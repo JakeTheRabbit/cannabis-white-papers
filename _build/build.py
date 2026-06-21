@@ -6,7 +6,7 @@ import os, re, json, sys, html as _h
 sys.path.insert(0, os.path.dirname(__file__))
 
 import theme, app_js, shell
-from components import icon, esc, photo
+from components import icon, esc, photo, card, grid
 import images as IMG
 import links as LINKS
 import data.nav as NAV
@@ -193,12 +193,21 @@ def render_index():
         f'<div class="s"><b>{n_live}</b><span>available now</span></div>'
         f'<div class="s"><b>100%</b><span>cited &amp; diagrammed</span></div></div></div>'
     )
-    intro = ('<div class="callout key" style="max-width:760px;margin:8px auto 0">'
-             f'<div class="cic">{icon("seedling",17)}</div><div class="cbody">'
-             '<div class="ctitle">New to all this? Start with the beginner track.</div>'
-             'Read it top to bottom or jump straight to what you need. Every paper stands alone, '
-             'defines its own jargon, and links to the rest. Press <strong>Ctrl&nbsp;K</strong> to '
-             'search any term across the whole library.</div></div>')
+    intro = (
+        '<div class="track" style="margin-top:10px"><div class="track-h"><h2>What these are</h2>'
+        '<span class="ct">and the point of them</span></div>'
+        '<p style="max-width:780px;color:var(--muted);font-size:17px;line-height:1.6;margin:0 0 16px">'
+        'Each one is a white paper: a deep, single-topic grow guide written from absolute zero, '
+        'with every term defined, every claim cited to peer-reviewed research, and the working shown '
+        'in diagrams, charts and tables. Together they cover a whole grow, ordered below by the stage '
+        'you use them in: propagation, vegetative growth, flower, then harvest through to cure, plus '
+        'the systems that run across all of them. Follow the <a href="curriculum.html">grow order</a>, '
+        'jump to a stage below, or press <strong>Ctrl&nbsp;K</strong> to search anything.</p>'
+        + grid([
+            card("Deep, not shallow", "One topic per paper, taken from beginner to genuinely useful. No filler, no hype.", tag="What it is"),
+            card("Cited and honest", "Every factual claim links to peer-reviewed research. Where the science is uncertain, it says so.", tag="Why trust it"),
+            card("Ordered by the grow", "Grouped by task: propagation, veg, flower, harvest, and the systems that span every stage.", tag="How to use it"),
+        ], cols=3) + '</div>')
     body = hero + intro + track_grid()
     return shell.page("index", "Home", body, desc="Beginner-friendly, peer-reviewed cannabis cultivation white papers.", wide=True, mobile_active="index")
 
@@ -230,55 +239,55 @@ def render_glossary():
 
 # ---------------------------------------------------------------- curriculum tree
 CURRICULUM = [
- ("T0 · Foundations", "Know the plant before you grow it.", [
-   ("Cannabis plant biology & life cycle", None), ("Cannabinoids & terpenes", None),
-   ("Genetics, seeds & phenotype hunting", None)]),
- ("T1 · The grow space", "Set the environment the plant lives in.", [
-   ("The grow room: a systems guide", "grow-room-systems"), ("Lighting: spectrum, PPFD & DLI", "lighting-fundamentals"),
-   ("Light acclimation", "light-acclimation"), ("Airflow design", "airflow-design"),
-   ("Temperature, humidity & VPD", None), ("CO2 enrichment", None),
-   ("HVAC, cooling & dehumidification", None)]),
- ("T2 · Substrate & water", "The root-zone foundation.", [
-   ("Substrates compared: coco, rockwool, soil, hydro", "substrates-overview"),
-   ("Precision coco cultivation: crop steering", "coco-crop-steering"),
-   ("Source water, RO & alkalinity", "water-quality"), ("pH: hold it steady", "ph-management"),
-   ("Mixing an Athena Pro Line stock tank", "nutrient-mixing-athena"),
-   ("Nutrient deficiency & toxicity diagnosis", "nutrient-deficiencies")]),
- ("T3 · Propagation", "Make plants.", [
+ ("1 · Propagation", "Start the plants.", [
    ("Seeds, germination & seedlings", "seeds-germination"), ("Cloning", "cloning"),
    ("Tissue culture: clean genetics", "tissue-culture"),
    ("Mother / stock-plant management", None), ("Transplanting & potting up", None)]),
- ("T4 · Veg & training", "Build the plant.", [
-   ("Defoliation & plant training", "defoliation-training"),
+ ("2 · Vegetative growth", "Build a big, healthy plant.", [
+   ("Light acclimation", "light-acclimation"), ("Defoliation & plant training", "defoliation-training"),
    ("Vegetative management & timing", None)]),
- ("T5 · Flower & ripen", "Steer to yield and quality.", [
-   ("The flower cycle, week by week", "flowering-stages"), ("Ripening, flush & harvest timing", None)]),
- ("T6 · Plant health", "Keep them alive.", [
-   ("IPM: a working SOP", "ipm-sop"), ("Pest identification & control", "pest-id"),
-   ("Root diseases: pythium & fusarium", None), ("Mould risk: bud rot & PM", "mould-risk")]),
- ("T7 · Harvest & post", "Flower into product.", [
-   ("Harvest, dry, trim & cure", "harvest-dry-trim-cure"),
-   ("Extraction & concentrates", None), ("GMP hash manufacturing", "gmp-hash-lab"),
-   ("Lab testing, potency & COAs", None)]),
- ("T8 · Precision & automation", "Dial it in.", [
+ ("3 · Flowering", "Steer the plant to yield and quality.", [
+   ("The flower cycle, week by week", "flowering-stages"),
+   ("Precision coco cultivation: crop steering", "coco-crop-steering"),
+   ("Ripening, flush & harvest timing", None)]),
+ ("4 · Harvest, dry, trim & cure", "Turn flower into finished product.", [
+   ("Harvest, dry, trim & cure", "harvest-dry-trim-cure"), ("GMP hash manufacturing", "gmp-hash-lab"),
+   ("Extraction & concentrates", None), ("Lab testing, potency & COAs", None)]),
+ ("Runs every stage · Environment & climate", "The conditions the plant lives in.", [
+   ("The grow room: a systems guide", "grow-room-systems"), ("Lighting: spectrum, PPFD & DLI", "lighting-fundamentals"),
+   ("Airflow design", "airflow-design"), ("Temperature, humidity & VPD", None),
+   ("CO2 enrichment", None), ("HVAC, cooling & dehumidification", None)]),
+ ("Runs every stage · Water, substrate & feed", "What the roots get.", [
+   ("Substrates compared: coco, rockwool, soil, hydro", "substrates-overview"),
+   ("Source water, RO & alkalinity", "water-quality"), ("pH: hold it steady", "ph-management"),
+   ("Mixing an Athena Pro Line stock tank", "nutrient-mixing-athena"),
+   ("Nutrient deficiency & toxicity diagnosis", "nutrient-deficiencies")]),
+ ("Runs every stage · Plant health", "Keep them clean.", [
+   ("Mould risk: bud rot & PM", "mould-risk"), ("IPM: a working SOP", "ipm-sop"),
+   ("Pest identification & control", "pest-id"), ("Root diseases: pythium & fusarium", None)]),
+ ("Runs every stage · Precision & automation", "Dial it in and let it run.", [
    ("Root-zone state (TEROS-12)", "root-zone-teros12"), ("Signal & noise", "signal-and-noise"),
    ("Smart watering (VRWE)", "smart-watering-vrwe"), ("The closed loop", "closed-loop"),
    ("Plant-state dashboard", "plant-state-dashboard"), ("F2 crop steering", "f2-crop-steering"),
    ("Irrigation manual", "irrigation-manual")]),
- ("T9 · Facility, business & compliance", "Run it as an operation.", [
+ ("The operation · Facility & quality", "Run it as a business.", [
    ("Designing a facility in 3D", "facility-3d"), ("Quality manual / QMS", "wso-quality-manual"),
    ("Compliance, licensing & track-and-trace", None),
    ("Energy, utilities & sustainability", None), ("Yield per watt & unit economics", None)]),
+ ("Reference · Know the plant", "Background worth having.", [
+   ("Cannabis plant biology & life cycle", None), ("Cannabinoids & terpenes", None),
+   ("Genetics, seeds & phenotype hunting", None)]),
 ]
 
 def render_curriculum():
     total = sum(len(items) for _, _, items in CURRICULUM)
     live = sum(1 for _, _, items in CURRICULUM for _, slug in items if slug in _LIVE)
     head = (
-        '<div class="eyebrow">The learning path</div>'
-        '<h1 class="title">Start here: the whole guide, in order</h1>'
-        '<p class="sub">Cultivation is one connected craft. This is the order to learn it in, '
-        'foundations first. Green dots are published now. Greyed rows are written and on the way.</p>'
+        '<div class="eyebrow">The grow, in order</div>'
+        '<h1 class="title">Start here: the whole grow, stage by stage</h1>'
+        '<p class="sub">Every paper, grouped by where it sits in a grow: propagation, vegetative '
+        'growth, flowering, then harvest through to cure, plus the systems that run across every '
+        'stage. Green dots are published now. Greyed rows are written and on the way.</p>'
         f'<div class="hero-stats" style="justify-content:flex-start;gap:28px;margin:22px 0 0">'
         f'<div class="s"><b>{live}</b><span>published</span></div>'
         f'<div class="s"><b>{total}</b><span>in the full guide</span></div>'

@@ -10,7 +10,7 @@ deploys to GitHub Pages.
 | | |
 |---|---|
 | Theme | Variant B — charcoal monochrome + serif; green reserved for diagrams only. Light + **dark mode** (toggle, persisted, honours `prefers-color-scheme`). |
-| Live papers | **21** across four tracks (Beginner · Grow craft & post-harvest · Precision & sensors · Facility & GMP) |
+| Live papers | **29**, grouped by grow stage: Propagation, Vegetative, Flowering, Harvest/Dry/Trim/Cure, plus the systems that run across every stage (Environment, Water & feed, Plant health, Precision, Facility) |
 | Citations | 160 sources in one registry (mostly peer-reviewed; manufacturer/operational sources labelled) |
 | Glossary | 256 plain-English terms |
 | Search | Offline command palette (Ctrl/Cmd-K) over every paper, section and term |
