@@ -1,0 +1,282 @@
+{
+ "slug": "gmp-hash-lab",
+ "title": "GMP hash manufacturing: facility flow and quality control",
+ "eyebrow": "Facility · GMP",
+ "kind": "research",
+ "sub": "A from-scratch guide to designing a clean, compliant hash and extract factory — what GMP means, how rooms and people and product flow, and how a batch earns its way to market.",
+ "reading_min": 18,
+ "related": [
+  "mould-risk",
+  "wso-quality-manual",
+  "facility-3d"
+ ],
+ "ref_ids": [
+  "ecfr-21cfr211",
+  "ich-q3c-r9-ema",
+  "ehp-cannabis-contaminants-2019",
+  "en1822-h14-hepa",
+  "sciencedirect-cleanroom-personnel-emissions-2024",
+  "pmc-capa-ich-q10-2024",
+  "fda-process-validation-2011",
+  "ispe-cleanroom-design-iso14644-16"
+ ],
+ "ref_lookup": {
+  "ecfr-21cfr211": "U.S. Food and Drug Administration. 21 CFR Part 211 — Current Good Manufacturing Practice for Finished Pharmaceuticals (esp. 211.22 Responsibilities of quality control unit; 211.165 Testing and release for distribution; 211.192 Production record review). Code of Federal Regulations, Title 21.",
+  "ich-q3c-r9-ema": "International Council for Harmonisation. ICH Q3C(R9) Guideline for Residual Solvents (Step 5), reproduced by European Medicines Agency, 2024. EMA/CHMP/ICH/82260/2006.",
+  "ehp-cannabis-contaminants-2019": "Seltenrich N. Cannabis Contaminants: Regulating Solvents, Microbes, and Metals in Legal Weed. Environmental Health Perspectives. 2019;127(8):082001. doi:10.1289/EHP5785.",
+  "en1822-h14-hepa": "Camfil. EN 1822 and ISO 29463 HEPA filter factory test (EN 1822-1:2019 filter classes; H14 minimum efficiency 99.995% at the Most Penetrating Particle Size, MPPS).",
+  "sciencedirect-cleanroom-personnel-emissions-2024": "Meng H, Shiue A, Wang C, Leggett G. Particle and bacterial colony emissions from garments and humans in pharmaceutical cleanrooms. Journal of Building Engineering, 2024;96:110...; ScienceDirect S2352710224023970.",
+  "pmc-capa-ich-q10-2024": "Enhancing Pharmaceutical Product Quality With a Comprehensive Corrective and Preventive Actions (CAPA) Framework: From Reactive to Proactive. Cureus, 2024. PMC11490658.",
+  "fda-process-validation-2011": "U.S. Food and Drug Administration, CDER/CBER/CVM. Guidance for Industry — Process Validation: General Principles and Practices. January 2011 (Revision 1).",
+  "ispe-cleanroom-design-iso14644-16": "Pharmaceutical Engineering (ISPE). Pharmaceutical Cleanroom Design & ISO 14644-16, Sep/Oct 2021 — air-change-rate optimization for classified cleanrooms."
+ },
+ "sections": [
+  {
+   "id": "what-this-is",
+   "kicker": "Start here",
+   "title": "What This Is: GMP and the Hash Lab From Zero",
+   "summary": "GMP stands for Good Manufacturing Practice — a documented, audited system that proves a product is what its label says and that nothing harmful rode along. A GMP hash lab turns cannabis biomass into purified resin concentrates (bubble hash, rosin, live resin, distillate) under contamination control, because the same physics that concentrate cannabinoids also concentrate contaminants. The whole design answers one question at every step: can we prove this material is safe and correctly labelled? If yes it moves forward; if not, it holds. This paper is a reference architecture, not legal advice — limits vary by jurisdiction.",
+   "points": [
+    "GMP = a written, validated, inspectable system; 'if it isn't written down, it didn't happen'",
+    "Concentration is the core risk: extraction multiplies both the good and the bad roughly 5–10x",
+    "Five cleanliness grades (CNC through Grade A) and seven mandatory release-test families anchor the design",
+    "Zero open critical deviations are permitted at the point of release"
+   ],
+   "figures": [
+    {
+     "name": "Standards-to-facility map",
+     "kind": "table",
+     "desc": "The governing standards (EU-GMP Annex 1, cGMP 21 CFR 210/211, ICH Q7/Q9/Q10, ISO 14644-1, GACP, NFPA 30/C1D1) and which facility area each one governs"
+    },
+    {
+     "name": "The four headline numbers",
+     "kind": "bars",
+     "desc": "Visual of the anchor stats: 5 cleanliness grades, 7 release test families, 100% genealogy coverage, 0 critical deviations at release"
+    }
+   ],
+   "claims_needing_cite": [
+    "Extraction concentrates cannabinoids and contaminants roughly 5–10x",
+    "EU-GMP Annex 1 governs cleanroom classification and contamination control strategy",
+    "cGMP 21 CFR 210/211 governs production controls, records, and QC unit release authority"
+   ]
+  },
+  {
+   "id": "key-terms",
+   "kicker": "Vocabulary",
+   "title": "Key Terms: The Words You Need First",
+   "summary": "Before any diagram makes sense, a handful of terms do the heavy lifting. A cleanroom grade (CNC, D, C, B, A) describes how clean the air is, mapped to ISO 14644 particle classes (e.g. Grade C = ISO 7, Grade A = ISO 5). A batch is one defined production run with a single lot ID; a deviation is any departure from the approved process; CAPA is the corrective-and-preventive-action loop that closes it. QA (Quality Assurance), not production, owns the final release decision.",
+   "points": [
+    "Cleanroom grade vs ISO class: Grade D = ISO 8, Grade C = ISO 7, Grade A = ISO 5 at the fill point",
+    "Quarantine / Released / Rejected — the three exclusive status states every material sits in",
+    "CCP (Critical Control Point): a step where a measured limit prevents a hazard (HACCP language)",
+    "ALCOA+: records must be Attributable, Legible, Contemporaneous, Original, Accurate (plus Complete, Consistent, Enduring, Available)",
+    "Residual solvent, water activity (Aw), CoA (Certificate of Analysis), genealogy, C1D1 (flammable-rated room)"
+   ],
+   "figures": [
+    {
+     "name": "Grade-to-ISO quick reference",
+     "kind": "table",
+     "desc": "Each cleanroom grade beside its ISO 14644 class, air changes per hour, and the activity that happens there"
+    }
+   ],
+   "claims_needing_cite": [
+    "ISO 14644-1 defines cleanroom particle-count classifications including ISO 5, ISO 7, and ISO 8",
+    "HACCP critical-control-point methodology is the basis for in-process limits in food and pharma manufacturing"
+   ]
+  },
+  {
+   "id": "zoning",
+   "kicker": "Core concept",
+   "title": "Zoning and Cleanroom Grades: Nested Shells",
+   "summary": "The building is laid out as nested cleanliness shells: dirty operations (intake, milling, waste) sit at the perimeter and the cleanest operations (collection, filling, packaging of open product) sit at the core. Product moves inward toward purity; people and waste move outward toward the dirty edge, and the two never cross uncontrolled. Each shell boundary is an airlock plus a one-grade step. Most recreational and medical hash operations run a D-to-C envelope and treat the fill point as Grade C with local protection — Grade A/B is only needed for sterile or pharma-grade dose forms.",
+   "points": [
+    "Goods-in/quarantine is CNC (4–6 air changes/hr); milling and dispensing are Grade D / ISO 8 (10–20 ACH)",
+    "Wash/extraction and freeze-dry/press are Grade C / ISO 7 (20–40 ACH)",
+    "Solvent recovery is a C1D1-rated Grade D room with LEL purge",
+    "Open-product fill point reaches Grade A / ISO 5 with unidirectional airflow only for pharma-grade fill"
+   ],
+   "figures": [
+    {
+     "name": "Nested-shell facility map",
+     "kind": "zones",
+     "desc": "Concentric zoning from CNC outer shell through Grade D, C, B to a Grade A core, with green arrows for inward product flow and blue dashed arrows for outward personnel and waste flow"
+    },
+    {
+     "name": "Room classification reference",
+     "kind": "table",
+     "desc": "Each room with its grade, ISO class, air changes per hour, and key activity"
+    }
+   ],
+   "claims_needing_cite": [
+    "Grade C cleanrooms correspond to ISO 7 and Grade A to ISO 5 under EU-GMP Annex 1",
+    "Recommended air-change rates of 20–40 ACH for ISO 7 cleanrooms"
+   ]
+  },
+  {
+   "id": "pressure-and-people",
+   "kicker": "Core concept",
+   "title": "Pressure Cascade, HVAC, and Gowning",
+   "summary": "Air is the primary contamination vector, so a positive-pressure cascade keeps clean rooms blowing air outward into dirtier rooms — opening a door can never suck contamination toward product. Pressures step up from 0 Pa (CNC) to +15 Pa (D), +30 Pa (C), +45 Pa (B), +60 Pa (A); solvent rooms invert this to about -15 Pa to contain flammable vapour and pull it to the LEL exhaust. People are the largest particle and microbial source, so entry is a one-way airlock sequence that escalates gowning as the grade rises, with a physically separate de-gown exit corridor. Anyone with open wounds, respiratory illness, or GI symptoms is excluded at the health check and it is recorded.",
+   "points": [
+    "Pressure ladder: CNC 0 Pa, D +15, C +30, B +45, A +60; solvent C1D1 room runs negative at about -15 Pa",
+    "Filtration scales with grade: F9 in prep, H13 HEPA in wash/dry, H14 HEPA at fill",
+    "Gowning escalates: lab coat + single glove (D) to coverall + double glove (C) to sterile one-piece + double glove (B/A)",
+    "Airlocks are interlocked so both doors never open together; entry and egress never share a door"
+   ],
+   "figures": [
+    {
+     "name": "Pressure cascade ladder",
+     "kind": "diagram",
+     "desc": "Stepped boxes showing rising positive pressure from CNC to Grade A with airflow arrows always running clean-to-dirty, plus the negative solvent room"
+    },
+    {
+     "name": "Gowning airlock cascade",
+     "kind": "flow",
+     "desc": "Left-to-right one-way gowning steps from CNC entry through grade airlocks to cleanroom work, with a separate dashed de-gown exit"
+    },
+    {
+     "name": "HVAC control matrix",
+     "kind": "table",
+     "desc": "Temperature, RH, filtration, delta-P, ACH, and recirculation targets per room grade"
+    }
+   ],
+   "claims_needing_cite": [
+    "EU-GMP Annex 1 recommends a pressure differential of roughly 10–15 Pa between adjacent classified zones",
+    "H14 HEPA filters achieve at least 99.995% retention at MPPS per EN 1822",
+    "Personnel are the dominant source of particulate and microbial contamination in cleanrooms"
+   ]
+  },
+  {
+   "id": "process-flows",
+   "kicker": "Core concept",
+   "title": "How the Product Is Actually Made",
+   "summary": "Two routes leave the weigh-in: solventless and solvent extraction. Solventless mechanically separates trichome heads with ice-water agitation, then sieves (220 to 25 micron), freeze-dries, and presses to rosin — its four critical control points are wash temp (<=4 C), water quality (RO, <10 CFU/mL), water activity (Aw <=0.55), and press temp (<=90 C). Solvent extraction is a closed loop (butane, ethanol, or CO2) where the dominant hazards shift to flammability and residual solvent, gated hard by a GC-MS/headspace test before release. For solventless, water is treated as an ingredient with its own RO/DI loop, UV + 0.2 micron polish, and sampling at three points.",
+   "points": [
+    "Solventless CCPs: wash <=4 C, RO water <10 CFU/mL, final Aw <=0.55, press <=90 C",
+    "Solvent residual limits: n-butane/propane <=2000–5000 ppm (jurisdiction-dependent), ethanol <=5000 ppm (Class 3)",
+    "Solvent rooms need C1D1 interlocks: LEL gas detection + auto-purge, explosion-proof electrics, two-person rule, ASME-rated vessels",
+    "Water loop: mains to carbon/sediment pre-filter to RO/DI to UV+0.2 micron to sanitized ice hopper to point of use"
+   ],
+   "figures": [
+    {
+     "name": "Solventless swimlane with CCPs",
+     "kind": "flow",
+     "desc": "Input, process, and CCP/QC swimlanes for fresh-frozen biomass through agitate, sieve, collect, freeze-dry, and press with the four critical control points called out"
+    },
+    {
+     "name": "Closed-loop solvent extraction",
+     "kind": "flow",
+     "desc": "Charge column to solvent pass to filter/winterize to recovery to vacuum purge, with the residual-solvent QC gate and parallel C1D1 safety interlock overlay"
+    },
+    {
+     "name": "Treated water and ice loop",
+     "kind": "diagram",
+     "desc": "Linear water-treatment train with the three sampling points and out-of-spec quarantine logic"
+    }
+   ],
+   "claims_needing_cite": [
+    "Residual butane/propane action limits of 2000–5000 ppm vary by US state and other jurisdictions",
+    "Ethanol is an ICH Q3C Class 3 solvent with a typical limit around 5000 ppm",
+    "C1D1 (NFPA classified) rooms are required for hydrocarbon extraction with LEL detection and explosion relief",
+    "Water activity at or below 0.55–0.65 suppresses microbial and fungal growth in concentrates"
+   ]
+  },
+  {
+   "id": "qc-and-release",
+   "kicker": "How-to",
+   "title": "Step-by-Step: Testing, Sampling, and Batch Release",
+   "summary": "Testing happens at three tiers — incoming biomass, in-process, and release — across four sampling stations along the value stream, with retained reference samples kept to expiry + 1 year. The finished-goods release panel is the legal gate to market and covers seven families: potency (HPLC-DAD), residual solvents (headspace GC-MS), pesticides (LC-MS/MS, GC-MS/MS), microbials (TYMC, TAMC, E. coli, Salmonella, Aspergillus), heavy metals (ICP-MS for Pb/Cd/As/Hg), mycotoxins (LC-MS/MS), and water activity/moisture. QA — not production — then runs three sequential gates: batch record complete and signed, all results within spec, all deviations closed; any 'no' diverts to remediation and only a clean pass on all three reaches release with a QP/QA signature and issued CoA.",
+   "points": [
+    "Always test the finished concentrate — a pesticide level that passes on flower can fail once concentrated",
+    "Release panel = 7 mandatory families; pathogens (Salmonella, E. coli) must be absent",
+    "Release is a three-gate decision tree: records signed, results in spec, deviations closed",
+    "Sampling is itself an SOP: defined sample size, sterile tools, retention samples kept to expiry + 1 year"
+   ],
+   "figures": [
+    {
+     "name": "Four sampling stations",
+     "kind": "diagram",
+     "desc": "Timeline from incoming biomass (S1) through in-process (S2) and bulk concentrate (S3) to finished goods (S4) with what each station tests"
+    },
+    {
+     "name": "Finished-goods release panel",
+     "kind": "table",
+     "desc": "Seven test families with analytes, method, typical action limit, and rationale"
+    },
+    {
+     "name": "Batch release decision tree",
+     "kind": "flow",
+     "desc": "Three sequential yes/no gates (records, results, deviations) routing to QA release or to return/OOS/hold lanes"
+    }
+   ],
+   "claims_needing_cite": [
+    "Cannabis concentrate release panels typically require potency, residual solvents, pesticides, microbials, heavy metals, mycotoxins, and water activity testing",
+    "ICP-MS is the standard method for Pb, Cd, As, and Hg quantification in cannabis products",
+    "Aflatoxins B1/B2/G1/G2 and Ochratoxin A are carcinogenic mycotoxins regulated at ppb levels"
+   ]
+  },
+  {
+   "id": "deviations-and-pitfalls",
+   "kicker": "Pitfalls",
+   "title": "When It Goes Wrong: Deviations, CAPA, and Common Traps",
+   "summary": "When reality departs from the approved process, the deviation system captures it through a five-stage CAPA loop: detect/log, contain (quarantine and scope), investigate root cause (5-why or fishbone), correct the batch, then prevent and verify with an SOP/training update and an effectiveness check that feeds back into the process. Severity triage sets the urgency: critical (patient-safety or recall risk) goes to the QA director with <24h containment, major to QA on a defined timeline, minor to a supervisor to be trended. The classic traps are extrapolating safety from the biomass CoA instead of testing the concentrate, releasing on a borderline residual-solvent result, and letting physical status disagree with system status.",
+   "points": [
+    "CAPA loop is five stages and is not closed until the effectiveness check passes",
+    "Severity drives sign-off level and clock: critical = QA director + <24h containment",
+    "Never release on a borderline residual solvent result — re-test, re-purge, or reject, and document the disposition",
+    "Physical and system status must always agree; quarantine stock stays behind a locked cage or controlled rack"
+   ],
+   "figures": [
+    {
+     "name": "Five-stage CAPA loop",
+     "kind": "flow",
+     "desc": "Detect, contain, investigate, correct, prevent+verify with a dashed feedback arrow closing the loop, plus a severity-triage band"
+    },
+    {
+     "name": "Waste and reject disposition",
+     "kind": "flow",
+     "desc": "Off-spec product and spent biomass into a locked quarantine cage, rendered unusable, then licensed disposal with witnessed manifest; solvent waste as a separate hazmat stream"
+    }
+   ],
+   "claims_needing_cite": [
+    "ICH Q10 establishes the pharmaceutical quality system including CAPA and change control",
+    "Root-cause tools such as 5-why and Ishikawa (fishbone) are standard deviation-investigation methods",
+    "Cannabis waste must typically be rendered unusable and disposed via a licensed hauler with a witnessed manifest"
+   ]
+  },
+  {
+   "id": "realistic-expectations",
+   "kicker": "Reality check",
+   "title": "Realistic Expectations: Cost, Cadence, and What 'Compliant' Really Means",
+   "summary": "Compliance is a continuous program measured by data, not a one-time build: management review tracks KPIs like right-first-time release rate (target >=98%), deviation rate per batch (<5%), median CAPA closure (<=30 days), EM results within action limits (>=95%), and mock-recall retrieval (<24h). Equipment must be qualified through the V-model (DQ/IQ/OQ/PQ) before it makes releasable product, followed by process validation of three conformance batches, and cleaning is validated against measurable MACO carryover limits — not 'looks clean.' Scale the gowning, monitoring, and grade to what you actually run: a D-to-C envelope is normal for most hash operations, and over-building to Grade A/B that the product doesn't require wastes capital. Specific limits and grades vary by jurisdiction, so validate against your own licence before building.",
+   "points": [
+    "KPIs to run the system: >=98% right-first-time, <5% deviation rate, <=30d CAPA closure, <24h mock-recall",
+    "Qualify before you produce: V-model DQ to IQ to OQ to PQ, then 3 conformance batches for process validation",
+    "Cleaning is validated to a calculated MACO carryover limit with swab/rinse, TOC/HPLC, and micro acceptance criteria",
+    "Review cadence is fixed: per-batch, weekly, monthly, quarterly management review, annual PQR and self-inspection"
+   ],
+   "figures": [
+    {
+     "name": "Quality KPI dashboard",
+     "kind": "bars",
+     "desc": "The eight headline KPI targets shown as gauges or bars against their thresholds"
+    },
+    {
+     "name": "V-model qualification",
+     "kind": "diagram",
+     "desc": "Left leg URS/DS/build descending, right leg IQ/OQ/PQ ascending, with horizontal 'verified by' ties and process validation following PQ"
+    },
+    {
+     "name": "Review cadence",
+     "kind": "table",
+     "desc": "Per-batch through annual review activities with what is reviewed and the owner"
+    }
+   ],
+   "claims_needing_cite": [
+    "Process validation conventionally requires three consecutive conforming batches",
+    "Cleaning validation acceptance is based on a calculated Maximum Allowable Carryover (MACO) limit",
+    "Equipment qualification follows the IQ/OQ/PQ progression within a validation V-model"
+   ]
+  }
+ ]
+}

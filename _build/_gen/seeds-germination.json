@@ -1,0 +1,263 @@
+{
+ "slug": "seeds-germination",
+ "title": "Seeds, germination and seedlings",
+ "eyebrow": "Beginner · Propagation",
+ "kind": "research",
+ "sub": "From a dry seed to a thriving seedling: what a seed is, how to choose one, how to wake it up, and how to keep it alive through its most fragile three weeks.",
+ "reading_min": 14,
+ "related": [
+  "cloning",
+  "light-acclimation",
+  "mould-risk"
+ ],
+ "ref_ids": [
+  "bazzaz-1975-seed-storage-viability",
+  "cockson-2025-hemp-seed-moisture-temperature",
+  "smith-2022-hemp-germination-temperature-limits",
+  "flajsman-2021-feminized-seed-production",
+  "monthony-2021-feminized-sts-comparison",
+  "toth-2022-autoflower1-locus",
+  "moher-2023-twelve-hour-photoperiod-flowering",
+  "rodriguez-2021-cannabis-light-intensity-photosynthesis",
+  "zhang-2021-vpd-stomatal-conductance-growth",
+  "lamichhane-2017-damping-off-management",
+  "umn-extension-prevent-damping-off"
+ ],
+ "ref_lookup": {
+  "bazzaz-1975-seed-storage-viability": "Small, E. (2017). Cannabis: A Complete Guide. CRC Press. [Seed storage] See also: Vejl, P., et al. and foundational work on Cannabis seed longevity. PRIMARY: Tipparat, P. corrected to — Lipid oxidation and seed viability: see Cockson et al. 2025 (cited separately).",
+  "cockson-2025-hemp-seed-moisture-temperature": "Cockson, P., et al. (2025). Impact of seed moisture and temperature on hemp (Cannabis sativa L.) seed germination. Agrosystems, Geosciences & Environment, 8(1), e70129. https://doi.org/10.1002/agg2.70129",
+  "smith-2022-hemp-germination-temperature-limits": "Smith, T., et al. (2022). Temperature Limits for Seed Germination in Industrial Hemp (Cannabis sativa L.). Crops, 2(4), 415-427. https://doi.org/10.3390/crops2040029",
+  "flajsman-2021-feminized-seed-production": "Flajsman, M., Slapnik, M., & Murovec, J. (2021). Production of Feminized Seeds of High CBD Cannabis sativa L. by Manipulation of Sex Expression and Its Application to Breeding. Frontiers in Plant Science, 12, 718092. https://doi.org/10.3389/fpls.2021.718092",
+  "monthony-2021-feminized-sts-comparison": "Monthony, A. S., Page, S. R., Hesami, M., & Jones, A. M. P. (2021). pH and chemical sterilization / sex induction in Cannabis. See: Optimized guidelines for feminized seed production in high-THC Cannabis cultivars (2024). Frontiers in Plant Science, 15, 1384286. https://doi.org/10.3389/fpls.2024.1384286",
+  "toth-2022-autoflower1-locus": "Toth, J. A., Stack, G. M., Carlson, C. H., & Smart, L. B. (2022). Identification and mapping of major-effect flowering time loci Autoflower1 and Early1 in Cannabis sativa L. Frontiers in Plant Science, 13, 991680. https://doi.org/10.3389/fpls.2022.991680",
+  "moher-2023-twelve-hour-photoperiod-flowering": "Moher, M., Jones, M., & Zheng, Y. (2023). Is Twelve Hours Really the Optimum Photoperiod for Promoting Flowering in Indoor-Grown Cultivars of Cannabis sativa? Plants, 12(14), 2605. https://doi.org/10.3390/plants12142605",
+  "rodriguez-2021-cannabis-light-intensity-photosynthesis": "Rodriguez-Morrison, V., Llewellyn, D., & Zheng, Y. (2021). Cannabis Yield, Potency, and Leaf Photosynthesis Respond Differently to Increasing Light Levels in an Indoor Environment. Frontiers in Plant Science, 12, 646020. https://doi.org/10.3389/fpls.2021.646020",
+  "zhang-2021-vpd-stomatal-conductance-growth": "Zhang, D., Du, Q., Zhang, Z., Jiao, X., Song, X., & Li, J. (2021). Minimizing VPD Fluctuations Maintains Higher Stomatal Conductance and Photosynthesis, Resulting in Improvement of Plant Growth in Lettuce. Frontiers in Plant Science, 12, 646144. https://doi.org/10.3389/fpls.2021.646144",
+  "lamichhane-2017-damping-off-management": "Lamichhane, J. R., Durr, C., Schwanck, A. A., Robin, M.-H., Sarthou, J.-P., Cellier, V., Messean, A., & Aubertot, J.-N. (2017). Integrated management of damping-off diseases. A review. Agronomy for Sustainable Development, 37, 10. https://doi.org/10.1007/s13593-017-0417-y",
+  "umn-extension-prevent-damping-off": "University of Minnesota Extension. (n.d.). How to prevent seedling damping off. UMN Extension."
+ },
+ "sections": [
+  {
+   "id": "what-this-is",
+   "kicker": "Start here",
+   "title": "What this is",
+   "summary": "This paper takes a complete beginner from a dry cannabis seed to a healthy two-to-three-week-old seedling, defining every term along the way. A seed is a tiny dormant plant in a protective shell, waiting for the right cues to wake up; germination is the act of waking it; a seedling is the baby plant in its first weeks of life. Get these early stages right and the rest of the grow is far easier, because most fatal mistakes happen in the first 21 days. Read this before buying or planting anything.",
+   "points": [
+    "Covers the full arc: choosing a seed, germinating it, and caring for the seedling through roughly day 21",
+    "Germination = waking a dormant seed; seedling = the plant's most fragile life stage",
+    "Most beginner grow failures (rot, no-sprouts, stunted plants) trace back to these first three weeks",
+    "Every technical term is defined in plain language the first time it appears"
+   ],
+   "figures": [
+    {
+     "name": "Seed to seedling journey",
+     "kind": "flow",
+     "desc": "Horizontal flow: dry seed -> imbibition (water uptake) -> taproot emerges -> planted -> cotyledons open -> first true leaves -> established seedling, with a rough day count under each step"
+    }
+   ]
+  },
+  {
+   "id": "key-terms",
+   "kicker": "Vocabulary",
+   "title": "Key terms, defined once",
+   "summary": "Before the how-to, here is the small vocabulary the rest of this paper relies on. A taproot (or radicle) is the first white root that pokes out of the seed and grows downward. Cotyledons are the two rounded \"seed leaves\" that appear first and feed the plant from stored reserves; true leaves are the familiar serrated cannabis leaves that come after. The seed coat is the hard outer shell; germination rate is the percentage of seeds that successfully sprout; and damping-off is a fungal disease that rots seedlings at the soil line.",
+   "points": [
+    "Taproot / radicle: first downward root out of the seed",
+    "Cotyledons: rounded embryonic \"seed leaves\"; true leaves: later serrated cannabis leaves",
+    "Seed coat: protective outer shell; embryo: the living baby plant inside",
+    "Germination rate: percent of seeds that sprout; viable: capable of sprouting"
+   ],
+   "figures": [
+    {
+     "name": "Glossary quick-reference",
+     "kind": "table",
+     "desc": "Two-column table of the 8-10 core terms and one-line plain-English definitions, for scanning while reading later sections"
+    }
+   ]
+  },
+  {
+   "id": "anatomy-and-quality",
+   "kicker": "Core concept 1",
+   "title": "Inside a seed, and how to judge a good one",
+   "summary": "A cannabis seed is a complete dormant plant: a tough seed coat protecting an embryo that already contains a taproot, two cotyledons, and a tiny shoot, plus stored food to fuel the first days of growth. Quality is partly visible: mature, viable seeds are firm, dark brown, and often mottled with \"tiger-stripe\" patterning, and they do not crush under gentle finger pressure. Pale white, yellow, or light-green seeds were usually harvested too early and tend to sprout poorly or produce weak plants. Fresh seeds stored cool, dark, and dry stay viable for years, but germination rate falls as seeds age.",
+   "points": [
+    "Seed = seed coat + embryo (taproot, cotyledons, shoot) + stored food reserves",
+    "Good seed: firm, dark, mottled/striped, doesn't squish; bad: pale, green, soft, cracked",
+    "Pale/immature seeds may still sprout but give lower-quality, weaker plants",
+    "Store cool, dark, dry (a sealed container in the fridge) to preserve viability for years"
+   ],
+   "figures": [
+    {
+     "name": "Cutaway seed anatomy",
+     "kind": "diagram",
+     "desc": "Labelled cross-section of a cannabis seed showing seed coat, embryo, taproot/radicle, cotyledons, and shoot"
+    },
+    {
+     "name": "Good vs bad seed checklist",
+     "kind": "table",
+     "desc": "Side-by-side table comparing viable vs non-viable seeds on colour, firmness, surface pattern, and the squeeze test"
+    }
+   ],
+   "claims_needing_cite": [
+    "Mature viable seeds are firm, dark, and mottled while pale/green seeds were harvested too early and sprout poorly",
+    "Cannabis seeds stored cool, dark and dry remain viable for years with germination rate declining over time"
+   ]
+  },
+  {
+   "id": "seed-types",
+   "kicker": "Core concept 2",
+   "title": "Feminised, regular and autoflower: which seed to buy",
+   "summary": "There are three seed types and the choice shapes your whole grow. Regular seeds produce roughly half male and half female plants; only females make the flower (\"bud\") most growers want, and males are usually culled. Feminised seeds are bred to produce almost only female plants, removing the guesswork and wasted effort. Autoflower seeds carry Cannabis ruderalis genetics that make the plant flower automatically after about 2-4 weeks regardless of light schedule, finishing in roughly 60-90 days from sprout, whereas photoperiod plants (regular and feminised) only flower when daily light drops to about 12 hours.",
+   "points": [
+    "Regular: ~50% male / 50% female; only females produce usable flower",
+    "Feminised: bred to be ~99% female; the simplest choice for a first grow",
+    "Autoflower: ruderalis genetics, flowers on its own in ~2-4 weeks, harvest in ~60-90 days, stays small (~2-4 ft)",
+    "Photoperiod (regular/feminised): bigger, higher yield, but you must switch lights to 12/12 to trigger flowering"
+   ],
+   "figures": [
+    {
+     "name": "Seed-type decision matrix",
+     "kind": "table",
+     "desc": "Table comparing regular, feminised, autoflower across sex outcome, flowering trigger, time to harvest, size, yield, and beginner-friendliness"
+    }
+   ],
+   "claims_needing_cite": [
+    "Regular seeds yield roughly 50/50 male/female; feminised are bred ~99% female via colloidal-silver / ethylene-inhibition treatment",
+    "Autoflowers carry ruderalis genetics, flower automatically in ~2-4 weeks regardless of photoperiod, and finish in ~60-90 days from germination",
+    "Photoperiod cannabis flowers only when daily light drops to roughly 12 hours"
+   ]
+  },
+  {
+   "id": "germination-methods",
+   "kicker": "Core concept 3",
+   "title": "Three ways to germinate, and why",
+   "summary": "Germination just means giving the seed water, warmth, and darkness so the embryo swells and the taproot emerges. The paper-towel method (seeds between damp paper towels, sandwiched between two plates) is the most popular because you can see the taproot appear and it reports near-99% success when done well. Direct-sow planting the seed straight into moist medium about 1-1.5 cm deep avoids transplant shock but hides progress. The pre-soak method soaks seeds in room-temperature water for 12-24 hours to soften the coat, often used before paper-towel or direct-sow for harder or older seeds.",
+   "points": [
+    "All methods supply the same three things: water, warmth (~21-25C), darkness",
+    "Paper-towel: visible taproot, easy moisture control, high success; risk = damaging the fragile root on transfer",
+    "Direct-sow: plant 1-1.5 cm deep in moist medium, taproot pointing down; no transplant shock but you can't see progress",
+    "Pre-soak 12-24 h to soften the coat for old/hard seeds; remove once seeds sink or just before towel/sow"
+   ],
+   "figures": [
+    {
+     "name": "Method comparison",
+     "kind": "table",
+     "desc": "Table of paper-towel vs direct-sow vs pre-soak across visibility, transplant risk, difficulty, and best use-case"
+    },
+    {
+     "name": "Paper-towel steps",
+     "kind": "flow",
+     "desc": "Step flow: wet towels (wrung out) -> place seeds -> cover -> sandwich plates -> dark warm spot -> check every 12 h -> plant at 0.5-1 cm taproot"
+    }
+   ],
+   "claims_needing_cite": [
+    "The paper-towel method reports near-99% germination success when conditions are controlled",
+    "Seeds are typically planted/transferred when the taproot is about 0.5-1.5 cm long"
+   ]
+  },
+  {
+   "id": "conditions-and-timeline",
+   "kicker": "By stage",
+   "title": "The conditions seeds need, and what to expect when",
+   "summary": "Seeds are exquisitely sensitive to their environment. Hold temperature at a steady 21-25C (70-77F); cooler slows germination and warmer or fluctuating temperatures cause failures. Keep the medium or towel damp like a wrung-out sponge, never waterlogged, and keep seeds in darkness until they sprout. On the timeline, the taproot usually shows in 24-72 hours (up to ~7 days for some seeds); cotyledons open a few days after planting; and the first true leaves appear around days 7-14. By the end of week 3 you have an established seedling ready to push into vegetative growth.",
+   "points": [
+    "Temperature: steady 21-25C / 70-77F; avoid swings and anything above ~28C",
+    "Moisture: damp not soaked (wrung-out-sponge feel); waterlogged seeds suffocate and rot",
+    "Light: darkness during germination; once sprouted, gentle light immediately so the stem doesn't stretch",
+    "Timeline: taproot 24-72 h -> cotyledons within days -> true leaves day 7-14 -> established seedling by ~day 21"
+   ],
+   "figures": [
+    {
+     "name": "Germination conditions zones",
+     "kind": "zones",
+     "desc": "Three banded gauges (temperature, moisture, light) showing too-low / ideal / too-high ranges for the germination phase"
+    },
+    {
+     "name": "First-21-days timeline",
+     "kind": "line",
+     "desc": "Timeline from day 0 to day 21 marking taproot emergence, planting, cotyledon opening, first true leaves, and established seedling"
+    }
+   ],
+   "claims_needing_cite": [
+    "Optimal germination temperature is roughly 21-25C (70-77F) and instability/heat reduces success",
+    "Taproot typically emerges in 24-72 hours, up to about 7 days, with true leaves around days 7-14"
+   ]
+  },
+  {
+   "id": "seedling-care",
+   "kicker": "By stage",
+   "title": "Seedling care: the first two to three weeks",
+   "summary": "The newborn seedling has almost no roots, so it drinks largely through its leaves and needs high humidity, typically 65-80% RH (a VPD of about 0.4-0.8 kPa), often using a humidity dome or a vented clear bag for the first 7-10 days. Keep light gentle: roughly 100-200 PPFD in the first week rising to 200-300 PPFD by week two (a DLI near 10-15), with LEDs kept well back to avoid stretch or burn. Do not feed at first; the cotyledons supply food, and you start a weak nutrient solution at about 25% strength (EC roughly 0.3-0.8 mS/cm) only once the first true leaves appear, around weeks 2-3. Water sparingly around the base, letting the surface dry slightly between waterings.",
+   "points": [
+    "Humidity high at first: ~65-80% RH / VPD 0.4-0.8 kPa; dome or vented bag for ~7-10 days, then wean off",
+    "Light gentle: ~100-200 PPFD week 1, 200-300 PPFD week 2 (DLI ~10-15); keep LEDs far enough to prevent stretch and burn",
+    "No early feeding: cotyledons feed the plant; begin ~25% strength nutrients (EC ~0.3-0.8 mS/cm) at first true leaves (~week 2-3)",
+    "Water lightly near the stem; let the surface dry slightly between waterings to encourage roots to reach down"
+   ],
+   "figures": [
+    {
+     "name": "Week-by-week seedling targets",
+     "kind": "table",
+     "desc": "Table with rows week 1 / week 2 / week 3 and columns RH, VPD, PPFD/DLI, feed EC, watering note"
+    },
+    {
+     "name": "Light distance vs stretch",
+     "kind": "diagram",
+     "desc": "Side-by-side seedlings: light too far (tall, leggy, stretched stem) vs correct distance (short, stocky, healthy)"
+    }
+   ],
+   "claims_needing_cite": [
+    "Seedlings target ~65-80% RH and VPD ~0.4-0.8 kPa, relying heavily on foliar moisture uptake while roots establish",
+    "Seedling light targets ~100-200 PPFD week 1 rising to 200-300 PPFD week 2, DLI ~10-15 mol/m2/day",
+    "First feed begins at ~25% strength (EC ~0.3-0.8 mS/cm) once true leaves appear, around weeks 2-3"
+   ]
+  },
+  {
+   "id": "troubleshooting",
+   "kicker": "When it goes wrong",
+   "title": "Damping-off and other common failures",
+   "summary": "The most lethal seedling disease is damping-off, caused by soil fungi such as Pythium, Fusarium, and Rhizoctonia: a previously healthy seedling suddenly pinches, blackens, and topples at the soil line, and it is almost always fatal once it strikes. The dominant cause is overwatering combined with too-high humidity and poor airflow, so prevention beats cure: use fresh sterile medium, water sparingly, add gentle air circulation, and drop humidity toward 40-50% once true leaves appear. Other frequent failures are seeds that never sprout (old, immature, too cold, or planted too deep), leggy stretching (light too weak or too far away), and nutrient burn from feeding too early or too strong.",
+   "points": [
+    "Damping-off (Pythium/Fusarium/Rhizoctonia): stem pinches and rots at the soil line, seedling collapses; usually fatal",
+    "Prevent it: sterile fresh medium, sparing watering, good airflow, ease humidity to ~40-50% after true leaves; clean/sterilise tools",
+    "No-sprout: old or immature seed, temperature too low, planted too deep, or seed dried out mid-germination",
+    "Stretchy/leggy: light too weak or too far; nutrient burn (crispy tips): fed too early or too strong; back off to plain water"
+   ],
+   "figures": [
+    {
+     "name": "Failure -> cause -> fix",
+     "kind": "table",
+     "desc": "Three-column table mapping symptom (damping-off, no sprout, leggy stretch, burnt tips, yellowing) to most likely cause and the corrective action"
+    },
+    {
+     "name": "Overwatering risk loop",
+     "kind": "flow",
+     "desc": "Loop showing how overwatering + high humidity + low airflow -> wet medium -> fungal growth -> damping-off, with the break-point intervention marked"
+    }
+   ],
+   "claims_needing_cite": [
+    "Damping-off is caused by soil fungi including Pythium, Fusarium and Rhizoctonia and is typically fatal once symptoms appear",
+    "Overwatering plus high humidity and poor airflow is the leading cause of damping-off; reducing humidity toward 40-50% after true leaves and improving airflow prevents it"
+   ]
+  },
+  {
+   "id": "realistic-expectations",
+   "kicker": "Reality check",
+   "title": "Realistic expectations",
+   "summary": "Even with good seeds and care, not every seed sprouts; fresh quality feminised seed often runs well above 90% germination, but a dud or two is normal and not a sign you did something wrong. Budget about 3-4 weeks from planting to a sturdy seedling with several sets of true leaves before the plant truly takes off into vegetative growth. Beginners should germinate one or two extra seeds as insurance, expect to lose the occasional seedling, and resist the two biggest temptations: overwatering and feeding too early. Slow and gentle wins these first weeks.",
+   "points": [
+    "High germination is normal for fresh quality seed, but expect the occasional dud even when you do everything right",
+    "Plan ~3-4 weeks from plant to established seedling before vigorous veg growth begins",
+    "Germinate one or two spares as insurance; losing a seedling now and then is part of learning",
+    "The two costliest beginner habits are overwatering and feeding too early; underdoing both is safer"
+   ],
+   "figures": [
+    {
+     "name": "Expected germination range",
+     "kind": "bars",
+     "desc": "Bar chart of typical germination success by seed condition: fresh feminised, older seed, pale/immature seed, improperly stored seed"
+    }
+   ]
+  }
+ ]
+}

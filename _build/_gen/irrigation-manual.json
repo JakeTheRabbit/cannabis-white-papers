@@ -1,0 +1,253 @@
+{
+ "slug": "irrigation-manual",
+ "title": "Automated irrigation system manual",
+ "eyebrow": "Precision · Irrigation",
+ "kind": "operational",
+ "sub": "A plain-language guide to installing, running, and maintaining a sensor-driven crop-steering irrigation system built on Home Assistant.",
+ "reading_min": 14,
+ "related": [
+  "coco-crop-steering",
+  "root-zone-teros12",
+  "smart-watering-vrwe"
+ ],
+ "ref_ids": [
+  "caplan-2019-drought-cannabis",
+  "yang-2022-rdi-review",
+  "topp-1980-dielectric-vwc",
+  "mane-2024-sensor-calibration"
+ ],
+ "ref_lookup": {
+  "caplan-2019-drought-cannabis": "Caplan, D., Dixon, M., & Zheng, Y. (2019). Increasing inflorescence dry weight and cannabinoid content in medical cannabis using controlled drought stress. HortScience, 54(5), 964-969.",
+  "yang-2022-rdi-review": "Yang, B., Fu, P., Lu, J., Ma, F., Sun, X., & Fang, Y. (2022). Regulated deficit irrigation: an effective way to solve the shortage of agricultural water for horticulture. Stress Biology, 2, 28.",
+  "topp-1980-dielectric-vwc": "Topp, G. C., Davis, J. L., & Annan, A. P. (1980). Electromagnetic determination of soil water content: Measurements in coaxial transmission lines. Water Resources Research, 16(3), 574-582.",
+  "mane-2024-sensor-calibration": "Mane, S., Das, N., Singh, G., Cosh, M., & Dong, Y. (2024). Advancements in dielectric soil moisture sensor calibration: A comprehensive review of methods and techniques. Computers and Electronics in Agriculture, 218, 108686."
+ },
+ "sections": [
+  {
+   "id": "what-this-is",
+   "kicker": "Start here",
+   "title": "What this is, and what it does for you",
+   "summary": "This is an automated watering system for plants grown in pots of soil-less media. Instead of you watering by hand or on a dumb timer, sensors in each pot measure how wet the media is and how much fertiliser salt it holds, and the software decides when and how much to water. The described setup runs entirely inside Home Assistant (free open-source home-automation software) and controls 6 grow tables at once. The system is built in three layers: a time-based irrigation package and a sensor-driven crop-steering integration that both run today, plus an optional advanced layer (AppDaemon) for fully autonomous decisions.",
+   "points": [
+    "Replaces hand-watering and plain timers with sensor-driven decisions across 6 grow tables",
+    "Runs on Home Assistant; no cloud account or extra software required for the core system",
+    "Three layers: time-based package, crop-steering integration, and optional AppDaemon autonomy",
+    "You can start simple (timer-based) and add intelligence later without rebuilding"
+   ],
+   "figures": [
+    {
+     "name": "three_layer_stack",
+     "kind": "diagram",
+     "desc": "Stacked-box diagram of the three layers: Layer 1 Irrigation Package (runs now), Layer 2 Crop Steering Integration (runs now), Layer 3 AppDaemon (optional), with a note on what each adds."
+    },
+    {
+     "name": "sensor_to_valve_loop",
+     "kind": "flow",
+     "desc": "Simple closed-loop showing probe reads moisture, software decides, valve opens, water reaches plant, moisture rises, repeat."
+    }
+   ],
+   "claims_needing_cite": []
+  },
+  {
+   "id": "key-terms",
+   "kicker": "Vocabulary",
+   "title": "Key terms, defined from scratch",
+   "summary": "Before anything else, here are the words this manual uses constantly. VWC (volumetric water content) is how wet the growing media is, shown as a percentage. EC (electrical conductivity, in mS/cm) measures how much dissolved fertiliser salt is in the water around the roots. A dryback is a deliberate, controlled drying-out of the media between waterings, and a shot is a single timed burst of irrigation. Field capacity is the wettest the media can get before water just drains away; in this system the default is 70%.",
+   "points": [
+    "VWC: volumetric water content, how wet the media is, as a percentage",
+    "EC: electrical conductivity in mS/cm, a proxy for fertiliser-salt concentration at the roots",
+    "Dryback: a controlled drop in VWC; a shot: one timed irrigation burst",
+    "Field capacity: maximum VWC the media holds (default 70%); substrate: the growing media itself",
+    "VPD, crop steering, vegetative vs generative, and solenoid valve are defined in the glossary"
+   ],
+   "figures": [
+    {
+     "name": "term_quick_reference",
+     "kind": "table",
+     "desc": "Two-column table: term and one-line plain definition for VWC, EC, dryback, shot, field capacity, substrate, VPD, solenoid valve, runoff."
+    }
+   ],
+   "claims_needing_cite": []
+  },
+  {
+   "id": "hardware",
+   "kicker": "The physical kit",
+   "title": "The hardware: what gets wired up",
+   "summary": "The brains of the valve control is a KC868 E16S relay board connected over Ethernet, which switches every valve (6 tables plus mains, mainline, and manifold). Each table has a substrate probe reading VWC, EC, and temperature over SDI-12, and the room is covered by 4 environmental sensors, 3 CO2 sensors, 4 AC units, a humidifier, and 4 dehumidifier relays. Notably there is no pump switch: the pump auto-starts on a pressure switch the moment the mainline valve opens, so water flows tank to mainline to table dripper to plant. A few sensors are intentionally not yet connected, and that has safety consequences (next note).",
+   "points": [
+    "KC868 E16S relay board (Ethernet, via ESPHome firmware) switches all valves",
+    "6 substrate probes (SDI-12) read VWC, EC, and temperature, one per table",
+    "No pump switch needed: a pressure switch auto-starts the pump when the mainline valve opens",
+    "Water path: nutrient tank to mainline to table valve to drippers to plants to runoff",
+    "Mains-water and manifold valves are for tank filling and mixing only, not for feeding"
+   ],
+   "figures": [
+    {
+     "name": "hardware_connection_table",
+     "kind": "table",
+     "desc": "Device, what it does, and connection type for the relay board, probes, environmental sensors, CO2 sensors, AC, humidifier, dehumidifiers, lights."
+    },
+    {
+     "name": "water_flow_path",
+     "kind": "flow",
+     "desc": "Linear flow: Nutrient Tank, mainline valve opens (pump auto-starts), mainline pipe, table valve opens, drippers, plants, substrate, runoff."
+    }
+   ],
+   "claims_needing_cite": []
+  },
+  {
+   "id": "phases",
+   "kicker": "The core idea",
+   "title": "The phase logic: P0 to P3",
+   "summary": "Crop steering splits each lights-on day into four phases that control how the plant uses water and nutrients. P0 (morning dryback) is no watering, letting the media dry from overnight; it moves to P1 once VWC drops by the target amount (50% in vegetative, 40% in generative) or after a 120-minute cap. P1 (ramp-up) gives progressively larger shots, starting at 2% of substrate volume and rising 0.5% each shot, 15 minutes apart, up to 10 shots, until VWC hits roughly 65%. P2 (maintenance) holds the media steady with top-up shots when VWC drops below 60%, and crucially nudges that threshold up or down based on EC: if the EC ratio exceeds 1.2 it waters more to flush salts, and below 0.8 it lets the media dry to concentrate nutrients. P3 (pre-lights-off) is emergency-only watering before an overnight dryback resets the cycle.",
+   "points": [
+    "P0 morning dryback: no water; exits when VWC drops 50% (veg) or 40% (gen), or after 120 min",
+    "P1 ramp-up: shots start at 2% of substrate volume, grow 0.5% each, 15 min apart, max 10 shots, target ~65% VWC",
+    "P2 maintenance: top-up below 60% VWC; threshold auto-adjusts on EC ratio (>1.2 flush, <0.8 dry-down)",
+    "P3 pre-lights-off: emergency shots only below 40% VWC, then a controlled overnight dryback",
+    "Vegetative steering uses longer drybacks and lower EC; generative uses shorter drybacks and higher EC"
+   ],
+   "figures": [
+    {
+     "name": "phase_cycle",
+     "kind": "flow",
+     "desc": "Circular P0 to P1 to P2 to P3 back to P0 flow with the trigger condition labelled on each arrow (dryback target, field-capacity target, lights-off approach, lights-on)."
+    },
+    {
+     "name": "daily_vwc_sawtooth",
+     "kind": "line",
+     "desc": "A day-long VWC line showing morning dryback dip (P0), stepped rise (P1), steady sawtooth maintenance (P2), and overnight decline (P3)."
+    },
+    {
+     "name": "ec_threshold_adjust",
+     "kind": "zones",
+     "desc": "Banded chart showing EC ratio zones: below 0.8 (dry down to concentrate), 0.8 to 1.2 (hold), above 1.2 (water more to flush)."
+    }
+   ],
+   "claims_needing_cite": [
+    "A controlled dryback signals the plant toward vegetative root growth or generative fruit production",
+    "Vegetative steering with longer drybacks and lower EC encourages root and leaf growth; generative steering with shorter drybacks and higher EC pushes flowering"
+   ]
+  },
+  {
+   "id": "environment-and-safety",
+   "kicker": "Climate and protection",
+   "title": "Environment control and the safety net",
+   "summary": "Beyond watering, the system manages room climate: dehumidifiers turn on when humidity is 5% above target (4 relays stagger on with 10-second delays) and off 2% below; the humidifier mirrors that; CO2 injects when 50 ppm below target and only during lights-on, always closing at lights-off. Several independent safety layers run in parallel so one failure does not leave valves open. The master gate only allows irrigation when the system is enabled, not in maintenance mode, no leak, tank OK, and inside the time window. A valve watchdog force-closes any table valve open longer than 3 minutes, a daily 3 AM audit closes everything as a reset, and maintenance mode shuts all valves instantly.",
+   "points": [
+    "Dehumidifiers: on at 5% above target (staggered 10s apart), off at 2% below; humidifier mirrored",
+    "CO2 injects 50 ppm below target, lights-on only, always closes at lights-off",
+    "Master gate gates all irrigation on enabled + not-maintenance + no-leak + tank-OK + in-window",
+    "Valve watchdog force-closes any valve open over 3 minutes; mains watchdog at 24 minutes",
+    "Daily 3 AM audit force-closes all valves and CO2 as a safety reset"
+   ],
+   "figures": [
+    {
+     "name": "safety_layers_table",
+     "kind": "table",
+     "desc": "Protection name, what it does, and whether it is automatic, for master gate, valve watchdog, mains watchdog, leak abort, tank-low abort, maintenance mode, sensor-offline alert, daily audit, CO2 lights-off."
+    }
+   ],
+   "claims_needing_cite": []
+  },
+  {
+   "id": "commissioning",
+   "kicker": "Step by step",
+   "title": "Commissioning: getting it running from scratch",
+   "summary": "Bring the system up in order so each layer is proven before the next. First verify hardware: confirm all probes and the relay board show Online under ESPHome, check a table VWC sensor reads a sensible number (e.g. 47.4), and manually click each valve on then immediately off to confirm it responds. Next set the irrigation window (e.g. start 08:30, 30 min after lights-on; end 18:00, 2 hours before lights-off), interval 60 minutes, duration 60 seconds. Then enable the system from the Command Center, switch maintenance mode off, enable the tables you want, and run one test cycle to watch valves open and close one at a time. Finally set climate targets and, optionally, choose a steering mode and crop profile.",
+   "points": [
+    "Verify each ESPHome device is Online and each table VWC sensor reads a real value before plumbing tests",
+    "Test every valve manually on then off; toggle the mainline briefly to confirm the pump starts",
+    "Set the window (e.g. 08:30 start, 18:00 end), interval 60 min, duration 60 s as conservative starting points",
+    "Enable the system, turn maintenance mode off, enable wanted tables, then run one test cycle",
+    "Set day/night temp and humidity targets and a CO2 target (e.g. 26C day / 22C night, 60% RH, 1200 ppm)"
+   ],
+   "figures": [
+    {
+     "name": "commissioning_sequence",
+     "kind": "flow",
+     "desc": "Six-step flow: verify hardware, set window, enable system, test cycle, set climate, optional crop steering, with the key action in each box."
+    },
+    {
+     "name": "starting_setpoints",
+     "kind": "table",
+     "desc": "Recommended conservative starting values: window start/end, interval, duration, day/night temp, day/night RH, CO2 target."
+    }
+   ],
+   "claims_needing_cite": []
+  },
+  {
+   "id": "daily-operation",
+   "kicker": "Living with it",
+   "title": "Day-to-day operation and the dashboard",
+   "summary": "Daily checks are quick: on the Command Center all 6 tables should read VWC between 30 and 70%, EC in your target range (typically 2 to 6 mS/cm by stage), and substrate temps 20 to 26C, with all safety indicators green. On the Trends tab the VWC graph should show a sawtooth: a gradual drop then a sharp rise after each irrigation; a flat or only-falling line means watering is not happening. The dashboard splits work across tabs (Command Center, Zone Control, Trends, Environment, Schedule), and you change which tables get watered with the Enabled toggle in Zone Control. If anything goes wrong, the fastest stop is toggling Maintenance Mode on, which immediately closes all valves.",
+   "points": [
+    "Healthy daily readings: VWC 30 to 70%, EC about 2 to 6 mS/cm, substrate temp 20 to 26C, safety all green",
+    "Trends VWC should look like a sawtooth; a non-sawtooth line is your first warning sign",
+    "Five dashboard tabs: Command Center, Zone Control, Trends, Environment, Schedule",
+    "Enable or skip tables via the Enabled toggle in Zone Control",
+    "Emergency stop: toggle Maintenance Mode on (closes all valves) or call the emergency-stop script"
+   ],
+   "figures": [
+    {
+     "name": "dashboard_tab_guide",
+     "kind": "table",
+     "desc": "Tab, what it shows, and when to use it, for Command Center, Zone Control, Trends, Environment, Schedule."
+    },
+    {
+     "name": "healthy_sawtooth",
+     "kind": "line",
+     "desc": "Annotated sawtooth VWC trace labelled as the healthy pattern, next to a flat declining line labelled as a problem sign."
+    }
+   ],
+   "claims_needing_cite": []
+  },
+  {
+   "id": "troubleshooting",
+   "kicker": "When it breaks",
+   "title": "Troubleshooting and tuning",
+   "summary": "Most problems are diagnosable from a short checklist. If irrigation will not run, confirm the system is on, maintenance mode is off, the clock is inside the window, at least one table is enabled, and the irrigation-allowed binary sensor reads on. If VWC or EC shows Unavailable, check the ESPHome device is online and reload template entities; if the raw probe value is also missing, the probe has lost connection. If shot durations show 0.0 seconds, confirm substrate volume (default 10 L) and dripper flow rate (default 2 L/hr) are set; there is a known bug where the integration looks for entities with a crop_steering_ prefix. Tune by starting conservative: run time-based scheduling for about a week while watching VWC trends before switching to sensor-driven crop steering.",
+   "points": [
+    "Irrigation won't run: check system on, maintenance off, inside window, a table enabled, irrigation-allowed sensor on",
+    "Unavailable VWC/EC: confirm ESPHome online, reload template entities, then suspect a lost probe connection",
+    "0.0 s shots: set substrate volume (10 L) and dripper flow rate (2 L/hr); a known prefix bug can also cause it",
+    "Stuck-open valve: maintenance mode first, then turn the valve off via service, then cut power to the relay board",
+    "Tune slowly: run the timer-based scheduler ~1 week, confirm sensor readings, then enable crop steering"
+   ],
+   "figures": [
+    {
+     "name": "troubleshooting_matrix",
+     "kind": "table",
+     "desc": "Symptom, likely cause, and first action for the five common failures (won't run, unavailable sensor, 0.0 s shots, stuck valve, entity not found)."
+    },
+    {
+     "name": "tuning_parameters",
+     "kind": "table",
+     "desc": "Parameter, meaning, default, and how to measure for substrate volume, dripper flow rate, drippers per plant, field capacity."
+    }
+   ],
+   "claims_needing_cite": []
+  },
+  {
+   "id": "expectations",
+   "kicker": "Reality check",
+   "title": "Realistic expectations and limits",
+   "summary": "This is operational guidance, not a guarantee of yield. The core system automates timing and sensor-driven decisions, but it is only as good as its sensors and plumbing: until the tank float switch and leak sensor are physically installed, the tank-low and leak emergency aborts are hardcoded to safe and will not trigger, so do not run it unattended. Without a leaf-temperature sensor, VPD falls back to room air temperature and is less accurate. The fully autonomous phase transitions need the optional AppDaemon layer, which is not deployed by default. Expect to spend the first week or so validating readings and tuning before trusting the automation.",
+   "points": [
+    "Operational guidance, not a yield guarantee; results depend on correct sensors and plumbing",
+    "Tank-low and leak aborts are disabled until those physical sensors are installed; do not run unattended first",
+    "Missing leaf-temp sensor makes VPD less accurate (falls back to room air temperature)",
+    "Full autonomous P0 to P3 transitions require the optional, not-yet-deployed AppDaemon layer",
+    "Budget about a week of supervised, timer-based running before switching to sensor-driven steering"
+   ],
+   "figures": [
+    {
+     "name": "missing_sensors_impact",
+     "kind": "table",
+     "desc": "Not-yet-connected sensor and its impact: tank float (no tank-low abort), leak sensor (no leak abort), tank pH/EC (shows Unavailable), leaf temp (VPD less accurate)."
+    }
+   ],
+   "claims_needing_cite": []
+  }
+ ]
+}

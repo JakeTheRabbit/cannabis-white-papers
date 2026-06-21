@@ -1,0 +1,42 @@
+{
+ "done": [
+  "coco-crop-steering-1",
+  "coco-crop-steering-2",
+  "root-zone-teros12-2"
+ ],
+ "skip": [
+  "tissue-culture-1",
+  "tissue-culture-2",
+  "tissue-culture-3",
+  "grow-room-systems-1",
+  "grow-room-systems-2",
+  "airflow-design-1",
+  "airflow-design-2",
+  "mould-risk-1",
+  "mould-risk-2",
+  "root-zone-teros12-1",
+  "smart-watering-vrwe-1",
+  "signal-and-noise-1",
+  "closed-loop-1",
+  "plant-state-dashboard-1",
+  "f2-crop-steering-1",
+  "irrigation-manual-1",
+  "cloning-1",
+  "cloning-2",
+  "nutrient-mixing-athena-1",
+  "light-acclimation-1",
+  "light-acclimation-2",
+  "defoliation-training-1",
+  "defoliation-training-2",
+  "ipm-sop-1",
+  "ipm-sop-2",
+  "harvest-dry-trim-cure-1",
+  "harvest-dry-trim-cure-2",
+  "harvest-dry-trim-cure-3",
+  "gmp-hash-lab-1",
+  "gmp-hash-lab-2",
+  "facility-3d-1",
+  "wso-quality-manual-1"
+ ],
+ "fail": []
+}

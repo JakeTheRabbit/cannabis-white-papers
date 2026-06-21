@@ -1,0 +1,206 @@
+{
+ "slug": "smart-watering-vrwe",
+ "title": "The smart watering brain (VRWE), in plain English",
+ "eyebrow": "Precision · Smart watering",
+ "kind": "operational",
+ "sub": "How a grow room can water plants automatically by combining several sensor signals instead of trusting one moisture probe that might be lying.",
+ "reading_min": 9,
+ "related": [
+  "root-zone-teros12",
+  "signal-and-noise",
+  "closed-loop"
+ ],
+ "ref_ids": [
+  "szerement-seven-rod-2019",
+  "mane-dielectric-calibration-review-2024",
+  "koehler-transpiration-vpd-2023",
+  "owen-norden-preferential-flow-2024",
+  "hydrus-soilless-substrate-dynamics"
+ ],
+ "ref_lookup": {
+  "szerement-seven-rod-2019": "Szerement, J., Woszczyk, A., Szypłowska, A., Kafarski, M., Lewandowski, A., Wilczek, A., & Skierucha, W. (2019). A Seven-Rod Dielectric Sensor for Determination of Soil Moisture in Well-Defined Sample Volumes. Sensors, 19(7), 1646.",
+  "mane-dielectric-calibration-review-2024": "Mane, S., Das, N., Singh, G., Cosh, M., & Dong, Y. (2024). Advancements in dielectric soil moisture sensor calibration: A comprehensive review of methods and techniques. Computers and Electronics in Agriculture, 218, 108686.",
+  "koehler-transpiration-vpd-2023": "Koehler, T., Wankmüller, F. J. P., Sadok, W., & Carminati, A. (2023). Transpiration response to soil drying versus increasing vapor pressure deficit in crops: physical and physiological mechanisms and key plant traits. Journal of Experimental Botany, 74(16), 4789-4807.",
+  "owen-norden-preferential-flow-2024": "Owen, J., & Norden, D. (Profile Products). Understanding drainage in horticultural growing media. Greenhouse Management.",
+  "hydrus-soilless-substrate-dynamics": "International Society for Horticultural Science (ISHS). Utilizing the HYDRUS model as a tool for understanding soilless substrate water dynamics. Acta Horticulturae 1168."
+ },
+ "sections": [
+  {
+   "id": "what-this-is",
+   "kicker": "Start here",
+   "title": "What this is (and the problem it solves)",
+   "summary": "VRWE stands for Virtual Root-Zone Water Estimator: software that decides when and how much to water a plant by combining several signals instead of obeying one sensor. The catch it solves is that each pot has only one moisture sensor, and that sensor feels only a tiny spot of soil, about the volume of a soda can. If that spot happens to be dry, or water sneaks past it, the sensor screams 'I'm dry' and a dumb timer would believe it and drown the plant. VRWE treats the sensor as one opinion to double-check, not the boss.",
+   "points": [
+    "One moisture sensor reads only a soda-can-sized patch of the whole pot, so it is easy to fool",
+    "A timer-based system blindly trusts that one reading and can overwater or underwater",
+    "VRWE 'estimates' the real root-zone water rather than reading it directly from one probe",
+    "This paper is operational/product guidance for how the system behaves, not a lab study"
+   ],
+   "figures": [
+    {
+     "name": "see-think-do",
+     "kind": "flow",
+     "desc": "Three-box flow: SEE (one sensor, a tiny view that can lie) -> THINK (the brain does water-balance math) -> DO (water a bit / wait / ask a human). Mirrors the source's top-row diagram."
+    }
+   ],
+   "claims_needing_cite": [
+    "A single moisture sensor measures only a small localized volume of substrate (the 'soda-can' point — underlying sensor-physics claim worth a citation)"
+   ]
+  },
+  {
+   "id": "key-terms",
+   "kicker": "Vocabulary",
+   "title": "Key terms, defined once",
+   "summary": "A handful of words carry the whole idea, so we define them up front. VWC (volumetric water content) is just how wet the soil feels as measured by the sensor. Runoff (or drain) is water that comes out the bottom of the pot, and a 'full pot' (DUL, drained upper limit) is the most water the pot can hold after it has finished draining. Channeling is when water sneaks straight down a path and misses the roots, and confidence is how much the brain trusts its own current guess.",
+   "points": [
+    "VWC / sensor reading: how wet the soil feels at the sensor's spot",
+    "Runoff / drain: water leaving the bottom of the pot",
+    "Full pot (DUL): the most water the pot holds once it stops dripping",
+    "Channeling: water bypassing the roots straight to the drain",
+    "Confidence: the brain's self-rated trust in its own estimate right now"
+   ],
+   "figures": [
+    {
+     "name": "glossary-chips",
+     "kind": "table",
+     "desc": "Two-column table of the five core terms (VWC, runoff, full pot/DUL, channeling, confidence) with one-line plain-English definitions, matching the source's chip row."
+    }
+   ],
+   "claims_needing_cite": []
+  },
+  {
+   "id": "why-fuse",
+   "kicker": "Core idea 1",
+   "title": "Why fuse signals: the water bank account",
+   "summary": "Instead of believing one probe, VRWE keeps a checkbook for water. Money IN is the water the drippers squirted, which is known precisely because drippers are calibrated. Money OUT is what the plant drank (estimated from heat and light) plus what drained away. The running balance is the water really in the pot, and the sensor becomes just one statement the brain reconciles against the balance rather than the sole source of truth.",
+   "points": [
+    "IN = measured irrigation volume (drippers are precise, so the input is trustworthy)",
+    "OUT = plant uptake (estimated from temperature and light) + measured/estimated drainage",
+    "Balance = IN minus OUT minus drain = the estimated real root-zone water",
+    "Fusing several signals lets one wrong signal be outvoted instead of obeyed"
+   ],
+   "figures": [
+    {
+     "name": "water-balance",
+     "kind": "bars",
+     "desc": "A waterfall/bank-balance bar: starting balance + IN (irrigation) - drank (uptake) - drained (runoff) = ending balance, showing how the estimate is built each cycle."
+    },
+    {
+     "name": "signals-into-estimate",
+     "kind": "diagram",
+     "desc": "Several input arrows (irrigation volume, temp, light, sensor VWC, drain) feeding one combined 'estimate + confidence' box, illustrating sensor fusion."
+    }
+   ],
+   "claims_needing_cite": [
+    "Plant water uptake (transpiration) scales with heat and light — the science behind estimating 'drank' from temperature and light (cite plant-physiology / evapotranspiration basis)"
+   ]
+  },
+  {
+   "id": "trust-and-uncertainty",
+   "kicker": "Core idea 2",
+   "title": "How trust and uncertainty work",
+   "summary": "The brain carries a confidence meter alongside every estimate, answering 'how sure am I?'. When its independent signals agree, confidence is high; when they disagree (the sensor says dry but the bank balance says full), confidence drops. Crucially, a lying sensor can only make the system more cautious. It can never trick the brain into believing there is more room to add water than the balance allows, which is what protects the plant.",
+   "points": [
+    "Every estimate ships with a confidence level, not just a number",
+    "Agreement between independent signals raises confidence; disagreement lowers it",
+    "Low confidence triggers caution, not bold action",
+    "A faulty sensor biases toward 'wait', never toward flooding or starving"
+   ],
+   "figures": [
+    {
+     "name": "confidence-gauge",
+     "kind": "zones",
+     "desc": "A horizontal confidence meter split into zones (low/medium/high) with the action each zone unlocks: high = water, medium = small safe sip, low = wait or ask."
+    }
+   ],
+   "claims_needing_cite": []
+  },
+  {
+   "id": "what-it-decides",
+   "kicker": "Core idea 3",
+   "title": "What it actually decides",
+   "summary": "Decisions collapse to three outcomes driven by confidence and headroom. If the brain is confident and there is room to fill, it waters a bit. If it is not sure, it waits or gives a small safe sip rather than committing to a full shot. If it is genuinely stuck, it asks a human. The whole logic is bounded by one promise: never flood, never starve.",
+   "points": [
+    "Confident + room to fill -> water a measured amount",
+    "Unsure -> wait or deliver a small safe sip",
+    "Stuck -> escalate to a human instead of guessing",
+    "Every path obeys the bound: never flood the plant, never starve it"
+   ],
+   "figures": [
+    {
+     "name": "decision-tree",
+     "kind": "flow",
+     "desc": "Decision flow from the estimate+confidence: branch on 'confident & room?' -> water; 'unsure?' -> wait/small sip; 'stuck?' -> ask human, all converging on 'never flood / never starve'."
+    }
+   ],
+   "claims_needing_cite": []
+  },
+  {
+   "id": "shared-drain-howto",
+   "kicker": "In practice",
+   "title": "The shared-drain puzzle and how it is untangled",
+   "summary": "A real install often has three grow rooms draining into one shared sump, with the air conditioner and dehumidifier dripping into that same bucket, so when the pump flushes it is unclear who caused it. VRWE untangles this in three steps: at night, when nothing else runs, it learns the AC's steady background drip and subtracts it; it waters the rooms at staggered times so timing reveals which room flushed; and if it still cannot tell, it labels the reading 'not sure' rather than guessing. A flush right after a given room waters means that room is full or overflowing.",
+   "points": [
+    "Step 1: learn the AC/dehumidifier background drip at night, then subtract it",
+    "Step 2: water rooms at different times so flush timing identifies the source",
+    "Step 3: if attribution is ambiguous, mark it 'not sure' instead of guessing",
+    "Read-back: a flush right after a room waters = that room is full/overflowing"
+   ],
+   "figures": [
+    {
+     "name": "shared-drain",
+     "kind": "diagram",
+     "desc": "Three rooms plus AC/dehumidifier draining into one shared sump+pump, with a side panel listing the three untangling steps. Recreates the source's bottom 'shared-drain puzzle' diagram."
+    },
+    {
+     "name": "stagger-timeline",
+     "kind": "line",
+     "desc": "A timeline showing staggered irrigation events per room and the resulting drain spikes, so each flush lines up under the room that caused it."
+    }
+   ],
+   "claims_needing_cite": []
+  },
+  {
+   "id": "pitfalls",
+   "kicker": "Watch out",
+   "title": "Pitfalls and what fools a single sensor",
+   "summary": "The failure modes are exactly the situations VRWE is built to survive. The sensor sits in a dry pocket and reports dry while the pot is actually fine; water channels straight past the sensor and the roots to the drain, so a 'wet' input never reaches the plant; or the shared sump masks who really overflowed. The defense in every case is the same: cross-check against the water balance and drop confidence rather than acting on a lone suspicious reading.",
+   "points": [
+    "Dry-pocket sensor: local dry spot reads dry while the pot is fine",
+    "Channeling: water races to the drain, missing both sensor and roots",
+    "Shared-drain ambiguity: one bucket hides which room overflowed",
+    "Defense: reconcile against the balance and lower confidence, do not obey blindly"
+   ],
+   "figures": [
+    {
+     "name": "channeling",
+     "kind": "diagram",
+     "desc": "Cross-section of a pot showing a channeling path where water shoots down one side past the sensor and roots straight to the drain."
+    }
+   ],
+   "claims_needing_cite": [
+    "Preferential flow / channeling can route irrigation past the root zone in container substrate (cite substrate-hydrology source)"
+   ]
+  },
+  {
+   "id": "expectations",
+   "kicker": "Reality check",
+   "title": "Realistic expectations",
+   "summary": "VRWE is a safety-first estimator, not a mind reader. Its core guarantee is conservative: it only waters more when confident, and when confused it does the safe thing, so a bad sensor makes it cautious rather than catastrophic. Expect it to occasionally pause or ask for help instead of charging ahead, and understand that the estimate is only as good as the inputs feeding the bank account, accurate dripper volumes and a learned drain baseline matter.",
+   "points": [
+    "The golden rule: water more only when confident; otherwise do the safe thing",
+    "Worst case from a bad sensor is over-caution, not flooding or starving",
+    "Expect occasional 'wait' or 'ask a human' outcomes by design",
+    "Accuracy depends on calibrated inputs (dripper volume, learned AC drip baseline)"
+   ],
+   "figures": [
+    {
+     "name": "safe-vs-risky",
+     "kind": "table",
+     "desc": "Two-column comparison: a dumb timer (obeys one sensor, can flood/starve) vs VRWE (fuses signals, fails safe), highlighting the bounded behavior."
+    }
+   ],
+   "claims_needing_cite": []
+  }
+ ]
+}

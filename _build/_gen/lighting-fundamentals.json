@@ -1,0 +1,274 @@
+{
+ "slug": "lighting-fundamentals",
+ "title": "Lighting: spectrum, PPFD and DLI",
+ "eyebrow": "Beginner · Light",
+ "kind": "research",
+ "sub": "A from-zero guide to how grow light actually works — what to measure, what to aim for at each stage, and how to avoid cooking your plants",
+ "reading_min": 14,
+ "related": [
+  "light-acclimation",
+  "cloning",
+  "flowering-stages"
+ ],
+ "ref_ids": [
+  "rodriguez-morrison-2021-light-levels-yield-photosynthesis",
+  "llewellyn-2022-light-intensity-proportional-uv-no-effect",
+  "magagnini-2018-light-spectrum-morphology-cannabinoids",
+  "kusuma-2021-nir-leds-delay-flowering-phytochrome",
+  "eichhorn-bilodeau-2019-photobiology-cannabis-review",
+  "nelson-bugbee-2014-efficacy-led-vs-hps",
+  "westmoreland-2021-blue-fraction-efficacy-cannabis",
+  "chandra-2008-photosynthetic-response-ppfd-co2-temp",
+  "kotiranta-2024-high-light-specialized-metabolites-cannabis"
+ ],
+ "ref_lookup": {
+  "rodriguez-morrison-2021-light-levels-yield-photosynthesis": "Rodriguez-Morrison, V., Llewellyn, D., & Zheng, Y. (2021). Cannabis Yield, Potency, and Leaf Photosynthesis Respond Differently to Increasing Light Levels in an Indoor Environment. Frontiers in Plant Science, 12, 646020.",
+  "llewellyn-2022-light-intensity-proportional-uv-no-effect": "Llewellyn, D., Golem, S., Foley, E., Dinka, S., Jones, A.M.P., & Zheng, Y. (2022). Indoor grown cannabis yield increased proportionally with light intensity, but ultraviolet radiation did not affect yield or cannabinoid content. Frontiers in Plant Science, 13, 974018.",
+  "magagnini-2018-light-spectrum-morphology-cannabinoids": "Magagnini, G., Grassi, G., & Kotiranta, S. (2018). The Effect of Light Spectrum on the Morphology and Cannabinoid Content of Cannabis sativa L. Medical Cannabis and Cannabinoids, 1(1), 19-27.",
+  "kusuma-2021-nir-leds-delay-flowering-phytochrome": "Kusuma, P., Westmoreland, F.M., Zhen, S., & Bugbee, B. (2021). Photons from NIR LEDs can delay flowering in short-day soybean and Cannabis: Implications for phytochrome activity. PLOS ONE, 16(7), e0255232.",
+  "eichhorn-bilodeau-2019-photobiology-cannabis-review": "Eichhorn Bilodeau, S., Wu, B.-S., Rufyikiri, A.-S., MacPherson, S., & Lefsrud, M. (2019). An Update on Plant Photobiology and Implications for Cannabis Production. Frontiers in Plant Science, 10, 296.",
+  "nelson-bugbee-2014-efficacy-led-vs-hps": "Nelson, J.A., & Bugbee, B. (2014). Economic Analysis of Greenhouse Lighting: Light Emitting Diodes vs. High Intensity Discharge Fixtures. PLOS ONE, 9(6), e99010.",
+  "westmoreland-2021-blue-fraction-efficacy-cannabis": "Westmoreland, F.M., Kusuma, P., & Bugbee, B. (2021). Cannabis lighting: Decreasing blue photon fraction increases yield but efficacy is more important for cost effective production of cannabinoids. PLOS ONE, 16(3), e0248988.",
+  "chandra-2008-photosynthetic-response-ppfd-co2-temp": "Chandra, S., Lata, H., Khan, I.A., & ElSohly, M.A. (2008). Photosynthetic response of Cannabis sativa L. to variations in photosynthetic photon flux densities, temperature and CO2 conditions. Physiology and Molecular Biology of Plants, 14(4), 299-306.",
+  "kotiranta-2024-high-light-specialized-metabolites-cannabis": "Kotiranta, S., Pihlava, J.-M., Kotilainen, T., & Palonen, P. (2024). High light intensity improves yield of specialized metabolites in medicinal cannabis (Cannabis sativa L.), resulting from both higher inflorescence mass and concentrations of metabolites. Industrial Crops and Products, 211, 118210."
+ },
+ "sections": [
+  {
+   "id": "intro",
+   "kicker": "Start here",
+   "title": "What this is (and why light is the engine)",
+   "summary": "Light is not just \"on or off\" — it is the raw fuel a plant turns into sugar, and the single biggest lever on yield and quality you control indoors. This paper assumes you know nothing: it defines every term, gives concrete numbers to aim for at each growth stage, and explains the one switch (the photoperiod flip) that makes a plant flower. Its sister paper covers light acclimation (slowly ramping intensity so plants adapt); this one covers what the numbers mean and what to target.",
+   "points": [
+    "Plants eat light: photosynthesis converts light energy plus CO2 and water into sugar, so more usable light (up to a limit) means more growth.",
+    "The three numbers that matter most are PPFD (how bright, right now), DLI (how much total light per day), and spectrum (the color mix).",
+    "Every term is defined the first time it appears — no prior knowledge assumed.",
+    "This complements the light-acclimation paper: read this for targets, read that for how to ramp up to them safely."
+   ],
+   "figures": [
+    {
+     "name": "light_to_growth_flow",
+     "kind": "flow",
+     "desc": "Simple arrow flow: Light (photons) + CO2 + Water -> Photosynthesis in leaf -> Sugars -> Growth/buds. A side note shows the limiting-factor idea: if CO2, water, or nutrients run short, extra light stops helping."
+    }
+   ]
+  },
+  {
+   "id": "key-terms",
+   "kicker": "The vocabulary",
+   "title": "PAR, PPFD, DLI and umol/J in plain English",
+   "summary": "PAR (Photosynthetically Active Radiation) is the slice of light (400-700 nm) plants can use for photosynthesis; lumens and watts do not measure this, which is why a bright-looking bulb can be useless. PPFD (Photosynthetic Photon Flux Density) measures how many of those usable photons land on one square meter each second, in micromoles (umol/m2/s) — this is \"how bright\" at the canopy. DLI (Daily Light Integral) is the total photons delivered over a whole day, in moles per square meter (mol/m2/day), and is the number that actually drives yield: DLI = PPFD x seconds of light per day / 1,000,000. Efficacy (umol/J) tells you how many usable photons a fixture makes per joule of electricity — the headline efficiency number when shopping.",
+   "points": [
+    "PAR = the usable 400-700 nm band; lumens/watts do NOT tell you PAR, so ignore them for plants.",
+    "PPFD = instantaneous intensity at the canopy (umol/m2/s); measure it with a quantum/PAR meter, not a phone lux app.",
+    "DLI = the daily dose (mol/m2/day) = PPFD x photoperiod-seconds / 1,000,000; e.g. 600 PPFD at 18 h = ~38.9 mol.",
+    "Efficacy = umol/J = fixture output efficiency; higher means more light per dollar of power.",
+    "Photoperiod = hours of light per 24 h (e.g. 18/6 means 18 on, 6 off)."
+   ],
+   "figures": [
+    {
+     "name": "ppfd_vs_dli_table",
+     "kind": "table",
+     "desc": "Two-column worked example table: given PPFD and photoperiod, compute DLI. Rows: 200 PPFD x 18h = 13.0 mol; 400 x 18h = 25.9 mol; 600 x 12h = 25.9 mol; 800 x 12h = 34.6 mol; 900 x 12h = 38.9 mol. Shows the same DLI can come from different PPFD/hour combos."
+    },
+    {
+     "name": "par_band_diagram",
+     "kind": "diagram",
+     "desc": "Labeled spectrum bar from UV (under 400 nm) through blue/green/red PAR band (400-700) to far-red (700-750) and infrared, shading the 400-700 PAR window and marking where lumens/lux instead peak (green, ~555 nm)."
+    }
+   ],
+   "claims_needing_cite": [
+    "PAR is defined as the 400-700 nm waveband",
+    "DLI = PPFD x seconds of light per day / 1,000,000"
+   ]
+  },
+  {
+   "id": "spectrum",
+   "kicker": "Core concept 1",
+   "title": "Spectrum: what each color does",
+   "summary": "Blue light (roughly 400-500 nm) keeps plants compact with tight internode spacing and is associated with denser growth and resin in flower; red light (600-700 nm) is the most photosynthetically efficient and drives flowering and stretch. \"Full-spectrum white\" LEDs are rated by color temperature in Kelvin — higher-K/bluer (e.g. 4000-6500K) suits veg, lower-K/redder (e.g. 3000-3500K) suits flower — but a good broad white spectrum works fine across both stages for beginners. The practical takeaway: do not over-optimize spectrum early; intensity (PPFD/DLI) matters far more for yield than chasing a perfect color recipe.",
+   "points": [
+    "Blue (400-500 nm): compact growth, tight internodes, thicker leaves — useful in veg.",
+    "Red (600-700 nm): highest photosynthetic efficiency, drives flowering and stem stretch.",
+    "Kelvin is a shorthand for white-LED color mix: ~4000-6500K bluer (veg-leaning), ~3000-3500K redder (flower-leaning).",
+    "Green light is not wasted — it penetrates deeper into the canopy than people assume, but is a minor lever.",
+    "Beginner rule: a quality full-spectrum white LED covers veg and flower; intensity beats spectrum tuning."
+   ],
+   "figures": [
+    {
+     "name": "spectrum_role_table",
+     "kind": "table",
+     "desc": "Table: wavelength band | name | main effect | when it matters. Rows for UV (280-400), Blue (400-500), Green (500-600), Red (600-700), Far-red (700-750)."
+    }
+   ],
+   "claims_needing_cite": [
+    "Blue light promotes compact growth and tighter internodes",
+    "Red light (600-700 nm) is the most photosynthetically efficient band for driving flowering"
+   ]
+  },
+  {
+   "id": "intensity-dli",
+   "kicker": "Core concept 2",
+   "title": "Intensity and the daily dose — targets by stage",
+   "summary": "Young tissue cannot process intense light, so targets climb as the plant matures: clones/seedlings want ~100-300 PPFD (DLI ~10-15 mol), early-to-late veg ~300-600 PPFD (DLI ~20-35 mol), and flower ~700-900 PPFD without added CO2 (DLI ~30-45 mol). Pushing past ~900 PPFD only pays off if you also raise CO2 to 1000-1200 ppm and tighten temperature and humidity — otherwise extra light just causes stress and bleaching. Because DLI bundles intensity and hours together, you can hit the same daily dose with lower PPFD over more hours (common in veg at 18/6) or higher PPFD over fewer hours (flower at 12/12).",
+   "points": [
+    "Clone/seedling: ~100-300 PPFD, DLI ~10-15 mol/m2/day, typically 18 h of light.",
+    "Veg: ~300-450 PPFD early, ~450-600 PPFD late; DLI ~20-35 mol at 18/6.",
+    "Flower (no CO2): ~700-900 PPFD, DLI ~30-45 mol at 12/12 — the practical ceiling for most rooms.",
+    "Flower (with CO2 1000-1200 ppm, tight climate): ~1000-1400 PPFD, DLI ~40-60 mol — advanced only.",
+    "Same DLI, different paths: 600 PPFD x 18 h (veg) ~= 800 PPFD x 12 h (flower) in total dose."
+   ],
+   "figures": [
+    {
+     "name": "ppfd_dli_by_stage_zones",
+     "kind": "zones",
+     "desc": "Horizontal stage timeline (clone -> early veg -> late veg -> flower) with stacked PPFD and DLI target bands per stage, plus a shaded 'CO2-only' high zone above 900 PPFD marked as advanced/risky without climate control."
+    },
+    {
+     "name": "dli_curve_line",
+     "kind": "line",
+     "desc": "Line chart of yield/growth response vs DLI showing rising returns that flatten then bend down (light saturation, then stress/bleaching) — with a marker where added CO2 shifts the saturation point right."
+    }
+   ],
+   "claims_needing_cite": [
+    "Clones/seedlings target ~100-300 PPFD and DLI ~10-15 mol/m2/day",
+    "Flower without supplemental CO2 targets ~700-900 PPFD / DLI ~30-45 mol",
+    "With CO2 at 1000-1200 ppm, flowering PPFD of ~1000-1400 becomes usable"
+   ]
+  },
+  {
+   "id": "photoperiod-flip",
+   "kicker": "Core concept 3",
+   "title": "The photoperiod flip that triggers flowering",
+   "summary": "Photoperiod-type cannabis stays vegetative under long days (commonly 18/6) and is forced to flower by switching to 12 hours light / 12 hours uninterrupted dark — \"the flip.\" The plant does not count light hours; it measures the length of the unbroken dark period using a pigment called phytochrome, which flips between an active (Pfr) and inactive (Pr) form, and once nights are long enough it produces a flowering signal (florigen) in the leaves. This is why light leaks matter enormously: even a phone screen, an indicator LED, or a pinhole in a tent during lights-off can reset phytochrome and stall or revert flowering, cause re-vegging, or trigger hermaphrodites. Far-red and red wavelengths are exactly what phytochrome senses, so seal the room light-tight during the dark period.",
+   "points": [
+    "Veg stays under long days (18/6 or 20/4); flower is induced by switching to 12/12.",
+    "Plants sense the DARK period length, not the light hours — via the phytochrome pigment (Pr/Pfr).",
+    "Long enough night -> florigen signal made in leaves -> growing tips switch from leaf to bud production.",
+    "Light leaks during dark = the #1 beginner flowering failure: stalled bloom, re-veg, or hermaphrodites.",
+    "Seal pinholes, cover indicator LEDs, use light-proof ducting — if you can see in the dark, so can the plant."
+   ],
+   "figures": [
+    {
+     "name": "phytochrome_cycle_flow",
+     "kind": "flow",
+     "desc": "Cycle diagram: lights ON -> Pr converts to active Pfr ('it's day'); lights OFF -> Pfr slowly reverts to Pr; if dark period long enough -> florigen produced -> meristems switch to flowering. A red 'light leak' arrow re-converts Pr->Pfr and breaks the cycle."
+    }
+   ],
+   "claims_needing_cite": [
+    "Cannabis is induced to flower by a 12/12 light/dark schedule",
+    "Plants measure uninterrupted dark-period length via phytochrome (Pr/Pfr), not light hours",
+    "Light leaks during the dark period can cause re-vegging, stalled flowering, or hermaphroditism"
+   ]
+  },
+  {
+   "id": "fixtures",
+   "kicker": "The hardware",
+   "title": "LED vs HPS vs CMH, and reading efficacy (umol/J)",
+   "summary": "Modern LED is the efficiency leader at roughly 2.7-3.0 umol/J for good fixtures (budget units 2.0-2.3), runs cooler, and lasts longer; HPS (high-pressure sodium) sits around 1.7-1.9 umol/J and runs hot but is cheap to buy; CMH/LEC (ceramic metal halide) lands lower (~1.3-1.9 umol/J) but has a pleasant broad spectrum. Efficacy (umol/J) is the number to compare: a 3.0 umol/J LED makes ~60% more usable light than a ~1.85 umol/J double-ended HPS for the same power bill. For beginners, a reputable full-spectrum LED with a published PPFD map and efficacy at or above ~2.5 umol/J is the safe default; ignore inflated \"equivalent watt\" marketing and look at actual PPF (total umol/s) and coverage.",
+   "points": [
+    "LED: ~2.7-3.0 umol/J (good) / 2.0-2.3 (budget); cool-running, long-lived, dimmable — default choice.",
+    "HPS: ~1.7-1.9 umol/J; cheap upfront, lots of heat, red-heavy spectrum; double-ended 1000W ~1.85 umol/J.",
+    "CMH/LEC: ~1.3-1.9 umol/J; broad natural spectrum incl. some UV, lower efficiency.",
+    "Compare on efficacy (umol/J) and total PPF (umol/s) + a real PPFD map — NOT lumens or 'equivalent watts'.",
+    "A 3.0 umol/J LED yields ~60% more usable photons per watt than typical HPS."
+   ],
+   "figures": [
+    {
+     "name": "efficacy_bars",
+     "kind": "bars",
+     "desc": "Bar chart of efficacy (umol/J) by fixture type: budget LED 2.1, good LED 2.85, HPS DE 1.85, HPS SE 1.7, CMH 1.5 — with a horizontal 'good buy' threshold line at ~2.5."
+    },
+    {
+     "name": "fixture_tradeoff_table",
+     "kind": "table",
+     "desc": "Comparison table: type | efficacy umol/J | heat output | upfront cost | spectrum notes | best for. Rows for LED, HPS, CMH."
+    }
+   ],
+   "claims_needing_cite": [
+    "Good LED fixtures achieve ~2.7-3.0 umol/J; budget LEDs ~2.0-2.3",
+    "Double-ended HPS achieves ~1.85 umol/J, single-ended ~1.7 umol/J",
+    "CMH achieves roughly 1.3-1.9 umol/J",
+    "A ~3.0 umol/J LED produces about 60% more usable light per watt than typical HPS"
+   ]
+  },
+  {
+   "id": "setup-by-stage",
+   "kicker": "Do this",
+   "title": "Hanging height, coverage, and a stage-by-stage setup",
+   "summary": "Light obeys the inverse-square law — roughly doubling the distance from canopy cuts PPFD by about 75% — so height is your coarse intensity dial: hang ~24 in for seedlings/clones, ~18 in for veg, and ~12-16 in for flower, then fine-tune with the dimmer and a PAR meter. Verify coverage by taking PPFD readings at nine points (four corners, four edge-midpoints, center) and aim for a min-to-average ratio above 0.75 so edge plants are not starved while the center bleaches. Hanging higher trades peak intensity for more even spread, so use a manufacturer PPFD map as your starting point and confirm with real readings at canopy height.",
+   "points": [
+    "Inverse-square law: doubling fixture-to-canopy distance drops PPFD ~75% — height is the coarse dial, dimmer is fine.",
+    "Start heights: ~24 in seedling/clone, ~18 in veg, ~12-16 in flower (adjust to your fixture's PPFD map).",
+    "Measure a 9-point grid (corners + edge mids + center); target min-to-average uniformity > 0.75.",
+    "Higher hang = more uniform but lower peak; lower hang = hotter center, weak edges.",
+    "Pair with the light-acclimation paper: ramp dimmer/height up over days rather than slamming to full."
+   ],
+   "figures": [
+    {
+     "name": "ppfd_grid_diagram",
+     "kind": "diagram",
+     "desc": "Top-down 3x3 grid over a canopy showing 9 measurement points with example PPFD values, computing average and min/avg ratio, flagging a low corner."
+    },
+    {
+     "name": "height_by_stage_table",
+     "kind": "table",
+     "desc": "Table: stage | hang height | target PPFD | photoperiod | notes. Rows clone/seedling, veg, flower."
+    }
+   ],
+   "claims_needing_cite": [
+    "Doubling fixture-to-canopy distance reduces PPFD by approximately 75% (inverse-square law)",
+    "Recommended hang heights ~24 in seedling, ~18 in veg, ~12-16 in flower",
+    "A 9-point PPFD grid with min-to-average ratio above 0.75 indicates acceptable uniformity"
+   ]
+  },
+  {
+   "id": "pitfalls",
+   "kicker": "When it goes wrong",
+   "title": "Light stress, far-red and UV, and common mistakes",
+   "summary": "Too much light shows as bleaching (white/yellow bud tips directly under the fixture), upward-cupping or \"taco\" leaves, and faded color even when nutrients are fine — the fix is to dim or raise the light, not feed more. Far-red (~730 nm) can speed the transition to dark via the phytochrome system and slightly stretch plants, while UV-B in the final 1-2 weeks is a popular potency play, but evidence that UV-B reliably raises cannabinoids or yield is mixed and it carries real eye/skin and plant-stress risks, so it is optional and advanced. The biggest avoidable errors are jumping a clone straight to flower-level PPFD, trusting lux/wattage instead of a PAR meter, and ignoring light leaks during the dark period.",
+   "points": [
+    "Light-stress signs: bleached/white tops under the fixture, taco/cupping leaves, washed-out color — dim or raise, don't feed.",
+    "Far-red (~730 nm): can shorten perceived night and add stretch; high far-red can loosen bud density.",
+    "UV-B end-of-flower: popular for trichomes but benefit is unproven/inconsistent and it's a real safety hazard — optional.",
+    "Top beginner mistakes: clone slammed to full PPFD, measuring with lux/phone, and unsealed light leaks.",
+    "Heat from the fixture (esp. HPS) can scorch tops even when PPFD is fine — watch leaf-surface temperature."
+   ],
+   "figures": [
+    {
+     "name": "light_stress_table",
+     "kind": "table",
+     "desc": "Symptom -> likely cause -> fix table: bleached tops/too much PPFD/raise or dim; taco leaves/light+heat stress/raise light, check temp; stretchy pale growth/too little light or too far/lower or boost; stalled flowering/light leak/seal room."
+    }
+   ],
+   "claims_needing_cite": [
+    "Light bleaching presents as white/yellow bud tips directly beneath the fixture",
+    "Far-red ~730 nm accelerates the dark-period response and can increase stem elongation",
+    "Evidence that end-of-flower UV-B reliably increases cannabinoids or yield is inconsistent"
+   ]
+  },
+  {
+   "id": "expectations",
+   "kicker": "Reality check",
+   "title": "Realistic expectations",
+   "summary": "More light only helps up to the point where something else (CO2, water, nutrients, temperature, or genetics) becomes the limiting factor — past saturation you pay for electricity and heat with no extra yield, and eventually with stress. A well-run room without CO2 realistically tops out around 700-900 PPFD / DLI ~35-45 mol in flower; chasing the 1000-1400 PPFD numbers means committing to CO2 enrichment, serious cooling, and dialed humidity, which is a different (and costlier) operation. Buy fixtures on efficacy and a real PPFD map, hit the stage targets, seal your dark period, and you have removed lighting as a bottleneck — the rest is climate, feed, and genetics.",
+   "points": [
+    "Light has diminishing returns: beyond saturation, extra PPFD adds heat and cost, not yield.",
+    "Without CO2, ~700-900 PPFD / ~35-45 mol DLI in flower is a sensible practical ceiling.",
+    "The 1000-1400 PPFD regime requires CO2 + cooling + humidity control — a whole-room commitment, not just a brighter light.",
+    "Spectrum tweaks (far-red, UV) are fine-tuning, not the main lever — nail intensity, dose, and photoperiod first.",
+    "Get efficacy + PPFD map right, hit stage targets, seal light leaks: lighting stops being your limiting factor."
+   ],
+   "figures": [
+    {
+     "name": "limiting_factor_bars",
+     "kind": "bars",
+     "desc": "Conceptual 'barrel stave' / bar chart showing yield capped by the shortest input (light, CO2, water, nutrients, temp, genetics) — illustrating that boosting light past the others' level wastes effort."
+    }
+   ],
+   "claims_needing_cite": [
+    "Plant response to light saturates, after which added intensity yields no extra growth and may cause stress",
+    "Without supplemental CO2, flowering benefits plateau around 700-900 PPFD"
+   ]
+  }
+ ]
+}

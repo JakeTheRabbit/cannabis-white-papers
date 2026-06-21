@@ -1,0 +1,249 @@
+{
+ "slug": "cloning",
+ "title": "Cloning: cuttings that root every time",
+ "eyebrow": "Propagation · Cloning",
+ "kind": "research",
+ "sub": "A beginner's guide to taking cannabis cuttings and rooting them reliably — from picking a mother plant to a transplant-ready clone in 14 days.",
+ "reading_min": 12,
+ "related": [
+  "light-acclimation",
+  "ipm-sop",
+  "tissue-culture"
+ ],
+ "ref_ids": [
+  "caplan-2018-stem-cuttings",
+  "esposito-2026-morphology-predictors",
+  "kim-2025-light-temp-rh",
+  "landis-2022-iba-hemp-i3",
+  "fattorini-2017-iba-to-iaa",
+  "olympios-rootzone-temp",
+  "punja-2023-fusarium-pythium-biocontrol",
+  "msu-moisture-propagation",
+  "liu-2023-shade-highlight-acclimation"
+ ],
+ "ref_lookup": {
+  "caplan-2018-stem-cuttings": "Caplan, D., Stemeroff, J., Dixon, M., & Zheng, Y. (2018). Vegetative propagation of cannabis by stem cuttings: effects of leaf number, cutting position, rooting hormone, and leaf tip removal. Canadian Journal of Plant Science, 98(5), 1126-1132.",
+  "esposito-2026-morphology-predictors": "Esposito, L.G.A., et al. (2026). Analysis of Marijuana (Cannabis sativa L.) Cuttings: Morphological and Colorimetric Traits as Predictors for Optimization of Vegetative Reproduction. Plants, 15(3), 440.",
+  "kim-2025-light-temp-rh": "Kim, B., Hahm, S., Lee, Y.J., Bok, G., & Park, J. (2025). Light, Temperature, and Relative Humidity Influence the Adventitious Rooting of Cannabis Stem Cuttings. Horticultural Science and Technology, 43(4), 480-493.",
+  "landis-2022-iba-hemp-i3": "Landis, H., et al. (2022). Impact of Indole-3-butyric Acid Concentration and Formulation and Propagation Environment on Rooting Success of 'I3' Hemp by Stem Cuttings. HortTechnology, 32(3), 321-330.",
+  "fattorini-2017-iba-to-iaa": "Fattorini, L., Veloccia, A., Della Rovere, F., D'Angeli, S., Falasca, G., & Altamura, M.M. (2017). Indole-3-butyric acid promotes adventitious rooting in Arabidopsis thaliana thin cell layers by conversion into indole-3-acetic acid and stimulation of anthranilate synthase activity. BMC Plant Biology, 17, 121.",
+  "olympios-rootzone-temp": "Lopez, R.G., & Runkle, E.S. (2008). Photosynthetic daily light integral during propagation influences rooting and growth of cuttings and subsequent development. HortScience, 43(7), 2052-2059.",
+  "punja-2023-fusarium-pythium-biocontrol": "Punja, Z.K., Tirajoh, A., Collyer, D., & Ni, L. (2023). Biological control of Fusarium oxysporum causing damping-off and Pythium myriotylum causing root and crown rot on cannabis (Cannabis sativa L.) plants. Canadian Journal of Plant Pathology, 45(3), 245-264.",
+  "msu-moisture-propagation": "Lopez, R.G. & Currey, C.J. (Michigan State University Extension). Moisture management during vegetative cutting propagation. MSU Extension / Greenhouse floriculture.",
+  "liu-2023-shade-highlight-acclimation": "Liu, Y., et al. (2023). Photosynthetic Acclimation of Shade-Grown Soybean Seedlings to a High-Light Environment. Plants/Frontiers in Plant Science (shade-to-high-light photoinhibition study)."
+ },
+ "sections": [
+  {
+   "id": "intro",
+   "kicker": "Start here",
+   "title": "What cloning is and why growers do it",
+   "summary": "A clone is a cutting taken from a living plant that grows its own roots and becomes a new, genetically identical plant. Growers clone instead of using seeds so every plant in a batch is the same as a known, proven mother — same growth speed, same yield, same chemistry — which makes the whole grow predictable. A well-run propagation room turns out clones at 90 to 95 percent or better success, with cuttings rooted and ready to transplant in 10 to 14 days. This guide assumes you have never taken a cutting before and defines every term as it appears.",
+   "points": [
+    "A clone = a cutting that grows roots; it is genetically identical to the plant it came from (the 'mother').",
+    "Cloning gives a uniform batch: same genetics means same timing and behavior, which is why commercial grows rely on it.",
+    "Target outcome: 90–95%+ of cuttings root, in 10–14 days, ready to transplant.",
+    "No flowers or seeds are involved — you are rooting a stem, not germinating a seed."
+   ],
+   "figures": [
+    {
+     "name": "clone_lifecycle",
+     "kind": "flow",
+     "desc": "Simple left-to-right flow: Mother plant → take cutting → stick in cube under dome → roots emerge (day 7–14) → transplant. One box per stage with day labels."
+    }
+   ],
+   "claims_needing_cite": [
+    "Rooting success target of 90–95% or higher",
+    "Time to roots of 10–14 days"
+   ]
+  },
+  {
+   "id": "key-terms",
+   "kicker": "Vocabulary",
+   "title": "The words you need before you start",
+   "summary": "Cloning has its own jargon, and most beginner mistakes come from not knowing what a term means. A 'node' is the point on a stem where leaves and side-shoots grow — your cutting and your rooting depend on nodes. A 'mother' is a plant kept permanently in growth (never flowered) purely to supply cuttings. The 'dome' is the clear plastic lid that traps humidity over the tray; 'burping' means lifting it briefly to swap stale air. Learn these and the step-by-step section will read plainly.",
+   "points": [
+    "Node: the bump on a stem where leaves/branches attach — roots and new growth come from here.",
+    "Mother plant: a plant kept in vegetative growth indefinitely to harvest cuttings from.",
+    "Cutting / clone: the severed shoot you are rooting (the terms get used interchangeably).",
+    "Rooting cube: the rockwool or peat plug the cutting sits in while it roots.",
+    "Dome: clear humidity lid over the tray. Burping: briefly lifting it to exchange air.",
+    "Hardening off: gradually opening vents/removing the dome to acclimate clones to room air before transplant."
+   ],
+   "figures": [
+    {
+     "name": "cutting_anatomy",
+     "kind": "diagram",
+     "desc": "Labelled side-view of a prepared cutting: node, internode, 45° basal cut, lower leaves removed, fan leaf tips trimmed to ~50–70%, stem inserted 1.5–2.5 cm into cube."
+    }
+   ],
+   "claims_needing_cite": []
+  },
+  {
+   "id": "mother-and-cut",
+   "kicker": "The how/why",
+   "title": "Choosing a mother and making the cut",
+   "summary": "A good clone starts with a good shoot: pick upright shoots from the upper-to-mid canopy that are at least 3 mm thick and 15 cm long. The day before, water the mother with half-strength nutrients — this lowers leaf turgor so stems are less brittle and snap less when cut. Take cuttings at the start of the light cycle with a sterile blade, making a clean 45-degree cut just below a node, and drop each cutting straight into a holding jug of dilute solution so the cut end never sits in air. Sterilize the blade between mother plants to avoid carrying disease from one to the next.",
+   "points": [
+    "Select shoots: upright, ≥3 mm diameter, ≥15 cm long, from the upper-to-mid canopy.",
+    "Day -1: feed the mother HALF-strength nutrients so stems are less brittle and cut cleaner.",
+    "Cut at a 45° angle just below a node, with a sterile scalpel, at the start of the light period.",
+    "A 45° cut exposes more surface area (more cells that can form roots) than a flat cut.",
+    "Place the cut end straight into a holding jug — air drawn into the stem ('air embolism') blocks water uptake."
+   ],
+   "figures": [
+    {
+     "name": "shoot_selection",
+     "kind": "diagram",
+     "desc": "Mother bush from the side with a green-highlighted zone (upper-mid canopy) marking good shoots and greyed-out zones (lower, weak interior) marking poor ones; callout for the 45° cut below a node."
+    }
+   ],
+   "claims_needing_cite": [
+    "Shoot selection spec: ≥3 mm diameter, ≥15 cm long",
+    "Half-strength feed the day before reduces stem brittleness"
+   ]
+  },
+  {
+   "id": "hormone-and-cube",
+   "kicker": "The how/why",
+   "title": "Rooting hormone and the cube",
+   "summary": "Cuttings have no roots yet, so a rooting hormone is used to push the stem to make them. The active ingredient is usually IBA (indole-3-butyric acid), a synthetic version of a natural plant root hormone, sold as a gel or a liquid. Right before sticking, make a fresh 45° cut to expose new tissue, then coat the bottom 1–2 cm of stem in rooting gel and insert it 1.5–2.5 cm into a pre-soaked cube — firm enough that the cube lifts with the stem, but not crushing it. The cube (rockwool or a peat plug) is soaked in clone feed first so the stem sits in a moist, oxygen-rich medium from second one.",
+   "points": [
+    "Rooting hormone = IBA (indole-3-butyric acid), a synthetic auxin that triggers root formation; comes as gel or liquid.",
+    "Gel: dip the cut end ~0.5 in (the lower 1–2 cm). Liquid/alcohol-based dip: soak the cut end ~30 seconds.",
+    "Pre-soak rockwool or peat cubes in clone feed for ≥15 minutes; drain freely, do NOT squeeze them out.",
+    "Stick the stem 1.5–2.5 cm deep; test by lifting the clone — the cube should come up with it.",
+    "Speed matters: keep final cut to sticking under ~30 seconds to avoid air entering the stem."
+   ],
+   "figures": [
+    {
+     "name": "stick_depth",
+     "kind": "diagram",
+     "desc": "Cross-section of a soaked cube with a cutting inserted 1.5–2.5 cm deep, gel coating the lower 1–2 cm of stem, and an arrow showing the 'lift test' (cube rises with the stem)."
+    }
+   ],
+   "claims_needing_cite": [
+    "Active rooting hormone is typically IBA (indole-3-butyric acid)",
+    "Stick depth 1.5–2.5 cm; gel on lower 1–2 cm",
+    "Cube pre-soak ≥15 minutes, drain not squeeze"
+   ]
+  },
+  {
+   "id": "dome-environment",
+   "kicker": "The how/why",
+   "title": "Dome, humidity, temperature and light",
+   "summary": "A cutting with no roots cannot pull water up, so it survives on humidity until roots form — that is the whole point of the dome. Keep the air around 24–26°C and start with very high humidity (85–95% RH) inside a closed dome, then step it down as roots develop. Light should be gentle: 60–100 PPFD at the dome lid in the first days, rising to 150–200 by hardening — measured WITH the dome in place, because the plastic cuts the light reaching the cutting. A heat mat under the tray keeps the root zone warm (cube temp 22–24°C); roots form faster in warm media than warm air.",
+   "points": [
+    "High humidity replaces the water the rootless cutting can't draw up — dome RH starts at 85–95%.",
+    "Air temp 24–26°C throughout; heat mat keeps the CUBE at 22–24°C (warm root zone speeds rooting).",
+    "Light is low and rises by phase: ~60–100 PPFD early → 150–200 PPFD by hardening, measured at the lid with the dome on.",
+    "Humidity steps DOWN over the run: 85–95% (days 1–4) → 80–85% → 70–80% → 65–75% (days 11–14).",
+    "Air movement in the room is good, but never aim a fan directly at un-rooted clones — it dries them out."
+   ],
+   "figures": [
+    {
+     "name": "phase_targets",
+     "kind": "table",
+     "desc": "Four-phase table from the SOP: Initial Healing (d1–4, 85–95% RH, 0.3–0.5 kPa VPD, 60–100 PPFD), Early Rooting (d5–7, 80–85%, 0.5–0.7, 80–120), Mid Rooting (d8–10, 70–80%, 0.6–0.8, 100–150), Hardening (d11–14, 65–75%, 0.8–1.0, 150–200); all at 24–26°C."
+    },
+    {
+     "name": "rh_stepdown",
+     "kind": "line",
+     "desc": "Line chart of dome RH dropping across days 1–14 from ~90% to ~70%, with vent-state band annotations (closed → burp → 25–50% open → 50–100% open)."
+    }
+   ],
+   "claims_needing_cite": [
+    "Phase environmental targets (RH, VPD, PPFD, temp) by day range",
+    "Cube/root-zone temperature target 22–24°C",
+    "Measure PPFD with the dome in place"
+   ]
+  },
+  {
+   "id": "timeline",
+   "kicker": "Do this",
+   "title": "The 14-day routine, day by day",
+   "summary": "Most of cloning is leaving the tray alone at the right times and intervening at the right times. Days 1–4: vents fully closed, do not touch — high humidity makes the cutting close its leaf pores and focus on rooting. Days 5–7 the first watering usually comes due, judged by tray weight (irrigate at 40–50% water loss from Day 0, never below 30%) and by the cube fading from dark to light brown. From day 7 start daily 'burps', begin propping vents open, and on day 11 do the hardening-off test: lift the domes, wait 10 minutes, and if fewer than 5 clones per tray wilt, leave the dome off. Transplant around day 14.",
+   "points": [
+    "Days 1–4: dome shut, do not touch — let the cuttings begin rooting in trapped humidity.",
+    "Watering by weight: irrigate when the tray drops 40–50% below its Day 0 weight; never water below 30% loss (drowned cubes rot).",
+    "First feed usually day 5–7; clone feed runs EC ~1.5 mS/cm, pH 5.5–6.0, water 20–22°C.",
+    "Day 7+: daily burp, start opening vents, and lift one edge cube to check for emerging white roots.",
+    "Day 11 hardening-off test: domes off 10 min — <5 clones wilting per tray = dome stays off; ≥5 = re-dome, retry tomorrow.",
+    "Transplant-ready ~day 14: white roots on multiple sides of the cube, ≥2–3 cm long, cube holds together."
+   ],
+   "figures": [
+    {
+     "name": "day_by_day",
+     "kind": "flow",
+     "desc": "14-step horizontal timeline: d1–4 closed/no-touch → d3 burp → d5–7 first water + vents open → d7 root check → d8–10 prop vents → d11 harden-off test → d12–13 water daily → d14 transplant."
+    },
+    {
+     "name": "vent_schedule",
+     "kind": "zones",
+     "desc": "Banded bar across days 1–14 showing vent state zones: CLOSED (1–4), burp 5–10 min daily (5–7), 25–50% open (8–10), 50–100% open + offset dome (11–14)."
+    }
+   ],
+   "claims_needing_cite": [
+    "Irrigation trigger: 40–50% tray-weight loss, never below 30%",
+    "Clone feed EC ~1.5 mS/cm, pH 5.5–6.0, water 20–22°C",
+    "Hardening-off rule: <5 vs ≥5 wilting clones per tray",
+    "Transplant criteria: roots ≥2–3 cm on multiple sides by ~day 14"
+   ]
+  },
+  {
+   "id": "troubleshooting",
+   "kicker": "When it goes wrong",
+   "title": "Why clones fail — and the fix",
+   "summary": "Most clone failures trace to a handful of causes, and they look distinct enough to diagnose. Severe wilting in days 1–2 almost always means the dome humidity dropped, the light was too strong, or the heat mat was off — confirm RH ≥85%, lower the light, and check cube temp. Mold or slimy cubes mean standing water, poor hygiene, or too much heat: remove standing water, tighten the glove protocol, and keep cubes under 26°C. Crispy burnt leaf tips point to feed that is too strong or air that is too dry. White fuzzy mold in the dome is the classic sign of too much humidity with no air exchange.",
+   "points": [
+    "Severe early wilting → dome RH too low / light too high / heat mat off. Fix: RH ≥85%, drop PPFD, cube 22–24°C.",
+    "Mold or slimy cubes → standing water, poor hygiene, or too warm. Fix: empty standing water, gloves-only handling, cubes <26°C.",
+    "Burnt/crispy tips → EC or VPD too high (too dry). Fix: drop EC 0.2–0.3, raise RH, slow the vent opening.",
+    "Yellowing before roots → mother was deficient or feed EC too low. Fix: review mother nutrition, nudge EC up next run.",
+    "White fuzzy mold in dome = humidity too high with no airflow — burp more, never skip dome hygiene.",
+    "Hygiene is non-negotiable: sterilize tools ≥2 min in 71% alcohol (or chlorine-dioxide ≥180 s), handle cubes with gloves only."
+   ],
+   "figures": [
+    {
+     "name": "symptom_matrix",
+     "kind": "table",
+     "desc": "Three-column troubleshooting table: Symptom | Likely cause | Action — rows for early wilting, yellowing, burnt tips, mold/slimy cubes, pests, uneven rooting (straight from the SOP)."
+    }
+   ],
+   "claims_needing_cite": [
+    "Symptom→cause→fix mappings (wilting, mold, burnt tips, yellowing)",
+    "Tool sterilization: 71% isopropyl ≥2 min or chlorine dioxide ≥180 s",
+    "Glove-only cube handling prevents algae"
+   ]
+  },
+  {
+   "id": "expectations",
+   "kicker": "Reality check",
+   "title": "What good looks like, and what to expect",
+   "summary": "A realistic first goal is 90 percent rooting, with experienced rooms hitting 95 percent or higher; expect roots in 10–14 days and treat anything past 21 days with no roots as a problem to escalate. Not every cutting will make it, and that is normal — sorting ('culling') at transplant is part of the process: 'keepers' have strong roots and light-green tops, 'rejects' rooted but weakly, and 'kills' (zero roots) get discarded. Plan for this by taking 15 to 40 percent more cuttings than the number of plants you actually need, so culls don't leave you short. Some genetics simply root slower — slow-to-root cultivars are often cut a few days earlier to keep the schedule.",
+   "points": [
+    "Realistic success: 90% minimum, 95%+ with a dialed room. Roots in 10–14 days; >21 days = escalate.",
+    "Culling is normal: Keepers (strong roots, light-green tops), Rejects (rooted but 1–3 weak roots), Kills (no roots).",
+    "Take 15–40% MORE cuttings than plants needed so culls don't leave you short.",
+    "Slower-rooting genetics exist — cut those a few days earlier to stay on schedule.",
+    "Record everything (tray weights, EC/pH, success rate per batch) — clone data drives the rest of the grow."
+   ],
+   "figures": [
+    {
+     "name": "cull_categories",
+     "kind": "diagram",
+     "desc": "Three side-by-side cube illustrations — Keeper (many white roots all sides), Reject (1–3 thin roots), Kill (no roots) — as a sorting comparison chart."
+    },
+    {
+     "name": "overage_math",
+     "kind": "bars",
+     "desc": "Bar trio showing cuttings taken vs plants transplanted vs plants flowered for a 100-plant target with 40% overage (140 cut → 120 veg → 100 flower)."
+    }
+   ],
+   "claims_needing_cite": [
+    "Success benchmarks 90% min / 95%+ target; >21 days escalation",
+    "Cull categories keepers/rejects/kills definitions",
+    "Cutting overage 15–40% above plant count needed"
+   ]
+  }
+ ]
+}

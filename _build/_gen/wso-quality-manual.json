@@ -1,0 +1,266 @@
+{
+ "slug": "wso-quality-manual",
+ "title": "The quality manual: a GMP quality system for cannabis",
+ "eyebrow": "Facility · Quality",
+ "kind": "research",
+ "sub": "A from-zero guide to how a medicinal-cannabis company proves, on paper, that every gram it grows and ships is safe, consistent, and traceable.",
+ "reading_min": 18,
+ "related": [
+  "gmp-hash-lab",
+  "signal-and-noise",
+  "root-zone-teros12"
+ ],
+ "ref_ids": [
+  "ich-q10-pqs",
+  "ich-q9-risk",
+  "pics-pe009-ch1",
+  "mhra-data-integrity",
+  "pics-pi041-data",
+  "eu-gmp-annex11",
+  "nz-medcan-reg6",
+  "rogers-data-integrity-2020",
+  "arunagiri-capa-2024"
+ ],
+ "ref_lookup": {
+  "ich-q10-pqs": "International Council for Harmonisation (ICH). ICH Q10 Pharmaceutical Quality System (Step 4, adopted 4 June 2008; EMA/CHMP/ICH/214732/2007). European Medicines Agency, effective 1 June 2008.",
+  "ich-q9-risk": "International Council for Harmonisation (ICH). ICH Q9(R1) Quality Risk Management (Step 5; originally adopted 2005, R1 revision 2023). European Medicines Agency scientific guideline.",
+  "pics-pe009-ch1": "Pharmaceutical Inspection Co-operation Scheme (PIC/S). Guide to Good Manufacturing Practice for Medicinal Products, Part I, Chapter 1 'Pharmaceutical Quality System' (PE 009-15). PIC/S, 2022 (hosted by Australian TGA).",
+  "mhra-data-integrity": "Medicines and Healthcare products Regulatory Agency (MHRA). 'GXP' Data Integrity Guidance and Definitions, Revision 1, March 2018. MHRA, United Kingdom.",
+  "pics-pi041-data": "Pharmaceutical Inspection Co-operation Scheme (PIC/S). Good Practices for Data Management and Integrity in Regulated GMP/GDP Environments (PI 041-1). PIC/S, entered into force 1 July 2021.",
+  "eu-gmp-annex11": "European Commission. EudraLex Volume 4, EU Guidelines for GMP for Medicinal Products for Human and Veterinary Use, Annex 11: Computerised Systems. European Commission, 2011.",
+  "nz-medcan-reg6": "New Zealand. Misuse of Drugs (Medicinal Cannabis) Regulations 2019 (LI 2019/321), Regulation 6 'Minimum quality standard imposed'. New Zealand Legislation (as at 5 July 2024).",
+  "rogers-data-integrity-2020": "Rogers CA, Ahearn JD, Bartlett MG. Data Integrity in the Pharmaceutical Industry: Analysis of Inspections and Warning Letters Issued by the Bioresearch Monitoring Program Between Fiscal Years 2007-2018. Therapeutic Innovation & Regulatory Science. 2020;54(5):1123-1133.",
+  "arunagiri-capa-2024": "Arunagiri T, Kannaiah KP, Vasanthan M. Enhancing Pharmaceutical Product Quality With a Comprehensive Corrective and Preventive Actions (CAPA) Framework: From Reactive to Proactive. Cureus. 2024;16(9):e69762."
+ },
+ "sections": [
+  {
+   "id": "what-this-is",
+   "kicker": "Start here",
+   "title": "What a quality manual actually is",
+   "summary": "A quality manual is the single top-level document that describes how a company controls quality across everything it does. The source document, WSO-QM-001 v1.0, is an 84-page manual for a New Zealand medicinal-cannabis company covering the whole product lifecycle: cultivation, harvesting, drying and curing, processing, manufacture, packaging, storage, distribution, and recall. It is not a set of work instructions; it is the apex of a documentation pyramid that sits above all the detailed procedures, and it points to them rather than repeating them. Its job is to let a regulator, an auditor, or a new employee understand the whole system in one read.",
+   "points": [
+    "The example manual carries a document ID (WSO-QM-001), a version (1.0), a status (Active), an effective date (15 June 2026), and a fixed next-review date (15 June 2028) — every controlled document looks like this",
+    "It is structured to the New Zealand Code of GMP (based on PIC/S PE009-14) and supports the Minimum Quality Standard under the Misuse of Drugs (Medicinal Cannabis) Regulations 2019",
+    "Crucially, the company states it does NOT claim GMP certification — the manual describes a system designed to MEET GMP, which is a normal and honest distinction for a maturing facility",
+    "The manual is supported by, and indexes, controlled procedures, specifications and records via a Master Document Register (REG-QM-001)"
+   ],
+   "figures": [
+    {
+     "name": "doc_pyramid",
+     "kind": "diagram",
+     "desc": "A four-tier pyramid: Quality Policy + Quality Manual at the apex, then SOPs (how to do tasks), then Specifications (acceptance criteria), then Forms/Logs/Registers (the records). Arrows show the manual points down to procedures, records flow back up as evidence."
+    },
+    {
+     "name": "lifecycle_scope",
+     "kind": "flow",
+     "desc": "Left-to-right flow of the product lifecycle the manual governs: Genetics/Propagation -> Cultivation -> Harvest -> Dry/Cure -> Process/Manufacture -> Package/Label -> Store -> Release -> Distribute -> (Recall loop back)."
+    }
+   ],
+   "claims_needing_cite": [
+    "WSO-QM-001 is 84 pages, v1.0, effective 15 June 2026 with a two-year review cycle to 15 June 2028",
+    "The manual is structured to the NZ Code of GMP (PIC/S PE009-14) and supports the Minimum Quality Standard under the Misuse of Drugs (Medicinal Cannabis) Regulations 2019",
+    "The company explicitly does not claim GMP certification"
+   ]
+  },
+  {
+   "id": "key-terms",
+   "kicker": "Vocabulary first",
+   "title": "The acronyms you must know before anything else",
+   "summary": "GMP quality systems run on a dense layer of acronyms, and you cannot read a manual without them. The four load-bearing ideas are GMP (Good Manufacturing Practice — the rulebook for making medicines safely), QMS/PQS (the Quality Management System or Pharmaceutical Quality System — the organised machine that delivers quality), SOP (Standard Operating Procedure — the step-by-step instructions), and ALCOA+ (the data-integrity test every record must pass). For plant material specifically, GACP (Good Agricultural and Collection Practice) governs the growing side, since cannabis starts as a botanical crop, not a factory chemical.",
+   "points": [
+    "GMP = Good Manufacturing Practice; GACP = Good Agricultural and Collection Practice (applies to cultivation and starting material)",
+    "QMS / PQS = the whole quality system; QA = Quality Assurance (sets and checks the system, independent of production); QC = Quality Control (does the testing)",
+    "SOP = Standard Operating Procedure; CAPA = Corrective and Preventive Action; QRM = Quality Risk Management; RP = Responsible Person",
+    "ALCOA+ = Attributable, Legible, Contemporaneous, Original, Accurate — plus Complete, Consistent, Enduring, Available — the nine-part data-integrity standard",
+    "Standards bodies referenced: PIC/S (Pharmaceutical Inspection Co-operation Scheme) which publishes PE009, and ICH (which publishes Q9 for risk, Q10 for the quality system)"
+   ],
+   "figures": [
+    {
+     "name": "acronym_map",
+     "kind": "table",
+     "desc": "Two-column glossary table mapping each acronym (GMP, GACP, QMS, PQS, QA, QC, SOP, CAPA, QRM, RP, ALCOA+, PIC/S, ICH, MQS, OOS) to a one-line plain-English meaning."
+    }
+   ],
+   "claims_needing_cite": [
+    "ALCOA+ expands to Attributable, Legible, Contemporaneous, Original, Accurate plus Complete, Consistent, Enduring, Available",
+    "The manual is built on ICH Q9 (risk), ICH Q10 (quality system) and PIC/S PE009 Part I Chapter 1"
+   ]
+  },
+  {
+   "id": "gmp-principles",
+   "kicker": "Core idea 1",
+   "title": "GMP principles: quality is built in, not tested in",
+   "summary": "The foundational GMP principle is that you cannot inspect quality into a product at the end — it has to be designed and controlled at every step. The example system is built on ICH Q10 (the Pharmaceutical Quality System model) and PIC/S PE009 Part I Chapter 1, and it threads a few non-negotiables through everything: clearly defined roles, written procedures, contemporaneous records, risk-based decisions, and continual improvement. A second principle is independence: Quality Assurance must be able to make release and rejection decisions independent of production and cultivation, including the authority to halt operations or reject product if patient safety is at risk. The third is the golden thread of traceability — every plant, batch and material must be followable forward and backward through its entire life.",
+   "points": [
+    "Quality is the responsibility of every employee, but final authority for release sits with QA and the Responsible Person — never with production alone",
+    "The Responsible Person (RP) authorises product release, approves recalls, oversees security and reconciliation of controlled material, and is the regulator's point of contact",
+    "QA has the explicit authority to reject materials/products and to stop operations where quality or patient safety may be compromised",
+    "The system runs on a risk-based approach (ICH Q9): effort and controls are scaled to the actual risk to the patient and product"
+   ],
+   "figures": [
+    {
+     "name": "qa_independence",
+     "kind": "diagram",
+     "desc": "Org-style diagram showing Senior Management at top, with Production/Cultivation and Quality Assurance as separate branches; a highlighted line shows QA has an independent veto on release that does not pass through Production."
+    },
+    {
+     "name": "build_vs_test",
+     "kind": "zones",
+     "desc": "Two contrasting zones: 'Test-in quality' (single inspection gate at the end, red) vs 'Build-in quality' (green checkpoints at every lifecycle stage), illustrating the core GMP principle."
+    }
+   ],
+   "claims_needing_cite": [
+    "The PQS is built on ICH Q10 and PIC/S PE009 Part I Chapter 1",
+    "QA is positioned to act independently of production and cultivation and has authority to reject product and halt operations",
+    "The Responsible Person authorises release, approves recalls, and acts as the regulator contact"
+   ]
+  },
+  {
+   "id": "documents-records",
+   "kicker": "Core idea 2",
+   "title": "SOPs, records and the documentation hierarchy",
+   "summary": "A quality system is, in practice, a documentation system: if it isn't written down, it didn't happen. The hierarchy runs from the Quality Policy and Quality Manual at the apex, down through SOPs (how to do each task), Specifications (the acceptance criteria), and finally the Forms, Logs and Registers that capture the actual evidence. Every controlled document carries a unique ID, version number, owner, effective date and review date, and only the current approved version is available at the point of use — superseded copies are withdrawn and marked. The Master Document Register (REG-QM-001) is the keystone: the single authoritative index where every controlled document has exactly one row.",
+   "points": [
+    "Document lifecycle: draft -> review -> approve -> issue -> train -> effective -> periodic review -> revise -> withdraw/archive",
+    "Good Documentation Practice (GDP): entries made at the time of the activity, in indelible form; corrections are a single line through the error (still legible), initialled, dated and reasoned — never obliterated, overwritten or back-dated",
+    "Documents follow a numbering convention by type and area, e.g. SOP-QM-001, FRM-QM-001 (form), REG-QM-001 (register), SPEC-MF-001 (specification)",
+    "Records must be retained for a defined period (e.g. batch records kept at least one year after expiry, subject to regulation and licence conditions)"
+   ],
+   "figures": [
+    {
+     "name": "doc_lifecycle",
+     "kind": "flow",
+     "desc": "Circular flow of the controlled-document lifecycle: Draft -> Review -> Approve -> Issue -> Train -> Effective -> Periodic Review -> Revise/Withdraw, looping back."
+    },
+    {
+     "name": "id_anatomy",
+     "kind": "diagram",
+     "desc": "Anatomy of a document ID: SOP-QM-001 broken into TYPE (SOP/FRM/REG/SPEC/POL) - AREA (QM=quality, MF=manufacturing, CU=cultivation, QC=quality control, SD=storage/distribution) - sequential number."
+    }
+   ],
+   "claims_needing_cite": [
+    "The documentation hierarchy is Quality Policy/Manual at apex, then SOPs, Specifications, then Forms/Logs/Registers",
+    "GDP requires corrections by single line, initialled, dated and reasoned, never obliterated or back-dated",
+    "Every controlled document has a unique ID, version, owner, effective and review date, indexed in the Master Document Register REG-QM-001"
+   ]
+  },
+  {
+   "id": "traceability-data",
+   "kicker": "Core idea 3",
+   "title": "Traceability, batch records and data integrity",
+   "summary": "Traceability means any finished product can be traced back to the exact plants, materials, equipment, people and conditions that made it — and forward to where every unit went. The example system uses batch numbering and a Batch/Lot Traceability Register (REG-CU-001) that captures materials used, processing activities, personnel, equipment usage, in-process results and final disposition on the batch record (FRM-MF-004). Data integrity is the modern frontier: all GxP data, paper or electronic, must meet ALCOA+, and electronic systems must add Annex 11 / PI 041 controls — unique user logins, role-based access, secure audit trails, synchronised clocks, validated backups. Notably, the manual is candid that its Home Assistant sensor layer (capturing temperature, humidity, CO2, VPD) is NOT a validated GMP records system in its standard configuration and cannot be presented as one until validated.",
+   "points": [
+    "Batch records (FRM-MF-004) tie together every input and action for a batch; the Batch/Lot Traceability Register (REG-CU-001) consolidates the golden thread from plant to product",
+    "Electronic GMP records need Annex 11 / PI 041 controls: unique user IDs, role-based access, enabled and reviewed audit trails, controlled system time, tested backups, and validation for GMP use",
+    "The manual honestly flags Home Assistant as a monitoring/alerting/capture layer only — until validated, HA-sourced records are backed by an independent verified control (recorded in REG-QM-008)",
+    "Quarantine and status control keep untested or suspect material physically and/or electronically segregated until a release decision is made"
+   ],
+   "figures": [
+    {
+     "name": "golden_thread",
+     "kind": "flow",
+     "desc": "A 'golden thread' traceability chain: Mother plant/genetics -> Clone -> Cultivation batch -> Harvest lot -> Dried/cured lot -> Processed batch -> Finished product unit, with the shared batch ID following all the way through and a backward-trace arrow."
+    },
+    {
+     "name": "alcoa_checklist",
+     "kind": "table",
+     "desc": "ALCOA+ as a checklist table: each of the nine attributes (Attributable...Available) with a one-line 'what it means for a record' and a pass/fail example."
+    }
+   ],
+   "claims_needing_cite": [
+    "Batch records use FRM-MF-004 and consolidate into the Batch/Lot Traceability Register REG-CU-001",
+    "Electronic records must meet ALCOA+ and Annex 11 / PI 041 controls including audit trails, access control and validated backups",
+    "The manual states Home Assistant in standard configuration is not a validated GMP electronic-records system and HA-sourced records require an independent verified control until validated"
+   ]
+  },
+  {
+   "id": "how-to-build",
+   "kicker": "Do it",
+   "title": "How to stand up a quality system, step by step",
+   "summary": "Building a QMS is sequential, not all-at-once. You start with the apex documents (Quality Policy and Quality Manual), define the organisation chart and roles, then create the spine of operational quality: the eight core registers and their forms. The example system is anchored by registers for deviations (REG-QM-004), change control (REG-QM-005), CAPA (REG-QM-006), risk (REG-QM-007), computerised systems (REG-QM-008) and audits (REG-QM-009), each paired with a form (e.g. FRM-QM-001 Deviation, FRM-QM-002 CAPA, FRM-QM-003 Change). Each register is a standalone controlled document that grows only by adding rows, never by restructuring — that stability is what makes it auditable over years.",
+   "points": [
+    "Step 1: Approve the Quality Policy and Quality Manual; Step 2: publish the org chart and define RP, QA, QC and personnel responsibilities",
+    "Step 3: stand up the Master Document Register (REG-QM-001) as the single index, then allocate IDs from it",
+    "Step 4: build the core quality processes — Document Control, Deviations, Change Control, CAPA, Risk Management, Management Review — each with its SOP, form and register",
+    "Step 5: layer in operations (cultivation/GACP, manufacturing, QC testing, storage/distribution) and supplier qualification, all pointing back to the same registers",
+    "Step 6: train everyone, then run the system; Management Review (at least annually) closes the loop"
+   ],
+   "figures": [
+    {
+     "name": "register_spine",
+     "kind": "table",
+     "desc": "Table of the core registers and their paired forms: Master Document (REG-QM-001), Deviation (REG-QM-004/FRM-QM-001), Change Control (REG-QM-005/FRM-QM-003), CAPA (REG-QM-006/FRM-QM-002), Risk (REG-QM-007), Computerised Systems (REG-QM-008), Audit (REG-QM-009/FRM-QM-004), Batch Traceability (REG-CU-001/FRM-MF-004)."
+    },
+    {
+     "name": "buildout_sequence",
+     "kind": "flow",
+     "desc": "Numbered left-to-right buildout sequence from Policy/Manual -> Roles -> Master Register -> Core quality processes -> Operations -> Train -> Run/Review."
+    }
+   ],
+   "claims_needing_cite": [
+    "Core registers include REG-QM-004 (Deviation), 005 (Change), 006 (CAPA), 007 (Risk), 008 (Computerised Systems), 009 (Audit), each paired with a form",
+    "Registers are standalone controlled documents that grow by adding rows, never by restructuring",
+    "The Master Document Register REG-QM-001 is the keystone index from which IDs are allocated"
+   ]
+  },
+  {
+   "id": "pitfalls",
+   "kicker": "Watch out",
+   "title": "Common pitfalls that fail audits",
+   "summary": "Most GMP findings are not exotic — they are predictable documentation and discipline failures. The classic traps are: records filled in later rather than contemporaneously (an ALCOA+ failure), corrections that obliterate the original entry, superseded SOP versions left in use at the bench, and changes made to validated equipment or processes without going through formal change control. A subtler trap is overclaiming: presenting an unvalidated system (like a stock sensor/automation platform) as a GMP records source. The example manual avoids this by explicitly declaring its Home Assistant layer non-validated and supporting it with an independent control until proven.",
+   "points": [
+    "Back-dating or batch-completing records at end of shift breaks 'Contemporaneous' — the single most common data-integrity finding",
+    "Using whiteout, overwriting, or a correction that hides the original entry violates GDP — corrections must leave the error legible",
+    "Old document versions at the point of use: if the bench copy isn't the current approved version, the work is non-compliant",
+    "Changes to facilities, equipment, computerised systems or processes that skip the Change Control Request (FRM-QM-003) put the validated state at risk",
+    "Treating audits as a pass/fail exam rather than a source of CAPA — findings must be classified by impact and driven to root cause"
+   ],
+   "figures": [
+    {
+     "name": "deviation_to_capa",
+     "kind": "flow",
+     "desc": "Flow from an event: Detect -> Contain -> Raise Deviation (FRM-QM-001) -> Classify (minor/major/critical) -> Investigate root cause -> QA product-impact decision -> Raise CAPA (FRM-QM-002) -> Implement -> Effectiveness review -> Close, with trending feeding Management Review."
+    },
+    {
+     "name": "pitfall_zones",
+     "kind": "zones",
+     "desc": "Red/green zones contrasting a failing record (late entry, scribbled-out correction, old SOP version) against a compliant one (contemporaneous, single-line correction initialled/dated, current version stamp)."
+    }
+   ],
+   "claims_needing_cite": [
+    "Deviations are classified minor/major/critical, investigated to root cause, with QA assessing product impact (FRM-QM-001, governed by SOP-QM-004)",
+    "Changes affecting the validated state must go through a Change Control Request (FRM-QM-003) approved by QA before implementation",
+    "Audit findings are classified by impact and corrective actions are driven through the CAPA system"
+   ]
+  },
+  {
+   "id": "expectations",
+   "kicker": "Reality check",
+   "title": "Realistic expectations: a manual is a starting point, not a finish line",
+   "summary": "A written quality manual proves intent and design, not yet proven performance. The example explicitly separates 'a system designed to meet GMP' from 'GMP certification' — and it is peppered with FACILITY INPUT placeholders for retention periods, classification criteria, closure timeframes, validation status and named role-holders that the facility must complete before the system is real. Expect the system to mature over months: registers fill with rows, validation completes, audit-trail review and backup frequencies get defined, and Management Review accumulates evidence. The honest stance in the source — flagging open requirements like the unvalidated Home Assistant data flow rather than papering over them — is itself a marker of a credible quality culture.",
+   "points": [
+    "A v1.0 manual with open FACILITY INPUT items is normal — it defines the framework; the facility must populate specifics (retention periods, KPIs, thresholds, named RP)",
+    "Validation is ongoing work: computerised systems, equipment and processes need documented qualification before their records can be fully relied upon as GMP records",
+    "The system only demonstrates effectiveness over time, through trended deviations/CAPA, completed audits, and at least annual Management Review",
+    "Continual improvement is the intended end-state, not a one-time project — the manual reviews on a fixed two-year cycle and updates via its own change control"
+   ],
+   "figures": [
+    {
+     "name": "maturity_curve",
+     "kind": "line",
+     "desc": "A maturity line over time: x-axis months from go-live, y-axis 'demonstrated compliance'; curve rises as registers fill, validation completes, and Management Reviews accumulate, with the manual's v1.0 issue marked at the start."
+    },
+    {
+     "name": "open_items",
+     "kind": "table",
+     "desc": "Table of typical open 'FACILITY INPUT' items to close: named Responsible Person, record retention periods, deviation classification/closure timeframes, Home Assistant validation (REG-QM-008), quality KPIs and targets."
+    }
+   ],
+   "claims_needing_cite": [
+    "The manual distinguishes 'a system designed to meet GMP' from holding GMP certification",
+    "The manual contains numerous FACILITY INPUT placeholders (retention periods, classification criteria, KPIs, named role-holders, validation status) to be completed by the facility",
+    "The manual is on a two-year review cycle and the Home Assistant data flows are flagged as an open validation requirement (REG-QM-008)"
+   ]
+  }
+ ]
+}

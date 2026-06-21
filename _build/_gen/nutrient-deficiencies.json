@@ -1,0 +1,276 @@
+{
+ "slug": "nutrient-deficiencies",
+ "title": "Nutrient deficiency and toxicity diagnosis",
+ "eyebrow": "Plant health · Diagnosis",
+ "kind": "research",
+ "sub": "A beginner's visual guide to reading cannabis leaf symptoms: mobile vs immobile nutrients, deficiency vs toxicity vs pH lockout, and how to confirm and fix the real problem.",
+ "reading_min": 14,
+ "related": [
+  "ph-management",
+  "nutrient-mixing-athena",
+  "water-quality"
+ ],
+ "ref_ids": [
+  "cockson-2019-nutrient-disorders-cannabis",
+  "maillard-2015-leaf-nutrient-remobilization",
+  "bevan-2021-npk-soilless-cannabis-flowering",
+  "morad-2023-cannabis-magnesium-supply",
+  "saloner-2020-cannabis-nitrogen-supply",
+  "neilsen-1993-rhizosphere-ph-fe-mn-zn",
+  "vyn-2007-ufl-nutrient-mobility-diagnosis",
+  "hawkesford-2012-marschner-mineral-nutrition",
+  "fageria-2001-nutrient-interactions-antagonism"
+ ],
+ "ref_lookup": {
+  "cockson-2019-nutrient-disorders-cannabis": "Cockson, P., Landis, H., Smith, T., Hicks, K., & Whipker, B. E. (2019). Characterization of Nutrient Disorders of Cannabis sativa. Applied Sciences, 9(20), 4432. https://doi.org/10.3390/app9204432",
+  "maillard-2015-leaf-nutrient-remobilization": "Maillard, A., Diquelou, S., Billard, V., Laine, P., Garnica, M., Prudent, M., Garcia-Mina, J.-M., Yvin, J.-C., & Ourry, A. (2015). Leaf mineral nutrient remobilization during leaf senescence and modulation by nutrient deficiency. Frontiers in Plant Science, 6, 317. https://doi.org/10.3389/fpls.2015.00317",
+  "bevan-2021-npk-soilless-cannabis-flowering": "Bevan, L., Jones, M., & Zheng, Y. (2021). Optimisation of Nitrogen, Phosphorus, and Potassium for Soilless Production of Cannabis sativa in the Flowering Stage Using Response Surface Analysis. Frontiers in Plant Science, 12, 764103. https://doi.org/10.3389/fpls.2021.764103",
+  "morad-2023-cannabis-magnesium-supply": "Morad, D., & Bernstein, N. (2023). Response of Medical Cannabis to Magnesium (Mg) Supply at the Vegetative Growth Phase. Plants, 12(14), 2676. https://doi.org/10.3390/plants12142676",
+  "saloner-2020-cannabis-nitrogen-supply": "Saloner, A., & Bernstein, N. (2020). Response of Medical Cannabis (Cannabis sativa L.) to Nitrogen Supply Under Long Photoperiod. Frontiers in Plant Science, 11, 572293. https://doi.org/10.3389/fpls.2020.572293",
+  "neilsen-1993-rhizosphere-ph-fe-mn-zn": "Neilsen, D., Neilsen, G. H., Sinclair, A. H., & Linehan, D. J. (1992). Effect of rhizosphere pH on the availability and uptake of Fe, Mn and Zn. Plant and Soil, 145(1), 45-50. https://doi.org/10.1007/BF00009540",
+  "vyn-2007-ufl-nutrient-mobility-diagnosis": "Liu, G., Hanlon, E., & Li, Y. (2017). Movement of Plant Nutrients (HS1373). UF/IFAS Extension, University of Florida. https://edis.ifas.ufl.edu/publication/HS1373",
+  "hawkesford-2012-marschner-mineral-nutrition": "Hawkesford, M., Horst, W., Kichey, T., Lambers, H., Schjoerring, J., Skrumsager Moller, I., & White, P. (2012). Functions of Macronutrients. In P. Marschner (Ed.), Marschner's Mineral Nutrition of Higher Plants (3rd ed., pp. 135-189). Academic Press. https://doi.org/10.1016/B978-0-12-384905-2.00006-6",
+  "fageria-2001-nutrient-interactions-antagonism": "Fageria, V. D. (2001). Nutrient interactions in crop plants. Journal of Plant Nutrition, 24(8), 1269-1290. https://doi.org/10.1081/PLN-100106981"
+ },
+ "sections": [
+  {
+   "id": "what-this-is",
+   "kicker": "Start here",
+   "title": "What this is: reading the plant like a gauge",
+   "summary": "A cannabis plant tells you what it lacks or has too much of through the colour, shape, and position of its leaves. This paper teaches you to read those signals systematically instead of guessing, so you fix the actual cause rather than randomly adding fertiliser. The single most important idea is that WHERE a symptom appears (old bottom leaves vs new top leaves) usually matters more than WHAT colour it is.",
+   "points": [
+    "A 'nutrient' is one of the ~17 chemical elements a plant must absorb to grow; the ones you adjust most are nitrogen (N), phosphorus (P), and potassium (K), plus calcium (Ca), magnesium (Mg), sulfur (S), and tiny amounts of 'micronutrients' like iron and zinc.",
+    "Three different problems can look almost identical on a leaf: a true deficiency (not enough of an element), a toxicity (too much), and a pH lockout (the element is present but the roots cannot absorb it). Telling them apart is the whole skill.",
+    "This is a visual-first approach: you observe leaf position and colour, form a hypothesis, then confirm it with two cheap measurements (pH and EC) before changing anything.",
+    "Reading symptoms is diagnostic, not instant: by the time a leaf shows damage the plant has been short for days, and a damaged leaf will not turn green again even after you fix the cause — you are looking for NEW growth to recover."
+   ],
+   "figures": [
+    {
+     "name": "Plant-as-gauge overview",
+     "kind": "diagram",
+     "desc": "Side-view cannabis plant with callout arrows: top/new growth zone labelled 'immobile nutrients show here', bottom/old growth zone labelled 'mobile nutrients show here', with a magnifier icon over a leaf showing the three readout questions: position, colour pattern, shape."
+    },
+    {
+     "name": "The three look-alikes",
+     "kind": "table",
+     "desc": "Three columns — Deficiency, Toxicity, pH lockout — each with a one-line plain definition and the one telltale sign that distinguishes it, so a beginner sees up front that yellow does not equal 'needs feeding'."
+    }
+   ],
+   "claims_needing_cite": [
+    "Cannabis requires ~17 essential elements for growth"
+   ]
+  },
+  {
+   "id": "key-terms",
+   "kicker": "Vocabulary",
+   "title": "Key terms, defined plainly",
+   "summary": "Before diagnosing anything you need a handful of words that growers use constantly. These are deliberately defined in everyday language so nothing in the rest of the paper is mysterious. Skim this once and refer back as needed.",
+   "points": [
+    "Macronutrient = an element the plant needs in large amounts (N, P, K, Ca, Mg, S). Micronutrient = an element needed in tiny amounts (iron Fe, manganese Mn, zinc Zn, copper Cu, boron B, molybdenum Mo).",
+    "Mobile nutrient = one the plant can pull out of an old leaf and resend to new growth when supply runs short (N, P, K, Mg). Immobile nutrient = one that stays locked where it was first placed and cannot be relocated (Ca, S, Fe, Mn, Zn, B, Cu, Mo).",
+    "Chlorosis = yellowing (loss of green chlorophyll). Interveinal chlorosis = yellowing BETWEEN the veins while the veins stay green — a very common and specific pattern. Necrosis = dead brown/crispy tissue.",
+    "pH = a 0–14 scale of how acidic or alkaline the root-zone water is; it controls which nutrients dissolve and can be absorbed. EC (electrical conductivity) = how much dissolved salt/fertiliser is in the water, a proxy for feed strength; PPM is just EC expressed in different units. Runoff = the water that drains out the bottom of the pot, which you can measure to see what is happening at the roots."
+   ],
+   "figures": [
+    {
+     "name": "Mobile vs immobile element map",
+     "kind": "table",
+     "desc": "Two-column list assigning every common element to Mobile or Immobile, with a third column stating which leaves show symptoms first (old/bottom vs new/top)."
+    }
+   ],
+   "claims_needing_cite": [
+    "Classification of N, P, K, Mg as mobile and Ca, S, Fe, Mn, Zn, B, Cu, Mo as immobile in cannabis"
+   ]
+  },
+  {
+   "id": "mobility-why-position",
+   "kicker": "Core concept 1",
+   "title": "Why old leaves vs new leaves is the first question",
+   "summary": "When a plant runs short of a MOBILE nutrient, it cannibalises its oldest leaves to feed new growth, so damage appears at the BOTTOM first and climbs upward. When it runs short of an IMMOBILE nutrient, it cannot move existing stores, so the newest top growth starves while old leaves stay fine. This single rule lets you cut the list of suspects roughly in half before you even look at colour.",
+   "points": [
+    "Bottom/old leaves yellowing and dying upward → suspect a mobile nutrient: nitrogen, phosphorus, potassium, or magnesium.",
+    "Top/new leaves distorted, pale, or hooked while the bottom looks healthy → suspect an immobile nutrient: calcium, sulfur, iron, zinc, manganese, or boron.",
+    "Whole-plant uniform symptoms, or damage on both ends at once, points away from a single deficiency and toward a pH lockout, a root problem, or an environmental stress — treat that as a different branch of the decision tree.",
+    "Caveat: nitrogen fading from the bottom up is NORMAL in late flowering as the plant remobilises N into buds, so the same symptom is healthy at week 7 and a problem at week 2 — always read symptoms against growth stage."
+   ],
+   "figures": [
+    {
+     "name": "Old-vs-new decision split",
+     "kind": "flow",
+     "desc": "A flowchart starting at 'Where did symptoms appear FIRST?' branching to Old/bottom → mobile shortlist, New/top → immobile shortlist, Whole plant/both → lockout-or-environment branch."
+    },
+    {
+     "name": "Remobilisation illustration",
+     "kind": "diagram",
+     "desc": "Simple plant showing an arrow of nitrogen moving FROM a yellowing bottom leaf UP to a green new leaf, captioned to explain why mobile deficiencies always start low."
+    }
+   ],
+   "claims_needing_cite": [
+    "Mobile-nutrient deficiencies present on older/lower leaves; immobile on newer/upper growth"
+   ]
+  },
+  {
+   "id": "deficiency-vs-toxicity-vs-lockout",
+   "kicker": "Core concept 2",
+   "title": "Deficiency vs toxicity vs pH lockout: the three causes of one symptom",
+   "summary": "The biggest beginner trap is seeing yellow leaves, assuming 'hungry', and adding more fertiliser — which makes a toxicity or lockout dramatically worse. A toxicity (too much, especially of salts/nitrogen) shows as dark green clawed leaves and burnt tips, the opposite of a hunger symptom. A pH lockout means the nutrient is sitting right there in the pot but the roots physically cannot take it up because the water is too acidic or too alkaline.",
+   "points": [
+    "Deficiency: progressive fading/yellowing, smaller new growth, leaves eventually drop. The plant looks like it is starving and getting paler.",
+    "Toxicity (overfeeding): leaves go DARK green and glossy, tips burn brown and curl, and severe nitrogen excess bends leaf tips into a downward hook called 'the claw'. Salt/nutrient burn shows as crispy brown leaf tips that creep inward.",
+    "pH lockout: classic deficiency patterns (often iron or calcium/magnesium) appear even though you ARE feeding correctly — because pH is outside the absorbable window. The fix is to correct pH and flush, NOT to add more of the locked-out nutrient.",
+    "Decision rule: before treating any suspected deficiency, check pH first. If pH is out of range, fix that and re-observe for several days before concluding the plant is actually short of anything."
+   ],
+   "figures": [
+    {
+     "name": "One symptom, three causes",
+     "kind": "table",
+     "desc": "Rows = a common symptom (e.g. yellow leaves, brown tips); columns = how each of deficiency / toxicity / lockout would produce it, plus the correct first action for each."
+    },
+    {
+     "name": "Deficiency–toxicity spectrum",
+     "kind": "zones",
+     "desc": "A horizontal band from 'too little' (pale/yellow, drop) through 'optimal' (healthy green) to 'too much' (dark green, claw, burnt tips), showing that both ends are bad and look different."
+    }
+   ],
+   "claims_needing_cite": [
+    "Nitrogen toxicity presents as dark-green clawed leaves with burnt tips",
+    "pH outside range causes nutrient lockout despite adequate feed"
+   ]
+  },
+  {
+   "id": "ph-windows",
+   "kicker": "Core concept 3",
+   "title": "pH: the gatekeeper, and why your medium sets the target",
+   "summary": "Each nutrient only dissolves and stays available across a specific pH band, so if root-zone pH drifts out of range, several nutrients drop out of solution at once and the plant 'starves in a full pantry'. The correct target pH depends entirely on your growing medium: soil buffers itself and tolerates a higher band, while coco and hydroponics have no buffer and must be dialled in tightly. Getting pH right prevents more deficiencies than any fertiliser ever fixes.",
+   "points": [
+    "Soil target: roughly pH 6.0–7.0 (sweet spot ~6.2–6.8). Soil's organic matter and microbes buffer pH, so it is the most forgiving medium.",
+    "Coco coir and hydroponics target: roughly pH 5.5–6.5 (most growers hold 5.8–6.2) and must be checked far more often — daily in hydro — because there is no buffer.",
+    "Direction of drift tells you what locks out: above ~6.5 in coco/hydro, iron, manganese, zinc and boron fall out (expect micronutrient-style new-growth chlorosis); below ~5.5, calcium, magnesium and phosphorus lock out.",
+    "Because pH targets are a moving window, slightly varying within the range (e.g. cycling 5.8–6.2) is sometimes used so every nutrient gets its turn at peak availability — but stay inside the band for your medium."
+   ],
+   "figures": [
+    {
+     "name": "Nutrient availability vs pH",
+     "kind": "zones",
+     "desc": "Classic nutrient-availability band chart: horizontal pH axis 4.5–8.0, one bar per nutrient widening where it is available, with the soil and coco/hydro target windows shaded as vertical bands."
+    },
+    {
+     "name": "pH targets by medium",
+     "kind": "table",
+     "desc": "Rows = Soil, Coco, Hydro; columns = target pH range, typical sweet spot, how often to check, buffering ability."
+    }
+   ],
+   "claims_needing_cite": [
+    "Soil optimal pH ~6.0–7.0; coco/hydro ~5.5–6.5",
+    "Above ~6.5 Fe/Mn/Zn/B lock out; below ~5.5 Ca/Mg/P lock out"
+   ]
+  },
+  {
+   "id": "field-guide",
+   "kicker": "Practical reference",
+   "title": "A symptom field guide, nutrient by nutrient",
+   "summary": "This is the lookup table you return to at the plant. For each nutrient it gives the leaf position, the colour/shape pattern, and the one detail that separates it from its look-alikes. Use the old-vs-new rule from earlier to jump straight to the right block.",
+   "points": [
+    "Nitrogen (mobile): whole older/lower leaves turn uniformly pale then yellow and drop, working upward — the most common deficiency. Excess N = dark green clawed leaves.",
+    "Phosphorus (mobile): older leaves darken, dull, and develop bronze/grey/purple blotches; stems may go red/purple — but some strains are naturally purple, so never diagnose on stem colour alone.",
+    "Potassium (mobile): older leaves show burnt, brown, crispy tips and EDGES (margins) with possible curling, while the leaf centre stays greener — distinct from N's whole-leaf fade.",
+    "Magnesium (mobile): interveinal yellowing on older leaves with veins staying green, often starting mid-leaf and creeping in. Calcium & sulfur (immobile): Ca = distorted/brown-spotted NEW growth; S = pale/yellow NEW leaves overall. Iron (immobile, very common with high pH): bright interveinal yellowing on the NEWEST top leaves with sharp green veins."
+   ],
+   "figures": [
+    {
+     "name": "Leaf symptom atlas",
+     "kind": "table",
+     "desc": "Master table: rows = N, P, K, Ca, Mg, S, Fe, Zn, Mn, B; columns = mobile/immobile, leaf position affected, colour pattern, shape change, key differentiator, first fix."
+    },
+    {
+     "name": "Iron vs magnesium look-alike",
+     "kind": "diagram",
+     "desc": "Side-by-side leaf drawings: Mg interveinal chlorosis on an OLD lower leaf vs Fe interveinal chlorosis on a NEW top leaf, captioned to show position is what tells them apart since the colour pattern is similar."
+    }
+   ],
+   "claims_needing_cite": [
+    "Potassium deficiency = burnt leaf margins/tips on older leaves",
+    "Magnesium deficiency = interveinal chlorosis on older leaves; iron = interveinal chlorosis on new growth",
+    "Phosphorus deficiency = dark/bronze/purple blotching on older leaves"
+   ]
+  },
+  {
+   "id": "confirm-and-fix",
+   "kicker": "Step by step",
+   "title": "Confirm before you treat: the pH + EC + runoff workflow",
+   "summary": "Diagnosis is a loop, not a guess: observe the leaves, then confirm with two cheap meters before changing anything. Measuring the EC and pH of both what goes IN and what runs OUT of the pot tells you whether the root zone is starving, overloaded, or locked out. This step is what separates growers who fix problems from those who chase them in circles.",
+   "points": [
+    "Step 1 — check input pH and EC: confirm the feed you are giving is actually in range for your medium (pH 5.8–6.2 coco/hydro, ~6.5 soil) at a stage-appropriate strength.",
+    "Step 2 — measure runoff: in coco, runoff EC should come out roughly equal to input. Runoff much HIGHER than input (e.g. >200 PPM higher) means salt buildup/overfeeding; runoff much LOWER or pale plants with low EC means underfeeding.",
+    "Stage-appropriate feed strength (general coco/hydro guide): seedlings EC ~0.4–0.8 (≈250–400 PPM), veg ~1.0–1.8, flower ~1.6–2.4 early rising to ~2.4–3.0 late — verify against your specific nutrient line.",
+    "Step 3 — fix the matching cause: lockout/buildup → flush with correctly pH'd plain or light water until runoff EC normalises, then resume; underfeeding → raise EC gradually; true single deficiency → correct pH first, then supplement the specific nutrient and watch NEW growth, not the damaged leaves, for recovery over 5–10 days."
+   ],
+   "figures": [
+    {
+     "name": "Diagnose-confirm-fix loop",
+     "kind": "flow",
+     "desc": "Cyclic flowchart: Observe leaves → Check input pH/EC → Measure runoff pH/EC → classify (lockout / overfeed / underfeed / true deficiency) → apply matching fix → wait & re-observe new growth → back to Observe."
+    },
+    {
+     "name": "Stage feed-strength targets",
+     "kind": "line",
+     "desc": "Line chart of target EC (and PPM) rising across the grow timeline: seedling → veg → early flower → peak flower → flush, with a shaded acceptable band rather than single points."
+    }
+   ],
+   "claims_needing_cite": [
+    "Coco runoff EC should approximate input; >~200 PPM above input indicates salt buildup",
+    "Stage EC/PPM target ranges for seedling/veg/flower"
+   ]
+  },
+  {
+   "id": "pitfalls",
+   "kicker": "Troubleshooting",
+   "title": "Common traps and look-alikes that fool beginners",
+   "summary": "Most 'deficiencies' beginners post about are actually pH lockout, overwatering, or light burn wearing a deficiency costume. Knowing the impostors stops you from dumping fertiliser on a plant that is drowning, burning, or locked out. When in doubt, change one variable at a time and wait.",
+   "points": [
+    "Adding more nutrients to a yellow plant without checking pH/EC first is the number-one mistake — it converts a lockout into a toxicity. Always rule out pH before feeding.",
+    "Overwatering mimics nitrogen toxicity (droopy, clawed leaves) and root rot mimics multiple deficiencies (a sick root cannot absorb anything) — check soil moisture and root health, not just leaves.",
+    "Light/heat stress bleaches and crisps the TOP canopy leaves nearest the lamp, imitating a nutrient burn or deficiency; check distance to light and canopy temperature before blaming feed.",
+    "Antagonism: too much of one nutrient blocks another (e.g. excess potassium suppresses calcium and magnesium uptake), so a 'Ca/Mg deficiency' can actually be a K excess — which is why over-supplementing single elements backfires."
+   ],
+   "figures": [
+    {
+     "name": "Impostor checklist",
+     "kind": "table",
+     "desc": "Rows = overwatering, root rot, light/heat burn, pH lockout, nutrient antagonism; columns = which deficiency it imitates, the giveaway that distinguishes it, what to check instead of feeding."
+    },
+    {
+     "name": "Rule-out order",
+     "kind": "flow",
+     "desc": "Ordered gate flow: before declaring a deficiency, pass through pH check → EC/runoff check → watering/root check → light/heat check; only reaching the end confirms a true nutrient deficiency."
+    }
+   ],
+   "claims_needing_cite": [
+    "Excess potassium antagonises calcium and magnesium uptake",
+    "Overwatering and light stress mimic nutrient disorders"
+   ]
+  },
+  {
+   "id": "realistic-expectations",
+   "kicker": "Reality check",
+   "title": "What to realistically expect",
+   "summary": "Diagnosis gives you a confident shortlist, not a lab certainty — visual symptoms overlap, and only a tissue/substrate test is definitive. Damaged leaves never heal, so success looks like healthy NEW growth, not the recovery of burnt ones. Most importantly, prevention through stable pH and correct feed strength beats diagnosis every time.",
+   "points": [
+    "Expect to be right about the CATEGORY (mobile vs immobile, deficiency vs toxicity vs lockout) more often than the exact element — and that is usually enough to act correctly.",
+    "Recovery timeline: after a correct fix, look for normal new growth within roughly 5–10 days; existing damaged leaves will not re-green and can be left or removed.",
+    "A single clean pH and EC routine prevents the large majority of nutrient problems; chasing individual-element 'cures' is a sign the underlying routine needs fixing.",
+    "For high-value or commercial crops, confirm ambiguous cases with leaf-tissue or substrate analysis rather than eyeballing — the visual method is a fast first pass, not the final word."
+   ],
+   "figures": [
+    {
+     "name": "Prevention vs cure effort",
+     "kind": "bars",
+     "desc": "Bar chart contrasting the small recurring effort of stable pH/EC management against the larger reactive effort and yield loss of diagnosing and recovering from disorders."
+    }
+   ],
+   "claims_needing_cite": [
+    "Tissue/substrate analysis is the definitive confirmation method for nutrient disorders"
+   ]
+  }
+ ]
+}

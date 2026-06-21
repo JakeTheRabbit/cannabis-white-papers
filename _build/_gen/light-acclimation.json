@@ -1,0 +1,257 @@
+{
+ "slug": "light-acclimation",
+ "title": "Light acclimation: ramping onto high light without bleaching",
+ "eyebrow": "Beginner · Light",
+ "kind": "research",
+ "sub": "Light is a curve, not a switch. How to raise PPFD safely as plants adapt — and why CO2 decides how high you can go.",
+ "reading_min": 9,
+ "related": [
+  "coco-crop-steering",
+  "signal-and-noise",
+  "plant-state-dashboard"
+ ],
+ "ref_ids": [
+  "rodriguez-morrison-2021-cannabis-light-intensity-yield",
+  "chandra-2008-cannabis-photosynthesis-ppfd-co2-temperature",
+  "llewellyn-2022-cannabis-yield-proportional-light-uv",
+  "moher-2022-cannabis-vegetative-light-intensity-morphology",
+  "takahashi-murata-2008-environmental-stress-photoinhibition",
+  "pospisil-2016-ros-photosystem-ii-light-temperature",
+  "gjindali-johnson-2023-photosynthetic-acclimation",
+  "sun-shade-leaf-thickness-chloroplast-acclimation"
+ ],
+ "ref_lookup": {
+  "rodriguez-morrison-2021-cannabis-light-intensity-yield": "Rodriguez-Morrison, V., Llewellyn, D., & Zheng, Y. (2021). Cannabis Yield, Potency, and Leaf Photosynthesis Respond Differently to Increasing Light Levels in an Indoor Environment. Frontiers in Plant Science, 12, 646020. https://doi.org/10.3389/fpls.2021.646020",
+  "chandra-2008-cannabis-photosynthesis-ppfd-co2-temperature": "Chandra, S., Lata, H., Khan, I. A., & ElSohly, M. A. (2008). Photosynthetic response of Cannabis sativa L. to variations in photosynthetic photon flux densities, temperature and CO2 conditions. Physiology and Molecular Biology of Plants, 14(4), 299-306. https://doi.org/10.1007/s12298-008-0027-x",
+  "llewellyn-2022-cannabis-yield-proportional-light-uv": "Llewellyn, D., Golem, S., Foley, E., Dinka, S., Jones, A. M. P., & Zheng, Y. (2022). Indoor grown cannabis yield increased proportionally with light intensity, but ultraviolet radiation did not affect yield or cannabinoid content. Frontiers in Plant Science, 13, 974018. https://doi.org/10.3389/fpls.2022.974018",
+  "moher-2022-cannabis-vegetative-light-intensity-morphology": "Moher, M., Llewellyn, D., Jones, M., & Zheng, Y. (2022). Light intensity can be used to modify the growth and morphological characteristics of cannabis during the vegetative stage of indoor production. Industrial Crops and Products, 183, 114909. https://doi.org/10.1016/j.indcrop.2022.114909",
+  "takahashi-murata-2008-environmental-stress-photoinhibition": "Takahashi, S., & Murata, N. (2008). How do environmental stresses accelerate photoinhibition? Trends in Plant Science, 13(4), 178-182. https://doi.org/10.1016/j.tplants.2008.01.005",
+  "pospisil-2016-ros-photosystem-ii-light-temperature": "Pospisil, P. (2016). Production of Reactive Oxygen Species by Photosystem II as a Response to Light and Temperature Stress. Frontiers in Plant Science, 7, 1950. https://doi.org/10.3389/fpls.2016.01950",
+  "gjindali-johnson-2023-photosynthetic-acclimation": "Gjindali, A., & Johnson, G. N. (2023). Photosynthetic acclimation to changing environments. Biochemical Society Transactions, 51(2), 473-486. https://doi.org/10.1042/BST20211245",
+  "sun-shade-leaf-thickness-chloroplast-acclimation": "Schumann, T., Paul, S., Melzer, M., Doermann, P., & Jahns, P. (2017). Plant Growth under Natural Light Conditions Provides Highly Flexible Short-Term Acclimation Properties toward High Light Stress. Frontiers in Plant Science, 8, 681. https://doi.org/10.3389/fpls.2017.00681"
+ },
+ "sections": [
+  {
+   "id": "intro",
+   "kicker": "Start here",
+   "title": "Why light is a ramp, not a switch",
+   "summary": "New growers routinely cook fresh clones and starve flowering plants by treating light like an on/off control. Light intensity is something a plant adapts to over weeks, and pushing it too fast (or too high without matching CO2) bleaches the canopy and stalls growth. This guide walks through how plants acclimate, a week-by-week intensity schedule, how high you can safely go, and how to read the warning signs.",
+   "points": [
+    "The two most common beginner failures are blasting weak clones with too much light and under-lighting flowering plants out of fear.",
+    "Light intensity must scale gradually because the plant physically rebuilds its light-harvesting machinery as it adapts.",
+    "CO2 is the hidden partner: above a point, more light without more CO2 just damages the plant instead of growing it.",
+    "A full grow can ramp from roughly 80 to 1500 µmol/m²/s depending on growth stage and how much of the environment you control."
+   ],
+   "figures": [
+    {
+     "name": "light_curve_hero",
+     "kind": "line",
+     "desc": "A rising curve labeled 'intensity over time' contrasted with a flat on/off step line, showing light as a gradual ramp rather than a switch."
+    }
+   ],
+   "claims_needing_cite": [
+    "The two most common beginner failures are blasting weak clones with too much light and under-lighting flowering plants.",
+    "A full grow can ramp from roughly 80 to 1500 µmol/m²/s depending on growth stage and control level."
+   ]
+  },
+  {
+   "id": "key-terms",
+   "kicker": "Plain-language glossary",
+   "title": "The words you need before we start",
+   "summary": "This topic is full of acronyms that hide simple ideas. PPFD is just 'how bright the light is at the leaf.' DLI is 'how much total light the plant got all day.' Photoinhibition and bleaching are what happens when there's more light energy than the plant can use, so it starts damaging itself. Read these once and the rest of the guide reads easily.",
+   "points": [
+    "PPFD (Photosynthetic Photon Flux Density): the intensity of usable light hitting the canopy, measured in µmol/m²/s (micromoles per square meter per second).",
+    "DLI (Daily Light Integral): total usable light delivered over a whole day, in mol/m²/day — it combines intensity and hours of light.",
+    "Photoperiod: the daily light/dark schedule, e.g. 18/6 (18 hours on) for veg or 12/12 to trigger flowering.",
+    "Photoinhibition / bleaching: damage that occurs when captured light energy can't be used, producing reactive oxygen species that attack the leaf, leaving pale or white tips.",
+    "Acclimation: the multi-week process where a plant builds chloroplasts, thicker leaf surfaces, and protective enzymes to handle higher light."
+   ],
+   "figures": [
+    {
+     "name": "ppfd_vs_dli_diagram",
+     "kind": "diagram",
+     "desc": "Side-by-side: PPFD shown as a single bright arrow on a leaf (intensity now), DLI shown as a filled bucket over a 12-hour bar (total accumulated light)."
+    }
+   ],
+   "claims_needing_cite": []
+  },
+  {
+   "id": "how-acclimation-works",
+   "kicker": "The why",
+   "title": "What the plant is actually doing as it adapts",
+   "summary": "When light rises gradually, the plant builds more chloroplasts, thicker protective leaf cuticles, and higher enzyme density week over week — so each new increment of light has machinery ready to catch it. A plant that has only built capacity for moderate light cannot use a sudden flood of photons, so the excess energy becomes reactive oxygen species and the leaf damages itself. This is why incremental ramping works and a hard jump bleaches.",
+   "points": [
+    "Acclimation is physical: more chloroplasts, thicker cuticles, and better enzyme density develop over successive weeks.",
+    "A plant built for moderate light turns excess photons into reactive oxygen species — the leaf 'attacks itself,' showing bleached tips and stalled growth.",
+    "Because adaptation is gradual, the safe move is to add light in small steps the plant can keep pace with.",
+    "When light and the plant's capacity scale together, every photon becomes sugar instead of damage."
+   ],
+   "figures": [
+    {
+     "name": "acclimation_buildup",
+     "kind": "flow",
+     "desc": "Flow showing week-over-week: small light increase to more chloroplasts to higher capacity to next light increase, looping upward safely."
+    },
+    {
+     "name": "too_fast_vs_incremental",
+     "kind": "diagram",
+     "desc": "Two leaves: one under a sudden flood of light arrows (bleached, pale) vs one under arrows that grow gradually (healthy dark green)."
+    }
+   ],
+   "claims_needing_cite": [
+    "A plant built for moderate light converts excess photons into reactive oxygen species, causing bleached tips and stalled growth.",
+    "Acclimation involves building more chloroplasts, thicker cuticles, and higher enzyme density over successive weeks."
+   ]
+  },
+  {
+   "id": "co2-partnership",
+   "kicker": "The why, part two",
+   "title": "Light is the accelerator, CO2 is the fuel",
+   "summary": "Photosynthesis has two halves: light reactions capture energy, and the Calvin cycle uses CO2 to turn that energy into sugar. If you raise light but CO2 stays low, the light reactions keep capturing energy that the Calvin cycle can't fix onto anything — energy backs up and causes the exact same oxidative bleaching as ramping too fast. This is why high-light setups require matched CO2: below ~1000 ppm at 1200 µmol/m²/s you are bleaching for no reason.",
+   "points": [
+    "Light reactions capture energy; the Calvin cycle needs CO2 to convert it to sugar — both must scale together.",
+    "High light with low CO2 produces the same visible damage as ramping too fast: you cannot tell the two mistakes apart by looking.",
+    "At ambient CO2 (~400–600 ppm), pushing much above ~850 µmol/m²/s mostly wastes electricity rather than making sugar.",
+    "To run 1200 µmol/m²/s you need roughly 1000–1200 ppm CO2; for 1500 µmol/m²/s, around 1200–1500 ppm."
+   ],
+   "figures": [
+    {
+     "name": "accelerator_fuel",
+     "kind": "diagram",
+     "desc": "Car-engine metaphor: light = accelerator pedal, CO2 = fuel tank. Three states: floor-it-cold (damage), floor-it-empty (stall then damage), revs+full-tank (power)."
+    },
+    {
+     "name": "low_co2_backup",
+     "kind": "flow",
+     "desc": "Light reactions full to Calvin cycle starved of CO2 to energy backup to oxidative damage to bleached leaf."
+    }
+   ],
+   "claims_needing_cite": [
+    "High light with low CO2 causes the same oxidative bleaching as ramping light too fast.",
+    "Above roughly 850 µmol/m²/s at ambient CO2, added light stops becoming sugar.",
+    "Running 1200 µmol/m²/s needs about 1000–1200 ppm CO2 and 1500 needs about 1200–1500 ppm."
+   ]
+  },
+  {
+   "id": "ppfd-schedule",
+   "kicker": "The practical schedule",
+   "title": "A week-by-week PPFD ramp by growth stage",
+   "summary": "A typical ~14-week indoor cycle ramps light stage by stage. Cloning starts soft at 80 µmol/m²/s and eases up toward 300; vegetative growth climbs from 300 to about 650, roughly +100 per week; early flower rebuilds from 600 toward 950; peak flower holds wherever your environment allows; maturation tapers slightly (e.g. 950 down to 850). One subtlety: when you flip to 12/12, total daily light (DLI) actually drops about 28% even at the same intensity, because the lights are on fewer hours.",
+   "points": [
+    "Cloning (weeks ~1, 18/6): 80 → 300 µmol/m²/s, soft and gentle while roots and machinery form.",
+    "Vegetative bulking: 300 → 650 µmol/m²/s, ramping roughly +100 per week.",
+    "Flower acclimation (early 12/12): rebuild from ~600 toward 950 µmol/m²/s after the flip.",
+    "Peak flower: hold 950 / 1200 / 1500 depending on your control tier; maturation tapers from ~950 down to ~850.",
+    "'The flip' to 12/12 cuts DLI by about 28% even at the same PPFD because daylight hours drop — plan for it rather than panicking."
+   ],
+   "figures": [
+    {
+     "name": "ppfd_ramp_table",
+     "kind": "table",
+     "desc": "Rows per stage (Clone, Veg, Flower acclimation, Peak, Maturation) with columns for photoperiod (18/6 or 12/12) and PPFD range."
+    },
+    {
+     "name": "dli_over_98_days",
+     "kind": "bars",
+     "desc": "Daily Light Integral bar chart across ~98 days rising from ~5 to ~52 mol/m²/day, with a visible ~28% dip at the 12/12 flip around day 36."
+    }
+   ],
+   "claims_needing_cite": [
+    "Cloning runs 80 to 300, veg 300 to 650 at about +100/week, flower acclimation 600 to 950, maturation 950 to 850 µmol/m²/s.",
+    "Flipping to 12/12 reduces DLI by about 28% at the same PPFD.",
+    "A representative full cycle spans about 14 weeks / 98 days indoors."
+   ]
+  },
+  {
+   "id": "how-high",
+   "kicker": "Setting your ceiling",
+   "title": "How high you push depends on what you control",
+   "summary": "Your safe peak PPFD is set by your environment, not by ambition. On ambient air (400–600 ppm CO2) the honest ceiling is about 950 µmol/m²/s — beyond ~850 you pay for electricity that isn't becoming sugar. A matched intermediate system with 1000–1200 ppm CO2 and tight VPD supports 1200. The 1500 tier is expert-only and demands the full environmental stack: leaf-temperature control, substrate strategy, and a strain that can take the load.",
+   "points": [
+    "Tier 1 (beginner, ambient air): ~950 µmol/m²/s with 400–600 ppm CO2 — no supplementation, diminishing returns above ~850.",
+    "Tier 2 (intermediate, matched): 1200 µmol/m²/s requires 1000–1200 ppm CO2 and tight VPD; below 1000 ppm here you bleach for nothing.",
+    "Tier 3 (expert only): 1500 µmol/m²/s needs full leaf-temp control, substrate strategy, and strain selection — otherwise you're just heating expensive plants.",
+    "Pick the tier your environment actually supports today; raising the ceiling means raising the whole system, not just the dimmer."
+   ],
+   "figures": [
+    {
+     "name": "three_tier_ceiling",
+     "kind": "table",
+     "desc": "Three columns (Beginner / Intermediate / Expert) listing peak PPFD, required CO2 ppm, and the prerequisite controls for each tier."
+    }
+   ],
+   "claims_needing_cite": [
+    "Ambient-air ceiling is about 950 µmol/m²/s with diminishing returns above ~850.",
+    "1200 µmol/m²/s requires 1000–1200 ppm CO2 and tight VPD; 1500 requires the full environmental stack."
+   ]
+  },
+  {
+   "id": "hanging-and-dimming",
+   "kicker": "Doing it physically",
+   "title": "Hanging height and dimming: how you actually deliver the ramp",
+   "summary": "You change PPFD in two ways: dim the fixture or change its distance to the canopy. Dimming is the cleaner, more repeatable lever because it changes intensity without changing the spread of light or risking heat at the canopy. Whichever you use, verify the real number — measure PPFD at the canopy with a meter (or use the manufacturer's chart) rather than guessing, because the same fixture reads very differently at different heights.",
+   "points": [
+    "Two levers set canopy PPFD: the fixture's dimmer and its hanging height above the plants.",
+    "Dimming is usually preferable for fine, repeatable steps; raising/lowering also shifts how evenly light spreads and how much radiant heat reaches the canopy.",
+    "Always confirm the actual PPFD at canopy level — measured or from the fixture's distance chart — instead of trusting a wattage or a dial position.",
+    "Re-check intensity whenever the canopy grows toward the light; plants get closer to the source as they stretch, raising PPFD even if you changed nothing."
+   ],
+   "figures": [
+    {
+     "name": "height_vs_dimming",
+     "kind": "diagram",
+     "desc": "A fixture over a canopy showing two adjustment arrows: vertical (hanging height) and a dimmer slider, with PPFD readout changing for each."
+    }
+   ],
+   "claims_needing_cite": [
+    "The same fixture produces very different canopy PPFD at different hanging heights.",
+    "Plants stretching toward the light raise effective PPFD even with no fixture change."
+   ]
+  },
+  {
+   "id": "troubleshooting",
+   "kicker": "Reading the plant",
+   "title": "Signs of too much light, and the traps that cause it",
+   "summary": "Too much light shows up as bleached or white leaf tips at the top of the canopy, plus stalled growth — but the same symptom comes from two different mistakes (ramping too fast, or high light with low CO2), so you cannot diagnose the cause from the leaf alone. The fix is to avoid both: ramp incrementally and keep CO2 matched to your intensity. Remember the whole schedule assumes the rest of the environment is in range; out-of-range temperature or VPD will bleach plants even at 'safe' light.",
+   "points": [
+    "Classic overexposure signs: bleached or pale tips on the upper canopy and stalled growth.",
+    "Two distinct causes (too-fast ramp vs high-light/low-CO2) produce identical visible damage — don't try to diagnose by eye, prevent both.",
+    "If you see bleaching, back the intensity down a step and confirm CO2, temperature, and VPD before pushing again.",
+    "Don't over-correct in fear: chronically under-lighting flower wastes yield just as surely as bleaching wastes plants."
+   ],
+   "figures": [
+    {
+     "name": "bleach_symptom_panel",
+     "kind": "diagram",
+     "desc": "Three leaf panels: ramp-too-fast (bleached), high-light-low-CO2 (bleached, same look), incremental+matched (healthy) — captioned 'same damage, different cause.'"
+    }
+   ],
+   "claims_needing_cite": [
+    "Bleached/pale upper-canopy tips and stalled growth are the signs of too much light.",
+    "Ramp-too-fast and high-light/low-CO2 produce visually identical damage."
+   ]
+  },
+  {
+   "id": "expectations",
+   "kicker": "Realistic expectations",
+   "title": "What to actually expect from your setup",
+   "summary": "Light is the schedule, not the whole system. Every PPFD target here assumes leaf temperature around 26–28°C, VPD of 1.2–1.5 kPa, adequate root-zone capacity, and a strain that can handle the load — push light and CO2 without those and you get heated plants, not bigger yields. Be honest about your tier: most beginners are best served maxing out the ~950 ambient ceiling cleanly before ever chasing 1200 or 1500.",
+   "points": [
+    "All the numbers assume leaf temp ~26–28°C, VPD 1.2–1.5 kPa, healthy root zone, and a capable strain.",
+    "Higher tiers are not 'better defaults' — they're whole-system commitments; the wrong tier just wastes energy and stresses plants.",
+    "A clean run at the honest ceiling beats a sloppy run at a higher one; nail acclimation and CO2 matching first.",
+    "Treat this as one input among several — light works only when temperature, humidity, and the root zone are also in range."
+   ],
+   "figures": [
+    {
+     "name": "required_conditions_box",
+     "kind": "table",
+     "desc": "A 'required for all tiers' panel listing leaf temp 26–28°C, VPD 1.2–1.5 kPa, adequate root-zone capacity, and strain capability."
+    }
+   ],
+   "claims_needing_cite": [
+    "All PPFD/CO2 targets assume leaf temp 26–28°C, VPD 1.2–1.5 kPa, adequate root-zone capacity, and a capable strain."
+   ]
+  }
+ ]
+}

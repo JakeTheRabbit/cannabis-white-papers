@@ -1,0 +1,253 @@
+{
+ "slug": "defoliation-training",
+ "title": "Defoliation and plant training for maximum yield",
+ "eyebrow": "Canopy · Training",
+ "kind": "research",
+ "sub": "A beginner's guide to topping, low-stress training, trellising, lollipopping and defoliation — what each one does, when to do it, and how to avoid overdoing it.",
+ "reading_min": 12,
+ "related": [
+  "airflow-design",
+  "mould-risk",
+  "harvest-dry-trim-cure"
+ ],
+ "ref_ids": [
+  "sikora-2019-apical-bud-hemp",
+  "massuela-2022-pruning-cbd-yield",
+  "rodriguez-morrison-2021-ppfd-yield",
+  "danziger-2022-planting-density",
+  "wang-2020-shade-avoidance",
+  "mahmoud-2023-budrot-botrytis",
+  "anthony-2020-training-light-interception",
+  "massuela-springer-2026-topping-hemp"
+ ],
+ "ref_lookup": {
+  "sikora-2019-apical-bud-hemp": "Sikora V, Berenji J, Latkovic D. Apical bud removal increased seed yield in hemp (Cannabis sativa L.). Acta Agriculturae Scandinavica, Section B - Soil & Plant Science. 2019;69(4):317-323. doi:10.1080/09064710.2019.1568540",
+  "massuela-2022-pruning-cbd-yield": "Massuela DC, Hartung J, Munz S, Erpenbach F, Graeff-Honninger S. Impact of Harvest Time and Pruning Technique on Total CBD Concentration and Yield of Medicinal Cannabis. Plants. 2022;11(1):140. doi:10.3390/plants11010140",
+  "rodriguez-morrison-2021-ppfd-yield": "Rodriguez-Morrison V, Llewellyn D, Zheng Y. Cannabis Yield, Potency, and Leaf Photosynthesis Respond Differently to Increasing Light Levels in an Indoor Environment. Frontiers in Plant Science. 2021;12:646020. doi:10.3389/fpls.2021.646020",
+  "danziger-2022-planting-density": "Danziger N, Bernstein N. Too Dense or Not Too Dense: Higher Planting Density Reduces Cannabinoid Uniformity but Increases Yield/Area in Drug-Type Medical Cannabis. Frontiers in Plant Science. 2022;13:713481. doi:10.3389/fpls.2022.713481",
+  "wang-2020-shade-avoidance": "Wang X, Gao X, Liu Y, Fan S, Ma Q. Progress of Research on the Regulatory Pathway of the Plant Shade-Avoidance Syndrome. Frontiers in Plant Science. 2020;11:439. doi:10.3389/fpls.2020.00439",
+  "mahmoud-2023-budrot-botrytis": "Mahmoud M, BenRejeb I, Punja ZK, Buirs L, Jabaji S. Understanding bud rot development, caused by Botrytis cinerea, on cannabis (Cannabis sativa L.) plants grown under greenhouse conditions. Botany. 2023;101(5):200-231. doi:10.1139/cjb-2022-0139",
+  "anthony-2020-training-light-interception": "Anthony BM, Serra S, Musacchi S. Optimization of Light Interception, Leaf Area and Yield in 'WA38': Comparisons among Training Systems, Rootstocks and Pruning Techniques. Agronomy. 2020;10(5):689. doi:10.3390/agronomy10050689",
+  "massuela-springer-2026-topping-hemp": "Morphological, physiological, and biochemical responses of two industrial hemp (Cannabis sativa L.) cultivars to different levels of topping. Journal of Cannabis Research. 2026;8:Article 410. doi:10.1186/s42238-026-00410-2"
+ },
+ "sections": [
+  {
+   "id": "intro",
+   "kicker": "Start here",
+   "title": "Why we cut and bend the plant on purpose",
+   "summary": "Plant training and defoliation are deliberate physical interventions — bending, tying, and selectively removing leaves and branches — that reshape a cannabis plant so more of its energy lands in the flowers you actually harvest. Left alone, a plant grows tall with one dominant top and a tangle of weak, shaded lower growth that produces airy, low-value flower. Training flattens and widens the canopy so light hits more bud sites evenly, and defoliation opens the interior so light and air reach the middle instead of being blocked by leaves. Done right these techniques raise yield and quality; done badly or too aggressively they stress the plant and cost you flower.",
+   "points": [
+    "Two families of technique: training (reshaping via bending/tying/cutting growth tips) and defoliation (removing leaves and lower growth)",
+    "Goal is an even, flat, well-lit canopy where every bud site gets strong light and airflow",
+    "This is an active, scheduled process tied to specific days of the grow, not a one-time event",
+    "Overdoing it is a real risk — the guide covers what NOT to remove"
+   ],
+   "figures": [
+    {
+     "name": "training_vs_untrained_canopy",
+     "kind": "diagram",
+     "desc": "Side-by-side cross-section of an untrained plant (one tall central cola, shaded fluffy lower growth) versus a trained flat canopy (many even tops across a trellis), with light arrows showing penetration in each case."
+    }
+   ]
+  },
+  {
+   "id": "key-terms",
+   "kicker": "Vocabulary",
+   "title": "Every term, defined once",
+   "summary": "Before the how-to, here is the full vocabulary used throughout. These terms come up constantly in grow rooms and many beginners conflate them. Topping and FIM affect the growing tip; LST and trellising reshape the whole plant without cutting much; lollipopping and defanning remove growth; and the sources-vs-sinks idea explains why removing the wrong leaves hurts you.",
+   "points": [
+    "Node: the point on a stem where leaves and branches grow out; counting nodes is how training is measured",
+    "Topping: cutting off the very top growing tip to stop upward growth and force two new tops below it",
+    "FIM: a partial top (cutting most but not all of the tip) that can produce multiple new tops instead of two",
+    "Apical dominance: the plant's natural tendency to push one main top taller than the side branches; topping/LST break this",
+    "LST (Low-Stress Training): gently bending and tying down branches to spread them flat without cutting",
+    "Trellis / SCROG (Screen of Green): horizontal netting the canopy grows up through, used to hold branches spread out and evenly spaced",
+    "Lollipopping: stripping the small branches, nodes and leaves off the bottom of the plant so it looks like a lollipop — stick below, canopy on top",
+    "Defanning / defoliation: selectively removing large fan leaves to open the canopy for light and air",
+    "Fan leaves: the big classic cannabis leaves that collect light (not the small sugar leaves on the buds)",
+    "Source vs sink: a 'source' leaf makes more sugar than it uses; a 'sink' (flower, shaded leaf) consumes more than it makes"
+   ],
+   "figures": [
+    {
+     "name": "plant_anatomy_labelled",
+     "kind": "diagram",
+     "desc": "Labelled line drawing of a cannabis plant marking node, growing tip, fan leaf, lateral branch, and the lower third 'lollipop zone'."
+    }
+   ]
+  },
+  {
+   "id": "training-light",
+   "kicker": "The core idea",
+   "title": "How training and defoliation actually raise yield",
+   "summary": "The underlying mechanism is light and air reaching more of the plant. A flat, spread canopy puts dozens of bud sites at the same height under strong light instead of one top hogging it. Source materials measure flower-room light climbing from 400-800 PPFD in early flower to a peak of 1000-1200 PPFD mid-bloom — that intensity only pays off if it reaches the bud, which is why the interior must be opened up. The 'sources and sinks' framework explains the trade-off: a well-lit leaf is a sugar factory (a source) feeding the buds, but a shaded leaf deep in the canopy becomes a drain (a sink), so opening the canopy converts shaded would-be sinks back into productive sources while improving airflow.",
+   "points": [
+    "Spreading the canopy flat means many bud sites share the strongest light instead of one dominant top",
+    "Flower-room light intensity runs 400-800 PPFD in flower week 1 and peaks around 1000-1200 PPFD weeks 4-7 (source: LED crop-steering tables)",
+    "Opening the interior lets that high light reach lower/inner buds that would otherwise stay airy and underdeveloped",
+    "Better airflow through the canopy lowers humidity around dense buds and reduces mould/bud-rot risk",
+    "Keep VPD between 0.8 and 1.2 kPa; below 0.8 raises bud-rot risk in dense colas — airflow from defoliation helps hold this"
+   ],
+   "figures": [
+    {
+     "name": "ppfd_through_flower",
+     "kind": "line",
+     "desc": "Line chart of target PPFD (umol/m2/s) across veg week 1 to flower week 8 from the LED 8-week table, showing the rise to the 1000-1200 plateau and taper at the end."
+    },
+    {
+     "name": "source_sink_flow",
+     "kind": "flow",
+     "desc": "Flow diagram: well-lit fan leaf (source) -> sugars -> flower (sink); and a shaded leaf shown flipping from sink back to source once the canopy is opened."
+    }
+   ],
+   "claims_needing_cite": [
+    "Flower-room PPFD targets of 400-800 in flower week 1 and 1000-1200 peak weeks 4-7",
+    "VPD below 0.8 kPa raises bud-rot risk in dense colas; target band 0.8-1.2 kPa"
+   ]
+  },
+  {
+   "id": "topping-lst",
+   "kicker": "The core idea",
+   "title": "Topping, FIM and low-stress training in veg",
+   "summary": "Topping and LST both fight apical dominance — the plant's habit of sending one top racing upward. Topping cuts that tip off, which redirects growth hormones to the side branches and turns one main top into two (or more), creating a bushier, wider plant. LST does the same thing without cutting: you bend the tall central stem down and tie it sideways so the lower branches catch up and the canopy levels out. In commercial veg the source material tops the growing tip and notes the first topping happens around day 5-7 of veg, with taller outlier plants getting 2-3 nodes removed to match canopy height. Topping is reserved for longer veg cycles (the 21-day veg) or tall, stretchy genetics — a fast 14-day veg often runs with no topping at all.",
+   "points": [
+    "Topping = remove the top node; this slows vertical growth and forces lateral branching into multiple tops",
+    "First topping is done around day 5-7 of veg; significantly taller plants get 2-3 nodes removed to even the canopy",
+    "In a standard 14-day veg, plants are often topped only once if at all; the 21-day veg is where topping is routine",
+    "LST achieves the same flattening with no cut — lower stress, no recovery time, good for beginners and home tents",
+    "Match the technique to veg length: tall genetics veg ~8-10 days, mid ~10-14, short ~14-21 days"
+   ],
+   "figures": [
+    {
+     "name": "topping_before_after",
+     "kind": "diagram",
+     "desc": "Before/after of a single growing tip: one apical top, then the cut, then two new tops emerging from the node below."
+    },
+    {
+     "name": "lst_tie_down",
+     "kind": "diagram",
+     "desc": "Top-down view of a plant with the central stem bent and tied to the pot edge, side branches fanning out to fill a circle."
+    }
+   ],
+   "claims_needing_cite": [
+    "First veg topping at day 5-7; remove 2-3 nodes from taller plants to even canopy",
+    "Topping reserved for 21-day veg or tall genetics; 14-day veg often topped once or not at all",
+    "Veg durations by height class: tall 8-10 days, mid 10-14, short 14-21"
+   ]
+  },
+  {
+   "id": "trellis-spread",
+   "kicker": "The core idea",
+   "title": "Trellising and spreading: locking the canopy flat",
+   "summary": "A trellis is horizontal netting stretched over the table that the plants grow up through; it is the tool that holds a spread canopy in place and later stops heavy buds from snapping branches. The source workflow sets all three trellis layers on day 1 of flower, with the first net placed 1-2 inches below the top of the canopy. Around day 5-7 the plants have grown through the first net and the team 'spreads' the branches — pulling them out from the central stalk and tucking them into open squares so light reaches the middle and the whole table fills out evenly. The second and third nets go higher as the plants stretch and exist mainly to support flower weight; short plants may only need two layers, very tall genetics need all three.",
+   "points": [
+    "Trellis netting spreads branches early and supports heavy flowers later in bloom",
+    "All trellis levels are set on flower day 1; the first net sits 1-2 inches below the canopy top",
+    "Plants grow through the first net by ~day 5 and are spread out from the central stalk into the open squares",
+    "Spreading opens the center to light and airflow and reduces how many fan leaves you later need to remove",
+    "Net count scales with height: short plants ~2 layers, tall genetics 3 layers"
+   ],
+   "figures": [
+    {
+     "name": "trellis_layers",
+     "kind": "diagram",
+     "desc": "Side view of a flower table with three stacked trellis nets at different heights, plants woven through, labelled with the job of each layer (spread / support / support)."
+    },
+    {
+     "name": "spread_top_down",
+     "kind": "diagram",
+     "desc": "Top-down view of one trellis square grid: branches pulled from a central stalk and distributed evenly to fill empty squares."
+    }
+   ],
+   "claims_needing_cite": [
+    "All three trellis levels set on flower day 1; first net 1-2 inches below canopy top",
+    "Plants spread from central stalk around day 5-7 after growing through first net",
+    "Short plants need ~2 trellis layers, tall genetics need 3"
+   ]
+  },
+  {
+   "id": "schedule",
+   "kicker": "Do this",
+   "title": "The defoliation and training schedule, day by day",
+   "summary": "The source material lays out a clear flower-room timeline you can follow as a default. Day 1: trellis the tables. Day 5-14: spread the plants through the first net. Day 7-10: Phase 1 lollipopping — remove the small branches and lower nodes from the bottom half, keeping at least the top 3 nodes on each main branch. Day 21-28: Phase 2 defanning — remove the lower fan leaves across every plant for light and airflow. Day 42-49: Phase 3 final defanning — done only if a strain still needs it, decided per strain by the grower. Lollipopping removes the bottom 10-18 inches (the lower third) of growth that would otherwise make small, underdeveloped 'larf'.",
+   "points": [
+    "Day 1: set the trellis (all levels)",
+    "Day 5-14: spread branches through the first net",
+    "Day 7-10: Phase 1 lollipopping — strip the lower half/third, keep the top 3 nodes per branch",
+    "Day 21-28: Phase 2 defanning — remove lower fan leaves on every plant",
+    "Day 42-49: Phase 3 final defanning — optional, strain-by-strain decision",
+    "Lollipop zone is roughly the bottom 10-18 inches (lower one-third) of the plant"
+   ],
+   "figures": [
+    {
+     "name": "flower_plant_work_timeline",
+     "kind": "table",
+     "desc": "Table mapping flower day ranges (1, 5-14, 7-10, 21-28, 42-49) to the action (trellis, spread, lollipop, defan phase 2, defan phase 3) straight from the source timeline."
+    },
+    {
+     "name": "lollipop_zone",
+     "kind": "diagram",
+     "desc": "Plant silhouette with the bottom third shaded as the removal zone and the top 3 nodes per branch marked as 'keep'."
+    }
+   ],
+   "claims_needing_cite": [
+    "Flower timeline: day 1 trellis, day 5-14 spread, day 7-10 lollipop, day 21-28 defan phase 2, day 42-49 defan phase 3",
+    "Lollipopping keeps at least the top 3 nodes per main branch and removes the lower 10-18 inches"
+   ]
+  },
+  {
+   "id": "pitfalls",
+   "kicker": "Avoid these",
+   "title": "What NOT to overdo, and common beginner mistakes",
+   "summary": "The single biggest mistake is removing too many fan leaves. Source material is explicit: fan leaves are 'sources' that make more energy than they use, so the goal is to leave as many on as possible while still achieving light penetration and airflow — strip too many and you starve the buds you are trying to grow. The second trap is overcrowding: plants packed too close trigger a 'shade avoidance response' where they waste energy on weak inner branches reaching for light. Source spacing starts at 2.3 sqft per plant and runs 1.8-3.0 sqft; proper spacing means far less defoliation is needed because the canopy was never a jungle to begin with. Timing matters too — heavy defoliation late in flower or topping a plant already in bloom stresses it when it should be bulking.",
+   "points": [
+    "Do not over-defoliate: leave as many fan-leaf 'sources' as possible while still opening the canopy",
+    "Over-removal starves buds — the leaves you cut were feeding the flowers",
+    "Avoid overcrowding: plants too close trigger a shade-avoidance response and weak inner growth",
+    "Spacing guide: start at 2.3 sqft per plant, typical range 1.8-3.0 sqft; correct spacing means less plant work overall",
+    "Don't top during flower or defoliate hard late in bloom; match aggressive work to the early-flower window",
+    "If the room smells musty or fan leaves are dying/molding inside the canopy, plant work is overdue — but the fix is airflow, not stripping every leaf"
+   ],
+   "figures": [
+    {
+     "name": "over_vs_right_defoliation",
+     "kind": "diagram",
+     "desc": "Two plants side by side: one over-defoliated (bare stems, few leaves, label 'starved') versus one correctly thinned (open interior but plenty of fan leaves left, label 'fed and airy')."
+    },
+    {
+     "name": "spacing_density",
+     "kind": "zones",
+     "desc": "Top-down table grid showing plant spacing zones: too dense (shade-avoidance flag), 2.3 sqft start point, and the 1.8-3.0 sqft working range."
+    }
+   ],
+   "claims_needing_cite": [
+    "Fan leaves are sources; leave as many as possible while achieving light penetration and airflow",
+    "Overcrowding triggers a shade-avoidance response with weak inner branching",
+    "Plant density: start at 2.3 sqft per plant, working range 1.8-3.0 sqft"
+   ]
+  },
+  {
+   "id": "expectations",
+   "kicker": "Reality check",
+   "title": "Realistic expectations and how to learn your plants",
+   "summary": "Training and defoliation are real yield and quality levers, but they are not magic and the numbers depend on your genetics, light and environment. Source material frames the whole approach as data-driven and iterative — it takes about three runs of the same cultivar to dial in the sweet spot of maximum yield and quality, and good planning of genetics and spacing is cited as worth 15-30% to the bottom line with no extra overhead. Phase 3 defanning being optional is the model in miniature: you watch the plant and only intervene when that strain actually needs it. Log what you do, photograph the canopy, and adjust next run rather than chasing a one-size-fits-all recipe.",
+   "points": [
+    "Expect to refine over ~3 runs of a cultivar before you hit its yield/quality sweet spot",
+    "Good genetic planning and spacing is cited as a 15-30% bottom-line gain with no extra cost",
+    "Not every strain needs every phase — the optional Phase 3 defan is decided per strain by observation",
+    "Track and photograph each run so changes are based on your own data, not generic advice",
+    "Slow-growing genetics behave differently and need a gentler, less aggressive hand"
+   ],
+   "figures": [
+    {
+     "name": "three_run_learning_curve",
+     "kind": "line",
+     "desc": "Line chart showing yield/quality rising across run 1, run 2, run 3 of the same cultivar as training and defoliation are dialled in."
+    }
+   ],
+   "claims_needing_cite": [
+    "It takes about three runs of a cultivar to reach the maximum yield/quality sweet spot",
+    "Genetic planning and spacing can improve the bottom line by 15-30% with no extra overhead"
+   ]
+  }
+ ]
+}

@@ -1,0 +1,208 @@
+{
+ "slug": "pest-id",
+ "title": "Pest identification and control",
+ "eyebrow": "Plant health · Pests",
+ "kind": "research",
+ "sub": "A beginner's field guide to the eight pests that hit cannabis crops most: how to spot each one, understand its life cycle, monitor for it, and knock it down with biological controls and targeted treatments — the companion to your IPM decision process.",
+ "reading_min": 18,
+ "related": [
+  "ipm-sop",
+  "airflow-design",
+  "mould-risk",
+  "cloning"
+ ],
+ "ref_ids": [
+  "ahmed-2024-hemp-pests-florida-jipm",
+  "pulkoski-burrack-2023-piercing-sucking-hemp",
+  "cranshaw-2018-phorodon-cannabis-north-america",
+  "cranshaw-wainwright-2020-rice-root-aphid-cannabis",
+  "lopez-2023-amblyseius-swirskii-review-jipm",
+  "vanmaanen-2010-broad-mite-swirskii-biocontrol",
+  "cloyd-2015-fungus-gnat-ecology-management",
+  "cloyd-2024-biopesticides-cannabis-oregon"
+ ],
+ "ref_lookup": {
+  "ahmed-2024-hemp-pests-florida-jipm": "Ahmed, M. Z., McKenzie, C. L., & Osborne, L. S. (2024). Arthropod and mollusk pests of hemp, Cannabis sativa (Rosales: Cannabaceae), and their indoor management plan in Florida. Journal of Integrated Pest Management, 15(1), 1.",
+  "pulkoski-burrack-2023-piercing-sucking-hemp": "Pulkoski, M. A., & Burrack, H. J. (2023). Assessing the impact of piercing-sucking pests on greenhouse-grown industrial hemp (Cannabis sativa L.). Environmental Entomology, 53(1), 1-10.",
+  "cranshaw-2018-phorodon-cannabis-north-america": "Cranshaw, W., Halbert, S. E., Favret, C., Britt, K., & Miller, G. L. (2018). Phorodon cannabis Passerini (Hemiptera: Aphididae), a newly recognized pest in North America found on industrial hemp. Insecta Mundi, 0662, 1-12.",
+  "cranshaw-wainwright-2020-rice-root-aphid-cannabis": "Cranshaw, W., & Wainwright-Evans, S. (2020). Cannabis sativa as a host of rice root aphid (Hemiptera: Aphididae) in North America. Journal of Integrated Pest Management, 11(1), 15.",
+  "lopez-2023-amblyseius-swirskii-review-jipm": "Lopez, L. (2023). Meet Amblyseius swirskii (Acari: Phytoseiidae): a commonly used predatory mite in vegetable crops. Journal of Integrated Pest Management, 14(1), 20.",
+  "vanmaanen-2010-broad-mite-swirskii-biocontrol": "van Maanen, R., Vila, E., Sabelis, M. W., & Janssen, A. (2010). Biological control of broad mites (Polyphagotarsonemus latus) with the generalist predator Amblyseius swirskii. Experimental and Applied Acarology, 52(1), 29-34.",
+  "cloyd-2015-fungus-gnat-ecology-management": "Cloyd, R. A. (2015). Ecology of fungus gnats (Bradysia spp.) in greenhouse production systems associated with disease-interactions and alternative management strategies. Insects, 6(2), 325-332.",
+  "cloyd-2024-biopesticides-cannabis-oregon": "Effects of Selected Biopesticides on Two Arthropod Pests of Cannabis sativa L. in Northeastern Oregon. (2024). Crops, 4(4), 19."
+ },
+ "sections": [
+  {
+   "id": "intro",
+   "kicker": "Start here",
+   "title": "What this guide is (and is not)",
+   "summary": "This is a plain-language field guide to identifying and controlling the eight pest groups that most commonly attack cannabis: spider mites, russet and broad mites, thrips, fungus gnats, aphids and root aphids, whitefly, and caterpillars. It tells you what each pest looks like, how fast it breeds, how to monitor for it, and how to treat it with bugs (biological controls) and sprays. It is the 'who's who' companion to the IPM SOP, which is the separate decision process that tells you WHEN to act and which lever to pull. Read this to recognise the enemy; read the IPM SOP to run the program.",
+   "points": [
+    "Covers 8 pest groups by name with tell-tale signs, life cycle, monitoring, biocontrol and treatment",
+    "Beginner-first: every technical term is defined the first time it appears",
+    "Pairs with the IPM SOP (the decision framework) — this guide is the identification reference",
+    "Bias is toward prevention and early detection, because every pest below breeds faster than you can spray"
+   ],
+   "figures": [
+    {
+     "name": "Pest at a glance",
+     "kind": "table",
+     "desc": "8 rows (one per pest group) x columns: where it feeds (leaf top/underside/roots/buds), size and whether you need a loupe, #1 tell-tale sign, fastest life cycle in days, primary biocontrol"
+    }
+   ]
+  },
+  {
+   "id": "key-terms",
+   "kicker": "Vocabulary",
+   "title": "Key terms, defined once",
+   "summary": "A handful of words appear throughout this guide and the IPM SOP, so define them now. IPM (Integrated Pest Management) is a layered strategy that combines prevention, monitoring, biological controls and targeted sprays instead of relying on calendar spraying. A biocontrol or beneficial is a living predator, parasite or microbe you release to eat or infect the pest. Scouting is the deliberate, repeatable inspection of plants and traps to catch problems early, and an action threshold is the pest count at which you stop watching and start treating.",
+   "points": [
+    "IPM — layered prevention + monitoring + biologicals + targeted treatment, not calendar spraying",
+    "Biocontrol / beneficial — a released predator (e.g. predatory mite), parasitoid wasp, or microbe (fungus/bacterium)",
+    "Preventative vs curative — preventative agents establish before pests arrive; curative agents knock down an active outbreak",
+    "Life cycle / generation time — egg to egg-laying adult; warm dry rooms shorten this to under a week for mites",
+    "Loupe / scope — a 30x hand loupe finds spider mites; russet/broad mites need 60-100x magnification",
+    "Frass, honeydew, stippling — pest droppings, sticky sugar excretion, and fine pale feeding speckles, respectively"
+   ],
+   "figures": [
+    {
+     "name": "Preventative vs curative timeline",
+     "kind": "line",
+     "desc": "Two pest-population curves over time: one where a preventative beneficial is established early (flat low line), one where treatment starts only after threshold (spike then slow decline), showing why early establishment wins"
+    }
+   ]
+  },
+  {
+   "id": "sap-suckers",
+   "kicker": "The core pests, part 1",
+   "title": "Leaf sap-suckers: spider mites, thrips, aphids and whitefly",
+   "summary": "These four feed on leaves and stems by piercing cells and sucking sap, so they share a look: pale stippling, distortion and loss of vigour. Two-spotted spider mites live on leaf undersides, spin fine webbing, and in a warm dry room (27C / ~20% RH) complete egg-to-adult in as little as 3 days, with one female laying up to ~200 eggs. Thrips rasp the surface leaving silvery streaks and black frass dots, and drop to the soil to pupate; aphids cluster on new growth, multiply explosively, and excrete honeydew that grows black sooty mould; whitefly are tiny white flies that erupt in clouds when disturbed and also leave honeydew. Heat and low humidity accelerate all of them, which is why a small spot can become a crop-wide problem in one to two weeks.",
+   "points": [
+    "Spider mites: leaf-underside stippling + fine webbing; cycle as fast as 3 days at 27C/20% RH; up to ~200 eggs/female",
+    "Thrips: silvery rasping streaks + tiny black frass; pupate in the growing medium, so leaf sprays alone miss a stage",
+    "Aphids: soft-bodied clusters on new growth, cast white skins, honeydew + sooty mould; can give live birth (very fast buildup)",
+    "Whitefly: white moth-like adults flush up when disturbed; uniform yellowing and lower-canopy decline",
+    "Shared driver: warm + dry shortens every life cycle — environment control is the first lever"
+   ],
+   "figures": [
+    {
+     "name": "Damage signature comparison",
+     "kind": "diagram",
+     "desc": "Four leaf illustrations side by side showing the distinct damage of spider mites (webbing + fine stipple), thrips (silver streaks + black dots), aphids (curled new growth + clusters), whitefly (yellowing + flies underside)"
+    },
+    {
+     "name": "Spider mite life cycle vs temperature",
+     "kind": "bars",
+     "desc": "Bar chart of days to complete the egg-to-adult cycle at ~27C/20% RH (~3 days) vs ~21C (~7 days) vs ~10C (up to ~19 days), illustrating how heat speeds reproduction"
+    }
+   ]
+  },
+  {
+   "id": "hidden-pests",
+   "kicker": "The core pests, part 2",
+   "title": "The hidden ones: russet and broad mites, fungus gnats, root aphids and caterpillars",
+   "summary": "This group is dangerous because the damage shows before the pest does. Russet mites (Aculops cannabicola, under 1 mm, needs 80-100x) and broad mites (needs ~60x) are invisible to the naked eye and announce themselves through cupped, glossy or 'wet-looking' new growth, twisted tops and stunting — symptoms often misread as nutrient or heat stress. Fungus gnat larvae live in the medium and chew root hairs, weakening plants and opening wounds for root pathogens, while the adults are the small dark flies hovering over wet media. Root aphids feed below ground at the crown and roots causing unexplained yellowing and stalled growth, and caterpillars (budworms) bore into flowers leaving frass and triggering bud rot. Because all of these hide in the medium, the crown, or inside buds, you find them by inspecting roots and tops and by scouting at dusk — not by glancing at the canopy.",
+   "points": [
+    "Russet/broad mites: cupped, glossy, twisted new growth; sub-mm, need 60-100x magnification — easily mistaken for nutrient issues",
+    "Fungus gnats: larvae eat root hairs in wet media; adults are weak dark fliers; larvae open the door to root-rot pathogens",
+    "Root aphids: feed at crown/roots; cause yellowing and stunting with no visible canopy pest — check the root zone and pot base",
+    "Caterpillars/budworms: frass + bore holes in flowers, rapid trigger for bud rot; scout at dusk when larvae feed",
+    "Misdiagnosis is the trap — confirm with a loupe/scope and root inspection before blaming nutrients or environment"
+   ],
+   "figures": [
+    {
+     "name": "Where each hidden pest lives",
+     "kind": "zones",
+     "desc": "Plant cross-section split into zones (growing tips, mid-canopy leaves, flowers/buds, root zone/crown) with each hidden pest mapped to where you actually find it"
+    }
+   ]
+  },
+  {
+   "id": "monitoring",
+   "kicker": "Catch it early",
+   "title": "Monitoring: traps, loupes and a weekly scouting routine",
+   "summary": "You cannot control what you do not measure, and early detection is the single biggest lever you have. Run a fixed weekly scouting walk on the same day, inspecting leaf undersides, growing tips, flowers and the root zone, and increase to twice weekly as rooms warm up. Hang yellow sticky cards at canopy height for thrips/whitefly/fungus-gnat adults at roughly one card per 1,000 sq ft minimum (more cards = better signal), placing fungus-gnat cards low near the medium surface. Record counts on each card so you track the trend, not just the snapshot, and carry a 30x loupe for spider mites plus access to a 60-100x scope for russet/broad mites.",
+   "points": [
+    "Scout weekly on a fixed day; spot-check twice weekly when temperatures and pest development rise",
+    "Yellow sticky cards: minimum ~1 per 1,000 sq ft; place low at the medium for fungus gnats, canopy height for thrips/whitefly",
+    "Log card counts each week — a rising trend, not a single number, is the alarm",
+    "30x loupe for spider mites; 60-100x scope for russet/broad mites; inspect undersides, tips, flowers AND roots",
+    "Action thresholds are facility-specific — e.g. one grower tolerates 10-15 thrips/card/week, another with virus history tolerates under 5"
+   ],
+   "figures": [
+    {
+     "name": "Sticky-card trend log",
+     "kind": "line",
+     "desc": "Example weekly line chart of thrips count per card across 6 weeks, with a horizontal action-threshold line, showing the point where the trend crosses the line and treatment begins"
+    },
+    {
+     "name": "Weekly scouting checklist",
+     "kind": "flow",
+     "desc": "Step flow: same day each week -> inspect undersides/tips/flowers/roots -> read and log every sticky card -> compare to last week -> below threshold = monitor / above = trigger IPM SOP"
+    }
+   ]
+  },
+  {
+   "id": "controls",
+   "kicker": "What to release and spray",
+   "title": "Biological controls and treatments, pest by pest",
+   "summary": "Match the tool to the pest and to whether you are preventing or reacting. For spider mites the specialist predator Phytoseiulus persimilis is the fast curative (it wants above ~60% RH), while Neoseiulus californicus or Amblyseius swirskii establish preventatively (e.g. roughly 20 persimilis + 100 swirskii per m2 in combined-release studies). Thrips are managed with Amblyseius cucumeris or swirskii at about 100-300 mites/m2 on the canopy, with control typically visible around 3 weeks; aphids respond to species-matched parasitoid wasps (Aphidius colemani for green peach, Aphidius matricariae for cannabis aphid) plus the fungus Beauveria bassiana; whitefly to Encarsia/Eretmocerus wasps and swirskii. Fungus gnats are hit in the medium with Steinernema feltiae nematodes and the bacterium Bti (e.g. Gnatrol) every ~2 weeks; caterpillars with Bacillus thuringiensis kurstaki (Btk), which only kills larvae that eat it; russet/broad mites with predatory mites plus micronised sulphur — but never apply sulphur in flower.",
+   "points": [
+    "Spider mites: persimilis = curative (needs >60% RH); californicus / swirskii = preventative establishment",
+    "Thrips: cucumeris or swirskii at ~100-300/m2, control ~3 weeks; pair with sticky cards and a soil-stage tactic for pupae",
+    "Aphids: match the wasp to the species (colemani vs matricariae); add Beauveria bassiana for soft-bodied knockdown",
+    "Whitefly: Encarsia / Eretmocerus parasitoid wasps + swirskii; fungus gnats: S. feltiae nematodes + Bti drench every ~2 weeks",
+    "Caterpillars: Btk (kills only larvae that ingest it). Russet/broad mites: predatory mites + micronised sulphur — NOT during flowering",
+    "Beneficials reproduce faster than pests only if released before the pest gets a head start — timing beats dose"
+   ],
+   "figures": [
+    {
+     "name": "Beneficial selection matrix",
+     "kind": "table",
+     "desc": "Rows = 8 pests; columns = preventative agent, curative agent, microbial/spray option, typical release rate or interval, key constraint (RH, flowering restriction, ingestion-required)"
+    }
+   ]
+  },
+  {
+   "id": "pitfalls",
+   "kicker": "Where growers go wrong",
+   "title": "Troubleshooting and common pitfalls",
+   "summary": "Most pest disasters are diagnosis and timing failures, not product failures. The classic mistakes: blaming twisted, glossy new growth on nutrients when it is russet or broad mites (confirm at 60-100x before feeding the plant); spraying the canopy for thrips or fungus gnats while ignoring the soil-dwelling pupal/larval stage so the population rebounds; and releasing beneficials onto an already-exploding population, where the predators can never catch up. Other traps include applying sulphur or harsh oils in flower and tainting the harvest, releasing persimilis into a dry room below ~60% RH where it fails, and skipping clone quarantine so an infested cutting seeds the whole crop. When a treatment 'fails', re-confirm the pest ID, check you covered every life stage, and verify the environment (RH, temperature) actually suited the agent.",
+   "points": [
+    "Misreading mite distortion as nutrient deficiency — always confirm with a scope before dosing nutrients",
+    "Treating only the visible stage — thrips pupae and gnat larvae live in the medium; hit soil AND canopy",
+    "Releasing beneficials too late — once the pest is exploding, predators cannot win; preventative release is the fix",
+    "Wrong environment for the agent — persimilis fails below ~60% RH; check conditions before blaming the bug",
+    "Sulphur and harsh oils in flower risk residue/taint and phytotoxicity — stop these before bloom",
+    "Skipping clone/mother quarantine — one infested cutting reseeds the room; isolate and inspect incoming plants"
+   ],
+   "figures": [
+    {
+     "name": "Symptom -> likely cause -> confirm/fix",
+     "kind": "flow",
+     "desc": "Decision flow starting from common ambiguous symptoms (twisted tips, yellowing, silver streaks, sudden wilting) branching to likely pest vs non-pest cause and the confirmation step before any treatment"
+    }
+   ]
+  },
+  {
+   "id": "expectations",
+   "kicker": "What success looks like",
+   "title": "Realistic expectations and prevention payoff",
+   "summary": "Eradication is rarely the goal; durable suppression below the action threshold is. Expect biological control to take time — thrips control is often visible only around 3 weeks after release, and breaking a fungus-gnat cycle by trapping adults while killing larvae usually takes 4-8 weeks. The cheapest 'treatment' is prevention: quarantine and inspect every incoming clone, keep mother plants clean (an infested mother makes every cutting infested), control humidity and airflow, sanitise tools and rooms, and run the weekly scout without fail. A facility that prevents and detects early spends far less on curatives and loses far less crop than one that fights outbreaks reactively.",
+   "points": [
+    "Goal is suppression below threshold, not zero pests — clean crops come from prevention, not heroic sprays",
+    "Biologicals are slow but durable: thrips ~3 weeks to visible control; fungus-gnat cycle ~4-8 weeks to break",
+    "Prevention stack: quarantine clones, keep mothers clean, control RH/airflow, sanitise, scout weekly",
+    "An infested mother plant guarantees infested clones — the mother room is the highest-leverage inspection point",
+    "Track outcomes against the IPM SOP thresholds so you know whether the program is actually holding"
+   ],
+   "figures": [
+    {
+     "name": "Cost of prevention vs reaction",
+     "kind": "bars",
+     "desc": "Two stacked bars comparing a prevention-led program (low ongoing monitoring + biocontrol cost, minimal crop loss) vs a reactive program (high curative spend + crop loss + downtime)"
+    }
+   ]
+  }
+ ]
+}

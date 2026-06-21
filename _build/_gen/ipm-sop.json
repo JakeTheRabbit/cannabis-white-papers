@@ -1,0 +1,278 @@
+{
+ "slug": "ipm-sop",
+ "title": "Integrated pest management: a working SOP",
+ "eyebrow": "Plant health · IPM",
+ "kind": "operational",
+ "sub": "A plain-language standard operating procedure for keeping pests and disease out of an indoor cannabis grow: how to scout, when to act, how to use good bugs and sprays, and how to keep records that hold up.",
+ "reading_min": 14,
+ "related": [
+  "mould-risk",
+  "airflow-design",
+  "harvest-dry-trim-cure"
+ ],
+ "ref_ids": [
+  "punja-2021-emerging-diseases-cannabis",
+  "scott-punja-2021-powdery-mildew-management",
+  "elmoghazy-2024-swirskii-functional-response",
+  "mumtaz-2023-californicus-functional-response",
+  "koppert-persimilis-tech",
+  "epa-wps-notice-to-workers"
+ ],
+ "ref_lookup": {
+  "punja-2021-emerging-diseases-cannabis": "Punja, Z. K. (2021). Emerging diseases of Cannabis sativa and sustainable management. Pest Management Science, 77(9), 3857-3870.",
+  "scott-punja-2021-powdery-mildew-management": "Scott, C., & Punja, Z. K. (2021). Evaluation of disease management approaches for powdery mildew on Cannabis sativa L. (marijuana) plants. Canadian Journal of Plant Pathology, 43(3), 394-412.",
+  "elmoghazy-2024-swirskii-functional-response": "Elmoghazy, M. M. E., Elsherbini, D. M. A., Mashlawi, A. M., Ibrahim, A. M., El-Mansi, A. A., & El-Sherbiny, M. (2024). Implications of temperature and prey density on predatory mite Amblyseius swirskii (Acari: Phytoseiidae) functional responses. Insects, 15(6), 444.",
+  "mumtaz-2023-californicus-functional-response": "Mumtaz, M., Rahman, V. J., Saba, T., et al. (2023). Functional response of Neoseiulus californicus (Acari: Phytoseiidae) to Tetranychus urticae (Acari: Tetranychidae) at different temperatures. PeerJ, 11, e16461.",
+  "koppert-persimilis-tech": "Koppert Biological Systems. Phytoseiulus persimilis - Predatory Mite for Spider Mite Control (technical/product sheet).",
+  "epa-wps-notice-to-workers": "U.S. Environmental Protection Agency. Notice to Workers About Pesticide Applications and Pesticide-Treated Areas (Worker Protection Standard)."
+ },
+ "sections": [
+  {
+   "id": "intro",
+   "kicker": "Start here",
+   "title": "What IPM is and why a grow lives or dies by it",
+   "summary": "Integrated Pest Management (IPM) is the routine of catching pests and diseases before they spread, using the lightest control that works and escalating only when you have to. It is not one spray or one bug release; it is a loop of evaluate, decide, control, repeat, run across every room from mothers and clones through veg and flower. The stakes are total: a single missed mite colony or a powdery-mildew outbreak can destroy an entire harvest, and in a regulated facility a pesticide misstep can fail residue testing and bin the whole batch. This guide assumes you know nothing and defines every term as it appears.",
+   "points": [
+    "IPM = a repeating loop (evaluate, decide, control, evaluate), not a one-off treatment",
+    "Lightest effective control first; escalate to sprays only when thresholds force it",
+    "Applies to every stage: mothers, clones, veg, and flower",
+    "A small problem caught early is cheap; a missed one can cost the whole crop"
+   ],
+   "figures": [
+    {
+     "name": "ipm_loop",
+     "kind": "flow",
+     "desc": "Circular flow: Scout, then Identify, then check Threshold, then Decide control, then Act, then Record, looping back to Scout"
+    }
+   ],
+   "claims_needing_cite": [
+    "A single missed pest colony or mildew outbreak can destroy an entire harvest",
+    "Pesticide residue failures can void a whole regulated batch"
+   ]
+  },
+  {
+   "id": "key-terms",
+   "kicker": "Vocabulary",
+   "title": "Every term you need, defined once",
+   "summary": "Before the procedure, here is the language. Scouting is the deliberate visual inspection of plants for pests, damage, or disease. An action threshold is the pest level that triggers a specific response. Biological control (biocontrol) means releasing predatory insects or mites (the good bugs) to eat the pests. A foliar spray is a liquid applied to leaves and stems; a drench is applied to the root zone. REI (re-entry interval, also called REI) is how long after a spray before anyone may safely enter the room. A withholding period is how long after treatment before the crop can be harvested for sale.",
+   "points": [
+    "Scouting: planned visual inspection for early signs of trouble",
+    "Action threshold: the pest level that triggers a defined response",
+    "Biocontrol / good bugs: predator insects and mites that eat pests",
+    "Foliar vs drench: leaf-and-stem spray vs root-zone application",
+    "REI: wait time before re-entering a sprayed room; withholding period: wait time before harvest"
+   ],
+   "figures": [
+    {
+     "name": "term_map",
+     "kind": "table",
+     "desc": "Two-column glossary table: term and one-line plain-English definition for scouting, threshold, biocontrol, foliar, drench, REI, withholding period, quarantine, frass, sachet"
+    }
+   ],
+   "claims_needing_cite": []
+  },
+  {
+   "id": "scouting",
+   "kicker": "Core practice 1",
+   "title": "Scouting: find it before it finds you",
+   "summary": "Scouting is the engine of IPM; everything downstream depends on catching pests early. A practical baseline is for the room lead to visually inspect at least 5 percent of the room at every check, logging any finding immediately, while dedicated IPM scouts do deeper precision inspections. Work a fixed route every time: scout the tables and substrate for frass (insect droppings) and debris, then the trunk and stems, then the undersides of leaves (where mites and thrips hide), then leaf tops. Yellow sticky traps at the base of the stem and at canopy height give an early-warning catch of stray fungus gnats, aphids, and thrips; replace one trap weekly, write the date on it, and use a jeweler's loupe to confirm tiny pests like russet mites that are invisible to the naked eye.",
+   "points": [
+    "Inspect at least 5% of the room every check; deeper scouting by trained scouts",
+    "Fixed route: substrate, then trunk/stems, then leaf undersides, then leaf tops",
+    "Yellow sticky traps at stem base and canopy; replace one weekly and date it",
+    "Carry a loupe: russet mites and broad mites need magnification to confirm"
+   ],
+   "figures": [
+    {
+     "name": "scout_route",
+     "kind": "diagram",
+     "desc": "Side view of a plant with numbered inspection stops: 1 substrate/tray, 2 base sticky trap, 3 trunk and stems, 4 leaf undersides, 5 leaf tops, 6 canopy sticky trap"
+    },
+    {
+     "name": "sticky_trend",
+     "kind": "line",
+     "desc": "Weekly insect counts on dated sticky traps trending up vs flat, illustrating early-warning detection"
+    }
+   ],
+   "claims_needing_cite": [
+    "A 5% per-check inspection sample is an effective baseline for room scouting"
+   ]
+  },
+  {
+   "id": "thresholds",
+   "kicker": "Core practice 2",
+   "title": "Action thresholds: knowing exactly when to act",
+   "summary": "A threshold turns observation into a decision so nobody has to guess. A workable two-tier model: at the first sign of a single mite, aphid, or similar pest, assume there are more, scout the entire room, begin exclusion measures (limit who enters), and line up biological controls; once more than 3 percent of a room is affected, escalate to approved pesticide applications, subject to the plant's growth stage and management sign-off. Growth stage is itself a hard gate: in a regulated soilless facility, plants are treated only from mothering through day 21 of flower, with no foliar treatment after buds form (a light antimicrobial rinse may be the only exception). For a serious infestation that appears after day 21 of flower, the correct action is to pull and destroy the affected plants rather than spray.",
+   "points": [
+    "Tier 1 (single pest seen): assume more, scout the whole room, start exclusion + biocontrol",
+    "Tier 2 (>3% of room affected): escalate to approved pesticide with sign-off",
+    "Treatment window: mothering through day 21 of flower only",
+    "After day 21 with a serious infestation: pull and destroy, do not spray"
+   ],
+   "figures": [
+    {
+     "name": "threshold_ladder",
+     "kind": "flow",
+     "desc": "Decision ladder: 0 pests = monitor; 1 pest seen = scout room + exclude + order biocontrol; >3% affected = add approved pesticide; post-day-21 serious = pull and destroy"
+    },
+    {
+     "name": "treatment_window",
+     "kind": "zones",
+     "desc": "Timeline bar across mothering, clone, veg, flower days 1-21 (treatable, green) and flower day 22 to harvest (no foliar, red)"
+    }
+   ],
+   "claims_needing_cite": [
+    "The single-pest and >3%-of-room thresholds reflect a common commercial action model",
+    "Sulphur should be restricted to mothers and vegetative growth, not flowering"
+   ]
+  },
+  {
+   "id": "biocontrol",
+   "kicker": "Core practice 3",
+   "title": "Biological controls: putting good bugs to work",
+   "summary": "Biocontrol releases predators that hunt your pests, and they are harmless to the cannabis plant at every stage; if they run out of prey they simply die off and fall away. Match the predator to the pest and the conditions. Amblyseius swirskii is a generalist that eats thrips larvae, whitefly, and broad mites and works best at 77 to 86 degrees Fahrenheit with humidity above 70 percent. Phytoseiulus persimilis is a spider-mite specialist that eats up to 5 adults or 20 eggs a day but needs cooler, humid conditions (ideal 59 to 77 F); Neoseiulus californicus is the tougher spider-mite option that holds up in hotter, drier rooms (60 to 90 F). Stratiolaelaps scimitus is a soil-dwelling mite for fungus gnat larvae and thrips pupae, best deployed when pest pressure is still low. Use hanging release boxes or sachets so predators and their carrier media stay out of the irrigation system.",
+   "points": [
+    "Good bugs are harmless to the plant and self-limit when prey runs out",
+    "Generalist (swirskii) for thrips/whitefly/broad mites; warm and humid rooms",
+    "Spider mites: persimilis (cool, fast) or californicus (hot/dry, hardy)",
+    "Soil pests: stratiolaelaps for fungus gnat larvae and thrips pupae",
+    "Deploy via hanging sachets/boxes to keep media out of irrigation"
+   ],
+   "figures": [
+    {
+     "name": "predator_match",
+     "kind": "table",
+     "desc": "Predator-to-pest table: species, target pest, ideal temperature range, ideal humidity, generalist vs specialist"
+    },
+    {
+     "name": "temp_windows",
+     "kind": "zones",
+     "desc": "Horizontal temperature bars (50-95 F) showing each predator's active range overlaid for quick selection"
+    }
+   ],
+   "claims_needing_cite": [
+    "Amblyseius swirskii optimum is 77-86 F and humidity above 70%",
+    "Phytoseiulus persimilis eats up to 5 adult mites or 20 eggs per day",
+    "Neoseiulus californicus stays active across 60-90 F",
+    "Stratiolaelaps scimitus targets fungus gnat larvae and thrips pupae and is best deployed at low pest pressure"
+   ]
+  },
+  {
+   "id": "spray-rotation",
+   "kicker": "Core practice 4",
+   "title": "Spray rotation and safe application",
+   "summary": "When thresholds force a spray, the rules are about residue safety and effective coverage, not improvisation. Use only products approved for cannabis in your jurisdiction, always follow the label dilution and withholding periods, and never freelance with off-list nutrients or supplements that could fail residue testing. A preventative program can be as simple as a weekly foliar of an approved wash plus sulphur (1 to 3 tablespoons per litre, ideally 3, no more than once every 2 weeks), stepping up to 3 times a week curatively at low pest levels. Rotate chemistries and tank-mix only combinations the labels allow, adding products in the label-specified order; spray when the media is fully saturated (for example the P1-to-P2 irrigation transition) so the product is not pulled into the leaves and burns them. Coverage is everything: hit the top of the media, up the stalk, leaf undersides, then leaf tops, using a fan tip and a dedicated sprayer per product to avoid cross-contamination.",
+   "points": [
+    "Approved products only; follow label dilution and withholding periods exactly",
+    "Preventative baseline: weekly approved wash + sulphur; up to 3x/week curative",
+    "Sulphur dose 1-3 tbsp/L (ideally 3), max once per 2 weeks, veg/mothers only",
+    "Spray on saturated media to prevent leaf uptake and burn",
+    "Coverage order: media top, stalk, leaf undersides, leaf tops; fan tip, one sprayer per product"
+   ],
+   "figures": [
+    {
+     "name": "spray_rotation",
+     "kind": "table",
+     "desc": "Example weekly rotation grid: day, product/tank-mix, target, REI, withholding period (genericized, no brand recommendations)"
+    },
+    {
+     "name": "coverage_order",
+     "kind": "diagram",
+     "desc": "Plant diagram with arrows numbering spray sequence 1 media top, 2 up the stalk, 3 leaf undersides, 4 leaf tops"
+    }
+   ],
+   "claims_needing_cite": [
+    "Sulphur foliar at 1-3 tbsp/L, max once per 2 weeks, restricted to veg and mothers",
+    "Spraying at full media saturation reduces foliar uptake and burn risk",
+    "A two-product approach (a citric-acid wash plus sulphur) covers most common pests"
+   ]
+  },
+  {
+   "id": "sanitation-quarantine",
+   "kicker": "Prevention",
+   "title": "Sanitation and quarantine: stop pests at the door",
+   "summary": "Most pests are walked in, so the cheapest control is keeping them out. The biggest single entry point is footwear, so replace shoes or use overboots before entering grow rooms, wash hands on entry and after every break, and wear nitrile gloves at all times, changing them after breaks or after handling chemicals (when in doubt, change them). Every incoming plant goes through quarantine: dunk or wash it in an approved foliar solution on receipt, then hold it in a separate quarantine tent for 2 or more weeks under observation before it joins the crop. Treat all plant waste as hazardous: bag it in the room, weigh and log it, and move it straight to green waste. Keep equipment (scissors, buckets, sprayers, PPE) room-specific and cleaned after every task so a tool never carries pests between rooms.",
+   "points": [
+    "Footwear is the #1 entry route: overboots/shoe change before every room",
+    "Gloves on always, change after breaks/chemicals; wash hands on entry",
+    "Quarantine new plants: approved wash on receipt + 2+ weeks isolated observation",
+    "Plant waste is hazardous: bag in-room, weigh, log, move straight to green waste",
+    "Room-specific, cleaned equipment and PPE; never shared between rooms"
+   ],
+   "figures": [
+    {
+     "name": "entry_protocol",
+     "kind": "flow",
+     "desc": "Entry sequence: change shoes/overboots, wash hands, glove up, foot bath, enter; reverse on exit with glove change"
+    },
+    {
+     "name": "quarantine_timeline",
+     "kind": "line",
+     "desc": "New-plant journey: receipt and wash at day 0, quarantine observation days 0-14+, release to crop only if clean"
+    }
+   ],
+   "claims_needing_cite": [
+    "Footwear is the primary way pests are walked into a facility",
+    "New plants should be quarantined 2+ weeks under observation before joining the crop"
+   ]
+  },
+  {
+   "id": "records-decision-flow",
+   "kicker": "Step-by-step",
+   "title": "The daily routine, the decision flow, and record-keeping",
+   "summary": "Put it together as a repeatable shift routine. Each day: gear up and enter through the foot bath, walk your scout route, check and date sticky traps, and log every finding (photos and pest IDs uploaded weekly is a good cadence). Run each finding through the decision flow: identify the pest or disease, compare to the threshold, then choose monitor, biocontrol, spray, or pull-and-destroy based on stage and severity. Record everything a regulator or auditor would ask for: product, dilution, area, applicator, REI posted on the door, and the calendar mark outside the room, plus a manager-signed pesticide log. Good records also double as a feedback loop, comparing sticky-trap counts before and after a treatment tells you whether it actually worked.",
+   "points": [
+    "Daily: enter clean, walk the route, check/date traps, log findings (weekly photo upload)",
+    "Decision flow: identify, compare to threshold, choose monitor/biocontrol/spray/destroy",
+    "Log every spray: product, dilution, area, applicator, REI, manager-signed log",
+    "Post REI signage on the door and mark the room calendar during/after application",
+    "Use before-and-after trap counts to verify a treatment worked"
+   ],
+   "figures": [
+    {
+     "name": "ipm_decision_flow",
+     "kind": "flow",
+     "desc": "Master decision flowchart from a finding: Identify -> below threshold? monitor; at tier 1? scout+exclude+biocontrol; over 3%? approved spray (if in window) else pull-and-destroy; then record and re-scout"
+    },
+    {
+     "name": "spray_log",
+     "kind": "table",
+     "desc": "Blank pesticide log template: date, product, active ingredient, dilution, area/room, applicator, REI, withholding, manager signature"
+    }
+   ],
+   "claims_needing_cite": [
+    "Every pesticide application must be logged and the log signed by management",
+    "REI signage must be posted on the room door and removed only after the interval"
+   ]
+  },
+  {
+   "id": "pitfalls-expectations",
+   "kicker": "Reality check",
+   "title": "Common mistakes and what good IPM actually looks like",
+   "summary": "The frequent failures are predictable: skipping scouting until damage is visible, spraying without confirming the pest, ignoring the treatment window and spraying in late flower, sharing tools or PPE between rooms, and letting good bugs wash into the irrigation system. Avoid airborne fumigators entirely in a flower facility, they can drift into bud and compromise the crop, and check sprayers for metallic hose clamps that can rust and fail heavy-metals testing. Set realistic expectations: IPM does not mean zero pests ever; it means you detect early, keep populations under threshold, and never let a problem reach the harvest. A mature program is mostly quiet, steady prevention, weekly scouting, sticky-trap trends, clean entry, light preventative foliar, with curative escalation as the rare exception rather than the routine.",
+   "points": [
+    "Top mistakes: late scouting, spraying unidentified pests, treating after the window",
+    "Keep tools/PPE room-specific; keep biocontrol media out of irrigation",
+    "No fumigators in a flower facility; no metallic clamps in sprayers (heavy-metals risk)",
+    "Realistic goal: stay under threshold and protect the harvest, not zero pests",
+    "Mature IPM is mostly quiet prevention; curative spraying is the exception"
+   ],
+   "figures": [
+    {
+     "name": "pitfalls_table",
+     "kind": "table",
+     "desc": "Two-column table: common mistake and the correct practice that prevents it"
+    },
+    {
+     "name": "prevention_vs_reaction",
+     "kind": "bars",
+     "desc": "Bar comparison of effort/cost: prevention (scouting, hygiene, biocontrol) vs reactive cleanup after an outbreak"
+    }
+   ],
+   "claims_needing_cite": [
+    "Airborne fumigators can drift into buds and compromise a flowering crop",
+    "Metallic hose clamps in sprayers can rust and cause heavy-metals test failures"
+   ]
+  }
+ ]
+}

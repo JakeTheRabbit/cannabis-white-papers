@@ -1,0 +1,273 @@
+{
+ "slug": "water-quality",
+ "title": "Source water, RO and alkalinity",
+ "eyebrow": "Feed · Water",
+ "kind": "research",
+ "sub": "A beginner's guide to what's in your water before nutrients ever go in: tap vs RO vs well, starting EC, alkalinity and carbonates, chlorine and chloramine, hardness, and when reverse osmosis is actually worth it.",
+ "reading_min": 14,
+ "related": [
+  "ph-management",
+  "nutrient-mixing-athena",
+  "irrigation-manual"
+ ],
+ "ref_ids": [
+  "bevan-2021-npk-flowering-cannabis",
+  "kpai-2024-mineral-nutrition-vegetative-cannabis",
+  "umass-water-quality-ph-alkalinity",
+  "fisher-purdue-ho242-alkalinity-soilless",
+  "ferrarezi-2023-chlorine-phytotoxicity-rex-lettuce",
+  "date-2005-chloramines-lettuce-hydroponic",
+  "sutton-2006-pythium-hydroponic-etiology",
+  "fao-dissolved-oxygen-temperature"
+ ],
+ "ref_lookup": {
+  "bevan-2021-npk-flowering-cannabis": "Bevan, L., Jones, M., & Zheng, Y. (2021). Optimisation of Nitrogen, Phosphorus, and Potassium for Soilless Production of Cannabis sativa in the Flowering Stage Using Response Surface Analysis. Frontiers in Plant Science, 12, 764103.",
+  "kpai-2024-mineral-nutrition-vegetative-cannabis": "Kpai, P., et al. (2024). Mineral nutrition for Cannabis sativa in the vegetative stage using response surface analysis. Frontiers in Plant Science, 15, 1501484.",
+  "umass-water-quality-ph-alkalinity": "University of Massachusetts Amherst, Center for Agriculture, Food, and the Environment (Greenhouse & Floriculture Program). Water quality: pH and alkalinity (fact sheet). UMass Extension.",
+  "fisher-purdue-ho242-alkalinity-soilless": "Fisher, P., et al. (Purdue University Extension). HO-242-W: Alkalinity Management in Soilless Substrates. Purdue Extension.",
+  "ferrarezi-2023-chlorine-phytotoxicity-rex-lettuce": "Ferrarezi, R. S., et al. (2023). Irrigation Sources with Chlorine Drinking Water Standard Limits Cause Phytotoxicity on 'Rex' Lettuce Grown in Hydroponic Systems. HortTechnology, 33(1), 125-130.",
+  "date-2005-chloramines-lettuce-hydroponic": "Date, S., Terabayashi, S., Kobayashi, Y., & Fujime, Y. (2005). Effects of chloramines concentration in nutrient solution and exposure time on plant growth in hydroponically cultured lettuce. Scientia Horticulturae, 103(3), 257-265.",
+  "sutton-2006-pythium-hydroponic-etiology": "Sutton, J. C., Sopher, C. R., Owen-Going, T. N., Liu, W., Grodzinski, B., Hall, J. C., & Benchimol, R. L. (2006). Etiology and epidemiology of Pythium root rot in hydroponic crops: current knowledge and perspectives. Summa Phytopathologica, 32(4), 307-321.",
+  "fao-dissolved-oxygen-temperature": "FAO. Dissolved Oxygen (Section 4). In: Water Quality for Aquaculture / Inland Water Resources and Aquaculture Service. Food and Agriculture Organization of the United Nations."
+ },
+ "sections": [
+  {
+   "id": "intro",
+   "kicker": "What this is",
+   "title": "Your water is the first ingredient, not a blank slate",
+   "summary": "Every feed you give a cannabis plant starts with water, and that water is almost never pure. Tap, well, and rainwater all arrive carrying dissolved minerals, gases, and treatment chemicals that change pH, occupy room in your nutrient recipe, and can kill roots or beneficial microbes before you add a single drop of fertilizer. This paper walks an absolute beginner from understanding what is in their source water, to testing it, to deciding whether reverse osmosis is worth the cost.",
+   "points": [
+    "The plant never tastes your nutrients in isolation; it tastes water plus minerals plus nutrients combined.",
+    "Two growers using the identical feed chart can get opposite results purely because of source-water differences.",
+    "You cannot manage what you have not measured: a water test comes before any nutrient decision.",
+    "Goal of this paper: know what is in your water, know your targets, and know when to spend money on RO."
+   ],
+   "figures": [
+    {
+     "name": "water_to_root_flow",
+     "kind": "flow",
+     "desc": "Left-to-right flow: Source water (tap/well/rain) plus dissolved load (minerals, gases, chlorine) feeds into Mixing (pH adjust, nutrients added) feeds into Root zone (what the plant actually drinks). Callout that the first box is fixed until you treat it."
+    }
+   ]
+  },
+  {
+   "id": "key-terms",
+   "kicker": "Key terms",
+   "title": "The vocabulary, in plain words",
+   "summary": "Water-quality talk is full of jargon that hides simple ideas. EC and PPM both measure how much dissolved stuff is in water; pH measures acidity; alkalinity measures the water's resistance to pH change, which is a different thing from pH itself. Hardness is specifically dissolved calcium and magnesium, while TDS is everything dissolved added together.",
+   "points": [
+    "EC (electrical conductivity): how well water conducts electricity, which rises with dissolved salts; measured in mS/cm or uS/cm.",
+    "PPM / TDS (parts per million / total dissolved solids): the same idea expressed as a weight; note PPM meters use conversion factors (500 or 700 scale) so two meters can disagree on the same water.",
+    "pH: acidity on a 0-14 scale; most cannabis nutrient uptake targets pH 5.8-6.2 in hydro/coco, 6.2-6.8 in soil.",
+    "Alkalinity: the buffering capacity from carbonates and bicarbonates, reported as ppm CaCO3; high alkalinity pushes root-zone pH up over time even after you pH-down the tank.",
+    "Hardness: dissolved calcium and magnesium, reported as ppm CaCO3 or grains per gallon (1 GPG = 17.1 mg/L).",
+    "RO (reverse osmosis): filtration that forces water through a membrane and strips most dissolved minerals, leaving near-zero PPM water."
+   ],
+   "figures": [
+    {
+     "name": "ph_vs_alkalinity",
+     "kind": "diagram",
+     "desc": "Two side-by-side jars: one labeled pH (a snapshot reading, shown as a single dot on a scale) and one labeled Alkalinity (shown as a spring/buffer resisting a finger pushing the pH down). Caption: pH is where you are now; alkalinity is how hard the water fights to go back."
+    }
+   ],
+   "claims_needing_cite": [
+    "PPM meters use 500 or 700 conversion scales that disagree",
+    "cannabis uptake pH targets 5.8-6.2 hydro/coco and 6.2-6.8 soil",
+    "1 grain per gallon equals 17.1 mg/L"
+   ]
+  },
+  {
+   "id": "source-types",
+   "kicker": "The core: where it comes from",
+   "title": "Tap, well, and rain: three very different starting points",
+   "summary": "Municipal tap water is treated and consistent but carries chlorine or chloramine and often moderate-to-high mineral content, sometimes 150-300+ ppm straight from the faucet. Well water is unpredictable: it can be very hard, high in iron, manganese, or sulfur, and varies seasonally, so it must be tested. Rainwater is naturally low in dissolved minerals (near 0-20 ppm) but can pick up roof and storage contaminants and offers little buffering.",
+   "points": [
+    "Tap: consistent and convenient, but expect chlorine/chloramine and a starting EC that eats into your nutrient headroom.",
+    "Well: free and unmetered, but composition swings; test at least twice a year and after heavy rain.",
+    "Rain: low starting PPM like RO, but low buffering and risk of pathogens, roofing contaminants, or sodium near coasts.",
+    "Hard tap water at 300+ ppm leaves almost no room before you hit a working feed strength of 800-900 ppm."
+   ],
+   "figures": [
+    {
+     "name": "source_starting_ppm",
+     "kind": "bars",
+     "desc": "Bar chart of typical starting TDS (ppm) for RO (0-10), rainwater (0-20), soft tap (50-120), hard tap (200-350), and well (highly variable, shown as a wide error bar 50-600)."
+    }
+   ],
+   "claims_needing_cite": [
+    "municipal tap often 150-300+ ppm from the faucet",
+    "working feed strength typically capped near 800-900 ppm",
+    "rainwater typically 0-20 ppm dissolved minerals"
+   ]
+  },
+  {
+   "id": "alkalinity-carbonates",
+   "kicker": "The core: the hidden pH driver",
+   "title": "Alkalinity and carbonates: why your pH won't stay put",
+   "summary": "Alkalinity is the single most misunderstood water parameter for beginners. It is caused by dissolved carbonates and bicarbonates, and it acts like a chemical spring that drags root-zone pH back upward even after you adjust the tank to 5.8. A common acceptable range for container cannabis is roughly 40-100 ppm CaCO3, with many growers targeting 30-60 ppm; conversions are 1 meq/L = 50 ppm CaCO3 = 61 ppm bicarbonate.",
+   "points": [
+    "High alkalinity (above ~100-150 ppm CaCO3) steadily raises substrate pH, locking out iron, manganese, and other micronutrients.",
+    "You correct excess alkalinity by adding acid (e.g. phosphoric, nitric, or citric) to neutralize carbonates, not just to hit a pH number once.",
+    "Very low alkalinity (RO, rain) means almost no buffer, so pH swings fast and small acid/base errors matter more.",
+    "Target for most container cannabis: about 40-100 ppm CaCO3 alkalinity, often 30-60 ppm as an optimum."
+   ],
+   "figures": [
+    {
+     "name": "alkalinity_drift_line",
+     "kind": "line",
+     "desc": "Line chart over time (days) showing root-zone pH: a high-alkalinity water line that you pH-down to 5.8 but climbs back to 6.8+, versus a corrected/low-alkalinity line that stays near 5.8-6.0."
+    },
+    {
+     "name": "alkalinity_zones",
+     "kind": "zones",
+     "desc": "Horizontal band of alkalinity in ppm CaCO3: 0-30 too low/no buffer, 30-100 ideal/acceptable, 100-150 borderline, 150+ problematic. Color-graded green in the middle."
+    }
+   ],
+   "claims_needing_cite": [
+    "acceptable container cannabis alkalinity ~40-100 ppm CaCO3, optimum 30-60",
+    "1 meq/L equals 50 ppm CaCO3 equals 61 ppm bicarbonate",
+    "alkalinity above 100-150 ppm CaCO3 raises substrate pH and locks out micronutrients"
+   ]
+  },
+  {
+   "id": "chlorine-hardness",
+   "kicker": "The core: chemicals and minerals",
+   "title": "Chlorine, chloramine, and hardness: what helps and what harms",
+   "summary": "Municipalities disinfect with chlorine or the more stable chloramine; both can damage root tips and beneficial microbes, with root-tip death reported at chlorine concentrations as low as 0.4 ppm. Chlorine off-gasses if water sits and aerates for about 24 hours, but chloramine does not and requires a catalytic carbon filter or RO to remove. Hardness (calcium and magnesium) is the one part of your starting water that is genuinely useful, because cannabis needs both, but in hard water it often arrives locked up with carbonates.",
+   "points": [
+    "Chlorine off-gasses overnight with aeration; chloramine is stable and needs catalytic carbon or RO.",
+    "Even low chlorine (~0.4 ppm) can burn root tips; this matters most for living-soil and microbe-driven growers.",
+    "Hardness is dissolved Ca and Mg: helpful nutrients, but high hardness usually rides with high alkalinity, causing pH and lockout problems.",
+    "Soft water (<1 GPG / ~17 ppm) may be low in Ca/Mg and need a CalMag supplement regardless of RO."
+   ],
+   "figures": [
+    {
+     "name": "chlorine_removal_table",
+     "kind": "table",
+     "desc": "Table: rows Chlorine vs Chloramine; columns Stable in standing water?, Removed by 24h aeration?, Removed by carbon?, Removed by RO?. Shows chlorine yes-to-aeration, chloramine no-to-aeration/needs catalytic carbon."
+    },
+    {
+     "name": "hardness_classes",
+     "kind": "table",
+     "desc": "Hardness classification table: Soft (<1 GPG / <17 mg/L), Slightly hard (1-3.5 GPG), Moderately hard (3.5-7), Hard (7-10.5), Very hard (>10.5 GPG / >180 mg/L), with the cannabis-relevant note in each row."
+    }
+   ],
+   "claims_needing_cite": [
+    "root-tip death reported at chlorine ~0.4 ppm",
+    "chlorine off-gasses in ~24h with aeration but chloramine does not",
+    "chloramine removal requires catalytic carbon filter or RO",
+    "hardness classes: soft <1 GPG, very hard >10.5 GPG"
+   ]
+  },
+  {
+   "id": "ro-buildback",
+   "kicker": "The core: the RO decision",
+   "title": "Why growers use RO, build back, and when you actually need it",
+   "summary": "Reverse osmosis strips water to near-zero PPM (typically 0-10 ppm TDS), giving a blank canvas so every mineral the plant gets is one you chose. Because RO removes calcium and magnesium too, you must build back, usually adding a CalMag supplement and your base nutrients to reach a target of roughly 100-200 ppm before nutrients in some recipes. RO is genuinely needed when source water is very hard, high in sodium, high in alkalinity, or carries chloramine, and is often optional when tap is soft and clean.",
+   "points": [
+    "RO output is near-zero (0-10 ppm TDS), so you control 100% of the recipe.",
+    "Build back: add CalMag and base nutrients; do not feed plants plain RO, which lacks Ca/Mg and has no buffer.",
+    "RO is worth it when: starting EC is high, sodium is elevated, alkalinity is high, or chloramine is present.",
+    "RO is often skippable when: tap is soft, low-alkalinity, chlorine-only (off-gassable), and under ~150 ppm.",
+    "Cost of RO: wastewater ratio (often 1-4 gallons wasted per gallon made), membrane replacement, and slower fill rate."
+   ],
+   "figures": [
+    {
+     "name": "ro_decision_flow",
+     "kind": "flow",
+     "desc": "Decision flowchart: Start with water test -> Is alkalinity high OR sodium high OR chloramine present OR EC >150-200? -> Yes: RO recommended (then build back) / No: tap likely fine (dechlorinate + adjust)."
+    },
+    {
+     "name": "ro_buildback_diagram",
+     "kind": "diagram",
+     "desc": "Three-step diagram: (1) Tap/well water with mixed labeled ions, (2) RO membrane stripping to ~0 ppm clean water, (3) Build-back beaker adding CalMag + base nutrients up to target EC."
+    }
+   ],
+   "claims_needing_cite": [
+    "RO output typically 0-10 ppm TDS",
+    "build-back target often ~100-200 ppm with high Ca/Mg",
+    "RO wastewater ratio often 1-4 gallons wasted per gallon produced"
+   ]
+  },
+  {
+   "id": "testing-stepbystep",
+   "kicker": "Practical: test and treat",
+   "title": "Testing your source water, step by step",
+   "summary": "Before buying any equipment, get real numbers for your water. A cheap EC/PPM pen and pH pen tell you starting strength and acidity in seconds, but they will not reveal alkalinity, sodium, or specific minerals; for that, send a sample to a lab or use a municipal water report. Read the report for EC/TDS, pH, alkalinity (ppm CaCO3), calcium, magnesium, sodium, chloride, and any chlorine/chloramine note, then decide your treatment.",
+   "points": [
+    "Buy and calibrate an EC/PPM pen and a pH pen first; calibrate with fresh solution, not tap.",
+    "For the full picture (alkalinity, Na, Ca, Mg, micronutrients) use a lab test or your city's annual water-quality report.",
+    "Order of operations when mixing: fill water -> let chlorine off-gas or filter -> add CalMag (if RO/soft) -> add base nutrients -> adjust pH last.",
+    "Re-test well and rain sources seasonally; municipal supplies can also switch chlorine to chloramine periodically.",
+    "Record starting EC so you know how much room you have before the ~800-900 ppm feed ceiling."
+   ],
+   "figures": [
+    {
+     "name": "test_report_table",
+     "kind": "table",
+     "desc": "Annotated sample water-report table: parameter | typical value | cannabis target | action. Rows for EC/TDS, pH, alkalinity, Ca, Mg, Na, Cl, chlorine/chloramine."
+    },
+    {
+     "name": "mixing_order_flow",
+     "kind": "flow",
+     "desc": "Linear flow of correct mixing order: Fill -> Dechlorinate/filter -> CalMag -> Base nutrients -> Mix/aerate -> pH adjust last -> Verify EC and pH."
+    }
+   ],
+   "claims_needing_cite": [
+    "correct mix order adds pH adjustment last after nutrients",
+    "feed ceiling commonly ~800-900 ppm"
+   ]
+  },
+  {
+   "id": "temperature-pitfalls",
+   "kicker": "Troubleshooting and pitfalls",
+   "title": "Water temperature and the mistakes beginners make",
+   "summary": "Water temperature quietly controls dissolved oxygen and disease risk: aim for roughly 18-22 C (65-72 F), because dissolved oxygen falls from about 5-6 ppm at 20 C to only 3-4 ppm at 26 C, and root pathogens like Pythium accelerate above ~23 C. The most common beginner mistakes are chasing a PPM number from a different meter scale, ignoring alkalinity while obsessing over pH, feeding plain RO with no CalMag, and assuming letting water sit removes chloramine.",
+   "points": [
+    "Target reservoir/irrigation water around 18-22 C (65-72 F); warm water plus low oxygen invites root rot.",
+    "Dissolved oxygen drops sharply with heat: ~5-6 ppm at 20 C versus ~3-4 ppm at 26 C.",
+    "Pitfall: comparing PPM across meters on different scales (500 vs 700) and thinking your feed changed.",
+    "Pitfall: pH-ing the tank perfectly but ignoring high alkalinity, so root-zone pH creeps up within days.",
+    "Pitfall: feeding straight RO or rainwater with no CalMag, causing calcium/magnesium deficiency.",
+    "Pitfall: leaving chloraminated water out overnight and assuming it is now safe."
+   ],
+   "figures": [
+    {
+     "name": "temp_do_line",
+     "kind": "line",
+     "desc": "Line chart: water temperature (C) on x-axis vs dissolved oxygen (ppm) on y-axis, declining curve, with a shaded safe zone 18-22 C and a danger marker above 23 C labeled Pythium risk."
+    },
+    {
+     "name": "pitfalls_table",
+     "kind": "table",
+     "desc": "Two-column table: Common mistake | What actually happens / the fix. Rows for meter-scale confusion, ignoring alkalinity, plain RO no CalMag, chloramine sit-out myth, water too warm."
+    }
+   ],
+   "claims_needing_cite": [
+    "target water temp ~18-22 C / 65-72 F",
+    "dissolved oxygen ~5-6 ppm at 20 C vs 3-4 ppm at 26 C",
+    "Pythium accelerates above ~23 C"
+   ]
+  },
+  {
+   "id": "expectations",
+   "kicker": "Realistic expectations",
+   "title": "What good water gets you, and what it doesn't",
+   "summary": "Sorting out your water removes a whole category of mystery problems, stable pH, no chlorine damage, predictable feed strength, but it will not fix bad genetics, poor light, or a broken nutrient schedule. Most home growers on clean, soft, low-alkalinity tap can succeed with simple dechlorination and pH control and never need RO. RO is an upgrade that pays off most for hard water, hydroponics, and anyone wanting full recipe control, not a universal requirement.",
+   "points": [
+    "Good water quality is a foundation, not a yield button; it prevents problems more than it boosts numbers.",
+    "If your tap is soft, low-alkalinity, and chlorine-only, you likely do not need RO to grow well.",
+    "RO matters most for very hard/high-sodium/high-alkalinity sources, chloramine, and precision hydro.",
+    "Expect to still manage pH, EC, temperature, and CalMag regardless of which water source you choose.",
+    "Spend on a water test first; let the numbers, not marketing, decide whether RO is worth it."
+   ],
+   "figures": [
+    {
+     "name": "need_ro_zones",
+     "kind": "zones",
+     "desc": "Three-band verdict graphic: Probably skip RO (soft, low-alk, chlorine-only, <150 ppm), Consider RO (moderate hardness/alkalinity, mixed signals), RO strongly worth it (hard, high Na, high alkalinity, chloramine)."
+    }
+   ]
+  }
+ ]
+}

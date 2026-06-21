@@ -1,0 +1,225 @@
+{
+ "slug": "nutrient-mixing-athena",
+ "title": "Mixing Athena Pro Line nutrients (metric)",
+ "eyebrow": "Feed · Nutrient mixing",
+ "kind": "research",
+ "sub": "A beginner-proof, step-by-step method for dissolving two-part powdered salt nutrients into a 50 L tank without locking out your crop — add salts to water, dissolve one part fully before the next, and never mix concentrated A and B.",
+ "reading_min": 9,
+ "related": [
+  "coco-crop-steering",
+  "smart-watering-vrwe",
+  "irrigation-manual"
+ ],
+ "ref_ids": [
+  "purdue-fertilizer-compatibility",
+  "yep-nacl-cannabis-stress",
+  "powell-bauerle-uptake-massbalance",
+  "saloner-mineral-uptake-dynamics",
+  "scienceinhydroponics-caso4",
+  "libretexts-temperature-solubility",
+  "valdrighi-reservoir-water-quality",
+  "saloner-bernstein-response-surface-nutrition"
+ ],
+ "ref_lookup": {
+  "purdue-fertilizer-compatibility": "Guan, W. (2017). Fertilizer Compatibility. Purdue University Vegetable Crops Hotline, Issue 643. Purdue Extension.",
+  "yep-nacl-cannabis-stress": "Yep, B., Gale, N. V., & Zheng, Y. (2020). Aquaponic and Hydroponic Solutions Modulate NaCl-Induced Stress in Drug-Type Cannabis sativa L. Frontiers in Plant Science, 11, 1169.",
+  "powell-bauerle-uptake-massbalance": "Powell, K., & Bauerle, W. L. (2026). Predicting vegetative phase nutrient uptake in Cannabis sativa L. via transpiration-driven mass-balance. Frontiers in Plant Science, 16, 1753553.",
+  "saloner-mineral-uptake-dynamics": "Saloner, A., & Bernstein, N. (2023). Dynamics of Mineral Uptake and Plant Function during Development of Drug-Type Medical Cannabis Plants. Agronomy, 13(12), 2865.",
+  "scienceinhydroponics-caso4": "Fernandez, D. (2020). Using Calcium Sulfate in Hydroponics. Science in Hydroponics.",
+  "libretexts-temperature-solubility": "LibreTexts Chemistry. Temperature Effects on Solubility (Physical & Theoretical Chemistry; Equilibria/Solubility module).",
+  "valdrighi-reservoir-water-quality": "Hultberg, M., et al. / van Os, E. (2004). Water quality assessment of different reservoir types in relation to nutrient solution use in hydroponics. Agricultural Water Management (Elsevier ScienceDirect).",
+  "saloner-bernstein-response-surface-nutrition": "Saloner, A., & Bernstein, N. (2024). Mineral nutrition for Cannabis sativa in the vegetative stage using response surface analysis. Frontiers in Plant Science, 15, 1501484."
+ },
+ "sections": [
+  {
+   "id": "intro",
+   "kicker": "Start here",
+   "title": "Why mixing order is the whole game",
+   "summary": "Athena Pro Line is a two-part powdered (salt) nutrient: Pro Core (Part A, the calcium/nitrogen base) plus Pro Grow or Pro Bloom (Part B). Powders are cheaper and more concentrated than liquids, but they are unforgiving — get the order wrong and you waste a whole tank. This guide takes you from a 25 lb (11.34 kg) bag, a 50 L tank, hot water, and a drill paddle to a clean, fully dissolved, ready-to-feed batch.",
+   "points": [
+    "Two parts exist for a chemical reason, not a marketing one: keeping calcium apart from sulfate and phosphate until both are dilute is what prevents lockout",
+    "The reader's exact kit: one 25 lb / 11.34 kg bag, a 50 L tank, jugs of hot water, a paint-mixer paddle on a drill — no lab gear required",
+    "A correctly mixed batch looks clear (or lightly tinted) with no grit, cloud, or sludge on the tank floor",
+    "Target is roughly an EC of 3 in early growth, rising toward 4-5 as the plant matures (the Athena guide lists substrate EC bands of 3-5 in veg and up to 4-10 in flower stretch)"
+   ],
+   "figures": [
+    {
+     "name": "two_part_why",
+     "kind": "diagram",
+     "desc": "Side-by-side: Part A (Pro Core = calcium + nitrogen) and Part B (Pro Grow/Bloom = sulfates + phosphates), with a red 'X' arrow showing what happens if concentrated A meets concentrated B (white precipitate forming)"
+    }
+   ],
+   "claims_needing_cite": [
+    "Pro Core is the calcium/nitrogen base and Pro Grow/Bloom carries the sulfates and phosphates",
+    "A 25 lb bag of Athena Pro Line equals 11.34 kg"
+   ]
+  },
+  {
+   "id": "key-terms",
+   "kicker": "Define everything",
+   "title": "The words you need before you open the bag",
+   "summary": "You do not need chemistry class, but five terms appear on every label and in every grow chat. Learn these and the rest of the guide reads easily. Each is defined in plain language with the number range you actually care about.",
+   "points": [
+    "EC (Electrical Conductivity): how much dissolved salt is in the water, measured in mS/cm. More salt = higher EC. Your finished feed sits around 2.5-5.0 depending on growth stage",
+    "pH: how acidic or basic the water is, on a 0-14 scale. Nutrient solution is usually adjusted to about 5.8-6.2 so roots can absorb everything",
+    "Salt / mineral salt: the dry crystalline form a nutrient ships in. It must fully dissolve into water before the plant can use it",
+    "Precipitate / lockout: solid lumps that fall out of solution when calcium meets sulfate or phosphate at high concentration — those locked-up nutrients can no longer reach the plant",
+    "Grams per litre (g/L): the dosing unit. A label rate of, say, 1 g/L of each part across a 50 L tank means 50 g of each part"
+   ],
+   "figures": [
+    {
+     "name": "ec_ph_dial",
+     "kind": "zones",
+     "desc": "Two horizontal band gauges: an EC band marked with veg (~3), bulk (~4-5) and a danger zone above ~6; a pH band with the green target window 5.8-6.2 highlighted"
+    }
+   ],
+   "claims_needing_cite": [
+    "EC is measured in mS/cm and reflects dissolved salt concentration",
+    "Target nutrient-solution pH for cannabis is approximately 5.8-6.2"
+   ]
+  },
+  {
+   "id": "chemistry",
+   "kicker": "The why",
+   "title": "What actually happens when salts hit water",
+   "summary": "A mineral salt is held together as a solid crystal; water pulls those ions apart so the plant can drink them. This takes energy, time, and movement — which is exactly why hot water, stirring, and patience matter. The danger is that calcium ions (from Part A) and sulfate/phosphate ions (from Part B) will instantly re-bond into an insoluble solid if they meet while concentrated.",
+   "points": [
+    "Dissolving = water molecules surrounding and separating the ions of the salt crystal; undissolved grit on the tank floor is nutrient the plant cannot use",
+    "Warm/hot water dissolves salts faster and more completely than cold — cold water can leave a stubborn layer that never fully clears",
+    "Calcium sulfate (gypsum) and calcium phosphate are barely soluble; concentrated A + concentrated B makes them precipitate out as white sludge = permanent lockout for that batch",
+    "Dilution is the safety margin: once Part A is fully dissolved and spread through all 50 L, adding Part B is safe because nothing is concentrated enough to react"
+   ],
+   "figures": [
+    {
+     "name": "dissolve_mechanism",
+     "kind": "diagram",
+     "desc": "Zoom-in cartoon of a salt crystal in water: water molecules peeling individual ions off the crystal lattice into solution, with a thermometer icon showing hot water = faster peeling"
+    },
+    {
+     "name": "precipitation_curve",
+     "kind": "line",
+     "desc": "Conceptual line: x-axis concentration, y-axis 'risk of precipitate'; flat and safe at low concentration (diluted), spiking sharply where concentrated A meets concentrated B"
+    }
+   ],
+   "claims_needing_cite": [
+    "Calcium sulfate and calcium phosphate have low solubility and precipitate when calcium meets sulfate/phosphate at high concentration",
+    "Warm water increases the dissolution rate of mineral salts"
+   ]
+  },
+  {
+   "id": "rules",
+   "kicker": "The four non-negotiables",
+   "title": "The rules that prevent a ruined tank",
+   "summary": "Four habits separate a clean batch from a cloudy mess. They are the heart of this whole guide; everything in the step-by-step is just these four rules in order. Memorise them before you ever touch the drill.",
+   "points": [
+    "Rule 1 — Salts TO water, never water to salts: always start with the tank part-full of water, then sprinkle powder in. Pouring water onto a pile of powder makes a cement-like clump that won't dissolve",
+    "Rule 2 — One part FULLY dissolved before the next: Part A (Pro Core) goes in first and must be crystal-clear before Part B touches the tank",
+    "Rule 3 — NEVER combine concentrated A and B: don't pre-mix the two powders dry, and don't pour B into a tank where A hasn't dispersed — that's the precipitation reaction",
+    "Rule 4 — Mix with real energy: a paint paddle on a drill for 30-60 seconds per part beats a hand stir; you want a visible vortex, not a lazy swirl"
+   ],
+   "figures": [
+    {
+     "name": "four_rules_flow",
+     "kind": "flow",
+     "desc": "Four-box vertical flow: Water in tank -> add Part A -> mix to clear -> add Part B -> mix to clear, with a crossed-out branch showing 'dry-mix A+B' and 'water onto powder' as forbidden"
+    }
+   ],
+   "claims_needing_cite": [
+    "Pre-mixing concentrated Part A and Part B powders causes nutrient precipitation"
+   ]
+  },
+  {
+   "id": "recipe",
+   "kicker": "The worked batch",
+   "title": "A concrete 50 L recipe with your exact kit",
+   "summary": "Here is a full batch sized to a 50 L tank using the reader's 25 lb / 11.34 kg bag, hot-water jugs, and a drill paddle. Numbers below are a worked example at an early-growth target near EC 3 — always cross-check against your bag's printed g/L rate, because formulas vary. The method is fixed even if the grams shift.",
+   "points": [
+    "Fill the 50 L tank to about 40 L with warm/hot water first — leave headroom so it doesn't overflow once powder and the final top-up go in",
+    "Part A (Pro Core) first: weigh the label's g/L rate x 50. Example at ~1 g/L = 50 g; sprinkle in slowly while the paddle runs, mix 30-60 s until perfectly clear",
+    "Part B (Pro Grow or Pro Bloom) second: same maths, e.g. ~1.3 g/L = 65 g; add only once A is clear, mix another 30-60 s",
+    "Top up to the full 50 L, then check EC (aim ~3 early, 4-5 in bulk) and pH (adjust to 5.8-6.2); a 25 lb bag mixed at this rate yields roughly 100+ tanks of feed"
+   ],
+   "figures": [
+    {
+     "name": "recipe_card",
+     "kind": "table",
+     "desc": "Batch table: columns = Step, Ingredient, Example grams (50 L), Action, Mix time; rows for water fill, Part A, mix, Part B, mix, top-up, EC/pH check"
+    },
+    {
+     "name": "ec_targets_by_stage",
+     "kind": "bars",
+     "desc": "Bar chart of target substrate EC by growth stage from the Athena guide: Veg 3-5, Flower Stretch 4-10, Flower Bulk 3.5-6, Flower Finish 3-4"
+    }
+   ],
+   "claims_needing_cite": [
+    "Exact Athena Pro Line g/L dosing rates per growth stage",
+    "Athena guide substrate EC targets: Veg 3-5, Flower Stretch 4-10, Flower Bulk 3.5-6, Flower Finish 3-4",
+    "A 25 lb bag yields approximately 100+ tanks at the example rate"
+   ]
+  },
+  {
+   "id": "steps",
+   "kicker": "Do it now",
+   "title": "Step-by-step: from dry bag to ready feed",
+   "summary": "Run this exact sequence every single time and you will never lock out a tank. It takes about five to ten minutes. The order is the safety mechanism — do not improvise it.",
+   "points": [
+    "1) Half-fill the 50 L tank (~40 L) with warm/hot water from your jugs. 2) Weigh Part A (Pro Core) on a kitchen scale to the label rate x 50",
+    "3) Start the drill paddle, sprinkle Part A in slowly, mix 30-60 s until the water is clear with zero grit on the bottom",
+    "4) Weigh Part B, sprinkle it in with the paddle running, mix another 30-60 s until clear",
+    "5) Top up to 50 L, mix briefly. 6) Measure EC and pH; adjust pH into 5.8-6.2. 7) Rinse the paddle and scale immediately so dried salt doesn't cake on"
+   ],
+   "figures": [
+    {
+     "name": "step_sequence",
+     "kind": "flow",
+     "desc": "Numbered horizontal flowchart of the 7 steps with small icons (tank/water, scale, drill paddle clear, scale, drill paddle clear, top-up, EC/pH meter)"
+    }
+   ],
+   "claims_needing_cite": []
+  },
+  {
+   "id": "pitfalls",
+   "kicker": "When it goes wrong",
+   "title": "Troubleshooting: cloudy water, grit, and lockout",
+   "summary": "Most mixing failures show up visibly in the tank within a minute. Learn to read the three warning signs and what each one means. Catching them early saves the batch; ignoring them feeds the plant locked-up junk.",
+   "points": [
+    "White cloud or sludge that won't clear = precipitation: Part B met concentrated A. There's no fix — drain, rinse, and remix in the correct order",
+    "Grit on the tank floor that won't dissolve = water too cold or mixed too briefly: warm the water and run the paddle longer; cold water is the usual culprit",
+    "EC reads far below target after both parts are in = under-dosed or salt still undissolved on the bottom; recheck your grams and keep mixing before adding more",
+    "Common beginner mistakes: pouring water onto powder (rule 1), dumping both powders in at once, hand-stirring instead of using the paddle, and skipping the EC/pH check"
+   ],
+   "figures": [
+    {
+     "name": "symptom_table",
+     "kind": "table",
+     "desc": "Troubleshooting table: columns = What you see, Likely cause, Fix; rows for white cloud/sludge, grit on bottom, low EC, off pH"
+    }
+   ],
+   "claims_needing_cite": []
+  },
+  {
+   "id": "expectations",
+   "kicker": "Keep it real",
+   "title": "What good looks like, and what it won't fix",
+   "summary": "A perfect mix is necessary but not sufficient — it gets the right nutrients to the root zone, but yield still depends on EC strategy, environment, and irrigation. Set realistic expectations so you measure success correctly. Mixing is the foundation, not the whole house.",
+   "points": [
+    "A correct batch is clear/lightly tinted, fully dissolved, at target EC and pH 5.8-6.2 — that's the win you control at the bench",
+    "Mixing right won't rescue a bad environment: the Athena guide pairs feed with VPD around 0.8-1.4 kPa and stage-specific temp/RH, and warns high substrate EC can burn plants when conditions are off-range",
+    "Make only what you'll use soon: mixed nutrient solution degrades and can grow biofilm in a standing tank, so batch to your watering schedule",
+    "Expect to dial in over a few runs — log EC, pH, and grams each batch so you can repeat what worked, exactly as crop-steering practice recommends"
+   ],
+   "figures": [
+    {
+     "name": "feed_vs_environment",
+     "kind": "zones",
+     "desc": "Simple two-axis 'both must be green' panel: left zone = correct mix (EC/pH in range), right zone = correct environment (VPD 0.8-1.4 kPa, temp/RH), with a note that good feed + bad environment still burns"
+    }
+   ],
+   "claims_needing_cite": [
+    "Athena guide VPD targets of roughly 0.8-1.4 kPa across stages",
+    "High substrate EC can burn plants when environmental factors are out of range",
+    "Mixed nutrient solution degrades over time in a standing tank"
+   ]
+  }
+ ]
+}

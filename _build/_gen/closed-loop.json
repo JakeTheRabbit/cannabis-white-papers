@@ -1,0 +1,212 @@
+{
+ "slug": "closed-loop",
+ "title": "The closed loop: levers, signal and plant state",
+ "eyebrow": "Precision · Closed loop",
+ "kind": "research",
+ "sub": "A beginner's guide to running a grow room as one self-correcting system: the controls you pull, how to read what the plants are actually doing, and how to feed that back without the room chasing its own tail.",
+ "reading_min": 17,
+ "related": [
+  "signal-and-noise",
+  "plant-state-dashboard",
+  "f2-crop-steering"
+ ],
+ "ref_ids": [
+  "mohammed-spc-2024",
+  "isa-18-2-alarm-mgmt",
+  "moon-rootzone-ec-2018",
+  "huber-dli-co2-2021",
+  "kim-co2-temp-light-msu",
+  "szerement-dielectric-2019",
+  "tdr-fdr-soil-review-2024",
+  "choi-ec-transpiration-2015",
+  "saure-tipburn-calcium-2001"
+ ],
+ "ref_lookup": {
+  "mohammed-spc-2024": "Mohammed MA. Statistical Process Control. Cambridge University Press (Elements of Improving Quality and Safety in Healthcare); 2024.",
+  "isa-18-2-alarm-mgmt": "International Society of Automation. ANSI/ISA-18.2-2016, Management of Alarm Systems for the Process Industries. ISA; 2016.",
+  "moon-rootzone-ec-2018": "Moon T, Ahn TI, Son JE. Forecasting Root-Zone Electrical Conductivity of Nutrient Solutions in Closed-Loop Soilless Cultures via a Recurrent Neural Network Using Environmental and Cultivation Information. Frontiers in Plant Science. 2018;9:859.",
+  "huber-dli-co2-2021": "Huber BM, Louws FJ, Hernandez R. Impact of Different Daily Light Integrals and Carbon Dioxide Concentrations on the Growth, Morphology, and Production Efficiency of Tomato Seedlings. Frontiers in Plant Science. 2021;12:615853.",
+  "kim-co2-temp-light-msu": "Runkle E, Kim WS. Interactions of light, CO2, and temperature on photosynthesis. Michigan State University Extension, Floriculture & Greenhouse Crop Production; 2017.",
+  "szerement-dielectric-2019": "Szerement J, Woszczyk A, Szyplowska A, Kafarski M, Lewandowski A, Wilczek A, Skierucha W. A Seven-Rod Dielectric Sensor for Determination of Soil Moisture in Well-Defined Sample Volumes. Sensors (Basel). 2019;19(7):1646.",
+  "tdr-fdr-soil-review-2024": "Advancements in dielectric soil moisture sensor calibration: A comprehensive review of methods and techniques. Computers and Electronics in Agriculture. 2024;218:108663.",
+  "choi-ec-transpiration-2015": "Choi KY, et al. Changes in electrical conductivity and moisture content of substrate and their subsequent effects on transpiration rate, water use efficiency, and plant growth in the soilless culture of paprika (Capsicum annuum L.). Horticulture, Environment, and Biotechnology. 2015;56(2):209-217.",
+  "saure-tipburn-calcium-2001": "Saure MC. Calcium localization and tipburn development in lettuce leaves during early enlargement. Journal of the American Society for Horticultural Science. 2001 / related work on localized calcium deficiency and tipburn."
+ },
+ "sections": [
+  {
+   "id": "what-this-is",
+   "kicker": "Start here",
+   "title": "What this is (and why a grow room is a loop)",
+   "summary": "A grow room is not a panel of independent dials you set and forget. It is a loop: you change a control (a lever), the room and plants respond, sensors measure that response, you figure out what it means, and that tells you what to change next, around and around every minute of every day. This guide teaches that whole circle as one thing, with three jobs on it: getting the action right (cause), getting the measurement honest (perception), and getting the meaning out (cognition). The source paper calls the finished version a self-correcting room that 'senses its own state, knows what its actions will do, and corrects its own drift before it becomes damage.'",
+   "points": [
+    "A 'closed loop' just means the output feeds back to the input: what the plant tells you decides your next move, then you watch what that move did.",
+    "The single most important fact: you never move just one thing. Every control pushes on four linked things at once (heat, water vapour, CO2, and salt in the root zone).",
+    "The paper frames the room like a nervous system: muscles (the levers), nerves (the sensors), and a mind (the inference that decides what it all means).",
+    "A mature loop can tell you whole-room health and whether to act in under 5 seconds, and it stays quiet when nothing needs you."
+   ],
+   "figures": [
+    {
+     "name": "The closed loop, six steps",
+     "kind": "flow",
+     "desc": "A circle of six boxes read clockwise: ACT (pull a lever) -> ROOM RESPONDS (coupled cascade) -> SENSE (measure + noise) -> FILTER (signal vs noise) -> INFER (estimate plant state) -> PRESCRIBE (action + setpoint) -> back to ACT. Centre labelled 'the closed loop'. The PRESCRIBE-back-to-ACT arrow is highlighted as the arrow that closes the loop."
+    }
+   ]
+  },
+  {
+   "id": "key-terms",
+   "kicker": "Plain-language dictionary",
+   "title": "Key terms, defined once",
+   "summary": "This field is loaded with jargon, so here is every term you need before the real content. Most are everyday ideas with intimidating names: a 'lever' is just a control you can change, 'signal' is the real story, 'noise' is the meaningless jitter on top of it, and a 'setpoint' is the number you tell a machine to aim for. Get these straight and the rest of the paper reads easily.",
+   "points": [
+    "Lever / actuator: a control you can move (light brightness, cooling temperature, irrigation, CO2 dosing). Eleven main lever families run a room.",
+    "Signal vs noise: signal is what the plant and room are truly doing; noise is sensor jitter, biological scatter, and one-off spikes that mean nothing. A reading is always signal + noise added together.",
+    "Setpoint vs target: a setpoint is the literal number a machine chases (e.g. cool to 24C); a target is the outcome you actually want (e.g. keep the plant transpiring healthily). They are not the same thing.",
+    "VPD (vapour pressure deficit): how 'thirsty' the air is, driving how fast plants lose water. EC (electrical conductivity): how salty the feed or root zone is. VWC: how wet the growing medium is. Dryback: how much the medium dries between waterings.",
+    "Plant state: the plant's actual condition (stressed, steering generative, on-track), inferred from many signals rather than read off one gauge."
+   ],
+   "figures": []
+  },
+  {
+   "id": "the-levers",
+   "kicker": "Core content - the action half",
+   "title": "The levers: every control moves four things at once",
+   "summary": "The first core idea is that the room is one coupled system, not a set of independent knobs. Turn up the light and you have not just added light: you have added heat, increased how fast plants drink and sweat (raising humidity), increased CO2 demand, and sped up how fast the root zone dries and concentrates salt. The source organises everything you can do into four 'balances' you are always disturbing: energy (heat), moisture (water vapour), carbon (CO2), and salt (root-zone EC). The right question before any change is not 'what does this lever do?' but 'which balance am I disturbing, and can the rest of the room absorb it?'",
+   "points": [
+    "Light is not a light knob: it is a heat source, a transpiration driver, a CO2-demand creator and an HVAC load simultaneously.",
+    "Lower the cooling setpoint and you also change humidity, VPD, dryback rate and condensation risk in one move.",
+    "Every classic failure is a coupling failure, not a broken part: cooling that creates humidity, dehumidification that overheats the room, CO2 fighting the exhaust. Nothing broke; the levers were set as if independent.",
+    "The order of operations: set biological demand first (stage, light level, CO2), then size climate capacity to match, then set root-zone strategy to that."
+   ],
+   "figures": [
+    {
+     "name": "One lever, four balances",
+     "kind": "flow",
+     "desc": "A single lever box ('raise light / PPFD') on the left fanning out into four labelled lanes: ENERGY (leaf temp up, AC runtime up), MOISTURE (transpiration up, humidity up, dehumidifier load up), CARBON (CO2 demand up), SALT/ROOT ZONE (faster dryback, substrate EC up). All four converge into a verdict box: 'capacity exceeded? = failure mode.'"
+    },
+    {
+     "name": "The four balances and their levers",
+     "kind": "table",
+     "desc": "Rows: Energy, Moisture, Carbon, Salt/root zone. Columns: what adds to it, what removes from it, the lever you reach for. E.g. Salt: feed EC and dryback add, plant uptake and runoff remove, lever = shot size/frequency, dryback target, feed EC, runoff %."
+    }
+   ],
+   "claims_needing_cite": [
+    "Eleven primary lever families act on the four balances",
+    "Light simultaneously acts as heat source, transpiration driver, CO2-demand creator and HVAC load",
+    "Lowering the cooling setpoint changes RH, VPD, dryback rate and condensation risk together"
+   ]
+  },
+  {
+   "id": "reading-plant-state",
+   "kicker": "Core content - the sensing and meaning halves",
+   "title": "Reading the signal, then reading the plant",
+   "summary": "Once you accept the room will respond, you have to actually see that response without being fooled, and then turn it into meaning. Every measurement is signal plus noise, and the source notes that around 70% of raw alerts are noise that must be rejected before they reach a decision. Reading plant state is the leap from 'VWC fell 12% overnight' (a number) to 'the plant is steering generative as intended, no action needed' or 'reduce dryback 3% tonight or expect tip burn in about 48 hours' (a decision). The goal is to infer the plant, not just display the room.",
+   "points": [
+    "Three signal habits in order: sample at the right speed for the biology (fast enough to catch a 30-minute irrigation response, slow enough not to log useless jitter); filter out scatter with rolling or median averages; and judge with control limits.",
+    "Control limits: lines drawn from the process's own history (commonly the mean and roughly +/-3 sigma). Inside the band = the room being a room, do nothing. Outside, or a non-random run = investigate.",
+    "Aggregate many readings, not one: trust n-of-12, not n-of-1. A clean, classified signal is the only acceptable input to inference.",
+    "Inference fuses several cleaned signals into named conditions with a confidence level and an evidence chain, judged against a learned envelope (e.g. 1.4 kPa VPD is fine in late flower but punishing in early veg) rather than a fixed line."
+   ],
+   "figures": [
+    {
+     "name": "Signal vs noise on one reading",
+     "kind": "line",
+     "desc": "Two overlaid lines over time: a smooth line (the true signal, what the room is doing) and a jagged line (the noisy sensor reading). Caption: the trend is the story, not the jitter."
+    },
+    {
+     "name": "Control chart: when a wiggle earns a response",
+     "kind": "line",
+     "desc": "Dots scattered between an upper and lower control limit (UCL +3 sigma, LCL -3 sigma) around a mean line. Twelve dots jitter harmlessly inside the band; one rockets past the limit and is flagged 'special cause - investigate'."
+    },
+    {
+     "name": "The four-zone calm dashboard",
+     "kind": "zones",
+     "desc": "Four stacked bands: Zone 1 a single green plant-truth headline ('Flower Day 24, on-track, no action needed', ~90% of value); Zone 2 yellow watchlist (drifting precursors); Zone 3 orange advisory (the only interrupt: 'reduce dryback 3% tonight'); Zone 4 the raw graph wall, demoted to the basement."
+    }
+   ],
+   "claims_needing_cite": [
+    "Roughly 70% of raw alerts are noise",
+    "Control limits are conventionally set at the mean plus or minus three standard deviations",
+    "Distinguishing common-cause from special-cause variation is the basis of statistical process control"
+   ]
+  },
+  {
+   "id": "closing-the-loop",
+   "kicker": "Core content - putting it together",
+   "title": "Closing the loop: one problem, traced all the way round",
+   "summary": "This is where the three jobs become one machine. Watch a single ordinary problem (slow salt creep in the root zone) travel the whole loop. Cause sets the conditions: a long dryback plus flat feed concentrates salt each cycle. Perception refuses to react to any single EC spike but flags a sustained 4-day rising run past the control limit as a true signal. Cognition fuses that with feed and dryback data into a named precursor ('tip-burn precursor') and prescribes the fix, which pulls the dryback lever back, closing the loop about four days before tip burn would appear.",
+   "points": [
+    "No single job catches it alone: a lever-only grower never measures it, a signal-only grower sees a number move but not what it means, a dashboard-only grower without the causal map prescribes the wrong lever.",
+    "The emergent property the loop has and no single part does is self-correction: a system that can sense its own mistakes and undo them.",
+    "Bridge metrics let the jobs talk: dryback %, VPD and VPD-hours, pore-water EC, and recovery slope are each computed once on a consistent definition and read by every part.",
+    "Prescribe with a number and show your work: name the action, the setpoint, the deadline, and the expected outcome, and expand to the evidence on demand. Never be a black box."
+   ],
+   "figures": [
+    {
+     "name": "Salt creep through the whole loop",
+     "kind": "flow",
+     "desc": "Three stage boxes left to right - Cause (dryback long, feed flat, salt concentrates), Perception (single spike ignored, 4-day run past limit = signal), Cognition (fuse EC + feed + dryback -> 'salt accumulation, tip-burn precursor') - then a 'prescribe -> act' box that loops back to correct the same dryback lever."
+    },
+    {
+     "name": "Five failures, one fusion",
+     "kind": "table",
+     "desc": "Rows: silent salt creep, irrigation didn't land, stealth morning stress, dehumidifier dying slowly, the blind sensor. Columns: the cause/coupling at fault, the signal discipline that catches it, the inference and prescription."
+    }
+   ],
+   "claims_needing_cite": [
+    "Closed-loop control corrects root-zone salt accumulation roughly four days before visible tip burn",
+    "A flatlined, drifting or noisy probe is itself a detectable special-cause signal"
+   ]
+  },
+  {
+   "id": "how-to",
+   "kicker": "Do this first",
+   "title": "How to build the loop, step by step",
+   "summary": "You build the loop one rung at a time and you do not earn the next rung until the previous one is genuinely running. The source lays out a five-stage ladder: Blind (eyeball only), Logged (data watched live and panicked at), Filtered (right cadence, filters and limits), Inferred (plant-state estimates and prescriptions), and Looped (closed, gated, automatic). Almost none of this needs new capital; most of it is discipline. Start by getting your actions coupling-aware, your signals honest, and your decisions inferred, then and only then consider closing the loop with automation.",
+   "points": [
+    "Arc I (act): before any change, name which of the four balances it moves and in which direction; treat every failure as a capacity/coordination problem, not one bad lever.",
+    "Arc II (signal): stop watching live numbers (they invite over-reaction), set a sampling cadence per channel, put a rolling average on every decision chart, and compute control limits from your own history.",
+    "Arc III (decide): judge against an envelope per cultivar/stage/photoperiod, fuse before you flag (no signal stands alone), make every advisory prescribe a number and show its evidence, and go quiet by default.",
+    "Close the loop last and gently: gate the first automated write-back to a low-risk, reversible move (e.g. a 3-point dryback nudge behind a confirm). Keep expensive or irreversible actions human-approved."
+   ],
+   "figures": []
+  },
+  {
+   "id": "pitfalls",
+   "kicker": "What goes wrong",
+   "title": "Pitfalls: oscillation and chasing noise",
+   "summary": "The two failure modes that ruin a loop are chasing noise and oscillation. If you feed the controller noise (single spikes, jitter, ghost trends), it acts on events that never happened and actively destabilises the room: a loop fed noise doesn't help, it amplifies. Oscillation comes from reacting too fast, too hard, or to readings that are still inside normal variation, so the room swings back and forth instead of settling. The fix is the discipline from the previous sections: only act on signals that pass through all three checks.",
+   "points": [
+    "The one-sentence test before reacting to any number: has it moved beyond its learned envelope (meaning), for longer than one reading with sensors in agreement (signal), and do you know which lever answers it without disturbing another balance (cause)? If not all three, it's noise.",
+    "Aliasing: sampling too slowly invents phantom trends that aren't there; over-sampling logs jitter you can't act on and tempts you to tamper. Match cadence to the biology.",
+    "The biggest trap is reacting to live numbers (Stage 2). It is paradoxically more stressful than flying blind, because it is a wall of noise to panic at.",
+    "Walk the loop, not the wiggle: smooth enough to act calmly, but never so smooth you go blind to a real fast event - keep raw data one click away."
+   ],
+   "figures": [
+    {
+     "name": "Noise-driven oscillation vs calm correction",
+     "kind": "line",
+     "desc": "Two timelines: top, a setpoint that swings wildly up and down chasing every jitter (oscillation); bottom, a smoothed line that holds steady and makes one decisive correction only when the signal crosses a control limit."
+    }
+   ]
+  },
+  {
+   "id": "expectations",
+   "kicker": "What to actually expect",
+   "title": "Realistic expectations",
+   "summary": "The end state is quieter, not flashier. A working loop means you look at the dashboard less, are surprised less, and harvest more consistently; silence is the product, and a blank screen means nothing needs you. Importantly, the advisory-first stage (the loop tells you what to do but you still pull the lever) is a stable, valuable place to stop indefinitely. Full autonomy is opt-in, gated, and never obligatory, and the single highest-return move is just getting from reacting-to-live-numbers to reacting-to-filtered-trends.",
+   "points": [
+    "The highest-ROI step costs nothing but habit: move from Stage 2 to Stage 3 (stop reacting to live numbers, start reacting to filtered trends past control limits). It is the precondition for everything else.",
+    "You do not have to automate to win. Intelligence reaches the screen long before autonomous actuation, and stopping there is a fine, stable outcome.",
+    "Numbers are starting points, not gospel: reference setpoints are commercial-cultivation starting points to calibrate against your own facility's history. The method is universal; the setpoints are yours.",
+    "Prove it small: pick one room and one failure pattern, run it in shadow-mode for one cycle, and prove the lead time on a single advisory before you scale."
+   ],
+   "figures": [
+    {
+     "name": "The five-rung maturity ladder",
+     "kind": "diagram",
+     "desc": "Five rising steps left to right: 1 Blind (gut & eyeball), 2 Logged (data, no method, react to spikes), 3 Filtered (sampling + filter + limits, Perception lit), 4 Inferred (fuse to plant state, prescribe, Cognition lit), 5 Looped (gated write-back, predictive, Cause closes back). A dashed 'rising capability' arrow runs up the diagonal."
+    }
+   ]
+  }
+ ]
+}

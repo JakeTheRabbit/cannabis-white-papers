@@ -1,0 +1,244 @@
+{
+ "slug": "f2-crop-steering",
+ "title": "F2 crop steering: the daily operating manual",
+ "eyebrow": "Precision · Crop steering",
+ "kind": "operational",
+ "sub": "A plain-language, beginner-first guide to running an autonomous crop-steering irrigation controller day to day: the P0-P3 cycle, moisture and salt targets, the controls you actually touch, the safety fail-safes, and what to do when something looks wrong.",
+ "reading_min": 18,
+ "related": [
+  "coco-crop-steering",
+  "root-zone-teros12",
+  "smart-watering-vrwe"
+ ],
+ "ref_ids": [
+  "caplan-drought-2019",
+  "zawilski-calibration-2023",
+  "qi-salinity-2024",
+  "kang-rootgrowth-2019",
+  "mohammed-spc-2024"
+ ],
+ "ref_lookup": {
+  "caplan-drought-2019": "Caplan, D., Dixon, M., & Zheng, Y. (2019). Increasing Inflorescence Dry Weight and Cannabinoid Content in Medical Cannabis Using Controlled Drought Stress. HortScience, 54(5), 964-969.",
+  "zawilski-calibration-2023": "Zawilski, B. M., Granouillac, F., Claverie, N., Lemaire, B., Brut, A., & Tallec, T. (2023). Calculation of soil water content using dielectric-permittivity-based sensors - benefits of soil-specific calibration. Geoscientific Instrumentation, Methods and Data Systems, 12, 45-56.",
+  "qi-salinity-2024": "Qi, Q., Yang, H., Zhou, Q., Han, X., Jia, Z., Jiang, Y., Chen, Z., Hou, L., & Mei, S. (2024). Performance of Soil Moisture Sensors at Different Salinity Levels: Comparative Analysis and Calibration. Sensors, 24(19), 6323.",
+  "kang-rootgrowth-2019": "Kang, S., van Iersel, M. W., & Kim, J. (2019). Plant root growth affects FDR soil moisture sensor calibration. Scientia Horticulturae, 252, 208-211.",
+  "mohammed-spc-2024": "Mohammed MA. Statistical Process Control. Cambridge University Press (Elements of Improving Quality and Safety in Healthcare); 2024."
+ },
+ "sections": [
+  {
+   "id": "what-this-is",
+   "kicker": "Start here",
+   "title": "What this system is (and what crop steering means)",
+   "summary": "F2 is an autonomous irrigation controller for a veg grow room: software that reads moisture and salt probes in the root zone and decides, on its own, when to fire a watering shot through a pump and valves. Crop steering means deliberately nudging the plant toward vegetative growth (bulking: kept wet, many small waterings, small drying-out) or generative growth (stress/flower: bigger drying-out, saltier root zone, fewer larger waterings) by controlling exactly how and when it waters. The system runs in two cooperating layers: a Home Assistant integration that gives you every on-screen control and reading, and an AppDaemon engine (master_crop_steering_app.py) that is the actual decision-making brain. The room is wired as 3 rows (zones), each with its own moisture+salt probe and its own valve, all fed from one shared tank, one pump, one main line.",
+   "points": [
+    "Two layers: Home Assistant integration (the dashboard controls and readouts) + AppDaemon engine (the autonomous brain that fires shots)",
+    "3 rows/zones, each with its own VWC+EC probe and valve, fed from one shared veg tank, one pump, one main line",
+    "Every setting has a global default plus an optional per-row override (number.crop_steering_zone_N_*)",
+    "Two things to memorize: the 'Phase (manual set)' dropdown is an override that shows what you last picked, NOT the live phase; read sensor.crop_steering_current_phase for the truth",
+    "Disarming is always safe by design: switch.crop_steering_system_enabled = OFF means nothing can fire, ever"
+   ],
+   "figures": [
+    {
+     "name": "Two-layer architecture",
+     "kind": "diagram",
+     "desc": "Box diagram: Home Assistant integration (controls, settings, readouts) on top feeding/reading from the AppDaemon engine, which drives the hardware chain pump -> main line -> 3 zone valves, with 3 probe pairs feeding back up."
+    },
+    {
+     "name": "Room layout: 3 rows from one tank",
+     "kind": "diagram",
+     "desc": "Veg tank -> pump -> main line branching to Row 1 / Row 2 / Row 3 valves; each row shows its own VWC + EC probe. Caption: only one row waters at a time."
+    }
+   ]
+  },
+  {
+   "id": "key-terms",
+   "kicker": "Vocabulary",
+   "title": "Key terms, defined",
+   "summary": "Before anything else, three measurements run the whole system. VWC (volumetric water content) is how wet the growing medium is, shown as a percent; EC (electrical conductivity, in mS/cm) is how salty/strong the root zone or feed water is. Dryback is the percent the medium dries from its post-watering peak, and a shot is a single timed burst of water whose size is expressed as a percent of the medium's volume. Field capacity is the saturated peak VWC right after irrigation, and the EC ratio (measured EC divided by target EC) tells the engine whether the root zone is too salty (above 1, water more to dilute) or too weak (below 1, hold back).",
+   "points": [
+    "VWC = volumetric water content (% how wet the medium is); EC = electrical conductivity (mS/cm, how salty/strong)",
+    "Dryback = % the medium has dried from its peak; field capacity = the saturated peak VWC just after watering",
+    "Shot = one timed water burst, sized as a % of substrate volume; duration in seconds is derived from substrate volume, dripper flow rate, and shot size %",
+    "EC ratio = measured EC / target EC; >1 means too salty (water more/dilute), <1 means too weak (hold back)",
+    "Vegetative vs Generative = the two steering 'modes' that select which dryback and EC targets the engine uses",
+    "Zone/row = one of the 3 independently steered sections; phase = where a row is in its daily P0-P3 cycle"
+   ],
+   "figures": [
+    {
+     "name": "Core terms cheat sheet",
+     "kind": "table",
+     "desc": "Table: Term | Plain meaning | Unit/example. Rows for VWC (%), EC (mS/cm), dryback (%), shot (% of volume -> seconds), field capacity, EC ratio."
+    }
+   ]
+  },
+  {
+   "id": "p0-p3-cycle",
+   "kicker": "The core loop",
+   "title": "The P0-P3 daily cycle",
+   "summary": "Each row moves through four phases across the lights-on day, driven by the light schedule (defaults: lights on 10:00, off 22:00). P0 is morning dryback: after lights-on the system waters nothing and lets the medium dry a small amount (p0_dryback_drop_percent, e.g. 5-10%), exiting to P1 when that target is hit or when p0_maximum_wait_time expires (default 120 min). P1 is ramp-up, a series of progressively larger shots that rebuild VWC to p1_target_vwc; P2 is maintenance, the bulk of the day, watering whenever VWC drops below p2_vwc_threshold and using the EC ratio to water more or less. P3 is the pre-lights-off and overnight wind-down: normal irrigation stops a set number of minutes before lights-off and only emergency top-ups fire if VWC falls below p3_emergency_vwc_threshold.",
+   "points": [
+    "P0 (morning dryback): no watering; exit when dryback target hit OR p0_maximum_wait_time (default 120 min) expires",
+    "P1 (ramp-up): shots start at p1_initial_shot_size, grow by p1_shot_size_increment, capped at p1_maximum_shot_size, spaced by p1_time_between_shots, bounded by min/max shot counts; exits when VWC >= p1_target_vwc",
+    "P2 (maintenance): waters whenever VWC < p2_vwc_threshold; if EC ratio > ~1.2 it waters MORE (dilute), if < ~0.8 it holds back",
+    "P3 (overnight): stops normal irrigation p3_veg_last_irrigation (or _gen_) minutes before lights-off; only emergency shots below the floor; zones hold P3 all night",
+    "Vegetative mode = high VWC, modest dryback (~10-20%), lower EC (~3.0 mS/cm), many small shots; Generative = lower VWC, bigger dryback (~25-50%), higher EC (~4.5-6.0 mS/cm), fewer larger shots",
+    "Set the mode globally with select.crop_steering_steering_mode or per-row (a row override beats the global; 'Follow Main' = use the global)"
+   ],
+   "figures": [
+    {
+     "name": "P0-P3 across the day",
+     "kind": "line",
+     "desc": "VWC-over-time curve for one lights-on day: P0 gentle decline, P1 stair-step rise to target, P2 sawtooth maintenance band, P3 overnight decline to emergency floor. Lights-on 10:00 and lights-off 22:00 marked."
+    },
+    {
+     "name": "Phase transition flow",
+     "kind": "flow",
+     "desc": "Flowchart: P3 (overnight) -> lights-on -> P0 -> dryback met/timeout -> P1 -> VWC>=target -> P2 -> before lights-off -> P3, looping."
+    },
+    {
+     "name": "Vegetative vs Generative targets",
+     "kind": "table",
+     "desc": "Mode | VWC target | Dryback | EC target | Shot pattern, with the two rows from the source (Veg: high / modest 10-20% / ~3.0 / many small; Gen: lower / 25-50% / 4.5-6.0 / fewer larger)."
+    }
+   ]
+  },
+  {
+   "id": "controls-and-targets",
+   "kicker": "What you touch",
+   "title": "The controls and targets that matter",
+   "summary": "Day to day you mostly touch a handful of controls. Two arm switches set how 'on' the system is: System enabled is the master arm (OFF = nothing irrigates ever, and the engine fails safe to OFF if it can't read the switch), while Auto irrigation only governs engine-driven shots and still lets manual shots through when OFF ('watch mode'). The targets that steer growth are the per-phase VWC numbers (p1_target_vwc, p2_vwc_threshold), the dryback targets, and the per-phase/per-mode EC targets (ec_target_veg_p0..p3 and ec_target_gen_p0..p3). Per-row selects let you push one row generative while the others stay veg, set priority for who waters first when only one row can fire, and group zones to coordinate.",
+   "points": [
+    "System enabled = master arm (master kill switch); Auto irrigation = only disables autonomous shots (manual still works) -> use ON/OFF together for 'watch mode'",
+    "EC stacking switch ON lets the engine raise root-zone EC by reducing water (a generative push); usually OFF for veg",
+    "Hardware controls you can see: pump (Tuya plug, ~490 W running), main line relay, and switch.f2_row1/2/3 zone valves (only one waters at a time)",
+    "Per-row selects: steering_mode, crop_profile (Follow Main + 7 profiles), group (A-D), priority (Critical/High/Normal/Low)",
+    "Shot duration is computed from substrate_volume, dripper_flow_rate, drippers_per_plant and shot size % (numbers you must set correctly)",
+    "Per-row safety caps: max_daily_volume (L), shot_size_multiplier, plant_count"
+   ],
+   "figures": [
+    {
+     "name": "Two levels of off",
+     "kind": "table",
+     "desc": "System enabled x Auto irrigation truth table: ON/ON = normal autonomous + manual; ON/OFF = watch mode (manual only); OFF/either = fully disarmed, every shot blocked at the gate."
+    },
+    {
+     "name": "Controls you actually touch",
+     "kind": "table",
+     "desc": "Control | Entity | What it does | When to use, covering the arm switches, steering mode select, manual phase select, per-row enabled/override, dripper protection."
+    }
+   ]
+  },
+  {
+   "id": "decision-gates",
+   "kicker": "How it decides",
+   "title": "How a single irrigation decision is made (the gates)",
+   "summary": "When the engine decides a shot is needed, that shot only fires if it passes every safety gate in order; any failed gate blocks it. The checks run roughly: System enabled? (fail-safe: if unreadable, blocked) -> Auto irrigation on (manual can bypass)? -> Zone enabled? -> No zone manual override? -> Not dosing/filling? -> Tank not empty (the low float must read water present)? -> Source-water pH/EC inside the limit window (default pH 5.8-6.2)? -> Safety limits OK (daily-volume cap, max-EC ceiling, max-frequency)? Only then does it fire the hardware sequence: pump on -> 2 s prime -> main line on -> 1 s -> zone valve on -> hold for the calculated duration -> valve off -> main off -> pump off.",
+   "points": [
+    "Every gate must pass; a single failed gate blocks the shot",
+    "Order: system armed -> auto-irrigation (manual bypasses) -> zone enabled -> no manual override -> not dosing -> tank not empty -> source pH/EC in range -> safety limits",
+    "pH/EC out of range blocks AND sends a phone alert with an 'Irrigate Anyway' button",
+    "Fire sequence: pump on, 2 s prime, main line on, 1 s, zone valve on, hold calculated duration, then valve -> main -> pump off (reverse order)",
+    "Tank guard blocks only when the low float explicitly reads empty, so it can keep watering as the tank drains"
+   ],
+   "figures": [
+    {
+     "name": "The gate chain",
+     "kind": "flow",
+     "desc": "Vertical decision flow: each gate (armed, auto, zone enabled, no override, not dosing, tank not empty, pH/EC in range, safety limits) with pass-down / fail-block branches, ending in the hardware fire sequence."
+    }
+   ]
+  },
+  {
+   "id": "calibration-howto",
+   "kicker": "Do this first",
+   "title": "Calibration: getting the numbers right before you trust it",
+   "summary": "This is the most important practical step: the system only behaves correctly if its number entities match your actual medium. The factory defaults are placeholders (50% VWC / 50% dryback), not your substrate. Hand-water normally for a few days and watch each row's VWC: the reading just after watering is roughly field capacity (the peak), and the reading just before the next watering is the trough; together those define the row's operating band. Then set field_capacity just above the highest peak, p1_target_vwc to each row's post-water peak, p2_vwc_threshold a few percent below that (a smaller gap = a tighter veg band), the dryback targets (veg ~15-20%, gen ~25-45%), p0_dryback_drop_percent (5-15%), and p3_emergency_vwc_threshold a few percent below the normal trough. Set EC targets slightly above feed EC for veg and well above for generative.",
+   "points": [
+    "Defaults are placeholders (50%/50%); calibrate to your medium or the steering is meaningless",
+    "Observe: peak right after watering ~= field capacity; trough right before next watering -> that's the row's band",
+    "Set field_capacity just above the highest peak, p1_target_vwc = post-water peak, p2_vwc_threshold a few % below it",
+    "Dryback targets: veg ~15-20%, gen ~25-45%; p0_dryback_drop_percent 5-15%; emergency floor a few % below normal trough",
+    "EC targets are substrate EC to maintain per phase; p2_ec_high/low_threshold are multipliers on target (1.2 high = dilute above 120%, 0.8 low = conserve below 80%)",
+    "Source's recommended F2 starting numbers (from its hand-watered ranges) Row1/Row2/Row3: p1_target_vwc 26/22/18, p2_vwc_threshold 22/19/15, vegetative_dryback_target 18/18/18, p0_dryback_drop 8/8/8, emergency floor 15/14/11, global field_capacity 30"
+   ],
+   "figures": [
+    {
+     "name": "Reading the operating band",
+     "kind": "zones",
+     "desc": "VWC band diagram for one row: shaded zones for field capacity (top), p1_target_vwc, p2_vwc_threshold (P2 band), normal trough, and p3 emergency floor at the bottom, with peak/trough arrows from hand-watering."
+    },
+    {
+     "name": "F2 recommended starting numbers",
+     "kind": "table",
+     "desc": "Setting | Row 1 | Row 2 | Row 3 | What it does, transcribed from the source's calibration table (p1_target_vwc, p2_vwc_threshold, dryback, p0 drop, emergency floor) plus global field_capacity 30."
+    },
+    {
+     "name": "Calibration steps",
+     "kind": "flow",
+     "desc": "Observe (hand-water, log peaks/troughs) -> Set the band (field capacity, P1 target, P2 threshold, dryback) -> Set EC targets -> Run a few cycles and refine."
+    }
+   ]
+  },
+  {
+   "id": "recipes",
+   "kicker": "Everyday tasks",
+   "title": "How-to recipes for common jobs",
+   "summary": "Most routine actions have a safe, prescribed method. To fire a manual shot, prefer the integration service crop_steering.execute_irrigation_shot (zone, duration_seconds, shot_type: manual) from Developer Tools -> Services, which runs the full gated hardware sequence; raw switch-flipping (pump, then main, then valve, reversed to stop) is a last resort and you run one row at a time. To force a phase, change select.crop_steering_irrigation_phase, which immediately moves every zone to that phase and bypasses the normal transition rules. Disable a row with switch.crop_steering_zone_N_enabled (excludes it) or pause it with the manual_override switch (keeps it in steering while you hand-water). Switching to generative is just selecting 'Generative' on the steering mode, globally or per row.",
+   "points": [
+    "Manual shot (preferred): service crop_steering.execute_irrigation_shot with zone, duration_seconds, shot_type: manual -> runs full gated sequence",
+    "Raw hardware (last resort): pump -> main -> valve on, reverse to stop, one row at a time",
+    "Force a phase: change select.crop_steering_irrigation_phase (immediate, bypasses normal transitions; selector then shows that phase)",
+    "'Irrigate Anyway' phone override grants a 30-min bypass of the pH/EC gate ONLY; all other interlocks still apply and it auto-clears when pH/EC return in range",
+    "Disable a row = zone_N_enabled OFF (excluded); pause for hand-watering = zone_N_manual_override ON (stays in steering)",
+    "Water counters reset automatically (daily at midnight, weekly Monday); restart AppDaemon to re-init early"
+   ],
+   "figures": [
+    {
+     "name": "Recipe quick-reference",
+     "kind": "table",
+     "desc": "Task | Safe method | Caution. Rows for manual shot, force phase, irrigate-anyway override, disable vs pause a row, switch to generative, reset counters."
+    }
+   ]
+  },
+  {
+   "id": "safety-troubleshooting",
+   "kicker": "When it goes wrong",
+   "title": "Safety fail-safes, emergency stop, and troubleshooting",
+   "summary": "The system has layered fail-safes: the pH/EC source-water gate, a tank dry-run guard (blocks only when the low float reads empty), a blocked-dripper guard that parks a row for 2 hours after too many failed shots, fail-safe reads (if the arm switch can't be confirmed the engine treats the system as disabled), and persistent state saved every 5 minutes so zones come back in their saved phase after a restart. There are two ways to force-stop, and they differ critically: the dashboard 'EMERGENCY - ALL OFF' button (script.f2_irrigation_all_off) kills the three hardware pieces fast but does NOT disarm the engine, which stays armed and may re-energise on its next ~60 s phase-check; flipping System enabled OFF disarms the engine durably. For anything beyond a brief stop, use both. Common faults include stuck-in-phase zones, valves open with no flow, repeated pH/EC alerts, and a stuck irrigation_in_progress flag after a mid-shot kill (fix: restart AppDaemon).",
+   "points": [
+    "Fail-safes: pH/EC gate, tank dry-run guard (blocks only on empty float), blocked-dripper guard (parks a row 2 h after default 4 failed shots in 30 min), fail-safe arm-switch reads, state persisted every 5 min",
+    "The dashboard EMERGENCY button kills hardware fast but does NOT disarm the engine -- it can re-fire on the next ~60 s phase-check; flip System enabled OFF to truly disarm",
+    "Re-activation order: fix the physical root cause first, confirm all hardware reads off, check engine arm state, re-arm, sanity-check the live phase, then watch one cycle",
+    "Stuck 'Irrigation already in progress -- skipping' every cycle = stuck flag; restart AppDaemon (ha addons restart a0d7b954_appdaemon); phase + counters restore from disk",
+    "Troubleshoot list from the source: zones stuck in one phase, valves open but no flow, Status/Water-today reads unknown, repeated pH/EC alerts, a row repeatedly parked as blocked dripper, engine unresponsive after restart",
+    "Known data gap noted in source: sensor.crop_steering_dryback_percentage and substrate EC reads can be suspiciously low (Row 1 at 0.48 mS/cm) -- check probe calibration before trusting EC steering"
+   ],
+   "figures": [
+    {
+     "name": "Two ways to stop -- what they touch",
+     "kind": "table",
+     "desc": "Trigger | What runs | What it touches | Engine state after. Rows for dashboard EMERGENCY button, System enabled OFF, and the engine-internal auto emergency stop."
+    },
+    {
+     "name": "Bring-it-back-online checklist",
+     "kind": "flow",
+     "desc": "Numbered flow: fix root cause -> confirm hardware off -> check engine arm state -> (resume / re-arm) -> sanity-check live phase -> watch one cycle."
+    }
+   ]
+  },
+  {
+   "id": "expectations",
+   "kicker": "Reality check",
+   "title": "Realistic expectations",
+   "summary": "This is an operational controller, not a magic autopilot: it only steers as well as its calibration, and the source is explicit that the factory 50%/50% defaults are placeholders that must be replaced with numbers from your own medium before you trust autonomous mode. Expect to run a 'watch mode' period first (System enabled ON, Auto irrigation OFF) so the engine is armed but observe-only while you confirm thresholds and hand-test plumbing. Treat the recommended starting numbers as starting points to refine over several cycles, not final settings, and be aware some readings can be unreliable -- the source flags an unpopulated dryback-percentage sensor and suspiciously low EC readings that point to probe-calibration issues rather than real root-zone conditions. The fail-safes protect hardware, but they assume your probes, floats, and pH/EC sensors are themselves trustworthy.",
+   "points": [
+    "Steering quality is bounded by calibration; defaults are placeholders, not your substrate",
+    "Run watch mode first (armed but observe-only) before granting full autonomy",
+    "Recommended numbers are starting points to refine over a few cycles",
+    "Some sensors can mislead: dryback-percentage may be unpopulated, EC may read suspiciously low -- verify probe calibration before trusting EC steering",
+    "Fail-safes guard hardware but trust the sensors; a bad probe or float can still cause wrong decisions within the safe envelope"
+   ],
+   "figures": []
+  }
+ ]
+}

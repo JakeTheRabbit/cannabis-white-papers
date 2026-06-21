@@ -1,0 +1,259 @@
+{
+ "slug": "substrates-overview",
+ "title": "Substrates compared: coco, rockwool, soil, hydro",
+ "eyebrow": "Beginner · Substrate",
+ "kind": "research",
+ "sub": "A from-zero guide to what cannabis roots grow in — how each medium holds water and air, how it handles nutrients, how forgiving it is, and how to pick one",
+ "reading_min": 11,
+ "related": [
+  "coco-crop-steering",
+  "ph-management",
+  "water-quality"
+ ],
+ "ref_ids": [
+  "xiong-2017-coir-rockwool-peat-tomato",
+  "abad-2002-coir-dust-peat-substitute",
+  "bevan-2021-cannabis-npk-soilless",
+  "cockson-2019-cannabis-nutrient-disorders",
+  "le-pythium-hydroponic-epidemiology-review",
+  "frontiers-2026-do-pythium-strawberry-nft",
+  "raviv-lieth-soilless-culture-afp",
+  "joseph-2024-rockwool-recovery-composting",
+  "abad-2017-peat-use-horticulture"
+ ],
+ "ref_lookup": {
+  "xiong-2017-coir-rockwool-peat-tomato": "Xiong J, Tian Y, Wang J, Liu W, Chen Q. Comparison of Coconut Coir, Rockwool, and Peat Cultivations for Tomato Production: Nutrient Balance, Plant Growth and Fruit Quality. Frontiers in Plant Science. 2017;8:1327. doi:10.3389/fpls.2017.01327",
+  "abad-2002-coir-dust-peat-substitute": "Abad M, Noguera P, Puchades R, Maquieira A, Noguera V. Physico-chemical and chemical properties of some coconut coir dusts for use as a peat substitute for containerised ornamental plants. Bioresource Technology. 2002;82(3):241-245. doi:10.1016/S0960-8524(01)00189-4",
+  "bevan-2021-cannabis-npk-soilless": "Bevan L, Jones M, Zheng Y. Optimisation of Nitrogen, Phosphorus, and Potassium for Soilless Production of Cannabis sativa in the Flowering Stage Using Response Surface Analysis. Frontiers in Plant Science. 2021;12:764103. doi:10.3389/fpls.2021.764103",
+  "cockson-2019-cannabis-nutrient-disorders": "Cockson P, Landis H, Smith T, Hicks K, Whipker BE. Characterization of Nutrient Disorders of Cannabis sativa. Applied Sciences. 2019;9(20):4432. doi:10.3390/app9204432",
+  "le-pythium-hydroponic-epidemiology-review": "Le DH, et al. Etiology and epidemiology of Pythium root rot in hydroponic crops: current knowledge and perspectives. Summa Phytopathologica. (review) Available via SciELO Brazil.",
+  "frontiers-2026-do-pythium-strawberry-nft": "Dissolved oxygen limitation and Pythium root rot in strawberry NFT systems: mechanisms, research gaps, and prospects for substrate-free production. Frontiers in Plant Science. 2026. doi:10.3389/fpls.2026.1829367",
+  "raviv-lieth-soilless-culture-afp": "Raviv M, Lieth JH (eds.). Soilless Culture: Theory and Practice. Elsevier/Academic Press, 2008. ISBN 978-0-444-52975-6. (Chapter: Physical Characteristics of Soilless Media.)",
+  "joseph-2024-rockwool-recovery-composting": "Composting of recovered rock wool from hydroponics for the production of soil amendment. Environmental Science and Pollution Research. 2024. doi:10.1007/s11356-024-33041-2",
+  "abad-2017-peat-use-horticulture": "Peat Use in Horticulture. IntechOpen (peer-reviewed book chapter), 2018. doi:10.5772/intechopen.79611"
+ },
+ "sections": [
+  {
+   "id": "what-this-is",
+   "kicker": "Start here",
+   "title": "What this is (and who it's for)",
+   "summary": "A \"substrate\" (also called a growing medium) is simply the material a plant's roots live in — it physically holds the plant up and acts as the reservoir for water, air, and dissolved nutrients. This guide compares the five materials cannabis growers actually use — coco coir, rockwool, peat, living soil, and deep water culture (DWC) hydroponics — assuming you know nothing yet. By the end you'll understand the two trade-offs that decide everything (how much water vs. air a medium holds, and how much it cushions nutrient mistakes) and be able to pick the right one for your setup. It pairs with the coco crop-steering paper, which goes deep on driving one specific medium hard.",
+   "points": [
+    "Substrate = the stuff roots grow in; it stores water, air, and nutrients",
+    "Five options covered: coco coir, rockwool, peat/soil mixes, living soil, DWC hydroponics",
+    "The whole choice comes down to water-vs-air balance and how forgiving the medium is",
+    "Companion to the coco crop-steering paper, which assumes you already picked coco"
+   ],
+   "figures": [
+    {
+     "name": "substrate_family_map",
+     "kind": "diagram",
+     "desc": "A simple branching diagram: 'Where do roots live?' splits into 'In a solid medium' (coco, rockwool, peat, living soil) vs 'In water/air' (DWC), with a one-line label on each describing what holds the roots."
+    }
+   ]
+  },
+  {
+   "id": "key-terms",
+   "kicker": "Vocabulary",
+   "title": "Key terms, defined once",
+   "summary": "Two numbers describe how any medium behaves when wet: water-holding capacity (the share of the pore space that holds water after it drains) and air-filled porosity (the share that holds air at that same moment) — together they roughly add up to the total pore space, so more water means less air. EC (electrical conductivity) measures how much dissolved nutrient salt is in the water, in milliSiemens per centimeter (mS/cm); pH measures acidity on a 0-14 scale where ~5.5-6.5 is the cannabis sweet spot. CEC (cation exchange capacity, in meq/100g) is the medium's ability to grab and hold nutrient ions like a sponge holds them in reserve — high CEC means the medium buffers (cushions) feeding mistakes. \"Dryback\" is how much a medium dries between waterings, the lever crop-steering uses.",
+   "points": [
+    "Water-holding capacity vs air-filled porosity: a see-saw — more of one means less of the other",
+    "EC: dissolved-nutrient strength in mS/cm; pH: acidity, target ~5.5-6.5",
+    "CEC (meq/100g): how strongly a medium stores nutrient ions = how much it forgives feeding errors",
+    "Buffering = the medium absorbing your mistakes; dryback = how far it dries between irrigations"
+   ],
+   "figures": [
+    {
+     "name": "water_air_seesaw",
+     "kind": "diagram",
+     "desc": "A see-saw / balance illustration showing total pore space as a fixed bar split into a water portion and an air portion, with a slider; caption notes that saturating the medium pushes the slider toward water and starves roots of oxygen."
+    }
+   ],
+   "claims_needing_cite": [
+    "Cannabis root-zone pH sweet spot is approximately 5.5-6.5 (5.8-6.2 for tight soilless control)",
+    "CEC is conventionally expressed in meq/100g"
+   ]
+  },
+  {
+   "id": "water-vs-air",
+   "kicker": "Core concept 1",
+   "title": "Water versus air: the porosity trade-off",
+   "summary": "Roots need oxygen as much as water — a medium that stays saturated drowns roots and invites rot, while one that holds too little water dries out and stresses the plant. The five media land at different points on this see-saw: rockwool is roughly 96% total porosity but only ~11% air-filled with ~91% water-holding, so it holds a lot of water and releases it freely; peat sits around 90-95% total porosity with a higher ~18-25% air-filled fraction. Coco coir is the standout — even when saturated it can retain around 22% air, beating rockwool's ~10%, which is why coco resists drowning. DWC is the extreme case: roots dangle in nutrient water and get their oxygen entirely from air pumped into the reservoir.",
+   "points": [
+    "Roots breathe — too much water = no oxygen = root rot; the balance is the whole game",
+    "Rockwool: ~96% total porosity, ~11% air-filled, ~91% water-holding — wet but free-draining",
+    "Peat: ~90-95% porosity, ~18-25% air-filled — naturally airier than rockwool",
+    "Coco: holds ~22% air even when saturated (vs rockwool ~10%) — hard to overwater",
+    "DWC: no solid medium at all; oxygen comes from air pumped into the water"
+   ],
+   "figures": [
+    {
+     "name": "porosity_compare_bars",
+     "kind": "bars",
+     "desc": "Stacked horizontal bars for rockwool, peat, coco showing air-filled porosity vs water-holding capacity as two segments per bar, using the cited percentages so the reader sees coco's larger air fraction at saturation."
+    },
+    {
+     "name": "saturated_air_table",
+     "kind": "table",
+     "desc": "Small table: medium | total porosity % | air-filled % | water-holding % | air retained when saturated, populated with rockwool ~96/11/91/~10 and coco ~22 retained, peat ~90-95/18-25."
+    }
+   ],
+   "claims_needing_cite": [
+    "Rockwool: ~96% total porosity, ~11% air-filled porosity, ~91% water-holding capacity, bulk density ~0.85 g/cm3",
+    "Peat: ~90-95% total porosity, ~18-25% air-filled porosity",
+    "Coco coir retains ~22% air even when saturated versus rockwool's ~10%",
+    "After draining, irrigated rockwool holds roughly 80% solution, 15% air, 5% fiber by volume"
+   ]
+  },
+  {
+   "id": "ec-buffering",
+   "kicker": "Core concept 2",
+   "title": "How each medium handles nutrients (EC buffering and the coco surprise)",
+   "summary": "An inert medium like rockwool holds almost no nutrients of its own (its native EC is negligible and pH is alkaline around 8), so whatever you feed is exactly what the roots get — precise, but unforgiving of a bad mix. Coco is the opposite: its high CEC (roughly 40-100 meq/100g) buffers EC swings, but raw coco's exchange sites come pre-loaded with potassium and sodium and will strip calcium and magnesium out of your feed, causing cal-mag deficiency — which is why coco must be \"buffered\" (pre-soaked in cal-mag) or bought pre-buffered. Living soil is the most forgiving of all: microbes, organic matter, and minerals hold pH near 5.2-6.5 within minutes of watering regardless of your water's pH, so you generally don't pH your input at all. In DWC there is no buffer — the reservoir is the only thing standing between your plants and a mistake.",
+   "points": [
+    "Rockwool: inert, negligible native EC, pH ~8 — total control, zero cushion",
+    "Coco: high CEC (~40-100 meq/100g) buffers EC but strips Ca/Mg unless pre-buffered with cal-mag",
+    "Living soil: microbes + amendments self-buffer pH to ~5.2-6.5; don't pH your water",
+    "DWC: no medium = no buffer; the reservoir IS your margin for error"
+   ],
+   "figures": [
+    {
+     "name": "cec_buffering_scale",
+     "kind": "zones",
+     "desc": "A horizontal 'forgiveness' scale from 'Inert / no buffer' (DWC, rockwool) through 'Buffered' (coco) to 'Self-regulating' (living soil), each band labeled with its CEC behavior and what mistake it does/doesn't absorb."
+    }
+   ],
+   "claims_needing_cite": [
+    "Coco coir CEC ranges roughly 40-100 meq/100g depending on brand/processing",
+    "Unbuffered coco's exchange sites are loaded with K and Na and will adsorb Ca/Mg from feed, causing deficiency unless buffered",
+    "Rockwool native EC is negligible and pH is alkaline (~8), requiring a pre-soak conditioning at lower pH",
+    "Quality living soil buffers to pH ~5.2-6.5 within minutes of watering regardless of input water pH"
+   ]
+  },
+  {
+   "id": "reuse-cost",
+   "kicker": "Core concept 3",
+   "title": "Re-use, cost, and environmental footprint",
+   "summary": "Media differ enormously in how many runs you get. Rockwool can be re-used for up to ~3 years with proper sanitation but is energy-intensive to make and banned from landfill in some countries (it has declined in Europe and Japan for this reason). Coco can be rinsed, re-buffered, and re-used for a few cycles, then composted into garden soil — but most is shipped from overseas. Living soil is the re-use champion: a recycled-organic-living-soil (ROLS) bed is amended between runs and grows indefinitely, getting better with age. DWC has no medium to dispose of, but you replace the nutrient reservoir constantly and depend on continuous electricity for pumps. Peat is cheap and effective but is a slowly-renewing resource with a real carbon cost, which pushes many growers toward coco.",
+   "points": [
+    "Rockwool: ~3 years re-use with sanitation, but energy-heavy and landfill-restricted in places",
+    "Coco: a few re-buffered cycles, then composts into soil; high shipping footprint",
+    "Living soil: amend-and-reuse forever (ROLS); the lowest-waste option once established",
+    "DWC: nothing to throw away, but constant reservoir changes and 24/7 pump electricity",
+    "Peat: cheap and proven but slow to renew — an environmental knock"
+   ],
+   "figures": [
+    {
+     "name": "reuse_cost_table",
+     "kind": "table",
+     "desc": "Table: medium | typical re-use | disposal/end-of-life | rough cost tier | environmental note, one row each for coco, rockwool, peat, living soil, DWC."
+    }
+   ],
+   "claims_needing_cite": [
+    "Rockwool can be re-used up to ~3 years with proper sanitation and is landfill-restricted in some European countries and Japan",
+    "Living soil (ROLS) is amended and re-used indefinitely between crops",
+    "Peat is a slowly-renewing resource with a meaningful carbon/extraction cost"
+   ]
+  },
+  {
+   "id": "choose-by-stage",
+   "kicker": "Decide",
+   "title": "How to choose: a beginner's decision path",
+   "summary": "Match the medium to your tolerance for fiddling, not to what wins a yield contest. If you want the most forgiving start and minimal daily tech, choose living soil or a quality peat-based soil mix — water-only or near-water-only, no pH meter required at first. If you want bigger control and faster growth and are willing to feed every irrigation and watch EC/pH, choose coco (buy it pre-buffered) — this is also the on-ramp to crop steering. Save rockwool for after your irrigation and environment are dialed in, because its low buffering punishes inconsistency. Treat DWC as advanced: it can give explosive growth but a warm reservoir or a dead air pump can kill a plant in a day.",
+   "points": [
+    "Want forgiving + low-tech: living soil or quality soil mix, water-only to start",
+    "Want control + speed, willing to feed daily: pre-buffered coco (and it leads into crop steering)",
+    "Rockwool: adopt only after irrigation/environment are consistent",
+    "DWC: highest reward, lowest safety margin — not a first grow"
+   ],
+   "figures": [
+    {
+     "name": "choose_flow",
+     "kind": "flow",
+     "desc": "A flowchart starting 'How hands-on do you want to be?' branching through 'Water-only?' -> living soil/soil; 'Feed every watering + monitor?' -> coco; 'Parameters already dialed in?' -> rockwool; 'Comfortable with constant monitoring?' -> DWC."
+    },
+    {
+     "name": "forgiveness_ranking",
+     "kind": "bars",
+     "desc": "Horizontal bar ranking the five media on a 'beginner forgiveness' score from living soil (highest) down to DWC (lowest), with a one-line reason per bar."
+    }
+   ]
+  },
+  {
+   "id": "by-stage-setup",
+   "kicker": "Do it",
+   "title": "Setting up and running each, step by step",
+   "summary": "Every medium has a non-negotiable prep step. Coco: rinse and pre-buffer (soak 8-24h in cal-mag) unless bought pre-buffered, then feed at low EC and pH 5.8-6.2, watering little and often. Rockwool: pre-soak the cubes/slabs at pH ~5.5 (because dry rockwool is ~pH 8) before transplanting, then never let it go bone-dry. Living soil: build or buy the bed, let it cycle a few weeks, then water-only and leave pH alone unless symptoms appear. DWC: keep the reservoir at 18-20C (65-68F), dissolved oxygen at 7-9 mg/L, pH 5.5-6.0, and run the air pump 24/7.",
+   "points": [
+    "Coco: rinse + pre-buffer (cal-mag soak 8-24h) -> feed every watering at pH 5.8-6.2, low EC",
+    "Rockwool: pre-soak at pH ~5.5 to neutralize its alkalinity -> never fully dry out",
+    "Living soil: cycle a few weeks -> water-only -> don't touch pH unless something's wrong",
+    "DWC: reservoir 18-20C, dissolved oxygen 7-9 mg/L, pH 5.5-6.0, air pump always on"
+   ],
+   "figures": [
+    {
+     "name": "setup_checklist_table",
+     "kind": "table",
+     "desc": "Table: medium | prep step | feed/water routine | pH target | the one thing not to skip, one row per medium."
+    },
+    {
+     "name": "dwc_reservoir_zones",
+     "kind": "zones",
+     "desc": "A reservoir gauge graphic showing safe vs danger bands for water temp (18-20C safe, >23C danger) and dissolved oxygen (7-9 mg/L target), making the DWC kill-zone visible."
+    }
+   ],
+   "claims_needing_cite": [
+    "Coco pre-buffering = soak rinsed coir 8-24h in a cal-mag solution before planting",
+    "DWC targets: reservoir 18-20C (65-68F), dissolved oxygen ~7-9 mg/L, pH 5.5-6.0",
+    "Pythium root-rot risk rises sharply above ~23C reservoir temperature",
+    "Soilless feeding pH target is 5.8-6.2"
+   ]
+  },
+  {
+   "id": "pitfalls",
+   "kicker": "Avoid",
+   "title": "Common pitfalls and how to dodge them",
+   "summary": "The classic beginner mistakes are medium-specific. In coco, skipping the buffer step gives a textbook cal-mag deficiency (rusty spots, yellowing) that beginners misread as a feeding problem. In rockwool, planting straight into dry cubes locks out nutrients because of the pH-8 alkalinity, and overwatering its low-air matrix suffocates roots. In living soil, the temptation to pH your water or hit it with synthetic salts kills the microbes that were doing the work for you. In DWC, a warm reservoir (>23C) or a failed air pump crashes dissolved oxygen and brings on root rot within a day — the single most common DWC failure.",
+   "points": [
+    "Coco: unbuffered medium -> cal-mag deficiency mistaken for a feed issue",
+    "Rockwool: dry-planting causes pH lockout; its low air-porosity punishes overwatering",
+    "Living soil: pH-ing the water or adding salts kills the microbial buffer",
+    "DWC: warm water or dead air pump = root rot in ~24h, the #1 DWC killer"
+   ],
+   "figures": [
+    {
+     "name": "pitfall_symptom_table",
+     "kind": "table",
+     "desc": "Table: medium | classic mistake | what you see (symptom) | the fix, one row per medium so a beginner can diagnose from leaf/root signs."
+    }
+   ],
+   "claims_needing_cite": [
+    "Unbuffered coco strips Ca/Mg and produces calcium/magnesium deficiency symptoms",
+    "Warm reservoir (>23C) and air-pump failure are the leading causes of DWC root rot"
+   ]
+  },
+  {
+   "id": "expectations",
+   "kicker": "Reality check",
+   "title": "Realistic expectations",
+   "summary": "No medium grows the plant for you — they differ in where the difficulty sits, not in whether there is difficulty. Living soil front-loads the work (building the bed) then runs hands-off; coco and rockwool spread the work across daily feeding and monitoring; DWC concentrates the risk into a few parameters that must never slip. Inert media like coco and rockwool, fed precisely, can edge out soil on yield and speed in research comparisons, but only once your environment and irrigation are consistent — a dialed-in soil grower will out-produce a sloppy hydro grower every time. Pick the medium whose failure mode you can live with, get one full run under your belt, and change only one variable next time.",
+   "points": [
+    "Every medium is work — they just move the work to different places",
+    "Inert media (coco/rockwool) can beat soil on yield/speed, but only when dialed in",
+    "Consistency beats medium choice — a tidy soil grow outperforms a sloppy hydro one",
+    "Run one full cycle, then change a single variable; don't switch everything at once"
+   ],
+   "figures": [
+    {
+     "name": "effort_vs_reward",
+     "kind": "line",
+     "desc": "A 2-axis plot positioning the five media on 'daily effort/risk' vs 'ceiling for yield/speed', showing living soil low-effort/moderate-ceiling, coco & rockwool mid-effort/high-ceiling, DWC high-risk/highest-ceiling."
+    }
+   ],
+   "claims_needing_cite": [
+    "Coco-grown cannabis showed higher K and S uptake, greater photosynthetic rates, and higher yield than rockwool in at least one comparison study"
+   ]
+  }
+ ]
+}

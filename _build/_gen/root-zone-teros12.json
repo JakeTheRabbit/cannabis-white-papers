@@ -1,0 +1,226 @@
+{
+ "slug": "root-zone-teros12",
+ "title": "Root-zone state estimation with the TEROS-12 sensor",
+ "eyebrow": "Precision · Root zone",
+ "kind": "research",
+ "sub": "A plain-language guide to what a TEROS-12 capacitance probe actually measures in your pot, why its raw number is not the truth, and how to turn it into safe irrigation decisions.",
+ "reading_min": 18,
+ "related": [
+  "smart-watering-vrwe",
+  "coco-crop-steering",
+  "signal-and-noise"
+ ],
+ "ref_ids": [
+  "topp-1980-dielectric-vwc",
+  "hilhorst-2000-pore-water-ec",
+  "fragkos-2024-teros12-soils-ec",
+  "nasta-2024-teros12-temp-correction",
+  "kargas-temp-capacitance-correction-2012",
+  "tavan-2021-sensor-irrigation-soilless",
+  "nemali-2006-set-point-irrigation",
+  "meter-teros12-manual"
+ ],
+ "ref_lookup": {
+  "topp-1980-dielectric-vwc": "Topp, G. C., Davis, J. L., & Annan, A. P. (1980). Electromagnetic determination of soil water content: Measurements in coaxial transmission lines. Water Resources Research, 16(3), 574-582.",
+  "hilhorst-2000-pore-water-ec": "Hilhorst, M. A. (2000). A Pore Water Conductivity Sensor. Soil Science Society of America Journal, 64(6), 1922-1925.",
+  "fragkos-2024-teros12-soils-ec": "Fragkos, A., Loukatos, D., Kargas, G., & Arvanitis, K. G. (2024). Response of the TEROS 12 Soil Moisture Sensor under Different Soils and Variable Electrical Conductivity. Sensors, 24(7), 2206.",
+  "nasta-2024-teros12-temp-correction": "Nasta, P., Coccia, F., Lazzaro, U., Bogena, H. R., Huisman, J. A., Sica, B., Mazzitelli, C., Vereecken, H., & Romano, N. (2024). Temperature-Corrected Calibration of GS3 and TEROS-12 Soil Water Content Sensors. Sensors, 24(3), 952.",
+  "kargas-temp-capacitance-correction-2012": "Kapilaratne, R. G. C. J. & Lu, M. (2012). Correcting the Temperature Influence on Soil Capacitance Sensors Using Diurnal Temperature and Water Content Cycles. Sensors, 12(7), 9773-9790.",
+  "tavan-2021-sensor-irrigation-soilless": "Tavan, M., Wee, B., Brodie, G., Fuentes, S., Pang, A., & Gupta, D. (2021). Optimizing Sensor-Based Irrigation Management in a Soilless Vertical Farm for Growing Microgreens. Frontiers in Sustainable Food Systems, 4, 622720.",
+  "nemali-2006-set-point-irrigation": "Nemali, K. S. & van Iersel, M. W. (2006). An automated system for controlling drought stress and irrigation in potted plants. Scientia Horticulturae, 110(3), 292-297.",
+  "meter-teros12-manual": "METER Group, Inc. (2023). TEROS 11/12 User Manual & Specifications. METER Group, Pullman, WA."
+ },
+ "sections": [
+  {
+   "id": "what-this-is",
+   "kicker": "Start here",
+   "title": "What this is (and who it's for)",
+   "summary": "A TEROS-12 is a small probe you bury in growing media (coco, rockwool, soil) that reports three things over a digital wire: how much water is in the media, how salty the water is, and the temperature. This guide explains, from zero, what each of those numbers really means, how the probe arrives at them, and why you should never wire the probe straight to a valve. The honest framing throughout: a single probe is one noisy local witness sampling a roughly 1010 mL pocket of one pot, not a perfect reading of the whole zone.",
+   "points": [
+    "The TEROS-12 reports volumetric water content (VWC), bulk electrical conductivity (EC), and substrate temperature over a digital protocol called SDI-12.",
+    "Its 'volume of influence' is only about 1010 mL of media around the prongs, so it sees one local spot, not the average of a tray or zone.",
+    "Goal of the paper: convert that noisy local reading into a trustworthy estimate of stored water you can steer irrigation on, with the uncertainty made explicit.",
+    "The reader is assumed to know nothing about soil sensors; every term is defined as it appears."
+   ],
+   "figures": [
+    {
+     "name": "what_the_probe_sees",
+     "kind": "diagram",
+     "desc": "Cutaway of a pot with the TEROS-12 inserted, a shaded ~1010 mL ellipsoid around the prongs labeled 'volume of influence', and the rest of the root zone greyed out to show what the probe does NOT see."
+    }
+   ]
+  },
+  {
+   "id": "key-terms",
+   "kicker": "Vocabulary",
+   "title": "Key terms, defined once",
+   "summary": "Before any physics, here is the small set of words this whole field hangs on. Volumetric water content (VWC) is the fraction of the media's total volume that is liquid water, expressed in cubic metres of water per cubic metre of media (m3/m3), so 0.34 means 34% of the pot's volume is water. Permittivity (the dielectric constant) is how strongly a material responds to an electric field; water's is very high (~80) versus dry media (~3-5), which is the entire trick that lets a capacitance sensor 'feel' water it cannot see. Bulk EC is the conductivity of the whole wet-media mixture, while pore-water EC is the conductivity of just the nutrient solution in the pores, which is what the plant actually experiences.",
+   "points": [
+    "VWC: volume fraction of water in the media, 0-1 in m3/m3; the headline irrigation number.",
+    "Permittivity / dielectric constant: a material's electrical responsiveness; water ~80, dry substrate ~3-5, air ~1.",
+    "Capacitance sensor: measures permittivity, then infers VWC from it; the TEROS-12 is one of these.",
+    "Bulk EC vs pore-water EC: bulk EC is the whole mix (range 0-20000 microS/cm on this probe); pore-water EC is the salt the roots feel, estimated indirectly.",
+    "DUL (drained upper limit) / container capacity: how much water this specific pot holds after it stops draining; the steering ceiling, and not a textbook constant.",
+    "Resolution vs accuracy: VWC resolution is 0.001 m3/m3 (smallest change reported) but accuracy is only +/-0.03 m3/m3 generic; resolution is not accuracy."
+   ],
+   "figures": [
+    {
+     "name": "permittivity_ladder",
+     "kind": "bars",
+     "desc": "Horizontal bar chart of relative permittivity for air (~1), dry substrate (~3-5), and water (~80), showing why water dominates the sensor's reading."
+    },
+    {
+     "name": "vwc_anatomy",
+     "kind": "diagram",
+     "desc": "A unit cube of media split into three stacked fractions (solids, air, water) with the water fraction highlighted and labeled 'VWC = water volume / total volume'."
+    }
+   ]
+  },
+  {
+   "id": "how-it-measures",
+   "kicker": "Core content",
+   "title": "How the probe turns an electric field into a water number",
+   "summary": "The TEROS-12 is a capacitance probe: its prongs create a high-frequency electric field in the surrounding media and measure how the media stores that field, which is its permittivity. Because water's permittivity (~80) towers over dry media (~3-5) and air (~1), the bulk permittivity rises steeply and predictably as water content rises, so permittivity becomes a proxy for VWC. The sensor then applies a calibration equation (a generic mineral-soil curve by default) to map measured permittivity to a VWC number, reporting it to 0.001 m3/m3 resolution. The catch baked in from the start: that mapping is media-specific, and the generic curve is only good to +/-0.03 m3/m3.",
+   "points": [
+    "Capacitance/permittivity is the physical quantity; VWC is a derived, calibrated estimate sitting on top of it.",
+    "Permittivity-to-VWC curves are nonlinear, especially near saturation where the response flattens and can fake a 'full' reading.",
+    "Substrate temperature is read both as a useful output and because temperature shifts the dielectric response (a known TEROS effect that can masquerade as a water swing).",
+    "The probe outputs over SDI-12; a stale, NaN, or railed (pinned at 0 or full-scale) value is a hardware fault, not data."
+   ],
+   "figures": [
+    {
+     "name": "permittivity_to_vwc_curve",
+     "kind": "line",
+     "desc": "Permittivity (x) vs VWC (y) showing the nonlinear calibration curve, with a flagged flat region near saturation labeled 'response flattens - can mimic full'."
+    },
+    {
+     "name": "measurement_chain",
+     "kind": "flow",
+     "desc": "Flow: electric field -> media permittivity -> calibration equation -> VWC number, with branch arrows for bulk EC and temperature, ending in 'SDI-12 output'."
+    }
+   ]
+  },
+  {
+   "id": "calibration",
+   "kicker": "Core content",
+   "title": "Calibration: why the default number lies a little",
+   "summary": "Out of the box the TEROS-12 uses a generic mineral-soil calibration, which gives VWC accurate to only +/-0.03 m3/m3; a substrate-specific calibration for your exact coco or rockwool tightens that to +/-0.01-0.02 m3/m3. That difference is not academic: crop-steering dryback windows are often narrower than the +/-0.03 generic error band, so steering on uncalibrated VWC means steering inside the noise. A worked headroom example in the source shows the consequence directly: a naive 256 mL of 'room to water' shrinks to a safe ~109 mL under +/-0.02 accuracy, and to just ~54 mL under the generic +/-0.03. For this reason the source treats substrate-specific calibration as mandatory for tight steering, not optional.",
+   "points": [
+    "Generic mineral cal: +/-0.03 m3/m3. Substrate-specific cal: +/-0.01-0.02 m3/m3. The gap is the whole game for tight steering.",
+    "The generic error band is wider than typical dryback steering windows, so uncalibrated steering is steering on noise.",
+    "Worked example: usable 'safe headroom' fell from 256 mL naive to ~109 mL at +/-0.02, and would be only ~54 mL at +/-0.03.",
+    "Calibration corrects additive offset, but gain error and nonlinearity near saturation persist and do not cancel in later math."
+   ],
+   "figures": [
+    {
+     "name": "headroom_erosion",
+     "kind": "bars",
+     "desc": "Three bars for the same pot: naive headroom 256 mL, safe headroom at +/-0.02 cal ~109 mL, safe headroom at +/-0.03 generic ~54 mL, illustrating how accuracy erodes usable room."
+    },
+    {
+     "name": "cal_accuracy_table",
+     "kind": "table",
+     "desc": "Table: calibration type | VWC accuracy | resolution | suitable for tight steering? rows for generic mineral and substrate-specific."
+    }
+   ]
+  },
+  {
+   "id": "ec-and-limits",
+   "kicker": "Core content",
+   "title": "What EC tells you, and what the probe cannot see",
+   "summary": "The TEROS-12 measures bulk EC (the conductivity of the whole wet-media mixture, 0-20000 microS/cm), but what growers care about is pore-water EC, the salt concentration in the solution touching the roots. You get pore-water EC by combining bulk EC, VWC, and temperature through the Hilhorst (2000) model, which is genuinely useful but parameter-sensitive at roughly +/-20% and unreliable below VWC 0.10 m3/m3, where it should not be used. The deeper limit is representativeness: the probe integrates one ~1010 mL spot, so channeling, dry pockets, or poor probe-to-media contact can make a perfectly healthy probe report a number that is simply not true of the zone. The probe cannot directly measure runoff, root mass, or whether your emitter actually fired.",
+   "points": [
+    "Bulk EC is the raw measurement (0-20000 microS/cm); pore-water EC is the derived quantity the roots actually experience.",
+    "Hilhorst (2000) converts bulk EC + VWC + temp to pore-water EC, but is ~+/-20% sensitive and invalid below VWC 0.10 m3/m3.",
+    "Representativeness fault: the probe can be fine while its 1010 mL is not representative of the zone (channeling, air gap, pulled probe).",
+    "The sensor cannot see: per-pot runoff, effective substrate volume (it shrinks as roots grow), or whether a commanded irrigation shot was truly delivered."
+   ],
+   "figures": [
+    {
+     "name": "bulk_vs_pore_ec",
+     "kind": "diagram",
+     "desc": "Two side-by-side media cross-sections: 'bulk EC' spanning solids+water+air vs 'pore-water EC' isolating only the liquid in the pores, with the Hilhorst arrow connecting them and a '~+/-20%, invalid below VWC 0.10' caption."
+    },
+    {
+     "name": "cannot-see",
+     "kind": "table",
+     "desc": "Table of what the probe CAN measure (VWC, bulk EC, temp) vs CANNOT (runoff, root volume, delivery verification, zone average), with the workaround for each."
+    }
+   ]
+  },
+  {
+   "id": "steering",
+   "kicker": "How-to",
+   "title": "Using it to steer irrigation, step by step",
+   "summary": "The practical recipe is a demotion and a promotion: demote the raw VWC reading from 'truth' to 'one noisy witness with a confidence score', and promote a small running water-balance model that holds the belief about stored water and is only nudged by trusted readings. You track dryback (the VWC fall between shots), watch specific yield S = change-in-VWC per delivered mL to sense when the pot is filling, and anchor your ceiling on the observed DUL rather than a guessed number. Critically, you steer on derivatives (the shape of the dryback, the slope) more than the absolute level, because trends shrug off additive calibration error, but you never act on a derivative alone without a second witness such as runoff timing or pot weight.",
+   "points": [
+    "Step 1: calibrate the probe to your substrate (mandatory for tight steering).",
+    "Step 2: verify the probe has good media contact and a fixed, representative position.",
+    "Step 3: learn this pot's DUL from corroborated runoff/weight events (the source requires ~5 clean events, not one), preferring water-volume space over a VWC number.",
+    "Step 4: steer on dryback shape and specific yield, gated by a 'safe headroom' lower-confidence-bound, not the naive point estimate.",
+    "Step 5: require a second independent witness (runoff onset, load-cell mass) before any signal moves a valve."
+   ],
+   "figures": [
+    {
+     "name": "dryback_cycle",
+     "kind": "line",
+     "desc": "VWC over a day: irrigation shots as sharp rises, dryback as the decay between them, with annotations for 'shot', 'dryback slope', 'DUL ceiling', and the target dryback window."
+    },
+    {
+     "name": "steering_loop",
+     "kind": "flow",
+     "desc": "Flow: probe reading -> confidence score -> water-balance model belief -> need a 2nd witness? -> confidence gate -> valve action, showing the reading never reaching the valve directly."
+    }
+   ]
+  },
+  {
+   "id": "troubleshooting",
+   "kicker": "When it goes wrong",
+   "title": "Troubleshooting and pitfalls",
+   "summary": "Most TEROS-12 disappointments are not the sensor breaking but the sensor being believed when it shouldn't be. The first distinction to make: a wrong reading (the probe is fine but its 1010 mL isn't the zone) is a representativeness fault that should lower your trust in absolute VWC, whereas a railed, flatline, NaN, or stale value is a hardware/cable fault that should stop you acting entirely. Watch for VWC that tracks the daily substrate-temperature swing (a contact or calibration artifact, not real storage change), wetting-vs-drying paths that diverge abnormally (channeling or hydrophobic media), and one pot that drifts away from its identically-treated siblings (a dud probe or blocked emitter). The cardinal safety rule: temperature and EC should move your trust in the reading, never the stored-water number directly.",
+   "points": [
+    "Railed/flatline/NaN/stale VWC = hardware fault: stop steering on it, fall back to a bounded safe routine, page a human.",
+    "VWC swinging with the diurnal temperature cycle signals poor contact or a calibration artifact, not a real water change.",
+    "Abnormal wetting-vs-drying divergence (hysteresis) points to channeling or hydrophobic media bypassing the probe.",
+    "A cohort outlier (one pot unlike its siblings under the same recipe) flags a local fault before it flags the plant.",
+    "Never let one manual reading or a single human observation hard-write your capacity anchor or override a safety interlock."
+   ],
+   "figures": [
+    {
+     "name": "fault_triage",
+     "kind": "flow",
+     "desc": "Decision tree: is VWC railed/NaN/stale? -> hardware fault, fallback. Does VWC track temperature? -> contact artifact, down-trust. Does one pot deviate from siblings? -> local fault, inspect emitter/probe."
+    },
+    {
+     "name": "fault_modes",
+     "kind": "table",
+     "desc": "Table: symptom | likely cause | what it is NOT | response, covering rail, temp-coupling, hysteresis, cohort outlier."
+    }
+   ],
+   "claims_needing_cite": [
+    "Substrate temperature can drive a real dielectric (permittivity) shift in dry media that mimics a water change - cited as a known TEROS effect.",
+    "VWC accuracy figures (+/-0.03 generic, +/-0.01-0.02 substrate-specific), 0.001 resolution, ~1010 mL volume of influence, 0-20000 microS/cm EC range, SDI-12 - all attributable to the METER TEROS-12 manual/spec sheet.",
+    "Hilhorst pore-water EC model parameter sensitivity (~+/-20%) and lower validity bound (VWC 0.10 m3/m3)."
+   ]
+  },
+  {
+   "id": "expectations",
+   "kicker": "Reality check",
+   "title": "Realistic expectations",
+   "summary": "A single TEROS-12 will not give you a per-zone, ground-truth picture of your root zone, and treating it as one is the most common and most expensive mistake. With substrate-specific calibration you can realistically resolve dryback trends and approximate stored water to about +/-0.01-0.02 m3/m3 in the spot the probe occupies, which is good enough to steer if you account for the uncertainty and cross-check it. What it cannot do alone is prove runoff, prove your emitter delivered water, or speak for cohort variation across many pots; those need a second witness (a load cell is the strongest because it is the one measurement that does not route through dielectric physics). The mature stance is to demand that the system say when it cannot tell, rather than emit a confident number it has not earned.",
+   "points": [
+    "Best case with calibration: trustworthy dryback shape and ~+/-0.01-0.02 m3/m3 stored-water estimate for the probe's local spot.",
+    "Not achievable alone: per-zone runoff, delivery verification, or a true zone average across pots.",
+    "A load cell (pot weight) is the highest-value add-on because it is independent of dielectric measurement.",
+    "Expect, and design for, explicit 'I cannot tell' outputs rather than false precision; control authority should be earned, not assumed."
+   ],
+   "figures": [
+    {
+     "name": "single_vs_witnessed",
+     "kind": "zones",
+     "desc": "Two confidence zones: 'single probe alone' (wide uncertainty band, many caveats) vs 'probe + 2nd witness + calibration' (tighter band, steering-ready), mapping capability against trust."
+    }
+   ]
+  }
+ ]
+}

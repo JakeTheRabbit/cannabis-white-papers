@@ -1,0 +1,241 @@
+{
+ "slug": "signal-and-noise",
+ "title": "Signal and noise: precision cultivation",
+ "eyebrow": "Precision · Signal & noise",
+ "kind": "research",
+ "sub": "How to tell a real change in your plants and root zone from random sensor wobble — and only act when it matters.",
+ "reading_min": 14,
+ "related": [
+  "root-zone-teros12",
+  "smart-watering-vrwe",
+  "closed-loop"
+ ],
+ "ref_ids": [
+  "shewhart-control-chart",
+  "deming-funnel-tampering",
+  "western-electric-rules-anhoj",
+  "nyquist-shannon-sampling",
+  "replication-reduces-variance",
+  "bogena-soil-sensor-calibration",
+  "roberts-ewma-1959",
+  "greenhouse-uniformity-crop-growth",
+  "snr-engineering-origin"
+ ],
+ "ref_lookup": {
+  "shewhart-control-chart": "Control chart. Wikipedia. Describes Walter A. Shewhart's development of statistical process control at Bell Telephone Laboratories (1924), the distinction between common-cause and special-cause variation, and the convention of setting control limits at ±3 standard deviations from the process mean.",
+  "deming-funnel-tampering": "The Funnel Experiment. The W. Edwards Deming Institute. Demonstrates that adjusting (tampering with) a stable process in response to individual outcomes increases its variation rather than reducing it; leaving a stable process alone (Rule 1) yields the least variation.",
+  "western-electric-rules-anhoj": "Anhoej J, Wentzel-Larsen T. Sense and sensibility: on the diagnostic value of control chart rules for detection of shifts in time series data. BMC Medical Research Methodology. 2018;18:100. doi:10.1186/s12874-018-0564-0. Evaluates the Western Electric SPC control-chart rules for detecting non-random (special-cause) variation in sequential data.",
+  "nyquist-shannon-sampling": "Nyquist-Shannon sampling theorem. Wikipedia. States that perfect reconstruction of a band-limited continuous signal requires a sampling rate greater than twice the highest frequency present in the signal; under-sampling causes aliasing and irrecoverable information loss.",
+  "replication-reduces-variance": "Blainey P, Krzywinski M, Altman N. Points of significance: Replication. Variation: use it or misuse it - replication and its variants. PMC3424707. Explains that the standard error of an estimate decreases with the square root of the number of replicates, so replication reduces measurement variance in proportion to sample size.",
+  "bogena-soil-sensor-calibration": "Bogena HR, Huisman JA, Schilling B, Weuthen A, Vereecken H. Effective Calibration of Low-Cost Soil Water Content Sensors. Sensors (Basel). 2017;17(1):208. doi:10.3390/s17010208. Documents sensor-to-sensor variability and drift in low-cost permittivity-based soil moisture sensors, the two-step permittivity-to-water-content calibration, and large accuracy gains (RMSE reduced ~70%) from sensor-specific calibration.",
+  "roberts-ewma-1959": "Roberts SW. Control Chart Tests Based on Geometric Moving Averages. Technometrics. 1959;1(3):239-250. doi:10.1080/00401706.1959.10489860. Introduces the exponentially-weighted (geometric) moving average chart and shows it responds faster to small persistent process shifts than an ordinary moving average of equivalent smoothing.",
+  "greenhouse-uniformity-crop-growth": "Story of a paper: A Study of the Effects of Enhanced Uniformity Control of Greenhouse Environment Variables on Crop Growth. Energies. 2019;12(9):1749. doi:10.3390/en12091749. Shows that reducing spatial/temporal fluctuation (improving uniformity, i.e., lower coefficient of variation) of environment variables improves crop growth and quality.",
+  "snr-engineering-origin": "Signal-to-noise ratio. Wikipedia. Defines SNR as the ratio of signal power to background-noise power, a measure that originated in electrical/communications engineering and is now applied across telecommunications, imaging, and scientific measurement."
+ },
+ "sections": [
+  {
+   "id": "what-this-is",
+   "kicker": "Start here",
+   "title": "What this is (and why a grow room is really a listening problem)",
+   "summary": "Every sensor reading in a grow room is two things added together: the real story (the signal) and meaningless jitter (the noise). Sensors got cheap and dashboards got pretty, but most growing decisions are still made on gut feel, because the hard part moved from collecting data to separating the meaningful pattern from the meaningless wobble. This paper teaches you to hear what your plants are actually telling you above the static — and, just as importantly, when to do nothing. A single flower room can produce hundreds of thousands of datapoints a week, so a method for ignoring most of them is not optional.",
+   "points": [
+    "Measured value = true signal + noise; your whole job is seeing the first through the second",
+    "Roughly 70% of grow-room 'alerts' are noise — transients that fix themselves before any action matters",
+    "More data is not more insight: a firehose of low-quality data is harder to act on than a trickle of good data",
+    "You don't have a data problem, you have a signal-to-noise problem"
+   ],
+   "figures": [
+    {
+     "name": "Signal hidden inside noise",
+     "kind": "line",
+     "desc": "One smooth line (the real dry-down trend) under a jagged line (what the sensor actually prints); same data, two readings."
+    }
+   ],
+   "claims_needing_cite": [
+    "Roughly 70% of grow-room alerts are noise that self-corrects before action matters",
+    "A commercial flower room can generate hundreds of thousands of datapoints per week"
+   ]
+  },
+  {
+   "id": "key-terms",
+   "kicker": "Plain-language dictionary",
+   "title": "Key terms, defined once",
+   "summary": "This field borrows its vocabulary from radio engineering, manufacturing, and statistics, so the words can sound intimidating. They are not. Signal-to-noise ratio (SNR) is simply how loud the thing you care about is compared to everything else competing for your attention — a high-SNR room is calm and decisive, a low-SNR room is anxious and reactive. The rest of the terms below are just names for specific kinds of signal and noise, and for the tools that separate them.",
+   "points": [
+    "Signal: a real, meaningful change worth acting on (a trend, a step, a repeating daily rhythm)",
+    "Noise: meaningless fluctuation — single-reading spikes, jitter, transients from a door opening",
+    "Drift: a slow, one-way sensor error that masquerades as a real trend (the dangerous kind of noise)",
+    "Averaging / aggregation: combining many readings or many plants so random quirks cancel out",
+    "Control limits: the boundary, drawn from a process's own history, that separates normal from abnormal",
+    "Sensor placement and calibration: where a probe sits, and keeping it honest against a reference"
+   ],
+   "figures": [
+    {
+     "name": "Signal vs noise at a glance",
+     "kind": "table",
+     "desc": "Two-column table: left lists signal types (sustained trend, step change, diurnal rhythm, cross-sensor agreement); right lists noise types (single spike, jitter below accuracy, transients, lone-probe disagreement, drift)."
+    }
+   ],
+   "claims_needing_cite": [
+    "Signal-to-noise ratio originates as a concept in radio and communications engineering"
+   ]
+  },
+  {
+   "id": "where-noise-comes-from",
+   "kicker": "Core idea 1",
+   "title": "Where the noise comes from",
+   "summary": "You cannot reduce what you cannot name, and grow-room noise enters through six channels. Three are largely physical and inherent — the sensor itself (electronic jitter, drift, no calibration), placement (a probe near a vent or light, or being an n-of-1), and biology (one plant simply differs from the next). The other three are procedural and therefore the cheapest to fix — the environment (doors, HVAC cycling), the operator (inconsistent manual sampling), and the data pipeline (logging gaps, mixed-up units, clock skew). Start with the cheap procedural fixes before you blame the hardware.",
+   "points": [
+    "Sensor, placement, biology = mostly physical/inherent; environment, operator, data = mostly procedural and cheap to fix",
+    "Drift is the most dangerous source: it moves slowly in one direction, exactly like a real trend, so it fools you",
+    "A single probe is a rumor; calibration against a known reference is the only defense against drift",
+    "Most 'the room is fighting me' stories are really 'I am fighting the noise' stories"
+   ],
+   "figures": [
+    {
+     "name": "Fishbone of noise sources",
+     "kind": "diagram",
+     "desc": "Ishikawa fishbone: spine points to 'measured noise', six bones labelled sensor, placement, biology, environment, operator, data/process with sub-causes."
+    },
+    {
+     "name": "Six sources ranked by fix cost",
+     "kind": "table",
+     "desc": "Columns: source, signature, fix, cost-to-fix (low/med/inherent); rows ordered cheapest-first from data/process down to biology."
+    }
+   ],
+   "claims_needing_cite": [
+    "Uncalibrated pH and EC probes drift measurably over weeks to a month",
+    "The Ishikawa (fishbone) diagram is a standard root-cause analysis tool"
+   ]
+  },
+  {
+   "id": "averaging-and-sampling",
+   "kicker": "Core idea 2",
+   "title": "Averaging and how often to measure",
+   "summary": "The single most powerful, most ignored noise filter in horticulture is replication: ask one plant how the room is doing and you get a rumor, but average twelve plants across the bench and the individual quirks cancel, leaving only the shared room signal. How often you measure matters just as much. Sample too slowly and a fast pattern folds into a slow one that was never there — engineers call this aliasing, the wagon-wheel-spinning-backwards effect from old films. The rule of thumb (Nyquist) is to sample at least twice as fast as the fastest pattern you need to see; to catch a 30-minute irrigation response, log every 10–15 minutes.",
+   "points": [
+    "Replication: report the average across 6–12 probes, never a single one",
+    "Aliasing: undersampling invents phantom trends that aren't real",
+    "Nyquist rule of thumb: sample at least twice as fast as the fastest thing you need to resolve",
+    "Faster is not free — over-sampling adds noise, storage cost, and the temptation to react to jitter (don't weigh yourself hourly)"
+   ],
+   "figures": [
+    {
+     "name": "Undersampling invents a trend",
+     "kind": "line",
+     "desc": "A true fast wave with too-sparse sample dots, and a dashed line connecting the dots showing a phantom slow wave that doesn't exist."
+    },
+    {
+     "name": "Sensible sampling cadence per channel",
+     "kind": "table",
+     "desc": "Rows for substrate VWC/EC (1–5 min), air temp/RH/VPD (1–5 min), CO2 (1–5 min), pour-through pH/EC (1x/day fixed time), plant morphology (2–3x/week), with a 'why' column."
+    }
+   ],
+   "claims_needing_cite": [
+    "The Nyquist sampling theorem requires sampling at twice the highest frequency of interest",
+    "Replication reduces measurement variance in proportion to sample size"
+   ]
+  },
+  {
+   "id": "control-limits-spc",
+   "kicker": "Core idea 3",
+   "title": "Control limits: knowing when a wiggle deserves a response",
+   "summary": "This is the most valuable idea in the paper, borrowed from manufacturing's quality revolution: statistical process control (SPC). Walter Shewhart and W. Edwards Deming split all variation into two kinds — common-cause variation, the natural jitter of a stable process that lives inside the control limits and should be left alone, and special-cause variation, a real assignable event that breaks outside the limits and earns investigation. Control limits are computed from the process's own history, typically the mean plus or minus three standard deviations, not from a guess. Deming proved that tampering — reacting to common-cause jitter — actually amplifies a process's variation, so SPC gives you permission to do the hardest thing in cultivation: watch a number move and correctly do nothing.",
+   "points": [
+    "Common cause = normal jitter inside the limits = do nothing; special cause = breaks the limits = investigate",
+    "Control limits = mean ± 3 standard deviations, drawn from the room's own history",
+    "Western Electric rules also flag non-random patterns: 7+ points trending, 8+ on one side, or abnormal hugging of the mean",
+    "Tampering (nudging a stable process) makes variation worse — the over-reactive grower is the room's biggest noise source"
+   ],
+   "figures": [
+    {
+     "name": "Control chart with a special-cause point",
+     "kind": "zones",
+     "desc": "Horizontal mean line, ±1σ band, upper/lower control limits at ±3σ; most points jitter harmlessly inside, one point rockets past the upper limit and is flagged."
+    }
+   ],
+   "claims_needing_cite": [
+    "Walter Shewhart developed statistical process control and the control chart",
+    "W. Edwards Deming demonstrated that tampering with a stable process increases its variation",
+    "Control limits are conventionally set at ±3 standard deviations from the mean",
+    "The Western Electric rules define non-random patterns indicating special-cause variation"
+   ]
+  },
+  {
+   "id": "playbook",
+   "kicker": "Do this Monday",
+   "title": "The operator's playbook: a step-by-step",
+   "summary": "None of the highest-return moves requires new capital — most require only discipline, tackled top-down. This week: stop watching live numbers (they invite tampering), set a sensible sampling cadence per channel, add a rolling average to every decision chart while keeping a raw view one click away, aggregate across 6–12 probes instead of single-sourcing, and write SOPs so manual readings happen at the same time, method, and spot every time. This quarter: calibrate on a logged schedule, compute control limits for your top three KPIs, audit sensor placement (move probes off edges and away from vents and lights into the canopy core), widen twitchy dead-bands, and track batch consistency. Three workhorse filters cover almost all grow data: the moving average, the EWMA (which weights recent readings more, so it lags less), and the median filter (which deletes single-point spikes).",
+   "points": [
+    "The one-sentence test before reacting to any number: 'Has this moved beyond its normal range, for longer than one reading, and do my other sensors agree?' If not all three, it's noise — walk away",
+    "Three filters: moving average (simple), EWMA (less lag), median (kills spikes); start with a window spanning ~30–60 min",
+    "Keep a raw view alongside every smoothed chart so a real emergency isn't hidden by over-smoothing",
+    "Audit placement: canopy core, not edges, vents, or under lights"
+   ],
+   "figures": [
+    {
+     "name": "React-or-ignore decision flow",
+     "kind": "flow",
+     "desc": "Three yes/no gates from 'a reading looks alarming': beyond limits? persists past one reading? sensors agree? All yes = ACT (signal); any no = DO NOTHING (noise)."
+    },
+    {
+     "name": "Raw vs rolling average",
+     "kind": "line",
+     "desc": "A noisy raw line with a bold smoothed line over it; the trend becomes unmistakable, with a small visible lag annotated."
+    }
+   ],
+   "claims_needing_cite": [
+    "An exponentially-weighted moving average produces less lag than a simple moving average for equivalent smoothing"
+   ]
+  },
+  {
+   "id": "pitfalls",
+   "kicker": "Watch out",
+   "title": "Common pitfalls",
+   "summary": "The two opposite failures are over-smoothing and tampering. Filtering is sugar — a little clarifies, too much rots: crank the window too wide and you erase a real fast event (a pump failure, an EC spike from a clogged dripper) exactly when you needed to see it. The opposite mistake is reacting to every twitch, which destabilises the very room you were trying to steady. A specific systems failure is hunting: a feedback loop fed noisy data or tuned too tight over-corrects one way, the noisy measurement says it overshot, and it slams back — the room oscillates instead of settling. If your HVAC or fertigation seems to 'fight itself', suspect a noisy sensor or too-tight dead-band before you suspect broken equipment.",
+   "points": [
+    "Over-smoothing blinds you to genuine emergencies; tampering amplifies variation — avoid both extremes",
+    "Hunting/oscillation: a regular saw-tooth in temp, RH, or VWC that isn't driven by day/night is the fingerprint",
+    "A wider dead-band and a filtered input often fix 'broken' climate gear that was never broken",
+    "Filter the controller's input right at the sensor's output, before it decides anything"
+   ],
+   "figures": [
+    {
+     "name": "The feedback loop and where noise enters",
+     "kind": "flow",
+     "desc": "Loop: setpoint → controller → actuator → plant/room → sensor → back to controller; noise injected at the sensor stage shown in orange."
+    }
+   ],
+   "claims_needing_cite": [
+    "Aggressive controller tuning or noisy feedback causes oscillation (hunting) in closed-loop control"
+   ]
+  },
+  {
+   "id": "realistic-expectations",
+   "kicker": "What to expect",
+   "title": "Realistic expectations",
+   "summary": "Facilities climb a predictable ladder — Blind (gut only), Logged (data but no method), Filtered (smoothing and sampling rules), Controlled (acting only on special cause), and Tuned (closed-loop, consistency-driven). Most commercial rooms sit at Logged, which is paradoxically more stressful than flying blind because now there's a wall of noise to panic about. The goal is not the top overnight — it's one rung up, and the leap from Logged to Filtered (just smoothing plus sampling rules) is the highest-return move here and costs almost nothing but habit. Expect to track few metrics, not many: the number most tied to commercial success is often uniformity — measured as the batch coefficient of variation — not peak yield, because a batch where every plant yields 95g sells better than one averaging 110g with a 40g spread.",
+   "points": [
+    "Five stages: Blind → Logged → Filtered → Controlled → Tuned; aim for one rung up, not the summit",
+    "Most rooms are stuck at 'Logged' — instrumented but undisciplined, and more anxious for it",
+    "Track few high-signal KPIs (grams per kWh, VPD time-in-range, dryback trend, batch CV), not 40 gauges",
+    "Coefficient of variation literally measures noise in your crop; consistency beats peak performance commercially"
+   ],
+   "figures": [
+    {
+     "name": "The five-stage maturity ladder",
+     "kind": "diagram",
+     "desc": "Rising staircase of five steps labelled Blind, Logged, Filtered, Controlled, Tuned, with a 'rising SNR' arrow and a caption noting most rooms sit at stage 2."
+    },
+    {
+     "name": "Signal-rich KPIs vs vanity metrics",
+     "kind": "table",
+     "desc": "Two columns contrasting signal-rich KPIs (grams/kWh, dryback trend, VPD time-in-range, DLI delivered vs planned, batch CV) against vanity metrics (instantaneous single-sensor temp, total datapoints logged, peak readings, alert count)."
+    }
+   ],
+   "claims_needing_cite": [
+    "Crop uniformity (low coefficient of variation) correlates with commercial value more than peak yield"
+   ]
+  }
+ ]
+}

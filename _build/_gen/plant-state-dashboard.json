@@ -1,0 +1,235 @@
+{
+ "slug": "plant-state-dashboard",
+ "title": "From telemetry to intelligence: the plant-state dashboard",
+ "eyebrow": "Precision · Dashboards",
+ "kind": "operational",
+ "sub": "Why grow-room screens should show what the plant is doing, not just raw sensor numbers, and how to design one that does.",
+ "reading_min": 13,
+ "related": [
+  "signal-and-noise",
+  "f2-crop-steering",
+  "root-zone-teros12"
+ ],
+ "ref_ids": [
+  "spc-signal-noise-ed",
+  "preattentive-dataviz",
+  "vpd-plant-response",
+  "capacitive-soil-moisture",
+  "alarm-mgmt-isa182"
+ ],
+ "ref_lookup": {
+  "spc-signal-noise-ed": "Pimentel L, Barrueto F Jr. Statistical process control: separating signal from noise in emergency department operations. Journal of Emergency Medicine. 2015;48(5):628-638. doi:10.1016/j.jemermed.2014.12.019.",
+  "preattentive-dataviz": "Fusco R, Granata V, Setola SV, et al. Visual Perception and Pre-Attentive Attributes in Oncological Data Visualisation. Bioengineering. 2025;12(7):782. doi:10.3390/bioengineering12070782.",
+  "vpd-plant-response": "Grossiord C, Buckley TN, Cernusak LA, Novick KA, Poulter B, Siegwolf RTW, Sperry JS, McDowell NG. Plant responses to rising vapor pressure deficit (Tansley review). New Phytologist. 2020;226(6):1550-1566. doi:10.1111/nph.16485.",
+  "capacitive-soil-moisture": "Briciu-Burghina C, Zhou J, Ali MI, Regan F. Demonstrating the Potential of a Low-Cost Soil Moisture Sensor Network. Sensors. 2022;22(3):987. doi:10.3390/s22030987.",
+  "alarm-mgmt-isa182": "Engineering Equipment and Materials Users' Association (EEMUA). EEMUA Publication 191: Alarm Systems - A Guide to Design, Management and Procurement; and ANSI/ISA-18.2, Management of Alarm Systems for the Process Industries. (Industry standards; alarm-flood threshold ~10 alarms/10 min, <=3-4 priorities, <=5% high-priority.)"
+ },
+ "sections": [
+  {
+   "id": "intro",
+   "kicker": "Start here",
+   "title": "What this is (and why it matters)",
+   "summary": "A grow room today is wired with sensors that measure air temperature, humidity, VPD, CO2, light (PPFD), substrate water content, EC, root-zone temperature, pH, and power draw, second by second. The problem is that the dashboards built to show all of this are just walls of live numbers and graphs: they show WHAT is happening but never what it MEANS, what is about to happen, or what to do. This paper argues for a different design center, called Plant-State Intelligence, where the screen reasons about the plant instead of just displaying the room. The result it aims for is a 'calm dashboard' that is quiet most of the time and speaks only when it has something worth saying.",
+   "points": [
+    "A 'telemetry dump' dashboard forces the human to be the integrator, synthesizing 15 graphs into a judgment in real time, often while tired",
+    "The goal is a screen that infers the plant's state, predicts trouble days early, and prescribes the next step with its evidence and confidence attached",
+    "This is an operational/product design guide, not a horticulture-science paper; most claims are design opinions backed by worked examples",
+    "'A cockpit full of gauges is not a co-pilot' is the paper's one-line thesis"
+   ],
+   "figures": [
+    {
+     "name": "telemetry_vs_intelligence",
+     "kind": "flow",
+     "desc": "Two-column flow: left, raw sensors to a wall of graphs to a tired human deciding; right, raw sensors to fusion/inference to one plain-language judgment. Shows where the 'thinking' moves."
+    }
+   ]
+  },
+  {
+   "id": "key-terms",
+   "kicker": "Vocabulary",
+   "title": "Key terms, defined from zero",
+   "summary": "Before the argument, the words. Telemetry means raw measurements streamed off sensors. VPD (vapor pressure deficit) is how 'thirsty' the air is for moisture, which drives how fast a plant transpires; the paper uses values like 1.4 to 1.6 kPa and notes 1.4 kPa is fine in late flower but punishing in early veg. Crop steering means deliberately pushing a plant 'vegetative' (leafy growth) or 'generative' (flower/fruit) by controlling irrigation and dryback. Inference means estimating something you cannot measure directly (like plant stress) by combining things you can.",
+   "points": [
+    "Sensor fusion: combining several signals over time into one conclusion, because 'leaf temp up' alone is noise but 'leaf temp up AND transpiration flat AND dryback unusually deep' is a diagnosis",
+    "Dryback: how much the substrate dries between irrigations; 'dryback depth' and 'dryback rate' are derived crop-steering metrics that matter more than any raw number",
+    "Leading vs lagging indicator: a precursor that warns early vs a symptom that confirms damage already happened",
+    "Baseline / trajectory: the expected envelope for this cultivar at this stage and point in the photoperiod, learned from your own past runs",
+    "PPFD/DLI: instantaneous light intensity vs total daily light delivered; EC: salt concentration in the feed or root-zone pore water"
+   ],
+   "figures": [
+    {
+     "name": "term_glossary_table",
+     "kind": "table",
+     "desc": "Two-column table: term and one-sentence plain-English definition, for VPD, EC, dryback, crop steering, sensor fusion, inference, baseline, leading/lagging indicator, PPFD/DLI, transpiration."
+    }
+   ]
+  },
+  {
+   "id": "sensor-problem",
+   "kicker": "The problem",
+   "title": "Why the sensor dashboard falls short",
+   "summary": "The conventional dashboard's implicit theory is 'expose every measurement and a skilled grower will know what to do,' and the paper says that fails in seven predictable ways. It shows the environment when the grower cares about the plant; it is reactive (a graph only looks bad after the plant is already stressed); it has no memory or context; its static threshold alarms 'cry wolf' and cause alarm fatigue; it thinks one sensor at a time; it imposes cognitive load as if that were a feature; and it stops at symptoms. The summary indictment: 'we built instruments and called them intelligence.'",
+   "points": [
+    "Every sensor measures the plant's SURROUNDINGS (air, root zone, light) - none measures vigor, stress, or transpiration directly, leaving an inference gap the human must cross unaided",
+    "By the time a line crosses a threshold, salt accumulation or a stalled dryback has been accruing for hours or days",
+    "Static high/low alarms fire on transient blips (a door opened, a lights-on spike), so growers learn to ignore them",
+    "Single-channel widgets cannot express the cross-signal, multivariate patterns where the real truth about plant health lives"
+   ],
+   "figures": [
+    {
+     "name": "seven_failure_modes",
+     "kind": "table",
+     "desc": "Numbered table of the seven failure modes, each with a one-line 'what it looks like in practice' example (e.g. alarm fatigue, no context, symptom-not-cause)."
+    },
+    {
+     "name": "lagging_symptom_timeline",
+     "kind": "line",
+     "desc": "Timeline showing pore-water EC creeping up over 4 days while the grower notices nothing until tip burn appears on day 26, illustrating the lag between cause and visible symptom."
+    }
+   ]
+  },
+  {
+   "id": "six-inversions",
+   "kicker": "The shift",
+   "title": "Six inversions: from gauge cluster to calm dashboard",
+   "summary": "Plant-State Intelligence is defined by inverting six assumptions baked into the sensor dashboard. The object shifts from instrumentation (show the environment) to inference (estimate the plant's state); the reference from fixed thresholds to learned per-stage baselines; breadth from one signal per widget to multi-input fusion; timing from lagging symptoms to leading precursors; output from alerting ('a number moved') to prescription ('do this, by when, or expect that'); and posture from an always-on wall of graphs to exception-based and quiet by default. Crucially, none of this throws away the raw data - it moves to the 'basement,' available on drill-down for the expert and the post-mortem.",
+   "points": [
+    "Object: instrumentation to inference",
+    "Reference: fixed thresholds to learned trajectories per cultivar x stage x photoperiod phase",
+    "Output: an alert is replaced by a prescription that names the action, the deadline, and the consequence of ignoring it",
+    "Posture: the dashboard competes with the plant for attention, and the plant should win - so silence becomes the default state"
+   ],
+   "figures": [
+    {
+     "name": "six_inversions_table",
+     "kind": "table",
+     "desc": "Three-column table (axis, From - gauge cluster, To - calm dashboard) for all six inversions: object, reference, breadth, timing, output, posture."
+    }
+   ]
+  },
+  {
+   "id": "plant-state-model",
+   "kicker": "Core content",
+   "title": "What the system actually infers",
+   "summary": "The pipeline estimates four (really five) interacting states. Environmental state (temp, RH, VPD, CO2, PPFD/DLI) is reframed as integrals and rates - VPD-hours accumulated today, DLI to date - not instants. Substrate state adds derived crop-steering metrics (dryback depth and rate, field-capacity recovery, shot-to-shot WC response). The plant physiological state is the whole point: it is not measured but ESTIMATED by fusing the others into a transpiration proxy, a stress index, a vigor/stacking trajectory, and a steering-response readout. Operational/equipment state and optional vision state (canopy cameras) round it out, and sensor health itself is treated as a first-class signal so the system knows when it is blind.",
+   "points": [
+    "Transpiration proxy is modeled from VPD, light, and substrate WC response - 'the closest thing to is the plant breathing'",
+    "Stress index is a composite flag for stomatal-closure conditions: VPD too high, dryback too deep, or root zone too hot",
+    "Cameras already on-site for security become a horticultural input: canopy color/uniformity, lights-on wilt, height/stacking over days, early discoloration",
+    "The output of this layer is not 15 numbers - it is a short list of NAMED CONDITIONS, each with a confidence and an evidence chain"
+   ],
+   "figures": [
+    {
+     "name": "state_layers_diagram",
+     "kind": "diagram",
+     "desc": "Layered diagram: Environmental, Substrate, and Equipment/Vision states feeding inward into the inferred Plant Physiological State (transpiration proxy, stress index, vigor, steering response) at the center."
+    },
+    {
+     "name": "raw_vs_derived",
+     "kind": "table",
+     "desc": "Table contrasting a raw value (e.g. 'WC = 42%') against its derived, meaningful form ('dryback depth 8%, slower than this cultivar's baseline')."
+    }
+   ]
+  },
+  {
+   "id": "architecture",
+   "kicker": "Core content",
+   "title": "The six-layer pipeline",
+   "summary": "The system is a six-layer pipeline that maps onto a Home Assistant-centered stack; most operations already have layers 0-1 without realizing it. Layer 0 INGEST pulls all raw streams onto one timebase. Layer 1 DERIVE turns raw into meaningful (VPD, dryback %, DLI, recovery slopes). Layer 2 BASELINE builds per-cultivar/stage/photoperiod envelopes, seeded from horticultural priors and refined on your own runs. Layer 3 INFER fuses everything into named conditions with confidence and evidence, using rules plus anomaly detection plus optionally an LLM reasoning pass. Layer 4 PRESCRIBE maps each condition to a concrete action with a deadline; Layer 5 PRESENT is the calm dashboard; an optional gated layer 5b closes the loop on low-risk licensed actions only.",
+   "points": [
+    "Layer 2 baselines can be seeded from published horticultural targets (the paper cites Athena targets as an example) before you have your own history",
+    "The advisory-first, human-in-the-loop posture is the design, not a limitation: an operation can run permanently at 'advise only' and capture most of the value",
+    "'The intelligence moves to the dashboard long before the actuation does' - autonomous control is earned channel by channel after advisories prove correct",
+    "Layer 5b auto-applies ONLY the low-risk, explicitly-licensed actions; everything irreversible or expensive stays human-approved"
+   ],
+   "figures": [
+    {
+     "name": "six_layer_pipeline",
+     "kind": "flow",
+     "desc": "Vertical flow of layers 0-5 (Ingest, Derive, Baseline, Infer, Prescribe, Present) with the optional gated 5b Closed-Loop branch off the side, labeled with what each layer does."
+    }
+   ]
+  },
+  {
+   "id": "dashboard-surface",
+   "kicker": "Core content",
+   "title": "The new dashboard surface: four zones",
+   "summary": "What the grower actually opens has four zones in priority order, and on a good day three of them are empty. Zone 1 is the Headline - one line of plant truth in plain language with a status color (e.g. 'Flower Day 24 - Room 3 - On-track. Steering generative as intended. No action needed.'), which is 90% of what a busy grower needs 90% of the time. Zone 2 is the Watchlist of things drifting but not yet wrong - the precursors - and it 'is the whole point: it exists to make the next zone rare.' Zone 3 is Advisories, the only zone that should ever interrupt, each prescriptive and time-bound. Zone 4 is the Evidence and raw 'basement,' demoted but not deleted.",
+   "points": [
+    "The old dashboard was 100% zone 4 (raw graphs); the new one leads with zones 1-3 and keeps 4 in the basement",
+    "A sample advisory: 'Reduce dryback target 3% in Room 3 (Day 24)... Tip burn likely within ~48h if unaddressed. Confidence: high. [Show evidence]'",
+    "Every advisory expands to its evidence chain: the fused signals, the baseline it violated, and the historical precedent",
+    "Each watchlist and advisory item is a sentence, not a graph"
+   ],
+   "figures": [
+    {
+     "name": "four_zone_surface",
+     "kind": "zones",
+     "desc": "Mockup of the four stacked zones (Headline, Watchlist, Advisories, Evidence/raw) with example text in each and three of them shown empty on a 'good day' variant."
+    }
+   ]
+  },
+  {
+   "id": "how-to",
+   "kicker": "How to",
+   "title": "The adoption path: crawl, walk, run",
+   "summary": "This is not a boil-the-ocean rebuild; each stage ships value and earns the next. Stage 0 is today's raw graphs. Stage 1 DERIVE computes the metrics that matter (dryback %/rate, DLI, VPD-hours, shot response) - still graphs, but meaningful ones, at low effort. Stage 2 BASELINE establishes per-stage/cultivar envelopes and switches from threshold alarms to exception-based attention, which 'single step kills alarm fatigue.' Stage 3 FUSE brings the watchlist and advisory zones alive, Stage 4 PRESCRIBE attaches actions, and Stage 5 closes the loop opt-in and gated. Most of the payoff lands by Stage 3.",
+   "points": [
+    "The recommended first build: pick one room and one failure pattern, implement Stages 1-3 for just that pattern in Home Assistant, and run it shadow-mode for a cycle against the existing dashboard",
+    "Prove the lead time on a single advisory before scaling anything",
+    "Stage 2 (baseline and go quiet) is the single highest-leverage step because it ends alarm fatigue",
+    "Advisory-first is a stable, valuable end state - Stage 5 closed-loop is optional and you are never obligated to leave Stage 4"
+   ],
+   "figures": [
+    {
+     "name": "adoption_ladder",
+     "kind": "flow",
+     "desc": "Six-rung ladder (Stage 0 Telemetry through Stage 5 Closed-loop) with effort and payoff annotations, highlighting that most payoff lands by Stage 3."
+    }
+   ]
+  },
+  {
+   "id": "pitfalls",
+   "kicker": "Pitfalls",
+   "title": "Trust, confidence, and failure modes",
+   "summary": "An advisory system that is wrong and confident is worse than no system, so the paper names five non-negotiable guardrails. Cold-start honestly: with thin history, seed from horticultural priors, widen confidence bands, and label outputs 'still learning' - never project false certainty from one cycle. Make false advisories cheap to correct: every advisory is dismissable and markable as a false positive, and those marks tune the baselines while advisory precision is tracked as a first-class metric. Keep the human in the loop for irreversible or costly actions, treat the system's own blindness as a signal, and never be a black box.",
+   "points": [
+    "Trust is a balance you spend with every wrong call and earn with every right one - precision drives action",
+    "A drifted, noisy, or flatlined sensor is itself an advisory (e.g. 'EC probe in Room 2 reads implausibly flat - suspect failure, EC-derived advisories paused')",
+    "'A grower who can't see WHY will, correctly, stop trusting the WHAT' - every conclusion must expand to its evidence",
+    "The system's job is to make the decision obvious, not to make it alone, on anything irreversible or expensive"
+   ],
+   "figures": [
+    {
+     "name": "five_guardrails",
+     "kind": "table",
+     "desc": "Table of the five guardrails: name, the failure it prevents, and the concrete mechanism (e.g. confidence bands, false-positive marking, sensor-health flag)."
+    }
+   ]
+  },
+  {
+   "id": "expectations",
+   "kicker": "Reality check",
+   "title": "Measuring success and realistic expectations",
+   "summary": "If the new dashboard is working, the grower looks at it LESS, is surprised LESS, and harvests MORE consistently. The paper proposes six run-over-run metrics: lead time (hours/days between an advisory and when the problem would have become visible - the core KPI, higher is better); surprises (visible damage with no prior advisory - drive to zero); advisory precision (acted-upon advisories divided by total, plus false-positive rate); dashboard dwell time (lower is better); decisions surfaced per week; and outcome variance (yield/quality consistency cycle over cycle). The honest framing: 'most of the payoff lands by Stage 3' and advisory-first may be the right permanent end state.",
+   "points": [
+    "Lead time is the single core KPI - the whole point is catching drift before it becomes damage",
+    "Lower dashboard dwell time is a SUCCESS signal: attention should return to the plants, not the screen",
+    "The output is decisions, not pageviews - measure real actionable decisions raised per week",
+    "The working names (Plant-State Intelligence / 'calm dashboard') are explicitly placeholders: 'substance over branding'"
+   ],
+   "figures": [
+    {
+     "name": "success_metrics",
+     "kind": "bars",
+     "desc": "Bar chart of the six KPIs with their target direction (lead time up, surprises down, precision up, dwell time down, decisions up, outcome variance down)."
+    },
+    {
+     "name": "old_vs_new_outcome",
+     "kind": "diagram",
+     "desc": "Simple before/after: 'looks at it more, surprised more, inconsistent harvest' vs 'looks at it less, surprised less, consistent harvest'."
+    }
+   ]
+  }
+ ]
+}

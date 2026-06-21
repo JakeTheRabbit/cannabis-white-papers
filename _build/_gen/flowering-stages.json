@@ -1,0 +1,244 @@
+{
+ "slug": "flowering-stages",
+ "title": "The flower cycle, week by week",
+ "eyebrow": "Beginner · Flower",
+ "kind": "research",
+ "sub": "A beginner's guide to the cannabis flowering stage: the flip to 12/12, the stretch, bud set, bulking, ripening, and reading the plant to know exactly when to cut.",
+ "reading_min": 12,
+ "related": [
+  "coco-crop-steering",
+  "defoliation-training",
+  "harvest-dry-trim-cure"
+ ],
+ "ref_ids": [
+  "ahrens-2023-photoperiod-optimum",
+  "spitzer-rimon-2019-florogenesis",
+  "llewellyn-2022-light-intensity-yield",
+  "eichhorn-bilodeau-2019-photobiology",
+  "livingston-2020-trichome-maturation",
+  "hesami-2023-morphological-lifecycle",
+  "mahmoud-2023-botrytis-budrot",
+  "ahrens-2023-photoperiod-lightleak-revert"
+ ],
+ "ref_lookup": {
+  "ahrens-2023-photoperiod-optimum": "Ahrens A, Llewellyn D, Zheng Y. Is Twelve Hours Really the Optimum Photoperiod for Promoting Flowering in Indoor-Grown Cultivars of Cannabis sativa? Plants. 2023;12(14):2605.",
+  "spitzer-rimon-2019-florogenesis": "Spitzer-Rimon B, Duchin S, Bernstein N, Kamenetsky R. Architecture and Florogenesis in Female Cannabis sativa Plants. Front Plant Sci. 2019;10:350.",
+  "llewellyn-2022-light-intensity-yield": "Llewellyn D, Golem S, Foley E, Dinka S, Jones AMP, Zheng Y. Indoor grown cannabis yield increased proportionally with light intensity, but ultraviolet radiation did not affect yield or cannabinoid content. Front Plant Sci. 2022;13:974018.",
+  "eichhorn-bilodeau-2019-photobiology": "Eichhorn Bilodeau S, Wu B-S, Rufyikiri A-S, MacPherson S, Lefsrud M. An Update on Plant Photobiology and Implications for Cannabis Production. Front Plant Sci. 2019;10:296.",
+  "livingston-2020-trichome-maturation": "Livingston SJ, Quilichini TD, Booth JK, Wong DCJ, Rensing KH, Laflamme-Yonkman J, Castellarin SD, Bohlmann J, Page JE, Samuels AL. Cannabis glandular trichomes alter morphology and metabolite content during flower maturation. Plant J. 2020;101(1):37-56.",
+  "hesami-2023-morphological-lifecycle": "Hesami M, Pepe M, Jones AMP. Morphological Characterization of Cannabis sativa L. Throughout Its Complete Life Cycle. Plants. 2023;12(20):3646.",
+  "mahmoud-2023-botrytis-budrot": "Mahmoud M, BenRejeb I, Punja ZK, Buirs L, Jabaji S. Understanding bud rot development, caused by Botrytis cinerea, on cannabis (Cannabis sativa L.) plants grown under greenhouse conditions. Botany. 2023;101(4):200-231.",
+  "ahrens-2023-photoperiod-lightleak-revert": "Moher M, Jones M, Zheng Y. Photoperiodic Response of In Vitro Cannabis sativa Plants. HortScience. 2021;56(1):108-113."
+ },
+ "sections": [
+  {
+   "id": "what-this-is",
+   "kicker": "Start here",
+   "title": "What this is and who it's for",
+   "summary": "Cannabis grows in two big phases: vegetative (building leaves, stems and roots) and flowering (building the buds you actually harvest). Flowering is triggered by changing the lights to 12 hours on and 12 hours off, and it runs for roughly 8 to 10 weeks for most plants. This guide walks that stretch one week at a time and tells you what to change as you go, assuming you have never grown before.",
+   "points": [
+    "Flowering is the final phase before harvest, lasting about 8 to 10 weeks for typical hybrids; pure indica types can finish in 7 to 8 weeks and long sativa types can take 11 to 13.",
+    "Only photoperiod plants need the light change to flower; autoflower plants flower on their own with age (this guide focuses on photoperiod).",
+    "The plant tells you what week it is in: read the plant (pistils, trichomes, leaves) rather than the calendar alone.",
+    "Getting the climate, light and feed right each week is the difference between dense, potent buds and loose, mouldy, or harsh ones."
+   ],
+   "figures": [
+    {
+     "name": "two_phase_lifecycle",
+     "kind": "flow",
+     "desc": "Simple horizontal flow: Seed/Clone to Vegetative (18/6 light) to FLIP (12/12) to Flowering (8-10 wks) to Harvest, with the flowering box expanded."
+    }
+   ],
+   "claims_needing_cite": [
+    "typical hybrid flowering lasts about 8 to 10 weeks",
+    "pure indica types finish in 7 to 8 weeks and sativa types take 11 to 13 weeks"
+   ]
+  },
+  {
+   "id": "key-terms",
+   "kicker": "Vocabulary",
+   "title": "Every term you need, defined",
+   "summary": "This page uses a handful of grower words repeatedly. Learn these six and the rest of the guide reads easily. None of them are complicated once defined.",
+   "points": [
+    "Flip / 12/12: changing your light timer to 12 hours on, 12 hours off. This tricks a photoperiod plant into thinking winter is coming, which starts flowering.",
+    "Pistils: the fine white hairs that emerge from bud sites; they start white and darken to orange/brown as the plant ripens.",
+    "Trichomes: the tiny mushroom-shaped resin glands that coat the buds; under magnification they go clear, then milky, then amber. They hold most of the THC and aroma and are the real harvest signal.",
+    "Calyx and bud (cola): a calyx is one teardrop floral pod; many calyxes stacking together form a bud, and a large bud cluster on a main stem is a cola.",
+    "EC and VPD: EC (electrical conductivity) measures how strong your nutrient water is; VPD (vapor pressure deficit) is a single number combining temperature and humidity that tells you how comfortably the plant breathes and drinks.",
+    "Defoliation and lollipopping: removing leaves to open up airflow and light (defoliation), and stripping the lower third of the plant so energy goes to the top buds (lollipopping)."
+   ],
+   "figures": [
+    {
+     "name": "plant_anatomy",
+     "kind": "diagram",
+     "desc": "Labeled drawing of a flowering branch pointing out: pistil, calyx, sugar leaf, fan leaf, bud/cola, and a magnified inset of clear/milky/amber trichomes."
+    }
+   ],
+   "claims_needing_cite": []
+  },
+  {
+   "id": "the-flip",
+   "kicker": "How it works",
+   "title": "The flip: why 12/12 starts flowering",
+   "summary": "Photoperiod cannabis measures the length of the dark period to decide whether it is spring (grow) or autumn (reproduce). When you give it 12 hours of uninterrupted darkness, it reads that as the days shortening and switches into flower production. The darkness must be truly dark: even small light leaks during the 12-hour night can stress the plant back toward veg or cause it to make seeds (hermaphroditism).",
+   "points": [
+    "Set your timer to 12 hours light / 12 hours dark and keep it consistent; this single change is what triggers flowering.",
+    "The dark period must be light-tight; stray light from chargers, timers, or door gaps during lights-off can cause re-vegging or hermaphroditism.",
+    "Most strains show their first pre-flower pistils within 7 to 14 days of the flip.",
+    "Flip the plant when it is healthy and roughly half to two-thirds of your final desired height, because it will stretch a lot after the flip."
+   ],
+   "figures": [
+    {
+     "name": "photoperiod_response",
+     "kind": "zones",
+     "desc": "Two side-by-side bars: 18/6 'Vegetative' (long light bar) vs 12/12 'Flowering' (equal light/dark bars), with an arrow showing the trigger at the switch."
+    }
+   ],
+   "claims_needing_cite": [
+    "uninterrupted 12 hours of darkness is required to trigger and maintain flowering in photoperiod cannabis",
+    "light leaks during the dark period can cause re-vegging or hermaphroditism",
+    "first pre-flower pistils typically appear 7 to 14 days after the flip"
+   ]
+  },
+  {
+   "id": "stretch-bud-set",
+   "kicker": "Weeks 1-4",
+   "title": "The stretch and bud set (weeks 1-4)",
+   "summary": "For the first 2 to 3 weeks after the flip the plant 'stretches', often nearly doubling in height as it builds the frame to hang buds on, while white pistils appear at the nodes. Around weeks 3 to 4 the stretch stops and those pistil sites organise into real budlets as calyxes begin stacking. This is the most sensitive window: every bud's final position is being set, so heavy leaf removal here costs you yield.",
+   "points": [
+    "Weeks 1-2 (stretch): plants can gain 50-100% in height; keep PPFD around 800-900 umol/m2/s and feed at a moderate EC (drip EC around 2.0-2.6) as growth is fast.",
+    "Run early-flower climate slightly warm and humid: about 26-28 C (78-82 F) day and 60-70% relative humidity, VPD around 0.9-1.1 kPa.",
+    "Lollipop and do your main defoliation between roughly day 7 and the end of week 3, before bud sites lock in; do not defoliate heavily after week 3.",
+    "Weeks 3-4 (bud set): stretch ends, white pistils cluster into small buds, and the plant becomes fussier about feed and environment."
+   ],
+   "figures": [
+    {
+     "name": "height_stretch_curve",
+     "kind": "line",
+     "desc": "Line chart of plant height over weeks 0-10 showing a steep rise weeks 1-3 (the stretch) then a plateau, with the 'final height locked' point marked at ~week 4."
+    },
+    {
+     "name": "early_targets_table",
+     "kind": "table",
+     "desc": "Table of weeks 1-4 targets: PPFD, day/night temp, RH, VPD, drip EC, and the training action for each week."
+    }
+   ],
+   "claims_needing_cite": [
+    "plants can nearly double in height during the first 2-3 weeks of flower",
+    "early-flower PPFD around 800-900 umol/m2/s",
+    "early-flower targets ~26-28 C day, 60-70% RH, VPD ~0.9-1.1 kPa",
+    "defoliation should be done before the end of week 3 and avoided afterward"
+   ]
+  },
+  {
+   "id": "bulking-ripening",
+   "kicker": "Weeks 5-10",
+   "title": "Bulking and ripening (weeks 5-10)",
+   "summary": "Weeks 5 to 7 are peak bulking: buds swell fastest, frost (trichomes) builds, and aroma intensifies, so this is when light, feed and CO2 pay off most. From roughly week 7 onward the plant ripens: pistils darken from white to orange, trichomes shift clear to milky, and lower fan leaves yellow as the plant pulls stored nutrients into the buds. You push hardest during bulking, then ease off and lower humidity into ripening to protect the harvest.",
+   "points": [
+    "Bulking (wk 5-7): push PPFD to about 900-1100 umol/m2/s (1200-1500 with CO2 enrichment at 1000-1200 ppm) and raise feed to peak EC; substrate EC commonly run high during this phase.",
+    "Bulking climate: ~26-28 C day, RH down to about 55-62% to limit mould risk as buds densify, VPD ~1.1-1.3 kPa.",
+    "Ripening (wk 8+): drop RH to 40-50%, keep temps moderate (low-to-mid 20s C), and many growers lower or 'flush' nutrients in the last 1-2 weeks; some dim the light slightly.",
+    "Yellowing lower leaves late in flower is normal nutrient remobilisation, not always a deficiency to chase."
+   ],
+   "figures": [
+    {
+     "name": "weekly_bud_growth",
+     "kind": "bars",
+     "desc": "Bar chart of relative bud mass gain per week 1-10, tallest at weeks 5-7 (peak bulking), tapering into ripening."
+    },
+    {
+     "name": "climate_by_stage",
+     "kind": "zones",
+     "desc": "Three stacked zone bands (early / bulking / ripening) plotting target RH dropping from ~65% to ~45% and EC rising then easing across the cycle."
+    }
+   ],
+   "claims_needing_cite": [
+    "peak bud bulking occurs roughly weeks 5-7",
+    "bulking PPFD ~900-1100 umol/m2/s, or 1200-1500 with CO2 at 1000-1200 ppm",
+    "bulking RH ~55-62%, VPD ~1.1-1.3 kPa",
+    "ripening RH dropped to ~40-50%",
+    "lower-leaf yellowing late in flower is normal nutrient remobilisation"
+   ]
+  },
+  {
+   "id": "when-to-harvest",
+   "kicker": "The decision",
+   "title": "Reading the plant: when to harvest",
+   "summary": "Pistils are a rough early signal but they lie; trichomes are the true clock, and you read them with a cheap jeweler's loupe or pocket microscope. Harvest when most trichomes have turned from clear to milky/cloudy, with a small fraction going amber: a common target is 80-90% milky with 5-15% amber. More clear/milky gives a more energetic, heady effect; more amber means THC is degrading toward CBN for a heavier, more sedative effect.",
+   "points": [
+    "Wait until pistils are mostly darkened and curled in (roughly 70%+), then switch to checking trichomes for the real call.",
+    "Aim for cloudy/milky-dominant trichomes; ~5-15% amber is the common 'peak' window, earlier (less amber) for a clearer high, later for a more sedative one.",
+    "Use 60x+ magnification on actual bud (not sugar leaves) and check several spots, since maturity varies across the plant.",
+    "Don't harvest on the calendar alone; a 'week 9' strain can need week 10 depending on conditions and phenotype."
+   ],
+   "figures": [
+    {
+     "name": "trichome_harvest_window",
+     "kind": "line",
+     "desc": "Three overlapping curves over time for % clear, % milky, % amber trichomes, with a shaded 'harvest window' band where milky is high and amber is 5-15%."
+    },
+    {
+     "name": "harvest_signals_table",
+     "kind": "table",
+     "desc": "Table mapping signal (pistil color, trichome mix, leaf yellowing) to readiness and resulting effect (energetic vs balanced vs sedative)."
+    }
+   ],
+   "claims_needing_cite": [
+    "trichomes are a more reliable harvest indicator than pistils",
+    "common harvest target is 80-90% milky trichomes with 5-15% amber",
+    "more amber trichomes correlate with THC converting to CBN and a more sedative effect",
+    "check trichomes at 60x or higher magnification on buds rather than leaves"
+   ]
+  },
+  {
+   "id": "pitfalls",
+   "kicker": "Avoid these",
+   "title": "Common beginner mistakes",
+   "summary": "Most first-grow failures in flower come from a few repeatable errors: light leaks, over-defoliating, chasing the calendar instead of the trichomes, and letting humidity stay high as buds get dense. Each is easy to avoid once you know it. The single most expensive mistake is harvesting too early because you ran out of patience.",
+   "points": [
+    "Light leaks in the dark period: tape over LED indicators and seal door gaps; even a phone screen-worth of light repeatedly can cause hermies.",
+    "Over-defoliating or doing it late: stripping too many leaves after week 3 slows bulking; leaves are the plant's sugar factory.",
+    "Humidity too high in late flower: dense buds plus 60%+ RH invites bud rot (botrytis); pull RH down to 40-50% from week 7.",
+    "Harvesting too early or by calendar only: a few extra days to reach proper trichome maturity often matters more than hitting an exact week number."
+   ],
+   "figures": [
+    {
+     "name": "pitfall_fix_table",
+     "kind": "table",
+     "desc": "Two-column table: common pitfall (left) and the concrete fix (right) for light leaks, defoliation, humidity, nutrient burn, and early harvest."
+    }
+   ],
+   "claims_needing_cite": [
+    "high humidity (60%+) in dense late-flower canopies increases bud rot / botrytis risk"
+   ]
+  },
+  {
+   "id": "expectations",
+   "kicker": "Reality check",
+   "title": "Realistic expectations and a sample timeline",
+   "summary": "A typical photoperiod indoor grow runs about 8 to 10 weeks of flower on top of veg time, and your first harvest will rarely be your best; yield and quality climb as you learn to read the plant. Strain genetics set the outer limits, while your light, climate and feed decide how close you get to them. Use the week-by-week timeline below as a map, not a rulebook, and let the trichomes have the final word.",
+   "points": [
+    "Plan for ~8-10 weeks of flower for most hybrids; budget extra for sativa-leaning strains and check the breeder's stated flowering time as a starting estimate.",
+    "Conditions, not just genetics, move the finish date by a week or more in either direction.",
+    "Keep simple notes (week, height, climate, feed, what you removed) so each grow informs the next; this is the fastest way to improve.",
+    "Expect the last 1-2 weeks to feel slow; resist cutting early, as that is where a lot of weight and potency finalize."
+   ],
+   "figures": [
+    {
+     "name": "full_cycle_timeline",
+     "kind": "table",
+     "desc": "Master week-by-week table (weeks 1-10): phase name, what the plant is doing, target PPFD, day/night temp, RH/VPD, EC, and the action to take that week."
+    },
+    {
+     "name": "phase_gantt",
+     "kind": "flow",
+     "desc": "Horizontal stage bar: Stretch (wk1-3), Bud set (wk3-4), Bulking (wk5-7), Ripening (wk8-10), Harvest, with the trichome read marked at the end."
+    }
+   ],
+   "claims_needing_cite": [
+    "breeder-stated flowering times are estimates and actual finish varies with conditions"
+   ]
+  }
+ ]
+}

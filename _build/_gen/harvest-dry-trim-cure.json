@@ -1,0 +1,277 @@
+{
+ "slug": "harvest-dry-trim-cure",
+ "title": "Harvest, dry, trim and cure",
+ "eyebrow": "Post-harvest · Process",
+ "kind": "research",
+ "sub": "A beginner's guide to the full post-harvest process — when to cut, how to dry, how to trim, and how to cure flower so it is safe from mould and keeps its smell, weight and quality.",
+ "reading_min": 14,
+ "related": [
+  "mould-risk",
+  "airflow-design",
+  "nutrient-mixing-athena"
+ ],
+ "ref_ids": [
+  "punja-2023-trichome-maturation",
+  "birenboim-2024-cultivar-drying",
+  "brikenstein-2024-trimming",
+  "fairbairn-1976-light-stability",
+  "astm-d8197-water-activity",
+  "fda-water-activity-foods",
+  "aqualab-microbial-water-activity",
+  "aroya-drying-water-activity-guide"
+ ],
+ "ref_lookup": {
+  "punja-2023-trichome-maturation": "Punja, Z.K., Sutton, D.B., & Kim, T. (2023). Glandular trichome development, morphology, and maturation are influenced by plant age and genotype in high THC-containing cannabis (Cannabis sativa L.) inflorescences. Journal of Cannabis Research, 5(1), 12. https://doi.org/10.1186/s42238-023-00178-9",
+  "birenboim-2024-cultivar-drying": "Birenboim, M., Brikenstein, N., Duanis-Assaf, D., Maurer, D., Chalupowicz, D., Kenigsbuch, D., & Shimshoni, J.A. (2024). In Pursuit of Optimal Quality: Cultivar-Specific Drying Approaches for Medicinal Cannabis. Plants (Basel), 13(7), 1049. https://doi.org/10.3390/plants13071049",
+  "brikenstein-2024-trimming": "Brikenstein, N., Birenboim, M., Kenigsbuch, D., & Shimshoni, J.A. (2024). Optimization of Trimming Techniques for Enhancing Cannabinoid and Terpene Content in Medical Cannabis Inflorescences. Medical Cannabis and Cannabinoids, 7(1), 111-118. https://doi.org/10.1159/000539192",
+  "fairbairn-1976-light-stability": "Fairbairn, J.W., Liebmann, J.A., & Rowan, M.G. (1976). The stability of cannabis and its preparations on storage. Journal of Pharmacy and Pharmacology, 28(1), 1-7. https://doi.org/10.1111/j.2042-7158.1976.tb04014.x",
+  "astm-d8197-water-activity": "ASTM International. (2021). ASTM D8197-21: Standard Specification for Maintaining Acceptable Water Activity (aw) Range (0.55 to 0.65) for Dry Cannabis Flower Intended for Human/Animal Use. West Conshohocken, PA: ASTM International. https://www.astm.org/d8197-21.html",
+  "fda-water-activity-foods": "U.S. Food and Drug Administration. Inspection Technical Guides: Water Activity (aw) in Foods. Office of Regulatory Affairs, FDA. https://www.fda.gov/inspections-compliance-enforcement-and-criminal-investigations/inspection-technical-guides/water-activity-aw-foods",
+  "aqualab-microbial-water-activity": "AQUALAB (Addium, Inc.). How Water Activity Controls Microbial Growth. AQUALAB Learning Center. https://aqualab.com/learn/how-water-activity-controls-microbial-growth",
+  "aroya-drying-water-activity-guide": "AROYA (Addium, Inc.). Processor's Guide to Moisture and Water Activity (Drying Cannabis). AROYA Education Guides. https://aroya.io/education-guides/drying-cannabis"
+ },
+ "sections": [
+  {
+   "id": "intro",
+   "kicker": "Start here",
+   "title": "Why the last two weeks decide everything",
+   "summary": "Post-harvest is everything that happens after the plant is cut down: drying, trimming, curing and storage. Weeks of growing can be ruined in a few days here — dry too fast or too dry and you lose smell and weight; dry too slow or too wet and mould takes hold. Done well, simply dialling in this stage is reported to add 5-10% to final yield, because most growers are accidentally over-drying and losing sellable weight.",
+   "points": [
+    "Post-harvest = harvest, dry, trim, cure, store — the four steps that turn a living plant into a finished, stable product",
+    "The goal is a narrow safe zone: dry enough that mould cannot grow, but not so dry that the smell (terpenes) and weight (water) evaporate away",
+    "This guide assumes zero prior knowledge and defines every term as it appears",
+    "A source operation found that tightening up drying and curing alone gave a 5-10% yield increase, mostly by no longer over-drying"
+   ],
+   "figures": [
+    {
+     "name": "post_harvest_pipeline",
+     "kind": "flow",
+     "desc": "Left-to-right flow: Standing plant in flower room -> Harvest (cut) -> Hang dry 10-14 days -> Takedown & section -> Trim -> Cure (burp) -> Seal & store. Annotate each box with its target number (e.g. dry = 60F/60%RH, cure target = 0.60-0.62 aw)."
+    }
+   ],
+   "claims_needing_cite": [
+    "dialling in drying and curing gave a 5-10% yield increase",
+    "most growers are accidentally over-drying"
+   ]
+  },
+  {
+   "id": "key-terms",
+   "kicker": "Vocabulary",
+   "title": "The words you need before we start",
+   "summary": "Two ideas do most of the work in this guide. Water activity (aw) is a 0 to 1.00 scale measuring how 'available' the water in the flower is — it is the single best predictor of whether mould will grow, and it is basically relative humidity expressed for a solid instead of for air. Moisture content is a different number: the percentage of the flower's weight that is water, which is what tells you about yield. Trichomes are the tiny resin glands on the bud that hold the THC and terpenes.",
+   "points": [
+    "Water activity (aw): energy state of water on a 0-1.00 scale; when flower and surrounding air reach balance, air RH = aw x 100. Controls mould — use it to decide 'done'",
+    "Moisture content (%): share of the flower's weight that is water; tells you about yield, not safety",
+    "Relative humidity (RH): how much water vapour is in the air, 0-100%. Dry-room target is 60% RH",
+    "Trichomes: frosty resin glands on the flower holding THC, terpenes and flavonoids — protect these at every step",
+    "Terpenes: the aromatic oils that give each strain its smell and flavour; they evaporate if flower gets too dry",
+    "Burping: briefly opening a sealed container to let humid air out and fresh air in during curing"
+   ],
+   "figures": [
+    {
+     "name": "aw_vs_moisture",
+     "kind": "table",
+     "desc": "Two-column table contrasting Water Activity (intensive, 0-1.00, predicts mould, controls the process) vs Moisture Content (extensive, %, predicts yield, measures the product)."
+    }
+   ],
+   "claims_needing_cite": [
+    "when flower and air reach equilibrium, air RH equals water activity times 100"
+   ]
+  },
+  {
+   "id": "harvest-timing",
+   "kicker": "Step 1 of the science",
+   "title": "When to harvest: reading the plant, not the calendar",
+   "summary": "Harvest is simply cutting the plants down when they have finished flowering. Maturity is judged by the flower itself — in the source workflow plants run a set flowering timeline with plant-work phases at days 7-10, 21-28 and 42-49, and are cut at the end. Cut order follows a posted strain list so genetics never get mixed, and each plant keeps its tracking tag as it comes down.",
+   "points": [
+    "Harvest = cutting down all plants once flowering is complete",
+    "Cut one strain at a time in the order on the strain list to avoid mixing genetics",
+    "Keep each plant's compliance/tracking tag attached as it is cut — this is how batches stay traceable",
+    "Loose buds that fall on the table ('table nugs') are collected per strain, labelled, and dried separately"
+   ],
+   "figures": [
+    {
+     "name": "flower_timeline",
+     "kind": "line",
+     "desc": "Timeline of the flowering room marking plant-work milestones (trellis day 1, spread day 5-14, lollipop day 7-10, defan day 21-28, final defan day 42-49) ending at harvest, to show harvest is the end of a defined cycle."
+    }
+   ],
+   "claims_needing_cite": [
+    "trichome colour (cloudy vs amber) as the maturity signal"
+   ]
+  },
+  {
+   "id": "harvest-method",
+   "kicker": "Step 2 — hands on",
+   "title": "Cutting down and weighing the wet plant",
+   "summary": "Plants are cut whole and hung to dry rather than stripped first. Cutters free each plant from the lower two layers of trellis netting, leave the top layer on for support, then cut the main stalk at its base. Before hanging, every bin is weighed to record the 'wet weight' — the starting weight that, compared to the final dry weight, gives the dry-to-wet ratio for each genetic (around 10% in the source data).",
+   "points": [
+    "Cut a circle through the bottom and middle trellis layers, leave the top layer attached, then cut the stalk at the base",
+    "Place 7-10 whole plants per 55-gallon bin; do not overfill or you bruise the flower",
+    "Weigh each bin (tared first) to capture wet weight before drying — the baseline for yield tracking",
+    "Whole-plant hanging slows the dry and lets moisture move out of the stem evenly; one plant per trellis square, 2-4 squares between rows for airflow"
+   ],
+   "figures": [
+    {
+     "name": "wet_dry_ratio",
+     "kind": "bar",
+     "desc": "Bar comparing example wet weight vs final dry weight for one batch, with the ~10.46% dry-to-wet ratio labelled, illustrating how much of the harvested mass is water."
+    }
+   ],
+   "claims_needing_cite": [
+    "dry-to-wet ratio around 10% (example batch 10.46%)"
+   ]
+  },
+  {
+   "id": "drying",
+   "kicker": "The core science",
+   "title": "The drying environment: slow, cool, dark, moving air",
+   "summary": "The dry room is held at 60°F and 60% RH with fans running and lights off, and a clean room before any plant goes in. At these setpoints whole plants are typically ready in 10-14 days. Going slow and cool protects terpenes (which evaporate in heat and dry air) and prevents the outside of the bud drying while the inside stays wet — the classic recipe for hidden mould. Light is kept off because it degrades cannabinoids and terpenes.",
+   "points": [
+    "Setpoints: 60°F, 60% RH, fans on, lights off, doors closed — minimise foot traffic so the environment stays stable",
+    "Whole-plant dry takes about 10-14 days at these setpoints",
+    "If the room runs above 60% RH and dehumidification is undersized, exhaust fans can pull humidity down",
+    "Keep racks evenly spaced so air reaches every plant and buds dry uniformly; a deep clean precedes every load"
+   ],
+   "figures": [
+    {
+     "name": "dry_room_zones",
+     "kind": "zones",
+     "desc": "A band chart of dry-room RH over the dry: target 60% RH zone in green, a 'too humid >60% = mould risk' red band above, and a 'too dry, terpene loss' amber band below, with a curve trending down to takedown around day 10-14."
+    }
+   ],
+   "claims_needing_cite": [
+    "60F/60%RH for 10-14 days as drying setpoint",
+    "light degrades cannabinoids and terpenes"
+   ]
+  },
+  {
+   "id": "water-activity",
+   "kicker": "The core science",
+   "title": "Water activity: the number that controls mould and yield",
+   "summary": "Water activity is the safe-zone gauge for cannabis. Mould and yeast can grow at 0.70 aw and above, pathogenic bacteria at 0.85; nothing grows below about 0.60. Quality sets the floor: below 0.55 aw terpenes dry up and quality falls off. That leaves a sweet spot of 0.55-0.65 aw — the range written into the ASTM D8197 standard. Sample testing starts around day 7-8 and plants are taken down when the batch averages 0.60-0.62 aw, leaving a safety margin below the 0.65 mould line.",
+   "points": [
+    "Mould/yeast grow at 0.70 aw, bacteria at 0.85, no microbial growth below ~0.60 aw",
+    "Safe-and-quality window is 0.55-0.65 aw (ASTM D8197); above 0.65 risks mould, below 0.55 loses terpenes",
+    "Begin testing flower samples around day 7-8; take plants down when the average reads 0.60-0.62 aw",
+    "Water activity is the better control number because it varies far less than cheap moisture readings — measuring on water activity gave roughly 10x tighter yield precision in one example (±1% to ±0.12%)",
+    "Denser flowers tend to finish at a slightly lower aw than fluffy ones — use the meter as a guide but also trust smell"
+   ],
+   "figures": [
+    {
+     "name": "aw_safe_zone",
+     "kind": "zones",
+     "desc": "Horizontal aw scale 0.50-0.90 with bands: <0.55 'too dry / terpene loss' (amber), 0.55-0.65 'sweet spot' (green) with a marker at 0.60-0.62 'take down here', 0.70 'mould & yeast' (red), 0.85 'bacteria' (dark red)."
+    },
+    {
+     "name": "growth_limits_table",
+     "kind": "table",
+     "desc": "Table of microbial growth thresholds: Pathogenic bacteria 0.85 aw, Spoilage mould & yeast 0.70 aw, No microbial growth 0.60 aw."
+    }
+   ],
+   "claims_needing_cite": [
+    "mould/yeast 0.70 aw, bacteria 0.85 aw, no growth below 0.60 aw",
+    "ASTM D8197 specifies 0.55-0.65 aw",
+    "measuring on water activity improved yield precision from ±1% to ±0.12%",
+    "denser flowers finish at lower aw"
+   ]
+  },
+  {
+   "id": "trimming",
+   "kicker": "Step 3 — hands on",
+   "title": "Trimming: wet vs dry, and protecting the trichomes",
+   "summary": "Trimming removes leaf so the bud looks clean and presentable. The source operation trims dry — after the hang-dry — taking plants down, cutting them into 8-12 inch sections, then removing fan leaves by hand and cutting sugar leaves with scissors. The golden rule is never touch the flower itself, because handling knocks off the trichomes that carry potency and smell. Scissors are swapped and cleaned in alcohol as resin builds up.",
+   "points": [
+    "Wet trim = trim right after cutting, before drying; dry trim = trim after the hang-dry. The source workflow dry-trims for better terpene retention and slower drying",
+    "Buck = cut the finished buds off the stem; do this into a sealed bag so the flower does not over-dry in open air",
+    "Never touch the flower — handling damages trichomes and makes buds look shaved and dull",
+    "Remove fan leaves (large, few trichomes) by hand, then scissor off sugar leaves; clean scissors in 71% alcohol when resin builds up",
+    "Trimming itself lowers water activity, so flower that took down at 0.62 aw often reads 0.58-0.60 aw once trimmed"
+   ],
+   "figures": [
+    {
+     "name": "wet_vs_dry_trim",
+     "kind": "table",
+     "desc": "Comparison table: Wet trim (faster, easier leaf removal, harsher dry, more handling risk) vs Dry trim (slower dry, gentler on terpenes, leaf is brittle) — with 'this guide uses dry trim' flagged."
+    }
+   ],
+   "claims_needing_cite": [
+    "dry trimming retains terpenes better than wet trimming",
+    "trimming lowers water activity to 0.58-0.60 aw"
+   ]
+  },
+  {
+   "id": "curing",
+   "kicker": "The core science",
+   "title": "Curing and storage: burp, stabilise, then seal",
+   "summary": "Curing lets the whole batch settle to one even water activity and preserves terpenes that would otherwise break down in storage. Flower is held in containers at 60-65°F and 58-62% RH; a humidity sensor is read, and any bin above ~60% RH is 'burped' — lid off for 5-10 minutes — then the barrel is rotated and the reading logged. Once trimmed flower sits at 0.58-0.60 aw it is finished: seal it and stop burping, because further burping just evaporates terpenes (lost smell) and water (lost sellable weight).",
+   "points": [
+    "Curing equilibrates the batch to a single aw and slows terpene breakdown; it also prevents mould developing in finished product",
+    "Storage conditions: 60-65°F and 58-62% RH for product being processed/cured",
+    "Burp any container reading above ~60% RH for 5-10 minutes, rotate the barrel for even drying, and log date/humidity/bin every time",
+    "When trimmed flower reaches 0.58-0.60 aw it is done — seal and stop burping; over-burping evaporates terpenes and water weight",
+    "Bags of finished flower should be free of air but not compressed, and not stacked, to protect bud structure"
+   ],
+   "figures": [
+    {
+     "name": "burp_decision",
+     "kind": "flow",
+     "desc": "Decision flow: Read humidity sensor -> Is bin >60% RH? -> Yes: burp 5-10 min, rotate, log -> No / aw at 0.58-0.60: seal, stop burping, store. Loop back daily until finished."
+    }
+   ],
+   "claims_needing_cite": [
+    "burp containers above 60% RH for 5-10 minutes",
+    "curing storage at 60-65F and 58-62% RH",
+    "over-burping evaporates terpenes and water weight"
+   ]
+  },
+  {
+   "id": "pitfalls",
+   "kicker": "What goes wrong",
+   "title": "Common mistakes and how to avoid them",
+   "summary": "Most post-harvest failures are variations on going too fast, too dry, or too crowded. Over-drying is the quiet killer — cheap moisture meters with ±1% error can read '11% moisture' while the flower is anywhere from 0.53 aw (ruined, too dry) to 0.66 aw (mould risk), so growers chasing a number often dry too far and lose weight and smell. Overfilling bins and skipping the deep clean are the other big ones.",
+   "points": [
+    "Over-drying below 0.55 aw: terpenes evaporate, smell fades faster, and you lose water weight you could have sold",
+    "Drying too hot/fast: the outside dries while the inside stays wet, trapping moisture that grows mould later",
+    "Trusting cheap moisture meters alone: ±1% precision spans 0.53-0.66 aw — too dry to mouldy; water-activity testing closes that gap",
+    "Overfilling containers: fill totes/barrels no more than ~2/3 (and curing barrels no more than half) or you crush buds and trap moisture",
+    "Touching the flower or skipping the pre-load deep clean: knocked-off trichomes and contamination both show up in the final product",
+    "If flower is in the safe aw range but still smells wet, let it dry more — your senses are the final check"
+   ],
+   "figures": [
+    {
+     "name": "imprecision_cost",
+     "kind": "bar",
+     "desc": "Bar showing the aw range hidden behind a single '11% moisture' reading on a ±1% meter: spans 0.53 (too dry) to 0.66 (mould), versus a tight 0.617-0.623 band from a water-activity reading at 0.62 aw."
+    }
+   ],
+   "claims_needing_cite": [
+    "±1% moisture meter spans 0.53-0.66 aw at 11% moisture",
+    "fill containers no more than 2/3, curing barrels no more than half"
+   ]
+  },
+  {
+   "id": "expectations",
+   "kicker": "Reality check",
+   "title": "What realistic results look like",
+   "summary": "Expect roughly 10-14 days of hang-drying plus several more days of curing before flower is truly finished — there is no rushing it. The payoff for doing it patiently is real and measurable: dialling in the process is reported to lift yield 5-10%, largely by stopping over-drying. Genetics matter too — dense and fluffy flowers finish at slightly different water-activity points — so log every batch's numbers so you can repeat what works.",
+   "points": [
+    "Timeline: ~10-14 days drying, then days of curing/burping; the whole post-harvest stage is two-to-three weeks, not overnight",
+    "Dialling in drying and curing is reported to raise yield 5-10%, mostly by no longer over-drying",
+    "Drying and curing are strain-dependent — record aw, RH, dates and outcomes per genetic so good results are repeatable",
+    "The instrument is a guide, not a boss: in the safe aw zone, trust smell and feel for the final call"
+   ],
+   "figures": [
+    {
+     "name": "finish_timeline",
+     "kind": "line",
+     "desc": "Single timeline from harvest day 0 -> aw testing starts ~day 7-8 -> takedown ~day 10-14 at 0.60-0.62 aw -> trim -> cure/burp to 0.58-0.60 aw -> sealed & finished, with the safe zone shaded."
+    }
+   ],
+   "claims_needing_cite": [
+    "dialling in drying and curing raises yield 5-10%",
+    "drying and curing are strain-dependent"
+   ]
+  }
+ ]
+}

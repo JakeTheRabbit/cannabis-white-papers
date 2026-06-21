@@ -1,0 +1,248 @@
+{
+ "slug": "ph-management",
+ "title": "pH: what it is and how to hold it",
+ "eyebrow": "Feed · pH",
+ "kind": "research",
+ "sub": "A beginner's guide to root-zone pH: why a single number decides which nutrients your plant can actually eat, what to aim for in coco, hydro and soil, and how to measure, adjust and hold it without chasing ghosts.",
+ "reading_min": 14,
+ "related": [
+  "nutrient-deficiencies",
+  "water-quality",
+  "nutrient-mixing-athena"
+ ],
+ "ref_ids": [
+  "veazie-2025-substrate-ph-micronutrient-cannabis",
+  "gillespie-kubota-2020-low-ph-basil-nutrient-uptake",
+  "kpai-2024-cannabis-nutrient-solution-ph-cation-uptake",
+  "malik-tlustos-2025-soilless-media-cannabis",
+  "kudirka-2023-precise-hydroponic-ph-mes-buffer",
+  "saloner-bernstein-2022-nitrogen-source-cannabis",
+  "umass-water-quality-ph-alkalinity",
+  "unl-passel-soil-ph-definition"
+ ],
+ "ref_lookup": {
+  "veazie-2025-substrate-ph-micronutrient-cannabis": "Veazie, P., Cockson, P., Smith, J. T., Schulker, B., Jackson, B., Hicks, K., & Whipker, B. (2025). Impact of substrate pH and micronutrient fertility rates on Cannabis sativa. Agrosystems, Geosciences & Environment, 8(1), e70044. https://doi.org/10.1002/agg2.70044",
+  "gillespie-kubota-2020-low-ph-basil-nutrient-uptake": "Gillespie, D. P., Kubota, C., & Miller, S. A. (2020). Effects of low pH of hydroponic nutrient solution on plant growth, nutrient uptake, and root rot disease incidence of basil (Ocimum basilicum L.). HortScience, 55(8), 1251-1258. https://doi.org/10.21273/HORTSCI14986-20",
+  "kpai-2024-cannabis-nutrient-solution-ph-cation-uptake": "Kpai, P. Y., Adaramola, O., Addo, P. W., MacPherson, S., & Lefsrud, M. (2024). Mineral nutrition for Cannabis sativa in the vegetative stage using response surface analysis. Frontiers in Plant Science, 15, 1501484. https://doi.org/10.3389/fpls.2024.1501484",
+  "malik-tlustos-2025-soilless-media-cannabis": "Malik, M., & Tlustos, P. (2025). Soilless growing media for Cannabis cultivation. Agriculture, 15(18), 1955. https://doi.org/10.3390/agriculture15181955",
+  "kudirka-2023-precise-hydroponic-ph-mes-buffer": "Kudirka, G., Virsile, A., Sutuliene, R., Lauzike, K., & Samuoliene, G. (2023). Precise management of hydroponic nutrient solution pH: The effects of minor pH changes and MES buffer molarity on lettuce physiological properties. Horticulturae, 9(7), 837. https://doi.org/10.3390/horticulturae9070837",
+  "saloner-bernstein-2022-nitrogen-source-cannabis": "Saloner, A., & Bernstein, N. (2022). Nitrogen source matters: High NH4/NO3 ratio reduces cannabinoids, terpenoids, and yield in medical cannabis. Frontiers in Plant Science, 13, 830224. https://doi.org/10.3389/fpls.2022.830224",
+  "umass-water-quality-ph-alkalinity": "University of Massachusetts Amherst, Center for Agriculture, Food, and the Environment (Greenhouse & Floriculture Program). Water quality: pH and alkalinity (fact sheet). UMass Extension.",
+  "unl-passel-soil-ph-definition": "University of Nebraska-Lincoln, Plant and Soil Sciences eLibrary (PASSeL). Soils - Part 4: Soil pH - Defining pH. University of Nebraska-Lincoln."
+ },
+ "sections": [
+  {
+   "id": "what-this-is",
+   "kicker": "Start here",
+   "title": "What this is (and why one number matters so much)",
+   "summary": "pH is a 0-14 scale that measures how acidic or alkaline a liquid is, where 7 is neutral, lower is acidic, and higher is alkaline. For a grower it is the single setting that decides whether the nutrients you already paid for can actually enter the roots: get it wrong and a fully fed plant can still starve. This guide assumes you know nothing and builds up from the scale itself to a daily routine you can actually run.",
+   "points": [
+    "pH 7 = neutral (pure water); below 7 = acidic (lemon juice ~2); above 7 = alkaline (baking soda ~8.5)",
+    "The scale is logarithmic: each whole number is a 10x change in acidity, so pH 5 is ten times more acidic than pH 6",
+    "Plants do not absorb nutrients at every pH; the right window keeps everything dissolved and available",
+    "You can have perfect nutrients, perfect light, and still get deficiencies purely from bad pH"
+   ],
+   "figures": [
+    {
+     "name": "ph_scale_overview",
+     "kind": "zones",
+     "desc": "Horizontal 0-14 pH scale with everyday reference points (lemon, water, baking soda) and the green 5.5-6.5 grower target band highlighted"
+    }
+   ],
+   "claims_needing_cite": [
+    "pH is logarithmic so each whole unit is a tenfold change in hydrogen-ion concentration"
+   ]
+  },
+  {
+   "id": "key-terms",
+   "kicker": "Vocabulary",
+   "title": "Key terms in plain English",
+   "summary": "Before the how-and-why, here are the words this guide uses, each defined once so the rest reads cleanly. None of these require chemistry beyond what is defined here. Keep this section handy; the troubleshooting section assumes you know these.",
+   "points": [
+    "pH = how acidic/alkaline the water around the roots is, 0-14",
+    "Root zone = the wet substrate immediately around the roots, where uptake actually happens",
+    "Lockout = nutrients are present but chemically unavailable, so the plant shows a deficiency despite being fed",
+    "EC (electrical conductivity) = how strong/salty the nutrient solution is, a separate dial from pH",
+    "Substrate/medium = what the roots grow in (coco coir, rockwool/water in hydro, or soil)",
+    "Buffering = a medium or water's resistance to pH change; high buffering = stubborn, low = swings fast",
+    "Alkalinity = the water's built-in acid-absorbing capacity (mostly bicarbonates), not the same as a high pH reading",
+    "Runoff = the solution that drains out the bottom of the pot after watering"
+   ],
+   "figures": [
+    {
+     "name": "terms_quick_table",
+     "kind": "table",
+     "desc": "Two-column table: term and one-line plain-English definition for all eight terms above"
+    }
+   ],
+   "claims_needing_cite": []
+  },
+  {
+   "id": "why-ph-controls-availability",
+   "kicker": "The core idea",
+   "title": "Why pH controls nutrient availability (and causes lockout)",
+   "summary": "Each nutrient stays dissolved (and therefore absorbable) only across a certain pH band, and outside that band it chemically binds into forms roots cannot take up. Push pH too high (above ~6.5 in inert media) and iron, manganese, zinc and boron drop out of solution; drop it too low (below ~5.5) and calcium, magnesium and phosphorus lock out instead. This is lockout: the plant is surrounded by food it cannot eat because the root-zone chemistry drifted out of the window. Phosphorus, for example, peaks around 6.0-7.0 and binds to iron/aluminium below 5.5 or to calcium above 7.5.",
+   "points": [
+    "High pH (>6.5 in coco/hydro) locks out the micronutrients: iron, manganese, zinc, boron",
+    "Low pH (<5.5) locks out calcium, magnesium and phosphorus",
+    "Lockout looks identical to a deficiency, so growers often add more nutrients and make it worse",
+    "The 'sweet spot' exists because it is where the most nutrients overlap as available at once"
+   ],
+   "figures": [
+    {
+     "name": "nutrient_availability_bands",
+     "kind": "zones",
+     "desc": "Classic nutrient-availability chart: horizontal bars per nutrient (N, P, K, Ca, Mg, Fe, Mn, Zn, B) widening where available across pH 4-8, with the 5.5-6.5 overlap zone marked"
+    }
+   ],
+   "claims_needing_cite": [
+    "Above ~6.5 in inert media iron, manganese, zinc and boron become unavailable",
+    "Below ~5.5 calcium, magnesium and phosphorus lock out",
+    "Phosphorus peaks at pH 6.0-7.0 and binds with iron/aluminium below 5.5 and calcium above 7.5"
+   ]
+  },
+  {
+   "id": "targets-by-substrate",
+   "kicker": "Your numbers",
+   "title": "Target ranges by substrate: coco, hydro, soil",
+   "summary": "There is no single 'correct' pH because the right target depends on what the roots are sitting in. In soil, organic matter and microbes buffer the root zone, so aim for the inflow water at roughly 6.0-7.0 (sweet spot 6.2-6.8). In coco coir, which is nearly inert with almost no buffering, set the inflow nutrient solution to 5.5-6.5 (many run 5.8-6.2). In hydroponics, target 5.5-6.5 with 5.8-6.2 as the all-nutrient sweet spot. Coco and hydro respond to pH swings almost immediately because they cannot buffer; soil is more forgiving but slower to correct.",
+   "points": [
+    "Soil: 6.0-7.0 inflow, sweet spot 6.2-6.8 (microbes + organic matter buffer it)",
+    "Coco coir: 5.5-6.5 inflow, commonly 5.8-6.2; nearly inert, almost no buffering",
+    "Hydroponics: 5.5-6.5, sweet spot 5.8-6.2 for maximum uptake of all nutrients",
+    "Some growers swing the target slightly within range to favour specific nutrients across the week",
+    "It is the inflow (what you pour in) you control directly, not the runoff"
+   ],
+   "figures": [
+    {
+     "name": "targets_by_medium",
+     "kind": "table",
+     "desc": "Table: substrate (soil / coco / hydro) x columns for buffering, full range, sweet spot, and a one-line 'why'"
+    }
+   ],
+   "claims_needing_cite": [
+    "Soil target 6.0-7.0 with sweet spot 6.2-6.8",
+    "Coco target 5.5-6.5, commonly run 5.8-6.2, and coco has almost no buffering capacity",
+    "Hydroponic target 5.5-6.5 with sweet spot 5.8-6.2"
+   ]
+  },
+  {
+   "id": "measuring-calibrating",
+   "kicker": "The tool",
+   "title": "Measuring it: pen, calibration and care",
+   "summary": "A pH pen is only as honest as its last calibration, and an uncalibrated or dried-out probe is worse than no reading because it lies with confidence. Calibrate with fresh two-point buffers (pH 7.0 first, then pH 4.0) about monthly, and never trust a single-point calibration across your whole range. Store the probe tip wet in KCl storage solution, never dry or in plain water, which strips the reference electrolyte and permanently kills accuracy. Replace the probe when drift exceeds ~0.2 pH between calibrations or it cannot settle within ~30 seconds.",
+   "points": [
+    "Two-point calibration (7.0 then 4.0) with fresh buffer, roughly monthly",
+    "A single-point calibration is not enough for accuracy across the working range",
+    "Store wet in KCl solution; dry storage or plain water permanently damages the probe",
+    "Replace/retire the probe when calibration drift exceeds ~0.2 pH or it won't stabilise in ~30s",
+    "Let the reading settle before you trust it; temperature and stirring affect the number"
+   ],
+   "figures": [
+    {
+     "name": "calibrate_pen_flow",
+     "kind": "flow",
+     "desc": "Step flow: rinse probe -> calibrate in pH 7.0 -> rinse -> calibrate in pH 4.0 -> rinse -> measure sample -> store in KCl cap"
+    }
+   ],
+   "claims_needing_cite": [
+    "Two-point calibration (7.0 then 4.0) recommended roughly monthly with fresh buffer",
+    "Probe must be stored in KCl solution; dry/plain-water storage permanently damages accuracy",
+    "Retire probe when drift exceeds ~0.2 pH or it fails to stabilise within ~30 seconds"
+   ]
+  },
+  {
+   "id": "adjusting-and-water",
+   "kicker": "Making the number",
+   "title": "Adjusting with pH up/down — and the water you start with",
+   "summary": "Mix your nutrients first, then adjust pH last, because adding nutrients shifts pH on its own. Add pH Down (usually phosphoric acid) or pH Up (usually potassium hydroxide) a few drops at a time, stir, wait, and re-measure rather than dumping and overshooting. Your starting water matters enormously: alkalinity is the water's built-in acid-absorbing capacity (mostly bicarbonates, reported as ppm CaCO3), and high-alkalinity water fights your acid and creeps pH back up. Ideal irrigation alkalinity is roughly 60-100 ppm CaCO3; very hard, high-alkalinity tap water may need more acid or pre-treatment to hold a target.",
+   "points": [
+    "Order matters: nutrients in first, pH adjusted last",
+    "Adjust in small increments (drops), stir, wait, re-measure — never dump and chase",
+    "pH Down is typically phosphoric acid; pH Up is typically potassium hydroxide",
+    "Alkalinity (buffering, ppm CaCO3) is different from a high pH reading and is what resists your acid",
+    "Target irrigation alkalinity ~60-100 ppm CaCO3; high-alkalinity water makes pH creep back up"
+   ],
+   "figures": [
+    {
+     "name": "alkalinity_vs_ph",
+     "kind": "diagram",
+     "desc": "Side-by-side: two beakers same pH 7 but different alkalinity, showing one needs far more acid drops to move, illustrating buffering vs the pH reading"
+    }
+   ],
+   "claims_needing_cite": [
+    "pH Down is commonly phosphoric acid and pH Up commonly potassium hydroxide",
+    "Alkalinity is the water's acid-neutralising capacity reported as ppm CaCO3 and is distinct from pH",
+    "Ideal irrigation alkalinity is approximately 60-100 ppm CaCO3"
+   ]
+  },
+  {
+   "id": "runoff-and-routine",
+   "kicker": "Daily practice",
+   "title": "Runoff pH and a by-stage routine",
+   "summary": "Runoff is the solution that drains from the pot, and beginners over-rely on it: in inert media like coco it is a momentary, indirect sample distorted by salt buildup and what the roots have done locally, not a soil test. The reliable lever is the inflow pH you set going in, plus watching runoff EC for salt accumulation (a flush is due when runoff EC climbs well above your feed EC). Keep inflow inside the target band every feed, calibrate the pen monthly, and let buffering work — do not feed out of range to 'fix' a runoff number.",
+   "points": [
+    "Check and set inflow pH every feed; that is the dial you actually control",
+    "In coco/hydro, runoff pH is unreliable for diagnosis — runoff EC (salt buildup) is the better signal",
+    "Flush when runoff EC drifts well above feed EC; aim to keep feed and runoff EC within ~10%",
+    "Soil runoff is somewhat more meaningful but still lags and is buffered",
+    "Routine: calibrate monthly, mix-then-pH every batch, log inflow pH and EC, adjust slowly"
+   ],
+   "figures": [
+    {
+     "name": "routine_by_stage",
+     "kind": "table",
+     "desc": "Table of weekly routine by stage (seedling/veg/flower) x checks: inflow pH target, EC watch, calibration cadence, flush trigger"
+    }
+   ],
+   "claims_needing_cite": [
+    "In coco runoff pH is an indirect momentary sample and a common cause of over-adjustment",
+    "Runoff EC is a more reliable signal than runoff pH in inert media; keep feed and runoff EC within ~10%"
+   ]
+  },
+  {
+   "id": "pitfalls",
+   "kicker": "Don't do this",
+   "title": "Common mistakes and how to avoid them",
+   "summary": "Most pH problems are self-inflicted: chasing runoff numbers, never calibrating, or over-correcting. The classic error is feeding nutrient solution outside the safe range trying to fix a runoff reading, which causes the very lockout the grower fears. Other repeat offenders: trusting an uncalibrated or dry-stored pen, adjusting pH before adding nutrients, and dumping acid then overshooting. Treat lockout symptoms by checking pH first, before adding more nutrients.",
+   "points": [
+    "Chasing runoff pH and feeding out-of-range to 'correct' it — the top mistake",
+    "Never calibrating, or storing the probe dry / in plain water",
+    "Adjusting pH before mixing nutrients (nutrients move pH afterward)",
+    "Overshooting by adding too much acid/base at once instead of small steps",
+    "Adding more nutrients to fix what is actually a lockout — check pH first",
+    "Ignoring source-water alkalinity, then wondering why pH creeps back up"
+   ],
+   "figures": [
+    {
+     "name": "mistake_fix_table",
+     "kind": "table",
+     "desc": "Two-column table: common mistake -> the correct practice that replaces it"
+    }
+   ],
+   "claims_needing_cite": [
+    "Feeding out of range to correct runoff pH is a leading cause of unnecessary over-adjustment and lockout"
+   ]
+  },
+  {
+   "id": "expectations",
+   "kicker": "Reality check",
+   "title": "Realistic expectations",
+   "summary": "pH will drift between feeds — that is normal, not a crisis — and the goal is to keep the root zone inside a band, not to pin a single decimal. Soil buffers and corrects slowly; coco and hydro move fast and need checking every feed. Expect to calibrate monthly, replace probes periodically, and accept that the runoff number jumps around. Hold the inflow steadily in range over weeks and most 'mystery' deficiencies never appear.",
+   "points": [
+    "A band (e.g. 5.8-6.2) is the target, not one exact number",
+    "Drift between feeds is normal; coco/hydro need per-feed checks, soil is slower",
+    "Pens are consumables: calibrate monthly, replace probes over time",
+    "Consistency over weeks beats chasing perfection on any single reading"
+   ],
+   "figures": [
+    {
+     "name": "drift_over_time",
+     "kind": "line",
+     "desc": "Line chart of root-zone pH over a week staying inside a shaded target band, with small normal wobbles vs an out-of-band excursion that needs action"
+    }
+   ],
+   "claims_needing_cite": []
+  }
+ ]
+}
