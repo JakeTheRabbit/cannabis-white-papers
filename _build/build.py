@@ -208,8 +208,26 @@ def render_index():
             card("Cited and honest", "Every factual claim links to peer-reviewed research. Where the science is uncertain, it says so.", tag="Why trust it"),
             card("Ordered by the grow", "Grouped by task: propagation, veg, flower, harvest, and the systems that span every stage.", tag="How to use it"),
         ], cols=3) + '</div>')
-    body = hero + intro + track_grid()
-    return shell.page("index", "Home", body, desc="Beginner-friendly, peer-reviewed cannabis cultivation white papers.", wide=True, mobile_active="index")
+    body = hero + intro + render_directory()
+    return shell.page("index", "Home", body, desc="Peer-reviewed cannabis cultivation white papers, by grow stage.", wide=True, mobile_active="index")
+
+def render_directory():
+    """Compact, filterable one-screen directory: stage pills + dense card grid."""
+    n = len(NAV.all_items())
+    pills = [f'<button class="fpill on" data-filter="all">All <span>{n}</span></button>']
+    cards = []
+    for g in NAV.GROUPS:
+        gs = slugify(g["group"])
+        pills.append(f'<button class="fpill" data-filter="{gs}">{esc(g["group"])} <span>{len(g["items"])}</span></button>')
+        for it in g["items"]:
+            cards.append(
+                f'<a class="pcard sm" data-group="{gs}" href="{it["slug"]}.html">'
+                f'<div class="pic">{icon(it["icon"],17)}</div>'
+                f'<div><div class="pt">{esc(it["title"])}</div>'
+                f'<div class="ps">{esc(it["short"])}</div></div></a>')
+    return (f'<div class="filterbar" id="filterbar">{"".join(pills)}</div>'
+            f'<div class="pgrid compact" id="paperdir">{"".join(cards)}</div>'
+            f'<div class="dir-empty" id="dirEmpty" style="display:none">Nothing in this stage yet.</div>')
 
 def render_papers():
     head = ('<div class="eyebrow">Library</div><h1 class="title">All papers</h1>'

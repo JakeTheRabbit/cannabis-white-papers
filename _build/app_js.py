@@ -120,6 +120,18 @@ JS = r"""(function(){
  });
  $$('.sidebar .nav a').forEach(function(a){a.addEventListener('click',closeMenu);});
 
+ var fpills=$$('.fpill');
+ if(fpills.length){
+   var dcards=$$('#paperdir .pcard'), demp=$('#dirEmpty');
+   function filt(g){
+     fpills.forEach(function(p){p.classList.toggle('on',p.getAttribute('data-filter')===g);});
+     var shown=0;
+     dcards.forEach(function(c){ var ok=(g==='all'||c.getAttribute('data-group')===g); c.style.display=ok?'':'none'; if(ok)shown++; });
+     if(demp) demp.style.display=shown?'none':'';
+   }
+   fpills.forEach(function(p){p.addEventListener('click',function(){filt(p.getAttribute('data-filter'));});});
+ }
+
  var rlinks=$$('.rail a');
  if(rlinks.length){
    var secs=rlinks.map(function(a){return document.getElementById(a.getAttribute('href').slice(1));}).filter(Boolean);
