@@ -83,7 +83,7 @@ REFS = {
 }
 
 # Merge generated citations (non-destructive: existing ids win).
-for _genmod in ("data.refs_gen", "data.refs_gen4", "data.refs_gen5", "data.refs_gen6"):
+for _genmod in ("data.refs_gen", "data.refs_gen4", "data.refs_gen5", "data.refs_gen6", "data.refs_gen7"):
     try:
         _m = __import__(_genmod, fromlist=["REFS_ADD"])
         for _k, _v in _m.REFS_ADD.items():

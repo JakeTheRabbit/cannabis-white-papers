@@ -1,27 +1,6 @@
 {
  "airflow-design": {
-  "gallery": [
-   [
-    "Boundary layer",
-    "assets/img/t-airflow-design-boundary-layer.jpg"
-   ],
-   [
-    "Air velocity",
-    "assets/img/t-airflow-design-air-velocity.jpg"
-   ],
-   [
-    "Laminar vs turbulent",
-    "assets/img/t-airflow-design-laminar-vs-turbulent.jpg"
-   ],
-   [
-    "Transpiration",
-    "assets/img/t-airflow-design-transpiration.jpg"
-   ],
-   [
-    "Air exchange",
-    "assets/img/t-airflow-design-air-exchange.jpg"
-   ]
-  ],
+  "gallery": [],
   "sequences": [
    {
     "section_id": "boundary",
@@ -65,10 +44,6 @@
    [
     "Dome",
     "assets/img/t-cloning-dome.jpg"
-   ],
-   [
-    "Hardening off",
-    "assets/img/t-cloning-hardening-off.jpg"
    ]
   ],
   "sequences": [
@@ -94,28 +69,7 @@
   ]
  },
  "closed-loop": {
-  "gallery": [
-   [
-    "Lever (actuator)",
-    "assets/img/t-closed-loop-lever-actuator.jpg"
-   ],
-   [
-    "Setpoint vs target",
-    "assets/img/t-closed-loop-setpoint-vs-target.jpg"
-   ],
-   [
-    "VPD (vapour pressure deficit)",
-    "assets/img/t-closed-loop-vpd-vapour-pressure-deficit.jpg"
-   ],
-   [
-    "EC, VWC, dryback",
-    "assets/img/t-closed-loop-ec-vwc-dryback.jpg"
-   ],
-   [
-    "Plant state",
-    "assets/img/t-closed-loop-plant-state.jpg"
-   ]
-  ],
+  "gallery": [],
   "sequences": [
    {
     "section_id": "reading-plant-state",
@@ -147,22 +101,6 @@
    [
     "Substrate",
     "assets/img/t-coco-crop-steering-substrate.jpg"
-   ],
-   [
-    "VWC (volumetric water content)",
-    "assets/img/t-coco-crop-steering-vwc-volumetric-water-content.jpg"
-   ],
-   [
-    "EC (electrical conductivity)",
-    "assets/img/t-coco-crop-steering-ec-electrical-conductivity.jpg"
-   ],
-   [
-    "Field capacity",
-    "assets/img/t-coco-crop-steering-field-capacity.jpg"
-   ],
-   [
-    "Dryback",
-    "assets/img/t-coco-crop-steering-dryback.jpg"
    ]
   ],
   "sequences": [
@@ -198,14 +136,6 @@
     "assets/img/t-defoliation-training-topping.jpg"
    ],
    [
-    "FIM",
-    "assets/img/t-defoliation-training-fim.jpg"
-   ],
-   [
-    "Apical dominance",
-    "assets/img/t-defoliation-training-apical-dominance.jpg"
-   ],
-   [
     "LST (Low-Stress Training)",
     "assets/img/t-defoliation-training-lst-low-stress-training.jpg"
    ],
@@ -237,32 +167,7 @@
   ]
  },
  "f2-crop-steering": {
-  "gallery": [
-   [
-    "VWC (volumetric water content)",
-    "assets/img/t-f2-crop-steering-vwc-volumetric-water-content.jpg"
-   ],
-   [
-    "EC (electrical conductivity)",
-    "assets/img/t-f2-crop-steering-ec-electrical-conductivity.jpg"
-   ],
-   [
-    "Shot",
-    "assets/img/t-f2-crop-steering-shot.jpg"
-   ],
-   [
-    "Field capacity",
-    "assets/img/t-f2-crop-steering-field-capacity.jpg"
-   ],
-   [
-    "Vegetative vs Generative",
-    "assets/img/t-f2-crop-steering-vegetative-vs-generative.jpg"
-   ],
-   [
-    "Zone / phase",
-    "assets/img/t-f2-crop-steering-zone-phase.jpg"
-   ]
-  ],
+  "gallery": [],
   "sequences": [
    {
     "section_id": "p0-p3-cycle",
@@ -287,10 +192,6 @@
  },
  "facility-3d": {
   "gallery": [
-   [
-    "Floor plan",
-    "assets/img/t-facility-3d-floor-plan.jpg"
-   ],
    [
     "Fit-out",
     "assets/img/t-facility-3d-fit-out.jpg"
@@ -321,28 +222,12 @@
  "flowering-stages": {
   "gallery": [
    [
-    "Flip / 12/12",
-    "assets/img/t-flowering-stages-flip-12-12.jpg"
-   ],
-   [
     "Pistils",
     "assets/img/t-flowering-stages-pistils.jpg"
    ],
    [
     "Trichomes",
     "assets/img/t-flowering-stages-trichomes.jpg"
-   ],
-   [
-    "Calyx, bud and cola",
-    "assets/img/t-flowering-stages-calyx-bud-and-cola.jpg"
-   ],
-   [
-    "EC and VPD",
-    "assets/img/t-flowering-stages-ec-and-vpd.jpg"
-   ],
-   [
-    "Defoliation and lollipopping",
-    "assets/img/t-flowering-stages-defoliation-and-lollipopping.jpg"
    ]
   ],
   "sequences": [
@@ -368,28 +253,7 @@
   ]
  },
  "gmp-hash-lab": {
-  "gallery": [
-   [
-    "Cleanroom grade",
-    "assets/img/t-gmp-hash-lab-cleanroom-grade.jpg"
-   ],
-   [
-    "Batch / lot",
-    "assets/img/t-gmp-hash-lab-batch-lot.jpg"
-   ],
-   [
-    "Quarantine / Released / Rejected",
-    "assets/img/t-gmp-hash-lab-quarantine-released-rejected.jpg"
-   ],
-   [
-    "CCP (Critical Control Point)",
-    "assets/img/t-gmp-hash-lab-ccp-critical-control-point.jpg"
-   ],
-   [
-    "Water activity (Aw)",
-    "assets/img/t-gmp-hash-lab-water-activity-aw.jpg"
-   ]
-  ],
+  "gallery": [],
   "sequences": [
    {
     "section_id": "pressure-and-people",
@@ -414,18 +278,6 @@
  },
  "grow-room-systems": {
   "gallery": [
-   [
-    "PPFD",
-    "assets/img/t-grow-room-systems-ppfd.jpg"
-   ],
-   [
-    "CO2",
-    "assets/img/t-grow-room-systems-co2.jpg"
-   ],
-   [
-    "Stomata",
-    "assets/img/t-grow-room-systems-stomata.jpg"
-   ],
    [
     "Substrate",
     "assets/img/t-grow-room-systems-substrate.jpg"
@@ -456,28 +308,8 @@
  "harvest-dry-trim-cure": {
   "gallery": [
    [
-    "Water activity (aw)",
-    "assets/img/t-harvest-dry-trim-cure-water-activity-aw.jpg"
-   ],
-   [
-    "Moisture content (%)",
-    "assets/img/t-harvest-dry-trim-cure-moisture-content.jpg"
-   ],
-   [
-    "Relative humidity (RH)",
-    "assets/img/t-harvest-dry-trim-cure-relative-humidity-rh.jpg"
-   ],
-   [
     "Trichomes",
     "assets/img/t-harvest-dry-trim-cure-trichomes.jpg"
-   ],
-   [
-    "Terpenes",
-    "assets/img/t-harvest-dry-trim-cure-terpenes.jpg"
-   ],
-   [
-    "Burping",
-    "assets/img/t-harvest-dry-trim-cure-burping.jpg"
    ]
   ],
   "sequences": [
@@ -509,20 +341,8 @@
     "assets/img/t-ipm-sop-scouting.jpg"
    ],
    [
-    "Action threshold",
-    "assets/img/t-ipm-sop-action-threshold.jpg"
-   ],
-   [
     "Biological control (biocontrol)",
     "assets/img/t-ipm-sop-biological-control-biocontrol.jpg"
-   ],
-   [
-    "Foliar spray vs drench",
-    "assets/img/t-ipm-sop-foliar-spray-vs-drench.jpg"
-   ],
-   [
-    "Quarantine",
-    "assets/img/t-ipm-sop-quarantine.jpg"
    ],
    [
     "Frass",
@@ -554,26 +374,6 @@
  "irrigation-manual": {
   "gallery": [
    [
-    "VWC (volumetric water content)",
-    "assets/img/t-irrigation-manual-vwc-volumetric-water-content.jpg"
-   ],
-   [
-    "EC (electrical conductivity)",
-    "assets/img/t-irrigation-manual-ec-electrical-conductivity.jpg"
-   ],
-   [
-    "Dryback",
-    "assets/img/t-irrigation-manual-dryback.jpg"
-   ],
-   [
-    "Shot",
-    "assets/img/t-irrigation-manual-shot.jpg"
-   ],
-   [
-    "Field capacity",
-    "assets/img/t-irrigation-manual-field-capacity.jpg"
-   ],
-   [
     "Substrate",
     "assets/img/t-irrigation-manual-substrate.jpg"
    ]
@@ -603,20 +403,8 @@
  "light-acclimation": {
   "gallery": [
    [
-    "PPFD (Photosynthetic Photon Flux Density)",
-    "assets/img/t-light-acclimation-ppfd-photosynthetic-photon-flux-density.jpg"
-   ],
-   [
-    "Photoperiod",
-    "assets/img/t-light-acclimation-photoperiod.jpg"
-   ],
-   [
     "Photoinhibition / bleaching",
     "assets/img/t-light-acclimation-photoinhibition-bleaching.jpg"
-   ],
-   [
-    "Acclimation",
-    "assets/img/t-light-acclimation-acclimation.jpg"
    ]
   ],
   "sequences": [
@@ -642,24 +430,7 @@
   ]
  },
  "lighting-fundamentals": {
-  "gallery": [
-   [
-    "PAR (Photosynthetically Active Radiation)",
-    "assets/img/t-lighting-fundamentals-par-photosynthetically-active-radiation.jpg"
-   ],
-   [
-    "PPFD (Photosynthetic Photon Flux Density)",
-    "assets/img/t-lighting-fundamentals-ppfd-photosynthetic-photon-flux-density.jpg"
-   ],
-   [
-    "Efficacy (umol/J)",
-    "assets/img/t-lighting-fundamentals-efficacy-umol-j.jpg"
-   ],
-   [
-    "Photoperiod",
-    "assets/img/t-lighting-fundamentals-photoperiod.jpg"
-   ]
-  ],
+  "gallery": [],
   "sequences": [
    {
     "section_id": "intensity-dli",
@@ -693,16 +464,8 @@
     "assets/img/t-mould-risk-powdery-mildew-pm.jpg"
    ],
    [
-    "Relative humidity (RH)",
-    "assets/img/t-mould-risk-relative-humidity-rh.jpg"
-   ],
-   [
     "Leaf wetness / free moisture",
     "assets/img/t-mould-risk-leaf-wetness-free-moisture.jpg"
-   ],
-   [
-    "Water activity",
-    "assets/img/t-mould-risk-water-activity.jpg"
    ]
   ],
   "sequences": [
@@ -730,28 +493,12 @@
  "nutrient-deficiencies": {
   "gallery": [
    [
-    "Mobile nutrient",
-    "assets/img/t-nutrient-deficiencies-mobile-nutrient.jpg"
-   ],
-   [
-    "Immobile nutrient",
-    "assets/img/t-nutrient-deficiencies-immobile-nutrient.jpg"
-   ],
-   [
     "Chlorosis",
     "assets/img/t-nutrient-deficiencies-chlorosis.jpg"
    ],
    [
     "Necrosis",
     "assets/img/t-nutrient-deficiencies-necrosis.jpg"
-   ],
-   [
-    "pH",
-    "assets/img/t-nutrient-deficiencies-ph.jpg"
-   ],
-   [
-    "EC (electrical conductivity)",
-    "assets/img/t-nutrient-deficiencies-ec-electrical-conductivity.jpg"
    ]
   ],
   "sequences": [
@@ -783,24 +530,12 @@
     "assets/img/t-nutrient-mixing-athena-stock-solution-concentrate.jpg"
    ],
    [
-    "Working solution (feed)",
-    "assets/img/t-nutrient-mixing-athena-working-solution-feed.jpg"
-   ],
-   [
     "Part A / Pro Core",
     "assets/img/t-nutrient-mixing-athena-part-a-pro-core.jpg"
    ],
    [
     "Part B / Pro Grow or Pro Bloom",
     "assets/img/t-nutrient-mixing-athena-part-b-pro-grow-or-pro-bloom.jpg"
-   ],
-   [
-    "Dosing rate",
-    "assets/img/t-nutrient-mixing-athena-dosing-rate.jpg"
-   ],
-   [
-    "Solubility / saturation",
-    "assets/img/t-nutrient-mixing-athena-solubility-saturation.jpg"
    ]
   ],
   "sequences": [
@@ -865,22 +600,6 @@
  "ph-management": {
   "gallery": [
    [
-    "pH",
-    "assets/img/t-ph-management-ph.jpg"
-   ],
-   [
-    "Root zone",
-    "assets/img/t-ph-management-root-zone.jpg"
-   ],
-   [
-    "Lockout",
-    "assets/img/t-ph-management-lockout.jpg"
-   ],
-   [
-    "EC (electrical conductivity)",
-    "assets/img/t-ph-management-ec-electrical-conductivity.jpg"
-   ],
-   [
     "Substrate / medium",
     "assets/img/t-ph-management-substrate-medium.jpg"
    ],
@@ -912,28 +631,7 @@
   ]
  },
  "plant-state-dashboard": {
-  "gallery": [
-   [
-    "Telemetry",
-    "assets/img/t-plant-state-dashboard-telemetry.jpg"
-   ],
-   [
-    "VPD (vapour pressure deficit)",
-    "assets/img/t-plant-state-dashboard-vpd-vapour-pressure-deficit.jpg"
-   ],
-   [
-    "Crop steering",
-    "assets/img/t-plant-state-dashboard-crop-steering.jpg"
-   ],
-   [
-    "Dryback",
-    "assets/img/t-plant-state-dashboard-dryback.jpg"
-   ],
-   [
-    "PPFD / DLI",
-    "assets/img/t-plant-state-dashboard-ppfd-dli.jpg"
-   ]
-  ],
+  "gallery": [],
   "sequences": [
    {
     "section_id": "plant-state-model",
@@ -959,16 +657,8 @@
  "root-zone-teros12": {
   "gallery": [
    [
-    "Volumetric water content (VWC)",
-    "assets/img/t-root-zone-teros12-volumetric-water-content-vwc.jpg"
-   ],
-   [
     "Capacitance sensor",
     "assets/img/t-root-zone-teros12-capacitance-sensor.jpg"
-   ],
-   [
-    "DUL / container capacity",
-    "assets/img/t-root-zone-teros12-dul-container-capacity.jpg"
    ]
   ],
   "sequences": [
@@ -1006,18 +696,6 @@
    [
     "True leaves",
     "assets/img/t-seeds-germination-true-leaves.jpg"
-   ],
-   [
-    "Seed coat",
-    "assets/img/t-seeds-germination-seed-coat.jpg"
-   ],
-   [
-    "Embryo",
-    "assets/img/t-seeds-germination-embryo.jpg"
-   ],
-   [
-    "Viable",
-    "assets/img/t-seeds-germination-viable.jpg"
    ]
   ],
   "sequences": [
@@ -1044,10 +722,6 @@
  },
  "signal-and-noise": {
   "gallery": [
-   [
-    "Drift",
-    "assets/img/t-signal-and-noise-drift.jpg"
-   ],
    [
     "Calibration",
     "assets/img/t-signal-and-noise-calibration.jpg"
@@ -1078,20 +752,12 @@
  "smart-watering-vrwe": {
   "gallery": [
    [
-    "VWC (volumetric water content)",
-    "assets/img/t-smart-watering-vrwe-vwc-volumetric-water-content.jpg"
-   ],
-   [
     "Runoff / drain",
     "assets/img/t-smart-watering-vrwe-runoff-drain.jpg"
    ],
    [
     "Full pot (DUL, drained upper limit)",
     "assets/img/t-smart-watering-vrwe-full-pot-dul-drained-upper-limit.jpg"
-   ],
-   [
-    "Channeling",
-    "assets/img/t-smart-watering-vrwe-channeling.jpg"
    ]
   ],
   "sequences": [
@@ -1113,28 +779,7 @@
   ]
  },
  "substrates-overview": {
-  "gallery": [
-   [
-    "Water-holding capacity",
-    "assets/img/t-substrates-overview-water-holding-capacity.jpg"
-   ],
-   [
-    "Air-filled porosity",
-    "assets/img/t-substrates-overview-air-filled-porosity.jpg"
-   ],
-   [
-    "EC (electrical conductivity)",
-    "assets/img/t-substrates-overview-ec-electrical-conductivity.jpg"
-   ],
-   [
-    "pH",
-    "assets/img/t-substrates-overview-ph.jpg"
-   ],
-   [
-    "Dryback",
-    "assets/img/t-substrates-overview-dryback.jpg"
-   ]
-  ],
+  "gallery": [],
   "sequences": [
    {
     "section_id": "water-vs-air",
@@ -1159,26 +804,6 @@
  },
  "tissue-culture": {
   "gallery": [
-   [
-    "Hop Latent Viroid (HpLVd, sometimes HLVd)",
-    "assets/img/t-tissue-culture-hop-latent-viroid-hplvd-sometimes-hlvd.jpg"
-   ],
-   [
-    "MS (Murashige & Skoog) salts",
-    "assets/img/t-tissue-culture-ms-murashige-skoog-salts.jpg"
-   ],
-   [
-    "DKW (Driver & Kuniyuki Walnut) salts",
-    "assets/img/t-tissue-culture-dkw-driver-kuniyuki-walnut-salts.jpg"
-   ],
-   [
-    "RT-qPCR",
-    "assets/img/t-tissue-culture-rt-qpcr.jpg"
-   ],
-   [
-    "RT-LAMP",
-    "assets/img/t-tissue-culture-rt-lamp.jpg"
-   ],
    [
     "Hyperhydricity (a.k.a. vitrification)",
     "assets/img/t-tissue-culture-hyperhydricity-a-k-a-vitrification.jpg"
@@ -1207,32 +832,7 @@
   ]
  },
  "water-quality": {
-  "gallery": [
-   [
-    "EC (electrical conductivity)",
-    "assets/img/t-water-quality-ec-electrical-conductivity.jpg"
-   ],
-   [
-    "PPM / TDS (parts per million / total dissolved solids)",
-    "assets/img/t-water-quality-ppm-tds-parts-per-million-total-dissolve.jpg"
-   ],
-   [
-    "pH",
-    "assets/img/t-water-quality-ph.jpg"
-   ],
-   [
-    "Alkalinity",
-    "assets/img/t-water-quality-alkalinity.jpg"
-   ],
-   [
-    "Hardness",
-    "assets/img/t-water-quality-hardness.jpg"
-   ],
-   [
-    "RO (reverse osmosis)",
-    "assets/img/t-water-quality-ro-reverse-osmosis.jpg"
-   ]
-  ],
+  "gallery": [],
   "sequences": [
    {
     "section_id": "ro-buildback",
@@ -1256,24 +856,7 @@
   ]
  },
  "wso-quality-manual": {
-  "gallery": [
-   [
-    "GACP: Good Agricultural and Collection Practice",
-    "assets/img/t-wso-quality-manual-gacp-good-agricultural-and-collection-pr.jpg"
-   ],
-   [
-    "QA vs QC",
-    "assets/img/t-wso-quality-manual-qa-vs-qc.jpg"
-   ],
-   [
-    "SOP: Standard Operating Procedure",
-    "assets/img/t-wso-quality-manual-sop-standard-operating-procedure.jpg"
-   ],
-   [
-    "Good Documentation Practice (GDP)",
-    "assets/img/t-wso-quality-manual-good-documentation-practice-gdp.jpg"
-   ]
-  ],
+  "gallery": [],
   "sequences": [
    {
     "section_id": "how-to-build",

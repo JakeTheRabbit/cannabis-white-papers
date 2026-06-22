@@ -27,6 +27,7 @@ LINK_PHRASES = {
     "gmp-hash-lab": ["GMP", "cleanroom", "good manufacturing practice", "solventless", "hash"],
     "facility-3d": ["3D model", "facility design", "floor plan"],
     "wso-quality-manual": ["quality management system", "quality manual", "standard operating procedure", "batch release", "traceability"],
+    "daily-checks": ["daily checks", "daily check", "pause point", "killer item", "pencil-whipping", "action limit", "self-completing"],
     "seeds-germination": ["germination", "seedling", "feminised seeds", "autoflower", "popping seeds"],
     "lighting-fundamentals": ["light spectrum", "photoperiod", "grow lights", "umol/J", "PAR"],
     "substrates-overview": ["rockwool", "living soil", "hydroponics", "air-filled porosity", "growing media"],

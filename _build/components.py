@@ -90,6 +90,11 @@ def figure(svg, num, caption):
     return (f"<figure class='fig'>{svg}"
             f"<figcaption><span class='fignum'>Figure {num}.</span> {caption}</figcaption></figure>")
 
+def diagram(svg, caption, label="Diagram"):
+    """Injected SVG diagram (no fixed figure number, avoids clashing with inline figures)."""
+    return (f"<figure class='fig'>{svg}"
+            f"<figcaption><span class='fignum'>{label}.</span> {caption}</figcaption></figure>")
+
 def photo(src, caption, alt="", model=""):
     """Raster example image (AI-generated). src relative to site root, e.g. img/foo.jpg."""
     cred = f"<span class='fcredit'>{model}</span>" if model else ""

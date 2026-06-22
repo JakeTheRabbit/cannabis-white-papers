@@ -6,8 +6,14 @@ import os, re, json, sys, html as _h
 sys.path.insert(0, os.path.dirname(__file__))
 
 import theme, app_js, shell
-from components import icon, esc, photo, card, grid, term_gallery, photo_sequence
+from components import icon, esc, photo, card, grid, term_gallery, photo_sequence, diagram
 import images as IMG
+try:
+    import diagrams as DG
+    _DIAGRAMS = DG.DIAGRAMS
+except Exception as _de:
+    _DIAGRAMS = {}
+    print("diagrams registry not loaded:", repr(_de))
 import links as LINKS
 import data.nav as NAV
 import data.glossary as GL
@@ -36,7 +42,7 @@ PAPER_MODULES = [
     "paper_cloning", "paper_nutrient_mixing_athena", "paper_light_acclimation",
     "paper_defoliation_training", "paper_ipm_sop", "paper_harvest_dry_trim_cure",
     "paper_gmp_hash_lab", "paper_facility_3d", "paper_wso_quality_manual",
-    "paper_rockwool_crop_steering",
+    "paper_rockwool_crop_steering", "paper_daily_checks",
 ]
 PAPERS, PAPER_ERRORS = [], []
 for _m in PAPER_MODULES:
@@ -119,6 +125,26 @@ def render_paper(mod):
         if idx is None:
             idx = min(2, len(secs) - 1)
         secs[idx]["blocks"].append(photo_sequence(seq["title"], frames, seq["caption"], "Nano Banana 2"))
+    # embed bespoke SVG concept diagrams (registry; placed by section hint, fallback to terms section)
+    def _find_sec(hint):
+        if hint:
+            h = hint.lower()
+            i = next((i for i, s in enumerate(secs) if h in s["id"].lower() or h in s["title"].lower()), None)
+            if i is not None:
+                return i
+        i = next((i for i, s in enumerate(secs)
+                  if "term" in s["id"].lower() or "vocab" in s["id"].lower()
+                  or any(w in s["title"].lower() for w in ("term", "word", "vocab"))), None)
+        return i if i is not None else (1 if len(secs) > 1 else 0)
+    for entry in _DIAGRAMS.get(mod.SLUG, []):
+        hint, fn, cap = entry
+        try:
+            svg = fn()
+        except Exception as _xe:
+            print(f"  diagram fail [{mod.SLUG}] {cap[:40]}: {_xe!r}")
+            continue
+        if secs:
+            secs[_find_sec(hint)]["blocks"].append(diagram(svg, cap))
     # hero
     pills = []
     for i, (ic, txt) in enumerate(mod.META):
@@ -315,6 +341,7 @@ CURRICULUM = [
    ("Irrigation manual", "irrigation-manual")]),
  ("The operation · Facility & quality", "Run it as a business.", [
    ("Designing a facility in 3D", "facility-3d"), ("Quality manual / QMS", "wso-quality-manual"),
+   ("Daily checks: the self-completing round", "daily-checks"),
    ("Compliance, licensing & track-and-trace", None),
    ("Energy, utilities & sustainability", None), ("Yield per watt & unit economics", None)]),
  ("Reference · Know the plant", "Background worth having.", [
