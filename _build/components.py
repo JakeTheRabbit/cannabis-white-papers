@@ -97,6 +97,28 @@ def photo(src, caption, alt="", model=""):
     return (f"<figure class='fig photo'><img src='{esc(src)}' alt='{a}' loading='lazy'>"
             f"<figcaption><span class='fignum'>Example.</span> {caption}{cred}</figcaption></figure>")
 
+def photo_sequence(title, frames, caption, model=""):
+    """Image progression: [(label, src), ...] shown as labelled frames with arrows."""
+    steps = []
+    for i, (label, src) in enumerate(frames):
+        steps.append(f"<div class='pseq-step'><img src='{esc(src)}' alt='{esc(label)}' loading='lazy'>"
+                     f"<div class='pseq-lab'>{esc(label)}</div></div>")
+        if i < len(frames) - 1:
+            steps.append("<div class='pseq-arr'>&rarr;</div>")
+    cred = f"<span class='fcredit'>{model}</span>" if model else ""
+    return (f"<figure class='fig figseq'><div class='pseq-t'>{esc(title)}</div>"
+            f"<div class='pseq'>{''.join(steps)}</div>"
+            f"<figcaption><span class='fignum'>Sequence.</span> {caption}{cred}</figcaption></figure>")
+
+def term_gallery(items, model=""):
+    """Labelled image grid of the page's physical key terms. items = [(term, src), ...]."""
+    cells = "".join(
+        f"<figure class='tgal-item'><img src='{esc(src)}' alt='{esc(term)}' loading='lazy'>"
+        f"<figcaption>{term}</figcaption></figure>" for term, src in items)
+    cred = f"<span class='fcredit'>{model}</span>" if model else ""
+    return (f"<div class='tgal-wrap'><div class='kicker'>{icon('image',14)} Key terms, in the facility{cred}</div>"
+            f"<div class='tgal'>{cells}</div></div>")
+
 # ---------------- stage card / grid / cards / kv / steps ----------------
 def stagecard(num, title, dur, body):
     return (f"<div class='stagecard'><div class='stagecard-h'>"

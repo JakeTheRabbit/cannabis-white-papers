@@ -53,7 +53,7 @@ GLOSSARY = [
 
 # Merge generated terms (skip any term already defined).
 _seen = {g["term"].strip().lower() for g in GLOSSARY}
-for _genmod in ("data.glossary_gen", "data.glossary_gen4", "data.glossary_gen5"):
+for _genmod in ("data.glossary_gen", "data.glossary_gen4", "data.glossary_gen5", "data.glossary_gen6"):
     try:
         _m = __import__(_genmod, fromlist=["GLOSSARY_ADD"])
         for _g in _m.GLOSSARY_ADD:

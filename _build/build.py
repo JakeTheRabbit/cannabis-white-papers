@@ -6,7 +6,7 @@ import os, re, json, sys, html as _h
 sys.path.insert(0, os.path.dirname(__file__))
 
 import theme, app_js, shell
-from components import icon, esc, photo, card, grid
+from components import icon, esc, photo, card, grid, term_gallery, photo_sequence
 import images as IMG
 import links as LINKS
 import data.nav as NAV
@@ -16,6 +16,11 @@ import importlib
 
 ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
 ASSETS = os.path.join(ROOT, "assets")
+
+try:
+    EMBED = json.load(open(os.path.join(os.path.dirname(__file__), "_gen", "embed_map.json"), encoding="utf-8"))
+except Exception:
+    EMBED = {}
 
 # Papers in display order. Loaded defensively: a broken module is reported,
 # not fatal, and only successfully-loaded papers go live in the nav.
@@ -31,6 +36,7 @@ PAPER_MODULES = [
     "paper_cloning", "paper_nutrient_mixing_athena", "paper_light_acclimation",
     "paper_defoliation_training", "paper_ipm_sop", "paper_harvest_dry_trim_cure",
     "paper_gmp_hash_lab", "paper_facility_3d", "paper_wso_quality_manual",
+    "paper_rockwool_crop_steering",
 ]
 PAPERS, PAPER_ERRORS = [], []
 for _m in PAPER_MODULES:
@@ -95,6 +101,24 @@ def render_paper(mod):
             secs[si]["blocks"].append(
                 photo(f"assets/img/{fn}", im["caption"], im.get("alt", ""),
                       IMG.MODEL_LABEL.get(im["model"], "")))
+    # embed term-image gallery + progression sequences (file-gated)
+    em = EMBED.get(mod.SLUG, {})
+    _ex = lambda src: os.path.exists(os.path.join(ROOT, src))
+    gal = [(t, s) for t, s in em.get("gallery", []) if _ex(s)]
+    if gal and secs:
+        ki = next((i for i, s in enumerate(secs)
+                   if "term" in s["id"].lower() or "vocab" in s["id"].lower()
+                   or any(w in s["title"].lower() for w in ("term", "word", "vocab"))),
+                  1 if len(secs) > 1 else 0)
+        secs[ki]["blocks"].append(term_gallery(gal, "Nano Banana 2"))
+    for seq in em.get("sequences", []):
+        frames = [(l, s) for l, s in seq["frames"] if _ex(s)]
+        if not frames:
+            continue
+        idx = next((i for i, s in enumerate(secs) if s["id"] == seq.get("section_id")), None)
+        if idx is None:
+            idx = min(2, len(secs) - 1)
+        secs[idx]["blocks"].append(photo_sequence(seq["title"], frames, seq["caption"], "Nano Banana 2"))
     # hero
     pills = []
     for i, (ic, txt) in enumerate(mod.META):
@@ -267,6 +291,7 @@ CURRICULUM = [
  ("3 · Flowering", "Steer the plant to yield and quality.", [
    ("The flower cycle, week by week", "flowering-stages"),
    ("Precision coco cultivation: crop steering", "coco-crop-steering"),
+   ("Rockwool crop steering: drybacks & saturation", "rockwool-crop-steering"),
    ("Ripening, flush & harvest timing", None)]),
  ("4 · Harvest, dry, trim & cure", "Turn flower into finished product.", [
    ("Harvest, dry, trim & cure", "harvest-dry-trim-cure"), ("GMP hash manufacturing", "gmp-hash-lab"),

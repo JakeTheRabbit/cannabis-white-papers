@@ -23,6 +23,7 @@ GROUPS = [
     {"group": "Flowering", "items": [
         {"slug": "flowering-stages",   "title": "Flower week by week",  "short": "The flip through to ripe",       "icon": "spark",   "status": "live", "track": "Flower"},
         {"slug": "coco-crop-steering", "title": "Coco & crop steering", "short": "Steer the plant with water",      "icon": "droplet", "status": "live", "track": "Flower"},
+        {"slug": "rockwool-crop-steering", "title": "Rockwool & crop steering", "short": "Drybacks, saturation, the breaking point", "icon": "droplet", "status": "live", "track": "Flower"},
     ]},
     {"group": "Harvest, dry, trim & cure", "items": [
         {"slug": "harvest-dry-trim-cure", "title": "Harvest, dry, trim, cure", "short": "The whole post-harvest run", "icon": "leaf",  "status": "live", "track": "Harvest"},

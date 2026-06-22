@@ -1,0 +1,264 @@
+{
+ "airflow-design": [
+  "Boundary layer",
+  "Air velocity",
+  "Laminar vs turbulent",
+  "Transpiration",
+  "Air exchange"
+ ],
+ "cloning": [
+  "Node",
+  "Mother plant",
+  "Cutting / clone",
+  "Rooting cube",
+  "Dome",
+  "Hardening off"
+ ],
+ "closed-loop": [
+  "Lever (actuator)",
+  "Signal vs noise",
+  "Setpoint vs target",
+  "VPD (vapour pressure deficit)",
+  "EC, VWC, dryback",
+  "Plant state"
+ ],
+ "coco-crop-steering": [
+  "Coco coir",
+  "Substrate",
+  "VWC (volumetric water content)",
+  "EC (electrical conductivity)",
+  "Field capacity",
+  "Dryback",
+  "Crop steering",
+  "Shot"
+ ],
+ "defoliation-training": [
+  "Node",
+  "Topping",
+  "FIM",
+  "Apical dominance",
+  "LST (Low-Stress Training)",
+  "Trellis / SCROG (Screen of Green)",
+  "Lollipopping",
+  "Defanning / defoliation",
+  "Fan leaves",
+  "Source vs sink"
+ ],
+ "f2-crop-steering": [
+  "VWC (volumetric water content)",
+  "EC (electrical conductivity)",
+  "Dryback",
+  "Shot",
+  "Field capacity",
+  "EC ratio",
+  "Vegetative vs Generative",
+  "Zone / phase"
+ ],
+ "facility-3d": [
+  "3D model",
+  "Three.js",
+  "Floor plan",
+  "Render / scene",
+  "JSON / data file",
+  "FOV cone",
+  "Fit-out",
+  "Digital twin"
+ ],
+ "flowering-stages": [
+  "Flip / 12/12",
+  "Pistils",
+  "Trichomes",
+  "Calyx, bud and cola",
+  "EC and VPD",
+  "Defoliation and lollipopping"
+ ],
+ "gmp-hash-lab": [
+  "Cleanroom grade",
+  "Batch / lot",
+  "Deviation",
+  "CAPA",
+  "Quarantine / Released / Rejected",
+  "CCP (Critical Control Point)",
+  "ALCOA+",
+  "Water activity (Aw)"
+ ],
+ "grow-room-systems": [
+  "PPFD",
+  "DLI (daily light integral)",
+  "Transpiration",
+  "VPD (vapour pressure deficit)",
+  "CO2",
+  "Stomata",
+  "Substrate"
+ ],
+ "harvest-dry-trim-cure": [
+  "Water activity (aw)",
+  "Moisture content (%)",
+  "Relative humidity (RH)",
+  "Trichomes",
+  "Terpenes",
+  "Burping"
+ ],
+ "ipm-sop": [
+  "Scouting",
+  "Action threshold",
+  "Biological control (biocontrol)",
+  "Foliar spray vs drench",
+  "REI (re-entry interval)",
+  "Withholding period",
+  "Quarantine",
+  "Frass"
+ ],
+ "irrigation-manual": [
+  "VWC (volumetric water content)",
+  "EC (electrical conductivity)",
+  "Dryback",
+  "Shot",
+  "Field capacity",
+  "Substrate",
+  "Solenoid valve",
+  "VPD &amp; crop steering"
+ ],
+ "light-acclimation": [
+  "PPFD (Photosynthetic Photon Flux Density)",
+  "DLI (Daily Light Integral)",
+  "Photoperiod",
+  "Photoinhibition / bleaching",
+  "Acclimation"
+ ],
+ "lighting-fundamentals": [
+  "PAR (Photosynthetically Active Radiation)",
+  "PPFD (Photosynthetic Photon Flux Density)",
+  "DLI (Daily Light Integral)",
+  "Efficacy (umol/J)",
+  "Photoperiod"
+ ],
+ "mould-risk": [
+  "Bud rot (Botrytis)",
+  "Powdery mildew (PM)",
+  "Relative humidity (RH)",
+  "Leaf wetness / free moisture",
+  "Water activity",
+  "Mycotoxin"
+ ],
+ "nutrient-deficiencies": [
+  "Macronutrient",
+  "Micronutrient",
+  "Mobile nutrient",
+  "Immobile nutrient",
+  "Chlorosis",
+  "Necrosis",
+  "pH",
+  "EC (electrical conductivity)",
+  "Runoff"
+ ],
+ "nutrient-mixing-athena": [
+  "Stock solution (concentrate)",
+  "Working solution (feed)",
+  "Part A / Pro Core",
+  "Part B / Pro Grow or Pro Bloom",
+  "Dosing rate",
+  "Solubility / saturation",
+  "Precipitation / lockout",
+  "EC (electrical conductivity)"
+ ],
+ "pest-id": [
+  "IPM (Integrated Pest Management)",
+  "Biocontrol / beneficial",
+  "Preventative vs curative",
+  "Life cycle / generation time",
+  "Loupe / scope",
+  "Frass, honeydew, stippling",
+  "Action threshold"
+ ],
+ "ph-management": [
+  "pH",
+  "Root zone",
+  "Lockout",
+  "EC (electrical conductivity)",
+  "Substrate / medium",
+  "Buffering",
+  "Alkalinity",
+  "Runoff"
+ ],
+ "plant-state-dashboard": [
+  "Telemetry",
+  "VPD (vapour pressure deficit)",
+  "Crop steering",
+  "Inference",
+  "Sensor fusion",
+  "Dryback",
+  "Leading vs lagging indicator",
+  "Baseline / trajectory",
+  "PPFD / DLI"
+ ],
+ "root-zone-teros12": [
+  "Volumetric water content (VWC)",
+  "Permittivity (dielectric constant)",
+  "Capacitance sensor",
+  "Bulk EC vs pore-water EC",
+  "DUL / container capacity",
+  "Resolution vs accuracy"
+ ],
+ "seeds-germination": [
+  "Taproot (radicle)",
+  "Cotyledons",
+  "True leaves",
+  "Seed coat",
+  "Embryo",
+  "Germination rate",
+  "Viable",
+  "Damping-off"
+ ],
+ "signal-and-noise": [
+  "Signal",
+  "Noise",
+  "Drift",
+  "Averaging / aggregation",
+  "Control limits",
+  "Calibration"
+ ],
+ "smart-watering-vrwe": [
+  "VWC (volumetric water content)",
+  "Runoff / drain",
+  "Full pot (DUL, drained upper limit)",
+  "Channeling",
+  "Confidence"
+ ],
+ "substrates-overview": [
+  "Water-holding capacity",
+  "Air-filled porosity",
+  "EC (electrical conductivity)",
+  "pH",
+  "CEC (cation exchange capacity)",
+  "Buffering",
+  "Dryback"
+ ],
+ "tissue-culture": [
+  "Hop Latent Viroid (HpLVd, sometimes HLVd)",
+  "MS (Murashige &amp; Skoog) salts",
+  "DKW (Driver &amp; Kuniyuki Walnut) salts",
+  "RT-qPCR",
+  "RT-LAMP",
+  "Hyperhydricity (a.k.a. vitrification)",
+  "Acclimatisation (hardening / weaning)"
+ ],
+ "water-quality": [
+  "EC (electrical conductivity)",
+  "PPM / TDS (parts per million / total dissolved solids)",
+  "pH",
+  "Alkalinity",
+  "Hardness",
+  "RO (reverse osmosis)"
+ ],
+ "wso-quality-manual": [
+  "GMP: Good Manufacturing Practice",
+  "GACP: Good Agricultural and Collection Practice",
+  "QMS / PQS: Quality (or Pharmaceutical) Management System",
+  "QA vs QC",
+  "SOP: Standard Operating Procedure",
+  "ALCOA+",
+  "CAPA / QRM / RP",
+  "Good Documentation Practice (GDP)"
+ ]
+}

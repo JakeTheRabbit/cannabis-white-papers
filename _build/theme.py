@@ -134,6 +134,21 @@ code{font-family:var(--mono);font-size:.85em;background:var(--surface-2);border:
 .fig.photo img{display:block;width:100%;height:auto;border-radius:var(--r-lg) var(--r-lg) 0 0}
 .fig.photo figcaption{margin:0;padding:14px 18px}
 .fcredit{display:inline-block;margin-left:8px;font-size:10.5px;letter-spacing:.04em;text-transform:uppercase;color:var(--faint);border:1px solid var(--line);border-radius:20px;padding:1px 8px;vertical-align:middle}
+/* image-sequence (progression) figure */
+.figseq{padding:20px}
+.pseq-t{font-size:14px;font-weight:600;color:var(--ink);margin-bottom:14px;text-align:left}
+.pseq{display:flex;align-items:center;gap:6px;flex-wrap:wrap;justify-content:center}
+.pseq-step{flex:1 1 150px;min-width:130px;max-width:240px;text-align:center}
+.pseq-step img{width:100%;aspect-ratio:1/1;object-fit:cover;border-radius:10px;border:1px solid var(--line)}
+.pseq-lab{font-size:12px;color:var(--ink-2);margin-top:7px;font-weight:500}
+.pseq-arr{color:var(--muted);font-size:18px;flex:0 0 auto}
+@media(max-width:680px){.pseq-arr{transform:rotate(90deg)}.pseq-step{flex-basis:100%}}
+/* key-terms image gallery */
+.tgal-wrap{margin:22px 0}
+.tgal{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:12px}
+.tgal-item{margin:0}
+.tgal-item img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:10px;border:1px solid var(--line);display:block}
+.tgal-item figcaption{font-size:12.5px;color:var(--ink-2);margin-top:6px;font-weight:500;line-height:1.3}
 
 /* ---------------- stage cards ---------------- */
 .stagecard{border:1px solid var(--line);border-radius:var(--r-lg);margin:18px 0;overflow:hidden;background:var(--surface)}

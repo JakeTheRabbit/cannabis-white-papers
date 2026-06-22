@@ -1,0 +1,1612 @@
+[
+ {
+  "file": "t-airflow-design-boundary-layer.jpg",
+  "prompt": "an extreme macro close-up of a single cannabis fan leaf surface showing the fine hairs and waxy sheen where a thin film of still air would cling, sharp detail Photorealistic, inside a clean modern licensed medical cannabis production facility; hygienic white and stainless surfaces, bright even lighting, documentary realism, sharp focus, shallow depth of field. Any people present wear correct PPE: nitrile gloves, hairnet, clean lab coat or gown, closed shoes; no bare hands on product, no smoking, eating or naked flames. No text, words or labels in the image.",
+  "model": "nano_banana_2",
+  "ar": "4:3",
+  "res": "1k"
+ },
+ {
+  "file": "t-airflow-design-air-velocity.jpg",
+  "prompt": "a handheld digital anemometer with a small spinning vane held just above a green cannabis canopy in a grow room, blade rotating in the airflow Photorealistic, inside a clean modern licensed medical cannabis production facility; hygienic white and stainless surfaces, bright even lighting, documentary realism, sharp focus, shallow depth of field. Any people present wear correct PPE: nitrile gloves, hairnet, clean lab coat or gown, closed shoes; no bare hands on product, no smoking, eating or naked flames. No text, words or labels in the image.",
+  "model": "nano_banana_2",
+  "ar": "4:3",
+  "res": "1k"
+ },
+ {
+  "file": "t-airflow-design-laminar-vs-turbulent.jpg",
+  "prompt": "an oscillating circulation fan blowing across a cannabis canopy with visible swirling movement in the leaves, thin haze drifting to show chaotic eddies of moving air Photorealistic, inside a clean modern licensed medical cannabis production facility; hygienic white and stainless surfaces, bright even lighting, documentary realism, sharp focus, shallow depth of field. Any people present wear correct PPE: nitrile gloves, hairnet, clean lab coat or gown, closed shoes; no bare hands on product, no smoking, eating or naked flames. No text, words or labels in the image.",
+  "model": "nano_banana_2",
+  "ar": "4:3",
+  "res": "1k"
+ },
+ {
+  "file": "t-airflow-design-transpiration.jpg",
+  "prompt": "tiny beads of water vapour and fine droplets condensing on the underside of a cannabis fan leaf, extreme macro close-up showing the leaf releasing moisture Photorealistic, inside a clean modern licensed medical cannabis production facility; hygienic white and stainless surfaces, bright even lighting, documentary realism, sharp focus, shallow depth of field. Any people present wear correct PPE: nitrile gloves, hairnet, clean lab coat or gown, closed shoes; no bare hands on product, no smoking, eating or naked flames. No text, words or labels in the image.",
+  "model": "nano_banana_2",
+  "ar": "4:3",
+  "res": "1k"
+ },
+ {
+  "file": "t-airflow-design-air-exchange.jpg",
+  "prompt": "an inline ventilation fan connected to insulated silver ducting and a carbon filter mounted near the ceiling of a clean cultivation room, intake and exhaust ports visible Photorealistic, inside a clean modern licensed medical cannabis production facility; hygienic white and stainless surfaces, bright even lighting, documentary realism, sharp focus, shallow depth of field. Any people present wear correct PPE: nitrile gloves, hairnet, clean lab coat or gown, closed shoes; no bare hands on product, no smoking, eating or naked flames. No text, words or labels in the image.",
+  "model": "nano_banana_2",
+  "ar": "4:3",
+  "res": "1k"
+ },
+ {
+  "file": "s-airflow-design-boundary-layer-airflow-0.jpg",
+  "prompt": "a single broad cannabis fan leaf held perfectly still in stagnant air inside a clean grow room, dust motes hanging motionless around it, close macro view Photorealistic, inside a clean modern licensed medical cannabis production facility; hygienic white and stainless surfaces, bright even lighting, documentary realism, sharp focus, shallow depth of field. Any people present wear correct PPE: nitrile gloves, hairnet, clean lab coat or gown, closed shoes; no bare hands on product, no smoking, eating or naked flames. No text, words or labels in the image.",
+  "model": "nano_banana_2",
+  "ar": "1:1",
+  "res": "1k"
+ },
+ {
+  "file": "s-airflow-design-boundary-layer-airflow-1.jpg",
+  "prompt": "a cannabis fan leaf with its edges and serrated tips just beginning to flutter as a light breeze reaches it, surrounding plants softly stirring Photorealistic, inside a clean modern licensed medical cannabis production facility; hygienic white and stainless surfaces, bright even lighting, documentary realism, sharp focus, shallow depth of field. Any people present wear correct PPE: nitrile gloves, hairnet, clean lab coat or gown, closed shoes; no bare hands on product, no smoking, eating or naked flames. No text, words or labels in the image.",
+  "model": "nano_banana_2",
+  "ar": "1:1",
+  "res": "1k"
+ },
+ {
+  "file": "s-airflow-design-boundary-layer-airflow-2.jpg",
+  "prompt": "a cannabis fan leaf rippling and fluttering vigorously in a steady breeze from an oscillating wall fan, the whole canopy of leaves rustling and moving Photorealistic, inside a clean modern licensed medical cannabis production facility; hygienic white and stainless surfaces, bright even lighting, documentary realism, sharp focus, shallow depth of field. Any people present wear correct PPE: nitrile gloves, hairnet, clean lab coat or gown, closed shoes; no bare hands on product, no smoking, eating or naked flames. No text, words or labels in the image.",
+  "model": "nano_banana_2",
+  "ar": "1:1",
+  "res": "1k"
+ },
+ {
+  "file": "t-cloning-node.jpg",
+  "prompt": "a close-up of a cannabis vegetative stem showing a node where a leaf and side-shoot attach, the joint plump and green against a clean propagation bench Photorealistic, inside a clean modern licensed medical cannabis production facility; hygienic white and stainless surfaces, bright even lighting, documentary realism, sharp focus, shallow depth of field. Any people present wear correct PPE: nitrile gloves, hairnet, clean lab coat or gown, closed shoes; no bare hands on product, no smoking, eating or naked flames. No text, words or labels in the image.",
+  "model": "nano_banana_2",
+  "ar": "4:3",
+  "res": "1k"
+ },
+ {
+  "file": "t-cloning-mother-plant.jpg",
+  "prompt": "a large bushy cannabis mother plant kept in vegetative growth in a clean medical grow room, dense with healthy fan leaves and many leafy side-shoots ready for cuttings Photorealistic, inside a clean modern licensed medical cannabis production facility; hygienic white and stainless surfaces, bright even lighting, documentary realism, sharp focus, shallow depth of field. Any people present wear correct PPE: nitrile gloves, hairnet, clean lab coat or gown, closed shoes; no bare hands on product, no smoking, eating or naked flames. No text, words or labels in the image.",
+  "model": "nano_banana_2",
+  "ar": "4:3",
+  "res": "1k"
+ },
+ {
+  "file": "t-cloning-cutting-clone.jpg",
+  "prompt": "a single fresh cannabis cutting, a short leafy shoot with a clean diagonal cut at the base, lying on a sanitized propagation tray Photorealistic, inside a clean modern licensed medical cannabis production facility; hygienic white and stainless surfaces, bright even lighting, documentary realism, sharp focus, shallow depth of field. Any people present wear correct PPE: nitrile gloves, hairnet, clean lab coat or gown, closed shoes; no bare hands on product, no smoking, eating or naked flames. No text, words or labels in the image.",
+  "model": "nano_banana_2",
+  "ar": "4:3",
+  "res": "1k"
+ },
+ {
+  "file": "t-cloning-rooting-cube.jpg",
+  "prompt": "a moist rockwool rooting cube with a central planting hole sitting in a propagation tray, a cannabis cutting stem inserted into it Photorealistic, inside a clean modern licensed medical cannabis production facility; hygienic white and stainless surfaces, bright even lighting, documentary realism, sharp focus, shallow depth of field. Any people present wear correct PPE: nitrile gloves, hairnet, clean lab coat or gown, closed shoes; no bare hands on product, no smoking, eating or naked flames. No text, words or labels in the image.",
+  "model": "nano_banana_2",
+  "ar": "4:3",
+  "res": "1k"
+ },
+ {
+  "file": "t-cloning-dome.jpg",
+  "prompt": "a clear plastic humidity dome lid covering a propagation tray of cannabis cuttings, condensation beaded on the inside, adjustable vents on top Photorealistic, inside a clean modern licensed medical cannabis production facility; hygienic white and stainless surfaces, bright even lighting, documentary realism, sharp focus, shallow depth of field. Any people present wear correct PPE: nitrile gloves, hairnet, clean lab coat or gown, closed shoes; no bare hands on product, no smoking, eating or naked flames. No text, words or labels in the image.",
+  "model": "nano_banana_2",
+  "ar": "4:3",
+  "res": "1k"
+ },
+ {
+  "file": "t-cloning-hardening-off.jpg",
+  "prompt": "a propagation tray of rooted cannabis clones with the humidity dome lifted slightly ajar on one side, vents open, leaves upright and firm Photorealistic, inside a clean modern licensed medical cannabis production facility; hygienic white and stainless surfaces, bright even lighting, documentary realism, sharp focus, shallow depth of field. Any people present wear correct PPE: nitrile gloves, hairnet, clean lab coat or gown, closed shoes; no bare hands on product, no smoking, eating or naked flames. No text, words or labels in the image.",
+  "model": "nano_banana_2",
+  "ar": "4:3",
+  "res": "1k"
+ },
+ {
+  "file": "s-cloning-trichome-anatomy-zoom-0.jpg",
+  "prompt": "a healthy green cannabis vegetative stem showing several nodes where leaves and side-shoots attach, held in a gloved hand against a clean propagation bench Photorealistic, inside a clean modern licensed medical cannabis production facility; hygienic white and stainless surfaces, bright even lighting, documentary realism, sharp focus, shallow depth of field. Any people present wear correct PPE: nitrile gloves, hairnet, clean lab coat or gown, closed shoes; no bare hands on product, no smoking, eating or naked flames. No text, words or labels in the image.",
+  "model": "nano_banana_2",
+  "ar": "1:1",
+  "res": "1k"
+ },
+ {
+  "file": "s-cloning-trichome-anatomy-zoom-1.jpg",
+  "prompt": "a fresh diagonal cut on a cannabis cutting made just below a leaf node, the severed stem end clean and green Photorealistic, inside a clean modern licensed medical cannabis production facility; hygienic white and stainless surfaces, bright even lighting, documentary realism, sharp focus, shallow depth of field. Any people present wear correct PPE: nitrile gloves, hairnet, clean lab coat or gown, closed shoes; no bare hands on product, no smoking, eating or naked flames. No text, words or labels in the image.",
+  "model": "nano_banana_2",
+  "ar": "1:1",
+  "res": "1k"
+ },
+ {
+  "file": "s-cloning-trichome-anatomy-zoom-2.jpg",
+  "prompt": "the cut end of a cannabis cutting inserted into a moist rockwool rooting cube with the node buried below the surface Photorealistic, inside a clean modern licensed medical cannabis production facility; hygienic white and stainless surfaces, bright even lighting, documentary realism, sharp focus, shallow depth of field. Any people present wear correct PPE: nitrile gloves, hairnet, clean lab coat or gown, closed shoes; no bare hands on product, no smoking, eating or naked flames. No text, words or labels in the image.",
+  "model": "nano_banana_2",
+  "ar": "1:1",
+  "res": "1k"
+ },
+ {
+  "file": "t-closed-loop-lever-actuator.jpg",
+  "prompt": "A grow-room environmental control device close up, an LED dimming controller dial and a climate cooling setpoint controller mounted on a clean facility wall Photorealistic, inside a clean modern licensed medical cannabis production facility; hygienic white and stainless surfaces, bright even lighting, documentary realism, sharp focus, shallow depth of field. Any people present wear correct PPE: nitrile gloves, hairnet, clean lab coat or gown, closed shoes; no bare hands on product, no smoking, eating or naked flames. No text, words or labels in the image.",
+  "model": "nano_banana_2",
+  "ar": "4:3",
+  "res": "1k"
+ },
+ {
+  "file": "t-closed-loop-setpoint-vs-target.jpg",
+  "prompt": "A digital climate controller readout panel in a grow room showing temperature and humidity numbers on a wall-mounted thermostat unit Photorealistic, inside a clean modern licensed medical cannabis production facility; hygienic white and stainless surfaces, bright even lighting, documentary realism, sharp focus, shallow depth of field. Any people present wear correct PPE: nitrile gloves, hairnet, clean lab coat or gown, closed shoes; no bare hands on product, no smoking, eating or naked flames. No text, words or labels in the image.",
+  "model": "nano_banana_2",
+  "ar": "4:3",
+  "res": "1k"
+ },
+ {
+  "file": "t-closed-loop-vpd-vapour-pressure-deficit.jpg",
+  "prompt": "A handheld environment meter and a wall-mounted temperature-humidity sensor probe hanging at canopy height among cannabis plants Photorealistic, inside a clean modern licensed medical cannabis production facility; hygienic white and stainless surfaces, bright even lighting, documentary realism, sharp focus, shallow depth of field. Any people present wear correct PPE: nitrile gloves, hairnet, clean lab coat or gown, closed shoes; no bare hands on product, no smoking, eating or naked flames. No text, words or labels in the image.",
+  "model": "nano_banana_2",
+  "ar": "4:3",
+  "res": "1k"
+ },
+ {
+  "file": "t-closed-loop-ec-vwc-dryback.jpg",
+  "prompt": "a handheld nutrient meter and a three-prong moisture probe inserted into a rockwool cube at the base of a cannabis plant, blank instrument screens, a dripper stake feeding the block Photorealistic, inside a clean modern licensed medical cannabis production facility; hygienic white and stainless surfaces, bright even lighting, documentary realism, sharp focus, shallow depth of field. Any people present wear correct PPE: nitrile gloves, hairnet, clean lab coat or gown, closed shoes; no bare hands on product, no smoking, eating or naked flames. No text, words or labels in the image.",
+  "model": "nano_banana_2",
+  "ar": "4:3",
+  "res": "1k"
+ },
+ {
+  "file": "t-closed-loop-plant-state.jpg",
+  "prompt": "A close up of a single healthy flowering cannabis plant in late bloom, full frosty colas and slightly clawing fan leaves showing its overall condition Photorealistic, inside a clean modern licensed medical cannabis production facility; hygienic white and stainless surfaces, bright even lighting, documentary realism, sharp focus, shallow depth of field. Any people present wear correct PPE: nitrile gloves, hairnet, clean lab coat or gown, closed shoes; no bare hands on product, no smoking, eating or naked flames. No text, words or labels in the image.",
+  "model": "nano_banana_2",
+  "ar": "4:3",
+  "res": "1k"
+ },
+ {
+  "file": "s-closed-loop-trichome-ripeness-0.jpg",
+  "prompt": "extreme true macro of cannabis flower trichomes at the clear stage, glassy fully transparent ball-tipped stalks standing on a green sugar leaf, sharp focus, no melted or distorted shapes Photorealistic, inside a clean modern licensed medical cannabis production facility; hygienic white and stainless surfaces, bright even lighting, documentary realism, sharp focus, shallow depth of field. Any people present wear correct PPE: nitrile gloves, hairnet, clean lab coat or gown, closed shoes; no bare hands on product, no smoking, eating or naked flames. No text, words or labels in the image.",
+  "model": "nano_banana_2",
+  "ar": "1:1",
+  "res": "1k"
+ },
+ {
+  "file": "s-closed-loop-trichome-ripeness-1.jpg",
+  "prompt": "Extreme macro of cannabis flower trichomes turned milky and opaque white, dense forest of cloudy mushroom-headed stalks on a frosted bud Photorealistic, inside a clean modern licensed medical cannabis production facility; hygienic white and stainless surfaces, bright even lighting, documentary realism, sharp focus, shallow depth of field. Any people present wear correct PPE: nitrile gloves, hairnet, clean lab coat or gown, closed shoes; no bare hands on product, no smoking, eating or naked flames. No text, words or labels in the image.",
+  "model": "nano_banana_2",
+  "ar": "1:1",
+  "res": "1k"
+ },
+ {
+  "file": "s-closed-loop-trichome-ripeness-2.jpg",
+  "prompt": "Extreme macro of cannabis flower trichomes with many heads turned warm amber and gold, mixed cloudy and amber tips on a ripe resinous bud Photorealistic, inside a clean modern licensed medical cannabis production facility; hygienic white and stainless surfaces, bright even lighting, documentary realism, sharp focus, shallow depth of field. Any people present wear correct PPE: nitrile gloves, hairnet, clean lab coat or gown, closed shoes; no bare hands on product, no smoking, eating or naked flames. No text, words or labels in the image.",
+  "model": "nano_banana_2",
+  "ar": "1:1",
+  "res": "1k"
+ },
+ {
+  "file": "t-coco-crop-steering-coco-coir.jpg",
+  "prompt": "A loose handful of light-brown coconut coir fibre and pith spilling from an open bag onto a clean steel bench, individual fibres and pith granules clearly visible. Photorealistic, inside a clean modern licensed medical cannabis production facility; hygienic white and stainless surfaces, bright even lighting, documentary realism, sharp focus, shallow depth of field. Any people present wear correct PPE: nitrile gloves, hairnet, clean lab coat or gown, closed shoes; no bare hands on product, no smoking, eating or naked flames. No text, words or labels in the image.",
+  "model": "nano_banana_2",
+  "ar": "4:3",
+  "res": "1k"
+ },
+ {
+  "file": "t-coco-crop-steering-substrate.jpg",
+  "prompt": "A row of plant containers each holding a different growing medium side by side, coco coir, a beige rockwool cube, and clay pebbles, on a clean potting bench. Photorealistic, inside a clean modern licensed medical cannabis production facility; hygienic white and stainless surfaces, bright even lighting, documentary realism, sharp focus, shallow depth of field. Any people present wear correct PPE: nitrile gloves, hairnet, clean lab coat or gown, closed shoes; no bare hands on product, no smoking, eating or naked flames. No text, words or labels in the image.",
+  "model": "nano_banana_2",
+  "ar": "4:3",
+  "res": "1k"
+ },
+ {
+  "file": "t-coco-crop-steering-vwc-volumetric-water-content.jpg",
+  "prompt": "A soil moisture probe inserted into a coco coir pot showing its handheld digital readout display, the sensor prongs buried in the moist medium. Photorealistic, inside a clean modern licensed medical cannabis production facility; hygienic white and stainless surfaces, bright even lighting, documentary realism, sharp focus, shallow depth of field. Any people present wear correct PPE: nitrile gloves, hairnet, clean lab coat or gown, closed shoes; no bare hands on product, no smoking, eating or naked flames. No text, words or labels in the image.",
+  "model": "nano_banana_2",
+  "ar": "4:3",
+  "res": "1k"
+ },
+ {
+  "file": "t-coco-crop-steering-ec-electrical-conductivity.jpg",
+  "prompt": "A handheld EC meter with its probe tip dipped into a small beaker of nutrient runoff solution beside a coco pot on a clean bench. Photorealistic, inside a clean modern licensed medical cannabis production facility; hygienic white and stainless surfaces, bright even lighting, documentary realism, sharp focus, shallow depth of field. Any people present wear correct PPE: nitrile gloves, hairnet, clean lab coat or gown, closed shoes; no bare hands on product, no smoking, eating or naked flames. No text, words or labels in the image.",
+  "model": "nano_banana_2",
+  "ar": "4:3",
+  "res": "1k"
+ },
+ {
+  "file": "t-coco-crop-steering-field-capacity.jpg",
+  "prompt": "A saturated coco coir pot dripping a few beads of water from its drainage holes into a tray, the surface glistening wet just after watering. Photorealistic, inside a clean modern licensed medical cannabis production facility; hygienic white and stainless surfaces, bright even lighting, documentary realism, sharp focus, shallow depth of field. Any people present wear correct PPE: nitrile gloves, hairnet, clean lab coat or gown, closed shoes; no bare hands on product, no smoking, eating or naked flames. No text, words or labels in the image.",
+  "model": "nano_banana_2",
+  "ar": "4:3",
+  "res": "1k"
+ },
+ {
+  "file": "t-coco-crop-steering-dryback.jpg",
+  "prompt": "A coco coir pot on a digital bench scale showing its weight, the medium surface visibly drier and lighter in colour than a freshly watered pot. Photorealistic, inside a clean modern licensed medical cannabis production facility; hygienic white and stainless surfaces, bright even lighting, documentary realism, sharp focus, shallow depth of field. Any people present wear correct PPE: nitrile gloves, hairnet, clean lab coat or gown, closed shoes; no bare hands on product, no smoking, eating or naked flames. No text, words or labels in the image.",
+  "model": "nano_banana_2",
+  "ar": "4:3",
+  "res": "1k"
+ },
+ {
+  "file": "s-coco-crop-steering-dryback-cycle-0.jpg",
+  "prompt": "A freshly watered coco coir pot with a dark, saturated, glistening surface and a single drip falling from its drainage hole into a tray. Photorealistic, inside a clean modern licensed medical cannabis production facility; hygienic white and stainless surfaces, bright even lighting, documentary realism, sharp focus, shallow depth of field. Any people present wear correct PPE: nitrile gloves, hairnet, clean lab coat or gown, closed shoes; no bare hands on product, no smoking, eating or naked flames. No text, words or labels in the image.",
+  "model": "nano_banana_2",
+  "ar": "1:1",
+  "res": "1k"
+ },
+ {
+  "file": "s-coco-crop-steering-dryback-cycle-1.jpg",
+  "prompt": "The same coco coir pot with a medium-brown, partly dried surface, no runoff, dripper stake resting on top. Photorealistic, inside a clean modern licensed medical cannabis production facility; hygienic white and stainless surfaces, bright even lighting, documentary realism, sharp focus, shallow depth of field. Any people present wear correct PPE: nitrile gloves, hairnet, clean lab coat or gown, closed shoes; no bare hands on product, no smoking, eating or naked flames. No text, words or labels in the image.",
+  "model": "nano_banana_2",
+  "ar": "1:1",
+  "res": "1k"
+ },
+ {
+  "file": "s-coco-crop-steering-dryback-cycle-2.jpg",
+  "prompt": "The same coco coir pot with a pale, light-brown crumbly dry surface pulling slightly away from the pot wall, ready for the next watering. Photorealistic, inside a clean modern licensed medical cannabis production facility; hygienic white and stainless surfaces, bright even lighting, documentary realism, sharp focus, shallow depth of field. Any people present wear correct PPE: nitrile gloves, hairnet, clean lab coat or gown, closed shoes; no bare hands on product, no smoking, eating or naked flames. No text, words or labels in the image.",
+  "model": "nano_banana_2",
+  "ar": "1:1",
+  "res": "1k"
+ },
+ {
+  "file": "t-defoliation-training-node.jpg",
+  "prompt": "a close view of a single node on a cannabis stem where two leaves and a side branch emerge from the same point Photorealistic, inside a clean modern licensed medical cannabis production facility; hygienic white and stainless surfaces, bright even lighting, documentary realism, sharp focus, shallow depth of field. Any people present wear correct PPE: nitrile gloves, hairnet, clean lab coat or gown, closed shoes; no bare hands on product, no smoking, eating or naked flames. No text, words or labels in the image.",
+  "model": "nano_banana_2",
+  "ar": "4:3",
+  "res": "1k"
+ },
+ {
+  "file": "t-defoliation-training-topping.jpg",
+  "prompt": "a gloved hand snipping the top growing tip off a young cannabis plant with clean pruning scissors, fresh cut at the stem tip Photorealistic, inside a clean modern licensed medical cannabis production facility; hygienic white and stainless surfaces, bright even lighting, documentary realism, sharp focus, shallow depth of field. Any people present wear correct PPE: nitrile gloves, hairnet, clean lab coat or gown, closed shoes; no bare hands on product, no smoking, eating or naked flames. No text, words or labels in the image.",
+  "model": "nano_banana_2",
+  "ar": "4:3",
+  "res": "1k"
+ },
+ {
+  "file": "t-defoliation-training-fim.jpg",
+  "prompt": "two blue nitrile-gloved hands pinching out the soft new growth tip of a young cannabis plant in veg, a clean FIM topping pinch, close detail Photorealistic, inside a clean modern licensed medical cannabis production facility; hygienic white and stainless surfaces, bright even lighting, documentary realism, sharp focus, shallow depth of field. Any people present wear correct PPE: nitrile gloves, hairnet, clean lab coat or gown, closed shoes; no bare hands on product, no smoking, eating or naked flames. No text, words or labels in the image.",
+  "model": "nano_banana_2",
+  "ar": "4:3",
+  "res": "1k"
+ },
+ {
+  "file": "t-defoliation-training-apical-dominance.jpg",
+  "prompt": "a vegetative cannabis plant with one clearly dominant central cola standing taller than all the surrounding side branches Photorealistic, inside a clean modern licensed medical cannabis production facility; hygienic white and stainless surfaces, bright even lighting, documentary realism, sharp focus, shallow depth of field. Any people present wear correct PPE: nitrile gloves, hairnet, clean lab coat or gown, closed shoes; no bare hands on product, no smoking, eating or naked flames. No text, words or labels in the image.",
+  "model": "nano_banana_2",
+  "ar": "4:3",
+  "res": "1k"
+ },
+ {
+  "file": "t-defoliation-training-lst-low-stress-training.jpg",
+  "prompt": "cannabis branches gently bent outward and tied down with soft plant ties to stakes at the edge of the pot, spreading the plant low and wide Photorealistic, inside a clean modern licensed medical cannabis production facility; hygienic white and stainless surfaces, bright even lighting, documentary realism, sharp focus, shallow depth of field. Any people present wear correct PPE: nitrile gloves, hairnet, clean lab coat or gown, closed shoes; no bare hands on product, no smoking, eating or naked flames. No text, words or labels in the image.",
+  "model": "nano_banana_2",
+  "ar": "4:3",
+  "res": "1k"
+ },
+ {
+  "file": "t-defoliation-training-trellis-scrog-screen-of-green.jpg",
+  "prompt": "a horizontal square-mesh trellis net stretched over a cannabis canopy with shoots growing up evenly through the openings Photorealistic, inside a clean modern licensed medical cannabis production facility; hygienic white and stainless surfaces, bright even lighting, documentary realism, sharp focus, shallow depth of field. Any people present wear correct PPE: nitrile gloves, hairnet, clean lab coat or gown, closed shoes; no bare hands on product, no smoking, eating or naked flames. No text, words or labels in the image.",
+  "model": "nano_banana_2",
+  "ar": "4:3",
+  "res": "1k"
+ },
+ {
+  "file": "s-defoliation-training-topping-two-tops-0.jpg",
+  "prompt": "the single tallest growing tip of a young vegetative cannabis plant, sharp green apical shoot rising above the lower nodes Photorealistic, inside a clean modern licensed medical cannabis production facility; hygienic white and stainless surfaces, bright even lighting, documentary realism, sharp focus, shallow depth of field. Any people present wear correct PPE: nitrile gloves, hairnet, clean lab coat or gown, closed shoes; no bare hands on product, no smoking, eating or naked flames. No text, words or labels in the image.",
+  "model": "nano_banana_2",
+  "ar": "1:1",
+  "res": "1k"
+ },
+ {
+  "file": "s-defoliation-training-topping-two-tops-1.jpg",
+  "prompt": "a clean pruning snip removing the top growing tip of a cannabis stem, fresh cut surface visible at the severed node Photorealistic, inside a clean modern licensed medical cannabis production facility; hygienic white and stainless surfaces, bright even lighting, documentary realism, sharp focus, shallow depth of field. Any people present wear correct PPE: nitrile gloves, hairnet, clean lab coat or gown, closed shoes; no bare hands on product, no smoking, eating or naked flames. No text, words or labels in the image.",
+  "model": "nano_banana_2",
+  "ar": "1:1",
+  "res": "1k"
+ },
+ {
+  "file": "s-defoliation-training-topping-two-tops-2.jpg",
+  "prompt": "a topped cannabis plant a week later with two new symmetrical shoots growing from the node just below the cut Photorealistic, inside a clean modern licensed medical cannabis production facility; hygienic white and stainless surfaces, bright even lighting, documentary realism, sharp focus, shallow depth of field. Any people present wear correct PPE: nitrile gloves, hairnet, clean lab coat or gown, closed shoes; no bare hands on product, no smoking, eating or naked flames. No text, words or labels in the image.",
+  "model": "nano_banana_2",
+  "ar": "1:1",
+  "res": "1k"
+ },
+ {
+  "file": "t-f2-crop-steering-vwc-volumetric-water-content.jpg",
+  "prompt": "a moisture sensor probe with stainless steel prongs pushed into a rockwool slab beside the base of a cannabis plant, the wet substrate clearly visible around the prongs Photorealistic, inside a clean modern licensed medical cannabis production facility; hygienic white and stainless surfaces, bright even lighting, documentary realism, sharp focus, shallow depth of field. Any people present wear correct PPE: nitrile gloves, hairnet, clean lab coat or gown, closed shoes; no bare hands on product, no smoking, eating or naked flames. No text, words or labels in the image.",
+  "model": "nano_banana_2",
+  "ar": "4:3",
+  "res": "1k"
+ },
+ {
+  "file": "t-f2-crop-steering-ec-electrical-conductivity.jpg",
+  "prompt": "a handheld EC pen meter dipped into a small beaker of root-zone runoff water held over a drip tray in a grow room Photorealistic, inside a clean modern licensed medical cannabis production facility; hygienic white and stainless surfaces, bright even lighting, documentary realism, sharp focus, shallow depth of field. Any people present wear correct PPE: nitrile gloves, hairnet, clean lab coat or gown, closed shoes; no bare hands on product, no smoking, eating or naked flames. No text, words or labels in the image.",
+  "model": "nano_banana_2",
+  "ar": "4:3",
+  "res": "1k"
+ },
+ {
+  "file": "t-f2-crop-steering-shot.jpg",
+  "prompt": "a pressure-compensating dripper stake releasing a single bead of nutrient water onto the surface of a rockwool cube, droplet caught mid-drip Photorealistic, inside a clean modern licensed medical cannabis production facility; hygienic white and stainless surfaces, bright even lighting, documentary realism, sharp focus, shallow depth of field. Any people present wear correct PPE: nitrile gloves, hairnet, clean lab coat or gown, closed shoes; no bare hands on product, no smoking, eating or naked flames. No text, words or labels in the image.",
+  "model": "nano_banana_2",
+  "ar": "4:3",
+  "res": "1k"
+ },
+ {
+  "file": "t-f2-crop-steering-field-capacity.jpg",
+  "prompt": "a freshly irrigated rockwool cube fully saturated and dark with water, droplets beading and dripping from its base into the tray below, a cannabis plant rooted on top Photorealistic, inside a clean modern licensed medical cannabis production facility; hygienic white and stainless surfaces, bright even lighting, documentary realism, sharp focus, shallow depth of field. Any people present wear correct PPE: nitrile gloves, hairnet, clean lab coat or gown, closed shoes; no bare hands on product, no smoking, eating or naked flames. No text, words or labels in the image.",
+  "model": "nano_banana_2",
+  "ar": "4:3",
+  "res": "1k"
+ },
+ {
+  "file": "t-f2-crop-steering-vegetative-vs-generative.jpg",
+  "prompt": "two cannabis plants side by side, one with loose wide-spaced vegetative growth and one with tight compact generative structure, in matching rockwool slabs Photorealistic, inside a clean modern licensed medical cannabis production facility; hygienic white and stainless surfaces, bright even lighting, documentary realism, sharp focus, shallow depth of field. Any people present wear correct PPE: nitrile gloves, hairnet, clean lab coat or gown, closed shoes; no bare hands on product, no smoking, eating or naked flames. No text, words or labels in the image.",
+  "model": "nano_banana_2",
+  "ar": "4:3",
+  "res": "1k"
+ },
+ {
+  "file": "t-f2-crop-steering-zone-phase.jpg",
+  "prompt": "one long row of evenly spaced cannabis plants on a single irrigation line of rockwool slabs, with its own feed manifold running down the row in a clean grow room Photorealistic, inside a clean modern licensed medical cannabis production facility; hygienic white and stainless surfaces, bright even lighting, documentary realism, sharp focus, shallow depth of field. Any people present wear correct PPE: nitrile gloves, hairnet, clean lab coat or gown, closed shoes; no bare hands on product, no smoking, eating or naked flames. No text, words or labels in the image.",
+  "model": "nano_banana_2",
+  "ar": "4:3",
+  "res": "1k"
+ },
+ {
+  "file": "s-f2-crop-steering-dryback-cycle-0.jpg",
+  "prompt": "a rockwool cube fully saturated and glistening with water beading and dripping from its underside right after irrigation, a young cannabis plant rooted in it Photorealistic, inside a clean modern licensed medical cannabis production facility; hygienic white and stainless surfaces, bright even lighting, documentary realism, sharp focus, shallow depth of field. Any people present wear correct PPE: nitrile gloves, hairnet, clean lab coat or gown, closed shoes; no bare hands on product, no smoking, eating or naked flames. No text, words or labels in the image.",
+  "model": "nano_banana_2",
+  "ar": "1:1",
+  "res": "1k"
+ },
+ {
+  "file": "s-f2-crop-steering-dryback-cycle-1.jpg",
+  "prompt": "the same rockwool cube partly dried, surface matte and lighter in color with a moisture probe inserted, healthy cannabis plant on top Photorealistic, inside a clean modern licensed medical cannabis production facility; hygienic white and stainless surfaces, bright even lighting, documentary realism, sharp focus, shallow depth of field. Any people present wear correct PPE: nitrile gloves, hairnet, clean lab coat or gown, closed shoes; no bare hands on product, no smoking, eating or naked flames. No text, words or labels in the image.",
+  "model": "nano_banana_2",
+  "ar": "1:1",
+  "res": "1k"
+ },
+ {
+  "file": "s-f2-crop-steering-dryback-cycle-2.jpg",
+  "prompt": "the rockwool cube visibly dry and pale with shrunken edges pulling slightly from the tray, cannabis plant still turgid above it Photorealistic, inside a clean modern licensed medical cannabis production facility; hygienic white and stainless surfaces, bright even lighting, documentary realism, sharp focus, shallow depth of field. Any people present wear correct PPE: nitrile gloves, hairnet, clean lab coat or gown, closed shoes; no bare hands on product, no smoking, eating or naked flames. No text, words or labels in the image.",
+  "model": "nano_banana_2",
+  "ar": "1:1",
+  "res": "1k"
+ },
+ {
+  "file": "t-facility-3d-floor-plan.jpg",
+  "prompt": "a large printed architectural floor-plan blueprint of a cannabis production facility laid flat on a table, showing room outlines, doors and labelled bays Photorealistic, inside a clean modern licensed medical cannabis production facility; hygienic white and stainless surfaces, bright even lighting, documentary realism, sharp focus, shallow depth of field. Any people present wear correct PPE: nitrile gloves, hairnet, clean lab coat or gown, closed shoes; no bare hands on product, no smoking, eating or naked flames. No text, words or labels in the image.",
+  "model": "nano_banana_2",
+  "ar": "4:3",
+  "res": "1k"
+ },
+ {
+  "file": "t-facility-3d-fit-out.jpg",
+  "prompt": "a fully fitted cultivation room interior with rows of stainless steel rolling grow benches, overhead LED light bars, oscillating airflow fans and white climate ducting Photorealistic, inside a clean modern licensed medical cannabis production facility; hygienic white and stainless surfaces, bright even lighting, documentary realism, sharp focus, shallow depth of field. Any people present wear correct PPE: nitrile gloves, hairnet, clean lab coat or gown, closed shoes; no bare hands on product, no smoking, eating or naked flames. No text, words or labels in the image.",
+  "model": "nano_banana_2",
+  "ar": "4:3",
+  "res": "1k"
+ },
+ {
+  "file": "s-facility-3d-bare-to-fitout-0.jpg",
+  "prompt": "an empty cultivation room with bare sealed concrete floor, white insulated wall panels and capped service drops hanging from the ceiling, completely unfurnished Photorealistic, inside a clean modern licensed medical cannabis production facility; hygienic white and stainless surfaces, bright even lighting, documentary realism, sharp focus, shallow depth of field. Any people present wear correct PPE: nitrile gloves, hairnet, clean lab coat or gown, closed shoes; no bare hands on product, no smoking, eating or naked flames. No text, words or labels in the image.",
+  "model": "nano_banana_2",
+  "ar": "1:1",
+  "res": "1k"
+ },
+ {
+  "file": "s-facility-3d-bare-to-fitout-1.jpg",
+  "prompt": "the same empty cultivation room now fitted with rows of stainless steel rolling grow benches and overhead LED grow-light bars mounted but switched off Photorealistic, inside a clean modern licensed medical cannabis production facility; hygienic white and stainless surfaces, bright even lighting, documentary realism, sharp focus, shallow depth of field. Any people present wear correct PPE: nitrile gloves, hairnet, clean lab coat or gown, closed shoes; no bare hands on product, no smoking, eating or naked flames. No text, words or labels in the image.",
+  "model": "nano_banana_2",
+  "ar": "1:1",
+  "res": "1k"
+ },
+ {
+  "file": "s-facility-3d-bare-to-fitout-2.jpg",
+  "prompt": "the cultivation room with grow benches plus wall-mounted climate equipment, oscillating airflow fans, white ducting and a dehumidifier installed Photorealistic, inside a clean modern licensed medical cannabis production facility; hygienic white and stainless surfaces, bright even lighting, documentary realism, sharp focus, shallow depth of field. Any people present wear correct PPE: nitrile gloves, hairnet, clean lab coat or gown, closed shoes; no bare hands on product, no smoking, eating or naked flames. No text, words or labels in the image.",
+  "model": "nano_banana_2",
+  "ar": "1:1",
+  "res": "1k"
+ },
+ {
+  "file": "t-flowering-stages-flip-12-12.jpg",
+  "prompt": "A digital grow-room light timer or controller mounted on a wall, its display set to a 12-hours-on 12-hours-off schedule, in a clean medical cannabis flower room. Photorealistic, inside a clean modern licensed medical cannabis production facility; hygienic white and stainless surfaces, bright even lighting, documentary realism, sharp focus, shallow depth of field. Any people present wear correct PPE: nitrile gloves, hairnet, clean lab coat or gown, closed shoes; no bare hands on product, no smoking, eating or naked flames. No text, words or labels in the image.",
+  "model": "nano_banana_2",
+  "ar": "4:3",
+  "res": "1k"
+ },
+ {
+  "file": "t-flowering-stages-pistils.jpg",
+  "prompt": "An extreme close-up of a single cannabis bud site showing fine white hair-like pistils emerging from a green calyx, healthy and crisp. Photorealistic, inside a clean modern licensed medical cannabis production facility; hygienic white and stainless surfaces, bright even lighting, documentary realism, sharp focus, shallow depth of field. Any people present wear correct PPE: nitrile gloves, hairnet, clean lab coat or gown, closed shoes; no bare hands on product, no smoking, eating or naked flames. No text, words or labels in the image.",
+  "model": "nano_banana_2",
+  "ar": "4:3",
+  "res": "1k"
+ },
+ {
+  "file": "t-flowering-stages-trichomes.jpg",
+  "prompt": "An extreme macro close-up of cannabis flower surface coated in tiny mushroom-shaped resin glands, the trichome heads glistening like glass droplets. Photorealistic, inside a clean modern licensed medical cannabis production facility; hygienic white and stainless surfaces, bright even lighting, documentary realism, sharp focus, shallow depth of field. Any people present wear correct PPE: nitrile gloves, hairnet, clean lab coat or gown, closed shoes; no bare hands on product, no smoking, eating or naked flames. No text, words or labels in the image.",
+  "model": "nano_banana_2",
+  "ar": "4:3",
+  "res": "1k"
+ },
+ {
+  "file": "t-flowering-stages-calyx-bud-and-cola.jpg",
+  "prompt": "A single mature cannabis cola, a dense vertical column of stacked teardrop calyxes forming one large flower top, shown against a clean background. Photorealistic, inside a clean modern licensed medical cannabis production facility; hygienic white and stainless surfaces, bright even lighting, documentary realism, sharp focus, shallow depth of field. Any people present wear correct PPE: nitrile gloves, hairnet, clean lab coat or gown, closed shoes; no bare hands on product, no smoking, eating or naked flames. No text, words or labels in the image.",
+  "model": "nano_banana_2",
+  "ar": "4:3",
+  "res": "1k"
+ },
+ {
+  "file": "t-flowering-stages-ec-and-vpd.jpg",
+  "prompt": "A handheld EC nutrient meter resting beside a reservoir of nutrient solution in a clean grow facility, its probe dipped in the water. Photorealistic, inside a clean modern licensed medical cannabis production facility; hygienic white and stainless surfaces, bright even lighting, documentary realism, sharp focus, shallow depth of field. Any people present wear correct PPE: nitrile gloves, hairnet, clean lab coat or gown, closed shoes; no bare hands on product, no smoking, eating or naked flames. No text, words or labels in the image.",
+  "model": "nano_banana_2",
+  "ar": "4:3",
+  "res": "1k"
+ },
+ {
+  "file": "t-flowering-stages-defoliation-and-lollipopping.jpg",
+  "prompt": "Gloved hands using small pruning snips to remove a large fan leaf from the lower stem of a flowering cannabis plant, trimmed lower growth visible. Photorealistic, inside a clean modern licensed medical cannabis production facility; hygienic white and stainless surfaces, bright even lighting, documentary realism, sharp focus, shallow depth of field. Any people present wear correct PPE: nitrile gloves, hairnet, clean lab coat or gown, closed shoes; no bare hands on product, no smoking, eating or naked flames. No text, words or labels in the image.",
+  "model": "nano_banana_2",
+  "ar": "4:3",
+  "res": "1k"
+ },
+ {
+  "file": "s-flowering-stages-trichome-ripeness-0.jpg",
+  "prompt": "Extreme macro of cannabis trichomes with fully clear, transparent glass-like resin heads on a green bud surface. Photorealistic, inside a clean modern licensed medical cannabis production facility; hygienic white and stainless surfaces, bright even lighting, documentary realism, sharp focus, shallow depth of field. Any people present wear correct PPE: nitrile gloves, hairnet, clean lab coat or gown, closed shoes; no bare hands on product, no smoking, eating or naked flames. No text, words or labels in the image.",
+  "model": "nano_banana_2",
+  "ar": "1:1",
+  "res": "1k"
+ },
+ {
+  "file": "s-flowering-stages-trichome-ripeness-1.jpg",
+  "prompt": "Extreme macro of cannabis trichomes with milky, opaque cloudy white resin heads densely covering the bud. Photorealistic, inside a clean modern licensed medical cannabis production facility; hygienic white and stainless surfaces, bright even lighting, documentary realism, sharp focus, shallow depth of field. Any people present wear correct PPE: nitrile gloves, hairnet, clean lab coat or gown, closed shoes; no bare hands on product, no smoking, eating or naked flames. No text, words or labels in the image.",
+  "model": "nano_banana_2",
+  "ar": "1:1",
+  "res": "1k"
+ },
+ {
+  "file": "s-flowering-stages-trichome-ripeness-2.jpg",
+  "prompt": "Extreme macro of cannabis trichomes with a mix of cloudy and golden amber resin heads on a ripe bud. Photorealistic, inside a clean modern licensed medical cannabis production facility; hygienic white and stainless surfaces, bright even lighting, documentary realism, sharp focus, shallow depth of field. Any people present wear correct PPE: nitrile gloves, hairnet, clean lab coat or gown, closed shoes; no bare hands on product, no smoking, eating or naked flames. No text, words or labels in the image.",
+  "model": "nano_banana_2",
+  "ar": "1:1",
+  "res": "1k"
+ },
+ {
+  "file": "t-gmp-hash-lab-cleanroom-grade.jpg",
+  "prompt": "A wall-mounted differential pressure gauge and a HEPA ceiling diffuser in a smooth white sealed cleanroom with coved floor corners Photorealistic, inside a clean modern licensed medical cannabis production facility; hygienic white and stainless surfaces, bright even lighting, documentary realism, sharp focus, shallow depth of field. Any people present wear correct PPE: nitrile gloves, hairnet, clean lab coat or gown, closed shoes; no bare hands on product, no smoking, eating or naked flames. No text, words or labels in the image.",
+  "model": "nano_banana_2",
+  "ar": "4:3",
+  "res": "1k"
+ },
+ {
+  "file": "t-gmp-hash-lab-batch-lot.jpg",
+  "prompt": "A sealed labelled production drum with a printed lot-ID tag sitting on a clean pallet in a production corridor Photorealistic, inside a clean modern licensed medical cannabis production facility; hygienic white and stainless surfaces, bright even lighting, documentary realism, sharp focus, shallow depth of field. Any people present wear correct PPE: nitrile gloves, hairnet, clean lab coat or gown, closed shoes; no bare hands on product, no smoking, eating or naked flames. No text, words or labels in the image.",
+  "model": "nano_banana_2",
+  "ar": "4:3",
+  "res": "1k"
+ },
+ {
+  "file": "t-gmp-hash-lab-quarantine-released-rejected.jpg",
+  "prompt": "A roped-off quarantine hold area in a clean warehouse with sealed drums on pallets and coloured status hold tags tied to them Photorealistic, inside a clean modern licensed medical cannabis production facility; hygienic white and stainless surfaces, bright even lighting, documentary realism, sharp focus, shallow depth of field. Any people present wear correct PPE: nitrile gloves, hairnet, clean lab coat or gown, closed shoes; no bare hands on product, no smoking, eating or naked flames. No text, words or labels in the image.",
+  "model": "nano_banana_2",
+  "ar": "4:3",
+  "res": "1k"
+ },
+ {
+  "file": "t-gmp-hash-lab-ccp-critical-control-point.jpg",
+  "prompt": "A digital temperature and pressure readout panel mounted on a stainless steel rosin or extraction press in a clean production room Photorealistic, inside a clean modern licensed medical cannabis production facility; hygienic white and stainless surfaces, bright even lighting, documentary realism, sharp focus, shallow depth of field. Any people present wear correct PPE: nitrile gloves, hairnet, clean lab coat or gown, closed shoes; no bare hands on product, no smoking, eating or naked flames. No text, words or labels in the image.",
+  "model": "nano_banana_2",
+  "ar": "4:3",
+  "res": "1k"
+ },
+ {
+  "file": "t-gmp-hash-lab-water-activity-aw.jpg",
+  "prompt": "A benchtop water activity meter with a sample cup of cannabis concentrate seated in its measuring chamber on a clean lab bench Photorealistic, inside a clean modern licensed medical cannabis production facility; hygienic white and stainless surfaces, bright even lighting, documentary realism, sharp focus, shallow depth of field. Any people present wear correct PPE: nitrile gloves, hairnet, clean lab coat or gown, closed shoes; no bare hands on product, no smoking, eating or naked flames. No text, words or labels in the image.",
+  "model": "nano_banana_2",
+  "ar": "4:3",
+  "res": "1k"
+ },
+ {
+  "file": "s-gmp-hash-lab-gowning-sequence-0.jpg",
+  "prompt": "A stainless steel gowning bench and wall dispensers of folded sterile coveralls, hairnets and overshoes inside a clean white airlock anteroom Photorealistic, inside a clean modern licensed medical cannabis production facility; hygienic white and stainless surfaces, bright even lighting, documentary realism, sharp focus, shallow depth of field. Any people present wear correct PPE: nitrile gloves, hairnet, clean lab coat or gown, closed shoes; no bare hands on product, no smoking, eating or naked flames. No text, words or labels in the image.",
+  "model": "nano_banana_2",
+  "ar": "1:1",
+  "res": "1k"
+ },
+ {
+  "file": "s-gmp-hash-lab-gowning-sequence-1.jpg",
+  "prompt": "A fully sealed white disposable cleanroom coverall hanging ready with hood, mask and boot covers laid out on a bench Photorealistic, inside a clean modern licensed medical cannabis production facility; hygienic white and stainless surfaces, bright even lighting, documentary realism, sharp focus, shallow depth of field. Any people present wear correct PPE: nitrile gloves, hairnet, clean lab coat or gown, closed shoes; no bare hands on product, no smoking, eating or naked flames. No text, words or labels in the image.",
+  "model": "nano_banana_2",
+  "ar": "1:1",
+  "res": "1k"
+ },
+ {
+  "file": "s-gmp-hash-lab-gowning-sequence-2.jpg",
+  "prompt": "Blue nitrile gloves and a peel-off tacky contamination-control floor mat at the threshold of a cleanroom door Photorealistic, inside a clean modern licensed medical cannabis production facility; hygienic white and stainless surfaces, bright even lighting, documentary realism, sharp focus, shallow depth of field. Any people present wear correct PPE: nitrile gloves, hairnet, clean lab coat or gown, closed shoes; no bare hands on product, no smoking, eating or naked flames. No text, words or labels in the image.",
+  "model": "nano_banana_2",
+  "ar": "1:1",
+  "res": "1k"
+ },
+ {
+  "file": "t-grow-room-systems-ppfd.jpg",
+  "prompt": "A handheld quantum PAR light meter held just above a green cannabis canopy with its sensor head flat to the leaves, the meter body close and in sharp focus. Photorealistic, inside a clean modern licensed medical cannabis production facility; hygienic white and stainless surfaces, bright even lighting, documentary realism, sharp focus, shallow depth of field. Any people present wear correct PPE: nitrile gloves, hairnet, clean lab coat or gown, closed shoes; no bare hands on product, no smoking, eating or naked flames. No text, words or labels in the image.",
+  "model": "nano_banana_2",
+  "ar": "4:3",
+  "res": "1k"
+ },
+ {
+  "file": "t-grow-room-systems-co2.jpg",
+  "prompt": "A wall-mounted CO2 controller unit with a sensor and a short length of clear distribution tubing running toward a cannabis canopy in a grow room, the controller close and clearly in frame. Photorealistic, inside a clean modern licensed medical cannabis production facility; hygienic white and stainless surfaces, bright even lighting, documentary realism, sharp focus, shallow depth of field. Any people present wear correct PPE: nitrile gloves, hairnet, clean lab coat or gown, closed shoes; no bare hands on product, no smoking, eating or naked flames. No text, words or labels in the image.",
+  "model": "nano_banana_2",
+  "ar": "4:3",
+  "res": "1k"
+ },
+ {
+  "file": "t-grow-room-systems-stomata.jpg",
+  "prompt": "An extreme close-up of the underside of a fresh green cannabis leaf showing the fine waxy surface texture and tiny pores, filling the frame. Photorealistic, inside a clean modern licensed medical cannabis production facility; hygienic white and stainless surfaces, bright even lighting, documentary realism, sharp focus, shallow depth of field. Any people present wear correct PPE: nitrile gloves, hairnet, clean lab coat or gown, closed shoes; no bare hands on product, no smoking, eating or naked flames. No text, words or labels in the image.",
+  "model": "nano_banana_2",
+  "ar": "4:3",
+  "res": "1k"
+ },
+ {
+  "file": "t-grow-room-systems-substrate.jpg",
+  "prompt": "A single moist brown coco coir block beside an upright rockwool cube, both clean and fresh on a stainless surface, roots not yet present. Photorealistic, inside a clean modern licensed medical cannabis production facility; hygienic white and stainless surfaces, bright even lighting, documentary realism, sharp focus, shallow depth of field. Any people present wear correct PPE: nitrile gloves, hairnet, clean lab coat or gown, closed shoes; no bare hands on product, no smoking, eating or naked flames. No text, words or labels in the image.",
+  "model": "nano_banana_2",
+  "ar": "4:3",
+  "res": "1k"
+ },
+ {
+  "file": "s-grow-room-systems-substrate-types-0.jpg",
+  "prompt": "A single fresh upright rockwool propagation cube, dry and clean, on a stainless surface. Photorealistic, inside a clean modern licensed medical cannabis production facility; hygienic white and stainless surfaces, bright even lighting, documentary realism, sharp focus, shallow depth of field. Any people present wear correct PPE: nitrile gloves, hairnet, clean lab coat or gown, closed shoes; no bare hands on product, no smoking, eating or naked flames. No text, words or labels in the image.",
+  "model": "nano_banana_2",
+  "ar": "1:1",
+  "res": "1k"
+ },
+ {
+  "file": "s-grow-room-systems-substrate-types-1.jpg",
+  "prompt": "A loose pile of moist brown coco coir growing media on a stainless surface. Photorealistic, inside a clean modern licensed medical cannabis production facility; hygienic white and stainless surfaces, bright even lighting, documentary realism, sharp focus, shallow depth of field. Any people present wear correct PPE: nitrile gloves, hairnet, clean lab coat or gown, closed shoes; no bare hands on product, no smoking, eating or naked flames. No text, words or labels in the image.",
+  "model": "nano_banana_2",
+  "ar": "1:1",
+  "res": "1k"
+ },
+ {
+  "file": "s-grow-room-systems-substrate-types-2.jpg",
+  "prompt": "A handful of dark fibrous peat-based potting mix on a stainless surface. Photorealistic, inside a clean modern licensed medical cannabis production facility; hygienic white and stainless surfaces, bright even lighting, documentary realism, sharp focus, shallow depth of field. Any people present wear correct PPE: nitrile gloves, hairnet, clean lab coat or gown, closed shoes; no bare hands on product, no smoking, eating or naked flames. No text, words or labels in the image.",
+  "model": "nano_banana_2",
+  "ar": "1:1",
+  "res": "1k"
+ },
+ {
+  "file": "t-harvest-dry-trim-cure-water-activity-aw.jpg",
+  "prompt": "a benchtop water activity meter with a small sample cup holding ground cannabis flower, a digital readout panel on the device Photorealistic, inside a clean modern licensed medical cannabis production facility; hygienic white and stainless surfaces, bright even lighting, documentary realism, sharp focus, shallow depth of field. Any people present wear correct PPE: nitrile gloves, hairnet, clean lab coat or gown, closed shoes; no bare hands on product, no smoking, eating or naked flames. No text, words or labels in the image.",
+  "model": "nano_banana_2",
+  "ar": "4:3",
+  "res": "1k"
+ },
+ {
+  "file": "t-harvest-dry-trim-cure-moisture-content.jpg",
+  "prompt": "a handheld moisture analyzer balance holding a small sample of dried cannabis flower on its weighing pan Photorealistic, inside a clean modern licensed medical cannabis production facility; hygienic white and stainless surfaces, bright even lighting, documentary realism, sharp focus, shallow depth of field. Any people present wear correct PPE: nitrile gloves, hairnet, clean lab coat or gown, closed shoes; no bare hands on product, no smoking, eating or naked flames. No text, words or labels in the image.",
+  "model": "nano_banana_2",
+  "ar": "4:3",
+  "res": "1k"
+ },
+ {
+  "file": "t-harvest-dry-trim-cure-relative-humidity-rh.jpg",
+  "prompt": "a digital hygrometer probe mounted on the wall of a clean cannabis drying room showing humidity and temperature readouts Photorealistic, inside a clean modern licensed medical cannabis production facility; hygienic white and stainless surfaces, bright even lighting, documentary realism, sharp focus, shallow depth of field. Any people present wear correct PPE: nitrile gloves, hairnet, clean lab coat or gown, closed shoes; no bare hands on product, no smoking, eating or naked flames. No text, words or labels in the image.",
+  "model": "nano_banana_2",
+  "ar": "4:3",
+  "res": "1k"
+ },
+ {
+  "file": "t-harvest-dry-trim-cure-trichomes.jpg",
+  "prompt": "extreme macro close-up of frosty resin trichome glands coating a cannabis flower, mushroom-shaped stalks topped with glistening bulbous heads Photorealistic, inside a clean modern licensed medical cannabis production facility; hygienic white and stainless surfaces, bright even lighting, documentary realism, sharp focus, shallow depth of field. Any people present wear correct PPE: nitrile gloves, hairnet, clean lab coat or gown, closed shoes; no bare hands on product, no smoking, eating or naked flames. No text, words or labels in the image.",
+  "model": "nano_banana_2",
+  "ar": "4:3",
+  "res": "1k"
+ },
+ {
+  "file": "t-harvest-dry-trim-cure-terpenes.jpg",
+  "prompt": "a small amber dropper vial of golden cannabis terpene oil beside a fragrant cured flower on a clean bench Photorealistic, inside a clean modern licensed medical cannabis production facility; hygienic white and stainless surfaces, bright even lighting, documentary realism, sharp focus, shallow depth of field. Any people present wear correct PPE: nitrile gloves, hairnet, clean lab coat or gown, closed shoes; no bare hands on product, no smoking, eating or naked flames. No text, words or labels in the image.",
+  "model": "nano_banana_2",
+  "ar": "4:3",
+  "res": "1k"
+ },
+ {
+  "file": "t-harvest-dry-trim-cure-burping.jpg",
+  "prompt": "a gloved hand lifting the lid off a clear glass curing jar packed with cured cannabis flowers to release air Photorealistic, inside a clean modern licensed medical cannabis production facility; hygienic white and stainless surfaces, bright even lighting, documentary realism, sharp focus, shallow depth of field. Any people present wear correct PPE: nitrile gloves, hairnet, clean lab coat or gown, closed shoes; no bare hands on product, no smoking, eating or naked flames. No text, words or labels in the image.",
+  "model": "nano_banana_2",
+  "ar": "4:3",
+  "res": "1k"
+ },
+ {
+  "file": "s-harvest-dry-trim-cure-trichome-ripeness-0.jpg",
+  "prompt": "extreme macro of clear, glassy translucent trichome glands standing on a cannabis flower calyx, bulbous heads still transparent Photorealistic, inside a clean modern licensed medical cannabis production facility; hygienic white and stainless surfaces, bright even lighting, documentary realism, sharp focus, shallow depth of field. Any people present wear correct PPE: nitrile gloves, hairnet, clean lab coat or gown, closed shoes; no bare hands on product, no smoking, eating or naked flames. No text, words or labels in the image.",
+  "model": "nano_banana_2",
+  "ar": "1:1",
+  "res": "1k"
+ },
+ {
+  "file": "s-harvest-dry-trim-cure-trichome-ripeness-1.jpg",
+  "prompt": "extreme macro of milky, cloudy white trichome glands densely covering a cannabis bud, heads turned opaque Photorealistic, inside a clean modern licensed medical cannabis production facility; hygienic white and stainless surfaces, bright even lighting, documentary realism, sharp focus, shallow depth of field. Any people present wear correct PPE: nitrile gloves, hairnet, clean lab coat or gown, closed shoes; no bare hands on product, no smoking, eating or naked flames. No text, words or labels in the image.",
+  "model": "nano_banana_2",
+  "ar": "1:1",
+  "res": "1k"
+ },
+ {
+  "file": "s-harvest-dry-trim-cure-trichome-ripeness-2.jpg",
+  "prompt": "extreme macro of amber-tinted trichome glands on a ripe cannabis flower, a mix of cloudy and golden-brown resin heads Photorealistic, inside a clean modern licensed medical cannabis production facility; hygienic white and stainless surfaces, bright even lighting, documentary realism, sharp focus, shallow depth of field. Any people present wear correct PPE: nitrile gloves, hairnet, clean lab coat or gown, closed shoes; no bare hands on product, no smoking, eating or naked flames. No text, words or labels in the image.",
+  "model": "nano_banana_2",
+  "ar": "1:1",
+  "res": "1k"
+ },
+ {
+  "file": "t-ipm-sop-scouting.jpg",
+  "prompt": "a gloved hand holding a jeweller's loupe magnifier up to the underside of a cannabis fan leaf, inspecting closely for pests on a plant in a clean grow room Photorealistic, inside a clean modern licensed medical cannabis production facility; hygienic white and stainless surfaces, bright even lighting, documentary realism, sharp focus, shallow depth of field. Any people present wear correct PPE: nitrile gloves, hairnet, clean lab coat or gown, closed shoes; no bare hands on product, no smoking, eating or naked flames. No text, words or labels in the image.",
+  "model": "nano_banana_2",
+  "ar": "4:3",
+  "res": "1k"
+ },
+ {
+  "file": "t-ipm-sop-action-threshold.jpg",
+  "prompt": "a yellow sticky trap crowded with several small dark insects hanging among cannabis foliage, the catch level being judged Photorealistic, inside a clean modern licensed medical cannabis production facility; hygienic white and stainless surfaces, bright even lighting, documentary realism, sharp focus, shallow depth of field. Any people present wear correct PPE: nitrile gloves, hairnet, clean lab coat or gown, closed shoes; no bare hands on product, no smoking, eating or naked flames. No text, words or labels in the image.",
+  "model": "nano_banana_2",
+  "ar": "4:3",
+  "res": "1k"
+ },
+ {
+  "file": "t-ipm-sop-biological-control-biocontrol.jpg",
+  "prompt": "a paper breeder sachet of live predatory mites clipped onto a cannabis plant stem, tiny live beneficial mites visible around the sachet, a blue-gloved hand steadying it, macro detail Photorealistic, inside a clean modern licensed medical cannabis production facility; hygienic white and stainless surfaces, bright even lighting, documentary realism, sharp focus, shallow depth of field. Any people present wear correct PPE: nitrile gloves, hairnet, clean lab coat or gown, closed shoes; no bare hands on product, no smoking, eating or naked flames. No text, words or labels in the image.",
+  "model": "nano_banana_2",
+  "ar": "4:3",
+  "res": "1k"
+ },
+ {
+  "file": "t-ipm-sop-foliar-spray-vs-drench.jpg",
+  "prompt": "a handheld pump sprayer misting a fine liquid film over the leaves of a cannabis plant in a grow room Photorealistic, inside a clean modern licensed medical cannabis production facility; hygienic white and stainless surfaces, bright even lighting, documentary realism, sharp focus, shallow depth of field. Any people present wear correct PPE: nitrile gloves, hairnet, clean lab coat or gown, closed shoes; no bare hands on product, no smoking, eating or naked flames. No text, words or labels in the image.",
+  "model": "nano_banana_2",
+  "ar": "4:3",
+  "res": "1k"
+ },
+ {
+  "file": "t-ipm-sop-quarantine.jpg",
+  "prompt": "a few young cannabis plants isolated on their own bench behind a curtain in a separate room, held apart from the main crop under observation Photorealistic, inside a clean modern licensed medical cannabis production facility; hygienic white and stainless surfaces, bright even lighting, documentary realism, sharp focus, shallow depth of field. Any people present wear correct PPE: nitrile gloves, hairnet, clean lab coat or gown, closed shoes; no bare hands on product, no smoking, eating or naked flames. No text, words or labels in the image.",
+  "model": "nano_banana_2",
+  "ar": "4:3",
+  "res": "1k"
+ },
+ {
+  "file": "t-ipm-sop-frass.jpg",
+  "prompt": "tiny dark granular insect droppings scattered across the surface of a cannabis fan leaf, an early sign of feeding pests Photorealistic, inside a clean modern licensed medical cannabis production facility; hygienic white and stainless surfaces, bright even lighting, documentary realism, sharp focus, shallow depth of field. Any people present wear correct PPE: nitrile gloves, hairnet, clean lab coat or gown, closed shoes; no bare hands on product, no smoking, eating or naked flames. No text, words or labels in the image.",
+  "model": "nano_banana_2",
+  "ar": "4:3",
+  "res": "1k"
+ },
+ {
+  "file": "s-ipm-sop-trichome-ripeness-0.jpg",
+  "prompt": "extreme macro of cannabis flower trichomes with glassy fully clear transparent resin heads on slender stalks Photorealistic, inside a clean modern licensed medical cannabis production facility; hygienic white and stainless surfaces, bright even lighting, documentary realism, sharp focus, shallow depth of field. Any people present wear correct PPE: nitrile gloves, hairnet, clean lab coat or gown, closed shoes; no bare hands on product, no smoking, eating or naked flames. No text, words or labels in the image.",
+  "model": "nano_banana_2",
+  "ar": "1:1",
+  "res": "1k"
+ },
+ {
+  "file": "s-ipm-sop-trichome-ripeness-1.jpg",
+  "prompt": "extreme macro of cannabis flower trichomes with milky opaque white cloudy resin heads densely packed Photorealistic, inside a clean modern licensed medical cannabis production facility; hygienic white and stainless surfaces, bright even lighting, documentary realism, sharp focus, shallow depth of field. Any people present wear correct PPE: nitrile gloves, hairnet, clean lab coat or gown, closed shoes; no bare hands on product, no smoking, eating or naked flames. No text, words or labels in the image.",
+  "model": "nano_banana_2",
+  "ar": "1:1",
+  "res": "1k"
+ },
+ {
+  "file": "s-ipm-sop-trichome-ripeness-2.jpg",
+  "prompt": "extreme macro of cannabis flower trichomes with golden amber coloured resin heads among cloudy ones Photorealistic, inside a clean modern licensed medical cannabis production facility; hygienic white and stainless surfaces, bright even lighting, documentary realism, sharp focus, shallow depth of field. Any people present wear correct PPE: nitrile gloves, hairnet, clean lab coat or gown, closed shoes; no bare hands on product, no smoking, eating or naked flames. No text, words or labels in the image.",
+  "model": "nano_banana_2",
+  "ar": "1:1",
+  "res": "1k"
+ },
+ {
+  "file": "t-irrigation-manual-vwc-volumetric-water-content.jpg",
+  "prompt": "A handheld substrate moisture sensor with stainless probes pushed into a rockwool slab beside a cannabis plant, the probe buried in the damp media Photorealistic, inside a clean modern licensed medical cannabis production facility; hygienic white and stainless surfaces, bright even lighting, documentary realism, sharp focus, shallow depth of field. Any people present wear correct PPE: nitrile gloves, hairnet, clean lab coat or gown, closed shoes; no bare hands on product, no smoking, eating or naked flames. No text, words or labels in the image.",
+  "model": "nano_banana_2",
+  "ar": "4:3",
+  "res": "1k"
+ },
+ {
+  "file": "t-irrigation-manual-ec-electrical-conductivity.jpg",
+  "prompt": "A handheld EC and nutrient meter held over a beaker of nutrient solution with its probe submerged, on a clean stainless bench in a grow facility Photorealistic, inside a clean modern licensed medical cannabis production facility; hygienic white and stainless surfaces, bright even lighting, documentary realism, sharp focus, shallow depth of field. Any people present wear correct PPE: nitrile gloves, hairnet, clean lab coat or gown, closed shoes; no bare hands on product, no smoking, eating or naked flames. No text, words or labels in the image.",
+  "model": "nano_banana_2",
+  "ar": "4:3",
+  "res": "1k"
+ },
+ {
+  "file": "t-irrigation-manual-dryback.jpg",
+  "prompt": "A rockwool cube that has visibly dried out, its surface pale and matte with a young cannabis plant growing from it, sitting on a clean propagation tray Photorealistic, inside a clean modern licensed medical cannabis production facility; hygienic white and stainless surfaces, bright even lighting, documentary realism, sharp focus, shallow depth of field. Any people present wear correct PPE: nitrile gloves, hairnet, clean lab coat or gown, closed shoes; no bare hands on product, no smoking, eating or naked flames. No text, words or labels in the image.",
+  "model": "nano_banana_2",
+  "ar": "4:3",
+  "res": "1k"
+ },
+ {
+  "file": "t-irrigation-manual-shot.jpg",
+  "prompt": "A dripper stake releasing a fresh burst of nutrient water into coco substrate at the base of a cannabis plant, a dark wet ring spreading from the emitter Photorealistic, inside a clean modern licensed medical cannabis production facility; hygienic white and stainless surfaces, bright even lighting, documentary realism, sharp focus, shallow depth of field. Any people present wear correct PPE: nitrile gloves, hairnet, clean lab coat or gown, closed shoes; no bare hands on product, no smoking, eating or naked flames. No text, words or labels in the image.",
+  "model": "nano_banana_2",
+  "ar": "4:3",
+  "res": "1k"
+ },
+ {
+  "file": "t-irrigation-manual-field-capacity.jpg",
+  "prompt": "A fully saturated rockwool slab with water beading on its surface and a single drip falling from its lower edge, on a clean drainage tray Photorealistic, inside a clean modern licensed medical cannabis production facility; hygienic white and stainless surfaces, bright even lighting, documentary realism, sharp focus, shallow depth of field. Any people present wear correct PPE: nitrile gloves, hairnet, clean lab coat or gown, closed shoes; no bare hands on product, no smoking, eating or naked flames. No text, words or labels in the image.",
+  "model": "nano_banana_2",
+  "ar": "4:3",
+  "res": "1k"
+ },
+ {
+  "file": "t-irrigation-manual-substrate.jpg",
+  "prompt": "Side-by-side blocks of growing media, a brown coco coir brick and a tan rockwool cube, on a clean stainless bench in a grow facility Photorealistic, inside a clean modern licensed medical cannabis production facility; hygienic white and stainless surfaces, bright even lighting, documentary realism, sharp focus, shallow depth of field. Any people present wear correct PPE: nitrile gloves, hairnet, clean lab coat or gown, closed shoes; no bare hands on product, no smoking, eating or naked flames. No text, words or labels in the image.",
+  "model": "nano_banana_2",
+  "ar": "4:3",
+  "res": "1k"
+ },
+ {
+  "file": "s-irrigation-manual-dryback-cycle-0.jpg",
+  "prompt": "A rockwool cube fully saturated with nutrient water, droplets beading and a thin film of water glistening on its surface, sitting on a clean propagation tray Photorealistic, inside a clean modern licensed medical cannabis production facility; hygienic white and stainless surfaces, bright even lighting, documentary realism, sharp focus, shallow depth of field. Any people present wear correct PPE: nitrile gloves, hairnet, clean lab coat or gown, closed shoes; no bare hands on product, no smoking, eating or naked flames. No text, words or labels in the image.",
+  "model": "nano_banana_2",
+  "ar": "1:1",
+  "res": "1k"
+ },
+ {
+  "file": "s-irrigation-manual-dryback-cycle-1.jpg",
+  "prompt": "A rockwool cube partway dried, the top surface looking matte and pale while the lower portion stays darker and damp, on a clean propagation tray Photorealistic, inside a clean modern licensed medical cannabis production facility; hygienic white and stainless surfaces, bright even lighting, documentary realism, sharp focus, shallow depth of field. Any people present wear correct PPE: nitrile gloves, hairnet, clean lab coat or gown, closed shoes; no bare hands on product, no smoking, eating or naked flames. No text, words or labels in the image.",
+  "model": "nano_banana_2",
+  "ar": "1:1",
+  "res": "1k"
+ },
+ {
+  "file": "s-irrigation-manual-dryback-cycle-2.jpg",
+  "prompt": "a visibly dry pale rockwool cube on a clean propagation bench, surface matte and light tan, clearly drier and lighter than a wet block, an idle dripper stake beside it Photorealistic, inside a clean modern licensed medical cannabis production facility; hygienic white and stainless surfaces, bright even lighting, documentary realism, sharp focus, shallow depth of field. Any people present wear correct PPE: nitrile gloves, hairnet, clean lab coat or gown, closed shoes; no bare hands on product, no smoking, eating or naked flames. No text, words or labels in the image.",
+  "model": "nano_banana_2",
+  "ar": "1:1",
+  "res": "1k"
+ },
+ {
+  "file": "t-light-acclimation-ppfd-photosynthetic-photon-flux-density.jpg",
+  "prompt": "a handheld quantum PAR light meter with its sensor held flat at the top of a cannabis canopy under LED grow lights in a medical grow facility Photorealistic, inside a clean modern licensed medical cannabis production facility; hygienic white and stainless surfaces, bright even lighting, documentary realism, sharp focus, shallow depth of field. Any people present wear correct PPE: nitrile gloves, hairnet, clean lab coat or gown, closed shoes; no bare hands on product, no smoking, eating or naked flames. No text, words or labels in the image.",
+  "model": "nano_banana_2",
+  "ar": "4:3",
+  "res": "1k"
+ },
+ {
+  "file": "t-light-acclimation-photoperiod.jpg",
+  "prompt": "a digital lighting timer controller mounted on the wall of a grow room wired to LED fixtures over a cannabis canopy Photorealistic, inside a clean modern licensed medical cannabis production facility; hygienic white and stainless surfaces, bright even lighting, documentary realism, sharp focus, shallow depth of field. Any people present wear correct PPE: nitrile gloves, hairnet, clean lab coat or gown, closed shoes; no bare hands on product, no smoking, eating or naked flames. No text, words or labels in the image.",
+  "model": "nano_banana_2",
+  "ar": "4:3",
+  "res": "1k"
+ },
+ {
+  "file": "t-light-acclimation-photoinhibition-bleaching.jpg",
+  "prompt": "the bleached bone-white top leaves of a cannabis plant closest to an intense LED grow light, with healthy green growth lower on the plant Photorealistic, inside a clean modern licensed medical cannabis production facility; hygienic white and stainless surfaces, bright even lighting, documentary realism, sharp focus, shallow depth of field. Any people present wear correct PPE: nitrile gloves, hairnet, clean lab coat or gown, closed shoes; no bare hands on product, no smoking, eating or naked flames. No text, words or labels in the image.",
+  "model": "nano_banana_2",
+  "ar": "4:3",
+  "res": "1k"
+ },
+ {
+  "file": "t-light-acclimation-acclimation.jpg",
+  "prompt": "a healthy deep-green cannabis fan leaf under bright LED grow lighting, turgid and glossy, adapting to strong light, no yellowing and no spots Photorealistic, inside a clean modern licensed medical cannabis production facility; hygienic white and stainless surfaces, bright even lighting, documentary realism, sharp focus, shallow depth of field. Any people present wear correct PPE: nitrile gloves, hairnet, clean lab coat or gown, closed shoes; no bare hands on product, no smoking, eating or naked flames. No text, words or labels in the image.",
+  "model": "nano_banana_2",
+  "ar": "4:3",
+  "res": "1k"
+ },
+ {
+  "file": "s-light-acclimation-acclimation-leaf-anatomy-0.jpg",
+  "prompt": "a single thin broad dark-green cannabis shade leaf held up to backlight so it looks thin and slightly translucent, close macro showing its thin morphology Photorealistic, inside a clean modern licensed medical cannabis production facility; hygienic white and stainless surfaces, bright even lighting, documentary realism, sharp focus, shallow depth of field. Any people present wear correct PPE: nitrile gloves, hairnet, clean lab coat or gown, closed shoes; no bare hands on product, no smoking, eating or naked flames. No text, words or labels in the image.",
+  "model": "nano_banana_2",
+  "ar": "1:1",
+  "res": "1k"
+ },
+ {
+  "file": "s-light-acclimation-acclimation-leaf-anatomy-1.jpg",
+  "prompt": "a deepening green cannabis fan leaf with slightly thicker, firmer texture held between fingertips in a grow room Photorealistic, inside a clean modern licensed medical cannabis production facility; hygienic white and stainless surfaces, bright even lighting, documentary realism, sharp focus, shallow depth of field. Any people present wear correct PPE: nitrile gloves, hairnet, clean lab coat or gown, closed shoes; no bare hands on product, no smoking, eating or naked flames. No text, words or labels in the image.",
+  "model": "nano_banana_2",
+  "ar": "1:1",
+  "res": "1k"
+ },
+ {
+  "file": "s-light-acclimation-acclimation-leaf-anatomy-2.jpg",
+  "prompt": "a thick, dark green, rigid cannabis fan leaf with a waxy sheen, photographed close on a clean bench in a medical grow facility Photorealistic, inside a clean modern licensed medical cannabis production facility; hygienic white and stainless surfaces, bright even lighting, documentary realism, sharp focus, shallow depth of field. Any people present wear correct PPE: nitrile gloves, hairnet, clean lab coat or gown, closed shoes; no bare hands on product, no smoking, eating or naked flames. No text, words or labels in the image.",
+  "model": "nano_banana_2",
+  "ar": "1:1",
+  "res": "1k"
+ },
+ {
+  "file": "t-lighting-fundamentals-par-photosynthetically-active-radiation.jpg",
+  "prompt": "a full-spectrum white LED grow bar glowing over a green cannabis canopy, the light visibly bathing the leaves Photorealistic, inside a clean modern licensed medical cannabis production facility; hygienic white and stainless surfaces, bright even lighting, documentary realism, sharp focus, shallow depth of field. Any people present wear correct PPE: nitrile gloves, hairnet, clean lab coat or gown, closed shoes; no bare hands on product, no smoking, eating or naked flames. No text, words or labels in the image.",
+  "model": "nano_banana_2",
+  "ar": "4:3",
+  "res": "1k"
+ },
+ {
+  "file": "t-lighting-fundamentals-ppfd-photosynthetic-photon-flux-density.jpg",
+  "prompt": "a handheld PAR quantum light meter sensor held just above a cannabis canopy showing a digital readout Photorealistic, inside a clean modern licensed medical cannabis production facility; hygienic white and stainless surfaces, bright even lighting, documentary realism, sharp focus, shallow depth of field. Any people present wear correct PPE: nitrile gloves, hairnet, clean lab coat or gown, closed shoes; no bare hands on product, no smoking, eating or naked flames. No text, words or labels in the image.",
+  "model": "nano_banana_2",
+  "ar": "4:3",
+  "res": "1k"
+ },
+ {
+  "file": "t-lighting-fundamentals-efficacy-umol-j.jpg",
+  "prompt": "a close-up of an LED grow light driver and spec label panel with an electrical power meter clamped to its cord Photorealistic, inside a clean modern licensed medical cannabis production facility; hygienic white and stainless surfaces, bright even lighting, documentary realism, sharp focus, shallow depth of field. Any people present wear correct PPE: nitrile gloves, hairnet, clean lab coat or gown, closed shoes; no bare hands on product, no smoking, eating or naked flames. No text, words or labels in the image.",
+  "model": "nano_banana_2",
+  "ar": "4:3",
+  "res": "1k"
+ },
+ {
+  "file": "t-lighting-fundamentals-photoperiod.jpg",
+  "prompt": "a grow-room lighting timer controller mounted on the wall with the light cable plugged into it Photorealistic, inside a clean modern licensed medical cannabis production facility; hygienic white and stainless surfaces, bright even lighting, documentary realism, sharp focus, shallow depth of field. Any people present wear correct PPE: nitrile gloves, hairnet, clean lab coat or gown, closed shoes; no bare hands on product, no smoking, eating or naked flames. No text, words or labels in the image.",
+  "model": "nano_banana_2",
+  "ar": "4:3",
+  "res": "1k"
+ },
+ {
+  "file": "s-lighting-fundamentals-dli-stage-targets-0.jpg",
+  "prompt": "a tiny cannabis seedling in a small rockwool cube under a low-intensity LED bar on a propagation bench Photorealistic, inside a clean modern licensed medical cannabis production facility; hygienic white and stainless surfaces, bright even lighting, documentary realism, sharp focus, shallow depth of field. Any people present wear correct PPE: nitrile gloves, hairnet, clean lab coat or gown, closed shoes; no bare hands on product, no smoking, eating or naked flames. No text, words or labels in the image.",
+  "model": "nano_banana_2",
+  "ar": "1:1",
+  "res": "1k"
+ },
+ {
+  "file": "s-lighting-fundamentals-dli-stage-targets-1.jpg",
+  "prompt": "a leafy vegetative cannabis plant with broad fan leaves under a bright white LED panel Photorealistic, inside a clean modern licensed medical cannabis production facility; hygienic white and stainless surfaces, bright even lighting, documentary realism, sharp focus, shallow depth of field. Any people present wear correct PPE: nitrile gloves, hairnet, clean lab coat or gown, closed shoes; no bare hands on product, no smoking, eating or naked flames. No text, words or labels in the image.",
+  "model": "nano_banana_2",
+  "ar": "1:1",
+  "res": "1k"
+ },
+ {
+  "file": "s-lighting-fundamentals-dli-stage-targets-2.jpg",
+  "prompt": "a tall flowering cannabis plant with dense developing colas under an intense overhead LED array Photorealistic, inside a clean modern licensed medical cannabis production facility; hygienic white and stainless surfaces, bright even lighting, documentary realism, sharp focus, shallow depth of field. Any people present wear correct PPE: nitrile gloves, hairnet, clean lab coat or gown, closed shoes; no bare hands on product, no smoking, eating or naked flames. No text, words or labels in the image.",
+  "model": "nano_banana_2",
+  "ar": "1:1",
+  "res": "1k"
+ },
+ {
+  "file": "t-mould-risk-bud-rot-botrytis.jpg",
+  "prompt": "a cannabis cola sliced open to expose a core of fuzzy grey-brown mould and browned, collapsed inner flower tissue Photorealistic, inside a clean modern licensed medical cannabis production facility; hygienic white and stainless surfaces, bright even lighting, documentary realism, sharp focus, shallow depth of field. Any people present wear correct PPE: nitrile gloves, hairnet, clean lab coat or gown, closed shoes; no bare hands on product, no smoking, eating or naked flames. No text, words or labels in the image.",
+  "model": "nano_banana_2",
+  "ar": "4:3",
+  "res": "1k"
+ },
+ {
+  "file": "t-mould-risk-powdery-mildew-pm.jpg",
+  "prompt": "early powdery mildew on a cannabis fan leaf shown as patchy raised white fungal colonies growing out of the living green leaf surface, not an even dusting of powder, macro detail Photorealistic, inside a clean modern licensed medical cannabis production facility; hygienic white and stainless surfaces, bright even lighting, documentary realism, sharp focus, shallow depth of field. Any people present wear correct PPE: nitrile gloves, hairnet, clean lab coat or gown, closed shoes; no bare hands on product, no smoking, eating or naked flames. No text, words or labels in the image.",
+  "model": "nano_banana_2",
+  "ar": "4:3",
+  "res": "1k"
+ },
+ {
+  "file": "t-mould-risk-relative-humidity-rh.jpg",
+  "prompt": "a wall-mounted digital temperature and humidity sensor probe hanging at canopy height among cannabis plants in a grow room, close product detail, no people in frame Photorealistic, inside a clean modern licensed medical cannabis production facility; hygienic white and stainless surfaces, bright even lighting, documentary realism, sharp focus, shallow depth of field. Any people present wear correct PPE: nitrile gloves, hairnet, clean lab coat or gown, closed shoes; no bare hands on product, no smoking, eating or naked flames. No text, words or labels in the image.",
+  "model": "nano_banana_2",
+  "ar": "4:3",
+  "res": "1k"
+ },
+ {
+  "file": "t-mould-risk-leaf-wetness-free-moisture.jpg",
+  "prompt": "tiny beads of condensation and water droplets resting on a cannabis fan leaf and clustered in the crook of a cola Photorealistic, inside a clean modern licensed medical cannabis production facility; hygienic white and stainless surfaces, bright even lighting, documentary realism, sharp focus, shallow depth of field. Any people present wear correct PPE: nitrile gloves, hairnet, clean lab coat or gown, closed shoes; no bare hands on product, no smoking, eating or naked flames. No text, words or labels in the image.",
+  "model": "nano_banana_2",
+  "ar": "4:3",
+  "res": "1k"
+ },
+ {
+  "file": "t-mould-risk-water-activity.jpg",
+  "prompt": "a benchtop water activity meter with an open sample cup holding ground dried cannabis flower, lid raised Photorealistic, inside a clean modern licensed medical cannabis production facility; hygienic white and stainless surfaces, bright even lighting, documentary realism, sharp focus, shallow depth of field. Any people present wear correct PPE: nitrile gloves, hairnet, clean lab coat or gown, closed shoes; no bare hands on product, no smoking, eating or naked flames. No text, words or labels in the image.",
+  "model": "nano_banana_2",
+  "ar": "4:3",
+  "res": "1k"
+ },
+ {
+  "file": "s-mould-risk-botrytis-progression-0.jpg",
+  "prompt": "a dense, healthy late-flower cannabis cola, plump and frosted with intact green calyxes and orange pistils Photorealistic, inside a clean modern licensed medical cannabis production facility; hygienic white and stainless surfaces, bright even lighting, documentary realism, sharp focus, shallow depth of field. Any people present wear correct PPE: nitrile gloves, hairnet, clean lab coat or gown, closed shoes; no bare hands on product, no smoking, eating or naked flames. No text, words or labels in the image.",
+  "model": "nano_banana_2",
+  "ar": "1:1",
+  "res": "1k"
+ },
+ {
+  "file": "s-mould-risk-botrytis-progression-1.jpg",
+  "prompt": "a cannabis cola spread open by hand to reveal a single browned, wilted leaf and greyish discoloured tissue deep inside the bud Photorealistic, inside a clean modern licensed medical cannabis production facility; hygienic white and stainless surfaces, bright even lighting, documentary realism, sharp focus, shallow depth of field. Any people present wear correct PPE: nitrile gloves, hairnet, clean lab coat or gown, closed shoes; no bare hands on product, no smoking, eating or naked flames. No text, words or labels in the image.",
+  "model": "nano_banana_2",
+  "ar": "1:1",
+  "res": "1k"
+ },
+ {
+  "file": "s-mould-risk-botrytis-progression-2.jpg",
+  "prompt": "a cannabis cola with a fuzzy grey-brown mould patch erupting from its core, calyxes drying and curling around it Photorealistic, inside a clean modern licensed medical cannabis production facility; hygienic white and stainless surfaces, bright even lighting, documentary realism, sharp focus, shallow depth of field. Any people present wear correct PPE: nitrile gloves, hairnet, clean lab coat or gown, closed shoes; no bare hands on product, no smoking, eating or naked flames. No text, words or labels in the image.",
+  "model": "nano_banana_2",
+  "ar": "1:1",
+  "res": "1k"
+ },
+ {
+  "file": "t-nutrient-deficiencies-mobile-nutrient.jpg",
+  "prompt": "a cannabis plant with the lower, older fan leaves yellowing while the upper new growth stays deep green, viewed against a clean grow-room backdrop Photorealistic, inside a clean modern licensed medical cannabis production facility; hygienic white and stainless surfaces, bright even lighting, documentary realism, sharp focus, shallow depth of field. Any people present wear correct PPE: nitrile gloves, hairnet, clean lab coat or gown, closed shoes; no bare hands on product, no smoking, eating or naked flames. No text, words or labels in the image.",
+  "model": "nano_banana_2",
+  "ar": "4:3",
+  "res": "1k"
+ },
+ {
+  "file": "t-nutrient-deficiencies-immobile-nutrient.jpg",
+  "prompt": "a cannabis plant whose newest top leaves are pale and distorted while the lower older leaves remain healthy green Photorealistic, inside a clean modern licensed medical cannabis production facility; hygienic white and stainless surfaces, bright even lighting, documentary realism, sharp focus, shallow depth of field. Any people present wear correct PPE: nitrile gloves, hairnet, clean lab coat or gown, closed shoes; no bare hands on product, no smoking, eating or naked flames. No text, words or labels in the image.",
+  "model": "nano_banana_2",
+  "ar": "4:3",
+  "res": "1k"
+ },
+ {
+  "file": "t-nutrient-deficiencies-chlorosis.jpg",
+  "prompt": "a close-up of a cannabis fan leaf showing yellowing between the veins while the veins themselves stay green Photorealistic, inside a clean modern licensed medical cannabis production facility; hygienic white and stainless surfaces, bright even lighting, documentary realism, sharp focus, shallow depth of field. Any people present wear correct PPE: nitrile gloves, hairnet, clean lab coat or gown, closed shoes; no bare hands on product, no smoking, eating or naked flames. No text, words or labels in the image.",
+  "model": "nano_banana_2",
+  "ar": "4:3",
+  "res": "1k"
+ },
+ {
+  "file": "t-nutrient-deficiencies-necrosis.jpg",
+  "prompt": "a close-up of a cannabis leaf with dead, brown, crispy patches along its edges and tips Photorealistic, inside a clean modern licensed medical cannabis production facility; hygienic white and stainless surfaces, bright even lighting, documentary realism, sharp focus, shallow depth of field. Any people present wear correct PPE: nitrile gloves, hairnet, clean lab coat or gown, closed shoes; no bare hands on product, no smoking, eating or naked flames. No text, words or labels in the image.",
+  "model": "nano_banana_2",
+  "ar": "4:3",
+  "res": "1k"
+ },
+ {
+  "file": "t-nutrient-deficiencies-ph.jpg",
+  "prompt": "a digital pH pen resting beside a beaker of clear nutrient solution on a stainless workbench Photorealistic, inside a clean modern licensed medical cannabis production facility; hygienic white and stainless surfaces, bright even lighting, documentary realism, sharp focus, shallow depth of field. Any people present wear correct PPE: nitrile gloves, hairnet, clean lab coat or gown, closed shoes; no bare hands on product, no smoking, eating or naked flames. No text, words or labels in the image.",
+  "model": "nano_banana_2",
+  "ar": "4:3",
+  "res": "1k"
+ },
+ {
+  "file": "t-nutrient-deficiencies-ec-electrical-conductivity.jpg",
+  "prompt": "a handheld EC meter dipped into a beaker of nutrient water on a clean grow-room bench Photorealistic, inside a clean modern licensed medical cannabis production facility; hygienic white and stainless surfaces, bright even lighting, documentary realism, sharp focus, shallow depth of field. Any people present wear correct PPE: nitrile gloves, hairnet, clean lab coat or gown, closed shoes; no bare hands on product, no smoking, eating or naked flames. No text, words or labels in the image.",
+  "model": "nano_banana_2",
+  "ar": "4:3",
+  "res": "1k"
+ },
+ {
+  "file": "s-nutrient-deficiencies-mobility-old-vs-new-0.jpg",
+  "prompt": "the lowest fan leaves of a cannabis plant turning pale yellow from the edges inward while still attached to the stem Photorealistic, inside a clean modern licensed medical cannabis production facility; hygienic white and stainless surfaces, bright even lighting, documentary realism, sharp focus, shallow depth of field. Any people present wear correct PPE: nitrile gloves, hairnet, clean lab coat or gown, closed shoes; no bare hands on product, no smoking, eating or naked flames. No text, words or labels in the image.",
+  "model": "nano_banana_2",
+  "ar": "1:1",
+  "res": "1k"
+ },
+ {
+  "file": "s-nutrient-deficiencies-mobility-old-vs-new-1.jpg",
+  "prompt": "the middle tier of a cannabis plant where fan leaves are partly yellowed and beginning to droop Photorealistic, inside a clean modern licensed medical cannabis production facility; hygienic white and stainless surfaces, bright even lighting, documentary realism, sharp focus, shallow depth of field. Any people present wear correct PPE: nitrile gloves, hairnet, clean lab coat or gown, closed shoes; no bare hands on product, no smoking, eating or naked flames. No text, words or labels in the image.",
+  "model": "nano_banana_2",
+  "ar": "1:1",
+  "res": "1k"
+ },
+ {
+  "file": "s-nutrient-deficiencies-mobility-old-vs-new-2.jpg",
+  "prompt": "the healthy bright green top shoot and youngest leaves of the same cannabis plant Photorealistic, inside a clean modern licensed medical cannabis production facility; hygienic white and stainless surfaces, bright even lighting, documentary realism, sharp focus, shallow depth of field. Any people present wear correct PPE: nitrile gloves, hairnet, clean lab coat or gown, closed shoes; no bare hands on product, no smoking, eating or naked flames. No text, words or labels in the image.",
+  "model": "nano_banana_2",
+  "ar": "1:1",
+  "res": "1k"
+ },
+ {
+  "file": "t-nutrient-mixing-athena-stock-solution-concentrate.jpg",
+  "prompt": "a sealed 50 litre white plastic tank of dark concentrated liquid nutrient stock solution with a dosing pump line, sitting on a clean dosing-room floor Photorealistic, inside a clean modern licensed medical cannabis production facility; hygienic white and stainless surfaces, bright even lighting, documentary realism, sharp focus, shallow depth of field. Any people present wear correct PPE: nitrile gloves, hairnet, clean lab coat or gown, closed shoes; no bare hands on product, no smoking, eating or naked flames. No text, words or labels in the image.",
+  "model": "nano_banana_2",
+  "ar": "4:3",
+  "res": "1k"
+ },
+ {
+  "file": "t-nutrient-mixing-athena-working-solution-feed.jpg",
+  "prompt": "a large clean reservoir of pale diluted nutrient feed water with a clear flexible irrigation line drawing from it Photorealistic, inside a clean modern licensed medical cannabis production facility; hygienic white and stainless surfaces, bright even lighting, documentary realism, sharp focus, shallow depth of field. Any people present wear correct PPE: nitrile gloves, hairnet, clean lab coat or gown, closed shoes; no bare hands on product, no smoking, eating or naked flames. No text, words or labels in the image.",
+  "model": "nano_banana_2",
+  "ar": "4:3",
+  "res": "1k"
+ },
+ {
+  "file": "t-nutrient-mixing-athena-part-a-pro-core.jpg",
+  "prompt": "an open bag of off-white calcium-nitrate Athena Pro Core nutrient powder scooped beside a clean measuring container Photorealistic, inside a clean modern licensed medical cannabis production facility; hygienic white and stainless surfaces, bright even lighting, documentary realism, sharp focus, shallow depth of field. Any people present wear correct PPE: nitrile gloves, hairnet, clean lab coat or gown, closed shoes; no bare hands on product, no smoking, eating or naked flames. No text, words or labels in the image.",
+  "model": "nano_banana_2",
+  "ar": "4:3",
+  "res": "1k"
+ },
+ {
+  "file": "t-nutrient-mixing-athena-part-b-pro-grow-or-pro-bloom.jpg",
+  "prompt": "an open bag of fine pale sulfate-and-phosphate Athena Pro Grow nutrient powder beside a clean scoop on a stainless bench Photorealistic, inside a clean modern licensed medical cannabis production facility; hygienic white and stainless surfaces, bright even lighting, documentary realism, sharp focus, shallow depth of field. Any people present wear correct PPE: nitrile gloves, hairnet, clean lab coat or gown, closed shoes; no bare hands on product, no smoking, eating or naked flames. No text, words or labels in the image.",
+  "model": "nano_banana_2",
+  "ar": "4:3",
+  "res": "1k"
+ },
+ {
+  "file": "t-nutrient-mixing-athena-dosing-rate.jpg",
+  "prompt": "a graduated measuring cylinder holding a few millilitres of concentrated nutrient stock next to a litre jug of feed water Photorealistic, inside a clean modern licensed medical cannabis production facility; hygienic white and stainless surfaces, bright even lighting, documentary realism, sharp focus, shallow depth of field. Any people present wear correct PPE: nitrile gloves, hairnet, clean lab coat or gown, closed shoes; no bare hands on product, no smoking, eating or naked flames. No text, words or labels in the image.",
+  "model": "nano_banana_2",
+  "ar": "4:3",
+  "res": "1k"
+ },
+ {
+  "file": "t-nutrient-mixing-athena-solubility-saturation.jpg",
+  "prompt": "a clear glass beaker of warm water with nutrient salt crystals half-dissolved and a thin layer of undissolved salt settled on the bottom Photorealistic, inside a clean modern licensed medical cannabis production facility; hygienic white and stainless surfaces, bright even lighting, documentary realism, sharp focus, shallow depth of field. Any people present wear correct PPE: nitrile gloves, hairnet, clean lab coat or gown, closed shoes; no bare hands on product, no smoking, eating or naked flames. No text, words or labels in the image.",
+  "model": "nano_banana_2",
+  "ar": "4:3",
+  "res": "1k"
+ },
+ {
+  "file": "s-nutrient-mixing-athena-salt-dissolve-progression-0.jpg",
+  "prompt": "a heap of fine white-and-grey crystalline nutrient salt powder poured into the bottom of an empty white 50 litre plastic mixing tank Photorealistic, inside a clean modern licensed medical cannabis production facility; hygienic white and stainless surfaces, bright even lighting, documentary realism, sharp focus, shallow depth of field. Any people present wear correct PPE: nitrile gloves, hairnet, clean lab coat or gown, closed shoes; no bare hands on product, no smoking, eating or naked flames. No text, words or labels in the image.",
+  "model": "nano_banana_2",
+  "ar": "1:1",
+  "res": "1k"
+ },
+ {
+  "file": "s-nutrient-mixing-athena-salt-dissolve-progression-1.jpg",
+  "prompt": "water streaming into a tank of undissolved nutrient salt, the powder swirling up in a cloudy plume through the water Photorealistic, inside a clean modern licensed medical cannabis production facility; hygienic white and stainless surfaces, bright even lighting, documentary realism, sharp focus, shallow depth of field. Any people present wear correct PPE: nitrile gloves, hairnet, clean lab coat or gown, closed shoes; no bare hands on product, no smoking, eating or naked flames. No text, words or labels in the image.",
+  "model": "nano_banana_2",
+  "ar": "1:1",
+  "res": "1k"
+ },
+ {
+  "file": "s-nutrient-mixing-athena-salt-dissolve-progression-2.jpg",
+  "prompt": "a 50 litre plastic tank of clear water with white mineral nutrient salts dissolving, a paint-mixer paddle on a cordless drill creating a vortex, white salt clouds swirling in the water, clean grow-room utility area Photorealistic, inside a clean modern licensed medical cannabis production facility; hygienic white and stainless surfaces, bright even lighting, documentary realism, sharp focus, shallow depth of field. Any people present wear correct PPE: nitrile gloves, hairnet, clean lab coat or gown, closed shoes; no bare hands on product, no smoking, eating or naked flames. No text, words or labels in the image.",
+  "model": "nano_banana_2",
+  "ar": "1:1",
+  "res": "1k"
+ },
+ {
+  "file": "t-pest-id-biocontrol-beneficial.jpg",
+  "prompt": "a paper breeder sachet of live predatory mites clipped onto a cannabis plant stem, tiny live beneficial mites crawling around it, macro detail Photorealistic, inside a clean modern licensed medical cannabis production facility; hygienic white and stainless surfaces, bright even lighting, documentary realism, sharp focus, shallow depth of field. Any people present wear correct PPE: nitrile gloves, hairnet, clean lab coat or gown, closed shoes; no bare hands on product, no smoking, eating or naked flames. No text, words or labels in the image.",
+  "model": "nano_banana_2",
+  "ar": "4:3",
+  "res": "1k"
+ },
+ {
+  "file": "t-pest-id-loupe-scope.jpg",
+  "prompt": "a folding metal hand loupe with its lens open, held over a green cannabis leaf Photorealistic, inside a clean modern licensed medical cannabis production facility; hygienic white and stainless surfaces, bright even lighting, documentary realism, sharp focus, shallow depth of field. Any people present wear correct PPE: nitrile gloves, hairnet, clean lab coat or gown, closed shoes; no bare hands on product, no smoking, eating or naked flames. No text, words or labels in the image.",
+  "model": "nano_banana_2",
+  "ar": "4:3",
+  "res": "1k"
+ },
+ {
+  "file": "t-pest-id-frass-honeydew-stippling.jpg",
+  "prompt": "a cannabis fan leaf with clear pest damage in macro: pale stippled feeding spots, scattered dark frass specks and shiny sticky honeydew on the leaf surface Photorealistic, inside a clean modern licensed medical cannabis production facility; hygienic white and stainless surfaces, bright even lighting, documentary realism, sharp focus, shallow depth of field. Any people present wear correct PPE: nitrile gloves, hairnet, clean lab coat or gown, closed shoes; no bare hands on product, no smoking, eating or naked flames. No text, words or labels in the image.",
+  "model": "nano_banana_2",
+  "ar": "4:3",
+  "res": "1k"
+ },
+ {
+  "file": "s-pest-id-spider-mite-loupe-zoom-0.jpg",
+  "prompt": "a cannabis fan leaf with fine pale yellow stippling speckled across its surface, held flat and close Photorealistic, inside a clean modern licensed medical cannabis production facility; hygienic white and stainless surfaces, bright even lighting, documentary realism, sharp focus, shallow depth of field. Any people present wear correct PPE: nitrile gloves, hairnet, clean lab coat or gown, closed shoes; no bare hands on product, no smoking, eating or naked flames. No text, words or labels in the image.",
+  "model": "nano_banana_2",
+  "ar": "1:1",
+  "res": "1k"
+ },
+ {
+  "file": "s-pest-id-spider-mite-loupe-zoom-1.jpg",
+  "prompt": "a small folding hand loupe held against the underside of a cannabis leaf, lens pressed close to the surface Photorealistic, inside a clean modern licensed medical cannabis production facility; hygienic white and stainless surfaces, bright even lighting, documentary realism, sharp focus, shallow depth of field. Any people present wear correct PPE: nitrile gloves, hairnet, clean lab coat or gown, closed shoes; no bare hands on product, no smoking, eating or naked flames. No text, words or labels in the image.",
+  "model": "nano_banana_2",
+  "ar": "1:1",
+  "res": "1k"
+ },
+ {
+  "file": "s-pest-id-spider-mite-loupe-zoom-2.jpg",
+  "prompt": "extreme close-up of tiny two-spotted spider mites and fine silken webbing clustered along the underside vein of a cannabis leaf Photorealistic, inside a clean modern licensed medical cannabis production facility; hygienic white and stainless surfaces, bright even lighting, documentary realism, sharp focus, shallow depth of field. Any people present wear correct PPE: nitrile gloves, hairnet, clean lab coat or gown, closed shoes; no bare hands on product, no smoking, eating or naked flames. No text, words or labels in the image.",
+  "model": "nano_banana_2",
+  "ar": "1:1",
+  "res": "1k"
+ },
+ {
+  "file": "t-ph-management-ph.jpg",
+  "prompt": "a handheld digital pH pen held over a beaker of nutrient solution, its probe tip glistening with droplets, on a clean bench in a grow facility Photorealistic, inside a clean modern licensed medical cannabis production facility; hygienic white and stainless surfaces, bright even lighting, documentary realism, sharp focus, shallow depth of field. Any people present wear correct PPE: nitrile gloves, hairnet, clean lab coat or gown, closed shoes; no bare hands on product, no smoking, eating or naked flames. No text, words or labels in the image.",
+  "model": "nano_banana_2",
+  "ar": "4:3",
+  "res": "1k"
+ },
+ {
+  "file": "t-ph-management-root-zone.jpg",
+  "prompt": "a cannabis plant lifted from its pot to reveal white healthy roots threading through moist coco coir substrate Photorealistic, inside a clean modern licensed medical cannabis production facility; hygienic white and stainless surfaces, bright even lighting, documentary realism, sharp focus, shallow depth of field. Any people present wear correct PPE: nitrile gloves, hairnet, clean lab coat or gown, closed shoes; no bare hands on product, no smoking, eating or naked flames. No text, words or labels in the image.",
+  "model": "nano_banana_2",
+  "ar": "4:3",
+  "res": "1k"
+ },
+ {
+  "file": "t-ph-management-lockout.jpg",
+  "prompt": "a cannabis fan leaf showing interveinal yellowing and rusty nutrient-deficiency spotting despite a healthy green plant, held up close in a grow room Photorealistic, inside a clean modern licensed medical cannabis production facility; hygienic white and stainless surfaces, bright even lighting, documentary realism, sharp focus, shallow depth of field. Any people present wear correct PPE: nitrile gloves, hairnet, clean lab coat or gown, closed shoes; no bare hands on product, no smoking, eating or naked flames. No text, words or labels in the image.",
+  "model": "nano_banana_2",
+  "ar": "4:3",
+  "res": "1k"
+ },
+ {
+  "file": "t-ph-management-ec-electrical-conductivity.jpg",
+  "prompt": "a handheld EC meter with its probe in a beaker of nutrient solution on a clean grow-room bench Photorealistic, inside a clean modern licensed medical cannabis production facility; hygienic white and stainless surfaces, bright even lighting, documentary realism, sharp focus, shallow depth of field. Any people present wear correct PPE: nitrile gloves, hairnet, clean lab coat or gown, closed shoes; no bare hands on product, no smoking, eating or naked flames. No text, words or labels in the image.",
+  "model": "nano_banana_2",
+  "ar": "4:3",
+  "res": "1k"
+ },
+ {
+  "file": "t-ph-management-substrate-medium.jpg",
+  "prompt": "three growing media side by side on a bench, a block of rockwool, loose brown coco coir, and a clay-pebble hydro medium in a grow facility Photorealistic, inside a clean modern licensed medical cannabis production facility; hygienic white and stainless surfaces, bright even lighting, documentary realism, sharp focus, shallow depth of field. Any people present wear correct PPE: nitrile gloves, hairnet, clean lab coat or gown, closed shoes; no bare hands on product, no smoking, eating or naked flames. No text, words or labels in the image.",
+  "model": "nano_banana_2",
+  "ar": "4:3",
+  "res": "1k"
+ },
+ {
+  "file": "t-ph-management-runoff.jpg",
+  "prompt": "clear runoff solution draining from the drainage holes at the bottom of a fabric pot into a collection tray on a grow-room floor Photorealistic, inside a clean modern licensed medical cannabis production facility; hygienic white and stainless surfaces, bright even lighting, documentary realism, sharp focus, shallow depth of field. Any people present wear correct PPE: nitrile gloves, hairnet, clean lab coat or gown, closed shoes; no bare hands on product, no smoking, eating or naked flames. No text, words or labels in the image.",
+  "model": "nano_banana_2",
+  "ar": "4:3",
+  "res": "1k"
+ },
+ {
+  "file": "s-ph-management-ph-pen-calibration-0.jpg",
+  "prompt": "a digital pH pen with its probe tip submerged in a small beaker of clear pH 7.0 calibration buffer solution on a clean lab bench in a grow facility Photorealistic, inside a clean modern licensed medical cannabis production facility; hygienic white and stainless surfaces, bright even lighting, documentary realism, sharp focus, shallow depth of field. Any people present wear correct PPE: nitrile gloves, hairnet, clean lab coat or gown, closed shoes; no bare hands on product, no smoking, eating or naked flames. No text, words or labels in the image.",
+  "model": "nano_banana_2",
+  "ar": "1:1",
+  "res": "1k"
+ },
+ {
+  "file": "s-ph-management-ph-pen-calibration-1.jpg",
+  "prompt": "a digital pH pen with its probe tip rinsed and submerged in a beaker of pH 4.0 calibration buffer solution beside the rinse cup Photorealistic, inside a clean modern licensed medical cannabis production facility; hygienic white and stainless surfaces, bright even lighting, documentary realism, sharp focus, shallow depth of field. Any people present wear correct PPE: nitrile gloves, hairnet, clean lab coat or gown, closed shoes; no bare hands on product, no smoking, eating or naked flames. No text, words or labels in the image.",
+  "model": "nano_banana_2",
+  "ar": "1:1",
+  "res": "1k"
+ },
+ {
+  "file": "s-ph-management-ph-pen-calibration-2.jpg",
+  "prompt": "a calibrated digital pH pen probe dipped into a nutrient reservoir tank of nutrient solution in a grow room Photorealistic, inside a clean modern licensed medical cannabis production facility; hygienic white and stainless surfaces, bright even lighting, documentary realism, sharp focus, shallow depth of field. Any people present wear correct PPE: nitrile gloves, hairnet, clean lab coat or gown, closed shoes; no bare hands on product, no smoking, eating or naked flames. No text, words or labels in the image.",
+  "model": "nano_banana_2",
+  "ar": "1:1",
+  "res": "1k"
+ },
+ {
+  "file": "t-plant-state-dashboard-telemetry.jpg",
+  "prompt": "a wall-mounted environmental sensor node in a grow room, small white enclosure with a probe cable running into the canopy Photorealistic, inside a clean modern licensed medical cannabis production facility; hygienic white and stainless surfaces, bright even lighting, documentary realism, sharp focus, shallow depth of field. Any people present wear correct PPE: nitrile gloves, hairnet, clean lab coat or gown, closed shoes; no bare hands on product, no smoking, eating or naked flames. No text, words or labels in the image.",
+  "model": "nano_banana_2",
+  "ar": "4:3",
+  "res": "1k"
+ },
+ {
+  "file": "t-plant-state-dashboard-vpd-vapour-pressure-deficit.jpg",
+  "prompt": "a handheld digital thermo-hygrometer held at canopy height among cannabis leaves, showing a humidity and temperature readout Photorealistic, inside a clean modern licensed medical cannabis production facility; hygienic white and stainless surfaces, bright even lighting, documentary realism, sharp focus, shallow depth of field. Any people present wear correct PPE: nitrile gloves, hairnet, clean lab coat or gown, closed shoes; no bare hands on product, no smoking, eating or naked flames. No text, words or labels in the image.",
+  "model": "nano_banana_2",
+  "ar": "4:3",
+  "res": "1k"
+ },
+ {
+  "file": "t-plant-state-dashboard-crop-steering.jpg",
+  "prompt": "a row of cannabis plants on a drip-fed table with emitter stakes in each rockwool block, tidy uniform canopy in a clean grow room Photorealistic, inside a clean modern licensed medical cannabis production facility; hygienic white and stainless surfaces, bright even lighting, documentary realism, sharp focus, shallow depth of field. Any people present wear correct PPE: nitrile gloves, hairnet, clean lab coat or gown, closed shoes; no bare hands on product, no smoking, eating or naked flames. No text, words or labels in the image.",
+  "model": "nano_banana_2",
+  "ar": "4:3",
+  "res": "1k"
+ },
+ {
+  "file": "t-plant-state-dashboard-dryback.jpg",
+  "prompt": "a rockwool slab with a cannabis plant and an inserted substrate moisture probe, the block visibly dried and lightened between waterings Photorealistic, inside a clean modern licensed medical cannabis production facility; hygienic white and stainless surfaces, bright even lighting, documentary realism, sharp focus, shallow depth of field. Any people present wear correct PPE: nitrile gloves, hairnet, clean lab coat or gown, closed shoes; no bare hands on product, no smoking, eating or naked flames. No text, words or labels in the image.",
+  "model": "nano_banana_2",
+  "ar": "4:3",
+  "res": "1k"
+ },
+ {
+  "file": "t-plant-state-dashboard-ppfd-dli.jpg",
+  "prompt": "a handheld PAR quantum light meter held above a cannabis canopy under grow lights, sensor disc facing upward Photorealistic, inside a clean modern licensed medical cannabis production facility; hygienic white and stainless surfaces, bright even lighting, documentary realism, sharp focus, shallow depth of field. Any people present wear correct PPE: nitrile gloves, hairnet, clean lab coat or gown, closed shoes; no bare hands on product, no smoking, eating or naked flames. No text, words or labels in the image.",
+  "model": "nano_banana_2",
+  "ar": "4:3",
+  "res": "1k"
+ },
+ {
+  "file": "s-plant-state-dashboard-dryback-cycle-0.jpg",
+  "prompt": "a freshly irrigated rockwool slab with a plant, glistening wet and fully saturated, runoff beading at the base Photorealistic, inside a clean modern licensed medical cannabis production facility; hygienic white and stainless surfaces, bright even lighting, documentary realism, sharp focus, shallow depth of field. Any people present wear correct PPE: nitrile gloves, hairnet, clean lab coat or gown, closed shoes; no bare hands on product, no smoking, eating or naked flames. No text, words or labels in the image.",
+  "model": "nano_banana_2",
+  "ar": "1:1",
+  "res": "1k"
+ },
+ {
+  "file": "s-plant-state-dashboard-dryback-cycle-1.jpg",
+  "prompt": "a partially dried rockwool slab with a plant, surface gone pale and matte, a moisture probe inserted into the block Photorealistic, inside a clean modern licensed medical cannabis production facility; hygienic white and stainless surfaces, bright even lighting, documentary realism, sharp focus, shallow depth of field. Any people present wear correct PPE: nitrile gloves, hairnet, clean lab coat or gown, closed shoes; no bare hands on product, no smoking, eating or naked flames. No text, words or labels in the image.",
+  "model": "nano_banana_2",
+  "ar": "1:1",
+  "res": "1k"
+ },
+ {
+  "file": "s-plant-state-dashboard-dryback-cycle-2.jpg",
+  "prompt": "a noticeably shrunken dry rockwool slab with a plant, edges pulled in and lightened, drip stake poised above the block Photorealistic, inside a clean modern licensed medical cannabis production facility; hygienic white and stainless surfaces, bright even lighting, documentary realism, sharp focus, shallow depth of field. Any people present wear correct PPE: nitrile gloves, hairnet, clean lab coat or gown, closed shoes; no bare hands on product, no smoking, eating or naked flames. No text, words or labels in the image.",
+  "model": "nano_banana_2",
+  "ar": "1:1",
+  "res": "1k"
+ },
+ {
+  "file": "t-root-zone-teros12-volumetric-water-content-vwc.jpg",
+  "prompt": "a TEROS-12 soil moisture probe with its three stainless steel needles inserted into a saturated coco coir slab inside a fabric pot Photorealistic, inside a clean modern licensed medical cannabis production facility; hygienic white and stainless surfaces, bright even lighting, documentary realism, sharp focus, shallow depth of field. Any people present wear correct PPE: nitrile gloves, hairnet, clean lab coat or gown, closed shoes; no bare hands on product, no smoking, eating or naked flames. No text, words or labels in the image.",
+  "model": "nano_banana_2",
+  "ar": "4:3",
+  "res": "1k"
+ },
+ {
+  "file": "t-root-zone-teros12-capacitance-sensor.jpg",
+  "prompt": "a close view of a TEROS-12 capacitance probe held in hand, showing its flat grey epoxy head and three sharp parallel metal prongs Photorealistic, inside a clean modern licensed medical cannabis production facility; hygienic white and stainless surfaces, bright even lighting, documentary realism, sharp focus, shallow depth of field. Any people present wear correct PPE: nitrile gloves, hairnet, clean lab coat or gown, closed shoes; no bare hands on product, no smoking, eating or naked flames. No text, words or labels in the image.",
+  "model": "nano_banana_2",
+  "ar": "4:3",
+  "res": "1k"
+ },
+ {
+  "file": "t-root-zone-teros12-dul-container-capacity.jpg",
+  "prompt": "a single black fabric pot of coco coir freshly drained to runoff with a clear droplet falling from its base into a saucer Photorealistic, inside a clean modern licensed medical cannabis production facility; hygienic white and stainless surfaces, bright even lighting, documentary realism, sharp focus, shallow depth of field. Any people present wear correct PPE: nitrile gloves, hairnet, clean lab coat or gown, closed shoes; no bare hands on product, no smoking, eating or naked flames. No text, words or labels in the image.",
+  "model": "nano_banana_2",
+  "ar": "4:3",
+  "res": "1k"
+ },
+ {
+  "file": "s-root-zone-teros12-vwc-wetting-front-0.jpg",
+  "prompt": "a rockwool propagation block sitting on a bench looking dry and pale tan with no visible surface water Photorealistic, inside a clean modern licensed medical cannabis production facility; hygienic white and stainless surfaces, bright even lighting, documentary realism, sharp focus, shallow depth of field. Any people present wear correct PPE: nitrile gloves, hairnet, clean lab coat or gown, closed shoes; no bare hands on product, no smoking, eating or naked flames. No text, words or labels in the image.",
+  "model": "nano_banana_2",
+  "ar": "1:1",
+  "res": "1k"
+ },
+ {
+  "file": "s-root-zone-teros12-vwc-wetting-front-1.jpg",
+  "prompt": "a rockwool propagation block evenly damp and darkened brown with a single drip emitter resting on top Photorealistic, inside a clean modern licensed medical cannabis production facility; hygienic white and stainless surfaces, bright even lighting, documentary realism, sharp focus, shallow depth of field. Any people present wear correct PPE: nitrile gloves, hairnet, clean lab coat or gown, closed shoes; no bare hands on product, no smoking, eating or naked flames. No text, words or labels in the image.",
+  "model": "nano_banana_2",
+  "ar": "1:1",
+  "res": "1k"
+ },
+ {
+  "file": "s-root-zone-teros12-vwc-wetting-front-2.jpg",
+  "prompt": "a rockwool propagation block fully soaked and glossy dark with a thin film of water beading on its surface and pooling at its base Photorealistic, inside a clean modern licensed medical cannabis production facility; hygienic white and stainless surfaces, bright even lighting, documentary realism, sharp focus, shallow depth of field. Any people present wear correct PPE: nitrile gloves, hairnet, clean lab coat or gown, closed shoes; no bare hands on product, no smoking, eating or naked flames. No text, words or labels in the image.",
+  "model": "nano_banana_2",
+  "ar": "1:1",
+  "res": "1k"
+ },
+ {
+  "file": "t-seeds-germination-taproot-radicle.jpg",
+  "prompt": "a single white taproot emerging from a cracked cannabis seed on a damp paper towel, extreme macro close-up Photorealistic, inside a clean modern licensed medical cannabis production facility; hygienic white and stainless surfaces, bright even lighting, documentary realism, sharp focus, shallow depth of field. Any people present wear correct PPE: nitrile gloves, hairnet, clean lab coat or gown, closed shoes; no bare hands on product, no smoking, eating or naked flames. No text, words or labels in the image.",
+  "model": "nano_banana_2",
+  "ar": "4:3",
+  "res": "1k"
+ },
+ {
+  "file": "t-seeds-germination-cotyledons.jpg",
+  "prompt": "a cannabis seedling showing its two rounded smooth green cotyledon seed leaves, close-up in a rockwool cube Photorealistic, inside a clean modern licensed medical cannabis production facility; hygienic white and stainless surfaces, bright even lighting, documentary realism, sharp focus, shallow depth of field. Any people present wear correct PPE: nitrile gloves, hairnet, clean lab coat or gown, closed shoes; no bare hands on product, no smoking, eating or naked flames. No text, words or labels in the image.",
+  "model": "nano_banana_2",
+  "ar": "4:3",
+  "res": "1k"
+ },
+ {
+  "file": "t-seeds-germination-true-leaves.jpg",
+  "prompt": "the first pair of serrated jagged-edged true cannabis leaves on a young seedling, close-up Photorealistic, inside a clean modern licensed medical cannabis production facility; hygienic white and stainless surfaces, bright even lighting, documentary realism, sharp focus, shallow depth of field. Any people present wear correct PPE: nitrile gloves, hairnet, clean lab coat or gown, closed shoes; no bare hands on product, no smoking, eating or naked flames. No text, words or labels in the image.",
+  "model": "nano_banana_2",
+  "ar": "4:3",
+  "res": "1k"
+ },
+ {
+  "file": "t-seeds-germination-seed-coat.jpg",
+  "prompt": "the hard mottled brown tiger-striped outer shell of a cannabis seed, macro close-up between fingertips Photorealistic, inside a clean modern licensed medical cannabis production facility; hygienic white and stainless surfaces, bright even lighting, documentary realism, sharp focus, shallow depth of field. Any people present wear correct PPE: nitrile gloves, hairnet, clean lab coat or gown, closed shoes; no bare hands on product, no smoking, eating or naked flames. No text, words or labels in the image.",
+  "model": "nano_banana_2",
+  "ar": "4:3",
+  "res": "1k"
+ },
+ {
+  "file": "t-seeds-germination-embryo.jpg",
+  "prompt": "the pale curled embryo and folded cotyledons revealed inside an opened cannabis seed, macro close-up Photorealistic, inside a clean modern licensed medical cannabis production facility; hygienic white and stainless surfaces, bright even lighting, documentary realism, sharp focus, shallow depth of field. Any people present wear correct PPE: nitrile gloves, hairnet, clean lab coat or gown, closed shoes; no bare hands on product, no smoking, eating or naked flames. No text, words or labels in the image.",
+  "model": "nano_banana_2",
+  "ar": "4:3",
+  "res": "1k"
+ },
+ {
+  "file": "t-seeds-germination-viable.jpg",
+  "prompt": "a row of plump healthy dark cannabis seeds beside a single pale shriveled non-viable seed on a white tray, close-up Photorealistic, inside a clean modern licensed medical cannabis production facility; hygienic white and stainless surfaces, bright even lighting, documentary realism, sharp focus, shallow depth of field. Any people present wear correct PPE: nitrile gloves, hairnet, clean lab coat or gown, closed shoes; no bare hands on product, no smoking, eating or naked flames. No text, words or labels in the image.",
+  "model": "nano_banana_2",
+  "ar": "4:3",
+  "res": "1k"
+ },
+ {
+  "file": "s-seeds-germination-seed-to-seedling-0.jpg",
+  "prompt": "a single cannabis seed split open with a short white taproot emerging, resting on a damp paper towel, extreme close-up Photorealistic, inside a clean modern licensed medical cannabis production facility; hygienic white and stainless surfaces, bright even lighting, documentary realism, sharp focus, shallow depth of field. Any people present wear correct PPE: nitrile gloves, hairnet, clean lab coat or gown, closed shoes; no bare hands on product, no smoking, eating or naked flames. No text, words or labels in the image.",
+  "model": "nano_banana_2",
+  "ar": "1:1",
+  "res": "1k"
+ },
+ {
+  "file": "s-seeds-germination-seed-to-seedling-1.jpg",
+  "prompt": "a just-sprouted cannabis seedling in a rockwool cube showing two rounded green cotyledon seed leaves, close-up Photorealistic, inside a clean modern licensed medical cannabis production facility; hygienic white and stainless surfaces, bright even lighting, documentary realism, sharp focus, shallow depth of field. Any people present wear correct PPE: nitrile gloves, hairnet, clean lab coat or gown, closed shoes; no bare hands on product, no smoking, eating or naked flames. No text, words or labels in the image.",
+  "model": "nano_banana_2",
+  "ar": "1:1",
+  "res": "1k"
+ },
+ {
+  "file": "s-seeds-germination-seed-to-seedling-2.jpg",
+  "prompt": "a young cannabis seedling with its first pair of serrated true leaves above the cotyledons, in a small propagation cube, close-up Photorealistic, inside a clean modern licensed medical cannabis production facility; hygienic white and stainless surfaces, bright even lighting, documentary realism, sharp focus, shallow depth of field. Any people present wear correct PPE: nitrile gloves, hairnet, clean lab coat or gown, closed shoes; no bare hands on product, no smoking, eating or naked flames. No text, words or labels in the image.",
+  "model": "nano_banana_2",
+  "ar": "1:1",
+  "res": "1k"
+ },
+ {
+  "file": "t-signal-and-noise-drift.jpg",
+  "prompt": "a handheld EC meter and a pH pen lying side by side on a clean bench next to small bottles of calibration buffer, the probe tips slightly stained from long use Photorealistic, inside a clean modern licensed medical cannabis production facility; hygienic white and stainless surfaces, bright even lighting, documentary realism, sharp focus, shallow depth of field. Any people present wear correct PPE: nitrile gloves, hairnet, clean lab coat or gown, closed shoes; no bare hands on product, no smoking, eating or naked flames. No text, words or labels in the image.",
+  "model": "nano_banana_2",
+  "ar": "4:3",
+  "res": "1k"
+ },
+ {
+  "file": "t-signal-and-noise-calibration.jpg",
+  "prompt": "a digital pH pen with its glass electrode tip dipped into a small beaker of colored calibration buffer solution on a clean stainless steel bench Photorealistic, inside a clean modern licensed medical cannabis production facility; hygienic white and stainless surfaces, bright even lighting, documentary realism, sharp focus, shallow depth of field. Any people present wear correct PPE: nitrile gloves, hairnet, clean lab coat or gown, closed shoes; no bare hands on product, no smoking, eating or naked flames. No text, words or labels in the image.",
+  "model": "nano_banana_2",
+  "ar": "4:3",
+  "res": "1k"
+ },
+ {
+  "file": "s-signal-and-noise-trichome-ripening-0.jpg",
+  "prompt": "extreme macro of cannabis flower trichomes with glassy clear translucent resin heads on slender stalks Photorealistic, inside a clean modern licensed medical cannabis production facility; hygienic white and stainless surfaces, bright even lighting, documentary realism, sharp focus, shallow depth of field. Any people present wear correct PPE: nitrile gloves, hairnet, clean lab coat or gown, closed shoes; no bare hands on product, no smoking, eating or naked flames. No text, words or labels in the image.",
+  "model": "nano_banana_2",
+  "ar": "1:1",
+  "res": "1k"
+ },
+ {
+  "file": "s-signal-and-noise-trichome-ripening-1.jpg",
+  "prompt": "extreme macro of cannabis flower trichomes with milky white opaque cloudy resin heads densely covering the bud Photorealistic, inside a clean modern licensed medical cannabis production facility; hygienic white and stainless surfaces, bright even lighting, documentary realism, sharp focus, shallow depth of field. Any people present wear correct PPE: nitrile gloves, hairnet, clean lab coat or gown, closed shoes; no bare hands on product, no smoking, eating or naked flames. No text, words or labels in the image.",
+  "model": "nano_banana_2",
+  "ar": "1:1",
+  "res": "1k"
+ },
+ {
+  "file": "s-signal-and-noise-trichome-ripening-2.jpg",
+  "prompt": "extreme macro of cannabis flower trichomes with golden amber tinted resin heads mixed among cloudy ones Photorealistic, inside a clean modern licensed medical cannabis production facility; hygienic white and stainless surfaces, bright even lighting, documentary realism, sharp focus, shallow depth of field. Any people present wear correct PPE: nitrile gloves, hairnet, clean lab coat or gown, closed shoes; no bare hands on product, no smoking, eating or naked flames. No text, words or labels in the image.",
+  "model": "nano_banana_2",
+  "ar": "1:1",
+  "res": "1k"
+ },
+ {
+  "file": "t-smart-watering-vrwe-vwc-volumetric-water-content.jpg",
+  "prompt": "a handheld substrate moisture probe with metal prongs inserted into a rockwool cube supporting a young cannabis plant on a clean grow bench Photorealistic, inside a clean modern licensed medical cannabis production facility; hygienic white and stainless surfaces, bright even lighting, documentary realism, sharp focus, shallow depth of field. Any people present wear correct PPE: nitrile gloves, hairnet, clean lab coat or gown, closed shoes; no bare hands on product, no smoking, eating or naked flames. No text, words or labels in the image.",
+  "model": "nano_banana_2",
+  "ar": "4:3",
+  "res": "1k"
+ },
+ {
+  "file": "t-smart-watering-vrwe-runoff-drain.jpg",
+  "prompt": "clear runoff water dripping from the bottom of a fabric pot into a white saucer on a flood-and-drain table in a grow room Photorealistic, inside a clean modern licensed medical cannabis production facility; hygienic white and stainless surfaces, bright even lighting, documentary realism, sharp focus, shallow depth of field. Any people present wear correct PPE: nitrile gloves, hairnet, clean lab coat or gown, closed shoes; no bare hands on product, no smoking, eating or naked flames. No text, words or labels in the image.",
+  "model": "nano_banana_2",
+  "ar": "4:3",
+  "res": "1k"
+ },
+ {
+  "file": "t-smart-watering-vrwe-full-pot-dul-drained-upper-limit.jpg",
+  "prompt": "a freshly saturated coco-coir fabric pot with a cannabis plant, water glistening on the surface and the last drips falling from the base Photorealistic, inside a clean modern licensed medical cannabis production facility; hygienic white and stainless surfaces, bright even lighting, documentary realism, sharp focus, shallow depth of field. Any people present wear correct PPE: nitrile gloves, hairnet, clean lab coat or gown, closed shoes; no bare hands on product, no smoking, eating or naked flames. No text, words or labels in the image.",
+  "model": "nano_banana_2",
+  "ar": "4:3",
+  "res": "1k"
+ },
+ {
+  "file": "t-smart-watering-vrwe-channeling.jpg",
+  "prompt": "a cutaway of a dry coco-coir root block with a single dark wet vertical channel cut straight through it while the surrounding substrate stays pale and dry Photorealistic, inside a clean modern licensed medical cannabis production facility; hygienic white and stainless surfaces, bright even lighting, documentary realism, sharp focus, shallow depth of field. Any people present wear correct PPE: nitrile gloves, hairnet, clean lab coat or gown, closed shoes; no bare hands on product, no smoking, eating or naked flames. No text, words or labels in the image.",
+  "model": "nano_banana_2",
+  "ar": "4:3",
+  "res": "1k"
+ },
+ {
+  "file": "s-smart-watering-vrwe-vwc-sensor-in-rootzone-0.jpg",
+  "prompt": "a substrate moisture probe with stainless steel prongs lying on a clean stainless bench in a grow room Photorealistic, inside a clean modern licensed medical cannabis production facility; hygienic white and stainless surfaces, bright even lighting, documentary realism, sharp focus, shallow depth of field. Any people present wear correct PPE: nitrile gloves, hairnet, clean lab coat or gown, closed shoes; no bare hands on product, no smoking, eating or naked flames. No text, words or labels in the image.",
+  "model": "nano_banana_2",
+  "ar": "1:1",
+  "res": "1k"
+ },
+ {
+  "file": "s-smart-watering-vrwe-vwc-sensor-in-rootzone-1.jpg",
+  "prompt": "a substrate moisture probe inserted into the side of a saturated rockwool cube holding a cannabis plant Photorealistic, inside a clean modern licensed medical cannabis production facility; hygienic white and stainless surfaces, bright even lighting, documentary realism, sharp focus, shallow depth of field. Any people present wear correct PPE: nitrile gloves, hairnet, clean lab coat or gown, closed shoes; no bare hands on product, no smoking, eating or naked flames. No text, words or labels in the image.",
+  "model": "nano_banana_2",
+  "ar": "1:1",
+  "res": "1k"
+ },
+ {
+  "file": "t-substrates-overview-water-holding-capacity.jpg",
+  "prompt": "A saturated rockwool cube dripping water from its base onto a propagation tray, water beading on the dense mineral-wool fibres at close range Photorealistic, inside a clean modern licensed medical cannabis production facility; hygienic white and stainless surfaces, bright even lighting, documentary realism, sharp focus, shallow depth of field. Any people present wear correct PPE: nitrile gloves, hairnet, clean lab coat or gown, closed shoes; no bare hands on product, no smoking, eating or naked flames. No text, words or labels in the image.",
+  "model": "nano_banana_2",
+  "ar": "4:3",
+  "res": "1k"
+ },
+ {
+  "file": "t-substrates-overview-air-filled-porosity.jpg",
+  "prompt": "An extreme close-up of loose coco coir substrate broken open to reveal the open spongy fibre structure and air gaps between chunks Photorealistic, inside a clean modern licensed medical cannabis production facility; hygienic white and stainless surfaces, bright even lighting, documentary realism, sharp focus, shallow depth of field. Any people present wear correct PPE: nitrile gloves, hairnet, clean lab coat or gown, closed shoes; no bare hands on product, no smoking, eating or naked flames. No text, words or labels in the image.",
+  "model": "nano_banana_2",
+  "ar": "4:3",
+  "res": "1k"
+ },
+ {
+  "file": "t-substrates-overview-ec-electrical-conductivity.jpg",
+  "prompt": "A handheld EC nutrient meter probe dipped into a beaker of clear nutrient solution on a clean bench, digital readout panel facing the camera Photorealistic, inside a clean modern licensed medical cannabis production facility; hygienic white and stainless surfaces, bright even lighting, documentary realism, sharp focus, shallow depth of field. Any people present wear correct PPE: nitrile gloves, hairnet, clean lab coat or gown, closed shoes; no bare hands on product, no smoking, eating or naked flames. No text, words or labels in the image.",
+  "model": "nano_banana_2",
+  "ar": "4:3",
+  "res": "1k"
+ },
+ {
+  "file": "t-substrates-overview-ph.jpg",
+  "prompt": "A digital pH pen with its glass electrode tip submerged in a small cup of nutrient solution on a stainless steel bench Photorealistic, inside a clean modern licensed medical cannabis production facility; hygienic white and stainless surfaces, bright even lighting, documentary realism, sharp focus, shallow depth of field. Any people present wear correct PPE: nitrile gloves, hairnet, clean lab coat or gown, closed shoes; no bare hands on product, no smoking, eating or naked flames. No text, words or labels in the image.",
+  "model": "nano_banana_2",
+  "ar": "4:3",
+  "res": "1k"
+ },
+ {
+  "file": "t-substrates-overview-dryback.jpg",
+  "prompt": "A rockwool slab with a moisture-sensor probe inserted, the slab surface visibly drier and lighter at the top than the damp darker base, on a flood table Photorealistic, inside a clean modern licensed medical cannabis production facility; hygienic white and stainless surfaces, bright even lighting, documentary realism, sharp focus, shallow depth of field. Any people present wear correct PPE: nitrile gloves, hairnet, clean lab coat or gown, closed shoes; no bare hands on product, no smoking, eating or naked flames. No text, words or labels in the image.",
+  "model": "nano_banana_2",
+  "ar": "4:3",
+  "res": "1k"
+ },
+ {
+  "file": "s-substrates-overview-substrate-types-0.jpg",
+  "prompt": "A handful of moist brown coco coir substrate held over an open grow bag, loose fibrous texture visible close up Photorealistic, inside a clean modern licensed medical cannabis production facility; hygienic white and stainless surfaces, bright even lighting, documentary realism, sharp focus, shallow depth of field. Any people present wear correct PPE: nitrile gloves, hairnet, clean lab coat or gown, closed shoes; no bare hands on product, no smoking, eating or naked flames. No text, words or labels in the image.",
+  "model": "nano_banana_2",
+  "ar": "1:1",
+  "res": "1k"
+ },
+ {
+  "file": "s-substrates-overview-substrate-types-1.jpg",
+  "prompt": "A clean cube of green-tinged mineral-wool rockwool sitting on a propagation tray, dense fibre structure visible Photorealistic, inside a clean modern licensed medical cannabis production facility; hygienic white and stainless surfaces, bright even lighting, documentary realism, sharp focus, shallow depth of field. Any people present wear correct PPE: nitrile gloves, hairnet, clean lab coat or gown, closed shoes; no bare hands on product, no smoking, eating or naked flames. No text, words or labels in the image.",
+  "model": "nano_banana_2",
+  "ar": "1:1",
+  "res": "1k"
+ },
+ {
+  "file": "s-substrates-overview-substrate-types-2.jpg",
+  "prompt": "A scoop of dark crumbly living-soil potting mix with visible perlite specks held in a hand above a fabric pot Photorealistic, inside a clean modern licensed medical cannabis production facility; hygienic white and stainless surfaces, bright even lighting, documentary realism, sharp focus, shallow depth of field. Any people present wear correct PPE: nitrile gloves, hairnet, clean lab coat or gown, closed shoes; no bare hands on product, no smoking, eating or naked flames. No text, words or labels in the image.",
+  "model": "nano_banana_2",
+  "ar": "1:1",
+  "res": "1k"
+ },
+ {
+  "file": "t-tissue-culture-hop-latent-viroid-hplvd-sometimes-hlvd.jpg",
+  "prompt": "a stunted, brittle cannabis plant beside a healthy one showing the dulled trichomes, smaller malformed leaves and reduced vigour of viroid infection in a clean grow facility Photorealistic, inside a clean modern licensed medical cannabis production facility; hygienic white and stainless surfaces, bright even lighting, documentary realism, sharp focus, shallow depth of field. Any people present wear correct PPE: nitrile gloves, hairnet, clean lab coat or gown, closed shoes; no bare hands on product, no smoking, eating or naked flames. No text, words or labels in the image.",
+  "model": "nano_banana_2",
+  "ar": "4:3",
+  "res": "1k"
+ },
+ {
+  "file": "t-tissue-culture-ms-murashige-skoog-salts.jpg",
+  "prompt": "an open jar of fine off-white plant tissue culture salt powder with a measuring scoop on a clean lab bench Photorealistic, inside a clean modern licensed medical cannabis production facility; hygienic white and stainless surfaces, bright even lighting, documentary realism, sharp focus, shallow depth of field. Any people present wear correct PPE: nitrile gloves, hairnet, clean lab coat or gown, closed shoes; no bare hands on product, no smoking, eating or naked flames. No text, words or labels in the image.",
+  "model": "nano_banana_2",
+  "ar": "4:3",
+  "res": "1k"
+ },
+ {
+  "file": "t-tissue-culture-dkw-driver-kuniyuki-walnut-salts.jpg",
+  "prompt": "a labelled foil pouch of pale crystalline plant culture salt mix being weighed on a digital lab balance Photorealistic, inside a clean modern licensed medical cannabis production facility; hygienic white and stainless surfaces, bright even lighting, documentary realism, sharp focus, shallow depth of field. Any people present wear correct PPE: nitrile gloves, hairnet, clean lab coat or gown, closed shoes; no bare hands on product, no smoking, eating or naked flames. No text, words or labels in the image.",
+  "model": "nano_banana_2",
+  "ar": "4:3",
+  "res": "1k"
+ },
+ {
+  "file": "t-tissue-culture-rt-qpcr.jpg",
+  "prompt": "a real-time PCR thermocycler instrument with a 96-well plate of small clear sample tubes loaded into it on a lab bench Photorealistic, inside a clean modern licensed medical cannabis production facility; hygienic white and stainless surfaces, bright even lighting, documentary realism, sharp focus, shallow depth of field. Any people present wear correct PPE: nitrile gloves, hairnet, clean lab coat or gown, closed shoes; no bare hands on product, no smoking, eating or naked flames. No text, words or labels in the image.",
+  "model": "nano_banana_2",
+  "ar": "4:3",
+  "res": "1k"
+ },
+ {
+  "file": "t-tissue-culture-rt-lamp.jpg",
+  "prompt": "a small portable handheld isothermal LAMP test device with a row of reaction tubes turning fluorescent on a clean bench Photorealistic, inside a clean modern licensed medical cannabis production facility; hygienic white and stainless surfaces, bright even lighting, documentary realism, sharp focus, shallow depth of field. Any people present wear correct PPE: nitrile gloves, hairnet, clean lab coat or gown, closed shoes; no bare hands on product, no smoking, eating or naked flames. No text, words or labels in the image.",
+  "model": "nano_banana_2",
+  "ar": "4:3",
+  "res": "1k"
+ },
+ {
+  "file": "t-tissue-culture-hyperhydricity-a-k-a-vitrification.jpg",
+  "prompt": "a glassy translucent water-soaked swollen cannabis micro-shoot in a culture vessel, leaves looking wet and brittle compared with a normal green shoot Photorealistic, inside a clean modern licensed medical cannabis production facility; hygienic white and stainless surfaces, bright even lighting, documentary realism, sharp focus, shallow depth of field. Any people present wear correct PPE: nitrile gloves, hairnet, clean lab coat or gown, closed shoes; no bare hands on product, no smoking, eating or naked flames. No text, words or labels in the image.",
+  "model": "nano_banana_2",
+  "ar": "4:3",
+  "res": "1k"
+ },
+ {
+  "file": "s-tissue-culture-meristem-zoom-0.jpg",
+  "prompt": "the soft growing tip of a green cannabis shoot with tightly folded young leaves at the very apex, held in forceps Photorealistic, inside a clean modern licensed medical cannabis production facility; hygienic white and stainless surfaces, bright even lighting, documentary realism, sharp focus, shallow depth of field. Any people present wear correct PPE: nitrile gloves, hairnet, clean lab coat or gown, closed shoes; no bare hands on product, no smoking, eating or naked flames. No text, words or labels in the image.",
+  "model": "nano_banana_2",
+  "ar": "1:1",
+  "res": "1k"
+ },
+ {
+  "file": "s-tissue-culture-meristem-zoom-1.jpg",
+  "prompt": "a cannabis shoot tip with the outer young leaves peeled back under a stereo microscope, exposing the pale glistening growing point Photorealistic, inside a clean modern licensed medical cannabis production facility; hygienic white and stainless surfaces, bright even lighting, documentary realism, sharp focus, shallow depth of field. Any people present wear correct PPE: nitrile gloves, hairnet, clean lab coat or gown, closed shoes; no bare hands on product, no smoking, eating or naked flames. No text, words or labels in the image.",
+  "model": "nano_banana_2",
+  "ar": "1:1",
+  "res": "1k"
+ },
+ {
+  "file": "s-tissue-culture-meristem-zoom-2.jpg",
+  "prompt": "an extreme close-up of the tiny translucent dome-shaped meristem at the apex of a cannabis shoot, surrounded by two minute leaf primordia, viewed through a stereo microscope Photorealistic, inside a clean modern licensed medical cannabis production facility; hygienic white and stainless surfaces, bright even lighting, documentary realism, sharp focus, shallow depth of field. Any people present wear correct PPE: nitrile gloves, hairnet, clean lab coat or gown, closed shoes; no bare hands on product, no smoking, eating or naked flames. No text, words or labels in the image.",
+  "model": "nano_banana_2",
+  "ar": "1:1",
+  "res": "1k"
+ },
+ {
+  "file": "t-water-quality-ec-electrical-conductivity.jpg",
+  "prompt": "A handheld EC meter pen resting on a stainless bench, its probe tip beaded with water beside a clear beaker of nutrient solution Photorealistic, inside a clean modern licensed medical cannabis production facility; hygienic white and stainless surfaces, bright even lighting, documentary realism, sharp focus, shallow depth of field. Any people present wear correct PPE: nitrile gloves, hairnet, clean lab coat or gown, closed shoes; no bare hands on product, no smoking, eating or naked flames. No text, words or labels in the image.",
+  "model": "nano_banana_2",
+  "ar": "4:3",
+  "res": "1k"
+ },
+ {
+  "file": "t-water-quality-ppm-tds-parts-per-million-total-dissolve.jpg",
+  "prompt": "A digital TDS meter held over a glass of water, its small readout screen face-on and probe submerged Photorealistic, inside a clean modern licensed medical cannabis production facility; hygienic white and stainless surfaces, bright even lighting, documentary realism, sharp focus, shallow depth of field. Any people present wear correct PPE: nitrile gloves, hairnet, clean lab coat or gown, closed shoes; no bare hands on product, no smoking, eating or naked flames. No text, words or labels in the image.",
+  "model": "nano_banana_2",
+  "ar": "4:3",
+  "res": "1k"
+ },
+ {
+  "file": "t-water-quality-ph.jpg",
+  "prompt": "A digital pH pen with its glass electrode bulb dipped into a beaker of water, two small calibration buffer bottles standing nearby Photorealistic, inside a clean modern licensed medical cannabis production facility; hygienic white and stainless surfaces, bright even lighting, documentary realism, sharp focus, shallow depth of field. Any people present wear correct PPE: nitrile gloves, hairnet, clean lab coat or gown, closed shoes; no bare hands on product, no smoking, eating or naked flames. No text, words or labels in the image.",
+  "model": "nano_banana_2",
+  "ar": "4:3",
+  "res": "1k"
+ },
+ {
+  "file": "t-water-quality-alkalinity.jpg",
+  "prompt": "A liquid alkalinity test kit with a dropper reagent bottle adding drops to a sample vial of water that has shifted to a faint pink hue Photorealistic, inside a clean modern licensed medical cannabis production facility; hygienic white and stainless surfaces, bright even lighting, documentary realism, sharp focus, shallow depth of field. Any people present wear correct PPE: nitrile gloves, hairnet, clean lab coat or gown, closed shoes; no bare hands on product, no smoking, eating or naked flames. No text, words or labels in the image.",
+  "model": "nano_banana_2",
+  "ar": "4:3",
+  "res": "1k"
+ },
+ {
+  "file": "t-water-quality-hardness.jpg",
+  "prompt": "Pale white limescale and calcium carbonate crusting on a misting nozzle and the rim of a water reservoir, evidence of hard water Photorealistic, inside a clean modern licensed medical cannabis production facility; hygienic white and stainless surfaces, bright even lighting, documentary realism, sharp focus, shallow depth of field. Any people present wear correct PPE: nitrile gloves, hairnet, clean lab coat or gown, closed shoes; no bare hands on product, no smoking, eating or naked flames. No text, words or labels in the image.",
+  "model": "nano_banana_2",
+  "ar": "4:3",
+  "res": "1k"
+ },
+ {
+  "file": "t-water-quality-ro-reverse-osmosis.jpg",
+  "prompt": "A wall-mounted reverse osmosis filtration system with stacked clear pre-filter housings, a white membrane vessel, and blue connecting tubing in a clean grow room Photorealistic, inside a clean modern licensed medical cannabis production facility; hygienic white and stainless surfaces, bright even lighting, documentary realism, sharp focus, shallow depth of field. Any people present wear correct PPE: nitrile gloves, hairnet, clean lab coat or gown, closed shoes; no bare hands on product, no smoking, eating or naked flames. No text, words or labels in the image.",
+  "model": "nano_banana_2",
+  "ar": "4:3",
+  "res": "1k"
+ },
+ {
+  "file": "s-water-quality-ro-membrane-anatomy-0.jpg",
+  "prompt": "A clear sediment pre-filter housing on a wall-mounted water treatment rack, holding a white spun cartridge stained light brown from filtered particulates Photorealistic, inside a clean modern licensed medical cannabis production facility; hygienic white and stainless surfaces, bright even lighting, documentary realism, sharp focus, shallow depth of field. Any people present wear correct PPE: nitrile gloves, hairnet, clean lab coat or gown, closed shoes; no bare hands on product, no smoking, eating or naked flames. No text, words or labels in the image.",
+  "model": "nano_banana_2",
+  "ar": "1:1",
+  "res": "1k"
+ },
+ {
+  "file": "s-water-quality-ro-membrane-anatomy-1.jpg",
+  "prompt": "A horizontal white cylindrical reverse osmosis membrane housing with inlet and outlet ports and thin connecting tubing, mounted on a treatment frame Photorealistic, inside a clean modern licensed medical cannabis production facility; hygienic white and stainless surfaces, bright even lighting, documentary realism, sharp focus, shallow depth of field. Any people present wear correct PPE: nitrile gloves, hairnet, clean lab coat or gown, closed shoes; no bare hands on product, no smoking, eating or naked flames. No text, words or labels in the image.",
+  "model": "nano_banana_2",
+  "ar": "1:1",
+  "res": "1k"
+ },
+ {
+  "file": "s-water-quality-ro-membrane-anatomy-2.jpg",
+  "prompt": "A stream of clear filtered water flowing from an RO outlet tube into a food-grade collection tank in a clean grow facility Photorealistic, inside a clean modern licensed medical cannabis production facility; hygienic white and stainless surfaces, bright even lighting, documentary realism, sharp focus, shallow depth of field. Any people present wear correct PPE: nitrile gloves, hairnet, clean lab coat or gown, closed shoes; no bare hands on product, no smoking, eating or naked flames. No text, words or labels in the image.",
+  "model": "nano_banana_2",
+  "ar": "1:1",
+  "res": "1k"
+ },
+ {
+  "file": "t-wso-quality-manual-gacp-good-agricultural-and-collection-pr.jpg",
+  "prompt": "A healthy potted cannabis plant in early flower growing in a clean cultivation room, with a row of identical plants receding behind it Photorealistic, inside a clean modern licensed medical cannabis production facility; hygienic white and stainless surfaces, bright even lighting, documentary realism, sharp focus, shallow depth of field. Any people present wear correct PPE: nitrile gloves, hairnet, clean lab coat or gown, closed shoes; no bare hands on product, no smoking, eating or naked flames. No text, words or labels in the image.",
+  "model": "nano_banana_2",
+  "ar": "4:3",
+  "res": "1k"
+ },
+ {
+  "file": "t-wso-quality-manual-qa-vs-qc.jpg",
+  "prompt": "A laboratory analyst's bench in a cannabis QC lab with an HPLC instrument, sample vials in a rack, and a clipboard Photorealistic, inside a clean modern licensed medical cannabis production facility; hygienic white and stainless surfaces, bright even lighting, documentary realism, sharp focus, shallow depth of field. Any people present wear correct PPE: nitrile gloves, hairnet, clean lab coat or gown, closed shoes; no bare hands on product, no smoking, eating or naked flames. No text, words or labels in the image.",
+  "model": "nano_banana_2",
+  "ar": "4:3",
+  "res": "1k"
+ },
+ {
+  "file": "t-wso-quality-manual-sop-standard-operating-procedure.jpg",
+  "prompt": "A laminated step-by-step procedure sheet clipped to a wall-mounted holder beside a piece of clean processing equipment Photorealistic, inside a clean modern licensed medical cannabis production facility; hygienic white and stainless surfaces, bright even lighting, documentary realism, sharp focus, shallow depth of field. Any people present wear correct PPE: nitrile gloves, hairnet, clean lab coat or gown, closed shoes; no bare hands on product, no smoking, eating or naked flames. No text, words or labels in the image.",
+  "model": "nano_banana_2",
+  "ar": "4:3",
+  "res": "1k"
+ },
+ {
+  "file": "t-wso-quality-manual-good-documentation-practice-gdp.jpg",
+  "prompt": "An open bound batch record book on a clean stainless bench with a blue pen resting on a freshly completed handwritten entry Photorealistic, inside a clean modern licensed medical cannabis production facility; hygienic white and stainless surfaces, bright even lighting, documentary realism, sharp focus, shallow depth of field. Any people present wear correct PPE: nitrile gloves, hairnet, clean lab coat or gown, closed shoes; no bare hands on product, no smoking, eating or naked flames. No text, words or labels in the image.",
+  "model": "nano_banana_2",
+  "ar": "4:3",
+  "res": "1k"
+ },
+ {
+  "file": "s-wso-quality-manual-capa-loop-0.jpg",
+  "prompt": "A single dried cannabis flower on a stainless steel inspection bench showing visible grey bud rot on one side, set apart from clean buds Photorealistic, inside a clean modern licensed medical cannabis production facility; hygienic white and stainless surfaces, bright even lighting, documentary realism, sharp focus, shallow depth of field. Any people present wear correct PPE: nitrile gloves, hairnet, clean lab coat or gown, closed shoes; no bare hands on product, no smoking, eating or naked flames. No text, words or labels in the image.",
+  "model": "nano_banana_2",
+  "ar": "1:1",
+  "res": "1k"
+ },
+ {
+  "file": "s-wso-quality-manual-capa-loop-1.jpg",
+  "prompt": "An open paper deviation logbook on a clean bench beside a pen, blank ruled columns ready for an entry Photorealistic, inside a clean modern licensed medical cannabis production facility; hygienic white and stainless surfaces, bright even lighting, documentary realism, sharp focus, shallow depth of field. Any people present wear correct PPE: nitrile gloves, hairnet, clean lab coat or gown, closed shoes; no bare hands on product, no smoking, eating or naked flames. No text, words or labels in the image.",
+  "model": "nano_banana_2",
+  "ar": "1:1",
+  "res": "1k"
+ },
+ {
+  "file": "s-wso-quality-manual-capa-loop-2.jpg",
+  "prompt": "A gloved hand removing a quarantine-flagged sealed product jar from a labelled holding shelf in a clean storage room Photorealistic, inside a clean modern licensed medical cannabis production facility; hygienic white and stainless surfaces, bright even lighting, documentary realism, sharp focus, shallow depth of field. Any people present wear correct PPE: nitrile gloves, hairnet, clean lab coat or gown, closed shoes; no bare hands on product, no smoking, eating or naked flames. No text, words or labels in the image.",
+  "model": "nano_banana_2",
+  "ar": "1:1",
+  "res": "1k"
+ }
+]

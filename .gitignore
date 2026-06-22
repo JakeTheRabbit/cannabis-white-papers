@@ -2,3 +2,8 @@ __pycache__/
 *.pyc
 .DS_Store
 Thumbs.db
+
+# raw image-plan / QA intermediates (distilled into embed_map + assets_manifest)
+_build/_gen/imgplan_*.json
+_build/_gen/qa_list.json
+_build/_gen/assets_done.json
