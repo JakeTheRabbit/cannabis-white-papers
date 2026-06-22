@@ -1,882 +1,118 @@
 {
  "airflow-design": {
   "gallery": [],
-  "sequences": [
-   {
-    "section_id": "boundary",
-    "title": "How airflow strips the boundary layer",
-    "caption": "Still air clings to the leaf until moving air sweeps it away, letting the leaf breathe and transpire.",
-    "frames": [
-     [
-      "Still leaf",
-      "assets/img/s-airflow-design-boundary-layer-airflow-0.jpg"
-     ],
-     [
-      "Gentle breeze",
-      "assets/img/s-airflow-design-boundary-layer-airflow-1.jpg"
-     ],
-     [
-      "Full airflow",
-      "assets/img/s-airflow-design-boundary-layer-airflow-2.jpg"
-     ]
-    ]
-   }
-  ]
+  "sequences": []
  },
  "cloning": {
-  "gallery": [
-   [
-    "Node",
-    "assets/img/t-cloning-node.jpg"
-   ],
-   [
-    "Mother plant",
-    "assets/img/t-cloning-mother-plant.jpg"
-   ],
-   [
-    "Cutting / clone",
-    "assets/img/t-cloning-cutting-clone.jpg"
-   ],
-   [
-    "Rooting cube",
-    "assets/img/t-cloning-rooting-cube.jpg"
-   ],
-   [
-    "Dome",
-    "assets/img/t-cloning-dome.jpg"
-   ]
-  ],
-  "sequences": [
-   {
-    "section_id": "key-terms",
-    "title": "What to root: the node up close",
-    "caption": "A cutting is a shoot severed just below a node; new roots emerge from that node.",
-    "frames": [
-     [
-      "Stem with nodes",
-      "assets/img/s-cloning-trichome-anatomy-zoom-0.jpg"
-     ],
-     [
-      "Cut below node",
-      "assets/img/s-cloning-trichome-anatomy-zoom-1.jpg"
-     ],
-     [
-      "Node in cube",
-      "assets/img/s-cloning-trichome-anatomy-zoom-2.jpg"
-     ]
-    ]
-   }
-  ]
+  "gallery": [],
+  "sequences": []
  },
  "closed-loop": {
   "gallery": [],
-  "sequences": [
-   {
-    "section_id": "reading-plant-state",
-    "title": "Trichome ripeness: when plant state says harvest",
-    "caption": "Reading the plant directly: trichome heads shift clear to cloudy to amber as the flower ripens.",
-    "frames": [
-     [
-      "Clear",
-      "assets/img/s-closed-loop-trichome-ripeness-0.jpg"
-     ],
-     [
-      "Cloudy",
-      "assets/img/s-closed-loop-trichome-ripeness-1.jpg"
-     ],
-     [
-      "Amber",
-      "assets/img/s-closed-loop-trichome-ripeness-2.jpg"
-     ]
-    ]
-   }
-  ]
+  "sequences": []
  },
  "coco-crop-steering": {
-  "gallery": [
-   [
-    "Coco coir",
-    "assets/img/t-coco-crop-steering-coco-coir.jpg"
-   ],
-   [
-    "Substrate",
-    "assets/img/t-coco-crop-steering-substrate.jpg"
-   ]
-  ],
-  "sequences": [
-   {
-    "section_id": "dryback",
-    "title": "One dryback cycle in a coco pot",
-    "caption": "The same coco pot from saturated field capacity through progressive dryback as the plant drinks.",
-    "frames": [
-     [
-      "Field capacity",
-      "assets/img/s-coco-crop-steering-dryback-cycle-0.jpg"
-     ],
-     [
-      "Mid dryback",
-      "assets/img/s-coco-crop-steering-dryback-cycle-1.jpg"
-     ],
-     [
-      "Full dryback",
-      "assets/img/s-coco-crop-steering-dryback-cycle-2.jpg"
-     ]
-    ]
-   }
-  ]
+  "gallery": [],
+  "sequences": []
  },
  "defoliation-training": {
-  "gallery": [
-   [
-    "Node",
-    "assets/img/t-defoliation-training-node.jpg"
-   ],
-   [
-    "Topping",
-    "assets/img/t-defoliation-training-topping.jpg"
-   ],
-   [
-    "LST (Low-Stress Training)",
-    "assets/img/t-defoliation-training-lst-low-stress-training.jpg"
-   ],
-   [
-    "Trellis / SCROG (Screen of Green)",
-    "assets/img/t-defoliation-training-trellis-scrog-screen-of-green.jpg"
-   ]
-  ],
-  "sequences": [
-   {
-    "section_id": "topping-lst",
-    "title": "Topping: one tip becomes two",
-    "caption": "Cutting the main growing tip forces the plant to split into two new colas.",
-    "frames": [
-     [
-      "Before",
-      "assets/img/s-defoliation-training-topping-two-tops-0.jpg"
-     ],
-     [
-      "The cut",
-      "assets/img/s-defoliation-training-topping-two-tops-1.jpg"
-     ],
-     [
-      "Two tops",
-      "assets/img/s-defoliation-training-topping-two-tops-2.jpg"
-     ]
-    ]
-   }
-  ]
+  "gallery": [],
+  "sequences": []
  },
  "f2-crop-steering": {
   "gallery": [],
-  "sequences": [
-   {
-    "section_id": "p0-p3-cycle",
-    "title": "One day's dryback on a rockwool cube",
-    "caption": "A single cube from saturated field capacity down through the day's dryback to the next shot.",
-    "frames": [
-     [
-      "Saturated (field capacity)",
-      "assets/img/s-f2-crop-steering-dryback-cycle-0.jpg"
-     ],
-     [
-      "Mid dryback",
-      "assets/img/s-f2-crop-steering-dryback-cycle-1.jpg"
-     ],
-     [
-      "Deep dryback",
-      "assets/img/s-f2-crop-steering-dryback-cycle-2.jpg"
-     ]
-    ]
-   }
-  ]
+  "sequences": []
  },
  "facility-3d": {
-  "gallery": [
-   [
-    "Fit-out",
-    "assets/img/t-facility-3d-fit-out.jpg"
-   ]
-  ],
-  "sequences": [
-   {
-    "section_id": "fit-out-airflow",
-    "title": "From bare shell to fitted grow room",
-    "caption": "The same cultivation room at four build stages, from empty concrete shell to a fully fitted, planted grow room.",
-    "frames": [
-     [
-      "Bare shell",
-      "assets/img/s-facility-3d-bare-to-fitout-0.jpg"
-     ],
-     [
-      "Benches in",
-      "assets/img/s-facility-3d-bare-to-fitout-1.jpg"
-     ],
-     [
-      "Climate gear",
-      "assets/img/s-facility-3d-bare-to-fitout-2.jpg"
-     ]
-    ]
-   }
-  ]
+  "gallery": [],
+  "sequences": []
  },
  "flowering-stages": {
-  "gallery": [
-   [
-    "Pistils",
-    "assets/img/t-flowering-stages-pistils.jpg"
-   ],
-   [
-    "Trichomes",
-    "assets/img/t-flowering-stages-trichomes.jpg"
-   ]
-  ],
-  "sequences": [
-   {
-    "section_id": "when-to-harvest",
-    "title": "Reading trichomes for harvest",
-    "caption": "Trichome heads shift from clear to cloudy to amber as the flower ripens, the clearest harvest signal.",
-    "frames": [
-     [
-      "Clear",
-      "assets/img/s-flowering-stages-trichome-ripeness-0.jpg"
-     ],
-     [
-      "Cloudy",
-      "assets/img/s-flowering-stages-trichome-ripeness-1.jpg"
-     ],
-     [
-      "Amber",
-      "assets/img/s-flowering-stages-trichome-ripeness-2.jpg"
-     ]
-    ]
-   }
-  ]
+  "gallery": [],
+  "sequences": []
  },
  "gmp-hash-lab": {
   "gallery": [],
-  "sequences": [
-   {
-    "section_id": "pressure-and-people",
-    "title": "Gowning Up to Enter the Cleanroom",
-    "caption": "The ordered gowning steps an operator follows at the airlock before entering a clean production room.",
-    "frames": [
-     [
-      "Clean gown station",
-      "assets/img/s-gmp-hash-lab-gowning-sequence-0.jpg"
-     ],
-     [
-      "Donning coverall",
-      "assets/img/s-gmp-hash-lab-gowning-sequence-1.jpg"
-     ],
-     [
-      "Gloves and sticky mat",
-      "assets/img/s-gmp-hash-lab-gowning-sequence-2.jpg"
-     ]
-    ]
-   }
-  ]
+  "sequences": []
  },
  "grow-room-systems": {
-  "gallery": [
-   [
-    "Substrate",
-    "assets/img/t-grow-room-systems-substrate.jpg"
-   ]
-  ],
-  "sequences": [
-   {
-    "section_id": "rootzone",
-    "title": "Three root-zone substrates side by side",
-    "caption": "Common cannabis substrates differ in how they hold water and air around the roots.",
-    "frames": [
-     [
-      "Rockwool cube",
-      "assets/img/s-grow-room-systems-substrate-types-0.jpg"
-     ],
-     [
-      "Coco coir",
-      "assets/img/s-grow-room-systems-substrate-types-1.jpg"
-     ],
-     [
-      "Peat mix",
-      "assets/img/s-grow-room-systems-substrate-types-2.jpg"
-     ]
-    ]
-   }
-  ]
+  "gallery": [],
+  "sequences": []
  },
  "harvest-dry-trim-cure": {
-  "gallery": [
-   [
-    "Trichomes",
-    "assets/img/t-harvest-dry-trim-cure-trichomes.jpg"
-   ]
-  ],
-  "sequences": [
-   {
-    "section_id": "harvest-timing",
-    "title": "Reading trichome ripeness",
-    "caption": "The same trichome heads progress from clear to cloudy to amber as the flower ripens.",
-    "frames": [
-     [
-      "Clear",
-      "assets/img/s-harvest-dry-trim-cure-trichome-ripeness-0.jpg"
-     ],
-     [
-      "Cloudy",
-      "assets/img/s-harvest-dry-trim-cure-trichome-ripeness-1.jpg"
-     ],
-     [
-      "Amber",
-      "assets/img/s-harvest-dry-trim-cure-trichome-ripeness-2.jpg"
-     ]
-    ]
-   }
-  ]
+  "gallery": [],
+  "sequences": []
  },
  "ipm-sop": {
-  "gallery": [
-   [
-    "Scouting",
-    "assets/img/t-ipm-sop-scouting.jpg"
-   ],
-   [
-    "Biological control (biocontrol)",
-    "assets/img/t-ipm-sop-biological-control-biocontrol.jpg"
-   ],
-   [
-    "Frass",
-    "assets/img/t-ipm-sop-frass.jpg"
-   ]
-  ],
-  "sequences": [
-   {
-    "section_id": "scouting",
-    "title": "Reading trichome ripeness",
-    "caption": "Trichome heads shift from clear to cloudy to amber as a flower ripens, read under magnification.",
-    "frames": [
-     [
-      "Clear",
-      "assets/img/s-ipm-sop-trichome-ripeness-0.jpg"
-     ],
-     [
-      "Cloudy",
-      "assets/img/s-ipm-sop-trichome-ripeness-1.jpg"
-     ],
-     [
-      "Amber",
-      "assets/img/s-ipm-sop-trichome-ripeness-2.jpg"
-     ]
-    ]
-   }
-  ]
+  "gallery": [],
+  "sequences": []
  },
  "irrigation-manual": {
-  "gallery": [
-   [
-    "Substrate",
-    "assets/img/t-irrigation-manual-substrate.jpg"
-   ]
-  ],
-  "sequences": [
-   {
-    "section_id": "phases",
-    "title": "A dryback cycle in the substrate",
-    "caption": "How the media moves from saturated field capacity down through a controlled dryback before the next shot.",
-    "frames": [
-     [
-      "Saturated",
-      "assets/img/s-irrigation-manual-dryback-cycle-0.jpg"
-     ],
-     [
-      "Mid dryback",
-      "assets/img/s-irrigation-manual-dryback-cycle-1.jpg"
-     ],
-     [
-      "Dry, ready for next shot",
-      "assets/img/s-irrigation-manual-dryback-cycle-2.jpg"
-     ]
-    ]
-   }
-  ]
+  "gallery": [],
+  "sequences": []
  },
  "light-acclimation": {
-  "gallery": [
-   [
-    "Photoinhibition / bleaching",
-    "assets/img/t-light-acclimation-photoinhibition-bleaching.jpg"
-   ]
-  ],
-  "sequences": [
-   {
-    "section_id": "how-acclimation-works",
-    "title": "What the leaf builds as it acclimates",
-    "caption": "From a thin shade-grown leaf to a thick, dense sun-acclimated leaf with more chloroplasts.",
-    "frames": [
-     [
-      "Thin shade leaf",
-      "assets/img/s-light-acclimation-acclimation-leaf-anatomy-0.jpg"
-     ],
-     [
-      "Adapting leaf",
-      "assets/img/s-light-acclimation-acclimation-leaf-anatomy-1.jpg"
-     ],
-     [
-      "Thick sun leaf",
-      "assets/img/s-light-acclimation-acclimation-leaf-anatomy-2.jpg"
-     ]
-    ]
-   }
-  ]
+  "gallery": [],
+  "sequences": []
  },
  "lighting-fundamentals": {
   "gallery": [],
-  "sequences": [
-   {
-    "section_id": "intensity-dli",
-    "title": "Light dose by growth stage",
-    "caption": "The same plant under progressively higher canopy light from clone to peak flower.",
-    "frames": [
-     [
-      "Clone/seedling",
-      "assets/img/s-lighting-fundamentals-dli-stage-targets-0.jpg"
-     ],
-     [
-      "Veg",
-      "assets/img/s-lighting-fundamentals-dli-stage-targets-1.jpg"
-     ],
-     [
-      "Flower",
-      "assets/img/s-lighting-fundamentals-dli-stage-targets-2.jpg"
-     ]
-    ]
-   }
-  ]
+  "sequences": []
  },
  "mould-risk": {
-  "gallery": [
-   [
-    "Bud rot (Botrytis)",
-    "assets/img/t-mould-risk-bud-rot-botrytis.jpg"
-   ],
-   [
-    "Powdery mildew (PM)",
-    "assets/img/t-mould-risk-powdery-mildew-pm.jpg"
-   ],
-   [
-    "Leaf wetness / free moisture",
-    "assets/img/t-mould-risk-leaf-wetness-free-moisture.jpg"
-   ]
-  ],
-  "sequences": [
-   {
-    "section_id": "the-two",
-    "title": "How bud rot takes a cola",
-    "caption": "Botrytis moves from a hidden inner stem to a collapsed, browned cola in days.",
-    "frames": [
-     [
-      "Healthy cola",
-      "assets/img/s-mould-risk-botrytis-progression-0.jpg"
-     ],
-     [
-      "Early inner rot",
-      "assets/img/s-mould-risk-botrytis-progression-1.jpg"
-     ],
-     [
-      "Grey mould bloom",
-      "assets/img/s-mould-risk-botrytis-progression-2.jpg"
-     ]
-    ]
-   }
-  ]
+  "gallery": [],
+  "sequences": []
  },
  "nutrient-deficiencies": {
-  "gallery": [
-   [
-    "Chlorosis",
-    "assets/img/t-nutrient-deficiencies-chlorosis.jpg"
-   ],
-   [
-    "Necrosis",
-    "assets/img/t-nutrient-deficiencies-necrosis.jpg"
-   ]
-  ],
-  "sequences": [
-   {
-    "section_id": "mobility-why-position",
-    "title": "Mobile nutrient deficiency starts in old leaves",
-    "caption": "A mobile-nutrient deficiency moves up the plant: lower fan leaves yellow first while the new top growth stays green.",
-    "frames": [
-     [
-      "Lower leaves yellowing",
-      "assets/img/s-nutrient-deficiencies-mobility-old-vs-new-0.jpg"
-     ],
-     [
-      "Mid plant fading",
-      "assets/img/s-nutrient-deficiencies-mobility-old-vs-new-1.jpg"
-     ],
-     [
-      "Green new growth",
-      "assets/img/s-nutrient-deficiencies-mobility-old-vs-new-2.jpg"
-     ]
-    ]
-   }
-  ]
+  "gallery": [],
+  "sequences": []
  },
  "nutrient-mixing-athena": {
-  "gallery": [
-   [
-    "Stock solution (concentrate)",
-    "assets/img/t-nutrient-mixing-athena-stock-solution-concentrate.jpg"
-   ],
-   [
-    "Part A / Pro Core",
-    "assets/img/t-nutrient-mixing-athena-part-a-pro-core.jpg"
-   ],
-   [
-    "Part B / Pro Grow or Pro Bloom",
-    "assets/img/t-nutrient-mixing-athena-part-b-pro-grow-or-pro-bloom.jpg"
-   ]
-  ],
-  "sequences": [
-   {
-    "section_id": "method",
-    "title": "Dissolving the bag into the tank",
-    "caption": "One bag of Athena Pro powder going into a 50 L tank, from dry salt to clear stock.",
-    "frames": [
-     [
-      "Dry salt",
-      "assets/img/s-nutrient-mixing-athena-salt-dissolve-progression-0.jpg"
-     ],
-     [
-      "Adding water",
-      "assets/img/s-nutrient-mixing-athena-salt-dissolve-progression-1.jpg"
-     ],
-     [
-      "Mixing",
-      "assets/img/s-nutrient-mixing-athena-salt-dissolve-progression-2.jpg"
-     ]
-    ]
-   }
-  ]
+  "gallery": [],
+  "sequences": []
  },
  "pest-id": {
-  "gallery": [
-   [
-    "Biocontrol / beneficial",
-    "assets/img/t-pest-id-biocontrol-beneficial.jpg"
-   ],
-   [
-    "Loupe / scope",
-    "assets/img/t-pest-id-loupe-scope.jpg"
-   ],
-   [
-    "Frass, honeydew, stippling",
-    "assets/img/t-pest-id-frass-honeydew-stippling.jpg"
-   ]
-  ],
-  "sequences": [
-   {
-    "section_id": "monitoring",
-    "title": "What a loupe reveals: from leaf to mite",
-    "caption": "Zooming in from a stippled fan leaf to the spider mites and webbing a hand loupe exposes.",
-    "frames": [
-     [
-      "Stippled leaf",
-      "assets/img/s-pest-id-spider-mite-loupe-zoom-0.jpg"
-     ],
-     [
-      "Loupe on leaf",
-      "assets/img/s-pest-id-spider-mite-loupe-zoom-1.jpg"
-     ],
-     [
-      "Mites and webbing",
-      "assets/img/s-pest-id-spider-mite-loupe-zoom-2.jpg"
-     ]
-    ]
-   }
-  ]
+  "gallery": [],
+  "sequences": []
  },
  "ph-management": {
-  "gallery": [
-   [
-    "Substrate / medium",
-    "assets/img/t-ph-management-substrate-medium.jpg"
-   ],
-   [
-    "Runoff",
-    "assets/img/t-ph-management-runoff.jpg"
-   ]
-  ],
-  "sequences": [
-   {
-    "section_id": "measuring-calibrating",
-    "title": "Calibrating a pH pen",
-    "caption": "A two-point calibration: pH pen tip moving from buffer to buffer, then reading the tank.",
-    "frames": [
-     [
-      "pH 7 buffer",
-      "assets/img/s-ph-management-ph-pen-calibration-0.jpg"
-     ],
-     [
-      "pH 4 buffer",
-      "assets/img/s-ph-management-ph-pen-calibration-1.jpg"
-     ],
-     [
-      "reading the tank",
-      "assets/img/s-ph-management-ph-pen-calibration-2.jpg"
-     ]
-    ]
-   }
-  ]
+  "gallery": [],
+  "sequences": []
  },
  "plant-state-dashboard": {
   "gallery": [],
-  "sequences": [
-   {
-    "section_id": "plant-state-model",
-    "title": "A dryback cycle in the rootzone",
-    "caption": "Substrate moisture falls between irrigations, then refills at the next shot.",
-    "frames": [
-     [
-      "Saturated",
-      "assets/img/s-plant-state-dashboard-dryback-cycle-0.jpg"
-     ],
-     [
-      "Drying down",
-      "assets/img/s-plant-state-dashboard-dryback-cycle-1.jpg"
-     ],
-     [
-      "Peak dryback",
-      "assets/img/s-plant-state-dashboard-dryback-cycle-2.jpg"
-     ]
-    ]
-   }
-  ]
+  "sequences": []
  },
  "root-zone-teros12": {
-  "gallery": [
-   [
-    "Capacitance sensor",
-    "assets/img/t-root-zone-teros12-capacitance-sensor.jpg"
-   ]
-  ],
-  "sequences": [
-   {
-    "section_id": "how-it-measures",
-    "title": "How water fills the rootzone",
-    "caption": "The same rockwool block at rising water content, from drained to saturated.",
-    "frames": [
-     [
-      "Drained",
-      "assets/img/s-root-zone-teros12-vwc-wetting-front-0.jpg"
-     ],
-     [
-      "Field capacity",
-      "assets/img/s-root-zone-teros12-vwc-wetting-front-1.jpg"
-     ],
-     [
-      "Saturated",
-      "assets/img/s-root-zone-teros12-vwc-wetting-front-2.jpg"
-     ]
-    ]
-   }
-  ]
+  "gallery": [],
+  "sequences": []
  },
  "seeds-germination": {
-  "gallery": [
-   [
-    "Taproot (radicle)",
-    "assets/img/t-seeds-germination-taproot-radicle.jpg"
-   ],
-   [
-    "Cotyledons",
-    "assets/img/t-seeds-germination-cotyledons.jpg"
-   ],
-   [
-    "True leaves",
-    "assets/img/t-seeds-germination-true-leaves.jpg"
-   ]
-  ],
-  "sequences": [
-   {
-    "section_id": "conditions-and-timeline",
-    "title": "From seed to seedling",
-    "caption": "The visible stages from cracked seed to first true leaves.",
-    "frames": [
-     [
-      "Cracked seed, taproot",
-      "assets/img/s-seeds-germination-seed-to-seedling-0.jpg"
-     ],
-     [
-      "Cotyledons",
-      "assets/img/s-seeds-germination-seed-to-seedling-1.jpg"
-     ],
-     [
-      "First true leaves",
-      "assets/img/s-seeds-germination-seed-to-seedling-2.jpg"
-     ]
-    ]
-   }
-  ]
+  "gallery": [],
+  "sequences": []
  },
  "signal-and-noise": {
-  "gallery": [
-   [
-    "Calibration",
-    "assets/img/t-signal-and-noise-calibration.jpg"
-   ]
-  ],
-  "sequences": [
-   {
-    "section_id": "what-this-is",
-    "title": "Reading ripeness in the trichomes",
-    "caption": "The clearest natural signal in the room: trichome heads shift from clear to cloudy to amber as a flower ripens.",
-    "frames": [
-     [
-      "Clear",
-      "assets/img/s-signal-and-noise-trichome-ripening-0.jpg"
-     ],
-     [
-      "Cloudy",
-      "assets/img/s-signal-and-noise-trichome-ripening-1.jpg"
-     ],
-     [
-      "Amber",
-      "assets/img/s-signal-and-noise-trichome-ripening-2.jpg"
-     ]
-    ]
-   }
-  ]
+  "gallery": [],
+  "sequences": []
  },
  "smart-watering-vrwe": {
-  "gallery": [
-   [
-    "Runoff / drain",
-    "assets/img/t-smart-watering-vrwe-runoff-drain.jpg"
-   ],
-   [
-    "Full pot (DUL, drained upper limit)",
-    "assets/img/t-smart-watering-vrwe-full-pot-dul-drained-upper-limit.jpg"
-   ]
-  ],
-  "sequences": [
-   {
-    "section_id": "key-terms",
-    "title": "Where the moisture reading comes from",
-    "caption": "A substrate moisture probe pushed into a rockwool block, the single spot the wetness number is read from.",
-    "frames": [
-     [
-      "The probe",
-      "assets/img/s-smart-watering-vrwe-vwc-sensor-in-rootzone-0.jpg"
-     ],
-     [
-      "Inserted in the block",
-      "assets/img/s-smart-watering-vrwe-vwc-sensor-in-rootzone-1.jpg"
-     ]
-    ]
-   }
-  ]
+  "gallery": [],
+  "sequences": []
  },
  "substrates-overview": {
   "gallery": [],
-  "sequences": [
-   {
-    "section_id": "water-vs-air",
-    "title": "Four root-zone media, side by side",
-    "caption": "The four media compared in this paper, each shown as the grower handles it.",
-    "frames": [
-     [
-      "Coco coir",
-      "assets/img/s-substrates-overview-substrate-types-0.jpg"
-     ],
-     [
-      "Rockwool",
-      "assets/img/s-substrates-overview-substrate-types-1.jpg"
-     ],
-     [
-      "Living soil",
-      "assets/img/s-substrates-overview-substrate-types-2.jpg"
-     ]
-    ]
-   }
-  ]
+  "sequences": []
  },
  "tissue-culture": {
-  "gallery": [
-   [
-    "Hyperhydricity (a.k.a. vitrification)",
-    "assets/img/t-tissue-culture-hyperhydricity-a-k-a-vitrification.jpg"
-   ]
-  ],
-  "sequences": [
-   {
-    "section_id": "science",
-    "title": "From shoot tip to meristem dome",
-    "caption": "Zooming in on a shoot tip to the tiny virus-free meristem dome that is excised for clean-up.",
-    "frames": [
-     [
-      "Shoot tip",
-      "assets/img/s-tissue-culture-meristem-zoom-0.jpg"
-     ],
-     [
-      "Leaves peeled",
-      "assets/img/s-tissue-culture-meristem-zoom-1.jpg"
-     ],
-     [
-      "Meristem dome",
-      "assets/img/s-tissue-culture-meristem-zoom-2.jpg"
-     ]
-    ]
-   }
-  ]
+  "gallery": [],
+  "sequences": []
  },
  "water-quality": {
   "gallery": [],
-  "sequences": [
-   {
-    "section_id": "ro-buildback",
-    "title": "How a reverse osmosis system strips dissolved solids",
-    "caption": "Source water passes through pre-filters and the RO membrane, splitting into purified permeate and concentrate waste.",
-    "frames": [
-     [
-      "Pre-filter stage",
-      "assets/img/s-water-quality-ro-membrane-anatomy-0.jpg"
-     ],
-     [
-      "RO membrane vessel",
-      "assets/img/s-water-quality-ro-membrane-anatomy-1.jpg"
-     ],
-     [
-      "Purified output",
-      "assets/img/s-water-quality-ro-membrane-anatomy-2.jpg"
-     ]
-    ]
-   }
-  ]
+  "sequences": []
  },
  "wso-quality-manual": {
   "gallery": [],
-  "sequences": [
-   {
-    "section_id": "how-to-build",
-    "title": "From defect to fix: the CAPA loop",
-    "caption": "A quality event flows from observation to documented corrective and preventive action.",
-    "frames": [
-     [
-      "Defect spotted",
-      "assets/img/s-wso-quality-manual-capa-loop-0.jpg"
-     ],
-     [
-      "Logged record",
-      "assets/img/s-wso-quality-manual-capa-loop-1.jpg"
-     ],
-     [
-      "Corrective action",
-      "assets/img/s-wso-quality-manual-capa-loop-2.jpg"
-     ]
-    ]
-   }
-  ]
+  "sequences": []
  }
 }
