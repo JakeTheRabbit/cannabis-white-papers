@@ -45,6 +45,7 @@ GROUPS = [
         {"slug": "mould-risk", "title": "Mould risk",        "short": "Spot and stop bud rot",        "icon": "shield", "status": "live", "track": "Health"},
         {"slug": "ipm-sop",    "title": "IPM: pest management","short": "Scout, decide, act",           "icon": "shield", "status": "live", "track": "Health"},
         {"slug": "pest-id",    "title": "Pest ID & control",  "short": "Mites, thrips, gnats and more", "icon": "shield", "status": "live", "track": "Health"},
+        {"slug": "pppe",       "title": "PPE & biosecurity",  "short": "Gowning, gloves, keeping humans clean", "icon": "shield", "status": "live", "track": "Health"},
     ]},
     {"group": "Precision & automation", "items": [
         {"slug": "root-zone-teros12",  "title": "Root-zone state · TEROS-12", "short": "What the sensor really sees",      "icon": "gauge",     "status": "live", "track": "Precision"},

@@ -52,7 +52,12 @@
   "sequences": []
  },
  "light-acclimation": {
-  "gallery": [],
+  "gallery": [
+   [
+    "Photoinhibition / bleaching",
+    "assets/img/t-light-acclimation-photoinhibition-bleaching.jpg"
+   ]
+  ],
   "sequences": []
  },
  "lighting-fundamentals": {
@@ -60,11 +65,29 @@
   "sequences": []
  },
  "mould-risk": {
-  "gallery": [],
+  "gallery": [
+   [
+    "Bud rot (Botrytis)",
+    "assets/img/t-mould-risk-bud-rot-botrytis.jpg"
+   ],
+   [
+    "Powdery mildew (PM)",
+    "assets/img/t-mould-risk-powdery-mildew-pm.jpg"
+   ]
+  ],
   "sequences": []
  },
  "nutrient-deficiencies": {
-  "gallery": [],
+  "gallery": [
+   [
+    "Chlorosis",
+    "assets/img/t-nutrient-deficiencies-chlorosis.jpg"
+   ],
+   [
+    "Necrosis",
+    "assets/img/t-nutrient-deficiencies-necrosis.jpg"
+   ]
+  ],
   "sequences": []
  },
  "nutrient-mixing-athena": {
@@ -72,7 +95,20 @@
   "sequences": []
  },
  "pest-id": {
-  "gallery": [],
+  "gallery": [
+   [
+    "Biocontrol / beneficial",
+    "assets/img/t-pest-id-biocontrol-beneficial.jpg"
+   ],
+   [
+    "Loupe / scope",
+    "assets/img/t-pest-id-loupe-scope.jpg"
+   ],
+   [
+    "Frass, honeydew, stippling",
+    "assets/img/t-pest-id-frass-honeydew-stippling.jpg"
+   ]
+  ],
   "sequences": []
  },
  "ph-management": {
@@ -104,7 +140,12 @@
   "sequences": []
  },
  "tissue-culture": {
-  "gallery": [],
+  "gallery": [
+   [
+    "Hyperhydricity (a.k.a. vitrification)",
+    "assets/img/t-tissue-culture-hyperhydricity-a-k-a-vitrification.jpg"
+   ]
+  ],
   "sequences": []
  },
  "water-quality": {

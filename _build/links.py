@@ -36,6 +36,7 @@ LINK_PHRASES = {
     "nutrient-deficiencies": ["nutrient deficiency", "nutrient toxicity", "nutrient lockout", "mobile nutrients"],
     "flowering-stages": ["flowering cycle", "the stretch", "bud set", "the flip", "12/12"],
     "pest-id": ["spider mites", "russet mites", "broad mites", "thrips", "fungus gnats", "aphids"],
+    "pppe": ["PPPE", "gowning", "de-gowning", "personal protective equipment", "biosecurity", "fomite", "cross-contamination", "hierarchy of controls"],
 }
 
 # Flat (phrase, slug) list, longest phrase first so multi-word wins over substrings.

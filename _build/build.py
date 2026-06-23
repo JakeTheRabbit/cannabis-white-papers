@@ -42,7 +42,7 @@ PAPER_MODULES = [
     "paper_cloning", "paper_nutrient_mixing_athena", "paper_light_acclimation",
     "paper_defoliation_training", "paper_ipm_sop", "paper_harvest_dry_trim_cure",
     "paper_gmp_hash_lab", "paper_facility_3d", "paper_wso_quality_manual",
-    "paper_rockwool_crop_steering", "paper_daily_checks",
+    "paper_rockwool_crop_steering", "paper_daily_checks", "paper_pppe",
 ]
 PAPERS, PAPER_ERRORS = [], []
 for _m in PAPER_MODULES:
@@ -333,7 +333,8 @@ CURRICULUM = [
    ("Nutrient deficiency & toxicity diagnosis", "nutrient-deficiencies")]),
  ("Runs every stage · Plant health", "Keep them clean.", [
    ("Mould risk: bud rot & PM", "mould-risk"), ("IPM: a working SOP", "ipm-sop"),
-   ("Pest identification & control", "pest-id"), ("Root diseases: pythium & fusarium", None)]),
+   ("Pest identification & control", "pest-id"), ("PPE & biosecurity (PPPE)", "pppe"),
+   ("Root diseases: pythium & fusarium", None)]),
  ("Runs every stage · Precision & automation", "Dial it in and let it run.", [
    ("Root-zone state (TEROS-12)", "root-zone-teros12"), ("Signal & noise", "signal-and-noise"),
    ("Smart watering (VRWE)", "smart-watering-vrwe"), ("The closed loop", "closed-loop"),
