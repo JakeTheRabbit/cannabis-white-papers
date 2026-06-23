@@ -6,7 +6,7 @@ summary: "The best daily check is the one that mostly fills itself in. Let Home 
 track: "Facility & quality"
 read_time: "~16 min read"
 diagrams: "7 diagrams"
-related: ["wso-quality-manual", "plant-state-dashboard", "closed-loop", "grow-room-systems"]
+related: ["plant-state-dashboard", "closed-loop", "grow-room-systems"]
 url: "https://jaketherabbit.github.io/cannabis-white-papers/daily-checks.html"
 md_url: "https://jaketherabbit.github.io/cannabis-white-papers/papers/daily-checks.md"
 version: "1.0"

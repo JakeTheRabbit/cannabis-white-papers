@@ -5,7 +5,7 @@
  "license": "CC BY-NC 4.0",
  "license_url": "https://creativecommons.org/licenses/by-nc/4.0/",
  "base": "https://jaketherabbit.github.io/cannabis-white-papers",
- "count": 32,
+ "count": 31,
  "papers": [
   {
    "slug": "tissue-culture",
@@ -485,7 +485,6 @@
    "diagrams": "13 diagrams",
    "related": [
     "mould-risk",
-    "wso-quality-manual",
     "facility-3d"
    ],
    "url": "https://jaketherabbit.github.io/cannabis-white-papers/gmp-hash-lab.html",
@@ -511,24 +510,6 @@
    "version": "1.0",
    "updated": "2026-06-24",
    "ref_count": 5
-  },
-  {
-   "slug": "wso-quality-manual",
-   "title": "The quality manual: a GMP quality system for cannabis",
-   "summary": "How a medicinal-cannabis company proves, on paper, that every gram it grows and ships is safe, consistent, and traceable. A guide from zero.",
-   "track": "Facility & quality",
-   "read_time": "~18 min read",
-   "diagrams": "12 diagrams",
-   "related": [
-    "gmp-hash-lab",
-    "signal-and-noise",
-    "root-zone-teros12"
-   ],
-   "url": "https://jaketherabbit.github.io/cannabis-white-papers/wso-quality-manual.html",
-   "md_url": "https://jaketherabbit.github.io/cannabis-white-papers/papers/wso-quality-manual.md",
-   "version": "1.0",
-   "updated": "2026-06-24",
-   "ref_count": 9
   },
   {
    "slug": "rockwool-crop-steering",
@@ -557,7 +538,6 @@
    "read_time": "~16 min read",
    "diagrams": "7 diagrams",
    "related": [
-    "wso-quality-manual",
     "plant-state-dashboard",
     "closed-loop",
     "grow-room-systems"
@@ -579,7 +559,7 @@
     "ipm-sop",
     "mould-risk",
     "tissue-culture",
-    "wso-quality-manual"
+    "daily-checks"
    ],
    "url": "https://jaketherabbit.github.io/cannabis-white-papers/pppe.html",
    "md_url": "https://jaketherabbit.github.io/cannabis-white-papers/papers/pppe.md",

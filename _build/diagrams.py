@@ -180,8 +180,4 @@ DIAGRAMS = {
         ("alkalin", P.alkalinity_buffer, "Alkalinity is pH's hidden buffer: high-alkalinity water resists correction, then over-swings."),
         ("ph", C.ph_availability, "Source-water pH and alkalinity set where your feed lands on the availability curve."),
     ],
-    "wso-quality-manual": [
-        ("qa", P.qa_vs_qc, "QA builds quality into the process; QC checks it in the product. You need both."),
-        ("", P.doc_hierarchy, "The document pyramid: policy at the top, the records that prove it at the base."),
-    ],
 }

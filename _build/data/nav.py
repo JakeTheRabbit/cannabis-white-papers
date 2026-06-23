@@ -58,7 +58,6 @@ GROUPS = [
     ]},
     {"group": "Facility & quality", "items": [
         {"slug": "facility-3d",       "title": "3D facility model",  "short": "See the build before you build it", "icon": "building", "status": "live", "track": "Facility"},
-        {"slug": "wso-quality-manual", "title": "Quality manual / QMS","short": "GMP quality management system",      "icon": "doc",      "status": "live", "track": "Facility"},
         {"slug": "daily-checks",       "title": "Daily checks",       "short": "The self-completing facility round", "icon": "dashboard", "status": "live", "track": "Facility"},
     ]},
 ]

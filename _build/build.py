@@ -41,7 +41,7 @@ PAPER_MODULES = [
     "paper_f2_crop_steering", "paper_irrigation_manual",
     "paper_cloning", "paper_nutrient_mixing_athena", "paper_light_acclimation",
     "paper_defoliation_training", "paper_ipm_sop", "paper_harvest_dry_trim_cure",
-    "paper_gmp_hash_lab", "paper_facility_3d", "paper_wso_quality_manual",
+    "paper_gmp_hash_lab", "paper_facility_3d",
     "paper_rockwool_crop_steering", "paper_daily_checks", "paper_pppe",
 ]
 PAPERS, PAPER_ERRORS = [], []
@@ -341,7 +341,7 @@ CURRICULUM = [
    ("Plant-state dashboard", "plant-state-dashboard"), ("F2 crop steering", "f2-crop-steering"),
    ("Irrigation manual", "irrigation-manual")]),
  ("The operation · Facility & quality", "Run it as a business.", [
-   ("Designing a facility in 3D", "facility-3d"), ("Quality manual / QMS", "wso-quality-manual"),
+   ("Designing a facility in 3D", "facility-3d"),
    ("Daily checks: the self-completing round", "daily-checks"),
    ("Compliance, licensing & track-and-trace", None),
    ("Energy, utilities & sustainability", None), ("Yield per watt & unit economics", None)]),

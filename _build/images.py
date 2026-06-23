@@ -155,10 +155,6 @@ IMAGES = [
   "prompt":"Clean 3D architectural render: a top-down/isometric model of a cannabis grow facility floor plan with labelled rooms (veg, flower, dry, trim), equipment blocks and airflow, modern CAD visualization style, crisp labels",
   "caption":"Modelling the facility in 3D catches clashes before construction starts.","alt":"3D facility floor-plan render"},
 
- # ---- WSO quality manual ----
- {"slug":"wso-quality-manual","n":1,"sec":0,"model":CIN,"ar":"16:9","res":"2k",
-  "prompt":"Epic cinematic: a pharmaceutical-grade medicinal cannabis production facility corridor, gowned staff, stainless steel and glass, GMP signage without text, immaculate and clinical, dramatic depth, photoreal",
-  "caption":"A quality system is what lets a facility produce safe, consistent medicine, batch after batch.","alt":"GMP medicinal cannabis facility corridor"},
 ]
 
 # Dropped AI diagram images (image-gen mangles labels; papers already have real SVG diagrams).

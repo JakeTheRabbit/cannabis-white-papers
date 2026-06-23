@@ -13,7 +13,7 @@ SUB = ("Coveralls, hairnets, gloves and shoe covers do two jobs at once: they ke
        "minimum, the room-by-room kit, and the procedures that actually work.")
 META = [("shield", "Biosecurity & PPE"), ("image", "9 diagrams"),
         ("quote", "Research-backed · 15 sources"), ("clock", "~17 min read")]
-RELATED = ["ipm-sop", "mould-risk", "tissue-culture", "wso-quality-manual"]
+RELATED = ["ipm-sop", "mould-risk", "tissue-culture", "daily-checks"]
 REF_IDS = ["cleanroom-humans-source", "cdc-skin-squames", "human-microbial-cloud", "phone-fomite",
            "shoe-floor-contamination", "hlvd-transmission-2025", "hand-hygiene-logreduction",
            "toilet-plume", "fda-21cfr117-personnel", "who-gacp-2003", "who-hand-hygiene",
