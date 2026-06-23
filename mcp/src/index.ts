@@ -115,7 +115,7 @@ async function callTool(env: Env, name: string, args: any) {
           `### ${r.title}\n- slug: \`${r.slug}\`\n- stage: ${r.track}\n- ${r.summary}\n- match: ${r.snippet}`
       )
       .join("\n\n");
-    return textResult(`Top ${res.length} of 32 papers.\n\n${body}\n\nUse get_paper(slug) for the full text.`);
+    return textResult(`Top ${res.length} matching papers.\n\n${body}\n\nUse get_paper(slug) for the full text.`);
   }
   if (name === "get_paper") {
     const md = await env.CORPUS.get("paper:" + String(args?.slug || ""));
