@@ -127,20 +127,21 @@ SECTIONS.append({"id": "phases", "kicker": "06 · The daily rhythm", "title": "T
     p("Growers split the lights-on day into four phases. You do not need fancy gear to think this "
       "way. It is a rhythm of dry, refill, maintain, dry."),
     figure(L.flow("The four phases of the irrigation day",
-            [("P0", "overnight + early dryback"), ("P1", "ramp up: small shots refill"),
-             ("P2", "maintain near field capacity"), ("P3", "pre-night dryback")]), 3,
-      "P0 is the big overnight dryback. P1 is a series of small shots that climb the root zone back "
-      "up. P2 holds it full while the plant works. P3 lets it fall again before dark."),
+            [("P0", "morning dryback at lights-on"), ("P1", "ramp up: small shots refill"),
+             ("P2", "maintain near field capacity"), ("P3", "overnight dryback")]), 3,
+      "P0 is the short morning dryback after lights-on, before the first feed, that gets the plant "
+      "drinking. P1 is a series of small shots that climb the root zone back up. P2 holds it full "
+      "while the plant works. P3 is the big overnight dryback that falls through the dark."),
     figure(L.bars("Where VWC sits through the phases",
             [("P0 end", 46), ("P1", 54), ("P2", 60), ("P3 start", 57)], unit="%", target=55,
             note="Generative steering runs the whole band lower. Vegetative runs it higher and flatter.", maxv=70), 4,
-      "A generative day (shown) lets P0 fall further and keeps shots smaller. A vegetative day keeps "
+      "A generative day (shown) lets the dryback run deeper and keeps shots smaller. A vegetative day keeps "
       "VWC higher and the dryback shallow."),
     table(["Phase", "What it is", "What it does"], [
-      ["<strong>P0</strong>", "Lights-off + first part of the day, no water", "The biggest dryback. Sets the generative/vegetative tone for the day"],
+      ["<strong>P0</strong>", "After lights-on, before the first shot, no water", "A short morning dryback that gets the plant drinking before feeding starts"],
       ["<strong>P1</strong>", "A series of small shots after lights-on", "Refills the root zone back to field capacity, gently"],
       ["<strong>P2</strong>", "Maintenance shots", "Holds VWC near full and flushes out built-up salt (EC control)"],
-      ["<strong>P3</strong>", "Last shot to lights-off", "Lets the root zone dry down before night"],
+      ["<strong>P3</strong>", "Last shot, then overnight", "The big overnight dryback; sets the generative or vegetative tone for the day"],
     ], caption="The P0–P3 framework. The numbers you choose for each phase are your steering recipe."),
   ]})
 

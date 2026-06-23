@@ -118,7 +118,7 @@ SECTIONS.append({"id": "water-content", "kicker": "The number", "title": "What a
 # 5 -----------------------------------------------------------------
 _curve = [(0, 70), (1, 66), (2, 62), (3, 59), (4, 56), (5, 57), (6, 65),
           (7, 73), (8, 79), (9, 77), (10, 78), (11, 76), (12, 71)]
-_curve_x = ["off", "", "", "", "P3 min", "on", "P1", "", "FC", "P2", "", "P0", "off"]
+_curve_x = ["off", "", "", "", "pre-dawn low", "on · P0", "P1", "", "FC", "P2", "", "P3", "off"]
 SECTIONS.append({"id": "dryback", "kicker": "The main lever", "title": "Dryback: what it is, and how to calculate it",
   "blocks": [
     p("A dryback is the block losing water between its daily high and its next low. You create the high by "
@@ -128,7 +128,7 @@ SECTIONS.append({"id": "dryback", "kicker": "The main lever", "title": "Dryback:
     figure(L.line("A day in the life of a slab", _curve, _curve_x, ylab="water content %",
             ymin=0, ymax=100,
             bands=[(55, 92, GL, "working band"), (0, 30, REDL, "non-recoverable")],
-            note="Overnight P3 dryback to a pre-dawn low, a P1 ramp back to field capacity, a P2 maintenance plateau, then P0 into lights-off."), 3,
+            note="Overnight P3 dryback to a pre-dawn low, a short P0 morning dryback at lights-on, a P1 ramp back to field capacity, a P2 maintenance plateau, then the last shot into the P3 overnight dryback."), 3,
       "One daily cycle. The trough never approaches the floor, the peak refreshes the block. The gap "
       "between peak and trough is the dryback."),
     callout("key", "How to calculate a dryback",
