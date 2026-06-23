@@ -1,0 +1,15 @@
+{
+  "name": "cwp-mcp",
+  "version": "1.0.0",
+  "private": true,
+  "description": "The Cannabis White Papers - remote MCP server (Cloudflare Worker)",
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy",
+    "kv:load": "wrangler kv bulk put data/kv-bulk.json --binding CORPUS --remote"
+  },
+  "devDependencies": {
+    "wrangler": "^4.0.0",
+    "@cloudflare/workers-types": "^4.0.0"
+  }
+}
