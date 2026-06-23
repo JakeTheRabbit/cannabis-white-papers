@@ -8,4 +8,4 @@ workers_dev = true
 # then paste the returned id below and run the kv bulk put (see README.md).
 [[kv_namespaces]]
 binding = "CORPUS"
-id = "__FILL_AFTER_KV_CREATE__"
+id = "260347e8df804d9ca2b0fc5e1591f782"
