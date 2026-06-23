@@ -13,7 +13,7 @@ single source of truth and emits, into the repo root:
 
 Run:  cd _build && python export_corpus.py   (or it runs at the end of build.py)
 """
-import os, re, json, html, sys
+import os, re, json, html, sys, zipfile, shutil
 sys.path.insert(0, os.path.dirname(__file__))
 import build  # reuses build.PAPERS, build.REFS, build.NAV, build.GL (no render on import)
 
@@ -317,7 +317,83 @@ def main():
         f"attribution to \"{ATTRIBUTION}\". Commercial use requires permission.\n"
         "Full legal text: " + LICENSE_URL + "legalcode\n")
 
-    print(f"corpus OK -> {len(manifest)} papers + manifest/glossary/llms.txt/llms-full.txt/LICENSE  (leak-scan clean)")
+    # ---- Door 3: Claude Skill bundle (router + bundled corpus) ----
+    skill_dir = os.path.join(ROOT, "skill", "cannabis-white-papers")
+    skill_papers = os.path.join(skill_dir, "papers")
+    if os.path.isdir(skill_papers):
+        shutil.rmtree(skill_papers)
+    os.makedirs(skill_papers, exist_ok=True)
+    for m in manifest:
+        shutil.copy(os.path.join(papers_dir, m["slug"] + ".md"), skill_papers)
+    shutil.copy(os.path.join(ROOT, "manifest.json"), skill_dir)
+    shutil.copy(os.path.join(ROOT, "glossary.json"), skill_dir)
+    shutil.copy(os.path.join(ROOT, "LICENSE"), skill_dir)
+
+    desc = ("Beginner-friendly, peer-reviewed cannabis cultivation reference: 32 white papers on "
+            "propagation (seeds, cloning, tissue culture), crop steering (coco, rockwool, dryback, P0-P3), "
+            "environment (VPD, lighting, airflow, CO2), water and nutrition (pH, EC, substrates, Athena "
+            "mixing, deficiencies), plant health (mould, IPM, pest ID, PPE and biosecurity), precision "
+            "irrigation (root-zone sensors, smart watering, F2, the closed loop), and facility and quality "
+            "(GMP, QMS, daily checks). Use when answering questions about growing cannabis, crop steering, "
+            "irrigation, drybacks, water content, nutrients, pests, mould, environment/VPD, or cultivation "
+            "facility setup; read the relevant papers/<slug>.md for detail and citations.")
+    sk = [f"---\nname: cannabis-white-papers\ndescription: {json.dumps(desc, ensure_ascii=False)}\n---\n",
+          f"# {ATTRIBUTION}\n",
+          "A library of 32 peer-reviewed, beginner-friendly cannabis cultivation white papers. Every "
+          "paper is a clean markdown file in `papers/` with sources preserved as `[^id]` footnotes.\n",
+          f"Licensed {LICENSE_ID} ({LICENSE_URL}). Attribution: {ATTRIBUTION}.\n",
+          "## How to use\n",
+          "1. Match the user's question to a paper below (or grep `papers/` / read `manifest.json`).\n"
+          "2. Read only the relevant `papers/<slug>.md` (progressive disclosure, do not load all 32).\n"
+          "3. Answer from it and cite the paper's footnoted sources. Look up terms in `glossary.json`.\n",
+          "## Papers by stage\n"]
+    order2 = [g["group"] for g in build.NAV.GROUPS]
+    bg = {}
+    for m in manifest:
+        bg.setdefault(m["track"] or "Other", []).append(m)
+    for grp in order2 + [k for k in bg if k not in order2]:
+        if grp not in bg:
+            continue
+        sk.append(f"### {grp}")
+        for m in bg[grp]:
+            sk.append(f"- **{m['title']}** (`papers/{m['slug']}.md`): {SLUG_SHORT.get(m['slug']) or m['summary'][:90]}")
+        sk.append("")
+    open(os.path.join(skill_dir, "SKILL.md"), "w", encoding="utf-8").write("\n".join(sk) + "\n")
+
+    # ---- Door 4: drop-in zip (Projects / Custom GPT / NotebookLM) ----
+    dist_dir = os.path.join(ROOT, "dist")
+    os.makedirs(dist_dir, exist_ok=True)
+    readme = (f"{ATTRIBUTION}\n{'='*len(ATTRIBUTION)}\n\n"
+              f"{len(manifest)} peer-reviewed cannabis cultivation white papers as clean markdown.\n"
+              "Drag this folder into a Claude Project, a Custom GPT's knowledge, or NotebookLM.\n\n"
+              "- papers/<slug>.md  : one paper each, citations as [^id] footnotes\n"
+              "- manifest.json     : index of all papers\n"
+              "- glossary.json     : defined terms\n\n"
+              f"Licensed {LICENSE_ID} ({LICENSE_URL}). Attribution: {ATTRIBUTION}.\n")
+    zpath = os.path.join(dist_dir, "cannabis-white-papers-corpus.zip")
+    with zipfile.ZipFile(zpath, "w", zipfile.ZIP_DEFLATED) as z:
+        z.writestr("README.txt", readme)
+        z.write(os.path.join(ROOT, "manifest.json"), "manifest.json")
+        z.write(os.path.join(ROOT, "glossary.json"), "glossary.json")
+        z.write(os.path.join(ROOT, "LICENSE"), "LICENSE")
+        for m in manifest:
+            z.write(os.path.join(papers_dir, m["slug"] + ".md"), f"papers/{m['slug']}.md")
+
+    # ---- MCP data bundle (ready for the Cloudflare Worker / KV load) ----
+    mcp_data = os.path.join(ROOT, "mcp", "data")
+    os.makedirs(mcp_data, exist_ok=True)
+    shutil.copy(os.path.join(ROOT, "manifest.json"), mcp_data)
+    shutil.copy(os.path.join(ROOT, "glossary.json"), mcp_data)
+    shutil.copy(os.path.join(ROOT, "assets", "search-index.js"), os.path.join(mcp_data, "search-index.js"))
+    mp = os.path.join(mcp_data, "papers")
+    if os.path.isdir(mp):
+        shutil.rmtree(mp)
+    os.makedirs(mp, exist_ok=True)
+    for m in manifest:
+        shutil.copy(os.path.join(papers_dir, m["slug"] + ".md"), mp)
+
+    print(f"corpus OK -> {len(manifest)} papers + manifest/glossary/llms.txt/llms-full.txt/LICENSE "
+          f"+ skill + zip + mcp/data  (leak-scan clean)")
 
 
 if __name__ == "__main__":

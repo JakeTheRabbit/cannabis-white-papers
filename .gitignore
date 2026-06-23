@@ -7,3 +7,10 @@ Thumbs.db
 _build/_gen/imgplan_*.json
 _build/_gen/qa_list.json
 _build/_gen/assets_done.json
+
+# regenerable corpus bundles (source = papers/ + _build/export_corpus.py)
+mcp/data/
+skill/cannabis-white-papers/papers/
+skill/cannabis-white-papers/manifest.json
+skill/cannabis-white-papers/glossary.json
+skill/cannabis-white-papers/LICENSE
