@@ -1,0 +1,591 @@
+{
+ "name": "The Cannabis White Papers",
+ "version": "1.0",
+ "updated": "2026-06-24",
+ "license": "CC BY-NC 4.0",
+ "license_url": "https://creativecommons.org/licenses/by-nc/4.0/",
+ "base": "https://jaketherabbit.github.io/cannabis-white-papers",
+ "count": 32,
+ "papers": [
+  {
+   "slug": "tissue-culture",
+   "title": "Cleaning up cannabis genetics with tissue culture",
+   "summary": "Tissue culture grows a clean, vigorous, genetically identical mother from a speck of tissue off a tired or diseased plant. Explained from absolute zero.",
+   "track": "Propagation",
+   "read_time": "~22 min read",
+   "diagrams": "13 diagrams",
+   "related": [
+    "mould-risk",
+    "grow-room-systems",
+    "gmp-hash-lab"
+   ],
+   "url": "https://jaketherabbit.github.io/cannabis-white-papers/tissue-culture.html",
+   "md_url": "https://jaketherabbit.github.io/cannabis-white-papers/papers/tissue-culture.md",
+   "version": "1.0",
+   "updated": "2026-06-24",
+   "ref_count": 12
+  },
+  {
+   "slug": "coco-crop-steering",
+   "title": "Precision coco cultivation: crop steering in coir",
+   "summary": "Coco coir lets you talk to your plants through water. This paper shows you what the root zone is telling you, and how a daily rhythm of wetting and drying steers a plant toward leaves or toward flower, explained from zero.",
+   "track": "Flowering",
+   "read_time": "~16 min read",
+   "diagrams": "5 diagrams",
+   "related": [
+    "root-zone-teros12",
+    "grow-room-systems",
+    "tissue-culture"
+   ],
+   "url": "https://jaketherabbit.github.io/cannabis-white-papers/coco-crop-steering.html",
+   "md_url": "https://jaketherabbit.github.io/cannabis-white-papers/papers/coco-crop-steering.md",
+   "version": "1.0",
+   "updated": "2026-06-24",
+   "ref_count": 10
+  },
+  {
+   "slug": "grow-room-systems",
+   "title": "The cannabis grow room: a systems guide",
+   "summary": "A grow room is one connected system, not a list of gadgets. Light, heat, humidity, air and water all pull on each other. Learn to see the whole machine, so a fix in one place doesn't break another.",
+   "track": "Environment & climate",
+   "read_time": "~18 min read",
+   "diagrams": "4 diagrams",
+   "related": [
+    "coco-crop-steering",
+    "airflow-design",
+    "mould-risk"
+   ],
+   "url": "https://jaketherabbit.github.io/cannabis-white-papers/grow-room-systems.html",
+   "md_url": "https://jaketherabbit.github.io/cannabis-white-papers/papers/grow-room-systems.md",
+   "version": "1.0",
+   "updated": "2026-06-24",
+   "ref_count": 10
+  },
+  {
+   "slug": "airflow-design",
+   "title": "Airflow design for indoor cultivation",
+   "summary": "Every leaf sits inside a film of still air that limits how fast it can breathe. Airflow strips that film away. Done right it feeds the plant and dries the room. Done wrong it scorches leaves or breeds rot.",
+   "track": "Environment & climate",
+   "read_time": "~14 min read",
+   "diagrams": "3 diagrams",
+   "related": [
+    "grow-room-systems",
+    "mould-risk",
+    "coco-crop-steering"
+   ],
+   "url": "https://jaketherabbit.github.io/cannabis-white-papers/airflow-design.html",
+   "md_url": "https://jaketherabbit.github.io/cannabis-white-papers/papers/airflow-design.md",
+   "version": "1.0",
+   "updated": "2026-06-24",
+   "ref_count": 9
+  },
+  {
+   "slug": "mould-risk",
+   "title": "Mould risk: preventing and stopping bud rot",
+   "summary": "Mould is the disease most likely to wipe out a harvest in the final weeks, and the one that can quietly make your flower unsafe to consume. Learn the conditions it needs, how to deny them, and what to do the moment you find it.",
+   "track": "Plant health",
+   "read_time": "~15 min read",
+   "diagrams": "3 diagrams",
+   "related": [
+    "grow-room-systems",
+    "airflow-design",
+    "tissue-culture"
+   ],
+   "url": "https://jaketherabbit.github.io/cannabis-white-papers/mould-risk.html",
+   "md_url": "https://jaketherabbit.github.io/cannabis-white-papers/papers/mould-risk.md",
+   "version": "1.0",
+   "updated": "2026-06-24",
+   "ref_count": 10
+  },
+  {
+   "slug": "seeds-germination",
+   "title": "Seeds, germination and seedlings",
+   "summary": "From a dry seed to a thriving seedling: what a seed is, how to choose one, how to wake it up, and how to keep it alive through its most fragile three weeks.",
+   "track": "Propagation",
+   "read_time": "~14 min read",
+   "diagrams": "",
+   "related": [
+    "cloning",
+    "light-acclimation",
+    "mould-risk"
+   ],
+   "url": "https://jaketherabbit.github.io/cannabis-white-papers/seeds-germination.html",
+   "md_url": "https://jaketherabbit.github.io/cannabis-white-papers/papers/seeds-germination.md",
+   "version": "1.0",
+   "updated": "2026-06-24",
+   "ref_count": 11
+  },
+  {
+   "slug": "lighting-fundamentals",
+   "title": "Lighting: spectrum, PPFD and DLI",
+   "summary": "A from-zero guide to how grow light actually works: what to measure, what to aim for at each stage, and how to avoid cooking your plants.",
+   "track": "Environment & climate",
+   "read_time": "~14 min read",
+   "diagrams": "9 diagrams",
+   "related": [
+    "light-acclimation",
+    "cloning",
+    "flowering-stages"
+   ],
+   "url": "https://jaketherabbit.github.io/cannabis-white-papers/lighting-fundamentals.html",
+   "md_url": "https://jaketherabbit.github.io/cannabis-white-papers/papers/lighting-fundamentals.md",
+   "version": "1.0",
+   "updated": "2026-06-24",
+   "ref_count": 9
+  },
+  {
+   "slug": "substrates-overview",
+   "title": "Substrates compared: coco, rockwool, soil, hydro",
+   "summary": "A from-zero guide to what cannabis roots grow in: how each medium holds water and air, how it handles nutrients, how forgiving it is, and how to pick one.",
+   "track": "Water, substrate & feed",
+   "read_time": "~11 min read",
+   "diagrams": "11 diagrams",
+   "related": [
+    "coco-crop-steering",
+    "ph-management",
+    "water-quality"
+   ],
+   "url": "https://jaketherabbit.github.io/cannabis-white-papers/substrates-overview.html",
+   "md_url": "https://jaketherabbit.github.io/cannabis-white-papers/papers/substrates-overview.md",
+   "version": "1.0",
+   "updated": "2026-06-24",
+   "ref_count": 9
+  },
+  {
+   "slug": "water-quality",
+   "title": "Source water, RO and alkalinity",
+   "summary": "What is in your water before nutrients ever go in: tap vs RO vs well, starting EC, alkalinity and carbonates, chlorine and chloramine, hardness, and when reverse osmosis is actually worth the money.",
+   "track": "Water, substrate & feed",
+   "read_time": "~14 min read",
+   "diagrams": "",
+   "related": [
+    "ph-management",
+    "nutrient-mixing-athena",
+    "irrigation-manual"
+   ],
+   "url": "https://jaketherabbit.github.io/cannabis-white-papers/water-quality.html",
+   "md_url": "https://jaketherabbit.github.io/cannabis-white-papers/papers/water-quality.md",
+   "version": "1.0",
+   "updated": "2026-06-24",
+   "ref_count": 8
+  },
+  {
+   "slug": "ph-management",
+   "title": "pH: what it is and how to hold it",
+   "summary": "A beginner's guide to root-zone pH: why one number decides which nutrients your plant can actually eat, what to aim for in coco, hydro and soil, and how to measure, adjust and hold it without chasing ghosts.",
+   "track": "Water, substrate & feed",
+   "read_time": "~14 min read",
+   "diagrams": "8 diagrams",
+   "related": [
+    "nutrient-deficiencies",
+    "water-quality",
+    "nutrient-mixing-athena"
+   ],
+   "url": "https://jaketherabbit.github.io/cannabis-white-papers/ph-management.html",
+   "md_url": "https://jaketherabbit.github.io/cannabis-white-papers/papers/ph-management.md",
+   "version": "1.0",
+   "updated": "2026-06-24",
+   "ref_count": 8
+  },
+  {
+   "slug": "nutrient-deficiencies",
+   "title": "Nutrient deficiency and toxicity diagnosis",
+   "summary": "A beginner's visual guide to reading cannabis leaf symptoms: mobile vs immobile nutrients, deficiency vs toxicity vs pH lockout, and how to confirm and fix the real problem before you reach for fertiliser.",
+   "track": "Water, substrate & feed",
+   "read_time": "~14 min read",
+   "diagrams": "",
+   "related": [
+    "ph-management",
+    "nutrient-mixing-athena",
+    "water-quality"
+   ],
+   "url": "https://jaketherabbit.github.io/cannabis-white-papers/nutrient-deficiencies.html",
+   "md_url": "https://jaketherabbit.github.io/cannabis-white-papers/papers/nutrient-deficiencies.md",
+   "version": "1.0",
+   "updated": "2026-06-24",
+   "ref_count": 9
+  },
+  {
+   "slug": "flowering-stages",
+   "title": "The flower cycle, week by week",
+   "summary": "A beginner's guide to the cannabis flowering stage: the flip to 12/12, the stretch, bud set, bulking, ripening, and reading the plant to know exactly when to cut.",
+   "track": "Flowering",
+   "read_time": "~12 min read",
+   "diagrams": "9 diagrams",
+   "related": [
+    "coco-crop-steering",
+    "defoliation-training",
+    "harvest-dry-trim-cure"
+   ],
+   "url": "https://jaketherabbit.github.io/cannabis-white-papers/flowering-stages.html",
+   "md_url": "https://jaketherabbit.github.io/cannabis-white-papers/papers/flowering-stages.md",
+   "version": "1.0",
+   "updated": "2026-06-24",
+   "ref_count": 8
+  },
+  {
+   "slug": "pest-id",
+   "title": "Pest identification and control",
+   "summary": "A beginner's field guide to the eight pests that hit cannabis hardest: how to spot each one, understand its life cycle, monitor for it, and knock it down with biological controls and targeted treatments. The companion to your IPM decision process.",
+   "track": "Plant health",
+   "read_time": "~18 min read",
+   "diagrams": "",
+   "related": [
+    "ipm-sop",
+    "airflow-design",
+    "mould-risk",
+    "cloning"
+   ],
+   "url": "https://jaketherabbit.github.io/cannabis-white-papers/pest-id.html",
+   "md_url": "https://jaketherabbit.github.io/cannabis-white-papers/papers/pest-id.md",
+   "version": "1.0",
+   "updated": "2026-06-24",
+   "ref_count": 8
+  },
+  {
+   "slug": "root-zone-teros12",
+   "title": "Root-zone state estimation with the TEROS-12 sensor",
+   "summary": "A TEROS-12 capacitance probe measures three things in your pot. This guide explains what each number means, why the raw reading is not the truth, and how to turn it into safe irrigation decisions.",
+   "track": "Precision & automation",
+   "read_time": "~18 min read",
+   "diagrams": "12 diagrams",
+   "related": [
+    "smart-watering-vrwe",
+    "coco-crop-steering",
+    "signal-and-noise"
+   ],
+   "url": "https://jaketherabbit.github.io/cannabis-white-papers/root-zone-teros12.html",
+   "md_url": "https://jaketherabbit.github.io/cannabis-white-papers/papers/root-zone-teros12.md",
+   "version": "1.0",
+   "updated": "2026-06-24",
+   "ref_count": 8
+  },
+  {
+   "slug": "smart-watering-vrwe",
+   "title": "The smart watering brain (VRWE), in plain English",
+   "summary": "A grow room can water plants on its own by combining several sensor signals instead of trusting one moisture probe that might be lying.",
+   "track": "Precision & automation",
+   "read_time": "~9 min read",
+   "diagrams": "9 diagrams",
+   "related": [
+    "root-zone-teros12",
+    "signal-and-noise",
+    "closed-loop"
+   ],
+   "url": "https://jaketherabbit.github.io/cannabis-white-papers/smart-watering-vrwe.html",
+   "md_url": "https://jaketherabbit.github.io/cannabis-white-papers/papers/smart-watering-vrwe.md",
+   "version": "1.0",
+   "updated": "2026-06-24",
+   "ref_count": 5
+  },
+  {
+   "slug": "signal-and-noise",
+   "title": "Signal and noise: precision cultivation",
+   "summary": "Tell a real change in your plants and root zone apart from random sensor wobble, and act only when it matters.",
+   "track": "Precision & automation",
+   "read_time": "~14 min read",
+   "diagrams": "9 diagrams",
+   "related": [
+    "root-zone-teros12",
+    "smart-watering-vrwe",
+    "closed-loop"
+   ],
+   "url": "https://jaketherabbit.github.io/cannabis-white-papers/signal-and-noise.html",
+   "md_url": "https://jaketherabbit.github.io/cannabis-white-papers/papers/signal-and-noise.md",
+   "version": "1.0",
+   "updated": "2026-06-24",
+   "ref_count": 9
+  },
+  {
+   "slug": "closed-loop",
+   "title": "The closed loop: levers, signal and plant state",
+   "summary": "Run a grow room as one self-correcting system. This beginner's guide covers the controls you pull, how to read what the plants are actually doing, and how to feed that back without the room chasing its own tail.",
+   "track": "Precision & automation",
+   "read_time": "~17 min read",
+   "diagrams": "9 diagrams",
+   "related": [
+    "signal-and-noise",
+    "plant-state-dashboard",
+    "f2-crop-steering"
+   ],
+   "url": "https://jaketherabbit.github.io/cannabis-white-papers/closed-loop.html",
+   "md_url": "https://jaketherabbit.github.io/cannabis-white-papers/papers/closed-loop.md",
+   "version": "1.0",
+   "updated": "2026-06-24",
+   "ref_count": 9
+  },
+  {
+   "slug": "plant-state-dashboard",
+   "title": "From telemetry to intelligence: the plant-state dashboard",
+   "summary": "A grow-room screen should show what the plant is doing, not a wall of raw sensor numbers. Here is how to design one that does.",
+   "track": "Precision & automation",
+   "read_time": "~13 min read",
+   "diagrams": "11 diagrams",
+   "related": [
+    "signal-and-noise",
+    "f2-crop-steering",
+    "root-zone-teros12"
+   ],
+   "url": "https://jaketherabbit.github.io/cannabis-white-papers/plant-state-dashboard.html",
+   "md_url": "https://jaketherabbit.github.io/cannabis-white-papers/papers/plant-state-dashboard.md",
+   "version": "1.0",
+   "updated": "2026-06-24",
+   "ref_count": 5
+  },
+  {
+   "slug": "f2-crop-steering",
+   "title": "F2 crop steering: the daily operating manual",
+   "summary": "Run an autonomous crop-steering irrigation controller day to day. This is the plain-language starter guide: the P0–P3 cycle, moisture and salt targets, the controls you actually touch, the safety fail-safes, and what to do when something looks wrong.",
+   "track": "Precision & automation",
+   "read_time": "~18 min read",
+   "diagrams": "12 diagrams",
+   "related": [
+    "coco-crop-steering",
+    "root-zone-teros12",
+    "smart-watering-vrwe"
+   ],
+   "url": "https://jaketherabbit.github.io/cannabis-white-papers/f2-crop-steering.html",
+   "md_url": "https://jaketherabbit.github.io/cannabis-white-papers/papers/f2-crop-steering.md",
+   "version": "1.0",
+   "updated": "2026-06-24",
+   "ref_count": 5
+  },
+  {
+   "slug": "irrigation-manual",
+   "title": "Automated irrigation system manual",
+   "summary": "Install, run, and maintain a sensor-driven crop-steering irrigation system on Home Assistant, explained from zero.",
+   "track": "Precision & automation",
+   "read_time": "~14 min read",
+   "diagrams": "11 diagrams",
+   "related": [
+    "coco-crop-steering",
+    "root-zone-teros12",
+    "smart-watering-vrwe"
+   ],
+   "url": "https://jaketherabbit.github.io/cannabis-white-papers/irrigation-manual.html",
+   "md_url": "https://jaketherabbit.github.io/cannabis-white-papers/papers/irrigation-manual.md",
+   "version": "1.0",
+   "updated": "2026-06-24",
+   "ref_count": 4
+  },
+  {
+   "slug": "cloning",
+   "title": "Cloning: cuttings that root every time",
+   "summary": "Take cannabis cuttings that root reliably. This walks a beginner from picking a mother plant to a transplant-ready clone in 14 days.",
+   "track": "Propagation",
+   "read_time": "~12 min read",
+   "diagrams": "9 diagrams",
+   "related": [
+    "light-acclimation",
+    "ipm-sop",
+    "tissue-culture"
+   ],
+   "url": "https://jaketherabbit.github.io/cannabis-white-papers/cloning.html",
+   "md_url": "https://jaketherabbit.github.io/cannabis-white-papers/papers/cloning.md",
+   "version": "1.0",
+   "updated": "2026-06-24",
+   "ref_count": 9
+  },
+  {
+   "slug": "nutrient-mixing-athena",
+   "title": "Mixing an Athena Pro Line stock tank (metric)",
+   "summary": "Dissolve a full 25 lb bag of Athena Pro Line into a 50 L stock tank to make a concentrate you dose into your feed later. Covers the chemistry of getting ~227 g/L of salt fully into solution, and why each part needs its own tank.",
+   "track": "Water, substrate & feed",
+   "read_time": "~11 min read",
+   "diagrams": "6 diagrams",
+   "related": [
+    "coco-crop-steering",
+    "irrigation-manual",
+    "root-zone-teros12"
+   ],
+   "url": "https://jaketherabbit.github.io/cannabis-white-papers/nutrient-mixing-athena.html",
+   "md_url": "https://jaketherabbit.github.io/cannabis-white-papers/papers/nutrient-mixing-athena.md",
+   "version": "1.0",
+   "updated": "2026-06-24",
+   "ref_count": 8
+  },
+  {
+   "slug": "light-acclimation",
+   "title": "Light acclimation: raise PPFD in steps so plants don't bleach",
+   "summary": "Light is a curve, not a switch. Raise PPFD in steps the plant can keep up with, and match CO2 to set how high you can go.",
+   "track": "Vegetative growth",
+   "read_time": "~9 min read",
+   "diagrams": "9 diagrams",
+   "related": [
+    "coco-crop-steering",
+    "signal-and-noise",
+    "plant-state-dashboard"
+   ],
+   "url": "https://jaketherabbit.github.io/cannabis-white-papers/light-acclimation.html",
+   "md_url": "https://jaketherabbit.github.io/cannabis-white-papers/papers/light-acclimation.md",
+   "version": "1.0",
+   "updated": "2026-06-24",
+   "ref_count": 8
+  },
+  {
+   "slug": "defoliation-training",
+   "title": "Defoliation and plant training for maximum yield",
+   "summary": "A beginner's guide to topping, low-stress training, trellising, lollipopping and defoliation: what each one does, when to do it, and how to avoid overdoing it.",
+   "track": "Vegetative growth",
+   "read_time": "~12 min read",
+   "diagrams": "12 diagrams",
+   "related": [
+    "airflow-design",
+    "mould-risk",
+    "harvest-dry-trim-cure"
+   ],
+   "url": "https://jaketherabbit.github.io/cannabis-white-papers/defoliation-training.html",
+   "md_url": "https://jaketherabbit.github.io/cannabis-white-papers/papers/defoliation-training.md",
+   "version": "1.0",
+   "updated": "2026-06-24",
+   "ref_count": 8
+  },
+  {
+   "slug": "ipm-sop",
+   "title": "Integrated pest management: a working SOP",
+   "summary": "A plain-language standard operating procedure for keeping pests and disease out of an indoor cannabis grow. How to scout, when to act, how to use good bugs and sprays, and how to keep records that hold up.",
+   "track": "Plant health",
+   "read_time": "~14 min read",
+   "diagrams": "",
+   "related": [
+    "mould-risk",
+    "airflow-design",
+    "harvest-dry-trim-cure"
+   ],
+   "url": "https://jaketherabbit.github.io/cannabis-white-papers/ipm-sop.html",
+   "md_url": "https://jaketherabbit.github.io/cannabis-white-papers/papers/ipm-sop.md",
+   "version": "1.0",
+   "updated": "2026-06-24",
+   "ref_count": 6
+  },
+  {
+   "slug": "harvest-dry-trim-cure",
+   "title": "Harvest, dry, trim and cure",
+   "summary": "A beginner's guide to the full post-harvest process: when to cut, how to dry, how to trim, and how to cure flower so it is safe from mould and keeps its smell, weight and quality.",
+   "track": "Harvest, dry, trim & cure",
+   "read_time": "~14 min read",
+   "diagrams": "",
+   "related": [
+    "mould-risk",
+    "airflow-design",
+    "nutrient-mixing-athena"
+   ],
+   "url": "https://jaketherabbit.github.io/cannabis-white-papers/harvest-dry-trim-cure.html",
+   "md_url": "https://jaketherabbit.github.io/cannabis-white-papers/papers/harvest-dry-trim-cure.md",
+   "version": "1.0",
+   "updated": "2026-06-24",
+   "ref_count": 8
+  },
+  {
+   "slug": "gmp-hash-lab",
+   "title": "GMP hash manufacturing: facility flow and quality control",
+   "summary": "How to design a clean, compliant hash and extract factory from scratch: what GMP means, how rooms and people and product move, and how a batch earns its way to market.",
+   "track": "Harvest, dry, trim & cure",
+   "read_time": "~18 min read",
+   "diagrams": "13 diagrams",
+   "related": [
+    "mould-risk",
+    "wso-quality-manual",
+    "facility-3d"
+   ],
+   "url": "https://jaketherabbit.github.io/cannabis-white-papers/gmp-hash-lab.html",
+   "md_url": "https://jaketherabbit.github.io/cannabis-white-papers/papers/gmp-hash-lab.md",
+   "version": "1.0",
+   "updated": "2026-06-24",
+   "ref_count": 8
+  },
+  {
+   "slug": "facility-3d",
+   "title": "Designing a grow facility in 3D before you build it",
+   "summary": "Lay out rooms, equipment and airflow in a 3D model on your screen, and catch the expensive mistakes before anyone pours concrete.",
+   "track": "Facility & quality",
+   "read_time": "~14 min read",
+   "diagrams": "11 diagrams",
+   "related": [
+    "airflow-design",
+    "grow-room-systems",
+    "f2-crop-steering"
+   ],
+   "url": "https://jaketherabbit.github.io/cannabis-white-papers/facility-3d.html",
+   "md_url": "https://jaketherabbit.github.io/cannabis-white-papers/papers/facility-3d.md",
+   "version": "1.0",
+   "updated": "2026-06-24",
+   "ref_count": 5
+  },
+  {
+   "slug": "wso-quality-manual",
+   "title": "The quality manual: a GMP quality system for cannabis",
+   "summary": "How a medicinal-cannabis company proves, on paper, that every gram it grows and ships is safe, consistent, and traceable. A guide from zero.",
+   "track": "Facility & quality",
+   "read_time": "~18 min read",
+   "diagrams": "12 diagrams",
+   "related": [
+    "gmp-hash-lab",
+    "signal-and-noise",
+    "root-zone-teros12"
+   ],
+   "url": "https://jaketherabbit.github.io/cannabis-white-papers/wso-quality-manual.html",
+   "md_url": "https://jaketherabbit.github.io/cannabis-white-papers/papers/wso-quality-manual.md",
+   "version": "1.0",
+   "updated": "2026-06-24",
+   "ref_count": 9
+  },
+  {
+   "slug": "rockwool-crop-steering",
+   "title": "Crop steering in rockwool: drybacks, saturation and the breaking point",
+   "summary": "Rockwool is the most controllable substrate there is, and the least forgiving. This is the guide to what water content really means, how to read and calculate dryback, how dry a block can get before it is gone, and how to hold the right saturation from clone to chop without ever hand-flushing or topping up a cube.",
+   "track": "Flowering",
+   "read_time": "~18 min read",
+   "diagrams": "7 diagrams",
+   "related": [
+    "coco-crop-steering",
+    "root-zone-teros12",
+    "f2-crop-steering",
+    "irrigation-manual"
+   ],
+   "url": "https://jaketherabbit.github.io/cannabis-white-papers/rockwool-crop-steering.html",
+   "md_url": "https://jaketherabbit.github.io/cannabis-white-papers/papers/rockwool-crop-steering.md",
+   "version": "1.0",
+   "updated": "2026-06-24",
+   "ref_count": 10
+  },
+  {
+   "slug": "daily-checks",
+   "title": "Daily checks: the self-completing facility round",
+   "summary": "The best daily check is the one that mostly fills itself in. Let Home Assistant confirm everything it can measure, leave the human only the physical walk-around, make the rest one tap, and the check gets done every day, honestly, with an audit trail that holds up.",
+   "track": "Facility & quality",
+   "read_time": "~16 min read",
+   "diagrams": "7 diagrams",
+   "related": [
+    "wso-quality-manual",
+    "plant-state-dashboard",
+    "closed-loop",
+    "grow-room-systems"
+   ],
+   "url": "https://jaketherabbit.github.io/cannabis-white-papers/daily-checks.html",
+   "md_url": "https://jaketherabbit.github.io/cannabis-white-papers/papers/daily-checks.md",
+   "version": "1.0",
+   "updated": "2026-06-24",
+   "ref_count": 13
+  },
+  {
+   "slug": "pppe",
+   "title": "PPPE: plant and personal protective equipment",
+   "summary": "Coveralls, hairnets, gloves and shoe covers do two jobs at once: they keep the human safe, and they keep the human's particles, microbes and pests off the crop. People are the number-one contamination source in any clean space. This is the full rundown: how bad we are, the bare minimum, the room-by-room kit, and the procedures that actually work.",
+   "track": "Plant health",
+   "read_time": "~17 min read",
+   "diagrams": "9 diagrams",
+   "related": [
+    "ipm-sop",
+    "mould-risk",
+    "tissue-culture",
+    "wso-quality-manual"
+   ],
+   "url": "https://jaketherabbit.github.io/cannabis-white-papers/pppe.html",
+   "md_url": "https://jaketherabbit.github.io/cannabis-white-papers/papers/pppe.md",
+   "version": "1.0",
+   "updated": "2026-06-24",
+   "ref_count": 15
+  }
+ ]
+}
