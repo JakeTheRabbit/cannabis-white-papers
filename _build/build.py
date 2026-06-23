@@ -452,6 +452,15 @@ def build_search_index():
 
 # ---------------------------------------------------------------- main
 def main():
+    # Export the clean machine-readable corpus FIRST, before render_paper() mutates
+    # SECTIONS by appending galleries/diagrams (keeps the corpus prose-only).
+    try:
+        import export_corpus
+        export_corpus.main()
+    except SystemExit:
+        raise
+    except Exception as _ce:
+        print("corpus export skipped:", repr(_ce))
     sizes = {}
     sizes["assets/app.css"] = w("assets/app.css", theme.CSS)
     sizes["assets/app.js"] = w("assets/app.js", app_js.JS)

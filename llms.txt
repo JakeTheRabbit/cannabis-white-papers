@@ -1,0 +1,60 @@
+# The Cannabis White Papers
+
+> Beginner-friendly, peer-reviewed white papers on medical cannabis cultivation: propagation, crop steering, environment, plant health, precision irrigation, facility and quality.
+
+Licensed CC BY-NC 4.0 (https://creativecommons.org/licenses/by-nc/4.0/). Attribution: The Cannabis White Papers. Each paper has a clean markdown version under /papers/ with sources preserved as footnotes.
+
+## Propagation
+- [Cleaning up cannabis genetics with tissue culture](https://jaketherabbit.github.io/cannabis-white-papers/papers/tissue-culture.md): Clean up genetics from a speck of tissue
+- [Seeds, germination and seedlings](https://jaketherabbit.github.io/cannabis-white-papers/papers/seeds-germination.md): Pop seeds and raise seedlings
+- [Cloning: cuttings that root every time](https://jaketherabbit.github.io/cannabis-white-papers/papers/cloning.md): Cuttings that root every time
+
+## Vegetative growth
+- [Light acclimation: raise PPFD in steps so plants don't bleach](https://jaketherabbit.github.io/cannabis-white-papers/papers/light-acclimation.md): Ramp light without bleaching
+- [Defoliation and plant training for maximum yield](https://jaketherabbit.github.io/cannabis-white-papers/papers/defoliation-training.md): Train the canopy for yield
+
+## Flowering
+- [Precision coco cultivation: crop steering in coir](https://jaketherabbit.github.io/cannabis-white-papers/papers/coco-crop-steering.md): Steer the plant with water
+- [The flower cycle, week by week](https://jaketherabbit.github.io/cannabis-white-papers/papers/flowering-stages.md): The flip through to ripe
+- [Crop steering in rockwool: drybacks, saturation and the breaking point](https://jaketherabbit.github.io/cannabis-white-papers/papers/rockwool-crop-steering.md): Drybacks, saturation, the breaking point
+
+## Harvest, dry, trim & cure
+- [Harvest, dry, trim and cure](https://jaketherabbit.github.io/cannabis-white-papers/papers/harvest-dry-trim-cure.md): The whole post-harvest run
+- [GMP hash manufacturing: facility flow and quality control](https://jaketherabbit.github.io/cannabis-white-papers/papers/gmp-hash-lab.md): Turn flower into concentrate
+
+## Environment & climate
+- [The cannabis grow room: a systems guide](https://jaketherabbit.github.io/cannabis-white-papers/papers/grow-room-systems.md): The whole room as one system
+- [Airflow design for indoor cultivation](https://jaketherabbit.github.io/cannabis-white-papers/papers/airflow-design.md): Move air like the pros
+- [Lighting: spectrum, PPFD and DLI](https://jaketherabbit.github.io/cannabis-white-papers/papers/lighting-fundamentals.md): Spectrum, PPFD & DLI
+
+## Water, substrate & feed
+- [Substrates compared: coco, rockwool, soil, hydro](https://jaketherabbit.github.io/cannabis-white-papers/papers/substrates-overview.md): Coco, rockwool, soil, hydro
+- [Source water, RO and alkalinity](https://jaketherabbit.github.io/cannabis-white-papers/papers/water-quality.md): Source water, RO & alkalinity
+- [pH: what it is and how to hold it](https://jaketherabbit.github.io/cannabis-white-papers/papers/ph-management.md): Hold pH, avoid lockout
+- [Nutrient deficiency and toxicity diagnosis](https://jaketherabbit.github.io/cannabis-white-papers/papers/nutrient-deficiencies.md): Read the leaves, fix the feed
+- [Mixing an Athena Pro Line stock tank (metric)](https://jaketherabbit.github.io/cannabis-white-papers/papers/nutrient-mixing-athena.md): Salts, in metric, done right
+
+## Plant health
+- [Mould risk: preventing and stopping bud rot](https://jaketherabbit.github.io/cannabis-white-papers/papers/mould-risk.md): Spot and stop bud rot
+- [Pest identification and control](https://jaketherabbit.github.io/cannabis-white-papers/papers/pest-id.md): Mites, thrips, gnats and more
+- [Integrated pest management: a working SOP](https://jaketherabbit.github.io/cannabis-white-papers/papers/ipm-sop.md): Scout, decide, act
+- [PPPE: plant and personal protective equipment](https://jaketherabbit.github.io/cannabis-white-papers/papers/pppe.md): Gowning, gloves, keeping humans clean
+
+## Precision & automation
+- [Root-zone state estimation with the TEROS-12 sensor](https://jaketherabbit.github.io/cannabis-white-papers/papers/root-zone-teros12.md): What the sensor really sees
+- [The smart watering brain (VRWE), in plain English](https://jaketherabbit.github.io/cannabis-white-papers/papers/smart-watering-vrwe.md): The watering brain, plain English
+- [Signal and noise: precision cultivation](https://jaketherabbit.github.io/cannabis-white-papers/papers/signal-and-noise.md): Real signal vs sensor noise
+- [The closed loop: levers, signal and plant state](https://jaketherabbit.github.io/cannabis-white-papers/papers/closed-loop.md): Levers, signal & plant state
+- [From telemetry to intelligence: the plant-state dashboard](https://jaketherabbit.github.io/cannabis-white-papers/papers/plant-state-dashboard.md): From telemetry to intelligence
+- [F2 crop steering: the daily operating manual](https://jaketherabbit.github.io/cannabis-white-papers/papers/f2-crop-steering.md): The daily P0-P3 cycle
+- [Automated irrigation system manual](https://jaketherabbit.github.io/cannabis-white-papers/papers/irrigation-manual.md): Install and run the system
+
+## Facility & quality
+- [Designing a grow facility in 3D before you build it](https://jaketherabbit.github.io/cannabis-white-papers/papers/facility-3d.md): See the build before you build it
+- [The quality manual: a GMP quality system for cannabis](https://jaketherabbit.github.io/cannabis-white-papers/papers/wso-quality-manual.md): GMP quality management system
+- [Daily checks: the self-completing facility round](https://jaketherabbit.github.io/cannabis-white-papers/papers/daily-checks.md): The self-completing facility round
+
+## Optional
+- [Full corpus (all papers)](https://jaketherabbit.github.io/cannabis-white-papers/llms-full.txt): every paper concatenated
+- [Manifest (JSON index)](https://jaketherabbit.github.io/cannabis-white-papers/manifest.json): machine-readable paper index
+- [Glossary (JSON)](https://jaketherabbit.github.io/cannabis-white-papers/glossary.json): ~270 defined terms

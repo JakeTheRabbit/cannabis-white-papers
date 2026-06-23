@@ -1,0 +1,2692 @@
+{
+ "name": "The Cannabis White Papers — glossary",
+ "count": 381,
+ "license": "CC BY-NC 4.0",
+ "terms": [
+  {
+   "term": "Tissue culture (TC)",
+   "defn": "Growing plant cells, tissues or organs in a sterile container on a jelly-like food, instead of in soil. Also called micropropagation when used to multiply a plant.",
+   "tags": [
+    "tissue culture"
+   ]
+  },
+  {
+   "term": "Micropropagation",
+   "defn": "Using tissue culture to make many genetically identical copies of one plant.",
+   "tags": [
+    "tissue culture"
+   ]
+  },
+  {
+   "term": "In vitro",
+   "defn": "Latin for 'in glass', anything happening inside the sterile culture vessel. Opposite of ex vitro (out in the real world).",
+   "tags": [
+    "tissue culture"
+   ]
+  },
+  {
+   "term": "Explant",
+   "defn": "The small piece of plant you cut off and place into the culture vessel to start a new culture.",
+   "tags": [
+    "tissue culture"
+   ]
+  },
+  {
+   "term": "Meristem",
+   "defn": "The dome of forever-young, constantly dividing cells at the very tip of every shoot. The cleanest tissue on the plant, too new to carry most diseases.",
+   "tags": [
+    "tissue culture"
+   ]
+  },
+  {
+   "term": "Node",
+   "defn": "The point on a stem where a leaf and a bud join. A nodal segment is a short stem piece containing one bud.",
+   "tags": [
+    "tissue culture",
+    "propagation"
+   ]
+  },
+  {
+   "term": "Totipotency",
+   "defn": "The remarkable ability of a single plant cell to regrow into a whole new plant, given the right food and hormones.",
+   "tags": [
+    "tissue culture"
+   ]
+  },
+  {
+   "term": "Aseptic technique",
+   "defn": "Working so that no bacteria, fungi or yeast get into your culture. The single most important skill in tissue culture.",
+   "tags": [
+    "tissue culture"
+   ]
+  },
+  {
+   "term": "Medium (media)",
+   "defn": "The food a culture grows on: a jelly of mineral salts, sugar, vitamins and (optionally) hormones, set firm with a gelling agent.",
+   "tags": [
+    "tissue culture"
+   ]
+  },
+  {
+   "term": "PGR (plant growth regulator)",
+   "defn": "A plant hormone added to the medium to steer growth, cytokinins push shoots, auxins push roots.",
+   "tags": [
+    "tissue culture"
+   ]
+  },
+  {
+   "term": "Cytokinin",
+   "defn": "A class of plant hormone that promotes shoot and bud growth. Examples: meta-topolin, BAP, TDZ.",
+   "tags": [
+    "tissue culture"
+   ]
+  },
+  {
+   "term": "Auxin",
+   "defn": "A class of plant hormone that promotes root growth. IBA is the best one for cannabis.",
+   "tags": [
+    "tissue culture",
+    "propagation"
+   ]
+  },
+  {
+   "term": "Subculture",
+   "defn": "Moving growing tissue onto fresh medium. Repeated every few weeks to keep cultures alive and multiplying.",
+   "tags": [
+    "tissue culture"
+   ]
+  },
+  {
+   "term": "Hyperhydricity (vitrification)",
+   "defn": "A disorder where shoots turn glassy, swollen and water-soaked. They root and harden poorly and usually die at transplant.",
+   "tags": [
+    "tissue culture"
+   ]
+  },
+  {
+   "term": "Acclimatisation (hardening)",
+   "defn": "Gradually toughening a tissue-cultured plantlet up, lowering humidity and raising light, so it can survive in normal air.",
+   "tags": [
+    "tissue culture"
+   ]
+  },
+  {
+   "term": "Indexing",
+   "defn": "Lab-testing a plant (e.g. by RT-qPCR) to confirm it is free of a specific disease. Proving a plant is clean.",
+   "tags": [
+    "tissue culture",
+    "disease"
+   ]
+  },
+  {
+   "term": "Hop Latent Viroid (HpLVd)",
+   "defn": "A tiny loop of RNA, smaller than a virus, that causes 'dudding' in cannabis: stunted plants, smaller buds and big losses in cannabinoids and terpenes.",
+   "tags": [
+    "disease"
+   ]
+  },
+  {
+   "term": "Viroid",
+   "defn": "An infectious agent even simpler than a virus: just a short circle of RNA with no protein shell.",
+   "tags": [
+    "disease"
+   ]
+  },
+  {
+   "term": "Clone",
+   "defn": "A genetically identical copy of a plant, whether made by a cutting or by tissue culture.",
+   "tags": [
+    "propagation"
+   ]
+  },
+  {
+   "term": "Mother plant",
+   "defn": "A healthy stock plant kept in vegetative growth, from which cuttings or explants are taken.",
+   "tags": [
+    "propagation"
+   ]
+  },
+  {
+   "term": "VWC (volumetric water content)",
+   "defn": "How much water is in the root-zone substrate, as a percentage of its volume. A core crop-steering signal.",
+   "tags": [
+    "crop steering",
+    "sensors"
+   ]
+  },
+  {
+   "term": "EC (electrical conductivity)",
+   "defn": "A proxy for how much fertiliser salt is dissolved in the root zone. Higher EC = stronger feed.",
+   "tags": [
+    "crop steering",
+    "sensors"
+   ]
+  },
+  {
+   "term": "VPD (vapour pressure deficit)",
+   "defn": "How 'thirsty' the air is, combines temperature and humidity into one number that drives how fast plants transpire.",
+   "tags": [
+    "environment"
+   ]
+  },
+  {
+   "term": "Dryback",
+   "defn": "The deliberate drop in root-zone moisture between irrigations, used to steer the plant generative or vegetative.",
+   "tags": [
+    "crop steering"
+   ]
+  },
+  {
+   "term": "Crop steering",
+   "defn": "Nudging a plant toward vegetative (leafy) or generative (flower/fruit) growth by controlling irrigation, climate and light.",
+   "tags": [
+    "crop steering"
+   ]
+  },
+  {
+   "term": "Substrate",
+   "defn": "The growing medium roots live in, coco coir, rockwool, peat or soil.",
+   "tags": [
+    "cultivation"
+   ]
+  },
+  {
+   "term": "Generative vs vegetative",
+   "defn": "Two growth modes: vegetative = leaves and stems and size; generative = flowers, fruit and density. Crop steering shifts the balance.",
+   "tags": [
+    "crop steering"
+   ]
+  },
+  {
+   "term": "PPFD",
+   "defn": "Photosynthetic photon flux density, the amount of usable light hitting the canopy, in µmol/m²/s.",
+   "tags": [
+    "environment",
+    "light"
+   ]
+  },
+  {
+   "term": "GMP (good manufacturing practice)",
+   "defn": "A quality framework of rules and records that ensures products are made safely, consistently and traceably.",
+   "tags": [
+    "quality"
+   ]
+  },
+  {
+   "term": "Endophyte",
+   "defn": "A microbe that lives inside healthy-looking plant tissue. The hardest contaminant in tissue culture because surface bleach can't reach it.",
+   "tags": [
+    "tissue culture",
+    "disease"
+   ]
+  },
+  {
+   "term": "Capacitance sensor",
+   "defn": "A probe that measures how much water is in the substrate by sensing its electrical 'permittivity', water changes it far more than soil or air do.",
+   "tags": [
+    "sensors"
+   ]
+  },
+  {
+   "term": "Permittivity (dielectric)",
+   "defn": "How strongly a material responds to an electric field. Water has a very high value, so a moisture probe is really measuring permittivity and converting it to water content.",
+   "tags": [
+    "sensors"
+   ]
+  },
+  {
+   "term": "Calibration",
+   "defn": "Adjusting a sensor's raw reading so it matches reality for your specific substrate, without it, the percentage on screen can be off.",
+   "tags": [
+    "sensors"
+   ]
+  },
+  {
+   "term": "Pore-water EC",
+   "defn": "The salt strength of the water actually touching the roots (as opposed to the bulk average). It's what the plant really 'tastes'.",
+   "tags": [
+    "sensors",
+    "crop steering"
+   ]
+  },
+  {
+   "term": "Sensor fusion",
+   "defn": "Combining several imperfect sensor signals into one better estimate of what's really happening, with a sense of how much to trust it.",
+   "tags": [
+    "sensors",
+    "control"
+   ]
+  },
+  {
+   "term": "Telemetry",
+   "defn": "The stream of numbers your sensors send back, temperature, humidity, moisture and so on, over time.",
+   "tags": [
+    "control"
+   ]
+  },
+  {
+   "term": "Setpoint vs target",
+   "defn": "A setpoint is the exact value a controller aims to hold right now; a target is the broader goal you're steering toward over days.",
+   "tags": [
+    "control"
+   ]
+  },
+  {
+   "term": "Closed-loop control",
+   "defn": "When a system measures a result, compares it to a goal, and adjusts itself automatically, a thermostat is the classic example.",
+   "tags": [
+    "control"
+   ]
+  },
+  {
+   "term": "Feedback",
+   "defn": "Using the measured result of an action to decide the next action. The heart of any self-correcting (closed-loop) system.",
+   "tags": [
+    "control"
+   ]
+  },
+  {
+   "term": "Signal vs noise",
+   "defn": "Signal is a real change in the plant or root zone; noise is meaningless jitter from the sensor or environment. Good control acts on signal, ignores noise.",
+   "tags": [
+    "control",
+    "sensors"
+   ]
+  },
+  {
+   "term": "Control limits (SPC)",
+   "defn": "Statistically-set lines around normal variation. A reading inside them is just noise; one outside is a real signal worth acting on. From 'statistical process control'.",
+   "tags": [
+    "control"
+   ]
+  },
+  {
+   "term": "Cleanroom grade",
+   "defn": "A rating for how few airborne particles a room allows. Stricter grades (and gowning) are used where product contamination must be controlled.",
+   "tags": [
+    "quality",
+    "facility"
+   ]
+  },
+  {
+   "term": "SOP (standard operating procedure)",
+   "defn": "A written, step-by-step instruction for a task, so it's done the same correct way every time by anyone.",
+   "tags": [
+    "quality"
+   ]
+  },
+  {
+   "term": "Traceability",
+   "defn": "Being able to follow a product backward and forward through every step and input, essential for recalls and audits.",
+   "tags": [
+    "quality"
+   ]
+  },
+  {
+   "term": "CAPA",
+   "defn": "Corrective And Preventive Action: the formal process of fixing a problem and stopping it from happening again. A core GMP habit.",
+   "tags": [
+    "quality"
+   ]
+  },
+  {
+   "term": "Batch release",
+   "defn": "The controlled decision, backed by test results and records, that a finished batch is safe and meets spec before it can be sold.",
+   "tags": [
+    "quality"
+   ]
+  },
+  {
+   "term": "Volumetric water content (VWC)",
+   "defn": "The fraction of the media's total volume that is liquid water, in m3/m3; 0.34 means 34% of the pot volume is water. The headline number for irrigation steering.",
+   "tags": [
+    "reference"
+   ]
+  },
+  {
+   "term": "Permittivity (dielectric constant)",
+   "defn": "How strongly a material responds to an electric field. Water is very high (~80), dry substrate ~3-5, air ~1; this contrast is what lets a capacitance sensor infer water content.",
+   "tags": [
+    "reference"
+   ]
+  },
+  {
+   "term": "Volume of influence",
+   "defn": "The pocket of media a probe actually senses; for the TEROS-12 about 1010 mL, large for a dielectric probe but still a local sample of one spot.",
+   "tags": [
+    "reference"
+   ]
+  },
+  {
+   "term": "Resolution vs accuracy",
+   "defn": "Resolution is the smallest change a sensor reports (0.001 m3/m3 here); accuracy is how close the value is to truth (+/-0.03 generic, +/-0.01-0.02 calibrated). They are not the same.",
+   "tags": [
+    "reference"
+   ]
+  },
+  {
+   "term": "Bulk EC",
+   "defn": "Electrical conductivity of the entire wet-media mixture (solids, water, air), measured directly by the probe over 0-20000 microS/cm.",
+   "tags": [
+    "reference"
+   ]
+  },
+  {
+   "term": "Hilhorst model",
+   "defn": "A 2000 method to estimate pore-water EC from bulk EC, VWC and temperature; useful but ~+/-20% sensitive and invalid below VWC 0.10 m3/m3.",
+   "tags": [
+    "reference"
+   ]
+  },
+  {
+   "term": "DUL (drained upper limit) / container capacity",
+   "defn": "How much water a specific container holds after free drainage stops; an observed per-pot state, not a textbook soil constant, that drifts as roots grow.",
+   "tags": [
+    "reference"
+   ]
+  },
+  {
+   "term": "Specific yield (S)",
+   "defn": "Change in VWC per delivered mL of water (dVWC/delivered_mL); when it collapses toward zero it is a candidate sign the pot is full, but only a candidate.",
+   "tags": [
+    "reference"
+   ]
+  },
+  {
+   "term": "Substrate-specific calibration",
+   "defn": "Replacing the probe's generic equation with one fitted to your exact media, tightening VWC accuracy from +/-0.03 to +/-0.01-0.02 m3/m3; mandatory for tight steering.",
+   "tags": [
+    "reference"
+   ]
+  },
+  {
+   "term": "SDI-12",
+   "defn": "The digital serial protocol the TEROS-12 uses to report VWC, EC and temperature; a stale, NaN or railed value over it is a hardware fault, not data.",
+   "tags": [
+    "reference"
+   ]
+  },
+  {
+   "term": "Safe headroom",
+   "defn": "A lower-confidence-bound estimate of how much water can still be added before capacity, the only headroom number allowed to authorize a shot.",
+   "tags": [
+    "reference"
+   ]
+  },
+  {
+   "term": "Representativeness fault",
+   "defn": "When the probe works correctly but its local 1010 mL is not typical of the zone (channeling, air gap, moved probe), so the reading is true locally yet misleading.",
+   "tags": [
+    "reference"
+   ]
+  },
+  {
+   "term": "VRWE (Virtual Root-Zone Water Estimator)",
+   "defn": "Software that estimates the real water in a plant's root zone by combining several signals, then decides irrigation, instead of trusting one moisture probe.",
+   "tags": [
+    "precision"
+   ]
+  },
+  {
+   "term": "Water balance / bank account",
+   "defn": "The running tally of water IN (irrigation) minus what the plant drank minus what drained, equal to the estimated water in the pot.",
+   "tags": [
+    "precision"
+   ]
+  },
+  {
+   "term": "Runoff / drain",
+   "defn": "Water that leaves the bottom of the pot.",
+   "tags": [
+    "precision"
+   ]
+  },
+  {
+   "term": "Full pot (DUL, drained upper limit)",
+   "defn": "The most water a pot can hold after it has finished draining.",
+   "tags": [
+    "precision"
+   ]
+  },
+  {
+   "term": "Channeling (preferential flow)",
+   "defn": "Water sneaking straight down through the substrate, missing the roots (and often the sensor).",
+   "tags": [
+    "precision"
+   ]
+  },
+  {
+   "term": "Confidence",
+   "defn": "The brain's self-rated trust in its current estimate; high confidence allows watering, low confidence forces caution.",
+   "tags": [
+    "precision"
+   ]
+  },
+  {
+   "term": "Shared-drain (sump) puzzle",
+   "defn": "When multiple rooms plus AC/dehumidifier drain into one bucket, making it ambiguous which source caused a flush.",
+   "tags": [
+    "precision"
+   ]
+  },
+  {
+   "term": "Background drip baseline",
+   "defn": "The steady AC/dehumidifier drip learned at night so it can be subtracted from total drain readings.",
+   "tags": [
+    "precision"
+   ]
+  },
+  {
+   "term": "Signal",
+   "defn": "A real, meaningful change in the plant or root zone worth acting on, a sustained trend, a step change tied to a known event, or a repeating daily rhythm.",
+   "tags": [
+    "reference"
+   ]
+  },
+  {
+   "term": "Noise",
+   "defn": "Meaningless fluctuation in a measurement: single-reading spikes, high-frequency jitter, or transients from doors, traffic, and irrigation events.",
+   "tags": [
+    "reference"
+   ]
+  },
+  {
+   "term": "Signal-to-noise ratio (SNR)",
+   "defn": "How strong the thing you care about is compared with everything else competing for attention. High SNR = calm and legible; low SNR = busy and reactive.",
+   "tags": [
+    "reference"
+   ]
+  },
+  {
+   "term": "Drift",
+   "defn": "A slow, one-directional sensor error that pretends to be a real trend. The dangerous form of noise; defeated only by calibration and cross-checking.",
+   "tags": [
+    "reference"
+   ]
+  },
+  {
+   "term": "Aliasing",
+   "defn": "When sampling too slowly folds a fast pattern into a slow one that was never really there, the wagon-wheel-spinning-backwards effect in data.",
+   "tags": [
+    "reference"
+   ]
+  },
+  {
+   "term": "Nyquist rule",
+   "defn": "Sample at least twice as fast as the fastest pattern you need to resolve, or you will misread or invent it.",
+   "tags": [
+    "reference"
+   ]
+  },
+  {
+   "term": "Moving (rolling) average",
+   "defn": "The average of the last N readings, redrawn as each new reading arrives. Cancels random scatter at the cost of a small lag.",
+   "tags": [
+    "reference"
+   ]
+  },
+  {
+   "term": "EWMA",
+   "defn": "Exponentially-weighted moving average, a rolling average that weights recent readings more heavily, giving less lag for the same smoothing.",
+   "tags": [
+    "reference"
+   ]
+  },
+  {
+   "term": "Median filter",
+   "defn": "Takes the middle value of the last N readings; excellent at deleting single-point spikes without smearing real step changes.",
+   "tags": [
+    "reference"
+   ]
+  },
+  {
+   "term": "Statistical process control (SPC)",
+   "defn": "A method from manufacturing that uses a process's own history to decide whether a change is normal noise or a real event needing action.",
+   "tags": [
+    "reference"
+   ]
+  },
+  {
+   "term": "Common-cause variation",
+   "defn": "The natural, expected jitter of a stable process; it lives inside the control limits and the correct response is to do nothing.",
+   "tags": [
+    "reference"
+   ]
+  },
+  {
+   "term": "Special-cause variation",
+   "defn": "A real, assignable change, something actually shifted, that breaks outside the control limits and warrants investigation.",
+   "tags": [
+    "reference"
+   ]
+  },
+  {
+   "term": "Control limits",
+   "defn": "Boundaries computed from a process's own history (typically the mean ± 3 standard deviations) that separate normal variation from abnormal.",
+   "tags": [
+    "reference"
+   ]
+  },
+  {
+   "term": "Tampering",
+   "defn": "Reacting to normal common-cause jitter as if it were a real event; Deming showed this actually increases a process's variation.",
+   "tags": [
+    "reference"
+   ]
+  },
+  {
+   "term": "Coefficient of variation (CV)",
+   "defn": "A measure of spread relative to the average; applied to a batch of plants it literally quantifies the noise (inconsistency) in your crop.",
+   "tags": [
+    "reference"
+   ]
+  },
+  {
+   "term": "Dead-band",
+   "defn": "The tolerance window a controller allows before it acts; too narrow a dead-band makes equipment over-react and 'hunt'.",
+   "tags": [
+    "reference"
+   ]
+  },
+  {
+   "term": "Hunting",
+   "defn": "Oscillation in a feedback loop that over-corrects back and forth instead of settling, often caused by noisy input or too-tight tuning.",
+   "tags": [
+    "reference"
+   ]
+  },
+  {
+   "term": "Closed loop",
+   "defn": "A control system where the result feeds back to drive the next action: measure, decide, act, then measure the effect of that action, repeating continuously.",
+   "tags": [
+    "reference"
+   ]
+  },
+  {
+   "term": "Lever (actuator)",
+   "defn": "Any control you can change in the room - light intensity, cooling setpoint, irrigation shot, CO2 dosing. The paper counts eleven main lever families.",
+   "tags": [
+    "reference"
+   ]
+  },
+  {
+   "term": "Coupled system",
+   "defn": "A system where moving one control changes several others at once, so no lever acts in isolation.",
+   "tags": [
+    "reference"
+   ]
+  },
+  {
+   "term": "Setpoint",
+   "defn": "The specific number a machine is told to aim for (e.g. cool the room to 24C).",
+   "tags": [
+    "reference"
+   ]
+  },
+  {
+   "term": "Target",
+   "defn": "The real outcome you want (e.g. a healthy transpiration rate), which a setpoint is only a proxy for.",
+   "tags": [
+    "reference"
+   ]
+  },
+  {
+   "term": "Plant state",
+   "defn": "The plant's actual inferred condition (e.g. on-track, stressed, steering generative), worked out from many fused signals rather than one gauge.",
+   "tags": [
+    "reference"
+   ]
+  },
+  {
+   "term": "Common cause vs special cause",
+   "defn": "Common-cause variation is normal jitter you leave alone; special-cause variation is an unusual event (a point past a limit, or a non-random run) worth investigating.",
+   "tags": [
+    "reference"
+   ]
+  },
+  {
+   "term": "Sampling cadence",
+   "defn": "How often you record a measurement; it must match the biology - fast enough to catch real responses, slow enough to avoid logging useless noise.",
+   "tags": [
+    "reference"
+   ]
+  },
+  {
+   "term": "Learned envelope",
+   "defn": "The expected healthy range for a value given the cultivar, growth stage and photoperiod, used instead of one fixed threshold.",
+   "tags": [
+    "reference"
+   ]
+  },
+  {
+   "term": "Advisory / prescription",
+   "defn": "An output that names the action, the setpoint, the deadline and the expected outcome - 'do this, by when, or expect that' - instead of just raising an alarm.",
+   "tags": [
+    "reference"
+   ]
+  },
+  {
+   "term": "Oscillation",
+   "defn": "When a loop over-corrects back and forth instead of settling, usually from acting too fast, too hard, or on noise.",
+   "tags": [
+    "reference"
+   ]
+  },
+  {
+   "term": "Transpiration",
+   "defn": "The process of plants drawing water up and releasing it as vapour through their leaves; a core driver linking water, heat and humidity.",
+   "tags": [
+    "reference"
+   ]
+  },
+  {
+   "term": "VPD (vapor pressure deficit)",
+   "defn": "How strongly the air pulls moisture from the plant; drives transpiration. Measured in kPa, e.g. 1.4-1.6; ideal value depends on growth stage.",
+   "tags": [
+    "precision"
+   ]
+  },
+  {
+   "term": "Inference layer",
+   "defn": "The part of the system that estimates things you cannot measure directly (plant stress, transpiration, vigor) from things you can.",
+   "tags": [
+    "precision"
+   ]
+  },
+  {
+   "term": "Baseline / trajectory",
+   "defn": "The expected envelope for a given cultivar at a given stage and photoperiod phase, learned from your own past runs.",
+   "tags": [
+    "precision"
+   ]
+  },
+  {
+   "term": "Leading vs lagging indicator",
+   "defn": "A precursor that warns early (leading) versus a symptom that confirms damage already happened (lagging).",
+   "tags": [
+    "precision"
+   ]
+  },
+  {
+   "term": "PPFD / DLI",
+   "defn": "PPFD is instantaneous light intensity; DLI is total light delivered over a day. The system tracks DLI-to-date, not just the instant.",
+   "tags": [
+    "precision"
+   ]
+  },
+  {
+   "term": "Transpiration proxy",
+   "defn": "An estimate of how fast the plant is 'breathing,' modeled from VPD, light, and substrate water-content response.",
+   "tags": [
+    "precision"
+   ]
+  },
+  {
+   "term": "Named condition",
+   "defn": "A short, human-readable diagnosis (e.g. 'salt accumulation pattern') carrying a confidence level and an evidence chain, replacing a wall of raw numbers.",
+   "tags": [
+    "precision"
+   ]
+  },
+  {
+   "term": "Calm dashboard",
+   "defn": "The exception-based screen that stays quiet by default and speaks only when it has something worth saying.",
+   "tags": [
+    "precision"
+   ]
+  },
+  {
+   "term": "Closed loop (gated)",
+   "defn": "Letting the system auto-apply only low-risk, explicitly-licensed actions, with everything irreversible or expensive kept human-approved.",
+   "tags": [
+    "precision"
+   ]
+  },
+  {
+   "term": "Shot",
+   "defn": "One small irrigation pulse, sized as a percentage of the pot's water capacity (e.g. a 5% shot).",
+   "tags": [
+    "precision"
+   ]
+  },
+  {
+   "term": "Coco coir",
+   "defn": "A coconut-husk growing medium used instead of soil; drains fast and responds quickly to watering.",
+   "tags": [
+    "precision"
+   ]
+  },
+  {
+   "term": "Field capacity",
+   "defn": "The maximum VWC the medium can hold before water just runs off; default cap is 70%.",
+   "tags": [
+    "precision"
+   ]
+  },
+  {
+   "term": "P0-P3 phases",
+   "defn": "The four daily irrigation stages: P0 morning dryback, P1 ramp-up, P2 maintenance, P3 pre-lights-off (emergency only).",
+   "tags": [
+    "precision"
+   ]
+  },
+  {
+   "term": "Crop Steering AI (CS)",
+   "defn": "The sensor-driven 4-phase irrigation brain with per-zone control, EC logic and ML prediction; the active irrigation controller.",
+   "tags": [
+    "precision"
+   ]
+  },
+  {
+   "term": "Zone / table",
+   "defn": "One of the six independently-controlled grow tables, each with its own valve and probe and its own phase state.",
+   "tags": [
+    "precision"
+   ]
+  },
+  {
+   "term": "Substrate probe",
+   "defn": "An in-medium sensor (here GroundWork) that reports both VWC and EC for a zone.",
+   "tags": [
+    "precision"
+   ]
+  },
+  {
+   "term": "ESPHome",
+   "defn": "The firmware/platform that runs the physical sensors and some switches, reporting into Home Assistant.",
+   "tags": [
+    "precision"
+   ]
+  },
+  {
+   "term": "AppDaemon",
+   "defn": "The Python app environment running the ~5900-line master Crop Steering decision loop on top of Home Assistant.",
+   "tags": [
+    "precision"
+   ]
+  },
+  {
+   "term": "Manual override",
+   "defn": "An absolute per-zone lockout: when ON, nothing waters that zone - not auto, not emergency, not a manual trigger.",
+   "tags": [
+    "precision"
+   ]
+  },
+  {
+   "term": "EC ratio",
+   "defn": "Measured EC divided by target EC. Above 1 = too salty (water more to dilute); below 1 = too weak (hold back).",
+   "tags": [
+    "precision"
+   ]
+  },
+  {
+   "term": "Phase (P0-P3)",
+   "defn": "Where a row sits in its daily cycle: P0 morning dryback, P1 ramp-up, P2 maintenance, P3 pre-lights-off and overnight.",
+   "tags": [
+    "precision"
+   ]
+  },
+  {
+   "term": "Zone / row",
+   "defn": "One of the 3 independently steered sections of the room, each with its own probe pair and valve, all fed from a shared tank.",
+   "tags": [
+    "precision"
+   ]
+  },
+  {
+   "term": "Vegetative / Generative mode",
+   "defn": "The two steering modes that select which dryback and EC targets the engine uses; vegetative keeps the plant wet and bulking, generative drives stress/flower.",
+   "tags": [
+    "precision"
+   ]
+  },
+  {
+   "term": "System enabled vs Auto irrigation",
+   "defn": "System enabled is the master arm/kill switch (OFF = nothing fires, ever); Auto irrigation only disables autonomous shots while still allowing manual ones.",
+   "tags": [
+    "precision"
+   ]
+  },
+  {
+   "term": "pH/EC gate",
+   "defn": "A safety check that blocks irrigation when the source tank's pH or EC sits outside configured limits (default pH 5.8-6.2) and sends a phone alert with an 'Irrigate Anyway' option.",
+   "tags": [
+    "precision"
+   ]
+  },
+  {
+   "term": "Blocked-dripper guard",
+   "defn": "A fail-safe that parks a row for ~2 hours after too many failed emergency shots (default 4 in 30 min), with a per-row on/off toggle.",
+   "tags": [
+    "precision"
+   ]
+  },
+  {
+   "term": "Fail-safe read",
+   "defn": "If the engine can't confirm the master arm switch, it treats the system as disabled rather than firing, so a state-sync gap can't make it act blind.",
+   "tags": [
+    "precision"
+   ]
+  },
+  {
+   "term": "AppDaemon engine",
+   "defn": "The autonomous brain (master_crop_steering_app.py) that reads sensors and settings, decides each row's phase, and runs the hardware sequence.",
+   "tags": [
+    "precision"
+   ]
+  },
+  {
+   "term": "Vegetative vs generative",
+   "defn": "Two steering goals: vegetative favours root and leaf growth (longer drybacks, lower EC); generative favours flowering and fruit (shorter drybacks, higher EC).",
+   "tags": [
+    "precision"
+   ]
+  },
+  {
+   "term": "Solenoid valve",
+   "defn": "An electrically operated valve that opens or closes water flow when the relay board switches it.",
+   "tags": [
+    "precision"
+   ]
+  },
+  {
+   "term": "Home Assistant",
+   "defn": "Free open-source home-automation software that runs the dashboards, automations, and integrations described here.",
+   "tags": [
+    "precision"
+   ]
+  },
+  {
+   "term": "Runoff",
+   "defn": "Excess nutrient water that drains out the bottom of the pot during or after irrigation.",
+   "tags": [
+    "precision"
+   ]
+  },
+  {
+   "term": "Cleanroom grade (CNC, D, C, B, A)",
+   "defn": "A ranking of how clean a room's air is. CNC is uncontrolled; Grade A is cleanest. Mapped to ISO 14644 classes (D=ISO 8, C=ISO 7, A=ISO 5).",
+   "tags": [
+    "reference"
+   ]
+  },
+  {
+   "term": "ISO 14644",
+   "defn": "The international standard that classifies cleanrooms by the number of airborne particles allowed per cubic metre.",
+   "tags": [
+    "reference"
+   ]
+  },
+  {
+   "term": "Pressure cascade",
+   "defn": "A deliberate ladder of air pressures where cleaner rooms are more positive, so air always flows from clean to dirty and contamination cannot drift toward product.",
+   "tags": [
+    "reference"
+   ]
+  },
+  {
+   "term": "Airlock / gowning cascade",
+   "defn": "A sealed transition room with interlocked doors where personnel escalate protective clothing before entering a higher-grade space.",
+   "tags": [
+    "reference"
+   ]
+  },
+  {
+   "term": "C1D1",
+   "defn": "Class 1 Division 1, an electrical/room classification for areas where flammable solvent vapour may be present, requiring explosion-proof equipment and gas detection.",
+   "tags": [
+    "reference"
+   ]
+  },
+  {
+   "term": "Residual solvent",
+   "defn": "Solvent (butane, ethanol, etc.) left behind in a finished extract; a key safety test with hard ppm limits.",
+   "tags": [
+    "reference"
+   ]
+  },
+  {
+   "term": "Water activity (Aw)",
+   "defn": "A 0–1 measure of free water available to microbes; keeping Aw <=0.55–0.65 suppresses mould and yeast growth.",
+   "tags": [
+    "reference"
+   ]
+  },
+  {
+   "term": "CCP (Critical Control Point)",
+   "defn": "A process step with a measured limit that prevents a specific hazard; HACCP terminology used for in-process control.",
+   "tags": [
+    "reference"
+   ]
+  },
+  {
+   "term": "Batch / lot",
+   "defn": "One defined production run carrying a single ID that follows the material through every transfer.",
+   "tags": [
+    "reference"
+   ]
+  },
+  {
+   "term": "Genealogy / traceability",
+   "defn": "The forward-and-backward record linking any finished unit to its source lots, operators, equipment, and conditions, what makes a targeted recall possible.",
+   "tags": [
+    "reference"
+   ]
+  },
+  {
+   "term": "Quarantine / Released / Rejected",
+   "defn": "The three mutually exclusive status states material can hold; physical and system status must always agree.",
+   "tags": [
+    "reference"
+   ]
+  },
+  {
+   "term": "Deviation",
+   "defn": "Any departure from the approved, documented process; it must be logged and investigated.",
+   "tags": [
+    "reference"
+   ]
+  },
+  {
+   "term": "OOS (Out Of Specification)",
+   "defn": "A test result outside the accepted limit, triggering a formal investigation before any release decision.",
+   "tags": [
+    "reference"
+   ]
+  },
+  {
+   "term": "QA / release",
+   "defn": "Quality Assurance, the unit (not production) that owns the signed decision to release a batch to market.",
+   "tags": [
+    "reference"
+   ]
+  },
+  {
+   "term": "CoA (Certificate of Analysis)",
+   "defn": "The document listing a batch's test results against specification, issued at release.",
+   "tags": [
+    "reference"
+   ]
+  },
+  {
+   "term": "ALCOA+",
+   "defn": "Data-integrity rule: records must be Attributable, Legible, Contemporaneous, Original, Accurate, plus Complete, Consistent, Enduring, Available.",
+   "tags": [
+    "reference"
+   ]
+  },
+  {
+   "term": "V-model (DQ/IQ/OQ/PQ)",
+   "defn": "Equipment qualification framework tying each design stage to a matching verification: Design, Installation, Operational, and Performance Qualification.",
+   "tags": [
+    "reference"
+   ]
+  },
+  {
+   "term": "MACO",
+   "defn": "Maximum Allowable Carryover, the calculated residue limit used as the acceptance criterion in cleaning validation.",
+   "tags": [
+    "reference"
+   ]
+  },
+  {
+   "term": "EM (Environmental Monitoring)",
+   "defn": "The program that samples non-viable particles, viable air, surfaces, and personnel against alert and action limits.",
+   "tags": [
+    "reference"
+   ]
+  },
+  {
+   "term": "GACP",
+   "defn": "Good Agricultural and Collection Practice, the upstream cultivation/drying standard that feeds compliant biomass into the GMP facility.",
+   "tags": [
+    "reference"
+   ]
+  },
+  {
+   "term": "3D model",
+   "defn": "A picture of the building you can rotate, zoom and click on a screen, rebuilt from the floor plan rather than a fixed photo or render.",
+   "tags": [
+    "precision"
+   ]
+  },
+  {
+   "term": "Three.js",
+   "defn": "A free, widely used code library that draws interactive 3D scenes inside an ordinary web browser, with no software to install.",
+   "tags": [
+    "precision"
+   ]
+  },
+  {
+   "term": "Floor plan",
+   "defn": "The architect's flat, top-down drawing of walls, doors and rooms, usually dimensioned in millimetres.",
+   "tags": [
+    "precision"
+   ]
+  },
+  {
+   "term": "Render",
+   "defn": "To draw the 3D scene as a picture on screen; done many times a second to make it interactive.",
+   "tags": [
+    "precision"
+   ]
+  },
+  {
+   "term": "Scene",
+   "defn": "Everything contained in the 3D model, slabs, walls, benches, lights, cameras, held together as one structure.",
+   "tags": [
+    "precision"
+   ]
+  },
+  {
+   "term": "JSON / data file",
+   "defn": "A plain, human-readable list of facts (room names, sizes, positions) that the code reads to build the model.",
+   "tags": [
+    "precision"
+   ]
+  },
+  {
+   "term": "Schema",
+   "defn": "The agreed shape of the data file, here just four record types: rooms, walls, equipment and devices.",
+   "tags": [
+    "precision"
+   ]
+  },
+  {
+   "term": "Extrude",
+   "defn": "To take a flat 2D shape (like a floor outline) and push it upward to give it thickness or height.",
+   "tags": [
+    "precision"
+   ]
+  },
+  {
+   "term": "Opening",
+   "defn": "A gap in a wall, a door, pass-through or roller door, described by its position along the wall, its width and its top (head) height.",
+   "tags": [
+    "precision"
+   ]
+  },
+  {
+   "term": "Fit-out",
+   "defn": "The equipment and furniture placed inside the bare shell: benches, lights, dehumidifiers, tanks, racks.",
+   "tags": [
+    "precision"
+   ]
+  },
+  {
+   "term": "Instancing",
+   "defn": "Drawing many identical objects (like 210 plants) in one batch instead of one at a time, the main way to keep the model fast.",
+   "tags": [
+    "precision"
+   ]
+  },
+  {
+   "term": "FOV cone",
+   "defn": "A translucent 'field of view' wedge showing exactly what a camera can see; floor outside every cone is a candidate blind spot.",
+   "tags": [
+    "precision"
+   ]
+  },
+  {
+   "term": "Raycasting / picking",
+   "defn": "Working out which 3D object the mouse clicked on, by shooting an invisible ray from the cursor into the scene.",
+   "tags": [
+    "precision"
+   ]
+  },
+  {
+   "term": "PTZ camera",
+   "defn": "A pan-tilt-zoom camera that can swivel and zoom to track movement, used here for roof-intrusion coverage.",
+   "tags": [
+    "precision"
+   ]
+  },
+  {
+   "term": "glTF",
+   "defn": "A standard 3D file format for importing detailed models authored in tools like Blender, or exporting the building back out.",
+   "tags": [
+    "precision"
+   ]
+  },
+  {
+   "term": "Digital twin",
+   "defn": "A 3D model connected to live sensor feeds so it displays the facility's real current temperature, humidity and equipment status.",
+   "tags": [
+    "precision"
+   ]
+  },
+  {
+   "term": "Draw call",
+   "defn": "One instruction to the graphics card to draw something; fewer draw calls means a faster model (aim for under ~300).",
+   "tags": [
+    "precision"
+   ]
+  },
+  {
+   "term": "Tone mapping",
+   "defn": "The step that converts raw scene brightness into a natural-looking image; with ACES tone mapping pure-white surfaces 'blow out', so use warm off-white.",
+   "tags": [
+    "precision"
+   ]
+  },
+  {
+   "term": "GACP (Good Agricultural and Collection Practice)",
+   "defn": "The cultivation and collection standard applied to medicinal-cannabis starting material, recognising it as a botanical crop before it becomes a medicine.",
+   "tags": [
+    "reference"
+   ]
+  },
+  {
+   "term": "QMS / PQS (Quality Management System / Pharmaceutical Quality System)",
+   "defn": "The organised set of responsibilities, procedures, processes and resources by which an organisation directs and controls quality; used interchangeably in the manual.",
+   "tags": [
+    "reference"
+   ]
+  },
+  {
+   "term": "Quality Manual",
+   "defn": "The apex document that describes the whole quality system at a high level and points to the procedures and records beneath it.",
+   "tags": [
+    "reference"
+   ]
+  },
+  {
+   "term": "GDP (Good Documentation Practice)",
+   "defn": "Rules for making and correcting records: contemporaneous, indelible, original preserved, corrections by a single legible line that is initialled, dated and reasoned.",
+   "tags": [
+    "reference"
+   ]
+  },
+  {
+   "term": "CAPA (Corrective and Preventive Action)",
+   "defn": "A root-cause-driven process to fix an existing problem (corrective) and stop it recurring or occurring (preventive).",
+   "tags": [
+    "reference"
+   ]
+  },
+  {
+   "term": "Change Control",
+   "defn": "The formal process for assessing, approving and implementing any change that could affect product quality or the validated state.",
+   "tags": [
+    "reference"
+   ]
+  },
+  {
+   "term": "QRM (Quality Risk Management)",
+   "defn": "Risk-based decision-making per ICH Q9, used to identify, assess, control, review and communicate risks across the system.",
+   "tags": [
+    "reference"
+   ]
+  },
+  {
+   "term": "QA / QC (Quality Assurance / Quality Control)",
+   "defn": "QA sets and oversees the quality system and makes release decisions independently of production; QC performs the sampling and testing.",
+   "tags": [
+    "reference"
+   ]
+  },
+  {
+   "term": "RP (Responsible Person)",
+   "defn": "The legally accountable individual who oversees regulated activities, authorises release, approves recalls and is the regulator's contact.",
+   "tags": [
+    "reference"
+   ]
+  },
+  {
+   "term": "PIC/S PE009",
+   "defn": "The Pharmaceutical Inspection Co-operation Scheme's Guide to GMP for Medicinal Products; the reference standard the manual is structured to.",
+   "tags": [
+    "reference"
+   ]
+  },
+  {
+   "term": "ICH Q9 / Q10",
+   "defn": "International harmonisation guidelines for Quality Risk Management (Q9) and the Pharmaceutical Quality System (Q10).",
+   "tags": [
+    "reference"
+   ]
+  },
+  {
+   "term": "Annex 11 / PI 041",
+   "defn": "GMP requirements for computerised systems and data integrity (access control, audit trails, validation, backups).",
+   "tags": [
+    "reference"
+   ]
+  },
+  {
+   "term": "Batch / Lot Record",
+   "defn": "The document capturing all materials, actions, people, equipment, results and disposition for one batch (FRM-MF-004), consolidated in REG-CU-001.",
+   "tags": [
+    "reference"
+   ]
+  },
+  {
+   "term": "Validation / Qualification",
+   "defn": "Documented evidence that facilities, equipment, utilities and processes do what they are intended to do.",
+   "tags": [
+    "reference"
+   ]
+  },
+  {
+   "term": "Register",
+   "defn": "A standalone controlled document that indexes records of one type (e.g. deviations, CAPAs, documents) and grows only by adding rows.",
+   "tags": [
+    "reference"
+   ]
+  },
+  {
+   "term": "Master Document Register (REG-QM-001)",
+   "defn": "The keystone index listing every controlled document with its current version, owner and review status.",
+   "tags": [
+    "reference"
+   ]
+  },
+  {
+   "term": "Management Review",
+   "defn": "The periodic (at least annual) review by senior management of the quality system's performance and effectiveness.",
+   "tags": [
+    "reference"
+   ]
+  },
+  {
+   "term": "MQS (Minimum Quality Standard)",
+   "defn": "The quality standard for medicinal-cannabis products under the NZ Misuse of Drugs (Medicinal Cannabis) Regulations 2019.",
+   "tags": [
+    "reference"
+   ]
+  },
+  {
+   "term": "DLI",
+   "defn": "Daily Light Integral, the total amount of usable light a plant receives over a full day, in mol/m²/day. It combines intensity (PPFD) with hours of light, so two intensities can give the same DLI at different photoperiods.",
+   "tags": [
+    "reference"
+   ]
+  },
+  {
+   "term": "Photoperiod",
+   "defn": "The daily schedule of light and dark hours, written as light/dark (e.g. 18/6 for vegetative growth, 12/12 to trigger and run flowering).",
+   "tags": [
+    "reference"
+   ]
+  },
+  {
+   "term": "The flip",
+   "defn": "Switching the photoperiod from 18/6 to 12/12 to induce flowering. Because the lights are on fewer hours, daily light (DLI) drops about 28% even if PPFD is unchanged.",
+   "tags": [
+    "reference"
+   ]
+  },
+  {
+   "term": "Acclimation",
+   "defn": "The multi-week adaptation in which a plant builds more chloroplasts, thicker leaf cuticles, and higher enzyme density so it can safely use higher light.",
+   "tags": [
+    "reference"
+   ]
+  },
+  {
+   "term": "Photoinhibition",
+   "defn": "A drop in photosynthetic performance and active damage caused when a leaf captures more light energy than it can use.",
+   "tags": [
+    "reference"
+   ]
+  },
+  {
+   "term": "Bleaching",
+   "defn": "Pale or white discoloration (usually at upper-canopy tips) from light/oxidative stress, the visible result of photoinhibition.",
+   "tags": [
+    "reference"
+   ]
+  },
+  {
+   "term": "Reactive oxygen species",
+   "defn": "Damaging molecules produced when captured light energy has nowhere to go (too much light, or too little CO2 to use it); they attack leaf tissue and cause bleaching.",
+   "tags": [
+    "reference"
+   ]
+  },
+  {
+   "term": "Calvin cycle",
+   "defn": "The CO2-using half of photosynthesis that turns captured light energy into sugar. If CO2 is too low, this stage cannot keep up with the light reactions.",
+   "tags": [
+    "reference"
+   ]
+  },
+  {
+   "term": "VPD",
+   "defn": "Vapor Pressure Deficit, a combined measure of temperature and humidity (in kPa) that governs how fast a plant transpires; the schedule here assumes 1.2–1.5 kPa.",
+   "tags": [
+    "reference"
+   ]
+  },
+  {
+   "term": "CO2 supplementation",
+   "defn": "Deliberately raising carbon dioxide above ambient (~400–600 ppm) to match high light, required to run intensities like 1200 or 1500 µmol/m²/s without bleaching.",
+   "tags": [
+    "reference"
+   ]
+  },
+  {
+   "term": "Chloroplast",
+   "defn": "The cell structure that does photosynthesis; plants build more of them during acclimation to handle higher light.",
+   "tags": [
+    "reference"
+   ]
+  },
+  {
+   "term": "Integrated Pest Management (IPM)",
+   "defn": "A repeating loop of evaluating, deciding, and controlling pests using the lightest effective method, escalating only as needed.",
+   "tags": [
+    "reference"
+   ]
+  },
+  {
+   "term": "Scouting",
+   "defn": "Planned, routine visual inspection of plants and traps to catch pests, damage, or disease as early as possible.",
+   "tags": [
+    "reference"
+   ]
+  },
+  {
+   "term": "Action threshold",
+   "defn": "A defined pest level (e.g. one pest seen, or more than 3% of a room affected) that triggers a specific control response.",
+   "tags": [
+    "reference"
+   ]
+  },
+  {
+   "term": "Biological control (biocontrol)",
+   "defn": "Releasing predatory insects or mites that eat pests; harmless to the plant and self-limiting when prey runs out.",
+   "tags": [
+    "reference"
+   ]
+  },
+  {
+   "term": "Generalist vs specialist predator",
+   "defn": "A generalist eats many pest types (and pollen) and persists without prey; a specialist eats one pest type fast but fades without it.",
+   "tags": [
+    "reference"
+   ]
+  },
+  {
+   "term": "Foliar spray",
+   "defn": "A liquid treatment applied to leaves and stems, as opposed to the root zone.",
+   "tags": [
+    "reference"
+   ]
+  },
+  {
+   "term": "Drench",
+   "defn": "A treatment applied to the growing media and root zone rather than the foliage.",
+   "tags": [
+    "reference"
+   ]
+  },
+  {
+   "term": "REI (re-entry interval)",
+   "defn": "The mandatory wait after a spray before anyone may safely re-enter the treated room; posted on the door.",
+   "tags": [
+    "reference"
+   ]
+  },
+  {
+   "term": "Withholding period",
+   "defn": "The required time after treatment before a crop may be harvested for sale, to keep residues within limits.",
+   "tags": [
+    "reference"
+   ]
+  },
+  {
+   "term": "Quarantine",
+   "defn": "Isolating incoming plants (washed on receipt, held 2+ weeks under observation) before they join the main crop.",
+   "tags": [
+    "reference"
+   ]
+  },
+  {
+   "term": "Frass",
+   "defn": "Insect droppings and debris; an early visible sign of a pest presence during scouting.",
+   "tags": [
+    "reference"
+   ]
+  },
+  {
+   "term": "Sticky trap",
+   "defn": "A coloured (usually yellow) adhesive card that catches flying pests for early warning and monitoring of pest pressure.",
+   "tags": [
+    "reference"
+   ]
+  },
+  {
+   "term": "Sachet / release box",
+   "defn": "A hangable pouch or box that releases predator bugs onto the plant while keeping carrier media out of the irrigation system.",
+   "tags": [
+    "reference"
+   ]
+  },
+  {
+   "term": "Exclusion",
+   "defn": "Limiting who and what enters an affected room to stop pests spreading between rooms.",
+   "tags": [
+    "reference"
+   ]
+  },
+  {
+   "term": "Tank mix",
+   "defn": "Combining two or more products in one spray tank, only in label-approved combinations and the label-specified add order.",
+   "tags": [
+    "reference"
+   ]
+  },
+  {
+   "term": "Post-harvest",
+   "defn": "Everything done after the plant is cut: drying, trimming, curing and storage.",
+   "tags": [
+    "reference"
+   ]
+  },
+  {
+   "term": "Moisture content",
+   "defn": "The percentage of the flower's weight that is water. Used to measure yield, not safety.",
+   "tags": [
+    "reference"
+   ]
+  },
+  {
+   "term": "Relative humidity (RH)",
+   "defn": "How much water vapour the air holds, 0-100%. The dry room is held at 60% RH.",
+   "tags": [
+    "reference"
+   ]
+  },
+  {
+   "term": "Trichomes",
+   "defn": "The frosty resin glands on the bud that hold THC, terpenes and flavonoids.",
+   "tags": [
+    "reference"
+   ]
+  },
+  {
+   "term": "Terpenes",
+   "defn": "Aromatic oils that give each strain its smell and flavour; they evaporate if the flower gets too dry.",
+   "tags": [
+    "reference"
+   ]
+  },
+  {
+   "term": "Burping",
+   "defn": "Briefly opening a sealed container during curing to release humid air and let fresh air in.",
+   "tags": [
+    "reference"
+   ]
+  },
+  {
+   "term": "Curing",
+   "defn": "Letting a finished batch settle to one even water activity while preserving terpenes and preventing mould.",
+   "tags": [
+    "reference"
+   ]
+  },
+  {
+   "term": "Wet weight",
+   "defn": "The weight of freshly cut plants before drying; compared with dry weight to get the dry-to-wet ratio.",
+   "tags": [
+    "reference"
+   ]
+  },
+  {
+   "term": "Dry-to-wet ratio",
+   "defn": "Final dry weight as a fraction of starting wet weight; around 10% in the source data.",
+   "tags": [
+    "reference"
+   ]
+  },
+  {
+   "term": "Bucking",
+   "defn": "Cutting the finished buds off the stem after trimming.",
+   "tags": [
+    "reference"
+   ]
+  },
+  {
+   "term": "Wet trim / dry trim",
+   "defn": "Trimming before drying (wet) versus after the hang-dry (dry); the source workflow dry-trims.",
+   "tags": [
+    "reference"
+   ]
+  },
+  {
+   "term": "Fan leaves",
+   "defn": "The large leaves with few trichomes, removed by hand early in trimming.",
+   "tags": [
+    "reference"
+   ]
+  },
+  {
+   "term": "Sugar leaves",
+   "defn": "Small trichome-covered leaves around the bud, scissored off during trimming.",
+   "tags": [
+    "reference"
+   ]
+  },
+  {
+   "term": "Stem-snap test",
+   "defn": "Bending a stem to check dryness; when it cracks instead of folding, the plant is near ready.",
+   "tags": [
+    "reference"
+   ]
+  },
+  {
+   "term": "ASTM D8197",
+   "defn": "The industry standard specifying the 0.55-0.65 aw range for dry cannabis flower.",
+   "tags": [
+    "reference"
+   ]
+  },
+  {
+   "term": "Two-part nutrient",
+   "defn": "A nutrient system split into Part A and Part B that must be added to water separately, because mixing them while concentrated causes a chemical reaction that ruins the batch.",
+   "tags": [
+    "reference"
+   ]
+  },
+  {
+   "term": "Part A (Pro Core)",
+   "defn": "The calcium- and nitrogen-rich base part of Athena Pro Line; always dissolved into the water first.",
+   "tags": [
+    "reference"
+   ]
+  },
+  {
+   "term": "Part B (Pro Grow / Pro Bloom)",
+   "defn": "The second part carrying sulfates and phosphates; added only after Part A is fully dissolved and dispersed.",
+   "tags": [
+    "reference"
+   ]
+  },
+  {
+   "term": "Mineral salt",
+   "defn": "The dry crystalline form a powdered nutrient ships in; it must dissolve into water before a plant can absorb it.",
+   "tags": [
+    "reference"
+   ]
+  },
+  {
+   "term": "pH",
+   "defn": "How acidic or basic the water is on a 0-14 scale; nutrient solution is usually adjusted to about 5.8-6.2.",
+   "tags": [
+    "reference"
+   ]
+  },
+  {
+   "term": "Precipitate",
+   "defn": "A solid that forms and drops out of solution when incompatible ions (calcium with sulfate or phosphate) combine at high concentration.",
+   "tags": [
+    "reference"
+   ]
+  },
+  {
+   "term": "Lockout",
+   "defn": "When nutrients become chemically unavailable to the plant, here, caused by precipitation when concentrated Part A meets Part B.",
+   "tags": [
+    "reference"
+   ]
+  },
+  {
+   "term": "Grams per litre (g/L)",
+   "defn": "The dosing unit for powdered nutrients; multiply the label g/L by tank volume (e.g. x50 for a 50 L tank) to get grams to weigh.",
+   "tags": [
+    "reference"
+   ]
+  },
+  {
+   "term": "Dilution",
+   "defn": "Spreading a substance through a large volume of water so its concentration is low; the safety margin that makes adding Part B safe after Part A.",
+   "tags": [
+    "reference"
+   ]
+  },
+  {
+   "term": "Field capacity / substrate EC",
+   "defn": "The salt concentration held in the root-zone medium; the Athena guide gives stage targets (e.g. 3-5 in veg) that your mixed feed is meant to build toward.",
+   "tags": [
+    "reference"
+   ]
+  },
+  {
+   "term": "Internode",
+   "defn": "The length of bare stem between two nodes.",
+   "tags": [
+    "reference"
+   ]
+  },
+  {
+   "term": "Cutting",
+   "defn": "A severed shoot being rooted into a clone; used interchangeably with 'clone'.",
+   "tags": [
+    "reference"
+   ]
+  },
+  {
+   "term": "Rooting hormone / IBA",
+   "defn": "A gel or liquid containing indole-3-butyric acid, a synthetic auxin (plant root hormone) applied to the cut stem to trigger root formation.",
+   "tags": [
+    "reference"
+   ]
+  },
+  {
+   "term": "Rockwool cube",
+   "defn": "A spun-mineral-fiber plug that holds water and air; the medium a cutting roots into. Peat plugs serve the same role.",
+   "tags": [
+    "reference"
+   ]
+  },
+  {
+   "term": "Dome",
+   "defn": "The clear plastic humidity lid placed over a clone tray to trap moisture around rootless cuttings.",
+   "tags": [
+    "reference"
+   ]
+  },
+  {
+   "term": "RH",
+   "defn": "Relative Humidity, the percentage of moisture the air holds versus its maximum at that temperature.",
+   "tags": [
+    "reference"
+   ]
+  },
+  {
+   "term": "EC",
+   "defn": "Electrical Conductivity, a measure of nutrient strength in the feed water, in mS/cm.",
+   "tags": [
+    "reference"
+   ]
+  },
+  {
+   "term": "Hardening off",
+   "defn": "Gradually opening vents and removing the dome so rooted clones acclimate to drier room air before transplant.",
+   "tags": [
+    "reference"
+   ]
+  },
+  {
+   "term": "Air embolism",
+   "defn": "An air bubble drawn into a cut stem that blocks water uptake; prevented by sticking cuttings fast and keeping cut ends wet.",
+   "tags": [
+    "reference"
+   ]
+  },
+  {
+   "term": "Culling",
+   "defn": "Sorting and removing weak or unrooted clones (keepers / rejects / kills) before transplant.",
+   "tags": [
+    "reference"
+   ]
+  },
+  {
+   "term": "Transplant",
+   "defn": "Moving a rooted clone from its cube into a larger growing container or block to begin the veg stage.",
+   "tags": [
+    "reference"
+   ]
+  },
+  {
+   "term": "Topping",
+   "defn": "Cutting off the plant's top growing tip to halt upward growth and force the branches below it to become two or more new tops, creating a wider, bushier plant.",
+   "tags": [
+    "reference"
+   ]
+  },
+  {
+   "term": "FIM",
+   "defn": "A partial topping where most but not all of the growing tip is cut, which can produce several new tops rather than the two from a clean top.",
+   "tags": [
+    "reference"
+   ]
+  },
+  {
+   "term": "Apical dominance",
+   "defn": "A plant's natural tendency to grow one central top taller than its side branches. Topping and LST break this so growth spreads evenly.",
+   "tags": [
+    "reference"
+   ]
+  },
+  {
+   "term": "LST (Low-Stress Training)",
+   "defn": "Gently bending and tying down branches to spread the canopy flat without cutting the plant, lower stress and no recovery time.",
+   "tags": [
+    "reference"
+   ]
+  },
+  {
+   "term": "Trellis / SCROG",
+   "defn": "Horizontal netting stretched over the canopy that plants grow up through; it holds branches spread out early and supports heavy buds later (SCROG = Screen of Green).",
+   "tags": [
+    "reference"
+   ]
+  },
+  {
+   "term": "Spreading",
+   "defn": "Pulling branches out from the central stalk and tucking them into the trellis squares so light and air reach the middle and the canopy fills evenly.",
+   "tags": [
+    "reference"
+   ]
+  },
+  {
+   "term": "Lollipopping",
+   "defn": "Removing the small branches, nodes and leaves from the lower third (roughly the bottom 10-18 inches) of the plant so energy goes to the top buds, leaving a lollipop shape.",
+   "tags": [
+    "reference"
+   ]
+  },
+  {
+   "term": "Defanning / Defoliation",
+   "defn": "Selectively removing large fan leaves to open the canopy for light penetration and airflow.",
+   "tags": [
+    "reference"
+   ]
+  },
+  {
+   "term": "Source vs sink",
+   "defn": "A 'source' is a well-lit leaf that makes more sugar than it uses; a 'sink' (a flower, root, or shaded leaf) consumes more than it makes. Opening the canopy turns shaded sinks back into sources.",
+   "tags": [
+    "reference"
+   ]
+  },
+  {
+   "term": "Larf",
+   "defn": "Small, airy, underdeveloped flower from shaded lower bud sites, the low-value growth lollipopping removes.",
+   "tags": [
+    "reference"
+   ]
+  },
+  {
+   "term": "Shade avoidance response",
+   "defn": "When plants are crowded too close, they waste energy stretching weak inner branches toward light instead of building quality flower.",
+   "tags": [
+    "reference"
+   ]
+  },
+  {
+   "term": "Germination",
+   "defn": "The process of a dormant seed taking up water, waking, and pushing out its first root and shoot.",
+   "tags": [
+    "reference"
+   ]
+  },
+  {
+   "term": "Taproot (radicle)",
+   "defn": "The first white root to emerge from a seed; it grows downward to anchor the plant and seek water.",
+   "tags": [
+    "reference"
+   ]
+  },
+  {
+   "term": "Cotyledons",
+   "defn": "The two rounded embryonic 'seed leaves' that appear first and feed the seedling from stored reserves.",
+   "tags": [
+    "reference"
+   ]
+  },
+  {
+   "term": "True leaves",
+   "defn": "The familiar serrated cannabis leaves that grow after the cotyledons; their arrival marks the start of feeding.",
+   "tags": [
+    "reference"
+   ]
+  },
+  {
+   "term": "Seed coat",
+   "defn": "The hard protective outer shell of the seed that guards the embryo until conditions are right to sprout.",
+   "tags": [
+    "reference"
+   ]
+  },
+  {
+   "term": "Embryo",
+   "defn": "The tiny living baby plant inside the seed, already containing a root, two cotyledons, and a shoot.",
+   "tags": [
+    "reference"
+   ]
+  },
+  {
+   "term": "Viable / viability",
+   "defn": "Whether a seed is alive and capable of sprouting; viability declines as seeds age or are stored poorly.",
+   "tags": [
+    "reference"
+   ]
+  },
+  {
+   "term": "Germination rate",
+   "defn": "The percentage of a batch of seeds that successfully sprout.",
+   "tags": [
+    "reference"
+   ]
+  },
+  {
+   "term": "Feminised seed",
+   "defn": "Seed bred to produce almost only female plants, removing the need to identify and remove males.",
+   "tags": [
+    "reference"
+   ]
+  },
+  {
+   "term": "Regular seed",
+   "defn": "Untreated seed that produces a roughly even mix of male and female plants.",
+   "tags": [
+    "reference"
+   ]
+  },
+  {
+   "term": "Autoflower seed",
+   "defn": "Seed with ruderalis genetics that flowers automatically after a few weeks regardless of light schedule.",
+   "tags": [
+    "reference"
+   ]
+  },
+  {
+   "term": "Photoperiod plant",
+   "defn": "A plant that only begins flowering when daily light drops to about 12 hours; regular and feminised seeds are photoperiod.",
+   "tags": [
+    "reference"
+   ]
+  },
+  {
+   "term": "Cannabis ruderalis",
+   "defn": "A hardy cannabis subspecies whose genetics give autoflowers their automatic, light-independent flowering.",
+   "tags": [
+    "reference"
+   ]
+  },
+  {
+   "term": "Damping-off",
+   "defn": "A fungal disease (Pythium, Fusarium, Rhizoctonia) that rots a seedling at the soil line, usually killing it.",
+   "tags": [
+    "reference"
+   ]
+  },
+  {
+   "term": "Humidity dome",
+   "defn": "A clear cover placed over seedlings to trap moisture and keep humidity high while roots are tiny.",
+   "tags": [
+    "reference"
+   ]
+  },
+  {
+   "term": "Imbibition",
+   "defn": "The initial swelling of a seed as it absorbs water, the first physical step of germination.",
+   "tags": [
+    "reference"
+   ]
+  },
+  {
+   "term": "PAR (Photosynthetically Active Radiation)",
+   "defn": "The 400-700 nm band of light that plants can use for photosynthesis. Lumens, lux, and watts do not measure PAR, which is why they are useless for judging a grow light.",
+   "tags": [
+    "reference"
+   ]
+  },
+  {
+   "term": "PPFD (Photosynthetic Photon Flux Density)",
+   "defn": "How many usable (PAR) photons land on one square meter each second, measured in micromoles per square meter per second (umol/m2/s). This is the 'how bright at the canopy' number, read with a quantum/PAR meter.",
+   "tags": [
+    "reference"
+   ]
+  },
+  {
+   "term": "DLI (Daily Light Integral)",
+   "defn": "The total PAR photons delivered to a surface over a full day, in moles per square meter per day (mol/m2/day). DLI = PPFD x seconds of light per day / 1,000,000. It is the dose that most directly drives yield.",
+   "tags": [
+    "reference"
+   ]
+  },
+  {
+   "term": "Spectrum",
+   "defn": "The mix of light colors (wavelengths) a fixture emits. Blue (400-500 nm) favors compact growth; red (600-700 nm) drives flowering and is the most photosynthetically efficient band.",
+   "tags": [
+    "reference"
+   ]
+  },
+  {
+   "term": "Kelvin (K) / color temperature",
+   "defn": "A shorthand for the color mix of a white LED. Higher Kelvin (4000-6500K) is bluer and veg-leaning; lower Kelvin (3000-3500K) is redder and flower-leaning.",
+   "tags": [
+    "reference"
+   ]
+  },
+  {
+   "term": "Efficacy (umol/J)",
+   "defn": "How many usable PAR photons a fixture produces per joule of electricity. The key efficiency number when comparing lights: good LEDs are ~2.7-3.0 umol/J, HPS ~1.7-1.9, CMH ~1.3-1.9.",
+   "tags": [
+    "reference"
+   ]
+  },
+  {
+   "term": "PPF (Photosynthetic Photon Flux)",
+   "defn": "The total usable photons a fixture emits per second (umol/s), regardless of where they land. Divide PPF by wattage to get efficacy.",
+   "tags": [
+    "reference"
+   ]
+  },
+  {
+   "term": "Phytochrome",
+   "defn": "A plant pigment that senses red and far-red light and toggles between an active form (Pfr, 'it's day') and inactive form (Pr). It measures the length of the uninterrupted dark period and triggers the flowering signal.",
+   "tags": [
+    "reference"
+   ]
+  },
+  {
+   "term": "Florigen",
+   "defn": "The mobile flowering-signal protein made in the leaves once nights are long enough; it travels to the growing tips and reprograms them from making leaves to making buds.",
+   "tags": [
+    "reference"
+   ]
+  },
+  {
+   "term": "Far-red",
+   "defn": "Light around 700-750 nm, just past the PAR band. It is sensed by phytochrome, can speed the perceived onset of night, and adds some stem stretch; high doses can reduce bud density.",
+   "tags": [
+    "reference"
+   ]
+  },
+  {
+   "term": "UV-B",
+   "defn": "Ultraviolet light ~280-315 nm. Sometimes added in late flower in hopes of boosting trichomes/potency, but evidence is inconsistent and it poses real eye, skin, and plant-stress risks.",
+   "tags": [
+    "reference"
+   ]
+  },
+  {
+   "term": "Inverse-square law",
+   "defn": "Light intensity falls off with the square of distance: roughly doubling the fixture-to-canopy gap cuts PPFD by about 75%. This makes hanging height the coarse intensity control.",
+   "tags": [
+    "reference"
+   ]
+  },
+  {
+   "term": "PPFD map / PAR map",
+   "defn": "A manufacturer's grid showing PPFD across the coverage area at given hang heights. Use it as a starting point, then confirm with your own meter readings at canopy height.",
+   "tags": [
+    "reference"
+   ]
+  },
+  {
+   "term": "Uniformity (min-to-average ratio)",
+   "defn": "How evenly light covers the canopy, found by reading PPFD at nine grid points and dividing the lowest by the average. Above 0.75 is considered reasonably even.",
+   "tags": [
+    "reference"
+   ]
+  },
+  {
+   "term": "Light saturation",
+   "defn": "The point where a plant cannot use more light because CO2, water, nutrients, temperature, or genetics has become the limiting factor; beyond it, extra intensity adds cost and stress, not yield.",
+   "tags": [
+    "reference"
+   ]
+  },
+  {
+   "term": "Light stress / bleaching",
+   "defn": "Damage from too much intensity, showing as white/yellow bud tips directly under the fixture, upward-cupping 'taco' leaves, and faded color. The fix is to dim or raise the light, not to feed more.",
+   "tags": [
+    "reference"
+   ]
+  },
+  {
+   "term": "Nutrient (essential element)",
+   "defn": "One of the chemical elements a plant must absorb to grow normally; the major ones for cannabis are N, P, K, Ca, Mg and S, plus trace micronutrients like iron and zinc.",
+   "tags": [
+    "reference"
+   ]
+  },
+  {
+   "term": "Macronutrient",
+   "defn": "An element needed in large amounts: nitrogen (N), phosphorus (P), potassium (K), calcium (Ca), magnesium (Mg) and sulfur (S).",
+   "tags": [
+    "reference"
+   ]
+  },
+  {
+   "term": "Micronutrient",
+   "defn": "An element needed only in tiny amounts: iron (Fe), manganese (Mn), zinc (Zn), copper (Cu), boron (B) and molybdenum (Mo).",
+   "tags": [
+    "reference"
+   ]
+  },
+  {
+   "term": "Mobile nutrient",
+   "defn": "A nutrient the plant can withdraw from old leaves and resend to new growth when supply is short (N, P, K, Mg); its deficiency therefore shows on the oldest/lowest leaves first.",
+   "tags": [
+    "reference"
+   ]
+  },
+  {
+   "term": "Immobile nutrient",
+   "defn": "A nutrient that stays fixed where it was first deposited and cannot be relocated (Ca, S, Fe, Mn, Zn, B, Cu, Mo); its deficiency shows on the newest/top growth first.",
+   "tags": [
+    "reference"
+   ]
+  },
+  {
+   "term": "Chlorosis",
+   "defn": "Yellowing of leaf tissue caused by loss of green chlorophyll.",
+   "tags": [
+    "reference"
+   ]
+  },
+  {
+   "term": "Interveinal chlorosis",
+   "defn": "Yellowing between the leaf veins while the veins themselves stay green, a specific pattern seen with magnesium, iron and manganese problems.",
+   "tags": [
+    "reference"
+   ]
+  },
+  {
+   "term": "Necrosis",
+   "defn": "Dead, brown, dry or crispy leaf tissue, often at tips or edges.",
+   "tags": [
+    "reference"
+   ]
+  },
+  {
+   "term": "Deficiency",
+   "defn": "The plant is not getting enough of a nutrient, producing fading, yellowing and stunted growth.",
+   "tags": [
+    "reference"
+   ]
+  },
+  {
+   "term": "Toxicity",
+   "defn": "The plant has too much of a nutrient (or salts overall); typically dark, glossy, clawed leaves and burnt tips, the opposite look of a deficiency.",
+   "tags": [
+    "reference"
+   ]
+  },
+  {
+   "term": "pH lockout",
+   "defn": "A condition where a nutrient is present in the root zone but cannot be absorbed because root-zone pH is outside the range in which that nutrient stays dissolved.",
+   "tags": [
+    "reference"
+   ]
+  },
+  {
+   "term": "PPM (parts per million)",
+   "defn": "A unit expressing nutrient concentration in water, closely linked to EC; different conversion scales exist so the EC value is more universal.",
+   "tags": [
+    "reference"
+   ]
+  },
+  {
+   "term": "Nutrient burn",
+   "defn": "Tip and edge browning caused by feeding too strong a solution (excess salts), a form of toxicity.",
+   "tags": [
+    "reference"
+   ]
+  },
+  {
+   "term": "The claw",
+   "defn": "A downward hooking/curling of leaf tips, the classic sign of nitrogen toxicity (overfeeding).",
+   "tags": [
+    "reference"
+   ]
+  },
+  {
+   "term": "Nutrient antagonism",
+   "defn": "When an excess of one element blocks the uptake of another, e.g. too much potassium suppressing calcium and magnesium.",
+   "tags": [
+    "reference"
+   ]
+  },
+  {
+   "term": "Flush",
+   "defn": "Running plain or lightly fertilised, correctly pH'd water through the medium to wash out accumulated salts and reset the root zone.",
+   "tags": [
+    "reference"
+   ]
+  },
+  {
+   "term": "Buffer (buffering)",
+   "defn": "A medium's natural ability to resist pH change; soil buffers well, coco and hydroponics barely buffer at all, so they need tighter pH control.",
+   "tags": [
+    "reference"
+   ]
+  },
+  {
+   "term": "Root zone",
+   "defn": "The wet substrate immediately surrounding the roots, where nutrient and water uptake actually happens.",
+   "tags": [
+    "reference"
+   ]
+  },
+  {
+   "term": "Nutrient lockout",
+   "defn": "When nutrients are physically present but chemically bound into forms roots cannot absorb, usually because pH drifted out of range; looks like a deficiency.",
+   "tags": [
+    "reference"
+   ]
+  },
+  {
+   "term": "Substrate (medium)",
+   "defn": "The material roots grow in, e.g. coco coir, rockwool or water (hydro), or soil. Determines how much the root zone buffers pH.",
+   "tags": [
+    "reference"
+   ]
+  },
+  {
+   "term": "Hydroponics",
+   "defn": "Growing with roots in a nutrient water solution (or inert media fed by it) rather than soil; needs slightly acidic, closely managed pH.",
+   "tags": [
+    "reference"
+   ]
+  },
+  {
+   "term": "Buffering capacity",
+   "defn": "A medium or water's resistance to pH change. High buffering resists swings (soil); low buffering swings quickly (coco, hydro).",
+   "tags": [
+    "reference"
+   ]
+  },
+  {
+   "term": "Alkalinity",
+   "defn": "Water's built-in capacity to neutralise acid, mostly from bicarbonates, reported as ppm of calcium carbonate (CaCO3). Not the same as a high pH reading.",
+   "tags": [
+    "reference"
+   ]
+  },
+  {
+   "term": "Bicarbonate (HCO3-)",
+   "defn": "The main dissolved compound responsible for water alkalinity; it consumes added acid and pushes pH back up.",
+   "tags": [
+    "reference"
+   ]
+  },
+  {
+   "term": "pH Down / pH Up",
+   "defn": "Acid and base solutions used to adjust pH; Down is typically phosphoric acid, Up typically potassium hydroxide.",
+   "tags": [
+    "reference"
+   ]
+  },
+  {
+   "term": "Two-point calibration",
+   "defn": "Calibrating a pH pen against two known buffers (usually pH 7.0 then 4.0) so it reads accurately across the working range.",
+   "tags": [
+    "reference"
+   ]
+  },
+  {
+   "term": "Buffer solution",
+   "defn": "A liquid of precisely known pH (e.g. 4.0, 7.0) used to calibrate a pH pen.",
+   "tags": [
+    "reference"
+   ]
+  },
+  {
+   "term": "KCl storage solution",
+   "defn": "Potassium chloride solution that keeps a pH probe tip hydrated; storing dry or in plain water permanently damages the probe.",
+   "tags": [
+    "reference"
+   ]
+  },
+  {
+   "term": "Probe drift",
+   "defn": "Gradual loss of accuracy in a pH probe over time; replace when drift exceeds about 0.2 pH between calibrations.",
+   "tags": [
+    "reference"
+   ]
+  },
+  {
+   "term": "Flip (12/12)",
+   "defn": "Switching the grow-light timer to 12 hours on and 12 hours off, the change that triggers flowering in photoperiod plants.",
+   "tags": [
+    "reference"
+   ]
+  },
+  {
+   "term": "Stretch",
+   "defn": "The rapid vertical growth in the first 2-3 weeks of flower, where a plant can nearly double in height before settling into bud production.",
+   "tags": [
+    "reference"
+   ]
+  },
+  {
+   "term": "Pistil",
+   "defn": "A fine hair emerging from a bud site; white when young and darkening to orange/brown as the plant ripens. A rough, not definitive, harvest cue.",
+   "tags": [
+    "reference"
+   ]
+  },
+  {
+   "term": "Trichome",
+   "defn": "A microscopic resin gland coating the buds that holds most of the THC and aroma; its color (clear, milky, amber) is the primary harvest signal.",
+   "tags": [
+    "reference"
+   ]
+  },
+  {
+   "term": "Calyx",
+   "defn": "A single teardrop-shaped floral pod; many calyxes stacking together build a bud.",
+   "tags": [
+    "reference"
+   ]
+  },
+  {
+   "term": "Cola",
+   "defn": "A large, dense cluster of buds formed along a main stem, usually the topmost and best-developed flowers.",
+   "tags": [
+    "reference"
+   ]
+  },
+  {
+   "term": "Bud set",
+   "defn": "The point around weeks 3-4 when scattered pistils organise into defined, growing budlets.",
+   "tags": [
+    "reference"
+   ]
+  },
+  {
+   "term": "Bulking",
+   "defn": "The mid-flower phase (roughly weeks 5-7) when buds gain mass fastest.",
+   "tags": [
+    "reference"
+   ]
+  },
+  {
+   "term": "Ripening",
+   "defn": "The final phase when pistils darken, trichomes mature, and the plant moves stored nutrients into the buds before harvest.",
+   "tags": [
+    "reference"
+   ]
+  },
+  {
+   "term": "Defoliation",
+   "defn": "Selectively removing leaves to improve light penetration and airflow into the canopy.",
+   "tags": [
+    "reference"
+   ]
+  },
+  {
+   "term": "Hermaphroditism (hermie)",
+   "defn": "When a stressed female plant produces male parts and pollinates itself, seeding the buds; often caused by light leaks in the dark period.",
+   "tags": [
+    "reference"
+   ]
+  },
+  {
+   "term": "Bud rot (botrytis)",
+   "defn": "A grey mould that attacks dense buds in humid conditions, a major late-flower risk that drives the push to lower humidity.",
+   "tags": [
+    "reference"
+   ]
+  },
+  {
+   "term": "IPM (Integrated Pest Management)",
+   "defn": "A layered pest strategy combining prevention, monitoring, biological controls and targeted treatments rather than routine calendar spraying. This guide identifies the pests; the IPM SOP is the decision process.",
+   "tags": [
+    "reference"
+   ]
+  },
+  {
+   "term": "Biocontrol / beneficial",
+   "defn": "A living organism released to suppress a pest, a predatory mite, a parasitoid wasp, or a microbe such as a fungus or bacterium.",
+   "tags": [
+    "reference"
+   ]
+  },
+  {
+   "term": "Preventative vs curative",
+   "defn": "A preventative agent is established before pests arrive and persists on alternative food; a curative agent is released to knock down an active, growing outbreak.",
+   "tags": [
+    "reference"
+   ]
+  },
+  {
+   "term": "Life cycle / generation time",
+   "defn": "The time from egg to egg-laying adult. In warm dry rooms this drops below a week for spider mites, which is why infestations explode.",
+   "tags": [
+    "reference"
+   ]
+  },
+  {
+   "term": "Stippling",
+   "defn": "Fine pale speckling on leaves caused by sap-sucking pests piercing individual cells, classic for spider mites and thrips.",
+   "tags": [
+    "reference"
+   ]
+  },
+  {
+   "term": "Honeydew",
+   "defn": "Sticky sugary excretion from aphids and whitefly that coats leaves and grows black sooty mould.",
+   "tags": [
+    "reference"
+   ]
+  },
+  {
+   "term": "Loupe / scope",
+   "defn": "Magnifiers for inspection, a 30x hand loupe finds spider mites; russet and broad mites need 60-100x magnification.",
+   "tags": [
+    "reference"
+   ]
+  },
+  {
+   "term": "Parasitoid wasp",
+   "defn": "A tiny non-stinging wasp (e.g. Aphidius, Encarsia) that lays eggs in a host pest, killing it as the larva develops; key for aphids and whitefly.",
+   "tags": [
+    "reference"
+   ]
+  },
+  {
+   "term": "Bti / Btk",
+   "defn": "Strains of the soil bacterium Bacillus thuringiensis, israelensis (Bti) kills fungus-gnat larvae and kurstaki (Btk) kills caterpillars, both only when the pest ingests them.",
+   "tags": [
+    "reference"
+   ]
+  },
+  {
+   "term": "Entomopathogenic nematodes",
+   "defn": "Microscopic worms (e.g. Steinernema feltiae) drenched into the medium to parasitise and kill fungus-gnat larvae.",
+   "tags": [
+    "reference"
+   ]
+  },
+  {
+   "term": "PPM / TDS",
+   "defn": "Parts per million / total dissolved solids: the combined weight of everything dissolved in water. PPM meters convert from EC using a 500 or 700 scale, so readings can differ between meters.",
+   "tags": [
+    "reference"
+   ]
+  },
+  {
+   "term": "Carbonate / bicarbonate",
+   "defn": "The dissolved compounds (CO3 and HCO3) responsible for alkalinity. They neutralize added acid and can lock up calcium and magnesium when in excess.",
+   "tags": [
+    "reference"
+   ]
+  },
+  {
+   "term": "Hardness",
+   "defn": "The amount of dissolved calcium and magnesium in water, reported as ppm CaCO3 or grains per gallon (1 GPG = 17.1 mg/L). Soft water is under ~1 GPG; very hard is over ~10.5 GPG.",
+   "tags": [
+    "reference"
+   ]
+  },
+  {
+   "term": "Chlorine",
+   "defn": "A common municipal disinfectant that off-gasses from standing, aerated water in about 24 hours. Can damage root tips and beneficial microbes at low concentrations.",
+   "tags": [
+    "reference"
+   ]
+  },
+  {
+   "term": "Chloramine",
+   "defn": "A more stable chlorine-ammonia disinfectant that does NOT off-gas from standing water and requires a catalytic carbon filter or reverse osmosis to remove.",
+   "tags": [
+    "reference"
+   ]
+  },
+  {
+   "term": "Reverse osmosis (RO)",
+   "defn": "Filtration that forces water through a semipermeable membrane, stripping most dissolved minerals to leave near-zero PPM (typically 0-10 ppm TDS) water as a blank canvas.",
+   "tags": [
+    "reference"
+   ]
+  },
+  {
+   "term": "Build back",
+   "defn": "The practice of re-adding minerals (usually a CalMag supplement plus base nutrients) to mineral-stripped RO or rainwater, since the plant still needs calcium and magnesium and some buffer.",
+   "tags": [
+    "reference"
+   ]
+  },
+  {
+   "term": "CalMag",
+   "defn": "A calcium-and-magnesium (often with iron) supplement added to low-mineral water like RO, rain, or very soft tap to prevent calcium/magnesium deficiency.",
+   "tags": [
+    "reference"
+   ]
+  },
+  {
+   "term": "Dissolved oxygen (DO)",
+   "defn": "The amount of oxygen dissolved in water, which roots need. It falls as water warms (about 5-6 ppm at 20 C down to 3-4 ppm at 26 C), and low DO encourages root disease.",
+   "tags": [
+    "reference"
+   ]
+  },
+  {
+   "term": "Sodium (Na)",
+   "defn": "A non-nutrient salt sometimes high in well or coastal water. Elevated sodium competes with nutrient uptake and is a key reason to choose RO.",
+   "tags": [
+    "reference"
+   ]
+  },
+  {
+   "term": "Substrate (growing medium)",
+   "defn": "The material a plant's roots grow in; it holds the plant up and stores water, air, and dissolved nutrients.",
+   "tags": [
+    "reference"
+   ]
+  },
+  {
+   "term": "Water-holding capacity",
+   "defn": "The share of a medium's pore space that retains water after it has drained, expressed as a percentage by volume.",
+   "tags": [
+    "reference"
+   ]
+  },
+  {
+   "term": "Air-filled porosity",
+   "defn": "The share of a medium's pore space that holds air right after draining; it trades off directly against water-holding capacity.",
+   "tags": [
+    "reference"
+   ]
+  },
+  {
+   "term": "Total porosity",
+   "defn": "The total fraction of a medium that is open pore space (air plus water) rather than solid material.",
+   "tags": [
+    "reference"
+   ]
+  },
+  {
+   "term": "CEC (cation exchange capacity)",
+   "defn": "How strongly a medium grabs and holds positively-charged nutrient ions (in meq/100g); high CEC means more buffering of feed mistakes.",
+   "tags": [
+    "reference"
+   ]
+  },
+  {
+   "term": "Buffering",
+   "defn": "A medium's ability to absorb your errors in pH or nutrient strength so the roots see a steadier environment.",
+   "tags": [
+    "reference"
+   ]
+  },
+  {
+   "term": "Rockwool (stonewool)",
+   "defn": "Spun molten-rock fiber; inert, free-draining, holds lots of water with little buffering; alkaline until pre-soaked.",
+   "tags": [
+    "reference"
+   ]
+  },
+  {
+   "term": "Peat",
+   "defn": "Partially-decomposed bog moss; the airy, acidic, high-CEC base of most bagged soil mixes.",
+   "tags": [
+    "reference"
+   ]
+  },
+  {
+   "term": "Living soil (ROLS)",
+   "defn": "A microbe-rich organic soil bed (recycled organic living soil) that self-buffers pH and feeds plants via biology; water-only and reusable indefinitely.",
+   "tags": [
+    "reference"
+   ]
+  },
+  {
+   "term": "DWC (deep water culture)",
+   "defn": "Hydroponics where roots hang in oxygenated nutrient water with no solid medium; oxygen comes from an air pump.",
+   "tags": [
+    "reference"
+   ]
+  },
+  {
+   "term": "Pre-buffering",
+   "defn": "Soaking rinsed coco in a calcium-magnesium solution so its exchange sites stop stripping Ca/Mg from your feed.",
+   "tags": [
+    "reference"
+   ]
+  },
+  {
+   "term": "Cal-mag",
+   "defn": "A calcium and magnesium supplement; essential when running coco to prevent the deficiency caused by coco's CEC.",
+   "tags": [
+    "reference"
+   ]
+  },
+  {
+   "term": "Inert medium",
+   "defn": "A substrate (like rockwool) that holds no nutrients of its own, so the plant gets exactly what you feed and nothing else.",
+   "tags": [
+    "reference"
+   ]
+  },
+  {
+   "term": "Pythium",
+   "defn": "A water-mould pathogen that causes root rot, multiplying fast in warm (>23C) low-oxygen reservoirs.",
+   "tags": [
+    "reference"
+   ]
+  },
+  {
+   "term": "Water content (WC%)",
+   "defn": "The share of a block's or pot's volume that is water right now, as a percentage. In rockwool this single number is what you steer.",
+   "tags": [
+    "crop steering",
+    "precision"
+   ]
+  },
+  {
+   "term": "Recovery floor",
+   "defn": "The lowest water content a rockwool block can reach and still rewet evenly from the dripper. Below it (around 25-30% WC) the fibre channels and the core stays dry.",
+   "tags": [
+    "crop steering"
+   ]
+  },
+  {
+   "term": "Dryback %",
+   "defn": "The size of a dryback, in percentage points of water content: the daily peak minus the next trough (e.g. 78% to 58% is a 20-point dryback).",
+   "tags": [
+    "crop steering"
+   ]
+  },
+  {
+   "term": "Substrate EC",
+   "defn": "The salt strength of the water inside the medium, where the roots are. Steer to this reading, not the dripper or drain EC.",
+   "tags": [
+    "crop steering",
+    "precision"
+   ]
+  },
+  {
+   "term": "Pause point",
+   "defn": "A named moment a short checklist is run at (lights-on, first irrigation, pre-dark), rather than one long sheet done whenever.",
+   "tags": [
+    "operations"
+   ]
+  },
+  {
+   "term": "Killer item",
+   "defn": "A check that is both easy to skip and dangerous to miss (dehumidification at lights-off, a dosing pump with no irrigation timeout). The few items a checklist must force.",
+   "tags": [
+    "operations"
+   ]
+  },
+  {
+   "term": "Read-do vs do-confirm",
+   "defn": "Two checklist styles: read-do = perform each step as you read it (setup, calibration); do-confirm = do the round from memory, then pause to confirm nothing critical was missed.",
+   "tags": [
+    "operations"
+   ]
+  },
+  {
+   "term": "Pencil-whipping",
+   "defn": "Signing off a check without actually doing it. A predictable response to a check that is too slow, unowned, or never acted on, not simply carelessness.",
+   "tags": [
+    "operations"
+   ]
+  },
+  {
+   "term": "Implementation intention",
+   "defn": "An if-then plan that ties a task to a fixed time and place ('at lights-on, the AM tech does X'), which makes follow-through 2-3x more likely.",
+   "tags": [
+    "operations"
+   ]
+  },
+  {
+   "term": "Action limit",
+   "defn": "A pre-set value that, when crossed, forces a defined response (and a corrective-action note). Paired with a softer alert limit that just warns.",
+   "tags": [
+    "operations",
+    "precision"
+   ]
+  },
+  {
+   "term": "Auto-tick (self-completing check)",
+   "defn": "A check item that a system marks done by itself when its telemetry confirms the condition, leaving the human only the items a sensor cannot judge.",
+   "tags": [
+    "operations",
+    "precision"
+   ]
+  },
+  {
+   "term": "PPE / PPPE",
+   "defn": "Personal protective equipment. In a grow it is plant and personal: the same gown, gloves and covers protect the crop from the person and the person from hazards.",
+   "tags": [
+    "operations",
+    "health"
+   ]
+  },
+  {
+   "term": "Gowning / de-gowning",
+   "defn": "Donning and doffing protective clothing in a defined order across a clean/dirty line, so contamination never crosses. Gown top-down; de-gown in reverse, dirtiest first.",
+   "tags": [
+    "operations",
+    "health"
+   ]
+  },
+  {
+   "term": "Fomite",
+   "defn": "An object that carries and transfers microbes, e.g. a phone, pen, tool or handle. Hands move contamination from fomites to the crop.",
+   "tags": [
+    "health"
+   ]
+  },
+  {
+   "term": "Bioaerosol",
+   "defn": "Airborne particles carrying living things, such as skin flakes with bacteria, fungal spores, or droplets from speech or a toilet flush.",
+   "tags": [
+    "health"
+   ]
+  },
+  {
+   "term": "Cross-contamination",
+   "defn": "Carrying contamination from a dirty area or item to a clean one, e.g. walking from flower back into propagation without re-gowning.",
+   "tags": [
+    "operations",
+    "health"
+   ]
+  },
+  {
+   "term": "Hierarchy of controls",
+   "defn": "The legal order for managing risk: eliminate, substitute, isolate, engineer, administrate, then PPE as the last line.",
+   "tags": [
+    "operations"
+   ]
+  },
+  {
+   "term": "PCBU",
+   "defn": "Person Conducting a Business or Undertaking, the NZ legal term (Health and Safety at Work Act 2015) for the duty-holding business, i.e. the employer.",
+   "tags": [
+    "operations"
+   ]
+  }
+ ]
+}
