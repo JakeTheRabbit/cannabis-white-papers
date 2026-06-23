@@ -392,6 +392,26 @@ def main():
     for m in manifest:
         shutil.copy(os.path.join(papers_dir, m["slug"] + ".md"), mp)
 
+    # search docs + KV bulk-load file for the MCP Worker
+    def _plain(md):
+        body = md.split("---\n", 2)[-1]
+        body = re.sub(r"`+", "", body)
+        body = re.sub(r"[#>*_|\[\]()^]", " ", body)
+        return re.sub(r"\s+", " ", body).strip()
+    searchdocs, bulk = [], []
+    for m in manifest:
+        md = open(os.path.join(papers_dir, m["slug"] + ".md"), encoding="utf-8").read()
+        plain = _plain(md)
+        searchdocs.append({"slug": m["slug"], "title": m["title"], "track": m["track"],
+                           "summary": m["summary"],
+                           "text": (m["title"] + " " + m["summary"] + " " + plain[:1800]).lower()})
+        bulk.append({"key": "paper:" + m["slug"], "value": md})
+    bulk.append({"key": "manifest", "value": json.dumps({"papers": manifest}, ensure_ascii=False)})
+    bulk.append({"key": "searchdocs", "value": json.dumps(searchdocs, ensure_ascii=False)})
+    bulk.append({"key": "glossary", "value": json.dumps(GLOSSARY, ensure_ascii=False)})
+    json.dump(searchdocs, open(os.path.join(mcp_data, "searchdocs.json"), "w", encoding="utf-8"), ensure_ascii=False)
+    json.dump(bulk, open(os.path.join(mcp_data, "kv-bulk.json"), "w", encoding="utf-8"), ensure_ascii=False)
+
     print(f"corpus OK -> {len(manifest)} papers + manifest/glossary/llms.txt/llms-full.txt/LICENSE "
           f"+ skill + zip + mcp/data  (leak-scan clean)")
 

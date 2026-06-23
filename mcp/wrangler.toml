@@ -1,0 +1,11 @@
+name = "cwp-mcp"
+main = "src/index.ts"
+compatibility_date = "2025-06-01"
+workers_dev = true
+
+# KV namespace holding the corpus (manifest, searchdocs, glossary, paper:<slug>).
+# Create with:  wrangler kv namespace create CORPUS
+# then paste the returned id below and run the kv bulk put (see README.md).
+[[kv_namespaces]]
+binding = "CORPUS"
+id = "__FILL_AFTER_KV_CREATE__"
