@@ -11,7 +11,7 @@ SUB = ("How to design a clean, compliant hash and extract factory from scratch: 
        "means, how rooms and people and product move, and how a batch earns its way to market.")
 META = [("building", "Facility"), ("image", "13 diagrams"),
         ("quote", "Peer-reviewed · 8 sources"), ("clock", "~18 min read")]
-RELATED = ["mould-risk", "wso-quality-manual", "facility-3d"]
+RELATED = ["mould-risk", "facility-3d"]
 REF_IDS = ["ecfr-21cfr211", "ich-q3c-r9-ema", "ehp-cannabis-contaminants-2019",
            "en1822-h14-hepa", "sciencedirect-cleanroom-personnel-emissions-2024",
            "pmc-capa-ich-q10-2024", "fda-process-validation-2011",
@@ -340,7 +340,6 @@ SECTIONS.append({"id": "realistic-expectations", "kicker": "Reality check", "tit
         "the whole story from the records alone. Specific limits and grades vary by jurisdiction, so "
         "validate against your own licence before you build.")),
     p("Once the system runs, the contamination side of the picture is where most failures actually "
-      "originate. Read the <a href='mould-risk.html'>mould-risk</a> paper next, and see the "
-      "<a href='wso-quality-manual.html'>WSO quality manual</a> for a worked example of the documented "
-      "system this architecture demands."),
+      "originate. Read the <a href='mould-risk.html'>mould-risk</a> paper next for that side of the "
+      "build."),
   ]})

@@ -6,7 +6,7 @@ summary: "How to design a clean, compliant hash and extract factory from scratch
 track: "Harvest, dry, trim & cure"
 read_time: "~18 min read"
 diagrams: "13 diagrams"
-related: ["mould-risk", "wso-quality-manual", "facility-3d"]
+related: ["mould-risk", "facility-3d"]
 url: "https://jaketherabbit.github.io/cannabis-white-papers/gmp-hash-lab.html"
 md_url: "https://jaketherabbit.github.io/cannabis-white-papers/papers/gmp-hash-lab.md"
 version: "1.0"
@@ -214,7 +214,7 @@ Cleaning is validated too, against a calculated **MACO** (Maximum Allowable Carr
 > 
 > Not a perfect building: a _provable_ one. Compliant means every batch can be traced, every limit was met or the deviation was closed, and an inspector could reconstruct the whole story from the records alone. Specific limits and grades vary by jurisdiction, so validate against your own licence before you build.
 
-Once the system runs, the contamination side of the picture is where most failures actually originate. Read the [mould-risk](mould-risk.html) paper next, and see the [WSO quality manual](wso-quality-manual.html) for a worked example of the documented system this architecture demands.
+Once the system runs, the contamination side of the picture is where most failures actually originate. Read the [mould-risk](mould-risk.html) paper next for that side of the build.
 
 ## References
 

@@ -13,7 +13,7 @@ SUB = ("The best daily check is the one that mostly fills itself in. Let Home As
        "tap, and the check gets done every day, honestly, with an audit trail that holds up.")
 META = [("dashboard", "Operations & SOPs"), ("image", "7 diagrams"),
         ("quote", "Research-backed · 13 sources"), ("clock", "~16 min read")]
-RELATED = ["wso-quality-manual", "plant-state-dashboard", "closed-loop", "grow-room-systems"]
+RELATED = ["plant-state-dashboard", "closed-loop", "grow-room-systems"]
 REF_IDS = ["gawande-checklist-manifesto", "fogg-behavior-model", "gollwitzer-implementation-intentions",
            "checklist-compliance-illusion", "haynes-surgical-checklist-2009",
            "ha-todo-integration", "ha-template-alert-statistics", "aroya-rootzone-steering",

@@ -250,15 +250,5 @@
   "Alkalinity",
   "Hardness",
   "RO (reverse osmosis)"
- ],
- "wso-quality-manual": [
-  "GMP: Good Manufacturing Practice",
-  "GACP: Good Agricultural and Collection Practice",
-  "QMS / PQS: Quality (or Pharmaceutical) Management System",
-  "QA vs QC",
-  "SOP: Standard Operating Procedure",
-  "ALCOA+",
-  "CAPA / QRM / RP",
-  "Good Documentation Practice (GDP)"
  ]
 }

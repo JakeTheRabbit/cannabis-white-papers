@@ -6,7 +6,7 @@ summary: "Coveralls, hairnets, gloves and shoe covers do two jobs at once: they 
 track: "Plant health"
 read_time: "~17 min read"
 diagrams: "9 diagrams"
-related: ["ipm-sop", "mould-risk", "tissue-culture", "wso-quality-manual"]
+related: ["ipm-sop", "mould-risk", "tissue-culture", "daily-checks"]
 url: "https://jaketherabbit.github.io/cannabis-white-papers/pppe.html"
 md_url: "https://jaketherabbit.github.io/cannabis-white-papers/papers/pppe.md"
 version: "1.0"

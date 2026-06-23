@@ -64,6 +64,5 @@ Licensed CC BY-NC 4.0 (https://creativecommons.org/licenses/by-nc/4.0/). Attribu
 
 ### Facility & quality
 - **Designing a grow facility in 3D before you build it** (`papers/facility-3d.md`): See the build before you build it
-- **The quality manual: a GMP quality system for cannabis** (`papers/wso-quality-manual.md`): GMP quality management system
 - **Daily checks: the self-completing facility round** (`papers/daily-checks.md`): The self-completing facility round
 
