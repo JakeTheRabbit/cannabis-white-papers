@@ -230,54 +230,67 @@ def track_grid(only_live=False):
 
 # ---------------------------------------------------------------- landing
 def render_index():
-    n_total = len(NAV.all_items())
-    n_live = sum(1 for it in NAV.all_items() if it["status"] == "live")
-    hero = (
-        '<div class="hero-land"><div class="eyebrow">A field guide to growing, from zero</div>'
-        '<h1>The Cannabis White Papers</h1>'
-        '<p class="sub">Cultivation science from the journals, rewritten so a first-time grower can '
-        'actually follow it. Every paper defines its terms, shows its working in diagrams and tables, '
-        'and cites its sources.</p>'
-        f'<div class="hero-stats">'
-        f'<div class="s"><b>{n_total}</b><span>white papers</span></div>'
-        f'<div class="s"><b>{n_live}</b><span>available now</span></div>'
-        f'<div class="s"><b>100%</b><span>cited &amp; diagrammed</span></div></div></div>'
-    )
-    intro = (
-        '<div class="track" style="margin-top:10px"><div class="track-h"><h2>What these are</h2>'
-        '<span class="ct">and the point of them</span></div>'
-        '<p style="max-width:780px;color:var(--muted);font-size:17px;line-height:1.6;margin:0 0 16px">'
-        'Each one is a white paper: a deep, single-topic grow guide written from absolute zero, '
-        'with every term defined, every claim cited to peer-reviewed research, and the working shown '
-        'in diagrams, charts and tables. Together they cover a whole grow, ordered below by the stage '
-        'you use them in: propagation, vegetative growth, flower, then harvest through to cure, plus '
-        'the systems that run across all of them. Follow the <a href="curriculum.html">grow order</a>, '
-        'jump to a stage below, or press <strong>Ctrl&nbsp;K</strong> to search anything.</p>'
-        + grid([
-            card("Deep, not shallow", "One topic per paper, taken from beginner to genuinely useful. No filler, no hype.", tag="What it is"),
-            card("Cited and honest", "Every factual claim links to peer-reviewed research. Where the science is uncertain, it says so.", tag="Why trust it"),
-            card("Ordered by the grow", "Grouped by task: propagation, veg, flower, harvest, and the systems that span every stage.", tag="How to use it"),
-        ], cols=3) + '</div>')
-    body = hero + intro + render_directory()
-    return shell.page("index", "Home", body, desc="Peer-reviewed cannabis cultivation white papers, by grow stage.", wide=True, mobile_active="index")
-
-def render_directory():
-    """Compact, filterable one-screen directory: stage pills + dense card grid."""
+    """Landing = a filterable tree index: text filter + stage pills + grouped rows with blurbs."""
     n = len(NAV.all_items())
+    # per-paper blurb (first sentence of SUB) + read-time, from the live modules
+    meta = {}
+    for m in PAPERS:
+        sub = getattr(m, "SUB", "") or ""
+        blurb = sub.split(". ")[0].strip()
+        if blurb and not blurb.endswith("."):
+            blurb += "."
+        if len(blurb) > 165:
+            blurb = blurb[:162].rstrip(" ,;") + "…"
+        rt = ""
+        for _ic, txt in getattr(m, "META", []):
+            if "read" in txt.lower():
+                rt = txt.replace("~", "").strip()
+        meta[m.SLUG] = (blurb, rt)
+    hero = (
+        '<div class="hero-land tight">'
+        '<div class="eyebrow">A field guide to growing, from zero</div>'
+        '<h1>The Cannabis White Papers</h1>'
+        f'<p class="sub">Peer-reviewed cultivation science, rewritten so a first-timer can actually '
+        f'follow it: every term defined, every claim cited, the working shown in diagrams. Filter the '
+        f'{n} papers below, or press <strong>Ctrl&nbsp;K</strong> to search.</p></div>'
+    )
     pills = [f'<button class="fpill on" data-filter="all">All <span>{n}</span></button>']
-    cards = []
+    groups = []
     for g in NAV.GROUPS:
         gs = slugify(g["group"])
         pills.append(f'<button class="fpill" data-filter="{gs}">{esc(g["group"])} <span>{len(g["items"])}</span></button>')
+        rows = []
         for it in g["items"]:
-            cards.append(
-                f'<a class="pcard sm" data-group="{gs}" href="{it["slug"]}.html">'
-                f'<div class="pic">{icon(it["icon"],17)}</div>'
-                f'<div><div class="pt">{esc(it["title"])}</div>'
-                f'<div class="ps">{esc(it["short"])}</div></div></a>')
-    return (f'<div class="filterbar" id="filterbar">{"".join(pills)}</div>'
-            f'<div class="pgrid compact" id="paperdir">{"".join(cards)}</div>'
-            f'<div class="dir-empty" id="dirEmpty" style="display:none">Nothing in this stage yet.</div>')
+            live = it["status"] == "live"
+            blurb, rt = meta.get(it["slug"], ("", ""))
+            if not blurb:
+                blurb = it["short"]
+            dt = re.sub(r"[^a-z0-9 ]+", " ", (it["title"] + " " + blurb + " " + it["short"]).lower())
+            dt = re.sub(r"\s+", " ", dt).strip()
+            if live and rt:
+                metah = f'<span class="trow-meta">{esc(rt)}</span>'
+            elif not live:
+                metah = '<span class="trow-meta soon">soon</span>'
+            else:
+                metah = ''
+            inner = (f'<span class="trow-ic">{icon(it["icon"], 18)}</span>'
+                     f'<span class="trow-main"><span class="trow-t">{esc(it["title"])}</span>'
+                     f'<span class="trow-b">{esc(blurb)}</span></span>{metah}')
+            tag = "a" if live else "div"
+            href = f' href="{it["slug"]}.html"' if live else ''
+            cls = "trow" if live else "trow soon"
+            rows.append(f'<{tag} class="{cls}" data-group="{gs}" data-text="{dt}"{href}>{inner}</{tag}>')
+        groups.append(f'<section class="treegroup" data-group="{gs}">'
+                      f'<div class="tg-h"><h2>{esc(g["group"])}</h2><span class="tg-ct">{len(g["items"])}</span></div>'
+                      f'<div class="tg-rows">{"".join(rows)}</div></section>')
+    tools = ('<div class="dirtools">'
+             '<input id="treeFilter" class="treefilter" type="text" '
+             'placeholder="Filter papers by name or topic…" autocomplete="off" spellcheck="false">'
+             f'<div class="filterbar" id="filterbar">{"".join(pills)}</div></div>')
+    tree = (f'<div id="paperdir">{"".join(groups)}'
+            '<div class="dir-empty" id="dirEmpty" style="display:none">No papers match that filter.</div></div>')
+    body = hero + tools + tree
+    return shell.page("index", "Home", body, desc="Peer-reviewed cannabis cultivation white papers, by grow stage.", wide=True, mobile_active="index")
 
 def render_papers():
     head = ('<div class="eyebrow">Library</div><h1 class="title">All papers</h1>'
