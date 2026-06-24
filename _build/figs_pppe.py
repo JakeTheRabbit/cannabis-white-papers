@@ -4,7 +4,7 @@ from figs import (G, GD, GL, GXL, INK, INK2, MUT, LINE, AMB, AMBL, RED, REDL,
                   BLU, BLUL, PUR, PURL, PAPER, PANEL2, FS, MN)
 from figs_concepts import _svg, _title, _wrap
 
-SKIN = "#d8a47f"
+SKIN = "var(--fig-skin)"
 
 
 def human_contamination():

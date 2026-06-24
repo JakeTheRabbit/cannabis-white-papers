@@ -327,6 +327,8 @@ a.curitem:hover{border-color:#CFCEC6;color:var(--ink)}
   --fig-green:#2e7d52; --fig-green-d:#1d5638; --fig-green-l:#e7f2eb; --fig-green-xl:#f1f8f3;
   --fig-amber:#b3791a; --fig-amber-l:#fdf3e0; --fig-red:#b5402f; --fig-red-l:#fbe9e6;
   --fig-blue:#2f6fb0; --fig-blue-l:#e9f1f9; --fig-purple:#6b4f9e; --fig-purple-l:#efeaf7;
+  --fig-water:#4f8fd0; --fig-waterl:#dbe9f6; --fig-dry:#cdb48b; --fig-dryl:#ece0cc;
+  --fig-salt:#c98a2a; --fig-solid:#9a9a93; --fig-skin:#d8a47f;
 }
 
 /* ---------------- theme toggle ---------------- */
@@ -346,10 +348,15 @@ a.curitem:hover{border-color:#CFCEC6;color:var(--ink)}
   --amber:#d9a85a; --amber-l:#2a2113; --red:#e08a7d; --red-l:#2c1714;
   --blue:#6aa6e0; --blue-l:#14202e; --purple:#b09ce0; --purple-l:#221c30;
   --grn-soft:#14231b; --amber-soft:#241e12; --red-soft:#291814; --blue-soft:#152030;
-  /* Diagrams stay on a LIGHT card in dark mode: keep the light --fig-* values
-     from :root (do NOT override). Light strokes on a dark page bloom/halate and
-     our SVGs mix themed vars with light-tuned colours, so a consistent light
-     diagram card is the safe, no-inversion choice. */
+  /* Dark diagram palette: dark panel, off-white strokes (not pure white, avoids
+     halation), muted desaturated fills. Every diagram colour is a var so the
+     SVGs theme cleanly instead of flash-banging on a white card. */
+  --fig-bg:#1F1F1F; --fig-panel:#2A2A2A; --fig-ink:#E2E2E2; --fig-ink2:#B4B4B4; --fig-mut:#8C8C8C; --fig-line:#3A3A3A;
+  --fig-green:#52bd8d; --fig-green-d:#7ed6ab; --fig-green-l:#1f3a2c; --fig-green-xl:#18271f;
+  --fig-amber:#d9ab60; --fig-amber-l:#2c2415; --fig-red:#e58c7e; --fig-red-l:#2f1916;
+  --fig-blue:#6fa8e2; --fig-blue-l:#16222f; --fig-purple:#b4a0e2; --fig-purple-l:#221c30;
+  --fig-water:#5f9ed8; --fig-waterl:#22344a; --fig-dry:#b39a6e; --fig-dryl:#2f2b1d;
+  --fig-salt:#d8a049; --fig-solid:#6c6c66; --fig-skin:#c2885f;
 }
 [data-theme="dark"] body{background:var(--paper);color:var(--ink-2)}
 [data-theme="dark"] .brand .mark,[data-theme="dark"] .stagenum,[data-theme="dark"] .step-n{color:var(--paper)}

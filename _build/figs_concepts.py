@@ -3,7 +3,7 @@
 from figs import (G, GD, GL, GXL, INK, INK2, MUT, LINE, AMB, AMBL, RED, REDL,
                   BLU, BLUL, PUR, PURL, PAPER, PANEL2, FS, MN)
 
-WATER = "#4f8fd0"; WATERL = "#dbe9f6"; DRY = "#cdb48b"; DRYL = "#ece0cc"; SALT = "#c98a2a"; SOLID = "#9a9a93"
+WATER = "var(--fig-water)"; WATERL = "var(--fig-waterl)"; DRY = "var(--fig-dry)"; DRYL = "var(--fig-dryl)"; SALT = "var(--fig-salt)"; SOLID = "var(--fig-solid)"
 
 
 def _svg(w, h, label, parts):
