@@ -312,10 +312,10 @@ a.curitem:hover{border-color:#CFCEC6;color:var(--ink)}
 
 /* ---------------- dark mode ---------------- */
 [data-theme="dark"]{
-  --paper:#151613; --surface:#1E201A; --surface-2:#26281F; --surface-3:#2F3127;
-  --ink:#E6E7E0; --ink-2:#C8CAC2; --muted:#9A9C92; --faint:#70726A;
-  --line:#30322B; --line-2:#26281F;
-  --acc:#ECEDE7; --acc-soft:#23251F; --acc-ink:#ECEDE7;
+  --paper:#151515; --surface:#1F1F1F; --surface-2:#272727; --surface-3:#313131;
+  --ink:#E7E7E7; --ink-2:#C8C8C8; --muted:#9A9A9A; --faint:#717171;
+  --line:#2F2F2F; --line-2:#262626;
+  --acc:#E7E7E7; --acc-soft:#262626; --acc-ink:#E7E7E7;
   --grn:#46b88a; --grn-d:#8fe0b6; --grn-l:#1c3a2b; --grn-xl:#16271e; --grn-ink:#9fe6c0;
   --amber:#d9a85a; --amber-l:#2a2113; --red:#e08a7d; --red-l:#2c1714;
   --blue:#6aa6e0; --blue-l:#14202e; --purple:#b09ce0; --purple-l:#221c30;
