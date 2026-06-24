@@ -3,7 +3,7 @@
 from figs import (G, GD, GL, GXL, INK, INK2, MUT, LINE, AMB, AMBL, RED, REDL,
                   BLU, BLUL, PUR, PURL, PAPER, PANEL2, FS, MN)
 
-WATER = "#4f8fd0"; WATERL = "#dbe9f6"; DRY = "#cdb48b"; DRYL = "#ece0cc"; SALT = "#c98a2a"
+WATER = "var(--fig-water)"; WATERL = "var(--fig-waterl)"; DRY = "var(--fig-dry)"; DRYL = "var(--fig-dryl)"; SALT = "var(--fig-salt)"
 
 def _svg(w, h, label, parts):
     return (f'<svg viewBox="0 0 {w} {h}" width="{w}" height="{h}" xmlns="http://www.w3.org/2000/svg" '
@@ -56,7 +56,7 @@ def fig_wc_band():
              (55, 70, G, "70-55%", "Working band, healthy roots + air"),
              (42, 55, AMB, "55-42%", "Generative dryback, more stress, more air"),
              (30, 42, RED, "42-30%", "Stress floor, EC spikes, edges drying"),
-             (0, 30, "#7a2d20", "below 30%", "Non-recoverable, channels, hand-soak only")]
+             (0, 30, "var(--fig-red)", "below 30%", "Non-recoverable, channels, hand-soak only")]
     left, right, top, bot = 250, 60, 56, H - 34
     def Y(v): return bot - (v / 100) * (bot - top)
     p = [f'<text x="24" y="26" fill="{INK}" font-size="15" font-weight="700" style="{FS}">The rockwool water-content band</text>',
@@ -70,8 +70,8 @@ def fig_wc_band():
     p.append(f'<line x1="{left}" y1="{top}" x2="{left}" y2="{bot}" stroke="{LINE}" stroke-width="1.4"/>')
     for v in (0, 30, 55, 70, 92, 100):
         p.append(f'<text x="{left-8}" y="{Y(v)+4:.0f}" text-anchor="end" fill="{MUT}" font-size="10.5" style="{MN}">{v}</text>')
-    p.append(f'<line x1="{left}" y1="{Y(30):.0f}" x2="{W-right}" y2="{Y(30):.0f}" stroke="#7a2d20" stroke-width="2" stroke-dasharray="6 4"/>')
-    p.append(f'<text x="{W-right}" y="{Y(30)-6:.0f}" text-anchor="end" fill="#7a2d20" font-size="11" font-weight="700" style="{FS}">recovery floor</text>')
+    p.append(f'<line x1="{left}" y1="{Y(30):.0f}" x2="{W-right}" y2="{Y(30):.0f}" stroke="var(--fig-red)" stroke-width="2" stroke-dasharray="6 4"/>')
+    p.append(f'<text x="{W-right}" y="{Y(30)-6:.0f}" text-anchor="end" fill="var(--fig-red)" font-size="11" font-weight="700" style="{FS}">recovery floor</text>')
     return _svg(W, H, "Rockwool water-content band", p)
 
 # ---------------------------------------------------------------- dry-out 4 stages
@@ -137,7 +137,7 @@ def fig_rewet():
             p.append(f'<ellipse cx="{cx}" cy="{by+bh/2}" rx="62" ry="58" fill="{DRY}" opacity=".9"/>')
             p.append(f'<path d="M{cx-30},{by} L{cx-26},{by+bh}" stroke="{WATER}" stroke-width="4"/>')
             p.append(f'<path d="M{cx+34},{by} L{cx+28},{by+bh}" stroke="{WATER}" stroke-width="4"/>')
-            p.append(f'<text x="{cx}" y="{by+bh/2+4}" text-anchor="middle" fill="#7a2d20" font-size="10.5" font-weight="700" style="{FS}">dry core</text>')
+            p.append(f'<text x="{cx}" y="{by+bh/2+4}" text-anchor="middle" fill="var(--fig-red)" font-size="10.5" font-weight="700" style="{FS}">dry core</text>')
             p.append(f'<text x="{cx}" y="{by+bh+24}" text-anchor="middle" fill="{RED}" font-size="11" style="{FS}">runs down channels, core stays dry</text>')
     p.append(f'<text x="24" y="{H-12}" fill="{MUT}" font-size="11" style="{FS}">Below ~30% WC the dry fibre matrix repels even spreading. Water finds preferential channels and exits as runoff, so the drip-rate that hydrated a wet block cannot re-saturate a dry one. You must hand-soak.</text>')
     return _svg(W, H, "Rockwool rewetting and channeling", p)
