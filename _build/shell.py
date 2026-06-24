@@ -5,6 +5,7 @@ from components import icon, esc
 import data.nav as NAV
 
 BRAND = "The Cannabis White Papers"
+ASSET_VER = "0"  # set by build.py to a content hash, busts browser cache on deploy
 
 def _href(slug):
     return "index.html" if slug == "index" else f"{slug}.html"
@@ -77,7 +78,7 @@ def page(slug, title, body, desc="", rail_toc=None, wide=False, mobile_active=No
 <title>{esc(title)} &middot; {esc(BRAND)}</title>
 <meta name="description" content="{esc(desc)}">
 <script>(function(){{try{{var t=localStorage.getItem('cwp-theme')||(window.matchMedia&&window.matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light');document.documentElement.setAttribute('data-theme',t);}}catch(e){{}}}})();</script>
-<link rel="stylesheet" href="assets/app.css">
+<link rel="stylesheet" href="assets/app.css?v={ASSET_VER}">
 </head><body data-slug="{esc(slug)}">
 <button class="drawer-mask" id="mask" aria-label="Close menu"></button>
 <header class="mtopbar">
@@ -97,6 +98,6 @@ def page(slug, title, body, desc="", rail_toc=None, wide=False, mobile_active=No
     <div class="search-results" id="searchResults"></div>
   </div>
 </div>
-<script src="assets/search-index.js"></script>
-<script src="assets/app.js"></script>
+<script src="assets/search-index.js?v={ASSET_VER}"></script>
+<script src="assets/app.js?v={ASSET_VER}"></script>
 </body></html>"""

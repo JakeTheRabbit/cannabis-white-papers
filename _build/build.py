@@ -2,7 +2,7 @@
 """Build orchestrator. Emits the static site to the repo root.
 Run:  cd /c/Github/white-papers/_build && python build.py
 """
-import os, re, json, sys, html as _h
+import os, re, json, sys, html as _h, hashlib
 sys.path.insert(0, os.path.dirname(__file__))
 
 import theme, app_js, shell
@@ -461,6 +461,8 @@ def main():
         raise
     except Exception as _ce:
         print("corpus export skipped:", repr(_ce))
+    # cache-bust: version assets by a hash of the CSS+JS so deploys always show fresh
+    shell.ASSET_VER = hashlib.md5((theme.CSS + app_js.JS).encode("utf-8")).hexdigest()[:8]
     sizes = {}
     sizes["assets/app.css"] = w("assets/app.css", theme.CSS)
     sizes["assets/app.js"] = w("assets/app.js", app_js.JS)
