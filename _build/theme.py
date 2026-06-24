@@ -316,18 +316,18 @@ a.curitem:hover{border-color:#CFCEC6;color:var(--ink)}
 
 /* ---------------- dark mode ---------------- */
 [data-theme="dark"]{
-  --paper:#0E0F0D; --surface:#161814; --surface-2:#1D1F1A; --surface-3:#26281F;
-  --ink:#ECEDE7; --ink-2:#C8CAC2; --muted:#9A9C92; --faint:#70726A;
-  --line:#2B2D27; --line-2:#212319;
+  --paper:#151613; --surface:#1E201A; --surface-2:#26281F; --surface-3:#2F3127;
+  --ink:#E6E7E0; --ink-2:#C8CAC2; --muted:#9A9C92; --faint:#70726A;
+  --line:#30322B; --line-2:#26281F;
   --acc:#ECEDE7; --acc-soft:#23251F; --acc-ink:#ECEDE7;
   --grn:#46b88a; --grn-d:#8fe0b6; --grn-l:#1c3a2b; --grn-xl:#16271e; --grn-ink:#9fe6c0;
   --amber:#d9a85a; --amber-l:#2a2113; --red:#e08a7d; --red-l:#2c1714;
   --blue:#6aa6e0; --blue-l:#14202e; --purple:#b09ce0; --purple-l:#221c30;
   --grn-soft:#14231b; --amber-soft:#241e12; --red-soft:#291814; --blue-soft:#152030;
-  --fig-bg:#161814; --fig-panel:#1F2A24; --fig-ink:#ECEDE7; --fig-ink2:#C8CAC2; --fig-mut:#9A9C92; --fig-line:#33372F;
-  --fig-green:#46b88a; --fig-green-d:#8fe0b6; --fig-green-l:#1c3a2b; --fig-green-xl:#16271e;
-  --fig-amber:#d9a85a; --fig-amber-l:#2a2113; --fig-red:#e08a7d; --fig-red-l:#2c1714;
-  --fig-blue:#6aa6e0; --fig-blue-l:#14202e; --fig-purple:#b09ce0; --fig-purple-l:#221c30;
+  /* Diagrams stay on a LIGHT card in dark mode: keep the light --fig-* values
+     from :root (do NOT override). Light strokes on a dark page bloom/halate and
+     our SVGs mix themed vars with light-tuned colours, so a consistent light
+     diagram card is the safe, no-inversion choice. */
 }
 [data-theme="dark"] body{background:var(--paper);color:var(--ink-2)}
 [data-theme="dark"] .brand .mark,[data-theme="dark"] .stagenum,[data-theme="dark"] .step-n{color:var(--paper)}
@@ -342,4 +342,5 @@ a.curitem:hover{border-color:#CFCEC6;color:var(--ink)}
 [data-theme="dark"] .tag.w{color:#e6c07a}
 [data-theme="dark"] .tag.r{color:#ec9b8f}
 [data-theme="dark"] .pill.solid{color:var(--acc-ink)}
+[data-theme="dark"] .fig svg{border-radius:10px}
 """
