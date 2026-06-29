@@ -43,6 +43,7 @@ PAPER_MODULES = [
     "paper_defoliation_training", "paper_ipm_sop", "paper_harvest_dry_trim_cure",
     "paper_gmp_hash_lab", "paper_facility_3d",
     "paper_rockwool_crop_steering", "paper_daily_checks", "paper_pppe",
+    "paper_one_steering_law",
 ]
 PAPERS, PAPER_ERRORS = [], []
 for _m in PAPER_MODULES:
@@ -331,6 +332,7 @@ CURRICULUM = [
    ("The flower cycle, week by week", "flowering-stages"),
    ("Precision coco cultivation: crop steering", "coco-crop-steering"),
    ("Rockwool crop steering: drybacks & saturation", "rockwool-crop-steering"),
+   ("The one steering law: coco, rockwool, soil & water", "one-steering-law"),
    ("Ripening, flush & harvest timing", None)]),
  ("4 · Harvest, dry, trim & cure", "Turn flower into finished product.", [
    ("Harvest, dry, trim & cure", "harvest-dry-trim-cure"), ("GMP hash manufacturing", "gmp-hash-lab"),

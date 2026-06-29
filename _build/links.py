@@ -8,6 +8,7 @@ LINK_PHRASES = {
     "tissue-culture": ["tissue culture", "micropropagation", "meristem culture", "meristem", "hop latent viroid", "HpLVd", "clean stock"],
     "coco-crop-steering": ["crop steering", "coco coir", "dryback", "field capacity", "generative steering", "vegetative steering"],
     "rockwool-crop-steering": ["rockwool crop steering", "recovery floor", "stone wool", "preferential flow", "channeling"],
+    "one-steering-law": ["one steering law", "the steering law", "steering law"],
     "grow-room-systems": ["grow room as one", "coupled system", "vapour pressure deficit", "VPD", "daily light integral", "DLI"],
     "airflow-design": ["airflow design", "boundary layer", "air velocity", "leaf boundary"],
     "mould-risk": ["bud rot", "botrytis", "powdery mildew", "mould risk", "water activity"],
