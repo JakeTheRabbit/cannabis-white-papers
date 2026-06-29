@@ -30,6 +30,7 @@ Licensed CC BY-NC 4.0 (https://creativecommons.org/licenses/by-nc/4.0/). Attribu
 - **Precision coco cultivation: crop steering in coir** (`papers/coco-crop-steering.md`): Steer the plant with water
 - **The flower cycle, week by week** (`papers/flowering-stages.md`): The flip through to ripe
 - **Crop steering in rockwool: drybacks, saturation and the breaking point** (`papers/rockwool-crop-steering.md`): Drybacks, saturation, the breaking point
+- **The one steering law: coco, rockwool, soil & water** (`papers/one-steering-law.md`): Coco, rockwool, soil and water, one way to steer
 
 ### Harvest, dry, trim & cure
 - **Harvest, dry, trim and cure** (`papers/harvest-dry-trim-cure.md`): The whole post-harvest run

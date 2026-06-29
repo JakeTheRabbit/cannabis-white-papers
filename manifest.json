@@ -5,7 +5,7 @@
  "license": "CC BY-NC 4.0",
  "license_url": "https://creativecommons.org/licenses/by-nc/4.0/",
  "base": "https://jaketherabbit.github.io/cannabis-white-papers",
- "count": 31,
+ "count": 32,
  "papers": [
   {
    "slug": "tissue-culture",
@@ -566,6 +566,27 @@
    "version": "1.0",
    "updated": "2026-06-24",
    "ref_count": 15
+  },
+  {
+   "slug": "one-steering-law",
+   "title": "The one steering law: coco, rockwool, soil & water",
+   "summary": "Coco, rockwool, soil and plain water are not four separate skills. They are one way of steering a plant with water, running on four different sponges. Learn the steering once, with pictures and no jargon, and you can grow in any of them, because the sponge only changes the numbers.",
+   "track": "Flowering",
+   "read_time": "~22 min read",
+   "diagrams": "31 diagrams",
+   "related": [
+    "coco-crop-steering",
+    "rockwool-crop-steering",
+    "substrates-overview",
+    "root-zone-teros12",
+    "smart-watering-vrwe",
+    "f2-crop-steering"
+   ],
+   "url": "https://jaketherabbit.github.io/cannabis-white-papers/one-steering-law.html",
+   "md_url": "https://jaketherabbit.github.io/cannabis-white-papers/papers/one-steering-law.md",
+   "version": "1.0",
+   "updated": "2026-06-24",
+   "ref_count": 9
   }
  ]
 }
