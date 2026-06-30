@@ -8,9 +8,10 @@ SLUG = "light-acclimation"
 TITLE = "Light acclimation: raise PPFD in steps so plants don't bleach"
 EYEBROW = "Beginner · Light"
 SUB = ("Light is a curve, not a switch. Raise PPFD in steps the plant can keep up with, "
-       "and match CO2 to set how high you can go.")
-META = [("sun", "Beginner"), ("image", "9 diagrams"),
-        ("quote", "Peer-reviewed · 8 sources"), ("clock", "~9 min read")]
+       "and match CO2 to set how high you can go. Updated with the latest research (2024-2026) "
+       "on high-light quality gains, far-red, and UV.")
+META = [("sun", "Beginner"), ("image", "10 diagrams"),
+        ("quote", "Peer-reviewed · 12 sources"), ("clock", "~11 min read")]
 RELATED = ["coco-crop-steering", "signal-and-noise", "plant-state-dashboard"]
 REF_IDS = ["rodriguez-morrison-2021-cannabis-light-intensity-yield",
            "chandra-2008-cannabis-photosynthesis-ppfd-co2-temperature",
@@ -19,7 +20,11 @@ REF_IDS = ["rodriguez-morrison-2021-cannabis-light-intensity-yield",
            "takahashi-murata-2008-environmental-stress-photoinhibition",
            "pospisil-2016-ros-photosystem-ii-light-temperature",
            "gjindali-johnson-2023-photosynthetic-acclimation",
-           "sun-shade-leaf-thickness-chloroplast-acclimation"]
+           "sun-shade-leaf-thickness-chloroplast-acclimation",
+           "saetang2024-high-light-metabolites",
+           "farred2025-scirep",
+           "rfr2024-yield-vs-metabolites",
+           "huebner2024-uv-spectra"]
 
 def _c(rid):
     return "<sup class='cite'><a href='#ref-%s'>[%d]</a></sup>" % (rid, REF_IDS.index(rid) + 1)
@@ -258,6 +263,47 @@ SECTIONS.append({"id": "troubleshooting", "kicker": "Reading the plant", "title"
         "the table. Chronic under-lighting wastes a crop just as surely as bleaching wastes plants" +
         _c("rodriguez-morrison-2021-cannabis-light-intensity-yield") + ". Back down one step, then "
         "climb again deliberately.")),
+  ]})
+
+SECTIONS.append({"id": "latest-research", "kicker": "Latest research · 2024-2026", "title": "What the newest studies add",
+  "blocks": [
+    lead("Acclimation and CO2 matching are the foundation, and they haven't changed. Recent work "
+         "(2024-2026) sharpens three things: how much a high ceiling actually buys you, and two "
+         "spectrum levers, far-red and UV, that get oversold."),
+    p("<strong>A well-fuelled high ceiling improves quality, not just weight.</strong> A 2024 trial "
+      "pushing PPFD from 600 to 1200 &micro;mol/m&sup2;/s raised cannabinoid content by about "
+      "<strong>60%</strong> and terpenoid content by about <strong>40%</strong>, from <em>both</em> a "
+      "heavier inflorescence and higher concentrations, at roughly constant light-use efficiency" +
+      _c("saetang2024-high-light-metabolites") + ". Alongside the older result that dry flower yield "
+      "rises roughly linearly with PPFD up to ~1800 &micro;mol" + _c("rodriguez-morrison-2021-cannabis-light-intensity-yield") +
+      ", the message is consistent: a clean ramp to a high ceiling pays in grade as well as mass "
+      "&mdash; <em>provided</em> CO2 and climate keep pace. Without that fuel, the extra light still "
+      "just bleaches (Section above)."),
+    figure(L.bars("Pushing PPFD 600 -> 1200 (with matched CO2): metabolite gains",
+            [("Cannabinoid content", 60), ("Terpenoid content", 40)], unit="%", maxv=70,
+            note="From a 2024 trial; gains came from both more inflorescence mass and higher concentrations."), 10,
+      "More light, properly fuelled, lifts concentration as well as weight &mdash; it is a quality lever, "
+      "not only a yield one." + _c("saetang2024-high-light-metabolites")),
+    p("<strong>Far-red is a dosed scalpel, with a trade-off.</strong> End-of-day far-red can shorten the "
+      "photoperiod (12 to 10 hours, around 5.5% energy saving) and lift cannabinoid yield in <em>some</em> "
+      "cultivars &mdash; one strain showed roughly a 70% jump in total cannabinoid yield" +
+      _c("farred2025-scirep") + ". But pushing far-red across the whole spectrum (a lower red-to-far-red "
+      "ratio) tends to <em>raise inflorescence mass while diluting</em> cannabinoid and terpene "
+      "concentration &mdash; taller, bigger, looser, weaker bud" + _c("rfr2024-yield-vs-metabolites") + ". "
+      "Far-red also drives stretch. Treat it as a deliberate, strain-by-strain tool, never a default "
+      "&lsquo;more is better&rsquo; spectrum component."),
+    p("<strong>UV rarely adds potency in modern cultivars.</strong> Earlier work found supplemental "
+      "UV-B did not raise yield or cannabinoid content" + _c("llewellyn-2022-cannabis-yield-proportional-light-uv") +
+      ", and a 2024 UV-spectra trial confirmed no cannabinoid gain &mdash; high UV-B actually <em>cut</em> "
+      "THC and scorched leaves. Only the lowest UV-A dose nudged the terpene profile (linalool +29%, "
+      "limonene +25%, myrcene +22%) while holding yield" + _c("huebner2024-uv-spectra") + ". Modern "
+      "high-THC genetics already run near their ceiling, so don't expect UV to boost potency; at most a "
+      "careful low UV-A dose tweaks aroma, and supplemental UV usually costs efficiency."),
+    callout("key", "Intensity first, spectrum second",
+      p("Get the ramp and the CO2 right before touching spectrum. Far-red and UV are marginal, "
+        "trade-off-laden add-ons on top of a dialled-in intensity programme &mdash; not shortcuts around "
+        "it. A clean, fully-fuelled climb to your honest ceiling beats any spectrum trick on a "
+        "half-acclimated, CO2-starved plant.")),
   ]})
 
 SECTIONS.append({"id": "expectations", "kicker": "Realistic expectations", "title": "What to actually expect from your setup",

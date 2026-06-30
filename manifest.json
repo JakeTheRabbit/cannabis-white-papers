@@ -407,10 +407,10 @@
   {
    "slug": "light-acclimation",
    "title": "Light acclimation: raise PPFD in steps so plants don't bleach",
-   "summary": "Light is a curve, not a switch. Raise PPFD in steps the plant can keep up with, and match CO2 to set how high you can go.",
+   "summary": "Light is a curve, not a switch. Raise PPFD in steps the plant can keep up with, and match CO2 to set how high you can go. Updated with the latest research (2024-2026) on high-light quality gains, far-red, and UV.",
    "track": "Vegetative growth",
-   "read_time": "~9 min read",
-   "diagrams": "9 diagrams",
+   "read_time": "~11 min read",
+   "diagrams": "10 diagrams",
    "related": [
     "coco-crop-steering",
     "signal-and-noise",
@@ -420,7 +420,7 @@
    "md_url": "https://jaketherabbit.github.io/cannabis-white-papers/papers/light-acclimation.md",
    "version": "1.0",
    "updated": "2026-06-24",
-   "ref_count": 8
+   "ref_count": 12
   },
   {
    "slug": "defoliation-training",
