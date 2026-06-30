@@ -9,6 +9,7 @@ LINK_PHRASES = {
     "coco-crop-steering": ["crop steering", "coco coir", "dryback", "field capacity", "generative steering", "vegetative steering"],
     "rockwool-crop-steering": ["rockwool crop steering", "recovery floor", "stone wool", "preferential flow", "channeling"],
     "one-steering-law": ["one steering law", "the steering law", "steering law"],
+    "under-canopy-lighting": ["under-canopy lighting", "subcanopy lighting", "inter-canopy lighting", "intracanopy lighting", "photobleaching", "SCL", "ICL"],
     "grow-room-systems": ["grow room as one", "coupled system", "vapour pressure deficit", "VPD", "daily light integral", "DLI"],
     "airflow-design": ["airflow design", "boundary layer", "air velocity", "leaf boundary"],
     "mould-risk": ["bud rot", "botrytis", "powdery mildew", "mould risk", "water activity"],
