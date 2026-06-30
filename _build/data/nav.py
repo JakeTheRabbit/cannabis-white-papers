@@ -34,6 +34,7 @@ GROUPS = [
         {"slug": "grow-room-systems",    "title": "Grow-room systems",     "short": "The whole room as one system",  "icon": "building", "status": "live", "track": "Environment"},
         {"slug": "lighting-fundamentals","title": "Lighting fundamentals", "short": "Spectrum, PPFD & DLI",          "icon": "sun",      "status": "live", "track": "Environment"},
         {"slug": "airflow-design",       "title": "Airflow design",        "short": "Move air like the pros",        "icon": "wind",     "status": "live", "track": "Environment"},
+        {"slug": "under-canopy-lighting","title": "Under-canopy lighting",  "short": "Photons at the floor: SCL & ICL",  "icon": "sun",      "status": "live", "track": "Environment"},
     ]},
     {"group": "Water, substrate & feed", "items": [
         {"slug": "substrates-overview",  "title": "Substrates compared",     "short": "Coco, rockwool, soil, hydro",   "icon": "leaf",    "status": "live", "track": "Feed"},

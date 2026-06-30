@@ -44,6 +44,7 @@ PAPER_MODULES = [
     "paper_gmp_hash_lab", "paper_facility_3d",
     "paper_rockwool_crop_steering", "paper_daily_checks", "paper_pppe",
     "paper_one_steering_law",
+    "paper_under_canopy_lighting",
 ]
 PAPERS, PAPER_ERRORS = [], []
 for _m in PAPER_MODULES:
@@ -339,7 +340,8 @@ CURRICULUM = [
    ("Extraction & concentrates", None), ("Lab testing, potency & COAs", None)]),
  ("Runs every stage · Environment & climate", "The conditions the plant lives in.", [
    ("The grow room: a systems guide", "grow-room-systems"), ("Lighting: spectrum, PPFD & DLI", "lighting-fundamentals"),
-   ("Airflow design", "airflow-design"), ("Temperature, humidity & VPD", None),
+   ("Airflow design", "airflow-design"), ("Under-canopy & inter-canopy lighting", "under-canopy-lighting"),
+   ("Temperature, humidity & VPD", None),
    ("CO2 enrichment", None), ("HVAC, cooling & dehumidification", None)]),
  ("Runs every stage · Water, substrate & feed", "What the roots get.", [
    ("Substrates compared: coco, rockwool, soil, hydro", "substrates-overview"),

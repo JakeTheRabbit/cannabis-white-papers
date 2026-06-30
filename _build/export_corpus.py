@@ -241,6 +241,82 @@ def paper_md(mod):
     return md, fm
 
 
+# ---------------------------------------------------------------- README (contents page)
+def render_readme(manifest):
+    """Generate README.md: a full, link-rich contents table grouped by stage, with a
+    one-line description and topic tags per paper, plus a tag index. Auto-regenerates on
+    every build, so new papers appear without hand-editing."""
+    n = len(manifest)
+    by_group = {}
+    for m in manifest:
+        by_group.setdefault(m["track"] or "Other", []).append(m)
+    order = [g["group"] for g in build.NAV.GROUPS]
+    PH = build.LINKS.LINK_PHRASES
+
+    def esc_cell(s):
+        return s.replace("|", "\\|").replace("\n", " ")
+
+    L = [f"# {ATTRIBUTION}", ""]
+    L.append(f"> Beginner-first, peer-reviewed white papers on indoor medical cannabis cultivation — "
+             f"propagation, crop steering, environment, plant health, precision irrigation, and facility "
+             f"& quality. **{n} papers, each a self-contained interactive HTML page.**")
+    L.append("")
+    L.append(f"**▶ Read online → [{BASE}/]({BASE}/)**  ·  browse by stage: [Start here]({BASE}/curriculum.html)  "
+             f"·  every page has offline search (**Ctrl/Cmd-K**).")
+    L.append(f"Licensed {LICENSE_ID}. Machine-readable: [`manifest.json`]({BASE}/manifest.json) · "
+             f"[`llms.txt`]({BASE}/llms.txt) · [full corpus]({BASE}/llms-full.txt).")
+    L.append("")
+    L.append("Each paper links straight to its **full HTML** (opens in the browser, works offline). "
+             "The **·md** link is a clean Markdown version with citations as footnotes.")
+    L.append("")
+    L.append("## Contents")
+    L.append("")
+    for grp in order + [k for k in by_group if k not in order]:
+        items = by_group.get(grp)
+        if not items:
+            continue
+        L.append(f"### {grp}")
+        L.append("")
+        L.append("| Paper | What it covers | Topics |")
+        L.append("|---|---|---|")
+        for m in items:
+            slug = m["slug"]
+            title = esc_cell(m["title"])
+            desc = esc_cell(SLUG_SHORT.get(slug) or m["summary"].split(". ")[0])
+            tags = (PH.get(slug) or [grp])[:6]
+            tagmd = " ".join("`%s`" % esc_cell(t) for t in tags)
+            L.append(f"| **[{title}]({BASE}/{slug}.html)** <sub>· [md]({m['md_url']})</sub> | {desc} | {tagmd} |")
+        L.append("")
+    alltags = sorted({t for m in manifest for t in PH.get(m["slug"], [])}, key=str.lower)
+    L.append("## Topics & tags")
+    L.append("")
+    L.append("Search the repo or the site for any of these: " + " · ".join("`%s`" % t for t in alltags))
+    L.append("")
+    L.append("## How it's built")
+    L.append("")
+    L.append("A small Python build system in `_build/` renders every page through one shared template "
+             "(theme, nav, glossary, citations, search), and **also generates this README**, "
+             "`manifest.json`, `llms.txt`, the per-paper Markdown in `papers/`, and the search index.")
+    L.append("")
+    L.append("```")
+    L.append("cd _build && python build.py")
+    L.append("```")
+    L.append("")
+    L.append("**Add a paper:** create `_build/paper_<slug>.py` (`SLUG, TITLE, EYEBROW, SUB, META, "
+             "SECTIONS, RELATED, REF_IDS`; `figure()` takes a raw inline `<svg>` string), register it in "
+             "`build.py` (`PAPER_MODULES`) and `data/nav.py`, add interlink phrases in `links.py`, then "
+             "rebuild. Citations live in `data/refs.py`.")
+    L.append("")
+    L.append("## Sources & disclaimer")
+    L.append("")
+    L.append("Every factual claim is cited inline `[n]` to a per-paper References list — peer-reviewed "
+             "where possible; manufacturer/operational sources are labelled. Figures and numbers are "
+             "planning-grade; validate against your own measured data before committing capital. "
+             "*Not legal advice — follow the cannabis laws in your jurisdiction.*")
+    L.append("")
+    open(os.path.join(ROOT, "README.md"), "w", encoding="utf-8").write("\n".join(L) + "\n")
+
+
 # ---------------------------------------------------------------- outputs
 def main():
     papers_dir = os.path.join(ROOT, "papers")
@@ -271,6 +347,9 @@ def main():
                "count": len(manifest), "papers": manifest},
               open(os.path.join(ROOT, "manifest.json"), "w", encoding="utf-8"),
               ensure_ascii=False, indent=1)
+
+    # README contents page (links to every paper's full HTML + tags)
+    render_readme(manifest)
 
     # glossary.json
     json.dump({"name": ATTRIBUTION + " — glossary", "count": len(GLOSSARY),
