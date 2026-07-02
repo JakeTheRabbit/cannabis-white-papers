@@ -39,6 +39,7 @@ Licensed CC BY-NC 4.0 (https://creativecommons.org/licenses/by-nc/4.0/). Attribu
 ### Environment & climate
 - **The cannabis grow room: a systems guide** (`papers/grow-room-systems.md`): The whole room as one system
 - **Airflow design for indoor cultivation** (`papers/airflow-design.md`): Move air like the pros
+- **CO2 enrichment: feeding the plant carbon, safely** (`papers/co2-enrichment.md`): Feed the plant carbon, safely
 - **Lighting: spectrum, PPFD and DLI** (`papers/lighting-fundamentals.md`): Spectrum, PPFD & DLI
 - **Under-canopy lighting: photons at the floor** (`papers/under-canopy-lighting.md`): Photons at the floor: SCL & ICL
 

@@ -32,7 +32,7 @@ except Exception:
 # not fatal, and only successfully-loaded papers go live in the nav.
 PAPER_MODULES = [
     "paper_tissue_culture", "paper_coco_crop_steering", "paper_grow_room_systems",
-    "paper_airflow_design", "paper_mould_risk",
+    "paper_airflow_design", "paper_co2_enrichment", "paper_mould_risk",
     "paper_seeds_germination", "paper_lighting_fundamentals", "paper_substrates_overview",
     "paper_water_quality", "paper_ph_management", "paper_nutrient_deficiencies",
     "paper_flowering_stages", "paper_pest_id",
@@ -195,7 +195,7 @@ def render_paper(mod):
         r = REFS.REFS.get(rid)
         if not r:
             continue
-        npc = "" if r.get("peer") else " <span style='color:var(--faint)'>(manufacturer source, not peer-reviewed)</span>"
+        npc = "" if r.get("peer") else " <span style='color:var(--faint)'>(non-peer-reviewed source)</span>"
         link = f' <a href="{r["url"]}" target="_blank" rel="noopener">{r["url"]}</a>' if r.get("url") else ""
         cls = "" if r.get("peer") else " class='np'"
         ref_lis += f'<li id="ref-{rid}"{cls}>{r["cite"]}{npc}{link}</li>'
@@ -342,7 +342,7 @@ CURRICULUM = [
    ("The grow room: a systems guide", "grow-room-systems"), ("Lighting: spectrum, PPFD & DLI", "lighting-fundamentals"),
    ("Airflow design", "airflow-design"), ("Under-canopy & inter-canopy lighting", "under-canopy-lighting"),
    ("Temperature, humidity & VPD", None),
-   ("CO2 enrichment", None), ("HVAC, cooling & dehumidification", None)]),
+   ("CO2 enrichment", "co2-enrichment"), ("HVAC, cooling & dehumidification", None)]),
  ("Runs every stage · Water, substrate & feed", "What the roots get.", [
    ("Substrates compared: coco, rockwool, soil, hydro", "substrates-overview"),
    ("Source water, RO & alkalinity", "water-quality"), ("pH: hold it steady", "ph-management"),
