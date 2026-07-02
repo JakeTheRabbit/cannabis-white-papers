@@ -12,6 +12,7 @@ LINK_PHRASES = {
     "under-canopy-lighting": ["under-canopy lighting", "subcanopy lighting", "inter-canopy lighting", "intracanopy lighting", "photobleaching", "SCL", "ICL"],
     "grow-room-systems": ["grow room as one", "coupled system", "vapour pressure deficit", "VPD", "daily light integral", "DLI"],
     "airflow-design": ["airflow design", "boundary layer", "air velocity", "leaf boundary"],
+    "co2-enrichment": ["CO2 enrichment", "CO2 supplementation", "carbon dioxide enrichment", "CO2 injection", "dark respiration", "CO2 compensation point", "photorespiration", "sealed grow room"],
     "mould-risk": ["bud rot", "botrytis", "powdery mildew", "mould risk", "water activity"],
     "root-zone-teros12": ["root-zone sensor", "capacitance sensor", "capacitance probe", "volumetric water content", "pore-water EC", "permittivity", "TEROS-12", "TEROS 12"],
     "smart-watering-vrwe": ["smart watering", "sensor fusion", "VRWE", "watering brain"],

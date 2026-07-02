@@ -5,7 +5,7 @@
  "license": "CC BY-NC 4.0",
  "license_url": "https://creativecommons.org/licenses/by-nc/4.0/",
  "base": "https://jaketherabbit.github.io/cannabis-white-papers",
- "count": 33,
+ "count": 34,
  "papers": [
   {
    "slug": "tissue-culture",
@@ -78,6 +78,24 @@
    "version": "1.0",
    "updated": "2026-06-24",
    "ref_count": 9
+  },
+  {
+   "slug": "co2-enrichment",
+   "title": "CO2 enrichment: feeding the plant carbon, safely",
+   "summary": "Carbon dioxide is the raw material a plant turns into sugar. Under strong light an indoor crop can use far more CO2 than the air provides, so adding it can lift yield by around a third. But CO2 only helps in the light, it is easy to waste, and at the wrong concentration it will erase the plants' returns or kill the people in the room. This is how it works, how much to add and when, and how to do it without hurting anyone.",
+   "track": "Environment & climate",
+   "read_time": "~26 min read",
+   "diagrams": "6 diagrams",
+   "related": [
+    "grow-room-systems",
+    "airflow-design",
+    "harvest-dry-trim-cure"
+   ],
+   "url": "https://jaketherabbit.github.io/cannabis-white-papers/co2-enrichment.html",
+   "md_url": "https://jaketherabbit.github.io/cannabis-white-papers/papers/co2-enrichment.md",
+   "version": "1.0",
+   "updated": "2026-06-24",
+   "ref_count": 24
   },
   {
    "slug": "mould-risk",
