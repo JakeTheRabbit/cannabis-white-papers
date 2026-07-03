@@ -12,8 +12,8 @@ SUB = ("Carbon dioxide is the raw material a plant turns into sugar. Under stron
        "only helps in the light, it is easy to waste, and at the wrong concentration it will erase the "
        "plants' returns or kill the people in the room. This is how it works, how much to add and when, "
        "and how to do it without hurting anyone.")
-META = [("spark", "Core concept to safe setup"), ("image", "6 diagrams"),
-        ("quote", "Peer-reviewed + safety standards · 24 sources"), ("clock", "~26 min read")]
+META = [("spark", "Core concept to safe setup"), ("image", "7 diagrams"),
+        ("quote", "Peer-reviewed + safety standards · 38 sources"), ("clock", "~30 min read")]
 RELATED = ["grow-room-systems", "airflow-design", "harvest-dry-trim-cure"]
 REF_IDS = [
     "chandra2008-photo", "tolbert1995-compensation", "noaa2024-co2", "chandra2011-co2",
@@ -22,6 +22,10 @@ REF_IDS = [
     "kitaya2004-airvel", "kader2002-respiration", "permentier2017-co2poison", "osha-pel-co2",
     "niosh-co2", "worksafenz-co2", "azuma2018-cognition", "ifc5307", "sensirion-scd",
     "winsen-mq", "okstate-co2",
+    "epa-hepa", "souza2024-carbon-ethylene", "alvarez2024-ethylene", "abeles1992-ethylene",
+    "cornell-ethylene", "wheeler1996-ethylene", "hudelson2023-ethylene", "monthony2026-ethylene",
+    "osha-oxygen", "hpac-latent", "zhang2020-canopy-rh", "baptista2012-ventilation",
+    "liang2026-cannabis-ach", "punja2019-pathogens",
 ]
 
 def _c(rid):
@@ -266,7 +270,89 @@ SECTIONS.append({"id": "sealed", "kicker": "08 · Holding it in", "title": "Seal
   ]})
 
 # ---------------------------------------------------------------- 09
-SECTIONS.append({"id": "climate", "kicker": "09 · The knock-on effects", "title": "CO2 changes everything else in the room",
+SECTIONS.append({"id": "purge", "kicker": "09 · Fresh air", "title": "Stale air: why a sealed room still needs a purge",
+  "blocks": [
+    lead("You seal the room to hold CO2 in, and then you're told to let fresh air in. That sounds like a "
+         "contradiction, and it is where the filter question comes up: if carbon and HEPA are scrubbing the "
+         "air non-stop, why exchange it at all? Because filters <em>clean</em> the air, they do not "
+         "<em>refresh</em> it. What makes air &lsquo;stale&rsquo; is mostly the plants' own invisible waste "
+         "gases, plus their heat and moisture, and a carbon-and-HEPA stack removes almost none of that."),
+    p("Start with what those filters actually catch, and what they miss entirely:"),
+    table(["Filter", "Removes", "Does NOT touch"], [
+      ["HEPA", "Particulates &ge;0.3&nbsp;&micro;m: mould spores, dust, pollen (99.97%)" + _c("epa-hepa"),
+       "Any gas at all, water vapour, heat, CO2, ethylene, oxygen"],
+      ["Activated carbon", "Odour and heavier VOCs / terpenes, by adsorption",
+       "CO2, humidity, heat, oxygen; and it grips ethylene only weakly and saturates" + _c("souza2024-carbon-ethylene")],
+    ], cls="compact", caption="Neither filter refreshes the air. Between them they miss every gas that builds up in a sealed room, plus the heat and the moisture."),
+    p("The gas that forces the issue is <strong>ethylene</strong> (C2H4). It is a plant hormone the plants "
+      "make and breathe out <em>themselves</em>, a little all the time and a lot more when they are "
+      "stressed, wounded, defoliated or flowering" + _c("wheeler1996-ethylene") + ". And plants react to it "
+      "at almost unbelievably low levels: sensitive crops show damage at <strong>10 ppb</strong> "
+      "(0.01 ppm), and greenhouse practice is to hold it under about 20 ppb" + _c("abeles1992-ethylene") + _c("cornell-ethylene") + "."),
+    p("In a sealed space it builds up from the plants alone. NASA sealed a chamber of wheat, soybean, "
+      "lettuce and potato and watched ethylene climb to <strong>40&ndash;120 ppb</strong> purely from the "
+      "plants' own breath, enough to visibly deform the wheat" + _c("wheeler1996-ethylene") + ". In a "
+      "controlled tomato study a steady <strong>20 ppb cut fruit yield to about half</strong>, and 40 ppb "
+      "cut it by roughly 90%, while the foliage still looked nearly normal" + _c("hudelson2023-ethylene") + ". "
+      "Cannabis is not exempt: it has a fully working ethylene-signalling system, so responsive that "
+      "ethylene is what flips flower sex" + _c("monthony2026-ethylene") + "."),
+    figure(L.zones("Ethylene: damage starts at parts per billion", 0, 400,
+            [(0, 10, L.GL, "clean air"), (10, 20, L.GXL, "keep below ~20 ppb"),
+             (20, 100, L.AMBL, "chronic: stunting, bud abortion"), (100, 400, L.REDL, "acute: epinasty, abscission")],
+            unit=" ppb",
+            note="Plants respond at 10 ppb and a sealed room self-generates 40-120 ppb. Carbon and HEPA don't reliably remove it - air exchange or a KMnO4 scrubber does."), 7,
+      "The ethylene damage scale, in parts per <em>billion</em>. A sealed room of plants climbs into the "
+      "chronic-damage band on its own" + _c("wheeler1996-ethylene") + _c("hudelson2023-ethylene") + "."),
+    callout("warn", "Why the filters don't save you here",
+      p("Ethylene is a tiny, light molecule, about 0.4 nanometres across. HEPA cannot catch a gas at all, "
+        "and activated carbon holds ethylene only weakly and fills up fast" + _c("souza2024-carbon-ethylene") +
+        ". A carbon-and-HEPA stack can run all day and ethylene will still creep up from the plants faster "
+        "than the carbon retains it. The only reliable fixes are to <strong>exchange the air</strong> or fit "
+        "a <strong>dedicated ethylene scrubber</strong>, potassium-permanganate media or a UV / TiO2 "
+        "photocatalytic unit, which chemically <em>destroy</em> ethylene instead of briefly holding "
+        "it" + _c("alvarez2024-ethylene") + ".")),
+    callout("note", "The oxygen myth",
+      p("Growers often think they purge &lsquo;so the plants get oxygen.&rsquo; They do not need it from "
+        "you. Room air is ~21% oxygen (about 209,000 ppm); the level even flagged for human workers is "
+        "19.5%, which means losing ~14,500 ppm of oxygen, and a plant canopy removes nowhere near "
+        "that" + _c("osha-oxygen") + ". Room-air oxygen is a non-problem. The oxygen that <em>does</em> "
+        "matter is in the <strong>root zone</strong>, dissolved in the water and held in the "
+        "<a href='substrates-overview.html'>substrate's</a> air-filled porosity, and that is an irrigation "
+        "and substrate question, not an air-exchange one. The one thing that genuinely lowers a room's "
+        "oxygen and raises its CO2 is <em>people</em> working in it.")),
+    p("Ethylene is the sharpest reason to exchange air, but stale air is also carrying:"),
+    ul(["<strong>Humidity.</strong> Plants return most of their irrigation water to the air as "
+        "vapour" + _c("hpac-latent") + ". That latent load is removed by a dehumidifier, not a filter, and "
+        "it keeps coming after lights-off when transpiration outruns the dehumidifier.",
+        "<strong>Heat.</strong> Removed by the air conditioner, not the carbon can.",
+        "<strong>The plants' own terpenes</strong> and other VOCs, which carbon catches for a while, then "
+        "passes straight through once it saturates.",
+        "<strong>Mould spores.</strong> HEPA on the recirculation loop genuinely lowers the airborne spore "
+        "count" + _c("punja2019-pathogens") + ", but it only cleans the air that reaches it. Deep in a fat "
+        "canopy the humidity runs 15&ndash;25% higher than your room sensor reads" + _c("zhang2020-canopy-rh") +
+        ", and that stagnant, humid pocket is where bud rot starts. Exchanging air, and moving it "
+        "<em>through</em> the canopy rather than just filtering the room average, is what lowers "
+        "disease" + _c("baptista2012-ventilation") + " (detail in the <a href='mould-risk.html'>mould</a> "
+        "and <a href='airflow-design.html'>airflow</a> papers)."]),
+    callout("key", "So how do you square it with holding CO2?",
+      ul(["<strong>Purge at lights-off.</strong> The plants aren't using CO2 in the dark, so a timed "
+          "fresh-air exchange during the dark period dumps the accumulated ethylene, VOCs and humidity "
+          "without venting the CO2 you paid for.",
+          "<strong>Or scrub instead of vent.</strong> A potassium-permanganate or photocatalytic ethylene "
+          "scrubber lets a genuinely sealed room hold its CO2 and still kill ethylene" + _c("alvarez2024-ethylene") + ".",
+          "<strong>Don't confuse circulation with exchange.</strong> HAF fans mix the room and thin the "
+          "boundary layer at the leaf, which helps CO2 reach the stomata" + _c("kitaya2004-airvel") + ", but "
+          "they only stir the <em>same</em> air. Only fresh air (or a scrubber) changes what is in it."])),
+    p("How much exchange? Enough to hold ethylene and humidity down, not so much that you dump CO2 and dry "
+      "the media out. Enclosed plant environments run anywhere from well under 1 to ~15 air changes an "
+      "hour; a cannabis micropropagation study landed on about 4.4 changes an hour as optimal, with more "
+      "than that drying the substrate and stressing the plants" + _c("liang2026-cannabis-ach") + " (that "
+      "was at plantlet scale, so treat it as a direction, not a flower-room setpoint). &lsquo;Sealed&rsquo; "
+      "never means &lsquo;never exchanged.&rsquo;"),
+  ]})
+
+# ---------------------------------------------------------------- 10
+SECTIONS.append({"id": "climate", "kicker": "10 · The knock-on effects", "title": "CO2 changes everything else in the room",
   "blocks": [
     p("Raising CO2 does not act alone, it pulls on the rest of the room. This is the same "
       "&lsquo;inputs travel in convoys&rsquo; idea from the "
@@ -289,8 +375,8 @@ SECTIONS.append({"id": "climate", "kicker": "09 · The knock-on effects", "title
         "and can leave substrate wetter than you expect. Don't just copy your old irrigation schedule.")),
   ]})
 
-# ---------------------------------------------------------------- 10
-SECTIONS.append({"id": "drying", "kicker": "10 · The hidden hazard", "title": "The drying room: CO2 with no light to burn it",
+# ---------------------------------------------------------------- 11
+SECTIONS.append({"id": "drying", "kicker": "11 · The hidden hazard", "title": "The drying room: CO2 with no light to burn it",
   "blocks": [
     p("A drying room is the dark side of everything above, literally. You fill a sealed, dark, low-airflow "
       "room with tens or hundreds of kilos of freshly cut biomass, and that biomass keeps "
@@ -317,8 +403,8 @@ SECTIONS.append({"id": "drying", "kicker": "10 · The hidden hazard", "title": "
         "trim &amp; cure</a> paper.")),
   ]})
 
-# ---------------------------------------------------------------- 11
-SECTIONS.append({"id": "safety", "kicker": "11 · The part that can kill you", "title": "CO2 and people: the numbers that matter most",
+# ---------------------------------------------------------------- 12
+SECTIONS.append({"id": "safety", "kicker": "12 · The part that can kill you", "title": "CO2 and people: the numbers that matter most",
   "blocks": [
     lead("Read this section even if you skip the rest. Your enrichment setpoint of 1,000&ndash;1,500 ppm is "
          "well below any worker limit and safe for brief occupancy. The danger is not the setpoint, it is a "
@@ -355,8 +441,8 @@ SECTIONS.append({"id": "safety", "kicker": "11 · The part that can kill you", "
         "and test the air before entry, every time.")),
   ]})
 
-# ---------------------------------------------------------------- 12
-SECTIONS.append({"id": "monitoring", "kicker": "12 · Measuring and alarming", "title": "Sensors, alarms and the MQ trap",
+# ---------------------------------------------------------------- 13
+SECTIONS.append({"id": "monitoring", "kicker": "13 · Measuring and alarming", "title": "Sensors, alarms and the MQ trap",
   "blocks": [
     p("You cannot manage or survive CO2 you cannot measure, and the sensor market is full of parts that "
       "don't actually measure it. The correct technology is <strong>NDIR</strong> (non-dispersive "
@@ -381,8 +467,8 @@ SECTIONS.append({"id": "monitoring", "kicker": "12 · Measuring and alarming", "
       "Even below that threshold, an alarm plus an occupancy interlock is cheap insurance."),
   ]})
 
-# ---------------------------------------------------------------- 13
-SECTIONS.append({"id": "worth", "kicker": "13 · Straight talk", "title": "Is it worth it, and when it isn't",
+# ---------------------------------------------------------------- 14
+SECTIONS.append({"id": "worth", "kicker": "14 · Straight talk", "title": "Is it worth it, and when it isn't",
   "blocks": [
     p("CO2 is one of the highest-return upgrades in a sealed, high-light room, and a waste of money in any "
       "other" + _c("okstate-co2") + ". The gas itself is cheap; the room around it is what decides the payback."),
