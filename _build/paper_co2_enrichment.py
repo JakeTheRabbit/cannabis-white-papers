@@ -361,22 +361,24 @@ SECTIONS.append({"id": "climate", "kicker": "10 · The knock-on effects", "title
     table(["Lever", "What elevated CO2 does", "What to do about it"], [
       ["Temperature", "Shifts the plant's ideal temperature up a few degrees" + _c("lv2022-topt"),
        "Run warmer, ~28&ndash;30&nbsp;&deg;C instead of ~25&nbsp;&deg;C, <em>if</em> light supports it. Cannabis photosynthesis peaks near 30&nbsp;&deg;C" + _c("chandra2008-photo")],
-      ["Stomata &amp; water", "Partly closes the leaf pores: ~42% less stomatal conductance, ~29% less transpiration" + _c("chandra2008-photo"),
-       "The plant drinks less per unit growth. Re-check your VPD target, irrigation volume and feed EC"],
+      ["Stomata &amp; water", "Partly closes the leaf pores: ~42% less stomatal conductance, ~29% less transpiration per leaf" + _c("chandra2008-photo"),
+       "Per leaf it drinks less, but a bigger, hotter canopy usually drinks more overall. Re-check your VPD target, irrigation volume and feed EC"],
       ["Light", "Nothing, unless light is already high" + _c("rm2021-light"),
        "Only enrich rooms running strong light. Otherwise CO2 is wasted"],
       ["Feed", "Less transpiration can let salts concentrate at the root",
        "Watch runoff EC and adjust feed strength"],
     ], cls="compact", caption="Raise CO2, then ask what must move with it. The temperature and water changes are the ones growers most often miss."),
-    callout("note", "Water use: efficiency goes up, volume doesn't always go down",
+    callout("note", "Water use: efficiency goes up, volume usually goes up too",
       p("Elevated CO2 partly closes the stomata, so a leaf loses less water <em>per unit of leaf</em> for "
         "the same photosynthesis, and its water-use efficiency roughly <strong>doubles</strong>, about "
-        "twice the growth per litre transpired" + _c("chandra2008-photo") + ". That is <em>efficiency</em>, "
-        "not automatically <em>less water</em>. CO2 also grows a bigger canopy with more leaf area, and "
-        "enriched rooms are usually run hotter and brighter" + _c("lv2022-topt") + ", both of which pull "
-        "transpiration back up, so total room water use and humidity load can stay flat or even rise rather "
-        "than fall. Don't assume the substrate will stay wetter, and don't just copy your old irrigation "
-        "schedule, re-tune it by watching VWC, dryback and runoff on the actual crop.")),
+        "twice the growth per litre transpired" + _c("chandra2008-photo") + ". But that is <em>efficiency</em>, "
+        "not less water, and in a real enriched room the total usually moves the <em>other</em> way. CO2 "
+        "grows a bigger, faster canopy with far more leaf area, and the room is run hotter and brighter to "
+        "exploit it" + _c("lv2022-topt") + ", which more than cancels the per-leaf stomatal closure. So in "
+        "practice <strong>total water use and humidity load commonly go up, not down</strong>, most growers "
+        "running CO2 end up feeding and dehumidifying <em>more</em>. Don't assume a wetter substrate, and "
+        "re-tune irrigation by watching VWC, dryback and runoff on the actual crop rather than copying an "
+        "old schedule.")),
   ]})
 
 # ---------------------------------------------------------------- 11

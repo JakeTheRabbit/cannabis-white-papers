@@ -1130,15 +1130,15 @@ Raising CO2 does not act alone, it pulls on the rest of the room. This is the sa
 | Lever | What elevated CO2 does | What to do about it |
 | --- | --- | --- |
 | Temperature | Shifts the plant's ideal temperature up a few degrees[^lv2022-topt] | Run warmer, ~28–30 °C instead of ~25 °C, _if_ light supports it. Cannabis photosynthesis peaks near 30 °C[^chandra2008-photo] |
-| Stomata & water | Partly closes the leaf pores: ~42% less stomatal conductance, ~29% less transpiration[^chandra2008-photo] | The plant drinks less per unit growth. Re-check your VPD target, irrigation volume and feed EC |
+| Stomata & water | Partly closes the leaf pores: ~42% less stomatal conductance, ~29% less transpiration per leaf[^chandra2008-photo] | Per leaf it drinks less, but a bigger, hotter canopy usually drinks more overall. Re-check your VPD target, irrigation volume and feed EC |
 | Light | Nothing, unless light is already high[^rm2021-light] | Only enrich rooms running strong light. Otherwise CO2 is wasted |
 | Feed | Less transpiration can let salts concentrate at the root | Watch runoff EC and adjust feed strength |
 
 *Raise CO2, then ask what must move with it. The temperature and water changes are the ones growers most often miss.*
 
-> **NOTE — Water use: efficiency goes up, volume doesn't always go down**
+> **NOTE — Water use: efficiency goes up, volume usually goes up too**
 > 
-> Elevated CO2 partly closes the stomata, so a leaf loses less water _per unit of leaf_ for the same photosynthesis, and its water-use efficiency roughly **doubles**, about twice the growth per litre transpired[^chandra2008-photo]. That is _efficiency_, not automatically _less water_. CO2 also grows a bigger canopy with more leaf area, and enriched rooms are usually run hotter and brighter[^lv2022-topt], both of which pull transpiration back up, so total room water use and humidity load can stay flat or even rise rather than fall. Don't assume the substrate will stay wetter, and don't just copy your old irrigation schedule, re-tune it by watching VWC, dryback and runoff on the actual crop.
+> Elevated CO2 partly closes the stomata, so a leaf loses less water _per unit of leaf_ for the same photosynthesis, and its water-use efficiency roughly **doubles**, about twice the growth per litre transpired[^chandra2008-photo]. But that is _efficiency_, not less water, and in a real enriched room the total usually moves the _other_ way. CO2 grows a bigger, faster canopy with far more leaf area, and the room is run hotter and brighter to exploit it[^lv2022-topt], which more than cancels the per-leaf stomatal closure. So in practice **total water use and humidity load commonly go up, not down**, most growers running CO2 end up feeding and dehumidifying _more_. Don't assume a wetter substrate, and re-tune irrigation by watching VWC, dryback and runoff on the actual crop rather than copying an old schedule.
 
 ## The drying room: CO2 with no light to burn it
 
