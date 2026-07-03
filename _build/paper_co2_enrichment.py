@@ -368,11 +368,15 @@ SECTIONS.append({"id": "climate", "kicker": "10 · The knock-on effects", "title
       ["Feed", "Less transpiration can let salts concentrate at the root",
        "Watch runoff EC and adjust feed strength"],
     ], cls="compact", caption="Raise CO2, then ask what must move with it. The temperature and water changes are the ones growers most often miss."),
-    callout("note", "Why enriched rooms drink less",
-      p("Because CO2 partly closes the stomata, the plant loses less water for the same amount of "
-        "photosynthesis, so its water-use efficiency roughly <strong>doubles</strong>" + _c("chandra2008-photo") +
-        ". Practically, an enriched crop can transpire noticeably less, which changes your humidity load "
-        "and can leave substrate wetter than you expect. Don't just copy your old irrigation schedule.")),
+    callout("note", "Water use: efficiency goes up, volume doesn't always go down",
+      p("Elevated CO2 partly closes the stomata, so a leaf loses less water <em>per unit of leaf</em> for "
+        "the same photosynthesis, and its water-use efficiency roughly <strong>doubles</strong>, about "
+        "twice the growth per litre transpired" + _c("chandra2008-photo") + ". That is <em>efficiency</em>, "
+        "not automatically <em>less water</em>. CO2 also grows a bigger canopy with more leaf area, and "
+        "enriched rooms are usually run hotter and brighter" + _c("lv2022-topt") + ", both of which pull "
+        "transpiration back up, so total room water use and humidity load can stay flat or even rise rather "
+        "than fall. Don't assume the substrate will stay wetter, and don't just copy your old irrigation "
+        "schedule, re-tune it by watching VWC, dryback and runoff on the actual crop.")),
   ]})
 
 # ---------------------------------------------------------------- 11
