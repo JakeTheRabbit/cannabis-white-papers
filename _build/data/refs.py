@@ -3,6 +3,24 @@
 papers. Each paper declares the ref ids it cites; the build numbers them per paper."""
 
 REFS = {
+    "pb_mdpi_ad8232": {
+        "cite": "Marques JAL et al. (2023). From AD8232 to biopotentials sensors: open-source project and benchmark. <em>Electronics (MDPI)</em>, 12(4):833.",
+        "url": "https://www.mdpi.com/2079-9292/12/4/833", "peer": True},
+    "pb_pmc_plantsignals": {
+        "cite": "Plant bioelectrical signals for environmental and emotional state classification (2024). <em>PMC</em>. (AD8232 at 400 Hz; ~85% lamp on/off detection accuracy.)",
+        "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC12649952/", "peer": True},
+    "pb_arxiv_esp32": {
+        "cite": "AD8232 bioelectric signal processing with ESP32 (2025). <em>arXiv:2505.18173</em>.",
+        "url": "https://arxiv.org/pdf/2505.18173", "peer": False},
+    "pb_hackster_flora": {
+        "cite": "Verma A. Interacting with the Flora: an ESP32 + AD8232 + BH1750 + DS18B20 plant-signal rig. <em>Hackster.io</em>.",
+        "url": "https://www.hackster.io/ankurverma608/interacting-with-the-flora-7ef65f", "peer": False},
+    "pb_vivent": {
+        "cite": "Vivent Biosignals, VITA1 plant-driven cultivation sensor (manufacturer documentation).",
+        "url": "https://vivent-biosignals.com/plant-driven-cultivation/", "peer": False},
+    "pb_esphome_ads1115": {
+        "cite": "ESPHome, ADS1115 4-channel 16-bit A/D converter component (documentation).",
+        "url": "https://esphome.io/components/sensor/ads1115/", "peer": False},
     "holmes2021": {
         "cite": "Holmes JE et al. (2021). Variables affecting shoot growth and plantlet recovery in tissue cultures of drug-type <em>Cannabis sativa</em> L. <em>Frontiers in Plant Science</em>, 12:732344.",
         "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8491305/", "peer": True},

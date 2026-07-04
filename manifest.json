@@ -5,7 +5,7 @@
  "license": "CC BY-NC 4.0",
  "license_url": "https://creativecommons.org/licenses/by-nc/4.0/",
  "base": "https://jaketherabbit.github.io/cannabis-white-papers",
- "count": 34,
+ "count": 35,
  "papers": [
   {
    "slug": "tissue-culture",
@@ -625,6 +625,24 @@
    "version": "1.0",
    "updated": "2026-06-24",
    "ref_count": 7
+  },
+  {
+   "slug": "plant-biosignal-sensor",
+   "title": "DIY plant-biosignal sensor: read a plant's electrical signals",
+   "summary": "Commercial plant-biosignal sensors clip electrodes to a plant, amplify the tiny voltages it makes, and turn the drift into water and stress insight. You can build the acquisition side from an M5Stack ESP32, an ECG front-end chip and ESPHome for about NZ$110, and stream it straight into Home Assistant.",
+   "track": "Precision & automation",
+   "read_time": "~14 min read",
+   "diagrams": "",
+   "related": [
+    "plant-state-dashboard",
+    "signal-and-noise",
+    "closed-loop"
+   ],
+   "url": "https://jaketherabbit.github.io/cannabis-white-papers/plant-biosignal-sensor.html",
+   "md_url": "https://jaketherabbit.github.io/cannabis-white-papers/papers/plant-biosignal-sensor.md",
+   "version": "1.0",
+   "updated": "2026-06-24",
+   "ref_count": 6
   }
  ]
 }

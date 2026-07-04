@@ -58,6 +58,7 @@ GROUPS = [
         {"slug": "plant-state-dashboard","title": "Plant-state dashboard",   "short": "From telemetry to intelligence",   "icon": "dashboard", "status": "live", "track": "Precision"},
         {"slug": "f2-crop-steering",   "title": "F2 crop steering",         "short": "The daily P0-P3 cycle",            "icon": "gauge",     "status": "live", "track": "Precision"},
         {"slug": "irrigation-manual",  "title": "Irrigation manual",        "short": "Install and run the system",       "icon": "droplet",   "status": "live", "track": "Precision"},
+        {"slug": "plant-biosignal-sensor", "title": "DIY plant-biosignal sensor", "short": "Read a plant's electrical signals for ~NZ$110", "icon": "wave", "status": "live", "track": "Precision"},
     ]},
     {"group": "Facility & quality", "items": [
         {"slug": "facility-3d",       "title": "3D facility model",  "short": "See the build before you build it", "icon": "building", "status": "live", "track": "Facility"},

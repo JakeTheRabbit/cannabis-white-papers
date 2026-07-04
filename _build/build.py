@@ -45,6 +45,7 @@ PAPER_MODULES = [
     "paper_rockwool_crop_steering", "paper_daily_checks", "paper_pppe",
     "paper_one_steering_law",
     "paper_under_canopy_lighting",
+    "paper_plant_biosignal",
 ]
 PAPERS, PAPER_ERRORS = [], []
 for _m in PAPER_MODULES:
@@ -356,7 +357,8 @@ CURRICULUM = [
    ("Root-zone state (TEROS-12)", "root-zone-teros12"), ("Signal & noise", "signal-and-noise"),
    ("Smart watering (VRWE)", "smart-watering-vrwe"), ("The closed loop", "closed-loop"),
    ("Plant-state dashboard", "plant-state-dashboard"), ("F2 crop steering", "f2-crop-steering"),
-   ("Irrigation manual", "irrigation-manual")]),
+   ("Irrigation manual", "irrigation-manual"),
+   ("DIY plant-biosignal sensor", "plant-biosignal-sensor")]),
  ("The operation · Facility & quality", "Run it as a business.", [
    ("Designing a facility in 3D", "facility-3d"),
    ("Daily checks: the self-completing round", "daily-checks"),

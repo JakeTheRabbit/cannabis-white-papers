@@ -1,6 +1,6 @@
 # The Cannabis White Papers
 
-> Beginner-first, peer-reviewed white papers on indoor medical cannabis cultivation — propagation, crop steering, environment, plant health, precision irrigation, and facility & quality. **34 papers, each a self-contained interactive HTML page.**
+> Beginner-first, peer-reviewed white papers on indoor medical cannabis cultivation — propagation, crop steering, environment, plant health, precision irrigation, and facility & quality. **35 papers, each a self-contained interactive HTML page.**
 
 **▶ Read online → [https://jaketherabbit.github.io/cannabis-white-papers/](https://jaketherabbit.github.io/cannabis-white-papers/)**  ·  browse by stage: [Start here](https://jaketherabbit.github.io/cannabis-white-papers/curriculum.html)  ·  every page has offline search (**Ctrl/Cmd-K**).
 Licensed CC BY-NC 4.0. Machine-readable: [`manifest.json`](https://jaketherabbit.github.io/cannabis-white-papers/manifest.json) · [`llms.txt`](https://jaketherabbit.github.io/cannabis-white-papers/llms.txt) · [full corpus](https://jaketherabbit.github.io/cannabis-white-papers/llms-full.txt).
@@ -80,6 +80,7 @@ Each paper links straight to its **full HTML** (opens in the browser, works offl
 | **[From telemetry to intelligence: the plant-state dashboard](https://jaketherabbit.github.io/cannabis-white-papers/plant-state-dashboard.html)** <sub>· [md](https://jaketherabbit.github.io/cannabis-white-papers/papers/plant-state-dashboard.md)</sub> | From telemetry to intelligence | `plant-state dashboard` `plant state` `telemetry` |
 | **[F2 crop steering: the daily operating manual](https://jaketherabbit.github.io/cannabis-white-papers/f2-crop-steering.html)** <sub>· [md](https://jaketherabbit.github.io/cannabis-white-papers/papers/f2-crop-steering.md)</sub> | The daily P0-P3 cycle | `P0–P3` `P0-P3` `irrigation phases` `daily irrigation cycle` |
 | **[Automated irrigation system manual](https://jaketherabbit.github.io/cannabis-white-papers/irrigation-manual.html)** <sub>· [md](https://jaketherabbit.github.io/cannabis-white-papers/papers/irrigation-manual.md)</sub> | Install and run the system | `irrigation system` `fertigation` `drip emitters` `drip lines` |
+| **[DIY plant-biosignal sensor: read a plant's electrical signals](https://jaketherabbit.github.io/cannabis-white-papers/plant-biosignal-sensor.html)** <sub>· [md](https://jaketherabbit.github.io/cannabis-white-papers/papers/plant-biosignal-sensor.md)</sub> | Read a plant's electrical signals for ~NZ$110 | `Precision & automation` |
 
 ### Facility & quality
 
