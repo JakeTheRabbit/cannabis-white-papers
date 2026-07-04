@@ -51,6 +51,7 @@ Licensed CC BY-NC 4.0 (https://creativecommons.org/licenses/by-nc/4.0/). Attribu
 - [From telemetry to intelligence: the plant-state dashboard](https://jaketherabbit.github.io/cannabis-white-papers/papers/plant-state-dashboard.md): From telemetry to intelligence
 - [F2 crop steering: the daily operating manual](https://jaketherabbit.github.io/cannabis-white-papers/papers/f2-crop-steering.md): The daily P0-P3 cycle
 - [Automated irrigation system manual](https://jaketherabbit.github.io/cannabis-white-papers/papers/irrigation-manual.md): Install and run the system
+- [DIY plant-biosignal sensor: read a plant's electrical signals](https://jaketherabbit.github.io/cannabis-white-papers/papers/plant-biosignal-sensor.md): Read a plant's electrical signals for ~NZ$110
 
 ## Facility & quality
 - [Designing a grow facility in 3D before you build it](https://jaketherabbit.github.io/cannabis-white-papers/papers/facility-3d.md): See the build before you build it
