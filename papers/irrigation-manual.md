@@ -97,8 +97,8 @@ Crop steering splits each lights-on day into four phases that control how the pl
 
 > **KEY — Vegetative vs generative steering**
 > 
-> - **Vegetative** steering uses longer drybacks and lower EC to encourage root and leaf growth.
-> - **Generative** steering uses shorter drybacks and higher EC to push flowering.[^caplan-2019-drought-cannabis]
+> - **Vegetative** steering uses shorter drybacks and lower EC to encourage root and leaf growth.
+> - **Generative** steering uses longer drybacks and higher EC to apply more water and osmotic stress. The cited cannabis trial used one cultivar and one 11-day late-flower drought event, so it supports the direction of the response, not universal daily targets.[^caplan-2019-drought-cannabis]
 > - The same P0–P3 framework runs both. Only the dryback targets and EC change.
 
 > **Diagram.** The cycle loops every day. P3 hands back to P0 overnight, and lights-on restarts the ramp.
@@ -163,7 +163,7 @@ On the Trends tab the VWC graph should show a **sawtooth**: a gradual drop, then
 - Healthy daily readings: VWC 30–70%, EC ~2–6 mS/cm, substrate temp 20–26 °C, safety all green
 - A non-sawtooth VWC trace is your earliest signal that something is wrong
 - Enable or skip tables via the **Enabled** toggle in Zone Control
-- Emergency stop: toggle Maintenance Mode on (closes all valves) or call the emergency-stop script
+- Durable stop: enable Maintenance Mode and disarm the system; an output-off script alone is not a latched emergency stop
 
 | Tab | What it shows | When to use it |
 | --- | --- | --- |
@@ -210,7 +210,7 @@ If irrigation will not run, confirm the system is on, maintenance mode is off, t
 
 > **KEY — This is guidance, not a guarantee**
 > 
-> The core system automates timing and sensor-driven decisions, but it is only as good as its sensors and plumbing. Until the tank float switch and leak sensor are physically installed, the tank-low and leak emergency aborts are **hardcoded to ‘safe’ and will not trigger**, so do not run the system unattended in that state.
+> The core system automates timing and sensor-driven decisions, but it is only as good as its sensors and plumbing. Until the tank float switch and leak sensor are physically installed, the tank-low and leak emergency aborts are **hardcoded permissive and will not trigger**. This is fail-open behaviour, not a safety layer, so do not run the system unattended in that state.
 
 Two more honest limits. Without a leaf-temperature sensor, VPD falls back to room air temperature and is less accurate. The fully autonomous P0–P3 phase transitions need the optional AppDaemon layer, which is not deployed by default. Budget about a week of supervised, timer-based running before you trust the automation.
 
