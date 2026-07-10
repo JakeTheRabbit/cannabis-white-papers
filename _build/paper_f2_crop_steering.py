@@ -31,8 +31,9 @@ SECTIONS.append({"id": "what-this-is", "kicker": "Start here",
       "controlling exactly how and when it waters. <em>Vegetative</em> steering (bulking) keeps the "
       "medium wet with many small waterings and only a small drying-out. <em>Generative</em> steering "
       "(the flower or stress push) uses a bigger drying-out, a saltier root zone, and fewer, larger "
-      "waterings. Even a mild, deliberate water deficit applied at the right time shifts a cannabis "
-      "plant generatively without losing yield." + _c("caplan-drought-2019")),
+      "waterings. Controlled water deficit can shift cannabis generatively, but the cited trial used "
+      "one cultivar and one 11-day late-flower drought event; it does not validate these daily targets "
+      "across cultivars or substrates." + _c("caplan-drought-2019")),
     p("The system runs in two cooperating layers. A <strong>Home Assistant integration</strong> gives "
       "you every on-screen control and reading. An <strong>AppDaemon engine</strong> "
       "(<code>master_crop_steering_app.py</code>) is the decision-making brain that fires the shots. "
@@ -49,6 +50,11 @@ SECTIONS.append({"id": "what-this-is", "kicker": "Start here",
              ("Main line", "branches to each row"), ("Row 1/2/3 valves", "one VWC + EC probe each")],
             note="Only one row waters at a time."), 2,
       "One tank, one pump, one main line feeding three independently steered rows. Each row has its own probe pair and valve."),
+    callout("danger", "The dashboard stop is not a latched emergency stop",
+      p("<code>script.f2_irrigation_all_off</code> de-energises the hardware but leaves the AppDaemon "
+        "engine armed, so it may fire again at the next ~60&nbsp;s phase check. For a durable stop, "
+        "switch <strong>System enabled OFF</strong> as well. Do not run unattended until this is made "
+        "a single latched action with manual reset.")),
     callout("key", "Two things to memorise",
       ul(["The <strong>&lsquo;Phase (manual set)&rsquo;</strong> dropdown is an <em>override</em>. It "
           "shows what you last picked, not the live phase. Read "

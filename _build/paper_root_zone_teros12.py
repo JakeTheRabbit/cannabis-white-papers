@@ -124,10 +124,12 @@ SECTIONS.append({"id": "how-it-measures", "kicker": "Core content", "title": "Ho
 
 SECTIONS.append({"id": "calibration", "kicker": "Core content", "title": "Calibration: why the default number lies a little",
   "blocks": [
-    p("Out of the box the TEROS-12 uses a generic mineral-soil calibration, which makes VWC accurate to "
-      "only &plusmn;0.03 m&sup3;/m&sup3;. A <strong>substrate-specific</strong> calibration for your "
-      "exact coco or rockwool tightens that to &plusmn;0.01&ndash;0.02 m&sup3;/m&sup3;." + _c("fragkos-2024-teros12-soils-ec") +
-      " That difference is not academic. Crop-steering dryback windows are often <em>narrower</em> than "
+    p("Out of the box the TEROS-12 uses a generic mineral-soil calibration, specified at roughly "
+      "&plusmn;0.03 m&sup3;/m&sup3;. A well-built, media-specific calibration can reduce error, but the "
+      "cited TEROS-12 experiment tested six inorganic soils at constant temperature, not cannabis in "
+      "coco or rockwool; it does not establish a universal &plusmn;0.01&ndash;0.02 accuracy for those "
+      "substrates." + _c("fragkos-2024-teros12-soils-ec") + " That difference is not academic. "
+      "Crop-steering dryback windows are often <em>narrower</em> than "
       "the &plusmn;0.03 generic error band, so steering on uncalibrated VWC means steering inside the noise."),
     p("A worked headroom example shows the consequence directly. A naive 256 mL of &lsquo;room to "
       "water&rsquo; shrinks to a safe ~109 mL once you account for &plusmn;0.02 accuracy, and to just "
@@ -142,8 +144,8 @@ SECTIONS.append({"id": "calibration", "kicker": "Core content", "title": "Calibr
       "on the generic curve." + _c("nemali-2006-set-point-irrigation")),
     table(["Calibration type", "VWC accuracy", "Resolution", "Tight steering?"], [
       ["Generic mineral (default)", "&plusmn;0.03 m&sup3;/m&sup3;", "0.001 m&sup3;/m&sup3;", "No. Error wider than dryback window"],
-      ["Substrate-specific", "&plusmn;0.01&ndash;0.02 m&sup3;/m&sup3;", "0.001 m&sup3;/m&sup3;", "Yes. Required for tight steering"],
-    ], cls="compact", caption="Resolution is identical. Accuracy is what changes. Calibrate to your media."),
+      ["Substrate-specific", "Must be validated gravimetrically", "0.001 m&sup3;/m&sup3;", "Potentially. Prove the residual error first"],
+    ], cls="compact", caption="Resolution is identical. Accuracy must be measured in the actual media."),
     callout("warn", "Calibration is not a cure-all",
       p("Calibration corrects an additive <em>offset</em>, but gain error and nonlinearity near "
         "saturation persist and do not cancel out in later math. Treat substrate-specific calibration as "

@@ -83,7 +83,7 @@ Here is the trick beginners miss: **as the substrate dries, the salt left behind
 
 A **dryback** is letting the root zone dry by a chosen amount before you water again. It is the most powerful lever you have, because a mild, controlled water deficit changes how the plant grows.
 
-When the root zone dries a little, the plant makes a stress hormone called **abscisic acid (ABA)**, which shifts it away from leafy growth and toward flowering and resin production[^welling2025-aba]. Done deliberately at the right time, controlled water-deficit has been shown to _raise_ cannabinoid content without costing yield[^caplan2019-drought].
+When the root zone dries a little, the plant makes a stress hormone called **abscisic acid (ABA)**, which shifts it away from leafy growth and toward flowering and resin production[^welling2025-aba]. Done deliberately at the right time, one controlled water-deficit trial raised cannabinoid concentration; its flower-yield difference was not statistically significant[^caplan2019-drought]. That experiment used one cultivar and one 11-day drought event in week 7, so it supports a possible response, not the specific daily dryback targets below.
 
 > **WARN — A dryback is not a drought**
 > 

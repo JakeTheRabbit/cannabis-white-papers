@@ -613,7 +613,7 @@ Here is the trick beginners miss: **as the substrate dries, the salt left behind
 
 A **dryback** is letting the root zone dry by a chosen amount before you water again. It is the most powerful lever you have, because a mild, controlled water deficit changes how the plant grows.
 
-When the root zone dries a little, the plant makes a stress hormone called **abscisic acid (ABA)**, which shifts it away from leafy growth and toward flowering and resin production[^welling2025-aba]. Done deliberately at the right time, controlled water-deficit has been shown to _raise_ cannabinoid content without costing yield[^caplan2019-drought].
+When the root zone dries a little, the plant makes a stress hormone called **abscisic acid (ABA)**, which shifts it away from leafy growth and toward flowering and resin production[^welling2025-aba]. Done deliberately at the right time, one controlled water-deficit trial raised cannabinoid concentration; its flower-yield difference was not statistically significant[^caplan2019-drought]. That experiment used one cultivar and one 11-day drought event in week 7, so it supports a possible response, not the specific daily dryback targets below.
 
 > **WARN — A dryback is not a drought**
 > 
@@ -2874,7 +2874,7 @@ The sensor then applies a **calibration equation** (a generic mineral-soil curve
 
 ## Calibration: why the default number lies a little
 
-Out of the box the TEROS-12 uses a generic mineral-soil calibration, which makes VWC accurate to only ±0.03 m³/m³. A **substrate-specific** calibration for your exact coco or rockwool tightens that to ±0.01–0.02 m³/m³.[^fragkos-2024-teros12-soils-ec] That difference is not academic. Crop-steering dryback windows are often _narrower_ than the ±0.03 generic error band, so steering on uncalibrated VWC means steering inside the noise.
+Out of the box the TEROS-12 uses a generic mineral-soil calibration, specified at roughly ±0.03 m³/m³. A well-built, media-specific calibration can reduce error, but the cited TEROS-12 experiment tested six inorganic soils at constant temperature, not cannabis in coco or rockwool; it does not establish a universal ±0.01–0.02 accuracy for those substrates.[^fragkos-2024-teros12-soils-ec] That difference is not academic. Crop-steering dryback windows are often _narrower_ than the ±0.03 generic error band, so steering on uncalibrated VWC means steering inside the noise.
 
 A worked headroom example shows the consequence directly. A naive 256 mL of ‘room to water’ shrinks to a safe ~109 mL once you account for ±0.02 accuracy, and to just ~54 mL under the generic ±0.03. Same pot, same probe. The only thing that changed is how honestly you treat the error band.[^nemali-2006-set-point-irrigation]
 
@@ -2883,9 +2883,9 @@ A worked headroom example shows the consequence directly. A naive 256 mL of ‘r
 | Calibration type | VWC accuracy | Resolution | Tight steering? |
 | --- | --- | --- | --- |
 | Generic mineral (default) | ±0.03 m³/m³ | 0.001 m³/m³ | No. Error wider than dryback window |
-| Substrate-specific | ±0.01–0.02 m³/m³ | 0.001 m³/m³ | Yes. Required for tight steering |
+| Substrate-specific | Must be validated gravimetrically | 0.001 m³/m³ | Potentially. Prove the residual error first |
 
-*Resolution is identical. Accuracy is what changes. Calibrate to your media.*
+*Resolution is identical. Accuracy must be measured in the actual media.*
 
 > **WARN — Calibration is not a cure-all**
 > 
@@ -3701,13 +3701,17 @@ _Precision · Crop steering · ~18 min read_
 
 F2 is an **autonomous irrigation controller** for a veg grow room. It is software that reads moisture and salt probes in the root zone and decides, on its own, when to fire a watering shot through a pump and valves. You set the targets. It does the watering.
 
-**Crop steering** means pushing the plant toward one of two kinds of growth by controlling exactly how and when it waters. _Vegetative_ steering (bulking) keeps the medium wet with many small waterings and only a small drying-out. _Generative_ steering (the flower or stress push) uses a bigger drying-out, a saltier root zone, and fewer, larger waterings. Even a mild, deliberate water deficit applied at the right time shifts a cannabis plant generatively without losing yield.[^caplan-drought-2019]
+**Crop steering** means pushing the plant toward one of two kinds of growth by controlling exactly how and when it waters. _Vegetative_ steering (bulking) keeps the medium wet with many small waterings and only a small drying-out. _Generative_ steering (the flower or stress push) uses a bigger drying-out, a saltier root zone, and fewer, larger waterings. Controlled water deficit can shift cannabis generatively, but the cited trial used one cultivar and one 11-day late-flower drought event; it does not validate these daily targets across cultivars or substrates.[^caplan-drought-2019]
 
 The system runs in two cooperating layers. A **Home Assistant integration** gives you every on-screen control and reading. An **AppDaemon engine** (`master_crop_steering_app.py`) is the decision-making brain that fires the shots. The room is wired as **3 rows (zones)**, each with its own moisture and salt probe and its own valve, all fed from one shared tank, one pump, and one main line.
 
 > **Diagram.** The two software layers and the hardware they drive. Controls flow down, probe readings flow back up.
 
 > **Diagram.** One tank, one pump, one main line feeding three independently steered rows. Each row has its own probe pair and valve.
+
+> **DANGER — The dashboard stop is not a latched emergency stop**
+> 
+> `script.f2_irrigation_all_off` de-energises the hardware but leaves the AppDaemon engine armed, so it may fire again at the next ~60 s phase check. For a durable stop, switch **System enabled OFF** as well. Do not run unattended until this is made a single latched action with manual reset.
 
 > **KEY — Two things to memorise**
 > 
@@ -3988,8 +3992,8 @@ Crop steering splits each lights-on day into four phases that control how the pl
 
 > **KEY — Vegetative vs generative steering**
 > 
-> - **Vegetative** steering uses longer drybacks and lower EC to encourage root and leaf growth.
-> - **Generative** steering uses shorter drybacks and higher EC to push flowering.[^caplan-2019-drought-cannabis]
+> - **Vegetative** steering uses shorter drybacks and lower EC to encourage root and leaf growth.
+> - **Generative** steering uses longer drybacks and higher EC to apply more water and osmotic stress. The cited cannabis trial used one cultivar and one 11-day late-flower drought event, so it supports the direction of the response, not universal daily targets.[^caplan-2019-drought-cannabis]
 > - The same P0–P3 framework runs both. Only the dryback targets and EC change.
 
 > **Diagram.** The cycle loops every day. P3 hands back to P0 overnight, and lights-on restarts the ramp.
@@ -4054,7 +4058,7 @@ On the Trends tab the VWC graph should show a **sawtooth**: a gradual drop, then
 - Healthy daily readings: VWC 30–70%, EC ~2–6 mS/cm, substrate temp 20–26 °C, safety all green
 - A non-sawtooth VWC trace is your earliest signal that something is wrong
 - Enable or skip tables via the **Enabled** toggle in Zone Control
-- Emergency stop: toggle Maintenance Mode on (closes all valves) or call the emergency-stop script
+- Durable stop: enable Maintenance Mode and disarm the system; an output-off script alone is not a latched emergency stop
 
 | Tab | What it shows | When to use it |
 | --- | --- | --- |
@@ -4101,7 +4105,7 @@ If irrigation will not run, confirm the system is on, maintenance mode is off, t
 
 > **KEY — This is guidance, not a guarantee**
 > 
-> The core system automates timing and sensor-driven decisions, but it is only as good as its sensors and plumbing. Until the tank float switch and leak sensor are physically installed, the tank-low and leak emergency aborts are **hardcoded to ‘safe’ and will not trigger**, so do not run the system unattended in that state.
+> The core system automates timing and sensor-driven decisions, but it is only as good as its sensors and plumbing. Until the tank float switch and leak sensor are physically installed, the tank-low and leak emergency aborts are **hardcoded permissive and will not trigger**. This is fail-open behaviour, not a safety layer, so do not run the system unattended in that state.
 
 Two more honest limits. Without a leaf-temperature sensor, VPD falls back to room air temperature and is less accurate. The fully autonomous P0–P3 phase transitions need the optional AppDaemon layer, which is not deployed by default. Budget about a week of supervised, timer-based running before you trust the automation.
 
@@ -5092,9 +5096,9 @@ Going slow and cool protects the terpenes, which evaporate in heat and dry air, 
 
 Water activity is the safe-zone gauge for cannabis. Mould and yeast can grow at 0.70 aw and above, pathogenic bacteria at 0.85, and essentially nothing grows below about 0.60 aw.[^aqualab-microbial-water-activity] That sets the ceiling. Quality sets the floor: below 0.55 aw the terpenes dry up and quality falls off.
 
-Together that leaves a sweet spot of 0.55-0.65 aw, the exact range written into the ASTM D8197 standard for dry cannabis flower.[^astm-d8197-water-activity] Start sample testing around day 7-8, and take plants down when the batch averages 0.60-0.62 aw, leaving a safety margin below the 0.65 mould line.
+Together that leaves a sweet spot of 0.55-0.65 aw, the exact range written into the ASTM D8197 standard for dry cannabis flower.[^astm-d8197-water-activity] Start sample testing around day 7-8. A batch average of 0.60-0.62 aw is a useful commercial starting target from the cited AROYA guidance, not a narrower ASTM requirement or a universal cultivar endpoint.[^aroya-drying-water-activity-guide]
 
-> **Diagram.** Below 0.55 aw you lose terpenes. Above 0.65 aw you risk mould. 0.60-0.62 aw is where you take the batch down.[^astm-d8197-water-activity]
+> **Diagram.** ASTM specifies the 0.55-0.65 aw acceptance range. The narrower 0.60-0.62 takedown target is an operational starting point that must be checked against cultivar, sample density and storage performance.[^astm-d8197-water-activity]
 
 > **Diagram.** Drop the batch below the 0.70 aw mould line, with the take-down target at 0.62 aw giving headroom.[^aqualab-microbial-water-activity]
 
@@ -6622,7 +6626,7 @@ The marketing decks all cite ‘20–60% yield gains’ without naming a source.
 
 **Hawley et al., 2018** — the Guelph group ran the first controlled cannabis subcanopy trial in _HortScience_[^hawley2018-scl]. Both red-blue and RGB SCL significantly increased yield _and_ THC in the lower-canopy bud. The mechanism: improved light distribution into the lower canopy beats simply raising overhead PPFD — the whole thesis of the field. Detail worth tattooing on the wall: in cycle two they _left the bottom growth on_ (instead of gyping it) and the yield response was stronger. Under SCL, your defoliation logic inverts (Section 7).
 
-**2025, TL vs SCL vs ICL head to head** — a study in _Plants_ compared traditional top light against SCL and ICL directly[^icl2025-plants]. ICL was the standout, and both methods improved energy-use efficiency — the gain per watt was real, not just gross output bought with more power.
+**2025, TL vs SCL vs ICL head to head** — a study in _Plants_ compared traditional top light against SCL and ICL directly[^icl2025-plants]. ICL produced the largest gross yield, but it also used 23.21% more lighting energy. Raw flower efficiency was 1.49 g/kWh for top light, 1.61 for SCL and 1.48 for ICL, so only SCL improved raw grams per kWh.
 
 | Metric (ICL vs top-light control) | Result |
 | --- | --- |
@@ -6630,7 +6634,7 @@ The marketing decks all cite ‘20–60% yield gains’ without naming a source.
 | THC accumulation | +24% (24.4%) |
 | Total terpene concentration | +12% (12.5%) |
 
-*The 2025 Plants trial: ICL led on yield, potency and terpenes, and improved energy-use efficiency.*
+*The 2025 Plants trial: ICL led on gross yield after adding light; SCL, not ICL, improved raw flower grams per kWh.*
 
 **Fluence / Texas Original** — the trial that keeps you honest[^fluence-icl-2024]. At **equal total light flux**, moving photons into the canopy via ICL did _not_ reliably raise _total_ yield versus top-light alone — but it increased lower-canopy bud size and **upgraded the grade** (B/C → B/A) with much less variability. In a price-pressured market, consistency and grade are the margin, not gross weight.
 

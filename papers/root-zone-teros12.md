@@ -77,7 +77,7 @@ The sensor then applies a **calibration equation** (a generic mineral-soil curve
 
 ## Calibration: why the default number lies a little
 
-Out of the box the TEROS-12 uses a generic mineral-soil calibration, which makes VWC accurate to only ±0.03 m³/m³. A **substrate-specific** calibration for your exact coco or rockwool tightens that to ±0.01–0.02 m³/m³.[^fragkos-2024-teros12-soils-ec] That difference is not academic. Crop-steering dryback windows are often _narrower_ than the ±0.03 generic error band, so steering on uncalibrated VWC means steering inside the noise.
+Out of the box the TEROS-12 uses a generic mineral-soil calibration, specified at roughly ±0.03 m³/m³. A well-built, media-specific calibration can reduce error, but the cited TEROS-12 experiment tested six inorganic soils at constant temperature, not cannabis in coco or rockwool; it does not establish a universal ±0.01–0.02 accuracy for those substrates.[^fragkos-2024-teros12-soils-ec] That difference is not academic. Crop-steering dryback windows are often _narrower_ than the ±0.03 generic error band, so steering on uncalibrated VWC means steering inside the noise.
 
 A worked headroom example shows the consequence directly. A naive 256 mL of ‘room to water’ shrinks to a safe ~109 mL once you account for ±0.02 accuracy, and to just ~54 mL under the generic ±0.03. Same pot, same probe. The only thing that changed is how honestly you treat the error band.[^nemali-2006-set-point-irrigation]
 
@@ -86,9 +86,9 @@ A worked headroom example shows the consequence directly. A naive 256 mL of ‘r
 | Calibration type | VWC accuracy | Resolution | Tight steering? |
 | --- | --- | --- | --- |
 | Generic mineral (default) | ±0.03 m³/m³ | 0.001 m³/m³ | No. Error wider than dryback window |
-| Substrate-specific | ±0.01–0.02 m³/m³ | 0.001 m³/m³ | Yes. Required for tight steering |
+| Substrate-specific | Must be validated gravimetrically | 0.001 m³/m³ | Potentially. Prove the residual error first |
 
-*Resolution is identical. Accuracy is what changes. Calibrate to your media.*
+*Resolution is identical. Accuracy must be measured in the actual media.*
 
 > **WARN — Calibration is not a cure-all**
 > 

@@ -139,10 +139,12 @@ SECTIONS.append({"id": "phases", "kicker": "The core idea", "title": "The phase 
       "<strong>P3 (pre-lights-off)</strong> is emergency-only watering below 40% VWC before an "
       "overnight dryback resets the cycle."),
     callout("key", "Vegetative vs generative steering",
-      ul(["<strong>Vegetative</strong> steering uses longer drybacks and lower EC to encourage root "
+      ul(["<strong>Vegetative</strong> steering uses shorter drybacks and lower EC to encourage root "
           "and leaf growth.",
-          "<strong>Generative</strong> steering uses shorter drybacks and higher EC to push "
-          "flowering." + _c("caplan-2019-drought-cannabis"),
+          "<strong>Generative</strong> steering uses longer drybacks and higher EC to apply more "
+          "water and osmotic stress. The cited cannabis trial used one cultivar and one 11-day "
+          "late-flower drought event, so it supports the direction of the response, not universal "
+          "daily targets." + _c("caplan-2019-drought-cannabis"),
           "The same P0&ndash;P3 framework runs both. Only the dryback targets and EC change."], "tight")),
     figure(L.flow("The daily phase cycle",
             [("P0", "dryback &rarr; hit target"), ("P1", "ramp up &rarr; ~65% VWC"),
@@ -239,7 +241,7 @@ SECTIONS.append({"id": "daily-operation", "kicker": "Living with it",
     ul(["Healthy daily readings: VWC 30&ndash;70%, EC ~2&ndash;6 mS/cm, substrate temp 20&ndash;26 °C, safety all green",
         "A non-sawtooth VWC trace is your earliest signal that something is wrong",
         "Enable or skip tables via the <strong>Enabled</strong> toggle in Zone Control",
-        "Emergency stop: toggle Maintenance Mode on (closes all valves) or call the emergency-stop script"]),
+        "Durable stop: enable Maintenance Mode and disarm the system; an output-off script alone is not a latched emergency stop"]),
     table(["Tab", "What it shows", "When to use it"], [
       ["Command Center", "All tables at a glance: VWC, EC, temp, safety", "Daily health check"],
       ["Zone Control", "Per-table enable toggles and manual valves", "Add or skip a table"],
@@ -298,8 +300,9 @@ SECTIONS.append({"id": "expectations", "kicker": "Reality check", "title": "Real
     callout("key", "This is guidance, not a guarantee",
       p("The core system automates timing and sensor-driven decisions, but it is only as good as its "
         "sensors and plumbing. Until the tank float switch and leak sensor are physically installed, "
-        "the tank-low and leak emergency aborts are <strong>hardcoded to &lsquo;safe&rsquo; and will "
-        "not trigger</strong>, so do not run the system unattended in that state.")),
+        "the tank-low and leak emergency aborts are <strong>hardcoded permissive and will not "
+        "trigger</strong>. This is fail-open behaviour, not a safety layer, so do not run the system "
+        "unattended in that state.")),
     p("Two more honest limits. Without a leaf-temperature sensor, VPD falls back to room air "
       "temperature and is less accurate. The fully autonomous P0&ndash;P3 phase transitions need "
       "the optional AppDaemon layer, which is not deployed by default. Budget about a week of "

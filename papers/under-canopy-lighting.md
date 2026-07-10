@@ -57,7 +57,7 @@ The marketing decks all cite ‘20–60% yield gains’ without naming a source.
 
 **Hawley et al., 2018** — the Guelph group ran the first controlled cannabis subcanopy trial in _HortScience_[^hawley2018-scl]. Both red-blue and RGB SCL significantly increased yield _and_ THC in the lower-canopy bud. The mechanism: improved light distribution into the lower canopy beats simply raising overhead PPFD — the whole thesis of the field. Detail worth tattooing on the wall: in cycle two they _left the bottom growth on_ (instead of gyping it) and the yield response was stronger. Under SCL, your defoliation logic inverts (Section 7).
 
-**2025, TL vs SCL vs ICL head to head** — a study in _Plants_ compared traditional top light against SCL and ICL directly[^icl2025-plants]. ICL was the standout, and both methods improved energy-use efficiency — the gain per watt was real, not just gross output bought with more power.
+**2025, TL vs SCL vs ICL head to head** — a study in _Plants_ compared traditional top light against SCL and ICL directly[^icl2025-plants]. ICL produced the largest gross yield, but it also used 23.21% more lighting energy. Raw flower efficiency was 1.49 g/kWh for top light, 1.61 for SCL and 1.48 for ICL, so only SCL improved raw grams per kWh.
 
 | Metric (ICL vs top-light control) | Result |
 | --- | --- |
@@ -65,7 +65,7 @@ The marketing decks all cite ‘20–60% yield gains’ without naming a source.
 | THC accumulation | +24% (24.4%) |
 | Total terpene concentration | +12% (12.5%) |
 
-*The 2025 Plants trial: ICL led on yield, potency and terpenes, and improved energy-use efficiency.*
+*The 2025 Plants trial: ICL led on gross yield after adding light; SCL, not ICL, improved raw flower grams per kWh.*
 
 **Fluence / Texas Original** — the trial that keeps you honest[^fluence-icl-2024]. At **equal total light flux**, moving photons into the canopy via ICL did _not_ reliably raise _total_ yield versus top-light alone — but it increased lower-canopy bud size and **upgraded the grade** (B/C → B/A) with much less variability. In a price-pressured market, consistency and grade are the margin, not gross weight.
 

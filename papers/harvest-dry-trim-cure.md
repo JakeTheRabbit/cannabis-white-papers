@@ -100,9 +100,9 @@ Going slow and cool protects the terpenes, which evaporate in heat and dry air, 
 
 Water activity is the safe-zone gauge for cannabis. Mould and yeast can grow at 0.70 aw and above, pathogenic bacteria at 0.85, and essentially nothing grows below about 0.60 aw.[^aqualab-microbial-water-activity] That sets the ceiling. Quality sets the floor: below 0.55 aw the terpenes dry up and quality falls off.
 
-Together that leaves a sweet spot of 0.55-0.65 aw, the exact range written into the ASTM D8197 standard for dry cannabis flower.[^astm-d8197-water-activity] Start sample testing around day 7-8, and take plants down when the batch averages 0.60-0.62 aw, leaving a safety margin below the 0.65 mould line.
+Together that leaves a sweet spot of 0.55-0.65 aw, the exact range written into the ASTM D8197 standard for dry cannabis flower.[^astm-d8197-water-activity] Start sample testing around day 7-8. A batch average of 0.60-0.62 aw is a useful commercial starting target from the cited AROYA guidance, not a narrower ASTM requirement or a universal cultivar endpoint.[^aroya-drying-water-activity-guide]
 
-> **Diagram.** Below 0.55 aw you lose terpenes. Above 0.65 aw you risk mould. 0.60-0.62 aw is where you take the batch down.[^astm-d8197-water-activity]
+> **Diagram.** ASTM specifies the 0.55-0.65 aw acceptance range. The narrower 0.60-0.62 takedown target is an operational starting point that must be checked against cultivar, sample density and storage performance.[^astm-d8197-water-activity]
 
 > **Diagram.** Drop the batch below the 0.70 aw mould line, with the take-down target at 0.62 aw giving headroom.[^aqualab-microbial-water-activity]
 

@@ -88,14 +88,14 @@ SECTIONS.append({"id": "the-evidence", "kicker": "The evidence", "title": "What 
       "field. Detail worth tattooing on the wall: in cycle two they <em>left the bottom growth on</em> (instead "
       "of gyping it) and the yield response was stronger. Under SCL, your defoliation logic inverts (Section 7)."),
     p("<strong>2025, TL vs SCL vs ICL head to head</strong> &mdash; a study in <em>Plants</em> compared "
-      "traditional top light against SCL and ICL directly" + _c("icl2025-plants") + ". ICL was the standout, "
-      "and both methods improved energy-use efficiency &mdash; the gain per watt was real, not just gross "
-      "output bought with more power."),
+      "traditional top light against SCL and ICL directly" + _c("icl2025-plants") + ". ICL produced the "
+      "largest gross yield, but it also used 23.21% more lighting energy. Raw flower efficiency was "
+      "1.49 g/kWh for top light, 1.61 for SCL and 1.48 for ICL, so only SCL improved raw grams per kWh."),
     table(["Metric (ICL vs top-light control)", "Result"], [
       ["Dry inflorescence yield", "+30% (29.95%)"],
       ["THC accumulation", "+24% (24.4%)"],
       ["Total terpene concentration", "+12% (12.5%)"],
-    ], caption="The 2025 Plants trial: ICL led on yield, potency and terpenes, and improved energy-use efficiency."),
+    ], caption="The 2025 Plants trial: ICL led on gross yield after adding light; SCL, not ICL, improved raw flower grams per kWh."),
     p("<strong>Fluence / Texas Original</strong> &mdash; the trial that keeps you honest" + _c("fluence-icl-2024") +
       ". At <strong>equal total light flux</strong>, moving photons into the canopy via ICL did <em>not</em> "
       "reliably raise <em>total</em> yield versus top-light alone &mdash; but it increased lower-canopy bud size "

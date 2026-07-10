@@ -111,8 +111,10 @@ SECTIONS.append({"id": "dryback", "kicker": "05 · The engine", "title": "Drybac
     p("When the root zone dries a little, the plant makes a stress hormone called "
       "<strong>abscisic acid (ABA)</strong>, which shifts it away from leafy growth and toward "
       "flowering and resin production" + _c("welling2025-aba") + ". Done deliberately at the right time, "
-      "controlled water-deficit has been shown to <em>raise</em> cannabinoid content without costing "
-      "yield" + _c("caplan2019-drought") + "."),
+      "one controlled water-deficit trial raised cannabinoid concentration; its flower-yield difference "
+      "was not statistically significant" + _c("caplan2019-drought") + ". That experiment used one "
+      "cultivar and one 11-day drought event in week 7, so it supports a possible response, not the "
+      "specific daily dryback targets below."),
     callout("warn", "A dryback is not a drought",
       p("The difference is dose and timing. <strong>Moderate</strong>, measured drybacks that you "
         "stop on time preserve yield. A <strong>severe</strong> drought that runs too long crashes "
