@@ -149,14 +149,16 @@ SECTIONS.append({"id": "water-activity", "kicker": "The core science", "title": 
       "falls off."),
     p("Together that leaves a sweet spot of 0.55-0.65 aw, the exact range written into the "
       "ASTM D8197 standard for dry cannabis flower." + _c("astm-d8197-water-activity") + " Start "
-      "sample testing around day 7-8, and take plants down when the batch averages 0.60-0.62 aw, "
-      "leaving a safety margin below the 0.65 mould line."),
+      "sample testing around day 7-8. A batch average of 0.60-0.62 aw is a useful commercial starting "
+      "target from the cited AROYA guidance, not a narrower ASTM requirement or a universal cultivar "
+      "endpoint." + _c("aroya-drying-water-activity-guide")),
     figure(L.zones("The water-activity safe zone", 0.50, 0.90,
             [(0.50, 0.55, L.AMBL, "too dry"), (0.55, 0.65, L.GL, "sweet spot 0.60-0.62 = take down"),
              (0.70, 0.85, L.REDL, "mould & yeast"), (0.85, 0.90, L.RED, "bacteria")],
             note="Take plants down inside the green band, around 0.60-0.62 aw, well clear of the 0.65 mould line."), 6,
-      "Below 0.55 aw you lose terpenes. Above 0.65 aw you risk mould. 0.60-0.62 aw is where you take "
-      "the batch down." + _c("astm-d8197-water-activity")),
+      "ASTM specifies the 0.55-0.65 aw acceptance range. The narrower 0.60-0.62 takedown target is an "
+      "operational starting point that must be checked against cultivar, sample density and storage "
+      "performance." + _c("astm-d8197-water-activity")),
     figure(L.bars("Water activity thresholds for microbial growth",
             [("No growth", 0.60), ("Mould & yeast", 0.70), ("Bacteria", 0.85)], unit=" aw",
             target=0.62, maxv=0.95,
