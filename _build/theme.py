@@ -325,6 +325,36 @@ a.curitem:hover{border-color:#CFCEC6;color:var(--ink)}
 .curitem .soon-tag{margin-left:auto;font-size:9px;letter-spacing:.05em;text-transform:uppercase;color:var(--faint);border:1px solid var(--line);border-radius:20px;padding:1px 7px}
 .curitem .arr{margin-left:auto;color:var(--faint)}
 
+/* ---------------- fit-to-width display headings (kizu.dev/fit-to-width) ----------------
+   Pure-CSS: the visible heading is scaled so one line fills the column exactly.
+   Registered custom props capture the container width (100cqi), tan(atan2()) divides
+   it by the natural width to get a unitless ratio, clamp() turns that into a font-size
+   between the element's base (floor) and --cwp-max (ceiling). No JS, no reflow.
+   The technique needs single-line nowrap, so on narrow screens (<=900px) it neutralises
+   back to a normal wrapping heading — long titles must never overflow on a phone. */
+@property --captured-length{syntax:"<length>";initial-value:0px;inherits:true}
+@property --captured-length2{syntax:"<length>";initial-value:0px;inherits:true}
+.text-fit{display:flex;container-type:inline-size;--captured-length:initial;--support-sentinel:var(--captured-length,9999px)}
+.text-fit>[aria-hidden]{visibility:hidden}
+.text-fit>:not([aria-hidden]){flex-grow:1;container-type:inline-size;--captured-length:100cqi;--available-space:var(--captured-length)}
+.text-fit>:not([aria-hidden])>*{--support-sentinel:inherit;--captured-length:100cqi;
+  --ratio:tan(atan2(var(--available-space),var(--available-space) - var(--captured-length)));
+  --font-size:clamp(1em,1em * var(--ratio),var(--max-font-size,infinity * 1px) - var(--support-sentinel));
+  inline-size:var(--available-space)}
+.text-fit>:not([aria-hidden])>*:not(.text-fit){display:block;font-size:var(--font-size);line-height:1.05}
+@container (inline-size > 0){.text-fit>:not([aria-hidden])>*:not(.text-fit){white-space:nowrap}}
+h1.title.text-fit{font-size:26px;margin-bottom:18px}
+.hero-land h1.text-fit{font-size:30px}
+@media(max-width:900px){
+  /* single-line nowrap fill doesn't suit a phone column: neutralise to a normal wrapping heading */
+  .text-fit{display:block;container-type:normal}
+  .text-fit>[aria-hidden]{display:none}
+  .text-fit>:not([aria-hidden]){container-type:normal}
+  .text-fit>:not([aria-hidden])>*:not(.text-fit){font-size:inherit;inline-size:auto;white-space:normal;line-height:inherit}
+  h1.title.text-fit{font-size:33px}
+  .hero-land h1.text-fit{font-size:36px}
+}
+
 /* ---------------- figure palette (themable) ---------------- */
 :root{
   --fig-bg:#ffffff; --fig-panel:#f3f7f3; --fig-ink:#16211c; --fig-ink2:#3c4a42; --fig-mut:#697a70; --fig-line:#cdd8d0;

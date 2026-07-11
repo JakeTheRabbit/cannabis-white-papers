@@ -69,6 +69,16 @@ def w(path, content):
 def slugify(s):
     return re.sub(r"[^a-z0-9]+", "-", s.lower()).strip("-")
 
+def fit_title(text, max_px=54, cls="title"):
+    """A fit-to-width display heading: the title is duplicated (one visible, one
+    aria-hidden for measurement) so CSS can scale it to fill the column exactly.
+    See the .text-fit rules in theme.py. cls="" for the landing hero <h1>."""
+    e = esc(text)
+    c = (cls + " text-fit").strip()
+    return (f'<h1 class="{c}" style="--max-font-size:{max_px}px">'
+            f'<span><span>{e}</span></span>'
+            f'<span aria-hidden="true">{e}</span></h1>')
+
 # ---------------------------------------------------------------- auto-interlinking
 _XRE = [(re.compile(r'(?<![\w-])(' + re.escape(p) + r')(?![\w-])', re.I), slug)
         for p, slug in LINKS.phrase_list()]
@@ -158,7 +168,7 @@ def render_paper(mod):
         f'<span>{esc(mod.EYEBROW.split("·")[0].strip())}</span><span class="sep">{icon("chevright",12)}</span>'
         f'<span>{esc(mod.TITLE)}</span></div>'
         f'<div class="eyebrow">{esc(mod.EYEBROW)}</div>'
-        f'<h1 class="title">{esc(mod.TITLE)}</h1>'
+        f'{fit_title(mod.TITLE, 54)}'
         f'<p class="sub">{esc(mod.SUB)}</p>'
         f'<div class="metarow">{"".join(pills)}</div>'
         f'<div class="divider"></div>'
@@ -252,7 +262,7 @@ def render_index():
     hero = (
         '<div class="hero-land tight">'
         '<div class="eyebrow">A field guide to growing, from zero</div>'
-        '<h1>The Cannabis White Papers</h1>'
+        + fit_title("The Cannabis White Papers", 60, cls="") +
         f'<p class="sub">Peer-reviewed cultivation science, rewritten so a first-timer can actually '
         f'follow it: every term defined, every claim cited, the working shown in diagrams. Filter the '
         f'{n} papers below, or press <strong>Ctrl&nbsp;K</strong> to search.</p></div>'
@@ -296,7 +306,7 @@ def render_index():
     return shell.page("index", "Home", body, desc="Peer-reviewed cannabis cultivation white papers, by grow stage.", wide=True, mobile_active="index")
 
 def render_papers():
-    head = ('<div class="eyebrow">Library</div><h1 class="title">All papers</h1>'
+    head = ('<div class="eyebrow">Library</div>' + fit_title("All papers", 54) +
             '<p class="sub">Every white paper in the collection, grouped by track. Greyed cards are '
             'in production and coming soon.</p><div class="divider"></div>')
     body = head + track_grid()
@@ -304,7 +314,7 @@ def render_papers():
 
 # ---------------------------------------------------------------- glossary
 def render_glossary():
-    head = ('<div class="eyebrow">Reference</div><h1 class="title">Glossary</h1>'
+    head = ('<div class="eyebrow">Reference</div>' + fit_title("Glossary", 54) +
             '<p class="sub">Every bit of jargon used across the papers, in plain English. '
             'No prior knowledge assumed.</p><div class="divider"></div>')
     buckets = GL.by_letter()
@@ -374,7 +384,7 @@ def render_curriculum():
     live = sum(1 for _, _, items in CURRICULUM for _, slug in items if slug in _LIVE)
     head = (
         '<div class="eyebrow">The grow, in order</div>'
-        '<h1 class="title">Start here: the whole grow, stage by stage</h1>'
+        + fit_title("Start here: the whole grow, stage by stage", 46) +
         '<p class="sub">Every paper, grouped by where it sits in a grow: propagation, vegetative '
         'growth, flowering, then harvest through to cure, plus the systems that run across every '
         'stage. Green dots are published now. Greyed rows are written and on the way.</p>'
