@@ -9,8 +9,8 @@ diagrams: ""
 related: ["ipm-sop", "airflow-design", "mould-risk", "cloning"]
 url: "https://jaketherabbit.github.io/cannabis-white-papers/pest-id.html"
 md_url: "https://jaketherabbit.github.io/cannabis-white-papers/papers/pest-id.md"
-version: "1.0"
-updated: "2026-06-24"
+version: "1.1"
+updated: "2026-07-15"
 license: "CC BY-NC 4.0"
 license_url: "https://creativecommons.org/licenses/by-nc/4.0/"
 attribution: "The Cannabis White Papers"
@@ -83,7 +83,7 @@ This group is dangerous because the damage shows before the pest does. Russet mi
 Fungus gnat larvae weaken plants and wound roots, and the damage they cause interacts with soil-borne disease, which is why a wet-media gnat problem so often turns into a root-rot problem[^cloyd-2015-fungus-gnat-ecology-management]. Cannabis is also a confirmed host of the rice root aphid, which lives below ground and is missed entirely by canopy scouting[^cranshaw-wainwright-2020-rice-root-aphid-cannabis].
 
 > **WARN — Misdiagnosis is the trap**
-> 
+>
 > Twisted, glossy tops look exactly like nutrient burn or heat stress. Confirm with a loupe or scope and a root inspection _before_ you change the feed. Feeding the plant harder will not fix a mite.
 
 > **Diagram.** Map your inspection to where each pest actually lives. Glancing at the mid-canopy misses all four of these.
@@ -111,7 +111,7 @@ Match the tool to the pest, and to whether you are preventing or reacting. For s
 Aphids respond to species-matched parasitoid wasps (_Aphidius colemani_ for green peach aphid, _Aphidius matricariae_ for cannabis aphid) plus the insect-killing fungus _Beauveria bassiana_. Whitefly are hit with _Encarsia_ or _Eretmocerus_ wasps and swirskii. Fungus gnats are drenched in the medium with _Steinernema feltiae_ nematodes and the bacterium Bti every ~2 weeks. Caterpillars are killed with _Bacillus thuringiensis kurstaki_ (Btk), which only kills larvae that eat it. Several of these biopesticides have been tested directly on cannabis pests[^cloyd-2024-biopesticides-cannabis-oregon].
 
 > **WARN — Sulphur and flowering do not mix**
-> 
+>
 > Russet and broad mites respond to predatory mites plus micronised sulphur, but never apply sulphur during flowering. It risks residue, taint and phytotoxicity on the buds.
 
 > **Diagram.** Pick the agent by pest and by whether you are preventing or reacting. Timing beats dose: beneficials only out-breed pests if released before the pest gets a head start.
@@ -130,7 +130,7 @@ Most pest disasters are diagnosis and timing failures, not product failures. The
 | New crop infested from day one | Skipped clone/mother quarantine | Isolate and inspect every incoming plant |
 
 > **NOTE — When a treatment ‘fails’**
-> 
+>
 > Re-confirm the pest ID, check you covered every life stage (soil included), and verify the environment actually suited the agent. Most ‘failed’ biocontrol is one of those three.
 
 > **Diagram.** Never treat on a guess. The confirmation step, between suspecting and acting, is where most wasted sprays get prevented.
@@ -142,7 +142,7 @@ Eradication is rarely the goal. Durable suppression below the action threshold i
 The cheapest ‘treatment’ is prevention. Quarantine and inspect every incoming clone, keep mother plants clean (an infested mother makes every cutting infested), control humidity and airflow, sanitise tools and rooms, and run the weekly scout without fail. A facility that prevents and detects early spends far less on curatives and loses far less crop than one that fights outbreaks reactively.
 
 > **KEY — What to actually expect**
-> 
+>
 > - The goal is suppression below threshold, not zero pests. Clean crops come from prevention, not heroic sprays.
 > - Biologicals are slow but durable: thrips ~3 weeks to visible control, fungus-gnat cycle ~4-8 weeks to break.
 > - Prevention stack: quarantine clones, keep mothers clean, control RH and airflow, sanitise, scout weekly.

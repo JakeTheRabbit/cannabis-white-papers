@@ -9,8 +9,8 @@ diagrams: ""
 related: ["ph-management", "nutrient-mixing-athena", "water-quality"]
 url: "https://jaketherabbit.github.io/cannabis-white-papers/nutrient-deficiencies.html"
 md_url: "https://jaketherabbit.github.io/cannabis-white-papers/papers/nutrient-deficiencies.md"
-version: "1.0"
-updated: "2026-06-24"
+version: "1.1"
+updated: "2026-07-15"
 license: "CC BY-NC 4.0"
 license_url: "https://creativecommons.org/licenses/by-nc/4.0/"
 attribution: "The Cannabis White Papers"
@@ -44,7 +44,7 @@ Three different problems can look almost identical on a leaf: a true deficiency 
 *Yellow does not equal hungry. The same colour can come from three opposite causes.*
 
 > **WARN — A damaged leaf will not turn green again**
-> 
+>
 > Reading symptoms is diagnostic, not instant. By the time a leaf shows damage the plant has been short for days, and that leaf will not recover even after you fix the cause. You are watching new growth for recovery, not the old leaves.
 
 ## Key terms, defined plainly
@@ -84,7 +84,7 @@ This single rule lets you cut the list of suspects roughly in half before you ev
 > **Diagram.** Mobile-nutrient deficiencies present on the older lower leaves; immobile ones present on the newer upper growth.[^cockson-2019-nutrient-disorders-cannabis]
 
 > **NOTE — Read symptoms against the growth stage**
-> 
+>
 > Nitrogen fading from the bottom up is normal in late flowering as the plant remobilises N into the buds. The same symptom is healthy at week 7 and a problem at week 2, so always check the calendar before you act.
 
 ## Deficiency vs toxicity vs pH lockout
@@ -106,7 +106,7 @@ The biggest beginner trap is seeing yellow leaves, assuming hungry, and adding m
 > **Diagram.** Healthy is a middle band. Pale and dropping is one failure mode, dark and clawed is the opposite one, and chasing the wrong end makes things worse.
 
 > **KEY — Check pH first, always**
-> 
+>
 > Before treating any suspected deficiency, check pH. If pH is out of range, fix that and re-observe for several days before concluding the plant is actually short of anything. pH outside range causes lockout despite a perfectly good feed.[^neilsen-1993-rhizosphere-ph-fe-mn-zn]
 
 ## pH: the gatekeeper, and why your medium sets the target
@@ -126,7 +126,7 @@ The correct target pH depends entirely on your growing medium. Soil buffers itse
 *Soil is the most forgiving medium. Coco and hydro have no buffer, so pH must be checked far more often.*
 
 > **TIP — Direction of drift tells you what locks out**
-> 
+>
 > - **Above ~6.5** in coco or hydro: iron, manganese, zinc and boron fall out. Expect micronutrient-style new-growth chlorosis.[^neilsen-1993-rhizosphere-ph-fe-mn-zn]
 > - **Below ~5.5:** calcium, magnesium and phosphorus lock out.
 > - Slightly cycling within the band (e.g. 5.8-6.2) gives every nutrient its turn at peak availability, but stay inside the band for your medium.
@@ -165,7 +165,7 @@ Diagnosis is a loop, not a guess. You observe the leaves, then confirm with two 
 > **Diagram.** Target EC climbs from seedling through peak flower, then eases for the finish. Seedling roughly 0.4-0.8 (about 250-400 PPM), veg 1.0-1.8, flower 1.6-2.4 rising to 2.4-3.0 late.
 
 > **NOTE — Runoff EC is your salt gauge**
-> 
+>
 > Coco runoff EC should approximate input EC. Runoff more than about 200 PPM above input indicates salt is building up faster than the plant can use it, and a flush, not more feed, is the answer.
 
 ## Common traps and look-alikes that fool beginners
@@ -198,7 +198,7 @@ Diagnosis gives you a confident shortlist, not lab certainty. Visual symptoms ov
 > **Diagram.** The cheap habit on the left prevents most of the expensive work on the right. Prevention beats diagnosis every time.
 
 > **KEY — Prevention beats diagnosis**
-> 
+>
 > The visual method is a fast first pass, not the final word. Most problems never appear if pH and feed strength stay stable, so build the routine first and treat diagnosis as a backstop.
 
 Next, lock down the two routines that prevent most of this: read the [pH management](ph-management.html) guide, then the [nutrient mixing](nutrient-mixing-athena.html) guide to get your feed right from the start.

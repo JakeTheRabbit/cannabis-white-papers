@@ -19,8 +19,8 @@ import build  # reuses build.PAPERS, build.REFS, build.NAV, build.GL (no render 
 
 ROOT = build.ROOT
 BASE = "https://jaketherabbit.github.io/cannabis-white-papers"
-VERSION = "1.0"
-UPDATED = "2026-06-24"
+VERSION = "1.1"
+UPDATED = "2026-07-15"
 ATTRIBUTION = "The Cannabis White Papers"
 LICENSE_ID = "CC BY-NC 4.0"
 LICENSE_URL = "https://creativecommons.org/licenses/by-nc/4.0/"
@@ -238,6 +238,7 @@ def paper_md(mod):
     }
     front = "---\n" + "\n".join(f"{k}: {json.dumps(v, ensure_ascii=False)}" for k, v in fm.items()) + "\n---\n"
     md = front + f"\n# {fm['title']}\n\n_{fm['eyebrow']} · {rt}_\n\n> {fm['summary']}\n\n" + "\n".join(body) + "\n" + "\n".join(foot) + "\n"
+    md = "\n".join(line.rstrip() for line in md.splitlines()) + "\n"
     return md, fm
 
 

@@ -9,8 +9,8 @@ diagrams: "9 diagrams"
 related: ["light-acclimation", "ipm-sop", "tissue-culture"]
 url: "https://jaketherabbit.github.io/cannabis-white-papers/cloning.html"
 md_url: "https://jaketherabbit.github.io/cannabis-white-papers/papers/cloning.md"
-version: "1.0"
-updated: "2026-06-24"
+version: "1.1"
+updated: "2026-07-15"
 license: "CC BY-NC 4.0"
 license_url: "https://creativecommons.org/licenses/by-nc/4.0/"
 attribution: "The Cannabis White Papers"
@@ -34,7 +34,7 @@ A well-run propagation room roots clones at 90 to 95 percent success or better[^
 > **Diagram.** The whole job in five steps. Roots appear between day 7 and day 14, and the clone is ready to move on at around two weeks.[^kim-2025-light-temp-rh]
 
 > **NOTE — Who this is for**
-> 
+>
 > Anyone who wants to copy a plant they like and get a uniform batch every time. Pair it with the [light acclimation](light-acclimation.html) guide for moving fresh clones into stronger light, and the [IPM hygiene](ipm-sop.html) guide for keeping the room clean.
 
 ## The words you need before you start
@@ -62,7 +62,7 @@ A good clone starts with a good shoot. Pick upright shoots from the upper-to-mid
 Water the mother with **half-strength** nutrients the day before. This lowers the pressure inside the leaves and stems (their _turgor_) so the stems are less brittle and snap less when you cut them. Take cuttings at the start of the light cycle with a sterile blade, making a clean 45-degree cut just below a node, and drop each cutting straight into a holding jug of dilute solution so the cut end never sits in air.
 
 > **TIP — Why a 45° cut, and why no air**
-> 
+>
 > - A **45° cut** exposes more surface area than a flat cut, so more cells can turn into roots.
 > - If the cut end sits in air, the stem draws in an **air embolism** (an air bubble) that blocks water uptake. Keep the end wet from the moment it is cut.
 > - Sterilize the blade between mother plants so you don't carry disease from one to the next.[^punja-2023-fusarium-pythium-biocontrol]
@@ -81,7 +81,7 @@ Make a fresh 45-degree cut right before sticking to expose new tissue, coat the 
 4. **Stick & lift-test** — Insert 1.5–2.5 cm deep. Tug gently: the cube should rise with the stem.
 
 > **WARN — Speed matters**
-> 
+>
 > Keep the time from the final cut to sticking under about 30 seconds. The longer a fresh cut end sits in air, the more likely an air bubble blocks water uptake and the cutting stalls.
 
 > **Diagram.** There is a sweet spot. Too little hormone and rooting is slow. Too much scorches the stem base. Commercial gels come pre-mixed to land in the productive range.[^landis-2022-iba-hemp-i3]
@@ -106,7 +106,7 @@ Keep light gentle, about 60–100 PPFD (a measure of light intensity reaching th
 *Four-phase environment targets, all at 24–26°C air and a 22–24°C cube. VPD is a combined dryness measure; higher = drier air.[^kim-2025-light-temp-rh]*
 
 > **NOTE — Air movement, not a fan in the face**
-> 
+>
 > Gentle air movement in the room is good, but never aim a fan directly at un-rooted clones. With no roots to replace lost water, a direct breeze dries them out and wilts them fast.
 
 ## The 14-day routine, day by day
@@ -147,7 +147,7 @@ Most clone failures trace to a handful of causes, and they look distinct enough 
 *Diagnose by symptom, then act. Many of these overlap, so fix the most likely cause first and watch for a day.*
 
 > **DANGER — Hygiene is non-negotiable**
-> 
+>
 > Disease in a propagation room spreads cutting to cutting through tools and hands. Sterilize tools for at least 2 minutes in 71% isopropyl alcohol (or chlorine dioxide for at least 180 seconds), and handle cubes with gloves only. Bare hands spread algae and pathogens[^punja-2023-fusarium-pythium-biocontrol]. Good hygiene prevents the damping-off and root-rot organisms that wipe out whole trays[^punja-2023-fusarium-pythium-biocontrol].
 
 ## What good looks like, and what to expect
@@ -163,7 +163,7 @@ Not every cutting will make it, and that is normal. Sorting at transplant, calle
 Some genetics root slower. For slow-to-root cultivars, take the cuttings a few days earlier so they still hit the transplant date on schedule. Record everything, tray weights, EC and pH, success rate per batch, because clone data drives every decision downstream in the grow.
 
 > **KEY — Three honest truths**
-> 
+>
 > 1. **90% is the floor, not the ceiling.** A new grower hitting 90% is doing well; a dialed room runs 95%+. Below 80% means something in the environment or hygiene is off.
 > 2. **Culling is success, not failure.** Throwing out weak clones up front protects the uniformity of the whole batch.
 > 3. **The environment does the work.** Humidity, cube temperature and light matter more than any brand of hormone. Dial those in first.

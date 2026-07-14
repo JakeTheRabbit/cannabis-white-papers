@@ -9,8 +9,8 @@ diagrams: "9 diagrams"
 related: ["signal-and-noise", "plant-state-dashboard", "f2-crop-steering"]
 url: "https://jaketherabbit.github.io/cannabis-white-papers/closed-loop.html"
 md_url: "https://jaketherabbit.github.io/cannabis-white-papers/papers/closed-loop.md"
-version: "1.0"
-updated: "2026-06-24"
+version: "1.1"
+updated: "2026-07-15"
 license: "CC BY-NC 4.0"
 license_url: "https://creativecommons.org/licenses/by-nc/4.0/"
 attribution: "The Cannabis White Papers"
@@ -34,7 +34,7 @@ A **closed loop** means the output feeds back to the input: what the plant tells
 > **Diagram.** Read it as a circle. The room works like a nervous system: muscles (the levers), nerves (the sensors) and a mind (the inference that decides what it all means).
 
 > **KEY — What 'closed' buys you**
-> 
+>
 > A mature loop tells you whole-room health and whether to act in under five seconds, and it stays quiet when nothing needs you. Silence is a feature, not a fault.
 
 ## Key terms, defined once
@@ -73,7 +73,7 @@ Everything you can do sorts into four **balances** you are always disturbing: en
 *The four balances and the levers that move each. Every classic failure is a coupling failure, not a broken part.*
 
 > **WARN — Classic failures are coordination failures**
-> 
+>
 > Cooling that creates humidity, dehumidification that overheats the room, CO2 fighting the exhaust: nothing broke. The levers were just set as if they were independent. The fix is order of operations: set biological demand first (stage, light, CO2), then size climate capacity to match, then set the root-zone strategy to that.
 
 ## Reading the signal, then reading the plant
@@ -108,7 +108,7 @@ The three jobs become one machine here. Watch a single ordinary problem, slow **
 > **Diagram.** Closed-loop correction catches root-zone salt accumulation roughly four days before visible tip burn would show[^saure-tipburn-calcium-2001], because the EC the roots feel rises as the medium dries, well before leaves react[^choi-ec-transpiration-2015].
 
 > **NOTE — No single job catches it alone**
-> 
+>
 > - A **lever-only** grower never measures it.
 > - A **signal-only** grower sees a number move but not what it means.
 > - A **dashboard-only** grower, without the causal map, prescribes the wrong lever.
@@ -136,7 +136,7 @@ You build the loop one rung at a time, and you do not earn the next rung until t
 4. **Close the loop last, and gently** — Gate the first automated write-back to a low-risk, reversible move, for example a 3-point dryback nudge behind a confirm. Keep expensive or irreversible actions human-approved.
 
 > **TIP — Discipline before capital**
-> 
+>
 > The most valuable upgrades on this list cost nothing but habit: a sampling cadence, a rolling average and a control limit are free. Buy hardware only once the discipline is in place to use it.
 
 ## Pitfalls: oscillation and chasing noise
@@ -146,7 +146,7 @@ Two failure modes ruin a loop: **chasing noise** and **oscillation**. Feed a con
 > **Diagram.** Reacting to each wiggle drives the room into a swing it can never settle out of. A filtered loop makes one decisive correction only when the signal truly crosses a limit.
 
 > **DANGER — The one-sentence test before reacting**
-> 
+>
 > Has the reading moved beyond its learned envelope (_meaning_), for longer than one reading with sensors in agreement (_signal_), and do you know which lever answers it without disturbing another balance (_cause_)? If it fails any of the three, it's noise. Do nothing.
 
 - **Aliasing**: sampling too slowly invents phantom trends, and over-sampling logs jitter you can't act on and tempts you to tamper. Match cadence to the biology[^tdr-fdr-soil-review-2024].
@@ -156,7 +156,7 @@ Two failure modes ruin a loop: **chasing noise** and **oscillation**. Feed a con
 ## Realistic expectations
 
 > **KEY — The end state is quieter, not flashier**
-> 
+>
 > A working loop means you look at the dashboard less, are surprised less, and harvest more consistently. Silence is the product: a blank screen means nothing needs you. The advisory-first stage, where the loop tells you what to do but you still pull the lever, is a stable, valuable place to stop indefinitely. Full autonomy is opt-in, gated, and never obligatory.
 
 > **Diagram.** The single highest-return move is getting from rung 2 to rung 3: stop reacting to live numbers, start reacting to filtered trends past control limits. It costs nothing but habit and is the precondition for everything above it.

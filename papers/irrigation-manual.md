@@ -9,8 +9,8 @@ diagrams: "11 diagrams"
 related: ["coco-crop-steering", "root-zone-teros12", "smart-watering-vrwe"]
 url: "https://jaketherabbit.github.io/cannabis-white-papers/irrigation-manual.html"
 md_url: "https://jaketherabbit.github.io/cannabis-white-papers/papers/irrigation-manual.md"
-version: "1.0"
-updated: "2026-06-24"
+version: "1.1"
+updated: "2026-07-15"
 license: "CC BY-NC 4.0"
 license_url: "https://creativecommons.org/licenses/by-nc/4.0/"
 attribution: "The Cannabis White Papers"
@@ -69,7 +69,7 @@ The brain of the valve control is a **KC868 E16S relay board** connected over Et
 Each table has a substrate probe that reads VWC, EC, and temperature over **SDI-12**, a simple digital protocol for soil sensors. The room is also covered by 4 environmental sensors, 3 CO2 sensors, 4 AC units, a humidifier, and 4 dehumidifier relays. **There is no pump switch**: the pump auto-starts on a pressure switch the moment the mainline valve opens, so water flows tank → mainline → table dripper → plant.
 
 > **NOTE — Mains and manifold valves are not for feeding**
-> 
+>
 > The mains-water and manifold valves exist only to fill and mix the nutrient tank. The plants are fed exclusively through the table valves. A few sensors are intentionally not yet connected, which has safety consequences covered in the last section.
 
 | Device | What it does | Connection |
@@ -96,7 +96,7 @@ Crop steering splits each lights-on day into four phases that control how the pl
 **P2 (maintenance)** holds the media steady with top-up shots when VWC drops below 60%, and nudges that threshold up or down based on EC: if the EC ratio exceeds 1.2 it waters more to flush salts, and below 0.8 it lets the media dry to concentrate nutrients. **P3 (pre-lights-off)** is emergency-only watering below 40% VWC before an overnight dryback resets the cycle.
 
 > **KEY — Vegetative vs generative steering**
-> 
+>
 > - **Vegetative** steering uses longer drybacks and lower EC to encourage root and leaf growth.
 > - **Generative** steering uses shorter drybacks and higher EC to push flowering.[^caplan-2019-drought-cannabis]
 > - The same P0–P3 framework runs both. Only the dryback targets and EC change.
@@ -114,7 +114,7 @@ The system manages room climate as well as watering. Dehumidifiers turn on when 
 Several independent safety layers run in parallel so that one failure never leaves valves open. The **master gate** only allows irrigation when the system is enabled, not in maintenance mode, no leak detected, tank OK, and the clock is inside the time window. A **valve watchdog** force-closes any table valve open longer than 3 minutes, a daily 3 AM audit closes everything as a reset, and maintenance mode shuts all valves instantly.
 
 > **WARN — Defence in depth**
-> 
+>
 > No single check is trusted on its own. If the master gate logic ever passed a bad decision, the valve watchdog and the daily audit would still close the valves. Treat these layers as non-negotiable and do not disable them to ‘simplify’ the system.
 
 | Protection | What it does | Automatic? |
@@ -184,7 +184,7 @@ Most problems are diagnosable from a short checklist. Work top to bottom, becaus
 If irrigation will not run, confirm the system is on, maintenance mode is off, the clock is inside the window, at least one table is enabled, and the irrigation-allowed binary sensor reads **on**. If VWC or EC shows Unavailable, check the ESPHome device is online and reload template entities. If the raw probe value is also missing, the probe has lost its connection. Reliable VWC depends on a working dielectric sensor, so a flatlined raw value points at the probe, not the software.[^topp-1980-dielectric-vwc]
 
 > **TIP — Tune slowly**
-> 
+>
 > Run time-based scheduling for about a week while watching VWC trends before switching to sensor-driven crop steering. Confirm the sensors track reality first. Calibration drift in cheap probes is common and skews every decision built on top of it.[^mane-2024-sensor-calibration]
 
 | Symptom | Likely cause | First action |
@@ -209,7 +209,7 @@ If irrigation will not run, confirm the system is on, maintenance mode is off, t
 ## Realistic expectations and limits
 
 > **KEY — This is guidance, not a guarantee**
-> 
+>
 > The core system automates timing and sensor-driven decisions, but it is only as good as its sensors and plumbing. Until the tank float switch and leak sensor are physically installed, the tank-low and leak emergency aborts are **hardcoded to ‘safe’ and will not trigger**, so do not run the system unattended in that state.
 
 Two more honest limits. Without a leaf-temperature sensor, VPD falls back to room air temperature and is less accurate. The fully autonomous P0–P3 phase transitions need the optional AppDaemon layer, which is not deployed by default. Budget about a week of supervised, timer-based running before you trust the automation.

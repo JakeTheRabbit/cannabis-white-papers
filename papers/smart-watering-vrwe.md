@@ -9,8 +9,8 @@ diagrams: "9 diagrams"
 related: ["root-zone-teros12", "signal-and-noise", "closed-loop"]
 url: "https://jaketherabbit.github.io/cannabis-white-papers/smart-watering-vrwe.html"
 md_url: "https://jaketherabbit.github.io/cannabis-white-papers/papers/smart-watering-vrwe.md"
-version: "1.0"
-updated: "2026-06-24"
+version: "1.1"
+updated: "2026-07-15"
 license: "CC BY-NC 4.0"
 license_url: "https://creativecommons.org/licenses/by-nc/4.0/"
 attribution: "The Cannabis White Papers"
@@ -32,7 +32,7 @@ Each pot has only one moisture sensor, and that sensor feels only a tiny spot of
 > **Diagram.** VRWE sees one limited signal, thinks by checking it against other evidence, then acts conservatively. The whole paper is about the THINK box.
 
 > **NOTE — What kind of paper this is**
-> 
+>
 > This is operational, product-style guidance for how the system _behaves_, not a lab study. It pairs with the [root-zone sensor](root-zone-teros12.html) paper (what a single probe actually measures) and the [signal & noise](signal-and-noise.html) paper (telling a real change from sensor jitter).
 
 ## Key terms, defined once
@@ -70,7 +70,7 @@ The plant’s drinking, its **transpiration**, can be estimated from heat and li
 > **Diagram.** Several signals feed one combined estimate. Because the brain has multiple independent clues, a single wrong signal can be outvoted instead of obeyed.
 
 > **KEY — The point of fusing signals**
-> 
+>
 > Listen to only one sensor and a single bad reading becomes a bad decision. When several independent signals all feed the estimate, one liar gets outvoted. The system stays right even when one input is wrong.
 
 ## How trust and uncertainty work
@@ -82,7 +82,7 @@ Confidence is high when the independent signals agree, when the sensor, the bank
 > **Diagram.** Confidence is a dial, not a yes/no. High confidence lets the brain water a full measured amount. Medium allows only a small safe sip. Low means wait or ask a human.
 
 > **TIP — A faulty sensor is safe**
-> 
+>
 > - Every estimate ships with a confidence level, not just a number.
 > - Agreement between independent signals raises confidence; disagreement lowers it.
 > - Low confidence triggers caution, never bold action.
@@ -97,7 +97,7 @@ The brain only ever picks one of three outcomes, driven by **confidence** and **
 It waters a bit when the brain is confident and there is room to fill. It waits or gives a small safe sip when it is not sure, rather than committing to a full shot. It asks a human when it is genuinely stuck, when the signals contradict each other and it cannot resolve them. The whole logic is fenced in by one rule: **never flood, never starve**.
 
 > **KEY — The golden rule**
-> 
+>
 > Water more only when confident. When in doubt, do the safe thing. That single bound is what turns ‘automatic watering’ from a scary idea into a safe one.
 
 ## The shared-drain puzzle, and how it is untangled
@@ -113,7 +113,7 @@ A real install is messier than one pot. Often **three grow rooms drain into one 
 > **Diagram.** Because the rooms water at different times, each drain spike falls directly under the room that caused it. A flush right after a room waters means that room is full or overflowing.
 
 > **NOTE — What a post-watering flush tells you**
-> 
+>
 > A flush _right after_ a given room waters is a clear read-back: that room reached ‘full pot’ and the extra ran off. That is useful information, not a fault.
 
 ## Pitfalls, and what fools a single sensor
@@ -127,13 +127,13 @@ Channeling is worth a closer look, because it is sneaky. In container substrate,
 > **Diagram.** A cross-section of channeling: water in the top, out the bottom, roots untouched. To the balance this looks like ‘lots in, lots straight out’, a tell-tale the brain uses to lower confidence.
 
 > **WARN — The defence is always the same**
-> 
+>
 > VRWE does not obey a reading that looks suspicious. It reconciles against the bank balance, and if they disagree it lowers confidence and acts cautiously. A single fooled sensor never becomes a flooded or starved plant.
 
 ## Realistic expectations
 
 > **KEY — What VRWE promises, and what it does not**
-> 
+>
 > 1. **The golden rule.** It waters more only when confident; otherwise it does the safe thing. It is a safety-first estimator, not a mind reader.
 > 2. **Worst case is over-caution.** A bad sensor makes it cautious, not catastrophic. It will pause or ask before it ever floods or starves.
 > 3. **Expect ‘wait’ and ‘ask a human’ by design.** Those are the system working, not failing.

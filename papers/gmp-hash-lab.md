@@ -9,8 +9,8 @@ diagrams: "13 diagrams"
 related: ["mould-risk", "facility-3d"]
 url: "https://jaketherabbit.github.io/cannabis-white-papers/gmp-hash-lab.html"
 md_url: "https://jaketherabbit.github.io/cannabis-white-papers/papers/gmp-hash-lab.md"
-version: "1.0"
-updated: "2026-06-24"
+version: "1.1"
+updated: "2026-07-15"
 license: "CC BY-NC 4.0"
 license_url: "https://creativecommons.org/licenses/by-nc/4.0/"
 attribution: "The Cannabis White Papers"
@@ -32,7 +32,7 @@ The same physics that concentrate the cannabinoids you want also concentrate the
 Two rule-sets do most of the governing. **EU-GMP Annex 1** sets the cleanroom classifications and the contamination-control strategy, and the U.S. **cGMP rules in 21 CFR 210/211** set the production controls, the records, and the authority of the quality unit to release product[^ecfr-21cfr211]. This paper is a reference architecture, not legal advice. The exact limits and grades vary by jurisdiction.
 
 > **KEY — The one rule under all the others**
-> 
+>
 > ‘If it isn't written down, it didn't happen.’ GMP is a documented, validated, inspectable system. A spotless room with no records fails an audit. A modest room with complete, signed records passes.
 
 > **Diagram.** Four numbers anchor the whole facility: five cleanliness grades, seven mandatory release-test families, full genealogy coverage, and zero open critical deviations permitted at the point of release.
@@ -106,7 +106,7 @@ People are the single largest source of particles and microbes in a cleanroom[^s
 > **Diagram.** A one-way gowning sequence from CNC entry through grade airlocks to the work zone, with a separate dashed de-gown exit so entry and egress never share a door.
 
 > **WARN — Health check at the door**
-> 
+>
 > Anyone with open wounds, respiratory illness, or gastrointestinal symptoms is excluded at the entry health check, and the exclusion is recorded. Airlocks are interlocked so both doors can never open at once.
 
 | Grade | Temp | RH | Filtration | ΔP | ACH |
@@ -132,7 +132,7 @@ Solvent extraction is a closed loop using butane, propane, ethanol, or CO₂. He
 > **Diagram.** Charge to solvent pass to winterize to recovery to vacuum purge, with the residual-solvent QC gate and a parallel C1D1 safety overlay.
 
 > **DANGER — Hydrocarbon rooms are C1D1 for a reason**
-> 
+>
 > Butane and propane extraction must run in an NFPA-classified **C1D1** room: LEL (lower-explosive-limit) gas detection with auto-purge, explosion-proof electrics, a two-person rule, and ASME-rated pressure vessels. This is the highest-consequence area in the building. A single ignition source is catastrophic.
 
 For the solventless line, water is treated as an **ingredient**, not a utility. It runs its own loop: mains to carbon/sediment pre-filter, to RO/DI, to a UV + 0.2-micron polish, to a sanitised ice hopper, to the point of use, with sampling at three points and out-of-spec water sent straight to quarantine.
@@ -148,7 +148,7 @@ Testing happens at **three tiers**, incoming biomass, in-process, and release, a
 The finished-goods release panel is the legal gate to market. It covers **seven families**: potency, residual solvents, pesticides, microbials, heavy metals, mycotoxins, and water activity/moisture[^ehp-cannabis-contaminants-2019]. Heavy metals (lead, cadmium, arsenic, mercury) are quantified by ICP-MS, the standard method[^ehp-cannabis-contaminants-2019], and the regulated mycotoxins, aflatoxins B1/B2/G1/G2 and ochratoxin A, are carcinogens controlled at parts-per-billion levels.
 
 > **TIP — Always test the concentrate, never just the flower**
-> 
+>
 > A pesticide or metal level that passes comfortably on raw flower can fail once it is concentrated five- to ten-fold into resin[^ehp-cannabis-contaminants-2019]. Release decisions are made on the _finished concentrate_, full stop.
 
 | Family | Analytes | Method | Why |
@@ -181,7 +181,7 @@ When reality departs from the approved process, the **deviation system** catches
 Severity triage sets the urgency and the sign-off level. A **critical** deviation, one with patient-safety or recall risk, goes to the QA director with under 24 hours to containment. A **major** goes to QA on a defined timeline. A **minor** goes to a supervisor to be trended. Root-cause tools such as 5-why and Ishikawa (fishbone) diagrams are the standard ways to find what actually went wrong[^pmc-capa-ich-q10-2024].
 
 > **WARN — The three classic traps**
-> 
+>
 > - **Trusting the biomass CoA.** Extrapolating safety from the raw-flower result instead of testing the concentrate. The number that matters is the one after concentration.
 > - **Releasing on a borderline residual-solvent result.** Never. Re-test, re-purge, or reject, and document the disposition.
 > - **Letting physical and system status disagree.** Quarantine stock must sit behind a locked cage or controlled rack; the computer and the shelf must always tell the same story.
@@ -211,7 +211,7 @@ Cleaning is validated too, against a calculated **MACO** (Maximum Allowable Carr
 *The fixed review cadence, from per-batch through annual.*
 
 > **KEY — What 'compliant' actually means**
-> 
+>
 > Not a perfect building: a _provable_ one. Compliant means every batch can be traced, every limit was met or the deviation was closed, and an inspector could reconstruct the whole story from the records alone. Specific limits and grades vary by jurisdiction, so validate against your own licence before you build.
 
 Once the system runs, the contamination side of the picture is where most failures actually originate. Read the [mould-risk](mould-risk.html) paper next for that side of the build.

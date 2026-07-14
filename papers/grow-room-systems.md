@@ -9,8 +9,8 @@ diagrams: "4 diagrams"
 related: ["coco-crop-steering", "airflow-design", "mould-risk"]
 url: "https://jaketherabbit.github.io/cannabis-white-papers/grow-room-systems.html"
 md_url: "https://jaketherabbit.github.io/cannabis-white-papers/papers/grow-room-systems.md"
-version: "1.0"
-updated: "2026-06-24"
+version: "1.1"
+updated: "2026-07-15"
 license: "CC BY-NC 4.0"
 license_url: "https://creativecommons.org/licenses/by-nc/4.0/"
 attribution: "The Cannabis White Papers"
@@ -52,7 +52,7 @@ One chain runs your room. Push the first link and every link after it moves:
 > **Diagram.** The coupling chain. This is why ‘just add more light’ fails if your climate and airflow can't carry the extra water the plants now transpire.[^collado2025-light]
 
 > **KEY — The one rule that prevents most mistakes**
-> 
+>
 > Raise one input, then ask ‘what must move with it?’ More light → more transpiration → more humidity → more dehumidification and more water and feed. Inputs travel in convoys, not alone.
 
 ## Light: set the demand first
@@ -62,7 +62,7 @@ Light is the upstream lever: it sets how much of everything else the plant wants
 > **Diagram.** Whole-plant yield rises far past where a single leaf stops responding. The canopy keeps using light the top leaves can't[^rm2021-light]. Returns do taper, and very high light needs matching CO2, climate and water.
 
 > **WARN — Leaf vs canopy: the classic trap**
-> 
+>
 > Measure one leaf and photosynthesis ‘maxes out’ at modest light, which tempts you to stop there. The whole canopy keeps converting more light into more flower well beyond that point[^rm2021-light]. Don't set room light by leaf-level numbers.
 
 ## Climate: temperature, humidity & VPD
@@ -78,7 +78,7 @@ Temperature and humidity are not two separate dials. Together they make **VPD**,
 Moving air does two quiet but vital jobs. It strips away the thin film of still, humid air that clings to each leaf, and it cools the leaf by convection. Faster air thins that film, improving CO2 uptake and water-use efficiency while lowering water loss[^schymanski2016-wind]. It also keeps every plant in the room living in the same climate.
 
 > **NOTE — Airflow has its own paper**
-> 
+>
 > Boundary layers, fan placement, velocity targets and dead zones are covered in depth in [Airflow design for indoor cultivation](airflow-design.html). Here, just know that without air movement your light, climate and CO2 settings don't reach the leaf evenly.
 
 ## Root zone: feeding the demand
@@ -102,7 +102,7 @@ Inputs are coupled, so the order you set them in matters. Work top-down:
 The same warm, humid, densely-planted room that grows big plants also grows mould. Bud rot (_Botrytis_) takes off above ~70% humidity at moderate temperatures, and a thick canopy traps humid, still air inside itself where your room sensor never sees it[^punja-budrot-cjb].
 
 > **DANGER — Your room sensor is lying to you (a little)**
-> 
+>
 > A sensor in open air can read a comfortable 60% while the inside of a fat cola sits at 85% and rotting. Airflow through the canopy and sensible plant spacing, not just the room average, are what keep disease out[^punja2019-pathogens]. Full detail in the [mould risk](mould-risk.html) paper.
 
 ## Troubleshooting the system
@@ -118,7 +118,7 @@ The same warm, humid, densely-planted room that grows big plants also grows moul
 ## Realistic expectations
 
 > **KEY — The mindset that separates good growers from frustrated ones**
-> 
+>
 > - Think in **convoys**: change one input and pre-empt what must move with it.
 > - **Match, don't max.** The best room is not the one with the biggest light. It is the one whose parts are balanced for the light it has[^collado2025-light].
 > - Substrate and strain change the right answer. Treat published numbers as starting points, not law.

@@ -9,8 +9,8 @@ diagrams: "7 diagrams"
 related: ["grow-room-systems", "airflow-design", "harvest-dry-trim-cure"]
 url: "https://jaketherabbit.github.io/cannabis-white-papers/co2-enrichment.html"
 md_url: "https://jaketherabbit.github.io/cannabis-white-papers/papers/co2-enrichment.md"
-version: "1.0"
-updated: "2026-06-24"
+version: "1.1"
+updated: "2026-07-15"
 license: "CC BY-NC 4.0"
 license_url: "https://creativecommons.org/licenses/by-nc/4.0/"
 attribution: "The Cannabis White Papers"
@@ -28,7 +28,7 @@ _Environment & climate · CO2 · ~30 min read_
 A plant builds itself out of air. The carbon in every leaf, stem and flower comes from carbon dioxide (CO2) pulled out of the room and welded to water using the energy in light. Give a bright canopy more CO2 than the ~420 ppm in normal air and it can build faster, which is why growers add it. But CO2 enrichment is one of the easiest things in the room to get dangerously wrong.
 
 > **KEY — The five things this paper comes down to**
-> 
+>
 > - **CO2 is only used in the light.** In the dark the plant does the opposite, it breathes CO2 out. Injecting at night is pure waste and a safety risk.
 > - **It only pays under strong light.** CO2 and light limit each other. Under weak light, adding CO2 does almost nothing[^chandra2008-photo].
 > - **There is a target band, roughly 1,000–1,500 ppm.** Below it you leave yield on the table, above it you waste gas for no gain[^westmoreland2023-usu].
@@ -70,7 +70,7 @@ Today's air, at ~420 ppm CO2[^noaa2024-co2], is not enough to keep Rubisco busy.
 The climb does not go on forever. As CO2 rises, photosynthesis stops being limited by CO2 and starts being limited by how fast the leaf can use the light, so the curve **flattens into a saturation point**. For most greenhouse C3 crops that plateau is around 1,000–1,300 ppm[^doddrell2023-co2].
 
 > **KEY — The rule that decides whether CO2 is worth anything**
-> 
+>
 > CO2 and light limit each other, so the weaker one caps the plant (Liebig's law of the minimum). Adding CO2 under weak light is like flooring the accelerator with the handbrake on, nothing happens. Cannabis flower yield keeps climbing with light all the way to very high intensity[^rm2021-light], so CO2 only earns its keep once the light is already strong.
 
 ## The plant breathes both ways
@@ -90,7 +90,7 @@ You can see the asymmetry in a sealed room. With the lights on and no CO2 added,
 > **Diagram.** Room CO2 in a sealed, unenriched flower room. The lights-on crash is deep and fast; the overnight recovery is slow and modest. Enrichment exists to fill that daytime hole[^ahdb-co2].
 
 > **NOTE — The numbers, for a mid-size room**
-> 
+>
 > - **Lights-on drawdown.** A ~45 m² canopy pulling 15–25 µmol CO2 m²/s strips a sealed ~160 m³ room at roughly **350–600 ppm per hour** at first, taking 420 down to ~200 ppm in 20–40 minutes, then slowing as CO2 runs low.
 > - **Lights-off rise.** The same canopy respiring in the dark adds only about **25–70 ppm per hour**, a few hundred ppm over the whole night before leakage stops it.
 > - **The gap is the crop.** The daytime pull is many times the night-time push, because about half the fixed carbon stays in the plant instead of being breathed back out[^collalti2019-npp].
@@ -104,11 +104,11 @@ The best cannabis-specific yield data come from controlled work at Utah State Un
 > **Diagram.** The working band. Aim for roughly 1,000–1,500 ppm in the light. The plateau above ~1,500 ppm is real, so pushing to 2,000 ppm mostly buys wasted gas and a bigger safety and cooling burden[^westmoreland2023-usu].
 
 > **TIP — What CO2 does and doesn't change**
-> 
+>
 > CO2 is a **yield** lever, not a **potency** lever. It grows more flower mass, so grams of cannabinoid per plant go up, but it does not meaningfully raise %THC or %CBD, and its effect on terpenes is minor. Expect a bigger harvest, not stronger flower.
 
 > **WARN — About the ‘39% biomass, 43% flower’ figures you'll see quoted**
-> 
+>
 > Those exact numbers, and most ‘20–40% uplift’ claims, circulate on vendor blogs without a controlled trial behind them. The trustworthy primary source is the Utah State work above, which lands around a ~40% flower-yield gain at 1,200–1,400 ppm[^westmoreland2023-usu]. Treat anything more precise from a seller as marketing until you see the study.
 
 ## Delivery and dosing
@@ -125,7 +125,7 @@ There are four common ways to put CO2 in a room, and for a sealed indoor cannabi
 *For a sealed licensed room, compressed CO2 on a sensor-driven controller is the standard choice.*
 
 > **KEY — The dosing formula**
-> 
+>
 > To raise a sealed room, work in milligrams: **mass of CO2 (mg) = room volume (m³) × rise wanted (ppm) × 1.8**. The 1.8 is the mass of CO2 in a cubic metre per ppm at room temperature (CO2 is 1.799 g/L at 25 °C, so 1 ppm = 1.8 mg/m³)[^niosh-co2]. _Worked example:_ a 30 m³ room from 420 to 1,200 ppm (a 780 ppm rise) needs 30 × 780 × 1.8 = 42,120 mg ≈ **42 g** of CO2, about 23 litres of gas. That is only the one-time charge, a room that leaks needs continuous top-up on top of it.
 
 **Timing and distribution.** Inject only during the light period, typically starting about an hour after lights-on and stopping before lights-off[^wang2022-co2cue]. Drive it from an NDIR CO2 sensor at canopy height holding a setpoint, not a blind timer. Because CO2 is denser than air it sinks, so run the supply line above the canopy and use horizontal airflow (HAF) fans to mix it down and thin the still, CO2-starved layer that forms right at the leaf[^kitaya2004-airvel].
@@ -148,7 +148,7 @@ Even a room with the fans off leaks. In measured commercial greenhouses, more th
 *Enrichment and exhaust ventilation are opposites. Pick a sealed design before you buy a gram of CO2.*
 
 > **TIP — Purge in the dark**
-> 
+>
 > You still need to flush the room sometimes, to reset humidity or clear stale air. Do it at **lights-off**, when the plants aren't using CO2 anyway, so you never vent gas you just paid to inject. CO2 pools low, so a floor-level exhaust clears it fastest.
 
 ## Stale air: why a sealed room still needs a purge
@@ -171,11 +171,11 @@ In a sealed space it builds up from the plants alone. NASA sealed a chamber of w
 > **Diagram.** The ethylene damage scale, in parts per _billion_. A sealed room of plants climbs into the chronic-damage band on its own[^wheeler1996-ethylene][^hudelson2023-ethylene].
 
 > **WARN — Why the filters don't save you here**
-> 
+>
 > Ethylene is a tiny, light molecule, about 0.4 nanometres across. HEPA cannot catch a gas at all, and activated carbon holds ethylene only weakly and fills up fast[^souza2024-carbon-ethylene]. A carbon-and-HEPA stack can run all day and ethylene will still creep up from the plants faster than the carbon retains it. The only reliable fixes are to **exchange the air** or fit a **dedicated ethylene scrubber**, potassium-permanganate media or a UV / TiO2 photocatalytic unit, which chemically _destroy_ ethylene instead of briefly holding it[^alvarez2024-ethylene].
 
 > **NOTE — The oxygen myth**
-> 
+>
 > Growers often think they purge ‘so the plants get oxygen.’ They do not need it from you. Room air is ~21% oxygen (about 209,000 ppm); the level even flagged for human workers is 19.5%, which means losing ~14,500 ppm of oxygen, and a plant canopy removes nowhere near that[^osha-oxygen]. Room-air oxygen is a non-problem. The oxygen that _does_ matter is in the **root zone**, dissolved in the water and held in the [substrate's](substrates-overview.html) air-filled porosity, and that is an irrigation and substrate question, not an air-exchange one. The one thing that genuinely lowers a room's oxygen and raises its CO2 is _people_ working in it.
 
 Ethylene is the sharpest reason to exchange air, but stale air is also carrying:
@@ -186,7 +186,7 @@ Ethylene is the sharpest reason to exchange air, but stale air is also carrying:
 - **Mould spores.** HEPA on the recirculation loop genuinely lowers the airborne spore count[^punja2019-pathogens], but it only cleans the air that reaches it. Deep in a fat canopy the humidity runs 15–25% higher than your room sensor reads[^zhang2020-canopy-rh], and that stagnant, humid pocket is where bud rot starts. Exchanging air, and moving it _through_ the canopy rather than just filtering the room average, is what lowers disease[^baptista2012-ventilation] (detail in the [mould](mould-risk.html) and [airflow](airflow-design.html) papers).
 
 > **KEY — So how do you square it with holding CO2?**
-> 
+>
 > - **Purge at lights-off.** The plants aren't using CO2 in the dark, so a timed fresh-air exchange during the dark period dumps the accumulated ethylene, VOCs and humidity without venting the CO2 you paid for.
 > - **Or scrub instead of vent.** A potassium-permanganate or photocatalytic ethylene scrubber lets a genuinely sealed room hold its CO2 and still kill ethylene[^alvarez2024-ethylene].
 > - **Don't confuse circulation with exchange.** HAF fans mix the room and thin the boundary layer at the leaf, which helps CO2 reach the stomata[^kitaya2004-airvel], but they only stir the _same_ air. Only fresh air (or a scrubber) changes what is in it.
@@ -207,7 +207,7 @@ Raising CO2 does not act alone, it pulls on the rest of the room. This is the sa
 *Raise CO2, then ask what must move with it. The temperature and water changes are the ones growers most often miss.*
 
 > **NOTE — Water use: efficiency goes up, volume usually goes up too**
-> 
+>
 > Elevated CO2 partly closes the stomata, so a leaf loses less water _per unit of leaf_ for the same photosynthesis, and its water-use efficiency roughly **doubles**, about twice the growth per litre transpired[^chandra2008-photo]. But that is _efficiency_, not less water, and in a real enriched room the total usually moves the _other_ way. CO2 grows a bigger, faster canopy with far more leaf area, and the room is run hotter and brighter to exploit it[^lv2022-topt], which more than cancels the per-leaf stomatal closure. So in practice **total water use and humidity load commonly go up, not down**, most growers running CO2 end up feeding and dehumidifying _more_. Don't assume a wetter substrate, and re-tune irrigation by watching VWC, dryback and runoff on the actual crop rather than copying an old schedule.
 
 ## The drying room: CO2 with no light to burn it
@@ -217,11 +217,11 @@ A drying room is the dark side of everything above, literally. You fill a sealed
 Cut leaf and flower is a fast-respiring tissue, in the same postharvest class as leafy greens and cut herbs, and warmth speeds it up (that Q10-of-2 again)[^kader2002-respiration]. A drying room held at 15–18 °C with the air barely moving is a near-perfect CO2 trap. Sealed, planted greenhouses already climb to 600–1,000+ ppm overnight from living plants[^ahdb-co2]; a room packed with cut biomass and almost no ventilation can go substantially higher, into the thousands of ppm and, in the worst unventilated cases, potentially toward percent-level concentrations.
 
 > **DANGER — Treat an unventilated drying room as a confined space**
-> 
+>
 > CO2 is heavier than air, so it pools low, exactly where a person stands, and you cannot smell it. A sealed drying room that has been shut overnight can hold a dangerous atmosphere at floor level. Ventilate it before anyone enters, fit a CO2 alarm, and never let someone walk into a closed, full drying room to ‘just check on it’ without air exchange running.
 
 > **NOTE — An honest limit on the numbers**
-> 
+>
 > No peer-reviewed study has directly measured CO2 inside a cannabis drying room. The mechanism (respiring biomass in the dark) and the human-safety limits below are rock solid, but the exact ceiling a given room reaches is an engineering inference, not a measured cannabis value. The right response is not to guess, it is to **put a meter in your own drying room and find out**. The full drying environment is covered in the [harvest, dry, trim & cure](harvest-dry-trim-cure.html) paper.
 
 ## CO2 and people: the numbers that matter most
@@ -247,7 +247,7 @@ Every major safety authority agrees on the headline number: the 8-hour average a
 *The CO2 effect ladder. Note the jump: the enrichment band is safe, but the levels a leak can reach in a sealed room are not.*
 
 > **DANGER — CO2 is a poison, not just a smothering gas**
-> 
+>
 > It is tempting to think CO2 just crowds out oxygen. It does that, but it is also directly toxic: above ~5% it acidifies the blood, and forensic reviews conclude the cause of death in CO2 incidents is the poisoning itself, not the lack of oxygen[^permentier2017-co2poison]. That is why it drops people so fast they can't open a door, and why rescuers who rush in without protection are so often the second victims. A sealed, high-CO2 room is a confined space. Ventilate and test the air before entry, every time.
 
 ## Sensors, alarms and the MQ trap
@@ -263,7 +263,7 @@ You cannot manage or survive CO2 you cannot measure, and the sensor market is fu
 *If a ‘CO2 node’ is built on an MQ-135 or MQ-5, it is not measuring CO2. Only trust NDIR for control and for life safety.*
 
 > **WARN — The sealed-room calibration trap**
-> 
+>
 > NDIR sensors drift, so they self-calibrate by assuming the lowest CO2 they ever see is fresh 400 ppm air (Automatic Baseline Calibration). In a continuously enriched sealed room the sensor _never_ sees 400 ppm, so ABC slowly mis-calibrates it downward[^sensirion-scd]. **Disable ABC and calibrate manually** against fresh air or a reference gas on a schedule.
 
 **Two sensors, two jobs.** Put a control sensor at canopy height to run the setpoint, and a separate _life-safety_ sensor low on the wall (~30 cm off the floor) because CO2 settles. For larger systems the International Fire Code (Section 5307) makes this mandatory: any installation over 100 lb of CO2 needs gas detection that alarms at 5,000 ppm, alarms hard at 30,000 ppm, and automatically shuts off the CO2 and starts ventilation[^ifc5307]. Even below that threshold, an alarm plus an occupancy interlock is cheap insurance.
@@ -297,7 +297,7 @@ CO2 is one of the highest-return upgrades in a sealed, high-light room, and a wa
 *The usual CO2 failures. Almost all of them are the room, the light or the sensor, not the CO2.*
 
 > **KEY — The mindset**
-> 
+>
 > - **Light first, CO2 second.** CO2 amplifies strong light; it can't replace it.
 > - **Seal before you enrich.** An unsealed enrichment room is a money leak.
 > - **Measure with NDIR, alarm for people.** Control and safety are two sensors, not one.

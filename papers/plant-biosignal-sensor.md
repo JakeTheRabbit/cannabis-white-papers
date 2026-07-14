@@ -9,8 +9,8 @@ diagrams: ""
 related: ["plant-state-dashboard", "signal-and-noise", "closed-loop"]
 url: "https://jaketherabbit.github.io/cannabis-white-papers/plant-biosignal-sensor.html"
 md_url: "https://jaketherabbit.github.io/cannabis-white-papers/papers/plant-biosignal-sensor.md"
-version: "1.0"
-updated: "2026-06-24"
+version: "1.1"
+updated: "2026-07-15"
 license: "CC BY-NC 4.0"
 license_url: "https://creativecommons.org/licenses/by-nc/4.0/"
 attribution: "The Cannabis White Papers"
@@ -30,7 +30,7 @@ Plants generate tiny electrical signals. Ions move across cell membranes when th
 Electrically, reading a plant is the same problem as reading a heartbeat: a small, noisy, high-impedance voltage you must amplify cleanly. That means the cheap, proven ECG front-end chip, the **AD8232**, works straight out of the box for plants[^pb_mdpi_ad8232]. Bolt it to an ESP32 and ESPHome and you have a logging plant-biosignal sensor for the price of a night out.
 
 > **NOTE — What this build is, and isn't**
-> 
+>
 > - **It reproduces the acquisition**: the raw signal, the daily rhythm, the big deflections after a stress event, light-on/off detection (~85% accurate on this exact hardware class)[^pb_pmc_plantsignals], all logged in Home Assistant.
 > - **It does not reproduce the paid model.** A VITA1's N/P/K/Ca read-outs come from a trained model on a curated signal library. You get the millivolts; you build your own correlations over time.
 > - **ESPHome polls, it doesn't capture waveforms.** Fast sub-second spikes need the high-rate sketch noted at the end. For trend work, polling is the right tool, and it already samples finer than a VITA1's 5-minute dashboard.
@@ -56,7 +56,7 @@ Everything is one line from plant to dashboard. Two electrodes sense the stem, o
 > **Diagram.** The chain. Amplify first, digitise second, and the same I2C bus also carries the light, temperature and humidity sensors that give the plant trace its context.
 
 > **KEY — Why not just wire electrodes to the ADC?**
-> 
+>
 > Plant signals are tiny and sit on a high-impedance source, so mains hum swamps them. The ADS1115 alone has no common-mode rejection and no reference drive. The AD8232 gives you the gain, the band-pass filter _and_ a driven soil-reference electrode that holds the reading steady[^pb_mdpi_ad8232]. It is the difference between a signal and a mess.
 
 ## Bill of materials
@@ -77,7 +77,7 @@ About NZ$110. M5Stack parts come as plug-together Grove modules; the two non-M5S
 | Total ≈ NZ$110. A bare M5StampS3 instead of the StickC drops it below NZ$95 at the cost of the on-board screen. |
 
 > **WARN — Two parts are marked EOL**
-> 
+>
 > M5Stack has retired the StickC PLUS2 and ENV IV, but both are still stocked by resellers (RobotShop, Botland, TinyTronics) and have the most tutorials. If you want current parts, the **M5StampS3** replaces the controller and the **ENV Pro** replaces the ENV IV. The firmware only changes by two I2C pin numbers.
 
 ## Wiring
@@ -96,7 +96,7 @@ Everything downstream of the controller is one I2C bus, fanned out by the HUB. T
 | AD8232 | LA / RA / RL | electrodes | upper stem / lower stem / soil |
 
 > **WARN — Power the AD8232 from clean 3.3 V**
-> 
+>
 > Its output centre-point and noise floor track the supply, so feed it the 3.3 V rail, not the noisy 5 V USB rail. Keep electrode leads short and twisted, and route them away from lights, ballasts and pumps. Battery power (the StickC's LiPo) beats USB for noise.
 
 ## Electrodes and placement
@@ -117,7 +117,7 @@ Insert 2–3 mm just under the epidermis. More stable and closest to how commerc
 4. **Let it settle** — The baseline drifts for 10–30 minutes as the half-cell potentials equalise. Ignore that window.
 
 > **DANGER — Needle electrodes wound the plant**
-> 
+>
 > A fresh insertion itself triggers a variation potential, useful once as a known stimulus, then let it heal. Sterilise with alcohol and use a single clean insertion; don't ring-bark the stem with a row of holes.
 
 ## ESPHome firmware
@@ -221,7 +221,7 @@ binary_sensor:
     device_class: problem
 
 > **KEY — First-boot calibration**
-> 
+>
 > With electrodes attached and settled, read `Plant Biopotential (raw)` in Home Assistant. Whatever steady voltage it sits at _is_ your baseline, so replace the `1.5` in the lambda with that number. Then `Plant Biopotential` reads ~0 mV at rest and swings signed around it[^pb_esphome_ads1115].
 
 ## Reading the data
@@ -242,14 +242,14 @@ To approach a commercial unit's _inference_, log the raw trace alongside VPD, li
 ## Limits, calibration and safety
 
 > **KEY — Set expectations before you solder**
-> 
+>
 > - **Relative, not absolute.** Good for trends and events on one plant, not for comparing plants or reading a calibrated number.
 > - **Re-baseline every reattach.** Half-cell offsets differ each time you place electrodes, so redo the first-boot calibration.
 > - **Higher noise floor than commercial rigs.** Battery power, short shielded leads and a small enclosure help most.
 > - **ESPHome is for trends.** For actual waveforms, flash a plain Arduino sketch that samples the ADS1115 at its full 860 SPS (or the AD8232 off an ESP32 ADC pin at 400 Hz, the rate used in the published plant-signal study[^pb_arxiv_esp32]). Same wiring, different firmware.
 
 > **DANGER — Keep it isolated**
-> 
+>
 > Keep the whole thing low-voltage and battery or USB powered. Never connect plant electrodes to anything mains-referenced, and use one common ground only, so you don't create a ground loop through the plant.
 
 ## References

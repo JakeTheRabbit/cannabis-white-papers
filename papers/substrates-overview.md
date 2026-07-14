@@ -9,8 +9,8 @@ diagrams: "11 diagrams"
 related: ["coco-crop-steering", "ph-management", "water-quality"]
 url: "https://jaketherabbit.github.io/cannabis-white-papers/substrates-overview.html"
 md_url: "https://jaketherabbit.github.io/cannabis-white-papers/papers/substrates-overview.md"
-version: "1.0"
-updated: "2026-06-24"
+version: "1.1"
+updated: "2026-07-15"
 license: "CC BY-NC 4.0"
 license_url: "https://creativecommons.org/licenses/by-nc/4.0/"
 attribution: "The Cannabis White Papers"
@@ -32,7 +32,7 @@ By the end you will understand the two trade-offs that decide everything: how mu
 > **Diagram.** The whole field splits into media that physically hold the roots and water culture where the roots hang in the solution itself.
 
 > **NOTE — Who this is for**
-> 
+>
 > Total beginners choosing a first medium, and anyone who wants to know why their setup behaves the way it does. It pairs with the [coco crop-steering paper](coco-crop-steering.html), which goes deep on driving one specific medium hard once you have picked it.
 
 ## Key terms, defined once
@@ -72,7 +72,7 @@ Rockwool is roughly 96% total porosity but only about 11% air-filled, with aroun
 *After draining, irrigated rockwool holds roughly 80% solution, 15% air and 5% fibre by volume.[^raviv-lieth-soilless-culture-afp]*
 
 > **KEY — The whole game in one line**
-> 
+>
 > More water means less air. The medium that keeps air around the roots even when wet is the one that forgives a heavy hand on the watering.
 
 ## How each medium handles nutrients
@@ -86,7 +86,7 @@ Living soil is the most forgiving of all. Microbes, organic matter and minerals 
 > **Diagram.** From no cushion (DWC, rockwool) through coco's EC buffering to living soil, which self-regulates pH after every watering.
 
 > **TIP — Match the cushion to your patience**
-> 
+>
 > If you cannot promise a perfect feed every time, pick a medium that forgives you. The more control a medium gives, the less it protects you from yourself.
 
 ## Re-use, cost and footprint
@@ -114,7 +114,7 @@ Match the medium to your tolerance for fiddling, not to what wins a yield contes
 > **Diagram.** Living soil and quality soil mixes forgive the most. DWC forgives the least, so it is not a first grow.
 
 > **WARN — Skip DWC for your first run**
-> 
+>
 > DWC can give explosive growth, but a warm reservoir or a dead air pump can kill a plant in a day[^frontiers-2026-do-pythium-strawberry-nft]. Learn the basics in a more forgiving medium first.
 
 ## Setting up and running each, step by step
@@ -152,7 +152,7 @@ The classic beginner mistakes are medium-specific, and most look like something 
 *The coco and rockwool rows are misread as feeding problems. They are really prep problems.[^cockson-2019-cannabis-nutrient-disorders][^le-pythium-hydroponic-epidemiology-review]*
 
 > **DANGER — The number one DWC killer**
-> 
+>
 > A warm reservoir above 23C or a failed air pump crashes dissolved oxygen and brings on root rot within a day[^frontiers-2026-do-pythium-strawberry-nft]. If you run DWC, a chiller and a backup air pump are not optional.
 
 ## Realistic expectations
@@ -164,7 +164,7 @@ No medium grows the plant for you. They differ in where the difficulty sits, not
 Fed precisely, inert media like coco and rockwool can edge out soil on yield and speed in research comparisons[^xiong-2017-coir-rockwool-peat-tomato], and soilless cannabis responds strongly to dialed-in feeding[^bevan-2021-cannabis-npk-soilless]. But that only holds once your environment and irrigation are consistent.
 
 > **KEY — How to actually get good**
-> 
+>
 > 1. **Pick the failure mode you can live with.** Every medium fails differently. Choose the one whose worst case you can prevent.
 > 2. **Run one full cycle before you judge it.** You learn a medium by living a whole grow in it, not by reading about it.
 > 3. **Change one variable next time.** Do not switch everything at once, or you will never know what helped.

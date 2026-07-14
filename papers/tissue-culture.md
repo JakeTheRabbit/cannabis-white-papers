@@ -9,8 +9,8 @@ diagrams: "13 diagrams"
 related: ["mould-risk", "grow-room-systems", "gmp-hash-lab"]
 url: "https://jaketherabbit.github.io/cannabis-white-papers/tissue-culture.html"
 md_url: "https://jaketherabbit.github.io/cannabis-white-papers/papers/tissue-culture.md"
-version: "1.0"
-updated: "2026-06-24"
+version: "1.1"
+updated: "2026-07-15"
 license: "CC BY-NC 4.0"
 license_url: "https://creativecommons.org/licenses/by-nc/4.0/"
 attribution: "The Cannabis White Papers"
@@ -30,7 +30,7 @@ This guide takes you from picking a donor plant to holding a clean, rooted, hard
 This is written for someone who has **never set foot in a lab**. Every term is defined the first time it appears. Nothing is assumed. Where the science is genuinely uncertain or a product hides its details, this guide says so plainly.
 
 > **KEY — The one-sentence version**
-> 
+>
 > Tissue culture regrows an entire plant from a microscopic piece of its growing tip. That tip is too young to carry most diseases, so the new plant comes out _clean_ even if its parent was sick.
 
 #### How to use this document
@@ -48,7 +48,7 @@ Read everything. Sections 6–17 are the hands-on workflow in the exact order yo
 Jump to section 19 (Troubleshooting) and section 20, the honest reality check on success rates and cost.
 
 > **WARN — A realistic expectation, set now**
-> 
+>
 > Cannabis is a **recalcitrant** species: it fights back in the jar. Losing most of your first batch to contamination or browning is _normal_, not failure. Published labs report anywhere from ~55% of pieces surviving down to 90–95% losses at the very first stage. Treat your first run as a training run.
 
 ## Tissue culture in plain English
@@ -56,7 +56,7 @@ Jump to section 19 (Troubleshooting) and section 20, the honest reality check on
 Tissue culture rests on one fact about plants that animals do not share. Almost every cell holds the full instructions to rebuild the whole plant.
 
 > **KEY — Totipotency: the property that makes all of this work**
-> 
+>
 > Almost every living plant cell carries the complete instructions to rebuild the whole plant. Give a tiny scrap of the right tissue the right food and the right hormones and it grows roots, shoots and leaves: a complete new plant. This ability is called **totipotency**. You are not growing a ‘sample’, you are growing a whole new copy.
 
 Here is the vocabulary you need. Get the gist rather than memorising it. Each term comes back in context later.
@@ -78,7 +78,7 @@ Here is the vocabulary you need. Get the gist rather than memorising it. Each te
 | **Indexing** | Lab-testing a plant to confirm it is free of a specific disease (e.g. a DNA test for a viroid). ‘Proving clean.’ |
 
 > **NOTE — ‘Cleaning up genetics’: what it does and doesn't mean**
-> 
+>
 > It does **not** mean editing or improving the DNA. The strain stays exactly the same strain. It means stripping away the _diseases and pests_ the plant has picked up over years of cloning, so the original genetics can finally perform the way they were bred to. It is a factory reset on plant health, not a genetic upgrade.
 
 ## Why clean up genetics? Meet Hop Latent Viroid
@@ -111,11 +111,11 @@ for a long time and is ‘latent’ by name. By the time plants visibly dud, the
 It survives on tools, hands, pots and benches, rides in sap for ~a week and in dried tissue for ~a month, and even passes through seed (up to 100% in one cannabis cross).
 
 > **WARN — Why you can't just spray it away**
-> 
+>
 > No spray cures a viroid-infected plant. It lives _inside_ the plant's cells and plumbing. The only reliable way to get rid of it is to grow a brand-new plant from a piece of tissue the viroid hasn't reached yet. That is precisely what meristem tissue culture does, and it is the heart of this guide.
 
 > **NOTE — Other things tissue culture clears out**
-> 
+>
 > HpLVd gets the headlines, but a clean start also leaves behind fungal root-rots (_Fusarium_, _Pythium_), grey mould (_Botrytis_), powdery mildew, various viruses, and even hitch-hiking pests like russet and broad mites and their eggs. You begin clean at the cellular level instead of fire-fighting forever.
 
 ## The whole journey at a glance
@@ -135,7 +135,7 @@ Longer than you'd hope, and that's worth knowing up front. There are two honest 
 > **Diagram.** An indicative timeline for a careful beginner. A routine rooted, hardened clone is roughly 2.5–3.5 months. A _verified disease-free mother_, including slow meristem recovery and repeated lab testing, realistically takes 5–6+ months.
 
 > **KEY — The two timelines, stated plainly**
-> 
+>
 > - **A clean, rooted, hardened clone** (no lab proof of disease status): roughly **10–15 weeks**.
 > - **A confirmed HpLVd-free mother** (meristem culture + DNA testing): realistically **5–6 months or more**. It is not a two-week job.
 
@@ -148,7 +148,7 @@ Viroids and viruses move around a plant through its **vascular system**: the int
 > **Diagram.** Inside a shoot tip. The viroid travels up the red vascular tissue but cannot reach the green meristem dome: there's no plumbing there yet, and the dome's cells divide faster than the viroid can spread. Excise just that 0.2–0.5 mm dome and you usually leave the disease behind.
 
 > **KEY — Two reasons the dome stays clean**
-> 
+>
 > 1. **No plumbing yet.** The vascular tissue that carries the viroid hasn't differentiated in the dome, so the pathogen has no road in.
 > 2. **The cells outrun it.** Meristem cells divide faster than the viroid can copy itself and creep forward, so the newest tip cells stay ahead of the infection.
 
@@ -157,7 +157,7 @@ Which piece you cut decides whether you merely clone the plant or actually clean
 > **Diagram.** Your three explant choices. A nodal segment is easy but keeps the disease. A meristem dome is the only choice that reliably clears Hop Latent Viroid, but it's a sub-millimetre dissection under a microscope and many won't survive. Most beginners start with nodes to learn the craft, then graduate to meristems for the actual cleanup.
 
 > **WARN — The honest caveat: free is not the same as resistant**
-> 
+>
 > Meristem culture can produce a viroid-**free** plant. It does **not** make a viroid-**resistant** one. A cleaned plant can be re-infected the moment a dirty blade or hand touches it. Clean stock only stays clean with disciplined hygiene afterwards, and it's only truly ‘clean’ once a lab test says so (section 13).
 
 ## Your lab and your kit
@@ -175,7 +175,7 @@ A clear plastic storage tub on its side with two arm-holes cut in the front, wip
 A powered cabinet that blows HEPA-filtered air (removing >99% of particles) in one smooth sheet across your work, constantly washing contaminants away. Roomier, faster, far more forgiving. **The upgrade, not a requirement.** This is what comes in the Athena kit.
 
 > **NOTE — You do NOT need a biosafety cabinet**
-> 
+>
 > Those exist to protect the _operator_ from dangerous germs. In plant TC you only need to protect the _plant_ from germs, so a flow hood (or a still-air box) is exactly the right tool. A biosafety cabinet is expensive overkill.
 
 > **Diagram.** The inside of a still-air box or flow hood, laid out for work. There is one sterile field in the centre where the open jars and cutting happen; tools get re-sterilised on the left, fresh media and explants wait on the right, waste goes in a discard pile. Hands never pass over open vessels.
@@ -196,13 +196,13 @@ What's confirmed to be in the box:
 - Enough to make up to **~120 culture vessels** out of the box; media, vessels and filters are bought as refills.
 
 > **WARN — What the kit deliberately doesn't tell you, and doesn't include**
-> 
+>
 > - **The media base is secret.** Athena won't say whether ROOTS/SHOOTS are built on MS, DKW or a custom blend, nor which hormones, at what doses. You can't tune or troubleshoot what you can't see.
 > - **No disease test.** The kit does the meristem cut but ships _no_ DNA test (qPCR) and _no_ thermotherapy gear. So it cannot, by itself, prove a plant is HpLVd-free. Budget for independent lab testing (section 13).
 > - **Price moves around:** roughly **$1,800–$2,295** depending on where and when; refills (media $30–$40/box, vessels $15 each, HEPA $100) add up over time.
 
 > **TIP — You can do all of this without the Athena kit**
-> 
+>
 > A DIY equivalent (still-air box, a $60 pressure cooker as the autoclave, generic MS media powder, agar, bleach) runs roughly **$200–$550** to start. The kit buys convenience and a real flow hood, not a different outcome. Where this guide gives a recipe, it gives both the DIY version and the Athena-sachet version.
 
 ## Aseptic technique: the skill that decides everything
@@ -225,11 +225,11 @@ Learn this one thing well above all others. Ninety percent of beginner failures 
 6. **Hands never cross open jars** — Reaching over an open vessel showers it with skin flakes and spores. Approach from the side, always.
 
 > **DANGER — Flame plus alcohol is a fire risk**
-> 
+>
 > If you dip tools in alcohol and flame them, keep the open alcohol container well away from the flame and never flame directly over it. A glass-bead steriliser removes the open-flame risk entirely and is the safer choice in a plastic still-air box.
 
 > **TIP — The 7-day patience test**
-> 
+>
 > After pouring fresh media, or after starting new cultures, leave them in the culture room for about **7 days** before you trust them or commit more material. Any contamination, especially the slow latent kind, will reveal itself. It is far cheaper to lose one jar to the bin than a whole batch to a hidden microbe.
 
 ## Making and sterilising the medium
@@ -259,7 +259,7 @@ This is a solid, widely-used DIY initiation/multiplication medium. Make it once 
 *DIY all-purpose cannabis medium. Use full-strength MS for initiation/multiplication; switch to half-strength MS for rooting (section 15).*
 
 > **NOTE — Order of operations matters**
-> 
+>
 > Dissolve salts and sugar in the water first, **adjust the pH to 5.6–5.8** (nudge down with a drop of dilute acid, up with dilute base), _then_ add the agar, then heat to dissolve the agar, then pour into jars (~⅓ full) and sterilise. pH set after the agar is in is much harder to do.
 
 #### The hormone cheat-sheet (for DIY media)
@@ -287,7 +287,7 @@ Jars loosely capped, ~20 min at 15 psi. Let it cool and depressurise on its own 
 Empty one SHOOTS or ROOTS sachet into the vessel, add RO water to the line (125 mL or 750 mL), shake to dissolve, run the one-touch autoclave, then pour under the hood.
 
 > **WARN — Shelf life**
-> 
+>
 > Plain MS+agar media keeps a few weeks to ~1–2 months refrigerated and dark. Media with PPM in it should be used within about **1 month**. Make what you'll use.
 
 ## Preparing the mother plant
@@ -297,7 +297,7 @@ Garbage in, garbage out. The health of your donor plant is the single biggest pr
 0Condition a clean, vigorous donor1–2 weeksPick your best, true-to-type plant and get it into peak vegetative health before you cut anything from it.Keep it **vegetative, never flowering**: long days, 18 h light / 6 h dark.Aim for **24–30 °C** and a moderate **55–60% humidity**.Feed a vegetative nutrient mix and keep it pushing **soft, fast new growth**. That young tissue gives far better, cleaner explants than old woody stems.Scout and treat **pests and disease** first. Only work from a plant that looks genuinely healthy.
 
 > **TIP — The pre-cut conditioning trick**
-> 
+>
 > - For the **1–2 weeks before cutting**, keep humidity low and stop overhead watering. Dry foliage carries far fewer surface fungi and bacteria.
 > - Some growers apply a systemic fungicide drench/spray in those days to knock back the internal microbe load that surface sterilising can't touch.
 > - Take your explants from the **upper, younger but fully-formed nodes** of an actively growing shoot, not the floppy tip and not the woody base.
@@ -328,11 +328,11 @@ The standard, best-supported beginner protocol is a two-punch: a quick alcohol d
 *Beginner surface-sterilisation. The Athena protocol substitutes a Cleanse (hypochlorous acid) wash before the bleach; exact Athena dilutions/times are proprietary.[^holmes2021]*
 
 > **DANGER — The number-one beginner trap: “10% bleach” is NOT “10% NaOCl”**
-> 
+>
 > Recipes quote bleach two different ways and people poison their tissue by confusing them. **Household bleach is only ~5–8% sodium hypochlorite (NaOCl) to begin with.** So a 10% dilution of household bleach gives only ~0.5–0.8% _actual_ NaOCl, which is correct. If a paper says ‘1% NaOCl’ that's a stronger solution. Always check whether a number refers to diluted bleach or to active NaOCl before you mix.
 
 > **WARN — Don't over-soak**
-> 
+>
 > Beyond ~30 minutes in bleach, cannabis tissue starts dying (one study saw ~75% tissue death by 45+ min). Under-sterilise and you get contamination; over-sterilise and you get a dead brown explant. 15–20 minutes is the beginner sweet spot. Adjust from there.
 
 ## Initiation: waking the explant up
@@ -342,11 +342,11 @@ The standard, best-supported beginner protocol is a two-punch: a quick alcohol d
 IEstablish a clean, growing culture2–4 weeksPut the plated vessels in the culture room at **~25 °C**, **16 h light / 8 h dark**, gentle light.**Watch for 7–14 days.** Bin any vessel showing fungal fuzz, cloudy medium or slimy ooze immediately. One bad jar can seed the shelf.Expect the bud to swell and push new growth (‘bud break’) in roughly **2–3 weeks**.Survivors that are clean and growing graduate to the multiplication stage.
 
 > **WARN — Browning: the other way explants die**
-> 
+>
 > Cut cannabis leaks **phenolic** compounds that oxidise and turn the tissue (and the medium around it) brown, sometimes fatally. Fight it with **activated charcoal in the medium** (~1 g/L), an antioxidant dip, and moving the explant to fresh medium early and often in the first couple of weeks.
 
 > **NOTE — Why losses are high here, and that's OK**
-> 
+>
 > Initiation is where recalcitrant cannabis sheds the most cultures. Published labs report anywhere from ~55% of explants surviving to 90–95% loss across varieties. Start more explants than you think you need, and don't be discouraged by a thin survival rate on run one.
 
 ## Meristem dissection: the actual genetic clean-up
@@ -362,12 +362,12 @@ Here is where honesty matters most. Meristem culture _can_ clear HpLVd, but how 
 > **Diagram.** Clearance rates from a single protocol across 13 cannabis cultivars. Some cleared 100% of the time, others barely 14%. There is no universal recipe: expect to clean several meristems per strain and test them all. (The strain confusingly named ‘Athena’ here is unrelated to the Athena Ag kit.)
 
 > **NOTE — Optional adjuncts: thermotherapy and cryotherapy**
-> 
+>
 > - **Thermotherapy**, holding the mother or culture warm (~30–36 °C) for a couple of weeks, lowers viroid levels so you can excise a slightly larger, more survivable meristem that's still clean. On its own it's unreliable (levels rebound; heat can even create mutant viroids), so it's used _with_ meristem excision, not instead.
 > - **Cryotherapy** (briefly freezing shoot tips in liquid nitrogen so only the tiny clean cells survive) is a powerful research method but has no standard, proven cannabis protocol yet. File under ‘advanced/future’.
 
 > **WARN — The Athena kit can clean, but it cannot prove**
-> 
+>
 > The kit lets you do the meristem cut. It includes **no heat-treatment hardware and no DNA test**. So after this step you have a plant that is _probably_ clean, not a _proven_ clean one. That proof is the next section, and it's non-negotiable.
 
 ## Indexing: proving it's actually clean
@@ -379,13 +379,13 @@ A meristem plant that _looks_ healthy is not a clean plant until a lab test says
 **RT-LAMP** — A newer, cheaper test that runs at a single temperature (no expensive thermocycler), making in-house or field testing practical. Slightly less established than qPCR but increasingly used.
 
 > **KEY — How to index properly: timing is everything**
-> 
+>
 > - HpLVd spreads through a new plant unevenly and slowly. It reaches **roots in ~2–3 weeks** and **foliage in ~4–6 weeks** after infection.
 > - So **test more than once, on more than one tissue.** Roots are the most reliable early indicator; sample older and newer leaves too.
 > - Test the recovered plantlet, then **re-test as it matures** before you ever promote it to a production mother. A single early negative is not proof.
 
 > **TIP — Budget for it**
-> 
+>
 > This is the line item the kit marketing skips. Independent HpLVd testing is the difference between hope and proof. Factor a few lab tests per candidate mother into your plan. It's cheap compared to losing a crop.
 
 ## Multiplication, and the hyperhydricity trap
@@ -395,7 +395,7 @@ Once you have a clean, established shoot, multiplication turns one into many. Yo
 IIMultiply shoots, cycle by cycle4–8 weeks (1–2 cycles)Base mediumFull-strength MS (DKW optional)Hormone0 – ~0.5 µM meta-topolin (often best hormone-free)Sugar / gel / pH30 g/L sucrose · 6–9.5 g/L agar · pH 5.7–5.8Environment25 ± 2 °C · 16 h light · ~100–120 µmol/m²/sSubculture every~4 weeksRealistic rate~1–6 new shoots per shoot per cycle (genotype-dependent)
 
 > **NOTE — Counter-intuitive but well-supported: try hormone-free**
-> 
+>
 > You'd expect more cytokinin to mean more shoots. In cannabis, several studies found the **most** shoots, and the healthiest ones, on hormone-free medium, with added cytokinin actually reducing shoot count and causing glassy, deformed growth. Start low or zero, and only add hormone if you genuinely need a higher rate. (With the Athena SHOOTS sachet the hormones are pre-set and you can't change them.)
 
 #### Hyperhydricity: the disorder that ruins multiplication
@@ -416,7 +416,7 @@ Every time you subculture, a few tiny DNA copying errors (mutations) sneak in. R
 > **Diagram.** Mutations pile up roughly linearly with each subculture (the research found a very tight correlation). The industry rule of thumb, borrowed from banana propagation, is to reset from fresh or frozen clean stock by about the fifth cycle rather than subculturing indefinitely.
 
 > **KEY — The rule**
-> 
+>
 > Aim to use a culture line for **about 5 subcultures**, then start again from a freshly cleaned explant or cryo-stored stock. This keeps your clones genuinely true-to-type.
 
 ## Rooting: turning a shoot into a plant
@@ -434,7 +434,7 @@ Take the shoot straight out of the jar, dip the cut end in a rooting gel (e.g. ~
 IIIInduce roots2–4 weeks**IBA is the best auxin for cannabis**, roughly double the roots of IAA or NAA.Rooting substrate ranking: **rockwool > peat > coco** (rockwool's air-to-water balance and sterility win clearly).Harvest shoots for rooting from **younger cultures** (6–12 weeks old). Rooting success drops sharply from older, tired cultures.Expect roots in 2–4 weeks in vitro; 7–10 days for ex-vitro cuttings under a dome.
 
 > **NOTE — The Athena ROOTS sachet**
-> 
+>
 > Athena's ROOTS medium is their pre-mixed version of a rooting/callus medium, hormones already blended. Same idea as Route A, no measuring. As always, you can't see or tune what's in it.
 
 ## Acclimatisation: weaning the plantlet to the real world
@@ -448,13 +448,13 @@ This is the most heartbreaking stage to rush. A plantlet raised in a sealed jar 
 IVHarden to ambient conditions2–4 weeks1Pot upMove the rooted plantlet into a clean, sterile substrate, either rockwool or a peat:perlite (1:2) mix, in a small pot or plug.2Dome on, high humidityCover with a humidity dome / propagator at ~75–80% humidity. Keep light low at first (~50 µmol/m²/s). Water gently.3Step humidity downOver ~2–3 weeks, open the vents a little more each day, taking humidity down toward ~55–65%. Watch for wilting and back off if needed.4Ramp light upAs humidity falls, raise light toward ~500 µmol/m²/s, roughly a tenfold increase, to build a sturdy plant.5Dome offOnce it's holding turgor in open air and pushing new growth, remove the dome. It's now a normal young plant.
 
 > **WARN — The three killers at this stage**
-> 
+>
 > - **Desiccation**: humidity dropped too fast, so the plant can't close its pores in time and dries out. (The #1 cause; go slow.)
 > - **Hyperhydricity hangover**: glassy shoots from a too-humid multiplication stage simply never harden. Fix it upstream (section 14).
 > - **Damping-off**: fungal rot in the warm, wet substrate. Use sterile substrate and don't overwater.
 
 > **TIP — What good looks like**
-> 
+>
 > Well-run protocols report **90–100% survival** through hardening. Those are best-case lab numbers and your first run will likely be lower, but they show that patient, gradual weaning genuinely works.[^page2019]
 
 ## Re-establishing the clean mother
@@ -467,7 +467,7 @@ You've arrived. The hardened plantlet, ideally one you've had lab-tested clean, 
 4. **Keep her clean** — Dedicated, sanitised tools; sanitise hands and surfaces between plants; never let an untested plant near her. Clean stock stays clean only through discipline.
 
 > **KEY — Good news on quality**
-> 
+>
 > Research confirms tissue-cultured mothers are **chemically faithful**: cannabinoid content of plants from micropropagation, retips and ordinary cuttings was the same. TC doesn't change your strain, it just hands it back to you healthy.
 
 ## Storing genetics: synthetic seed & cryo (the cutting edge)
@@ -483,11 +483,11 @@ A shoot tip or bud encapsulated in a soft bead of calcium alginate gel: an ‘ar
 Freezing tiny shoot tips in liquid nitrogen (−196 °C) for indefinite storage. It's the gold standard for long-term germplasm banking, and it neatly ‘resets the clock’ on the subculture mutations from section 14. Real but advanced; cannabis protocols recover ~55–63% of tips.[^karger2019_cryo]
 
 > **NOTE — Where the industry is**
-> 
+>
 > Commercial clean-stock labs (Conception Nurseries, Front Range Biosciences and others) chain all of this together: test → meristem-clean → micropropagate → verify true-to-type → keep elite mothers with a frozen backup → ship clones or synthetic seed. The largest runs over 500,000 plants a month. You're doing the same pipeline in miniature.[^tis2022]
 
 > **TIP — A genuinely new development (2025)**
-> 
+>
 > Cannabis has long been ‘recalcitrant’, with regeneration only working on a few strains. A 2025 protocol using cotyledonary-node explants reported ~70–90% success across many hemp and medicinal lines, a real step toward methods that work on _any_ genetics. The science here is still moving fast.
 
 ## Troubleshooting
@@ -532,14 +532,14 @@ So you can decide with eyes open.
 | HpLVd lab testing (essential) | per-sample fee | several tests per candidate mother: budget for it |
 
 > **DANGER — The four limits to be clear-eyed about**
-> 
+>
 > 1. **Free ≠ resistant.** A cleaned plant can be re-infected instantly by a dirty tool or hand. Hygiene is forever.
 > 2. **A kit can clean but can't prove.** No qPCR test in the box = no proof of ‘clean’. Independent lab testing is mandatory, not optional.
 > 3. **It's strain-dependent and slow.** Some genetics barely clear; a verified clean mother is a multi-month project.
 > 4. **Proprietary media is a black box.** Pre-mixed kits trade tunability and troubleshooting insight for convenience: fine for many, limiting if you want to optimise.
 
 > **KEY — Bottom line**
-> 
+>
 > Tissue culture is the only reliable way to strip Hop Latent Viroid and other diseases out of a cannabis line and get your genetics performing like they should. It is learnable at home, a kit makes it convenient, and the biology genuinely works, _provided_ you respect aseptic technique, go slow on hardening, and prove your results with a lab test rather than taking ‘it looks healthy’ on faith.
 
 ## References

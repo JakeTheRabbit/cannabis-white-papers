@@ -9,8 +9,8 @@ diagrams: "9 diagrams"
 related: ["ipm-sop", "mould-risk", "tissue-culture", "daily-checks"]
 url: "https://jaketherabbit.github.io/cannabis-white-papers/pppe.html"
 md_url: "https://jaketherabbit.github.io/cannabis-white-papers/papers/pppe.md"
-version: "1.0"
-updated: "2026-06-24"
+version: "1.1"
+updated: "2026-07-15"
 license: "CC BY-NC 4.0"
 license_url: "https://creativecommons.org/licenses/by-nc/4.0/"
 attribution: "The Cannabis White Papers"
@@ -30,11 +30,11 @@ PPE in a grow is not really about you. In most rooms the gear is there to protec
 People are the dominant contamination source in any clean space, on the order of **70 to 90 percent** of it[^cleanroom-humans-source]. You cannot stop a human shedding. You can only put a barrier around the human and move them through the building in a controlled way. That is the whole game.
 
 > **KEY — Why this pays for itself**
-> 
+>
 > One contaminated mother plant or one shared glove can spread Hop Latent Viroid to an entire crop, with up to **100% transmission within four weeks** of propagation from infected stock[^hlvd-transmission-2025]. The spread is mechanical, on tools, cuttings and hands, not airborne. Gloves-per-plant and gowning are not box-ticking; they are crop insurance.
 
 > **NOTE — Two different reasons to gown**
-> 
+>
 > In cultivation, dry and trim, PPE protects the product. In **extraction** it flips to protecting the worker (solvents, fire), and in the vault it is mostly security. Same word, different purpose, different kit. This paper is about the biosecurity side, with the legal duties that sit under all of it.
 
 ## The words you need
@@ -67,7 +67,7 @@ It is worth sitting with the numbers, because they are the entire argument for g
 - **The toilet throws a plume.** A flush lofts aerosols to about 1.5 m within seconds, viable for minutes to hours; a closed lid cuts it sharply[^toilet-plume].
 
 > **NOTE — Hands are the main bridge, and hygiene is not a cure**
-> 
+>
 > Washing helps but does not sterilise: an alcohol rub removes about 83% of organisms, plain soap and water about 58%[^hand-hygiene-logreduction]. That is why hand hygiene is a frequent loop at every transition, and why gloves and barriers carry the rest.
 
 ## The bare minimum, everywhere
@@ -82,7 +82,7 @@ Before any room-specific extras, there is a non-negotiable baseline for entering
 6. **No personal items**, phone, jewellery, watch, makeup, left in a locker outside.
 
 > **NOTE — Strip before you gown**
-> 
+>
 > Remove jewellery, watches and makeup and store your phone before you put anything on. They cannot be cleaned, they shed particles, and a ring or watch hides bacteria a glove then traps against the crop.
 
 ## Different rooms, different kit
@@ -103,7 +103,7 @@ PPE intensity tracks the value and vulnerability of what is in the room, not a s
 *Order people through the day clean-to-dirty: propagation and mothers first, before anyone has been in flower or post-harvest.*
 
 > **NOTE — Visitors gown to the same standard**
-> 
+>
 > A contractor or visitor is the same contamination risk as staff, often worse (they were just somewhere else). Gown them to the room's standard or keep them out of mother, propagation, tissue culture and dry rooms entirely, and log every entry.
 
 ## Gowning, in the right order
@@ -113,7 +113,7 @@ Order matters. You gown top-to-bottom so that particles shed while dressing fall
 > **Diagram.** Donning order: strip personal items, hair and beard first, then mask and eyewear, inner gloves, coverall and hood, boot covers as you step over the line, outer gloves over the cuffs, sanitise, enter[^gmp-gowning-procedure].
 
 > **KEY — De-gown in reverse, dirtiest first**
-> 
+>
 > Coming out, remove the most contaminated items first and do not touch their outer surfaces: outer gloves, boot covers (stepping back over the line), coverall rolled inside-out, eyewear, hood, mask by its loops, hairnet, inner gloves, then wash. Single-use items go in the right bin in the anteroom.
 
 ## Hands and gloves
@@ -125,7 +125,7 @@ Hands are the main transfer bridge, so hand hygiene is the most repeated action 
 > **Diagram.** Gloves are the most contaminated item, so they come off first and inside-out, glove-to-glove then skin-to-skin, so bare skin never touches the dirty exterior[^cdc-glove-removal].
 
 > **WARN — Gloves do not replace washing**
-> 
+>
 > A glove is a barrier, not a clean hand. Wash before you don and immediately after you doff[^cdc-glove-removal], and change gloves between plants in mother and propagation and any time they touch a non-clean surface. A dirty glove spreads viroid just as well as a dirty hand.
 
 ## The scenarios that catch people out
@@ -173,7 +173,7 @@ In New Zealand, PPE and hygiene are not just good practice, they are legal dutie
 - Visitors carry the same take-care and follow-instruction duties.
 
 > **KEY — PPE is the last control, not the first**
-> 
+>
 > PPE supplements higher controls, it does not replace them[^worksafe-grwm]. Design the rooms, airflow and flow to remove the hazard first; the gown is what catches what is left. And the business pays for it, charging a worker for required PPE is an offence[^hswa-2015].
 
 ## The whole thing, in one place
@@ -189,7 +189,7 @@ In New Zealand, PPE and hygiene are not just good practice, they are legal dutie
 - **Law (NZ):** PCBU provides PPE free (s27); PPE is the last control
 
 > **KEY — The mindset that makes it stick**
-> 
+>
 > Frame every glove and gown as plant protection first. A human cannot help shedding millions of particles an hour. The suit, the order, the flow and the wash are simply how we keep that off a crop that a single contaminated touch can ruin.
 
 ## References

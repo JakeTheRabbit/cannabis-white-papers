@@ -9,8 +9,8 @@ diagrams: "12 diagrams"
 related: ["airflow-design", "mould-risk", "harvest-dry-trim-cure"]
 url: "https://jaketherabbit.github.io/cannabis-white-papers/defoliation-training.html"
 md_url: "https://jaketherabbit.github.io/cannabis-white-papers/papers/defoliation-training.md"
-version: "1.0"
-updated: "2026-06-24"
+version: "1.1"
+updated: "2026-07-15"
 license: "CC BY-NC 4.0"
 license_url: "https://creativecommons.org/licenses/by-nc/4.0/"
 attribution: "The Cannabis White Papers"
@@ -37,7 +37,7 @@ Left alone, a plant grows tall with one dominant top and a tangle of weak, shade
 > **Diagram.** An untrained plant wastes light on a single top while the interior stays dark and airy. A trained, flat canopy shares strong light across dozens of bud sites at the same height.
 
 > **NOTE — Who this is for**
-> 
+>
 > Anyone growing cannabis who wants repeatable yield instead of a jungle. Pairs with the [airflow design](airflow-design.html) and [mould risk](mould-risk.html) papers, since canopy work is half about light and half about keeping air moving.
 
 ## Every term, defined once
@@ -81,7 +81,7 @@ The **sources-and-sinks** framework explains the trade-off. A well-lit leaf is a
 Better airflow through an open canopy lowers the humidity that pools around dense buds, which directly reduces bud-rot risk. Aim to keep **VPD** (vapour pressure deficit, a combined measure of how ‘thirsty’ the air is) between about 0.8 and 1.2 kPa. Stagnant, humid air inside a closed canopy is exactly the condition that lets grey mould take hold in a thick cola[^mahmoud-2023-budrot-botrytis].
 
 > **KEY — Why the work pays off**
-> 
+>
 > - Spreading the canopy flat lets many bud sites share the strongest light instead of one top.
 > - Opening the interior lets that high light reach lower and inner buds that would otherwise stay airy.
 > - Better airflow lowers humidity around dense buds and cuts mould and bud-rot risk[^mahmoud-2023-budrot-botrytis].
@@ -108,7 +108,7 @@ In commercial veg, the first topping is typically done around **day 5–7** of v
 *Match the technique to veg length and how tall the genetics run. Shorter, faster vegs lean on LST; longer vegs make routine topping worthwhile.[^massuela-springer-2026-topping-hemp]*
 
 > **TIP — Beginners: start with LST**
-> 
+>
 > If you are new, skip topping for your first run and use LST. Bending and tying gives you most of the flat-canopy benefit with none of the recovery risk. You can always add topping once you know how your genetics stretch.
 
 ## Trellising and spreading: locking the canopy flat
@@ -127,7 +127,7 @@ A common workflow sets all three trellis layers on **day 1 of flower**, with the
 - Net count scales with height: short plants need about 2 layers, tall genetics need 3.
 
 > **NOTE — Less spreading work, less defoliation later**
-> 
+>
 > The better you spread the canopy early, the fewer fan leaves you will have to remove later. A well-spread table is already open to light, so defoliation is then a light touch-up, not major surgery.
 
 ## The defoliation and training schedule, day by day
@@ -155,7 +155,7 @@ Here is a clear flower-room timeline you can follow as a default and adjust to y
 > **Diagram.** Lollipopping removes the lower ~10–18 inches (the bottom third) and keeps at least the top 3 nodes on each main branch, so the plant spends energy on flower that will actually finish.
 
 > **WARN — Lollipop early, not late**
-> 
+>
 > Phase 1 lollipopping belongs in the first week or two of flower, while the plant can still recover and redirect energy. Stripping the base hard late in bloom just wounds the plant when it should be bulking flower.
 
 ## What NOT to overdo, and common beginner mistakes
@@ -181,7 +181,7 @@ A common starting point is about 2.3 sqft per plant, with a typical working rang
 *The common beginner traps. Note the last row: the fix for a stuffy canopy is airflow, not stripping it bare.[^mahmoud-2023-budrot-botrytis]*
 
 > **DANGER — Leaves are not the enemy**
-> 
+>
 > It is tempting to keep cutting until the plant looks ‘clean.’ Resist it. Every fan leaf you remove was feeding flower. Open the canopy enough for light and air, then stop. If the room still smells musty, the answer is more airflow, not more cutting. Read the [airflow design](airflow-design.html) paper.[^massuela-2022-pruning-cbd-yield]
 
 ## Realistic expectations and how to learn your plants
@@ -199,7 +199,7 @@ Good planning of genetics and spacing is one of the cheapest gains available. Ch
 - Slow-growing genetics behave differently and need a gentler, less aggressive hand.
 
 > **KEY — Three honest truths**
-> 
+>
 > 1. **There is no universal recipe.** Start from this timeline and tune the day ranges and how much you remove to _your_ genetics, light and room.
 > 2. **Less is usually more.** Leave the leaves that feed the plant; open the canopy just enough for light and air, then stop.
 > 3. **Your camera is your best tool.** Photograph the canopy each run; next-run decisions should come from what you actually saw, not a one-size-fits-all rule.

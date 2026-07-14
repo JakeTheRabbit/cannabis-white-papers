@@ -9,8 +9,8 @@ diagrams: "12 diagrams"
 related: ["coco-crop-steering", "root-zone-teros12", "smart-watering-vrwe"]
 url: "https://jaketherabbit.github.io/cannabis-white-papers/f2-crop-steering.html"
 md_url: "https://jaketherabbit.github.io/cannabis-white-papers/papers/f2-crop-steering.md"
-version: "1.0"
-updated: "2026-06-24"
+version: "1.1"
+updated: "2026-07-15"
 license: "CC BY-NC 4.0"
 license_url: "https://creativecommons.org/licenses/by-nc/4.0/"
 attribution: "The Cannabis White Papers"
@@ -36,7 +36,7 @@ The system runs in two cooperating layers. A **Home Assistant integration** give
 > **Diagram.** One tank, one pump, one main line feeding three independently steered rows. Each row has its own probe pair and valve.
 
 > **KEY — Two things to memorise**
-> 
+>
 > - The **‘Phase (manual set)’** dropdown is an _override_. It shows what you last picked, not the live phase. Read `sensor.crop_steering_current_phase` for the truth.
 > - Disarming is always safe by design. `switch.crop_steering_system_enabled = OFF` means nothing can fire, ever.
 
@@ -105,7 +105,7 @@ The targets that steer growth are the per-phase VWC numbers (`p1_target_vwc`, `p
 *The two levels of ‘off’. Use ON/OFF together for watch mode while you calibrate.*
 
 > **TIP — Watch mode is your friend**
-> 
+>
 > Run **System enabled ON, Auto irrigation OFF** while you confirm your numbers. The engine is armed and computing decisions but will not fire on its own. You can fire manual test shots and watch how the room responds before granting full autonomy.
 
 ## How a single irrigation decision is made (the gates)
@@ -121,7 +121,7 @@ When the engine decides a shot is needed, that shot only fires if it passes **ev
 > **Diagram.** The physical watering sequence: build pressure first, open the row, hold for the computed duration, then back out in reverse.
 
 > **NOTE — Why pH/EC gating matters**
-> 
+>
 > Source water that drifts out of the pH or EC window can lock out nutrients or burn roots. Gating on it, and alerting you rather than watering quietly, guards against feeding a bad solution to the whole room.
 
 ## Calibration: getting the numbers right before you trust it
@@ -150,7 +150,7 @@ Root growth itself changes how the probe reads over a run, so re-check the band 
 *The source's recommended F2 starting numbers, derived from its hand-watered ranges. Starting points, not final settings.*
 
 > **WARN — Defaults are placeholders, not your substrate**
-> 
+>
 > If you skip calibration and run the 50%/50% factory defaults, the steering is meaningless. The engine chases numbers that have nothing to do with your medium. Calibrate first, then arm.
 
 ## How-to recipes for common jobs
@@ -170,7 +170,7 @@ Most routine actions have a safe, prescribed method. Prefer the integration serv
 *Quick-reference for the jobs you'll do most. When in doubt, use the service, not the raw switch.*
 
 > **NOTE — ‘Irrigate Anyway’ is narrow on purpose**
-> 
+>
 > It grants a 30-minute bypass of the _pH/EC gate only_. Every other interlock still applies: system armed, tank not empty, daily-volume cap. It auto-clears the moment pH/EC return in range.
 
 ## Safety fail-safes, emergency stop, and troubleshooting
@@ -178,7 +178,7 @@ Most routine actions have a safe, prescribed method. Prefer the integration serv
 The system has layered fail-safes: the pH/EC source-water gate, a tank dry-run guard (blocks only when the low float reads empty), a blocked-dripper guard that parks a row for 2 hours after too many failed shots, fail-safe reads (an unconfirmed arm switch is treated as disabled), and persistent state saved every 5 minutes so zones come back in their saved phase after a restart.
 
 > **DANGER — The EMERGENCY button does NOT disarm the engine**
-> 
+>
 > There are two ways to force-stop and they differ in a way that matters. The dashboard **EMERGENCY, ALL OFF** button (`script.f2_irrigation_all_off`) kills the three hardware pieces fast but leaves the engine _armed_. It may re-energise on its next ~60 s phase-check. To truly disarm, flip **System enabled OFF**. For anything beyond a brief stop, use both.
 
 | Trigger | What it touches | Engine state after |
@@ -207,13 +207,13 @@ The system has layered fail-safes: the pH/EC source-water gate, a tank dry-run g
 *The troubleshooting list from the source. Most faults trace to a physical cause or a stale flag.*
 
 > **WARN — A known data gap to watch**
-> 
+>
 > The source flags that `sensor.crop_steering_dryback_percentage` and substrate EC reads can be suspiciously low (Row 1 at 0.48 mS/cm). Salinity strongly affects how dielectric probes report.[^qi-salinity-2024] Check probe calibration before trusting EC steering.
 
 ## Realistic expectations
 
 > **KEY — This is a controller, not a magic autopilot**
-> 
+>
 > - **Steering quality is bounded by calibration.** The factory 50%/50% defaults are placeholders. Replace them with numbers from your own medium before you trust autonomous mode.
 > - **Run watch mode first.** Armed but observe-only, so you confirm thresholds and hand-test plumbing before granting full autonomy.
 > - **Recommended numbers are starting points.** Refine them over several cycles. Treating them as final is how rooms get over- or under-watered.

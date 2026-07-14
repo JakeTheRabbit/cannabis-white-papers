@@ -9,8 +9,8 @@ diagrams: "11 diagrams"
 related: ["airflow-design", "grow-room-systems", "f2-crop-steering"]
 url: "https://jaketherabbit.github.io/cannabis-white-papers/facility-3d.html"
 md_url: "https://jaketherabbit.github.io/cannabis-white-papers/papers/facility-3d.md"
-version: "1.0"
-updated: "2026-06-24"
+version: "1.1"
+updated: "2026-07-15"
 license: "CC BY-NC 4.0"
 license_url: "https://creativecommons.org/licenses/by-nc/4.0/"
 attribution: "The Cannabis White Papers"
@@ -63,7 +63,7 @@ Here is the vocabulary. None of these need prior knowledge. They are the words t
 Each **room** is stored as a rectangle, `[x, y, width, depth]` in metres. Each **wall** is a centre-line with openings positioned by how far along the run they sit, and a single global wall thickness (0.15 m) avoids a whole class of typos. Everything uses one unit equals one metre, so the millimetre numbers on the architect's plan (4800, 9200) are divided by 1000 once, at data-entry time, and never thought about again.
 
 > **KEY — The four record types**
-> 
+>
 > - **Rooms**: an interior footprint rectangle in metres.
 > - **Walls**: a centre-line with openings (doors, the 4.6 m roller door, pass-throughs) placed by distance along the run.
 > - **Equipment**: benches, dehumidifiers, AC heads, CO₂ tanks.
@@ -121,7 +121,7 @@ Moving air thins the still ‘boundary layer’ of humid air that clings to each
 *The equipment schedule. Each item is a small reusable builder, and placing them in 3D reveals clashes early: a filter over an aisle, an AC head fouling a door.*
 
 > **TIP — Clashes you only see in 3D**
-> 
+>
 > A flat plan hides height. In 3D you immediately catch a carbon filter hung at 2.45 m over a walkway, an AC head sitting above a door swing, or a dehumidifier that lands on a bench. Pair this with the [airflow design](airflow-design.html) paper to size the fans before you place them.
 
 ## The security and compliance layer you can actually see
@@ -160,7 +160,7 @@ Here is the practical order of work, with nothing skipped. The whole thing is on
 6. **Add interaction** — An orbit camera plus a one-click top view that reproduces the 2D plan, and click-to-inspect so each room and device reports its own contents.
 
 > **NOTE — Reuse is copy-and-replace**
-> 
+>
 > To start a new facility, save the page, copy the importmap and script block, and replace the data tables with your own plan. The generator code does not change. Only the numbers do.
 
 ## Common pitfalls and how to dodge them
@@ -179,7 +179,7 @@ Most mistakes come from a handful of repeatable errors. The biggest by far is mo
 *Six common pitfalls and the recommended fix for each. The first one is the only one that costs you weeks. The rest cost minutes.*
 
 > **WARN — The cardinal sin, restated**
-> 
+>
 > Remember one thing: the moment you start hand-placing geometry in code, you have lost the ability to re-plan cheaply. Every ‘what if’ then means re-coding instead of re-typing a number.
 
 ## What 3D planning realistically gets you, and what it does not
@@ -201,7 +201,7 @@ Simple shapes carry you surprisingly far. You only reach for a proper modelling 
 *The performance budget. Hit these and the model stays smooth almost anywhere. The 60-fps figure is a reproduce-to-verify benchmark, not a guarantee for every machine.*
 
 > **KEY — What it is, and what it is not**
-> 
+>
 > A 3D facility model is a design tool, a compliance exhibit, a training aid and, wired to sensors, a live dashboard. It is not an engineering sign-off. Treat every airflow, structural and security target it shows as something to confirm with a professional, not as approved.
 
 Start with primitives, get your plan into data, and the model pays for itself the first time it catches a clash before construction. From here, read the [grow-room systems](grow-room-systems.html) paper to see what fills each room, or the [irrigation manual](irrigation-manual.html) for wiring the model to live irrigation data.

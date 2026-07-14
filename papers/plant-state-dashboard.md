@@ -9,8 +9,8 @@ diagrams: "11 diagrams"
 related: ["signal-and-noise", "f2-crop-steering", "root-zone-teros12"]
 url: "https://jaketherabbit.github.io/cannabis-white-papers/plant-state-dashboard.html"
 md_url: "https://jaketherabbit.github.io/cannabis-white-papers/papers/plant-state-dashboard.md"
-version: "1.0"
-updated: "2026-06-24"
+version: "1.1"
+updated: "2026-07-15"
 license: "CC BY-NC 4.0"
 license_url: "https://creativecommons.org/licenses/by-nc/4.0/"
 attribution: "The Cannabis White Papers"
@@ -30,7 +30,7 @@ A modern grow room is wired with sensors measuring air temperature, humidity, VP
 This paper makes the case for a different design centre, which we will call **Plant-State Intelligence**: a screen that reasons about the plant instead of just displaying the room. The target is a ‘calm dashboard’: one that stays quiet most of the time and speaks only when it has something worth saying. A telemetry-dump dashboard forces the human to be the integrator, synthesising fifteen graphs into a judgement in real time, often while tired. A plant-state dashboard does that synthesis for you.
 
 > **NOTE — What this paper is, and isn't**
-> 
+>
 > - This is an **operational and product-design guide**, not a horticulture-science paper. Most claims here are design opinions backed by worked examples.
 > - The aim is a screen that **infers** the plant's state, **predicts** trouble days early, and **prescribes** the next step with its evidence and confidence attached.
 > - The one-line thesis: _a cockpit full of gauges is not a co-pilot._
@@ -70,7 +70,7 @@ It is also reactive. By the time a line crosses a threshold, salt accumulation o
 > **Diagram.** Pore-water EC creeps up for four days while the grower notices nothing, until tip burn appears on Day 26. A single-channel chart shows the cause the whole time, but nobody is watching that one line at that moment. That is the lag a plant-state system is built to close[^spc-signal-noise-ed].
 
 > **WARN — Single-channel widgets hide the truth**
-> 
+>
 > The real story about plant health lives in cross-signal, multivariate patterns: moisture, EC, VPD and transpiration moving together. A wall of single-channel gauges structurally cannot express that pattern, no matter how many you add.
 
 ## Six inversions: from gauge cluster to calm dashboard
@@ -89,7 +89,7 @@ Plant-State Intelligence inverts six assumptions baked into the sensor dashboard
 *The six inversions. The hardest shift is the last one: silence becomes the default state.*
 
 > **KEY — The plant should win the fight for attention**
-> 
+>
 > An always-on wall of graphs competes with the plant for the grower's attention, and the plant should win. That is why a prescription replaces a bare alert. It names the action, the deadline, and the consequence of ignoring it. And it is why silence, not a full screen, is the healthy resting state.
 
 ## What the system actually infers
@@ -110,7 +110,7 @@ The **plant physiological state** is the whole point. It is not measured but **e
 *The same number, raw vs derived. The right column is what a plant-state dashboard shows. The left is in the basement.*
 
 > **TIP — The output is a short list of named conditions**
-> 
+>
 > This layer does not emit fifteen numbers. It emits a short list of **named conditions**: ‘dryback stalling,’ ‘salt accumulating,’ ‘over-transpiring,’ each with a confidence and an evidence chain. Cameras already on site for security become a horticultural input: canopy colour and uniformity, lights-on wilt, height and stacking over days, early discoloration.
 
 ## The six-layer pipeline
@@ -127,7 +127,7 @@ The system is a six-layer pipeline that maps cleanly onto a Home Assistant–cen
 > **Diagram.** The pipeline, layer by layer. Layer 2 baselines can be seeded from published horticultural targets (Athena targets are one example) before you have any history of your own.
 
 > **NOTE — Advisory-first is the design, not a limitation**
-> 
+>
 > The human-in-the-loop posture is deliberate. An operation can run permanently at ‘advise only’ and capture most of the value. Layer 5b auto-applies only the low-risk, explicitly-licensed actions. Anything irreversible or expensive stays human-approved.
 
 ## The new dashboard surface: four zones
@@ -153,7 +153,7 @@ The old dashboard, demoted. Fused signals, baselines, raw graphs, for drill-down
 Colour and layout do real work here. A calm dashboard leans on pre-attentive cues, a single status colour, position, one bold line, that the eye reads before conscious attention engages, so the ‘all clear’ state is grasped at a glance[^preattentive-dataviz].
 
 > **KEY — A sample advisory, in full**
-> 
+>
 > ‘Reduce dryback target 3% in Room 3 (Day 24)… Tip burn likely within ~48h if unaddressed. Confidence: high. _[Show evidence]_’, and the evidence expands to the fused signals, the baseline it violated, and the historical precedent. The old dashboard was 100% Zone 4. The new one leads with Zones 1–3 and keeps 4 in the basement.
 
 ## The adoption path: crawl, walk, run
@@ -168,7 +168,7 @@ This is not a boil-the-ocean rebuild. Each stage ships value and earns the next,
 4. **Scale pattern by pattern** — Add the next failure pattern, then the next room. Stage 4 (prescribe) and Stage 5 (closed-loop) are opt-in, channel by channel.
 
 > **TIP — Stage 4 is a stable, valuable end state**
-> 
+>
 > Advisory-first is not a stepping stone you are obligated to leave. An operation can sit at Stage 4 forever and capture most of the value. Stage 5 closed-loop is optional and gated to low-risk, licensed actions only.
 
 ## Trust, confidence, and failure modes
@@ -186,7 +186,7 @@ An advisory system that is wrong _and_ confident is worse than no system at all.
 *The five guardrails. Each prevents a specific way an advisory system loses the grower's trust.*
 
 > **DANGER — Treat the system's own blindness as a signal**
-> 
+>
 > A drifted, noisy or flatlined sensor is itself an advisory. For example: ‘EC probe in Room 2 reads implausibly flat: suspect failure, EC-derived advisories paused.’ A grower who can't see _why_ will, correctly, stop trusting the _what_. The system's job is to make the decision obvious, not to make it alone on anything irreversible or expensive.
 
 ## Measuring success and realistic expectations
@@ -203,7 +203,7 @@ If the new dashboard is working, the grower looks at it **less**, is surprised *
 - **Outcome variance**: yield and quality consistency, cycle over cycle.
 
 > **KEY — The honest framing**
-> 
+>
 > Most of the payoff lands by Stage 3, and advisory-first may well be the right permanent end state. You are never obligated to chase closed-loop control. The working names (Plant-State Intelligence, ‘calm dashboard’) are explicitly placeholders: substance over branding.
 
 Start small. Build the inference layer that catches drift early, see the [signal-and-noise](signal-and-noise.html) paper for the statistics underneath it, and feed it the derived crop-steering metrics from [f2 crop steering](f2-crop-steering.html). The dashboard is only as good as the states it reasons over.

@@ -9,8 +9,8 @@ diagrams: "12 diagrams"
 related: ["smart-watering-vrwe", "coco-crop-steering", "signal-and-noise"]
 url: "https://jaketherabbit.github.io/cannabis-white-papers/root-zone-teros12.html"
 md_url: "https://jaketherabbit.github.io/cannabis-white-papers/papers/root-zone-teros12.md"
-version: "1.0"
-updated: "2026-06-24"
+version: "1.1"
+updated: "2026-07-15"
 license: "CC BY-NC 4.0"
 license_url: "https://creativecommons.org/licenses/by-nc/4.0/"
 attribution: "The Cannabis White Papers"
@@ -37,7 +37,7 @@ A single probe is one noisy local witness. It samples a roughly 1010 mL pocket o
 > **Diagram.** What the probe sees: a small ellipsoid of media around the prongs, not the whole root zone.[^meter-teros12-manual]
 
 > **NOTE — Who this is for**
-> 
+>
 > This is for anyone putting a moisture probe in a pot who wants to steer on it honestly. It pairs with the [smart watering (VWC/EC) guide](smart-watering-vrwe.html) and the [coco crop-steering paper](coco-crop-steering.html).
 
 ## Key terms, defined once
@@ -91,7 +91,7 @@ A worked headroom example shows the consequence directly. A naive 256 mL of ‘r
 *Resolution is identical. Accuracy is what changes. Calibrate to your media.*
 
 > **WARN — Calibration is not a cure-all**
-> 
+>
 > Calibration corrects an additive _offset_, but gain error and nonlinearity near saturation persist and do not cancel out in later math. Treat substrate-specific calibration as **mandatory** for tight steering, not optional, and still respect the residual error.
 
 ## What EC tells you, and what the probe cannot see
@@ -139,7 +139,7 @@ Most TEROS-12 disappointments are not the sensor breaking. They are the sensor b
 Watch for VWC that tracks the daily substrate-temperature swing. That is a contact or calibration artifact, not a real storage change[^kargas-temp-capacitance-correction-2012]. Watch for wetting-versus-drying paths that diverge abnormally (channeling or hydrophobic media), and for one pot that drifts away from its identically-treated siblings (a dud probe or blocked emitter).
 
 > **DANGER — The cardinal safety rule**
-> 
+>
 > Temperature and EC should move your **trust** in the reading, never the stored-water number directly. A diurnal-temperature artifact can drive a real dielectric shift in dry media that mimics a water change[^nasta-2024-teros12-temp-correction]. If you let it write VWC, you will chase ghosts.
 
 > **Diagram.** A simple decision order: rule out hardware first, then artifacts, then local faults, before believing the number.
@@ -154,13 +154,13 @@ Watch for VWC that tracks the daily substrate-temperature swing. That is a conta
 *Symptom to cause to response. Note the ‘what it is NOT’ column, because misdiagnosis is the real cost.*
 
 > **WARN — Never hard-write your anchors**
-> 
+>
 > Never let one manual reading or a single human observation hard-write your capacity anchor or override a safety interlock. Anchors earn their place from corroborated events, not from one good look.
 
 ## Realistic expectations
 
 > **KEY — What one probe can and cannot earn**
-> 
+>
 > A single TEROS-12 will not give you a per-zone, ground-truth picture of your root zone, and treating it as one is the most common and most expensive mistake. With substrate-specific calibration you can realistically resolve dryback _trends_ and approximate stored water to about ±0.01–0.02 m³/m³ in the spot the probe occupies. That is good enough to steer if you account for the uncertainty and cross-check it.[^fragkos-2024-teros12-soils-ec]
 
 > **Diagram.** A lone probe sits in a wide, caveat-heavy uncertainty band. Calibration plus an independent witness earns a tighter, steering-ready band.[^nemali-2006-set-point-irrigation]

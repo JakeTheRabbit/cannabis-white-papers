@@ -9,8 +9,8 @@ diagrams: "5 diagrams"
 related: ["root-zone-teros12", "grow-room-systems", "tissue-culture"]
 url: "https://jaketherabbit.github.io/cannabis-white-papers/coco-crop-steering.html"
 md_url: "https://jaketherabbit.github.io/cannabis-white-papers/papers/coco-crop-steering.md"
-version: "1.0"
-updated: "2026-06-24"
+version: "1.1"
+updated: "2026-07-15"
 license: "CC BY-NC 4.0"
 license_url: "https://creativecommons.org/licenses/by-nc/4.0/"
 attribution: "The Cannabis White Papers"
@@ -30,7 +30,7 @@ _Beginner · Coco & crop steering · ~16 min read_
 You do not need to have measured a root zone before to use this guide. Every term is defined. By the end you will know what the numbers on a root-zone sensor mean, and how a daily wet-and-dry rhythm becomes a steering wheel for your plant.
 
 > **NOTE — Who this is for**
-> 
+>
 > Anyone growing in coco, or thinking about it, who wants results they can repeat instead of watering ‘when it feels dry.’ Pairs with the [root-zone sensor](root-zone-teros12.html) and [grow-room systems](grow-room-systems.html) papers.
 
 ## The words you need
@@ -62,7 +62,7 @@ Coco holds a lot of water **and** a lot of air at the same time. At field capaci
 Coco also carries a mild electrical charge on its fibres that grabs and releases nutrients: its **cation exchange capacity**[^noguera2003-cec]. Think of it as a small battery for feed. It buffers swings, but it also means fresh coco will hold back some calcium and magnesium until it is ‘charged’ (pre-soaked in a cal-mag feed).
 
 > **TIP — Charge your coco first**
-> 
+>
 > New coco can lock up calcium and magnesium for the first week or two. Pre-soak (buffer) it with a cal-mag solution before planting, or expect early deficiency spots until it settles.
 
 ## Reading the root zone: VWC and EC
@@ -74,7 +74,7 @@ Here is the trick beginners miss: **as the substrate dries, the salt left behind
 > **Diagram.** A healthy daily curve: a controlled fall (the dryback) followed by a refill to field capacity. The size and timing of that fall is your steering lever.
 
 > **KEY — Two numbers, one story**
-> 
+>
 > - **VWC falling** means the plant is drinking (good), until it falls too far and growth stalls.
 > - **EC drifting up** as VWC falls is normal. A big jump means the root zone is getting too salty, so water it.
 > - **EC drifting down** over days means the plant is eating salt faster than you feed, so raise feed EC.
@@ -86,7 +86,7 @@ A **dryback** is letting the root zone dry by a chosen amount before you water a
 When the root zone dries a little, the plant makes a stress hormone called **abscisic acid (ABA)**, which shifts it away from leafy growth and toward flowering and resin production[^welling2025-aba]. Done deliberately at the right time, controlled water-deficit has been shown to _raise_ cannabinoid content without costing yield[^caplan2019-drought].
 
 > **WARN — A dryback is not a drought**
-> 
+>
 > The difference is dose and timing. **Moderate**, measured drybacks that you stop on time preserve yield. A **severe** drought that runs too long crashes both yield and cannabinoids[^stack2024-drought]. Steer with a scalpel, not a hammer. Always water before the plant actually wilts.
 
 Bigger drybacks push generative (flower). Smaller drybacks, kept wetter, push vegetative (leaves and size). That one dial, how far you let it dry, is most of crop steering.
@@ -125,7 +125,7 @@ Growers split the lights-on day into four phases. You do not need fancy gear to 
 Temperature is on that list because the gap between day and night temperature controls stretch. A warm day with a cool night keeps plants compact. A warm night makes them stretch[^moe1995-dif]. Air dryness (VPD) sets how fast the plant transpires, up to a point, then stomata close and everything slows[^grossiord2020-vpd].
 
 > **DANGER — Change one thing at a time**
-> 
+>
 > Every lever interacts. If you yank the dryback, raise EC, drop humidity and cool the night all at once, you will not know what helped or hurt, and you may tip a steer into real stress. Move one dial, watch for a few days, then adjust.
 
 ## A week-by-week shape
@@ -152,7 +152,7 @@ Flowering indoors usually runs about 8–10 weeks once you flip the lights to a 
 ## Realistic expectations
 
 > **KEY — Three honest truths**
-> 
+>
 > 1. **There is no universal recipe.** The right VWC, EC and dryback numbers depend on your strain, pot size, climate and light. Start from the ranges here and tune to _your_ plants.
 > 2. **Steering is a bias, not a switch.** You are nudging odds over days, not flipping a plant overnight.
 > 3. **The root zone is only one lever.** Light, temperature, humidity and airflow all push the same plant. Read the [systems guide](grow-room-systems.html) next.
