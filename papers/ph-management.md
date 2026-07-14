@@ -9,8 +9,8 @@ diagrams: "8 diagrams"
 related: ["nutrient-deficiencies", "water-quality", "nutrient-mixing-athena"]
 url: "https://jaketherabbit.github.io/cannabis-white-papers/ph-management.html"
 md_url: "https://jaketherabbit.github.io/cannabis-white-papers/papers/ph-management.md"
-version: "1.0"
-updated: "2026-06-24"
+version: "1.1"
+updated: "2026-07-15"
 license: "CC BY-NC 4.0"
 license_url: "https://creativecommons.org/licenses/by-nc/4.0/"
 attribution: "The Cannabis White Papers"
@@ -34,7 +34,7 @@ One thing trips people up: the scale is logarithmic, so each whole number is a t
 > **Diagram.** Everyday liquids on the pH scale, with the 5.5-6.5 band most growers feed inside. Neutral water (7) is already too high for coco and hydro.
 
 > **KEY — The whole point in one line**
-> 
+>
 > You can have perfect nutrients and perfect light and still get deficiencies purely from bad pH. The number gates everything downstream.
 
 ## Key terms in plain English
@@ -68,7 +68,7 @@ Phosphorus is the clearest example. It is most available around pH 6.0-7.0, bind
 > **Diagram.** Calcium, magnesium and phosphorus fail at low pH; iron, manganese, zinc and boron fail at high pH. The 5.5-6.5 overlap is the only band where all are available.[^veazie-2025-substrate-ph-micronutrient-cannabis]
 
 > **WARN — Lockout looks exactly like a deficiency**
-> 
+>
 > Because the symptoms match, growers often add more nutrients and make it worse. Check pH first, before reaching for the bottle.
 
 ## Target ranges by substrate: coco, hydro, soil
@@ -96,7 +96,7 @@ Calibrate with fresh two-point buffers, pH 7.0 first then pH 4.0, about once a m
 > **Diagram.** Two-point calibration every time, rinsing between steps, then store the tip wet. Dry storage is the most common way pens die.
 
 > **TIP — Let it settle**
-> 
+>
 > Give the reading time to stop moving before you trust it. Temperature and stirring both shift the number, so read at room temperature and wait for it to hold steady.
 
 ## Adjusting with pH up/down, and the water you start with
@@ -114,7 +114,7 @@ pH Down is usually phosphoric acid and pH Up is usually potassium hydroxide.[^sa
 > **Diagram.** Alkalinity, not the pH reading, sets how much acid it takes to move the water. Hard, high-alkalinity tap water resists adjustment and drifts back up.[^umass-water-quality-ph-alkalinity]
 
 > **NOTE — Aim for 60-100 ppm CaCO3**
-> 
+>
 > Ideal irrigation alkalinity is roughly 60-100 ppm CaCO3. Very hard water may need more acid or pre-treatment before it will hold a target.[^umass-water-quality-ph-alkalinity]
 
 ## Runoff pH and a by-stage routine
@@ -132,7 +132,7 @@ The reliable lever is the inflow pH you set going in. For the root zone itself, 
 *Coco and hydro figures. Soil runoff is a little more meaningful but still lags and is buffered. Set inflow every feed and do not feed out of range to fix a runoff number.*
 
 > **TIP — The routine in five habits**
-> 
+>
 > - Calibrate the pen monthly with fresh two-point buffer.
 > - Mix nutrients, then set pH, every batch.
 > - Set inflow pH inside the band every feed.
@@ -159,7 +159,7 @@ pH will drift between feeds, and that is normal, not a crisis. The goal is to ke
 > **Diagram.** A normal week stays inside the shaded target band with minor wobbles. The one excursion above the band is the signal to check the pen, the water and the feed.
 
 > **KEY — What good looks like**
-> 
+>
 > - A band like 5.8-6.2 is the target, not one exact number.
 > - Drift between feeds is expected; coco and hydro need per-feed checks, soil is slower.
 > - Pens are consumables: calibrate monthly, replace probes over time.

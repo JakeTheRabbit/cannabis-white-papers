@@ -9,8 +9,8 @@ diagrams: "6 diagrams"
 related: ["coco-crop-steering", "irrigation-manual", "root-zone-teros12"]
 url: "https://jaketherabbit.github.io/cannabis-white-papers/nutrient-mixing-athena.html"
 md_url: "https://jaketherabbit.github.io/cannabis-white-papers/papers/nutrient-mixing-athena.md"
-version: "1.0"
-updated: "2026-06-24"
+version: "1.1"
+updated: "2026-07-15"
 license: "CC BY-NC 4.0"
 license_url: "https://creativecommons.org/licenses/by-nc/4.0/"
 attribution: "The Cannabis White Papers"
@@ -30,11 +30,11 @@ This guide covers one job: dissolving a **full 25 lb bag** of Athena Pro Line in
 A stock tank turns an awkward powder into an easy liquid. Weighing powder every time you mix feed is slow and inconsistent. Dissolve the whole bag once, then pump or pour a measured number of millilitres per litre into your feed water. Same recipe, every time, in seconds.
 
 > **KEY — The one-sentence version**
-> 
+>
 > A full 25 lb (11.34 kg) bag into 50 L makes a stock at about **227 grams per litre**, a heavy concentrate. Your whole job is to get every gram truly dissolved, keep the two parts in _separate_ tanks, and know how many millilitres to dose downstream.
 
 > **NOTE — Your kit**
-> 
+>
 > Written for exactly what you have: a full 25 lb bag, a 50 L tank, jugs of hot water, and a paint-mixer paddle on a drill. The paddle is not optional at this concentration. You cannot hand-stir 11 kg of salt into solution.
 
 ## The words you need
@@ -64,7 +64,7 @@ The reason is chemistry. Part A is loaded with **calcium**. Part B carries **sul
 > **Diagram.** Concentrated A plus concentrated B gives an instant precipitate. Diluted, added separately to feed water, they coexist fine. That gap is the whole rule.
 
 > **DANGER — Never do these**
-> 
+>
 > - Never pour Part A stock into Part B stock (or vice-versa).
 > - Never add the two concentrates to feed water at the same moment. Add A, stir, then add B, stir.
 > - Never reuse a dosing jug between A and B without rinsing.
@@ -79,7 +79,7 @@ The reason is chemistry. Part A is loaded with **calcium**. Part B carries **sul
 > **Diagram.** Solubility rises with temperature, so hot water both holds more and offsets the cooling the dissolving salt causes[^libretexts-temperature-solubility].
 
 > **WARN — Hot, not boiling**
-> 
+>
 > Use hot tap water (about 40-50 °C), not boiling. Boiling water can damage some compounds and is a scald hazard with a spinning paddle. Warm is enough to win the solubility fight.
 
 ## Step-by-step: one bag into one 50 L tank
@@ -105,7 +105,7 @@ A full 25 lb bag is **11.34 kg**. In 50 L that gives a stock of:
 To use it, you dilute. If your bag (or Athena's chart) says to feed a part at a rate of _X grams per litre_ of finished feed, then because your stock is 226.8 g/L:
 
 > **KEY — The dosing formula**
-> 
+>
 > **Dose (mL of stock per L of feed) = feed rate (g/L) ÷ 226.8 × 1000 ≈ feed rate × 4.41**[^powell-bauerle-uptake-massbalance]. Do this separately for Part A and Part B using each part's own rate.
 
 | If the label feed rate is... | ...dose this much stock per litre of feed |
@@ -118,7 +118,7 @@ To use it, you dilute. If your bag (or Athena's chart) says to feed a part at a 
 *Dosing your 226.8 g/L stock. Always confirm the target rate on your bag - formulas change.*
 
 > **WARN — Always finish on a meter**
-> 
+>
 > Dosing math gets you close. Your **EC meter** confirms it. Mix the feed, read EC, and trust the meter over the calculator, because water and formulas vary[^valdrighi-reservoir-water-quality].
 
 ## What strength to feed, by stage
@@ -128,7 +128,7 @@ The stock is only a delivery system. The plant cares about the _feed_ strength, 
 > **Diagram.** Feed weak early, build through veg and flower, taper late[^saloner-bernstein-response-surface-nutrition]. These are starting bands, not law. Substrate and strain shift them.
 
 > **DANGER — Over-feeding is its own stress**
-> 
+>
 > Cranking EC does not mean more growth. Too much salt in the root zone pulls water back out of the roots (osmotic stress) and burns the plant[^yep-nacl-cannabis-stress]. When in doubt, feed slightly weaker.
 
 ## Storage & troubleshooting
@@ -142,13 +142,13 @@ The stock is only a delivery system. The plant cares about the _feed_ strength, 
 | Sludge after combining | Concentrates A and B were mixed | Discard - this is precipitated, unusable; never combine concentrates |
 
 > **TIP — Storage**
-> 
+>
 > Keep each stock tank sealed, labelled, out of cold and out of light. Mix before each use in case anything has settled. Make what you'll use in a reasonable window rather than a year's supply[^valdrighi-reservoir-water-quality].
 
 ## What good looks like
 
 > **KEY — Remember**
-> 
+>
 > 1. **Two bags, two tanks, never combined concentrated.** This is the rule that prevents ruined stock.
 > 2. **Hot water + the paddle + patience** get all 226.8 g/L truly dissolved - clear, zero grit.
 > 3. **Stock is for dosing, not feeding.** Dilute to an EC target and confirm on a meter, every time.

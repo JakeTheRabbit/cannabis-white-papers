@@ -9,8 +9,8 @@ diagrams: ""
 related: ["cloning", "light-acclimation", "mould-risk"]
 url: "https://jaketherabbit.github.io/cannabis-white-papers/seeds-germination.html"
 md_url: "https://jaketherabbit.github.io/cannabis-white-papers/papers/seeds-germination.md"
-version: "1.0"
-updated: "2026-06-24"
+version: "1.1"
+updated: "2026-07-15"
 license: "CC BY-NC 4.0"
 license_url: "https://creativecommons.org/licenses/by-nc/4.0/"
 attribution: "The Cannabis White Papers"
@@ -32,7 +32,7 @@ Get these early stages right and the rest of the grow is far easier, because mos
 > **Diagram.** The whole arc this paper covers: a dry seed drinks water, pushes out a taproot, gets planted, opens its first leaves, and becomes a sturdy seedling by about week three.
 
 > **NOTE — What this covers**
-> 
+>
 > - Choosing a seed, germinating it, and caring for the seedling through roughly day 21
 > - Germination = waking a dormant seed. Seedling = the plant's most fragile life stage
 > - Most beginner failures (rot, no-sprouts, stunting) trace back to these first three weeks
@@ -91,7 +91,7 @@ Fresh seeds stored cool, dark and dry stay viable for years, but germination rat
 *A quick visual and feel check before you commit a seed to germination.*
 
 > **TIP — Pale does not always mean dead**
-> 
+>
 > Immature pale seeds can still sprout, but they tend to give weaker, lower-quality plants. If you have a choice, plant the dark, firm, striped ones first.
 
 ## Feminised, regular and autoflower: which seed to buy
@@ -114,7 +114,7 @@ Autoflower seeds carry Cannabis ruderalis genetics that make the plant flower au
 *Feminised is the simplest first choice. Autoflower is forgiving on timing. Regular suits breeders.*
 
 > **NOTE — Photoperiod vs autoflower in one line**
-> 
+>
 > Photoperiod plants flower when _you_ shorten their light to 12 hours. Autoflowers flower when they reach a certain age, whatever the lights are doing.
 
 ## Three ways to germinate, and why
@@ -134,7 +134,7 @@ The paper-towel method (seeds between damp paper towels, sandwiched between two 
 > **Diagram.** Wet but wrung-out towels, seeds spaced out and covered, kept warm and dark, checked twice a day. Plant once the taproot is about 0.5-1.5 cm long.[^smith-2022-hemp-germination-temperature-limits]
 
 > **TIP — Direct-sow and pre-soak in brief**
-> 
+>
 > - **Direct-sow:** plant the seed straight into moist medium about 1-1.5 cm deep, taproot pointing down. No transplant shock, but you cannot see progress.
 > - **Pre-soak:** soak seeds in room-temperature water for 12-24 hours to soften the coat. Useful for old or hard seeds, then move them to towel or medium.
 
@@ -149,7 +149,7 @@ Hold temperature at a steady 21-25C (70-77F). Cooler slows germination, and warm
 > **Diagram.** Taproot usually shows in 24-72 hours (up to ~7 days for some seeds), cotyledons open within days, first true leaves appear around days 7-14, and you have an established seedling by about day 21.[^cockson-2025-hemp-seed-moisture-temperature]
 
 > **KEY — The three settings, in one place**
-> 
+>
 > - **Temperature:** steady 21-25C / 70-77F. Avoid swings and anything above ~28C.
 > - **Moisture:** damp not soaked (wrung-out-sponge feel). Waterlogged seeds suffocate and rot.
 > - **Light:** darkness while germinating. Once sprouted, give gentle light immediately so the stem does not stretch.
@@ -175,7 +175,7 @@ Do not feed at first. The cotyledons supply the plant's food. Start a weak nutri
 > **Diagram.** A seedling reaching for distant light grows tall, thin and leggy. At the right distance it stays short and stocky, which is what you want.[^rodriguez-2021-cannabis-light-intensity-photosynthesis]
 
 > **WARN — The two newbie traps**
-> 
+>
 > Overwatering and feeding too early kill more seedlings than anything else. When in doubt, water less and feed later. A seedling that looks a little hungry recovers. One that has rotted does not.
 
 ## Damping-off and other common failures
@@ -197,7 +197,7 @@ The dominant cause is overwatering combined with too-high humidity and poor airf
 *Match the symptom to its cause. Most fixes are about doing less: less water, less feed, more air.*
 
 > **DANGER — Damping-off has no cure**
-> 
+>
 > Once a seedling pinches at the base it will not recover. Everything you do for damping-off is prevention: sterile fresh medium, sparing water, good airflow, and humidity eased to 40-50% after the true leaves show.[^umn-extension-prevent-damping-off]
 
 ## Realistic expectations
@@ -209,7 +209,7 @@ Even with good seeds and care, not every seed sprouts. Fresh quality feminised s
 Budget about 3-4 weeks from planting to a sturdy seedling with several sets of true leaves before the plant truly takes off into vegetative growth. Germinate one or two extra seeds as insurance, expect to lose the occasional seedling, and resist the two biggest temptations: overwatering and feeding too early.
 
 > **KEY — What good looks like**
-> 
+>
 > - High germination is normal for fresh quality seed, but expect the occasional dud even when you do everything right.
 > - Plan ~3-4 weeks from plant to established seedling before vigorous growth begins.
 > - Germinate one or two spares as insurance. Losing a seedling now and then is part of learning.

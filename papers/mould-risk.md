@@ -9,8 +9,8 @@ diagrams: "3 diagrams"
 related: ["grow-room-systems", "airflow-design", "tissue-culture"]
 url: "https://jaketherabbit.github.io/cannabis-white-papers/mould-risk.html"
 md_url: "https://jaketherabbit.github.io/cannabis-white-papers/papers/mould-risk.md"
-version: "1.0"
-updated: "2026-06-24"
+version: "1.1"
+updated: "2026-07-15"
 license: "CC BY-NC 4.0"
 license_url: "https://creativecommons.org/licenses/by-nc/4.0/"
 attribution: "The Cannabis White Papers"
@@ -54,7 +54,7 @@ Starts deep in a dense cola, often at a stem or where a leaf meets the bud. You'
 White, dusty patches on the tops of leaves that wipe off like flour, then return. Loves moderate temps and stagnant, humid air. Coats leaves and chokes photosynthesis[^scott2021-pm].
 
 > **NOTE — They're not the only ones**
-> 
+>
 > Indoor cannabis also hosts _Penicillium_, _Cladosporium_, _Fusarium_ and _Aspergillus_[^punja2019-pathogens]. Botrytis and PM are the two you'll meet first and most.
 
 ## The conditions that invite mould
@@ -66,7 +66,7 @@ Mould isn't bad luck. It is a recipe. Bud rot takes off when humidity climbs abo
 > **Diagram.** The infection chain. Almost all of it happens out of sight, which is why prevention beats cure[^punja-budrot-cjb].
 
 > **DANGER — The dense-canopy trap**
-> 
+>
 > A thick, undefoliated canopy traps warm, humid, still air inside itself, a private climate far wetter than your room reading[^punja-budrot-cjb]. Packing plants tight for yield directly raises rot risk. Spacing and defoliation are mould control, not just tidiness.
 
 ## Prevention: the daily routine
@@ -98,7 +98,7 @@ Spend five minutes a day in late flower with a bright light, looking _into_ the 
 5. **Consider harvest timing** — If rot is spreading fast late in flower, an early harvest of clean material can beat losing it all.
 
 > **WARN — Don't try to ‘treat’ rotted flower into safety**
-> 
+>
 > Once a bud has rotted, it's waste, not something to dry and smoke. Drying lowers microbe levels but won't undo rot or remove mycotoxins[^sun2025-drying]. Prevention is the only real cure.
 
 ## Drying & storage: don't lose it at the finish
@@ -114,7 +114,7 @@ Mould can still strike clean flower during a sloppy dry or in storage. The defen
 Flower can carry dangerous fungi while looking, smelling and even _testing_ clean. Standard culture-based mould tests can miss some toxin-producing _Aspergillus_[^mckernan2016-micro], and contamination rates across the market are high and inconsistently regulated[^gwinn2023-mycotoxin].
 
 > **KEY — Bottom line on safety**
-> 
+>
 > Prevention in the grow room is your real safety system. Lab testing is a backstop with real blind spots, not a guarantee. For vulnerable users, mouldy cannabis is a genuine health risk[^benedict2020-cdc], which is why clean genetics (see [tissue culture](tissue-culture.html)) and a clean room matter from day one.
 
 ## Troubleshooting
@@ -130,7 +130,7 @@ Flower can carry dangerous fungi while looking, smelling and even _testing_ clea
 ## Realistic expectations
 
 > **KEY — What to remember**
-> 
+>
 > 1. Mould is a **recipe (humidity + still air + density + moisture)**. Remove an ingredient and you remove the risk.
 > 2. It hides **inside** buds. By the time it's visible, spores are already spreading. Scout daily in late flower.
 > 3. **Prevention is the only cure.** You cannot make rotted or mycotoxic flower safe after the fact[^sun2025-drying].

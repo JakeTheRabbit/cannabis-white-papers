@@ -9,8 +9,8 @@ diagrams: ""
 related: ["mould-risk", "airflow-design", "nutrient-mixing-athena"]
 url: "https://jaketherabbit.github.io/cannabis-white-papers/harvest-dry-trim-cure.html"
 md_url: "https://jaketherabbit.github.io/cannabis-white-papers/papers/harvest-dry-trim-cure.md"
-version: "1.0"
-updated: "2026-06-24"
+version: "1.1"
+updated: "2026-07-15"
 license: "CC BY-NC 4.0"
 license_url: "https://creativecommons.org/licenses/by-nc/4.0/"
 attribution: "The Cannabis White Papers"
@@ -32,7 +32,7 @@ Aim for a narrow safe zone: dry enough that mould cannot grow, but not so dry th
 > **Diagram.** The five steps that turn a living plant into a finished, stable product. The numbers on each box are what you steer toward, explained section by section below.
 
 > **NOTE — Who this is for**
-> 
+>
 > Anyone harvesting their first crop who wants results they can repeat. This guide assumes zero prior knowledge and defines every term as it appears. It pairs with the [mould-risk](mould-risk.html) and [airflow-design](airflow-design.html) papers.
 
 ## The words you need before we start
@@ -67,7 +67,7 @@ The clearest signal is the trichomes. Under a loupe they shift from clear, to mi
 > **Diagram.** Harvest is not a surprise. It is the planned end of a sequence of plant-work milestones across the flowering room.
 
 > **TIP — Let the plant decide**
-> 
+>
 > If the calendar says cut but the trichomes are still mostly clear, wait. Read maturity off the flower. The date is only a rough guide.
 
 ## Cutting down and weighing the wet plant
@@ -107,7 +107,7 @@ Together that leaves a sweet spot of 0.55-0.65 aw, the exact range written into 
 > **Diagram.** Drop the batch below the 0.70 aw mould line, with the take-down target at 0.62 aw giving headroom.[^aqualab-microbial-water-activity]
 
 > **KEY — Why water activity beats a cheap moisture meter**
-> 
+>
 > - Water activity is the better control number because it varies far less than cheap moisture readings.
 > - In one example, measuring on water activity gave roughly 10x tighter yield precision (±1% down to ±0.12%).
 > - Denser flowers tend to finish at a slightly lower aw than fluffy ones. Use the meter as a guide, but also trust your nose.
@@ -143,7 +143,7 @@ Once the trimmed flower sits at 0.58-0.60 aw, it is finished: seal it and stop b
 > **Diagram.** Burp while wet, rotate for even drying, log every time, and stop the moment the flower reaches 0.58-0.60 aw.
 
 > **WARN — Over-burping costs you money**
-> 
+>
 > Every burp past the finish line evaporates terpenes and water weight you could have sold. When trimmed flower reaches 0.58-0.60 aw, seal it. Bags should be free of air but not compressed, and not stacked, to protect bud structure.
 
 ## Common mistakes and how to avoid them
@@ -170,7 +170,7 @@ Expect roughly 10-14 days of hang-drying plus several more days of curing before
 > **Diagram.** A realistic arc: water activity falls from harvest, enters the safe zone at takedown, and settles in curing before the batch is sealed.[^astm-d8197-water-activity]
 
 > **KEY — Three honest truths**
-> 
+>
 > 1. **It takes weeks, not days.** Plan two-to-three weeks for the whole post-harvest stage and do not rush the dry.
 > 2. **The payoff is real.** Dialling in drying and curing is reported to lift yield 5-10%, mostly by no longer over-drying.[^aroya-drying-water-activity-guide]
 > 3. **Genetics matter.** Drying and curing are strain-dependent. Dense and fluffy flowers finish at slightly different aw points, so log every batch.[^birenboim-2024-cultivar-drying]

@@ -9,8 +9,8 @@ diagrams: "9 diagrams"
 related: ["root-zone-teros12", "smart-watering-vrwe", "closed-loop"]
 url: "https://jaketherabbit.github.io/cannabis-white-papers/signal-and-noise.html"
 md_url: "https://jaketherabbit.github.io/cannabis-white-papers/papers/signal-and-noise.md"
-version: "1.0"
-updated: "2026-06-24"
+version: "1.1"
+updated: "2026-07-15"
 license: "CC BY-NC 4.0"
 license_url: "https://creativecommons.org/licenses/by-nc/4.0/"
 attribution: "The Cannabis White Papers"
@@ -34,7 +34,7 @@ A single flower room can generate hundreds of thousands of datapoints a week[^gr
 > **Diagram.** One smooth trend (a normal dry-down) lives under a jagged line of sensor jitter. Same numbers, two completely different stories. Only one of them is worth acting on.
 
 > **KEY — The one-line reframe**
-> 
+>
 > You don't have a data problem. You have a **signal-to-noise problem**. Most grow-room ‘alerts’, perhaps 70% in a busy room, are noise: transients that fix themselves before any action would have mattered.
 
 ## Key terms, defined once
@@ -70,7 +70,7 @@ You cannot reduce what you cannot name. Grow-room noise enters through six chann
 > **Diagram.** An Ishikawa (fishbone) view: six bones feed the ‘measured noise’ you see on the dashboard. Start with the cheap procedural ones before you blame the hardware.
 
 > **WARN — Drift is the assassin**
-> 
+>
 > Drift moves slowly in one direction, exactly like a real trend, so it fools you for weeks. Uncalibrated pH and EC probes can drift measurably over weeks to a month[^bogena-soil-sensor-calibration]. A single probe is a rumour. Calibration against a known reference is the only defence.
 
 Sensor-specific calibration is not a nicety. In low-cost permittivity soil-moisture sensors, applying a sensor-by-sensor calibration cut error by roughly 70% versus the factory default[^bogena-soil-sensor-calibration]. Most ‘the room is fighting me’ stories are really ‘I am fighting the noise’ stories.
@@ -95,7 +95,7 @@ How often you measure matters just as much. Sample too slowly and a fast pattern
 > **Diagram.** A true fast oscillation, sampled too sparsely, reconstructs as a slow phantom wave. That fake trend will tempt you to act on nothing at all.
 
 > **TIP — Faster is not free**
-> 
+>
 > Over-sampling adds noise, storage cost and the constant temptation to react to jitter. You don't weigh yourself every hour and panic at each wobble. Don't do it to your room either. Match the cadence to the channel.
 
 | Channel | Cadence | Why |
@@ -117,7 +117,7 @@ Control limits are computed from the process's own history, conventionally the m
 > **Diagram.** A mean line with a ±1σ band and control limits at ±3σ. Most readings jitter harmlessly inside. A lone point past the upper limit is the one that earns a response.[^shewhart-control-chart]
 
 > **NOTE — Beyond the limits: the Western Electric rules**
-> 
+>
 > - **7+ points** all trending the same way: a real drift, even inside the limits
 > - **8+ points** on one side of the mean: the process has shifted
 > - Abnormal **hugging of the mean**: often a sign the data is being over-smoothed or faked
@@ -138,7 +138,7 @@ None of the highest-return moves needs new capital. Most need only discipline, t
 8. **Audit placement and widen twitchy dead-bands** — Move probes off edges, vents and lights into the canopy core, and loosen dead-bands that chatter.
 
 > **KEY — The one-sentence test before reacting to any number**
-> 
+>
 > “Has this moved **beyond its normal range**, for **longer than one reading**, and do my **other sensors agree**?” If not all three are yes, it's noise. Walk away.
 
 > **Diagram.** The decision flow drawn out: every gate must pass before you touch a dial. One failed gate sends you to ‘do nothing’.
@@ -156,7 +156,7 @@ A specific systems failure is **hunting**. A feedback loop fed noisy data, or tu
 > **Diagram.** The loop runs setpoint → controller → actuator → room → sensor and back. Noise injected at the sensor is the dangerous one: the controller cannot tell it from a real error, so it acts on a phantom.
 
 > **DANGER — Filter at the source, widen the dead-band**
-> 
+>
 > A wider dead-band plus a filtered input often fixes ‘broken’ climate gear that was never broken. Filter the controller's input right at the sensor's output, before it decides anything. Otherwise every loop in the room is reacting to static.
 
 ## Realistic expectations
@@ -198,7 +198,7 @@ Track _few_ high-signal KPIs, not forty gauges. The metric most tied to commerci
 *Coefficient of variation literally measures the noise in your crop. Consistency beats peak performance commercially.*
 
 > **KEY — The honest summary**
-> 
+>
 > You're chasing a higher signal-to-noise ratio, not a perfect room. Aim for one rung up the ladder, smooth before you steer, and earn the right to do nothing when a number wobbles.
 
 Next: see how a clean, filtered signal actually drives irrigation in [smart watering by VWC & EC](smart-watering-vrwe.html), and how that closes the loop without hunting in [closed-loop control](closed-loop.html).

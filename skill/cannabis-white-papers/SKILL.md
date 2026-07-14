@@ -52,6 +52,7 @@ Licensed CC BY-NC 4.0 (https://creativecommons.org/licenses/by-nc/4.0/). Attribu
 
 ### Plant health
 - **Mould risk: preventing and stopping bud rot** (`papers/mould-risk.md`): Spot and stop bud rot
+- **Integrated pest management blueprint for indoor medicinal cannabis in Auckland** (`papers/auckland-ipm-blueprint.md`): Clean stock, NZ law, atlas & CAPA
 - **Pest identification and control** (`papers/pest-id.md`): Mites, thrips, gnats and more
 - **Integrated pest management: a working SOP** (`papers/ipm-sop.md`): Scout, decide, act
 - **PPPE: plant and personal protective equipment** (`papers/pppe.md`): Gowning, gloves, keeping humans clean

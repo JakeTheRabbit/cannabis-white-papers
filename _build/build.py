@@ -33,6 +33,7 @@ except Exception:
 PAPER_MODULES = [
     "paper_tissue_culture", "paper_coco_crop_steering", "paper_grow_room_systems",
     "paper_airflow_design", "paper_co2_enrichment", "paper_mould_risk",
+    "paper_auckland_ipm_blueprint",
     "paper_seeds_germination", "paper_lighting_fundamentals", "paper_substrates_overview",
     "paper_water_quality", "paper_ph_management", "paper_nutrient_deficiencies",
     "paper_flowering_stages", "paper_pest_id",
@@ -360,9 +361,10 @@ CURRICULUM = [
    ("Mixing an Athena Pro Line stock tank", "nutrient-mixing-athena"),
    ("Nutrient deficiency & toxicity diagnosis", "nutrient-deficiencies")]),
  ("Runs every stage · Plant health", "Keep them clean.", [
+   ("Auckland medicinal-cannabis IPM blueprint", "auckland-ipm-blueprint"),
    ("Mould risk: bud rot & PM", "mould-risk"), ("IPM: a working SOP", "ipm-sop"),
    ("Pest identification & control", "pest-id"), ("PPE & biosecurity (PPPE)", "pppe"),
-   ("Root diseases: pythium & fusarium", None)]),
+   ("Root diseases: pythium & fusarium", "auckland-ipm-blueprint")]),
  ("Runs every stage · Precision & automation", "Dial it in and let it run.", [
    ("Root-zone state (TEROS-12)", "root-zone-teros12"), ("Signal & noise", "signal-and-noise"),
    ("Smart watering (VRWE)", "smart-watering-vrwe"), ("The closed loop", "closed-loop"),
@@ -503,6 +505,12 @@ def main():
     for mod in PAPERS:
         sizes[f"{mod.SLUG}.html"] = w(f"{mod.SLUG}.html", render_paper(mod))
     w(".nojekyll", "")
+    try:
+        import standalone_ipm
+        standalone_ipm.build()
+    except Exception as _se:
+        print("standalone IPM build failed:", repr(_se))
+        raise
     for k, v in sizes.items():
         print(f"  {k:28} {v//1024 if v>1024 else v}{'K' if v>1024 else 'B'}")
     print("build OK ->", ROOT, "| live papers:", len(PAPERS))

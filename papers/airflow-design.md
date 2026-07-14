@@ -9,8 +9,8 @@ diagrams: "3 diagrams"
 related: ["grow-room-systems", "mould-risk", "coco-crop-steering"]
 url: "https://jaketherabbit.github.io/cannabis-white-papers/airflow-design.html"
 md_url: "https://jaketherabbit.github.io/cannabis-white-papers/papers/airflow-design.md"
-version: "1.0"
-updated: "2026-06-24"
+version: "1.1"
+updated: "2026-07-15"
 license: "CC BY-NC 4.0"
 license_url: "https://creativecommons.org/licenses/by-nc/4.0/"
 attribution: "The Cannabis White Papers"
@@ -62,7 +62,7 @@ More airflow helps, but with sharply diminishing returns. Photosynthesis climbs 
 The brighter the room, the more the leaf needs air. High light drives high photosynthesis and high transpiration, and both depend on the boundary layer staying thin. Cannabis yield keeps rising with light to very high levels[^rm2021-light], but only if airflow and climate scale with it. A bright room with weak airflow wastes the light.
 
 > **KEY — Airflow moves with the rest of the room**
-> 
+>
 > Light, CO2, temperature, humidity and airflow work together (see the [systems guide](grow-room-systems.html)). Turning up the light without turning up the air leaves hot leaves sitting in their own humid film[^chandra2008-photo].
 
 ## Faster air means a hungrier plant
@@ -85,7 +85,7 @@ Oscillating or clip fans that stir the air already in the room so every leaf get
 Intake and exhaust that swap stale, humid, CO2-depleted room air for fresh air. This is the climate & humidity job. It removes the water the plants transpire.
 
 > **WARN — Mind the dead zones**
-> 
+>
 > Air takes the easy path and skips corners, the lower canopy, and the inside of dense plants. Those still, humid pockets are where bud rot starts. Place fans to push air _through_ the canopy, not just over the top of it, and defoliate enough to let air in.
 
 ## Messy air beats smooth air
@@ -93,7 +93,7 @@ Intake and exhaust that swap stale, humid, CO2-depleted room air for fresh air. 
 Aiming one big fan straight down a row is tempting. Don't. A smooth, laminar jet builds its own thick boundary layer on whatever it hits, and leaves everything off-axis still. **Turbulent, mixing air**, from many fans at varied angles with oscillation, constantly disturbs the film on every leaf from every direction, which is exactly what thins it best[^schuepp1993-bl][^dupont2025-wind].
 
 > **TIP — The flutter test**
-> 
+>
 > Walk the room. Every leaf, top to bottom and inside the plants, should be gently moving. Still leaves anywhere = a pocket you need to reach. A leaf that is flapping hard = back that fan off.
 
 ## Troubleshooting
@@ -109,7 +109,7 @@ Aiming one big fan straight down a row is tempting. Don't. A smooth, laminar jet
 ## Realistic expectations
 
 > **KEY — What to remember**
-> 
+>
 > 1. Airflow's job is to **thin the boundary layer** on every leaf. That is the whole game.
 > 2. Aim for a **gentle, turbulent breeze (~0.3–1.0 m/s)** everywhere, including inside the plants.
 > 3. More air = more thirst: **feed and humidity must keep up**[^gilliham2011-ca].

@@ -5,6 +5,7 @@ existing links). Curated to distinctive multi-word phrases to avoid noise/mis-li
 
 # slug -> phrases that should link to it (case-insensitive, whole-word)
 LINK_PHRASES = {
+    "auckland-ipm-blueprint": ["Auckland medicinal IPM", "medicinal-cannabis input gate", "approved-input register", "rice root aphid", "Septoria leaf spot"],
     "tissue-culture": ["tissue culture", "micropropagation", "meristem culture", "meristem", "hop latent viroid", "HpLVd", "clean stock"],
     "coco-crop-steering": ["crop steering", "coco coir", "dryback", "field capacity", "generative steering", "vegetative steering"],
     "rockwool-crop-steering": ["rockwool crop steering", "recovery floor", "stone wool", "preferential flow", "channeling"],
