@@ -9,8 +9,8 @@ diagrams: ""
 related: ["ph-management", "nutrient-mixing-athena", "irrigation-manual"]
 url: "https://jaketherabbit.github.io/cannabis-white-papers/water-quality.html"
 md_url: "https://jaketherabbit.github.io/cannabis-white-papers/papers/water-quality.md"
-version: "1.0"
-updated: "2026-06-24"
+version: "1.1"
+updated: "2026-07-15"
 license: "CC BY-NC 4.0"
 license_url: "https://creativecommons.org/licenses/by-nc/4.0/"
 attribution: "The Cannabis White Papers"
@@ -32,7 +32,7 @@ The plant never tastes your nutrients in isolation. It tastes water plus mineral
 > **Diagram.** Your source water and its dissolved load are the starting point. Mixing only adds to what is already there, so a problem in the first box follows the water all the way to the root.
 
 > **NOTE — What this paper does**
-> 
+>
 > It walks an absolute beginner from understanding what is in their source water, to testing it, to deciding whether reverse osmosis is worth the cost. Pairs with the [pH management](ph-management.html) and [nutrient mixing](nutrient-mixing-athena.html) papers.
 
 ## The vocabulary, in plain words
@@ -62,7 +62,7 @@ Municipal tap water is treated and consistent but carries chlorine or chloramine
 Headroom is the point beginners miss. A working feed strength is commonly capped near 800-900 ppm, so hard tap water at 300+ ppm leaves almost no room before you hit that ceiling[^bevan-2021-npk-flowering-cannabis]. Rainwater typically arrives at only 0-20 ppm, which is closer to RO, but it brings little to no buffering and a risk of pathogens, roofing contaminants, or sodium near coasts.
 
 > **TIP — Match the source to the habit**
-> 
+>
 > - **Tap:** consistent and convenient, but expect chlorine or chloramine and a starting EC that eats into your nutrient room.
 > - **Well:** free and unmetered, but composition swings. Test at least twice a year and after heavy rain.
 > - **Rain:** low starting PPM like RO, but low buffering. Filter it and watch for sodium and contaminants.
@@ -111,7 +111,7 @@ Reverse osmosis strips water to near-zero PPM, typically 0-10 ppm TDS, giving a 
 > **Diagram.** A simple decision path. RO is recommended when alkalinity is high, sodium is elevated, chloramine is present, or starting EC is high. Otherwise clean tap is usually fine.[^umass-water-quality-ph-alkalinity]
 
 > **KEY — When RO is worth it, and when it is not**
-> 
+>
 > - **Worth it when:** starting EC is high, sodium is elevated, alkalinity is high, or chloramine is present.
 > - **Often skippable when:** tap is soft, low-alkalinity, chlorine-only (off-gassable), and under about 150 ppm.
 > - **The cost:** a wastewater ratio of often 1-4 gallons wasted per gallon made, membrane replacement, and a slower fill rate.
@@ -153,7 +153,7 @@ Sorting out your water removes a whole category of mystery problems: stable pH, 
 > **Diagram.** A plain-language verdict. Soft low-alkalinity tap usually needs no RO. Hard, high-sodium, high-alkalinity, or chloraminated water is where RO earns its cost.
 
 > **KEY — The honest summary**
-> 
+>
 > 1. **Most home growers on clean, soft, low-alkalinity tap** can succeed with simple dechlorination and pH control, and never need RO.
 > 2. **RO matters most** for very hard, high-sodium, or high-alkalinity sources, for chloramine, and for precision hydro.
 > 3. **You still manage pH, EC, temperature and CalMag** regardless of which water source you choose.

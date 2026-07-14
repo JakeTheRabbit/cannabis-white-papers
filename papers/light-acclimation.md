@@ -9,8 +9,8 @@ diagrams: "10 diagrams"
 related: ["coco-crop-steering", "signal-and-noise", "plant-state-dashboard"]
 url: "https://jaketherabbit.github.io/cannabis-white-papers/light-acclimation.html"
 md_url: "https://jaketherabbit.github.io/cannabis-white-papers/papers/light-acclimation.md"
-version: "1.0"
-updated: "2026-06-24"
+version: "1.1"
+updated: "2026-07-15"
 license: "CC BY-NC 4.0"
 license_url: "https://creativecommons.org/licenses/by-nc/4.0/"
 attribution: "The Cannabis White Papers"
@@ -34,7 +34,7 @@ The light a plant can take ranges enormously across a full cycle: roughly 80 µm
 > **Diagram.** A gradual ramp lets the plant build capacity ahead of each new increment of light. A hard jump to full power, an on/off ‘switch’, outruns the plant's ability to use the photons.[^gjindali-johnson-2023-photosynthetic-acclimation]
 
 > **NOTE — Who this is for**
-> 
+>
 > Anyone who has cooked a clone or been afraid to turn the lights up. Pairs with the [crop-steering](coco-crop-steering.html) and [plant-state dashboard](plant-state-dashboard.html) papers.
 
 ## The words you need before we start
@@ -66,7 +66,7 @@ This is the whole case for incremental ramping. Add light in small steps the pla
 > **Diagram.** A plant flooded before it has acclimated converts much of the light into damage rather than sugar. A ramped plant captures nearly all of it.[^takahashi-murata-2008-environmental-stress-photoinhibition]
 
 > **WARN — Bleaching is self-inflicted damage**
-> 
+>
 > Pale, white-tipped upper leaves are not ‘light hunger’. They are the leaf burning itself with energy it can't use. The cure is less light or more capacity, never more light.
 
 ## Light is the accelerator, CO2 is the fuel
@@ -82,7 +82,7 @@ High-light setups demand matched CO2. On ambient air (around 400–600 ppm CO2),
 > **Diagram.** CO2 sets how high PPFD can usefully go. Past your CO2's ceiling, more light is wasted or harmful.[^chandra-2008-cannabis-photosynthesis-ppfd-co2-temperature]
 
 > **KEY — One sentence to remember**
-> 
+>
 > Light is the accelerator, CO2 is the fuel. Flooring the pedal with an empty tank doesn't go faster. It stalls and overheats.
 
 ## A week-by-week PPFD ramp by growth stage
@@ -104,7 +104,7 @@ The 12/12 flip cuts total daily light (DLI) by about 28% even at the same PPFD, 
 *A stage-by-stage ramp. Treat these as starting ranges, not laws. The peak you hold depends on your CO2 and climate.[^rodriguez-morrison-2021-cannabis-light-intensity-yield]*
 
 > **TIP — Mind the flip**
-> 
+>
 > The DLI drop at 12/12 is normal and expected. Let early flower re-acclimate from ~600 back up toward 950 rather than slamming the lights to peak the day you flip.
 
 ## How high you push depends on what you control
@@ -124,7 +124,7 @@ On ambient air the honest ceiling is about 950 µmol/m²/s, with real diminishin
 > **Diagram.** Each tier's ceiling is a whole-system commitment, not just a brighter setting.[^llewellyn-2022-cannabis-yield-proportional-light-uv]
 
 > **WARN — Don't buy a ceiling you can't fuel**
-> 
+>
 > Running Tier-3 light on Tier-1 air is the most expensive way to bleach plants. Max out the honest ceiling you can fuel before chasing a higher one.
 
 ## Hanging height and dimming: how you deliver the ramp
@@ -138,7 +138,7 @@ Whichever lever you use, **verify the real number.** Measure PPFD at the canopy 
 > **Diagram.** Set intensity with the dimmer, height for spread and heat, and always confirm the canopy number rather than guessing.
 
 > **TIP — The canopy moves**
-> 
+>
 > A plant that stretched 15 cm toward the light this week is getting noticeably more PPFD even though you touched nothing. Re-measure after every growth spurt.
 
 ## Signs of too much light, and the traps that cause it
@@ -157,7 +157,7 @@ Mistake one is ramping intensity too fast. Mistake two is high light with low CO
 *Same damage, different causes. Prevent both rather than guessing after the fact.*
 
 > **DANGER — Don't over-correct in fear**
-> 
+>
 > After one bleaching scare, growers often crank flower light far too low and leave yield on the table. Chronic under-lighting wastes a crop just as surely as bleaching wastes plants[^rodriguez-morrison-2021-cannabis-light-intensity-yield]. Back down one step, then climb again deliberately.
 
 ## What the newest studies add
@@ -173,7 +173,7 @@ Acclimation and CO2 matching are the foundation, and they haven't changed. Recen
 **UV rarely adds potency in modern cultivars.** Earlier work found supplemental UV-B did not raise yield or cannabinoid content[^llewellyn-2022-cannabis-yield-proportional-light-uv], and a 2024 UV-spectra trial confirmed no cannabinoid gain — high UV-B actually _cut_ THC and scorched leaves. Only the lowest UV-A dose nudged the terpene profile (linalool +29%, limonene +25%, myrcene +22%) while holding yield[^huebner2024-uv-spectra]. Modern high-THC genetics already run near their ceiling, so don't expect UV to boost potency; at most a careful low UV-A dose tweaks aroma, and supplemental UV usually costs efficiency.
 
 > **KEY — Intensity first, spectrum second**
-> 
+>
 > Get the ramp and the CO2 right before touching spectrum. Far-red and UV are marginal, trade-off-laden add-ons on top of a dialled-in intensity programme — not shortcuts around it. A clean, fully-fuelled climb to your honest ceiling beats any spectrum trick on a half-acclimated, CO2-starved plant.
 
 ## What to actually expect from your setup
@@ -190,7 +190,7 @@ Light is the schedule, not the whole system. Every PPFD target in this guide ass
 *These hold for every tier. Light only pays off when temperature, humidity and the root zone are also in range.*
 
 > **KEY — Be honest about your tier**
-> 
+>
 > A clean run at the honest ceiling beats a sloppy run at a higher one. Most beginners are best served maxing out the ~950 ambient ceiling cleanly, nailing acclimation and CO2 matching first, before ever chasing 1200 or 1500.
 
 Treat light as one input among several. It works only when the rest of the environment cooperates. Learn to read the whole picture in the [plant-state dashboard](plant-state-dashboard.html) paper, and how to act on real signals instead of noise in [signal and noise](signal-and-noise.html).

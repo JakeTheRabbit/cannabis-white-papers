@@ -9,8 +9,8 @@ diagrams: "31 diagrams"
 related: ["coco-crop-steering", "rockwool-crop-steering", "substrates-overview", "root-zone-teros12", "smart-watering-vrwe", "f2-crop-steering"]
 url: "https://jaketherabbit.github.io/cannabis-white-papers/one-steering-law.html"
 md_url: "https://jaketherabbit.github.io/cannabis-white-papers/papers/one-steering-law.md"
-version: "1.0"
-updated: "2026-06-24"
+version: "1.1"
+updated: "2026-07-15"
 license: "CC BY-NC 4.0"
 license_url: "https://creativecommons.org/licenses/by-nc/4.0/"
 attribution: "The Cannabis White Papers"
@@ -28,7 +28,7 @@ _Flowering · Crop steering · ~22 min read_
 A cannabis plant can pour its energy into **leaves** — a bigger, bushier green plant — or into **flower**: the sticky buds you actually harvest. ‘Steering’ just means using water to nudge the plant toward one or the other.
 
 > **TIP — Think of it like driving**
-> 
+>
 > Whether you grow in coco, rockwool, soil or plain water, you steer the exact same way — like a hatchback, a truck and a sports car all use one wheel, one pedal, one gear stick. You don’t relearn _driving_ for each car. You won’t relearn _steering_ for each sponge.
 
 > **Diagram.** Leaves means a bigger green plant; flower means the buds you harvest. Steering just slides the plant between the two.
@@ -48,17 +48,17 @@ Here is the whole routine you’re about to learn. Each morning when the lights 
 > **Diagram.** The entire job in one daily ring: fill up, drink down, hold, dry, repeat.
 
 > **NOTE — What’s optional here**
-> 
+>
 > Sections 1–6 and the last one teach you to grow by hand. The two **nerd-bonus** sections on moisture sensors and auto-watering robots are skippable — if you’re growing by hand, you lose nothing.
 
 > **KEY — In one sentence**
-> 
+>
 > There’s one way to steer a plant with water — toward leaves or toward flower — and coco, rockwool, soil and water just change the numbers, not the steering.
 
 ## Everything is a sponge
 
 > **TIP — Think of it like a kitchen sponge**
-> 
+>
 > Hold a kitchen sponge under the tap until it’s full, then let it drip. Every way of growing — coco, rockwool, soil, even roots dangling in water — is that same sponge: a fixed number of little holes that hold either water or air. From here on, one picture: the sponge.
 
 A growing medium is just the stuff the roots live in. The total room inside is **fixed**, and every hole holds either water or air. Push water in and you squeeze air out. **More water always means less air.**
@@ -72,7 +72,7 @@ Different sponges keep wildly different amounts of air even when soaking wet[^ma
 > **Diagram.** Coco keeps about a fifth of its room as air even when soaked; rockwool only a tenth — which is why coco is so hard to drown.
 
 > **NOTE — Real numbers**
-> 
+>
 > - Coco air when soaked: about **22%**[^abad2005-coir] · rockwool only about **10%**
 > - Peat keeps about **18–25%** air when wet · coco’s total room is about 94–96%
 
@@ -81,19 +81,19 @@ There’s a **second, hidden trait** too, just as important: how much a sponge _
 > **Diagram.** The same feeding mistake is cushioned by forgiving sponges (soil, coco) and breaks straight through harsh ones (rockwool, water).
 
 > **KEY — In one sentence**
-> 
+>
 > Every way of growing is one sponge with a fixed amount of room, and watering just decides how much of that room is water versus air.
 
 ## Water is the steering wheel, the drink-down is the engine
 
 > **TIP — Think of it like wringing a sponge**
-> 
+>
 > Water isn’t just food — it’s the steering wheel. Picture the plant gripping the sponge and wringing a little water out each day. How hard you let it wring is the engine of steering. A gentle wring grows leaves; a hard wring grows flowers.
 
 **How-full %** is the one number you steer on — how full the sponge is right now. 60% means water fills 60 of every 100 holes. The **drink-down** is the fall in how-full % between waterings: the high after a sip, minus the low before the next.
 
 > **NOTE — Say it in points, never a bare ‘%’**
-> 
+>
 > Always count the drink-down in percentage **POINTS**: 78% down to 58% is a **20-point** drink-down (a fall of 20 on the 0–100 scale). A bare ‘20%’ is ambiguous, so this guide always says points.
 
 > **Diagram.** The drink-down is simply how far the water level drops before you water again — here, 78% down to 58% is a 20-point drink-down (a rockwool example).
@@ -107,25 +107,25 @@ Bigger, deeper drink-downs push flower (make-the-buds); smaller drink-downs, kep
 > **Diagram.** You never flip the plant overnight; you nudge a dimmer one notch a day, across the week, from mostly-leaves toward mostly-flower.
 
 > **WARN — A drink-down is not a drought**
-> 
+>
 > The difference is dose and timing. Stop it on time and you keep your yield; run it too far and you crash both yield and quality[^stack2024-drought]. Always water before the plant wilts. Steer with a scalpel, not a hammer.
 
 > **Diagram.** A healthy drink-down is caught and refilled before the plant wilts; a drought keeps falling through the red zone and crashes the crop.
 
 > **NOTE — Real numbers (rockwool example — yours will differ)**
-> 
+>
 > - Leaves mode: 5–15 point drink-down · flower mode: 20–30 point drink-down
 > - Young / early: 5–10 points · late veg & bulking: 10–15 points · the overnight dry-down adds another 5–15 and re-airs the roots
 > - A real finding: easing the overnight dry-down to leave it ~10% wetter actually _lifted_ medicinal yield — some dry-down is essential, too much hurts.
 
 > **KEY — In one sentence**
-> 
+>
 > You steer the plant by how hard you let it wring the sponge dry each day — gently for leaves, hard for flowers.
 
 ## Feed strength, and why the sponge gets saltier as it dries
 
 > **TIP — Think of it like squash on a windowsill**
-> 
+>
 > Make a glass of squash, then leave it on a sunny windowsill. As the water evaporates, the drink gets stronger and sweeter — same sugar, less water. The root zone does exactly this with the feed.
 
 **Feed strength** (growers call it EC) is how strong the fertiliser feed is around the roots — higher means stronger and saltier. Here is the one physical fact that ties it to everything else: as the sponge dries, the water leaves but the food stays behind, so the feed concentrates and strengthens on its own[^hilhorst2000-ec]. A deep drink-down for flower is therefore partly a _feed-strength squeeze_, not only a water one. Water and feed are really the **same lever**.
@@ -137,23 +137,23 @@ So read the two numbers as **one story**: how-full % falling is the plant drinki
 > **Diagram.** As the pot dries the feed climbs; every sip resets both — wetness and feed strength move together.
 
 > **NOTE — Real numbers (rockwool / water — yours will differ)**
-> 
+>
 > - Feed roughly **doubles** as the sponge dries to a third left: a feed set at 3.0 can read 5.0 in the block by late afternoon
 > - Leaves mode ~3.0 · flower mode ~4.5–6.0 · healthy daily range ~2–6
 > - The feed reading gets unreliable once the sponge is nearly dry
 
 > **NOTE — Coco growers, one note**
-> 
+>
 > Coco’s forgiving sponge soaks up some of the extra feed, so the strength climbs **more gently** than in rockwool or plain water. The squash picture is the rockwool/water version — coco’s is softer.
 
 > **KEY — In one sentence**
-> 
+>
 > When the sponge dries, the water leaves but the food stays — so drying the plant out also makes its feed stronger. Water and feed are the same lever.
 
 ## The cliff: the ‘full’ mark and the danger line
 
 > **TIP — Think of it like a lift in a building**
-> 
+>
 > The top floor is ‘full’ — fill past it and water just spills out the bottom. The basement is a trap door: drop the sponge below it and it bakes dry, water runs straight past the roots, and the dripper can’t save it. You steer in the floors between, never hitting either.
 
 The **‘full’ mark** (growers call it field capacity) is the wettest the sponge gets after it stops dripping — your daily ceiling to refill toward. Crucially, it’s a property of **your exact pot and sponge**, not a textbook number, and it shrinks as roots fill the pot. You learn it from a handful of real waterings.
@@ -169,19 +169,19 @@ One more friend: the small daily **drip-out** (growers call it runoff) — about
 > **Diagram.** The few drops that run out are not wasted — they carry off built-up salt and let you read the real feed strength at the roots.
 
 > **NOTE — Real numbers (rockwool example — yours will differ)**
-> 
+>
 > - Rockwool danger line ~**25–30%** how-full · working band ~55–92%
 > - A healthy daily range often sits ~30–70% how-full · sponge temperature 20–26°C
 > - Daily drip-out at ‘full’ ~10–20% · learn your ‘full’ mark from about 5 real, agreeing waterings
 
 > **KEY — In one sentence**
-> 
+>
 > There’s a ‘full’ mark you never overflow and a danger line you never fall through — and steering means swinging the sponge safely between them.
 
 ## One day, four beats
 
 > **TIP — Think of it like breathing on a schedule**
-> 
+>
 > A small morning exhale (dry down a little), a big drink (fill up in sips), steady breathing all day (hold the band), then one deep overnight breath (the big dry-down) that pulls fresh air back to the roots. Same four beats, every single day.
 
 You don’t water at random — you water on a fixed **four-beat schedule** tied to the lights. Growers label the beats P0, P1, P2, P3; you can just call them:
@@ -204,17 +204,17 @@ Here’s the punchline that _is_ the one steering law, visible in one room: **le
 > **Diagram.** Leaves mode and flower mode are the same daily loop — you only slot in a different numbers-card.
 
 > **WARN — Never run factory defaults un-checked**
-> 
+>
 > A placeholder of ‘50% full / 50% drink-down’ is not your sponge. Learn your own ‘full’ mark and danger line first, then set the targets to them.
 
 > **KEY — In one sentence**
-> 
+>
 > Every steered day is the same four beats — dry a little, fill up, hold steady, wind down overnight — and that repeating zig-zag is steering working.
 
 ## The sponge is the gearbox
 
 > **TIP — Think of it like a gearbox**
-> 
+>
 > You already know how to drive. A gearbox sits between your foot and the wheels — same pedal, but it decides how your push turns into speed. The sponge is that gearbox between your watering and what the roots feel. Swap it and you don’t relearn driving — you just read the new gearbox’s label.
 
 This is the keystone. The sponge takes your watering decision and **changes it by fixed amounts** before the roots feel it — same input, different output per sponge. So learning a new sponge is never learning a new way to steer. It’s reading the new sponge’s label and dialling in **four numbers**: how wet ‘full’ is, how much air it keeps when full, how much it forgives a bad feed, and how dry is too dry.
@@ -242,7 +242,7 @@ Notice the trade hidden in that table: **the more control a sponge gives you, th
 > **Diagram.** First ever grow? Start with living soil or coco. Earn your way to rockwool and water later.
 
 > **TIP — Start here — a recipe you can run tonight (coco)**
-> 
+>
 > |  | Leaves mode (grow-the-body) | Flower mode (make-the-buds) |
 > | --- | --- | --- |
 > | Lights | 12 / 12 | 12 / 12 |
@@ -250,17 +250,17 @@ Notice the trade hidden in that table: **the more control a sponge gives you, th
 > | Drink-down | 5–15 points | 20–30 points |
 > | Feed strength | ~3.0 | 4.5–6.0 |
 > | Sips | many, small | fewer, bigger |
-> 
+>
 > *Start with this, watch one week, then change one thing at a time.*
 
 > **KEY — In one sentence**
-> 
+>
 > The sponge is a gearbox that only changes four numbers and which mistake will hurt you — the steering itself never changes.
 
 ## The dashboard can lie
 
 > **NOTE — Optional section**
-> 
+>
 > Skip this whole part unless you want to understand the sensors. Growing by hand, you don’t need it. The one idea worth taking: your moisture number is a **good guess, not gospel** — watch the trend, and get a second opinion before you trust it.
 
 How a probe even feels water: water reacts to the probe’s tiny electric field **far more strongly** than dry sponge or air do[^szerement-dielectric-2019]. That huge gap is the whole trick, and it works the same in coco, rockwool and soil.
@@ -276,17 +276,17 @@ And one probe is one **local witness** — it only feels a soda-can-sized spot, 
 > **Diagram.** One probe lights only a soda-can-sized spot, so confirm with a second witness — drip-out or pot weight — before any water moves.
 
 > **WARN — Worth pinning even if you skip the rest**
-> 
+>
 > If your drink-down is **smaller than your sensor’s error**, you’re guessing. Calibrate the sensor, or use a bigger drink-down.
 
 > **KEY — In one sentence**
-> 
+>
 > The probe is a fuel gauge, not a dipstick — it can read a bit wrong, so trust the trend and get a second opinion before you water.
 
 ## The brain behind an auto-waterer
 
 > **NOTE — Optional section**
-> 
+>
 > Skip this unless you’re building an automatic waterer. By hand, _you_ are the brain and the rest of the guide is enough. The single reassuring idea: never trust one sensor, and never flood or starve — when unsure, do the safe thing.
 
 A good auto-waterer keeps a running **water tally**, like a piggy bank: water IN (the dripper sips, known precisely) minus water OUT (the plant breathing water out, like sweating, plus what drains) equals the real water in the pot. The sensor becomes one _opinion_ to double-check, not the boss.
@@ -304,13 +304,13 @@ The whole decision is just three choices, all fenced by one rule. A lying sensor
 And the reassuring part: **the brain works the same no matter the sponge.** The same check-the-clues, keep-a-tally, gate-on-confidence routine runs identically for coco, rockwool, soil and water. The sponge only changes the numbers it learns — never the logic.
 
 > **KEY — In one sentence**
-> 
+>
 > An auto-waterer keeps a water piggy-bank, attaches a confidence to its guess, and only ever errs toward ‘never flood, never starve’ — on any sponge.
 
 ## One law, any sponge
 
 > **TIP — Step back and look**
-> 
+>
 > Past the dashboard, the gearbox, all of it — you see one grower doing one thing: watching the sponge, deciding, watering a little, and letting it dry. Same wheel, same lever, same dial in every sponge. Now you can grow in any of them.
 
 Everything you learned stacks into one machine: the sponge (gearbox), then how-full % (the wheel), then the drink-down (the engine), then feed strength (the second dial), all running on the four-beat daily routine. The probe and the auto-brain are optional side-modules — bolt them on only if you automate.
@@ -326,7 +326,7 @@ Across a whole grow the drink-down has the **same shape on every sponge** — ge
 > **Diagram.** What the dials actually do to a living plant — seedling, leafy body, fat flowers, ripening — start to finish.
 
 > **NOTE — Real numbers**
-> 
+>
 > - Forgiveness ladder, most to least: living soil → coco → peat → rockwool → plain water
 > - Whole-grow rockwool arc: veg gentle; flower wk1–3 drink-down 10–18 points; wk4–6 deepest, 20–30 points and feed strongest; wk7–8 eases to 18–25 points
 > - Keeping the daytime a bit wetter can give higher yield at the same quality across most of flowering — steer by timing and drink-down, not by starving.
@@ -334,7 +334,7 @@ Across a whole grow the drink-down has the **same shape on every sponge** — ge
 There’s no magic recipe. Start on the forgiving end (living soil or coco), get a probe on the root zone, learn what **one normal day** looks like, then change one thing at a time. That discipline — not a number — is what makes any sponge repeatable. To go deeper, read the [coco crop steering](coco-crop-steering.html) and [rockwool crop steering](rockwool-crop-steering.html) papers, how the [root-zone sensor](root-zone-teros12.html) really sees, and the [smart watering](smart-watering-vrwe.html) brain.
 
 > **KEY — The promise, now earned**
-> 
+>
 > Steering is one law; the sponge only changes the constants.
 
 ## Every term, in plain English

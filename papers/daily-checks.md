@@ -9,8 +9,8 @@ diagrams: "7 diagrams"
 related: ["plant-state-dashboard", "closed-loop", "grow-room-systems"]
 url: "https://jaketherabbit.github.io/cannabis-white-papers/daily-checks.html"
 md_url: "https://jaketherabbit.github.io/cannabis-white-papers/papers/daily-checks.md"
-version: "1.0"
-updated: "2026-06-24"
+version: "1.1"
+updated: "2026-07-15"
 license: "CC BY-NC 4.0"
 license_url: "https://creativecommons.org/licenses/by-nc/4.0/"
 attribution: "The Cannabis White Papers"
@@ -30,11 +30,11 @@ Every facility has a daily check sheet. Most are half-fiction. Not because staff
 A famous surgical study found records showing **100% checklist compliance** while observers watched only 4 of 13 items actually get done[^checklist-compliance-illusion]. A ticked box is not proof of a done check. This guide builds a daily check where the ticks are earned: the measurable items are confirmed by your sensors, and the human items are so quick there is no reason to fake them.
 
 > **KEY — The whole idea in one line**
-> 
+>
 > Home Assistant auto-ticks every check it can measure (climate, lights, irrigation, doors, power), the grower does only the physical walk-around, one tap or an NFC scan logs the rest, and a missed or out-of-range item escalates on its own. The sheet becomes a short list of real, human-only items, on a calm green dashboard.
 
 > **NOTE — Who this is for**
-> 
+>
 > Any indoor or controlled-environment grow with sensors and an irrigation controller, scaling from a tent to a licensed medical facility. The behaviour and checklist principles hold even with no automation at all, the Home Assistant section is how you remove the busywork.
 
 ## The words you need
@@ -68,7 +68,7 @@ Adherence is a design problem, not a character problem. Decades of checklist and
 - **Make completion visible.** A team board of who did and did not do their checks lifts adherence sharply, as long as it reads as shared transparency, not surveillance.
 
 > **NOTE — Checks can move real outcomes**
-> 
+>
 > When genuinely performed, the WHO Surgical Safety Checklist cut deaths from 3.7% to 1.4% and lifted adherence to key steps from 18.6% to 50.7%[^haynes-surgical-checklist-2009]. The gain comes from the check actually happening, never from the mandate or the tick-rate alone.
 
 ## What to actually check, and when
@@ -90,7 +90,7 @@ Split the day into a few short pause-point lists, each tied to the moment it mat
 > **Diagram.** Pre-set the limits so the call is already made, and force a corrective-action note on any red so a problem can never simply be ticked away[^eu-gmp-annex1].
 
 > **NOTE — The environment killer item people miss**
-> 
+>
 > Confirm dehumidification ramps within minutes of lights-off and air keeps moving all night. A quiet failure here is how a clean late-flower room turns into a bud-rot room overnight.
 
 ## Auto-complete it with Home Assistant
@@ -111,7 +111,7 @@ Most of a daily check is data the building already knows. Let Home Assistant con
 - **The audit trail, free:** long-term statistics keep every reading, so the daily environmental and irrigation record exists with no extra logging[^ha-template-alert-statistics].
 
 > **KEY — Worked example, in words**
-> 
+>
 > Build `binary_sensor.environment_ok` = temp, RH, VPD and CO2 all in their stage bands. An automation watches it; once it has held true across the lights-on window, it calls `todo.update_item` to complete 'Environment in range' on today's list. The grower opens the list and that line is already green, with the numbers in the history for the record.
 
 ## Make the human part almost nothing
@@ -140,7 +140,7 @@ Two failure modes remain even with a great list: it gets skipped, or it gets fak
 - **Kill perverse incentives.** No volume quotas that reward rushing; make it safe to report a real failure rather than soften or hide it.
 
 > **WARN — The owner-absent branch**
-> 
+>
 > The most common escalation bug is no path when the owner is on leave or sick. Name a backup and route to them automatically, or the safety net quietly fails on exactly the days you need it.
 
 ## The audit trail, and how to build it
@@ -158,7 +158,7 @@ Because the data entry is near zero but the system stamps who, where, when and w
 5. **Escalate & record** — Alert on overdue or red items; rely on statistics for the audit trail; review trends weekly.
 
 > **KEY — Treat the check as living**
-> 
+>
 > Pilot for about two weeks, watch where it is skipped or breaks, cut non-killer items, fix wording in growers' terms, and re-issue. Re-test after any facility or automation change. A daily check is a product you maintain, not a form you laminate.
 
 ## References

@@ -45,6 +45,7 @@ GROUPS = [
         {"slug": "nutrient-deficiencies","title": "Deficiency diagnosis",    "short": "Read the leaves, fix the feed", "icon": "leaf",    "status": "live", "track": "Feed"},
     ]},
     {"group": "Plant health", "items": [
+        {"slug": "auckland-ipm-blueprint", "title": "Auckland medicinal IPM", "short": "Clean stock, NZ law, atlas & CAPA", "icon": "shield", "status": "live", "track": "Health"},
         {"slug": "mould-risk", "title": "Mould risk",        "short": "Spot and stop bud rot",        "icon": "shield", "status": "live", "track": "Health"},
         {"slug": "ipm-sop",    "title": "IPM: pest management","short": "Scout, decide, act",           "icon": "shield", "status": "live", "track": "Health"},
         {"slug": "pest-id",    "title": "Pest ID & control",  "short": "Mites, thrips, gnats and more", "icon": "shield", "status": "live", "track": "Health"},

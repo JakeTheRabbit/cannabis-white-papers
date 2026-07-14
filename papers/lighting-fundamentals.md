@@ -9,8 +9,8 @@ diagrams: "9 diagrams"
 related: ["light-acclimation", "cloning", "flowering-stages"]
 url: "https://jaketherabbit.github.io/cannabis-white-papers/lighting-fundamentals.html"
 md_url: "https://jaketherabbit.github.io/cannabis-white-papers/papers/lighting-fundamentals.md"
-version: "1.0"
-updated: "2026-06-24"
+version: "1.1"
+updated: "2026-07-15"
 license: "CC BY-NC 4.0"
 license_url: "https://creativecommons.org/licenses/by-nc/4.0/"
 attribution: "The Cannabis White Papers"
@@ -32,7 +32,7 @@ Plants eat light. Photosynthesis converts light energy plus CO2 and water into s
 > **Diagram.** Light is the input, but it only pays off when CO2, water and nutrients keep pace.
 
 > **NOTE — This pairs with the acclimation paper**
-> 
+>
 > Read this one for the targets. Read the [light acclimation](light-acclimation.html) paper for how to ramp up to them safely, so young plants adapt instead of bleaching.
 
 ## PAR, PPFD, DLI and umol/J in plain English
@@ -70,7 +70,7 @@ Blue light, roughly 400 to 500 nm, keeps plants compact with tight internode spa
 *What each part of the spectrum does. Green is not wasted: it reaches lower leaves, but it is a minor lever.*
 
 > **TIP — Beginner rule on spectrum**
-> 
+>
 > A quality full-spectrum white LED covers veg and flower. Intensity beats spectrum tuning, so spend your attention on PPFD and DLI before you chase color recipes.
 
 ## Intensity and the daily dose: targets by stage
@@ -102,7 +102,7 @@ The plant does not count light hours. It measures the length of the unbroken dar
 > **Diagram.** Phytochrome tracks the dark period. A light leak during lights-off resets the clock and stalls the flip.[^kusuma-2021-nir-leds-delay-flowering-phytochrome]
 
 > **DANGER — Seal your dark period**
-> 
+>
 > Light leaks during the dark period are the number one beginner flowering failure: stalled bloom, re-veg, or hermaphrodites. Far-red and red are exactly what phytochrome senses. Seal pinholes, cover indicator LEDs, use light-proof ducting. If you can see in the dark, so can the plant.
 
 ## LED vs HPS vs CMH, and reading efficacy
@@ -138,7 +138,7 @@ Verify coverage by taking PPFD readings at nine points: four corners, four edge-
 *Starting heights. Always confirm against your fixture's PPFD map and a meter at canopy height.*
 
 > **TIP — Ramp, do not slam**
-> 
+>
 > Pair this with the [light acclimation](light-acclimation.html) paper: raise the dimmer or lower the fixture over several days rather than jumping a fresh clone to full intensity.
 
 ## Light stress, far-red and UV, and common mistakes
@@ -164,7 +164,7 @@ More light only helps up to the point where something else (CO2, water, nutrient
 > **Diagram.** The limiting-factor idea: pushing light far above the other inputs wastes effort. Lift the shortest stave first.[^chandra-2008-photosynthetic-response-ppfd-co2-temp]
 
 > **KEY — What to actually do**
-> 
+>
 > 1. **Without CO2, ~700-900 PPFD / ~35-45 mol DLI in flower is a sensible ceiling.** The 1000-1400 PPFD regime needs CO2, cooling and humidity control: a whole-room commitment, not just a brighter light.
 > 2. **Nail intensity, dose and photoperiod first.** Spectrum tweaks like far-red and UV are fine-tuning, not the main lever.
 > 3. **Buy on efficacy and a real PPFD map.** Hit the stage targets, seal your dark period, and lighting stops being your bottleneck.

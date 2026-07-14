@@ -9,8 +9,8 @@ diagrams: "9 diagrams"
 related: ["coco-crop-steering", "defoliation-training", "harvest-dry-trim-cure"]
 url: "https://jaketherabbit.github.io/cannabis-white-papers/flowering-stages.html"
 md_url: "https://jaketherabbit.github.io/cannabis-white-papers/papers/flowering-stages.md"
-version: "1.0"
-updated: "2026-06-24"
+version: "1.1"
+updated: "2026-07-15"
 license: "CC BY-NC 4.0"
 license_url: "https://creativecommons.org/licenses/by-nc/4.0/"
 attribution: "The Cannabis White Papers"
@@ -34,7 +34,7 @@ Only photoperiod plants need the light change to flower. Autoflower plants flowe
 > **Diagram.** Flowering is the back half of the grow. Everything before the flip builds the plant. Everything after it builds the buds.[^hesami-2023-morphological-lifecycle]
 
 > **NOTE — Who this is for**
-> 
+>
 > Anyone about to flip their first photoperiod grow who wants a week-by-week map. Pairs with the [crop-steering](coco-crop-steering.html) and [harvest and cure](harvest-dry-trim-cure.html) papers.
 
 ## Every term you need, defined
@@ -66,7 +66,7 @@ Twelve hours is the safe default, though research finds slightly longer nights c
 > **Diagram.** Vegetative runs long days. Flowering runs an equal split, and the dark half is the trigger. Break that dark period and the plant can revert or seed.[^eichhorn-bilodeau-2019-photobiology]
 
 > **WARN — The dark must be dark**
-> 
+>
 > Stray light from chargers, timer LEDs, or door gaps during lights-off can cause re-vegging or hermaphroditism. Tape over indicator lights and seal the room before you flip.
 
 ## The stretch and bud set (weeks 1-4)
@@ -87,7 +87,7 @@ Around weeks 3 to 4 the stretch stops and those pistil sites organise into real 
 *Weeks 1 to 4 targets. Run early flower slightly warm and humid, then ease humidity down as buds set.[^eichhorn-bilodeau-2019-photobiology]*
 
 > **TIP — Defoliate early or not at all**
-> 
+>
 > Lollipop and do your main defoliation between roughly day 7 and the end of week 3, before bud sites lock in. Do not defoliate heavily after week 3. See the [defoliation and training](defoliation-training.html) paper for technique.
 
 ## Bulking and ripening (weeks 5-10)
@@ -137,7 +137,7 @@ Most first-grow failures in flower come from a few repeatable errors: light leak
 *The five mistakes that sink most first grows, and the concrete fix for each.[^mahmoud-2023-botrytis-budrot]*
 
 > **DANGER — Watch the late canopy for rot**
-> 
+>
 > High humidity (60% and up) in dense late-flower canopies sharply increases bud rot risk. Botrytis starts inside the bud where you cannot see it, then collapses a whole cola. Keep air moving and humidity low through ripening.[^mahmoud-2023-botrytis-budrot]
 
 ## Realistic expectations and a sample timeline
@@ -158,7 +158,7 @@ A typical photoperiod indoor grow runs about 8 to 10 weeks of flower on top of v
 > **Diagram.** Plan your effort around bulking. That is where light, climate and feed move the harvest most.
 
 > **KEY — Three honest truths**
-> 
+>
 > 1. **Conditions move the finish date.** Genetics set the range, but your climate and feed decide where in it you land, often by a week or more.
 > 2. **Keep simple notes.** Week, height, climate, feed, what you removed. This is the fastest way to make each grow better than the last.
 > 3. **The last weeks feel slow.** Resist cutting early, because that is where a lot of weight and potency finalise.
