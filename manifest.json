@@ -5,7 +5,7 @@
  "license": "CC BY-NC 4.0",
  "license_url": "https://creativecommons.org/licenses/by-nc/4.0/",
  "base": "https://jaketherabbit.github.io/cannabis-white-papers",
- "count": 36,
+ "count": 37,
  "papers": [
   {
    "slug": "tissue-culture",
@@ -96,6 +96,24 @@
    "version": "1.1",
    "updated": "2026-07-15",
    "ref_count": 38
+  },
+  {
+   "slug": "scaling-high-light",
+   "title": "Scaling light to the limiting factor",
+   "summary": "Light sets the demand. CO₂, water, airflow, feed and heat-removal have to supply it. Your yield ceiling is whichever one tops out first — so size every system to the light, find the wall, and dial the light down to meet it.",
+   "track": "Environment & climate",
+   "read_time": "~16 min read",
+   "diagrams": "1 diagram · 5 tables",
+   "related": [
+    "grow-room-systems",
+    "co2-enrichment",
+    "coco-crop-steering"
+   ],
+   "url": "https://jaketherabbit.github.io/cannabis-white-papers/scaling-high-light.html",
+   "md_url": "https://jaketherabbit.github.io/cannabis-white-papers/papers/scaling-high-light.md",
+   "version": "1.1",
+   "updated": "2026-07-15",
+   "ref_count": 4
   },
   {
    "slug": "mould-risk",

@@ -36,6 +36,7 @@ GROUPS = [
         {"slug": "airflow-design",       "title": "Airflow design",        "short": "Move air like the pros",        "icon": "wind",     "status": "live", "track": "Environment"},
         {"slug": "under-canopy-lighting","title": "Under-canopy lighting",  "short": "Photons at the floor: SCL & ICL",  "icon": "sun",      "status": "live", "track": "Environment"},
         {"slug": "co2-enrichment",       "title": "CO2 enrichment",        "short": "Feed the plant carbon, safely", "icon": "spark",    "status": "live", "track": "Environment"},
+        {"slug": "scaling-high-light",   "title": "Scaling to high light", "short": "Find the limiting factor, dial to it", "icon": "gauge",  "status": "live", "track": "Environment"},
     ]},
     {"group": "Water, substrate & feed", "items": [
         {"slug": "substrates-overview",  "title": "Substrates compared",     "short": "Coco, rockwool, soil, hydro",   "icon": "leaf",    "status": "live", "track": "Feed"},
