@@ -32,7 +32,7 @@ except Exception:
 # not fatal, and only successfully-loaded papers go live in the nav.
 PAPER_MODULES = [
     "paper_tissue_culture", "paper_coco_crop_steering", "paper_grow_room_systems",
-    "paper_airflow_design", "paper_co2_enrichment", "paper_mould_risk",
+    "paper_airflow_design", "paper_co2_enrichment", "paper_scaling_high_light", "paper_mould_risk",
     "paper_auckland_ipm_blueprint",
     "paper_seeds_germination", "paper_lighting_fundamentals", "paper_substrates_overview",
     "paper_water_quality", "paper_ph_management", "paper_nutrient_deficiencies",
