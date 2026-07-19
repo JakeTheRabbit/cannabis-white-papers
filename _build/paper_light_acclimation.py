@@ -11,7 +11,7 @@ SUB = ("Light is a curve, not a switch. Raise PPFD in steps the plant can keep u
        "and match CO2 to set how high you can go. Updated with the latest research (2024-2026) "
        "on high-light quality gains, far-red, and UV.")
 META = [("sun", "Beginner"), ("image", "10 diagrams"),
-        ("quote", "Peer-reviewed · 12 sources"), ("clock", "~11 min read")]
+        ("quote", "Evidence-linked · 12 sources"), ("clock", "~11 min read")]
 RELATED = ["coco-crop-steering", "signal-and-noise", "plant-state-dashboard"]
 REF_IDS = ["rodriguez-morrison-2021-cannabis-light-intensity-yield",
            "chandra-2008-cannabis-photosynthesis-ppfd-co2-temperature",
@@ -163,7 +163,7 @@ SECTIONS.append({"id": "ppfd-schedule", "kicker": "The practical schedule", "tit
       _c("moher-2022-cannabis-vegetative-light-intensity-morphology") + ". Clones start soft, veg "
       "climbs steadily, and after the flip to flower the plant rebuilds toward its peak before "
       "tapering at the end."),
-    p("The 12/12 flip cuts total daily light (DLI) by about 28% even at the same PPFD, "
+    p("The 12/12 flip cuts total daily light (DLI) by about one-third (~33%) even at the same PPFD, "
       "simply because the lights are on "
       "fewer hours" + _c("rodriguez-morrison-2021-cannabis-light-intensity-yield") + ". Plan for that "
       "dip rather than panicking and over-cranking the dimmer."),

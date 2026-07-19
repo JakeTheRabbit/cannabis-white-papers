@@ -10,7 +10,7 @@ EYEBROW = "Precision · Smart watering"
 SUB = ("A grow room can water plants on its own by combining several sensor signals "
        "instead of trusting one moisture probe that might be lying.")
 META = [("gauge", "Precision"), ("image", "9 diagrams"),
-        ("quote", "Peer-reviewed · 5 sources"), ("clock", "~9 min read")]
+        ("quote", "Evidence-linked · 5 sources"), ("clock", "~9 min read")]
 RELATED = ["root-zone-teros12", "signal-and-noise", "closed-loop"]
 REF_IDS = ["szerement-seven-rod-2019", "mane-dielectric-calibration-review-2024",
            "koehler-transpiration-vpd-2023", "owen-norden-preferential-flow-2024",
@@ -137,13 +137,13 @@ SECTIONS.append({"id": "what-it-decides", "kicker": "Core idea 3", "title": "Wha
             [("Confident + room to fill", "water a measured amount"),
              ("Unsure", "wait, or deliver a small safe sip"),
              ("Stuck", "escalate to a human instead of guessing")],
-            note="Every path obeys one bound: never flood, never starve."), 5,
+            note="Every path obeys one bound: prefer temporary mild deficit over flooding when uncertain; hard-floor emergency VWC still required."), 5,
       "The whole decision logic collapses to three branches, and all three are bounded by the same "
       "promise."),
     p("It waters a bit when the brain is confident and there is room to fill. It "
       "waits or gives a small safe sip when it is not sure, rather than committing to a full shot. It asks a "
       "human when it is genuinely stuck, when the signals contradict each other and it cannot resolve them. "
-      "The whole logic is fenced in by one rule: <strong>never flood, never starve</strong>."),
+      "The whole logic is fenced in by one rule: <strong>prefer temporary mild deficit over flooding when uncertain; hard-floor emergency VWC still required</strong>."),
     callout("key", "The golden rule",
       p("Water more only when confident. When in doubt, do the safe thing. That single bound is what "
         "turns &lsquo;automatic watering&rsquo; from a scary idea into a safe one.")),

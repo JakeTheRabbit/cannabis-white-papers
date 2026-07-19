@@ -63,7 +63,7 @@ Adherence is a design problem, not a character problem. Decades of checklist and
 
 - **Cut the friction.** Get each check under about 30 seconds, mobile, one tap. Every field you remove raises completion; auto-filling what the system already knows is the single biggest win[^digital-checklist-adherence].
 - **Short lists at pause points.** Five to nine killer items per list, one screen, run at a trigger moment, not one giant sheet[^gawande-checklist-manifesto].
-- **Fixed time, one named owner.** Tie each check to a person and a moment ('at lights-on the AM tech does X'); this if-then framing lifts follow-through two to three fold[^gollwitzer-implementation-intentions]. Name a backup for the owner-absent case.
+- **Fixed time, one named owner.** Tie each check to a person and a moment ('at lights-on the AM tech does X'); this if-then framing has a medium positive effect on goal attainment (meta-analytic d≈0.65)[^gollwitzer-implementation-intentions]. Name a backup for the owner-absent case.
 - **Close the loop.** Show the worker their data was used and acted on. The top cause of disengaged faking is submitting into a void where nothing ever happens.
 - **Make completion visible.** A team board of who did and did not do their checks lifts adherence sharply, as long as it reads as shared transparency, not surveillance.
 
@@ -148,7 +148,7 @@ Two failure modes remain even with a great list: it gets skipped, or it gets fak
 Because the data entry is near zero but the system stamps who, where, when and what on every action, you get the easiest-to-fill check and a defensible record from the same design.
 
 - **The record is automatic.** Long-term statistics hold every environmental, light and irrigation reading as the daily log[^ha-template-alert-statistics], the human items carry a timestamp, identity and any exception photo.
-- **Roll up for compliance.** Feed the daily fields into per-lot records (inputs, conditions, deviations, corrective actions) for a seed-to-harvest trail under GACP and GMP[^who-gacp-2003][^eu-gmp-annex1].
+- **Roll up for compliance.** Feed the daily fields into per-lot records (inputs, conditions, deviations, corrective actions) for operational seed-to-harvest discipline (regulated GACP/GMP still needs validated systems)[^who-gacp-2003][^eu-gmp-annex1].
 - **Trend, don't just file.** Set alert and action limits from your own history and review them weekly so drift is caught before it becomes a deviation[^eu-gmp-annex1]. Sanitation, hygiene and pest logs follow the same record discipline[^haccp-prerequisite-ssop][^globalgap-cpcc].
 
 1. **Make the list** — One local_todo list = today's sheet, seeded each morning with the day's items.

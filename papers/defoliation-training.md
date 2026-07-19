@@ -190,7 +190,7 @@ Training and defoliation are real yield and quality levers, but they are not mag
 
 > **Diagram.** Yield and quality typically climb across the first three runs of a cultivar as you learn how it stretches and how much canopy work it actually wants.
 
-Good planning of genetics and spacing is one of the cheapest gains available. Choosing the right plant count and layout can lift the bottom line by roughly 15–30% with no extra overhead, because uniformity and light interception both improve[^danziger-2022-planting-density][^anthony-2020-training-light-interception].
+Good planning of genetics and spacing is one of the cheapest gains available. Choosing the right plant count and layout can move yield per area and uniformity in ways that often matter more than expensive gear with no extra overhead, because uniformity and light interception both improve[^danziger-2022-planting-density][^anthony-2020-training-light-interception].
 
 - Expect to refine over about 3 runs of a cultivar before you hit its yield/quality sweet spot.
 - Good genetic planning and spacing can be worth 15–30% to the bottom line at no extra cost[^danziger-2022-planting-density].

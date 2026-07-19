@@ -61,7 +61,7 @@ These words come back through the rest of the guide. Read them once and the trou
 
 Each nutrient stays dissolved, and therefore absorbable, only across a certain pH band. Outside that band it binds into forms the roots cannot take up. That is lockout: the plant is surrounded by food it cannot eat because the root-zone chemistry drifted out of the window.
 
-Push pH too high, above about 6.5 in inert media like coco or hydro, and the micronutrients drop out of solution first: iron, manganese, zinc and boron.[^veazie-2025-substrate-ph-micronutrient-cannabis] Drop it too low, below about 5.5, and calcium, magnesium and phosphorus lock out instead.[^gillespie-kubota-2020-low-ph-basil-nutrient-uptake]
+Push pH too high, above about 6.5 in inert media like coco or hydro, and the micronutrients drop out of solution first: iron, manganese, zinc and boron.[^veazie-2025-substrate-ph-micronutrient-cannabis] Drop it too low, below about 5.5, and calcium, magnesium and phosphorus availability can fall while iron and manganese can push toward toxicity instead.[^gillespie-kubota-2020-low-ph-basil-nutrient-uptake]
 
 Phosphorus is the clearest example. It is most available around pH 6.0-7.0, binds with iron and aluminium below 5.5, and binds with calcium above 7.5.[^kpai-2024-cannabis-nutrient-solution-ph-cation-uptake] The ‘sweet spot’ exists because it is the pH where the most nutrients overlap as available at once.
 
@@ -109,25 +109,25 @@ Mix your nutrients first, then adjust pH last. Adding nutrients shifts pH on its
 4. **Stir and wait** — Mix it in and give it a moment to react.
 5. **Re-measure** — Read again. Repeat in small steps, never dump and chase.
 
-pH Down is usually phosphoric acid and pH Up is usually potassium hydroxide.[^saloner-bernstein-2022-nitrogen-source-cannabis] Your starting water matters more than beginners expect. Alkalinity is the water's built-in acid-absorbing capacity, mostly bicarbonates, reported as ppm CaCO3, and it is distinct from a high pH reading.[^umass-water-quality-ph-alkalinity] High-alkalinity water fights your acid and creeps the pH back up after you set it.
+Common pH downs include phosphoric, nitric, sulfuric, or organic acids; common pH ups include KOH or potassium carbonate. Each adds nutrients — account for them.[^saloner-bernstein-2022-nitrogen-source-cannabis] Your starting water matters more than beginners expect. Alkalinity is the water's built-in acid-absorbing capacity, mostly bicarbonates, reported as ppm CaCO3, and it is distinct from a high pH reading.[^umass-water-quality-ph-alkalinity] High-alkalinity water fights your acid and creeps the pH back up after you set it.
 
 > **Diagram.** Alkalinity, not the pH reading, sets how much acid it takes to move the water. Hard, high-alkalinity tap water resists adjustment and drifts back up.[^umass-water-quality-ph-alkalinity]
 
 > **NOTE — Aim for 60-100 ppm CaCO3**
 >
-> Ideal irrigation alkalinity is roughly 60-100 ppm CaCO3. Very hard water may need more acid or pre-treatment before it will hold a target.[^umass-water-quality-ph-alkalinity]
+> Ideal irrigation alkalinity is roughly 40-80 ppm CaCO3 (many soilless programmes sit near 60-100). Very hard water may need more acid or pre-treatment before it will hold a target.[^umass-water-quality-ph-alkalinity]
 
 ## Runoff pH and a by-stage routine
 
 Runoff is the solution that drains from the pot, and beginners over-rely on it. In inert media like coco it is a momentary, indirect sample distorted by salt buildup and what the roots have done locally. It is not a soil test.[^malik-tlustos-2025-soilless-media-cannabis]
 
-The reliable lever is the inflow pH you set going in. For the root zone itself, watch runoff EC for salt accumulation rather than runoff pH: a flush is due when runoff EC climbs well above your feed EC. Aim to keep feed and runoff EC within about 10 percent of each other.[^kpai-2024-cannabis-nutrient-solution-ph-cation-uptake]
+The reliable lever is the inflow pH you set going in. For the root zone itself, watch runoff EC for salt accumulation rather than runoff pH: a flush is due when runoff EC climbs well above your feed EC. Treat large runaway gaps (runoff much higher than feed) as salt buildup; advanced steering may hold higher root-zone EC on purpose. Keep an eye on feed and runoff EC each other.[^kpai-2024-cannabis-nutrient-solution-ph-cation-uptake]
 
 | Stage | Inflow pH target | EC watch | Calibration | Flush trigger |
 | --- | --- | --- | --- | --- |
 | Seedling | 5.8-6.2 | Low feed EC, gentle | Monthly | Runoff EC well above feed |
-| Veg | 5.8-6.2 | Rising EC means salt buildup | Monthly | Runoff EC > feed by >10% |
-| Flower | 5.8-6.2 | Hold feed and runoff within ~10% | Monthly | Runoff EC climbing day on day |
+| Veg | 5.8-6.2 | Rising EC means salt buildup | Monthly | Runoff EC running away above feed |
+| Flower | 5.8-6.2 | Watch runoff vs feed (beginner: avoid runaway salts) | Monthly | Runoff EC climbing day on day |
 
 *Coco and hydro figures. Soil runoff is a little more meaningful but still lags and is buffered. Set inflow every feed and do not feed out of range to fix a runoff number.*
 

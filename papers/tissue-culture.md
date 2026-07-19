@@ -57,7 +57,7 @@ Tissue culture rests on one fact about plants that animals do not share. Almost 
 
 > **KEY — Totipotency: the property that makes all of this work**
 >
-> Almost every living plant cell carries the complete instructions to rebuild the whole plant. Give a tiny scrap of the right tissue the right food and the right hormones and it grows roots, shoots and leaves: a complete new plant. This ability is called **totipotency**. You are not growing a ‘sample’, you are growing a whole new copy.
+> Many plant cells can, under the right conditions, carry the complete instructions to rebuild the whole plant. Give a tiny scrap of the right tissue the right food and the right hormones and it grows roots, shoots and leaves: a complete new plant. This ability is called **totipotency**. You are not growing a ‘sample’, you are growing a whole new copy.
 
 Here is the vocabulary you need. Get the gist rather than memorising it. Each term comes back in context later.
 
@@ -75,7 +75,7 @@ Here is the vocabulary you need. Get the gist rather than memorising it. Each te
 | **Node** | The point on a stem where a leaf and a bud join. A **nodal segment** is a short stem piece containing one bud. |
 | **Subculture** | Moving growing tissue onto fresh medium. You repeat this every few weeks to keep cultures alive and multiplying. |
 | **Contamination** | The enemy: any microbe that invades the jar and outcompetes your plant. Almost always fatal to that culture. |
-| **Indexing** | Lab-testing a plant to confirm it is free of a specific disease (e.g. a DNA test for a viroid). ‘Proving clean.’ |
+| **Indexing** | Lab-testing a plant to confirm it is free of a specific disease (e.g. a RT-qPCR test for a viroid). ‘Proving clean.’ |
 
 > **NOTE — ‘Cleaning up genetics’: what it does and doesn't mean**
 >
@@ -93,13 +93,11 @@ Take cuttings from the same mother for years and two things creep in: invisible 
 
 **It's everywhere**
 
-Surveys found HpLVd in roughly **90% of California facilities**
-and ~40% of Canadian dispensary flower. If you've cloned for years, assume you may have it.[^hlvd_mgmt2025]
+Industry and research surveys have reported very high facility infection rates in California (~90% in one large testing programme) and frequent positives in Canadian retail flower (~40% in one study) — treat as warning signals, not permanent global prevalence. If you've cloned for years, assume you may have it.[^hlvd_mgmt2025]
 
 **It's expensive**
 
-Infected plants can lose up to **~50% of cannabinoids**
-, plus terpenes, trichomes and yield. Industry losses run into tens of millions of dollars a year.
+In severe symptomatic dud outbreaks, infected plants can lose a large fraction of cannabinoids (sometimes approaching ~50%)**, plus terpenes, trichomes and yield. Industry losses run into tens of millions of dollars a year.
 
 **It's stealthy**
 
@@ -108,7 +106,7 @@ for a long time and is ‘latent’ by name. By the time plants visibly dud, the
 
 **It's tough**
 
-It survives on tools, hands, pots and benches, rides in sap for ~a week and in dried tissue for ~a month, and even passes through seed (up to 100% in one cannabis cross).
+It survives on tools, hands, pots and benches, rides in sap for ~a week and in dried tissue for ~a month, and even passes through seed (at genotype-dependent rates (often single digits to tens of percent — test seed lots)).
 
 > **WARN — Why you can't just spray it away**
 >
@@ -116,7 +114,7 @@ It survives on tools, hands, pots and benches, rides in sap for ~a week and in d
 
 > **NOTE — Other things tissue culture clears out**
 >
-> HpLVd gets the headlines, but a clean start also leaves behind fungal root-rots (_Fusarium_, _Pythium_), grey mould (_Botrytis_), powdery mildew, various viruses, and even hitch-hiking pests like russet and broad mites and their eggs. You begin clean at the cellular level instead of fire-fighting forever.
+> HpLVd gets the headlines, but meristem work plus indexing mainly targets systemic agents (viroids/viruses); surface sterilisation removes many surface microbes and hitch-hikers, but endophytes can still emerge and mites remain an IPM problem. You begin clean at the cellular level instead of fire-fighting forever.
 
 ## The whole journey at a glance
 
@@ -137,7 +135,7 @@ Longer than you'd hope, and that's worth knowing up front. There are two honest 
 > **KEY — The two timelines, stated plainly**
 >
 > - **A clean, rooted, hardened clone** (no lab proof of disease status): roughly **10–15 weeks**.
-> - **A confirmed HpLVd-free mother** (meristem culture + DNA testing): realistically **5–6 months or more**. It is not a two-week job.
+> - **A confirmed HpLVd-free mother** (meristem culture + RT-qPCR testing): realistically **5–6 months or more**. It is not a two-week job.
 
 ## Why a meristem tip beats the disease
 
@@ -198,7 +196,7 @@ What's confirmed to be in the box:
 > **WARN — What the kit deliberately doesn't tell you, and doesn't include**
 >
 > - **The media base is secret.** Athena won't say whether ROOTS/SHOOTS are built on MS, DKW or a custom blend, nor which hormones, at what doses. You can't tune or troubleshoot what you can't see.
-> - **No disease test.** The kit does the meristem cut but ships _no_ DNA test (qPCR) and _no_ thermotherapy gear. So it cannot, by itself, prove a plant is HpLVd-free. Budget for independent lab testing (section 13).
+> - **No disease test.** The kit does the meristem cut but ships _no_ RT-qPCR test and _no_ thermotherapy gear. So it cannot, by itself, prove a plant is HpLVd-free. Budget for independent lab testing (section 13).
 > - **Price moves around:** roughly **$1,800–$2,295** depending on where and when; refills (media $30–$40/box, vessels $15 each, HEPA $100) add up over time.
 
 > **TIP — You can do all of this without the Athena kit**
@@ -368,13 +366,13 @@ Here is where honesty matters most. Meristem culture _can_ clear HpLVd, but how 
 
 > **WARN — The Athena kit can clean, but it cannot prove**
 >
-> The kit lets you do the meristem cut. It includes **no heat-treatment hardware and no DNA test**. So after this step you have a plant that is _probably_ clean, not a _proven_ clean one. That proof is the next section, and it's non-negotiable.
+> The kit lets you do the meristem cut. It includes **no heat-treatment hardware and no DNA test**. So after this step you have a plant that is _probably_ clean until a lab RT-qPCR says so, not a _proven_ clean one. That proof is the next section, and it's non-negotiable.
 
 ## Indexing: proving it's actually clean
 
 A meristem plant that _looks_ healthy is not a clean plant until a lab test says so. ‘Indexing’ is that test. Skip it and you can spend six months building a ‘clean’ mother that quietly re-seeds your whole room with viroid.
 
-**RT-qPCR** — The gold-standard DNA/RNA test for HpLVd. A lab amplifies any viroid genetic material in your sample until it's detectable, sensitive down to a handful of copies. You send tissue; they send back positive/negative. Many cannabis testing labs offer it cheaply per sample.
+**RT-qPCR** — The gold-standard RNA test (RT-qPCR) for HpLVd. A lab amplifies any viroid genetic material in your sample until it's detectable, sensitive down to a handful of copies. You send tissue; they send back positive/negative. Many cannabis testing labs offer it cheaply per sample.
 
 **RT-LAMP** — A newer, cheaper test that runs at a single temperature (no expensive thermocycler), making in-house or field testing practical. Slightly less established than qPCR but increasingly used.
 

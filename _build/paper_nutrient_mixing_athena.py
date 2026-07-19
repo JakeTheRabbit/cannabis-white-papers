@@ -11,7 +11,7 @@ SUB = ("Dissolve a full 25 lb bag of Athena Pro Line into a 50 L stock tank to m
        "concentrate you dose into your feed later. Covers the chemistry of getting ~227 g/L "
        "of salt fully into solution, and why each part needs its own tank.")
 META = [("beaker", "Feed & mixing"), ("image", "6 diagrams"),
-        ("quote", "Peer-reviewed · 6 sources"), ("clock", "~11 min read")]
+        ("quote", "Evidence-linked · 6 sources"), ("clock", "~11 min read")]
 RELATED = ["coco-crop-steering", "irrigation-manual", "root-zone-teros12"]
 REF_IDS = ["purdue-fertilizer-compatibility", "scienceinhydroponics-caso4",
            "libretexts-temperature-solubility", "saloner-mineral-uptake-dynamics",
@@ -96,7 +96,7 @@ SECTIONS.append({"id": "cardinal-rule", "kicker": "The one rule", "title": "Two 
 # 4 -----------------------------------------------------------------
 SECTIONS.append({"id": "chemistry", "kicker": "The why", "title": "What it takes to dissolve 11 kg in 50 L",
   "blocks": [
-    p("227 grams of salt per litre is a lot, roughly four to five times saltier than "
+    p("227 grams of salt per litre is a lot, roughly six to seven times saltier than "
       "seawater. Getting it fully into solution isn't automatic. Two bits of physics work against "
       "you."),
     ul([

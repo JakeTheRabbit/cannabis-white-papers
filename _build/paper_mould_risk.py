@@ -12,7 +12,7 @@ SUB = ("Mould is the disease most likely to wipe out a harvest in the final week
        "that can quietly make your flower unsafe to consume. Learn the conditions it needs, how to "
        "deny them, and what to do the moment you find it.")
 META = [("shield", "Beginner"), ("image", "3 diagrams"),
-        ("quote", "Peer-reviewed · 10 sources"), ("clock", "~15 min read")]
+        ("quote", "Evidence-linked · 10 sources"), ("clock", "~15 min read")]
 RELATED = ["grow-room-systems", "airflow-design", "tissue-culture"]
 REF_IDS = ["punja-budrot-cjb", "punja2025-budrot-epi", "scott2021-pm", "buirs2024-idm",
            "mckernan2016-micro", "alubeed2022-postharvest", "sun2025-drying",
@@ -30,7 +30,7 @@ SECTIONS.append({"id": "start", "kicker": "01, Read this first", "title": "Why m
          "buds. The worst of it hides <em>inside</em> the bud, where you can't see it until "
          "it's spreading."),
     p("There is also a health stake. Cannabis users have been found to get fungal infections at "
-      "roughly <strong>3.5× the rate</strong> of non-users" + _c("benedict2020-cdc") + ", and some "
+      "about <strong>3.5× more often</strong> than non-users in one claims analysis (absolute rates still low; immunocompromised patients are the high-stakes group)" + _c("benedict2020-cdc") + ", and some "
       "moulds leave behind toxins that survive drying" + _c("gwinn2023-mycotoxin") + ". This isn't "
       "only about yield. It is about safe medicine. This guide assumes you know nothing. Every "
       "term is defined."),
@@ -98,7 +98,7 @@ SECTIONS.append({"id": "prevention", "kicker": "05, The routine", "title": "Prev
   "blocks": [
     p("Prevention is a handful of boring habits done consistently. This is the whole job:"),
     steps([
-      ("Hold humidity down", "Keep flowering RH in the ~60–70% band, lower in late flower. A dehumidifier sized to your transpiration load is non-negotiable" + _c("buirs2024-idm") + "."),
+      ("Hold humidity down", "Keep flowering RH in the ~45–65% stage-dependent band (mid/late flower often ~45–55%), lower in late flower. A dehumidifier sized to your transpiration load is non-negotiable" + _c("buirs2024-idm") + "."),
       ("Move air through the canopy", "Aim for ~0.5–1.0 m/s of gentle, turbulent air reaching inside the plants, not just over the top" + _c("buirs2024-idm") + ". See the airflow paper."),
       ("Open the canopy", "Defoliate and space plants so air and light penetrate. Density is the silent risk multiplier."),
       ("Avoid free moisture", "No overhead watering or spraying in flower. Prevent condensation by avoiding big temperature swings at lights-off, so surfaces never hit dew point."),

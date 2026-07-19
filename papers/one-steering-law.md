@@ -287,7 +287,7 @@ And one probe is one **local witness** — it only feels a soda-can-sized spot, 
 
 > **NOTE — Optional section**
 >
-> Skip this unless you’re building an automatic waterer. By hand, _you_ are the brain and the rest of the guide is enough. The single reassuring idea: never trust one sensor, and never flood or starve — when unsure, do the safe thing.
+> Skip this unless you’re building an automatic waterer. By hand, _you_ are the brain and the rest of the guide is enough. The single reassuring idea: never trust one sensor, and do not flood or starve — when unsure, do the safe thing.
 
 A good auto-waterer keeps a running **water tally**, like a piggy bank: water IN (the dripper sips, known precisely) minus water OUT (the plant breathing water out, like sweating, plus what drains) equals the real water in the pot. The sensor becomes one _opinion_ to double-check, not the boss.
 
@@ -299,13 +299,13 @@ Every guess carries a **confidence level** — high when the clues agree, low wh
 
 The whole decision is just three choices, all fenced by one rule. A lying sensor can only ever make the robot _more_ careful — never trick it into overwatering.
 
-> **Diagram.** The auto-waterer only ever waters a measured bit, waits, or asks you — all fenced by ‘never flood, never starve’.
+> **Diagram.** The auto-waterer only ever waters a measured bit, waits, or asks you — all fenced by ‘prefer mild deficit over flooding when uncertain; keep a hard VWC floor’.
 
 And the reassuring part: **the brain works the same no matter the sponge.** The same check-the-clues, keep-a-tally, gate-on-confidence routine runs identically for coco, rockwool, soil and water. The sponge only changes the numbers it learns — never the logic.
 
 > **KEY — In one sentence**
 >
-> An auto-waterer keeps a water piggy-bank, attaches a confidence to its guess, and only ever errs toward ‘never flood, never starve’ — on any sponge.
+> An auto-waterer keeps a water piggy-bank, attaches a confidence to its guess, and only ever errs toward ‘prefer mild deficit over flooding when uncertain; keep a hard VWC floor’ — on any sponge.
 
 ## One law, any sponge
 

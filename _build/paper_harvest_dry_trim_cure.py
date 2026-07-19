@@ -11,7 +11,7 @@ SUB = ("A beginner's guide to the full post-harvest process: when to cut, how to
        "how to trim, and how to cure flower so it is safe from mould and keeps its smell, "
        "weight and quality.")
 META = [("scissors", "Post-harvest"), ("image", "9 figures"),
-        ("quote", "Peer-reviewed · 4 sources"), ("clock", "~14 min read")]
+        ("quote", "Evidence-linked · 4 sources"), ("clock", "~14 min read")]
 RELATED = ["mould-risk", "airflow-design", "nutrient-mixing-athena"]
 REF_IDS = ["punja-2023-trichome-maturation", "birenboim-2024-cultivar-drying",
            "brikenstein-2024-trimming", "fairbairn-1976-light-stability",
@@ -29,7 +29,7 @@ SECTIONS.append({"id": "intro", "kicker": "Start here", "title": "Why the last t
          "curing and storage. Weeks of careful growing can be ruined in a few days here. Dry too "
          "fast or too dry and you lose smell and weight. Dry too slow or too wet and mould takes hold."),
     p("Aim for a narrow safe zone: dry enough that mould cannot grow, but not so dry that the smell "
-      "and weight evaporate away. Done well, simply dialling in this stage is reported to add 5-10% "
+      "and weight evaporate away. Done well, dialling in this stage often recovers sellable mass versus bone-dry flower; vendor education sometimes cites ~5-10% "
       "to final yield, because most growers are accidentally over-drying and "
       "losing sellable weight." + _c("aroya-drying-water-activity-guide")),
     figure(L.flow("The post-harvest pipeline, start to finish",
@@ -102,7 +102,7 @@ SECTIONS.append({"id": "harvest-method", "kicker": "Step 2, hands on", "title": 
       "leave the top layer on for support, then cut the main stalk at its base."),
     p("Before anything is hung, weigh every bin to record the <strong>wet weight</strong>, the "
       "starting weight. Compared against the final dry weight later, this gives the "
-      "dry-to-wet ratio for each genetic, which lands around 10% in practice (a real example batch "
+      "dry-to-wet ratio for each genetic, which is often ~10% of whole-plant wet weight in many rooms (example batch "
       "came in at 10.46%). That tells you how much of the harvested mass is water."),
     steps([
       ("Free the plant", "Cut a circle through the bottom and middle trellis layers. Leave the top layer attached for support."),
@@ -144,7 +144,7 @@ SECTIONS.append({"id": "drying", "kicker": "The core science", "title": "The dry
 SECTIONS.append({"id": "water-activity", "kicker": "The core science", "title": "Water activity: the number that controls mould and yield",
   "blocks": [
     p("Water activity is the safe-zone gauge for cannabis. Mould and yeast can grow at 0.70 aw and "
-      "above, pathogenic bacteria at 0.85, and essentially nothing grows below about 0.60 aw." + _c("aqualab-microbial-water-activity") +
+      "above, pathogenic bacteria at 0.85, and risk rises sharply toward ~0.70 aw and above; below ~0.55 quality often suffers even as microbes slow. ASTM&rsquo;s 0.55&ndash;0.65 window is the practical target for dried flower." + _c("aqualab-microbial-water-activity") +
       " That sets the ceiling. Quality sets the floor: below 0.55 aw the terpenes dry up and quality "
       "falls off."),
     p("Together that leaves a sweet spot of 0.55-0.65 aw, the exact range written into the "
@@ -184,7 +184,7 @@ SECTIONS.append({"id": "trimming", "kicker": "Step 3, hands on", "title": "Trimm
         "Never touch the flower. Handling damages trichomes",
         "Remove fan leaves (large, few trichomes) by hand, then scissor off sugar leaves",
         "Clean scissors in 71% alcohol when resin builds up",
-        "Trimming itself lowers water activity, so flower that took down at 0.62 aw often reads 0.58-0.60 aw once trimmed"]),
+        "After dry-trim, re-check aw &mdash; handling and leaf removal can change the reading, so do not assume the hang-dry number still holds"]),
     table(["", "Wet trim", "Dry trim (this guide)"], [
       ["When", "Right after cutting", "After the 10-14 day hang-dry"],
       ["Drying speed", "Faster, harsher", "Slower, gentler"],
@@ -255,7 +255,7 @@ SECTIONS.append({"id": "expectations", "kicker": "Reality check", "title": "What
       "settles in curing before the batch is sealed." + _c("astm-d8197-water-activity")),
     callout("key", "Three honest truths",
       ol(["<strong>It takes weeks, not days.</strong> Plan two-to-three weeks for the whole post-harvest stage and do not rush the dry.",
-          "<strong>The payoff is real.</strong> Dialling in drying and curing is reported to lift yield 5-10%, mostly by no longer over-drying." + _c("aroya-drying-water-activity-guide"),
+          "<strong>The payoff is real.</strong> Dialling in drying and curing can lift sellable weight when you stop over-drying (vendor ~5-10% figures are illustrative)." + _c("aroya-drying-water-activity-guide"),
           "<strong>Genetics matter.</strong> Drying and curing are strain-dependent. Dense and fluffy flowers finish at slightly different aw points, so log every batch." + _c("birenboim-2024-cultivar-drying")])),
     p("Record the aw, RH, dates and outcomes for every genetic so good results are repeatable. The "
       "instrument is a guide, not a boss: inside the safe aw zone, trust smell and feel for the "

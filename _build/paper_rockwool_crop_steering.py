@@ -14,7 +14,7 @@ SUB = ("Rockwool is the most controllable substrate there is, and the least forg
        "can get before it is gone, and how to hold the right saturation from clone to chop without "
        "ever hand-flushing or topping up a cube.")
 META = [("droplet", "Feed & steering"), ("image", "7 diagrams"),
-        ("quote", "Peer-reviewed + Grodan/Netafim/Athena"), ("clock", "~18 min read")]
+        ("quote", "Evidence-linked + Grodan/Netafim/Athena"), ("clock", "~18 min read")]
 RELATED = ["coco-crop-steering", "root-zone-teros12", "f2-crop-steering", "irrigation-manual"]
 REF_IDS = ["grodan-irrigation-medicinal", "owen-norden-preferential-flow-2024",
            "hydrus-soilless-substrate-dynamics", "moon-rootzone-ec-2018",
@@ -31,7 +31,7 @@ SECTIONS = []
 SECTIONS.append({"id": "intro", "kicker": "Start here", "title": "Why rockwool rewards and punishes you",
   "blocks": [
     lead("Rockwool (stone wool) is spun rock fibre. It holds no nutrients of its own and reacts with "
-         "nothing you feed it, so <strong>100% of what you put in goes straight to the plant</strong>" + _c("grodan-irrigation-medicinal") +
+         "nothing you feed it, so <strong>root-zone EC is essentially the EC of the pore water (unused feed still leaves as runoff or concentrates on dryback)</strong>" + _c("grodan-irrigation-medicinal") +
          ". That makes it the most precise substrate you can steer with. It also means the block has no "
          "buffer: get the water wrong and the plant feels it the same hour."),
     p("This guide is only about the water and salt in the block, the part most growers run on feel. "

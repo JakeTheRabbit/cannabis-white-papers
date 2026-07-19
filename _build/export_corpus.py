@@ -258,7 +258,7 @@ def render_readme(manifest):
         return s.replace("|", "\\|").replace("\n", " ")
 
     L = [f"# {ATTRIBUTION}", ""]
-    L.append(f"> Beginner-first, peer-reviewed white papers on indoor medical cannabis cultivation — "
+    L.append(f"> Beginner-first, evidence-linked field guides on indoor medical cannabis cultivation — "
              f"propagation, crop steering, environment, plant health, precision irrigation, and facility "
              f"& quality. **{n} papers, each a self-contained interactive HTML page.**")
     L.append("")
@@ -363,7 +363,7 @@ def main():
     for m in manifest:
         by_group.setdefault(m["track"] or "Other", []).append(m)
     L = [f"# {ATTRIBUTION}\n",
-         "> Beginner-friendly, peer-reviewed white papers on medical cannabis cultivation: "
+         "> Beginner-friendly, evidence-linked field guides on medical cannabis cultivation: "
          "propagation, crop steering, environment, plant health, precision irrigation, facility and quality.\n",
          f"Licensed {LICENSE_ID} ({LICENSE_URL}). Attribution: {ATTRIBUTION}. "
          f"Each paper has a clean markdown version under /papers/ with sources preserved as footnotes.\n"]
@@ -410,7 +410,7 @@ def main():
     shutil.copy(os.path.join(ROOT, "LICENSE"), skill_dir)
 
     n = len(manifest)
-    desc = (f"Beginner-friendly, peer-reviewed cannabis cultivation reference: {n} white papers on "
+    desc = (f"Beginner-friendly, evidence-linked cannabis cultivation reference: {n} white papers on "
             "propagation (seeds, cloning, tissue culture), crop steering (coco, rockwool, dryback, P0-P3), "
             "environment (VPD, lighting, airflow, CO2), water and nutrition (pH, EC, substrates, Athena "
             "mixing, deficiencies), plant health (mould, IPM, pest ID, PPE and biosecurity), precision "
@@ -420,7 +420,7 @@ def main():
             "facility setup; read the relevant papers/<slug>.md for detail and citations.")
     sk = [f"---\nname: cannabis-white-papers\ndescription: {json.dumps(desc, ensure_ascii=False)}\n---\n",
           f"# {ATTRIBUTION}\n",
-          f"A library of {n} peer-reviewed, beginner-friendly cannabis cultivation white papers. Every "
+          f"A library of {n} evidence-linked, beginner-friendly cannabis cultivation field guides. Every "
           "paper is a clean markdown file in `papers/` with sources preserved as `[^id]` footnotes.\n",
           f"Licensed {LICENSE_ID} ({LICENSE_URL}). Attribution: {ATTRIBUTION}.\n",
           "## How to use\n",
@@ -445,7 +445,7 @@ def main():
     dist_dir = os.path.join(ROOT, "dist")
     os.makedirs(dist_dir, exist_ok=True)
     readme = (f"{ATTRIBUTION}\n{'='*len(ATTRIBUTION)}\n\n"
-              f"{len(manifest)} peer-reviewed cannabis cultivation white papers as clean markdown.\n"
+              f"{len(manifest)} evidence-linked cannabis cultivation field guides as clean markdown.\n"
               "Drag this folder into a Claude Project, a Custom GPT's knowledge, or NotebookLM.\n\n"
               "- papers/<slug>.md  : one paper each, citations as [^id] footnotes\n"
               "- manifest.json     : index of all papers\n"

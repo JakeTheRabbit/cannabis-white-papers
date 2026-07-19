@@ -10,7 +10,7 @@ EYEBROW = "Beginner · Light"
 SUB = ("A from-zero guide to how grow light actually works: what to measure, what to aim for "
        "at each stage, and how to avoid cooking your plants.")
 META = [("sun", "Beginner"), ("image", "9 diagrams"),
-        ("quote", "Peer-reviewed · 9 sources"), ("clock", "~14 min read")]
+        ("quote", "Evidence-linked · 9 sources"), ("clock", "~14 min read")]
 RELATED = ["light-acclimation", "cloning", "flowering-stages"]
 REF_IDS = ["rodriguez-morrison-2021-light-levels-yield-photosynthesis",
            "llewellyn-2022-light-intensity-proportional-uv-no-effect",
@@ -93,7 +93,7 @@ SECTIONS.append({"id": "spectrum", "kicker": "03 · Core concept 1", "title": "S
       ["280-400", "UV", "Stress response, possible resin; safety hazard", "Optional, end of flower"],
       ["400-500", "Blue", "Compact growth, tight internodes, thicker leaves", "Veg"],
       ["500-600", "Green", "Penetrates deeper into the canopy than expected", "Minor lever, all stages"],
-      ["600-700", "Red", "Highest photosynthetic efficiency, drives flowering and stretch", "Flower"],
+      ["600-700", "Red", "Highest photosynthetic efficiency, is highly photosynthetic (stretch is more about low blue and far-red; flowering is photoperiod)", "Flower"],
       ["700-750", "Far-red", "Speeds the dark response, adds stem stretch", "Fine-tuning only"],
     ], caption="What each part of the spectrum does. Green is not wasted: it reaches lower leaves, but it is a minor lever."),
     callout("tip", "Beginner rule on spectrum",
@@ -104,7 +104,7 @@ SECTIONS.append({"id": "spectrum", "kicker": "03 · Core concept 1", "title": "S
 SECTIONS.append({"id": "intensity-dli", "kicker": "04 · Core concept 2", "title": "Intensity and the daily dose: targets by stage",
   "blocks": [
     p("Young tissue cannot process intense light, so targets climb as the plant matures. "
-      "Clones and seedlings want about 100-300 PPFD (DLI ~10-15 mol)" + _c("rodriguez-morrison-2021-light-levels-yield-photosynthesis") +
+      "Clones and seedlings want about 100-250 PPFD (DLI roughly ~6-16 mol)" + _c("rodriguez-morrison-2021-light-levels-yield-photosynthesis") +
       ", early-to-late veg about 300-600 PPFD (DLI ~20-35 mol), and flower about 700-900 PPFD without "
       "added CO2 (DLI ~30-45 mol)" + _c("llewellyn-2022-light-intensity-proportional-uv-no-effect") + "."),
     p("Pushing past about 900 PPFD only pays off if you also raise CO2 to 1000-1200 ppm and tighten "
@@ -126,12 +126,12 @@ SECTIONS.append({"id": "intensity-dli", "kicker": "04 · Core concept 2", "title
       "Growth rises with DLI, levels off at light saturation, then falls as stress and bleaching set "
       "in. Adding CO2 moves the saturation point to the right." + _c("chandra-2008-photosynthetic-response-ppfd-co2-temp")),
     table(["Stage", "PPFD (umol/m2/s)", "DLI (mol/m2/day)", "Photoperiod"], [
-      ["Clone / seedling", "100-300", "~10-15", "18/6"],
+      ["Clone / seedling", "100-250", "~6-16", "18/6"],
       ["Early veg", "300-450", "~20-29", "18/6"],
       ["Late veg", "450-600", "~29-39", "18/6"],
-      ["Flower (no CO2)", "700-900", "~30-45", "12/12"],
+      ["Flower (no CO2)", "700-900", "~30-39", "12/12"],
       ["Flower (CO2 1000-1200 ppm)", "1000-1400", "~40-60", "12/12"],
-    ], cls="compact", caption="Stage targets. 600 PPFD x 18h (veg) is roughly the same daily dose as 800 PPFD x 12h (flower)."),
+    ], cls="compact", caption="Stage targets. 600 PPFD x 18h (~39 mol) is closer to ~900 PPFD x 12h than to 800 PPFD x 12h."),
   ]})
 
 SECTIONS.append({"id": "photoperiod-flip", "kicker": "05 · Core concept 3", "title": "The photoperiod flip that triggers flowering",
@@ -185,8 +185,7 @@ SECTIONS.append({"id": "fixtures", "kicker": "06 · The hardware", "title": "LED
 
 SECTIONS.append({"id": "setup-by-stage", "kicker": "07 · Do this", "title": "Hanging height, coverage, and a stage-by-stage setup",
   "blocks": [
-    p("Light obeys the inverse-square law: roughly doubling the distance from the canopy cuts PPFD by "
-      "about 75%. Height is your coarse intensity dial, the dimmer is the fine dial. Hang about 24 in "
+    p("Intensity falls with distance, but inverse-square (quarter at 2&times; distance) is a point-source ideal for LEDs. Use a PPFD map and meter. About hang height:  Height is your coarse intensity dial, the dimmer is the fine dial. Hang about 24 in "
       "for seedlings and clones, ~18 in for veg, and ~12-16 in for flower, then fine-tune with the "
       "dimmer and a PAR meter."),
     p("Verify coverage by taking PPFD readings at nine points: four corners, four edge-midpoints, and "

@@ -59,7 +59,7 @@ Municipal tap water is treated and consistent but carries chlorine or chloramine
 
 > **Diagram.** Where your water starts on the PPM scale. RO and rain arrive near zero, soft tap is workable, and hard tap or well water can eat most of your nutrient headroom before you begin.[^umass-water-quality-ph-alkalinity]
 
-Headroom is the point beginners miss. A working feed strength is commonly capped near 800-900 ppm, so hard tap water at 300+ ppm leaves almost no room before you hit that ceiling[^bevan-2021-npk-flowering-cannabis]. Rainwater typically arrives at only 0-20 ppm, which is closer to RO, but it brings little to no buffering and a risk of pathogens, roofing contaminants, or sodium near coasts.
+Headroom is the point beginners miss. A working feed strength is commonly capped near your total EC budget (set targets in mS/cm), so hard tap water at 300+ ppm leaves almost no room before you hit that ceiling[^bevan-2021-npk-flowering-cannabis]. Rainwater typically arrives at only 0-20 ppm, which is closer to RO, but it brings little to no buffering and a risk of pathogens, roofing contaminants, or sodium near coasts.
 
 > **TIP — Match the source to the habit**
 >
@@ -124,7 +124,7 @@ Before buying any equipment, get real numbers for your water. A cheap EC/PPM pen
 
 1. **Buy and calibrate pens** — Get an EC/PPM pen and a pH pen first. Calibrate with fresh calibration solution, never with tap water.
 2. **Get the full picture** — For alkalinity, sodium, Ca, Mg and micronutrients, use a lab test or your city's annual water-quality report.
-3. **Record starting EC** — Note how much room you have before the ~800-900 ppm feed ceiling, so you know your nutrient headroom.
+3. **Record starting EC** — Note how much room you have before the ~your total EC budget (set targets in mS/cm) feed ceiling, so you know your nutrient headroom.
 4. **Mix in the right order** — Fill water, let chlorine off-gas or filter it, add CalMag if RO or soft, add base nutrients, then adjust pH last.
 5. **Re-test seasonally** — Re-check well and rain sources through the year. Municipal supplies can also switch chlorine to chloramine periodically.
 
@@ -132,9 +132,9 @@ Before buying any equipment, get real numbers for your water. A cheap EC/PPM pen
 
 ## Water temperature and the mistakes beginners make
 
-Water temperature quietly controls dissolved oxygen and disease risk. Aim for roughly 18-22 C (65-72 F), because dissolved oxygen falls from about 5-6 ppm at 20 C to only 3-4 ppm at 26 C[^fao-dissolved-oxygen-temperature], and root pathogens like Pythium accelerate above about 23 C[^sutton-2006-pythium-hydroponic-etiology]. Warm water plus low oxygen is an open invitation to root rot.
+Water temperature quietly controls dissolved oxygen and disease risk. Aim for roughly 18-22 C (65-72 F), because warm, poorly aerated water raises pathogen risk even though saturation DO is still roughly ~9 mg/L at 20 C and ~8 mg/L at 26 C. Target at 26 C[^fao-dissolved-oxygen-temperature], and root pathogens like Pythium accelerate above about 23 C[^sutton-2006-pythium-hydroponic-etiology]. Warm water plus low oxygen is an open invitation to root rot.
 
-> **Diagram.** Dissolved oxygen declines steadily as water warms, from about 5-6 ppm near 20 C down toward 3-4 ppm at 26 C. Above roughly 23 C you also enter Pythium risk.[^fao-dissolved-oxygen-temperature][^sutton-2006-pythium-hydroponic-etiology]
+> **Diagram.** Saturation dissolved oxygen declines gently as water warms (roughly ~9 mg/L near 20 C toward ~8 mg/L saturation at 26 C. Above roughly 23 C you also enter Pythium risk.[^fao-dissolved-oxygen-temperature][^sutton-2006-pythium-hydroponic-etiology]
 
 | Common mistake | What actually happens, and the fix |
 | --- | --- |

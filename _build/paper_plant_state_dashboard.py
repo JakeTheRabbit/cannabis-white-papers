@@ -34,7 +34,7 @@ SECTIONS.append({"id": "intro", "kicker": "Start here", "title": "What this is, 
       "human to be the integrator, synthesising fifteen graphs into a judgement in real time, often "
       "while tired. A plant-state dashboard does that synthesis for you."),
     callout("note", "What this paper is, and isn't",
-      ul(["This is an <strong>operational and product-design guide</strong>, not a horticulture-science paper. Most claims here are design opinions backed by worked examples.",
+      ul(["This is an <strong>operational and product-design guide</strong>, not a horticulture-science paper. Lead-time examples are illustrative UX, not validated predictions. Most claims here are design opinions backed by worked examples.",
           "The aim is a screen that <strong>infers</strong> the plant's state, <strong>predicts</strong> trouble days early, and <strong>prescribes</strong> the next step with its evidence and confidence attached.",
           "The one-line thesis: <em>a cockpit full of gauges is not a co-pilot.</em>"], "tight")),
     figure(L.flow("Where the thinking happens",
@@ -222,7 +222,7 @@ SECTIONS.append({"id": "dashboard-surface", "kicker": "Core content", "title": "
       "single status colour, position, one bold line, that the eye reads before conscious "
       "attention engages, so the &lsquo;all clear&rsquo; state is grasped at a glance" + _c("preattentive-dataviz") + "."),
     callout("key", "A sample advisory, in full",
-      p("&lsquo;Reduce dryback target 3% in Room 3 (Day 24)&hellip; Tip burn likely within ~48h if "
+      p("&lsquo;Reduce dryback target 3% in Room 3 (Day 24)&hellip; Tip burn likely soon (illustrative) if "
         "unaddressed. Confidence: high. <em>[Show evidence]</em>&rsquo;, and the evidence "
         "expands to the fused signals, the baseline it violated, and the historical precedent. The "
         "old dashboard was 100% Zone 4. The new one leads with Zones 1&ndash;3 and keeps 4 in the "

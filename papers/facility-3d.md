@@ -25,6 +25,10 @@ _Facility · Design · ~14 min read_
 
 ## What 3D facility planning is (and why it beats a paper plan)
 
+> **NOTE — Jurisdiction**
+>
+> Jurisdiction note: security and egress examples may cite US (WAC/IBC) rules for illustration. Use the code and licence rules of the jurisdiction that will inspect you.
+
 A grow facility is a building full of rooms, equipment, airflow paths and security cameras. The usual way to plan one, a flat top-down architect's drawing, can only really be read by experts. A **3D model** is the same plan rebuilt on your screen as a thing you can rotate, zoom into and click on, so investors, electricians, inspectors and staff all understand it instantly.
 
 Describe the building as data instead of drawing it. You write a data file, a plain list of rooms and their dimensions, and let code draw the building from that data. Re-planning the facility for the next harvest then becomes nothing more than editing some numbers. The worked example throughout this paper is a real two-storey licensed cultivation facility measuring 14.8 by 16.7 metres.

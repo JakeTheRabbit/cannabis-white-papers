@@ -11,7 +11,7 @@ SUB = ("A grow room is one connected system, not a list of gadgets. Light, heat,
        "water all pull on each other. Learn to see the whole machine, so a fix in one place doesn't "
        "break another.")
 META = [("building", "Beginner"), ("image", "4 diagrams"),
-        ("quote", "Peer-reviewed · 10 sources"), ("clock", "~18 min read")]
+        ("quote", "Evidence-linked · 10 sources"), ("clock", "~18 min read")]
 RELATED = ["coco-crop-steering", "airflow-design", "mould-risk"]
 REF_IDS = ["rm2021-light", "faust2018-dli", "collado2025-light", "chandra2008-photo",
            "inoue2021-vpd", "schymanski2016-wind", "malik2025-media", "caplan2019-drought",
@@ -97,7 +97,7 @@ SECTIONS.append({"id": "climate", "kicker": "05 · The air", "title": "Climate: 
              (1.2, 1.6, L.GXL, "generative"), (1.6, 2.0, L.AMBL, "stress: stomata close")],
             unit=" kPa",
             note="Rough guide. The ideal shifts with stage and strain. Steady VPD beats a perfect but jumpy one."), 3,
-      "Most growth happens around 0.8–1.2 kPa. Drier air pushes generative, but past ~1.5 kPa the "
+      "A practical mid-band is around 0.8–1.2 kPa (cultivar-dependent; late flower often ~1.2–1.5). Drier air can push generative, but past ~1.5 kPa the "
       "plant closes up and stops working" + _c("inoue2021-vpd") + "."),
     p("<strong>CO2</strong> is the other climate lever. Adding CO2 raises photosynthesis and "
       "water-use efficiency, and, counter-intuitively, it makes the plant transpire "
@@ -109,7 +109,7 @@ SECTIONS.append({"id": "air", "kicker": "06 · Movement", "title": "Airflow ties
   "blocks": [
     p("Moving air does two quiet but vital jobs. It strips away the thin film of still, humid air "
       "that clings to each leaf, and it cools the leaf by convection. Faster air thins that film, "
-      "improving CO2 uptake and water-use efficiency while lowering water loss" + _c("schymanski2016-wind") +
+      "improving CO2 uptake and water-use efficiency (more carbon fixed per unit water). Absolute water use often still rises in bright rooms" + _c("schymanski2016-wind") +
       ". It also keeps every plant in the room living in the same climate."),
     callout("note", "Airflow has its own paper",
       p("Boundary layers, fan placement, velocity targets and dead zones are covered in depth in "
@@ -157,7 +157,7 @@ SECTIONS.append({"id": "trouble", "kicker": "10 · When it goes wrong", "title":
   "blocks": [
     table(["Symptom", "Where the system broke", "What to do"], [
       ["Room humidity won't come down", "Light/transpiration outran your dehumidification", "Add dehumid capacity or trim light, and improve air exchange"],
-      ["Leaf edges curling/taco at high light", "VPD too high, so the plant closed its stomata", "Lower VPD (cooler/more humid), add CO2, verify airflow"],
+      ["Leaf edges curling/taco at high light", "Often light + leaf heat + VPD, not VPD alone", "Check PPFD and leaf temp first, then VPD (cooler/more humid), add CO2, verify airflow"],
       ["Big light, disappointing yield", "Climate/CO2/water didn't scale with the light", "Match CO2, VPD and feed to the light level"],
       ["Hot canopy, slow growth", "Airflow too weak, so the leaf can't shed heat", "Increase canopy-level air movement"],
       ["Bud rot in week 6+", "Dense canopy + trapped humidity", "Defoliate/space plants, airflow through the canopy, lower RH"],

@@ -7,11 +7,13 @@ REFS_ADD = {
         "url": "https://www.ecfr.gov/current/title-21/chapter-I/subchapter-B/part-117/subpart-B", "peer": False},
     "hlvd-transmission-2025": {
         "cite": "Mechanical transmission and management of Hop Latent Viroid (HLVd) in cannabis: spread via "
-                "contaminated tools and cuttings, up to 100% transmission within four weeks; controls include "
-                "fresh gloves per plant, tool sterilisation and footbaths. <em>Plants</em> (MDPI) 2025, 14:830.",
+                "contaminated tools and cuttings; under experimental conditions linked cuttings can approach "
+                "complete infection within weeks; controls include fresh gloves per plant, tool sterilisation "
+                "and footbaths. <em>Plants</em> (MDPI) 2025, 14:830.",
         "url": "https://www.mdpi.com/2223-7747/14/5/830", "peer": True},
     "cleanroom-humans-source": {
-        "cite": "Cleanroom contamination analyses: personnel account for roughly 70-90% of contamination; a "
+        "cite": "Cleanroom contamination analyses: personnel are typically the dominant contamination source "
+                "(industry figures often cite a large majority; exact share varies by facility); a "
                 "gowned worker emits ~100,000 particles/min at rest, ~1,000,000 walking, up to ~5,000,000 in "
                 "active work.",
         "url": "https://www.precgroup.com/70-percent-of-cleanroom-contamination/", "peer": False},
@@ -24,18 +26,19 @@ REFS_ADD = {
                 "7 million fungal genome copies per person per hour above the unoccupied baseline.",
         "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7950481/", "peer": True},
     "phone-fomite": {
-        "cite": "Mobile phones as fomites: cultured phones average far higher bacterial loads than a public "
-                "toilet seat (order-of-magnitude), isolates including <em>S. aureus</em>, <em>E. coli</em> "
-                "and <em>Candida</em>.",
+        "cite": "Mobile phones as fomites: high-touch devices carry skin and environmental flora "
+                "(methods and comparisons vary across studies), isolates including <em>S. aureus</em>, "
+                "<em>E. coli</em> and <em>Candida</em>.",
         "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3939586/", "peer": True},
     "shoe-floor-contamination": {
         "cite": "Shoe-sole and floor contamination: soles carry MRSA, <em>C. difficile</em>, <em>E. coli</em> "
                 "and other organisms; walking re-disperses settled organisms, contributing a meaningful share "
                 "of airborne CFU.",
-        "url": "https://www.infectioncontroltoday.com/view/shoe-sole-and-floor-contamination-new-consideration-environmental-hygiene", "peer": True},
+        "url": "https://www.infectioncontroltoday.com/view/shoe-sole-and-floor-contamination-new-consideration-environmental-hygiene", "peer": False},
     "hand-hygiene-logreduction": {
-        "cite": "Comparative hand-hygiene efficacy: alcohol-based handrub achieves a larger log reduction "
-                "(~3 log, ~83%) than plain soap-and-water washing (~2 log, ~58%); neither sterilises.",
+        "cite": "Comparative hand-hygiene efficacy: alcohol-based handrubs often achieve ~2–3 log reductions "
+                "of transient flora under test conditions (~99–99.9%); soap and water remove soil and many "
+                "organisms but neither sterilises hands. (Note: 1 log ≈ 90%, not ~58–83%.)",
         "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC117885/", "peer": True},
     "toilet-plume": {
         "cite": "Toilet-flush bioaerosol ('toilet plume'): a flush lofts aerosols to ~1.5 m within seconds; "

@@ -69,13 +69,13 @@ Light is the upstream lever: it sets how much of everything else the plant wants
 
 Temperature and humidity are not two separate dials. Together they make **VPD**, which controls how fast the plant transpires. There is a workable middle band. Too low and everything slows. Too high and the plant shuts its stomata to save water, stalling CO2 uptake and growth[^inoue2021-vpd].
 
-> **Diagram.** Most growth happens around 0.8–1.2 kPa. Drier air pushes generative, but past ~1.5 kPa the plant closes up and stops working[^inoue2021-vpd].
+> **Diagram.** A practical mid-band is around 0.8–1.2 kPa (cultivar-dependent; late flower often ~1.2–1.5). Drier air can push generative, but past ~1.5 kPa the plant closes up and stops working[^inoue2021-vpd].
 
 **CO2** is the other climate lever. Adding CO2 raises photosynthesis and water-use efficiency, and, counter-intuitively, it makes the plant transpire _less_ and partly close its stomata, not open them[^chandra2008-photo]. It only pays off when light is already high.
 
 ## Airflow ties it together
 
-Moving air does two quiet but vital jobs. It strips away the thin film of still, humid air that clings to each leaf, and it cools the leaf by convection. Faster air thins that film, improving CO2 uptake and water-use efficiency while lowering water loss[^schymanski2016-wind]. It also keeps every plant in the room living in the same climate.
+Moving air does two quiet but vital jobs. It strips away the thin film of still, humid air that clings to each leaf, and it cools the leaf by convection. Faster air thins that film, improving CO2 uptake and water-use efficiency (more carbon fixed per unit water). Absolute water use often still rises in bright rooms[^schymanski2016-wind]. It also keeps every plant in the room living in the same climate.
 
 > **NOTE — Airflow has its own paper**
 >
@@ -110,7 +110,7 @@ The same warm, humid, densely-planted room that grows big plants also grows moul
 | Symptom | Where the system broke | What to do |
 | --- | --- | --- |
 | Room humidity won't come down | Light/transpiration outran your dehumidification | Add dehumid capacity or trim light, and improve air exchange |
-| Leaf edges curling/taco at high light | VPD too high, so the plant closed its stomata | Lower VPD (cooler/more humid), add CO2, verify airflow |
+| Leaf edges curling/taco at high light | Often light + leaf heat + VPD, not VPD alone | Check PPFD and leaf temp first, then VPD (cooler/more humid), add CO2, verify airflow |
 | Big light, disappointing yield | Climate/CO2/water didn't scale with the light | Match CO2, VPD and feed to the light level |
 | Hot canopy, slow growth | Airflow too weak, so the leaf can't shed heat | Increase canopy-level air movement |
 | Bud rot in week 6+ | Dense canopy + trapped humidity | Defoliate/space plants, airflow through the canopy, lower RH |

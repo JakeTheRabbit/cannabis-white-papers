@@ -76,7 +76,7 @@ The second table is the **water, feed and heat** side of the same row — what y
 | 800 | 3.0 L/m²/d | 4.0 L/m²/d | 2.4–2.8 | 296 W/m² | 0.8 ton /10 m² | 6.3 pt/m²/d |
 | 1000 | 3.7 L/m²/d | 4.9 L/m²/d | 2.8–3.2 | 370 W/m² | 1.1 ton /10 m² | 7.8 pt/m²/d |
 | 1200 | 4.4 L/m²/d | 5.9 L/m²/d | 3.2–3.6 | 444 W/m² | 1.3 ton /10 m² | 9.4 pt/m²/d |
-| 1500 | 5.6 L/m²/d | 7.4 L/m²/d | 3.6–4.2 | 556 W/m² | 1.6 ton /10 m² | 11.7 pt/m²/d |
+| 1500 | 5.6 L/m²/d | 7.4 L/m²/d | 2.4–3.2 (advanced: up to ~3.6) | 556 W/m² | 1.6 ton /10 m² | 11.7 pt/m²/d |
 | Rules used: transpiration ≈ PPFD × 0.0037 L/m²/d; irrigation = transpiration ÷ 0.75; light heat = PPFD ÷ 2.7; dehu load = transpiration (1 L ≈ 2.1 US pints)[^collado2025-light]. Heavy CO₂ trims transpiration a little at the top. On HPS or 2.0 µmol/J LED, add ~35% to every heat, cooling and airflow figure. |
 
 *Table 2 · Water, feed & heat-removal by light level (per m² of canopy, ~25% runoff, LED @ 2.7 µmol/J)*
@@ -110,7 +110,7 @@ The feed column deserves its own look, because raising EC with light is the step
 | 800 | 2.4–2.8 | 4–5 | ~4.0 L | Build shot frequency with canopy | Balanced feed shows here |
 | 1000 | 2.8–3.2 | 5–6 | ~4.9 L | Multiple shots, tighter window | Under: lower-canopy fade |
 | 1200 | 3.2–3.6 | 6–7 | ~5.9 L | Frequent shots, watch runoff EC | Over: tip burn, crispy margins |
-| 1500 | 3.6–4.2 | 7–8 | ~7.4 L | High frequency + volume, daily EC checks | Either error bites fast |
+| 1500 | 2.4–3.2 (advanced: up to ~3.6) | advanced if runoff >> feed | ~7.4 L | High frequency + volume, daily EC checks | Either error bites fast |
 | Assumes a clean source (<0.4 EC), a balanced high-ratio nutrient and an inert substrate. Coir buffers cations, so run the lower half of each band. See [Coco & crop steering](coco-crop-steering.html) and [Nutrient deficiencies](nutrient-deficiencies.html). Raise EC as a lever _after_ irrigation volume is right, never instead of it. |
 
 *Table 4 · Feed EC and root-zone strategy by light level (managed substrate, clean source water)*
@@ -123,7 +123,7 @@ Now the payoff. Every support system can sustain some maximum light level — a 
 
 | System | What you have | Its PPFD ceiling |
 | --- | --- | --- |
-| **CO₂** | Your setpoint | Ambient 420 ppm → ~800 µmol · 800 ppm → ~1000 · 1200 ppm → ~1300 · 1500 ppm → ~1500 |
+| **CO₂** | Your setpoint | Ambient 420 ppm → ~800+ µmol with diminishing returns (not a hard wall) · 800 ppm → ~1000 · 1200 ppm → ~1300 · 1500 ppm → ~1500 |
 | **Cooling** | Installed sensible tons | PPFD ≤ 9,500 × tons ÷ m² |
 | **Dehumidification** | Rated pints/day | PPFD ≤ 128 × pints/day ÷ m² |
 | **Irrigation** | Max deliverable L/day | PPFD ≤ 200 × L/day ÷ m² |
@@ -149,7 +149,7 @@ The same method, four common rooms. Each has plenty of everything except one thi
 
 > **NOTE — Case B · The ambient-air ceiling cheap to fix**
 >
-> **The room:** big cooling and dehu, but _no_ CO₂ supplementation — ambient 420 ppm. **The math:** cooling and dehu might support 1200, but at ambient CO₂ the leaf light-saturates around **800** µmol[^chandra2008-photo]. **The wall:** CO₂, at ~800. **The fix:** above 800 the extra light just bleaches tops and adds heat — dial down to 800, or add CO₂ and suddenly all that cooling and dehu headroom means something. The cheapest ceiling in the building to raise.
+> **The room:** big cooling and dehu, but _no_ CO₂ supplementation — ambient 420 ppm. **The math:** cooling and dehu might support 1200, but at ambient Under ambient CO₂, leaf curves flatten earlier than canopy yield, which can still rise well past 800 [^chandra2008-photo]. **The practical limit:** ambient CO₂ lowers efficiency as PPFD climbs. **The fix:** above ~800–1000 without enrichment, extra light often just bleaches tops and adds heat — dial down to 800, or add CO₂ and suddenly all that cooling and dehu headroom means something. The cheapest ceiling in the building to raise.
 
 > **NOTE — Case C · The stagnant canopy hidden**
 >

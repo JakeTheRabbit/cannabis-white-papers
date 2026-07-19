@@ -10,7 +10,7 @@ EYEBROW = "Beginner · Flower"
 SUB = ("A beginner's guide to the cannabis flowering stage: the flip to 12/12, the stretch, "
        "bud set, bulking, ripening, and reading the plant to know exactly when to cut.")
 META = [("leaf", "Beginner"), ("image", "9 diagrams"),
-        ("quote", "Peer-reviewed · 8 sources"), ("clock", "~12 min read")]
+        ("quote", "Evidence-linked · 8 sources"), ("clock", "~12 min read")]
 RELATED = ["coco-crop-steering", "defoliation-training", "harvest-dry-trim-cure"]
 REF_IDS = ["ahrens-2023-photoperiod-optimum", "spitzer-rimon-2019-florogenesis",
            "llewellyn-2022-light-intensity-yield", "eichhorn-bilodeau-2019-photobiology",
@@ -150,7 +150,7 @@ SECTIONS.append({"id": "bulking-ripening", "kicker": "05 · Weeks 5-10", "title"
             unit="%", note="Peak swelling lands weeks 5 to 7, then tapers as the plant ripens.", maxv=110), 5,
       "Most of the weight goes on weeks 5 to 7. That is where light, feed and CO2 earn their keep." + _c("livingston-2020-trichome-maturation")),
     figure(L.zones("Target humidity falls across the cycle",
-            35, 75, [(0, 4, L.GL, "Early 60-70%"), (4, 7, L.AMBL, "Bulking 55-62%"),
+            35, 75, [(0, 4, L.GL, "Early 55-65%"), (4, 7, L.AMBL, "Bulking 50-60%"),
                      (7, 10, L.BLUL, "Ripening 40-50%")],
             unit="% RH",
             note="EC rises into bulking then eases in ripening. Humidity comes down the whole way to fend off rot."), 6,
@@ -165,7 +165,7 @@ SECTIONS.append({"id": "when-to-harvest", "kicker": "06 · The decision", "title
     p("Harvest when most trichomes have turned from clear to milky or cloudy, with a small fraction "
       "going amber. A common target is 80 to 90% milky with 5 to 15% amber. More clear or milky "
       "gives a more energetic, heady effect. More amber means THC is degrading toward CBN for a "
-      "heavier, more sedative effect." + _c("livingston-2020-trichome-maturation")),
+      "heavier feel for some people &mdash; multi-factor, not a CBN switch." + _c("livingston-2020-trichome-maturation")),
     p("Wait until pistils are mostly darkened and curled in (roughly 70% or more), then switch to "
       "checking trichomes for the real call. Use 60x or higher magnification on actual bud, not "
       "sugar leaves, and check several spots, since maturity varies across the plant. Do not harvest "
@@ -176,13 +176,13 @@ SECTIONS.append({"id": "when-to-harvest", "kicker": "06 · The decision", "title
             ylab="% clear", ymin=0, ymax=100, bands=[(0, 12, L.GXL, "harvest window")],
             note="As clear trichomes vanish, milky peaks and amber creeps in. The shaded band is the common harvest window."), 7,
       "Clear trichomes fade out as milky takes over and a little amber appears. Cut inside the "
-      "window for a balanced effect, later for a more sedative one." + _c("livingston-2020-trichome-maturation")),
+      "window as a maturity cue; later cuts often feel heavier, genotype still dominates." + _c("livingston-2020-trichome-maturation")),
     table(["Signal", "What you see", "Readiness", "Effect if cut now"], [
       ["Pistils", "Still mostly white, sticking out", "Too early", "Thin, harsh, low potency"],
       ["Trichomes", "Mostly clear", "Too early", "Underdeveloped"],
-      ["Trichomes", "80-90% milky, 5% amber", "Peak window (early)", "Energetic, heady"],
+      ["Trichomes", "80-90% milky, 5% amber", "Peak window (early)", "Common early-cut target"],
       ["Trichomes", "Milky with 10-15% amber", "Peak window (late)", "Balanced"],
-      ["Trichomes", "30%+ amber, leaves yellow", "Over-ripe", "Sedative, couch-lock"],
+      ["Trichomes", "30%+ amber, leaves yellow", "Over-ripe", "Often denser/heavier feel; genotype still dominates"],
     ], cls="compact", caption="Read trichomes on bud at 60x or more. Pistil colour is only a first hint." + _c("livingston-2020-trichome-maturation")),
   ]})
 
@@ -193,7 +193,7 @@ SECTIONS.append({"id": "pitfalls", "kicker": "07 · Avoid these", "title": "Comm
       "high as buds get dense. Each is easy to avoid once you know it. The single most expensive "
       "mistake is harvesting too early because you ran out of patience."),
     table(["Pitfall", "The fix"], [
-      ["Light leaks in the dark period", "Tape over LED indicators and seal door gaps. Even a phone-screen of light, repeated, can cause hermies"],
+      ["Light leaks in the dark period", "Tape over LED indicators and seal door gaps. Bright or repeated night interruptions can stall flowering; genetics and multi-stress drive most herms"],
       ["Over-defoliating or doing it late", "Stop heavy leaf removal after week 3. Leaves are the plant's sugar factory during bulking"],
       ["Humidity too high in late flower", "Pull RH down to 40-50% from week 7. Dense buds plus 60%+ RH invites bud rot (botrytis)"],
       ["Nutrient burn", "Drop feed EC and give enough water volume per feed. Burnt tips mean the feed is too strong"],
@@ -216,7 +216,7 @@ SECTIONS.append({"id": "expectations", "kicker": "08 · Reality check", "title":
       ["1-2", "Stretch", "Doubling in height, first pistils", "800-900", "27 C / 23 C", "65% / 1.0", "Lollipop, defoliate"],
       ["3-4", "Bud set", "Stretch ends, budlets form", "900", "27 C / 22 C", "60% / 1.1", "Stop defoliating"],
       ["5-7", "Bulking", "Buds swell fastest, frost builds", "1000-1100", "27 C / 22 C", "58% / 1.2", "Peak feed, push light"],
-      ["8-10", "Ripening", "Pistils darken, trichomes go milky", "900", "24 C / 20 C", "45% / 1.2", "Lower RH, flush, read trichomes"],
+      ["8-10", "Ripening", "Pistils darken, trichomes go milky", "900", "24 C / 20 C", "45% / 1.2", "Lower RH, ease EC, read trichomes"],
     ], cls="compact", caption="A week-by-week map, not a rulebook. Let the trichomes have the final word."),
     figure(L.flow("The flower cycle at a glance",
             [("Stretch", "wk 1-3"), ("Bud set", "wk 3-4"), ("Bulking", "wk 5-7"),

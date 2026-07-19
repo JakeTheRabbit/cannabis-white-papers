@@ -25,7 +25,7 @@ _Feed · Rockwool steering · ~18 min read_
 
 ## Why rockwool rewards and punishes you
 
-Rockwool (stone wool) is spun rock fibre. It holds no nutrients of its own and reacts with nothing you feed it, so **100% of what you put in goes straight to the plant**[^grodan-irrigation-medicinal]. That makes it the most precise substrate you can steer with. It also means the block has no buffer: get the water wrong and the plant feels it the same hour.
+Rockwool (stone wool) is spun rock fibre. It holds no nutrients of its own and reacts with nothing you feed it, so **root-zone EC is essentially the EC of the pore water (unused feed still leaves as runoff or concentrates on dryback)**[^grodan-irrigation-medicinal]. That makes it the most precise substrate you can steer with. It also means the block has no buffer: get the water wrong and the plant feels it the same hour.
 
 This guide is only about the water and salt in the block, the part most growers run on feel. By the end you will know exactly what a water-content percentage is, how to calculate a dryback, the minimum you must feed, the point past which a dried-out block cannot be saved by the dripper, and how to hold the slab in the right zone for the whole grow using sensors and an irrigation controller, never a hose.
 

@@ -64,7 +64,7 @@ Blue light, roughly 400 to 500 nm, keeps plants compact with tight internode spa
 | 280-400 | UV | Stress response, possible resin; safety hazard | Optional, end of flower |
 | 400-500 | Blue | Compact growth, tight internodes, thicker leaves | Veg |
 | 500-600 | Green | Penetrates deeper into the canopy than expected | Minor lever, all stages |
-| 600-700 | Red | Highest photosynthetic efficiency, drives flowering and stretch | Flower |
+| 600-700 | Red | Highest photosynthetic efficiency, is highly photosynthetic (stretch is more about low blue and far-red; flowering is photoperiod) | Flower |
 | 700-750 | Far-red | Speeds the dark response, adds stem stretch | Fine-tuning only |
 
 *What each part of the spectrum does. Green is not wasted: it reaches lower leaves, but it is a minor lever.*
@@ -75,7 +75,7 @@ Blue light, roughly 400 to 500 nm, keeps plants compact with tight internode spa
 
 ## Intensity and the daily dose: targets by stage
 
-Young tissue cannot process intense light, so targets climb as the plant matures. Clones and seedlings want about 100-300 PPFD (DLI ~10-15 mol)[^rodriguez-morrison-2021-light-levels-yield-photosynthesis], early-to-late veg about 300-600 PPFD (DLI ~20-35 mol), and flower about 700-900 PPFD without added CO2 (DLI ~30-45 mol)[^llewellyn-2022-light-intensity-proportional-uv-no-effect].
+Young tissue cannot process intense light, so targets climb as the plant matures. Clones and seedlings want about 100-250 PPFD (DLI roughly ~6-16 mol)[^rodriguez-morrison-2021-light-levels-yield-photosynthesis], early-to-late veg about 300-600 PPFD (DLI ~20-35 mol), and flower about 700-900 PPFD without added CO2 (DLI ~30-45 mol)[^llewellyn-2022-light-intensity-proportional-uv-no-effect].
 
 Pushing past about 900 PPFD only pays off if you also raise CO2 to 1000-1200 ppm and tighten temperature and humidity[^chandra-2008-photosynthetic-response-ppfd-co2-temp]. Otherwise extra light just causes stress and bleaching. Because DLI bundles intensity and hours together, you can hit the same daily dose with lower PPFD over more hours (veg at 18/6) or higher PPFD over fewer hours (flower at 12/12).
 
@@ -85,13 +85,13 @@ Pushing past about 900 PPFD only pays off if you also raise CO2 to 1000-1200 ppm
 
 | Stage | PPFD (umol/m2/s) | DLI (mol/m2/day) | Photoperiod |
 | --- | --- | --- | --- |
-| Clone / seedling | 100-300 | ~10-15 | 18/6 |
+| Clone / seedling | 100-250 | ~6-16 | 18/6 |
 | Early veg | 300-450 | ~20-29 | 18/6 |
 | Late veg | 450-600 | ~29-39 | 18/6 |
-| Flower (no CO2) | 700-900 | ~30-45 | 12/12 |
+| Flower (no CO2) | 700-900 | ~30-39 | 12/12 |
 | Flower (CO2 1000-1200 ppm) | 1000-1400 | ~40-60 | 12/12 |
 
-*Stage targets. 600 PPFD x 18h (veg) is roughly the same daily dose as 800 PPFD x 12h (flower).*
+*Stage targets. 600 PPFD x 18h (~39 mol) is closer to ~900 PPFD x 12h than to 800 PPFD x 12h.*
 
 ## The photoperiod flip that triggers flowering
 
@@ -123,7 +123,7 @@ Efficacy (umol/J) is the number to compare. A 3.0 umol/J LED makes about 60% mor
 
 ## Hanging height, coverage, and a stage-by-stage setup
 
-Light obeys the inverse-square law: roughly doubling the distance from the canopy cuts PPFD by about 75%. Height is your coarse intensity dial, the dimmer is the fine dial. Hang about 24 in for seedlings and clones, ~18 in for veg, and ~12-16 in for flower, then fine-tune with the dimmer and a PAR meter.
+Intensity falls with distance, but inverse-square (quarter at 2× distance) is a point-source ideal for LEDs. Use a PPFD map and meter. About hang height:  Height is your coarse intensity dial, the dimmer is the fine dial. Hang about 24 in for seedlings and clones, ~18 in for veg, and ~12-16 in for flower, then fine-tune with the dimmer and a PAR meter.
 
 Verify coverage by taking PPFD readings at nine points: four corners, four edge-midpoints, and the center. Aim for a min-to-average ratio above 0.75 so edge plants are not starved while the center bleaches. Hanging higher trades peak intensity for more even spread, so use a manufacturer PPFD map as your starting point and confirm with real readings at canopy height.
 

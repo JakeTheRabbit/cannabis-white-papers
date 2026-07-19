@@ -2,7 +2,7 @@
 slug: "plant-biosignal-sensor"
 title: "DIY plant-biosignal sensor: read a plant's electrical signals"
 eyebrow: "Build · Precision & automation"
-summary: "Commercial plant-biosignal sensors clip electrodes to a plant, amplify the tiny voltages it makes, and turn the drift into water and stress insight. You can build the acquisition side from an M5Stack ESP32, an ECG front-end chip and ESPHome for about NZ$110, and stream it straight into Home Assistant."
+summary: "Commercial plant-biosignal sensors clip electrodes to a plant, amplify the tiny voltages it makes, and log the drift for education — not as a validated water/nutrient/stress meter. You can build the acquisition side from an M5Stack ESP32, an ECG front-end chip and ESPHome for about NZ$110, and stream it straight into Home Assistant."
 track: "Precision & automation"
 read_time: "~14 min read"
 diagrams: ""
@@ -21,17 +21,17 @@ refs: [{"id": "pb_mdpi_ad8232", "n": 1, "cite": "Marques JAL et al. (2023). From
 
 _Build · Precision & automation · ~14 min read_
 
-> Commercial plant-biosignal sensors clip electrodes to a plant, amplify the tiny voltages it makes, and turn the drift into water and stress insight. You can build the acquisition side from an M5Stack ESP32, an ECG front-end chip and ESPHome for about NZ$110, and stream it straight into Home Assistant.
+> Commercial plant-biosignal sensors clip electrodes to a plant, amplify the tiny voltages it makes, and log the drift for education — not as a validated water/nutrient/stress meter. You can build the acquisition side from an M5Stack ESP32, an ECG front-end chip and ESPHome for about NZ$110, and stream it straight into Home Assistant.
 
 ## A plant is quietly electric
 
-Plants generate tiny electrical signals. Ions move across cell membranes when the plant responds to light, water, wounding or nutrient change, and that movement shows up as a sub-millivolt voltage you can read with electrodes on the stem[^pb_pmc_plantsignals]. Commercial units like the Vivent VITA1 do exactly this, then infer water and stress state from how the signal drifts[^pb_vivent].
+Plants generate tiny electrical signals. Ions move across cell membranes when the plant responds to light, water, wounding or nutrient change, and that movement shows up as a sub-millivolt voltage you can read with electrodes on the stem[^pb_pmc_plantsignals]. Commercial units like the Vivent VITA1 do exactly this, then use trained models to infer water and stress state from how the signal drifts[^pb_vivent].
 
 Electrically, reading a plant is the same problem as reading a heartbeat: a small, noisy, high-impedance voltage you must amplify cleanly. That means the cheap, proven ECG front-end chip, the **AD8232**, works straight out of the box for plants[^pb_mdpi_ad8232]. Bolt it to an ESP32 and ESPHome and you have a logging plant-biosignal sensor for the price of a night out.
 
 > **NOTE — What this build is, and isn't**
 >
-> - **It reproduces the acquisition**: the raw signal, the daily rhythm, the big deflections after a stress event, light-on/off detection (~85% accurate on this exact hardware class)[^pb_pmc_plantsignals], all logged in Home Assistant.
+> - **It reproduces the acquisition**: the raw signal, the daily rhythm, the big deflections after a stress event, light-on/off detection (one study reported ~85% under its protocol, not guaranteed on this exact hardware class)[^pb_pmc_plantsignals], all logged in Home Assistant.
 > - **It does not reproduce the paid model.** A VITA1's N/P/K/Ca read-outs come from a trained model on a curated signal library. You get the millivolts; you build your own correlations over time.
 > - **ESPHome polls, it doesn't capture waveforms.** Fast sub-second spikes need the high-rate sketch noted at the end. For trend work, polling is the right tool, and it already samples finer than a VITA1's 5-minute dashboard.
 

@@ -81,7 +81,7 @@ An inert medium like rockwool holds almost no nutrients of its own. Its native E
 
 Coco is the opposite. Its high CEC, roughly 40-100 meq/100g, buffers EC swings, but raw coco's exchange sites come pre-loaded with potassium and sodium and will strip calcium and magnesium out of your feed[^abad-2002-coir-dust-peat-substitute]. That causes a cal-mag deficiency unless the coco is buffered (pre-soaked in cal-mag) or bought pre-buffered[^cockson-2019-cannabis-nutrient-disorders].
 
-Living soil is the most forgiving of all. Microbes, organic matter and minerals hold the root zone near pH 5.2-6.5 within minutes of watering regardless of your water's pH, so you generally do not pH your input at all. In DWC there is no buffer at all: the reservoir is the only thing standing between your plants and a mistake.
+Living soil is the most forgiving of all. Microbes, organic matter and minerals hold the root zone near pH 5.2-6.5 over hours to days when biology is healthy. Many organic growers still do not acidify routine waterings, but avoid extreme alkaline water and monitor if problems appear. In DWC there is no buffer at all: the reservoir is the only thing standing between your plants and a mistake.
 
 > **Diagram.** From no cushion (DWC, rockwool) through coco's EC buffering to living soil, which self-regulates pH after every watering.
 
@@ -147,13 +147,13 @@ The classic beginner mistakes are medium-specific, and most look like something 
 | Rockwool | Planting into dry cubes | Pale, locked-out plant (pH-8 lockout) | Pre-soak at pH ~5.5 before transplant |
 | Rockwool | Overwatering low-air matrix | Slow, soggy, suffocating roots | Fewer shots, let it breathe between |
 | Living soil | pH-ing water or adding salts | Stalled growth, dying microbes | Water-only, leave the pH alone |
-| DWC | Warm water or dead air pump | Root rot within ~24h | Chill below 23C, keep the pump running |
+| DWC | Warm water or dead air pump | Root health can collapse quickly | Chill below 23C, keep the pump running |
 
 *The coco and rockwool rows are misread as feeding problems. They are really prep problems.[^cockson-2019-cannabis-nutrient-disorders][^le-pythium-hydroponic-epidemiology-review]*
 
 > **DANGER — The number one DWC killer**
 >
-> A warm reservoir above 23C or a failed air pump crashes dissolved oxygen and brings on root rot within a day[^frontiers-2026-do-pythium-strawberry-nft]. If you run DWC, a chiller and a backup air pump are not optional.
+> A warm reservoir above 23C or a failed air pump crashes dissolved oxygen and brings on root rot can progress quickly[^frontiers-2026-do-pythium-strawberry-nft]. If you run DWC, a chiller and a backup air pump are not optional.
 
 ## Realistic expectations
 

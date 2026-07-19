@@ -667,7 +667,7 @@
   {
    "slug": "plant-biosignal-sensor",
    "title": "DIY plant-biosignal sensor: read a plant's electrical signals",
-   "summary": "Commercial plant-biosignal sensors clip electrodes to a plant, amplify the tiny voltages it makes, and turn the drift into water and stress insight. You can build the acquisition side from an M5Stack ESP32, an ECG front-end chip and ESPHome for about NZ$110, and stream it straight into Home Assistant.",
+   "summary": "Commercial plant-biosignal sensors clip electrodes to a plant, amplify the tiny voltages it makes, and log the drift for education — not as a validated water/nutrient/stress meter. You can build the acquisition side from an M5Stack ESP32, an ECG front-end chip and ESPHome for about NZ$110, and stream it straight into Home Assistant.",
    "track": "Precision & automation",
    "read_time": "~14 min read",
    "diagrams": "",

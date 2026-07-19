@@ -22,7 +22,7 @@ SUB = ("Coco, rockwool, soil and plain water are not four separate skills. They 
        "steering a plant with water, running on four different sponges. Learn the steering once, with "
        "pictures and no jargon, and you can grow in any of them, because the sponge only changes the numbers.")
 META = [("droplet", "Flowering"), ("image", "31 diagrams"),
-        ("quote", "Peer-reviewed · 9 sources"), ("clock", "~22 min read")]
+        ("quote", "Evidence-linked · 9 sources"), ("clock", "~22 min read")]
 RELATED = ["coco-crop-steering", "rockwool-crop-steering", "substrates-overview",
            "root-zone-teros12", "smart-watering-vrwe", "f2-crop-steering"]
 REF_IDS = ["caplan2019-drought", "welling2025-aba", "stack2024-drought", "hilhorst2000-ec",
@@ -352,7 +352,7 @@ SECTIONS.append({"id": "the-auto-waterer-brain", "kicker": "Nerd bonus — skip 
   "blocks": [
     callout("note", "Optional section",
       p("Skip this unless you&rsquo;re building an automatic waterer. By hand, <em>you</em> are the brain and "
-        "the rest of the guide is enough. The single reassuring idea: never trust one sensor, and never flood "
+        "the rest of the guide is enough. The single reassuring idea: never trust one sensor, and do not flood "
         "or starve &mdash; when unsure, do the safe thing.")),
     p("A good auto-waterer keeps a running <strong>water tally</strong>, like a piggy bank: water IN (the "
       "dripper sips, known precisely) minus water OUT (the plant breathing water out, like sweating, plus what "
@@ -370,13 +370,13 @@ SECTIONS.append({"id": "the-auto-waterer-brain", "kicker": "Nerd bonus — skip 
     p("The whole decision is just three choices, all fenced by one rule. A lying sensor can only ever make the "
       "robot <em>more</em> careful &mdash; never trick it into overwatering."),
     fig("fig-27-three-branch-tree",
-        "The auto-waterer only ever waters a measured bit, waits, or asks you &mdash; all fenced by &lsquo;never flood, never starve&rsquo;."),
+        "The auto-waterer only ever waters a measured bit, waits, or asks you &mdash; all fenced by &lsquo;prefer mild deficit over flooding when uncertain; keep a hard VWC floor&rsquo;."),
     p("And the reassuring part: <strong>the brain works the same no matter the sponge.</strong> The same "
       "check-the-clues, keep-a-tally, gate-on-confidence routine runs identically for coco, rockwool, soil and "
       "water. The sponge only changes the numbers it learns &mdash; never the logic."),
     callout("key", "In one sentence",
       p("An auto-waterer keeps a water piggy-bank, attaches a confidence to its guess, and only ever errs "
-        "toward &lsquo;never flood, never starve&rsquo; &mdash; on any sponge.")),
+        "toward &lsquo;prefer mild deficit over flooding when uncertain; keep a hard VWC floor&rsquo; &mdash; on any sponge.")),
   ]})
 
 # ---------------------------------------------------------------- 9 one law

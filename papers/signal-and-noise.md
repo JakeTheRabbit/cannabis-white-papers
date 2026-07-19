@@ -35,7 +35,7 @@ A single flower room can generate hundreds of thousands of datapoints a week[^gr
 
 > **KEY — The one-line reframe**
 >
-> You don't have a data problem. You have a **signal-to-noise problem**. Most grow-room ‘alerts’, perhaps 70% in a busy room, are noise: transients that fix themselves before any action would have mattered.
+> You don't have a data problem. You have a **signal-to-noise problem**. Most grow-room ‘alerts’, are often noise until tuned: transients that fix themselves before any action would have mattered.
 
 ## Key terms, defined once
 
@@ -118,8 +118,8 @@ Control limits are computed from the process's own history, conventionally the m
 
 > **NOTE — Beyond the limits: the Western Electric rules**
 >
-> - **7+ points** all trending the same way: a real drift, even inside the limits
-> - **8+ points** on one side of the mean: the process has shifted
+> - **Nelson trend (often 6 points)** all trending the same way: a real drift, even inside the limits
+> - **Western Electric: 8 points** on one side of the mean: the process has shifted
 > - Abnormal **hugging of the mean**: often a sign the data is being over-smoothed or faked
 
 These pattern rules catch real shifts that a single out-of-limits point would miss, and they do it without raising false alarms on ordinary noise[^western-electric-rules-anhoj]. The lesson is blunt: the over-reactive grower, nudging a stable process all day, is usually the room's single biggest noise source.

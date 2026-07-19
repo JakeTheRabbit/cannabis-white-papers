@@ -11,7 +11,7 @@ SUB = ("Run a grow room as one self-correcting system. This beginner's guide cov
        "you pull, how to read what the plants are actually doing, and how to feed that back "
        "without the room chasing its own tail.")
 META = [("gauge", "Precision"), ("image", "9 diagrams"),
-        ("quote", "Peer-reviewed · 9 sources"), ("clock", "~17 min read")]
+        ("quote", "Evidence-linked · 9 sources"), ("clock", "~17 min read")]
 RELATED = ["signal-and-noise", "plant-state-dashboard", "f2-crop-steering"]
 REF_IDS = ["mohammed-spc-2024", "isa-18-2-alarm-mgmt", "moon-rootzone-ec-2018",
            "huber-dli-co2-2021", "kim-co2-temp-light-msu", "szerement-dielectric-2019",
@@ -45,7 +45,7 @@ SECTIONS.append({"id": "what-this-is", "kicker": "Start here", "title": "What th
       "Read it as a circle. The room works like a nervous system: muscles (the levers), nerves "
       "(the sensors) and a mind (the inference that decides what it all means)."),
     callout("key", "What 'closed' buys you",
-      p("A mature loop tells you whole-room health and whether to act in under five seconds, and it "
+      p("A mature loop tells you whole-room health and whether to act quickly when the dashboard is well designed, and it "
         "stays quiet when nothing needs you. Silence is a feature, not a fault.")),
   ]})
 
@@ -113,7 +113,7 @@ SECTIONS.append({"id": "the-levers", "kicker": "Core content: the action half", 
 SECTIONS.append({"id": "reading-plant-state", "kicker": "Core content: sensing and meaning", "title": "Reading the signal, then reading the plant",
   "blocks": [
     p("You have to <em>see</em> the room's response without being fooled, then turn it into meaning. "
-      "Every measurement is signal plus noise, and in practice around <strong>70% of raw alerts are "
+      "Every measurement is signal plus noise, and in practice many <strong>raw alerts are "
       "noise</strong> that must be rejected before they ever reach a decision" + _c("isa-18-2-alarm-mgmt") + "."),
     p("Reading plant state is the leap from &lsquo;VWC fell 12% overnight&rsquo; (a number) to "
       "&lsquo;the plant is steering generative as intended, no action needed&rsquo; or &lsquo;reduce "

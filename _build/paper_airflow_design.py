@@ -12,7 +12,7 @@ SUB = ("Every leaf sits inside a film of still air that limits how fast it can b
        "Airflow strips that film away. Done right it feeds the plant and dries the room. "
        "Done wrong it scorches leaves or breeds rot.")
 META = [("wind", "Beginner"), ("image", "3 diagrams"),
-        ("quote", "Peer-reviewed · 9 sources"), ("clock", "~14 min read")]
+        ("quote", "Evidence-linked · 9 sources"), ("clock", "~14 min read")]
 RELATED = ["grow-room-systems", "mould-risk", "coco-crop-steering"]
 REF_IDS = ["schuepp1993-bl", "dupont2025-wind", "kitaya2004-airvel", "tjosvold2018-air",
            "rm2021-light", "kitaya2010-circ", "gilliham2011-ca", "chehab2009-thigmo",

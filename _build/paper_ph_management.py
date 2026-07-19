@@ -11,7 +11,7 @@ SUB = ("A beginner's guide to root-zone pH: why one number decides which nutrien
        "actually eat, what to aim for in coco, hydro and soil, and how to measure, adjust and hold "
        "it without chasing ghosts.")
 META = [("flask", "Feed"), ("image", "8 diagrams"),
-        ("quote", "Peer-reviewed · 6 sources"), ("clock", "~14 min read")]
+        ("quote", "Evidence-linked · 6 sources"), ("clock", "~14 min read")]
 RELATED = ["nutrient-deficiencies", "water-quality", "nutrient-mixing-athena"]
 REF_IDS = ["veazie-2025-substrate-ph-micronutrient-cannabis",
            "gillespie-kubota-2020-low-ph-basil-nutrient-uptake",
@@ -81,7 +81,7 @@ SECTIONS.append({"id": "why-ph-controls-availability", "kicker": "The core idea"
       "surrounded by food it cannot eat because the root-zone chemistry drifted out of the window."),
     p("Push pH too high, above about 6.5 in inert media like coco or hydro, and the micronutrients "
       "drop out of solution first: iron, manganese, zinc and boron." + _c("veazie-2025-substrate-ph-micronutrient-cannabis") +
-      " Drop it too low, below about 5.5, and calcium, magnesium and phosphorus lock out "
+      " Drop it too low, below about 5.5, and calcium, magnesium and phosphorus availability can fall while iron and manganese can push toward toxicity "
       "instead." + _c("gillespie-kubota-2020-low-ph-basil-nutrient-uptake")),
     p("Phosphorus is the clearest example. It is most available around pH 6.0-7.0, binds with iron "
       "and aluminium below 5.5, and binds with calcium above 7.5." + _c("kpai-2024-cannabis-nutrient-solution-ph-cation-uptake") +
@@ -155,7 +155,7 @@ SECTIONS.append({"id": "adjusting-and-water", "kicker": "Making the number",
       ("Stir and wait", "Mix it in and give it a moment to react."),
       ("Re-measure", "Read again. Repeat in small steps, never dump and chase."),
     ]),
-    p("pH Down is usually phosphoric acid and pH Up is usually potassium hydroxide." + _c("saloner-bernstein-2022-nitrogen-source-cannabis") +
+    p("Common pH downs include phosphoric, nitric, sulfuric, or organic acids; common pH ups include KOH or potassium carbonate. Each adds nutrients &mdash; account for them." + _c("saloner-bernstein-2022-nitrogen-source-cannabis") +
       " Your starting water matters more than beginners expect. Alkalinity is the water's built-in "
       "acid-absorbing capacity, mostly bicarbonates, reported as ppm CaCO3, and it is distinct from a "
       "high pH reading." + _c("umass-water-quality-ph-alkalinity") + " High-alkalinity water fights "
@@ -167,7 +167,7 @@ SECTIONS.append({"id": "adjusting-and-water", "kicker": "Making the number",
       "Alkalinity, not the pH reading, sets how much acid it takes to move the water. Hard, "
       "high-alkalinity tap water resists adjustment and drifts back up." + _c("umass-water-quality-ph-alkalinity")),
     callout("note", "Aim for 60-100 ppm CaCO3",
-      p("Ideal irrigation alkalinity is roughly 60-100 ppm CaCO3. Very hard water may need more acid "
+      p("Ideal irrigation alkalinity is roughly 40-80 ppm CaCO3 (many soilless programmes sit near 60-100). Very hard water may need more acid "
         "or pre-treatment before it will hold a target." + _c("umass-water-quality-ph-alkalinity"))),
   ]})
 
@@ -179,12 +179,12 @@ SECTIONS.append({"id": "runoff-and-routine", "kicker": "Daily practice",
       "roots have done locally. It is not a soil test." + _c("malik-tlustos-2025-soilless-media-cannabis")),
     p("The reliable lever is the inflow pH you set going in. For the root zone itself, watch runoff "
       "EC for salt accumulation rather than runoff pH: a flush is due when runoff EC climbs well "
-      "above your feed EC. Aim to keep feed and runoff EC within about 10 percent of each "
+      "above your feed EC. Treat large runaway gaps (runoff much higher than feed) as salt buildup; advanced steering may hold higher root-zone EC on purpose. Keep an eye on feed and runoff EC each "
       "other." + _c("kpai-2024-cannabis-nutrient-solution-ph-cation-uptake")),
     table(["Stage", "Inflow pH target", "EC watch", "Calibration", "Flush trigger"], [
       ["Seedling", "5.8-6.2", "Low feed EC, gentle", "Monthly", "Runoff EC well above feed"],
-      ["Veg", "5.8-6.2", "Rising EC means salt buildup", "Monthly", "Runoff EC > feed by >10%"],
-      ["Flower", "5.8-6.2", "Hold feed and runoff within ~10%", "Monthly", "Runoff EC climbing day on day"],
+      ["Veg", "5.8-6.2", "Rising EC means salt buildup", "Monthly", "Runoff EC running away above feed"],
+      ["Flower", "5.8-6.2", "Watch runoff vs feed (beginner: avoid runaway salts)", "Monthly", "Runoff EC climbing day on day"],
     ], cls="compact", caption="Coco and hydro figures. Soil runoff is a little more meaningful but still lags and is buffered. Set inflow every feed and do not feed out of range to fix a runoff number."),
     callout("tip", "The routine in five habits",
       ul(["Calibrate the pen monthly with fresh two-point buffer.",

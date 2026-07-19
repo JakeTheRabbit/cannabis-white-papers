@@ -10,7 +10,7 @@ EYEBROW = "Beginner · Substrate"
 SUB = ("A from-zero guide to what cannabis roots grow in: how each medium holds water and air, "
        "how it handles nutrients, how forgiving it is, and how to pick one.")
 META = [("seedling", "Beginner"), ("image", "11 diagrams"),
-        ("quote", "Peer-reviewed · 9 sources"), ("clock", "~11 min read")]
+        ("quote", "Evidence-linked · 9 sources"), ("clock", "~11 min read")]
 RELATED = ["coco-crop-steering", "ph-management", "water-quality"]
 REF_IDS = ["xiong-2017-coir-rockwool-peat-tomato", "abad-2002-coir-dust-peat-substitute",
            "bevan-2021-cannabis-npk-soilless", "cockson-2019-cannabis-nutrient-disorders",
@@ -111,8 +111,8 @@ SECTIONS.append({"id": "ec-buffering", "kicker": "Core concept 2", "title": "How
       "cal-mag deficiency unless the coco is buffered (pre-soaked in cal-mag) or bought "
       "pre-buffered" + _c("cockson-2019-cannabis-nutrient-disorders") + "."),
     p("Living soil is the most forgiving of all. Microbes, organic matter and minerals hold the "
-      "root zone near pH 5.2-6.5 within minutes of watering regardless of your water's pH, so you "
-      "generally do not pH your input at all. In DWC there is no buffer at all: the reservoir is the "
+      "root zone near pH 5.2-6.5 over hours to days when biology is healthy. Many organic growers still "
+      "do not acidify routine waterings, but avoid extreme alkaline water and monitor if problems appear. In DWC there is no buffer at all: the reservoir is the "
       "only thing standing between your plants and a mistake."),
     figure(L.zones("The forgiveness scale: how much each medium cushions", 0, 100,
             [(0, 30, L.REDL, "Inert: DWC, rockwool"), (30, 65, L.AMBL, "Buffered: coco"),
@@ -204,12 +204,12 @@ SECTIONS.append({"id": "pitfalls", "kicker": "Avoid", "title": "Common pitfalls 
       ["Rockwool", "Planting into dry cubes", "Pale, locked-out plant (pH-8 lockout)", "Pre-soak at pH ~5.5 before transplant"],
       ["Rockwool", "Overwatering low-air matrix", "Slow, soggy, suffocating roots", "Fewer shots, let it breathe between"],
       ["Living soil", "pH-ing water or adding salts", "Stalled growth, dying microbes", "Water-only, leave the pH alone"],
-      ["DWC", "Warm water or dead air pump", "Root rot within ~24h", "Chill below 23C, keep the pump running"],
+      ["DWC", "Warm water or dead air pump", "Root health can collapse quickly", "Chill below 23C, keep the pump running"],
     ], cls="compact", caption="The coco and rockwool rows are misread as feeding problems. They are "
       "really prep problems." + _c("cockson-2019-cannabis-nutrient-disorders") + _c("le-pythium-hydroponic-epidemiology-review")),
     callout("danger", "The number one DWC killer",
       p("A warm reservoir above 23C or a failed air pump crashes dissolved oxygen and brings on root "
-        "rot within a day" + _c("frontiers-2026-do-pythium-strawberry-nft") + ". If you run DWC, a "
+        "rot can progress quickly" + _c("frontiers-2026-do-pythium-strawberry-nft") + ". If you run DWC, a "
         "chiller and a backup air pump are not optional.")),
   ]})
 

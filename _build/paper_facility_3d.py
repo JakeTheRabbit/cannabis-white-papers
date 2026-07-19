@@ -21,9 +21,15 @@ def _c(rid):
 
 SECTIONS = []
 
+# Fact-check jurisdiction banner
+JURISDICTION_NOTE = 'Jurisdiction note: security and egress examples may cite US (WAC/IBC) rules for illustration. Use the code and licence rules of the jurisdiction that will inspect you.'
+
+
 SECTIONS.append({"id": "intro", "kicker": "Start here",
   "title": "What 3D facility planning is (and why it beats a paper plan)",
   "blocks": [
+    callout("NOTE", "Jurisdiction", JURISDICTION_NOTE),
+    
     lead("A grow facility is a building full of rooms, equipment, airflow paths and security "
          "cameras. The usual way to plan one, a flat top-down architect's drawing, can only "
          "really be read by experts. A <strong>3D model</strong> is the same plan rebuilt on "

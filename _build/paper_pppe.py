@@ -24,21 +24,26 @@ def _c(rid):
 
 SECTIONS = []
 
+# Fact-check jurisdiction banner
+JURISDICTION_NOTE = 'Jurisdiction note: PPE duties and HSWA wording below are NZ-oriented; other jurisdictions differ.'
+
+
 # 1 -----------------------------------------------------------------
 SECTIONS.append({"id": "intro", "kicker": "Start here", "title": "Two jobs, one suit",
   "blocks": [
+    callout("NOTE", "Jurisdiction", JURISDICTION_NOTE),
+    
     lead("PPE in a grow is not really about you. In most rooms the gear is there to protect the "
          "<strong>plant</strong> from you: from the skin you shed, the spores on your jacket, the mites on "
          "your shoes and the viroid on your hands. The same coverall that keeps your clothes clean also "
          "keeps your contamination off the crop. That is why we call it PPPE, plant <em>and</em> personal "
          "protective equipment."),
-    p("People are the dominant contamination source in any clean space, on the order of <strong>70 to 90 "
-      "percent</strong> of it" + _c("cleanroom-humans-source") + ". You cannot stop a human shedding. You can "
+    p("People are typically the dominant contamination source in any clean space (exact share varies by facility design)" + _c("cleanroom-humans-source") + ". You cannot stop a human shedding. You can "
       "only put a barrier around the human and move them through the building in a controlled way. That is "
       "the whole game."),
     callout("key", "Why this pays for itself",
       p("One contaminated mother plant or one shared glove can spread Hop Latent Viroid to an entire crop, "
-        "with up to <strong>100% transmission within four weeks</strong> of propagation from infected "
+        "and under experimental conditions infection of linked cuttings can approach complete cohort infection within weeks of propagation from infected "
         "stock" + _c("hlvd-transmission-2025") + ". The spread is mechanical, on tools, cuttings and hands, not "
         "airborne. Gloves-per-plant and gowning are not box-ticking; they are crop insurance.")),
     callout("note", "Two different reasons to gown",
@@ -83,8 +88,8 @@ SECTIONS.append({"id": "how-bad", "kicker": "The problem", "title": "How bad hum
       "<strong>Movement is the multiplier.</strong> A gowned person emits about 100,000 particles a minute "
       "standing still, a million walking, and up to five million working fast" + _c("cleanroom-humans-source") +
       ". Slow, calm movement is itself a control.",
-      "<strong>Your phone is filthier than a toilet seat.</strong> Cultured phones carry roughly an "
-      "order of magnitude more bacteria than a public toilet seat, and they ride to your face and back to "
+      "<strong>Your phone is a high-touch fomite.</strong> Phones carry skin and environmental flora and "
+      "order of magnitude more bacteria than a public high-touch fomite that contacts faces and hands, and they ride to your face and back to "
       "your hands all day" + _c("phone-fomite") + ".",
       "<strong>Your shoes are a pest and spore taxi.</strong> Soles carry live pathogens and fungal spores, "
       "and walking re-launches settled organisms into the air" + _c("shoe-floor-contamination") + ". Mites and "
@@ -93,8 +98,8 @@ SECTIONS.append({"id": "how-bad", "kicker": "The problem", "title": "How bad hum
       "viable for minutes to hours; a closed lid cuts it sharply" + _c("toilet-plume") + ".",
     ]),
     callout("note", "Hands are the main bridge, and hygiene is not a cure",
-      p("Washing helps but does not sterilise: an alcohol rub removes about 83% of organisms, plain soap "
-        "and water about 58%" + _c("hand-hygiene-logreduction") + ". That is why hand hygiene is a frequent loop "
+      p("Washing helps but does not sterilise: alcohol rubs often achieve ~2&ndash;3 log reductions (~99&ndash;99.9%) under test conditions; plain soap "
+        "and water remove soil and many organisms without sterilising hands" + _c("hand-hygiene-logreduction") + ". That is why hand hygiene is a frequent loop "
         "at every transition, and why gloves and barriers carry the rest.")),
   ]})
 
@@ -200,7 +205,7 @@ SECTIONS.append({"id": "scenarios", "kicker": "The daily traps", "title": "The s
       "dedicated room boot or shoe cover goes on as you step over the demarcation line" + _c("shoe-floor-contamination") + "."),
     h(3, "Cross-contamination: one-way flow"),
     figure(PP.dirty_clean_flow(), 8,
-      "Move people, materials and waste one way, dirty to clean, never back. Backtracking means re-gowning, "
+      "Move people and clean materials clean → dirty; waste and used PPE only dirty → exit. Never back. Backtracking means re-gowning, "
       "and a dirty-side hand or sleeve must never touch the clean side."),
   ]})
 
@@ -242,7 +247,7 @@ SECTIONS.append({"id": "quick-reference", "kicker": "Cheat sheet", "title": "The
         ("Gloves", "off first, inside-out; never replace washing; per-plant in propagation"),
         ("Phones", "banned in clean areas, lockers outside"),
         ("Toilet", "de-gown, lid down, wash, wash + sanitise on return, re-gown"),
-        ("Flow", "one way, clean to dirty, re-gown to backtrack"),
+        ("Flow", "clean → dirty for people/materials; dirty → exit for waste, re-gown to backtrack"),
         ("Law (NZ)", "PCBU provides PPE free (s27); PPE is the last control")]),
     callout("key", "The mindset that makes it stick",
       p("Frame every glove and gown as plant protection first. A human cannot help shedding millions of "

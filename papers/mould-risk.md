@@ -27,7 +27,7 @@ _Beginner · Mould risk · ~15 min read_
 
 You can do everything right for ten weeks and lose it all to grey fuzz in the last two. Mould thrives in exactly the warm, humid, densely-flowered conditions that also grow big buds. The worst of it hides _inside_ the bud, where you can't see it until it's spreading.
 
-There is also a health stake. Cannabis users have been found to get fungal infections at roughly **3.5× the rate** of non-users[^benedict2020-cdc], and some moulds leave behind toxins that survive drying[^gwinn2023-mycotoxin]. This isn't only about yield. It is about safe medicine. This guide assumes you know nothing. Every term is defined.
+There is also a health stake. Cannabis users have been found to get fungal infections at about **3.5× more often** than non-users in one claims analysis (absolute rates still low; immunocompromised patients are the high-stakes group)[^benedict2020-cdc], and some moulds leave behind toxins that survive drying[^gwinn2023-mycotoxin]. This isn't only about yield. It is about safe medicine. This guide assumes you know nothing. Every term is defined.
 
 ## The words you need
 
@@ -73,7 +73,7 @@ Mould isn't bad luck. It is a recipe. Bud rot takes off when humidity climbs abo
 
 Prevention is a handful of boring habits done consistently. This is the whole job:
 
-1. **Hold humidity down** — Keep flowering RH in the ~60–70% band, lower in late flower. A dehumidifier sized to your transpiration load is non-negotiable[^buirs2024-idm].
+1. **Hold humidity down** — Keep flowering RH in the ~45–65% stage-dependent band (mid/late flower often ~45–55%), lower in late flower. A dehumidifier sized to your transpiration load is non-negotiable[^buirs2024-idm].
 2. **Move air through the canopy** — Aim for ~0.5–1.0 m/s of gentle, turbulent air reaching inside the plants, not just over the top[^buirs2024-idm]. See the airflow paper.
 3. **Open the canopy** — Defoliate and space plants so air and light penetrate. Density is the silent risk multiplier.
 4. **Avoid free moisture** — No overhead watering or spraying in flower. Prevent condensation by avoiding big temperature swings at lights-off, so surfaces never hit dew point.

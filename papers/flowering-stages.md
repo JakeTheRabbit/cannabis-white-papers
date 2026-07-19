@@ -106,19 +106,19 @@ Bulking climate runs around 26 to 28 C day, with RH down to about 55 to 62% to l
 
 Pistils are a rough early signal but they lie. Trichomes are the true clock, and you read them with a cheap jeweler's loupe or pocket microscope.[^livingston-2020-trichome-maturation]
 
-Harvest when most trichomes have turned from clear to milky or cloudy, with a small fraction going amber. A common target is 80 to 90% milky with 5 to 15% amber. More clear or milky gives a more energetic, heady effect. More amber means THC is degrading toward CBN for a heavier, more sedative effect.[^livingston-2020-trichome-maturation]
+Harvest when most trichomes have turned from clear to milky or cloudy, with a small fraction going amber. A common target is 80 to 90% milky with 5 to 15% amber. More clear or milky gives a more energetic, heady effect. More amber means THC is degrading toward CBN for a heavier feel for some people — multi-factor, not a CBN switch.[^livingston-2020-trichome-maturation]
 
 Wait until pistils are mostly darkened and curled in (roughly 70% or more), then switch to checking trichomes for the real call. Use 60x or higher magnification on actual bud, not sugar leaves, and check several spots, since maturity varies across the plant. Do not harvest on the calendar alone: a week 9 strain can need week 10 depending on conditions and phenotype.
 
-> **Diagram.** Clear trichomes fade out as milky takes over and a little amber appears. Cut inside the window for a balanced effect, later for a more sedative one.[^livingston-2020-trichome-maturation]
+> **Diagram.** Clear trichomes fade out as milky takes over and a little amber appears. Cut inside the window as a maturity cue; later cuts often feel heavier, genotype still dominates.[^livingston-2020-trichome-maturation]
 
 | Signal | What you see | Readiness | Effect if cut now |
 | --- | --- | --- | --- |
 | Pistils | Still mostly white, sticking out | Too early | Thin, harsh, low potency |
 | Trichomes | Mostly clear | Too early | Underdeveloped |
-| Trichomes | 80-90% milky, 5% amber | Peak window (early) | Energetic, heady |
+| Trichomes | 80-90% milky, 5% amber | Peak window (early) | Common early-cut target |
 | Trichomes | Milky with 10-15% amber | Peak window (late) | Balanced |
-| Trichomes | 30%+ amber, leaves yellow | Over-ripe | Sedative, couch-lock |
+| Trichomes | 30%+ amber, leaves yellow | Over-ripe | Often denser/heavier feel; genotype still dominates |
 
 *Read trichomes on bud at 60x or more. Pistil colour is only a first hint.[^livingston-2020-trichome-maturation]*
 
@@ -128,7 +128,7 @@ Most first-grow failures in flower come from a few repeatable errors: light leak
 
 | Pitfall | The fix |
 | --- | --- |
-| Light leaks in the dark period | Tape over LED indicators and seal door gaps. Even a phone-screen of light, repeated, can cause hermies |
+| Light leaks in the dark period | Tape over LED indicators and seal door gaps. Bright or repeated night interruptions can stall flowering; genetics and multi-stress drive most herms |
 | Over-defoliating or doing it late | Stop heavy leaf removal after week 3. Leaves are the plant's sugar factory during bulking |
 | Humidity too high in late flower | Pull RH down to 40-50% from week 7. Dense buds plus 60%+ RH invites bud rot (botrytis) |
 | Nutrient burn | Drop feed EC and give enough water volume per feed. Burnt tips mean the feed is too strong |
@@ -149,7 +149,7 @@ A typical photoperiod indoor grow runs about 8 to 10 weeks of flower on top of v
 | 1-2 | Stretch | Doubling in height, first pistils | 800-900 | 27 C / 23 C | 65% / 1.0 | Lollipop, defoliate |
 | 3-4 | Bud set | Stretch ends, budlets form | 900 | 27 C / 22 C | 60% / 1.1 | Stop defoliating |
 | 5-7 | Bulking | Buds swell fastest, frost builds | 1000-1100 | 27 C / 22 C | 58% / 1.2 | Peak feed, push light |
-| 8-10 | Ripening | Pistils darken, trichomes go milky | 900 | 24 C / 20 C | 45% / 1.2 | Lower RH, flush, read trichomes |
+| 8-10 | Ripening | Pistils darken, trichomes go milky | 900 | 24 C / 20 C | 45% / 1.2 | Lower RH, ease EC, read trichomes |
 
 *A week-by-week map, not a rulebook. Let the trichomes have the final word.*
 

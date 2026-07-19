@@ -31,7 +31,7 @@ This paper makes the case for a different design centre, which we will call **Pl
 
 > **NOTE — What this paper is, and isn't**
 >
-> - This is an **operational and product-design guide**, not a horticulture-science paper. Most claims here are design opinions backed by worked examples.
+> - This is an **operational and product-design guide**, not a horticulture-science paper. Lead-time examples are illustrative UX, not validated predictions. Most claims here are design opinions backed by worked examples.
 > - The aim is a screen that **infers** the plant's state, **predicts** trouble days early, and **prescribes** the next step with its evidence and confidence attached.
 > - The one-line thesis: _a cockpit full of gauges is not a co-pilot._
 
@@ -154,7 +154,7 @@ Colour and layout do real work here. A calm dashboard leans on pre-attentive cue
 
 > **KEY — A sample advisory, in full**
 >
-> ‘Reduce dryback target 3% in Room 3 (Day 24)… Tip burn likely within ~48h if unaddressed. Confidence: high. _[Show evidence]_’, and the evidence expands to the fused signals, the baseline it violated, and the historical precedent. The old dashboard was 100% Zone 4. The new one leads with Zones 1–3 and keeps 4 in the basement.
+> ‘Reduce dryback target 3% in Room 3 (Day 24)… Tip burn likely soon (illustrative) if unaddressed. Confidence: high. _[Show evidence]_’, and the evidence expands to the fused signals, the baseline it violated, and the historical precedent. The old dashboard was 100% Zone 4. The new one leads with Zones 1–3 and keeps 4 in the basement.
 
 ## The adoption path: crawl, walk, run
 
