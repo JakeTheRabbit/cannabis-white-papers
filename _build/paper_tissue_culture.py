@@ -11,7 +11,7 @@ EYEBROW = "Beginner · Tissue culture"
 SUB = ("Tissue culture grows a clean, vigorous, genetically identical mother from a speck of "
        "tissue off a tired or diseased plant. Explained from absolute zero.")
 META = [("spark", "Beginner"), ("image", "13 diagrams"),
-        ("quote", "Peer-reviewed · 11 sources"), ("clock", "~22 min read")]
+        ("quote", "Evidence-linked · 11 sources"), ("clock", "~22 min read")]
 RELATED = ["mould-risk", "grow-room-systems", "gmp-hash-lab"]
 REF_IDS = ["hlvd_threat2023", "hlvd_mgmt2025", "holmes2021", "mdpi2024_media",
            "hlvd_thermo2024", "page2019", "pmc9146626", "kurtz2022",
@@ -82,7 +82,7 @@ SECTIONS.append({
     p("Tissue culture rests on one fact about plants that animals do not share. Almost every cell "
       "holds the full instructions to rebuild the whole plant."),
     callout("key", "Totipotency: the property that makes all of this work",
-      p("Almost every living plant cell carries the complete instructions to rebuild the whole "
+      p("Many plant cells can, under the right conditions, carry the complete instructions to rebuild the whole "
         "plant. Give a tiny scrap of the right tissue the right food and the right hormones and it "
         "grows roots, shoots and leaves: a complete new plant. This ability is called "
         "<strong>totipotency</strong>. You are not growing a &lsquo;sample&rsquo;, you are growing a "
@@ -102,7 +102,7 @@ SECTIONS.append({
       ["<strong>Node</strong>", "The point on a stem where a leaf and a bud join. A <strong>nodal segment</strong> is a short stem piece containing one bud."],
       ["<strong>Subculture</strong>", "Moving growing tissue onto fresh medium. You repeat this every few weeks to keep cultures alive and multiplying."],
       ["<strong>Contamination</strong>", "The enemy: any microbe that invades the jar and outcompetes your plant. Almost always fatal to that culture."],
-      ["<strong>Indexing</strong>", "Lab-testing a plant to confirm it is free of a specific disease (e.g. a DNA test for a viroid). &lsquo;Proving clean.&rsquo;"],
+      ["<strong>Indexing</strong>", "Lab-testing a plant to confirm it is free of a specific disease (e.g. a RT-qPCR test for a viroid). &lsquo;Proving clean.&rsquo;"],
     ]),
     callout("note", "&lsquo;Cleaning up genetics&rsquo;: what it does and doesn't mean",
       p("It does <strong>not</strong> mean editing or improving the DNA. The strain stays exactly "
@@ -129,10 +129,10 @@ SECTIONS.append({
       "undetected until production has quietly collapsed."),
     h(3, "Why HpLVd is such a big deal"),
     grid([
-      card("It's everywhere", "Surveys found HpLVd in roughly <strong>90% of California facilities</strong> and ~40% of Canadian dispensary flower. If you've cloned for years, assume you may have it." + R["hlvd_mgmt2025"], tag="Prevalence"),
-      card("It's expensive", "Infected plants can lose up to <strong>~50% of cannabinoids</strong>, plus terpenes, trichomes and yield. Industry losses run into tens of millions of dollars a year.", tag="Impact"),
+      card("It's everywhere", "Industry and research surveys have reported very high facility infection rates in California (~90% in one large testing programme) and frequent positives in Canadian retail flower (~40% in one study) &mdash; treat as warning signals, not permanent global prevalence. If you've cloned for years, assume you may have it." + R["hlvd_mgmt2025"], tag="Prevalence"),
+      card("It's expensive", "In severe symptomatic dud outbreaks, infected plants can lose a large fraction of cannabinoids (sometimes approaching ~50%)</strong>, plus terpenes, trichomes and yield. Industry losses run into tens of millions of dollars a year.", tag="Impact"),
       card("It's stealthy", "It can sit <strong>symptomless</strong> for a long time and is &lsquo;latent&rsquo; by name. By the time plants visibly dud, the whole room is usually infected.", tag="Latent"),
-      card("It's tough", "It survives on tools, hands, pots and benches, rides in sap for ~a week and in dried tissue for ~a month, and even passes through seed (up to 100% in one cannabis cross).", tag="Persistent"),
+      card("It's tough", "It survives on tools, hands, pots and benches, rides in sap for ~a week and in dried tissue for ~a month, and even passes through seed (at genotype-dependent rates (often single digits to tens of percent — test seed lots)).", tag="Persistent"),
     ], cols=2),
     callout("warn", "Why you can't just spray it away",
       p("No spray cures a viroid-infected plant. It lives <em>inside</em> the plant's "
@@ -140,9 +140,7 @@ SECTIONS.append({
         "from a piece of tissue the viroid hasn't reached yet. That is precisely what "
         "meristem tissue culture does, and it is the heart of this guide.")),
     callout("note", "Other things tissue culture clears out",
-      p("HpLVd gets the headlines, but a clean start also leaves behind fungal root-rots "
-        "(<em>Fusarium</em>, <em>Pythium</em>), grey mould (<em>Botrytis</em>), powdery mildew, "
-        "various viruses, and even hitch-hiking pests like russet and broad mites and their eggs. "
+      p("HpLVd gets the headlines, but meristem work plus indexing mainly targets systemic agents (viroids/viruses); surface sterilisation removes many surface microbes and hitch-hikers, but endophytes can still emerge and mites remain an IPM problem. "
         "You begin clean at the cellular level instead of fire-fighting forever.")),
   ]})
 
@@ -174,7 +172,7 @@ SECTIONS.append({
     callout("key", "The two timelines, stated plainly",
       ul([
         "<strong>A clean, rooted, hardened clone</strong> (no lab proof of disease status): roughly <strong>10&ndash;15 weeks</strong>.",
-        "<strong>A confirmed HpLVd-free mother</strong> (meristem culture + DNA testing): realistically <strong>5&ndash;6 months or more</strong>. It is not a two-week job.",
+        "<strong>A confirmed HpLVd-free mother</strong> (meristem culture + RT-qPCR testing): realistically <strong>5&ndash;6 months or more</strong>. It is not a two-week job.",
       ], "tight")),
   ]})
 
@@ -260,7 +258,7 @@ SECTIONS.append({
     callout("warn", "What the kit deliberately doesn't tell you, and doesn't include",
       ul([
         "<strong>The media base is secret.</strong> Athena won't say whether ROOTS/SHOOTS are built on MS, DKW or a custom blend, nor which hormones, at what doses. You can't tune or troubleshoot what you can't see.",
-        "<strong>No disease test.</strong> The kit does the meristem cut but ships <em>no</em> DNA test (qPCR) and <em>no</em> thermotherapy gear. So it cannot, by itself, prove a plant is HpLVd-free. Budget for independent lab testing (section 13).",
+        "<strong>No disease test.</strong> The kit does the meristem cut but ships <em>no</em> RT-qPCR test and <em>no</em> thermotherapy gear. So it cannot, by itself, prove a plant is HpLVd-free. Budget for independent lab testing (section 13).",
         "<strong>Price moves around:</strong> roughly <strong>$1,800&ndash;$2,295</strong> depending on where and when; refills (media $30&ndash;$40/box, vessels $15 each, HEPA $100) add up over time.",
       ], "tight")),
     callout("tip", "You can do all of this without the Athena kit",
@@ -487,7 +485,7 @@ SECTIONS.append({
       ], "tight")),
     callout("warn", "The Athena kit can clean, but it cannot prove",
       p("The kit lets you do the meristem cut. It includes <strong>no heat-treatment hardware and no "
-        "DNA test</strong>. So after this step you have a plant that is <em>probably</em> clean, "
+        "DNA test</strong>. So after this step you have a plant that is <em>probably</em> clean until a lab RT-qPCR says so, "
         "not a <em>proven</em> clean one. That proof is the next section, and it's non-negotiable.")),
   ]})
 
@@ -499,7 +497,7 @@ SECTIONS.append({
       "&lsquo;Indexing&rsquo; is that test. Skip it and you can spend six months building a "
       "&lsquo;clean&rsquo; mother that quietly re-seeds your whole room with viroid."),
     defterm("RT-qPCR",
-      "The gold-standard DNA/RNA test for HpLVd. A lab amplifies any viroid genetic material in your "
+      "The gold-standard RNA test (RT-qPCR) for HpLVd. A lab amplifies any viroid genetic material in your "
       "sample until it's detectable, sensitive down to a handful of copies. You send tissue; "
       "they send back positive/negative. Many cannabis testing labs offer it cheaply per sample."),
     defterm("RT-LAMP",

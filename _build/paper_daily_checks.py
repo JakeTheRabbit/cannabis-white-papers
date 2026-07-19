@@ -85,7 +85,7 @@ SECTIONS.append({"id": "science", "kicker": "The science", "title": "What makes 
       "<strong>Short lists at pause points.</strong> Five to nine killer items per list, one screen, run at "
       "a trigger moment, not one giant sheet" + _c("gawande-checklist-manifesto") + ".",
       "<strong>Fixed time, one named owner.</strong> Tie each check to a person and a moment ('at lights-on "
-      "the AM tech does X'); this if-then framing lifts follow-through two to three fold" + _c("gollwitzer-implementation-intentions") + ". Name a backup for the owner-absent case.",
+      "the AM tech does X'); this if-then framing has a medium positive effect on goal attainment (meta-analytic d&asymp;0.65)" + _c("gollwitzer-implementation-intentions") + ". Name a backup for the owner-absent case.",
       "<strong>Close the loop.</strong> Show the worker their data was used and acted on. The top cause of "
       "disengaged faking is submitting into a void where nothing ever happens.",
       "<strong>Make completion visible.</strong> A team board of who did and did not do their checks lifts "
@@ -214,7 +214,7 @@ SECTIONS.append({"id": "audit-build", "kicker": "Proof & build", "title": "The a
       "irrigation reading as the daily log" + _c("ha-template-alert-statistics") + ", the human items carry a "
       "timestamp, identity and any exception photo.",
       "<strong>Roll up for compliance.</strong> Feed the daily fields into per-lot records (inputs, "
-      "conditions, deviations, corrective actions) for a seed-to-harvest trail under GACP and GMP" + _c("who-gacp-2003") + _c("eu-gmp-annex1") + ".",
+      "conditions, deviations, corrective actions) for operational seed-to-harvest discipline (regulated GACP/GMP still needs validated systems)" + _c("who-gacp-2003") + _c("eu-gmp-annex1") + ".",
       "<strong>Trend, don't just file.</strong> Set alert and action limits from your own history and review "
       "them weekly so drift is caught before it becomes a deviation" + _c("eu-gmp-annex1") + ". Sanitation, "
       "hygiene and pest logs follow the same record discipline" + _c("haccp-prerequisite-ssop") + _c("globalgap-cpcc") + ".",

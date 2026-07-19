@@ -99,7 +99,7 @@ This is the deeper answer to ‘how much do I need?’. Enrichment is not toppin
 
 ## How much, and what it buys you
 
-The best cannabis-specific yield data come from controlled work at Utah State University: raising a sealed room from ambient (~420 ppm) to about 1,200 ppm lifted dry flower yield by roughly **40%**, and 1,200 ppm captured about **95%** of the achievable gain, so there is little point going higher[^westmoreland2023-usu]. General greenhouse crops tell the same story: tomato yield rises up to ~80% at 1,000 ppm[^doddrell2023-co2], and most C3 crops saturate around 1,000–1,300 ppm[^doddrell2023-co2].
+The best cannabis-specific yield data come from controlled work at Utah State University: raising a sealed room from ambient (~420 ppm) to about 1,200 ppm lifted dry flower yield by roughly **40%**, and 1,200 ppm captured about **95%** of the achievable gain, so there is little point going higher[^westmoreland2023-usu]. General greenhouse crops tell the same story: many greenhouse C3 crops gain on the order of tens of percent at ~800–1,200 ppm (extreme published uplifts depend on depleted controls and system)[^doddrell2023-co2], and most C3 crops saturate around 1,000–1,300 ppm[^doddrell2023-co2].
 
 > **Diagram.** The working band. Aim for roughly 1,000–1,500 ppm in the light. The plateau above ~1,500 ppm is real, so pushing to 2,000 ppm mostly buys wasted gas and a bigger safety and cooling burden[^westmoreland2023-usu].
 
@@ -208,7 +208,7 @@ Raising CO2 does not act alone, it pulls on the rest of the room. This is the sa
 
 > **NOTE — Water use: efficiency goes up, volume usually goes up too**
 >
-> Elevated CO2 partly closes the stomata, so a leaf loses less water _per unit of leaf_ for the same photosynthesis, and its water-use efficiency roughly **doubles**, about twice the growth per litre transpired[^chandra2008-photo]. But that is _efficiency_, not less water, and in a real enriched room the total usually moves the _other_ way. CO2 grows a bigger, faster canopy with far more leaf area, and the room is run hotter and brighter to exploit it[^lv2022-topt], which more than cancels the per-leaf stomatal closure. So in practice **total water use and humidity load commonly go up, not down**, most growers running CO2 end up feeding and dehumidifying _more_. Don't assume a wetter substrate, and re-tune irrigation by watching VWC, dryback and runoff on the actual crop rather than copying an old schedule.
+> Elevated CO2 partly closes the stomata, so a leaf loses less water _per unit of leaf_ for the same photosynthesis, and its water-use efficiency often rises substantially (sometimes toward a large fraction of a doubling in short-term leaf measurements), about twice the growth per litre transpired[^chandra2008-photo]. But that is _efficiency_, not less water, and in a real enriched room the total usually moves the _other_ way. CO2 grows a bigger, faster canopy with far more leaf area, and the room is run hotter and brighter to exploit it[^lv2022-topt], which more than cancels the per-leaf stomatal closure. So in practice **total water use and humidity load commonly go up, not down**, most growers running CO2 end up feeding and dehumidifying _more_. Don't assume a wetter substrate, and re-tune irrigation by watching VWC, dryback and runoff on the actual crop rather than copying an old schedule.
 
 ## The drying room: CO2 with no light to burn it
 
@@ -236,7 +236,7 @@ Every major safety authority agrees on the headline number: the 8-hour average a
 | --- | --- | --- |
 | ~420 ppm | Normal outdoor air | Baseline[^noaa2024-co2] |
 | 1,000–1,500 ppm | Typical enrichment target, safe for short work | 3–5× below the worker limit |
-| 1,000–2,500 ppm | Measurable dip in concentration and decision-making | Cognition, not danger[^azuma2018-cognition] |
+| 1,000–2,500 ppm | Some studies report small cognitive effects (literature mixed) | Cognition, not danger[^azuma2018-cognition] |
 | 5,000 ppm (0.5%) | 8-hour worker exposure limit (TWA) | OSHA / NIOSH / ACGIH / WorkSafe NZ[^worksafenz-co2] |
 | 30,000 ppm (3%) | 15-minute short-term limit (STEL); headache, fast breathing | NIOSH / ACGIH / WorkSafe NZ[^niosh-co2] |
 | 40,000 ppm (4%) | IDLH, immediately dangerous to life or health | Escape-impairing[^niosh-co2] |

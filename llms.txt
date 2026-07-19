@@ -1,6 +1,6 @@
 # The Cannabis White Papers
 
-> Beginner-friendly, peer-reviewed white papers on medical cannabis cultivation: propagation, crop steering, environment, plant health, precision irrigation, facility and quality.
+> Beginner-friendly, evidence-linked field guides on medical cannabis cultivation: propagation, crop steering, environment, plant health, precision irrigation, facility and quality.
 
 Licensed CC BY-NC 4.0 (https://creativecommons.org/licenses/by-nc/4.0/). Attribution: The Cannabis White Papers. Each paper has a clean markdown version under /papers/ with sources preserved as footnotes.
 

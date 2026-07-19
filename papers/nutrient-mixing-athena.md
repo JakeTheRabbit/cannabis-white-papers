@@ -71,7 +71,7 @@ The reason is chemistry. Part A is loaded with **calcium**. Part B carries **sul
 
 ## What it takes to dissolve 11 kg in 50 L
 
-227 grams of salt per litre is a lot, roughly four to five times saltier than seawater. Getting it fully into solution isn't automatic. Two bits of physics work against you.
+227 grams of salt per litre is a lot, roughly six to seven times saltier than seawater. Getting it fully into solution isn't automatic. Two bits of physics work against you.
 
 - **Dissolving cools the water.** Most of these salts pull heat _in_ as they dissolve (endothermic), so the tank gets colder as you add powder, and colder water dissolves less[^libretexts-temperature-solubility]. Hot water and a paddle beat that downward spiral.
 - **Cold or still water saturates.** Without heat and vigorous mixing, you hit the saturation limit and the last of the bag sits as grit on the bottom, leaving an underdosed, inconsistent stock.

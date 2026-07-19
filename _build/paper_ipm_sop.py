@@ -11,7 +11,7 @@ SUB = ("A plain-language standard operating procedure for keeping pests and dise
        "indoor cannabis grow. How to scout, when to act, how to use good bugs and sprays, and "
        "how to keep records that hold up.")
 META = [("shield", "Operational"), ("doc", "Operational guide"),
-        ("quote", "Peer-reviewed · 4 sources"), ("clock", "~14 min read")]
+        ("quote", "Evidence-linked · 4 sources"), ("clock", "~14 min read")]
 RELATED = ["mould-risk", "airflow-design", "harvest-dry-trim-cure"]
 REF_IDS = ["punja-2021-emerging-diseases-cannabis", "scott-punja-2021-powdery-mildew-management",
            "elmoghazy-2024-swirskii-functional-response", "mumtaz-2023-californicus-functional-response",
@@ -22,8 +22,14 @@ def _c(rid):
 
 SECTIONS = []
 
+# Fact-check jurisdiction banner
+JURISDICTION_NOTE = 'Jurisdiction note: product legality, REI/PHI, and organism status are local (e.g. NZ ACVM/HSNO/WorkSafe vs US EPA WPS). Verify current law and labels before any spray or release.'
+
+
 SECTIONS.append({"id": "intro", "kicker": "Start here", "title": "What IPM is and why a grow lives or dies by it",
   "blocks": [
+    callout("NOTE", "Jurisdiction", JURISDICTION_NOTE),
+    
     lead("Integrated Pest Management (IPM) is the routine of catching pests and diseases before they "
          "spread, using the lightest control that works and escalating only when you have to. It is "
          "not one spray or one bug release. It is a loop: evaluate, decide, control, repeat, "
@@ -100,10 +106,10 @@ SECTIONS.append({"id": "thresholds", "kicker": "Core practice 2", "title": "Acti
       "reflects a common commercial action approach" + _c("punja-2021-emerging-diseases-cannabis") +
       ". At the first sign of a single mite, aphid, or similar pest, assume there are more: "
       "scout the entire room, begin exclusion measures (limit who enters), and line up biological "
-      "controls. Once more than 3 percent of a room is affected, escalate to approved pesticide "
+      "controls. As an example planning default, once more than 3 percent of a room is affected, escalate to approved pesticide (zero-tolerance organisms override any percentage) "
       "applications, subject to growth stage and management sign-off."),
     p("Growth stage is itself a hard gate. In a regulated soilless facility, plants are treated only "
-      "from mothering through day 21 of flower, with no foliar treatment after buds form (a light "
+      "through early flower in many residue-aware facilities (example: day 21); your PHI and QA SOP set the real cutoff (a light "
       "antimicrobial rinse may be the only exception)" + _c("scott-punja-2021-powdery-mildew-management") +
       ". For a serious infestation that appears after day 21 of flower, pull "
       "and destroy the affected plants rather than spray."),
@@ -125,7 +131,7 @@ SECTIONS.append({"id": "thresholds", "kicker": "Core practice 2", "title": "Acti
 
 SECTIONS.append({"id": "biocontrol", "kicker": "Core practice 3", "title": "Biological controls: putting good bugs to work",
   "blocks": [
-    p("Biocontrol releases predators that hunt your pests. They are harmless to the cannabis plant "
+    p("Biocontrol releases predators that hunt your pests when legal in your jurisdiction. They usually leave no chemical residue on the cannabis plant "
       "at every stage, and if they run out of prey they simply die off and fall away. The job is to match "
       "the predator to the pest and the conditions."),
     p("<em>Amblyseius swirskii</em> is a generalist that eats thrips larvae, whitefly, and broad mites "
@@ -152,7 +158,7 @@ SECTIONS.append({"id": "biocontrol", "kicker": "Core practice 3", "title": "Biol
       "Read your room temperature, then pick the predator whose active band covers it. In a hot, dry "
       "room californicus holds up where persimilis fades."),
     callout("note", "Good bugs self-limit",
-      p("Predators are harmless to the plant and to people. When the prey runs out they die off on "
+      p("Predatory arthropods usually leave no chemical residue, but must be legal and compatible. When the prey runs out they die off on "
         "their own. There is no residue and no withholding period.")),
   ]})
 
@@ -163,10 +169,10 @@ SECTIONS.append({"id": "spray-rotation", "kicker": "Core practice 4", "title": "
       "label dilution and withholding periods, and never freelance with off-list nutrients or "
       "supplements that could fail residue testing" + _c("scott-punja-2021-powdery-mildew-management") + "."),
     p("A preventative program can be as simple as a weekly foliar of an approved wash plus sulphur (1 "
-      "to 3 tablespoons per litre, ideally 3, no more than once every 2 weeks, veg and mothers only), "
+      "only at the current registered product label rate and REI/PHI if lawful (never kitchen tablespoon rates; veg and mothers only when residues allow), "
       "stepping up to 3 times a week curatively at low pest levels" + _c("scott-punja-2021-powdery-mildew-management") +
       ". Rotate chemistries and tank-mix only combinations the labels allow, adding products in the "
-      "label-specified order. Spray when the media is fully saturated so the product is not pulled "
+      "label-specified order. Avoid spraying under high light, high VPD, or drought stress so the product is not forced onto "
       "into the leaves and burns them."),
     figure(L.flow("Coverage order: media to leaf top",
             [("1 Media top", "soak the substrate surface"), ("2 Up the stalk", "trunk and lower stems"),
@@ -272,7 +278,7 @@ SECTIONS.append({"id": "pitfalls-expectations", "kicker": "Reality check", "titl
       "equipment."), 15, ""),
     p("Avoid airborne fumigators entirely in a flower facility. They can drift into bud and "
       "compromise the crop" + _c("scott-punja-2021-powdery-mildew-management") + ". Check "
-      "sprayers for metallic hose clamps that can rust and fail heavy-metals testing" + _c("punja-2021-emerging-diseases-cannabis") + "."),
+      "sprayers for corroding product-contact or fertigation hardware that can contribute to metals contamination in some cases" + _c("punja-2021-emerging-diseases-cannabis") + "."),
     figure(L.bars("Prevention is far cheaper than reactive cleanup",
             [("Prevention (scout, hygiene, bugs)", 25), ("Reactive cleanup after outbreak", 90)], unit=" effort",
             note="Relative effort and cost. Steady prevention vastly outperforms firefighting an outbreak.", maxv=100), 16,

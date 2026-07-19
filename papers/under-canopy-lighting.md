@@ -41,7 +41,7 @@ The result is the larf you already know: airy, underweight bud on the bottom thi
 | --- | --- | --- |
 | Top canopy | 800–1200 µmol | Typical under a modern LED array |
 | Basal bud sites | 100–200 µmol | What’s left after canopy attenuation |
-| Viability floor | 400–500 µmol | Minimum for adequate flower development |
+| Common commercial band | 300–600 µmol | Typical target to fill lower flower (not a hard biological floor) |
 
 *The geometry is the problem, and geometry needs a geometric fix: light delivered at depth, not just from above.*
 
@@ -81,7 +81,7 @@ Here’s the most expensive mistake in the category. Most under-canopy products 
 >
 > In the Fluence ICL trials, red intercanopy treatments at **80% and 100% red caused photobleaching**[^fluence-icl-2024] — the lower bud bleaches, loses pigment and degrades. They dropped to 60% red. Pushing a high-red bar into a dense lower canopy at close range bleaches the exact flower you were trying to save.
 
-Two things are happening. First, the mid and lower canopy is _already_ red-rich and far-red-dominant — the upper leaves absorbed the blue and red on the way down. Stacking more concentrated red onto that imbalance is the opposite of what the plant needs. Second, photosystems I and II must be excited roughly equally for efficient photosynthesis; monochromatic red unbalances them.
+Two things are happening. First, the mid and lower canopy is _already_ green/FR-enriched and far-red-dominant — the upper leaves absorbed the blue and red on the way down. Stacking more concentrated red onto that imbalance is the opposite of what the plant needs. Second, photosystems I and II must be excited roughly equally for efficient photosynthesis; monochromatic red unbalances them.
 
 **Use a balanced, broad spectrum below the canopy** — closer to what the plant evolved under than to a red space heater. Broad-spectrum minimises bleaching risk while still driving photosynthesis[^fluence-broad-2026]; Hawley’s red-blue gave consistency, RGB moved terpenes more. Broad-spectrum white with a measured red component is the safe, productive default.
 

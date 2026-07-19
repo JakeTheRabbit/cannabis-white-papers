@@ -25,6 +25,10 @@ _Plant health · Pests · ~18 min read_
 
 ## What this guide is (and is not)
 
+> **NOTE — Jurisdiction**
+>
+> Jurisdiction note: named biocontrol agents and rates are planning examples only. Confirm legal status and supplier availability in your country (NZ readers: check HSNO/MPI before release).
+
 This is a plain-language field guide to identifying and controlling the eight pest groups that most commonly attack cannabis: spider mites, russet and broad mites, thrips, fungus gnats, aphids and root aphids, whitefly, and caterpillars. It tells you what each pest looks like, how fast it breeds, how to monitor for it, and how to treat it with bugs (biological controls) and sprays.
 
 It is the ‘who’s who’ companion to the IPM SOP, which is the separate decision process that tells you _when_ to act and which lever to pull. Read this guide to recognise the enemy. Read the [IPM SOP](ipm-sop.html) to run the program.
@@ -48,7 +52,7 @@ A handful of words appear throughout this guide and the IPM SOP, so define them 
 
 **Life cycle / generation time** — Egg to egg-laying adult. Warm dry rooms shorten this to under a week for mites, which is why a small spot becomes a crop-wide problem fast.
 
-**Loupe / scope** — A 30x hand loupe finds spider mites. Russet and broad mites are smaller than a millimetre and need 60-100x magnification to see at all.
+**Loupe / scope** — A 30x hand loupe finds spider mites. Russet and broad mites (confirm at 60–100× before treating; symptoms overlap with heat tacoing and tip burn) are smaller than a millimetre and need 60-100x magnification to see at all.
 
 **Frass, honeydew, stippling** — Pest droppings, the sticky sugar excretion sap-suckers leave behind, and the fine pale feeding speckles on a leaf, respectively.
 
@@ -60,7 +64,7 @@ A handful of words appear throughout this guide and the IPM SOP, so define them 
 
 These four feed on leaves and stems by piercing cells and sucking sap, so they share a look: pale stippling, distortion and loss of vigour[^pulkoski-burrack-2023-piercing-sucking-hemp]. Telling them apart is about the secondary signs each one leaves.
 
-- **Spider mites:** leaf-underside stippling plus fine webbing. The cycle runs as fast as 3 days at 27C / ~20% RH, and one female can lay up to ~200 eggs.
+- **Spider mites:** leaf-underside stippling plus fine webbing. Under hot, dry conditions egg-to-adult often finishes in about a week (sometimes under two weeks); females often lay on the order of ~100 eggs over life (exact times depend on temperature and host).
 - **Thrips:** silvery rasping streaks plus tiny black frass dots. They drop to the medium to pupate, so leaf sprays alone miss a whole life stage.
 - **Aphids:** soft-bodied clusters on new growth, cast white skins, honeydew that grows black sooty mould. They can give live birth, so buildup is explosive.
 - **Whitefly:** tiny white moth-like adults that flush up in a cloud when disturbed, with uniform yellowing and lower-canopy decline.
@@ -92,7 +96,7 @@ Fungus gnat larvae weaken plants and wound roots, and the damage they cause inte
 
 You cannot control what you do not measure, and early detection is the single biggest lever you have. Run a fixed weekly scouting walk on the same day, inspecting leaf undersides, growing tips, flowers and the root zone, and step up to twice weekly as rooms warm up.
 
-Hang yellow sticky cards at canopy height for thrips, whitefly and fungus-gnat adults at roughly one card per 1,000 square feet as a minimum, with more cards giving a better signal. Place fungus-gnat cards low, near the medium surface, where the adults fly. Record the count on each card every week so you track the trend, not just the snapshot.
+Hang yellow sticky cards at canopy height for thrips, whitefly and fungus-gnat adults at a mapped density (example: ~1 card / 100 m² or ~1,000 sq ft) as a starting point, with more cards giving a better signal. Place fungus-gnat cards low, near the medium surface, where the adults fly. Record the count on each card every week so you track the trend, not just the snapshot.
 
 - Scout weekly on a fixed day, spot-check twice weekly when temperatures and pest development rise
 - Yellow sticky cards: minimum ~1 per 1,000 sq ft, low at the medium for fungus gnats, canopy height for thrips/whitefly

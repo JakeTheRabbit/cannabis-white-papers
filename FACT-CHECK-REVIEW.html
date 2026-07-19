@@ -1,0 +1,1425 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Fact-check review · Cannabis White Papers v1.2</title>
+<style>
+  :root {
+    --bg: #0f1419;
+    --panel: #1a2332;
+    --border: #2d3a4d;
+    --text: #e7ecf3;
+    --muted: #9aabbc;
+    --false: #ff5c5c;
+    --half: #ffb020;
+    --mislead: #ff8a4c;
+    --unclear: #a78bfa;
+    --explain: #38bdf8;
+    --image: #34d399;
+    --site: #f472b6;
+    --ok: #4ade80;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.45;
+  }
+  header {
+    padding: 2rem 1.5rem 1rem;
+    border-bottom: 1px solid var(--border);
+    background: linear-gradient(180deg, #152033 0%, var(--bg) 100%);
+  }
+  header h1 { margin: 0 0 0.35rem; font-size: 1.65rem; font-weight: 700; }
+  header p { margin: 0.35rem 0; color: var(--muted); max-width: 70rem; }
+  .meta { display: flex; flex-wrap: wrap; gap: 0.75rem; margin-top: 1rem; }
+  .pill {
+    display: inline-flex; align-items: center; gap: 0.35rem;
+    padding: 0.25rem 0.7rem; border-radius: 999px;
+    background: var(--panel); border: 1px solid var(--border);
+    font-size: 0.85rem; color: var(--muted);
+  }
+  .pill strong { color: var(--text); }
+  .controls {
+    display: flex; flex-wrap: wrap; gap: 0.75rem; align-items: center;
+    padding: 1rem 1.5rem; border-bottom: 1px solid var(--border);
+    position: sticky; top: 0; background: rgba(15,20,25,0.92);
+    backdrop-filter: blur(8px); z-index: 10;
+  }
+  .controls input, .controls select {
+    background: var(--panel); color: var(--text);
+    border: 1px solid var(--border); border-radius: 8px;
+    padding: 0.5rem 0.75rem; font-size: 0.9rem;
+  }
+  .controls input { min-width: 16rem; flex: 1; }
+  .count { color: var(--muted); font-size: 0.9rem; }
+  main { padding: 1rem 1.5rem 3rem; }
+  .summary-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 0.75rem; margin-bottom: 1.5rem;
+  }
+  .stat {
+    background: var(--panel); border: 1px solid var(--border);
+    border-radius: 10px; padding: 0.85rem 1rem;
+  }
+  .stat .n { font-size: 1.5rem; font-weight: 700; }
+  .stat .l { font-size: 0.8rem; color: var(--muted); text-transform: uppercase; letter-spacing: 0.04em; }
+  h2 { margin: 2rem 0 0.75rem; font-size: 1.2rem; }
+  .note {
+    background: #1c2a1c; border: 1px solid #2f5a3a; color: #b7e4c7;
+    border-radius: 10px; padding: 0.9rem 1rem; margin-bottom: 1.25rem;
+  }
+  .table-wrap { overflow-x: auto; border: 1px solid var(--border); border-radius: 12px; }
+  table { width: 100%; border-collapse: collapse; min-width: 1100px; font-size: 0.9rem; }
+  th {
+    text-align: left; padding: 0.75rem 0.85rem; background: #121a26;
+    border-bottom: 1px solid var(--border); color: var(--muted);
+    font-weight: 600; font-size: 0.78rem; text-transform: uppercase;
+    letter-spacing: 0.04em; position: sticky; top: 0;
+  }
+  td {
+    padding: 0.85rem; border-bottom: 1px solid var(--border);
+    vertical-align: top; background: var(--panel);
+  }
+  tr:hover td { background: #1f2b3d; }
+  tr.hidden { display: none; }
+  .sev {
+    display: inline-block; font-size: 0.72rem; font-weight: 700;
+    letter-spacing: 0.03em; padding: 0.2rem 0.5rem; border-radius: 6px;
+    white-space: nowrap;
+  }
+  .sev-FALSE { background: rgba(255,92,92,0.18); color: var(--false); }
+  .sev-HALF_TRUE { background: rgba(255,176,32,0.18); color: var(--half); }
+  .sev-MISLEADING { background: rgba(255,138,76,0.18); color: var(--mislead); }
+  .sev-UNCLEAR { background: rgba(167,139,250,0.18); color: var(--unclear); }
+  .sev-NEEDS_BETTER_EXPLAIN { background: rgba(56,189,248,0.15); color: var(--explain); }
+  .sev-IMAGE_HELP { background: rgba(52,211,153,0.15); color: var(--image); }
+  .sev-SITE_WIDE { background: rgba(244,114,182,0.15); color: var(--site); }
+  .paper { font-weight: 600; white-space: nowrap; }
+  .quote { color: var(--muted); font-style: italic; }
+  .rewrite { color: #c6e6ff; }
+  .prompt {
+    margin-top: 0.4rem; padding: 0.55rem 0.7rem;
+    background: #0d1520; border-left: 3px solid var(--image);
+    border-radius: 0 6px 6px 0; color: #b8f0d4; font-size: 0.82rem;
+  }
+  .conf {
+    font-size: 0.75rem; color: var(--muted); text-transform: uppercase;
+    letter-spacing: 0.04em;
+  }
+  .id { color: var(--muted); font-variant-numeric: tabular-nums; }
+  footer {
+    padding: 1.5rem; border-top: 1px solid var(--border);
+    color: var(--muted); font-size: 0.85rem;
+  }
+  details.legend { margin-bottom: 1rem; color: var(--muted); }
+  details.legend summary { cursor: pointer; color: var(--text); }
+</style>
+</head>
+<body>
+<header>
+  <h1>Full fact-check review — Cannabis White Papers</h1>
+  <p>
+    Site reviewed: <a href="https://jaketherabbit.github.io/cannabis-white-papers" style="color:#7dd3fc">jaketherabbit.github.io/cannabis-white-papers</a>
+    · Corpus v1.2 (updated 2026-07-18) · 37 papers · source: <code>papers/*.md</code>
+  </p>
+  <p>
+    Scope: claims that are <strong>false</strong>, <strong>half-true</strong>, <strong>misleading</strong>,
+    <strong>poorly worded</strong>, <strong>under-explained</strong>, or where a <strong>picture would fix confusion</strong>.
+    Directionally solid science is not listed as “broken.” Priority: safety, numbers, citation hygiene, jurisdiction.
+  </p>
+  <div class="meta">
+    <span class="pill"><strong>Method:</strong> full markdown read + cross-paper consistency + physiology/hort checks</span>
+    <span class="pill"><strong>Repo:</strong> JakeTheRabbit/cannabis-white-papers</span>
+    <span class="pill"><strong>Date:</strong> 2026-07-19</span>
+  </div>
+</header>
+
+<div class="controls">
+  <input id="q" type="search" placeholder="Filter by paper, quote, keyword…" />
+  <select id="sev">
+    <option value="">All severities</option>
+    <option value="FALSE">FALSE</option>
+    <option value="HALF_TRUE">HALF_TRUE</option>
+    <option value="MISLEADING">MISLEADING</option>
+    <option value="UNCLEAR">UNCLEAR</option>
+    <option value="NEEDS_BETTER_EXPLAIN">NEEDS_BETTER_EXPLAIN</option>
+    <option value="IMAGE_HELP">IMAGE_HELP</option>
+    <option value="SITE_WIDE">SITE_WIDE</option>
+  </select>
+  <select id="track">
+    <option value="">All tracks</option>
+    <option value="Site-wide">Site-wide</option>
+    <option value="Propagation">Propagation</option>
+    <option value="Vegetative">Vegetative</option>
+    <option value="Flowering">Flowering</option>
+    <option value="Harvest">Harvest</option>
+    <option value="Environment">Environment</option>
+    <option value="Water &amp; feed">Water &amp; feed</option>
+    <option value="Plant health">Plant health</option>
+    <option value="Precision">Precision</option>
+    <option value="Facility">Facility</option>
+  </select>
+  <span class="count" id="count"></span>
+</div>
+
+<main>
+  <div class="summary-grid" id="stats"></div>
+
+  <div class="note">
+    <strong>Overall verdict:</strong> This is a strong beginner-first, evidence-<em>linked</em> field guide corpus —
+    better than most grow-blog content — but it is <strong>not</strong> peer-reviewed science as marketed.
+    Highest-risk fixes: site branding, PPE log-math, sulphur Tbsp rates, irrigation veg/gen dryback inversion,
+    dissolved-oxygen numbers, leaf-drinking seedling claim, ambient 800 µmol hard ceiling vs RM2021, late-flower RH band,
+    Caplan drought mis-mapped to daily drybacks, and biosignal overclaim.
+  </div>
+
+  <details class="legend">
+    <summary>Severity key</summary>
+    <ul>
+      <li><strong>FALSE</strong> — claim is wrong; rewrite or remove.</li>
+      <li><strong>HALF_TRUE</strong> — directionally real but overstated / incomplete.</li>
+      <li><strong>MISLEADING</strong> — wording or framing will send readers the wrong way.</li>
+      <li><strong>UNCLEAR</strong> — cannot verify as stated / needs a primary source.</li>
+      <li><strong>NEEDS_BETTER_EXPLAIN</strong> — not false, but beginners will misapply.</li>
+      <li><strong>IMAGE_HELP</strong> — visual would prevent a common misconception.</li>
+      <li><strong>SITE_WIDE</strong> — marketing / multi-paper / jurisdiction issue.</li>
+    </ul>
+  </details>
+
+  <div class="table-wrap">
+    <table id="issues">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Severity</th>
+          <th>Track</th>
+          <th>Paper</th>
+          <th>Quote / claim</th>
+          <th>What’s wrong</th>
+          <th>Suggested rewrite</th>
+          <th>Picture / gen prompt</th>
+          <th>Conf.</th>
+        </tr>
+      </thead>
+      <tbody>
+<!-- ========== SITE ========== -->
+<tr data-sev="SITE_WIDE" data-track="Site-wide">
+  <td class="id">1</td>
+  <td><span class="sev sev-SITE_WIDE">SITE_WIDE</span></td>
+  <td>Site-wide</td>
+  <td class="paper">index / README</td>
+  <td class="quote">“Peer-reviewed cultivation science” / “peer-reviewed white papers”</td>
+  <td>These guides <em>cite</em> peer-reviewed work; the papers themselves are not journal peer-reviewed. Some refs are also mis-tagged industry sources as peer.</td>
+  <td class="rewrite">“Evidence-linked cultivation field guides: primary literature cited where claims rest on science; the guides themselves are not peer-reviewed journal articles.”</td>
+  <td><div class="prompt">Badge mockup: two labels — “Evidence-linked · not peer-reviewed” vs “Cites peer-reviewed sources.” Flat UI, dark theme matching the site.</div></td>
+  <td class="conf">high</td>
+</tr>
+<tr data-sev="SITE_WIDE" data-track="Site-wide">
+  <td class="id">2</td>
+  <td><span class="sev sev-SITE_WIDE">SITE_WIDE</span></td>
+  <td>Site-wide</td>
+  <td class="paper">IPM / PPE / Facility mix</td>
+  <td class="quote">US EPA WPS + NZ HSWA/ACVM + WA WAC security rules stitched across papers</td>
+  <td>Readers can assemble inapplicable “legal” advice. No consistent jurisdiction banner.</td>
+  <td class="rewrite">Required front-matter on every paper: Jurisdiction · product pathway · “not legal advice.”</td>
+  <td>—</td>
+  <td class="conf">high</td>
+</tr>
+<tr data-sev="MISLEADING" data-track="Site-wide">
+  <td class="id">3</td>
+  <td><span class="sev sev-MISLEADING">MISLEADING</span></td>
+  <td>Site-wide</td>
+  <td class="paper">Multiple EC papers</td>
+  <td class="quote">Flower EC ~1.6–3.0 (deficiencies) vs 3.6–4.2 / runoff 7–8 (scaling-high-light)</td>
+  <td>Same library teaches incompatible feed strengths with no shared beginner vs advanced matrix.</td>
+  <td class="rewrite">One EC matrix by stage × light × media, with beginner / advanced columns.</td>
+  <td><div class="prompt">Educational EC ladder infographic: Seedling → Veg → Flower ambient → Flower high-light CO2. Green “beginner safe” band and amber “advanced steering only” band. Clean vector.</div></td>
+  <td class="conf">high</td>
+</tr>
+
+<!-- ========== PROPAGATION ========== -->
+<tr data-sev="FALSE" data-track="Propagation">
+  <td class="id">4</td>
+  <td><span class="sev sev-FALSE">FALSE</span></td>
+  <td>Propagation</td>
+  <td class="paper">seeds-germination</td>
+  <td class="quote">“The newborn seedling… drinks largely through its leaves.”</td>
+  <td>Water uptake is root-mediated once the radicle is in medium. High RH reduces evaporative demand; leaves are not the main water source.</td>
+  <td class="rewrite">“A young seedling has a tiny root system, so it loses water easily. High humidity (or a dome) reduces how hard the air pulls water from the leaves until roots expand.”</td>
+  <td><div class="prompt">Two-panel botanical diagram, white background. A: cannabis seed imbibing water via seed coat/radicle. B: seedling under humidity dome; blue arrows root uptake from soil; dashed arrows reduced leaf water loss. Caption: “High RH reduces demand — roots still drink.” Flat scientific vector.</div></td>
+  <td class="conf">high</td>
+</tr>
+<tr data-sev="MISLEADING" data-track="Propagation">
+  <td class="id">5</td>
+  <td><span class="sev sev-MISLEADING">MISLEADING</span></td>
+  <td>Propagation</td>
+  <td class="paper">seeds-germination</td>
+  <td class="quote">Paper-towel “near-99% success” cited to Cockson 2025</td>
+  <td>Cockson studies seed moisture/temperature, not paper-towel success rate. 99% is marketing-style.</td>
+  <td class="rewrite">“With fresh seed, steady warmth (~21–25°C), and damp—not soaked—conditions, high germination is common; method matters less than moisture, temp, and seed quality.”</td>
+  <td>—</td>
+  <td class="conf">high</td>
+</tr>
+<tr data-sev="HALF_TRUE" data-track="Propagation">
+  <td class="id">6</td>
+  <td><span class="sev sev-HALF_TRUE">HALF_TRUE</span></td>
+  <td>Propagation</td>
+  <td class="paper">seeds-germination</td>
+  <td class="quote">Germination needs “water, warmth and darkness” as hard triad</td>
+  <td>Cannabis is not a strict dark-requirer; darkness is conventional, not physiology law.</td>
+  <td class="rewrite">“Most people germinate dark for convenience and to avoid drying. Light is not toxic to germination; moisture and temperature matter more.”</td>
+  <td>—</td>
+  <td class="conf">high</td>
+</tr>
+<tr data-sev="MISLEADING" data-track="Propagation">
+  <td class="id">7</td>
+  <td><span class="sev sev-MISLEADING">MISLEADING</span></td>
+  <td>Propagation</td>
+  <td class="paper">seeds-germination</td>
+  <td class="quote">Autoflower column “~99% female”</td>
+  <td>Autos can be regular or feminized; ~99% female only if feminized.</td>
+  <td class="rewrite">“Feminized autos: mostly female. Regular autos: roughly half male / half female.”</td>
+  <td>—</td>
+  <td class="conf">high</td>
+</tr>
+<tr data-sev="HALF_TRUE" data-track="Propagation">
+  <td class="id">8</td>
+  <td><span class="sev sev-HALF_TRUE">HALF_TRUE</span></td>
+  <td>Propagation</td>
+  <td class="paper">seeds-germination</td>
+  <td class="quote">Feminized seeds “carry only female genetics”</td>
+  <td>XX×XX induction is female-leaning, not a guarantee; herms still occur. STS is more common than colloidal silver commercially.</td>
+  <td class="rewrite">“Feminized seed is made by inducing female plants to produce pollen (e.g. STS or colloidal silver), so almost all offspring are female—though stress hermaphroditism can still appear.”</td>
+  <td>—</td>
+  <td class="conf">high</td>
+</tr>
+<tr data-sev="HALF_TRUE" data-track="Propagation">
+  <td class="id">9</td>
+  <td><span class="sev sev-HALF_TRUE">HALF_TRUE</span></td>
+  <td>Propagation</td>
+  <td class="paper">seeds-germination</td>
+  <td class="quote">“flower when the daily light drops to about 12 hours”</td>
+  <td>Trigger is uninterrupted night length; 12/12 is industry default, not unique optimum (Moher et al.).</td>
+  <td class="rewrite">“Photoperiod cannabis flowers when nights are long enough without light interruptions. Growers usually use 12/12; some cultivars flower under other night lengths.”</td>
+  <td>—</td>
+  <td class="conf">high</td>
+</tr>
+<tr data-sev="MISLEADING" data-track="Propagation">
+  <td class="id">10</td>
+  <td><span class="sev sev-MISLEADING">MISLEADING</span></td>
+  <td>Propagation</td>
+  <td class="paper">seeds-germination</td>
+  <td class="quote">Seedling VPD → Zhang lettuce; PPFD → Rodriguez-Morrison flowering study</td>
+  <td>Operational ranges OK; citations are wrong species/stage for those exact numbers.</td>
+  <td class="rewrite">Label as “typical commercial starting ranges for cannabis seedlings”; fix or drop peer claim on exact bands.</td>
+  <td>—</td>
+  <td class="conf">medium</td>
+</tr>
+<tr data-sev="UNCLEAR" data-track="Propagation">
+  <td class="id">11</td>
+  <td><span class="sev sev-UNCLEAR">UNCLEAR</span></td>
+  <td>Propagation</td>
+  <td class="paper">seeds-germination</td>
+  <td class="quote">Ref 1 seed colour/viability (garbled multi-source string)</td>
+  <td>Readers cannot verify against a clean primary source.</td>
+  <td class="rewrite">Point colour/firmness guidance at one coherent source (e.g. Small 2017 + modern hemp seed storage work).</td>
+  <td>—</td>
+  <td class="conf">high</td>
+</tr>
+<tr data-sev="FALSE" data-track="Propagation">
+  <td class="id">12</td>
+  <td><span class="sev sev-FALSE">FALSE</span></td>
+  <td>Propagation</td>
+  <td class="paper">cloning</td>
+  <td class="quote">Half-strength feed day before “lowers turgor… stems less brittle”</td>
+  <td>Best practice is a well-hydrated, turgid mother. Lowering turgor worsens cutting quality. Mechanism stated is wrong.</td>
+  <td class="rewrite">“Water the mother thoroughly the day before so cuttings are fully hydrated and turgid. Avoid drought-stressed mothers.”</td>
+  <td>—</td>
+  <td class="conf">high</td>
+</tr>
+<tr data-sev="HALF_TRUE" data-track="Propagation">
+  <td class="id">13</td>
+  <td><span class="sev sev-HALF_TRUE">HALF_TRUE</span></td>
+  <td>Propagation</td>
+  <td class="paper">cloning</td>
+  <td class="quote">Air embolism as primary cannabis cutting failure mode</td>
+  <td>Overstated for soft herbaceous stems; desiccation is the main issue. Keeping cut wet still good.</td>
+  <td class="rewrite">“Keep the cut end moist from the moment you cut. Exposed cuts dry and stall water uptake.”</td>
+  <td>—</td>
+  <td class="conf">medium</td>
+</tr>
+<tr data-sev="HALF_TRUE" data-track="Propagation">
+  <td class="id">14</td>
+  <td><span class="sev sev-HALF_TRUE">HALF_TRUE</span></td>
+  <td>Propagation</td>
+  <td class="paper">cloning</td>
+  <td class="quote">IBA “synthetic version of a natural… auxin”</td>
+  <td>IBA occurs in plants; primary natural auxin is IAA. Commercial IBA is usually synthetic.</td>
+  <td class="rewrite">“IBA is an auxin used in rooting products. Plants can convert IBA into IAA, the main natural auxin that triggers adventitious roots.”</td>
+  <td>—</td>
+  <td class="conf">high</td>
+</tr>
+<tr data-sev="HALF_TRUE" data-track="Propagation">
+  <td class="id">15</td>
+  <td><span class="sev sev-HALF_TRUE">HALF_TRUE</span></td>
+  <td>Propagation</td>
+  <td class="paper">cloning</td>
+  <td class="quote">“90–95% success or better” as Caplan-backed floor</td>
+  <td>Achievable, not a universal floor. Genetics/environment dominate.</td>
+  <td class="rewrite">“Well-run rooms often hit ~90%+ rooting; treat 90% as a good operational target, not a guarantee.”</td>
+  <td>—</td>
+  <td class="conf">medium</td>
+</tr>
+<tr data-sev="NEEDS_BETTER_EXPLAIN" data-track="Propagation">
+  <td class="id">16</td>
+  <td><span class="sev sev-NEEDS_BETTER_EXPLAIN">NEEDS_BETTER_EXPLAIN</span></td>
+  <td>Propagation</td>
+  <td class="paper">cloning</td>
+  <td class="quote">Clone feed EC ~1.5 mS/cm</td>
+  <td>Many protocols run lower until roots show; 1.5 can burn soft cuttings.</td>
+  <td class="rewrite">“Start mild (~0.6–1.2 mS/cm, product-dependent). Raise only after roots appear if leaves look hungry.”</td>
+  <td>—</td>
+  <td class="conf">medium</td>
+</tr>
+<tr data-sev="MISLEADING" data-track="Propagation">
+  <td class="id">17</td>
+  <td><span class="sev sev-MISLEADING">MISLEADING</span></td>
+  <td>Propagation</td>
+  <td class="paper">tissue-culture</td>
+  <td class="quote">HpLVd seed transmission “up to 100% in one cannabis cross”</td>
+  <td>Seed transmission is real; published rates typically lower and genotype-dependent. Absolute “up to 100%” needs hard primary cite or drop.</td>
+  <td class="rewrite">“HpLVd can move in seed and pollen at meaningful rates (often single digits to tens of percent depending on parent infection and genotype)—test seed lots if purity matters.”</td>
+  <td>—</td>
+  <td class="conf">high</td>
+</tr>
+<tr data-sev="HALF_TRUE" data-track="Propagation">
+  <td class="id">18</td>
+  <td><span class="sev sev-HALF_TRUE">HALF_TRUE</span></td>
+  <td>Propagation</td>
+  <td class="paper">tissue-culture</td>
+  <td class="quote">“lose up to ~50% of cannabinoids” / 90% CA facilities / ~40% Canadian flower</td>
+  <td>“Can” is true for severe dudding; readers hear “typical.” Prevalence is survey-based, not global law.</td>
+  <td class="rewrite">Frame as survey warnings and severe-outbreak ceilings, not permanent global epidemiology or typical loss.</td>
+  <td>—</td>
+  <td class="conf">high</td>
+</tr>
+<tr data-sev="HALF_TRUE" data-track="Propagation">
+  <td class="id">19</td>
+  <td><span class="sev sev-HALF_TRUE">HALF_TRUE</span></td>
+  <td>Propagation</td>
+  <td class="paper">tissue-culture</td>
+  <td class="quote">Totipotency: “Almost every living plant cell…”</td>
+  <td>Classic textbook claim; cannabis recalcitrance shows competence is tissue/genotype/medium-limited.</td>
+  <td class="rewrite">“Many plant cells can regenerate a whole plant under the right conditions. In cannabis, only some tissues and genotypes do this reliably.”</td>
+  <td><div class="prompt">Scientific cutaway of cannabis shoot tip: vascular strands red with RNA loop icons stopping short of green apical meristem dome 0.2–0.5 mm; leaf primordia; legend vascular path vs meristem often cleaner. White background poster style.</div></td>
+  <td class="conf">high</td>
+</tr>
+<tr data-sev="MISLEADING" data-track="Propagation">
+  <td class="id">20</td>
+  <td><span class="sev sev-MISLEADING">MISLEADING</span></td>
+  <td>Propagation</td>
+  <td class="paper">tissue-culture</td>
+  <td class="quote">TC “clears” Fusarium, Pythium, Botrytis, PM, mites and eggs</td>
+  <td>Meristem+indexing mainly for systemic agents. Endophytes can survive; mites are hygiene/IPM, not meristem magic.</td>
+  <td class="rewrite">“Clean culture + surface sterilisation can exclude many surface microbes/pests; meristem work + testing targets systemic agents like HpLVd. Endophytes can still emerge.”</td>
+  <td>—</td>
+  <td class="conf">high</td>
+</tr>
+<tr data-sev="HALF_TRUE" data-track="Propagation">
+  <td class="id">21</td>
+  <td><span class="sev sev-HALF_TRUE">HALF_TRUE</span></td>
+  <td>Propagation</td>
+  <td class="paper">tissue-culture</td>
+  <td class="quote">RT-qPCR called “DNA test” for HpLVd</td>
+  <td>HpLVd is RNA; method is RT-qPCR (reverse transcription then qPCR).</td>
+  <td class="rewrite">“RT-qPCR detects the viroid’s RNA by converting it to DNA then amplifying it.”</td>
+  <td>—</td>
+  <td class="conf">high</td>
+</tr>
+<tr data-sev="HALF_TRUE" data-track="Propagation">
+  <td class="id">22</td>
+  <td><span class="sev sev-HALF_TRUE">HALF_TRUE</span></td>
+  <td>Propagation</td>
+  <td class="paper">tissue-culture</td>
+  <td class="quote">“5-subculture rule” as biology law</td>
+  <td>Mutation accumulation is real; “5” is a conservative habit, not cannabis hard limit.</td>
+  <td class="rewrite">“Reset from indexed stock periodically (many programs aim ~5 cycles as a conservative habit, not a universal number).”</td>
+  <td>—</td>
+  <td class="conf">medium</td>
+</tr>
+
+<!-- ========== VEG ========== -->
+<tr data-sev="FALSE" data-track="Vegetative">
+  <td class="id">23</td>
+  <td><span class="sev sev-FALSE">FALSE</span></td>
+  <td>Vegetative</td>
+  <td class="paper">light-acclimation</td>
+  <td class="quote">Flip cuts DLI “by about 28%” at same PPFD</td>
+  <td>18→12 hours is a 33% cut (6/18), not ~28%.</td>
+  <td class="rewrite">“At the same PPFD, switching 18/6 → 12/12 cuts DLI by one-third (~33%).”</td>
+  <td>—</td>
+  <td class="conf">high</td>
+</tr>
+<tr data-sev="HALF_TRUE" data-track="Vegetative">
+  <td class="id">24</td>
+  <td><span class="sev sev-HALF_TRUE">HALF_TRUE</span></td>
+  <td>Vegetative</td>
+  <td class="paper">light-acclimation</td>
+  <td class="quote">Ambient ceiling ~850 useful / ~950 honest as hard science</td>
+  <td>Operational guidance; not a universal photosynthetic law. RM2021 yield can keep rising.</td>
+  <td class="rewrite">“Without CO₂, returns diminish as intensity climbs; many rooms cap ambient flower near ~800–1000 µmol while watching stress. CO₂ unlocks higher useful ceilings.”</td>
+  <td>—</td>
+  <td class="conf">medium</td>
+</tr>
+<tr data-sev="MISLEADING" data-track="Vegetative">
+  <td class="id">25</td>
+  <td><span class="sev sev-MISLEADING">MISLEADING</span></td>
+  <td>Vegetative</td>
+  <td class="paper">light-acclimation</td>
+  <td class="quote">Far-red “~70% jump in total cannabinoid yield” (one strain)</td>
+  <td>Extreme single-cultivar results get remembered as general.</td>
+  <td class="rewrite">“In one reported cultivar, end-of-day far-red improved cannabinoid yield; treat as genotype-specific and trade-off-prone.”</td>
+  <td>—</td>
+  <td class="conf">medium</td>
+</tr>
+<tr data-sev="HALF_TRUE" data-track="Vegetative">
+  <td class="id">26</td>
+  <td><span class="sev sev-HALF_TRUE">HALF_TRUE</span></td>
+  <td>Vegetative</td>
+  <td class="paper">defoliation-training</td>
+  <td class="quote">Shaded leaf always “flips into a drain (sink)”</td>
+  <td>Shaded leaves reduce export; not always strong parasitic sinks. Over-defoliation still costs source capacity.</td>
+  <td class="rewrite">“Deeply shaded leaves contribute little carbon and clog airflow. Thin selectively—every well-lit fan leaf you strip was still a sugar factory.”</td>
+  <td>—</td>
+  <td class="conf">high</td>
+</tr>
+<tr data-sev="MISLEADING" data-track="Vegetative">
+  <td class="id">27</td>
+  <td><span class="sev sev-MISLEADING">MISLEADING</span></td>
+  <td>Vegetative</td>
+  <td class="paper">defoliation-training</td>
+  <td class="quote">Apple orchard training paper as cannabis yield mechanism</td>
+  <td>Light-interception principles transfer; apple systems are weak peer basis for cannabis SOPs.</td>
+  <td class="rewrite">Keep principle; prefer cannabis canopy/density studies over apple yield numbers.</td>
+  <td>—</td>
+  <td class="conf">high</td>
+</tr>
+<tr data-sev="UNCLEAR" data-track="Vegetative">
+  <td class="id">28</td>
+  <td><span class="sev sev-UNCLEAR">UNCLEAR</span></td>
+  <td>Vegetative</td>
+  <td class="paper">defoliation-training</td>
+  <td class="quote">“lift the bottom line by roughly 15–30%”</td>
+  <td>Density trade-offs real; tidy profit % not settled multi-study result.</td>
+  <td class="rewrite">“Plant count and canopy uniformity are cheap levers: denser plantings can raise g/m² while often reducing uniformity—tune to goals.”</td>
+  <td>—</td>
+  <td class="conf">medium</td>
+</tr>
+<tr data-sev="NEEDS_BETTER_EXPLAIN" data-track="Vegetative">
+  <td class="id">29</td>
+  <td><span class="sev sev-NEEDS_BETTER_EXPLAIN">NEEDS_BETTER_EXPLAIN</span></td>
+  <td>Vegetative</td>
+  <td class="paper">defoliation-training</td>
+  <td class="quote">First topping “around day 5–7 of veg”</td>
+  <td>OK for rooted multi-node clones; dangerous for seed starts. Beginners misapply.</td>
+  <td class="rewrite">“Top only when plants are established with enough nodes. Clone rooms may top early; seed-grown plants need more time.”</td>
+  <td>—</td>
+  <td class="conf">high</td>
+</tr>
+
+<!-- ========== FLOWERING ========== -->
+<tr data-sev="HALF_TRUE" data-track="Flowering">
+  <td class="id">30</td>
+  <td><span class="sev sev-HALF_TRUE">HALF_TRUE</span></td>
+  <td>Flowering</td>
+  <td class="paper">flowering-stages</td>
+  <td class="quote">Amber trichomes → THC→CBN → “sedative / couch-lock”</td>
+  <td>Trichomes age (Livingston); CBN forms with oxidation, but human CBN-sedation evidence is weak/mixed. Effect is multi-factor (terpenes, dose, genotype). Amber % is maturity proxy, not effect formula.</td>
+  <td class="rewrite">“Many growers harvest mostly cloudy trichomes with a little amber. Later harvests often feel ‘heavier,’ but effect isn’t only CBN—genotype and terpenes matter as much as amber %.”</td>
+  <td><div class="prompt">Educational trichome maturity strip: clear → milky → amber under loupe, labels “immature / common harvest window / over-ripe.” Note under amber: “maturity cue, not a CBN sedative switch.” Clean macro illustration style.</div></td>
+  <td class="conf">high</td>
+</tr>
+<tr data-sev="MISLEADING" data-track="Flowering">
+  <td class="id">31</td>
+  <td><span class="sev sev-MISLEADING">MISLEADING</span></td>
+  <td>Flowering</td>
+  <td class="paper">flowering-stages / lighting</td>
+  <td class="quote">“Even a phone-screen of light, repeated, can cause hermies”</td>
+  <td>Night integrity matters; trivial indicator LEDs rarely proven to force herms. Herms are strongly genetic + multi-stress.</td>
+  <td class="rewrite">“Keep nights dark enough that flowering stays stable. Brief dim indicator LEDs are usually low risk; genetics and other stresses drive most hermaphroditism.”</td>
+  <td>—</td>
+  <td class="conf">medium</td>
+</tr>
+<tr data-sev="HALF_TRUE" data-track="Flowering">
+  <td class="id">32</td>
+  <td><span class="sev sev-HALF_TRUE">HALF_TRUE</span></td>
+  <td>Flowering</td>
+  <td class="paper">flowering-stages / coco / one-steering</td>
+  <td class="quote">Flush nutrients last 1–2 weeks as normal ripening</td>
+  <td>Controlled trials often find little taste/potency benefit from long plain-water flushes. EC taper can still be sensible.</td>
+  <td class="rewrite">“Late flower often eases EC as appetite falls. A long plain-water flush is traditional, but controlled tests frequently find little quality gain—avoid starving plants into collapse.”</td>
+  <td>—</td>
+  <td class="conf">high</td>
+</tr>
+<tr data-sev="HALF_TRUE" data-track="Flowering">
+  <td class="id">33</td>
+  <td><span class="sev sev-HALF_TRUE">HALF_TRUE</span></td>
+  <td>Flowering</td>
+  <td class="paper">flowering-stages</td>
+  <td class="quote">Stretch “often nearly doubling” / 50–100% as default</td>
+  <td>Highly cultivar- and spectrum-dependent (modest to &gt;2×).</td>
+  <td class="rewrite">“Many hybrids stretch ~1.5–2× after flip; some barely stretch and some more than double. Flip at half to two-thirds of target height for *your* genetics.”</td>
+  <td>—</td>
+  <td class="conf">high</td>
+</tr>
+<tr data-sev="MISLEADING" data-track="Flowering">
+  <td class="id">34</td>
+  <td><span class="sev sev-MISLEADING">MISLEADING</span></td>
+  <td>Flowering</td>
+  <td class="paper">coco-crop-steering / rockwool / one-steering / f2</td>
+  <td class="quote">Caplan 2019 as proof daily generative drybacks raise cannabinoids without costing yield</td>
+  <td>Caplan was one severe late-flower drought event (~11 days), not multi-week daily drybacks. Concentration rose; dry weight gain was not significant in the same way vendors imply.</td>
+  <td class="rewrite">Separate “single carefully timed late drought study” from “daily dryback sawtooth recipes.” Caplan supports mild controlled deficit, not P0–P3 recipes.</td>
+  <td><div class="prompt">Two charts side by side. Left: Caplan single late drought (one long dry event). Right: daily crop-steering VWC sawtooth over weeks. Big red X connecting them with label “Not the same experiment.” Clean infographic.</div></td>
+  <td class="conf">high</td>
+</tr>
+<tr data-sev="HALF_TRUE" data-track="Flowering">
+  <td class="id">35</td>
+  <td><span class="sev sev-HALF_TRUE">HALF_TRUE</span></td>
+  <td>Flowering</td>
+  <td class="paper">coco-crop-steering</td>
+  <td class="quote">Mild dryback → ABA → flower/resin as settled daily mechanism</td>
+  <td>ABA/water deficit affect secondary metabolism; commercial generative drybacks are hort model, not fully mapped daily hormone protocol.</td>
+  <td class="rewrite">“Mild water deficit can bias plants toward generative behaviour; use dryback as a gentle bias over days, not a drought.”</td>
+  <td>—</td>
+  <td class="conf">medium</td>
+</tr>
+<tr data-sev="MISLEADING" data-track="Flowering">
+  <td class="id">36</td>
+  <td><span class="sev sev-MISLEADING">MISLEADING</span></td>
+  <td>Flowering</td>
+  <td class="paper">rockwool-crop-steering</td>
+  <td class="quote">“100% of what you put in goes straight to the plant”</td>
+  <td>Negligible CEC ≠ plant absorbs everything. Unused feed leaves as runoff or concentrates.</td>
+  <td class="rewrite">“Rockwool holds almost no nutrient reserve, so root-zone EC is basically the EC of the pore water—precise but unbuffered. Unused feed leaves as runoff or concentrates as the slab dries.”</td>
+  <td>—</td>
+  <td class="conf">high</td>
+</tr>
+<tr data-sev="HALF_TRUE" data-track="Flowering">
+  <td class="id">37</td>
+  <td><span class="sev sev-HALF_TRUE">HALF_TRUE</span></td>
+  <td>Flowering</td>
+  <td class="paper">rockwool-crop-steering</td>
+  <td class="quote">Hard recovery floor “25–30% WC” universal cliff</td>
+  <td>Hydrophobicity/preferential flow real; exact % product-dependent.</td>
+  <td class="rewrite">“If a slab gets too dry, fibres can stop wicking. Stay well above that zone for your product—confirm with your sensor.”</td>
+  <td>—</td>
+  <td class="conf">medium</td>
+</tr>
+<tr data-sev="HALF_TRUE" data-track="Flowering">
+  <td class="id">38</td>
+  <td><span class="sev sev-HALF_TRUE">HALF_TRUE</span></td>
+  <td>Flowering</td>
+  <td class="paper">rockwool-crop-steering</td>
+  <td class="quote">EC concentration maths as exact (3.0 → past 5.0)</td>
+  <td>Direction right; plants uptake ions and water at different rates so not pure inverse maths.</td>
+  <td class="rewrite">“As water leaves, remaining salts often concentrate—watch the sensor; don’t assume pure inverse maths.”</td>
+  <td>—</td>
+  <td class="conf">high</td>
+</tr>
+<tr data-sev="MISLEADING" data-track="Flowering">
+  <td class="id">39</td>
+  <td><span class="sev sev-MISLEADING">MISLEADING</span></td>
+  <td>Flowering</td>
+  <td class="paper">one-steering-law</td>
+  <td class="quote">Beginner coco recipe EC ~3.0 veg / 4.5–6.0 flower</td>
+  <td>Looks like aggressive rockwool/high-intensity substrate ECs, unsafe as beginner coco defaults.</td>
+  <td class="rewrite">“Many coco programs start far lower. Match feed to runoff EC and leaf tips—don’t import rockwool 3–6 numbers blindly.”</td>
+  <td><div class="prompt">Vertical VWC gauge 0–100%. Peak 78%, trough 58%. Callout: “Dryback = 20 percentage POINTS (not 20% of peak unless stated).” Rockwool slab icon, flat design.</div></td>
+  <td class="conf">high</td>
+</tr>
+<tr data-sev="MISLEADING" data-track="Flowering">
+  <td class="id">40</td>
+  <td><span class="sev sev-MISLEADING">MISLEADING</span></td>
+  <td>Flowering</td>
+  <td class="paper">one-steering-law / substrates</td>
+  <td class="quote">DWC “root rot above ~23°C within a day”</td>
+  <td>Warm low-DO raises risk; “within a day above 23°C” is alarmist as default timeline.</td>
+  <td class="rewrite">“Keep solution cool and oxygenated (many aim ~18–21°C). Heat plus low DO speeds root disease—monitor DO, not only a single temperature cliff.”</td>
+  <td>—</td>
+  <td class="conf">high</td>
+</tr>
+
+<!-- ========== HARVEST ========== -->
+<tr data-sev="HALF_TRUE" data-track="Harvest">
+  <td class="id">41</td>
+  <td><span class="sev sev-HALF_TRUE">HALF_TRUE</span></td>
+  <td>Harvest</td>
+  <td class="paper">harvest-dry-trim-cure</td>
+  <td class="quote">Dialling drying “add 5–10% to final yield” (AROYA)</td>
+  <td>Plausible if over-drying is common; manufacturer education, not peer multi-site data.</td>
+  <td class="rewrite">“Over-drying throws away weight and aroma. Hitting a safe aw window often recovers sellable mass—treat vendor % gains as illustrative.”</td>
+  <td><div class="prompt">Side-by-side gauges. Left: moisture content % with error bar “same 11% moisture can be 0.53–0.66 aw.” Right: water activity aw green band 0.55–0.65, take-down 0.60–0.62, red mould ≥0.70. Lab poster style.</div></td>
+  <td class="conf">high</td>
+</tr>
+<tr data-sev="HALF_TRUE" data-track="Harvest">
+  <td class="id">42</td>
+  <td><span class="sev sev-HALF_TRUE">HALF_TRUE</span></td>
+  <td>Harvest</td>
+  <td class="paper">harvest-dry-trim-cure</td>
+  <td class="quote">“Essentially nothing grows below ~0.60 aw”</td>
+  <td>ASTM 0.55–0.65 is right practical standard; some xerophiles can grow lower under conditions.</td>
+  <td class="rewrite">“Use ASTM 0.55–0.65 aw for dried flower. Risk rises sharply toward ~0.70+; below ~0.55 quality often suffers.”</td>
+  <td>—</td>
+  <td class="conf">medium</td>
+</tr>
+<tr data-sev="NEEDS_BETTER_EXPLAIN" data-track="Harvest">
+  <td class="id">43</td>
+  <td><span class="sev sev-NEEDS_BETTER_EXPLAIN">NEEDS_BETTER_EXPLAIN</span></td>
+  <td>Harvest</td>
+  <td class="paper">harvest-dry-trim-cure</td>
+  <td class="quote">Whole-plant dry-to-wet “around 10%”</td>
+  <td>Plausible for whole plant → dry flower; people confuse with bud-only dry-down ratios.</td>
+  <td class="rewrite">“Dry flower is often ~10% of whole-plant wet weight in many rooms, but depends on stem share, trim, and definition—log your own genetics.”</td>
+  <td>—</td>
+  <td class="conf">medium</td>
+</tr>
+<tr data-sev="UNCLEAR" data-track="Harvest">
+  <td class="id">44</td>
+  <td><span class="sev sev-UNCLEAR">UNCLEAR</span></td>
+  <td>Harvest</td>
+  <td class="paper">harvest-dry-trim-cure</td>
+  <td class="quote">Trimming lowers aw 0.62 → 0.58–0.60 as general fact</td>
+  <td>Exact 0.04 aw drop presented without peer support.</td>
+  <td class="rewrite">“After dry-trim, re-check aw—disturbance and leaf removal can change the reading.”</td>
+  <td>—</td>
+  <td class="conf">medium</td>
+</tr>
+<tr data-sev="HALF_TRUE" data-track="Harvest">
+  <td class="id">45</td>
+  <td><span class="sev sev-HALF_TRUE">HALF_TRUE</span></td>
+  <td>Harvest</td>
+  <td class="paper">gmp-hash-lab</td>
+  <td class="quote">“Extraction multiplies contaminants ~5- to 10-fold”</td>
+  <td>Depends on process yield and partitioning; not universal for every method.</td>
+  <td class="rewrite">“Concentrates can carry much higher contaminant levels if residues follow resin—concentration factor tracks process yield. Always test finished concentrate.”</td>
+  <td>—</td>
+  <td class="conf">high</td>
+</tr>
+<tr data-sev="NEEDS_BETTER_EXPLAIN" data-track="Harvest">
+  <td class="id">46</td>
+  <td><span class="sev sev-NEEDS_BETTER_EXPLAIN">NEEDS_BETTER_EXPLAIN</span></td>
+  <td>Harvest</td>
+  <td class="paper">gmp-hash-lab</td>
+  <td class="quote">Residual solvent limits via ICH Q3C / seven mandatory release families / EU-GMP Grade A default vibe</td>
+  <td>Jurisdiction- and product-specific. Most adult-use hash ops are not sterile Annex 1 Grade A.</td>
+  <td class="rewrite">“Use your regulator’s residual solvent and release panels; ICH Q3C is pharma reference. Scale cleanroom grade to product type and licence.”</td>
+  <td>—</td>
+  <td class="conf">high</td>
+</tr>
+<tr data-sev="UNCLEAR" data-track="Harvest">
+  <td class="id">47</td>
+  <td><span class="sev sev-UNCLEAR">UNCLEAR</span></td>
+  <td>Harvest</td>
+  <td class="paper">gmp-hash-lab</td>
+  <td class="quote">aw ≤0.55 CCP vs 0.55–0.65 microbe note</td>
+  <td>Flower ASTM band vs concentrate dryness mixed without product context.</td>
+  <td class="rewrite">“Finished flower often ~0.55–0.65 aw. Concentrates are usually kept drier; set product-specific aw limits.”</td>
+  <td>—</td>
+  <td class="conf">medium</td>
+</tr>
+
+<!-- ========== ENVIRONMENT ========== -->
+<tr data-sev="MISLEADING" data-track="Environment">
+  <td class="id">48</td>
+  <td><span class="sev sev-MISLEADING">MISLEADING</span></td>
+  <td>Environment</td>
+  <td class="paper">grow-room-systems</td>
+  <td class="quote">Airflow “lowering water loss” (Schymanski) while airflow paper says more thirst</td>
+  <td>WUE can rise while absolute transpiration often still rises in bright rooms. Cross-paper contradiction.</td>
+  <td class="rewrite">“Faster air usually raises CO₂ uptake and WUE; absolute water use often still rises in bright grow rooms—so feed and dehu must keep up.”</td>
+  <td>—</td>
+  <td class="conf">high</td>
+</tr>
+<tr data-sev="MISLEADING" data-track="Environment">
+  <td class="id">49</td>
+  <td><span class="sev sev-MISLEADING">MISLEADING</span></td>
+  <td>Environment</td>
+  <td class="paper">grow-room-systems</td>
+  <td class="quote">VPD 0.8–1.2 kPa / past ~1.5 closes up — citing Inoue lettuce</td>
+  <td>Reasonable hort band; citation is lettuce, not cannabis-specific.</td>
+  <td class="rewrite">“Practical mid-band ~0.8–1.2 kPa (often toward ~1.2–1.5 late flower). Cannabis optima vary; treat 1.5+ as high-stress unless dialed for it.”</td>
+  <td>—</td>
+  <td class="conf">high</td>
+</tr>
+<tr data-sev="HALF_TRUE" data-track="Environment">
+  <td class="id">50</td>
+  <td><span class="sev sev-HALF_TRUE">HALF_TRUE</span></td>
+  <td>Environment</td>
+  <td class="paper">grow-room-systems</td>
+  <td class="quote">Tacoing at high light → VPD too high; add CO2</td>
+  <td>Often light + leaf heat + VPD. CO₂ not first fix for heat/light tacoing.</td>
+  <td class="rewrite">“Tacoing under high PPFD: check leaf temp and PPFD first, then VPD/airflow; CO₂ helps only if light is already high and climate is controlled.”</td>
+  <td>—</td>
+  <td class="conf">high</td>
+</tr>
+<tr data-sev="HALF_TRUE" data-track="Environment">
+  <td class="id">51</td>
+  <td><span class="sev sev-HALF_TRUE">HALF_TRUE</span></td>
+  <td>Environment</td>
+  <td class="paper">lighting-fundamentals</td>
+  <td class="quote">Clone 100–300 PPFD with DLI ~10–15; flower 700–900 with DLI ~30–45</td>
+  <td>Arithmetic mismatch: 100 PPFD×18h ≈ 6.5 mol; 900×12h ≈ 39 mol not 45. 600×18 ≠ 800×12.</td>
+  <td class="rewrite">Recalculate table: 100–250 PPFD ≈ 6–16 mol on 18/6; flower 700–900 ≈ 30–39 mol on 12/12; 600×18 ≈ 900×12.</td>
+  <td><div class="prompt">Simple DLI calculator strip: PPFD × hours → mol/m²/day with three worked examples matching corrected table. Clean dark UI educational graphic.</div></td>
+  <td class="conf">high</td>
+</tr>
+<tr data-sev="MISLEADING" data-track="Environment">
+  <td class="id">52</td>
+  <td><span class="sev sev-MISLEADING">MISLEADING</span></td>
+  <td>Environment</td>
+  <td class="paper">lighting-fundamentals</td>
+  <td class="quote">Inverse-square: doubling distance cuts PPFD ~75%</td>
+  <td>Point-source free-space ideal. Multi-bar LED panels at 12–24″ fall off much more gently.</td>
+  <td class="rewrite">“Intensity falls with distance, but inverse-square is a point-source ideal. Use the fixture PPFD map and a meter.”</td>
+  <td><div class="prompt">Two falloff curves: point source 1/d² steep drop vs extended LED bar array gentle drop over 12–36 inches. White scientific background.</div></td>
+  <td class="conf">high</td>
+</tr>
+<tr data-sev="MISLEADING" data-track="Environment">
+  <td class="id">53</td>
+  <td><span class="sev sev-MISLEADING">MISLEADING</span></td>
+  <td>Environment</td>
+  <td class="paper">lighting-fundamentals</td>
+  <td class="quote">LED efficacy 2.7–3.0 µmol/J cited Nelson-Bugbee 2014</td>
+  <td>Modern numbers real; 2014 paper had much lower LED efficacies. Wrong citation for today’s band.</td>
+  <td class="rewrite">Keep modern band; cite current DLC/review for efficacy; keep Nelson-Bugbee for economic framework era.</td>
+  <td>—</td>
+  <td class="conf">high</td>
+</tr>
+<tr data-sev="HALF_TRUE" data-track="Environment">
+  <td class="id">54</td>
+  <td><span class="sev sev-HALF_TRUE">HALF_TRUE</span></td>
+  <td>Environment</td>
+  <td class="paper">lighting-fundamentals</td>
+  <td class="quote">Red “drives flowering and stretch”</td>
+  <td>Red is photosynthetic; stretch is mainly low blue + high far-red (low R:FR). Flowering is photoperiod.</td>
+  <td class="rewrite">“Red: high photosynthetic efficiency. Stretch is driven more by low blue and far-red (low R:FR) than by red itself.”</td>
+  <td>—</td>
+  <td class="conf">high</td>
+</tr>
+<tr data-sev="NEEDS_BETTER_EXPLAIN" data-track="Environment">
+  <td class="id">55</td>
+  <td><span class="sev sev-NEEDS_BETTER_EXPLAIN">NEEDS_BETTER_EXPLAIN</span></td>
+  <td>Environment</td>
+  <td class="paper">lighting-fundamentals</td>
+  <td class="quote">PAR = 400–700 only; far-red separate with no Emerson/ePAR note</td>
+  <td>Correct McCree convention; beginners think FR “isn’t light.”</td>
+  <td class="rewrite">“Standard PAR meters count 400–700 nm. Far-red can still aid photosynthesis (Emerson) and strongly affects morphology via phytochrome.”</td>
+  <td><div class="prompt">McCree action spectrum 400–700 with faint ePAR extension 700–750 and note Emerson enhancement when red+far-red present. Clean axis labels.</div></td>
+  <td class="conf">high</td>
+</tr>
+<tr data-sev="FALSE" data-track="Environment">
+  <td class="id">56</td>
+  <td><span class="sev sev-FALSE">FALSE</span></td>
+  <td>Environment</td>
+  <td class="paper">under-canopy-lighting</td>
+  <td class="quote">Mid/lower canopy already “red-rich and far-red-dominant” after upper leaves absorb blue and red</td>
+  <td>Canopy filtering depletes blue and red; transmitted light is relatively green- and far-red-enriched, not “red-rich.”</td>
+  <td class="rewrite">“Light under the canopy is depleted in blue/red and relatively rich in green and far-red. Piling on narrow-band red at short range can bleach flower tissue.”</td>
+  <td><div class="prompt">Diagram spectrum above canopy vs under canopy: blue and red depleted, green and far-red relatively enriched, labeled 400–750 nm. Cannabis canopy silhouette.</div></td>
+  <td class="conf">high</td>
+</tr>
+<tr data-sev="MISLEADING" data-track="Environment">
+  <td class="id">57</td>
+  <td><span class="sev sev-MISLEADING">MISLEADING</span></td>
+  <td>Environment</td>
+  <td class="paper">under-canopy-lighting</td>
+  <td class="quote">“full air exchange every 1–3 minutes” for sealed SCL retrofit</td>
+  <td>20–60 ACH is vented-room math; continuous exchange dumps CO₂ in sealed enrichment rooms.</td>
+  <td class="rewrite">“Sealed rooms: recirculation + dehu, with timed dark purges—not continuous 1–3 min exchanges that erase CO₂.”</td>
+  <td>—</td>
+  <td class="conf">high</td>
+</tr>
+<tr data-sev="HALF_TRUE" data-track="Environment">
+  <td class="id">58</td>
+  <td><span class="sev sev-HALF_TRUE">HALF_TRUE</span></td>
+  <td>Environment</td>
+  <td class="paper">under-canopy-lighting</td>
+  <td class="quote">Viability floor 400–500 µmol; monochromatic red unbalances PS I/II</td>
+  <td>Industry rule of thumb / overstated PS “must be equal.” Bleaching more about dose/proximity.</td>
+  <td class="rewrite">“A common commercial target is lifting basal sites toward ~300–600 µmol; broad spectrum is safer default than extreme monochromatic red at short range.”</td>
+  <td>—</td>
+  <td class="conf">medium</td>
+</tr>
+<tr data-sev="HALF_TRUE" data-track="Environment">
+  <td class="id">59</td>
+  <td><span class="sev sev-HALF_TRUE">HALF_TRUE</span></td>
+  <td>Environment</td>
+  <td class="paper">co2-enrichment</td>
+  <td class="quote">Tomato yield “up to ~80% at 1,000 ppm”; WUE “roughly doubles”; cognition 1,000–2,500 settled</td>
+  <td>Commercial tomato gains more often tens of percent; WUE doubling is condition-specific; cognition literature mixed.</td>
+  <td class="rewrite">Soften tomato/WUE/cognition claims; keep USU cannabis ~40% flower-yield framing with PhD-not-journal caveat already partially present.</td>
+  <td>—</td>
+  <td class="conf">medium</td>
+</tr>
+<tr data-sev="HALF_TRUE" data-track="Environment">
+  <td class="id">60</td>
+  <td><span class="sev sev-HALF_TRUE">HALF_TRUE</span></td>
+  <td>Environment</td>
+  <td class="paper">co2-enrichment</td>
+  <td class="quote">CO₂ “sinks” / denser than air at enrichment levels</td>
+  <td>Pure CO₂ is denser; at 1000–1500 ppm density difference is tiny—mixing is dominated by fans. Still pool risk for pure leaks/spills.</td>
+  <td class="rewrite">“At enrichment ppm, air movement mixes CO₂ well. Dense pure leaks can still pool low—put life-safety sensors near the floor.”</td>
+  <td>—</td>
+  <td class="conf">medium</td>
+</tr>
+<tr data-sev="UNCLEAR" data-track="Environment">
+  <td class="id">61</td>
+  <td><span class="sev sev-UNCLEAR">UNCLEAR</span></td>
+  <td>Environment</td>
+  <td class="paper">co2-enrichment</td>
+  <td class="quote">Drying room “potentially toward percent-level concentrations”</td>
+  <td>Well caveated mechanism, but percent-level is speculative without measurements.</td>
+  <td class="rewrite">“Can climb into the thousands of ppm and, if sealed and packed, possibly higher—measure your room.”</td>
+  <td>—</td>
+  <td class="conf">high</td>
+</tr>
+<tr data-sev="FALSE" data-track="Environment">
+  <td class="id">62</td>
+  <td><span class="sev sev-FALSE">FALSE</span></td>
+  <td>Environment</td>
+  <td class="paper">scaling-high-light</td>
+  <td class="quote">Ambient 420 ppm → hard ~800 µmol ceiling (leaf saturates ~800) while citing RM2021 linear yield to ~1800</td>
+  <td>Collapses leaf gas-exchange into canopy yield; contradicts RM2021 and the project’s own leaf≠canopy teaching.</td>
+  <td class="rewrite">“Ambient CO₂ lowers efficiency of high PPFD and advances leaf saturation, but canopy yield can still rise well past 800 µmol. Expect diminishing returns and better ROI with enrichment—not a hard 800 wall.”</td>
+  <td><div class="prompt">Two panels: left single-leaf photosynthesis saturating mid-PPFD; right whole-canopy flower yield still rising toward 1800 µmol m⁻² s⁻¹. Labeled axes, white vector style.</div></td>
+  <td class="conf">high</td>
+</tr>
+<tr data-sev="MISLEADING" data-track="Environment">
+  <td class="id">63</td>
+  <td><span class="sev sev-MISLEADING">MISLEADING</span></td>
+  <td>Environment</td>
+  <td class="paper">scaling-high-light</td>
+  <td class="quote">Feed EC 3.6–4.2; runoff 7–8 at 1500 PPFD as ladder targets</td>
+  <td>Advanced extremes, osmotic-stress territory for many cultivars; conflicts with deficiency-paper EC bands.</td>
+  <td class="rewrite">“High light raises demand; EC often climbs into mid-2s to low-3s in strong programs. 3.6–4.2 / runoff 7–8 is advanced only—watch tip burn daily.”</td>
+  <td>—</td>
+  <td class="conf">high</td>
+</tr>
+<tr data-sev="NEEDS_BETTER_EXPLAIN" data-track="Environment">
+  <td class="id">64</td>
+  <td><span class="sev sev-NEEDS_BETTER_EXPLAIN">NEEDS_BETTER_EXPLAIN</span></td>
+  <td>Environment</td>
+  <td class="paper">scaling-high-light</td>
+  <td class="quote">Transpiration ≈ PPFD × 0.0037 L/m²/d; VPD “barely moves” with light</td>
+  <td>Rule of thumb not a law; VPD is held by design, often nudged up with intensity.</td>
+  <td class="rewrite">Label as order-of-magnitude sizing rule; “light scales latent load needed to hold the VPD band.”</td>
+  <td>—</td>
+  <td class="conf">high</td>
+</tr>
+<tr data-sev="NEEDS_BETTER_EXPLAIN" data-track="Environment">
+  <td class="id">65</td>
+  <td><span class="sev sev-NEEDS_BETTER_EXPLAIN">NEEDS_BETTER_EXPLAIN</span></td>
+  <td>Environment</td>
+  <td class="paper">airflow-design</td>
+  <td class="quote">Velocity thresholds ~0.2 / 0.3–1.0 / 1.2 m/s as disease/stress cliffs</td>
+  <td>Directionally right; not cannabis hard limits; measurement height rarely defined.</td>
+  <td class="rewrite">“Aim for gentle leaf flutter through the whole canopy (~0.3–1.0 m/s as a practical band). Confirm with smoke/flutter test.”</td>
+  <td>—</td>
+  <td class="conf">medium</td>
+</tr>
+
+<!-- ========== WATER & FEED ========== -->
+<tr data-sev="MISLEADING" data-track="Water &amp; feed">
+  <td class="id">66</td>
+  <td><span class="sev sev-MISLEADING">MISLEADING</span></td>
+  <td>Water &amp; feed</td>
+  <td class="paper">substrates-overview</td>
+  <td class="quote">Living soil pH “within minutes… regardless of water pH… do not pH input at all”</td>
+  <td>Buffering real but not “any water / minutes.” Extreme alkalinity still drifts media.</td>
+  <td class="rewrite">“Healthy living soil buffers over hours to days. Many organic growers don’t acidify routine waterings, but avoid extreme alkaline water and monitor if problems appear.”</td>
+  <td>—</td>
+  <td class="conf">high</td>
+</tr>
+<tr data-sev="FALSE" data-track="Water &amp; feed">
+  <td class="id">67</td>
+  <td><span class="sev sev-FALSE">FALSE</span></td>
+  <td>Water &amp; feed</td>
+  <td class="paper">water-quality</td>
+  <td class="quote">DO “5–6 ppm at 20°C… 3–4 ppm at 26°C” as saturation</td>
+  <td>Air-saturated freshwater is ~9.1 mg/L at 20°C and ~8.1 at 26°C. Those low numbers look like residual DO in stressed systems, not saturation.</td>
+  <td class="rewrite">“Saturation DO is roughly ~9 mg/L at 20°C and ~8 mg/L at 26°C. Warm reservoirs still raise Pythium risk because pathogen activity rises and DO is harder to maintain under root demand.”</td>
+  <td><div class="prompt">Graph DO saturation mg/L vs water temp 10–30°C at 1 atm. Mark 20°C ~9.1 and 26°C ~8.1. Cross out wrong 5–6 / 3–4 points. Clean scientific graph.</div></td>
+  <td class="conf">high</td>
+</tr>
+<tr data-sev="MISLEADING" data-track="Water &amp; feed">
+  <td class="id">68</td>
+  <td><span class="sev sev-MISLEADING">MISLEADING</span></td>
+  <td>Water &amp; feed</td>
+  <td class="paper">water-quality</td>
+  <td class="quote">Working feed strength “capped near 800–900 ppm”</td>
+  <td>Depends on PPM scale; high-intensity flower often EC 2.0–3.0+ (well above 900 on 0.5 scale).</td>
+  <td class="rewrite">“Source minerals consume part of your total EC budget—set targets in mS/cm, not a fixed 800–900 ppm ceiling.”</td>
+  <td>—</td>
+  <td class="conf">high</td>
+</tr>
+<tr data-sev="UNCLEAR" data-track="Water &amp; feed">
+  <td class="id">69</td>
+  <td><span class="sev sev-UNCLEAR">UNCLEAR</span></td>
+  <td>Water &amp; feed</td>
+  <td class="paper">water-quality / ph-management</td>
+  <td class="quote">Alkalinity optima 30–60 / 40–100 vs 60–100 ppm CaCO₃</td>
+  <td>Both cite similar guidance but bands don’t match across papers.</td>
+  <td class="rewrite">Harmonize e.g. “~40–80 ppm CaCO₃ common soilless target; &lt;30 swings fast; &gt;100–150 fights you.”</td>
+  <td>—</td>
+  <td class="conf">high</td>
+</tr>
+<tr data-sev="HALF_TRUE" data-track="Water &amp; feed">
+  <td class="id">70</td>
+  <td><span class="sev sev-HALF_TRUE">HALF_TRUE</span></td>
+  <td>Water &amp; feed</td>
+  <td class="paper">water-quality</td>
+  <td class="quote">Chlorine injury “as low as 0.4 ppm” (lettuce)</td>
+  <td>Useful caution; not a cannabis threshold.</td>
+  <td class="rewrite">“Chlorine/chloramine can injure roots and microbes at residual drinking-water levels in sensitive systems (shown in lettuce); dechlorinate before living soil or recirculating hydro.”</td>
+  <td>—</td>
+  <td class="conf">high</td>
+</tr>
+<tr data-sev="HALF_TRUE" data-track="Water &amp; feed">
+  <td class="id">71</td>
+  <td><span class="sev sev-HALF_TRUE">HALF_TRUE</span></td>
+  <td>Water &amp; feed</td>
+  <td class="paper">ph-management</td>
+  <td class="quote">Below 5.5 Ca/Mg/P lockout only; above 6.5 Fe/Mn/Zn lockout only</td>
+  <td>Low pH also increases Fe/Mn (toxicity risk). Chart is too tidy.</td>
+  <td class="rewrite">“High pH often shows as Fe/Mn/Zn deficiency. Low pH can reduce Ca/Mg/P availability and push Fe/Mn toward toxicity—stay in band.”</td>
+  <td><div class="prompt">Nutrient availability vs pH curves with toxicity note for Fe/Mn at low pH and deficiency at high pH. Highlight 5.5–6.5 sweet band. Classic textbook style updated.</div></td>
+  <td class="conf">high</td>
+</tr>
+<tr data-sev="MISLEADING" data-track="Water &amp; feed">
+  <td class="id">72</td>
+  <td><span class="sev sev-MISLEADING">MISLEADING</span></td>
+  <td>Water &amp; feed</td>
+  <td class="paper">ph-management</td>
+  <td class="quote">“pH Down usually phosphoric / pH Up KOH” citing Saloner NH₄/NO₃ paper</td>
+  <td>Wrong citation purpose; incomplete (nitric, sulfuric, citric; K₂CO₃ also common).</td>
+  <td class="rewrite">“Common pH downs: phosphoric, nitric, sulfuric, or organic acids. Common pH ups: KOH or K₂CO₃. Each adds nutrients—account for them.”</td>
+  <td>—</td>
+  <td class="conf">high</td>
+</tr>
+<tr data-sev="HALF_TRUE" data-track="Water &amp; feed">
+  <td class="id">73</td>
+  <td><span class="sev sev-HALF_TRUE">HALF_TRUE</span></td>
+  <td>Water &amp; feed</td>
+  <td class="paper">ph-management</td>
+  <td class="quote">Feed and runoff EC “within about 10%”</td>
+  <td>Beginner salt-buildup guardrail; advanced steering often holds higher root-zone EC by design.</td>
+  <td class="rewrite">“For beginners, runoff ≫ feed means salt buildup. Advanced steering may hold higher root-zone EC intentionally—know which mode you’re in.”</td>
+  <td>—</td>
+  <td class="conf">high</td>
+</tr>
+<tr data-sev="FALSE" data-track="Water &amp; feed">
+  <td class="id">74</td>
+  <td><span class="sev sev-FALSE">FALSE</span></td>
+  <td>Water &amp; feed</td>
+  <td class="paper">nutrient-mixing-athena</td>
+  <td class="quote">227 g/L “four to five times saltier than seawater”</td>
+  <td>Seawater ≈ 35 g/L → ~6.5× not 4–5×.</td>
+  <td class="rewrite">“About six to seven times the salinity of seawater (~35 g/L)—a heavy concentrate.”</td>
+  <td>—</td>
+  <td class="conf">high</td>
+</tr>
+<tr data-sev="MISLEADING" data-track="Water &amp; feed">
+  <td class="id">75</td>
+  <td><span class="sev sev-MISLEADING">MISLEADING</span></td>
+  <td>Water &amp; feed</td>
+  <td class="paper">nutrient-mixing-athena</td>
+  <td class="quote">Dosing formula cited to Powell &amp; Bauerle mass-balance paper</td>
+  <td>Math OK; citation doesn’t support Athena stock arithmetic.</td>
+  <td class="rewrite">Present as unit conversion; cite Athena Pro Line docs for bag→stock ratios.</td>
+  <td>—</td>
+  <td class="conf">high</td>
+</tr>
+<tr data-sev="NEEDS_BETTER_EXPLAIN" data-track="Water &amp; feed">
+  <td class="id">76</td>
+  <td><span class="sev sev-NEEDS_BETTER_EXPLAIN">NEEDS_BETTER_EXPLAIN</span></td>
+  <td>Water &amp; feed</td>
+  <td class="paper">nutrient-mixing-athena</td>
+  <td class="quote">Stage EC only via empty diagram placeholders; hot water dissolve without RO caveat</td>
+  <td>Readers can invent unsafe working rates; hard water can precipitate stock.</td>
+  <td class="rewrite">Add example mL/L to hit ~1.5 / 2.0 / 2.5 mS/cm in RO; prefer RO for stock; warm not boiling.</td>
+  <td>—</td>
+  <td class="conf">high</td>
+</tr>
+<tr data-sev="NEEDS_BETTER_EXPLAIN" data-track="Water &amp; feed">
+  <td class="id">77</td>
+  <td><span class="sev sev-NEEDS_BETTER_EXPLAIN">NEEDS_BETTER_EXPLAIN</span></td>
+  <td>Water &amp; feed</td>
+  <td class="paper">nutrient-deficiencies</td>
+  <td class="quote">Symptom atlas strong on N/P/K/Mg/Ca/Fe; missing Zn/B/Mn/Cu/Mo rows</td>
+  <td>Title promises broad diagnosis; classic lookalikes under-covered.</td>
+  <td class="rewrite">Add Zn little-leaf/rosetting, B brittle tips, Mn interveinal vs Fe, toxicity dark spots.</td>
+  <td><div class="prompt">Educational comparison plate: Mg vs Fe vs Mn interveinal chlorosis positions; Ca vs B new-growth deformity. Labeled cannabis leaves, white background training board.</div></td>
+  <td class="conf">high</td>
+</tr>
+<tr data-sev="NEEDS_BETTER_EXPLAIN" data-track="Water &amp; feed">
+  <td class="id">78</td>
+  <td><span class="sev sev-NEEDS_BETTER_EXPLAIN">NEEDS_BETTER_EXPLAIN</span></td>
+  <td>Water &amp; feed</td>
+  <td class="paper">nutrient-deficiencies</td>
+  <td class="quote">Runoff “more than about 200 PPM above input”</td>
+  <td>PPM scale-dependent; prefer mS/cm.</td>
+  <td class="rewrite">“Runoff EC rising ~0.3–0.5 mS/cm (or more) above feed for days → salt buildup / flush decision.”</td>
+  <td>—</td>
+  <td class="conf">high</td>
+</tr>
+
+<!-- ========== PLANT HEALTH ========== -->
+<tr data-sev="MISLEADING" data-track="Plant health">
+  <td class="id">79</td>
+  <td><span class="sev sev-MISLEADING">MISLEADING</span></td>
+  <td>Plant health</td>
+  <td class="paper">mould-risk</td>
+  <td class="quote">Keep flowering RH “~60–70% band, lower in late flower” while disease takes off &gt;~70%</td>
+  <td>Parks crop on upper risk edge. Commercial late flower often ~45–55% RH; in-bud RH is higher than room RH.</td>
+  <td class="rewrite">“Early flower often ~55–65% RH; mid/late flower commonly 45–55% with strong through-canopy air. Treat sustained ~70% as red zone, not a target.”</td>
+  <td><div class="prompt">Cross-section dense cannabis cola: aisle air 55% RH vs inside bud interior 80%+ RH, airflow arrows failing to penetrate. Educational infographic.</div></td>
+  <td class="conf">high</td>
+</tr>
+<tr data-sev="HALF_TRUE" data-track="Plant health">
+  <td class="id">80</td>
+  <td><span class="sev sev-HALF_TRUE">HALF_TRUE</span></td>
+  <td>Plant health</td>
+  <td class="paper">mould-risk</td>
+  <td class="quote">Users fungal infections ~3.5× non-users</td>
+  <td>Benedict OR ≈3.5 real; absolute rates tiny (~0.08% vs ~0.03%). Scare framing without absolute risk misleads.</td>
+  <td class="rewrite">“In one claims analysis, coded fungal infections were ~3.5× more common among people with cannabis-use codes, but absolute rates were still low; immunocompromised patients remain the high-stakes group.”</td>
+  <td>—</td>
+  <td class="conf">high</td>
+</tr>
+<tr data-sev="FALSE" data-track="Plant health">
+  <td class="id">81</td>
+  <td><span class="sev sev-FALSE">FALSE</span></td>
+  <td>Plant health</td>
+  <td class="paper">pppe</td>
+  <td class="quote">Alcohol rub “~3 log, ~83%” / soap “~2 log, ~58%”</td>
+  <td>Log reduction math wrong: 1 log ≈90%, 2 log ≈99%, 3 log ≈99.9% under test conditions.</td>
+  <td class="rewrite">“Alcohol handrubs often achieve ~2–3 log reductions of transient flora when used correctly; soap removes soil and organisms but does not sterilise. Neither replaces gloves for viroid transfer.”</td>
+  <td><div class="prompt">Simple table graphic: log10 reduction vs % remaining (1 log 90%, 2 log 99%, 3 log 99.9%). Red X on 83%/58% mapping. Clean medical education style.</div></td>
+  <td class="conf">high</td>
+</tr>
+<tr data-sev="FALSE" data-track="Plant health">
+  <td class="id">82</td>
+  <td><span class="sev sev-FALSE">FALSE</span></td>
+  <td>Plant health</td>
+  <td class="paper">pppe</td>
+  <td class="quote">“Move… dirty to clean” vs summary “clean to dirty”</td>
+  <td>Internal contradiction. Standard is clean → dirty; waste dirty → exit.</td>
+  <td class="rewrite">“People and clean materials: clean → dirty. Waste and used PPE: only dirty → exit. Never reverse without re-gowning.”</td>
+  <td><div class="prompt">Facility planogram arrows: clean gowning → mothers → veg → flower → waste exit; red ban on reverse without re-gown. Blueprint style.</div></td>
+  <td class="conf">high</td>
+</tr>
+<tr data-sev="HALF_TRUE" data-track="Plant health">
+  <td class="id">83</td>
+  <td><span class="sev sev-HALF_TRUE">HALF_TRUE</span></td>
+  <td>Plant health</td>
+  <td class="paper">pppe</td>
+  <td class="quote">“70–90% of cleanroom contamination is people”; phone “order of magnitude filthier than toilet seat”</td>
+  <td>Directionally useful / rhetorical punchlines; overprecise and poorly universal.</td>
+  <td class="rewrite">“Personnel are typically the dominant particle/microbial source. Phones are fomites—ban them from clean areas for that reason, not a toilet-seat ranking.”</td>
+  <td>—</td>
+  <td class="conf">high</td>
+</tr>
+<tr data-sev="FALSE" data-track="Plant health">
+  <td class="id">84</td>
+  <td><span class="sev sev-FALSE">FALSE</span></td>
+  <td>Plant health</td>
+  <td class="paper">ipm-sop</td>
+  <td class="quote">Sulphur “1 to 3 tablespoons per litre, ideally 3”</td>
+  <td>Dangerous product-agnostic kitchen rate. Labels dose by g/L or %; 3 Tbsp/L often far above label → phytotoxicity/residue risk.</td>
+  <td class="rewrite">“If sulphur is lawful for your crop, use only the current label rate and REI/PHI for that registered product. Never invent volumetric kitchen rates.”</td>
+  <td>—</td>
+  <td class="conf">high</td>
+</tr>
+<tr data-sev="MISLEADING" data-track="Plant health">
+  <td class="id">85</td>
+  <td><span class="sev sev-MISLEADING">MISLEADING</span></td>
+  <td>Plant health</td>
+  <td class="paper">ipm-sop / pest-id</td>
+  <td class="quote">Named biocontrols + rates as default toolkit; “predators harmless… no residue… no PHI”; day-21 foliar lockout as science law; EPA REI as general</td>
+  <td>Auckland paper correctly requires NZ legality; other IPM papers read universal. Day-21 is SOP not law. EPA WPS is US.</td>
+  <td class="rewrite">Lead every biocontrol list with jurisdiction check. Frame day-21 as residue-aware example. “Post treated-area controls per local law.”</td>
+  <td>—</td>
+  <td class="conf">high</td>
+</tr>
+<tr data-sev="UNCLEAR" data-track="Plant health">
+  <td class="id">86</td>
+  <td><span class="sev sev-UNCLEAR">UNCLEAR</span></td>
+  <td>Plant health</td>
+  <td class="paper">ipm-sop</td>
+  <td class="quote">“&gt;3% of room affected → spray”</td>
+  <td>Facility planning default, not literature universal; zero-tolerance pests need overrides.</td>
+  <td class="rewrite">“Example two-tier model only. Zero-tolerance organisms and clean-stock rooms override any percentage.”</td>
+  <td>—</td>
+  <td class="conf">high</td>
+</tr>
+<tr data-sev="HALF_TRUE" data-track="Plant health">
+  <td class="id">87</td>
+  <td><span class="sev sev-HALF_TRUE">HALF_TRUE</span></td>
+  <td>Plant health</td>
+  <td class="paper">pest-id</td>
+  <td class="quote">Spider mite cycle “as fast as 3 days… one female ~200 eggs… ~20% RH”</td>
+  <td>Egg-to-adult more often ~5–14 days under heat; fecundity often ~70–120; 200 extreme; 20% RH unusually low framing.</td>
+  <td class="rewrite">“Under hot, dry conditions egg-to-adult can finish in about a week; females often lay on the order of ~100 eggs over life.”</td>
+  <td>—</td>
+  <td class="conf">medium</td>
+</tr>
+<tr data-sev="NEEDS_BETTER_EXPLAIN" data-track="Plant health">
+  <td class="id">88</td>
+  <td><span class="sev sev-NEEDS_BETTER_EXPLAIN">NEEDS_BETTER_EXPLAIN</span></td>
+  <td>Plant health</td>
+  <td class="paper">pest-id</td>
+  <td class="quote">Russet + broad mites lumped with shared symptoms</td>
+  <td>Symptoms overlap; morphology, preferred parts, and biocontrols differ. Lookalikes under-taught.</td>
+  <td class="rewrite">Separate species cards; “do not treat until 60–100× confirmation.” Link abiotic lookalike table.</td>
+  <td><div class="prompt">Educational comparison plate, four cannabis shoot tips: (A) broad mite cupping/gloss, (B) hemp russet bronzing, (C) abiotic light tacoing, (D) nutrient tip burn — caption “training aid, not lab ID.”</div></td>
+  <td class="conf">high</td>
+</tr>
+<tr data-sev="HALF_TRUE" data-track="Plant health">
+  <td class="id">89</td>
+  <td><span class="sev sev-HALF_TRUE">HALF_TRUE</span></td>
+  <td>Plant health</td>
+  <td class="paper">ipm-sop</td>
+  <td class="quote">“Spray when media fully saturated so product is not pulled into the leaves”</td>
+  <td>Mechanism wording poor; phytotoxicity more about light/VPD/wilt stress than media “sucking spray in.”</td>
+  <td class="rewrite">“Avoid foliar applications under high light/VPD/drought stress; consider irrigating so plants are not wilted before spraying.”</td>
+  <td>—</td>
+  <td class="conf">medium</td>
+</tr>
+
+<!-- ========== PRECISION ========== -->
+<tr data-sev="FALSE" data-track="Precision">
+  <td class="id">90</td>
+  <td><span class="sev sev-FALSE">FALSE</span></td>
+  <td>Precision</td>
+  <td class="paper">irrigation-manual</td>
+  <td class="quote">“Vegetative… longer drybacks… Generative… shorter drybacks”</td>
+  <td>Inverted vs mainstream crop steering and F2 paper (veg small dryback, gen larger). Critical internal contradiction.</td>
+  <td class="rewrite">“Vegetative: smaller drybacks, higher VWC, moderate EC. Generative: larger controlled drybacks and/or higher root-zone EC, within cultivar limits.”</td>
+  <td><div class="prompt">Side-by-side VWC sawtooth charts: left veg flat band small dryback; right gen deep dryback. Labels match F2/coco papers. Clean dashboard style.</div></td>
+  <td class="conf">high</td>
+</tr>
+<tr data-sev="FALSE" data-track="Precision">
+  <td class="id">91</td>
+  <td><span class="sev sev-FALSE">FALSE</span></td>
+  <td>Precision</td>
+  <td class="paper">signal-and-noise / closed-loop</td>
+  <td class="quote">“~70% of raw alerts are noise” citing ISA-18.2</td>
+  <td>ISA-18.2 discusses alarm management targets, not “70% of grow-room alerts are noise.” Figure is rhetorical invention.</td>
+  <td class="rewrite">“Untuned dashboards often produce alarm floods; measure your own false-positive rate. Industry practice aims to keep actionable rates low.”</td>
+  <td>—</td>
+  <td class="conf">high</td>
+</tr>
+<tr data-sev="MISLEADING" data-track="Precision">
+  <td class="id">92</td>
+  <td><span class="sev sev-MISLEADING">MISLEADING</span></td>
+  <td>Precision</td>
+  <td class="paper">signal-and-noise</td>
+  <td class="quote">Western Electric “7+ trending / 8+ one side”</td>
+  <td>Classic WE includes 8 same side; trend rule is Nelson (typically 6), not classic WE. Mash-up.</td>
+  <td class="rewrite">Name Nelson vs Western Electric correctly; list rules with sources.</td>
+  <td>—</td>
+  <td class="conf">high</td>
+</tr>
+<tr data-sev="HALF_TRUE" data-track="Precision">
+  <td class="id">93</td>
+  <td><span class="sev sev-HALF_TRUE">HALF_TRUE</span></td>
+  <td>Precision</td>
+  <td class="paper">signal-and-noise</td>
+  <td class="quote">Nyquist → sample ≥2×; 30-min irrigation → log every 10–15 min</td>
+  <td>Nyquist is for band-limited reconstruction, not direct SOP for SPC. Paper’s own table prefers 1–5 min for irrigation shape.</td>
+  <td class="rewrite">“Sample fast enough to resolve dryback curvature; decide on filtered trends.”</td>
+  <td>—</td>
+  <td class="conf">high</td>
+</tr>
+<tr data-sev="MISLEADING" data-track="Precision">
+  <td class="id">94</td>
+  <td><span class="sev sev-MISLEADING">MISLEADING</span></td>
+  <td>Precision</td>
+  <td class="paper">smart-watering-vrwe / closed-loop / plant-state-dashboard</td>
+  <td class="quote">VRWE “never flood, never starve”; whole-room health under 5s; tip-burn 4 days / 48h early</td>
+  <td>Product architecture aspirational, not demonstrated cannabis closed-loop science. Lettuce tipburn ≠ cannabis timeline.</td>
+  <td class="rewrite">Frame as reference architecture / illustrative UX—not validated prognostic models. Prefer temporary mild deficit over flooding when uncertain.</td>
+  <td>—</td>
+  <td class="conf">high</td>
+</tr>
+<tr data-sev="MISLEADING" data-track="Precision">
+  <td class="id">95</td>
+  <td><span class="sev sev-MISLEADING">MISLEADING</span></td>
+  <td>Precision</td>
+  <td class="paper">plant-biosignal-sensor</td>
+  <td class="quote">Summary: “turn the drift into water and stress insight”; cites emotional-state classification</td>
+  <td>Biopotentials real; DIY AD8232+1 Hz polling is not a validated water/nutrient/stress meter. Emotional-state citation is pseudoscience-adjacent for a cultivation field guide.</td>
+  <td class="rewrite">“This build logs relative biopotential changes for education. It is not a validated water-status, nutrient, or stress meter. Do not irrigate or feed from this signal alone.”</td>
+  <td><div class="prompt">Warning banner mockup for paper header: “Experimental physiology logging — not a crop sensor.” Red/amber industrial safety aesthetic.</div></td>
+  <td class="conf">high</td>
+</tr>
+<tr data-sev="HALF_TRUE" data-track="Precision">
+  <td class="id">96</td>
+  <td><span class="sev sev-HALF_TRUE">HALF_TRUE</span></td>
+  <td>Precision</td>
+  <td class="paper">plant-biosignal-sensor</td>
+  <td class="quote">“~85% lamp on/off detection” on this hardware class</td>
+  <td>May match one study protocol; not generalizable to noisy grow rooms / cannabis stems / 1 s ESPHome.</td>
+  <td class="rewrite">“One study reported ~85% detection under its protocol; expect lower performance in noisy grow rooms.”</td>
+  <td>—</td>
+  <td class="conf">medium</td>
+</tr>
+<tr data-sev="HALF_TRUE" data-track="Precision">
+  <td class="id">97</td>
+  <td><span class="sev sev-HALF_TRUE">HALF_TRUE</span></td>
+  <td>Precision</td>
+  <td class="paper">root-zone-teros12</td>
+  <td class="quote">±0.03 generic / ±0.01–0.02 substrate-specific as universal; additive offset only</td>
+  <td>Core physics solid (best in set). Manufacturer specs not universal for every pack; multiplicative EC/temp interactions exist.</td>
+  <td class="rewrite">“Treat manufacturer accuracy as a starting envelope; verify against gravimetric samples of *your* media over the operating range.”</td>
+  <td><div class="prompt">TEROS probe ellipsoid ~1 L volume of influence inside pot; error bands ±0.03 generic vs ±0.01 media-cal on dryback window. Cross-section pot diagram.</div></td>
+  <td class="conf">high</td>
+</tr>
+<tr data-sev="NEEDS_BETTER_EXPLAIN" data-track="Precision">
+  <td class="id">98</td>
+  <td><span class="sev sev-NEEDS_BETTER_EXPLAIN">NEEDS_BETTER_EXPLAIN</span></td>
+  <td>Precision</td>
+  <td class="paper">f2-crop-steering</td>
+  <td class="quote">Field capacity 30 / targets 26/22/18 etc. as table numbers</td>
+  <td>Paper says calibrate; readers still copy facility-native uncalibrated %.</td>
+  <td class="rewrite">Bold: “These are one facility’s probe-native numbers after hand-watering—not universal % water content.”</td>
+  <td>—</td>
+  <td class="conf">high</td>
+</tr>
+
+<!-- ========== FACILITY ========== -->
+<tr data-sev="MISLEADING" data-track="Facility">
+  <td class="id">99</td>
+  <td><span class="sev sev-MISLEADING">MISLEADING</span></td>
+  <td>Facility</td>
+  <td class="paper">facility-3d</td>
+  <td class="quote">WA WAC security + IBC stairs as compliance layer</td>
+  <td>Fine as illustration; presents US rules as “typical” without naming licence jurisdiction (NZ Building Code differs).</td>
+  <td class="rewrite">“Example rules from WAC/IBC for illustration. Use the security and egress rules of the licensing jurisdiction that will inspect you.”</td>
+  <td>—</td>
+  <td class="conf">high</td>
+</tr>
+<tr data-sev="MISLEADING" data-track="Facility">
+  <td class="id">100</td>
+  <td><span class="sev sev-MISLEADING">MISLEADING</span></td>
+  <td>Facility</td>
+  <td class="paper">daily-checks</td>
+  <td class="quote">WHO surgical mortality cut + “implementation intentions 2–3 fold” + HA auto-tick = GACP/GMP trail</td>
+  <td>Checklist design transfers; outcome magnitudes don’t. d≈0.65 ≠ 2–3×. HA is not default validated GxP.</td>
+  <td class="rewrite">“Use checklists for process reliability—not because surgery data transfers. HA is ops tooling; regulated release needs validated systems and QA-approved procedures.”</td>
+  <td>—</td>
+  <td class="conf">high</td>
+</tr>
+
+<!-- ========== IMAGE-ONLY PRIORITY BUNDLE ========== -->
+<tr data-sev="IMAGE_HELP" data-track="Site-wide">
+  <td class="id">101</td>
+  <td><span class="sev sev-IMAGE_HELP">IMAGE_HELP</span></td>
+  <td>Site-wide</td>
+  <td class="paper">Multiple (priority visual pack)</td>
+  <td class="quote">Cross-cutting misconceptions that diagrams already promise but need accurate art</td>
+  <td>Several papers say “Diagram.” without shipping the correct conceptual model (or ship AI pest plates that can mis-train).</td>
+  <td class="rewrite">Ship a shared diagram pack for the top 8 misconceptions; caption AI plates as non-diagnostic.</td>
+  <td><div class="prompt">Master set: (1) roots drink / dome reduces demand; (2) meristem vs vascular HpLVd; (3) Caplan one drought vs daily dryback; (4) dryback points vs percent; (5) moisture % vs aw; (6) leaf vs canopy light curves; (7) room RH vs in-cola RH; (8) clean→dirty flow. Unified flat scientific style, white or dark site-matching themes.</div></td>
+  <td class="conf">high</td>
+</tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h2>What is generally solid (do not “fix” these)</h2>
+  <ul style="color:var(--muted); max-width:70rem">
+    <li>CO₂ occupational limits (5,000 / 30,000 / 40,000), NDIR vs MQ, ABC sealed-room trap, dosing ~1.8 mg m⁻³ ppm⁻¹</li>
+    <li>A/B stock never combine (Ca vs SO₄/PO₄); Athena 25 lb / 50 L ≈ 227 g/L math</li>
+    <li>Chloramine not removed by overnight aeration; hardness ≠ alkalinity</li>
+    <li>Mobile vs immobile diagnostic split; Mg (old) vs Fe (new) interveinal</li>
+    <li>Meristem + indexing as real cleanup story; free ≠ resistant</li>
+    <li>ASTM-style 0.55–0.65 aw for dried flower; cool/dark/slow dry defaults</li>
+    <li>TEROS-12 media-specific calibration framing; F2 emergency-stop ≠ disarm</li>
+    <li>Auckland IPM legal gate structure (best regulatory hygiene in the corpus)</li>
+    <li>RM2021 canopy yield can keep rising at high PPFD while leaf curves flatten (when correctly applied)</li>
+  </ul>
+
+  <h2>Suggested edit priority</h2>
+  <ol style="color:var(--muted); max-width:70rem">
+    <li><strong>P0 safety / false:</strong> peer-reviewed branding · PPE log math · sulphur Tbsp · irrigation veg/gen inversion · DO saturation · seedling leaf-drinking · clean↔dirty flow</li>
+    <li><strong>P0 science:</strong> ambient 800 µmol hard ceiling · Caplan≠daily dryback · late-flower RH 60–70 · beginner EC 3–6 · sub-canopy “red-rich”</li>
+    <li><strong>P1 clarity:</strong> DLI table maths · inverse-square LED · flush caveats · trichome/CBN · biosignal demotion · 70% noise · jurisdiction banners</li>
+    <li><strong>P2 polish:</strong> citation hygiene · alkalinity band harmonisation · missing micronutrient rows · AI pest plate disclaimers</li>
+  </ol>
+</main>
+
+<footer>
+  Generated for JakeTheRabbit / cannabis-white-papers v1.2 full review.
+  Open this file in a browser; use filters above. When GitHub write access is granted, issues can be turned into a PR checklist and markdown patches file-by-file.
+</footer>
+
+<script>
+  const q = document.getElementById('q');
+  const sev = document.getElementById('sev');
+  const track = document.getElementById('track');
+  const rows = [...document.querySelectorAll('#issues tbody tr')];
+  const countEl = document.getElementById('count');
+  const stats = document.getElementById('stats');
+
+  function severityOf(row) { return row.dataset.sev; }
+  function trackOf(row) { return row.dataset.track; }
+
+  function renderStats(visible) {
+    const order = ['FALSE','HALF_TRUE','MISLEADING','UNCLEAR','NEEDS_BETTER_EXPLAIN','IMAGE_HELP','SITE_WIDE'];
+    const map = Object.fromEntries(order.map(k => [k, 0]));
+    visible.forEach(r => { map[severityOf(r)] = (map[severityOf(r)] || 0) + 1; });
+    stats.innerHTML = `
+      <div class="stat"><div class="n">${visible.length}</div><div class="l">Showing</div></div>
+      <div class="stat"><div class="n" style="color:var(--false)">${map.FALSE||0}</div><div class="l">False</div></div>
+      <div class="stat"><div class="n" style="color:var(--half)">${map.HALF_TRUE||0}</div><div class="l">Half true</div></div>
+      <div class="stat"><div class="n" style="color:var(--mislead)">${map.MISLEADING||0}</div><div class="l">Misleading</div></div>
+      <div class="stat"><div class="n" style="color:var(--unclear)">${map.UNCLEAR||0}</div><div class="l">Unclear</div></div>
+      <div class="stat"><div class="n" style="color:var(--explain)">${map.NEEDS_BETTER_EXPLAIN||0}</div><div class="l">Explain better</div></div>
+      <div class="stat"><div class="n" style="color:var(--image)">${map.IMAGE_HELP||0}</div><div class="l">Image help</div></div>
+      <div class="stat"><div class="n" style="color:var(--site)">${map.SITE_WIDE||0}</div><div class="l">Site-wide</div></div>
+    `;
+  }
+
+  function apply() {
+    const query = q.value.trim().toLowerCase();
+    const s = sev.value;
+    const t = track.value;
+    let n = 0;
+    const visible = [];
+    rows.forEach(r => {
+      const text = r.innerText.toLowerCase();
+      const okQ = !query || text.includes(query);
+      const okS = !s || severityOf(r) === s;
+      const okT = !t || trackOf(r) === t;
+      const show = okQ && okS && okT;
+      r.classList.toggle('hidden', !show);
+      if (show) { n++; visible.push(r); }
+    });
+    countEl.textContent = `${n} of ${rows.length} issues`;
+    renderStats(visible);
+  }
+
+  q.addEventListener('input', apply);
+  sev.addEventListener('change', apply);
+  track.addEventListener('change', apply);
+  apply();
+</script>
+</body>
+</html>

@@ -94,7 +94,7 @@ The brain only ever picks one of three outcomes, driven by **confidence** and **
 
 > **Diagram.** The whole decision logic collapses to three branches, and all three are bounded by the same promise.
 
-It waters a bit when the brain is confident and there is room to fill. It waits or gives a small safe sip when it is not sure, rather than committing to a full shot. It asks a human when it is genuinely stuck, when the signals contradict each other and it cannot resolve them. The whole logic is fenced in by one rule: **never flood, never starve**.
+It waters a bit when the brain is confident and there is room to fill. It waits or gives a small safe sip when it is not sure, rather than committing to a full shot. It asks a human when it is genuinely stuck, when the signals contradict each other and it cannot resolve them. The whole logic is fenced in by one rule: **prefer temporary mild deficit over flooding when uncertain; hard-floor emergency VWC still required**.
 
 > **KEY — The golden rule**
 >

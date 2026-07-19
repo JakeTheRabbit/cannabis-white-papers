@@ -43,7 +43,7 @@ Tissue culture rests on one fact about plants that animals do not share. Almost 
 
 > **KEY — Totipotency: the property that makes all of this work**
 >
-> Almost every living plant cell carries the complete instructions to rebuild the whole plant. Give a tiny scrap of the right tissue the right food and the right hormones and it grows roots, shoots and leaves: a complete new plant. This ability is called **totipotency**. You are not growing a ‘sample’, you are growing a whole new copy.
+> Many plant cells can, under the right conditions, carry the complete instructions to rebuild the whole plant. Give a tiny scrap of the right tissue the right food and the right hormones and it grows roots, shoots and leaves: a complete new plant. This ability is called **totipotency**. You are not growing a ‘sample’, you are growing a whole new copy.
 
 Here is the vocabulary you need. Get the gist rather than memorising it. Each term comes back in context later.
 
@@ -61,7 +61,7 @@ Here is the vocabulary you need. Get the gist rather than memorising it. Each te
 | **Node** | The point on a stem where a leaf and a bud join. A **nodal segment** is a short stem piece containing one bud. |
 | **Subculture** | Moving growing tissue onto fresh medium. You repeat this every few weeks to keep cultures alive and multiplying. |
 | **Contamination** | The enemy: any microbe that invades the jar and outcompetes your plant. Almost always fatal to that culture. |
-| **Indexing** | Lab-testing a plant to confirm it is free of a specific disease (e.g. a DNA test for a viroid). ‘Proving clean.’ |
+| **Indexing** | Lab-testing a plant to confirm it is free of a specific disease (e.g. a RT-qPCR test for a viroid). ‘Proving clean.’ |
 
 > **NOTE — ‘Cleaning up genetics’: what it does and doesn't mean**
 >
@@ -79,13 +79,11 @@ Take cuttings from the same mother for years and two things creep in: invisible 
 
 **It's everywhere**
 
-Surveys found HpLVd in roughly **90% of California facilities**
-and ~40% of Canadian dispensary flower. If you've cloned for years, assume you may have it.[^hlvd_mgmt2025]
+Industry and research surveys have reported very high facility infection rates in California (~90% in one large testing programme) and frequent positives in Canadian retail flower (~40% in one study) — treat as warning signals, not permanent global prevalence. If you've cloned for years, assume you may have it.[^hlvd_mgmt2025]
 
 **It's expensive**
 
-Infected plants can lose up to **~50% of cannabinoids**
-, plus terpenes, trichomes and yield. Industry losses run into tens of millions of dollars a year.
+In severe symptomatic dud outbreaks, infected plants can lose a large fraction of cannabinoids (sometimes approaching ~50%)**, plus terpenes, trichomes and yield. Industry losses run into tens of millions of dollars a year.
 
 **It's stealthy**
 
@@ -94,7 +92,7 @@ for a long time and is ‘latent’ by name. By the time plants visibly dud, the
 
 **It's tough**
 
-It survives on tools, hands, pots and benches, rides in sap for ~a week and in dried tissue for ~a month, and even passes through seed (up to 100% in one cannabis cross).
+It survives on tools, hands, pots and benches, rides in sap for ~a week and in dried tissue for ~a month, and even passes through seed (at genotype-dependent rates (often single digits to tens of percent — test seed lots)).
 
 > **WARN — Why you can't just spray it away**
 >
@@ -102,7 +100,7 @@ It survives on tools, hands, pots and benches, rides in sap for ~a week and in d
 
 > **NOTE — Other things tissue culture clears out**
 >
-> HpLVd gets the headlines, but a clean start also leaves behind fungal root-rots (_Fusarium_, _Pythium_), grey mould (_Botrytis_), powdery mildew, various viruses, and even hitch-hiking pests like russet and broad mites and their eggs. You begin clean at the cellular level instead of fire-fighting forever.
+> HpLVd gets the headlines, but meristem work plus indexing mainly targets systemic agents (viroids/viruses); surface sterilisation removes many surface microbes and hitch-hikers, but endophytes can still emerge and mites remain an IPM problem. You begin clean at the cellular level instead of fire-fighting forever.
 
 ## The whole journey at a glance
 
@@ -123,7 +121,7 @@ Longer than you'd hope, and that's worth knowing up front. There are two honest 
 > **KEY — The two timelines, stated plainly**
 >
 > - **A clean, rooted, hardened clone** (no lab proof of disease status): roughly **10–15 weeks**.
-> - **A confirmed HpLVd-free mother** (meristem culture + DNA testing): realistically **5–6 months or more**. It is not a two-week job.
+> - **A confirmed HpLVd-free mother** (meristem culture + RT-qPCR testing): realistically **5–6 months or more**. It is not a two-week job.
 
 ## Why a meristem tip beats the disease
 
@@ -184,7 +182,7 @@ What's confirmed to be in the box:
 > **WARN — What the kit deliberately doesn't tell you, and doesn't include**
 >
 > - **The media base is secret.** Athena won't say whether ROOTS/SHOOTS are built on MS, DKW or a custom blend, nor which hormones, at what doses. You can't tune or troubleshoot what you can't see.
-> - **No disease test.** The kit does the meristem cut but ships _no_ DNA test (qPCR) and _no_ thermotherapy gear. So it cannot, by itself, prove a plant is HpLVd-free. Budget for independent lab testing (section 13).
+> - **No disease test.** The kit does the meristem cut but ships _no_ RT-qPCR test and _no_ thermotherapy gear. So it cannot, by itself, prove a plant is HpLVd-free. Budget for independent lab testing (section 13).
 > - **Price moves around:** roughly **$1,800–$2,295** depending on where and when; refills (media $30–$40/box, vessels $15 each, HEPA $100) add up over time.
 
 > **TIP — You can do all of this without the Athena kit**
@@ -354,13 +352,13 @@ Here is where honesty matters most. Meristem culture _can_ clear HpLVd, but how 
 
 > **WARN — The Athena kit can clean, but it cannot prove**
 >
-> The kit lets you do the meristem cut. It includes **no heat-treatment hardware and no DNA test**. So after this step you have a plant that is _probably_ clean, not a _proven_ clean one. That proof is the next section, and it's non-negotiable.
+> The kit lets you do the meristem cut. It includes **no heat-treatment hardware and no DNA test**. So after this step you have a plant that is _probably_ clean until a lab RT-qPCR says so, not a _proven_ clean one. That proof is the next section, and it's non-negotiable.
 
 ## Indexing: proving it's actually clean
 
 A meristem plant that _looks_ healthy is not a clean plant until a lab test says so. ‘Indexing’ is that test. Skip it and you can spend six months building a ‘clean’ mother that quietly re-seeds your whole room with viroid.
 
-**RT-qPCR** — The gold-standard DNA/RNA test for HpLVd. A lab amplifies any viroid genetic material in your sample until it's detectable, sensitive down to a handful of copies. You send tissue; they send back positive/negative. Many cannabis testing labs offer it cheaply per sample.
+**RT-qPCR** — The gold-standard RNA test (RT-qPCR) for HpLVd. A lab amplifies any viroid genetic material in your sample until it's detectable, sensitive down to a handful of copies. You send tissue; they send back positive/negative. Many cannabis testing labs offer it cheaply per sample.
 
 **RT-LAMP** — A newer, cheaper test that runs at a single temperature (no expensive thermocycler), making in-house or field testing practical. Slightly less established than qPCR but increasingly used.
 
@@ -666,7 +664,7 @@ Flowering indoors usually runs about 8–10 weeks once you flip the lights to a 
 2. **Flower wk 1–2 (stretch)** — Plants nearly double in height. Keep nights cooler and the day-night gap modest to limit stretch, and begin gentle generative drybacks.
 3. **Flower wk 3–6 (build)** — Peak generative steering: firm drybacks, higher EC, hold P2 full to feed bulking flowers.
 4. **Flower wk 7+ (ripen)** — Ease off. A controlled late water-deficit can lift potency, but stop before stress shows.
-5. **Flush / finish** — Lower EC feeds in the final stretch. Let the plant wind down cleanly.
+5. **Finish (ease EC; long plain-water flush has weak quality evidence)** — Lower EC feeds in the final stretch. Let the plant wind down cleanly.
 
 ## Troubleshooting
 
@@ -758,13 +756,13 @@ Light is the upstream lever: it sets how much of everything else the plant wants
 
 Temperature and humidity are not two separate dials. Together they make **VPD**, which controls how fast the plant transpires. There is a workable middle band. Too low and everything slows. Too high and the plant shuts its stomata to save water, stalling CO2 uptake and growth[^inoue2021-vpd].
 
-> **Diagram.** Most growth happens around 0.8–1.2 kPa. Drier air pushes generative, but past ~1.5 kPa the plant closes up and stops working[^inoue2021-vpd].
+> **Diagram.** A practical mid-band is around 0.8–1.2 kPa (cultivar-dependent; late flower often ~1.2–1.5). Drier air can push generative, but past ~1.5 kPa the plant closes up and stops working[^inoue2021-vpd].
 
 **CO2** is the other climate lever. Adding CO2 raises photosynthesis and water-use efficiency, and, counter-intuitively, it makes the plant transpire _less_ and partly close its stomata, not open them[^chandra2008-photo]. It only pays off when light is already high.
 
 ## Airflow ties it together
 
-Moving air does two quiet but vital jobs. It strips away the thin film of still, humid air that clings to each leaf, and it cools the leaf by convection. Faster air thins that film, improving CO2 uptake and water-use efficiency while lowering water loss[^schymanski2016-wind]. It also keeps every plant in the room living in the same climate.
+Moving air does two quiet but vital jobs. It strips away the thin film of still, humid air that clings to each leaf, and it cools the leaf by convection. Faster air thins that film, improving CO2 uptake and water-use efficiency (more carbon fixed per unit water). Absolute water use often still rises in bright rooms[^schymanski2016-wind]. It also keeps every plant in the room living in the same climate.
 
 > **NOTE — Airflow has its own paper**
 >
@@ -799,7 +797,7 @@ The same warm, humid, densely-planted room that grows big plants also grows moul
 | Symptom | Where the system broke | What to do |
 | --- | --- | --- |
 | Room humidity won't come down | Light/transpiration outran your dehumidification | Add dehumid capacity or trim light, and improve air exchange |
-| Leaf edges curling/taco at high light | VPD too high, so the plant closed its stomata | Lower VPD (cooler/more humid), add CO2, verify airflow |
+| Leaf edges curling/taco at high light | Often light + leaf heat + VPD, not VPD alone | Check PPFD and leaf temp first, then VPD (cooler/more humid), add CO2, verify airflow |
 | Big light, disappointing yield | Climate/CO2/water didn't scale with the light | Match CO2, VPD and feed to the light level |
 | Hot canopy, slow growth | Airflow too weak, so the leaf can't shed heat | Increase canopy-level air movement |
 | Bud rot in week 6+ | Dense canopy + trapped humidity | Defoliate/space plants, airflow through the canopy, lower RH |
@@ -1029,7 +1027,7 @@ This is the deeper answer to ‘how much do I need?’. Enrichment is not toppin
 
 ## How much, and what it buys you
 
-The best cannabis-specific yield data come from controlled work at Utah State University: raising a sealed room from ambient (~420 ppm) to about 1,200 ppm lifted dry flower yield by roughly **40%**, and 1,200 ppm captured about **95%** of the achievable gain, so there is little point going higher[^westmoreland2023-usu]. General greenhouse crops tell the same story: tomato yield rises up to ~80% at 1,000 ppm[^doddrell2023-co2], and most C3 crops saturate around 1,000–1,300 ppm[^doddrell2023-co2].
+The best cannabis-specific yield data come from controlled work at Utah State University: raising a sealed room from ambient (~420 ppm) to about 1,200 ppm lifted dry flower yield by roughly **40%**, and 1,200 ppm captured about **95%** of the achievable gain, so there is little point going higher[^westmoreland2023-usu]. General greenhouse crops tell the same story: many greenhouse C3 crops gain on the order of tens of percent at ~800–1,200 ppm (extreme published uplifts depend on depleted controls and system)[^doddrell2023-co2], and most C3 crops saturate around 1,000–1,300 ppm[^doddrell2023-co2].
 
 > **Diagram.** The working band. Aim for roughly 1,000–1,500 ppm in the light. The plateau above ~1,500 ppm is real, so pushing to 2,000 ppm mostly buys wasted gas and a bigger safety and cooling burden[^westmoreland2023-usu].
 
@@ -1138,7 +1136,7 @@ Raising CO2 does not act alone, it pulls on the rest of the room. This is the sa
 
 > **NOTE — Water use: efficiency goes up, volume usually goes up too**
 >
-> Elevated CO2 partly closes the stomata, so a leaf loses less water _per unit of leaf_ for the same photosynthesis, and its water-use efficiency roughly **doubles**, about twice the growth per litre transpired[^chandra2008-photo]. But that is _efficiency_, not less water, and in a real enriched room the total usually moves the _other_ way. CO2 grows a bigger, faster canopy with far more leaf area, and the room is run hotter and brighter to exploit it[^lv2022-topt], which more than cancels the per-leaf stomatal closure. So in practice **total water use and humidity load commonly go up, not down**, most growers running CO2 end up feeding and dehumidifying _more_. Don't assume a wetter substrate, and re-tune irrigation by watching VWC, dryback and runoff on the actual crop rather than copying an old schedule.
+> Elevated CO2 partly closes the stomata, so a leaf loses less water _per unit of leaf_ for the same photosynthesis, and its water-use efficiency often rises substantially (sometimes toward a large fraction of a doubling in short-term leaf measurements), about twice the growth per litre transpired[^chandra2008-photo]. But that is _efficiency_, not less water, and in a real enriched room the total usually moves the _other_ way. CO2 grows a bigger, faster canopy with far more leaf area, and the room is run hotter and brighter to exploit it[^lv2022-topt], which more than cancels the per-leaf stomatal closure. So in practice **total water use and humidity load commonly go up, not down**, most growers running CO2 end up feeding and dehumidifying _more_. Don't assume a wetter substrate, and re-tune irrigation by watching VWC, dryback and runoff on the actual crop rather than copying an old schedule.
 
 ## The drying room: CO2 with no light to burn it
 
@@ -1166,7 +1164,7 @@ Every major safety authority agrees on the headline number: the 8-hour average a
 | --- | --- | --- |
 | ~420 ppm | Normal outdoor air | Baseline[^noaa2024-co2] |
 | 1,000–1,500 ppm | Typical enrichment target, safe for short work | 3–5× below the worker limit |
-| 1,000–2,500 ppm | Measurable dip in concentration and decision-making | Cognition, not danger[^azuma2018-cognition] |
+| 1,000–2,500 ppm | Some studies report small cognitive effects (literature mixed) | Cognition, not danger[^azuma2018-cognition] |
 | 5,000 ppm (0.5%) | 8-hour worker exposure limit (TWA) | OSHA / NIOSH / ACGIH / WorkSafe NZ[^worksafenz-co2] |
 | 30,000 ppm (3%) | 15-minute short-term limit (STEL); headache, fast breathing | NIOSH / ACGIH / WorkSafe NZ[^niosh-co2] |
 | 40,000 ppm (4%) | IDLH, immediately dangerous to life or health | Escape-impairing[^niosh-co2] |
@@ -1339,7 +1337,7 @@ The second table is the **water, feed and heat** side of the same row — what y
 | 800 | 3.0 L/m²/d | 4.0 L/m²/d | 2.4–2.8 | 296 W/m² | 0.8 ton /10 m² | 6.3 pt/m²/d |
 | 1000 | 3.7 L/m²/d | 4.9 L/m²/d | 2.8–3.2 | 370 W/m² | 1.1 ton /10 m² | 7.8 pt/m²/d |
 | 1200 | 4.4 L/m²/d | 5.9 L/m²/d | 3.2–3.6 | 444 W/m² | 1.3 ton /10 m² | 9.4 pt/m²/d |
-| 1500 | 5.6 L/m²/d | 7.4 L/m²/d | 3.6–4.2 | 556 W/m² | 1.6 ton /10 m² | 11.7 pt/m²/d |
+| 1500 | 5.6 L/m²/d | 7.4 L/m²/d | 2.4–3.2 (advanced: up to ~3.6) | 556 W/m² | 1.6 ton /10 m² | 11.7 pt/m²/d |
 | Rules used: transpiration ≈ PPFD × 0.0037 L/m²/d; irrigation = transpiration ÷ 0.75; light heat = PPFD ÷ 2.7; dehu load = transpiration (1 L ≈ 2.1 US pints)[^collado2025-light]. Heavy CO₂ trims transpiration a little at the top. On HPS or 2.0 µmol/J LED, add ~35% to every heat, cooling and airflow figure. |
 
 *Table 2 · Water, feed & heat-removal by light level (per m² of canopy, ~25% runoff, LED @ 2.7 µmol/J)*
@@ -1373,7 +1371,7 @@ The feed column deserves its own look, because raising EC with light is the step
 | 800 | 2.4–2.8 | 4–5 | ~4.0 L | Build shot frequency with canopy | Balanced feed shows here |
 | 1000 | 2.8–3.2 | 5–6 | ~4.9 L | Multiple shots, tighter window | Under: lower-canopy fade |
 | 1200 | 3.2–3.6 | 6–7 | ~5.9 L | Frequent shots, watch runoff EC | Over: tip burn, crispy margins |
-| 1500 | 3.6–4.2 | 7–8 | ~7.4 L | High frequency + volume, daily EC checks | Either error bites fast |
+| 1500 | 2.4–3.2 (advanced: up to ~3.6) | advanced if runoff >> feed | ~7.4 L | High frequency + volume, daily EC checks | Either error bites fast |
 | Assumes a clean source (<0.4 EC), a balanced high-ratio nutrient and an inert substrate. Coir buffers cations, so run the lower half of each band. See [Coco & crop steering](coco-crop-steering.html) and [Nutrient deficiencies](nutrient-deficiencies.html). Raise EC as a lever _after_ irrigation volume is right, never instead of it. |
 
 *Table 4 · Feed EC and root-zone strategy by light level (managed substrate, clean source water)*
@@ -1386,7 +1384,7 @@ Now the payoff. Every support system can sustain some maximum light level — a 
 
 | System | What you have | Its PPFD ceiling |
 | --- | --- | --- |
-| **CO₂** | Your setpoint | Ambient 420 ppm → ~800 µmol · 800 ppm → ~1000 · 1200 ppm → ~1300 · 1500 ppm → ~1500 |
+| **CO₂** | Your setpoint | Ambient 420 ppm → ~800+ µmol with diminishing returns (not a hard wall) · 800 ppm → ~1000 · 1200 ppm → ~1300 · 1500 ppm → ~1500 |
 | **Cooling** | Installed sensible tons | PPFD ≤ 9,500 × tons ÷ m² |
 | **Dehumidification** | Rated pints/day | PPFD ≤ 128 × pints/day ÷ m² |
 | **Irrigation** | Max deliverable L/day | PPFD ≤ 200 × L/day ÷ m² |
@@ -1412,7 +1410,7 @@ The same method, four common rooms. Each has plenty of everything except one thi
 
 > **NOTE — Case B · The ambient-air ceiling cheap to fix**
 >
-> **The room:** big cooling and dehu, but _no_ CO₂ supplementation — ambient 420 ppm. **The math:** cooling and dehu might support 1200, but at ambient CO₂ the leaf light-saturates around **800** µmol[^chandra2008-photo]. **The wall:** CO₂, at ~800. **The fix:** above 800 the extra light just bleaches tops and adds heat — dial down to 800, or add CO₂ and suddenly all that cooling and dehu headroom means something. The cheapest ceiling in the building to raise.
+> **The room:** big cooling and dehu, but _no_ CO₂ supplementation — ambient 420 ppm. **The math:** cooling and dehu might support 1200, but at ambient Under ambient CO₂, leaf curves flatten earlier than canopy yield, which can still rise well past 800 [^chandra2008-photo]. **The practical limit:** ambient CO₂ lowers efficiency as PPFD climbs. **The fix:** above ~800–1000 without enrichment, extra light often just bleaches tops and adds heat — dial down to 800, or add CO₂ and suddenly all that cooling and dehu headroom means something. The cheapest ceiling in the building to raise.
 
 > **NOTE — Case C · The stagnant canopy hidden**
 >
@@ -1486,7 +1484,7 @@ _Beginner · Mould risk · ~15 min read_
 
 You can do everything right for ten weeks and lose it all to grey fuzz in the last two. Mould thrives in exactly the warm, humid, densely-flowered conditions that also grow big buds. The worst of it hides _inside_ the bud, where you can't see it until it's spreading.
 
-There is also a health stake. Cannabis users have been found to get fungal infections at roughly **3.5× the rate** of non-users[^benedict2020-cdc], and some moulds leave behind toxins that survive drying[^gwinn2023-mycotoxin]. This isn't only about yield. It is about safe medicine. This guide assumes you know nothing. Every term is defined.
+There is also a health stake. Cannabis users have been found to get fungal infections at about **3.5× more often** than non-users in one claims analysis (absolute rates still low; immunocompromised patients are the high-stakes group)[^benedict2020-cdc], and some moulds leave behind toxins that survive drying[^gwinn2023-mycotoxin]. This isn't only about yield. It is about safe medicine. This guide assumes you know nothing. Every term is defined.
 
 ## The words you need
 
@@ -1532,7 +1530,7 @@ Mould isn't bad luck. It is a recipe. Bud rot takes off when humidity climbs abo
 
 Prevention is a handful of boring habits done consistently. This is the whole job:
 
-1. **Hold humidity down** — Keep flowering RH in the ~60–70% band, lower in late flower. A dehumidifier sized to your transpiration load is non-negotiable[^buirs2024-idm].
+1. **Hold humidity down** — Keep flowering RH in the ~45–65% stage-dependent band (mid/late flower often ~45–55%), lower in late flower. A dehumidifier sized to your transpiration load is non-negotiable[^buirs2024-idm].
 2. **Move air through the canopy** — Aim for ~0.5–1.0 m/s of gentle, turbulent air reaching inside the plants, not just over the top[^buirs2024-idm]. See the airflow paper.
 3. **Open the canopy** — Defoliate and space plants so air and light penetrate. Density is the silent risk multiplier.
 4. **Avoid free moisture** — No overhead watering or spraying in flower. Prevent condensation by avoiding big temperature swings at lights-off, so surfaces never hit dew point.
@@ -2165,7 +2163,7 @@ The biological, diagnostic, operational and New Zealand regulatory terms used in
 [^sutton-2006-pythium-hydroponic-etiology]: Sutton, J. C., Sopher, C. R., Owen-Going, T. N., Liu, W., Grodzinski, B., Hall, J. C., & Benchimol, R. L. (2006). Etiology and epidemiology of Pythium root rot in hydroponic crops: current knowledge and perspectives. Summa Phytopathologica, 32(4), 307-321. https://doi.org/10.1590/S0100-54052006000400001 (peer-reviewed)
 [^hlvd_threat2023]: Atallah OO et al. (2023). Hop latent viroid: a hidden threat to the cannabis industry. Viruses / PMC. https://pmc.ncbi.nlm.nih.gov/articles/PMC10053334/ (peer-reviewed)
 [^hlvd_mgmt2025]: Transmission, spread, longevity and management of hop latent viroid in cannabis in North America (2025). PMC. https://pmc.ncbi.nlm.nih.gov/articles/PMC11902214/ (peer-reviewed)
-[^hlvd-transmission-2025]: Mechanical transmission and management of Hop Latent Viroid (HLVd) in cannabis: spread via contaminated tools and cuttings, up to 100% transmission within four weeks; controls include fresh gloves per plant, tool sterilisation and footbaths. Plants (MDPI) 2025, 14:830. https://www.mdpi.com/2223-7747/14/5/830 (peer-reviewed)
+[^hlvd-transmission-2025]: Mechanical transmission and management of Hop Latent Viroid (HLVd) in cannabis: spread via contaminated tools and cuttings; under experimental conditions linked cuttings can approach complete infection within weeks; controls include fresh gloves per plant, tool sterilisation and footbaths. Plants (MDPI) 2025, 14:830. https://www.mdpi.com/2223-7747/14/5/830 (peer-reviewed)
 [^rahnama-2021-septoria-cannabis]: Rahnama M, Szarka D, Li H, Dixon E, Castlebury LA, Gauthier N (2021). Reemergence of Septoria leaf spot caused by Septoria cannabis on hemp in Kentucky, confirmed by sequence data. Plant Disease 105:2286-2289. https://doi.org/10.1094/PDIS-12-20-2620-SC (peer-reviewed)
 [^ujata-2024-septoria-cannabicola]: Ujata AH, Konishi S, Kato Y, Tonami H, Nakashima C (2024). Septoria cannabicola, a new species on Cannabis sativa from Japan. Mycoscience 65:92-95. https://pmc.ncbi.nlm.nih.gov/articles/PMC11369300/ (peer-reviewed)
 
@@ -2256,11 +2254,11 @@ There are three seed types and the choice shapes your whole grow. Regular seeds 
 
 Feminised seeds are bred to produce almost only female plants, removing the guesswork and wasted effort. They are made by inducing a female plant to make pollen (using treatments such as colloidal silver), so the resulting seeds carry only female genetics.[^flajsman-2021-feminized-seed-production][^monthony-2021-feminized-sts-comparison]
 
-Autoflower seeds carry Cannabis ruderalis genetics that make the plant flower automatically after about 2-4 weeks regardless of the light schedule, finishing in roughly 60-90 days from sprout.[^toth-2022-autoflower1-locus] Photoperiod plants (regular and feminised) only flower when the daily light drops to about 12 hours.[^moher-2023-twelve-hour-photoperiod-flowering]
+Autoflower seeds carry Cannabis ruderalis genetics that make the plant flower automatically after about 2-4 weeks regardless of the light schedule, finishing in roughly 60-90 days from sprout.[^toth-2022-autoflower1-locus] Photoperiod plants (regular and feminised) flower when nights are long enough without light interruptions (12/12 is the usual default).[^moher-2023-twelve-hour-photoperiod-flowering]
 
 |  | Regular | Feminised | Autoflower |
 | --- | --- | --- | --- |
-| Sex outcome | ~50% male / 50% female | ~99% female | ~99% female |
+| Sex outcome | ('~50% male / 50% female', '~99% female (if feminised)', 'Feminised autos ~99% female; regular autos ~50/50') |
 | Flowering trigger | Switch to 12h light | Switch to 12h light | Automatic, by age |
 | Time to harvest | Longer | Longer | ~60-90 days from sprout |
 | Plant size | Large | Large | Small (~2-4 ft) |
@@ -2271,13 +2269,13 @@ Autoflower seeds carry Cannabis ruderalis genetics that make the plant flower au
 
 > **NOTE — Photoperiod vs autoflower in one line**
 >
-> Photoperiod plants flower when _you_ shorten their light to 12 hours. Autoflowers flower when they reach a certain age, whatever the lights are doing.
+> Photoperiod plants flower when nights are long enough (growers usually use 12 hours light / 12 hours dark). Autoflowers flower when they reach a certain age, whatever the lights are doing.
 
 ## Three ways to germinate, and why
 
-Germination just means giving the seed three things: water, warmth and darkness. The embryo swells, drinks, and pushes the taproot out through the seed coat. There are three common ways to deliver those three things.
+Germination just means giving the seed three things: water and warmth (darkness is optional convenience). The embryo swells, drinks, and pushes the taproot out through the seed coat. There are three common ways to deliver those three things.
 
-The paper-towel method (seeds between damp paper towels, sandwiched between two plates) is the most popular because you can watch the taproot appear, and it reports near-99% success when conditions are controlled.[^cockson-2025-hemp-seed-moisture-temperature] Its one risk is damaging the fragile root when you move the seed to its pot.
+The paper-towel method (seeds between damp paper towels, sandwiched between two plates) is the most popular because you can watch the taproot appear, and with fresh seed and controlled moisture and temperature high germination is common when conditions are controlled.[^cockson-2025-hemp-seed-moisture-temperature] Its one risk is damaging the fragile root when you move the seed to its pot.
 
 | Method | Visibility | Transplant risk | Difficulty | Best for |
 | --- | --- | --- | --- | --- |
@@ -2285,7 +2283,7 @@ The paper-towel method (seeds between damp paper towels, sandwiched between two 
 | Direct-sow | None (hidden in medium) | None | Easy | Avoiding any root handling |
 | Pre-soak | Some (seeds sink/swell) | Low | Easy | Old or hard-shelled seeds |
 
-*All three supply the same water + warmth + darkness. They differ mainly in whether you can see progress.*
+*All three supply water + warmth (darkness optional). They differ mainly in whether you can see progress.*
 
 > **Diagram.** Wet but wrung-out towels, seeds spaced out and covered, kept warm and dark, checked twice a day. Plant once the taproot is about 0.5-1.5 cm long.[^smith-2022-hemp-germination-temperature-limits]
 
@@ -2298,7 +2296,7 @@ The paper-towel method (seeds between damp paper towels, sandwiched between two 
 
 Seeds are sensitive to their environment. Three settings matter: temperature, moisture and light. Get all three in range and most viable seeds sprout on their own.
 
-Hold temperature at a steady 21-25C (70-77F). Cooler slows germination, and warmer or fluctuating temperatures cause outright failures.[^smith-2022-hemp-germination-temperature-limits] Keep the medium or towel damp like a wrung-out sponge, never waterlogged, and keep seeds in darkness until they sprout.
+Hold temperature at a steady 21-25C (70-77F). Cooler slows germination, and warmer or fluctuating temperatures cause outright failures.[^smith-2022-hemp-germination-temperature-limits] Keep the medium or towel damp like a wrung-out sponge, never waterlogged, and keep seeds damp and warm until they sprout (darkness optional).
 
 > **Diagram.** Aim for the green band and keep it stable. Swings and heat above ~28C are a common cause of no-shows.[^smith-2022-hemp-germination-temperature-limits]
 
@@ -2308,11 +2306,11 @@ Hold temperature at a steady 21-25C (70-77F). Cooler slows germination, and warm
 >
 > - **Temperature:** steady 21-25C / 70-77F. Avoid swings and anything above ~28C.
 > - **Moisture:** damp not soaked (wrung-out-sponge feel). Waterlogged seeds suffocate and rot.
-> - **Light:** darkness while germinating. Once sprouted, give gentle light immediately so the stem does not stretch.
+> - **Light:** darkness is optional while germinating. Once sprouted, give gentle light immediately so the stem does not stretch.
 
 ## Seedling care: the first two to three weeks
 
-The newborn seedling has almost no roots, so it drinks largely through its leaves. That means it needs high humidity, typically 65-80% RH (a VPD of about 0.4-0.8 kPa), often using a humidity dome or a vented clear bag for the first 7-10 days.[^zhang-2021-vpd-stomatal-conductance-growth] VPD (vapour pressure deficit) is just a measure of how thirsty the air is. Lower means more humid.
+The newborn seedling has almost no roots, so it has a tiny root system, so it loses water easily. High humidity reduces evaporative demand until roots expand — roots still do the drinking.4-0.8 kPa), often using a humidity dome or a vented clear bag for the first 7-10 days.[^zhang-2021-vpd-stomatal-conductance-growth] VPD (vapour pressure deficit) is just a measure of how thirsty the air is. Lower means more humid.
 
 Keep light gentle: roughly 100-200 PPFD in the first week, rising to 200-300 PPFD by week two (a DLI near 10-15), with LEDs kept well back to avoid stretch or burn.[^rodriguez-2021-cannabis-light-intensity-photosynthesis] PPFD is the amount of usable light hitting the plant right now. DLI is the total it receives over a day.
 
@@ -2438,7 +2436,7 @@ Blue light, roughly 400 to 500 nm, keeps plants compact with tight internode spa
 | 280-400 | UV | Stress response, possible resin; safety hazard | Optional, end of flower |
 | 400-500 | Blue | Compact growth, tight internodes, thicker leaves | Veg |
 | 500-600 | Green | Penetrates deeper into the canopy than expected | Minor lever, all stages |
-| 600-700 | Red | Highest photosynthetic efficiency, drives flowering and stretch | Flower |
+| 600-700 | Red | Highest photosynthetic efficiency, is highly photosynthetic (stretch is more about low blue and far-red; flowering is photoperiod) | Flower |
 | 700-750 | Far-red | Speeds the dark response, adds stem stretch | Fine-tuning only |
 
 *What each part of the spectrum does. Green is not wasted: it reaches lower leaves, but it is a minor lever.*
@@ -2449,7 +2447,7 @@ Blue light, roughly 400 to 500 nm, keeps plants compact with tight internode spa
 
 ## Intensity and the daily dose: targets by stage
 
-Young tissue cannot process intense light, so targets climb as the plant matures. Clones and seedlings want about 100-300 PPFD (DLI ~10-15 mol)[^rodriguez-morrison-2021-light-levels-yield-photosynthesis], early-to-late veg about 300-600 PPFD (DLI ~20-35 mol), and flower about 700-900 PPFD without added CO2 (DLI ~30-45 mol)[^llewellyn-2022-light-intensity-proportional-uv-no-effect].
+Young tissue cannot process intense light, so targets climb as the plant matures. Clones and seedlings want about 100-250 PPFD (DLI roughly ~6-16 mol)[^rodriguez-morrison-2021-light-levels-yield-photosynthesis], early-to-late veg about 300-600 PPFD (DLI ~20-35 mol), and flower about 700-900 PPFD without added CO2 (DLI ~30-45 mol)[^llewellyn-2022-light-intensity-proportional-uv-no-effect].
 
 Pushing past about 900 PPFD only pays off if you also raise CO2 to 1000-1200 ppm and tighten temperature and humidity[^chandra-2008-photosynthetic-response-ppfd-co2-temp]. Otherwise extra light just causes stress and bleaching. Because DLI bundles intensity and hours together, you can hit the same daily dose with lower PPFD over more hours (veg at 18/6) or higher PPFD over fewer hours (flower at 12/12).
 
@@ -2459,13 +2457,13 @@ Pushing past about 900 PPFD only pays off if you also raise CO2 to 1000-1200 ppm
 
 | Stage | PPFD (umol/m2/s) | DLI (mol/m2/day) | Photoperiod |
 | --- | --- | --- | --- |
-| Clone / seedling | 100-300 | ~10-15 | 18/6 |
+| Clone / seedling | 100-250 | ~6-16 | 18/6 |
 | Early veg | 300-450 | ~20-29 | 18/6 |
 | Late veg | 450-600 | ~29-39 | 18/6 |
-| Flower (no CO2) | 700-900 | ~30-45 | 12/12 |
+| Flower (no CO2) | 700-900 | ~30-39 | 12/12 |
 | Flower (CO2 1000-1200 ppm) | 1000-1400 | ~40-60 | 12/12 |
 
-*Stage targets. 600 PPFD x 18h (veg) is roughly the same daily dose as 800 PPFD x 12h (flower).*
+*Stage targets. 600 PPFD x 18h (~39 mol) is closer to ~900 PPFD x 12h than to 800 PPFD x 12h.*
 
 ## The photoperiod flip that triggers flowering
 
@@ -2497,7 +2495,7 @@ Efficacy (umol/J) is the number to compare. A 3.0 umol/J LED makes about 60% mor
 
 ## Hanging height, coverage, and a stage-by-stage setup
 
-Light obeys the inverse-square law: roughly doubling the distance from the canopy cuts PPFD by about 75%. Height is your coarse intensity dial, the dimmer is the fine dial. Hang about 24 in for seedlings and clones, ~18 in for veg, and ~12-16 in for flower, then fine-tune with the dimmer and a PAR meter.
+Intensity falls with distance, but inverse-square (quarter at 2× distance) is a point-source ideal for LEDs. Use a PPFD map and meter. About hang height:  Height is your coarse intensity dial, the dimmer is the fine dial. Hang about 24 in for seedlings and clones, ~18 in for veg, and ~12-16 in for flower, then fine-tune with the dimmer and a PAR meter.
 
 Verify coverage by taking PPFD readings at nine points: four corners, four edge-midpoints, and the center. Aim for a min-to-average ratio above 0.75 so edge plants are not starved while the center bleaches. Hanging higher trades peak intensity for more even spread, so use a manufacturer PPFD map as your starting point and confirm with real readings at canopy height.
 
@@ -2625,7 +2623,7 @@ An inert medium like rockwool holds almost no nutrients of its own. Its native E
 
 Coco is the opposite. Its high CEC, roughly 40-100 meq/100g, buffers EC swings, but raw coco's exchange sites come pre-loaded with potassium and sodium and will strip calcium and magnesium out of your feed[^abad-2002-coir-dust-peat-substitute]. That causes a cal-mag deficiency unless the coco is buffered (pre-soaked in cal-mag) or bought pre-buffered[^cockson-2019-cannabis-nutrient-disorders].
 
-Living soil is the most forgiving of all. Microbes, organic matter and minerals hold the root zone near pH 5.2-6.5 within minutes of watering regardless of your water's pH, so you generally do not pH your input at all. In DWC there is no buffer at all: the reservoir is the only thing standing between your plants and a mistake.
+Living soil is the most forgiving of all. Microbes, organic matter and minerals hold the root zone near pH 5.2-6.5 over hours to days when biology is healthy. Many organic growers still do not acidify routine waterings, but avoid extreme alkaline water and monitor if problems appear. In DWC there is no buffer at all: the reservoir is the only thing standing between your plants and a mistake.
 
 > **Diagram.** From no cushion (DWC, rockwool) through coco's EC buffering to living soil, which self-regulates pH after every watering.
 
@@ -2691,13 +2689,13 @@ The classic beginner mistakes are medium-specific, and most look like something 
 | Rockwool | Planting into dry cubes | Pale, locked-out plant (pH-8 lockout) | Pre-soak at pH ~5.5 before transplant |
 | Rockwool | Overwatering low-air matrix | Slow, soggy, suffocating roots | Fewer shots, let it breathe between |
 | Living soil | pH-ing water or adding salts | Stalled growth, dying microbes | Water-only, leave the pH alone |
-| DWC | Warm water or dead air pump | Root rot within ~24h | Chill below 23C, keep the pump running |
+| DWC | Warm water or dead air pump | Root health can collapse quickly | Chill below 23C, keep the pump running |
 
 *The coco and rockwool rows are misread as feeding problems. They are really prep problems.[^cockson-2019-cannabis-nutrient-disorders][^le-pythium-hydroponic-epidemiology-review]*
 
 > **DANGER — The number one DWC killer**
 >
-> A warm reservoir above 23C or a failed air pump crashes dissolved oxygen and brings on root rot within a day[^frontiers-2026-do-pythium-strawberry-nft]. If you run DWC, a chiller and a backup air pump are not optional.
+> A warm reservoir above 23C or a failed air pump crashes dissolved oxygen and brings on root rot can progress quickly[^frontiers-2026-do-pythium-strawberry-nft]. If you run DWC, a chiller and a backup air pump are not optional.
 
 ## Realistic expectations
 
@@ -2773,7 +2771,7 @@ Municipal tap water is treated and consistent but carries chlorine or chloramine
 
 > **Diagram.** Where your water starts on the PPM scale. RO and rain arrive near zero, soft tap is workable, and hard tap or well water can eat most of your nutrient headroom before you begin.[^umass-water-quality-ph-alkalinity]
 
-Headroom is the point beginners miss. A working feed strength is commonly capped near 800-900 ppm, so hard tap water at 300+ ppm leaves almost no room before you hit that ceiling[^bevan-2021-npk-flowering-cannabis]. Rainwater typically arrives at only 0-20 ppm, which is closer to RO, but it brings little to no buffering and a risk of pathogens, roofing contaminants, or sodium near coasts.
+Headroom is the point beginners miss. A working feed strength is commonly capped near your total EC budget (set targets in mS/cm), so hard tap water at 300+ ppm leaves almost no room before you hit that ceiling[^bevan-2021-npk-flowering-cannabis]. Rainwater typically arrives at only 0-20 ppm, which is closer to RO, but it brings little to no buffering and a risk of pathogens, roofing contaminants, or sodium near coasts.
 
 > **TIP — Match the source to the habit**
 >
@@ -2838,7 +2836,7 @@ Before buying any equipment, get real numbers for your water. A cheap EC/PPM pen
 
 1. **Buy and calibrate pens** — Get an EC/PPM pen and a pH pen first. Calibrate with fresh calibration solution, never with tap water.
 2. **Get the full picture** — For alkalinity, sodium, Ca, Mg and micronutrients, use a lab test or your city's annual water-quality report.
-3. **Record starting EC** — Note how much room you have before the ~800-900 ppm feed ceiling, so you know your nutrient headroom.
+3. **Record starting EC** — Note how much room you have before the ~your total EC budget (set targets in mS/cm) feed ceiling, so you know your nutrient headroom.
 4. **Mix in the right order** — Fill water, let chlorine off-gas or filter it, add CalMag if RO or soft, add base nutrients, then adjust pH last.
 5. **Re-test seasonally** — Re-check well and rain sources through the year. Municipal supplies can also switch chlorine to chloramine periodically.
 
@@ -2846,9 +2844,9 @@ Before buying any equipment, get real numbers for your water. A cheap EC/PPM pen
 
 ## Water temperature and the mistakes beginners make
 
-Water temperature quietly controls dissolved oxygen and disease risk. Aim for roughly 18-22 C (65-72 F), because dissolved oxygen falls from about 5-6 ppm at 20 C to only 3-4 ppm at 26 C[^fao-dissolved-oxygen-temperature], and root pathogens like Pythium accelerate above about 23 C[^sutton-2006-pythium-hydroponic-etiology]. Warm water plus low oxygen is an open invitation to root rot.
+Water temperature quietly controls dissolved oxygen and disease risk. Aim for roughly 18-22 C (65-72 F), because warm, poorly aerated water raises pathogen risk even though saturation DO is still roughly ~9 mg/L at 20 C and ~8 mg/L at 26 C. Target at 26 C[^fao-dissolved-oxygen-temperature], and root pathogens like Pythium accelerate above about 23 C[^sutton-2006-pythium-hydroponic-etiology]. Warm water plus low oxygen is an open invitation to root rot.
 
-> **Diagram.** Dissolved oxygen declines steadily as water warms, from about 5-6 ppm near 20 C down toward 3-4 ppm at 26 C. Above roughly 23 C you also enter Pythium risk.[^fao-dissolved-oxygen-temperature][^sutton-2006-pythium-hydroponic-etiology]
+> **Diagram.** Saturation dissolved oxygen declines gently as water warms (roughly ~9 mg/L near 20 C toward ~8 mg/L saturation at 26 C. Above roughly 23 C you also enter Pythium risk.[^fao-dissolved-oxygen-temperature][^sutton-2006-pythium-hydroponic-etiology]
 
 | Common mistake | What actually happens, and the fix |
 | --- | --- |
@@ -2933,7 +2931,7 @@ These words come back through the rest of the guide. Read them once and the trou
 
 Each nutrient stays dissolved, and therefore absorbable, only across a certain pH band. Outside that band it binds into forms the roots cannot take up. That is lockout: the plant is surrounded by food it cannot eat because the root-zone chemistry drifted out of the window.
 
-Push pH too high, above about 6.5 in inert media like coco or hydro, and the micronutrients drop out of solution first: iron, manganese, zinc and boron.[^veazie-2025-substrate-ph-micronutrient-cannabis] Drop it too low, below about 5.5, and calcium, magnesium and phosphorus lock out instead.[^gillespie-kubota-2020-low-ph-basil-nutrient-uptake]
+Push pH too high, above about 6.5 in inert media like coco or hydro, and the micronutrients drop out of solution first: iron, manganese, zinc and boron.[^veazie-2025-substrate-ph-micronutrient-cannabis] Drop it too low, below about 5.5, and calcium, magnesium and phosphorus availability can fall while iron and manganese can push toward toxicity instead.[^gillespie-kubota-2020-low-ph-basil-nutrient-uptake]
 
 Phosphorus is the clearest example. It is most available around pH 6.0-7.0, binds with iron and aluminium below 5.5, and binds with calcium above 7.5.[^kpai-2024-cannabis-nutrient-solution-ph-cation-uptake] The ‘sweet spot’ exists because it is the pH where the most nutrients overlap as available at once.
 
@@ -2981,25 +2979,25 @@ Mix your nutrients first, then adjust pH last. Adding nutrients shifts pH on its
 4. **Stir and wait** — Mix it in and give it a moment to react.
 5. **Re-measure** — Read again. Repeat in small steps, never dump and chase.
 
-pH Down is usually phosphoric acid and pH Up is usually potassium hydroxide.[^saloner-bernstein-2022-nitrogen-source-cannabis] Your starting water matters more than beginners expect. Alkalinity is the water's built-in acid-absorbing capacity, mostly bicarbonates, reported as ppm CaCO3, and it is distinct from a high pH reading.[^umass-water-quality-ph-alkalinity] High-alkalinity water fights your acid and creeps the pH back up after you set it.
+Common pH downs include phosphoric, nitric, sulfuric, or organic acids; common pH ups include KOH or potassium carbonate. Each adds nutrients — account for them.[^saloner-bernstein-2022-nitrogen-source-cannabis] Your starting water matters more than beginners expect. Alkalinity is the water's built-in acid-absorbing capacity, mostly bicarbonates, reported as ppm CaCO3, and it is distinct from a high pH reading.[^umass-water-quality-ph-alkalinity] High-alkalinity water fights your acid and creeps the pH back up after you set it.
 
 > **Diagram.** Alkalinity, not the pH reading, sets how much acid it takes to move the water. Hard, high-alkalinity tap water resists adjustment and drifts back up.[^umass-water-quality-ph-alkalinity]
 
 > **NOTE — Aim for 60-100 ppm CaCO3**
 >
-> Ideal irrigation alkalinity is roughly 60-100 ppm CaCO3. Very hard water may need more acid or pre-treatment before it will hold a target.[^umass-water-quality-ph-alkalinity]
+> Ideal irrigation alkalinity is roughly 40-80 ppm CaCO3 (many soilless programmes sit near 60-100). Very hard water may need more acid or pre-treatment before it will hold a target.[^umass-water-quality-ph-alkalinity]
 
 ## Runoff pH and a by-stage routine
 
 Runoff is the solution that drains from the pot, and beginners over-rely on it. In inert media like coco it is a momentary, indirect sample distorted by salt buildup and what the roots have done locally. It is not a soil test.[^malik-tlustos-2025-soilless-media-cannabis]
 
-The reliable lever is the inflow pH you set going in. For the root zone itself, watch runoff EC for salt accumulation rather than runoff pH: a flush is due when runoff EC climbs well above your feed EC. Aim to keep feed and runoff EC within about 10 percent of each other.[^kpai-2024-cannabis-nutrient-solution-ph-cation-uptake]
+The reliable lever is the inflow pH you set going in. For the root zone itself, watch runoff EC for salt accumulation rather than runoff pH: a flush is due when runoff EC climbs well above your feed EC. Treat large runaway gaps (runoff much higher than feed) as salt buildup; advanced steering may hold higher root-zone EC on purpose. Keep an eye on feed and runoff EC each other.[^kpai-2024-cannabis-nutrient-solution-ph-cation-uptake]
 
 | Stage | Inflow pH target | EC watch | Calibration | Flush trigger |
 | --- | --- | --- | --- | --- |
 | Seedling | 5.8-6.2 | Low feed EC, gentle | Monthly | Runoff EC well above feed |
-| Veg | 5.8-6.2 | Rising EC means salt buildup | Monthly | Runoff EC > feed by >10% |
-| Flower | 5.8-6.2 | Hold feed and runoff within ~10% | Monthly | Runoff EC climbing day on day |
+| Veg | 5.8-6.2 | Rising EC means salt buildup | Monthly | Runoff EC running away above feed |
+| Flower | 5.8-6.2 | Watch runoff vs feed (beginner: avoid runaway salts) | Monthly | Runoff EC climbing day on day |
 
 *Coco and hydro figures. Soil runoff is a little more meaningful but still lags and is buffered. Set inflow every feed and do not feed out of range to fix a runoff number.*
 
@@ -3179,7 +3177,7 @@ This is the lookup table you return to at the plant. For each nutrient it gives 
 | Potassium (K) | Mobile | Old / lower | Burnt brown crispy tips and edges, centre stays green | Margins burn, unlike N's whole-leaf fade |
 | Magnesium (Mg) | Mobile | Old / lower | Interveinal yellowing, veins stay green | Starts mid-leaf and creeps in |
 | Calcium (Ca) | Immobile | New / top | Distorted, brown-spotted new growth | Deformity, not just colour |
-| Sulfur (S) | Immobile | New / top | Pale or yellow new leaves overall | Whole new leaf pales, not interveinal |
+| Sulfur (S) | Limited mobility | New / top | Pale or yellow new leaves overall | Whole new leaf pales, not interveinal |
 | Iron (Fe) | Immobile | New / top | Bright interveinal yellowing, sharp green veins | Very common with high pH; topmost leaves |
 
 *The leaf symptom atlas. Position first, then pattern, then the differentiator.*
@@ -3195,7 +3193,7 @@ Two of these look almost identical and trip up beginners constantly: magnesium a
 Diagnosis is a loop, not a guess. You observe the leaves, then confirm with two cheap meters before changing anything. Measuring the EC and pH of both what goes in and what runs out of the pot tells you whether the root zone is starving, overloaded or locked out.
 
 1. **Step 1, check input pH and EC** — Confirm the feed you are giving is actually in range for your medium: pH 5.8-6.2 in coco or hydro, around 6.5 in soil, at a stage-appropriate strength.
-2. **Step 2, measure runoff** — In coco, runoff EC should come out roughly equal to input. Runoff much higher than input (e.g. more than 200 PPM higher) means salt buildup and overfeeding. Pale plants with low runoff EC mean underfeeding.
+2. **Step 2, measure runoff** — In coco, runoff EC should come out roughly equal to input. Runoff rising ~0.3–0.5 mS/cm (or more) above feed for days means salt buildup and overfeeding. Pale plants with low runoff EC mean underfeeding.
 3. **Step 3, match the fix to the cause** — Lockout or salt buildup: flush with correctly pH'd plain or light water until runoff EC normalises, then resume. Underfeeding: raise EC gradually. True single deficiency: correct pH first, then supplement the specific nutrient.
 4. **Step 4, watch new growth** — Look at the new leaves, not the damaged ones, for recovery over 5-10 days. Old damage will not re-green.
 
@@ -3203,7 +3201,7 @@ Diagnosis is a loop, not a guess. You observe the leaves, then confirm with two 
 
 > **NOTE — Runoff EC is your salt gauge**
 >
-> Coco runoff EC should approximate input EC. Runoff more than about 200 PPM above input indicates salt is building up faster than the plant can use it, and a flush, not more feed, is the answer.
+> Coco runoff EC should approximate input EC. Runoff rising ~0.3–0.5 mS/cm above feed for days indicates salt is building up faster than the plant can use it, and a flush, not more feed, is the answer.
 
 ## Common traps and look-alikes that fool beginners
 
@@ -3345,19 +3343,19 @@ Bulking climate runs around 26 to 28 C day, with RH down to about 55 to 62% to l
 
 Pistils are a rough early signal but they lie. Trichomes are the true clock, and you read them with a cheap jeweler's loupe or pocket microscope.[^livingston-2020-trichome-maturation]
 
-Harvest when most trichomes have turned from clear to milky or cloudy, with a small fraction going amber. A common target is 80 to 90% milky with 5 to 15% amber. More clear or milky gives a more energetic, heady effect. More amber means THC is degrading toward CBN for a heavier, more sedative effect.[^livingston-2020-trichome-maturation]
+Harvest when most trichomes have turned from clear to milky or cloudy, with a small fraction going amber. A common target is 80 to 90% milky with 5 to 15% amber. More clear or milky gives a more energetic, heady effect. More amber means THC is degrading toward CBN for a heavier feel for some people — multi-factor, not a CBN switch.[^livingston-2020-trichome-maturation]
 
 Wait until pistils are mostly darkened and curled in (roughly 70% or more), then switch to checking trichomes for the real call. Use 60x or higher magnification on actual bud, not sugar leaves, and check several spots, since maturity varies across the plant. Do not harvest on the calendar alone: a week 9 strain can need week 10 depending on conditions and phenotype.
 
-> **Diagram.** Clear trichomes fade out as milky takes over and a little amber appears. Cut inside the window for a balanced effect, later for a more sedative one.[^livingston-2020-trichome-maturation]
+> **Diagram.** Clear trichomes fade out as milky takes over and a little amber appears. Cut inside the window as a maturity cue; later cuts often feel heavier, genotype still dominates.[^livingston-2020-trichome-maturation]
 
 | Signal | What you see | Readiness | Effect if cut now |
 | --- | --- | --- | --- |
 | Pistils | Still mostly white, sticking out | Too early | Thin, harsh, low potency |
 | Trichomes | Mostly clear | Too early | Underdeveloped |
-| Trichomes | 80-90% milky, 5% amber | Peak window (early) | Energetic, heady |
+| Trichomes | 80-90% milky, 5% amber | Peak window (early) | Common early-cut target |
 | Trichomes | Milky with 10-15% amber | Peak window (late) | Balanced |
-| Trichomes | 30%+ amber, leaves yellow | Over-ripe | Sedative, couch-lock |
+| Trichomes | 30%+ amber, leaves yellow | Over-ripe | Often denser/heavier feel; genotype still dominates |
 
 *Read trichomes on bud at 60x or more. Pistil colour is only a first hint.[^livingston-2020-trichome-maturation]*
 
@@ -3367,7 +3365,7 @@ Most first-grow failures in flower come from a few repeatable errors: light leak
 
 | Pitfall | The fix |
 | --- | --- |
-| Light leaks in the dark period | Tape over LED indicators and seal door gaps. Even a phone-screen of light, repeated, can cause hermies |
+| Light leaks in the dark period | Tape over LED indicators and seal door gaps. Bright or repeated night interruptions can stall flowering; genetics and multi-stress drive most herms |
 | Over-defoliating or doing it late | Stop heavy leaf removal after week 3. Leaves are the plant's sugar factory during bulking |
 | Humidity too high in late flower | Pull RH down to 40-50% from week 7. Dense buds plus 60%+ RH invites bud rot (botrytis) |
 | Nutrient burn | Drop feed EC and give enough water volume per feed. Burnt tips mean the feed is too strong |
@@ -3388,7 +3386,7 @@ A typical photoperiod indoor grow runs about 8 to 10 weeks of flower on top of v
 | 1-2 | Stretch | Doubling in height, first pistils | 800-900 | 27 C / 23 C | 65% / 1.0 | Lollipop, defoliate |
 | 3-4 | Bud set | Stretch ends, budlets form | 900 | 27 C / 22 C | 60% / 1.1 | Stop defoliating |
 | 5-7 | Bulking | Buds swell fastest, frost builds | 1000-1100 | 27 C / 22 C | 58% / 1.2 | Peak feed, push light |
-| 8-10 | Ripening | Pistils darken, trichomes go milky | 900 | 24 C / 20 C | 45% / 1.2 | Lower RH, flush, read trichomes |
+| 8-10 | Ripening | Pistils darken, trichomes go milky | 900 | 24 C / 20 C | 45% / 1.2 | Lower RH, ease EC, read trichomes |
 
 *A week-by-week map, not a rulebook. Let the trichomes have the final word.*
 
@@ -3427,6 +3425,10 @@ _Plant health · Pests · ~18 min read_
 
 ## What this guide is (and is not)
 
+> **NOTE — Jurisdiction**
+>
+> Jurisdiction note: named biocontrol agents and rates are planning examples only. Confirm legal status and supplier availability in your country (NZ readers: check HSNO/MPI before release).
+
 This is a plain-language field guide to identifying and controlling the eight pest groups that most commonly attack cannabis: spider mites, russet and broad mites, thrips, fungus gnats, aphids and root aphids, whitefly, and caterpillars. It tells you what each pest looks like, how fast it breeds, how to monitor for it, and how to treat it with bugs (biological controls) and sprays.
 
 It is the ‘who’s who’ companion to the IPM SOP, which is the separate decision process that tells you _when_ to act and which lever to pull. Read this guide to recognise the enemy. Read the [IPM SOP](ipm-sop.html) to run the program.
@@ -3450,7 +3452,7 @@ A handful of words appear throughout this guide and the IPM SOP, so define them 
 
 **Life cycle / generation time** — Egg to egg-laying adult. Warm dry rooms shorten this to under a week for mites, which is why a small spot becomes a crop-wide problem fast.
 
-**Loupe / scope** — A 30x hand loupe finds spider mites. Russet and broad mites are smaller than a millimetre and need 60-100x magnification to see at all.
+**Loupe / scope** — A 30x hand loupe finds spider mites. Russet and broad mites (confirm at 60–100× before treating; symptoms overlap with heat tacoing and tip burn) are smaller than a millimetre and need 60-100x magnification to see at all.
 
 **Frass, honeydew, stippling** — Pest droppings, the sticky sugar excretion sap-suckers leave behind, and the fine pale feeding speckles on a leaf, respectively.
 
@@ -3462,7 +3464,7 @@ A handful of words appear throughout this guide and the IPM SOP, so define them 
 
 These four feed on leaves and stems by piercing cells and sucking sap, so they share a look: pale stippling, distortion and loss of vigour[^pulkoski-burrack-2023-piercing-sucking-hemp]. Telling them apart is about the secondary signs each one leaves.
 
-- **Spider mites:** leaf-underside stippling plus fine webbing. The cycle runs as fast as 3 days at 27C / ~20% RH, and one female can lay up to ~200 eggs.
+- **Spider mites:** leaf-underside stippling plus fine webbing. Under hot, dry conditions egg-to-adult often finishes in about a week (sometimes under two weeks); females often lay on the order of ~100 eggs over life (exact times depend on temperature and host).
 - **Thrips:** silvery rasping streaks plus tiny black frass dots. They drop to the medium to pupate, so leaf sprays alone miss a whole life stage.
 - **Aphids:** soft-bodied clusters on new growth, cast white skins, honeydew that grows black sooty mould. They can give live birth, so buildup is explosive.
 - **Whitefly:** tiny white moth-like adults that flush up in a cloud when disturbed, with uniform yellowing and lower-canopy decline.
@@ -3494,7 +3496,7 @@ Fungus gnat larvae weaken plants and wound roots, and the damage they cause inte
 
 You cannot control what you do not measure, and early detection is the single biggest lever you have. Run a fixed weekly scouting walk on the same day, inspecting leaf undersides, growing tips, flowers and the root zone, and step up to twice weekly as rooms warm up.
 
-Hang yellow sticky cards at canopy height for thrips, whitefly and fungus-gnat adults at roughly one card per 1,000 square feet as a minimum, with more cards giving a better signal. Place fungus-gnat cards low, near the medium surface, where the adults fly. Record the count on each card every week so you track the trend, not just the snapshot.
+Hang yellow sticky cards at canopy height for thrips, whitefly and fungus-gnat adults at a mapped density (example: ~1 card / 100 m² or ~1,000 sq ft) as a starting point, with more cards giving a better signal. Place fungus-gnat cards low, near the medium surface, where the adults fly. Record the count on each card every week so you track the trend, not just the snapshot.
 
 - Scout weekly on a fixed day, spot-check twice weekly when temperatures and pest development rise
 - Yellow sticky cards: minimum ~1 per 1,000 sq ft, low at the medium for fungus gnats, canopy height for thrips/whitefly
@@ -3816,7 +3818,7 @@ The brain only ever picks one of three outcomes, driven by **confidence** and **
 
 > **Diagram.** The whole decision logic collapses to three branches, and all three are bounded by the same promise.
 
-It waters a bit when the brain is confident and there is room to fill. It waits or gives a small safe sip when it is not sure, rather than committing to a full shot. It asks a human when it is genuinely stuck, when the signals contradict each other and it cannot resolve them. The whole logic is fenced in by one rule: **never flood, never starve**.
+It waters a bit when the brain is confident and there is room to fill. It waits or gives a small safe sip when it is not sure, rather than committing to a full shot. It asks a human when it is genuinely stuck, when the signals contradict each other and it cannot resolve them. The whole logic is fenced in by one rule: **prefer temporary mild deficit over flooding when uncertain; hard-floor emergency VWC still required**.
 
 > **KEY — The golden rule**
 >
@@ -3893,7 +3895,7 @@ A single flower room can generate hundreds of thousands of datapoints a week[^gr
 
 > **KEY — The one-line reframe**
 >
-> You don't have a data problem. You have a **signal-to-noise problem**. Most grow-room ‘alerts’, perhaps 70% in a busy room, are noise: transients that fix themselves before any action would have mattered.
+> You don't have a data problem. You have a **signal-to-noise problem**. Most grow-room ‘alerts’, are often noise until tuned: transients that fix themselves before any action would have mattered.
 
 ## Key terms, defined once
 
@@ -3976,8 +3978,8 @@ Control limits are computed from the process's own history, conventionally the m
 
 > **NOTE — Beyond the limits: the Western Electric rules**
 >
-> - **7+ points** all trending the same way: a real drift, even inside the limits
-> - **8+ points** on one side of the mean: the process has shifted
+> - **Nelson trend (often 6 points)** all trending the same way: a real drift, even inside the limits
+> - **Western Electric: 8 points** on one side of the mean: the process has shifted
 > - Abnormal **hugging of the mean**: often a sign the data is being over-smoothed or faked
 
 These pattern rules catch real shifts that a single out-of-limits point would miss, and they do it without raising false alarms on ordinary noise[^western-electric-rules-anhoj]. The lesson is blunt: the over-reactive grower, nudging a stable process all day, is usually the room's single biggest noise source.
@@ -4095,7 +4097,7 @@ A **closed loop** means the output feeds back to the input: what the plant tells
 
 > **KEY — What 'closed' buys you**
 >
-> A mature loop tells you whole-room health and whether to act in under five seconds, and it stays quiet when nothing needs you. Silence is a feature, not a fault.
+> A mature loop tells you whole-room health and whether to act quickly when the dashboard is well designed, and it stays quiet when nothing needs you. Silence is a feature, not a fault.
 
 ## Key terms, defined once
 
@@ -4138,7 +4140,7 @@ Everything you can do sorts into four **balances** you are always disturbing: en
 
 ## Reading the signal, then reading the plant
 
-You have to _see_ the room's response without being fooled, then turn it into meaning. Every measurement is signal plus noise, and in practice around **70% of raw alerts are noise** that must be rejected before they ever reach a decision[^isa-18-2-alarm-mgmt].
+You have to _see_ the room's response without being fooled, then turn it into meaning. Every measurement is signal plus noise, and in practice many **raw alerts are noise** that must be rejected before they ever reach a decision[^isa-18-2-alarm-mgmt].
 
 Reading plant state is the leap from ‘VWC fell 12% overnight’ (a number) to ‘the plant is steering generative as intended, no action needed’ or ‘reduce dryback 3% tonight or expect tip burn in about 48 hours’ (a decision). The goal is to infer the plant, not just display the room.
 
@@ -4257,7 +4259,7 @@ This paper makes the case for a different design centre, which we will call **Pl
 
 > **NOTE — What this paper is, and isn't**
 >
-> - This is an **operational and product-design guide**, not a horticulture-science paper. Most claims here are design opinions backed by worked examples.
+> - This is an **operational and product-design guide**, not a horticulture-science paper. Lead-time examples are illustrative UX, not validated predictions. Most claims here are design opinions backed by worked examples.
 > - The aim is a screen that **infers** the plant's state, **predicts** trouble days early, and **prescribes** the next step with its evidence and confidence attached.
 > - The one-line thesis: _a cockpit full of gauges is not a co-pilot._
 
@@ -4380,7 +4382,7 @@ Colour and layout do real work here. A calm dashboard leans on pre-attentive cue
 
 > **KEY — A sample advisory, in full**
 >
-> ‘Reduce dryback target 3% in Room 3 (Day 24)… Tip burn likely within ~48h if unaddressed. Confidence: high. _[Show evidence]_’, and the evidence expands to the fused signals, the baseline it violated, and the historical precedent. The old dashboard was 100% Zone 4. The new one leads with Zones 1–3 and keeps 4 in the basement.
+> ‘Reduce dryback target 3% in Room 3 (Day 24)… Tip burn likely soon (illustrative) if unaddressed. Confidence: high. _[Show evidence]_’, and the evidence expands to the fused signals, the baseline it violated, and the historical precedent. The old dashboard was 100% Zone 4. The new one leads with Zones 1–3 and keeps 4 in the basement.
 
 ## The adoption path: crawl, walk, run
 
@@ -4743,8 +4745,8 @@ Crop steering splits each lights-on day into four phases that control how the pl
 
 > **KEY — Vegetative vs generative steering**
 >
-> - **Vegetative** steering uses longer drybacks and lower EC to encourage root and leaf growth.
-> - **Generative** steering uses shorter drybacks and higher EC to push flowering.[^caplan-2019-drought-cannabis]
+> - **Vegetative** steering uses smaller drybacks and moderate EC to encourage root and leaf growth.
+> - **Generative** steering uses larger controlled drybacks and/or higher root-zone EC to push flowering.[^caplan-2019-drought-cannabis]
 > - The same P0–P3 framework runs both. Only the dryback targets and EC change.
 
 > **Diagram.** The cycle loops every day. P3 hands back to P0 overnight, and lights-on restarts the ramp.
@@ -4894,7 +4896,7 @@ A **clone** is a cutting taken from a living plant that grows its own roots and 
 
 Cloning gives every plant in a batch the same genetics as a known, proven plant called the **mother**. Same genetics means the same growth speed, the same yield and the same chemistry, so the whole grow runs predictable. That predictability is why nearly every commercial grow clones rather than seeds.
 
-A well-run propagation room roots clones at 90 to 95 percent success or better[^caplan-2018-stem-cuttings], with cuttings ready to transplant in about 10 to 14 days[^kim-2025-light-temp-rh]. This guide assumes you have never taken a cutting before and defines every term as it appears.
+Well-run propagation rooms often root clones at ~90 percent or better as an operational target[^caplan-2018-stem-cuttings], with cuttings ready to transplant in about 10 to 14 days[^kim-2025-light-temp-rh]. This guide assumes you have never taken a cutting before and defines every term as it appears.
 
 > **Diagram.** The whole job in five steps. Roots appear between day 7 and day 14, and the clone is ready to move on at around two weeks.[^kim-2025-light-temp-rh]
 
@@ -4924,19 +4926,19 @@ Cloning has its own jargon, and most beginner mistakes come from not knowing wha
 
 A good clone starts with a good shoot. Pick upright shoots from the upper-to-mid canopy that are at least 3 mm thick and 15 cm long. Thicker, well-lit shoots carry more stored energy and root faster than thin, shaded interior growth[^esposito-2026-morphology-predictors]. Shoot thickness and leaf colour reliably predict how well a cutting will root[^esposito-2026-morphology-predictors].
 
-Water the mother with **half-strength** nutrients the day before. This lowers the pressure inside the leaves and stems (their _turgor_) so the stems are less brittle and snap less when you cut them. Take cuttings at the start of the light cycle with a sterile blade, making a clean 45-degree cut just below a node, and drop each cutting straight into a holding jug of dilute solution so the cut end never sits in air.
+Water the mother thoroughly the day before so cuttings are fully hydrated and turgid. Avoid drought-stressed mothers; wilted tissue roots poorly. ht cycle with a sterile blade, making a clean 45-degree cut just below a node, and drop each cutting straight into a holding jug of dilute solution so the cut end never sits in air.
 
 > **TIP — Why a 45° cut, and why no air**
 >
 > - A **45° cut** exposes more surface area than a flat cut, so more cells can turn into roots.
-> - If the cut end sits in air, the stem draws in an **air embolism** (an air bubble) that blocks water uptake. Keep the end wet from the moment it is cut.
+> - If the cut end sits in air, the stem draws in an **dried cut that stalls water uptake. ment it is cut.
 > - Sterilize the blade between mother plants so you don't carry disease from one to the next.[^punja-2023-fusarium-pythium-biocontrol]
 
 > **Diagram.** Upright shoots from the well-lit upper-to-mid canopy root most reliably. Weak shaded interior growth lags well behind.[^esposito-2026-morphology-predictors]
 
 ## Rooting hormone and the cube
 
-Cuttings have no roots yet, so a **rooting hormone** pushes the stem to grow them. The active ingredient is usually **IBA (indole-3-butyric acid)**, a synthetic version of a natural plant root hormone called an auxin[^landis-2022-iba-hemp-i3]. Inside the stem the plant converts IBA into the active rooting auxin (IAA), which is what triggers new roots[^fattorini-2017-iba-to-iaa]. It sells as a gel or a liquid.
+Cuttings have no roots yet, so a **rooting hormone** pushes the stem to grow them. The active ingredient is usually **IBA (indole-3-butyric acid)**, a an auxin used in rooting products (often converted to IAA in the plant)[^landis-2022-iba-hemp-i3]. Inside the stem the plant converts IBA into the active rooting auxin (IAA), which is what triggers new roots[^fattorini-2017-iba-to-iaa]. It sells as a gel or a liquid.
 
 Make a fresh 45-degree cut right before sticking to expose new tissue, coat the bottom 1–2 cm of stem in rooting gel, and insert it 1.5–2.5 cm into a pre-soaked cube. Firm it just enough that the cube lifts with the stem when you tug gently, the _lift test_, but don't crush the cube.
 
@@ -4982,7 +4984,7 @@ Cloning is mostly leaving the tray alone at the right times and intervening at t
 
 **Days 1–4:** vents fully closed, do not touch. The trapped humidity makes the cutting close its leaf pores and focus on rooting. **Days 5–7:** the first watering usually comes due. Judge it by tray weight. Irrigate when the tray has dropped 40–50% below its Day 0 weight, and never let it fall below 30% loss, because a permanently soggy cube rots[^msu-moisture-propagation]. The cube fading from dark to light brown is the same signal.
 
-Clone feed should run an EC of about 1.5 mS/cm at pH 5.5–6.0, with the water at 20–22°C. From day 7 start a daily **burp**, begin propping the vents open, and lift one edge cube to look for emerging white roots. On day 11 run the hardening-off test: lift the domes, wait 10 minutes, and if fewer than 5 clones per tray wilt, leave the dome off; if 5 or more wilt, re-dome and retry tomorrow. Transplant at around day 14.
+Clone feed often starts milder (~0.6–1.2 mS/cm, product-dependent) and rises only after roots appear; ~1.5 mS/cm can burn soft cuttings at pH 5.5–6.0, with the water at 20–22°C. From day 7 start a daily **burp**, begin propping the vents open, and lift one edge cube to look for emerging white roots. On day 11 run the hardening-off test: lift the domes, wait 10 minutes, and if fewer than 5 clones per tray wilt, leave the dome off; if 5 or more wilt, re-dome and retry tomorrow. Transplant at around day 14.
 
 > **Diagram.** How far the dome vents are open by day. Closed at the start protects rootless cuttings; fully open by the end hardens them for room air.
 
@@ -5105,7 +5107,7 @@ The reason is chemistry. Part A is loaded with **calcium**. Part B carries **sul
 
 ## What it takes to dissolve 11 kg in 50 L
 
-227 grams of salt per litre is a lot, roughly four to five times saltier than seawater. Getting it fully into solution isn't automatic. Two bits of physics work against you.
+227 grams of salt per litre is a lot, roughly six to seven times saltier than seawater. Getting it fully into solution isn't automatic. Two bits of physics work against you.
 
 - **Dissolving cools the water.** Most of these salts pull heat _in_ as they dissolve (endothermic), so the tank gets colder as you add powder, and colder water dissolves less[^libretexts-temperature-solubility]. Hot water and a paddle beat that downward spiral.
 - **Cold or still water saturates.** Without heat and vigorous mixing, you hit the saturation limit and the last of the bag sits as grit on the bottom, leaving an underdosed, inconsistent stock.
@@ -5277,7 +5279,7 @@ High-light setups demand matched CO2. On ambient air (around 400–600 ppm CO2),
 
 A representative indoor cycle runs about 14 weeks (~98 days) and ramps light stage by stage[^moher-2022-cannabis-vegetative-light-intensity-morphology]. Clones start soft, veg climbs steadily, and after the flip to flower the plant rebuilds toward its peak before tapering at the end.
 
-The 12/12 flip cuts total daily light (DLI) by about 28% even at the same PPFD, simply because the lights are on fewer hours[^rodriguez-morrison-2021-cannabis-light-intensity-yield]. Plan for that dip rather than panicking and over-cranking the dimmer.
+The 12/12 flip cuts total daily light (DLI) by about one-third (~33%) even at the same PPFD, simply because the lights are on fewer hours[^rodriguez-morrison-2021-cannabis-light-intensity-yield]. Plan for that dip rather than panicking and over-cranking the dimmer.
 
 > **Diagram.** DLI climbs through veg, dips at the flip (fewer light hours), then climbs again as flower PPFD rebuilds.[^moher-2022-cannabis-vegetative-light-intensity-morphology]
 
@@ -5575,7 +5577,7 @@ Training and defoliation are real yield and quality levers, but they are not mag
 
 > **Diagram.** Yield and quality typically climb across the first three runs of a cultivar as you learn how it stretches and how much canopy work it actually wants.
 
-Good planning of genetics and spacing is one of the cheapest gains available. Choosing the right plant count and layout can lift the bottom line by roughly 15–30% with no extra overhead, because uniformity and light interception both improve[^danziger-2022-planting-density][^anthony-2020-training-light-interception].
+Good planning of genetics and spacing is one of the cheapest gains available. Choosing the right plant count and layout can move yield per area and uniformity in ways that often matter more than expensive gear with no extra overhead, because uniformity and light interception both improve[^danziger-2022-planting-density][^anthony-2020-training-light-interception].
 
 - Expect to refine over about 3 runs of a cultivar before you hit its yield/quality sweet spot.
 - Good genetic planning and spacing can be worth 15–30% to the bottom line at no extra cost[^danziger-2022-planting-density].
@@ -5613,6 +5615,10 @@ _Plant health · IPM · ~14 min read_
 > A plain-language standard operating procedure for keeping pests and disease out of an indoor cannabis grow. How to scout, when to act, how to use good bugs and sprays, and how to keep records that hold up.
 
 ## What IPM is and why a grow lives or dies by it
+
+> **NOTE — Jurisdiction**
+>
+> Jurisdiction note: product legality, REI/PHI, and organism status are local (e.g. NZ ACVM/HSNO/WorkSafe vs US EPA WPS). Verify current law and labels before any spray or release.
 
 Integrated Pest Management (IPM) is the routine of catching pests and diseases before they spread, using the lightest control that works and escalating only when you have to. It is not one spray or one bug release. It is a loop: evaluate, decide, control, repeat, run across every room from mothers and clones through veg and flower.
 
@@ -5662,9 +5668,9 @@ Work a fixed route every time: scout the tables and substrate for frass and debr
 
 ## Action thresholds: knowing exactly when to act
 
-A threshold turns observation into a decision so nobody has to guess. A workable two-tier model reflects a common commercial action approach[^punja-2021-emerging-diseases-cannabis]. At the first sign of a single mite, aphid, or similar pest, assume there are more: scout the entire room, begin exclusion measures (limit who enters), and line up biological controls. Once more than 3 percent of a room is affected, escalate to approved pesticide applications, subject to growth stage and management sign-off.
+A threshold turns observation into a decision so nobody has to guess. A workable two-tier model reflects a common commercial action approach[^punja-2021-emerging-diseases-cannabis]. At the first sign of a single mite, aphid, or similar pest, assume there are more: scout the entire room, begin exclusion measures (limit who enters), and line up biological controls. As an example planning default, once more than 3 percent of a room is affected, escalate to approved pesticide (zero-tolerance organisms override any percentage) applications, subject to growth stage and management sign-off.
 
-Growth stage is itself a hard gate. In a regulated soilless facility, plants are treated only from mothering through day 21 of flower, with no foliar treatment after buds form (a light antimicrobial rinse may be the only exception)[^scott-punja-2021-powdery-mildew-management]. For a serious infestation that appears after day 21 of flower, pull and destroy the affected plants rather than spray.
+Growth stage is itself a hard gate. In a regulated soilless facility, plants are treated only through early flower in many residue-aware facilities (example: day 21); your PHI and QA SOP set the real cutoff (a light antimicrobial rinse may be the only exception)[^scott-punja-2021-powdery-mildew-management]. For a serious infestation that appears after day 21 of flower, pull and destroy the affected plants rather than spray.
 
 > **Diagram.** Each rung is a defined response. The level of pressure, not a gut feeling, decides which rung you are on.
 
@@ -5676,7 +5682,7 @@ Growth stage is itself a hard gate. In a regulated soilless facility, plants are
 
 ## Biological controls: putting good bugs to work
 
-Biocontrol releases predators that hunt your pests. They are harmless to the cannabis plant at every stage, and if they run out of prey they simply die off and fall away. The job is to match the predator to the pest and the conditions.
+Biocontrol releases predators that hunt your pests when legal in your jurisdiction. They usually leave no chemical residue on the cannabis plant at every stage, and if they run out of prey they simply die off and fall away. The job is to match the predator to the pest and the conditions.
 
 _Amblyseius swirskii_ is a generalist that eats thrips larvae, whitefly, and broad mites and works best at 77 to 86 °F with humidity above 70 percent[^elmoghazy-2024-swirskii-functional-response]. _Phytoseiulus persimilis_ is a spider-mite specialist that eats up to 5 adults or 20 eggs a day but needs cooler, humid conditions[^koppert-persimilis-tech]. _Neoseiulus californicus_ is the tougher spider-mite option that stays active across 60 to 90 °F[^mumtaz-2023-californicus-functional-response]. _Stratiolaelaps scimitus_ is a soil-dwelling mite for fungus gnat larvae and thrips pupae, best deployed when pest pressure is still low[^punja-2021-emerging-diseases-cannabis].
 
@@ -5686,13 +5692,13 @@ _Amblyseius swirskii_ is a generalist that eats thrips larvae, whitefly, and bro
 
 > **NOTE — Good bugs self-limit**
 >
-> Predators are harmless to the plant and to people. When the prey runs out they die off on their own. There is no residue and no withholding period.
+> Predatory arthropods usually leave no chemical residue, but must be legal and compatible. When the prey runs out they die off on their own. There is no residue and no withholding period.
 
 ## Spray rotation and safe application
 
 When thresholds force a spray, the rules are about residue safety and effective coverage, not improvisation. Use only products approved for cannabis in your jurisdiction, always follow the label dilution and withholding periods, and never freelance with off-list nutrients or supplements that could fail residue testing[^scott-punja-2021-powdery-mildew-management].
 
-A preventative program can be as simple as a weekly foliar of an approved wash plus sulphur (1 to 3 tablespoons per litre, ideally 3, no more than once every 2 weeks, veg and mothers only), stepping up to 3 times a week curatively at low pest levels[^scott-punja-2021-powdery-mildew-management]. Rotate chemistries and tank-mix only combinations the labels allow, adding products in the label-specified order. Spray when the media is fully saturated so the product is not pulled into the leaves and burns them.
+A preventative program can be as simple as a weekly foliar of an approved wash plus sulphur (1 only at the current registered product label rate and REI/PHI if lawful (never kitchen tablespoon rates; veg and mothers only when residues allow), stepping up to 3 times a week curatively at low pest levels[^scott-punja-2021-powdery-mildew-management]. Rotate chemistries and tank-mix only combinations the labels allow, adding products in the label-specified order. Avoid spraying under high light, high VPD, or drought stress so the product is not forced onto into the leaves and burns them.
 
 > **Diagram.** Coverage is everything. Use a fan tip and a dedicated sprayer per product to avoid cross-contamination.
 
@@ -5741,7 +5747,7 @@ The frequent failures are predictable: skipping scouting until damage is visible
 
 > **Diagram.**
 
-Avoid airborne fumigators entirely in a flower facility. They can drift into bud and compromise the crop[^scott-punja-2021-powdery-mildew-management]. Check sprayers for metallic hose clamps that can rust and fail heavy-metals testing[^punja-2021-emerging-diseases-cannabis].
+Avoid airborne fumigators entirely in a flower facility. They can drift into bud and compromise the crop[^scott-punja-2021-powdery-mildew-management]. Check sprayers for corroding product-contact or fertigation hardware that can contribute to metals contamination in some cases[^punja-2021-emerging-diseases-cannabis].
 
 > **Diagram.** A mature program is mostly quiet, steady prevention. Curative spraying is the rare exception, not the routine.
 
@@ -5774,7 +5780,7 @@ _Post-harvest · Process · ~14 min read_
 
 Post-harvest is everything that happens after the plant is cut down: drying, trimming, curing and storage. Weeks of careful growing can be ruined in a few days here. Dry too fast or too dry and you lose smell and weight. Dry too slow or too wet and mould takes hold.
 
-Aim for a narrow safe zone: dry enough that mould cannot grow, but not so dry that the smell and weight evaporate away. Done well, simply dialling in this stage is reported to add 5-10% to final yield, because most growers are accidentally over-drying and losing sellable weight.[^aroya-drying-water-activity-guide]
+Aim for a narrow safe zone: dry enough that mould cannot grow, but not so dry that the smell and weight evaporate away. Done well, dialling in this stage often recovers sellable mass versus bone-dry flower; vendor education sometimes cites ~5-10% to final yield, because most growers are accidentally over-drying and losing sellable weight.[^aroya-drying-water-activity-guide]
 
 > **Diagram.** The five steps that turn a living plant into a finished, stable product. The numbers on each box are what you steer toward, explained section by section below.
 
@@ -5821,7 +5827,7 @@ The clearest signal is the trichomes. Under a loupe they shift from clear, to mi
 
 Cut plants whole and hang them to dry, rather than stripping the buds first. Cutters free each plant from the lower two layers of trellis netting (the support grid the plant grew through), leave the top layer on for support, then cut the main stalk at its base.
 
-Before anything is hung, weigh every bin to record the **wet weight**, the starting weight. Compared against the final dry weight later, this gives the dry-to-wet ratio for each genetic, which lands around 10% in practice (a real example batch came in at 10.46%). That tells you how much of the harvested mass is water.
+Before anything is hung, weigh every bin to record the **wet weight**, the starting weight. Compared against the final dry weight later, this gives the dry-to-wet ratio for each genetic, which is often ~10% of whole-plant wet weight in many rooms (example batch came in at 10.46%). That tells you how much of the harvested mass is water.
 
 1. **Free the plant** — Cut a circle through the bottom and middle trellis layers. Leave the top layer attached for support.
 2. **Cut the stalk** — Sever the main stalk at its base so the whole plant comes away in one piece.
@@ -5845,7 +5851,7 @@ Going slow and cool protects the terpenes, which evaporate in heat and dry air, 
 
 ## Water activity: the number that controls mould and yield
 
-Water activity is the safe-zone gauge for cannabis. Mould and yeast can grow at 0.70 aw and above, pathogenic bacteria at 0.85, and essentially nothing grows below about 0.60 aw.[^aqualab-microbial-water-activity] That sets the ceiling. Quality sets the floor: below 0.55 aw the terpenes dry up and quality falls off.
+Water activity is the safe-zone gauge for cannabis. Mould and yeast can grow at 0.70 aw and above, pathogenic bacteria at 0.85, and risk rises sharply toward ~0.70 aw and above; below ~0.55 quality often suffers even as microbes slow. ASTM’s 0.55–0.65 window is the practical target for dried flower.[^aqualab-microbial-water-activity] That sets the ceiling. Quality sets the floor: below 0.55 aw the terpenes dry up and quality falls off.
 
 Together that leaves a sweet spot of 0.55-0.65 aw, the exact range written into the ASTM D8197 standard for dry cannabis flower.[^astm-d8197-water-activity] Start sample testing around day 7-8, and take plants down when the batch averages 0.60-0.62 aw, leaving a safety margin below the 0.65 mould line.
 
@@ -5869,7 +5875,7 @@ Never touch the flower itself. Handling knocks off the trichomes that carry pote
 - Never touch the flower. Handling damages trichomes
 - Remove fan leaves (large, few trichomes) by hand, then scissor off sugar leaves
 - Clean scissors in 71% alcohol when resin builds up
-- Trimming itself lowers water activity, so flower that took down at 0.62 aw often reads 0.58-0.60 aw once trimmed
+- After dry-trim, re-check aw — handling and leaf removal can change the reading, so do not assume the hang-dry number still holds
 
 |  | Wet trim | Dry trim (this guide) |
 | --- | --- | --- |
@@ -5919,7 +5925,7 @@ Expect roughly 10-14 days of hang-drying plus several more days of curing before
 > **KEY — Three honest truths**
 >
 > 1. **It takes weeks, not days.** Plan two-to-three weeks for the whole post-harvest stage and do not rush the dry.
-> 2. **The payoff is real.** Dialling in drying and curing is reported to lift yield 5-10%, mostly by no longer over-drying.[^aroya-drying-water-activity-guide]
+> 2. **The payoff is real.** Dialling in drying and curing can lift sellable weight when you stop over-drying (vendor ~5-10% figures are illustrative).[^aroya-drying-water-activity-guide]
 > 3. **Genetics matter.** Drying and curing are strain-dependent. Dense and fluffy flowers finish at slightly different aw points, so log every batch.[^birenboim-2024-cultivar-drying]
 
 Record the aw, RH, dates and outcomes for every genetic so good results are repeatable. The instrument is a guide, not a boss: inside the safe aw zone, trust smell and feel for the final call. When you are ready, read the [mould-risk](mould-risk.html) guide for what to do if a batch slips above the line, and the [nutrient-mixing](nutrient-mixing-athena.html) guide for the feed side of quality.
@@ -5949,7 +5955,7 @@ _Facility · GMP · ~18 min read_
 
 GMP stands for **Good Manufacturing Practice**: a written, audited system that proves a product is exactly what its label says and that nothing harmful rode along. A GMP hash lab turns cannabis biomass into purified resin concentrates (bubble hash, rosin, live resin, distillate) under tight contamination control.
 
-The same physics that concentrate the cannabinoids you want also concentrate the contaminants you don't. Extraction multiplies both the good and the bad roughly five- to ten-fold[^ehp-cannabis-contaminants-2019], so a pesticide or mould level that looked fine on the raw flower can fail badly once it is squeezed into a gram of resin. Every step in the building is designed to answer one question: _can we prove this material is safe and correctly labelled?_ If yes, it moves forward. If not, it holds.
+The same physics that concentrate the cannabinoids you want also concentrate the contaminants you don't. Extraction can concentrate both the good and the bad (often several-fold when mass yield is low) roughly five- to ten-fold[^ehp-cannabis-contaminants-2019], so a pesticide or mould level that looked fine on the raw flower can fail badly once it is squeezed into a gram of resin. Every step in the building is designed to answer one question: _can we prove this material is safe and correctly labelled?_ If yes, it moves forward. If not, it holds.
 
 Two rule-sets do most of the governing. **EU-GMP Annex 1** sets the cleanroom classifications and the contamination-control strategy, and the U.S. **cGMP rules in 21 CFR 210/211** set the production controls, the records, and the authority of the quality unit to release product[^ecfr-21cfr211]. This paper is a reference architecture, not legal advice. The exact limits and grades vary by jurisdiction.
 
@@ -6161,6 +6167,10 @@ _Facility · Design · ~14 min read_
 
 ## What 3D facility planning is (and why it beats a paper plan)
 
+> **NOTE — Jurisdiction**
+>
+> Jurisdiction note: security and egress examples may cite US (WAC/IBC) rules for illustration. Use the code and licence rules of the jurisdiction that will inspect you.
+
 A grow facility is a building full of rooms, equipment, airflow paths and security cameras. The usual way to plan one, a flat top-down architect's drawing, can only really be read by experts. A **3D model** is the same plan rebuilt on your screen as a thing you can rotate, zoom into and click on, so investors, electricians, inspectors and staff all understand it instantly.
 
 Describe the building as data instead of drawing it. You write a data file, a plain list of rooms and their dimensions, and let code draw the building from that data. Re-planning the facility for the next harvest then becomes nothing more than editing some numbers. The worked example throughout this paper is a real two-storey licensed cultivation facility measuring 14.8 by 16.7 metres.
@@ -6362,7 +6372,7 @@ _Feed · Rockwool steering · ~18 min read_
 
 ## Why rockwool rewards and punishes you
 
-Rockwool (stone wool) is spun rock fibre. It holds no nutrients of its own and reacts with nothing you feed it, so **100% of what you put in goes straight to the plant**[^grodan-irrigation-medicinal]. That makes it the most precise substrate you can steer with. It also means the block has no buffer: get the water wrong and the plant feels it the same hour.
+Rockwool (stone wool) is spun rock fibre. It holds no nutrients of its own and reacts with nothing you feed it, so **root-zone EC is essentially the EC of the pore water (unused feed still leaves as runoff or concentrates on dryback)**[^grodan-irrigation-medicinal]. That makes it the most precise substrate you can steer with. It also means the block has no buffer: get the water wrong and the plant feels it the same hour.
 
 This guide is only about the water and salt in the block, the part most growers run on feel. By the end you will know exactly what a water-content percentage is, how to calculate a dryback, the minimum you must feed, the point past which a dried-out block cannot be saved by the dripper, and how to hold the slab in the right zone for the whole grow using sensors and an irrigation controller, never a hose.
 
@@ -6634,7 +6644,7 @@ Adherence is a design problem, not a character problem. Decades of checklist and
 
 - **Cut the friction.** Get each check under about 30 seconds, mobile, one tap. Every field you remove raises completion; auto-filling what the system already knows is the single biggest win[^digital-checklist-adherence].
 - **Short lists at pause points.** Five to nine killer items per list, one screen, run at a trigger moment, not one giant sheet[^gawande-checklist-manifesto].
-- **Fixed time, one named owner.** Tie each check to a person and a moment ('at lights-on the AM tech does X'); this if-then framing lifts follow-through two to three fold[^gollwitzer-implementation-intentions]. Name a backup for the owner-absent case.
+- **Fixed time, one named owner.** Tie each check to a person and a moment ('at lights-on the AM tech does X'); this if-then framing has a medium positive effect on goal attainment (meta-analytic d≈0.65)[^gollwitzer-implementation-intentions]. Name a backup for the owner-absent case.
 - **Close the loop.** Show the worker their data was used and acted on. The top cause of disengaged faking is submitting into a void where nothing ever happens.
 - **Make completion visible.** A team board of who did and did not do their checks lifts adherence sharply, as long as it reads as shared transparency, not surveillance.
 
@@ -6719,7 +6729,7 @@ Two failure modes remain even with a great list: it gets skipped, or it gets fak
 Because the data entry is near zero but the system stamps who, where, when and what on every action, you get the easiest-to-fill check and a defensible record from the same design.
 
 - **The record is automatic.** Long-term statistics hold every environmental, light and irrigation reading as the daily log[^ha-template-alert-statistics], the human items carry a timestamp, identity and any exception photo.
-- **Roll up for compliance.** Feed the daily fields into per-lot records (inputs, conditions, deviations, corrective actions) for a seed-to-harvest trail under GACP and GMP[^who-gacp-2003][^eu-gmp-annex1].
+- **Roll up for compliance.** Feed the daily fields into per-lot records (inputs, conditions, deviations, corrective actions) for operational seed-to-harvest discipline (regulated GACP/GMP still needs validated systems)[^who-gacp-2003][^eu-gmp-annex1].
 - **Trend, don't just file.** Set alert and action limits from your own history and review them weekly so drift is caught before it becomes a deviation[^eu-gmp-annex1]. Sanitation, hygiene and pest logs follow the same record discipline[^haccp-prerequisite-ssop][^globalgap-cpcc].
 
 1. **Make the list** — One local_todo list = today's sheet, seeded each morning with the day's items.
@@ -6760,13 +6770,17 @@ _Plant health · PPE & biosecurity · ~17 min read_
 
 ## Two jobs, one suit
 
+> **NOTE — Jurisdiction**
+>
+> Jurisdiction note: PPE duties and HSWA wording below are NZ-oriented; other jurisdictions differ.
+
 PPE in a grow is not really about you. In most rooms the gear is there to protect the **plant** from you: from the skin you shed, the spores on your jacket, the mites on your shoes and the viroid on your hands. The same coverall that keeps your clothes clean also keeps your contamination off the crop. That is why we call it PPPE, plant _and_ personal protective equipment.
 
-People are the dominant contamination source in any clean space, on the order of **70 to 90 percent** of it[^cleanroom-humans-source]. You cannot stop a human shedding. You can only put a barrier around the human and move them through the building in a controlled way. That is the whole game.
+People are typically the dominant contamination source in any clean space (exact share varies by facility design)[^cleanroom-humans-source]. You cannot stop a human shedding. You can only put a barrier around the human and move them through the building in a controlled way. That is the whole game.
 
 > **KEY — Why this pays for itself**
 >
-> One contaminated mother plant or one shared glove can spread Hop Latent Viroid to an entire crop, with up to **100% transmission within four weeks** of propagation from infected stock[^hlvd-transmission-2025]. The spread is mechanical, on tools, cuttings and hands, not airborne. Gloves-per-plant and gowning are not box-ticking; they are crop insurance.
+> One contaminated mother plant or one shared glove can spread Hop Latent Viroid to an entire crop, and under experimental conditions infection of linked cuttings can approach complete cohort infection within weeks of propagation from infected stock[^hlvd-transmission-2025]. The spread is mechanical, on tools, cuttings and hands, not airborne. Gloves-per-plant and gowning are not box-ticking; they are crop insurance.
 
 > **NOTE — Two different reasons to gown**
 >
@@ -6797,13 +6811,13 @@ It is worth sitting with the numbers, because they are the entire argument for g
 > **Diagram.** People are the number-one contamination source in a clean space[^cleanroom-humans-source]. You shed roughly ten million skin flakes a day, about a tenth carrying live bacteria[^cdc-skin-squames], and an occupied room gains tens of millions of bacteria and millions of fungal spores per person per hour[^human-microbial-cloud].
 
 - **Movement is the multiplier.** A gowned person emits about 100,000 particles a minute standing still, a million walking, and up to five million working fast[^cleanroom-humans-source]. Slow, calm movement is itself a control.
-- **Your phone is filthier than a toilet seat.** Cultured phones carry roughly an order of magnitude more bacteria than a public toilet seat, and they ride to your face and back to your hands all day[^phone-fomite].
+- **Your phone is a high-touch fomite.** Phones carry skin and environmental flora and order of magnitude more bacteria than a public high-touch fomite that contacts faces and hands, and they ride to your face and back to your hands all day[^phone-fomite].
 - **Your shoes are a pest and spore taxi.** Soles carry live pathogens and fungal spores, and walking re-launches settled organisms into the air[^shoe-floor-contamination]. Mites and powdery mildew arrive on clothing and footwear.
 - **The toilet throws a plume.** A flush lofts aerosols to about 1.5 m within seconds, viable for minutes to hours; a closed lid cuts it sharply[^toilet-plume].
 
 > **NOTE — Hands are the main bridge, and hygiene is not a cure**
 >
-> Washing helps but does not sterilise: an alcohol rub removes about 83% of organisms, plain soap and water about 58%[^hand-hygiene-logreduction]. That is why hand hygiene is a frequent loop at every transition, and why gloves and barriers carry the rest.
+> Washing helps but does not sterilise: alcohol rubs often achieve ~2–3 log reductions (~99–99.9%) under test conditions; plain soap and water remove soil and many organisms without sterilising hands[^hand-hygiene-logreduction]. That is why hand hygiene is a frequent loop at every transition, and why gloves and barriers carry the rest.
 
 ## The bare minimum, everywhere
 
@@ -6885,7 +6899,7 @@ No eating, drinking, gum or vaping in production. De-gown to leave for a break a
 
 #### Cross-contamination: one-way flow
 
-> **Diagram.** Move people, materials and waste one way, dirty to clean, never back. Backtracking means re-gowning, and a dirty-side hand or sleeve must never touch the clean side.
+> **Diagram.** Move people and clean materials clean → dirty; waste and used PPE only dirty → exit. Never back. Backtracking means re-gowning, and a dirty-side hand or sleeve must never touch the clean side.
 
 ## Who is responsible: HSWA 2015
 
@@ -6920,7 +6934,7 @@ In New Zealand, PPE and hygiene are not just good practice, they are legal dutie
 - **Gloves:** off first, inside-out; never replace washing; per-plant in propagation
 - **Phones:** banned in clean areas, lockers outside
 - **Toilet:** de-gown, lid down, wash, wash + sanitise on return, re-gown
-- **Flow:** one way, clean to dirty, re-gown to backtrack
+- **Flow:** clean → dirty for people/materials; dirty → exit for waste, re-gown to backtrack
 - **Law (NZ):** PCBU provides PPE free (s27); PPE is the last control
 
 > **KEY — The mindset that makes it stick**
@@ -6929,13 +6943,13 @@ In New Zealand, PPE and hygiene are not just good practice, they are legal dutie
 
 ## References
 
-[^cleanroom-humans-source]: Cleanroom contamination analyses: personnel account for roughly 70-90% of contamination; a gowned worker emits ~100,000 particles/min at rest, ~1,000,000 walking, up to ~5,000,000 in active work. https://www.precgroup.com/70-percent-of-cleanroom-contamination/ (industry/manufacturer source)
+[^cleanroom-humans-source]: Cleanroom contamination analyses: personnel are typically the dominant contamination source (industry figures often cite a large majority; exact share varies by facility); a gowned worker emits ~100,000 particles/min at rest, ~1,000,000 walking, up to ~5,000,000 in active work. https://www.precgroup.com/70-percent-of-cleanroom-contamination/ (industry/manufacturer source)
 [^cdc-skin-squames]: Noble / CDC Emerging Infectious Diseases: humans disseminate ~10^7 skin squames per day, of which roughly 10% carry viable bacteria. https://wwwnc.cdc.gov/eid/article/7/2/70-0225_article (peer-reviewed)
 [^human-microbial-cloud]: Human microbial-emissions research: an occupied space gains roughly 37 million bacterial and 7 million fungal genome copies per person per hour above the unoccupied baseline. https://pmc.ncbi.nlm.nih.gov/articles/PMC7950481/ (peer-reviewed)
-[^phone-fomite]: Mobile phones as fomites: cultured phones average far higher bacterial loads than a public toilet seat (order-of-magnitude), isolates including S. aureus, E. coli and Candida. https://pmc.ncbi.nlm.nih.gov/articles/PMC3939586/ (peer-reviewed)
-[^shoe-floor-contamination]: Shoe-sole and floor contamination: soles carry MRSA, C. difficile, E. coli and other organisms; walking re-disperses settled organisms, contributing a meaningful share of airborne CFU. https://www.infectioncontroltoday.com/view/shoe-sole-and-floor-contamination-new-consideration-environmental-hygiene (peer-reviewed)
-[^hlvd-transmission-2025]: Mechanical transmission and management of Hop Latent Viroid (HLVd) in cannabis: spread via contaminated tools and cuttings, up to 100% transmission within four weeks; controls include fresh gloves per plant, tool sterilisation and footbaths. Plants (MDPI) 2025, 14:830. https://www.mdpi.com/2223-7747/14/5/830 (peer-reviewed)
-[^hand-hygiene-logreduction]: Comparative hand-hygiene efficacy: alcohol-based handrub achieves a larger log reduction (~3 log, ~83%) than plain soap-and-water washing (~2 log, ~58%); neither sterilises. https://www.ncbi.nlm.nih.gov/pmc/articles/PMC117885/ (peer-reviewed)
+[^phone-fomite]: Mobile phones as fomites: high-touch devices carry skin and environmental flora (methods and comparisons vary across studies), isolates including S. aureus, E. coli and Candida. https://pmc.ncbi.nlm.nih.gov/articles/PMC3939586/ (peer-reviewed)
+[^shoe-floor-contamination]: Shoe-sole and floor contamination: soles carry MRSA, C. difficile, E. coli and other organisms; walking re-disperses settled organisms, contributing a meaningful share of airborne CFU. https://www.infectioncontroltoday.com/view/shoe-sole-and-floor-contamination-new-consideration-environmental-hygiene (industry/manufacturer source)
+[^hlvd-transmission-2025]: Mechanical transmission and management of Hop Latent Viroid (HLVd) in cannabis: spread via contaminated tools and cuttings; under experimental conditions linked cuttings can approach complete infection within weeks; controls include fresh gloves per plant, tool sterilisation and footbaths. Plants (MDPI) 2025, 14:830. https://www.mdpi.com/2223-7747/14/5/830 (peer-reviewed)
+[^hand-hygiene-logreduction]: Comparative hand-hygiene efficacy: alcohol-based handrubs often achieve ~2–3 log reductions of transient flora under test conditions (~99–99.9%); soap and water remove soil and many organisms but neither sterilises hands. (Note: 1 log ≈ 90%, not ~58–83%.) https://www.ncbi.nlm.nih.gov/pmc/articles/PMC117885/ (peer-reviewed)
 [^toilet-plume]: Toilet-flush bioaerosol ('toilet plume'): a flush lofts aerosols to ~1.5 m within seconds; particles remain viable for minutes to hours, and a closed lid produces markedly less aerosol. https://pmc.ncbi.nlm.nih.gov/articles/PMC9732293/ (peer-reviewed)
 [^fda-21cfr117-personnel]: US FDA. 21 CFR 117.10, Personnel (current good manufacturing practice for food): clean outer garments, personal cleanliness, hand washing, hair restraints, glove integrity. https://www.ecfr.gov/current/title-21/chapter-I/subchapter-B/part-117/subpart-B (industry/manufacturer source)
 [^who-gacp-2003]: World Health Organization (2003). WHO guidelines on good agricultural and collection practices (GACP) for medicinal plants. https://www.who.int/publications/i/item/9241546271 (industry/manufacturer source)
@@ -7219,7 +7233,7 @@ And one probe is one **local witness** — it only feels a soda-can-sized spot, 
 
 > **NOTE — Optional section**
 >
-> Skip this unless you’re building an automatic waterer. By hand, _you_ are the brain and the rest of the guide is enough. The single reassuring idea: never trust one sensor, and never flood or starve — when unsure, do the safe thing.
+> Skip this unless you’re building an automatic waterer. By hand, _you_ are the brain and the rest of the guide is enough. The single reassuring idea: never trust one sensor, and do not flood or starve — when unsure, do the safe thing.
 
 A good auto-waterer keeps a running **water tally**, like a piggy bank: water IN (the dripper sips, known precisely) minus water OUT (the plant breathing water out, like sweating, plus what drains) equals the real water in the pot. The sensor becomes one _opinion_ to double-check, not the boss.
 
@@ -7231,13 +7245,13 @@ Every guess carries a **confidence level** — high when the clues agree, low wh
 
 The whole decision is just three choices, all fenced by one rule. A lying sensor can only ever make the robot _more_ careful — never trick it into overwatering.
 
-> **Diagram.** The auto-waterer only ever waters a measured bit, waits, or asks you — all fenced by ‘never flood, never starve’.
+> **Diagram.** The auto-waterer only ever waters a measured bit, waits, or asks you — all fenced by ‘prefer mild deficit over flooding when uncertain; keep a hard VWC floor’.
 
 And the reassuring part: **the brain works the same no matter the sponge.** The same check-the-clues, keep-a-tally, gate-on-confidence routine runs identically for coco, rockwool, soil and water. The sponge only changes the numbers it learns — never the logic.
 
 > **KEY — In one sentence**
 >
-> An auto-waterer keeps a water piggy-bank, attaches a confidence to its guess, and only ever errs toward ‘never flood, never starve’ — on any sponge.
+> An auto-waterer keeps a water piggy-bank, attaches a confidence to its guess, and only ever errs toward ‘prefer mild deficit over flooding when uncertain; keep a hard VWC floor’ — on any sponge.
 
 ## One law, any sponge
 
@@ -7361,7 +7375,7 @@ The result is the larf you already know: airy, underweight bud on the bottom thi
 | --- | --- | --- |
 | Top canopy | 800–1200 µmol | Typical under a modern LED array |
 | Basal bud sites | 100–200 µmol | What’s left after canopy attenuation |
-| Viability floor | 400–500 µmol | Minimum for adequate flower development |
+| Common commercial band | 300–600 µmol | Typical target to fill lower flower (not a hard biological floor) |
 
 *The geometry is the problem, and geometry needs a geometric fix: light delivered at depth, not just from above.*
 
@@ -7401,7 +7415,7 @@ Here’s the most expensive mistake in the category. Most under-canopy products 
 >
 > In the Fluence ICL trials, red intercanopy treatments at **80% and 100% red caused photobleaching**[^fluence-icl-2024] — the lower bud bleaches, loses pigment and degrades. They dropped to 60% red. Pushing a high-red bar into a dense lower canopy at close range bleaches the exact flower you were trying to save.
 
-Two things are happening. First, the mid and lower canopy is _already_ red-rich and far-red-dominant — the upper leaves absorbed the blue and red on the way down. Stacking more concentrated red onto that imbalance is the opposite of what the plant needs. Second, photosystems I and II must be excited roughly equally for efficient photosynthesis; monochromatic red unbalances them.
+Two things are happening. First, the mid and lower canopy is _already_ green/FR-enriched and far-red-dominant — the upper leaves absorbed the blue and red on the way down. Stacking more concentrated red onto that imbalance is the opposite of what the plant needs. Second, photosystems I and II must be excited roughly equally for efficient photosynthesis; monochromatic red unbalances them.
 
 **Use a balanced, broad spectrum below the canopy** — closer to what the plant evolved under than to a red space heater. Broad-spectrum minimises bleaching risk while still driving photosynthesis[^fluence-broad-2026]; Hawley’s red-blue gave consistency, RGB moved terpenes more. Broad-spectrum white with a measured red component is the safe, productive default.
 
@@ -7579,17 +7593,17 @@ The realistic 25–35% average improvement is achievable[^aroya-undercanopy] —
 
 _Build · Precision & automation · ~14 min read_
 
-> Commercial plant-biosignal sensors clip electrodes to a plant, amplify the tiny voltages it makes, and turn the drift into water and stress insight. You can build the acquisition side from an M5Stack ESP32, an ECG front-end chip and ESPHome for about NZ$110, and stream it straight into Home Assistant.
+> Commercial plant-biosignal sensors clip electrodes to a plant, amplify the tiny voltages it makes, and log the drift for education — not as a validated water/nutrient/stress meter. You can build the acquisition side from an M5Stack ESP32, an ECG front-end chip and ESPHome for about NZ$110, and stream it straight into Home Assistant.
 
 ## A plant is quietly electric
 
-Plants generate tiny electrical signals. Ions move across cell membranes when the plant responds to light, water, wounding or nutrient change, and that movement shows up as a sub-millivolt voltage you can read with electrodes on the stem[^pb_pmc_plantsignals]. Commercial units like the Vivent VITA1 do exactly this, then infer water and stress state from how the signal drifts[^pb_vivent].
+Plants generate tiny electrical signals. Ions move across cell membranes when the plant responds to light, water, wounding or nutrient change, and that movement shows up as a sub-millivolt voltage you can read with electrodes on the stem[^pb_pmc_plantsignals]. Commercial units like the Vivent VITA1 do exactly this, then use trained models to infer water and stress state from how the signal drifts[^pb_vivent].
 
 Electrically, reading a plant is the same problem as reading a heartbeat: a small, noisy, high-impedance voltage you must amplify cleanly. That means the cheap, proven ECG front-end chip, the **AD8232**, works straight out of the box for plants[^pb_mdpi_ad8232]. Bolt it to an ESP32 and ESPHome and you have a logging plant-biosignal sensor for the price of a night out.
 
 > **NOTE — What this build is, and isn't**
 >
-> - **It reproduces the acquisition**: the raw signal, the daily rhythm, the big deflections after a stress event, light-on/off detection (~85% accurate on this exact hardware class)[^pb_pmc_plantsignals], all logged in Home Assistant.
+> - **It reproduces the acquisition**: the raw signal, the daily rhythm, the big deflections after a stress event, light-on/off detection (one study reported ~85% under its protocol, not guaranteed on this exact hardware class)[^pb_pmc_plantsignals], all logged in Home Assistant.
 > - **It does not reproduce the paid model.** A VITA1's N/P/K/Ca read-outs come from a trained model on a curated signal library. You get the millivolts; you build your own correlations over time.
 > - **ESPHome polls, it doesn't capture waveforms.** Fast sub-second spikes need the high-rate sketch noted at the end. For trend work, polling is the right tool, and it already samples finer than a VITA1's 5-minute dashboard.
 

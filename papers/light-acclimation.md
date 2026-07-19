@@ -89,7 +89,7 @@ High-light setups demand matched CO2. On ambient air (around 400–600 ppm CO2),
 
 A representative indoor cycle runs about 14 weeks (~98 days) and ramps light stage by stage[^moher-2022-cannabis-vegetative-light-intensity-morphology]. Clones start soft, veg climbs steadily, and after the flip to flower the plant rebuilds toward its peak before tapering at the end.
 
-The 12/12 flip cuts total daily light (DLI) by about 28% even at the same PPFD, simply because the lights are on fewer hours[^rodriguez-morrison-2021-cannabis-light-intensity-yield]. Plan for that dip rather than panicking and over-cranking the dimmer.
+The 12/12 flip cuts total daily light (DLI) by about one-third (~33%) even at the same PPFD, simply because the lights are on fewer hours[^rodriguez-morrison-2021-cannabis-light-intensity-yield]. Plan for that dip rather than panicking and over-cranking the dimmer.
 
 > **Diagram.** DLI climbs through veg, dips at the flip (fewer light hours), then climbs again as flower PPFD rebuilds.[^moher-2022-cannabis-vegetative-light-intensity-morphology]
 

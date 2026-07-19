@@ -10,7 +10,7 @@ EYEBROW = "Facility · GMP"
 SUB = ("How to design a clean, compliant hash and extract factory from scratch: what GMP "
        "means, how rooms and people and product move, and how a batch earns its way to market.")
 META = [("building", "Facility"), ("image", "13 diagrams"),
-        ("quote", "Peer-reviewed · 8 sources"), ("clock", "~18 min read")]
+        ("quote", "Evidence-linked · 8 sources"), ("clock", "~18 min read")]
 RELATED = ["mould-risk", "facility-3d"]
 REF_IDS = ["ecfr-21cfr211", "ich-q3c-r9-ema", "ehp-cannabis-contaminants-2019",
            "en1822-h14-hepa", "sciencedirect-cleanroom-personnel-emissions-2024",
@@ -29,7 +29,7 @@ SECTIONS.append({"id": "what-this-is", "kicker": "Start here", "title": "What Th
          "along. A GMP hash lab turns cannabis biomass into purified resin concentrates (bubble hash, "
          "rosin, live resin, distillate) under tight contamination control."),
     p("The same physics that concentrate the cannabinoids you want also "
-      "concentrate the contaminants you don't. Extraction multiplies both the good and the bad "
+      "concentrate the contaminants you don't. Extraction can concentrate both the good and the bad (often several-fold when mass yield is low) "
       "roughly five- to ten-fold" + _c("ehp-cannabis-contaminants-2019") + ", so a pesticide or mould "
       "level that looked fine on the raw flower can fail badly once it is squeezed into a gram of "
       "resin. Every step in the building is designed to answer one question: <em>can we prove this "

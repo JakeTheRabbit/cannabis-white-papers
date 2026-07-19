@@ -11,7 +11,7 @@ SUB = ("Light sets the demand. CO₂, water, airflow, feed and heat-removal have
        "Your yield ceiling is whichever one tops out first — so size every system to the "
        "light, find the wall, and dial the light down to meet it.")
 META = [("gauge", "Advanced"), ("image", "1 diagram · 5 tables"),
-        ("quote", "Peer-reviewed · 4 sources"), ("clock", "~16 min read")]
+        ("quote", "Evidence-linked · 4 sources"), ("clock", "~16 min read")]
 RELATED = ["grow-room-systems", "co2-enrichment", "coco-crop-steering"]
 REF_IDS = ["rm2021-light", "chandra2008-photo", "faust2018-dli", "collado2025-light"]
 
@@ -110,7 +110,7 @@ SECTIONS.append({"id": "ladder", "kicker": "03 · The core reference", "title": 
         ["800",  "3.0 L/m&sup2;/d", "4.0 L/m&sup2;/d", "2.4&ndash;2.8", "296 W/m&sup2;", "0.8 ton /10 m&sup2;", "6.3 pt/m&sup2;/d"],
         ["1000", "3.7 L/m&sup2;/d", "4.9 L/m&sup2;/d", "2.8&ndash;3.2", "370 W/m&sup2;", "1.1 ton /10 m&sup2;", "7.8 pt/m&sup2;/d"],
         ["1200", "4.4 L/m&sup2;/d", "5.9 L/m&sup2;/d", "3.2&ndash;3.6", "444 W/m&sup2;", "1.3 ton /10 m&sup2;", "9.4 pt/m&sup2;/d"],
-        ["1500", "5.6 L/m&sup2;/d", "7.4 L/m&sup2;/d", "3.6&ndash;4.2", "556 W/m&sup2;", "1.6 ton /10 m&sup2;", "11.7 pt/m&sup2;/d"],
+        ["1500", "5.6 L/m&sup2;/d", "7.4 L/m&sup2;/d", "2.4&ndash;3.2 (advanced: up to ~3.6)", "556 W/m&sup2;", "1.6 ton /10 m&sup2;", "11.7 pt/m&sup2;/d"],
       ],
       caption="Table 2 &middot; Water, feed &amp; heat-removal by light level (per m&sup2; of canopy, ~25% runoff, LED @ 2.7 &micro;mol/J)",
       foot="Rules used: transpiration &asymp; PPFD &times; 0.0037 L/m&sup2;/d; irrigation = transpiration &divide; 0.75; "
@@ -167,7 +167,7 @@ SECTIONS.append({"id": "ec", "kicker": "05 · The root zone", "title": "EC climb
         ["800",  "2.4&ndash;2.8", "4&ndash;5", "~4.0 L", "Build shot frequency with canopy", "Balanced feed shows here"],
         ["1000", "2.8&ndash;3.2", "5&ndash;6", "~4.9 L", "Multiple shots, tighter window", "Under: lower-canopy fade"],
         ["1200", "3.2&ndash;3.6", "6&ndash;7", "~5.9 L", "Frequent shots, watch runoff EC", "Over: tip burn, crispy margins"],
-        ["1500", "3.6&ndash;4.2", "7&ndash;8", "~7.4 L", "High frequency + volume, daily EC checks", "Either error bites fast"],
+        ["1500", "2.4&ndash;3.2 (advanced: up to ~3.6)", "advanced if runoff >> feed", "~7.4 L", "High frequency + volume, daily EC checks", "Either error bites fast"],
       ],
       caption="Table 4 &middot; Feed EC and root-zone strategy by light level (managed substrate, clean source water)",
       foot="Assumes a clean source (&lt;0.4 EC), a balanced high-ratio nutrient and an inert substrate. Coir buffers "
@@ -191,7 +191,7 @@ SECTIONS.append({"id": "find", "kicker": "06 · The method", "title": "Find your
     table(
       ["System", "What you have", "Its PPFD ceiling"],
       [
-        ["<strong>CO&#8322;</strong>", "Your setpoint", "Ambient 420 ppm &rarr; ~800 &micro;mol &middot; 800 ppm &rarr; ~1000 &middot; 1200 ppm &rarr; ~1300 &middot; 1500 ppm &rarr; ~1500"],
+        ["<strong>CO&#8322;</strong>", "Your setpoint", "Ambient 420 ppm &rarr; ~800+ &micro;mol with diminishing returns (not a hard wall) &middot; 800 ppm &rarr; ~1000 &middot; 1200 ppm &rarr; ~1300 &middot; 1500 ppm &rarr; ~1500"],
         ["<strong>Cooling</strong>", "Installed sensible tons", "PPFD &le; 9,500 &times; tons &divide; m&sup2;"],
         ["<strong>Dehumidification</strong>", "Rated pints/day", "PPFD &le; 128 &times; pints/day &divide; m&sup2;"],
         ["<strong>Irrigation</strong>", "Max deliverable L/day", "PPFD &le; 200 &times; L/day &divide; m&sup2;"],
@@ -230,8 +230,8 @@ SECTIONS.append({"id": "cases", "kicker": "07 · Case studies", "title": "Four r
     callout("note", "Case B &middot; The ambient-air ceiling " + _tag("g", "cheap to fix"),
       p("<strong>The room:</strong> big cooling and dehu, but <em>no</em> CO&#8322; supplementation &mdash; "
         "ambient 420 ppm. <strong>The math:</strong> cooling and dehu might support 1200, but at ambient "
-        "CO&#8322; the leaf light-saturates around <strong>800</strong> &micro;mol" + _c("chandra2008-photo") +
-        ". <strong>The wall:</strong> CO&#8322;, at ~800. <strong>The fix:</strong> above 800 the extra light just "
+        "Under ambient CO&#8322;, leaf curves flatten earlier than canopy yield, which can still rise well past 800 " + _c("chandra2008-photo") +
+        ". <strong>The practical limit:</strong> ambient CO&#8322; lowers efficiency as PPFD climbs. <strong>The fix:</strong> above ~800&ndash;1000 without enrichment, extra light often just "
         "bleaches tops and adds heat &mdash; dial down to 800, or add CO&#8322; and suddenly all that cooling and "
         "dehu headroom means something. The cheapest ceiling in the building to raise.")),
     callout("note", "Case C &middot; The stagnant canopy " + _tag("w", "hidden"),

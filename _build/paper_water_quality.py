@@ -11,7 +11,7 @@ SUB = ("What is in your water before nutrients ever go in: tap vs RO vs well, st
        "alkalinity and carbonates, chlorine and chloramine, hardness, and when reverse "
        "osmosis is actually worth the money.")
 META = [("droplet", "Beginner"), ("image", "13 figures"),
-        ("quote", "Peer-reviewed · 6 sources"), ("clock", "~14 min read")]
+        ("quote", "Evidence-linked · 6 sources"), ("clock", "~14 min read")]
 RELATED = ["ph-management", "nutrient-mixing-athena", "irrigation-manual"]
 REF_IDS = ["bevan-2021-npk-flowering-cannabis",
            "kpai-2024-mineral-nutrition-vegetative-cannabis",
@@ -94,7 +94,7 @@ SECTIONS.append({"id": "source-types", "kicker": "The core: where it comes from"
       "Where your water starts on the PPM scale. RO and rain arrive near zero, soft tap is workable, "
       "and hard tap or well water can eat most of your nutrient headroom before you begin." + _c("umass-water-quality-ph-alkalinity")),
     p("Headroom is the point beginners miss. A working feed strength is commonly capped near "
-      "800-900 ppm, so hard tap water at 300+ ppm leaves almost no room before you hit that "
+      "your total EC budget (set targets in mS/cm), so hard tap water at 300+ ppm leaves almost no room before you hit that "
       "ceiling" + _c("bevan-2021-npk-flowering-cannabis") + ". Rainwater typically arrives at only "
       "0-20 ppm, which is closer to RO, but it brings little to no buffering and a risk of pathogens, "
       "roofing contaminants, or sodium near coasts."),
@@ -210,7 +210,7 @@ SECTIONS.append({"id": "testing-stepbystep", "kicker": "Practical: test and trea
     steps([
       ("Buy and calibrate pens", "Get an EC/PPM pen and a pH pen first. Calibrate with fresh calibration solution, never with tap water."),
       ("Get the full picture", "For alkalinity, sodium, Ca, Mg and micronutrients, use a lab test or your city's annual water-quality report."),
-      ("Record starting EC", "Note how much room you have before the ~800-900 ppm feed ceiling, so you know your nutrient headroom."),
+      ("Record starting EC", "Note how much room you have before the ~your total EC budget (set targets in mS/cm) feed ceiling, so you know your nutrient headroom."),
       ("Mix in the right order", "Fill water, let chlorine off-gas or filter it, add CalMag if RO or soft, add base nutrients, then adjust pH last."),
       ("Re-test seasonally", "Re-check well and rain sources through the year. Municipal supplies can also switch chlorine to chloramine periodically."),
     ]),
@@ -226,7 +226,7 @@ SECTIONS.append({"id": "temperature-pitfalls", "kicker": "Troubleshooting and pi
   "title": "Water temperature and the mistakes beginners make",
   "blocks": [
     p("Water temperature quietly controls dissolved oxygen and disease risk. Aim for roughly "
-      "18-22 C (65-72 F), because dissolved oxygen falls from about 5-6 ppm at 20 C to only 3-4 ppm "
+      "18-22 C (65-72 F), because warm, poorly aerated water raises pathogen risk even though saturation DO is still roughly ~9 mg/L at 20 C and ~8 mg/L at 26 C. Target "
       "at 26 C" + _c("fao-dissolved-oxygen-temperature") + ", and root pathogens like Pythium "
       "accelerate above about 23 C" + _c("sutton-2006-pythium-hydroponic-etiology") + ". Warm water "
       "plus low oxygen is an open invitation to root rot."),
@@ -236,8 +236,8 @@ SECTIONS.append({"id": "temperature-pitfalls", "kicker": "Troubleshooting and pi
             ylab="dissolved O2 ppm", ymin=2, ymax=7,
             note="Dissolved oxygen drops as water warms. The 18-22 C band is the safe target.",
             bands=[(4.8, 6.5, L.GL, "target O2")]), 11,
-      "Dissolved oxygen declines steadily as water warms, from about 5-6 ppm near 20 C down toward "
-      "3-4 ppm at 26 C. Above roughly 23 C you also enter Pythium risk." + _c("fao-dissolved-oxygen-temperature") + _c("sutton-2006-pythium-hydroponic-etiology")),
+      "Saturation dissolved oxygen declines gently as water warms (roughly ~9 mg/L near 20 C toward "
+      "~8 mg/L saturation at 26 C. Above roughly 23 C you also enter Pythium risk." + _c("fao-dissolved-oxygen-temperature") + _c("sutton-2006-pythium-hydroponic-etiology")),
     table(["Common mistake", "What actually happens, and the fix"], [
       ["Comparing PPM across meters", "A 500 vs 700 scale makes two pens disagree on the same water. Pick one scale and stick to it"],
       ["pH the tank, ignore alkalinity", "Root-zone pH creeps up within days. Correct the alkalinity, not just the one reading"],

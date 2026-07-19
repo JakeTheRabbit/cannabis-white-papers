@@ -10,7 +10,7 @@ EYEBROW = "Canopy · Training"
 SUB = ("A beginner's guide to topping, low-stress training, trellising, lollipopping and "
        "defoliation: what each one does, when to do it, and how to avoid overdoing it.")
 META = [("scissors", "Canopy"), ("image", "12 diagrams"),
-        ("quote", "Peer-reviewed · 8 sources"), ("clock", "~12 min read")]
+        ("quote", "Evidence-linked · 8 sources"), ("clock", "~12 min read")]
 RELATED = ["airflow-design", "mould-risk", "harvest-dry-trim-cure"]
 REF_IDS = ["sikora-2019-apical-bud-hemp", "massuela-2022-pruning-cbd-yield",
            "rodriguez-morrison-2021-ppfd-yield", "danziger-2022-planting-density",
@@ -328,7 +328,7 @@ SECTIONS.append({"id": "expectations", "kicker": "Reality check",
       "Yield and quality typically climb across the first three runs of a cultivar as you learn how "
       "it stretches and how much canopy work it actually wants."),
     p("Good planning of genetics and spacing is one of the cheapest gains available. Choosing "
-      "the right plant count and layout can lift the bottom line by roughly 15&ndash;30% with no "
+      "the right plant count and layout can move yield per area and uniformity in ways that often matter more than expensive gear with no "
       "extra overhead, because uniformity and light interception both improve" +
       _c("danziger-2022-planting-density") + _c("anthony-2020-training-light-interception") + "."),
     ul(["Expect to refine over about 3 runs of a cultivar before you hit its yield/quality sweet spot.",

@@ -9,11 +9,11 @@ SLUG = "plant-biosignal-sensor"
 TITLE = "DIY plant-biosignal sensor: read a plant's electrical signals"
 EYEBROW = "Build · Precision & automation"
 SUB = ("Commercial plant-biosignal sensors clip electrodes to a plant, amplify the tiny voltages it "
-       "makes, and turn the drift into water and stress insight. You can build the acquisition side "
+       "makes, and log the drift for education — not as a validated water/nutrient/stress meter. You can build the acquisition side "
        "from an M5Stack ESP32, an ECG front-end chip and ESPHome for about NZ$110, and stream it "
        "straight into Home Assistant.")
 META = [("wave", "Build guide"), ("gauge", "DIY hardware"),
-        ("quote", "Peer-reviewed · 4 sources"), ("clock", "~14 min read")]
+        ("quote", "Evidence-linked · 4 sources"), ("clock", "~14 min read")]
 RELATED = ["plant-state-dashboard", "signal-and-noise", "closed-loop"]
 REF_IDS = ["pb_mdpi_ad8232", "pb_arxiv_esp32", "pb_pmc_plantsignals",
            "pb_hackster_flora", "pb_vivent", "pb_esphome_ads1115"]
@@ -88,7 +88,7 @@ SECTIONS.append({"id": "start", "kicker": "01 · Read this first", "title": "A p
     lead("Plants generate tiny electrical signals. Ions move across cell membranes when the plant "
          "responds to light, water, wounding or nutrient change, and that movement shows up as a "
          "sub-millivolt voltage you can read with electrodes on the stem" + _c("pb_pmc_plantsignals") + ". "
-         "Commercial units like the Vivent VITA1 do exactly this, then infer water and stress state "
+         "Commercial units like the Vivent VITA1 do exactly this, then use trained models to infer water and stress state "
          "from how the signal drifts" + _c("pb_vivent") + "."),
     p("Electrically, reading a plant is the same problem as reading a heartbeat: a small, noisy, "
       "high-impedance voltage you must amplify cleanly. That means the cheap, proven ECG front-end "
@@ -97,7 +97,7 @@ SECTIONS.append({"id": "start", "kicker": "01 · Read this first", "title": "A p
       "of a night out."),
     callout("note", "What this build is, and isn't",
       ul(["<strong>It reproduces the acquisition</strong>: the raw signal, the daily rhythm, the "
-          "big deflections after a stress event, light-on/off detection (~85% accurate on this exact "
+          "big deflections after a stress event, light-on/off detection (one study reported ~85% under its protocol, not guaranteed on this exact "
           "hardware class)" + _c("pb_pmc_plantsignals") + ", all logged in Home Assistant.",
           "<strong>It does not reproduce the paid model.</strong> A VITA1's N/P/K/Ca read-outs come "
           "from a trained model on a curated signal library. You get the millivolts; you build your "

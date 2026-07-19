@@ -13,7 +13,7 @@ SUB = ("Carbon dioxide is the raw material a plant turns into sugar. Under stron
        "plants' returns or kill the people in the room. This is how it works, how much to add and when, "
        "and how to do it without hurting anyone.")
 META = [("spark", "Core concept to safe setup"), ("image", "7 diagrams"),
-        ("quote", "Peer-reviewed + safety standards · 38 sources"), ("clock", "~30 min read")]
+        ("quote", "Evidence-linked + safety standards · 38 sources"), ("clock", "~30 min read")]
 RELATED = ["grow-room-systems", "airflow-design", "harvest-dry-trim-cure"]
 REF_IDS = [
     "chandra2008-photo", "tolbert1995-compensation", "noaa2024-co2", "chandra2011-co2",
@@ -186,7 +186,7 @@ SECTIONS.append({"id": "howmuch", "kicker": "06 · The dose", "title": "How much
       "sealed room from ambient (~420 ppm) to about 1,200 ppm lifted dry flower yield by roughly "
       "<strong>40%</strong>, and 1,200 ppm captured about <strong>95%</strong> of the achievable gain, so "
       "there is little point going higher" + _c("westmoreland2023-usu") + ". General greenhouse crops tell "
-      "the same story: tomato yield rises up to ~80% at 1,000 ppm" + _c("doddrell2023-co2") + ", and most "
+      "the same story: many greenhouse C3 crops gain on the order of tens of percent at ~800&ndash;1,200 ppm (extreme published uplifts depend on depleted controls and system)" + _c("doddrell2023-co2") + ", and most "
       "C3 crops saturate around 1,000&ndash;1,300 ppm" + _c("doddrell2023-co2") + "."),
     figure(L.zones("Where to hold CO2 while the lights are on", 200, 2000,
             [(200, 400, L.BLUL, "sub-ambient: starved"), (400, 800, L.GL, "ambient: gains begin"),
@@ -370,7 +370,7 @@ SECTIONS.append({"id": "climate", "kicker": "10 · The knock-on effects", "title
     ], cls="compact", caption="Raise CO2, then ask what must move with it. The temperature and water changes are the ones growers most often miss."),
     callout("note", "Water use: efficiency goes up, volume usually goes up too",
       p("Elevated CO2 partly closes the stomata, so a leaf loses less water <em>per unit of leaf</em> for "
-        "the same photosynthesis, and its water-use efficiency roughly <strong>doubles</strong>, about "
+        "the same photosynthesis, and its water-use efficiency often rises substantially (sometimes toward a large fraction of a doubling in short-term leaf measurements), about "
         "twice the growth per litre transpired" + _c("chandra2008-photo") + ". But that is <em>efficiency</em>, "
         "not less water, and in a real enriched room the total usually moves the <em>other</em> way. CO2 "
         "grows a bigger, faster canopy with far more leaf area, and the room is run hotter and brighter to "
@@ -430,7 +430,7 @@ SECTIONS.append({"id": "safety", "kicker": "12 · The part that can kill you", "
     table(["CO2 level", "What happens", "Reference point"], [
       ["~420 ppm", "Normal outdoor air", "Baseline" + _c("noaa2024-co2")],
       ["1,000&ndash;1,500 ppm", "Typical enrichment target, safe for short work", "3&ndash;5&times; below the worker limit"],
-      ["1,000&ndash;2,500 ppm", "Measurable dip in concentration and decision-making", "Cognition, not danger" + _c("azuma2018-cognition")],
+      ["1,000&ndash;2,500 ppm", "Some studies report small cognitive effects (literature mixed)", "Cognition, not danger" + _c("azuma2018-cognition")],
       ["5,000 ppm (0.5%)", "8-hour worker exposure limit (TWA)", "OSHA / NIOSH / ACGIH / WorkSafe NZ" + _c("worksafenz-co2")],
       ["30,000 ppm (3%)", "15-minute short-term limit (STEL); headache, fast breathing", "NIOSH / ACGIH / WorkSafe NZ" + _c("niosh-co2")],
       ["40,000 ppm (4%)", "IDLH, immediately dangerous to life or health", "Escape-impairing" + _c("niosh-co2")],

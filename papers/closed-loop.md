@@ -35,7 +35,7 @@ A **closed loop** means the output feeds back to the input: what the plant tells
 
 > **KEY — What 'closed' buys you**
 >
-> A mature loop tells you whole-room health and whether to act in under five seconds, and it stays quiet when nothing needs you. Silence is a feature, not a fault.
+> A mature loop tells you whole-room health and whether to act quickly when the dashboard is well designed, and it stays quiet when nothing needs you. Silence is a feature, not a fault.
 
 ## Key terms, defined once
 
@@ -78,7 +78,7 @@ Everything you can do sorts into four **balances** you are always disturbing: en
 
 ## Reading the signal, then reading the plant
 
-You have to _see_ the room's response without being fooled, then turn it into meaning. Every measurement is signal plus noise, and in practice around **70% of raw alerts are noise** that must be rejected before they ever reach a decision[^isa-18-2-alarm-mgmt].
+You have to _see_ the room's response without being fooled, then turn it into meaning. Every measurement is signal plus noise, and in practice many **raw alerts are noise** that must be rejected before they ever reach a decision[^isa-18-2-alarm-mgmt].
 
 Reading plant state is the leap from ‘VWC fell 12% overnight’ (a number) to ‘the plant is steering generative as intended, no action needed’ or ‘reduce dryback 3% tonight or expect tip burn in about 48 hours’ (a decision). The goal is to infer the plant, not just display the room.
 

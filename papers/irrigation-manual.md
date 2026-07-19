@@ -97,8 +97,8 @@ Crop steering splits each lights-on day into four phases that control how the pl
 
 > **KEY — Vegetative vs generative steering**
 >
-> - **Vegetative** steering uses longer drybacks and lower EC to encourage root and leaf growth.
-> - **Generative** steering uses shorter drybacks and higher EC to push flowering.[^caplan-2019-drought-cannabis]
+> - **Vegetative** steering uses smaller drybacks and moderate EC to encourage root and leaf growth.
+> - **Generative** steering uses larger controlled drybacks and/or higher root-zone EC to push flowering.[^caplan-2019-drought-cannabis]
 > - The same P0–P3 framework runs both. Only the dryback targets and EC change.
 
 > **Diagram.** The cycle loops every day. P3 hands back to P0 overnight, and lights-on restarts the ramp.

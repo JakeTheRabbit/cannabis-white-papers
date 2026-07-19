@@ -23,7 +23,7 @@ SUB = ("Under-canopy (SCL) and inter-canopy (ICL) lighting put photons where the
        "than gross weight. This covers the light, spectrum, placement, training, and the thermal and "
        "airflow bill most guides skip.")
 META = [("sun", "Environment"), ("image", "2 diagrams"),
-        ("quote", "Peer-reviewed + trials · 7 sources"), ("clock", "~16 min read")]
+        ("quote", "Evidence-linked + trials · 7 sources"), ("clock", "~16 min read")]
 RELATED = ["lighting-fundamentals", "airflow-design", "grow-room-systems", "defoliation-training", "mould-risk"]
 REF_IDS = ["hawley2018-scl", "icl2025-plants", "fluence-icl-2024", "fluence-broad-2026",
            "farred2025-scirep", "rm2021-light", "aroya-undercanopy"]
@@ -65,7 +65,7 @@ SECTIONS.append({"id": "light-starved", "kicker": "The problem", "title": "The l
     table(["Zone", "PPFD", "Meaning"], [
       ["Top canopy", "800&ndash;1200 &micro;mol", "Typical under a modern LED array"],
       ["Basal bud sites", "100&ndash;200 &micro;mol", "What&rsquo;s left after canopy attenuation"],
-      ["Viability floor", "400&ndash;500 &micro;mol", "Minimum for adequate flower development"],
+      ["Common commercial band", "300&ndash;600 &micro;mol", "Typical target to fill lower flower (not a hard biological floor)"],
     ], caption="The geometry is the problem, and geometry needs a geometric fix: light delivered at depth, not just from above."),
     callout("note", "SCL vs ICL &mdash; not interchangeable",
       ul(["<strong>SCL (subcanopy / under-canopy):</strong> bars on the bench, pot rims or floor, shining "
@@ -121,7 +121,7 @@ SECTIONS.append({"id": "spectrum", "kicker": "Spectrum", "title": "The heavy-red
         "photobleaching</strong>" + _c("fluence-icl-2024") + " &mdash; the lower bud bleaches, loses pigment "
         "and degrades. They dropped to 60% red. Pushing a high-red bar into a dense lower canopy at close range "
         "bleaches the exact flower you were trying to save.")),
-    p("Two things are happening. First, the mid and lower canopy is <em>already</em> red-rich and "
+    p("Two things are happening. First, the mid and lower canopy is <em>already</em> green/FR-enriched and "
       "far-red-dominant &mdash; the upper leaves absorbed the blue and red on the way down. Stacking more "
       "concentrated red onto that imbalance is the opposite of what the plant needs. Second, photosystems I and "
       "II must be excited roughly equally for efficient photosynthesis; monochromatic red unbalances them."),

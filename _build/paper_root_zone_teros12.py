@@ -10,7 +10,7 @@ EYEBROW = "Precision · Root zone"
 SUB = ("A TEROS-12 capacitance probe measures three things in your pot. This guide explains what each "
        "number means, why the raw reading is not the truth, and how to turn it into safe irrigation decisions.")
 META = [("gauge", "Precision"), ("image", "12 diagrams"),
-        ("quote", "Peer-reviewed · 8 sources"), ("clock", "~18 min read")]
+        ("quote", "Evidence-linked · 8 sources"), ("clock", "~18 min read")]
 RELATED = ["smart-watering-vrwe", "coco-crop-steering", "signal-and-noise"]
 REF_IDS = ["topp-1980-dielectric-vwc", "hilhorst-2000-pore-water-ec",
            "fragkos-2024-teros12-soils-ec", "nasta-2024-teros12-temp-correction",

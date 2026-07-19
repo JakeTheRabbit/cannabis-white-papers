@@ -10,7 +10,7 @@ EYEBROW = "Propagation · Cloning"
 SUB = ("Take cannabis cuttings that root reliably. This walks a beginner from picking a "
        "mother plant to a transplant-ready clone in 14 days.")
 META = [("seedling", "Propagation"), ("image", "9 diagrams"),
-        ("quote", "Peer-reviewed · 7 sources"), ("clock", "~12 min read")]
+        ("quote", "Evidence-linked · 7 sources"), ("clock", "~12 min read")]
 RELATED = ["light-acclimation", "ipm-sop", "tissue-culture"]
 REF_IDS = ["caplan-2018-stem-cuttings", "esposito-2026-morphology-predictors",
            "kim-2025-light-temp-rh", "landis-2022-iba-hemp-i3", "fattorini-2017-iba-to-iaa",
@@ -31,7 +31,7 @@ SECTIONS.append({"id": "intro", "kicker": "01 · Start here", "title": "What clo
       "<strong>mother</strong>. Same genetics means the same growth speed, the same yield and the same "
       "chemistry, so the whole grow runs predictable. That predictability is why nearly every commercial "
       "grow clones rather than seeds."),
-    p("A well-run propagation room roots clones at 90 to 95 percent success or better" + _c("caplan-2018-stem-cuttings") +
+    p("Well-run propagation rooms often root clones at ~90 percent or better as an operational target" + _c("caplan-2018-stem-cuttings") +
       ", with cuttings ready to transplant in about 10 to 14 days" + _c("kim-2025-light-temp-rh") +
       ". This guide assumes you have never taken a cutting before and defines every term as it appears."),
     figure(L.flow("From mother plant to transplant",
@@ -76,14 +76,12 @@ SECTIONS.append({"id": "mother-and-cut", "kicker": "03 · The how & why", "title
       "at least 3 mm thick and 15 cm long. Thicker, well-lit shoots carry more stored energy and "
       "root faster than thin, shaded interior growth" + _c("esposito-2026-morphology-predictors") +
       ". Shoot thickness and leaf colour reliably predict how well a cutting will root" + _c("esposito-2026-morphology-predictors") + "."),
-    p("Water the mother with <strong>half-strength</strong> nutrients the day before. This lowers the "
-      "pressure inside the leaves and stems (their <em>turgor</em>) so the stems are less brittle and "
-      "snap less when you cut them. Take cuttings at the start of the light cycle with a sterile blade, "
+    p("Water the mother thoroughly the day before so cuttings are fully hydrated and turgid. Avoid drought-stressed mothers; wilted tissue roots poorly. ht cycle with a sterile blade, "
       "making a clean 45-degree cut just below a node, and drop each cutting straight into a holding jug "
       "of dilute solution so the cut end never sits in air."),
     callout("tip", "Why a 45° cut, and why no air",
       ul(["A <strong>45° cut</strong> exposes more surface area than a flat cut, so more cells can turn into roots.",
-          "If the cut end sits in air, the stem draws in an <strong>air embolism</strong> (an air bubble) that blocks water uptake. Keep the end wet from the moment it is cut.",
+          "If the cut end sits in air, the stem draws in an <strong>dried cut that stalls water uptake. ment it is cut.",
           "Sterilize the blade between mother plants so you don't carry disease from one to the next." + _c("punja-2023-fusarium-pythium-biocontrol")], "tight")),
     figure(L.bars("Where to take cuttings from on the mother",
             [("Upper-mid (best)", 92), ("Lower interior", 58), ("Soft tip growth", 70)], unit="% root",
@@ -97,7 +95,7 @@ SECTIONS.append({"id": "hormone-and-cube", "kicker": "04 · The how & why", "tit
   "blocks": [
     p("Cuttings have no roots yet, so a <strong>rooting hormone</strong> pushes the stem to "
       "grow them. The active ingredient is usually <strong>IBA (indole-3-butyric acid)</strong>, a "
-      "synthetic version of a natural plant root hormone called an auxin" + _c("landis-2022-iba-hemp-i3") +
+      "an auxin used in rooting products (often converted to IAA in the plant)" + _c("landis-2022-iba-hemp-i3") +
       ". Inside the stem the plant converts IBA into the active rooting auxin (IAA), which is what "
       "triggers new roots" + _c("fattorini-2017-iba-to-iaa") + ". It sells as a gel or a liquid."),
     p("Make a fresh 45-degree cut right before sticking to expose new tissue, coat the bottom 1&ndash;2 cm "
@@ -169,7 +167,7 @@ SECTIONS.append({"id": "timeline", "kicker": "06 · Do this", "title": "The 14-d
       "40&ndash;50% below its Day 0 weight, and never let it fall below 30% loss, because a permanently "
       "soggy cube rots" + _c("msu-moisture-propagation") + ". The cube fading from dark to light brown is "
       "the same signal."),
-    p("Clone feed should run an EC of about 1.5 mS/cm at pH 5.5&ndash;6.0, with the water at "
+    p("Clone feed often starts milder (~0.6&ndash;1.2 mS/cm, product-dependent) and rises only after roots appear; ~1.5 mS/cm can burn soft cuttings at pH 5.5&ndash;6.0, with the water at "
       "20&ndash;22&deg;C. From day 7 start a daily <strong>burp</strong>, begin propping the vents open, "
       "and lift one edge cube to look for emerging white roots. On day 11 run the hardening-off test: "
       "lift the domes, wait 10 minutes, and if fewer than 5 clones per tray wilt, leave the dome off; if "

@@ -1,6 +1,6 @@
 # The Cannabis White Papers
 
-> Beginner-first, peer-reviewed white papers on indoor medical cannabis cultivation — propagation, crop steering, environment, plant health, precision irrigation, and facility & quality. **37 papers, each a self-contained interactive HTML page.**
+> Beginner-first, evidence-linked field guides on indoor medical cannabis cultivation — propagation, crop steering, environment, plant health, precision irrigation, and facility & quality. **37 papers, each a self-contained interactive HTML page.**
 
 **▶ Read online → [https://jaketherabbit.github.io/cannabis-white-papers/](https://jaketherabbit.github.io/cannabis-white-papers/)**  ·  browse by stage: [Start here](https://jaketherabbit.github.io/cannabis-white-papers/curriculum.html)  ·  every page has offline search (**Ctrl/Cmd-K**).
 Licensed CC BY-NC 4.0. Machine-readable: [`manifest.json`](https://jaketherabbit.github.io/cannabis-white-papers/manifest.json) · [`llms.txt`](https://jaketherabbit.github.io/cannabis-white-papers/llms.txt) · [full corpus](https://jaketherabbit.github.io/cannabis-white-papers/llms-full.txt).

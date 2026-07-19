@@ -10,7 +10,7 @@ EYEBROW = "Precision · Signal & noise"
 SUB = ("Tell a real change in your plants and root zone apart from random sensor wobble, "
        "and act only when it matters.")
 META = [("gauge", "Precision"), ("image", "9 diagrams"),
-        ("quote", "Peer-reviewed · 9 sources"), ("clock", "~14 min read")]
+        ("quote", "Evidence-linked · 9 sources"), ("clock", "~14 min read")]
 RELATED = ["root-zone-teros12", "smart-watering-vrwe", "closed-loop"]
 REF_IDS = ["shewhart-control-chart", "deming-funnel-tampering", "western-electric-rules-anhoj",
            "nyquist-shannon-sampling", "replication-reduces-variance", "bogena-soil-sensor-calibration",
@@ -43,7 +43,7 @@ SECTIONS.append({"id": "what-this-is", "kicker": "Start here",
       "two completely different stories. Only one of them is worth acting on."),
     callout("key", "The one-line reframe",
       p("You don't have a data problem. You have a <strong>signal-to-noise problem</strong>. Most "
-        "grow-room &lsquo;alerts&rsquo;, perhaps 70% in a busy room, are noise: transients "
+        "grow-room &lsquo;alerts&rsquo;, are often noise until tuned: transients "
         "that fix themselves before any action would have mattered.")),
   ]})
 
@@ -167,8 +167,8 @@ SECTIONS.append({"id": "control-limits-spc", "kicker": "Core idea 3",
       "A mean line with a ±1σ band and control limits at ±3σ. Most readings jitter harmlessly inside. "
       "A lone point past the upper limit is the one that earns a response." + _c("shewhart-control-chart")),
     callout("note", "Beyond the limits: the Western Electric rules",
-      ul(["<strong>7+ points</strong> all trending the same way: a real drift, even inside the limits",
-          "<strong>8+ points</strong> on one side of the mean: the process has shifted",
+      ul(["<strong>Nelson trend (often 6 points)</strong> all trending the same way: a real drift, even inside the limits",
+          "<strong>Western Electric: 8 points</strong> on one side of the mean: the process has shifted",
           "Abnormal <strong>hugging of the mean</strong>: often a sign the data is being over-smoothed or faked"],
          "tight")),
     p("These pattern rules catch real shifts that a single out-of-limits point would miss, and they "

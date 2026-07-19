@@ -11,7 +11,7 @@ SUB = ("A beginner's visual guide to reading cannabis leaf symptoms: mobile vs i
        "deficiency vs toxicity vs pH lockout, and how to confirm and fix the real problem before you "
        "reach for fertiliser.")
 META = [("leaf", "Plant health"), ("image", "12 figures"),
-        ("quote", "Peer-reviewed · 7 sources"), ("clock", "~14 min read")]
+        ("quote", "Evidence-linked · 7 sources"), ("clock", "~14 min read")]
 RELATED = ["ph-management", "nutrient-mixing-athena", "water-quality"]
 REF_IDS = ["cockson-2019-nutrient-disorders-cannabis", "maillard-2015-leaf-nutrient-remobilization",
            "bevan-2021-npk-soilless-cannabis-flowering", "morad-2023-cannabis-magnesium-supply",
@@ -176,7 +176,7 @@ SECTIONS.append({"id": "field-guide", "kicker": "Practical reference", "title": 
       ["Potassium (K)", "Mobile", "Old / lower", "Burnt brown crispy tips and edges, centre stays green", "Margins burn, unlike N's whole-leaf fade"],
       ["Magnesium (Mg)", "Mobile", "Old / lower", "Interveinal yellowing, veins stay green", "Starts mid-leaf and creeps in"],
       ["Calcium (Ca)", "Immobile", "New / top", "Distorted, brown-spotted new growth", "Deformity, not just colour"],
-      ["Sulfur (S)", "Immobile", "New / top", "Pale or yellow new leaves overall", "Whole new leaf pales, not interveinal"],
+      ["Sulfur (S)", "Limited mobility", "New / top", "Pale or yellow new leaves overall", "Whole new leaf pales, not interveinal"],
       ["Iron (Fe)", "Immobile", "New / top", "Bright interveinal yellowing, sharp green veins", "Very common with high pH; topmost leaves"],
     ], cls="compact", caption="The leaf symptom atlas. Position first, then pattern, then the differentiator."),
     p("Two of these look almost identical and trip up beginners constantly: magnesium and iron both "
@@ -202,7 +202,7 @@ SECTIONS.append({"id": "confirm-and-fix", "kicker": "Step by step", "title": "Co
       "the pot tells you whether the root zone is starving, overloaded or locked out."),
     steps([
       ("Step 1, check input pH and EC", "Confirm the feed you are giving is actually in range for your medium: pH 5.8-6.2 in coco or hydro, around 6.5 in soil, at a stage-appropriate strength."),
-      ("Step 2, measure runoff", "In coco, runoff EC should come out roughly equal to input. Runoff much higher than input (e.g. more than 200 PPM higher) means salt buildup and overfeeding. Pale plants with low runoff EC mean underfeeding."),
+      ("Step 2, measure runoff", "In coco, runoff EC should come out roughly equal to input. Runoff rising ~0.3&ndash;0.5 mS/cm (or more) above feed for days means salt buildup and overfeeding. Pale plants with low runoff EC mean underfeeding."),
       ("Step 3, match the fix to the cause", "Lockout or salt buildup: flush with correctly pH'd plain or light water until runoff EC normalises, then resume. Underfeeding: raise EC gradually. True single deficiency: correct pH first, then supplement the specific nutrient."),
       ("Step 4, watch new growth", "Look at the new leaves, not the damaged ones, for recovery over 5-10 days. Old damage will not re-green."),
     ]),
@@ -214,7 +214,7 @@ SECTIONS.append({"id": "confirm-and-fix", "kicker": "Step by step", "title": "Co
       "Target EC climbs from seedling through peak flower, then eases for the finish. Seedling roughly "
       "0.4-0.8 (about 250-400 PPM), veg 1.0-1.8, flower 1.6-2.4 rising to 2.4-3.0 late."),
     callout("note", "Runoff EC is your salt gauge",
-      p("Coco runoff EC should approximate input EC. Runoff more than about 200 PPM above input "
+      p("Coco runoff EC should approximate input EC. Runoff rising ~0.3&ndash;0.5 mS/cm above feed for days "
         "indicates salt is building up faster than the plant can use it, and a flush, not more feed, "
         "is the answer.")),
   ]})

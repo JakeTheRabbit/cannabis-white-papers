@@ -100,11 +100,11 @@ There are three seed types and the choice shapes your whole grow. Regular seeds 
 
 Feminised seeds are bred to produce almost only female plants, removing the guesswork and wasted effort. They are made by inducing a female plant to make pollen (using treatments such as colloidal silver), so the resulting seeds carry only female genetics.[^flajsman-2021-feminized-seed-production][^monthony-2021-feminized-sts-comparison]
 
-Autoflower seeds carry Cannabis ruderalis genetics that make the plant flower automatically after about 2-4 weeks regardless of the light schedule, finishing in roughly 60-90 days from sprout.[^toth-2022-autoflower1-locus] Photoperiod plants (regular and feminised) only flower when the daily light drops to about 12 hours.[^moher-2023-twelve-hour-photoperiod-flowering]
+Autoflower seeds carry Cannabis ruderalis genetics that make the plant flower automatically after about 2-4 weeks regardless of the light schedule, finishing in roughly 60-90 days from sprout.[^toth-2022-autoflower1-locus] Photoperiod plants (regular and feminised) flower when nights are long enough without light interruptions (12/12 is the usual default).[^moher-2023-twelve-hour-photoperiod-flowering]
 
 |  | Regular | Feminised | Autoflower |
 | --- | --- | --- | --- |
-| Sex outcome | ~50% male / 50% female | ~99% female | ~99% female |
+| Sex outcome | ('~50% male / 50% female', '~99% female (if feminised)', 'Feminised autos ~99% female; regular autos ~50/50') |
 | Flowering trigger | Switch to 12h light | Switch to 12h light | Automatic, by age |
 | Time to harvest | Longer | Longer | ~60-90 days from sprout |
 | Plant size | Large | Large | Small (~2-4 ft) |
@@ -115,13 +115,13 @@ Autoflower seeds carry Cannabis ruderalis genetics that make the plant flower au
 
 > **NOTE — Photoperiod vs autoflower in one line**
 >
-> Photoperiod plants flower when _you_ shorten their light to 12 hours. Autoflowers flower when they reach a certain age, whatever the lights are doing.
+> Photoperiod plants flower when nights are long enough (growers usually use 12 hours light / 12 hours dark). Autoflowers flower when they reach a certain age, whatever the lights are doing.
 
 ## Three ways to germinate, and why
 
-Germination just means giving the seed three things: water, warmth and darkness. The embryo swells, drinks, and pushes the taproot out through the seed coat. There are three common ways to deliver those three things.
+Germination just means giving the seed three things: water and warmth (darkness is optional convenience). The embryo swells, drinks, and pushes the taproot out through the seed coat. There are three common ways to deliver those three things.
 
-The paper-towel method (seeds between damp paper towels, sandwiched between two plates) is the most popular because you can watch the taproot appear, and it reports near-99% success when conditions are controlled.[^cockson-2025-hemp-seed-moisture-temperature] Its one risk is damaging the fragile root when you move the seed to its pot.
+The paper-towel method (seeds between damp paper towels, sandwiched between two plates) is the most popular because you can watch the taproot appear, and with fresh seed and controlled moisture and temperature high germination is common when conditions are controlled.[^cockson-2025-hemp-seed-moisture-temperature] Its one risk is damaging the fragile root when you move the seed to its pot.
 
 | Method | Visibility | Transplant risk | Difficulty | Best for |
 | --- | --- | --- | --- | --- |
@@ -129,7 +129,7 @@ The paper-towel method (seeds between damp paper towels, sandwiched between two 
 | Direct-sow | None (hidden in medium) | None | Easy | Avoiding any root handling |
 | Pre-soak | Some (seeds sink/swell) | Low | Easy | Old or hard-shelled seeds |
 
-*All three supply the same water + warmth + darkness. They differ mainly in whether you can see progress.*
+*All three supply water + warmth (darkness optional). They differ mainly in whether you can see progress.*
 
 > **Diagram.** Wet but wrung-out towels, seeds spaced out and covered, kept warm and dark, checked twice a day. Plant once the taproot is about 0.5-1.5 cm long.[^smith-2022-hemp-germination-temperature-limits]
 
@@ -142,7 +142,7 @@ The paper-towel method (seeds between damp paper towels, sandwiched between two 
 
 Seeds are sensitive to their environment. Three settings matter: temperature, moisture and light. Get all three in range and most viable seeds sprout on their own.
 
-Hold temperature at a steady 21-25C (70-77F). Cooler slows germination, and warmer or fluctuating temperatures cause outright failures.[^smith-2022-hemp-germination-temperature-limits] Keep the medium or towel damp like a wrung-out sponge, never waterlogged, and keep seeds in darkness until they sprout.
+Hold temperature at a steady 21-25C (70-77F). Cooler slows germination, and warmer or fluctuating temperatures cause outright failures.[^smith-2022-hemp-germination-temperature-limits] Keep the medium or towel damp like a wrung-out sponge, never waterlogged, and keep seeds damp and warm until they sprout (darkness optional).
 
 > **Diagram.** Aim for the green band and keep it stable. Swings and heat above ~28C are a common cause of no-shows.[^smith-2022-hemp-germination-temperature-limits]
 
@@ -152,11 +152,11 @@ Hold temperature at a steady 21-25C (70-77F). Cooler slows germination, and warm
 >
 > - **Temperature:** steady 21-25C / 70-77F. Avoid swings and anything above ~28C.
 > - **Moisture:** damp not soaked (wrung-out-sponge feel). Waterlogged seeds suffocate and rot.
-> - **Light:** darkness while germinating. Once sprouted, give gentle light immediately so the stem does not stretch.
+> - **Light:** darkness is optional while germinating. Once sprouted, give gentle light immediately so the stem does not stretch.
 
 ## Seedling care: the first two to three weeks
 
-The newborn seedling has almost no roots, so it drinks largely through its leaves. That means it needs high humidity, typically 65-80% RH (a VPD of about 0.4-0.8 kPa), often using a humidity dome or a vented clear bag for the first 7-10 days.[^zhang-2021-vpd-stomatal-conductance-growth] VPD (vapour pressure deficit) is just a measure of how thirsty the air is. Lower means more humid.
+The newborn seedling has almost no roots, so it has a tiny root system, so it loses water easily. High humidity reduces evaporative demand until roots expand — roots still do the drinking.4-0.8 kPa), often using a humidity dome or a vented clear bag for the first 7-10 days.[^zhang-2021-vpd-stomatal-conductance-growth] VPD (vapour pressure deficit) is just a measure of how thirsty the air is. Lower means more humid.
 
 Keep light gentle: roughly 100-200 PPFD in the first week, rising to 200-300 PPFD by week two (a DLI near 10-15), with LEDs kept well back to avoid stretch or burn.[^rodriguez-2021-cannabis-light-intensity-photosynthesis] PPFD is the amount of usable light hitting the plant right now. DLI is the total it receives over a day.
 

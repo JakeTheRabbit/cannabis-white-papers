@@ -11,7 +11,7 @@ SUB = ("A beginner's field guide to the eight pests that hit cannabis hardest: h
        "understand its life cycle, monitor for it, and knock it down with biological controls and "
        "targeted treatments. The companion to your IPM decision process.")
 META = [("leaf", "Plant health"), ("image", "8 figures"),
-        ("quote", "Peer-reviewed · 8 sources"), ("clock", "~18 min read")]
+        ("quote", "Evidence-linked · 8 sources"), ("clock", "~18 min read")]
 RELATED = ["ipm-sop", "airflow-design", "mould-risk", "cloning"]
 REF_IDS = ["ahmed-2024-hemp-pests-florida-jipm", "pulkoski-burrack-2023-piercing-sucking-hemp",
            "cranshaw-2018-phorodon-cannabis-north-america", "cranshaw-wainwright-2020-rice-root-aphid-cannabis",
@@ -23,8 +23,14 @@ def _c(rid):
 
 SECTIONS = []
 
+# Fact-check jurisdiction banner
+JURISDICTION_NOTE = 'Jurisdiction note: named biocontrol agents and rates are planning examples only. Confirm legal status and supplier availability in your country (NZ readers: check HSNO/MPI before release).'
+
+
 SECTIONS.append({"id": "intro", "kicker": "Start here", "title": "What this guide is (and is not)",
   "blocks": [
+    callout("NOTE", "Jurisdiction", JURISDICTION_NOTE),
+    
     lead("This is a plain-language field guide to identifying and controlling the eight pest groups "
          "that most commonly attack cannabis: spider mites, russet and broad mites, thrips, fungus "
          "gnats, aphids and root aphids, whitefly, and caterpillars. It tells you what each pest "
@@ -64,7 +70,7 @@ SECTIONS.append({"id": "key-terms", "kicker": "Vocabulary", "title": "Key terms,
             "the line. Curative agents knock down an active outbreak that is already underway."),
     defterm("Life cycle / generation time", "Egg to egg-laying adult. Warm dry rooms shorten this to "
             "under a week for mites, which is why a small spot becomes a crop-wide problem fast."),
-    defterm("Loupe / scope", "A 30x hand loupe finds spider mites. Russet and broad mites are smaller "
+    defterm("Loupe / scope", "A 30x hand loupe finds spider mites. Russet and broad mites (confirm at 60&ndash;100&times; before treating; symptoms overlap with heat tacoing and tip burn) are smaller "
             "than a millimetre and need 60-100x magnification to see at all."),
     defterm("Frass, honeydew, stippling", "Pest droppings, the sticky sugar excretion sap-suckers "
             "leave behind, and the fine pale feeding speckles on a leaf, respectively."),
@@ -86,7 +92,7 @@ SECTIONS.append({"id": "sap-suckers", "kicker": "The core pests, part 1",
     p("These four feed on leaves and stems by piercing cells and sucking sap, so they share a look: "
       "pale stippling, distortion and loss of vigour" + _c("pulkoski-burrack-2023-piercing-sucking-hemp") +
       ". Telling them apart is about the secondary signs each one leaves."),
-    ul(["<strong>Spider mites:</strong> leaf-underside stippling plus fine webbing. The cycle runs as fast as 3 days at 27C / ~20% RH, and one female can lay up to ~200 eggs.",
+    ul(["<strong>Spider mites:</strong> leaf-underside stippling plus fine webbing. Under hot, dry conditions egg-to-adult often finishes in about a week (sometimes under two weeks); females often lay on the order of ~100 eggs over life (exact times depend on temperature and host).",
         "<strong>Thrips:</strong> silvery rasping streaks plus tiny black frass dots. They drop to the medium to pupate, so leaf sprays alone miss a whole life stage.",
         "<strong>Aphids:</strong> soft-bodied clusters on new growth, cast white skins, honeydew that grows black sooty mould. They can give live birth, so buildup is explosive.",
         "<strong>Whitefly:</strong> tiny white moth-like adults that flush up in a cloud when disturbed, with uniform yellowing and lower-canopy decline."]),
@@ -148,7 +154,7 @@ SECTIONS.append({"id": "monitoring", "kicker": "Catch it early",
       "you have. Run a fixed weekly scouting walk on the same day, inspecting leaf undersides, "
       "growing tips, flowers and the root zone, and step up to twice weekly as rooms warm up."),
     p("Hang yellow sticky cards at canopy height for thrips, whitefly and fungus-gnat adults at "
-      "roughly one card per 1,000 square feet as a minimum, with more cards giving a better signal. "
+      "a mapped density (example: ~1 card / 100 m&sup2; or ~1,000 sq ft) as a starting point, with more cards giving a better signal. "
       "Place fungus-gnat cards low, near the medium surface, where the adults fly. Record the count "
       "on each card every week so you track the trend, not just the snapshot."),
     ul(["Scout weekly on a fixed day, spot-check twice weekly when temperatures and pest development rise",

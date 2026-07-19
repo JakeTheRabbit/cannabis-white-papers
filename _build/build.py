@@ -207,12 +207,12 @@ def render_paper(mod):
         r = REFS.REFS.get(rid)
         if not r:
             continue
-        npc = "" if r.get("peer") else " <span style='color:var(--faint)'>(non-peer-reviewed source)</span>"
+        npc = "" if r.get("peer") else " <span style='color:var(--faint)'>(industry/manufacturer or non-journal source)</span>"
         link = f' <a href="{r["url"]}" target="_blank" rel="noopener">{r["url"]}</a>' if r.get("url") else ""
         cls = "" if r.get("peer") else " class='np'"
         ref_lis += f'<li id="ref-{rid}"{cls}>{r["cite"]}{npc}{link}</li>'
     refs = (f'<div class="refs"><h3>References</h3><ol>{ref_lis}</ol>'
-            f'<p class="foot">Citations marked in-text as [n] map to this list. Peer-reviewed sources '
+            f'<p class="foot">Citations marked in-text as [n] map to this list. Primary literature and official guidance '
             f'except where noted. Cannabis tissue culture is strongly genotype-dependent, verify '
             f'dilutions, hormone doses and local regulations against the primary sources before relying on them.</p></div>')
 
@@ -264,7 +264,7 @@ def render_index():
         '<div class="hero-land tight">'
         '<div class="eyebrow">A field guide to growing, from zero</div>'
         + fit_title("The Cannabis White Papers", 60, cls="") +
-        f'<p class="sub">Peer-reviewed cultivation science, rewritten so a first-timer can actually '
+        f'<p class="sub">Evidence-linked cultivation field guides, rewritten so a first-timer can actually '
         f'follow it: every term defined, every claim cited, the working shown in diagrams. Filter the '
         f'{n} papers below, or press <strong>Ctrl&nbsp;K</strong> to search.</p></div>'
     )
@@ -304,7 +304,7 @@ def render_index():
     tree = (f'<div id="paperdir">{"".join(groups)}'
             '<div class="dir-empty" id="dirEmpty" style="display:none">No papers match that filter.</div></div>')
     body = hero + tools + tree
-    return shell.page("index", "Home", body, desc="Peer-reviewed cannabis cultivation white papers, by grow stage.", wide=True, mobile_active="index")
+    return shell.page("index", "Home", body, desc="Evidence-linked cannabis cultivation field guides, by grow stage.", wide=True, mobile_active="index")
 
 def render_papers():
     head = ('<div class="eyebrow">Library</div>' + fit_title("All papers", 54) +

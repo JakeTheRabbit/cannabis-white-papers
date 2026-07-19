@@ -11,7 +11,7 @@ SUB = ("Coco coir lets you talk to your plants through water. This paper shows y
        "zone is telling you, and how a daily rhythm of wetting and drying steers a plant toward "
        "leaves or toward flower, explained from zero.")
 META = [("droplet", "Beginner"), ("image", "5 diagrams"),
-        ("quote", "Peer-reviewed · 10 sources"), ("clock", "~16 min read")]
+        ("quote", "Evidence-linked · 10 sources"), ("clock", "~16 min read")]
 RELATED = ["root-zone-teros12", "grow-room-systems", "tissue-culture"]
 REF_IDS = ["abad2005-coir", "noguera2003-cec", "malik2025-media", "hilhorst2000-ec",
            "caplan2019-drought", "stack2024-drought", "welling2025-aba",
@@ -176,7 +176,7 @@ SECTIONS.append({"id": "week", "kicker": "08 · The arc", "title": "A week-by-we
       ("Flower wk 1–2 (stretch)", "Plants nearly double in height. Keep nights cooler and the day-night gap modest to limit stretch, and begin gentle generative drybacks."),
       ("Flower wk 3–6 (build)", "Peak generative steering: firm drybacks, higher EC, hold P2 full to feed bulking flowers."),
       ("Flower wk 7+ (ripen)", "Ease off. A controlled late water-deficit can lift potency, but stop before stress shows."),
-      ("Flush / finish", "Lower EC feeds in the final stretch. Let the plant wind down cleanly."),
+      ("Finish (ease EC; long plain-water flush has weak quality evidence)", "Lower EC feeds in the final stretch. Let the plant wind down cleanly."),
     ]),
   ]})
 

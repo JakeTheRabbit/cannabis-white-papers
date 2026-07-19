@@ -79,8 +79,8 @@ SECTIONS.append({"id": "key-terms", "kicker": "Vocabulary", "title": "Key terms,
             "the air is. Crop steering is biasing the plant vegetative or generative using irrigation, "
             "climate and light. <a href='glossary.html'>Glossary &rarr;</a>"),
     figure(grid([
-        card("Vegetative", "Leafy growth and size. Longer drybacks held wetter overall, lower EC.", "Steer"),
-        card("Generative", "Flower, density and resin. Shorter, firmer drybacks, higher EC.", "Steer"),
+        card("Vegetative", "Leafy growth and size. Smaller drybacks, held wetter overall, moderate EC.", "Steer"),
+        card("Generative", "Flower, density and resin. Larger controlled drybacks and/or higher root-zone EC.", "Steer"),
         card("Runoff", "Water that drains out the bottom of the pot during a shot. Confirms the media "
              "reached field capacity.", "Signal"),
       ], cols=3), 3,
@@ -139,9 +139,9 @@ SECTIONS.append({"id": "phases", "kicker": "The core idea", "title": "The phase 
       "<strong>P3 (pre-lights-off)</strong> is emergency-only watering below 40% VWC before an "
       "overnight dryback resets the cycle."),
     callout("key", "Vegetative vs generative steering",
-      ul(["<strong>Vegetative</strong> steering uses longer drybacks and lower EC to encourage root "
+      ul(["<strong>Vegetative</strong> steering uses smaller drybacks and moderate EC to encourage root "
           "and leaf growth.",
-          "<strong>Generative</strong> steering uses shorter drybacks and higher EC to push "
+          "<strong>Generative</strong> steering uses larger controlled drybacks and/or higher root-zone EC to push "
           "flowering." + _c("caplan-2019-drought-cannabis"),
           "The same P0&ndash;P3 framework runs both. Only the dryback targets and EC change."], "tight")),
     figure(L.flow("The daily phase cycle",

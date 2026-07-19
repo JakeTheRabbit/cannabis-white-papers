@@ -136,7 +136,7 @@ Flowering indoors usually runs about 8–10 weeks once you flip the lights to a 
 2. **Flower wk 1–2 (stretch)** — Plants nearly double in height. Keep nights cooler and the day-night gap modest to limit stretch, and begin gentle generative drybacks.
 3. **Flower wk 3–6 (build)** — Peak generative steering: firm drybacks, higher EC, hold P2 full to feed bulking flowers.
 4. **Flower wk 7+ (ripen)** — Ease off. A controlled late water-deficit can lift potency, but stop before stress shows.
-5. **Flush / finish** — Lower EC feeds in the final stretch. Let the plant wind down cleanly.
+5. **Finish (ease EC; long plain-water flush has weak quality evidence)** — Lower EC feeds in the final stretch. Let the plant wind down cleanly.
 
 ## Troubleshooting
 

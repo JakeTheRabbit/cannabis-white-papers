@@ -25,6 +25,10 @@ _Plant health · IPM · ~14 min read_
 
 ## What IPM is and why a grow lives or dies by it
 
+> **NOTE — Jurisdiction**
+>
+> Jurisdiction note: product legality, REI/PHI, and organism status are local (e.g. NZ ACVM/HSNO/WorkSafe vs US EPA WPS). Verify current law and labels before any spray or release.
+
 Integrated Pest Management (IPM) is the routine of catching pests and diseases before they spread, using the lightest control that works and escalating only when you have to. It is not one spray or one bug release. It is a loop: evaluate, decide, control, repeat, run across every room from mothers and clones through veg and flower.
 
 One missed mite colony or one powdery-mildew outbreak can destroy an entire harvest[^punja-2021-emerging-diseases-cannabis], and in a regulated facility a pesticide misstep can fail residue testing and bin the whole batch[^scott-punja-2021-powdery-mildew-management]. This guide assumes you know nothing and defines every term as it appears.
@@ -73,9 +77,9 @@ Work a fixed route every time: scout the tables and substrate for frass and debr
 
 ## Action thresholds: knowing exactly when to act
 
-A threshold turns observation into a decision so nobody has to guess. A workable two-tier model reflects a common commercial action approach[^punja-2021-emerging-diseases-cannabis]. At the first sign of a single mite, aphid, or similar pest, assume there are more: scout the entire room, begin exclusion measures (limit who enters), and line up biological controls. Once more than 3 percent of a room is affected, escalate to approved pesticide applications, subject to growth stage and management sign-off.
+A threshold turns observation into a decision so nobody has to guess. A workable two-tier model reflects a common commercial action approach[^punja-2021-emerging-diseases-cannabis]. At the first sign of a single mite, aphid, or similar pest, assume there are more: scout the entire room, begin exclusion measures (limit who enters), and line up biological controls. As an example planning default, once more than 3 percent of a room is affected, escalate to approved pesticide (zero-tolerance organisms override any percentage) applications, subject to growth stage and management sign-off.
 
-Growth stage is itself a hard gate. In a regulated soilless facility, plants are treated only from mothering through day 21 of flower, with no foliar treatment after buds form (a light antimicrobial rinse may be the only exception)[^scott-punja-2021-powdery-mildew-management]. For a serious infestation that appears after day 21 of flower, pull and destroy the affected plants rather than spray.
+Growth stage is itself a hard gate. In a regulated soilless facility, plants are treated only through early flower in many residue-aware facilities (example: day 21); your PHI and QA SOP set the real cutoff (a light antimicrobial rinse may be the only exception)[^scott-punja-2021-powdery-mildew-management]. For a serious infestation that appears after day 21 of flower, pull and destroy the affected plants rather than spray.
 
 > **Diagram.** Each rung is a defined response. The level of pressure, not a gut feeling, decides which rung you are on.
 
@@ -87,7 +91,7 @@ Growth stage is itself a hard gate. In a regulated soilless facility, plants are
 
 ## Biological controls: putting good bugs to work
 
-Biocontrol releases predators that hunt your pests. They are harmless to the cannabis plant at every stage, and if they run out of prey they simply die off and fall away. The job is to match the predator to the pest and the conditions.
+Biocontrol releases predators that hunt your pests when legal in your jurisdiction. They usually leave no chemical residue on the cannabis plant at every stage, and if they run out of prey they simply die off and fall away. The job is to match the predator to the pest and the conditions.
 
 _Amblyseius swirskii_ is a generalist that eats thrips larvae, whitefly, and broad mites and works best at 77 to 86 °F with humidity above 70 percent[^elmoghazy-2024-swirskii-functional-response]. _Phytoseiulus persimilis_ is a spider-mite specialist that eats up to 5 adults or 20 eggs a day but needs cooler, humid conditions[^koppert-persimilis-tech]. _Neoseiulus californicus_ is the tougher spider-mite option that stays active across 60 to 90 °F[^mumtaz-2023-californicus-functional-response]. _Stratiolaelaps scimitus_ is a soil-dwelling mite for fungus gnat larvae and thrips pupae, best deployed when pest pressure is still low[^punja-2021-emerging-diseases-cannabis].
 
@@ -97,13 +101,13 @@ _Amblyseius swirskii_ is a generalist that eats thrips larvae, whitefly, and bro
 
 > **NOTE — Good bugs self-limit**
 >
-> Predators are harmless to the plant and to people. When the prey runs out they die off on their own. There is no residue and no withholding period.
+> Predatory arthropods usually leave no chemical residue, but must be legal and compatible. When the prey runs out they die off on their own. There is no residue and no withholding period.
 
 ## Spray rotation and safe application
 
 When thresholds force a spray, the rules are about residue safety and effective coverage, not improvisation. Use only products approved for cannabis in your jurisdiction, always follow the label dilution and withholding periods, and never freelance with off-list nutrients or supplements that could fail residue testing[^scott-punja-2021-powdery-mildew-management].
 
-A preventative program can be as simple as a weekly foliar of an approved wash plus sulphur (1 to 3 tablespoons per litre, ideally 3, no more than once every 2 weeks, veg and mothers only), stepping up to 3 times a week curatively at low pest levels[^scott-punja-2021-powdery-mildew-management]. Rotate chemistries and tank-mix only combinations the labels allow, adding products in the label-specified order. Spray when the media is fully saturated so the product is not pulled into the leaves and burns them.
+A preventative program can be as simple as a weekly foliar of an approved wash plus sulphur (1 only at the current registered product label rate and REI/PHI if lawful (never kitchen tablespoon rates; veg and mothers only when residues allow), stepping up to 3 times a week curatively at low pest levels[^scott-punja-2021-powdery-mildew-management]. Rotate chemistries and tank-mix only combinations the labels allow, adding products in the label-specified order. Avoid spraying under high light, high VPD, or drought stress so the product is not forced onto into the leaves and burns them.
 
 > **Diagram.** Coverage is everything. Use a fan tip and a dedicated sprayer per product to avoid cross-contamination.
 
@@ -152,7 +156,7 @@ The frequent failures are predictable: skipping scouting until damage is visible
 
 > **Diagram.**
 
-Avoid airborne fumigators entirely in a flower facility. They can drift into bud and compromise the crop[^scott-punja-2021-powdery-mildew-management]. Check sprayers for metallic hose clamps that can rust and fail heavy-metals testing[^punja-2021-emerging-diseases-cannabis].
+Avoid airborne fumigators entirely in a flower facility. They can drift into bud and compromise the crop[^scott-punja-2021-powdery-mildew-management]. Check sprayers for corroding product-contact or fertigation hardware that can contribute to metals contamination in some cases[^punja-2021-emerging-diseases-cannabis].
 
 > **Diagram.** A mature program is mostly quiet, steady prevention. Curative spraying is the rare exception, not the routine.
 
