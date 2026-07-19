@@ -21,7 +21,7 @@ const TOOLS = [
   {
     name: "search_papers",
     description:
-      "Search the 32 cannabis-cultivation white papers by keyword. Returns the best-matching papers with slug, title, stage and a snippet. Use this first, then get_paper for the full text.",
+      "Search the cannabis-cultivation white papers by keyword. Returns the best-matching papers with slug, title, stage and a snippet. Use this first, then get_paper for the full text.",
     inputSchema: {
       type: "object",
       properties: {
@@ -43,7 +43,7 @@ const TOOLS = [
   },
   {
     name: "list_papers",
-    description: "List all 32 white papers (slug, title, stage, summary), grouped data for browsing.",
+    description: "List all white papers (slug, title, stage, summary), grouped data for browsing.",
     inputSchema: { type: "object", properties: {} },
   },
   {

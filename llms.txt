@@ -62,4 +62,4 @@ Licensed CC BY-NC 4.0 (https://creativecommons.org/licenses/by-nc/4.0/). Attribu
 ## Optional
 - [Full corpus (all papers)](https://jaketherabbit.github.io/cannabis-white-papers/llms-full.txt): every paper concatenated
 - [Manifest (JSON index)](https://jaketherabbit.github.io/cannabis-white-papers/manifest.json): machine-readable paper index
-- [Glossary (JSON)](https://jaketherabbit.github.io/cannabis-white-papers/glossary.json): ~270 defined terms
+- [Glossary (JSON)](https://jaketherabbit.github.io/cannabis-white-papers/glossary.json): 388 defined terms
