@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 540" font-family="Segoe UI, system-ui, sans-serif">
+  <rect width="960" height="540" fill="#0f1419"/>
+  <text x="48" y="48" fill="#e7ecf3" font-size="24" font-weight="700">Log reduction ≠ those old “83% / 58%” mappings</text>
+  <text x="48" y="76" fill="#9aabbc" font-size="14">Under standard test conditions: 1 log ≈ 90% removed, 2 log ≈ 99%, 3 log ≈ 99.9%.</text>
+
+  <rect x="80" y="120" width="800" height="300" rx="12" fill="#1a2332" stroke="#2d3a4d"/>
+  <!-- header -->
+  <rect x="80" y="120" width="800" height="50" rx="12" fill="#121a26"/>
+  <text x="140" y="152" fill="#9aabbc" font-size="15" font-weight="600">Log₁₀ reduction</text>
+  <text x="400" y="152" fill="#9aabbc" font-size="15" font-weight="600">Approx. removed</text>
+  <text x="680" y="152" fill="#9aabbc" font-size="15" font-weight="600">Still remaining</text>
+
+  <!-- rows -->
+  <text x="180" y="210" text-anchor="middle" fill="#e7ecf3" font-size="22" font-weight="700">1 log</text>
+  <text x="450" y="210" text-anchor="middle" fill="#34d399" font-size="22" font-weight="700">~90%</text>
+  <text x="730" y="210" text-anchor="middle" fill="#9aabbc" font-size="22">~10%</text>
+  <line x1="100" y1="235" x2="860" y2="235" stroke="#2d3a4d"/>
+
+  <text x="180" y="285" text-anchor="middle" fill="#e7ecf3" font-size="22" font-weight="700">2 log</text>
+  <text x="450" y="285" text-anchor="middle" fill="#34d399" font-size="22" font-weight="700">~99%</text>
+  <text x="730" y="285" text-anchor="middle" fill="#9aabbc" font-size="22">~1%</text>
+  <line x1="100" y1="310" x2="860" y2="310" stroke="#2d3a4d"/>
+
+  <text x="180" y="360" text-anchor="middle" fill="#e7ecf3" font-size="22" font-weight="700">3 log</text>
+  <text x="450" y="360" text-anchor="middle" fill="#34d399" font-size="22" font-weight="700">~99.9%</text>
+  <text x="730" y="360" text-anchor="middle" fill="#9aabbc" font-size="22">~0.1%</text>
+
+  <rect x="80" y="440" width="800" height="50" rx="10" fill="#3f1d1d" stroke="#ff5c5c"/>
+  <text x="480" y="472" text-anchor="middle" fill="#fecaca" font-size="16">✕ Mapping 3 log → 83% or 2 log → 58% is arithmetic error — do not use.</text>
+
+  <text x="48" y="525" fill="#5a6a7a" font-size="12">Fact-check pack · hand hygiene education (neither sterilises hands)</text>
+</svg>

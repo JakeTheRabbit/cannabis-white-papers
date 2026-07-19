@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 700" font-family="Segoe UI, system-ui, sans-serif">
+  <rect width="1200" height="700" fill="#0b0f14"/>
+  <text x="48" y="42" fill="#f1f5f9" font-size="24" font-weight="700">One late drought study ≠ daily crop-steering drybacks</text>
+  <text x="48" y="70" fill="#94a3b8" font-size="14">Both plots: Y = substrate VWC (%), X = time. Example educational traces — recalibrate for your probe/media.</text>
+
+  <!-- A -->
+  <rect x="40" y="100" width="540" height="520" rx="14" fill="#111827" stroke="#ca8a04"/>
+  <text x="60" y="140" fill="#fbbf24" font-size="17" font-weight="700">A. Single late-flower drought (study-style)</text>
+  <text x="60" y="165" fill="#64748b" font-size="13">One long controlled dry event, then re-wet</text>
+
+  <g stroke="#1e293b"><line x1="100" y1="220" x2="520" y2="220"/><line x1="100" y1="300" x2="520" y2="300"/>
+  <line x1="100" y1="380" x2="520" y2="380"/><line x1="100" y1="460" x2="520" y2="460"/><line x1="100" y1="540" x2="520" y2="540"/></g>
+  <line x1="100" y1="540" x2="520" y2="540" stroke="#64748b" stroke-width="2"/>
+  <line x1="100" y1="540" x2="100" y2="220" stroke="#64748b" stroke-width="2"/>
+  <!-- VWC scale 30-80: y=540 at 30, y=220 at 80 → span 320 for 50% -->
+  <text x="90" y="545" text-anchor="end" fill="#94a3b8" font-size="11">30%</text>
+  <text x="90" y="465" text-anchor="end" fill="#94a3b8" font-size="11">45%</text>
+  <text x="90" y="385" text-anchor="end" fill="#94a3b8" font-size="11">60%</text>
+  <text x="90" y="305" text-anchor="end" fill="#94a3b8" font-size="11">70%</text>
+  <text x="90" y="225" text-anchor="end" fill="#94a3b8" font-size="11">80%</text>
+  <!-- x: day 0 to 16 over 100-520 -->
+  <text x="100" y="565" fill="#94a3b8" font-size="11">Day 0</text>
+  <text x="205" y="565" fill="#94a3b8" font-size="11">Day 4</text>
+  <text x="310" y="565" fill="#94a3b8" font-size="11">Day 8</text>
+  <text x="415" y="565" fill="#94a3b8" font-size="11">Day 12</text>
+  <text x="500" y="565" fill="#94a3b8" font-size="11">Day 16</text>
+  <text x="250" y="595" fill="#cbd5e1" font-size="13">Time (days of late flower)</text>
+  <text x="55" y="400" fill="#94a3b8" font-size="12" transform="rotate(-90 55 400)">VWC (%)</text>
+
+  <!-- 70% flat days 0-3, drop to 35 by day 11, hold, rewet day 14-16 to 70 -->
+  <!-- y for 70% = 540 - (70-30)/50*320 = 540-256 = 284; 35% = 540 - 32 = 508 -->
+  <polyline fill="none" stroke="#fbbf24" stroke-width="3.5"
+    points="100,284 180,284 200,284 310,508 390,508 450,350 520,284"/>
+  <circle cx="100" cy="284" r="5" fill="#fbbf24"/>
+  <circle cx="310" cy="508" r="5" fill="#fbbf24"/>
+  <circle cx="520" cy="284" r="5" fill="#fbbf24"/>
+  <text x="110" y="275" fill="#fef3c7" font-size="12">70%</text>
+  <text x="320" y="530" fill="#fef3c7" font-size="12">~35% trough</text>
+  <text x="430" y="340" fill="#fef3c7" font-size="12">re-wet → 70%</text>
+  <text x="60" y="620" fill="#94a3b8" font-size="12">≈ one multi-day drought (literature-style), not daily pulses</text>
+
+  <text x="600" y="380" fill="#f87171" font-size="42" font-weight="700" text-anchor="middle">≠</text>
+  <text x="600" y="415" fill="#f87171" font-size="14" text-anchor="middle">not the same</text>
+
+  <!-- B -->
+  <rect x="640" y="100" width="520" height="520" rx="14" fill="#111827" stroke="#16a34a" stroke-width="2"/>
+  <text x="660" y="140" fill="#4ade80" font-size="17" font-weight="700">B. Daily dryback sawtooth (steering)</text>
+  <text x="660" y="165" fill="#64748b" font-size="13">Many small wet–dry cycles (example 20-point drybacks)</text>
+
+  <g stroke="#1e293b"><line x1="700" y1="220" x2="1110" y2="220"/><line x1="700" y1="300" x2="1110" y2="300"/>
+  <line x1="700" y1="380" x2="1110" y2="380"/><line x1="700" y1="460" x2="1110" y2="460"/><line x1="700" y1="540" x2="1110" y2="540"/></g>
+  <line x1="700" y1="540" x2="1110" y2="540" stroke="#64748b" stroke-width="2"/>
+  <line x1="700" y1="540" x2="700" y2="220" stroke="#64748b" stroke-width="2"/>
+  <text x="690" y="545" text-anchor="end" fill="#94a3b8" font-size="11">30%</text>
+  <text x="690" y="465" text-anchor="end" fill="#94a3b8" font-size="11">45%</text>
+  <text x="690" y="385" text-anchor="end" fill="#94a3b8" font-size="11">60%</text>
+  <text x="690" y="305" text-anchor="end" fill="#94a3b8" font-size="11">70%</text>
+  <text x="690" y="225" text-anchor="end" fill="#94a3b8" font-size="11">80%</text>
+  <text x="700" y="565" fill="#94a3b8" font-size="11">Day 0</text>
+  <text x="800" y="565" fill="#94a3b8" font-size="11">Day 2</text>
+  <text x="900" y="565" fill="#94a3b8" font-size="11">Day 4</text>
+  <text x="1000" y="565" fill="#94a3b8" font-size="11">Day 6</text>
+  <text x="1085" y="565" fill="#94a3b8" font-size="11">Day 8</text>
+  <text x="850" y="595" fill="#cbd5e1" font-size="13">Time (days of irrigation cycle)</text>
+  <text x="655" y="400" fill="#94a3b8" font-size="12" transform="rotate(-90 655 400)">VWC (%)</text>
+
+  <!-- peak 75 y=284-ish: 75% = 540-(45/50)*320=252; trough 55 = 540-(25/50)*320=380 -->
+  <!-- wait use same scale: 30@540, 80@220, y=540-(v-30)/50*320 -->
+  <!-- 75%: 540-288=252; 55%: 540-160=380 -->
+  <polyline fill="none" stroke="#4ade80" stroke-width="3"
+    points="700,252 740,252 760,380 800,252 820,380 860,252 880,380 920,252 940,380 980,252 1000,380 1040,252 1060,380 1100,252"/>
+  <text x="710" y="245" fill="#bbf7d0" font-size="12">peak 75%</text>
+  <text x="770" y="400" fill="#bbf7d0" font-size="12">trough 55%</text>
+  <text x="860" y="430" fill="#4ade80" font-size="14" font-weight="700">20 percentage POINTS / day</text>
+  <text x="660" y="620" fill="#94a3b8" font-size="12">Related idea (mild deficit), different experiment from panel A</text>
+
+  <text x="48" y="680" fill="#475569" font-size="12">v3 · Explicit time axis (days) + VWC % axis on both panels</text>
+</svg>

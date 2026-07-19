@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Image review form · Fact-check pack (local, not live)</title>
+<style>
+  :root {
+    --bg: #0f1419; --panel: #1a2332; --border: #2d3a4d; --text: #e7ecf3;
+    --muted: #9aabbc; --accent: #38bdf8; --ok: #34d399; --warn: #fbbf24; --bad: #ff5c5c;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; font-family: "Segoe UI", system-ui, sans-serif; background: var(--bg); color: var(--text); line-height: 1.45; }
+  header { padding: 1.5rem 1.75rem; border-bottom: 1px solid var(--border); background: #152033; }
+  header h1 { margin: 0 0 0.4rem; font-size: 1.45rem; }
+  header p { margin: 0.3rem 0; color: var(--muted); max-width: 70rem; }
+  .toolbar {
+    position: sticky; top: 0; z-index: 20; display: flex; flex-wrap: wrap; gap: 0.6rem; align-items: center;
+    padding: 0.75rem 1.75rem; background: rgba(15,20,25,0.94); border-bottom: 1px solid var(--border); backdrop-filter: blur(8px);
+  }
+  button, .btn {
+    background: var(--panel); color: var(--text); border: 1px solid var(--border);
+    border-radius: 8px; padding: 0.45rem 0.85rem; font-size: 0.9rem; cursor: pointer;
+  }
+  button.primary { background: #0c4a6e; border-color: #0284c7; color: #e0f2fe; font-weight: 600; }
+  button.ok { background: #14532d; border-color: #22c55e; }
+  main { padding: 1.25rem 1.75rem 4rem; max-width: 1100px; margin: 0 auto; }
+  .note { background: #1c2a1c; border: 1px solid #2f5a3a; color: #b7e4c7; border-radius: 10px; padding: 0.9rem 1rem; margin-bottom: 1.25rem; }
+  .card {
+    background: var(--panel); border: 1px solid var(--border); border-radius: 14px;
+    padding: 1.1rem 1.2rem; margin-bottom: 1.25rem;
+  }
+  .card h2 { margin: 0 0 0.35rem; font-size: 1.15rem; }
+  .meta { display: flex; flex-wrap: wrap; gap: 0.4rem; margin: 0.5rem 0 0.75rem; }
+  .pill { font-size: 0.75rem; padding: 0.2rem 0.55rem; border-radius: 999px; background: #121a26; border: 1px solid var(--border); color: var(--muted); }
+  .pill.style { color: #7dd3fc; border-color: #0369a1; }
+  .pill.paper { color: #fcd34d; border-color: #a16207; }
+  .pill.verdict-pass { color: #86efac; border-color: #16a34a; }
+  .pill.verdict-fix { color: #fca5a5; border-color: #dc2626; }
+  .context {
+    background: #0d1520; border-left: 3px solid var(--accent); border-radius: 0 8px 8px 0;
+    padding: 0.7rem 0.9rem; margin: 0.6rem 0; color: #c6e6ff; font-size: 0.92rem;
+  }
+  .context strong { color: #e7ecf3; }
+  .why { color: var(--muted); font-size: 0.9rem; margin: 0.4rem 0 0.8rem; }
+  .preview {
+    display: block; width: 100%; max-height: 420px; object-fit: contain;
+    background: #0a0e14; border-radius: 10px; border: 1px solid var(--border); margin: 0.5rem 0;
+  }
+  .links a { color: #7dd3fc; margin-right: 1rem; font-size: 0.9rem; }
+  label { display: block; font-size: 0.8rem; color: var(--muted); margin: 0.55rem 0 0.25rem; text-transform: uppercase; letter-spacing: 0.04em; }
+  select, textarea, input[type="text"] {
+    width: 100%; background: #0d1520; color: var(--text); border: 1px solid var(--border);
+    border-radius: 8px; padding: 0.55rem 0.7rem; font: inherit;
+  }
+  textarea { min-height: 72px; resize: vertical; }
+  .row2 { display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem; }
+  @media (max-width: 700px) { .row2 { grid-template-columns: 1fr; } }
+  table.summary { width: 100%; border-collapse: collapse; font-size: 0.88rem; margin-top: 1rem; }
+  table.summary th, table.summary td { border: 1px solid var(--border); padding: 0.5rem 0.6rem; vertical-align: top; }
+  table.summary th { background: #121a26; color: var(--muted); text-align: left; font-size: 0.75rem; text-transform: uppercase; }
+  footer { padding: 1.5rem; border-top: 1px solid var(--border); color: var(--muted); font-size: 0.85rem; }
+  #status { color: var(--ok); font-size: 0.9rem; }
+</style>
+</head>
+<body>
+<header>
+  <h1>Image review form — fact-check pack (local only)</h1>
+  <p><strong>Not pushed live.</strong> Folder: <code>assets/img/factcheck-review/</code>. Fill feedback per image, then <strong>Save JSON for Grok</strong> and share the file back.</p>
+  <p><strong>v3 applied</strong> from overridden JSON (2026-07-19 12:44): photoreal aw/moisture, better graphs with day axes, two-kit PH flow, continuous VWC phase chart, annotated photoreal meristem, small pots. See <code>CHANGELOG-v3.md</code>. Hard-refresh (Ctrl+F5).</p>
+</header>
+
+<div class="toolbar">
+  <button class="primary" type="button" id="btnSave">Save JSON for Grok</button>
+  <button type="button" id="btnLoad">Load JSON</button>
+  <button type="button" id="btnExportMd">Export markdown notes</button>
+  <button class="ok" type="button" id="btnApproveAll">Mark all Approve</button>
+  <input type="file" id="fileIn" accept="application/json,.json" hidden />
+  <span id="status"></span>
+</div>
+
+<main>
+  <div class="note">
+    <strong>Style policy used:</strong>
+    code SVG for exact numbers/labels · scientific illustration for physiology cutaways · photoreal for “what this looks like in a real room” · comparison diagrams for “not the same experiment / inverted polarity.”
+    Rejected drafts are kept as <code>_reject-*</code> for transparency (not for site use).
+  </div>
+
+  <div id="cards"></div>
+
+  <div class="card">
+    <h2>Overall decision</h2>
+    <div class="row2">
+      <div>
+        <label>Ship decision</label>
+        <select id="overall">
+          <option value="">— choose —</option>
+          <option value="approve_all">Approve all for live push</option>
+          <option value="approve_subset">Approve subset only (see per-image)</option>
+          <option value="revise">Revise before push</option>
+          <option value="reject">Reject pack</option>
+        </select>
+      </div>
+      <div>
+        <label>Your name / date</label>
+        <input type="text" id="reviewer" placeholder="Ben · date" />
+      </div>
+    </div>
+    <label>Overall notes for Grok</label>
+    <textarea id="overallNotes" placeholder="Global feedback, priority papers, style tweaks…"></textarea>
+  </div>
+
+  <div class="card">
+    <h2>Quick index</h2>
+    <table class="summary" id="summaryTable">
+      <thead><tr><th>#</th><th>File</th><th>Style</th><th>Paper</th><th>Open</th><th>Your vote</th></tr></thead>
+      <tbody></tbody>
+    </table>
+  </div>
+</main>
+
+<footer>
+  Local working example only. After you return the saved JSON, images can be wired into papers and pushed to GitHub Pages.
+</footer>
+
+<script>
+const ITEMS = [
+  {
+    id: "01",
+    file: "01-dryback-points-vs-percent.svg",
+    title: "Dryback = percentage POINTS",
+    style: "Code diagram (SVG)",
+    paper: "one-steering-law · rockwool · coco · irrigation-manual",
+    self_verdict: "pass",
+    self_notes: "Exact arithmetic; no AI text garble.",
+    context: "Surrounding claim: growers confuse a 20-point dryback (78→58) with “20% of peak.” Steering SOPs mean peak − trough in points.",
+    why: "Numbers must be exact → code SVG, not image model."
+  },
+  {
+    id: "02",
+    file: "02-moisture-vs-water-activity.jpg",
+    title: "Moisture % vs water activity (aw)",
+    style: "Photoreal lab",
+    paper: "harvest-dry-trim-cure",
+    self_verdict: "pass",
+    self_notes: "v3 PHOTO: cut buds + aw meter ~0.61 + moisture ~11%. Diagram backup: 02-moisture-vs-water-activity-diagram.svg",
+    context: "Surrounding claim: same ~11% moisture meter reading can span aw ~0.53 (too dry) to ~0.66 (mould risk). Steer by water activity.",
+    why: "User asked for photo of the concept."
+  },
+  {
+    id: "03",
+    file: "03-leaf-vs-canopy-light.svg",
+    title: "Leaf saturation ≠ canopy yield ceiling",
+    style: "Code diagram (SVG)",
+    paper: "scaling-high-light · lighting-fundamentals",
+    self_verdict: "pass",
+    self_notes: "v3: publication-style dual plots, full grid, labelled start/mid/end points, units on both axes.",
+    context: "Surrounding claim: ambient CO₂ is not a hard ~800 µmol “wall.” Leaf curves flatten earlier; canopy flower yield can still rise toward high PPFD.",
+    why: "Real-looking graphs with numbers per feedback."
+  },
+  {
+    id: "04",
+    file: "04-caplan-vs-daily-dryback.svg",
+    title: "Caplan one drought ≠ daily drybacks",
+    style: "Code comparison diagram (SVG)",
+    paper: "coco-crop-steering · rockwool · one-steering-law · f2",
+    self_verdict: "pass",
+    self_notes: "v3: VWC % Y-axis + Day 0–N time X-axis on BOTH panels with example numbers.",
+    context: "Surrounding claim: Caplan 2019-style single carefully timed drought is not the same experiment as daily generative dryback recipes.",
+    why: "Prevent the biggest steering citation misconception."
+  },
+  {
+    id: "05",
+    file: "05-do-saturation-curve.svg",
+    title: "DO saturation vs temperature",
+    style: "Code diagram (SVG)",
+    paper: "water-quality · substrates-overview",
+    self_verdict: "pass",
+    self_notes: "Correct ~9.1 / ~8.1 mg/L; wrong 5–6 / 3–4 crossed out.",
+    context: "Surrounding claim (fixed in text): saturation DO is ~9 mg/L at 20°C and ~8 at 26°C, not 5–6 / 3–4 ppm.",
+    why: "Hard numerical correction needs exact labels."
+  },
+  {
+    id: "06",
+    file: "06-clean-to-dirty-flow.svg",
+    title: "Clean → dirty facility flow",
+    style: "Code flowchart (SVG)",
+    paper: "pppe · ipm-sop · facility-3d",
+    self_verdict: "pass",
+    self_notes: "v3: two explicit kits — Gown-in A (cultivation) vs Gown-in B (post-harvest) with hard barrier strip.",
+    context: "Surrounding claim: biosecurity flow. Review feedback: post-harvest must not share flower coveralls — lowest microbial zone for dry/trim/store.",
+    why: "Process polarity + product-protection barrier."
+  },
+  {
+    id: "07",
+    file: "07-log-reduction-table.svg",
+    title: "Log reduction math (hand hygiene)",
+    style: "Code table diagram (SVG)",
+    paper: "pppe",
+    self_verdict: "pass",
+    self_notes: "1/2/3 log = 90/99/99.9%; kills 83%/58% myth.",
+    context: "Surrounding claim (fixed): alcohol ~2–3 log under test conditions; mapping 3 log→83% was false.",
+    why: "Arithmetic must be exact."
+  },
+  {
+    id: "08",
+    file: "08-veg-vs-gen-dryback.svg",
+    title: "Veg vs generative dryback polarity",
+    style: "Code comparison diagram (SVG)",
+    paper: "irrigation-manual · f2-crop-steering",
+    self_verdict: "pass",
+    self_notes: "v3: single continuous chart VWC vs crop day 0–42, phase bands, veg ~12 pt vs gen ~24 pt callouts.",
+    context: "Surrounding claim (fixed): irrigation-manual had veg/gen dryback length inverted vs F2 and mainstream steering.",
+    why: "Polarity teaching aid with real graph numbers."
+  },
+  {
+    id: "09",
+    file: "09-seedling-roots-drink-dome.jpg",
+    title: "Seedling: roots drink; dome reduces demand",
+    style: "Scientific illustration",
+    paper: "seeds-germination",
+    self_verdict: "pass",
+    self_notes: "v3 loop: rockwool cube + coco + humidity dome; hypocotyl labelled correctly; roots-only uptake.",
+    context: "Surrounding claim (fixed): “drinks largely through its leaves” was FALSE. High RH cuts evaporative demand; roots still take water.",
+    why: "Physiology misconception — illustration with real prop media per feedback."
+  },
+  {
+    id: "10",
+    file: "10-meristem-viroid-cutaway.jpg",
+    title: "Meristem dome vs vascular HpLVd path",
+    style: "Photoreal scientific macro",
+    paper: "tissue-culture",
+    self_verdict: "pass",
+    self_notes: "v3: photoreal meristem WITH clean callout boxes — Meristem dome, Vascular tissue, HpLVd RNA, barrier note, 0.3 mm scale.",
+    context: "Surrounding claim: meristem tip is often cleaner because vascular delivery of viroid has not reached undifferentiated dome.",
+    why: "Photoreal meristem + annotations per feedback."
+  },
+  {
+    id: "11",
+    file: "11-cola-room-rh-vs-inside.jpg",
+    title: "Room RH vs inside-cola microclimate",
+    style: "Scientific illustration (hybrid photo cutaway)",
+    paper: "mould-risk · airflow-design · co2-enrichment",
+    self_verdict: "pass",
+    self_notes: "v2 clean English labels. Rejected v1 had garbled pseudo-Latin. Illustrative RH contrast, not a measured lab figure.",
+    context: "Surrounding claim: late flower room RH targets must account for denser in-bud humidity; 60–70% room RH is too wet as a routine band.",
+    why: "Shows why room sensor can lie about cola interior."
+  },
+  {
+    id: "12",
+    file: "12-canopy-spectrum-filter.jpg",
+    title: "Under-canopy: green/FR enriched, not red-rich",
+    style: "Scientific infographic",
+    paper: "under-canopy-lighting",
+    self_verdict: "pass",
+    self_notes: "Strong first-pass. Corrects false “red-rich under canopy” claim.",
+    context: "Surrounding claim (fixed): mid/lower canopy light is depleted in blue/red and relatively enriched in green and far-red.",
+    why: "Spectral concept needs plotted bands more than a photo."
+  },
+  {
+    id: "13",
+    file: "13-photoreal-late-flower-rh-meter.jpg",
+    title: "Photoreal: late flower aisle climate check",
+    style: "Photoreal",
+    paper: "mould-risk · grow-room-systems · daily-checks",
+    self_verdict: "pass",
+    self_notes: "v3: smaller black pots on tables; meter °C+°F (24.7/76.4), RH 48%, VPD 1.12; white LED bars.",
+    context: "Surrounding claim: keep mid/late flower RH commonly ~45–55% with strong through-canopy air; scout and measure, don’t trust room average alone.",
+    why: "Photoreal sells the operational habit of measuring in the real room."
+  }
+];
+
+const cards = document.getElementById("cards");
+const summaryBody = document.querySelector("#summaryTable tbody");
+
+function render() {
+  cards.innerHTML = "";
+  summaryBody.innerHTML = "";
+  ITEMS.forEach((it, idx) => {
+    const card = document.createElement("article");
+    card.className = "card";
+    card.id = "img-" + it.id;
+    card.innerHTML = `
+      <h2>${it.id}. ${it.title}</h2>
+      <div class="meta">
+        <span class="pill style">${it.style}</span>
+        <span class="pill paper">${it.paper}</span>
+        <span class="pill verdict-${it.self_verdict}">self-review: ${it.self_verdict}</span>
+      </div>
+      <div class="context"><strong>Paper context:</strong> ${it.context}</div>
+      <p class="why"><strong>Why this style:</strong> ${it.why}<br/><strong>Self-review notes:</strong> ${it.self_notes}</p>
+      <a href="${it.file}" target="_blank" rel="noopener">
+        <img class="preview" src="${it.file}" alt="${it.title}" loading="lazy" />
+      </a>
+      <div class="links">
+        <a href="${it.file}" target="_blank" rel="noopener">Open full size</a>
+        <a href="#img-${it.id}">Permalink</a>
+      </div>
+      <div class="row2">
+        <div>
+          <label>Your decision</label>
+          <select data-field="decision" data-id="${it.id}">
+            <option value="">—</option>
+            <option value="approve">Approve for live</option>
+            <option value="approve_with_edits">Approve with edits</option>
+            <option value="revise">Revise / regenerate</option>
+            <option value="drop">Drop (don’t use)</option>
+          </select>
+        </div>
+        <div>
+          <label>Priority if revising</label>
+          <select data-field="priority" data-id="${it.id}">
+            <option value="normal">Normal</option>
+            <option value="high">High</option>
+            <option value="blocker">Blocker</option>
+          </select>
+        </div>
+      </div>
+      <label>Feedback for Grok (what to change)</label>
+      <textarea data-field="feedback" data-id="${it.id}" placeholder="e.g. fix hypocotyl spelling; swap photoreal for illustration; add caption under image in paper X…"></textarea>
+      <label>Suggested caption for site (optional)</label>
+      <input type="text" data-field="caption" data-id="${it.id}" placeholder="Caption if different from context…" />
+    `;
+    cards.appendChild(card);
+
+    const tr = document.createElement("tr");
+    tr.innerHTML = `
+      <td>${it.id}</td>
+      <td><code>${it.file}</code></td>
+      <td>${it.style}</td>
+      <td>${it.paper}</td>
+      <td><a href="${it.file}" target="_blank">open</a> · <a href="#img-${it.id}">card</a></td>
+      <td data-vote="${it.id}" class="vote">—</td>`;
+    summaryBody.appendChild(tr);
+  });
+  wire();
+  loadLocal();
+}
+
+function collect() {
+  const images = ITEMS.map(it => {
+    const q = (field) => document.querySelector(`[data-field="${field}"][data-id="${it.id}"]`);
+    return {
+      id: it.id,
+      file: it.file,
+      title: it.title,
+      style: it.style,
+      paper: it.paper,
+      decision: q("decision")?.value || "",
+      priority: q("priority")?.value || "normal",
+      feedback: q("feedback")?.value || "",
+      caption: q("caption")?.value || "",
+      self_verdict: it.self_verdict,
+      self_notes: it.self_notes
+    };
+  });
+  return {
+    type: "cannabis-white-papers-image-review",
+    version: 1,
+    generated_for: "factcheck-review pack",
+    path: "assets/img/factcheck-review/",
+    reviewer: document.getElementById("reviewer").value,
+    overall: document.getElementById("overall").value,
+    overallNotes: document.getElementById("overallNotes").value,
+    saved_at: new Date().toISOString(),
+    images
+  };
+}
+
+function apply(data) {
+  if (!data) return;
+  if (data.reviewer) document.getElementById("reviewer").value = data.reviewer;
+  if (data.overall) document.getElementById("overall").value = data.overall;
+  if (data.overallNotes) document.getElementById("overallNotes").value = data.overallNotes;
+  (data.images || []).forEach(img => {
+    ["decision","priority","feedback","caption"].forEach(field => {
+      const el = document.querySelector(`[data-field="${field}"][data-id="${img.id}"]`);
+      if (el && img[field] != null) el.value = img[field];
+    });
+  });
+  updateVotes();
+}
+
+function updateVotes() {
+  ITEMS.forEach(it => {
+    const d = document.querySelector(`[data-field="decision"][data-id="${it.id}"]`)?.value || "—";
+    const cell = document.querySelector(`[data-vote="${it.id}"]`);
+    if (cell) cell.textContent = d || "—";
+  });
+}
+
+function wire() {
+  document.querySelectorAll("[data-field]").forEach(el => {
+    el.addEventListener("change", () => { saveLocal(); updateVotes(); });
+    el.addEventListener("input", () => { saveLocal(); updateVotes(); });
+  });
+  document.getElementById("overall").addEventListener("change", saveLocal);
+  document.getElementById("overallNotes").addEventListener("input", saveLocal);
+  document.getElementById("reviewer").addEventListener("input", saveLocal);
+}
+
+function saveLocal() {
+  localStorage.setItem("cwp-image-review", JSON.stringify(collect()));
+  document.getElementById("status").textContent = "Autosaved locally";
+}
+
+function loadLocal() {
+  try {
+    const raw = localStorage.getItem("cwp-image-review");
+    if (raw) apply(JSON.parse(raw));
+  } catch (_) {}
+}
+
+function download(filename, text, type) {
+  const blob = new Blob([text], { type });
+  const a = document.createElement("a");
+  a.href = URL.createObjectURL(blob);
+  a.download = filename;
+  a.click();
+  URL.revokeObjectURL(a.href);
+}
+
+document.getElementById("btnSave").onclick = () => {
+  const data = collect();
+  saveLocal();
+  download(`cwp-image-review-${new Date().toISOString().slice(0,10)}.json`, JSON.stringify(data, null, 2), "application/json");
+  document.getElementById("status").textContent = "JSON downloaded — send that file back to Grok";
+};
+
+document.getElementById("btnLoad").onclick = () => document.getElementById("fileIn").click();
+document.getElementById("fileIn").onchange = (e) => {
+  const f = e.target.files?.[0];
+  if (!f) return;
+  const r = new FileReader();
+  r.onload = () => {
+    try { apply(JSON.parse(r.result)); saveLocal(); document.getElementById("status").textContent = "Loaded " + f.name; }
+    catch (err) { document.getElementById("status").textContent = "Invalid JSON"; }
+  };
+  r.readAsText(f);
+};
+
+document.getElementById("btnExportMd").onclick = () => {
+  const d = collect();
+  let md = `# Image review feedback\n\nReviewer: ${d.reviewer || "—"}\nOverall: ${d.overall || "—"}\n\n${d.overallNotes || ""}\n\n`;
+  d.images.forEach(img => {
+    md += `## ${img.id} ${img.title}\n- File: \`${img.file}\`\n- Decision: **${img.decision || "—"}** (${img.priority})\n- Feedback: ${img.feedback || "—"}\n- Caption: ${img.caption || "—"}\n\n`;
+  });
+  download("cwp-image-review.md", md, "text/markdown");
+};
+
+document.getElementById("btnApproveAll").onclick = () => {
+  document.querySelectorAll('[data-field="decision"]').forEach(el => { el.value = "approve"; });
+  document.getElementById("overall").value = "approve_all";
+  saveLocal(); updateVotes();
+};
+
+render();
+</script>
+</body>
+</html>

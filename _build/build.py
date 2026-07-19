@@ -115,8 +115,19 @@ def render_paper(mod):
     secs = mod.SECTIONS
     # embed any generated example images into their target sections (file-gated)
     for im in IMG.by_slug().get(mod.SLUG, []):
-        fn = f"{im['slug']}-{im['n']}.jpg"
-        if os.path.exists(os.path.join(ASSETS, "img", fn)) and secs:
+        # Prefer explicit ext, else try jpg then svg (fact-check pack uses both)
+        candidates = []
+        if im.get("ext"):
+            candidates.append(f"{im['slug']}-{im['n']}.{im['ext']}")
+        else:
+            candidates.extend([
+                f"{im['slug']}-{im['n']}.jpg",
+                f"{im['slug']}-{im['n']}.svg",
+                f"{im['slug']}-{im['n']}.png",
+            ])
+        fn = next((c for c in candidates
+                   if os.path.exists(os.path.join(ASSETS, "img", c))), None)
+        if fn and secs:
             si = max(0, min(im["sec"], len(secs) - 1))
             secs[si]["blocks"].append(
                 photo(f"assets/img/{fn}", im["caption"], im.get("alt", ""),

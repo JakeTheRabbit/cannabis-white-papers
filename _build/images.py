@@ -7,10 +7,13 @@ MODEL_LABEL = {
     "nano_banana_2": "Nano Banana 2",
     "gpt_image_2": "GPT Image 2 (OpenAI)",
     "cinematic_studio_2_5": "Cinema Studio",
+    "factcheck_pack": "Fact-check pack",
+    "code_diagram": "Educational diagram",
 }
 
 # NB = photoreal practical, GPT = labelled/diagram, CIN = epic/cinematic hero
-NB, GPT, CIN = "nano_banana_2", "gpt_image_2", "cinematic_studio_2_5"
+# FC = fact-check educational pack (photo or code diagram)
+NB, GPT, CIN, FC, CD = "nano_banana_2", "gpt_image_2", "cinematic_studio_2_5", "factcheck_pack", "code_diagram"
 
 IMAGES = [
  # ---- tissue culture ----
@@ -154,6 +157,62 @@ IMAGES = [
  {"slug":"facility-3d","n":1,"sec":0,"model":GPT,"ar":"16:9","res":"1k",
   "prompt":"Clean 3D architectural render: a top-down/isometric model of a cannabis grow facility floor plan with labelled rooms (veg, flower, dry, trim), equipment blocks and airflow, modern CAD visualization style, crisp labels",
   "caption":"Modelling the facility in 3D catches clashes before construction starts.","alt":"3D facility floor-plan render"},
+
+ # ---- fact-check educational pack (2026-07) ----
+ {"slug":"seeds-germination","n":1,"sec":5,"model":FC,"ext":"jpg","ar":"16:9","res":"2k",
+  "prompt":"(factcheck) seedling roots drink under humidity dome in rockwool+coco",
+  "caption":"Roots still take the water. A humidity dome cuts evaporative demand — it does not mean the seedling drinks through its leaves.","alt":"Seedling in rockwool and coco under humidity dome"},
+ {"slug":"tissue-culture","n":4,"sec":3,"model":FC,"ext":"jpg","ar":"16:9","res":"2k",
+  "prompt":"(factcheck) photoreal meristem vs HpLVd vascular path",
+  "caption":"Shoot-tip meristem: Hop Latent Viroid typically rides vascular tissue and often cannot reach the undifferentiated dome — the idea behind meristem cleanup.","alt":"Annotated meristem cutaway with HpLVd"},
+ {"slug":"harvest-dry-trim-cure","n":4,"sec":4,"model":FC,"ext":"jpg","ar":"16:9","res":"2k",
+  "prompt":"(factcheck) water activity meter and moisture meter on dried flower",
+  "caption":"Same bulk moisture reading can span dry-to-mouldy water activity. Steer post-harvest with aw (here ~0.61) not a cheap moisture % alone.","alt":"Water activity and moisture meters with dried buds"},
+ {"slug":"mould-risk","n":3,"sec":2,"model":FC,"ext":"jpg","ar":"16:9","res":"2k",
+  "prompt":"(factcheck) cola room RH vs inside microclimate",
+  "caption":"Room air can read safe while the dense cola interior stays wetter — where bud rot starts.","alt":"Cannabis cola exterior vs humid interior cutaway"},
+ {"slug":"mould-risk","n":4,"sec":3,"model":FC,"ext":"jpg","ar":"16:9","res":"2k",
+  "prompt":"(factcheck) late flower aisle climate meter",
+  "caption":"Measure in the aisle and at canopy height. Late flower often targets roughly 45–55% RH with strong through-canopy air.","alt":"Thermo-hygrometer in late flower room"},
+ {"slug":"under-canopy-lighting","n":1,"sec":2,"model":FC,"ext":"jpg","ar":"16:9","res":"2k",
+  "prompt":"(factcheck) canopy spectrum filter green FR enriched",
+  "caption":"Under the canopy, blue and red are depleted; green and far-red are relatively enriched — not a “red-rich” understory.","alt":"Above vs under canopy LED spectrum comparison"},
+ {"slug":"scaling-high-light","n":1,"sec":1,"model":CD,"ext":"svg","ar":"16:9","res":"1k",
+  "prompt":"(factcheck) leaf vs canopy light curves",
+  "caption":"Leaf photosynthesis can plateau while whole-canopy flower yield still rises with light — ambient CO₂ is not a hard 800 µmol wall.","alt":"Leaf Anet vs canopy yield vs PPFD graphs"},
+ {"slug":"lighting-fundamentals","n":1,"sec":3,"model":CD,"ext":"svg","ar":"16:9","res":"1k",
+  "prompt":"(factcheck) leaf vs canopy light curves",
+  "caption":"Intensity targets are canopy-scale. A single leaf gas-exchange curve is not the whole room’s yield ceiling.","alt":"Leaf vs canopy light response graphs"},
+ {"slug":"coco-crop-steering","n":3,"sec":3,"model":CD,"ext":"svg","ar":"16:9","res":"1k",
+  "prompt":"(factcheck) Caplan one drought vs daily drybacks",
+  "caption":"A single carefully timed late drought is not the same experiment as daily generative dryback sawteeth.","alt":"Single drought vs daily dryback VWC traces"},
+ {"slug":"coco-crop-steering","n":4,"sec":2,"model":CD,"ext":"svg","ar":"16:9","res":"1k",
+  "prompt":"(factcheck) dryback percentage points",
+  "caption":"Dryback is percentage points (peak minus trough), not “percent of peak” unless you say so.","alt":"Dryback points vs percent of peak"},
+ {"slug":"rockwool-crop-steering","n":1,"sec":2,"model":CD,"ext":"svg","ar":"16:9","res":"1k",
+  "prompt":"(factcheck) Caplan one drought vs daily drybacks",
+  "caption":"Daily drybacks are a related idea to controlled deficit — not a copy of one late-flower drought trial.","alt":"Single drought vs daily dryback comparison"},
+ {"slug":"one-steering-law","n":1,"sec":2,"model":CD,"ext":"svg","ar":"16:9","res":"1k",
+  "prompt":"(factcheck) dryback percentage points",
+  "caption":"Count dryback in percentage points: 78% down to 58% is 20 points.","alt":"Dryback points explanation gauge"},
+ {"slug":"one-steering-law","n":2,"sec":4,"model":CD,"ext":"svg","ar":"16:9","res":"1k",
+  "prompt":"(factcheck) Caplan vs daily drybacks",
+  "caption":"One multi-day late drought ≠ multi-week daily steering pulses.","alt":"Drought study vs daily drybacks"},
+ {"slug":"irrigation-manual","n":2,"sec":2,"model":CD,"ext":"svg","ar":"16:9","res":"1k",
+  "prompt":"(factcheck) veg vs gen dryback phases",
+  "caption":"Vegetative: smaller drybacks, stay wetter. Generative: larger controlled drybacks. Example VWC vs crop day.","alt":"Veg vs generative dryback VWC chart"},
+ {"slug":"f2-crop-steering","n":2,"sec":2,"model":CD,"ext":"svg","ar":"16:9","res":"1k",
+  "prompt":"(factcheck) veg vs gen dryback phases",
+  "caption":"Phase polarity for autonomous steering: veg smaller drybacks, generative larger controlled drybacks.","alt":"Crop phase VWC dryback chart"},
+ {"slug":"water-quality","n":1,"sec":3,"model":CD,"ext":"svg","ar":"16:9","res":"1k",
+  "prompt":"(factcheck) DO saturation vs temperature",
+  "caption":"Air-saturated DO is roughly ~9 mg/L at 20 °C and ~8 mg/L at 26 °C — not 5–6 / 3–4 ppm. Still chill and aerate for roots.","alt":"Dissolved oxygen saturation curve"},
+ {"slug":"pppe","n":1,"sec":2,"model":CD,"ext":"svg","ar":"16:9","res":"1k",
+  "prompt":"(factcheck) clean dirty two kit flow",
+  "caption":"Two kits: cultivation gowning and a separate post-harvest gown-in. Flower coveralls do not walk into dry/trim.","alt":"Facility two-track gowning flow"},
+ {"slug":"pppe","n":2,"sec":4,"model":CD,"ext":"svg","ar":"16:9","res":"1k",
+  "prompt":"(factcheck) log reduction table",
+  "caption":"Log reduction: 1 log ≈ 90%, 2 log ≈ 99%, 3 log ≈ 99.9%. Mapping 3 log to 83% is wrong.","alt":"Hand hygiene log reduction table"},
 
 ]
 
