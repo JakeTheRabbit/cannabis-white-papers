@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 760" font-family="Segoe UI, system-ui, sans-serif">
+  <rect width="1200" height="760" fill="#0b0f14"/>
+  <text x="40" y="42" fill="#f1f5f9" font-size="24" font-weight="700">Two gowning systems: cultivation ≠ post-harvest</text>
+  <text x="40" y="72" fill="#94a3b8" font-size="14">Post-harvest (dry / trim / pack) needs the lowest microbial load. Flower coveralls never enter those rooms.</text>
+
+  <!-- CULT track -->
+  <rect x="36" y="100" width="1128" height="220" rx="14" fill="#111827" stroke="#334155"/>
+  <text x="56" y="135" fill="#38bdf8" font-size="16" font-weight="700">TRACK 1 — CULTIVATION (direction: cleaner → dirtier crop rooms)</text>
+  <g font-size="13" font-weight="600">
+    <rect x="56" y="160" width="160" height="80" rx="10" fill="#14532d" stroke="#22c55e"/>
+    <text x="136" y="195" text-anchor="middle" fill="#f0fdf4">Gown-in A</text>
+    <text x="136" y="218" text-anchor="middle" fill="#86efac" font-size="12">cultivation kit</text>
+    <rect x="260" y="160" width="160" height="80" rx="10" fill="#166534" stroke="#22c55e"/>
+    <text x="340" y="195" text-anchor="middle" fill="#f0fdf4">Mothers / Prop</text>
+    <text x="340" y="218" text-anchor="middle" fill="#86efac" font-size="12">clean stock</text>
+    <rect x="464" y="160" width="140" height="80" rx="10" fill="#1e3a5f" stroke="#38bdf8"/>
+    <text x="534" y="205" text-anchor="middle" fill="#e0f2fe">Veg</text>
+    <rect x="648" y="160" width="140" height="80" rx="10" fill="#713f12" stroke="#f59e0b"/>
+    <text x="718" y="205" text-anchor="middle" fill="#fef3c7">Flower</text>
+    <rect x="832" y="160" width="200" height="80" rx="10" fill="#3f1d1d" stroke="#ef4444"/>
+    <text x="932" y="195" text-anchor="middle" fill="#fecaca">De-gown A / exit</text>
+    <text x="932" y="218" text-anchor="middle" fill="#fca5a5" font-size="12">dirty kit off</text>
+  </g>
+  <defs>
+    <marker id="g" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 Z" fill="#22c55e"/></marker>
+  </defs>
+  <line x1="216" y1="200" x2="255" y2="200" stroke="#22c55e" stroke-width="3" marker-end="url(#g)"/>
+  <line x1="420" y1="200" x2="459" y2="200" stroke="#22c55e" stroke-width="3" marker-end="url(#g)"/>
+  <line x1="604" y1="200" x2="643" y2="200" stroke="#22c55e" stroke-width="3" marker-end="url(#g)"/>
+  <line x1="788" y1="200" x2="827" y2="200" stroke="#ef4444" stroke-width="3" marker-end="url(#g)"/>
+  <text x="56" y="280" fill="#94a3b8" font-size="13">People and plant work stay on this track. Product leaves in covered totes — not on dirty clothes into the dry room.</text>
+
+  <!-- WALL -->
+  <rect x="36" y="340" width="1128" height="70" rx="12" fill="#450a0a" stroke="#ef4444" stroke-width="2"/>
+  <text x="600" y="372" text-anchor="middle" fill="#fecaca" font-size="18" font-weight="700">✕ HARD BARRIER — no continuous walk flower → dry/trim in the same coveralls</text>
+  <text x="600" y="398" text-anchor="middle" fill="#fca5a5" font-size="13">Locker / grey zone: change into a separate clean post-harvest kit (or dedicated PH staff only)</text>
+
+  <!-- PH track -->
+  <rect x="36" y="430" width="1128" height="220" rx="14" fill="#111827" stroke="#166534" stroke-width="2"/>
+  <text x="56" y="465" fill="#4ade80" font-size="16" font-weight="700">TRACK 2 — POST-HARVEST (lowest microbial load on finished flower)</text>
+  <g font-size="13" font-weight="600">
+    <rect x="56" y="490" width="180" height="80" rx="10" fill="#14532d" stroke="#22c55e"/>
+    <text x="146" y="525" text-anchor="middle" fill="#f0fdf4">Gown-in B</text>
+    <text x="146" y="548" text-anchor="middle" fill="#86efac" font-size="12">fresh PH kit only</text>
+    <rect x="280" y="490" width="160" height="80" rx="10" fill="#0f3d2e" stroke="#22c55e"/>
+    <text x="360" y="525" text-anchor="middle" fill="#f0fdf4">Dry room</text>
+    <text x="360" y="548" text-anchor="middle" fill="#86efac" font-size="12">low traffic</text>
+    <rect x="484" y="490" width="160" height="80" rx="10" fill="#0f3d2e" stroke="#22c55e"/>
+    <text x="564" y="525" text-anchor="middle" fill="#f0fdf4">Trim / pack</text>
+    <text x="564" y="548" text-anchor="middle" fill="#86efac" font-size="12">product contact</text>
+    <rect x="688" y="490" width="160" height="80" rx="10" fill="#1e293b" stroke="#64748b"/>
+    <text x="768" y="525" text-anchor="middle" fill="#e2e8f0">Vault / ship</text>
+    <text x="768" y="548" text-anchor="middle" fill="#94a3b8" font-size="12">finished goods</text>
+    <rect x="892" y="490" width="220" height="80" rx="10" fill="#3f1d1d" stroke="#ef4444"/>
+    <text x="1002" y="525" text-anchor="middle" fill="#fecaca">Waste / used PPE</text>
+    <text x="1002" y="548" text-anchor="middle" fill="#fca5a5" font-size="12">dirty → exit only</text>
+  </g>
+  <line x1="236" y1="530" x2="275" y2="530" stroke="#22c55e" stroke-width="3" marker-end="url(#g)"/>
+  <line x1="440" y1="530" x2="479" y2="530" stroke="#22c55e" stroke-width="3" marker-end="url(#g)"/>
+  <line x1="644" y1="530" x2="683" y2="530" stroke="#22c55e" stroke-width="3" marker-end="url(#g)"/>
+  <text x="56" y="610" fill="#94a3b8" font-size="13">Why: drying and trimming fail when flower-room microbes ride in on people. Separate kit = product protection.</text>
+
+  <text x="40" y="690" fill="#475569" font-size="12">v3 · Explicit two-kit model: Gown-in A (cultivation) vs Gown-in B (post-harvest)</text>
+  <text x="40" y="720" fill="#475569" font-size="12">Never treat post-harvest as “the next room after flower” in the same suit.</text>
+</svg>

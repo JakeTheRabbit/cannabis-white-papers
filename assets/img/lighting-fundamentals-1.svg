@@ -1,0 +1,91 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 720" font-family="Segoe UI, system-ui, sans-serif">
+  <rect width="1200" height="720" fill="#0b0f14"/>
+  <text x="48" y="44" fill="#f1f5f9" font-size="26" font-weight="700">Leaf saturation ≠ canopy flower-yield ceiling</text>
+  <text x="48" y="74" fill="#94a3b8" font-size="14">Illustrative relative curves with labelled axes and points. Direction matches leaf gas-exchange vs whole-canopy yield literature (e.g. Rodriguez-Morrison et al. 2021). Not a raw data replot.</text>
+
+  <!-- LEFT -->
+  <rect x="40" y="100" width="540" height="540" rx="14" fill="#111827" stroke="#334155"/>
+  <text x="60" y="140" fill="#38bdf8" font-size="18" font-weight="700">A. Single-leaf net photosynthesis</text>
+  <text x="60" y="165" fill="#64748b" font-size="13">Relative Anet (ambient CO₂), index 0–100</text>
+
+  <!-- y grid + labels: 100 at y=200, 0 at y=560; x: 0@120, 1600@520 -->
+  <g stroke="#1e293b" stroke-width="1">
+    <line x1="120" y1="200" x2="520" y2="200"/>
+    <line x1="120" y1="290" x2="520" y2="290"/>
+    <line x1="120" y1="380" x2="520" y2="380"/>
+    <line x1="120" y1="470" x2="520" y2="470"/>
+    <line x1="120" y1="560" x2="520" y2="560"/>
+  </g>
+  <line x1="120" y1="560" x2="520" y2="560" stroke="#64748b" stroke-width="2"/>
+  <line x1="120" y1="560" x2="120" y2="200" stroke="#64748b" stroke-width="2"/>
+  <text x="108" y="565" text-anchor="end" fill="#94a3b8" font-size="12">0</text>
+  <text x="108" y="475" text-anchor="end" fill="#94a3b8" font-size="12">25</text>
+  <text x="108" y="385" text-anchor="end" fill="#94a3b8" font-size="12">50</text>
+  <text x="108" y="295" text-anchor="end" fill="#94a3b8" font-size="12">75</text>
+  <text x="108" y="205" text-anchor="end" fill="#94a3b8" font-size="12">100</text>
+  <text x="120" y="590" fill="#94a3b8" font-size="12">0</text>
+  <text x="220" y="590" fill="#94a3b8" font-size="12">400</text>
+  <text x="320" y="590" fill="#94a3b8" font-size="12">800</text>
+  <text x="420" y="590" fill="#94a3b8" font-size="12">1200</text>
+  <text x="500" y="590" fill="#94a3b8" font-size="12">1600</text>
+  <text x="280" y="620" fill="#cbd5e1" font-size="13">PPFD (µmol·m⁻²·s⁻¹)</text>
+  <text x="48" y="400" fill="#94a3b8" font-size="12" transform="rotate(-90 48 400)">Relative Anet</text>
+
+  <!-- saturating: 200→35, 400→60, 600→80, 800→90, 1000→95, 1200→97, 1500→98 -->
+  <!-- x = 120 + ppfd/1600*400; y = 560 - anet/100*360 -->
+  <polyline fill="none" stroke="#38bdf8" stroke-width="3.5"
+    points="170,434 220,344 270,272 320,236 370,218 420,210.8 495,207.2"/>
+  <g fill="#38bdf8">
+    <circle cx="170" cy="434" r="5"/><circle cx="220" cy="344" r="5"/>
+    <circle cx="270" cy="272" r="5"/><circle cx="320" cy="236" r="5"/>
+    <circle cx="370" cy="218" r="5"/><circle cx="420" cy="210.8" r="5"/>
+    <circle cx="495" cy="207.2" r="5"/>
+  </g>
+  <text x="325" y="225" fill="#fbbf24" font-size="13" font-weight="600">~90 at 800</text>
+  <text x="400" y="200" fill="#fbbf24" font-size="13">plateau ~95–98</text>
+  <text x="140" y="455" fill="#e2e8f0" font-size="11">200→35</text>
+  <text x="60" y="640" fill="#64748b" font-size="12">Start 200 PPFD · Mid 800 · End 1500 — leaf response flattens early</text>
+
+  <!-- RIGHT -->
+  <rect x="620" y="100" width="540" height="540" rx="14" fill="#111827" stroke="#166534" stroke-width="2"/>
+  <text x="640" y="140" fill="#4ade80" font-size="18" font-weight="700">B. Whole-canopy dry flower yield</text>
+  <text x="640" y="165" fill="#64748b" font-size="13">Relative yield index 0–100 (ambient CO₂ room)</text>
+
+  <g stroke="#1e293b" stroke-width="1">
+    <line x1="700" y1="200" x2="1100" y2="200"/>
+    <line x1="700" y1="290" x2="1100" y2="290"/>
+    <line x1="700" y1="380" x2="1100" y2="380"/>
+    <line x1="700" y1="470" x2="1100" y2="470"/>
+    <line x1="700" y1="560" x2="1100" y2="560"/>
+  </g>
+  <line x1="700" y1="560" x2="1100" y2="560" stroke="#64748b" stroke-width="2"/>
+  <line x1="700" y1="560" x2="700" y2="200" stroke="#64748b" stroke-width="2"/>
+  <text x="688" y="565" text-anchor="end" fill="#94a3b8" font-size="12">0</text>
+  <text x="688" y="475" text-anchor="end" fill="#94a3b8" font-size="12">25</text>
+  <text x="688" y="385" text-anchor="end" fill="#94a3b8" font-size="12">50</text>
+  <text x="688" y="295" text-anchor="end" fill="#94a3b8" font-size="12">75</text>
+  <text x="688" y="205" text-anchor="end" fill="#94a3b8" font-size="12">100</text>
+  <text x="700" y="590" fill="#94a3b8" font-size="12">0</text>
+  <text x="800" y="590" fill="#94a3b8" font-size="12">400</text>
+  <text x="900" y="590" fill="#94a3b8" font-size="12">800</text>
+  <text x="1000" y="590" fill="#94a3b8" font-size="12">1200</text>
+  <text x="1080" y="590" fill="#94a3b8" font-size="12">1600</text>
+  <text x="860" y="620" fill="#cbd5e1" font-size="13">PPFD (µmol·m⁻²·s⁻¹)</text>
+  <text x="640" y="400" fill="#94a3b8" font-size="12" transform="rotate(-90 640 400)">Relative yield</text>
+
+  <!-- nearly linear: 200→22, 400→35, 600→48, 800→58, 1000→68, 1200→78, 1500→92, 1800→100 -->
+  <polyline fill="none" stroke="#4ade80" stroke-width="3.5"
+    points="750,480.8 800,434 850,387.2 900,351.2 950,315.2 1000,279.2 1075,228.8 1120,200"/>
+  <g fill="#4ade80">
+    <circle cx="750" cy="480.8" r="5"/><circle cx="800" cy="434" r="5"/>
+    <circle cx="850" cy="387.2" r="5"/><circle cx="900" cy="351.2" r="5"/>
+    <circle cx="950" cy="315.2" r="5"/><circle cx="1000" cy="279.2" r="5"/>
+    <circle cx="1075" cy="228.8" r="5"/>
+  </g>
+  <text x="905" y="345" fill="#86efac" font-size="13" font-weight="600">58 at 800</text>
+  <text x="1020" y="220" fill="#86efac" font-size="13">~92 at 1500</text>
+  <text x="755" y="505" fill="#e2e8f0" font-size="11">200→22</text>
+  <text x="640" y="640" fill="#64748b" font-size="12">Still climbing past 800 — not a hard wall under ambient CO₂</text>
+
+  <text x="48" y="700" fill="#475569" font-size="12">v3 · Educational relative indices · always pair light increases with climate, water and CO₂ capacity</text>
+</svg>
