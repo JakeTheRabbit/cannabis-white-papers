@@ -24,6 +24,10 @@ SECTIONS = []
 
 SECTIONS.append({"id": "what-this-is", "kicker": "Start here", "title": "What this is (and why a grow room is a loop)",
   "blocks": [
+    callout("evidence", "Community / evidence note",
+      "<p><strong>Provisional:</strong> Lead-time examples (tip burn in N days, whole-room health in seconds) are "
+      "worked UX scenarios, not multi-site cannabis trials. Trust coupled thinking; treat prediction copy as "
+      "illustrative until you measure your own false-positive rate.</p>"),
     lead("A grow room is a <strong>loop</strong>, not a panel of independent dials you set and forget. "
          "You change a control, the room and plants respond, sensors measure that response, you work "
          "out what it means, and that tells you what to change next. Around and around, every minute "

@@ -160,6 +160,11 @@ SECTIONS.append({"id": "bulking-ripening", "kicker": "05 · Weeks 5-10", "title"
 
 SECTIONS.append({"id": "when-to-harvest", "kicker": "06 · The decision", "title": "Reading the plant: when to harvest",
   "blocks": [
+    callout("evidence", "Community / evidence note",
+      "<p><strong>Borderline:</strong> Amber trichome share is a <em>maturity</em> cue, not a clean pharmacological "
+      "switch. Effect is multi-factor (terpenes, dose, genotype, set/setting). Human evidence that CBN alone drives "
+      "&lsquo;couch-lock&rsquo; is limited. Long plain-water flushes are traditional; controlled tests often show little "
+      "taste/potency gain &mdash; ease EC as appetite falls rather than starving the plant.</p>"),
     p("Pistils are a rough early signal but they lie. Trichomes are the true clock, and you read "
       "them with a cheap jeweler's loupe or pocket microscope." + _c("livingston-2020-trichome-maturation")),
     p("Harvest when most trichomes have turned from clear to milky or cloudy, with a small fraction "

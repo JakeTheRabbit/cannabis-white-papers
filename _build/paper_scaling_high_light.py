@@ -34,6 +34,11 @@ SECTIONS = []
 SECTIONS.append({"id": "demand", "kicker": "01 · Read this first",
   "title": "Light is the throttle, not the engine",
   "blocks": [
+    callout("evidence", "Community / evidence note",
+      "<p><strong>Borderline:</strong> High-rung EC and runoff ladders are advanced steering territory. "
+      "Ambient CO&#8322; lowers efficiency of high PPFD but is not a hard 800 &micro;mol canopy wall. "
+      "Size HVAC and water from your meters, not from a single ladder cell.</p>"),
+
     lead("Photosynthesis runs at the speed of whatever is in shortest supply. Light can be the "
          "thing that sets the pace &mdash; but only up to the point where something else runs out. "
          "Past that point, more light does nothing except make heat and stress the plant."),

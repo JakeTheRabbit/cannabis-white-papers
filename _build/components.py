@@ -63,7 +63,10 @@ def ol(items, cls=""):
     return f"<ol{c}>" + "".join(f"<li>{i}</li>" for i in items) + "</ol>"
 
 # ---------------- callouts / definitions ----------------
-_CALLOUT_IC = {"note": "info", "tip": "bulb", "warn": "alert", "danger": "alert", "key": "key"}
+_CALLOUT_IC = {
+    "note": "info", "tip": "bulb", "warn": "alert", "danger": "alert", "key": "key",
+    "evidence": "quote",  # community / provisional evidence note
+}
 def callout(kind, title, body):
     ic = icon(_CALLOUT_IC.get(kind, "info"), 17)
     return (f"<div class='callout {kind}'><div class='cic'>{ic}</div>"

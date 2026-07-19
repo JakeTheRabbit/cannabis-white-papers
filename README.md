@@ -105,6 +105,16 @@ cd _build && python build.py
 
 **Add a paper:** create `_build/paper_<slug>.py` (`SLUG, TITLE, EYEBROW, SUB, META, SECTIONS, RELATED, REF_IDS`; `figure()` takes a raw inline `<svg>` string), register it in `build.py` (`PAPER_MODULES`) and `data/nav.py`, add interlink phrases in `links.py`, then rebuild. Citations live in `data/refs.py`.
 
+## Evidence tiers
+
+Each HTML paper includes a **How sure is this paper?** panel with three tiers:
+
+- **Solid** — strong physiology, standards, or multi-source consensus
+- **Operational** — commercial practice bands; calibrate to your crop
+- **Borderline / provisional** — thin cannabis data, single studies, product design, or folklore
+
+Inline **Community / evidence notes** flag the highest-risk over-trust points.
+
 ## Sources & disclaimer
 
 Every factual claim is cited inline `[n]` to a per-paper References list — peer-reviewed where possible; manufacturer/operational sources are labelled. Figures and numbers are planning-grade; validate against your own measured data before committing capital. *Not legal advice — follow the cannabis laws in your jurisdiction.*

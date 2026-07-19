@@ -61,6 +61,10 @@ Everything is one line from plant to dashboard. Two electrodes sense the stem, o
 
 ## Bill of materials
 
+> **EVIDENCE — Community / evidence note**
+>
+> **Provisional / experimental:** This build logs relative biopotentials for education and correlation hunting. It is _not_ a validated water, nutrient, or stress meter. Do not irrigate or feed from this signal alone.
+
 About NZ$110. M5Stack parts come as plug-together Grove modules; the two non-M5Stack parts (the AD8232 front-end and the ADS1115 ADC) are the standard cheap substitutes, because nobody sells a biopotential amplifier in the Grove ecosystem. Prices are indicative, mid-2026.
 
 | Part | Role | Where to buy | ~NZD |

@@ -25,6 +25,10 @@ _Precision · Dashboards · ~13 min read_
 
 ## What this is, and why it matters
 
+> **EVIDENCE — Community / evidence note**
+>
+> **Provisional:** On-screen advisories (e.g. tip-burn risk timelines) are product-design examples for operator UX — not a validated prognostic model.
+
 A modern grow room is wired with sensors measuring air temperature, humidity, VPD, CO₂, light, substrate moisture, EC, root-zone temperature, pH and power draw, second by second. The dashboards built to show all of this are walls of live numbers and graphs. They tell you _what_ is happening. They never tell you what it _means_, what is about to happen, or what to do about it.
 
 This paper makes the case for a different design centre, which we will call **Plant-State Intelligence**: a screen that reasons about the plant instead of just displaying the room. The target is a ‘calm dashboard’: one that stays quiet most of the time and speaks only when it has something worth saying. A telemetry-dump dashboard forces the human to be the integrator, synthesising fifteen graphs into a judgement in real time, often while tired. A plant-state dashboard does that synthesis for you.

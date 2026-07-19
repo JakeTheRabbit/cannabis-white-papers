@@ -146,6 +146,10 @@ SECTIONS.append({"id": "chain", "kicker": "03 · The idea", "title": "The signal
 
 SECTIONS.append({"id": "bom", "kicker": "04 · What to buy", "title": "Bill of materials",
   "blocks": [
+    callout("evidence", "Community / evidence note",
+      "<p><strong>Provisional / experimental:</strong> This build logs relative biopotentials for education and "
+      "correlation hunting. It is <em>not</em> a validated water, nutrient, or stress meter. Do not irrigate or "
+      "feed from this signal alone.</p>"),
     p("About NZ$110. M5Stack parts come as plug-together Grove modules; the two non-M5Stack parts "
       "(the AD8232 front-end and the ADS1115 ADC) are the standard cheap substitutes, because nobody "
       "sells a biopotential amplifier in the Grove ecosystem. Prices are indicative, mid-2026."),

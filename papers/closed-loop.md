@@ -25,6 +25,10 @@ _Precision · Closed loop · ~17 min read_
 
 ## What this is (and why a grow room is a loop)
 
+> **EVIDENCE — Community / evidence note**
+>
+> **Provisional:** Lead-time examples (tip burn in N days, whole-room health in seconds) are worked UX scenarios, not multi-site cannabis trials. Trust coupled thinking; treat prediction copy as illustrative until you measure your own false-positive rate.
+
 A grow room is a **loop**, not a panel of independent dials you set and forget. You change a control, the room and plants respond, sensors measure that response, you work out what it means, and that tells you what to change next. Around and around, every minute of every day.
 
 A **closed loop** means the output feeds back to the input: what the plant tells you decides your next move, and then you watch what that move actually did. This guide teaches the whole circle as one thing, with three jobs sitting on it: getting the action right (_cause_), getting the measurement honest (_perception_), and getting the meaning out (_cognition_).

@@ -308,6 +308,16 @@ def render_readme(manifest):
              "`build.py` (`PAPER_MODULES`) and `data/nav.py`, add interlink phrases in `links.py`, then "
              "rebuild. Citations live in `data/refs.py`.")
     L.append("")
+    L.append("## Evidence tiers")
+    L.append("")
+    L.append("Each HTML paper includes a **How sure is this paper?** panel with three tiers:")
+    L.append("")
+    L.append("- **Solid** — strong physiology, standards, or multi-source consensus")
+    L.append("- **Operational** — commercial practice bands; calibrate to your crop")
+    L.append("- **Borderline / provisional** — thin cannabis data, single studies, product design, or folklore")
+    L.append("")
+    L.append("Inline **Community / evidence notes** flag the highest-risk over-trust points.")
+    L.append("")
     L.append("## Sources & disclaimer")
     L.append("")
     L.append("Every factual claim is cited inline `[n]` to a per-paper References list — peer-reviewed "
