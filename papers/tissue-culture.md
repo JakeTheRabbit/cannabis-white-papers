@@ -5,7 +5,7 @@ eyebrow: "Beginner · Tissue culture"
 summary: "Tissue culture grows a clean, vigorous, genetically identical mother from a speck of tissue off a tired or diseased plant. Explained from absolute zero."
 track: "Propagation"
 read_time: "~22 min read"
-diagrams: "13 diagrams"
+diagrams: ""
 related: ["mould-risk", "grow-room-systems", "gmp-hash-lab"]
 url: "https://jaketherabbit.github.io/cannabis-white-papers/tissue-culture.html"
 md_url: "https://jaketherabbit.github.io/cannabis-white-papers/papers/tissue-culture.md"
