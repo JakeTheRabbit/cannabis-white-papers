@@ -19,8 +19,8 @@ import build  # reuses build.PAPERS, build.REFS, build.NAV, build.GL (no render 
 
 ROOT = build.ROOT
 BASE = "https://jaketherabbit.github.io/cannabis-white-papers"
-VERSION = "1.1"
-UPDATED = "2026-07-15"
+VERSION = "1.2"
+UPDATED = "2026-07-18"
 ATTRIBUTION = "The Cannabis White Papers"
 LICENSE_ID = "CC BY-NC 4.0"
 LICENSE_URL = "https://creativecommons.org/licenses/by-nc/4.0/"
@@ -380,7 +380,7 @@ def main():
     L.append("## Optional")
     L.append(f"- [Full corpus (all papers)]({BASE}/llms-full.txt): every paper concatenated")
     L.append(f"- [Manifest (JSON index)]({BASE}/manifest.json): machine-readable paper index")
-    L.append(f"- [Glossary (JSON)]({BASE}/glossary.json): ~270 defined terms")
+    L.append(f"- [Glossary (JSON)]({BASE}/glossary.json): {len(GLOSSARY)} defined terms")
     open(os.path.join(ROOT, "llms.txt"), "w", encoding="utf-8").write("\n".join(L) + "\n")
 
     # llms-full.txt
@@ -409,7 +409,8 @@ def main():
     shutil.copy(os.path.join(ROOT, "glossary.json"), skill_dir)
     shutil.copy(os.path.join(ROOT, "LICENSE"), skill_dir)
 
-    desc = ("Beginner-friendly, peer-reviewed cannabis cultivation reference: 32 white papers on "
+    n = len(manifest)
+    desc = (f"Beginner-friendly, peer-reviewed cannabis cultivation reference: {n} white papers on "
             "propagation (seeds, cloning, tissue culture), crop steering (coco, rockwool, dryback, P0-P3), "
             "environment (VPD, lighting, airflow, CO2), water and nutrition (pH, EC, substrates, Athena "
             "mixing, deficiencies), plant health (mould, IPM, pest ID, PPE and biosecurity), precision "
@@ -419,12 +420,12 @@ def main():
             "facility setup; read the relevant papers/<slug>.md for detail and citations.")
     sk = [f"---\nname: cannabis-white-papers\ndescription: {json.dumps(desc, ensure_ascii=False)}\n---\n",
           f"# {ATTRIBUTION}\n",
-          "A library of 32 peer-reviewed, beginner-friendly cannabis cultivation white papers. Every "
+          f"A library of {n} peer-reviewed, beginner-friendly cannabis cultivation white papers. Every "
           "paper is a clean markdown file in `papers/` with sources preserved as `[^id]` footnotes.\n",
           f"Licensed {LICENSE_ID} ({LICENSE_URL}). Attribution: {ATTRIBUTION}.\n",
           "## How to use\n",
           "1. Match the user's question to a paper below (or grep `papers/` / read `manifest.json`).\n"
-          "2. Read only the relevant `papers/<slug>.md` (progressive disclosure, do not load all 32).\n"
+          f"2. Read only the relevant `papers/<slug>.md` (progressive disclosure, do not load all {n}).\n"
           "3. Answer from it and cite the paper's footnoted sources. Look up terms in `glossary.json`.\n",
           "## Papers by stage\n"]
     order2 = [g["group"] for g in build.NAV.GROUPS]

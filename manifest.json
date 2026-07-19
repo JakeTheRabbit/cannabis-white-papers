@@ -1,7 +1,7 @@
 {
  "name": "The Cannabis White Papers",
- "version": "1.1",
- "updated": "2026-07-15",
+ "version": "1.2",
+ "updated": "2026-07-18",
  "license": "CC BY-NC 4.0",
  "license_url": "https://creativecommons.org/licenses/by-nc/4.0/",
  "base": "https://jaketherabbit.github.io/cannabis-white-papers",
@@ -21,8 +21,8 @@
    ],
    "url": "https://jaketherabbit.github.io/cannabis-white-papers/tissue-culture.html",
    "md_url": "https://jaketherabbit.github.io/cannabis-white-papers/papers/tissue-culture.md",
-   "version": "1.1",
-   "updated": "2026-07-15",
+   "version": "1.2",
+   "updated": "2026-07-18",
    "ref_count": 12
   },
   {
@@ -39,8 +39,8 @@
    ],
    "url": "https://jaketherabbit.github.io/cannabis-white-papers/coco-crop-steering.html",
    "md_url": "https://jaketherabbit.github.io/cannabis-white-papers/papers/coco-crop-steering.md",
-   "version": "1.1",
-   "updated": "2026-07-15",
+   "version": "1.2",
+   "updated": "2026-07-18",
    "ref_count": 10
   },
   {
@@ -57,8 +57,8 @@
    ],
    "url": "https://jaketherabbit.github.io/cannabis-white-papers/grow-room-systems.html",
    "md_url": "https://jaketherabbit.github.io/cannabis-white-papers/papers/grow-room-systems.md",
-   "version": "1.1",
-   "updated": "2026-07-15",
+   "version": "1.2",
+   "updated": "2026-07-18",
    "ref_count": 10
   },
   {
@@ -75,8 +75,8 @@
    ],
    "url": "https://jaketherabbit.github.io/cannabis-white-papers/airflow-design.html",
    "md_url": "https://jaketherabbit.github.io/cannabis-white-papers/papers/airflow-design.md",
-   "version": "1.1",
-   "updated": "2026-07-15",
+   "version": "1.2",
+   "updated": "2026-07-18",
    "ref_count": 9
   },
   {
@@ -93,8 +93,8 @@
    ],
    "url": "https://jaketherabbit.github.io/cannabis-white-papers/co2-enrichment.html",
    "md_url": "https://jaketherabbit.github.io/cannabis-white-papers/papers/co2-enrichment.md",
-   "version": "1.1",
-   "updated": "2026-07-15",
+   "version": "1.2",
+   "updated": "2026-07-18",
    "ref_count": 38
   },
   {
@@ -111,8 +111,8 @@
    ],
    "url": "https://jaketherabbit.github.io/cannabis-white-papers/scaling-high-light.html",
    "md_url": "https://jaketherabbit.github.io/cannabis-white-papers/papers/scaling-high-light.md",
-   "version": "1.1",
-   "updated": "2026-07-15",
+   "version": "1.2",
+   "updated": "2026-07-18",
    "ref_count": 4
   },
   {
@@ -129,8 +129,8 @@
    ],
    "url": "https://jaketherabbit.github.io/cannabis-white-papers/mould-risk.html",
    "md_url": "https://jaketherabbit.github.io/cannabis-white-papers/papers/mould-risk.md",
-   "version": "1.1",
-   "updated": "2026-07-15",
+   "version": "1.2",
+   "updated": "2026-07-18",
    "ref_count": 10
   },
   {
@@ -149,8 +149,8 @@
    ],
    "url": "https://jaketherabbit.github.io/cannabis-white-papers/auckland-ipm-blueprint.html",
    "md_url": "https://jaketherabbit.github.io/cannabis-white-papers/papers/auckland-ipm-blueprint.md",
-   "version": "1.1",
-   "updated": "2026-07-15",
+   "version": "1.2",
+   "updated": "2026-07-18",
    "ref_count": 28
   },
   {
@@ -167,8 +167,8 @@
    ],
    "url": "https://jaketherabbit.github.io/cannabis-white-papers/seeds-germination.html",
    "md_url": "https://jaketherabbit.github.io/cannabis-white-papers/papers/seeds-germination.md",
-   "version": "1.1",
-   "updated": "2026-07-15",
+   "version": "1.2",
+   "updated": "2026-07-18",
    "ref_count": 11
   },
   {
@@ -185,8 +185,8 @@
    ],
    "url": "https://jaketherabbit.github.io/cannabis-white-papers/lighting-fundamentals.html",
    "md_url": "https://jaketherabbit.github.io/cannabis-white-papers/papers/lighting-fundamentals.md",
-   "version": "1.1",
-   "updated": "2026-07-15",
+   "version": "1.2",
+   "updated": "2026-07-18",
    "ref_count": 9
   },
   {
@@ -203,8 +203,8 @@
    ],
    "url": "https://jaketherabbit.github.io/cannabis-white-papers/substrates-overview.html",
    "md_url": "https://jaketherabbit.github.io/cannabis-white-papers/papers/substrates-overview.md",
-   "version": "1.1",
-   "updated": "2026-07-15",
+   "version": "1.2",
+   "updated": "2026-07-18",
    "ref_count": 9
   },
   {
@@ -221,8 +221,8 @@
    ],
    "url": "https://jaketherabbit.github.io/cannabis-white-papers/water-quality.html",
    "md_url": "https://jaketherabbit.github.io/cannabis-white-papers/papers/water-quality.md",
-   "version": "1.1",
-   "updated": "2026-07-15",
+   "version": "1.2",
+   "updated": "2026-07-18",
    "ref_count": 8
   },
   {
@@ -239,8 +239,8 @@
    ],
    "url": "https://jaketherabbit.github.io/cannabis-white-papers/ph-management.html",
    "md_url": "https://jaketherabbit.github.io/cannabis-white-papers/papers/ph-management.md",
-   "version": "1.1",
-   "updated": "2026-07-15",
+   "version": "1.2",
+   "updated": "2026-07-18",
    "ref_count": 8
   },
   {
@@ -257,8 +257,8 @@
    ],
    "url": "https://jaketherabbit.github.io/cannabis-white-papers/nutrient-deficiencies.html",
    "md_url": "https://jaketherabbit.github.io/cannabis-white-papers/papers/nutrient-deficiencies.md",
-   "version": "1.1",
-   "updated": "2026-07-15",
+   "version": "1.2",
+   "updated": "2026-07-18",
    "ref_count": 9
   },
   {
@@ -275,8 +275,8 @@
    ],
    "url": "https://jaketherabbit.github.io/cannabis-white-papers/flowering-stages.html",
    "md_url": "https://jaketherabbit.github.io/cannabis-white-papers/papers/flowering-stages.md",
-   "version": "1.1",
-   "updated": "2026-07-15",
+   "version": "1.2",
+   "updated": "2026-07-18",
    "ref_count": 8
   },
   {
@@ -294,8 +294,8 @@
    ],
    "url": "https://jaketherabbit.github.io/cannabis-white-papers/pest-id.html",
    "md_url": "https://jaketherabbit.github.io/cannabis-white-papers/papers/pest-id.md",
-   "version": "1.1",
-   "updated": "2026-07-15",
+   "version": "1.2",
+   "updated": "2026-07-18",
    "ref_count": 8
   },
   {
@@ -312,8 +312,8 @@
    ],
    "url": "https://jaketherabbit.github.io/cannabis-white-papers/root-zone-teros12.html",
    "md_url": "https://jaketherabbit.github.io/cannabis-white-papers/papers/root-zone-teros12.md",
-   "version": "1.1",
-   "updated": "2026-07-15",
+   "version": "1.2",
+   "updated": "2026-07-18",
    "ref_count": 8
   },
   {
@@ -330,8 +330,8 @@
    ],
    "url": "https://jaketherabbit.github.io/cannabis-white-papers/smart-watering-vrwe.html",
    "md_url": "https://jaketherabbit.github.io/cannabis-white-papers/papers/smart-watering-vrwe.md",
-   "version": "1.1",
-   "updated": "2026-07-15",
+   "version": "1.2",
+   "updated": "2026-07-18",
    "ref_count": 5
   },
   {
@@ -348,8 +348,8 @@
    ],
    "url": "https://jaketherabbit.github.io/cannabis-white-papers/signal-and-noise.html",
    "md_url": "https://jaketherabbit.github.io/cannabis-white-papers/papers/signal-and-noise.md",
-   "version": "1.1",
-   "updated": "2026-07-15",
+   "version": "1.2",
+   "updated": "2026-07-18",
    "ref_count": 9
   },
   {
@@ -366,8 +366,8 @@
    ],
    "url": "https://jaketherabbit.github.io/cannabis-white-papers/closed-loop.html",
    "md_url": "https://jaketherabbit.github.io/cannabis-white-papers/papers/closed-loop.md",
-   "version": "1.1",
-   "updated": "2026-07-15",
+   "version": "1.2",
+   "updated": "2026-07-18",
    "ref_count": 9
   },
   {
@@ -384,8 +384,8 @@
    ],
    "url": "https://jaketherabbit.github.io/cannabis-white-papers/plant-state-dashboard.html",
    "md_url": "https://jaketherabbit.github.io/cannabis-white-papers/papers/plant-state-dashboard.md",
-   "version": "1.1",
-   "updated": "2026-07-15",
+   "version": "1.2",
+   "updated": "2026-07-18",
    "ref_count": 5
   },
   {
@@ -402,8 +402,8 @@
    ],
    "url": "https://jaketherabbit.github.io/cannabis-white-papers/f2-crop-steering.html",
    "md_url": "https://jaketherabbit.github.io/cannabis-white-papers/papers/f2-crop-steering.md",
-   "version": "1.1",
-   "updated": "2026-07-15",
+   "version": "1.2",
+   "updated": "2026-07-18",
    "ref_count": 5
   },
   {
@@ -420,8 +420,8 @@
    ],
    "url": "https://jaketherabbit.github.io/cannabis-white-papers/irrigation-manual.html",
    "md_url": "https://jaketherabbit.github.io/cannabis-white-papers/papers/irrigation-manual.md",
-   "version": "1.1",
-   "updated": "2026-07-15",
+   "version": "1.2",
+   "updated": "2026-07-18",
    "ref_count": 4
   },
   {
@@ -438,8 +438,8 @@
    ],
    "url": "https://jaketherabbit.github.io/cannabis-white-papers/cloning.html",
    "md_url": "https://jaketherabbit.github.io/cannabis-white-papers/papers/cloning.md",
-   "version": "1.1",
-   "updated": "2026-07-15",
+   "version": "1.2",
+   "updated": "2026-07-18",
    "ref_count": 9
   },
   {
@@ -456,8 +456,8 @@
    ],
    "url": "https://jaketherabbit.github.io/cannabis-white-papers/nutrient-mixing-athena.html",
    "md_url": "https://jaketherabbit.github.io/cannabis-white-papers/papers/nutrient-mixing-athena.md",
-   "version": "1.1",
-   "updated": "2026-07-15",
+   "version": "1.2",
+   "updated": "2026-07-18",
    "ref_count": 8
   },
   {
@@ -474,8 +474,8 @@
    ],
    "url": "https://jaketherabbit.github.io/cannabis-white-papers/light-acclimation.html",
    "md_url": "https://jaketherabbit.github.io/cannabis-white-papers/papers/light-acclimation.md",
-   "version": "1.1",
-   "updated": "2026-07-15",
+   "version": "1.2",
+   "updated": "2026-07-18",
    "ref_count": 12
   },
   {
@@ -492,8 +492,8 @@
    ],
    "url": "https://jaketherabbit.github.io/cannabis-white-papers/defoliation-training.html",
    "md_url": "https://jaketherabbit.github.io/cannabis-white-papers/papers/defoliation-training.md",
-   "version": "1.1",
-   "updated": "2026-07-15",
+   "version": "1.2",
+   "updated": "2026-07-18",
    "ref_count": 8
   },
   {
@@ -510,8 +510,8 @@
    ],
    "url": "https://jaketherabbit.github.io/cannabis-white-papers/ipm-sop.html",
    "md_url": "https://jaketherabbit.github.io/cannabis-white-papers/papers/ipm-sop.md",
-   "version": "1.1",
-   "updated": "2026-07-15",
+   "version": "1.2",
+   "updated": "2026-07-18",
    "ref_count": 6
   },
   {
@@ -528,8 +528,8 @@
    ],
    "url": "https://jaketherabbit.github.io/cannabis-white-papers/harvest-dry-trim-cure.html",
    "md_url": "https://jaketherabbit.github.io/cannabis-white-papers/papers/harvest-dry-trim-cure.md",
-   "version": "1.1",
-   "updated": "2026-07-15",
+   "version": "1.2",
+   "updated": "2026-07-18",
    "ref_count": 8
   },
   {
@@ -545,8 +545,8 @@
    ],
    "url": "https://jaketherabbit.github.io/cannabis-white-papers/gmp-hash-lab.html",
    "md_url": "https://jaketherabbit.github.io/cannabis-white-papers/papers/gmp-hash-lab.md",
-   "version": "1.1",
-   "updated": "2026-07-15",
+   "version": "1.2",
+   "updated": "2026-07-18",
    "ref_count": 8
   },
   {
@@ -563,8 +563,8 @@
    ],
    "url": "https://jaketherabbit.github.io/cannabis-white-papers/facility-3d.html",
    "md_url": "https://jaketherabbit.github.io/cannabis-white-papers/papers/facility-3d.md",
-   "version": "1.1",
-   "updated": "2026-07-15",
+   "version": "1.2",
+   "updated": "2026-07-18",
    "ref_count": 5
   },
   {
@@ -582,8 +582,8 @@
    ],
    "url": "https://jaketherabbit.github.io/cannabis-white-papers/rockwool-crop-steering.html",
    "md_url": "https://jaketherabbit.github.io/cannabis-white-papers/papers/rockwool-crop-steering.md",
-   "version": "1.1",
-   "updated": "2026-07-15",
+   "version": "1.2",
+   "updated": "2026-07-18",
    "ref_count": 10
   },
   {
@@ -600,8 +600,8 @@
    ],
    "url": "https://jaketherabbit.github.io/cannabis-white-papers/daily-checks.html",
    "md_url": "https://jaketherabbit.github.io/cannabis-white-papers/papers/daily-checks.md",
-   "version": "1.1",
-   "updated": "2026-07-15",
+   "version": "1.2",
+   "updated": "2026-07-18",
    "ref_count": 13
   },
   {
@@ -619,8 +619,8 @@
    ],
    "url": "https://jaketherabbit.github.io/cannabis-white-papers/pppe.html",
    "md_url": "https://jaketherabbit.github.io/cannabis-white-papers/papers/pppe.md",
-   "version": "1.1",
-   "updated": "2026-07-15",
+   "version": "1.2",
+   "updated": "2026-07-18",
    "ref_count": 15
   },
   {
@@ -640,8 +640,8 @@
    ],
    "url": "https://jaketherabbit.github.io/cannabis-white-papers/one-steering-law.html",
    "md_url": "https://jaketherabbit.github.io/cannabis-white-papers/papers/one-steering-law.md",
-   "version": "1.1",
-   "updated": "2026-07-15",
+   "version": "1.2",
+   "updated": "2026-07-18",
    "ref_count": 9
   },
   {
@@ -660,8 +660,8 @@
    ],
    "url": "https://jaketherabbit.github.io/cannabis-white-papers/under-canopy-lighting.html",
    "md_url": "https://jaketherabbit.github.io/cannabis-white-papers/papers/under-canopy-lighting.md",
-   "version": "1.1",
-   "updated": "2026-07-15",
+   "version": "1.2",
+   "updated": "2026-07-18",
    "ref_count": 7
   },
   {
@@ -678,8 +678,8 @@
    ],
    "url": "https://jaketherabbit.github.io/cannabis-white-papers/plant-biosignal-sensor.html",
    "md_url": "https://jaketherabbit.github.io/cannabis-white-papers/papers/plant-biosignal-sensor.md",
-   "version": "1.1",
-   "updated": "2026-07-15",
+   "version": "1.2",
+   "updated": "2026-07-18",
    "ref_count": 6
   }
  ]

@@ -1,6 +1,6 @@
 {
  "name": "The Cannabis White Papers — glossary",
- "count": 381,
+ "count": 388,
  "license": "CC BY-NC 4.0",
  "terms": [
   {
@@ -2686,6 +2686,55 @@
    "defn": "Person Conducting a Business or Undertaking, the NZ legal term (Health and Safety at Work Act 2015) for the duty-holding business, i.e. the employer.",
    "tags": [
     "operations"
+   ]
+  },
+  {
+   "term": "Limiting factor (Liebig's law of the minimum)",
+   "defn": "The single input in shortest supply relative to what the plant is demanding; it alone sets the growth rate. Raise the limiting input and growth climbs, raise anything else and nothing happens. In a grow room the weakest support system, usually dehumidification, cooling or CO2, is what really caps yield, not the brightest light the fixtures can make.",
+   "tags": [
+    "reference"
+   ]
+  },
+  {
+   "term": "Sensible heat load",
+   "defn": "The dry heat a grow room must shed, coming almost entirely off the lights (nearly all fixture wattage ends up as heat). It raises air temperature and is the air-conditioner's job. A rough rule: watts of light going in equals watts of sensible heat you have to remove.",
+   "tags": [
+    "reference"
+   ]
+  },
+  {
+   "term": "Latent heat load",
+   "defn": "The heat carried inside water vapour, removed by condensing that vapour back to liquid; this is the dehumidifier's job. Every litre a canopy transpires becomes latent load, which is why bright rooms need so much dehumidification. Separate from sensible (dry) heat, and often the bigger of the two at high light.",
+   "tags": [
+    "reference"
+   ]
+  },
+  {
+   "term": "Dehumidification load",
+   "defn": "How much water a room must pull out of the air each day to hold its humidity target, set by how much the canopy transpires. At high light it is frequently the true yield ceiling. Measured in litres or US pints per day (1 litre is about 2.1 pints); a dense flowering canopy can transpire several litres per square metre per day.",
+   "tags": [
+    "reference"
+   ]
+  },
+  {
+   "term": "Mass flow (nutrient uptake)",
+   "defn": "The main way nutrients reach the roots: dissolved in the water the plant is drinking, they are carried to the root surface as the plant transpires. Faster transpiration moves more water and more nutrient, so feed strength (EC) and light level have to rise together, under-feed a bright canopy and it fades.",
+   "tags": [
+    "reference"
+   ]
+  },
+  {
+   "term": "Transpiration stream",
+   "defn": "The continuous column of water pulled from the roots up to the leaves and released as vapour through the stomata. It carries dissolved nutrients upward; calcium in particular rides almost entirely on this stream, so weak transpiration shows up as calcium deficiency even when the tank is full.",
+   "tags": [
+    "reference"
+   ]
+  },
+  {
+   "term": "Boundary layer",
+   "defn": "The thin film of still air clinging to every leaf surface. CO2 going in, and water vapour and heat coming out, must diffuse slowly across it, so it throttles how fast a leaf can work. Moving air (about 0.3-1.0 m/s at the canopy) thins it; a stagnant boundary layer deep in a dense canopy is a hidden CO2 ceiling no room sensor will show you.",
+   "tags": [
+    "reference"
    ]
   }
  ]
