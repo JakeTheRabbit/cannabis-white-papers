@@ -1,0 +1,1177 @@
+<!DOCTYPE html><html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Reading the Root Zone &middot; The Cannabis White Papers</title>
+<meta name="description" content="Two questions every grower asks and few answer well: am I under-watering in coco or rockwool, and how much water does the light actually demand? A field guide to reading water status three ways — by weight, by probe, and by the plant — and to sizing every irrigation to your PPFD and DLI.">
+<script>(function(){try{var t=localStorage.getItem('cwp-theme')||(window.matchMedia&&window.matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light');document.documentElement.setAttribute('data-theme',t);}catch(e){}})();</script>
+<style>:root{
+  --paper:#FCFCFA; --surface:#FFFFFF; --surface-2:#F4F3EE; --surface-3:#EDECE6;
+  --ink:#23231F; --ink-2:#43433D; --muted:#6A6A63; --faint:#9B9B93;
+  --line:#E4E3DC; --line-2:#EFEEE8;
+  --acc:#2B2B28; --acc-soft:#ECEBE5; --acc-ink:#2B2B28;
+  /* data-viz greens (diagrams only) */
+  --grn:#1C5B40; --grn-2:#2E7D52; --grn-soft:#EAF2EC; --grn-ink:#103A29;
+  --amber:#946513; --amber-soft:#F6EFDC; --red:#A03A2B; --red-soft:#F5E6E2; --blue:#2C5E92; --blue-soft:#E8EFF6;
+  --r:10px; --r-lg:16px;
+  --sidebar:286px; --rail:226px; --maxw:760px;
+  --sans:"Inter",system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  --serif:"Iowan Old Style","Palatino Linotype",Georgia,"Times New Roman",serif;
+  --mono:ui-monospace,"Cascadia Code","SF Mono",Consolas,monospace;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;scroll-behavior:smooth}
+body{background:var(--paper);color:var(--ink-2);font-family:var(--sans);font-size:16.5px;line-height:1.68;overflow-wrap:break-word}
+html{overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+::selection{background:var(--surface-3)}
+img,svg{max-width:100%}
+
+/* ---------------- layout ---------------- */
+.layout{display:grid;grid-template-columns:var(--sidebar) minmax(0,1fr)}
+.sidebar{position:sticky;top:0;height:100vh;border-right:1px solid var(--line);background:var(--surface);
+  padding:24px 16px;display:flex;flex-direction:column;gap:3px;overflow-y:auto;z-index:30}
+.content{min-width:0}
+.doc{display:grid;grid-template-columns:minmax(0,1fr) var(--rail);gap:46px}
+.col{padding:58px 56px 130px;max-width:var(--maxw);width:100%;margin:0 auto}
+.wide .col{max-width:1080px}
+.rail{position:sticky;top:0;height:100vh;padding:62px 22px 40px;overflow-y:auto}
+
+/* ---------------- sidebar / nav ---------------- */
+.brand{display:flex;align-items:center;gap:12px;padding:4px 8px 18px;margin-bottom:12px;border-bottom:1px solid var(--line-2)}
+.brand .mark{width:34px;height:34px;border-radius:9px;background:var(--acc);color:#fff;display:grid;place-items:center;
+  font-family:var(--serif);font-weight:600;font-size:18px;flex:0 0 34px}
+.brand .nm{font-weight:600;font-size:14px;letter-spacing:-.01em;line-height:1.25;color:var(--ink)}
+.brand .nm small{display:block;font-weight:400;font-size:10px;letter-spacing:.13em;color:var(--faint);margin-top:2px}
+.cmdk{display:flex;align-items:center;gap:9px;padding:9px 12px;border:1px solid var(--line);border-radius:10px;
+  background:var(--surface-2);color:var(--muted);font-size:13px;margin-bottom:8px;cursor:pointer;width:100%}
+.cmdk .kbd{margin-left:auto;font-family:var(--mono);font-size:10.5px;color:var(--faint);border:1px solid var(--line);border-radius:5px;padding:1px 6px;background:var(--surface)}
+.navgrp{font-size:10px;letter-spacing:.13em;text-transform:uppercase;color:var(--faint);font-weight:600;padding:16px 10px 6px}
+.nav a{display:flex;align-items:center;gap:11px;padding:8px 11px;border-radius:9px;font-size:13.5px;color:var(--ink-2);transition:background .12s,color .12s}
+.nav a svg{width:17px;height:17px;color:var(--faint);flex:0 0 17px}
+.nav a:hover{background:var(--surface-2)}
+.nav a.on{background:var(--acc-soft);color:var(--ink);font-weight:500}
+.nav a.on svg{color:var(--acc)}
+.nav a.soon{color:var(--faint)}
+.nav a .badge-soon{margin-left:auto;font-size:9px;letter-spacing:.04em;text-transform:uppercase;color:var(--faint);border:1px solid var(--line);border-radius:20px;padding:1px 7px}
+.nav .seg{flex:1}
+
+/* ---------------- breadcrumb / hero ---------------- */
+.crumb{font-size:12.5px;color:var(--faint);margin-bottom:18px;display:flex;gap:7px;align-items:center}
+.crumb a:hover{color:var(--muted)}
+.crumb .sep{opacity:.5}
+.eyebrow{font-size:11px;letter-spacing:.15em;text-transform:uppercase;color:var(--muted);font-weight:600;margin-bottom:15px}
+h1.title{font-family:var(--serif);font-size:46px;line-height:1.07;letter-spacing:-.018em;font-weight:600;color:var(--ink);margin-bottom:18px}
+.sub{font-size:19px;line-height:1.55;color:var(--muted);max-width:640px;font-weight:400}
+.metarow{display:flex;flex-wrap:wrap;gap:8px;margin-top:26px}
+.pill{display:inline-flex;align-items:center;gap:7px;font-size:12.5px;color:var(--ink-2);border:1px solid var(--line);
+  border-radius:7px;padding:5px 11px;background:var(--surface)}
+.pill svg{width:14px;height:14px;color:var(--faint)}
+.pill.solid{background:var(--acc-soft);border-color:transparent;color:var(--acc-ink);font-weight:500}
+.pill.solid svg{color:var(--acc)}
+.divider{height:1px;background:var(--line);margin:42px 0}
+
+/* ---------------- prose ---------------- */
+.col p{margin:0 0 18px;color:var(--ink-2);font-size:16.5px;line-height:1.72}
+.col p strong{color:var(--ink);font-weight:600}
+.lead{font-size:18.5px !important;color:var(--ink-2) !important;line-height:1.6 !important}
+.sec{scroll-margin-top:20px}
+.sec h2{font-family:var(--serif);font-size:30px;letter-spacing:-.01em;font-weight:600;color:var(--ink);margin:56px 0 16px}
+.sec h3{font-size:19px;font-weight:600;color:var(--ink);margin:32px 0 10px}
+.sec h4{font-size:13px;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);font-weight:600;margin:22px 0 7px}
+.sec-kicker{font-family:var(--mono);font-size:11.5px;letter-spacing:.13em;text-transform:uppercase;color:var(--faint);font-weight:600;margin:0 0 2px}
+.col ul,.col ol{margin:0 0 18px;padding-left:1.3em}
+.col li{margin-bottom:.45em;color:var(--ink-2)}
+.col ul.tight li,.col ol.tight li{margin-bottom:.18em}
+sup.cite{font-size:11px;font-weight:600;color:var(--acc);vertical-align:super;cursor:pointer}
+a.xref{color:inherit;border-bottom:1px solid var(--line);text-decoration:none;transition:border-color .12s}
+a.xref:hover{border-bottom-color:var(--ink)}
+sup.cite a{color:var(--acc)}
+code{font-family:var(--mono);font-size:.85em;background:var(--surface-2);border:1px solid var(--line);border-radius:5px;padding:1px 5px;color:var(--ink)}
+
+/* ---------------- index / toc card ---------------- */
+.toc-card{background:var(--surface);border:1px solid var(--line);border-radius:var(--r-lg);padding:22px 26px;margin:6px 0 8px}
+.kicker{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--faint);font-weight:600;margin-bottom:16px;display:flex;align-items:center;gap:9px}
+.kicker svg{width:14px;height:14px;color:var(--acc)}
+.toc{display:grid;grid-template-columns:1fr 1fr;gap:0 32px}
+.toc a{display:flex;gap:13px;align-items:baseline;padding:9px 0;font-size:14.5px;color:var(--ink-2);border-bottom:1px solid var(--line-2)}
+.toc a:hover{color:var(--ink)}
+.toc .n{font-family:var(--mono);font-size:11.5px;color:var(--muted);font-weight:600;min-width:18px}
+
+/* ---------------- callouts ---------------- */
+.callout{display:flex;gap:14px;padding:16px 19px;border-radius:var(--r);margin:24px 0;background:var(--surface);border:1px solid var(--line)}
+.callout .cic{width:30px;height:30px;border-radius:8px;display:grid;place-items:center;flex:0 0 30px;color:#fff}
+.callout .cic svg{width:17px;height:17px}
+.callout .ctitle{font-weight:600;color:var(--ink);margin-bottom:2px}
+.callout .cbody{font-size:14.8px;color:var(--ink-2);line-height:1.6}
+.callout .cbody p:last-child{margin-bottom:0}
+.callout.note{background:var(--blue-soft);border-color:#D6E2EF} .callout.note .cic{background:var(--blue)}
+.callout.tip{background:var(--grn-soft);border-color:#D6E6DB} .callout.tip .cic{background:var(--grn)}
+.callout.warn{background:var(--amber-soft);border-color:#ECDDB8} .callout.warn .cic{background:var(--amber)}
+.callout.danger{background:var(--red-soft);border-color:#EAC9C0} .callout.danger .cic{background:var(--red)}
+.callout.key{background:var(--surface-2);border-color:var(--line)} .callout.key .cic{background:var(--acc)}
+
+/* ---------------- definition ---------------- */
+.defn{padding:13px 18px;border-left:3px solid var(--acc);background:var(--surface-2);border-radius:0 8px 8px 0;margin:14px 0;font-size:15px}
+.defn-t{font-family:var(--serif);font-weight:600;color:var(--ink);font-size:16px;margin-right:8px}
+.defn-t::after{content:", ";margin-left:8px;color:var(--faint);font-family:var(--sans);font-weight:400}
+.defn-b{color:var(--ink-2)}
+
+/* ---------------- table ---------------- */
+.tbl-wrap{overflow-x:auto;margin:24px 0;border:1px solid var(--line);border-radius:var(--r-lg)}
+.tbl{width:100%;border-collapse:collapse;font-size:14.3px;background:var(--surface)}
+.tbl caption{caption-side:top;text-align:left;font-weight:600;color:var(--ink-2);padding:14px 16px 0;font-size:13px}
+.tbl th{text-align:left;font-weight:600;color:var(--faint);font-size:11px;letter-spacing:.06em;text-transform:uppercase;padding:12px 14px;border-bottom:1.5px solid var(--line);background:var(--surface-2)}
+.tbl td{padding:11px 14px;border-top:1px solid var(--line-2);color:var(--ink-2);vertical-align:top}
+.tbl tbody tr:hover td{background:var(--surface-2)}
+.tbl tfoot td{font-size:12.5px;color:var(--muted);background:var(--surface-2);font-style:italic}
+.tbl .num{font-family:var(--mono);white-space:nowrap}
+.tag{font-size:11.5px;padding:3px 10px;border-radius:6px;font-weight:500;white-space:nowrap}
+.tag.g{background:var(--grn-soft);color:var(--grn-ink)} .tag.w{background:var(--amber-soft);color:var(--amber)} .tag.r{background:var(--red-soft);color:var(--red)}
+
+/* ---------------- figure ---------------- */
+.fig{margin:30px 0;background:var(--surface);border:1px solid var(--line);border-radius:var(--r-lg);padding:24px;text-align:center}
+.fig svg{height:auto;display:block;margin:0 auto}
+.fig figcaption{font-size:13px;color:var(--muted);margin-top:16px;text-align:left;line-height:1.55}
+.fignum{font-weight:600;color:var(--ink)}
+.fig.photo{padding:0;overflow:hidden}
+.fig.photo img{display:block;width:100%;height:auto;border-radius:var(--r-lg) var(--r-lg) 0 0}
+.fig.photo figcaption{margin:0;padding:14px 18px}
+.fcredit{display:inline-block;margin-left:8px;font-size:10.5px;letter-spacing:.04em;text-transform:uppercase;color:var(--faint);border:1px solid var(--line);border-radius:20px;padding:1px 8px;vertical-align:middle}
+/* image-sequence (progression) figure */
+.figseq{padding:20px}
+.pseq-t{font-size:14px;font-weight:600;color:var(--ink);margin-bottom:14px;text-align:left}
+.pseq{display:flex;align-items:center;gap:6px;flex-wrap:wrap;justify-content:center}
+.pseq-step{flex:1 1 150px;min-width:130px;max-width:240px;text-align:center}
+.pseq-step img{width:100%;aspect-ratio:1/1;object-fit:cover;border-radius:10px;border:1px solid var(--line)}
+.pseq-lab{font-size:12px;color:var(--ink-2);margin-top:7px;font-weight:500}
+.pseq-arr{color:var(--muted);font-size:18px;flex:0 0 auto}
+@media(max-width:680px){.pseq-arr{transform:rotate(90deg)}.pseq-step{flex-basis:100%}}
+/* key-terms image gallery */
+.tgal-wrap{margin:22px 0}
+.tgal{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:12px}
+.tgal-item{margin:0}
+.tgal-item img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:10px;border:1px solid var(--line);display:block}
+.tgal-item figcaption{font-size:12.5px;color:var(--ink-2);margin-top:6px;font-weight:500;line-height:1.3}
+
+/* ---------------- stage cards ---------------- */
+.stagecard{border:1px solid var(--line);border-radius:var(--r-lg);margin:18px 0;overflow:hidden;background:var(--surface)}
+.stagecard-h{display:flex;align-items:center;gap:14px;padding:14px 18px;background:var(--surface-2);border-bottom:1px solid var(--line)}
+.stagenum{flex:0 0 34px;height:34px;border-radius:9px;background:var(--acc);color:#fff;display:grid;place-items:center;font-weight:600;font-family:var(--mono)}
+.stagetitle{font-weight:600;font-size:16.5px;flex:1;color:var(--ink)}
+.stagedur{font-size:12px;color:var(--muted);background:var(--surface);border:1px solid var(--line);padding:3px 10px;border-radius:20px;white-space:nowrap}
+.stagecard-b{padding:16px 18px}
+.stagecard-b p:last-child{margin-bottom:0}
+
+/* ---------------- grid / cards / chips / kv / steps ---------------- */
+.grid{display:grid;gap:15px;margin:20px 0}
+.grid-2{grid-template-columns:1fr 1fr} .grid-3{grid-template-columns:1fr 1fr 1fr}
+.card{border:1px solid var(--line);border-radius:var(--r-lg);padding:16px 18px;background:var(--surface)}
+.card-tag{font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);font-weight:600}
+.card-title{font-weight:600;margin:4px 0 6px;font-size:16px;color:var(--ink)}
+.card-body{font-size:14.5px;color:var(--ink-2)} .card-body p:last-child{margin-bottom:0} .card-body ul{margin-bottom:0}
+.chip{display:inline-block;font-size:12px;padding:3px 11px;border-radius:20px;background:var(--surface-2);border:1px solid var(--line);color:var(--ink-2)}
+.kv{border:1px solid var(--line);border-radius:var(--r-lg);overflow:hidden;margin:18px 0;background:var(--surface)}
+.kv-row{display:flex;border-top:1px solid var(--line-2)} .kv-row:first-child{border-top:none}
+.kv-k{flex:0 0 42%;padding:10px 14px;background:var(--surface-2);font-weight:600;font-size:14px;color:var(--ink)}
+.kv-v{flex:1;padding:10px 14px;font-size:14px}
+.steps{list-style:none;margin:18px 0;padding:0}
+.step{display:flex;gap:14px;padding:12px 0;border-top:1px dashed var(--line)} .step:first-child{border-top:none}
+.step-n{flex:0 0 28px;height:28px;border-radius:50%;background:var(--acc);color:#fff;display:grid;place-items:center;font-weight:600;font-size:13.5px;font-family:var(--mono)}
+.step-t{font-weight:600;margin-bottom:2px;color:var(--ink)} .step-b{font-size:14.5px;color:var(--ink-2)} .step-b p:last-child{margin-bottom:0}
+
+/* ---------------- related ---------------- */
+.rel{display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px;margin-top:16px}
+.relcard{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:16px;transition:border-color .15s,transform .15s,box-shadow .15s}
+.relcard:hover{border-color:#CFCEC6;transform:translateY(-2px);box-shadow:0 12px 30px -18px rgba(20,20,15,.3)}
+.relcard svg{width:20px;height:20px;color:var(--acc);margin-bottom:10px}
+.relcard .tt{font-size:14px;font-weight:600;color:var(--ink);margin-bottom:2px}
+.relcard .dd{font-size:12px;color:var(--muted)}
+
+/* ---------------- rail (on this page) ---------------- */
+.rail .lbl{font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--faint);font-weight:600;margin-bottom:14px}
+.rail a{display:block;font-size:13px;color:var(--muted);padding:6px 0 6px 14px;border-left:2px solid var(--line);line-height:1.4}
+.rail a:hover{color:var(--ink-2)}
+.rail a.on{color:var(--ink);border-left-color:var(--acc);font-weight:500}
+
+/* ---------------- footer / refs ---------------- */
+.refs{margin-top:60px;padding-top:26px;border-top:1px solid var(--line)}
+.refs h3{font-family:var(--serif);font-size:20px;font-weight:600;color:var(--ink);margin-bottom:14px}
+.refs ol{padding-left:1.4em;font-size:13px;color:var(--muted);line-height:1.65}
+.refs li{margin-bottom:8px} .refs li.np{opacity:.85}
+.refs a{color:var(--acc);text-decoration:underline;text-underline-offset:2px}
+.foot{font-size:12.5px;color:var(--faint);margin-top:24px;line-height:1.6}
+
+/* ---------------- landing ---------------- */
+.hero-land{padding:74px 0 36px;text-align:center;max-width:760px;margin:0 auto}
+.hero-land .eyebrow{margin-bottom:18px}
+.hero-land h1{font-family:var(--serif);font-size:54px;line-height:1.05;letter-spacing:-.02em;font-weight:600;color:var(--ink);margin-bottom:20px}
+.hero-land .sub{font-size:20px;color:var(--muted);margin:0 auto;max-width:600px}
+.hero-stats{display:flex;justify-content:center;gap:34px;margin:34px 0 8px;flex-wrap:wrap}
+.hero-stats .s{text-align:center}
+.hero-stats .s b{display:block;font-family:var(--serif);font-size:30px;color:var(--ink);font-weight:600}
+.hero-stats .s span{font-size:12.5px;color:var(--muted)}
+.track{margin:46px 0 0}
+.track-h{display:flex;align-items:baseline;gap:12px;margin-bottom:16px}
+.track-h h2{font-family:var(--serif);font-size:24px;font-weight:600;color:var(--ink)}
+.track-h .ct{font-size:12.5px;color:var(--faint)}
+.pgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:14px}
+.pgrid.compact{grid-template-columns:repeat(auto-fill,minmax(232px,1fr));gap:10px}
+.pcard.sm{padding:12px 14px;gap:11px}
+.pcard.sm .pic{width:32px;height:32px;flex:0 0 32px} .pcard.sm .pic svg{width:17px;height:17px}
+.pcard.sm .pt{font-size:13.5px;margin-bottom:1px} .pcard.sm .ps{font-size:12px;line-height:1.4}
+.filterbar{display:flex;flex-wrap:wrap;gap:8px;align-items:center;position:sticky;top:0;z-index:20;
+  background:var(--paper);padding:14px 0;margin:8px 0 18px;border-bottom:1px solid var(--line)}
+.fpill{font-size:13px;border:1px solid var(--line);border-radius:30px;padding:6px 13px;background:var(--surface);
+  color:var(--ink-2);cursor:pointer;display:inline-flex;gap:7px;align-items:center;font-family:var(--sans)}
+.fpill:hover{border-color:var(--line-2);color:var(--ink)}
+.fpill span{color:var(--faint);font-size:11px;font-family:var(--mono)}
+.fpill.on{background:var(--acc);color:var(--paper);border-color:transparent}
+.fpill.on span{color:var(--paper);opacity:.7}
+.dir-empty{color:var(--muted);font-size:14px;padding:20px 0}
+/* ---------------- landing tree index ---------------- */
+.hero-land.tight{padding:52px 0 18px;text-align:left;max-width:none;margin:0}
+.hero-land.tight h1{font-size:46px;margin-bottom:16px}
+.hero-land.tight .sub{margin:0;max-width:780px;font-size:18.5px}
+.dirtools{position:sticky;top:0;z-index:20;background:var(--paper);padding:14px 0 10px;margin-bottom:4px;border-bottom:1px solid var(--line)}
+.dirtools .filterbar{position:static;border:none;padding:0;margin:0}
+.treefilter{display:block;width:100%;max-width:780px;padding:11px 14px;border:1px solid var(--line);border-radius:10px;background:var(--surface);color:var(--ink);font-family:var(--sans);font-size:15px;outline:none;margin-bottom:12px}
+.treefilter:focus{border-color:var(--muted)}
+.treefilter::placeholder{color:var(--faint)}
+.treegroup{margin:24px 0 0}
+.tg-h{display:flex;align-items:baseline;gap:10px;margin:0;padding-bottom:7px;border-bottom:1px solid var(--line)}
+.tg-h h2{font-family:var(--serif);font-size:21px;font-weight:600;color:var(--ink);margin:0}
+.tg-ct{font-family:var(--mono);font-size:12px;color:var(--faint)}
+.tg-rows{display:flex;flex-direction:column}
+.trow{display:flex;align-items:flex-start;gap:14px;padding:12px 10px;border-bottom:1px solid var(--line-2);border-radius:8px;transition:background .12s;color:inherit}
+.trow:last-child{border-bottom:none}
+a.trow:hover{background:var(--surface-2)}
+.trow-ic{flex:0 0 32px;height:32px;border-radius:9px;background:var(--surface-2);display:grid;place-items:center;color:var(--acc);margin-top:1px}
+.trow-ic svg{width:17px;height:17px}
+.trow-main{flex:1;min-width:0}
+.trow-t{display:block;font-weight:600;color:var(--ink);font-size:15.5px;line-height:1.3}
+.trow-b{display:block;color:var(--muted);font-size:13.8px;line-height:1.5;margin-top:3px}
+.trow-meta{flex:0 0 auto;font-family:var(--mono);font-size:11px;color:var(--faint);white-space:nowrap;padding-top:4px}
+.trow-meta.soon{text-transform:uppercase;letter-spacing:.05em}
+.trow.soon{opacity:.5;cursor:default}
+@media(max-width:900px){.dirtools{position:static}.hero-land.tight h1{font-size:33px}.trow-meta{display:none}}
+.pcard{display:flex;gap:13px;padding:17px;border:1px solid var(--line);border-radius:var(--r-lg);background:var(--surface);transition:border-color .15s,transform .15s,box-shadow .15s;position:relative}
+.pcard:hover{border-color:#CFCEC6;transform:translateY(-2px);box-shadow:0 14px 32px -20px rgba(20,20,15,.34)}
+.pcard.soon{opacity:.72}
+.pcard .pic{width:38px;height:38px;border-radius:10px;background:var(--surface-2);display:grid;place-items:center;flex:0 0 38px}
+.pcard .pic svg{width:20px;height:20px;color:var(--acc)}
+.pcard .pt{font-size:15px;font-weight:600;color:var(--ink);margin-bottom:2px;line-height:1.25}
+.pcard .ps{font-size:12.8px;color:var(--muted);line-height:1.45}
+.pcard .soon-tag{position:absolute;top:12px;right:12px;font-size:9px;letter-spacing:.05em;text-transform:uppercase;color:var(--faint);border:1px solid var(--line);border-radius:20px;padding:1px 7px}
+
+/* ---------------- glossary ---------------- */
+.gl-letter{font-family:var(--serif);font-size:26px;color:var(--ink);font-weight:600;margin:34px 0 10px;padding-bottom:6px;border-bottom:1px solid var(--line)}
+.gl-item{padding:14px 0;border-bottom:1px solid var(--line-2)}
+.gl-term{font-weight:600;color:var(--ink);font-size:16px}
+.gl-defn{font-size:14.8px;color:var(--ink-2);margin-top:3px;line-height:1.6}
+.gl-tags{margin-top:6px;display:flex;gap:6px;flex-wrap:wrap}
+
+/* ---------------- mobile chrome ---------------- */
+.mtopbar{display:none;align-items:center;gap:13px;padding:13px 18px;border-bottom:1px solid var(--line);position:sticky;top:0;background:rgba(252,252,250,.88);backdrop-filter:blur(12px);z-index:40}
+.mtopbar .mb{width:30px;height:30px;border-radius:8px;background:var(--acc);color:#fff;display:grid;place-items:center;font-family:var(--serif);font-weight:600;font-size:16px}
+.mtopbar .mt{font-weight:600;font-size:14px;flex:1;color:var(--ink);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.iconbtn{background:none;border:none;color:var(--muted);cursor:pointer;display:grid;place-items:center;padding:4px}
+.iconbtn svg{width:21px;height:21px}
+.bottomnav{display:none}
+.drawer-mask{display:none}
+
+@media(max-width:1180px){ .doc{grid-template-columns:minmax(0,1fr)} .rail{display:none} }
+@media(max-width:900px){
+  .layout{grid-template-columns:minmax(0,1fr)}
+  .sidebar{position:fixed;left:0;top:0;width:300px;transform:translateX(-100%);transition:transform .25s ease;box-shadow:0 0 60px rgba(0,0,0,.18)}
+  .sidebar.open{transform:translateX(0)}
+  .drawer-mask{position:fixed;inset:0;background:rgba(20,20,15,.4);z-index:29;border:none}
+  .drawer-mask.show{display:block}
+  .mtopbar{display:flex}
+  .col{padding:30px 20px 120px}
+  h1.title{font-size:33px} .hero-land h1{font-size:36px} .sec h2{font-size:25px}
+  .toc{grid-template-columns:1fr} .rel{grid-template-columns:1fr} .grid-2,.grid-3{grid-template-columns:1fr}
+  .bottomnav{display:flex;position:fixed;left:0;right:0;bottom:0;background:rgba(255,255,255,.92);
+    backdrop-filter:blur(16px);border-top:1px solid var(--line);padding:6px 4px;z-index:45;
+    padding-bottom:calc(6px + env(safe-area-inset-bottom))}
+  .bottomnav a{flex:1;display:flex;flex-direction:column;align-items:center;gap:3px;font-size:10px;color:var(--faint);padding:7px 0;position:relative}
+  .bottomnav a svg{width:21px;height:21px}
+  .bottomnav a.on{color:var(--acc)}
+  .bottomnav a.on::before{content:"";position:absolute;top:0;width:24px;height:2px;border-radius:2px;background:var(--acc)}
+}
+
+/* ---------------- search modal ---------------- */
+.search-mask{display:none;position:fixed;inset:0;background:rgba(20,20,15,.34);z-index:60;align-items:flex-start;justify-content:center;padding-top:12vh}
+.search-mask.show{display:flex}
+.search-box{width:min(560px,92vw);background:var(--surface);border:1px solid var(--line);border-radius:var(--r-lg);overflow:hidden;box-shadow:0 30px 80px -30px rgba(0,0,0,.5)}
+.search-box input{width:100%;border:none;border-bottom:1px solid var(--line);padding:16px 18px;font-size:16px;font-family:var(--sans);color:var(--ink);outline:none;background:var(--surface)}
+.search-results{max-height:54vh;overflow-y:auto}
+.sr-item{display:block;padding:11px 18px;border-bottom:1px solid var(--line-2);cursor:pointer}
+.sr-item:hover,.sr-item.sel{background:var(--surface-2)}
+.sr-t{font-size:14px;font-weight:600;color:var(--ink)}
+.sr-k{font-size:11px;color:var(--faint);text-transform:uppercase;letter-spacing:.05em}
+.sr-d{font-size:12.5px;color:var(--muted);margin-top:2px}
+.sr-empty{padding:22px 18px;color:var(--muted);font-size:14px;text-align:center}
+.sr-d mark{background:var(--acc-soft);color:var(--ink);border-radius:3px;padding:0 2px}
+
+/* ---------------- curriculum / learning tree ---------------- */
+.curtier{margin:30px 0 0}
+.curtier-h{display:flex;align-items:baseline;gap:12px;margin:0 0 4px}
+.curtier-h h3{font-family:var(--serif);font-size:21px;font-weight:600;color:var(--ink);margin:0}
+.curtier-h .d{font-size:12.5px;color:var(--faint)}
+.curlist{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:12px 0}
+@media(max-width:680px){.curlist{grid-template-columns:1fr}}
+.curitem{display:flex;align-items:center;gap:11px;padding:10px 13px;border:1px solid var(--line);border-radius:10px;background:var(--surface);font-size:14px;color:var(--ink-2)}
+a.curitem:hover{border-color:#CFCEC6;color:var(--ink)}
+.curitem .dot{width:7px;height:7px;border-radius:50%;background:var(--acc);flex:0 0 7px}
+.curitem.soon{opacity:.62} .curitem.soon .dot{background:var(--line)}
+.curitem .soon-tag{margin-left:auto;font-size:9px;letter-spacing:.05em;text-transform:uppercase;color:var(--faint);border:1px solid var(--line);border-radius:20px;padding:1px 7px}
+.curitem .arr{margin-left:auto;color:var(--faint)}
+
+/* ---------------- fit-to-width display headings (kizu.dev/fit-to-width) ----------------
+   Pure-CSS: the visible heading is scaled so one line fills the column exactly.
+   Registered custom props capture the container width (100cqi), tan(atan2()) divides
+   it by the natural width to get a unitless ratio, clamp() turns that into a font-size
+   between the element's base (floor) and --cwp-max (ceiling). No JS, no reflow.
+   The technique needs single-line nowrap, so on narrow screens (<=900px) it neutralises
+   back to a normal wrapping heading — long titles must never overflow on a phone. */
+@property --captured-length{syntax:"<length>";initial-value:0px;inherits:true}
+@property --captured-length2{syntax:"<length>";initial-value:0px;inherits:true}
+.text-fit{display:flex;container-type:inline-size;--captured-length:initial;--support-sentinel:var(--captured-length,9999px)}
+.text-fit>[aria-hidden]{visibility:hidden}
+.text-fit>:not([aria-hidden]){flex-grow:1;container-type:inline-size;--captured-length:100cqi;--available-space:var(--captured-length)}
+.text-fit>:not([aria-hidden])>*{--support-sentinel:inherit;--captured-length:100cqi;
+  --ratio:tan(atan2(var(--available-space),var(--available-space) - var(--captured-length)));
+  --font-size:clamp(1em,1em * var(--ratio),var(--max-font-size,infinity * 1px) - var(--support-sentinel));
+  inline-size:var(--available-space)}
+.text-fit>:not([aria-hidden])>*:not(.text-fit){display:block;font-size:var(--font-size);line-height:1.05}
+@container (inline-size > 0){.text-fit>:not([aria-hidden])>*:not(.text-fit){white-space:nowrap}}
+h1.title.text-fit{font-size:26px;margin-bottom:18px}
+.hero-land h1.text-fit{font-size:30px}
+@media(max-width:900px){
+  /* single-line nowrap fill doesn't suit a phone column: neutralise to a normal wrapping heading */
+  .text-fit{display:block;container-type:normal}
+  .text-fit>[aria-hidden]{display:none}
+  .text-fit>:not([aria-hidden]){container-type:normal}
+  .text-fit>:not([aria-hidden])>*:not(.text-fit){font-size:inherit;inline-size:auto;white-space:normal;line-height:inherit}
+  h1.title.text-fit{font-size:33px}
+  .hero-land h1.text-fit{font-size:36px}
+}
+
+/* ---------------- figure palette (themable) ---------------- */
+:root{
+  --fig-bg:#ffffff; --fig-panel:#f3f7f3; --fig-ink:#16211c; --fig-ink2:#3c4a42; --fig-mut:#697a70; --fig-line:#cdd8d0;
+  --fig-green:#2e7d52; --fig-green-d:#1d5638; --fig-green-l:#e7f2eb; --fig-green-xl:#f1f8f3;
+  --fig-amber:#b3791a; --fig-amber-l:#fdf3e0; --fig-red:#b5402f; --fig-red-l:#fbe9e6;
+  --fig-blue:#2f6fb0; --fig-blue-l:#e9f1f9; --fig-purple:#6b4f9e; --fig-purple-l:#efeaf7;
+  --fig-water:#4f8fd0; --fig-waterl:#dbe9f6; --fig-dry:#cdb48b; --fig-dryl:#ece0cc;
+  --fig-salt:#c98a2a; --fig-solid:#9a9a93; --fig-skin:#d8a47f;
+}
+
+/* ---------------- theme toggle ---------------- */
+.brandrow{display:flex;align-items:center;gap:8px;margin-bottom:12px;border-bottom:1px solid var(--line-2);padding-bottom:14px}
+.brandrow .brand{flex:1;border-bottom:none;margin-bottom:0;padding-bottom:0}
+.themebtn{background:none;border:1px solid var(--line);border-radius:8px;color:var(--muted);cursor:pointer;width:32px;height:32px;display:grid;place-items:center;flex:0 0 32px}
+.themebtn:hover{background:var(--surface-2);color:var(--ink)}
+.themebtn svg{width:17px;height:17px}
+
+/* ---------------- dark mode ---------------- */
+[data-theme="dark"]{
+  --paper:#151515; --surface:#1F1F1F; --surface-2:#272727; --surface-3:#313131;
+  --ink:#E7E7E7; --ink-2:#C8C8C8; --muted:#9A9A9A; --faint:#717171;
+  --line:#2F2F2F; --line-2:#262626;
+  --acc:#E7E7E7; --acc-soft:#262626; --acc-ink:#E7E7E7;
+  --grn:#46b88a; --grn-d:#8fe0b6; --grn-l:#1c3a2b; --grn-xl:#16271e; --grn-ink:#9fe6c0;
+  --amber:#d9a85a; --amber-l:#2a2113; --red:#e08a7d; --red-l:#2c1714;
+  --blue:#6aa6e0; --blue-l:#14202e; --purple:#b09ce0; --purple-l:#221c30;
+  --grn-soft:#14231b; --amber-soft:#241e12; --red-soft:#291814; --blue-soft:#152030;
+  /* Dark diagram palette: dark panel, off-white strokes (not pure white, avoids
+     halation), muted desaturated fills. Every diagram colour is a var so the
+     SVGs theme cleanly instead of flash-banging on a white card. */
+  --fig-bg:#1F1F1F; --fig-panel:#2A2A2A; --fig-ink:#E2E2E2; --fig-ink2:#B4B4B4; --fig-mut:#8C8C8C; --fig-line:#3A3A3A;
+  --fig-green:#52bd8d; --fig-green-d:#7ed6ab; --fig-green-l:#1f3a2c; --fig-green-xl:#18271f;
+  --fig-amber:#d9ab60; --fig-amber-l:#2c2415; --fig-red:#e58c7e; --fig-red-l:#2f1916;
+  --fig-blue:#6fa8e2; --fig-blue-l:#16222f; --fig-purple:#b4a0e2; --fig-purple-l:#221c30;
+  --fig-water:#5f9ed8; --fig-waterl:#22344a; --fig-dry:#b39a6e; --fig-dryl:#2f2b1d;
+  --fig-salt:#d8a049; --fig-solid:#6c6c66; --fig-skin:#c2885f;
+}
+[data-theme="dark"] body{background:var(--paper);color:var(--ink-2)}
+[data-theme="dark"] .brand .mark,[data-theme="dark"] .stagenum,[data-theme="dark"] .step-n{color:var(--paper)}
+[data-theme="dark"] .callout .cic{color:var(--paper)}
+[data-theme="dark"] .callout.note{border-color:#1d3346}
+[data-theme="dark"] .callout.tip{border-color:#1d3a2a}
+[data-theme="dark"] .callout.warn{border-color:#3a3115}
+[data-theme="dark"] .callout.danger{border-color:#3d2019}
+[data-theme="dark"] .mtopbar{background:rgba(14,15,13,.86)}
+[data-theme="dark"] .bottomnav{background:rgba(20,22,18,.92)}
+[data-theme="dark"] .tag.g{color:#86d6ad}
+[data-theme="dark"] .tag.w{color:#e6c07a}
+[data-theme="dark"] .tag.r{color:#ec9b8f}
+[data-theme="dark"] .pill.solid{color:var(--acc-ink)}
+[data-theme="dark"] .fig svg{border-radius:10px}
+</style>
+</head><body data-slug="reading-the-root-zone" id="top">
+<button class="drawer-mask" id="mask" aria-label="Close menu"></button>
+<header class="mtopbar">
+  <button class="iconbtn" data-action="menu" aria-label="Open menu"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+  <span class="mt">Reading the Root Zone</span>
+  <button class="iconbtn" data-action="theme" aria-label="Toggle dark mode"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.8A8 8 0 1 1 11.2 3a6 6 0 0 0 9.8 9.8z"/></svg></button>
+  <button class="iconbtn" data-action="search" aria-label="Search"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="6"/><path d="M20 20l-4.5-4.5"/></svg></button>
+</header>
+<div class="layout">
+  <aside class="sidebar" id="sidebar"><div class="brandrow"><a class="brand" href="index.html"><span class="mark">C</span><span class="nm">The Cannabis White Papers<small>FIELD GUIDE</small></span></a><button class="themebtn" data-action="theme" aria-label="Toggle dark mode"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.8A8 8 0 1 1 11.2 3a6 6 0 0 0 9.8 9.8z"/></svg></button></div><button class="cmdk" data-action="search" aria-label="Search"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="6"/><path d="M20 20l-4.5-4.5"/></svg><span class="seg">Search this paper</span><span class="kbd">Ctrl K</span></button><nav class="nav"><div class="navgrp">Contents</div><a href="#start"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg><span>The question under the question</span></a><a href="#under-over"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg><span>Under-watering and over-watering wear the same mask</span></a><a href="#substrate"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg><span>Coco and rockwool hold water in opposite ways</span></a><a href="#sensors"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg><span>What the sensors actually tell you</span></a><a href="#hands"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg><span>The lift test, the scale, and the ground truth</span></a><a href="#plant"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg><span>Let the canopy tell you it&#x27;s thirsty</span></a><a href="#light-water"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg><span>PPFD, DLI, and how light sets the water bill</span></a><a href="#integrate"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg><span>The operating loop, and steering vs starving</span></a><a href="#troubleshoot"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg><span>Symptom to cause to fix</span></a><a href="#tips"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg><span>Nuances, tricks, and hard-won habits</span></a><a href="#cheat"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg><span>The one-screen cheat sheet</span></a></nav></aside>
+  <div class="content"><div class="doc"><div class="col">
+<div class="crumb"><a href="index.html">Home</a><span class="sep"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></span><span>Water, substrate &amp; feed</span><span class="sep"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></span><span>Reading the Root Zone</span></div>
+<div class="eyebrow">Water, substrate &amp; feed · 34 min read</div><h1 class="title text-fit" style="--max-font-size:54px"><span><span>Reading the Root Zone</span></span><span aria-hidden="true">Reading the Root Zone</span></h1>
+<p class="sub">Two questions decide most of a grow: am I over- or under-watering, and how much water does the light actually want? Both come down to reading the root zone. This guide starts with the questions you have to answer before any sensor number means anything — then reads water status three ways, by weight, by probe, and by the plant, with a guidance table and a checklist for every substrate you are likely to run.</p>
+<div class="metarow"><span class="pill solid"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4s6 6 6 10a6 6 0 0 1-12 0c0-4 6-10 6-10z"/></svg>~34 min read</span><span class="pill"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 17a8 8 0 1 1 14 0"/><path d="M12 13l3.5-3"/></svg>Beginner-friendly → advanced</span><span class="pill"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 20c0-8 6-13 14-13 0 8-6 13-14 13z"/><path d="M5 20c3-5 6-7 10-9"/></svg>Veg &amp; flower</span><span class="pill"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2M5 5l1.4 1.4M17.6 17.6L19 19M19 5l-1.4 1.4M6.4 17.6L5 19"/></svg>Every substrate</span></div>
+<div class="divider"></div>
+<div class="toc-card">
+<div class="kicker"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6h11M9 12h11M9 18h11"/><path d="M4.5 6h.01M4.5 12h.01M4.5 18h.01"/></svg> In this guide</div>
+<div class="toc"><a href="#start"><span class="n">01</span> A number is useless without its context</a><a href="#answer-first"><span class="n">02</span> Answer these before you diagnose anything</a><a href="#under-over"><span class="n">03</span> Over- and under-watering look identical</a><a href="#substrate"><span class="n">04</span> Your substrate — one page each</a><a href="#sensors"><span class="n">05</span> What the probes actually tell you</a><a href="#hands"><span class="n">06</span> The lift test and the reference plant</a><a href="#plant"><span class="n">07</span> Reading the plant</a><a href="#light-water"><span class="n">08</span> How light sets the water bill</a><a href="#integrate"><span class="n">09</span> The daily operating loop</a><a href="#troubleshoot"><span class="n">10</span> Symptom, cause, fix</a><a href="#tips"><span class="n">11</span> Hard-won habits</a><a href="#cheat"><span class="n">12</span> The one-screen cheat sheet</a></div>
+</div>
+
+<section class="sec" id="start">
+<div class="sec-kicker">Start here</div>
+<h2>A number is useless without its context</h2>
+<p class='lead'>You cannot tell whether you are under-watering from a single number. Water status is three numbers and a plant, read against the substrate the roots sit in.</p>
+<p>The two questions — <em>am I over- or under-watering</em>, and <em>how much water does the light want</em> — are the same skill. Both are answered by reading the root zone: how much water is in it, how strong the solution is, how fast it is drying, and whether the plant agrees. Get that right and the sensors stop being a dashboard you stare at and start being instruments you steer with.</p>
+<div class='callout key'>
+<div class='cic'><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="8" cy="12" r="3.5"/><path d="M11.5 12H20l-2 2.5M16 12v3"/></svg></div>
+<div class='cbody'>
+<div class='ctitle'>The one idea to carry through the whole guide</div>
+<p>A number means nothing without the context that makes it readable. <strong>40% moisture in coco is not 40% in rockwool.</strong> A probe in the wrong part of a slab reads a different plant than the one you are growing. Every technique below is really about putting that missing context back.</p>
+</div>
+</div>
+<div class='defn'><span class='defn-t'>VWC (volumetric water content)</span><span class='defn-b'>the share of the substrate's volume that is water, as a percent. It is the headline number a moisture probe reports — worth only as much as its calibration and its placement.</span></div>
+<div class='defn'><span class='defn-t'>Dryback</span><span class='defn-b'>how far the substrate dries between the top of one irrigation and the next, measured as the drop in VWC. Some dryback every cycle is what pulls fresh air — oxygen — back into the root zone. It is also your most useful single signal, and the spine of everything here.</span></div>
+</section>
+
+<section class="sec" id="answer-first">
+<div class="sec-kicker">Ask first</div>
+<h2>Answer these before you diagnose anything</h2>
+<p class='lead'>Most watering mistakes are not sensor faults. They are a reading taken without the facts that make it mean something. Nail these down once and every number after gets easier to trust.</p>
+<p>A moisture probe reading 42% is not an answer — it is a question. 42% of what substrate, measured by which sensor, sitting where, fed at what strength, under how much light? Change any one of those and 42% flips from healthy to a plant in trouble. Before you touch a setpoint or call a plant over- or under-watered, write down the answers below. This is your baseline card. Keep it near the room.</p>
+<div class='tbl-wrap'>
+<table class='tbl'>
+<caption>Table 1. Know these before a number can be read. Fill it in per room, per crop.</caption><thead>
+<tr><th>What to nail down</th><th>Why it changes the reading</th></tr></thead><tbody>
+<tr><td><strong>Substrate</strong> — type, brand, pot/slab volume &amp; shape</td><td>Sets what a given VWC and dryback actually mean. A small block dries far faster than a big pot on the same schedule.</td></tr>
+<tr><td><strong>Sensor</strong> — make/model, and whether it carries a substrate-specific calibration</td><td>A mineral-soil calibration reads systematically off in coco or stone wool. Without this, the number is a trend, not a truth.</td></tr>
+<tr><td><strong>Placement</strong> — which part of the pot/slab, at what depth, how far from the dripper</td><td>The single biggest source of lying data. The wet base and the dry edge read opposite stories in the same slab.</td></tr>
+<tr><td><strong>Irrigation</strong> — dripper flow rate, shot size, shots per day</td><td>Tells you whether a dryback is deliberate steering or an accidental drought. You cannot judge a dryback without knowing the shots that made it.</td></tr>
+<tr><td><strong>Feed</strong> — input EC and pH, and target runoff %</td><td>The EC you feed is the baseline the substrate EC drifts away from. Without it, a rising pore-water EC has nothing to be compared to.</td></tr>
+<tr><td><strong>Crop</strong> — cultivar, growth stage, plant age/days, plant density</td><td>A generative flower plant wants a deeper dryback than the same plant in veg. Stage sets the target, not the table.</td></tr>
+<tr><td><strong>Light &amp; climate</strong> — PPFD, photoperiod, DLI, room VPD, substrate temp</td><td>Light and VPD set the day's water demand. The same pot under 900 PPFD drinks far more than under 600.</td></tr>
+<tr><td><strong>Sampling</strong> — how often the sensor logs</td><td>The dryback <em>shape</em> is where the diagnosis lives. An hourly average flattens it into a useless dot.</td></tr>
+<tr><td><strong>Interventions</strong> — any off-schedule hand-watering, hose flush, or tank top-up</td><td>An unlogged manual watering makes true data lie. If it moved water and it is not written down, your record is wrong.</td></tr>
+</tbody><tfoot>
+<tr><td colspan='2'>You do not need lab precision — you need the honest answers. Half of these are a tape measure, a label, and a note.</td></tr></tfoot>
+</table>
+</div>
+<div class='callout warn'>
+<div class='cic'><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4l9 16H3z"/><path d="M12 10v4M12 17h.01"/></svg></div>
+<div class='cbody'>
+<div class='ctitle'>The one that gets people every time</div>
+<p>The last row — <strong>the unlogged manual watering</strong>. A hose flush or a tank auto-top-up that never made it into the record is the reason a healthy room reads like a sick one, or a sick one reads fine. If a human moved water and it is not written down, the data is telling you a story about a plant that does not exist. Log every off-schedule intervention, or throw the day's read out.</p>
+</div>
+</div>
+</section>
+
+<section class="sec" id="under-over">
+<div class="sec-kicker">The differential</div>
+<h2>Over- and under-watering look identical</h2>
+<p class='lead'>A drooping plant is not a diagnosis. Three different failures produce the same wilt — and the beginner's instinct, add water, fixes one of them and kills the other two.</p>
+<p>Wilt is loss of turgor: the cells lose their internal water pressure and the leaf goes limp. There are three roads to that same limp leaf, and telling them apart is the whole job.</p>
+<div class='grid grid-3'>
+<div class='card'><span class='card-tag'>under</span>
+<div class='card-title'>Too little water</div>
+<div class='card-body'><p>Real drought. The substrate has given up its available water and the roots have nothing left to pull. VWC is low, the pot is light.</p></div>
+</div>
+<div class='card'><span class='card-tag'>over</span>
+<div class='card-title'>Too little air</div>
+<div class='card-body'><p>Drowning. The substrate never dries, so there is no oxygen in the pore space and the roots suffocate and rot. VWC is high and <em>stuck</em> high. It looks like thirst, so the beginner waters again.</p></div>
+</div>
+<div class='card'><span class='card-tag'>EC</span>
+<div class='card-title'>Too much salt</div>
+<div class='card-body'><p>Osmotic drought. Plenty of water, but so concentrated the roots cannot pull it in against the salt. EC is high. The plant is thirsty <em>in a wet pot</em>.</p></div>
+</div>
+</div>
+<div class='defn'><span class='defn-t'>Turgor</span><span class='defn-b'>the water pressure inside plant cells that keeps leaves and stems rigid. Full turgor at lights-on is a plant standing up with its leaves reaching; lost turgor is the droop you are trying to diagnose.</span></div>
+<div class='tbl-wrap'>
+<table class='tbl'>
+<caption>Table 2. The over- vs under-watering differential.</caption><thead>
+<tr><th>Signal</th><th>Under-watering</th><th>Over-watering</th></tr></thead><tbody>
+<tr><td>Pot / slab weight</td><td>light; lightens fast</td><td>heavy; stays heavy</td></tr>
+<tr><td>Dryback (VWC)</td><td>deep, fast, floor breached</td><td>shallow or none; never recovers air</td></tr>
+<tr><td>Substrate EC</td><td>climbs — salts concentrate</td><td>flat or falling — diluted</td></tr>
+<tr><td>Leaf at lights-on</td><td>limp; may not regain turgor</td><td>turgid but soft, often drooping</td></tr>
+<tr><td>Leaf detail</td><td>crispy margins, upward cupping / taco, dry tips</td><td>puffy downward droop, no crisping</td></tr>
+<tr><td>Canopy temp</td><td>rises — stomata shut</td><td>near air temp</td></tr>
+<tr><td>Runoff</td><td>little; EC higher than feed</td><td>lots; EC near feed; slow to drain</td></tr>
+<tr><td>Surface / root zone</td><td>media shrinks from the edges, dusty</td><td>algae, fungus gnats, sour smell</td></tr>
+<tr><td>New growth</td><td>small, slow, tip burn</td><td>soft, slow, lower leaves yellowing</td></tr>
+</tbody><tfoot>
+<tr><td colspan='3'>No single row is proof. Read three or four together, and trust the direction of travel over any one snapshot.</td></tr></tfoot>
+</table>
+</div>
+<div class='callout note'>
+<div class='cic'><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8"/><path d="M12 11v5M12 8h.01"/></svg></div>
+<div class='cbody'>
+<div class='ctitle'>The tie-breaker is the trend, not the snapshot</div>
+<p>A VWC of 45% tells you almost nothing on its own. <strong>45% and falling with EC climbing</strong> is a plant drying into a salt problem. <strong>45% and stuck there for six hours with EC flat</strong> is a plant drowning. Same number, opposite fix. Always read the shape of the curve, not the point.</p>
+</div>
+</div>
+</section>
+
+<section class="sec" id="substrate">
+<div class="sec-kicker">Know your medium</div>
+<h2>Your substrate — one page each</h2>
+<p class='lead'>The same shot, the same probe number, means something different in each of these media, because they store, release, and re-wet water by different physics. This is the heart of the over/under question. Find the one you run and work from its card.</p>
+<p>Two behaviours separate every substrate: how it <strong>holds EC</strong> (does it buffer the feed, or hand the roots exactly what you poured in), and how it <strong>re-wets after it dries</strong> (does the next shot soak in evenly, or channel down the wall and out the bottom). Get those two right for your medium and most watering faults never start.</p>
+<div class='defn'><span class='defn-t'>CEC (cation exchange capacity)</span><span class='defn-b'>the substrate's ability to hold nutrient ions on its surfaces and hand them to roots. High in coco and living soil (buffered, forgiving, cal-mag-hungry); effectively zero in rockwool and clay pebbles (inert, precise, unforgiving).</span></div>
+<div class='defn'><span class='defn-t'>Field capacity</span><span class='defn-b'>the wettest the substrate holds after free water has drained under gravity — the top of your dryback.</span></div>
+<div class='defn'><span class='defn-t'>Channeling</span><span class='defn-b'>when water carves a shortcut — down a pot wall, through a dry block — and exits as runoff without wetting the bulk of the root zone. It produces the most dangerous false signal in growing: proof of watering over a starving root-ball.</span></div>
+
+<h3>Rockwool / stone wool</h3>
+<p>Inert, near-zero CEC. It holds no nutrient and buffers nothing — the EC in the slab is the EC you fed, full stop. Huge water-holding capacity at saturation but a steep release curve, and gravity parks a saturated layer at the base under a top that dries first. That vertical gradient is why probe placement in rockwool is make-or-break for your data. Its failure modes are fast and loud: dry it too far and EC spikes hard (no buffer to soak it up), and dry stone wool re-wets badly — water channels through instead of soaking in, so a panicked re-saturation floods the base and drowns the roots you just dried out.</p>
+<div class='tbl-wrap'>
+<table class='tbl'>
+<caption>Rockwool — guidance bands. Starting points to reason from, not setpoints.</caption><thead>
+<tr><th>Property</th><th>What to expect</th></tr></thead><tbody>
+<tr><td>Field capacity (VWC)</td><td class='num'>~65–80%*</td></tr>
+<tr><td>Working dryback</td><td class='num'>~5–10% veg → 15–25% generative*</td></tr>
+<tr><td>EC behaviour</td><td>exactly what you fed; spikes hard and fast on dryback — no cushion</td></tr>
+<tr><td>Re-wet when dry</td><td><span class='tag r'>poor</span> channels; floods the base — real risk</td></tr>
+<tr><td>Cal-mag demand</td><td>none inherent; feed supplies everything</td></tr>
+<tr><td>Over-watering tell</td><td>base stays saturated, slab heavy, never dries; algae on top</td></tr>
+<tr><td>Under-watering tell</td><td>top dries and EC stacks while a probe in the wet base still reads "fine"</td></tr>
+</tbody></table>
+</div>
+<div class='card'>
+<span class='card-tag'>Rockwool checklist</span>
+<div class='card-body'><ul class='tight'>
+<li>Probe in the <strong>root mass (upper/middle), never the wet base</strong> — the base lies.</li>
+<li>Know the slab's saturated weight and its dried-back weight; lift to confirm.</li>
+<li>Watch pore-water EC as it dries — when it hits your ceiling, that VWC is your floor.</li>
+<li>Ramp P1 with several shots to field capacity; never one big flood.</li>
+<li>If it dried too far, re-wet with repeated <strong>small</strong> shots — a single flood re-channels.</li>
+<li>Run more than one probe per zone; treat a lone outlier as a placement fault.</li>
+</ul></div>
+</div>
+
+<h3>Coco coir</h3>
+<p>Behaves like a forgiving soil. High CEC, so it holds and trades nutrients, buffers pH swings, and covers small mistakes — but it binds calcium and magnesium, which is why coco grows carry a permanent cal-mag demand.<sup class='cite'><a href='#ref-5'>[5]</a></sup> It wets by capillarity through the whole profile, so a healthy pot is fairly even top to bottom. Its failure modes are quieter and slower: under-watered, salts stack because too little solution moves through; and if it ever goes bone-dry it turns hydrophobic and channels — the next shot runs down the gap between root-ball and pot wall and out the bottom, so you get runoff, tick the box, and the core stays dry.</p>
+<div class='tbl-wrap'>
+<table class='tbl'>
+<caption>Coco — guidance bands. Starting points to reason from, not setpoints.</caption><thead>
+<tr><th>Property</th><th>What to expect</th></tr></thead><tbody>
+<tr><td>Field capacity (VWC)</td><td class='num'>~55–70%*</td></tr>
+<tr><td>Working dryback</td><td class='num'>~10% veg → 25–30%+ generative*</td></tr>
+<tr><td>EC behaviour</td><td>buffered by CEC; moves slowly; cushioned on dryback</td></tr>
+<tr><td>Re-wet when dry</td><td><span class='tag w'>fair</span> re-wets acceptably, but channels down the wall if bone-dry</td></tr>
+<tr><td>Cal-mag demand</td><td>high — CEC binds Ca/Mg; keep it in the feed</td></tr>
+<tr><td>Over-watering tell</td><td>never dries, stays heavy, gnats, sour smell</td></tr>
+<tr><td>Under-watering tell</td><td>runoff EC climbs day on day, media shrinks off the pot wall, dusty surface</td></tr>
+</tbody></table>
+</div>
+<div class='card'>
+<span class='card-tag'>Coco checklist</span>
+<div class='card-body'><ul class='tight'>
+<li>Probe the <strong>middle third</strong>, root depth, about one dripper-width off the emitter.</li>
+<li>Never let it go bone-dry — hydrophobic coco channels and hides a dry core.</li>
+<li>Track <strong>runoff EC vs feed EC</strong> as your leaching gauge; creeping up = under-watering.</li>
+<li>Buffer fresh coco before use; keep cal-mag in every feed.</li>
+<li>You can run bigger, less frequent shots than rockwool — the buffer forgives.</li>
+<li>Confirm the core is wet by weight after a shot, not by seeing runoff.</li>
+</ul></div>
+</div>
+
+<h3>Peat &amp; potting mix (amended / living soil)</h3>
+<p>A reservoir with a big buffer. Peat and bagged mixes hold a lot of water and, when amended or run as living soil, a lot of nutrient — so EC readings are muddy and less useful, and the medium forgives timing far more than an inert slab does. The catch is the opposite: it is easy to overwater because it dries slowly, and dry peat is the worst re-wetter of the lot — it repels water and needs a slow soak, sometimes a wetting agent, to take it back up. In big pots the buffer is large, so hard crop-steering does not apply; you water, then let it dry a good way down, and let pot weight lead.</p>
+<div class='tbl-wrap'>
+<table class='tbl'>
+<caption>Peat / potting mix — guidance bands. Vary widely with mix and perlite fraction.</caption><thead>
+<tr><th>Property</th><th>What to expect</th></tr></thead><tbody>
+<tr><td>Field capacity (VWC)</td><td class='num'>~40–60%* (mix-dependent)</td></tr>
+<tr><td>Working dryback</td><td>slow and forgiving; let it dry a good way down between waterings</td></tr>
+<tr><td>EC behaviour</td><td>heavily buffered — especially living soil; feed the soil, do not chase probe EC</td></tr>
+<tr><td>Re-wet when dry</td><td><span class='tag r'>poor</span> peat repels when dry; slow soak or wetting agent to recover</td></tr>
+<tr><td>Cal-mag demand</td><td>usually covered by the mix / amendments</td></tr>
+<tr><td>Over-watering tell</td><td>stays wet for days, gnats, compaction, anaerobic sour smell</td></tr>
+<tr><td>Under-watering tell</td><td>pot very light, soil pulls off the wall, water beads and repels</td></tr>
+</tbody></table>
+</div>
+<div class='card'>
+<span class='card-tag'>Peat / soil checklist</span>
+<div class='card-body'><ul class='tight'>
+<li><strong>Lift test is your primary read</strong> — probes are noisy in amended, chunky soil.</li>
+<li>Water to modest runoff, then let it dry well down; do not keep it wet.</li>
+<li>If it dried out, re-wet slowly — a fast flood just runs off hydrophobic peat.</li>
+<li>Living soil: do not over-fertigate or chase EC; the biology handles it.</li>
+<li>Avoid compaction — it kills the air the roots need.</li>
+<li>Bigger pot = more buffer = slower cycle; size the watering to the pot, not a table.</li>
+</ul></div>
+</div>
+
+<h3>Clay pebbles / hydroton (expanded clay, semi-hydro)</h3>
+<p>The fast, low-margin one. Expanded clay drains almost fully and holds water only as a film plus whatever sits in the reservoir, so there is effectively no dryback buffer — it needs frequent irrigation or continuous recirculation. Inert and zero-CEC, so what the roots see is your reservoir EC, and in a recirculating system that EC drifts as the plant drinks. The upside: it re-wets instantly, never goes hydrophobic, and never channels — the easy substrate to wet, the unforgiving one to leave dry. Its real risk lives in the reservoir: a stalled pump dries roots in minutes, and roots sitting in stagnant warm water rot.</p>
+<div class='tbl-wrap'>
+<table class='tbl'>
+<caption>Clay pebbles — guidance bands. High-frequency / recirculating context.</caption><thead>
+<tr><th>Property</th><th>What to expect</th></tr></thead><tbody>
+<tr><td>Water retention</td><td>very low; drains near-fully; little to no dryback buffer</td></tr>
+<tr><td>Irrigation rhythm</td><td>high frequency or continuous; short cycles all day</td></tr>
+<tr><td>EC behaviour</td><td>= reservoir EC; drifts as the plant drinks — monitor the tank, not the media</td></tr>
+<tr><td>Re-wet when dry</td><td><span class='tag g'>excellent</span> instant, no hydrophobicity, no channeling</td></tr>
+<tr><td>Cal-mag demand</td><td>none inherent; the reservoir supplies everything</td></tr>
+<tr><td>Over-watering tell</td><td>rare — unless drainage blocks or roots sit in stagnant water (rot, slime)</td></tr>
+<tr><td>Under-watering tell</td><td>dries and wilts fast; a pump miss shows within minutes</td></tr>
+</tbody></table>
+</div>
+<div class='card'>
+<span class='card-tag'>Clay pebble checklist</span>
+<div class='card-body'><ul class='tight'>
+<li><strong>Pump watchdog and a fallback are mandatory</strong> — this substrate fails dry, fast.</li>
+<li>Monitor <strong>reservoir</strong> EC, pH, and temperature — not substrate VWC.</li>
+<li>Keep reservoir and root-zone temp down to hold dissolved oxygen up.</li>
+<li>Run frequent short cycles; there is no buffer to coast on.</li>
+<li>Keep drainage clear — stagnant water at the roots means rot.</li>
+<li>Top up the reservoir to a known EC; do not let it concentrate as it drops.</li>
+</ul></div>
+</div>
+
+<div class='callout warn'>
+<div class='cic'><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4l9 16H3z"/><path d="M12 10v4M12 17h.01"/></svg></div>
+<div class='cbody'>
+<div class='ctitle'>The two traps that never show up in the headline VWC</div>
+<p><strong>Coco and peat lie by omission</strong> — they channel or repel, so "I watered to runoff" is not proof the root-ball is wet. <strong>Rockwool lies by gradient</strong> — the wet base hides a dry, salt-stacked top. Neither trap shows in the VWC number. Both show in the pot weight and the plant.</p>
+</div>
+</div>
+<p class='foot' style='font-size:13px;color:var(--muted);margin-top:8px'>*VWC and dryback figures on these cards are starting bands, not setpoints. They depend on your sensor's substrate calibration, your genetics, and your steering intent. Dial them by watching the dryback and EC response in <em>your</em> room — never by matching a number off a table.</p>
+</section>
+
+<section class="sec" id="sensors">
+<div class="sec-kicker">Read it — the probes</div>
+<h2>What the probes actually tell you</h2>
+<p class='lead'>A substrate probe gives you three numbers — water content, EC, and temperature — and one shape, the dryback curve. The shape is worth more than any of the numbers.</p>
+<p><strong>VWC</strong> is the headline, and the first thing to know is that it is probably miscalibrated. Capacitance probes like the TEROS 12 ship with a mineral-soil calibration; in coco or stone wool that reads systematically off unless you load the soilless-specific calibration. Grodan's GroSens is calibrated for stone wool out of the box; a TEROS is not. So <strong>trust your probe for trends, not for absolute truth</strong>, until you have calibrated it to your actual substrate. A probe reading 8 points low still shows you the dryback perfectly.</p>
+<p><strong>EC</strong> is the number that catches osmotic drought — the wet-pot thirst from Table 2 — before the plant does. Probes report bulk EC, but what the roots feel is the <em>pore-water EC</em>: the strength of the solution in the film around the roots, derived from the bulk reading.<sup class='cite'><a href='#ref-9'>[9]</a></sup> The key behaviour: <strong>as the substrate dries, pore-water EC rises</strong>, because the salts stay behind while the water leaves. Watching pore-water EC climb as you dry back is how you find your safe dryback floor — the moment EC pushes past your ceiling, that VWC is the floor, whatever number it lands on.</p>
+<p><strong>Substrate temperature</strong> is the quiet third number. A cold slab at lights-on takes up water slowly; a hot root zone drives evaporative demand up and oxygen down. It also sets the vapour-pressure deficit right at the leaf, which — as the light section shows — is half of what decides water use.</p>
+<div class='defn'><span class='defn-t'>EC (electrical conductivity)</span><span class='defn-b'>a proxy for how strong the nutrient solution is — how much salt is dissolved in the water. Rising EC in the substrate means the solution is getting stronger and the roots have to work harder to drink.</span></div>
+<div class='defn'><span class='defn-t'>Pore-water EC</span><span class='defn-b'>the EC of the solution actually held in the pores — what the roots taste — as opposed to the raw bulk EC the probe measures. It climbs as the substrate dries even if you added no salt at all.</span></div>
+<figure class='fig'>
+<svg viewBox='0 0 720 404' xmlns='http://www.w3.org/2000/svg' role='img'
+     aria-label='A coco pot wets fairly evenly top to bottom; a rockwool slab holds a strong gradient, dry on top and saturated at the base, so a probe in the wet base reads fine while the roots up top are dry.'
+     style='width:100%;height:auto;font-family:var(--sans)'>
+  <!-- ===================== COCO POT ===================== -->
+  <text x='150' y='28' text-anchor='middle' font-size='13' fill='var(--fig-ink)' font-weight='700'>Coco pot</text>
+  <text x='150' y='46' text-anchor='middle' font-size='11' fill='var(--fig-mut)'>capillary — fairly even</text>
+  <!-- pot body as three moisture bands (clipped to a tapered pot) -->
+  <clipPath id='pot'><path d='M78,66 H222 L210,300 H90 Z'/></clipPath>
+  <g clip-path='url(#pot)'>
+    <rect x='70' y='66'  width='160' height='80'  fill='var(--fig-dryl)'/>
+    <rect x='70' y='146' width='160' height='84'  fill='var(--fig-waterl)'/>
+    <rect x='70' y='230' width='160' height='80'  fill='var(--fig-water)' opacity='.55'/>
+  </g>
+  <path d='M78,66 H222 L210,300 H90 Z' fill='none' stroke='var(--fig-ink2)' stroke-width='1.6'/>
+  <!-- roots throughout -->
+  <path d='M150,70 V292 M150,120 C132,138 122,150 120,176 M150,120 C168,138 178,150 180,176 M150,190 C134,206 126,220 126,246 M150,190 C166,206 174,220 176,250 M150,250 C140,262 134,272 134,286 M150,250 C160,262 166,272 168,288'
+        fill='none' stroke='var(--fig-green)' stroke-width='1.4' opacity='.85' stroke-linecap='round'/>
+  <!-- probe: mid third (correct) -->
+  <line x1='150' y1='40' x2='150' y2='188' stroke='var(--fig-ink)' stroke-width='2.4'/>
+  <circle cx='150' cy='188' r='4.5' fill='var(--fig-ink)'/>
+  <text x='150' y='330' text-anchor='middle' font-size='11' fill='var(--fig-green)' font-weight='600'>probe in the middle third</text>
+  <text x='150' y='346' text-anchor='middle' font-size='11' fill='var(--fig-mut)'>reads the working root zone</text>
+  <!-- channeling note -->
+  <path d='M206,70 C214,120 214,200 202,296' fill='none' stroke='var(--fig-dry)' stroke-width='2.2' stroke-dasharray='2 4'/>
+  <text x='150' y='378' text-anchor='middle' font-size='10.5' fill='var(--fig-mut)'>bone-dry coco channels down the wall (dashed) —</text>
+  <text x='150' y='392' text-anchor='middle' font-size='10.5' fill='var(--fig-mut)'>water exits without wetting the core</text>
+  <!-- divider -->
+  <line x1='360' y1='40' x2='360' y2='384' stroke='var(--fig-line)' stroke-width='1.2'/>
+  <!-- ===================== ROCKWOOL SLAB ===================== -->
+  <text x='540' y='28' text-anchor='middle' font-size='13' fill='var(--fig-ink)' font-weight='700'>Rockwool slab</text>
+  <text x='540' y='46' text-anchor='middle' font-size='11' fill='var(--fig-mut)'>strong vertical gradient</text>
+  <!-- slab: three bands, dry top -> saturated base (perched water) -->
+  <rect x='420' y='120' width='240' height='34' fill='var(--fig-dry)'/>
+  <rect x='420' y='154' width='240' height='40' fill='var(--fig-dryl)'/>
+  <rect x='420' y='194' width='240' height='54' fill='var(--fig-water)' opacity='.75'/>
+  <rect x='420' y='120' width='240' height='128' fill='none' stroke='var(--fig-ink2)' stroke-width='1.6'/>
+  <text x='668' y='140' font-size='10.5' fill='var(--fig-dry)'>dry (top)</text>
+  <text x='668' y='224' font-size='10.5' fill='var(--fig-water)'>saturated (base)</text>
+  <!-- salt-stack hotspot in the dry top -->
+  <circle cx='470' cy='137' r='3' fill='var(--fig-salt)'/><circle cx='500' cy='134' r='2.4' fill='var(--fig-salt)'/>
+  <circle cx='560' cy='138' r='2.6' fill='var(--fig-salt)'/><circle cx='600' cy='135' r='2.2' fill='var(--fig-salt)'/>
+  <text x='540' y='108' text-anchor='middle' font-size='10.5' fill='var(--fig-salt)'>EC stacks here as it dries</text>
+  <!-- roots concentrated upper slab -->
+  <path d='M470,120 V236 M470,150 C455,164 448,178 448,196 M470,150 C486,164 494,178 494,196 M540,120 V236 M540,152 C526,166 520,180 520,200 M540,152 C556,166 562,180 562,200 M610,120 V232'
+        fill='none' stroke='var(--fig-green)' stroke-width='1.3' opacity='.8' stroke-linecap='round'/>
+  <!-- probe A: wet base (lies) -->
+  <line x1='600' y1='96' x2='600' y2='224' stroke='var(--fig-red)' stroke-width='2.4'/>
+  <circle cx='600' cy='224' r='4.5' fill='var(--fig-red)'/>
+  <text x='612' y='300' font-size='10.5' fill='var(--fig-red)' font-weight='600'>probe in wet base:</text>
+  <text x='612' y='314' font-size='10.5' fill='var(--fig-red)'>says “fine” — it lies</text>
+  <!-- probe B: top third (truth) -->
+  <line x1='470' y1='96' x2='470' y2='150' stroke='var(--fig-ink)' stroke-width='2.4'/>
+  <circle cx='470' cy='150' r='4.5' fill='var(--fig-ink)'/>
+  <text x='430' y='340' font-size='10.5' fill='var(--fig-ink)' font-weight='600'>probe in the root mass:</text>
+  <text x='430' y='354' font-size='10.5' fill='var(--fig-mut)'>reads the plant you actually grow</text>
+  <text x='540' y='390' text-anchor='middle' font-size='10.5' fill='var(--fig-mut)'>Same slab, two readings. Placement is the measurement.</text>
+</svg>
+<figcaption><span class='fignum'>Figure 1.</span> The same probe number means different things by placement. Coco (left) wets fairly evenly, so a probe in the middle third reads the working root zone — unless the pot channelled and the core is dry. Rockwool (right) holds a strong gradient: a probe in the saturated base reports 'fine' while the roots in the dry, salt-stacked top are starving. Placement is not setup — placement is the measurement.</figcaption></figure>
+<div class='callout key'>
+<div class='cic'><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="8" cy="12" r="3.5"/><path d="M11.5 12H20l-2 2.5M16 12v3"/></svg></div>
+<div class='cbody'>
+<div class='ctitle'>Placement is the measurement</div>
+<p>Put the probe in the <strong>middle third</strong> of the root zone, at root depth, about one dripper-width off the emitter — never in the wet base, never under the dripper stream, never in the dry edge. Then distrust it anyway: run more than one, and cross-check every reading against pot weight and the plant. A probe records the moisture at one point; you are growing the whole pot.</p>
+</div>
+</div>
+<div class='callout note'>
+<div class='cic'><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8"/><path d="M12 11v5M12 8h.01"/></svg></div>
+<div class='cbody'>
+<div class='ctitle'>Log fast enough to see the curve</div>
+<p>Sample every one to three minutes, not hourly. The dryback slope, the jump when a shot lands, the overnight decline — the diagnostic value is all in the <em>shape</em>, and an hourly average flattens it into a useless dot.</p>
+</div>
+</div>
+</section>
+
+<section class="sec" id="hands">
+<div class="sec-kicker">Read it — the hands</div>
+<h2>The lift test and the reference plant</h2>
+<p class='lead'>The probe drifts and it lies about placement. Weight does neither. This is why the oldest trick in the book still beats the newest sensor for one specific job: total water.</p>
+<p>A pot's weight <em>is</em> its water content — directly, with no calibration, no gradient, no channeling blind spot. Know a pot's saturated weight and its dried-back weight and you can feel exactly where in the dryback it sits by lifting it. That is the lift test, and it is not a beginner's crutch you grow out of — it is the calibration reference the pros keep coming back to.</p>
+<ol class='steps'>
+<li class='step'><span class='step-n'>1</span>
+<div class='step-c'>
+<div class='step-t'>Learn the two anchor weights</div>
+<div class='step-b'>Weigh a representative pot right after it drains to field capacity, and again at your intended dryback floor. Now every lift in between is a reading.</div>
+</div>
+</li>
+<li class='step'><span class='step-n'>2</span>
+<div class='step-c'>
+<div class='step-t'>Put one plant on a scale</div>
+<div class='step-b'>A representative plant on a bench scale or load cell, logged continuously, is a home-made lysimeter: a calibration-free, gradient-proof dryback curve. For <em>total</em> water it out-truths a VWC probe, because it weighs the whole root zone at once instead of sampling one point.</div>
+</div>
+</li>
+<li class='step'><span class='step-n'>3</span>
+<div class='step-c'>
+<div class='step-t'>Squeeze-test the medium</div>
+<div class='step-b'>Coco: squeeze a handful — free drips means wet, damp-and-cohesive means near field capacity, crumbly-and-light means dry. Rockwool: press the block corner or tilt the slab — free water at saturation, springy-damp is the working band, firm-and-light means you dried it too far.</div>
+</div>
+</li>
+<li class='step'><span class='step-n'>4</span>
+<div class='step-c'>
+<div class='step-t'>Read the runoff</div>
+<div class='step-b'>Volume tells you throughput (aim to see runoff appear, not flood). Then the tell that matters: runoff EC vs feed EC. Runoff much higher than feed = salts stacking = under-watering / under-leaching. Runoff near feed = balanced. Watch it drift day to day.</div>
+</div>
+</li>
+<li class='step'><span class='step-n'>5</span>
+<div class='step-c'>
+<div class='step-t'>Do the channeling check</div>
+<div class='step-b'>Right after a shot, is the pot heavy and the surface evenly damp — or did water hit the tray in seconds while the pot stayed light? Fast runoff plus a light pot means the water channelled and the root-ball is still dry, whatever the probe says.</div>
+</div>
+</li>
+</ol>
+<div class='defn'><span class='defn-t'>Lysimeter</span><span class='defn-b'>any setup that weighs a plant-plus-substrate continuously to measure water loss. A single plant on a logging load cell is a perfectly good one, and arguably the highest-value calibration-free instrument in the room.</span></div>
+<div class='callout tip'>
+<div class='cic'><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18h6M10 21h4"/><path d="M8 11a4 4 0 1 1 8 0c0 1.6-1 2.5-1.5 3.5H9.5C9 13.5 8 12.6 8 11z"/></svg></div>
+<div class='cbody'>
+<div class='ctitle'>Build the load-cell reference plant</div>
+<p>If you do one thing beyond your probes, put a representative plant on a load cell and log it. It gives you the true dryback with zero calibration drift and no placement error, and it turns "is my VWC probe lying?" into a five-second glance. When the scale and the probe disagree about water, the scale is right — go find out why the probe isn't.</p>
+</div>
+</div>
+</section>
+
+<section class="sec" id="plant">
+<div class="sec-kicker">Read it — the plant</div>
+<h2>Reading the plant</h2>
+<p class='lead'>The plant sums up every variable you cannot measure. Learn to read it and it audits your sensors for free, every single day.</p>
+<p><strong>Turgor timing</strong> is the daily free audit. A well-watered plant is turgid and reaching up at lights-on. A plant that is limp first thing, or that wilts in the back half of the day and only recovers overnight, is telling you the water on offer did not cover the day's demand — either under-watering or a P3 dryback set too deep (both defined in the next section).</p>
+<p><strong>Leaf shape</strong> splits the two big failures. Upward cupping — the "taco" — with crispy margins and dry tips leans under-watering, heat, or light stress. A soft, puffy, downward droop with no crisping leans over-watering. They look different once you have seen both a few times.</p>
+<p><strong>Canopy temperature</strong> is a cheap, powerful instrument. A water-stressed plant closes its stomata to stop losing water; with the stomata shut, evaporative cooling stops and the leaf heats up. Point an infrared thermometer at the canopy and compare it to a well-watered reference: a canopy running 2–3 °C hotter than it should is telling you the stomata are closing — the formal version is the crop water stress index.<sup class='cite'><a href='#ref-3'>[3]</a></sup><sup class='cite'><a href='#ref-4'>[4]</a></sup> The catch is that VPD and airflow move leaf temperature too, so read it against a reference plant, not as an absolute.</p>
+<div class='defn'><span class='defn-t'>CWSI (crop water stress index)</span><span class='defn-b'>a water-stress measure built from how much hotter the canopy runs than a well-watered crop would in the same air. Rising canopy-minus-air temperature means stomata are closing — the plant is rationing water.</span></div>
+<div class='callout note'>
+<div class='cic'><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8"/><path d="M12 11v5M12 8h.01"/></svg></div>
+<div class='cbody'>
+<div class='ctitle'>The plant confirms; the sensors quantify</div>
+<p>When the plant and the probes agree, you are reading truth. When they disagree — plant wilting, probe says wet — the probe is almost always wrong about placement or blind to EC. Believe the plant, then go find which number lied.</p>
+</div>
+</div>
+</section>
+
+<section class="sec" id="light-water">
+<div class="sec-kicker">The engine</div>
+<h2>How light sets the water bill</h2>
+<p class='lead'>Light is the throttle on the whole water system. Nothing else you control moves water demand as hard — which is exactly why raising it without raising irrigation is the most common way growers under-water a healthy room.</p>
+<div class='defn'><span class='defn-t'>PPFD (photosynthetic photon flux density)</span><span class='defn-b'>the instant intensity of usable (400–700 nm) light landing on the canopy, in µmol/m²/s. How hard the light is hitting, right now.</span></div>
+<div class='defn'><span class='defn-t'>DLI (daily light integral)</span><span class='defn-b'>the total usable light delivered over the whole photoperiod, in mol/m²/day. DLI = PPFD × photoperiod-hours × 0.0036. The day's whole light budget in one number — and your water budget tracks it closely.</span></div>
+<p>The physiology is a short chain. Photosynthesis needs open stomata to let CO₂ in. Open stomata also let water vapour out — that is transpiration, and it is what pulls water up from the roots. More light means more photosynthesis, more open stomata, and more water pulled through the plant. But light only sets the <em>demand</em>; the <em>rate</em> water leaves through those open stomata is set by the vapour-pressure deficit — how thirsty the air is. Water use is the product of the two: roughly, light-driven conductance × VPD.<sup class='cite'><a href='#ref-1'>[1]</a></sup><sup class='cite'><a href='#ref-2'>[2]</a></sup> Turn up either and water use climbs; turn up both and it climbs fast.</p>
+<div class='defn'><span class='defn-t'>VPD (vapour-pressure deficit)</span><span class='defn-b'>how much more moisture the air could hold before it saturates — the drying power of the air. High VPD pulls water out of open stomata faster; it is the multiplier on whatever demand the light created.</span></div>
+<p>Across the normal operating range, transpiration tracks light and DLI close to linearly, and cannabis yield tracks light intensity the same way — right up to very high PPFD, and higher still under CO₂ enrichment.<sup class='cite'><a href='#ref-7'>[7]</a></sup><sup class='cite'><a href='#ref-8'>[8]</a></sup> Two things bend the line. Past a variety's light-saturation point, extra photons stop adding much photosynthesis but still add radiant heat, so water use keeps rising while growth does not — efficiency drops. And CO₂ enrichment partly closes stomata, so each leaf transpires <em>less per unit light</em> (better water-use efficiency) — yet the enriched room grows a bigger crop under more light and heat, so the <strong>whole-room</strong> water use usually rises, not falls. Per-leaf thrift, larger total bill.</p>
+<p>Light also decides <em>when</em> water is needed, because transpiration follows the light curve through the day. This is what crop-steering phases are built around.</p>
+<figure class='fig'>
+<svg viewBox='0 0 720 452' xmlns='http://www.w3.org/2000/svg' role='img'
+     aria-label='Over 24 hours, light rises at lights-on, transpiration follows it with a lag and peaks midday, and substrate water content is refilled in the morning then dries back overnight.'
+     style='width:100%;height:auto;font-family:var(--sans)'>
+  <!-- phase bands (span both panels) -->
+  <rect x='70'  y='28' width='80'  height='388' fill='var(--fig-green-l)' opacity='.55'/>
+  <rect x='150' y='28' width='280' height='388' fill='var(--fig-waterl)' opacity='.5'/>
+  <rect x='430' y='28' width='48'  height='388' fill='var(--fig-amber-l)' opacity='.7'/>
+  <rect x='478' y='28' width='208' height='388' fill='var(--fig-dryl)'   opacity='.55'/>
+  <!-- lights-off divider -->
+  <line x1='478' y1='28' x2='478' y2='416' stroke='var(--fig-line)' stroke-width='1.5' stroke-dasharray='3 4'/>
+  <!-- ===== Panel A: light + transpiration ===== -->
+  <text x='60' y='40' text-anchor='end' font-size='11' fill='var(--fig-mut)'>high</text>
+  <text x='60' y='196' text-anchor='end' font-size='11' fill='var(--fig-mut)'>0</text>
+  <line x1='70' y1='198' x2='686' y2='198' stroke='var(--fig-line)' stroke-width='1.2'/>
+  <!-- light (amber) -->
+  <polyline points='70,194 92,150 122,46 300,42 430,44 458,66 478,192 686,192'
+            fill='none' stroke='var(--fig-amber)' stroke-width='2.6' stroke-linecap='round' stroke-linejoin='round'/>
+  <!-- transpiration (green) -->
+  <polyline points='70,195 120,158 180,106 270,60 360,62 430,94 462,150 496,190 686,193'
+            fill='none' stroke='var(--fig-green)' stroke-width='2.6' stroke-linecap='round' stroke-linejoin='round'/>
+  <text x='150' y='64' font-size='12' fill='var(--fig-amber)' font-weight='600'>light (PPFD)</text>
+  <text x='250' y='96' font-size='12' fill='var(--fig-green)' font-weight='600'>transpiration</text>
+  <text x='560' y='150' font-size='11.5' fill='var(--fig-mut)'>dark: stomata shut,</text>
+  <text x='560' y='166' font-size='11.5' fill='var(--fig-mut)'>demand ≈ 0</text>
+  <!-- ===== Panel B: substrate water content ===== -->
+  <text x='60' y='262' text-anchor='end' font-size='11' fill='var(--fig-mut)'>wet</text>
+  <text x='60' y='360' text-anchor='end' font-size='11' fill='var(--fig-mut)'>dry</text>
+  <!-- field capacity + floor guides -->
+  <line x1='70' y1='258' x2='640' y2='258' stroke='var(--fig-green)' stroke-width='1.2' stroke-dasharray='2 5' opacity='.8'/>
+  <text x='644' y='262' font-size='10.5' fill='var(--fig-green)'>field capacity</text>
+  <line x1='70' y1='300' x2='640' y2='300' stroke='var(--fig-red)' stroke-width='1.2' stroke-dasharray='2 5' opacity='.85'/>
+  <text x='644' y='304' font-size='10.5' fill='var(--fig-red)'>working floor</text>
+  <!-- VWC sawtooth -->
+  <polyline points='70,344 100,300 150,258 176,274 182,260 232,278 238,262 300,282 306,264 372,286 378,266 430,290 436,258 470,300 540,332 620,350 686,358'
+            fill='none' stroke='var(--fig-water)' stroke-width='2.8' stroke-linecap='round' stroke-linejoin='round'/>
+  <text x='210' y='250' font-size='12' fill='var(--fig-water)' font-weight='600'>water content (VWC)</text>
+  <!-- overnight dryback bracket -->
+  <line x1='600' y1='258' x2='600' y2='352' stroke='var(--fig-ink2)' stroke-width='1.3'/>
+  <path d='M596,262 600,256 604,262' fill='none' stroke='var(--fig-ink2)' stroke-width='1.3'/>
+  <path d='M596,348 600,354 604,348' fill='none' stroke='var(--fig-ink2)' stroke-width='1.3'/>
+  <text x='608' y='330' font-size='10.5' fill='var(--fig-ink2)'>overnight</text>
+  <text x='608' y='344' font-size='10.5' fill='var(--fig-ink2)'>dryback</text>
+  <!-- x-axis events -->
+  <text x='70'  y='434' text-anchor='middle' font-size='11' fill='var(--fig-ink)' font-weight='600'>lights on</text>
+  <text x='478' y='434' text-anchor='middle' font-size='11' fill='var(--fig-ink)' font-weight='600'>lights off</text>
+  <!-- phase labels -->
+  <text x='110' y='410' text-anchor='middle' font-size='12' fill='var(--fig-ink)' font-weight='700'>P1</text>
+  <text x='290' y='410' text-anchor='middle' font-size='12' fill='var(--fig-ink)' font-weight='700'>P2</text>
+  <text x='454' y='410' text-anchor='middle' font-size='12' fill='var(--fig-ink)' font-weight='700'>P3</text>
+  <text x='582' y='410' text-anchor='middle' font-size='12' fill='var(--fig-ink)' font-weight='700'>P0</text>
+</svg>
+<figcaption><span class='fignum'>Figure 2.</span> Over a day: light (amber) rises at lights-on, transpiration (green) follows with a lag and peaks midday, and substrate water content (blue) is refilled in the morning, held or gently dried through the day, then dries back overnight. P1 ramps the pot to field capacity after lights-on; P2 maintains through peak demand; P3 sets the last shot before dark; P0 is the overnight dryback that pulls air back into the root zone. The size of every P1–P3 shot is set by how much water the day's light will pull.</figcaption></figure>
+<ol>
+<li><strong>P0 — overnight dryback.</strong> No irrigation; the plant dries the pot down in the dark. Sets how much air the roots get and how generative the morning starts.</li>
+<li><strong>P1 — ramp / saturation.</strong> Shots after lights-on that bring the pot back up to field capacity as demand rises.</li>
+<li><strong>P2 — maintenance.</strong> Shots through the day that hold VWC (or gently steer it) across peak transpiration.</li>
+<li><strong>P3 — last shot.</strong> The final irrigation before lights-off, timed to set the depth of the overnight dryback.</li>
+</ol>
+<div class='tbl-wrap'>
+<table class='tbl'>
+<caption>Table 3. DLI ready-reckoner (mol/m²/day).</caption><thead>
+<tr><th>PPFD (µmol/m²/s)</th><th>DLI at 12 h (flower)</th><th>DLI at 18 h (veg)</th></tr></thead><tbody>
+<tr><td class='num'>300</td><td class='num'>12.96</td><td class='num'>19.44</td></tr>
+<tr><td class='num'>600</td><td class='num'>25.92</td><td class='num'>38.88</td></tr>
+<tr><td class='num'>900</td><td class='num'>38.88</td><td class='num'>58.32</td></tr>
+<tr><td class='num'>1200</td><td class='num'>51.84</td><td class='num'>77.76</td></tr>
+<tr><td class='num'>1500</td><td class='num'>64.80</td><td class='num'>97.20</td></tr>
+</tbody><tfoot>
+<tr><td colspan='3'>DLI = PPFD × photoperiod-hours × 0.0036. Move up this table and your daily water delivery has to move with it — more shots, bigger shots, or both. The bill was rewritten the moment you turned up the dial.</td></tr></tfoot>
+</table>
+</div>
+<div class='callout warn'>
+<div class='cic'><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4l9 16H3z"/><path d="M12 10v4M12 17h.01"/></svg></div>
+<div class='cbody'>
+<div class='ctitle'>The classic self-inflicted under-water</div>
+<p>You raise PPFD (say 600 → 900) for more yield but leave irrigation where it was. Demand jumps ~40–50%; the pot now dries past its floor; in rockwool especially, EC spikes as it dries; the plant hits osmotic drought and wilts <em>under the lights</em>. It reads as heat or light stress — so the grower dims the lights instead of adding water, and throws away the yield they turned the lights up for. <strong>When you raise light, raise the water budget first — before the plant tells you.</strong></p>
+</div>
+</div>
+</section>
+
+<section class="sec" id="integrate">
+<div class="sec-kicker">Put it together</div>
+<h2>The daily operating loop</h2>
+<p class='lead'>Everything above resolves into one loop you run every day: size the budget from the light, set the rate from the air, cap the dryback with EC, and let weight and the plant keep all three honest.</p>
+<ol class='steps'>
+<li class='step'><span class='step-n'>1</span>
+<div class='step-c'>
+<div class='step-t'>Budget from DLI</div>
+<div class='step-b'>The day's light sets how much water the crop will move. Move up Table 3, move up your daily delivery. This is the coarse dial.</div>
+</div>
+</li>
+<li class='step'><span class='step-n'>2</span>
+<div class='step-c'>
+<div class='step-t'>Rate from VPD and the light curve</div>
+<div class='step-b'>Schedule shots to the shape of the day — ramp in P1, hold through the midday peak in P2, taper into P3 — with VPD deciding how fast demand comes on.</div>
+</div>
+</li>
+<li class='step'><span class='step-n'>3</span>
+<div class='step-c'>
+<div class='step-t'>Floor from the EC ceiling</div>
+<div class='step-b'>Decide how deep you will dry back — but let pore-water EC veto it. When EC hits your ceiling, that VWC is your floor, whatever the number. This is the line between steering and starving.</div>
+</div>
+</li>
+<li class='step'><span class='step-n'>4</span>
+<div class='step-c'>
+<div class='step-t'>Verify by weight and plant</div>
+<div class='step-b'>Cross-check the probe against a lift or the load-cell plant, and against turgor and canopy temperature. Disagreement is the signal to investigate — usually placement, channeling, or EC.</div>
+</div>
+</li>
+<li class='step'><span class='step-n'>5</span>
+<div class='step-c'>
+<div class='step-t'>Adjust the dryback to steer</div>
+<div class='step-b'>Deeper P0 dryback and a higher EC ceiling steer generative; shallower dryback and gentler EC steer vegetative. You are choosing where the floor sits, on purpose, not discovering it by accident.</div>
+</div>
+</li>
+</ol>
+<div class='callout key'>
+<div class='cic'><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="8" cy="12" r="3.5"/><path d="M11.5 12H20l-2 2.5M16 12v3"/></svg></div>
+<div class='cbody'>
+<div class='ctitle'>Steering and starving are the same line, drawn with opposite intent</div>
+<p>A controlled dryback with a known EC ceiling and a plant that recovers turgor overnight is <strong>generative steering</strong> — a floor you chose and defend. The same downward VWC line, run past the EC ceiling with a plant that wilts and does not recover, is <strong>under-watering</strong> — a floor you crossed by accident. The probe number can be identical. Always know which one you are doing.</p>
+</div>
+</div>
+</section>
+
+<section class="sec" id="troubleshoot">
+<div class="sec-kicker">When it goes wrong</div>
+<h2>Symptom, cause, fix</h2>
+<p class='lead'>The disagreements between your instruments are not noise — each pattern points at one cause. This is the diagnostic shortcut. When two rows fit, ask the follow-up question in the last column before you act.</p>
+<div class='tbl-wrap'>
+<table class='tbl'>
+<caption>Table 4. Fast differential for the common water faults.</caption><thead>
+<tr><th>What you see</th><th>Most likely cause</th><th>Do this — and the question to ask</th></tr></thead><tbody>
+<tr><td>Pot light, but the VWC probe says fine</td><td>probe in a wet channel or the wet slab base</td><td>smaller, more frequent shots to re-wet the whole profile; re-seat / add a probe in the middle third; verify by weight. <em>Ask: where exactly is the probe sitting?</em></td></tr>
+<tr><td>VWC fine, but the plant wilts under the lights</td><td>osmotic drought (EC stacked), hot root zone, or VPD too high for the water on offer</td><td>check pore-water EC and substrate temp; if EC is high, larger shots to drop runoff EC; if VPD is high, add water rate or soften climate — do not dim first. <em>Ask: what is the runoff EC vs feed?</em></td></tr>
+<tr><td>Deep dryback, EC creeping up a bit more each day</td><td>under-watering / under-leaching — salts accumulating</td><td>raise shot size and/or count to lift runoff %, and lift the VWC floor. <em>Ask: has the light or the plant size changed?</em></td></tr>
+<tr><td>Slab or pot never dries back</td><td>over-watering — no air reaching the roots</td><td>cut shot count/size, push a bigger overnight (P0) dryback, check drainage. <em>Ask: is the drainage actually clear?</em></td></tr>
+<tr><td>Watered to runoff, pot still light</td><td>channeling — the water bypassed the core</td><td>re-saturate with several small shots; next round fix media/dripper placement; never trust runoff alone as proof. <em>Ask: did the substrate ever go bone-dry?</em></td></tr>
+<tr><td>Canopy 2–3 °C above a shaded reference</td><td>stomata closing — water stress (drought, EC, or VPD)</td><td>confirm with VWC + EC, then add water or ease VPD before touching the lights. <em>Ask: does the reference plant read the same?</em></td></tr>
+</tbody><tfoot>
+<tr><td colspan='3'>Notice how many fixes are "add water / check EC" and how few are "change the lights". The reflex to dim or cool is usually treating a symptom of a water problem.</td></tr></tfoot>
+</table>
+</div>
+</section>
+
+<section class="sec" id="tips">
+<div class="sec-kicker">Hard-won</div>
+<h2>Hard-won habits</h2>
+<p class='lead'>The compressed version — the things that separate someone who owns sensors from someone who reads them.</p>
+<ul>
+<li><strong>Trend beats absolute.</strong> An uncalibrated probe still shows a perfect dryback. Calibrate for the truth of the number; use the shape from day one.</li>
+<li><strong>Weigh, don't guess.</strong> A load-cell reference plant is the single highest-value, drift-free instrument you can add. When probe and scale disagree about water, the scale wins.</li>
+<li><strong>Placement is the measurement.</strong> Middle third, root depth, one dripper-width off the emitter. The wet base and the dry edge both lie, in opposite directions.</li>
+<li><strong>Let EC set the floor.</strong> Rising pore-water EC on dryback is your real limit. When it hits your ceiling, stop drying — that VWC is the floor, whatever it reads.</li>
+<li><strong>Know how your substrate re-wets.</strong> Coco channels when it's too dry, peat repels, rockwool floods its base, clay pebbles are fine. Never let the first three go bone-dry, and recover with several small shots, never one flood.</li>
+<li><strong>Runoff EC vs feed EC is your leaching gauge.</strong> Creeping up at a steady feed = under-watering. Raise runoff % before the stack bites.</li>
+<li><strong>Morning turgor + afternoon wilt check = a free daily water audit.</strong> Limp at lights-on, or wilting that only recovers overnight, means the day's water didn't cover the day's light.</li>
+<li><strong>Keep an IR thermometer on the bench.</strong> Canopy hotter than a well-watered reference = stomata closing = stress. Confirm before you act.</li>
+<li><strong>Steer with P3, air the roots with P0.</strong> The last shot's timing sets the overnight dryback; the overnight dryback sets root oxygen and the generative/vegetative lean.</li>
+<li><strong>Watch substrate temperature at lights-on.</strong> A cold slab drinks slowly; ramp the morning shots rather than dumping cold feed into cold media.</li>
+<li><strong>Change the water before you change the lights.</strong> A DLI bump rewrites the water bill immediately; raise delivery first so the plant never has to tell you by wilting.</li>
+<li><strong>Never compare a Grodan number to a TEROS number</strong> as if they're the same scale. Different substrates, different calibrations — compare each probe only to its own history.</li>
+<li><strong>One probe is an anecdote.</strong> Run more than one per zone and treat a lone outlier as a placement problem until proven otherwise.</li>
+<li><strong>The reflex to dim or cool is usually a water problem in disguise.</strong> Check VWC, EC, and weight before you touch the environment.</li>
+</ul>
+</section>
+
+<section class="sec" id="cheat">
+<div class="sec-kicker">Keep this</div>
+<h2>The one-screen cheat sheet</h2>
+<p>Four questions answer "am I over- or under-watering?" faster than any dashboard:</p>
+<div class='kv'>
+<div class='kv-row'><span class='kv-k'>How heavy?</span><span class='kv-v'>Lift it / read the scale. Light and lightening fast = under. Heavy and stuck = over.</span></div>
+<div class='kv-row'><span class='kv-k'>How's the dryback?</span><span class='kv-v'>Deep, fast, floor breached = under. Flat, never recovers air = over.</span></div>
+<div class='kv-row'><span class='kv-k'>Which way is EC going?</span><span class='kv-v'>Climbing = concentrating = under-watering / under-leaching. Falling = diluted / over.</span></div>
+<div class='kv-row'><span class='kv-k'>What's the plant doing?</span><span class='kv-v'>Limp at lights-on, hot canopy, upward taco = under. Puffy droop, gnats, algae = over.</span></div>
+</div>
+<div class='tbl-wrap'>
+<table class='tbl'>
+<caption>Substrate quick-reference — the one thing to remember for each.</caption><thead>
+<tr><th>Substrate</th><th>EC</th><th>Re-wets when dry</th><th>The trap</th></tr></thead><tbody>
+<tr><td>Rockwool</td><td>= feed, spikes fast</td><td><span class='tag r'>poorly</span></td><td>wet base hides a dry, salt-stacked top</td></tr>
+<tr><td>Coco</td><td>buffered, slow</td><td><span class='tag w'>fairly</span></td><td>channels down the wall over a dry core</td></tr>
+<tr><td>Peat / soil</td><td>heavily buffered</td><td><span class='tag r'>poorly</span></td><td>easy to overwater; peat repels when dry</td></tr>
+<tr><td>Clay pebbles</td><td>= reservoir</td><td><span class='tag g'>instantly</span></td><td>no buffer — a pump miss dries roots fast</td></tr>
+</tbody></table>
+</div>
+<div class='callout key'>
+<div class='cic'><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="8" cy="12" r="3.5"/><path d="M11.5 12H20l-2 2.5M16 12v3"/></svg></div>
+<div class='cbody'>
+<div class='ctitle'>If you remember one sentence</div>
+<p>Water status is <strong>weight + dryback + EC + the plant</strong>, read against the medium — each substrate holds EC and re-wets its own way — and the light bill is set by <strong>DLI × VPD</strong>, so every time you turn up the light you have already turned up the thirst.</p>
+</div>
+</div>
+<div class='callout note'>
+<div class='cic'><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8"/><path d="M12 11v5M12 8h.01"/></svg></div>
+<div class='cbody'>
+<div class='ctitle'>On the numbers in this guide</div>
+<p>Every VWC, EC, and dryback figure here is a starting band to reason from, not a setpoint to copy. Your calibration, substrate, genetics, and steering intent move all of them. Dial by watching how your own root zone responds — the method carries over; the numbers you set yourself.</p>
+</div>
+</div>
+</section>
+<div class="refs"><h3>References</h3><ol><li id="ref-1">Monteith JL (1965). Evaporation and environment. Symposia of the Society for Experimental Biology 19:205–234.</li><li id="ref-2">Jones HG (2013). Plants and Microclimate: A Quantitative Approach to Environmental Plant Physiology, 3rd ed. Cambridge University Press.</li><li id="ref-3">Jackson RD, Idso SB, Reginato RJ, Pinter PJ (1981). Canopy temperature as a crop water stress indicator. Water Resources Research 17(4):1133–1138. <a href="https://doi.org/10.1029/WR017i004p01133" target="_blank" rel="noopener">https://doi.org/10.1029/WR017i004p01133</a></li><li id="ref-4">Idso SB, Jackson RD, Pinter PJ, Reginato RJ, Hatfield JL (1981). Normalizing the stress-degree-day parameter for environmental variability. Agricultural Meteorology 24:45–55. <a href="https://doi.org/10.1016/0002-1571(81)90032-7" target="_blank" rel="noopener">https://doi.org/10.1016/0002-1571(81)90032-7</a></li><li id="ref-5">Raviv M, Lieth JH, Bar-Tal A (eds) (2019). Soilless Culture: Theory and Practice, 2nd ed. Academic Press / Elsevier.</li><li id="ref-6">Fields JS, Fonteno WC, Jackson BE, Heitman JL, Owen JS (2014). Hydrophysical properties, moisture retention, and drainage profiles of wood and traditional components for greenhouse substrates. HortScience 49(6):827–832. <a href="https://doi.org/10.21273/HORTSCI.49.6.827" target="_blank" rel="noopener">https://doi.org/10.21273/HORTSCI.49.6.827</a></li><li id="ref-7">Chandra S, Lata H, Khan IA, ElSohly MA (2008). Photosynthetic response of Cannabis sativa L. to variations in photosynthetic photon flux densities, temperature and CO₂ conditions. Physiology and Molecular Biology of Plants 14:299–306. <a href="https://doi.org/10.1007/s12298-008-0027-x" target="_blank" rel="noopener">https://doi.org/10.1007/s12298-008-0027-x</a></li><li id="ref-8">Rodriguez-Morrison V, Llewellyn D, Zheng Y (2021). Cannabis yield, potency, and leaf photosynthesis respond differently to increasing light levels in an indoor environment. Frontiers in Plant Science 12:646020. <a href="https://doi.org/10.3389/fpls.2021.646020" target="_blank" rel="noopener">https://doi.org/10.3389/fpls.2021.646020</a></li><li id="ref-9">Hilhorst MA (2000). A pore water conductivity sensor. Soil Science Society of America Journal 64(6):1922–1925. <a href="https://doi.org/10.2136/sssaj2000.6461922x" target="_blank" rel="noopener">https://doi.org/10.2136/sssaj2000.6461922x</a></li></ol><p class="foot">Citations marked in-text as [n] map to this list. Verify claims against the primary sources before relying on them.</p></div></div><aside class="rail"><div class="lbl">On this page</div><a href="#start">A number is useless without its context</a><a href="#answer-first">Answer these before you diagnose anything</a><a href="#under-over">Over- and under-watering look identical</a><a href="#substrate">Your substrate — one page each</a><a href="#sensors">What the probes actually tell you</a><a href="#hands">The lift test and the reference plant</a><a href="#plant">Reading the plant</a><a href="#light-water">How light sets the water bill</a><a href="#integrate">The daily operating loop</a><a href="#troubleshoot">Symptom, cause, fix</a><a href="#tips">Hard-won habits</a><a href="#cheat">The one-screen cheat sheet</a></aside></div></div>
+</div>
+<nav class="bottomnav"><a href="index.html"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 11.5 12 4l8 7.5"/><path d="M6 10v9h12v-9"/></svg>Home</a><a data-action="search" role="button"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="6"/><path d="M20 20l-4.5-4.5"/></svg>Search</a><a data-action="theme" role="button"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.8A8 8 0 1 1 11.2 3a6 6 0 0 0 9.8 9.8z"/></svg>Theme</a><a data-action="menu" role="button"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>Menu</a></nav>
+<div class="search-mask" id="searchMask">
+  <div class="search-box">
+    <input id="searchInput" type="text" placeholder="Search this paper…" autocomplete="off" spellcheck="false">
+    <div class="search-results" id="searchResults"></div>
+  </div>
+</div>
+<script>window.SEARCH_INDEX=[{"type": "paper", "title": "Reading the Root Zone", "url": "#top", "text": "Two questions decide most of a grow: am I over- or under-watering, and how much water does the light actually want? Both come down to reading the root zone. This guide starts with the questions you have to answer before any sensor number means anything — then reads water status three ways, by weight, by probe, and by the plant, with a guidance table and a checklist for every substrate you are likely to run.", "kw": ""}, {"type": "section", "title": "A number is useless without its context", "url": "#start", "text": "You cannot tell whether you are under-watering from a single number. Water status is three numbers and a plant, read against the substrate the roots sit in. The two questions — am I over- or under-watering , and how much water does the light want — are the same skill. Both are answered by reading the root zone: how much water is in it, how strong the solution is, how fast it is drying, and whether the plant agrees. Get that right and the sensors stop being a dashboard you stare at and start being instruments you steer with. The one idea to carry through the whole guide A number means nothing without the context that makes it readable. 40% moisture in coco is not 40% in rockwool. A probe in the wrong part of a slab reads a different plant than the one you are growing. Every technique below is really about putting that missing context back. VWC (volumetric water content) the share of the substrate's volume that is water, as a percent. It is the headline number a moisture probe reports — worth only as much as its calibration and its placement. Dryback how far the substrate dries between", "kw": "", "paper": "Reading the Root Zone"}, {"type": "section", "title": "Answer these before you diagnose anything", "url": "#answer-first", "text": "Most watering mistakes are not sensor faults. They are a reading taken without the facts that make it mean something. Nail these down once and every number after gets easier to trust. A moisture probe reading 42% is not an answer — it is a question. 42% of what substrate, measured by which sensor, sitting where, fed at what strength, under how much light? Change any one of those and 42% flips from healthy to a plant in trouble. Before you touch a setpoint or call a plant over- or under-watered, write down the answers below. This is your baseline card. Keep it near the room. Table 1. Know these before a number can be read. Fill it in per room, per crop. What to nail down Why it changes the reading Substrate — type, brand, pot/slab volume & shape Sets what a given VWC and dryback actually mean. A small block dries far faster than a big pot on the same schedule. Sensor — make/model, and whether it carries a substrate-specific calibration A mineral-soil calibration reads systematically off in coco or stone wool. Without this, the number is a trend, not a truth. Placement — which part of ", "kw": "", "paper": "Reading the Root Zone"}, {"type": "section", "title": "Over- and under-watering look identical", "url": "#under-over", "text": "A drooping plant is not a diagnosis. Three different failures produce the same wilt — and the beginner's instinct, add water, fixes one of them and kills the other two. Wilt is loss of turgor: the cells lose their internal water pressure and the leaf goes limp. There are three roads to that same limp leaf, and telling them apart is the whole job. under Too little water Real drought. The substrate has given up its available water and the roots have nothing left to pull. VWC is low, the pot is light. over Too little air Drowning. The substrate never dries, so there is no oxygen in the pore space and the roots suffocate and rot. VWC is high and stuck high. It looks like thirst, so the beginner waters again. EC Too much salt Osmotic drought. Plenty of water, but so concentrated the roots cannot pull it in against the salt. EC is high. The plant is thirsty in a wet pot . Turgor the water pressure inside plant cells that keeps leaves and stems rigid. Full turgor at lights-on is a plant standing up with its leaves reaching; lost turgor is the droop you are trying to diagnose. Table 2. The o", "kw": "", "paper": "Reading the Root Zone"}, {"type": "section", "title": "Your substrate — one page each", "url": "#substrate", "text": "The same shot, the same probe number, means something different in each of these media, because they store, release, and re-wet water by different physics. This is the heart of the over/under question. Find the one you run and work from its card. Two behaviours separate every substrate: how it holds EC (does it buffer the feed, or hand the roots exactly what you poured in), and how it re-wets after it dries (does the next shot soak in evenly, or channel down the wall and out the bottom). Get those two right for your medium and most watering faults never start. CEC (cation exchange capacity) the substrate's ability to hold nutrient ions on its surfaces and hand them to roots. High in coco and living soil (buffered, forgiving, cal-mag-hungry); effectively zero in rockwool and clay pebbles (inert, precise, unforgiving). Field capacity the wettest the substrate holds after free water has drained under gravity — the top of your dryback. Channeling when water carves a shortcut — down a pot wall, through a dry block — and exits as runoff without wetting the bulk of the root zone. It produce", "kw": "", "paper": "Reading the Root Zone"}, {"type": "section", "title": "What the probes actually tell you", "url": "#sensors", "text": "A substrate probe gives you three numbers — water content, EC, and temperature — and one shape, the dryback curve. The shape is worth more than any of the numbers. VWC is the headline, and the first thing to know is that it is probably miscalibrated. Capacitance probes like the TEROS 12 ship with a mineral-soil calibration; in coco or stone wool that reads systematically off unless you load the soilless-specific calibration. Grodan's GroSens is calibrated for stone wool out of the box; a TEROS is not. So trust your probe for trends, not for absolute truth , until you have calibrated it to your actual substrate. A probe reading 8 points low still shows you the dryback perfectly. EC is the number that catches osmotic drought — the wet-pot thirst from Table 2 — before the plant does. Probes report bulk EC, but what the roots feel is the pore-water EC : the strength of the solution in the film around the roots, derived from the bulk reading. [9] The key behaviour: as the substrate dries, pore-water EC rises , because the salts stay behind while the water leaves. Watching pore-water EC cl", "kw": "", "paper": "Reading the Root Zone"}, {"type": "section", "title": "The lift test and the reference plant", "url": "#hands", "text": "The probe drifts and it lies about placement. Weight does neither. This is why the oldest trick in the book still beats the newest sensor for one specific job: total water. A pot's weight is its water content — directly, with no calibration, no gradient, no channeling blind spot. Know a pot's saturated weight and its dried-back weight and you can feel exactly where in the dryback it sits by lifting it. That is the lift test, and it is not a beginner's crutch you grow out of — it is the calibration reference the pros keep coming back to. 1 Learn the two anchor weights Weigh a representative pot right after it drains to field capacity, and again at your intended dryback floor. Now every lift in between is a reading. 2 Put one plant on a scale A representative plant on a bench scale or load cell, logged continuously, is a home-made lysimeter: a calibration-free, gradient-proof dryback curve. For total water it out-truths a VWC probe, because it weighs the whole root zone at once instead of sampling one point. 3 Squeeze-test the medium Coco: squeeze a handful — free drips means wet, damp", "kw": "", "paper": "Reading the Root Zone"}, {"type": "section", "title": "Reading the plant", "url": "#plant", "text": "The plant sums up every variable you cannot measure. Learn to read it and it audits your sensors for free, every single day. Turgor timing is the daily free audit. A well-watered plant is turgid and reaching up at lights-on. A plant that is limp first thing, or that wilts in the back half of the day and only recovers overnight, is telling you the water on offer did not cover the day's demand — either under-watering or a P3 dryback set too deep (both defined in the next section). Leaf shape splits the two big failures. Upward cupping — the \"taco\" — with crispy margins and dry tips leans under-watering, heat, or light stress. A soft, puffy, downward droop with no crisping leans over-watering. They look different once you have seen both a few times. Canopy temperature is a cheap, powerful instrument. A water-stressed plant closes its stomata to stop losing water; with the stomata shut, evaporative cooling stops and the leaf heats up. Point an infrared thermometer at the canopy and compare it to a well-watered reference: a canopy running 2–3 °C hotter than it should is telling you the st", "kw": "", "paper": "Reading the Root Zone"}, {"type": "section", "title": "How light sets the water bill", "url": "#light-water", "text": "Light is the throttle on the whole water system. Nothing else you control moves water demand as hard — which is exactly why raising it without raising irrigation is the most common way growers under-water a healthy room. PPFD (photosynthetic photon flux density) the instant intensity of usable (400–700 nm) light landing on the canopy, in µmol/m²/s. How hard the light is hitting, right now. DLI (daily light integral) the total usable light delivered over the whole photoperiod, in mol/m²/day. DLI = PPFD × photoperiod-hours × 0.0036. The day's whole light budget in one number — and your water budget tracks it closely. The physiology is a short chain. Photosynthesis needs open stomata to let CO₂ in. Open stomata also let water vapour out — that is transpiration, and it is what pulls water up from the roots. More light means more photosynthesis, more open stomata, and more water pulled through the plant. But light only sets the demand ; the rate water leaves through those open stomata is set by the vapour-pressure deficit — how thirsty the air is. Water use is the product of the two: roug", "kw": "", "paper": "Reading the Root Zone"}, {"type": "section", "title": "The daily operating loop", "url": "#integrate", "text": "Everything above resolves into one loop you run every day: size the budget from the light, set the rate from the air, cap the dryback with EC, and let weight and the plant keep all three honest. 1 Budget from DLI The day's light sets how much water the crop will move. Move up Table 3, move up your daily delivery. This is the coarse dial. 2 Rate from VPD and the light curve Schedule shots to the shape of the day — ramp in P1, hold through the midday peak in P2, taper into P3 — with VPD deciding how fast demand comes on. 3 Floor from the EC ceiling Decide how deep you will dry back — but let pore-water EC veto it. When EC hits your ceiling, that VWC is your floor, whatever the number. This is the line between steering and starving. 4 Verify by weight and plant Cross-check the probe against a lift or the load-cell plant, and against turgor and canopy temperature. Disagreement is the signal to investigate — usually placement, channeling, or EC. 5 Adjust the dryback to steer Deeper P0 dryback and a higher EC ceiling steer generative; shallower dryback and gentler EC steer vegetative. You ", "kw": "", "paper": "Reading the Root Zone"}, {"type": "section", "title": "Symptom, cause, fix", "url": "#troubleshoot", "text": "The disagreements between your instruments are not noise — each pattern points at one cause. This is the diagnostic shortcut. When two rows fit, ask the follow-up question in the last column before you act. Table 4. Fast differential for the common water faults. What you see Most likely cause Do this — and the question to ask Pot light, but the VWC probe says fine probe in a wet channel or the wet slab base smaller, more frequent shots to re-wet the whole profile; re-seat / add a probe in the middle third; verify by weight. Ask: where exactly is the probe sitting? VWC fine, but the plant wilts under the lights osmotic drought (EC stacked), hot root zone, or VPD too high for the water on offer check pore-water EC and substrate temp; if EC is high, larger shots to drop runoff EC; if VPD is high, add water rate or soften climate — do not dim first. Ask: what is the runoff EC vs feed? Deep dryback, EC creeping up a bit more each day under-watering / under-leaching — salts accumulating raise shot size and/or count to lift runoff %, and lift the VWC floor. Ask: has the light or the plant s", "kw": "", "paper": "Reading the Root Zone"}, {"type": "section", "title": "Hard-won habits", "url": "#tips", "text": "The compressed version — the things that separate someone who owns sensors from someone who reads them. Trend beats absolute. An uncalibrated probe still shows a perfect dryback. Calibrate for the truth of the number; use the shape from day one. Weigh, don't guess. A load-cell reference plant is the single highest-value, drift-free instrument you can add. When probe and scale disagree about water, the scale wins. Placement is the measurement. Middle third, root depth, one dripper-width off the emitter. The wet base and the dry edge both lie, in opposite directions. Let EC set the floor. Rising pore-water EC on dryback is your real limit. When it hits your ceiling, stop drying — that VWC is the floor, whatever it reads. Know how your substrate re-wets. Coco channels when it's too dry, peat repels, rockwool floods its base, clay pebbles are fine. Never let the first three go bone-dry, and recover with several small shots, never one flood. Runoff EC vs feed EC is your leaching gauge. Creeping up at a steady feed = under-watering. Raise runoff % before the stack bites. Morning turgor + a", "kw": "", "paper": "Reading the Root Zone"}, {"type": "section", "title": "The one-screen cheat sheet", "url": "#cheat", "text": "Four questions answer \"am I over- or under-watering?\" faster than any dashboard: How heavy? Lift it / read the scale. Light and lightening fast = under. Heavy and stuck = over. How's the dryback? Deep, fast, floor breached = under. Flat, never recovers air = over. Which way is EC going? Climbing = concentrating = under-watering / under-leaching. Falling = diluted / over. What's the plant doing? Limp at lights-on, hot canopy, upward taco = under. Puffy droop, gnats, algae = over. Substrate quick-reference — the one thing to remember for each. Substrate EC Re-wets when dry The trap Rockwool = feed, spikes fast poorly wet base hides a dry, salt-stacked top Coco buffered, slow fairly channels down the wall over a dry core Peat / soil heavily buffered poorly easy to overwater; peat repels when dry Clay pebbles = reservoir instantly no buffer — a pump miss dries roots fast If you remember one sentence Water status is weight + dryback + EC + the plant , read against the medium — each substrate holds EC and re-wets its own way — and the light bill is set by DLI × VPD , so every time you turn", "kw": "", "paper": "Reading the Root Zone"}];window.SEARCH_SYN={};</script>
+<script>(function(){
+ var $=function(s,e){return (e||document).querySelector(s);};
+ var $$=function(s,e){return Array.prototype.slice.call((e||document).querySelectorAll(s));};
+ var MOON='<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A8 8 0 1 1 11.2 3a6 6 0 0 0 9.8 9.8z"/></svg>';
+ var SUN='<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2M5 5l1.4 1.4M17.6 17.6L19 19M19 5l-1.4 1.4M6.4 17.6L5 19"/></svg>';
+ function curTheme(){return document.documentElement.getAttribute('data-theme')||'light';}
+ function paintThemeIcons(t){ $$('[data-action=theme]').forEach(function(b){ b.innerHTML=(t==='dark'?SUN:MOON); }); }
+ function setTheme(t){ document.documentElement.setAttribute('data-theme',t); try{localStorage.setItem('cwp-theme',t);}catch(e){} paintThemeIcons(t); }
+ paintThemeIcons(curTheme());
+
+ var sb=$('#sidebar'), mask=$('#mask');
+ function openMenu(){ if(sb)sb.classList.add('open'); if(mask)mask.classList.add('show'); }
+ function closeMenu(){ if(sb)sb.classList.remove('open'); if(mask)mask.classList.remove('show'); }
+ if(mask) mask.addEventListener('click',closeMenu);
+
+ /* ---------------- search engine ---------------- */
+ var IDX=window.SEARCH_INDEX||[], SYN=window.SEARCH_SYN||{};
+ var sm=$('#searchMask'), si=$('#searchInput'), sr=$('#searchResults');
+ var sel=-1, cur=[];
+ function esc(s){return (s||'').replace(/[&<>]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;'}[c];});}
+ function rxesc(s){return s.replace(/[.*+?^${}()|[\]\\]/g,'\\$&');}
+ function toks(q){ var m=(q||'').toLowerCase().match(/[a-z0-9]+/g)||[]; return m.filter(function(t){return t.length>=2;}); }
+ function expand(ts){
+   var out=[], seen={};
+   ts.forEach(function(t){ if(!seen[t]){seen[t]=1; out.push({t:t,w:1,p:true});}
+     (SYN[t]||[]).forEach(function(x){ x=x.toLowerCase();
+       x.match(/[a-z0-9]+/g).forEach(function(w){ if(w.length>=2&&!seen[w]){seen[w]=1; out.push({t:w,w:0.5,p:false});} });
+     });
+   });
+   return out;
+ }
+ function lev1(a,b){ if(a===b)return true; var la=a.length,lb=b.length; if(Math.abs(la-lb)>1)return false;
+   var i=0,j=0,d=0; while(i<la&&j<lb){ if(a[i]===b[j]){i++;j++;} else { d++; if(d>1)return false;
+     if(la>lb)i++; else if(lb>la)j++; else {i++;j++;} } } return (d + (la-i) + (lb-j))<=1; }
+ function score(x, terms, fuzzy){
+   var title=(x.title||'').toLowerCase(), kw=((x.kw||'')+' '+(x.paper||'')).toLowerCase(),
+       body=(x.text||'').toLowerCase(), sc=0, prim=0, primNeed=0;
+   terms.forEach(function(o){ if(o.p)primNeed++;
+     var hit=0, t=o.t, wb=new RegExp('\\b'+rxesc(t));
+     if(title===t) hit=120;
+     else if(wb.test(title)) hit=70;
+     else if(title.indexOf(t)>=0) hit=42;
+     if(kw.indexOf(t)>=0) hit=Math.max(hit,40);
+     if(body.indexOf(t)>=0){ var c=body.split(t).length-1; hit=Math.max(hit,14+Math.min(c*3,12)); }
+     if(!hit && fuzzy && t.length>=4){
+       var pool=(title+' '+kw).split(/[^a-z0-9]+/);
+       for(var k=0;k<pool.length;k++){ if(pool[k].length>=4 && lev1(pool[k],t)){ hit=34; break; } }
+     }
+     if(hit>0){ sc+=hit*o.w; if(o.p)prim++; }
+   });
+   if(prim===0) return 0;
+   if(prim>=primNeed && primNeed>1) sc*=1.3;          /* all query words hit */
+   if(x.type==='paper') sc*=1.18; else if(x.type==='term') sc*=1.06;
+   return sc;
+ }
+ function snippet(x, terms){
+   var body=x.text||''; if(!body) return '';
+   var low=body.toLowerCase(), at=-1;
+   for(var i=0;i<terms.length;i++){ var p=low.indexOf(terms[i].t); if(p>=0&&(at<0||p<at)) at=p; }
+   var start=at<0?0:Math.max(0,at-60), seg=body.slice(start, start+150);
+   if(start>0) seg='…'+seg; if(start+150<body.length) seg=seg+'…';
+   var out=esc(seg);
+   var pats=terms.map(function(o){return rxesc(o.t);}).filter(Boolean);
+   if(pats.length){ out=out.replace(new RegExp('('+pats.join('|')+')','ig'), '<mark>$1</mark>'); }
+   return out;
+ }
+ function search(q){
+   var ts=toks(q);
+   if(!ts.length) return IDX.filter(function(x){return x.type==='paper';}).slice(0,8)
+       .map(function(x){return {x:x,snip:esc((x.text||'').slice(0,120))};});
+   var terms=expand(ts);
+   function run(fuzzy){
+     var r=[];
+     for(var i=0;i<IDX.length;i++){ var s=score(IDX[i],terms,fuzzy); if(s>0) r.push({x:IDX[i],s:s}); }
+     r.sort(function(a,b){return b.s-a.s;});
+     return r;
+   }
+   var res=run(false);
+   if(res.length<4) res=run(true);
+   return res.slice(0,16).map(function(o){return {x:o.x,snip:snippet(o.x,terms)};});
+ }
+ function openSearch(){ if(!sm)return; sm.classList.add('show'); si.value=''; render(''); setTimeout(function(){si.focus();},30); }
+ function closeSearch(){ if(sm)sm.classList.remove('show'); }
+ function render(q){
+   cur=search(q); sel=-1;
+   if(!cur.length){ sr.innerHTML='<div class="sr-empty">No matches. Try a broader word, like &ldquo;humidity&rdquo;, &ldquo;pests&rdquo; or &ldquo;feed&rdquo;.</div>'; return; }
+   sr.innerHTML=cur.map(function(o,i){ var x=o.x;
+     return '<a class="sr-item" data-i="'+i+'" href="'+x.url+'">'+
+       '<div class="sr-k">'+esc(x.type)+(x.paper&&x.type!=='paper'?(' &middot; '+esc(x.paper)):'')+'</div>'+
+       '<div class="sr-t">'+esc(x.title)+'</div>'+
+       (o.snip?('<div class="sr-d">'+o.snip+'</div>'):'')+'</a>';
+   }).join('');
+ }
+ function paint(){ $$('.sr-item').forEach(function(el,i){ el.classList.toggle('sel',i===sel); if(i===sel)el.scrollIntoView({block:'nearest'}); }); }
+ function go(i){ var o=cur[i]; if(o) window.location.href=o.x.url; }
+ if(si){
+   si.addEventListener('input',function(){render(si.value);});
+   si.addEventListener('keydown',function(e){
+     if(e.key==='ArrowDown'){e.preventDefault();sel=Math.min(sel+1,cur.length-1);paint();}
+     else if(e.key==='ArrowUp'){e.preventDefault();sel=Math.max(sel-1,0);paint();}
+     else if(e.key==='Enter'){e.preventDefault();go(sel<0?0:sel);}
+     else if(e.key==='Escape'){closeSearch();}
+   });
+ }
+ if(sm) sm.addEventListener('click',function(e){ if(e.target===sm)closeSearch(); });
+
+ document.addEventListener('click',function(e){
+   var a=e.target.closest('[data-action]'); if(!a)return; e.preventDefault();
+   var act=a.getAttribute('data-action');
+   if(act==='search') openSearch();
+   else if(act==='menu'){ if(sb&&sb.classList.contains('open'))closeMenu(); else openMenu(); }
+   else if(act==='theme'){ setTheme(curTheme()==='dark'?'light':'dark'); }
+ });
+ document.addEventListener('keydown',function(e){
+   if((e.ctrlKey||e.metaKey)&&(e.key==='k'||e.key==='K')){e.preventDefault();openSearch();}
+ });
+ $$('.sidebar .nav a').forEach(function(a){a.addEventListener('click',closeMenu);});
+
+ var fpills=$$('.fpill'), tf=$('#treeFilter');
+ if(fpills.length||tf){
+   var rows=$$('#paperdir .trow'), tgroups=$$('#paperdir .treegroup'), demp=$('#dirEmpty'), curG='all';
+   function apply(){
+     var q=(tf&&tf.value||'').toLowerCase().replace(/[^a-z0-9 ]+/g,' ').trim(), shown=0;
+     rows.forEach(function(r){
+       var okG=(curG==='all'||r.getAttribute('data-group')===curG);
+       var okT=(!q||r.getAttribute('data-text').indexOf(q)>=0);
+       var ok=okG&&okT; r.style.display=ok?'':'none'; if(ok)shown++;
+     });
+     tgroups.forEach(function(s){
+       var vis=Array.prototype.some.call(s.querySelectorAll('.trow'),function(r){return r.style.display!=='none';});
+       s.style.display=vis?'':'none';
+     });
+     if(demp) demp.style.display=shown?'none':'';
+   }
+   fpills.forEach(function(p){p.addEventListener('click',function(){
+     curG=p.getAttribute('data-filter');
+     fpills.forEach(function(x){x.classList.toggle('on',x===p);});
+     apply();
+   });});
+   if(tf) tf.addEventListener('input',apply);
+ }
+
+ var rlinks=$$('.rail a');
+ if(rlinks.length){
+   var secs=rlinks.map(function(a){return document.getElementById(a.getAttribute('href').slice(1));}).filter(Boolean);
+   var onScroll=function(){
+     var y=window.scrollY+130, idx=0;
+     for(var i=0;i<secs.length;i++){ if(secs[i].offsetTop<=y) idx=i; }
+     rlinks.forEach(function(a,i){a.classList.toggle('on',i===idx);});
+   };
+   window.addEventListener('scroll',onScroll,{passive:true}); onScroll();
+ }
+})();
+</script>
+</body></html>
