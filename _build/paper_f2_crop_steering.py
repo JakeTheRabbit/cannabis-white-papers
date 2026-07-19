@@ -24,6 +24,10 @@ SECTIONS = []
 SECTIONS.append({"id": "what-this-is", "kicker": "Start here",
   "title": "What this system is, and what crop steering means",
   "blocks": [
+    callout("evidence", "Community / evidence note",
+      "<p><strong>Operational / provisional:</strong> Default VWC numbers are one facility&rsquo;s probe-native "
+      "placeholders after hand-watering. Caplan drought supports controlled deficit as a concept &mdash; not a "
+      "copy-paste of these exact setpoints. Calibrate media before arming automation.</p>"),
     lead("F2 is an <strong>autonomous irrigation controller</strong> for a veg grow room. It is software "
          "that reads moisture and salt probes in the root zone and decides, on its own, when to fire "
          "a watering shot through a pump and valves. You set the targets. It does the watering."),

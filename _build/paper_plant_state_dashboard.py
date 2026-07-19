@@ -22,6 +22,9 @@ SECTIONS = []
 
 SECTIONS.append({"id": "intro", "kicker": "Start here", "title": "What this is, and why it matters",
   "blocks": [
+    callout("evidence", "Community / evidence note",
+      "<p><strong>Provisional:</strong> On-screen advisories (e.g. tip-burn risk timelines) are product-design "
+      "examples for operator UX &mdash; not a validated prognostic model.</p>"),
     lead("A modern grow room is wired with sensors measuring air temperature, humidity, VPD, "
          "CO&#8322;, light, substrate moisture, EC, root-zone temperature, pH and power draw, "
          "second by second. The dashboards built to show all of this are walls of "

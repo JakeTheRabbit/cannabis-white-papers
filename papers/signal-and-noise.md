@@ -25,6 +25,10 @@ _Precision · Signal & noise · ~14 min read_
 
 ## What this is, and why a grow room is really a listening problem
 
+> **EVIDENCE — Community / evidence note**
+>
+> **Borderline:** Alarm-noise percentages and control-rule mashups should be replaced with _your_ measured false-positive rate. Name Western Electric vs Nelson rules correctly if you implement them.
+
 Every sensor reading in your grow room is two things added together: the real story (the **signal**) and meaningless jitter (the **noise**). Your whole job is seeing the first through the second.
 
 The hard part of growing has moved from collecting data to reading it. Sensors are cheap and dashboards are pretty, yet most decisions still run on gut feel. Collecting _data_ used to be the work. Now the work is separating the meaningful pattern from the meaningless wobble. This paper teaches you to hear what your plants are telling you above the static, and, just as important, when to do nothing.

@@ -25,6 +25,10 @@ _Precision · Crop steering · ~18 min read_
 
 ## What this system is, and what crop steering means
 
+> **EVIDENCE — Community / evidence note**
+>
+> **Operational / provisional:** Default VWC numbers are one facility’s probe-native placeholders after hand-watering. Caplan drought supports controlled deficit as a concept — not a copy-paste of these exact setpoints. Calibrate media before arming automation.
+
 F2 is an **autonomous irrigation controller** for a veg grow room. It is software that reads moisture and salt probes in the root zone and decides, on its own, when to fire a watering shot through a pump and valves. You set the targets. It does the watering.
 
 **Crop steering** means pushing the plant toward one of two kinds of growth by controlling exactly how and when it waters. _Vegetative_ steering (bulking) keeps the medium wet with many small waterings and only a small drying-out. _Generative_ steering (the flower or stress push) uses a bigger drying-out, a saltier root zone, and fewer, larger waterings. Even a mild, deliberate water deficit applied at the right time shifts a cannabis plant generatively without losing yield.[^caplan-drought-2019]

@@ -104,6 +104,10 @@ Bulking climate runs around 26 to 28 C day, with RH down to about 55 to 62% to l
 
 ## Reading the plant: when to harvest
 
+> **EVIDENCE — Community / evidence note**
+>
+> **Borderline:** Amber trichome share is a _maturity_ cue, not a clean pharmacological switch. Effect is multi-factor (terpenes, dose, genotype, set/setting). Human evidence that CBN alone drives ‘couch-lock’ is limited. Long plain-water flushes are traditional; controlled tests often show little taste/potency gain — ease EC as appetite falls rather than starving the plant.
+
 Pistils are a rough early signal but they lie. Trichomes are the true clock, and you read them with a cheap jeweler's loupe or pocket microscope.[^livingston-2020-trichome-maturation]
 
 Harvest when most trichomes have turned from clear to milky or cloudy, with a small fraction going amber. A common target is 80 to 90% milky with 5 to 15% amber. More clear or milky gives a more energetic, heady effect. More amber means THC is degrading toward CBN for a heavier feel for some people — multi-factor, not a CBN switch.[^livingston-2020-trichome-maturation]

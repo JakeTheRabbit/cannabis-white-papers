@@ -25,6 +25,10 @@ _Advanced · Scaling to high light · ~16 min read_
 
 ## Light is the throttle, not the engine
 
+> **EVIDENCE — Community / evidence note**
+>
+> **Borderline:** High-rung EC and runoff ladders are advanced steering territory. Ambient CO₂ lowers efficiency of high PPFD but is not a hard 800 µmol canopy wall. Size HVAC and water from your meters, not from a single ladder cell.
+
 Photosynthesis runs at the speed of whatever is in shortest supply. Light can be the thing that sets the pace — but only up to the point where something else runs out. Past that point, more light does nothing except make heat and stress the plant.
 
 This is an old rule with two names. Liebig's **law of the minimum** says a crop grows at the rate set by its scarcest resource, no matter how abundant everything else is. Blackman's **law of limiting factors** says the same about the moment-to-moment rate of photosynthesis: raise the input that is currently limiting and the rate climbs; raise anything else and nothing happens. Cannabis yield keeps rising with light to very high levels[^rm2021-light], but only because CO₂, warmth, water and feed rise with it[^chandra2008-photo]. A room at 1500 µmol on ambient CO₂ is really a room running at its 800 µmol ceiling, with 700 µmol of wasted, heat-making light on top.

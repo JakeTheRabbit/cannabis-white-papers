@@ -609,6 +609,10 @@ Here is the trick beginners miss: **as the substrate dries, the salt left behind
 
 ## Dryback: the engine of steering
 
+> **EVIDENCE — Community / evidence note**
+>
+> **Borderline:** Caplan-style single late droughts are _related_ to generative drybacks but not the same experiment as multi-week daily sawteeth. Use dryback as a gentle bias; never wilt. Your probe-native % is not a universal media law.
+
 A **dryback** is letting the root zone dry by a chosen amount before you water again. It is the most powerful lever you have, because a mild, controlled water deficit changes how the plant grows.
 
 When the root zone dries a little, the plant makes a stress hormone called **abscisic acid (ABA)**, which shifts it away from leafy growth and toward flowering and resin production[^welling2025-aba]. Done deliberately at the right time, controlled water-deficit has been shown to _raise_ cannabinoid content without costing yield[^caplan2019-drought].
@@ -1285,6 +1289,10 @@ _Advanced · Scaling to high light · ~16 min read_
 > Light sets the demand. CO₂, water, airflow, feed and heat-removal have to supply it. Your yield ceiling is whichever one tops out first — so size every system to the light, find the wall, and dial the light down to meet it.
 
 ## Light is the throttle, not the engine
+
+> **EVIDENCE — Community / evidence note**
+>
+> **Borderline:** High-rung EC and runoff ladders are advanced steering territory. Ambient CO₂ lowers efficiency of high PPFD but is not a hard 800 µmol canopy wall. Size HVAC and water from your meters, not from a single ladder cell.
 
 Photosynthesis runs at the speed of whatever is in shortest supply. Light can be the thing that sets the pace — but only up to the point where something else runs out. Past that point, more light does nothing except make heat and stress the plant.
 
@@ -3341,6 +3349,10 @@ Bulking climate runs around 26 to 28 C day, with RH down to about 55 to 62% to l
 
 ## Reading the plant: when to harvest
 
+> **EVIDENCE — Community / evidence note**
+>
+> **Borderline:** Amber trichome share is a _maturity_ cue, not a clean pharmacological switch. Effect is multi-factor (terpenes, dose, genotype, set/setting). Human evidence that CBN alone drives ‘couch-lock’ is limited. Long plain-water flushes are traditional; controlled tests often show little taste/potency gain — ease EC as appetite falls rather than starving the plant.
+
 Pistils are a rough early signal but they lie. Trichomes are the true clock, and you read them with a cheap jeweler's loupe or pocket microscope.[^livingston-2020-trichome-maturation]
 
 Harvest when most trichomes have turned from clear to milky or cloudy, with a small fraction going amber. A common target is 80 to 90% milky with 5 to 15% amber. More clear or milky gives a more energetic, heady effect. More amber means THC is degrading toward CBN for a heavier feel for some people — multi-factor, not a CBN switch.[^livingston-2020-trichome-maturation]
@@ -3749,6 +3761,10 @@ _Precision · Smart watering · ~9 min read_
 
 ## What this is, and the problem it solves
 
+> **EVIDENCE — Community / evidence note**
+>
+> **Provisional:** Multi-signal caution is sound engineering. Claims of never flooding or never starving depend on sensor health, calibration, and fail-safes — keep hard VWC floors and human override.
+
 VRWE stands for **Virtual Root-Zone Water Estimator**: software that decides when and how much to water a plant by combining several signals instead of obeying one sensor. It is a ‘virtual’ estimator because it never reads the water directly. It works the amount out from several clues, the way you can tell a kettle is nearly empty from its weight and how long it has been boiling.
 
 Each pot has only one moisture sensor, and that sensor feels only a tiny spot of soil, roughly the volume of a soda can[^szerement-seven-rod-2019]. If that spot happens to be dry, or if water sneaks past it, the sensor reports ‘I’m dry!’ and a dumb timer would believe it and drown the plant. VRWE treats the sensor as one opinion to double-check, not the boss.
@@ -3884,6 +3900,10 @@ _Precision · Signal & noise · ~14 min read_
 > Tell a real change in your plants and root zone apart from random sensor wobble, and act only when it matters.
 
 ## What this is, and why a grow room is really a listening problem
+
+> **EVIDENCE — Community / evidence note**
+>
+> **Borderline:** Alarm-noise percentages and control-rule mashups should be replaced with _your_ measured false-positive rate. Name Western Electric vs Nelson rules correctly if you implement them.
 
 Every sensor reading in your grow room is two things added together: the real story (the **signal**) and meaningless jitter (the **noise**). Your whole job is seeing the first through the second.
 
@@ -4087,6 +4107,10 @@ _Precision · Closed loop · ~17 min read_
 
 ## What this is (and why a grow room is a loop)
 
+> **EVIDENCE — Community / evidence note**
+>
+> **Provisional:** Lead-time examples (tip burn in N days, whole-room health in seconds) are worked UX scenarios, not multi-site cannabis trials. Trust coupled thinking; treat prediction copy as illustrative until you measure your own false-positive rate.
+
 A grow room is a **loop**, not a panel of independent dials you set and forget. You change a control, the room and plants respond, sensors measure that response, you work out what it means, and that tells you what to change next. Around and around, every minute of every day.
 
 A **closed loop** means the output feeds back to the input: what the plant tells you decides your next move, and then you watch what that move actually did. This guide teaches the whole circle as one thing, with three jobs sitting on it: getting the action right (_cause_), getting the measurement honest (_perception_), and getting the meaning out (_cognition_).
@@ -4252,6 +4276,10 @@ _Precision · Dashboards · ~13 min read_
 > A grow-room screen should show what the plant is doing, not a wall of raw sensor numbers. Here is how to design one that does.
 
 ## What this is, and why it matters
+
+> **EVIDENCE — Community / evidence note**
+>
+> **Provisional:** On-screen advisories (e.g. tip-burn risk timelines) are product-design examples for operator UX — not a validated prognostic model.
 
 A modern grow room is wired with sensors measuring air temperature, humidity, VPD, CO₂, light, substrate moisture, EC, root-zone temperature, pH and power draw, second by second. The dashboards built to show all of this are walls of live numbers and graphs. They tell you _what_ is happening. They never tell you what it _means_, what is about to happen, or what to do about it.
 
@@ -4455,6 +4483,10 @@ _Precision · Crop steering · ~18 min read_
 > Run an autonomous crop-steering irrigation controller day to day. This is the plain-language starter guide: the P0–P3 cycle, moisture and salt targets, the controls you actually touch, the safety fail-safes, and what to do when something looks wrong.
 
 ## What this system is, and what crop steering means
+
+> **EVIDENCE — Community / evidence note**
+>
+> **Operational / provisional:** Default VWC numbers are one facility’s probe-native placeholders after hand-watering. Caplan drought supports controlled deficit as a concept — not a copy-paste of these exact setpoints. Calibrate media before arming automation.
 
 F2 is an **autonomous irrigation controller** for a veg grow room. It is software that reads moisture and salt probes in the root zone and decides, on its own, when to fire a watering shot through a pump and valves. You set the targets. It does the watering.
 
@@ -6971,6 +7003,10 @@ _Flowering · Crop steering · ~22 min read_
 
 ## The one sentence you’ll leave with
 
+> **EVIDENCE — Community / evidence note**
+>
+> **Borderline:** Do not import high-intensity rockwool substrate EC (mid-3s to 6) into beginner coco recipes. DWC disease risk rises with heat and low dissolved oxygen — there is no universal ‘above 23 °C = dead tomorrow’ clock.
+
 A cannabis plant can pour its energy into **leaves** — a bigger, bushier green plant — or into **flower**: the sticky buds you actually harvest. ‘Steering’ just means using water to nudge the plant toward one or the other.
 
 > **TIP — Think of it like driving**
@@ -7632,6 +7668,10 @@ Everything is one line from plant to dashboard. Two electrodes sense the stem, o
 > Plant signals are tiny and sit on a high-impedance source, so mains hum swamps them. The ADS1115 alone has no common-mode rejection and no reference drive. The AD8232 gives you the gain, the band-pass filter _and_ a driven soil-reference electrode that holds the reading steady[^pb_mdpi_ad8232]. It is the difference between a signal and a mess.
 
 ## Bill of materials
+
+> **EVIDENCE — Community / evidence note**
+>
+> **Provisional / experimental:** This build logs relative biopotentials for education and correlation hunting. It is _not_ a validated water, nutrient, or stress meter. Do not irrigate or feed from this signal alone.
 
 About NZ$110. M5Stack parts come as plug-together Grove modules; the two non-M5Stack parts (the AD8232 front-end and the ADS1115 ADC) are the standard cheap substitutes, because nobody sells a biopotential amplifier in the Grove ecosystem. Prices are indicative, mid-2026.
 

@@ -23,6 +23,10 @@ SECTIONS = []
 
 SECTIONS.append({"id": "what-this-is", "kicker": "Start here", "title": "What this is, and the problem it solves",
   "blocks": [
+    callout("evidence", "Community / evidence note",
+      "<p><strong>Provisional:</strong> Multi-signal caution is sound engineering. Claims of never flooding or "
+      "never starving depend on sensor health, calibration, and fail-safes &mdash; keep hard VWC floors and "
+      "human override.</p>"),
     lead("VRWE stands for <strong>Virtual Root-Zone Water Estimator</strong>: software that decides "
          "when and how much to water a plant by combining several signals instead of obeying one "
          "sensor. It is a &lsquo;virtual&rsquo; estimator because it never reads the water directly. "

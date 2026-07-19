@@ -107,6 +107,33 @@ code{font-family:var(--mono);font-size:.85em;background:var(--surface-2);border:
 .callout.warn{background:var(--amber-soft);border-color:#ECDDB8} .callout.warn .cic{background:var(--amber)}
 .callout.danger{background:var(--red-soft);border-color:#EAC9C0} .callout.danger .cic{background:var(--red)}
 .callout.key{background:var(--surface-2);border-color:var(--line)} .callout.key .cic{background:var(--acc)}
+.callout.evidence{background:#F3EEF8;border-color:#D9CEE8} .callout.evidence .cic{background:#6D28D9}
+.callout.evidence .ctitle{color:#4C1D95}
+
+/* ---------------- evidence panel (per-paper confidence) ---------------- */
+.evidence-panel{margin:28px 0 32px;padding:20px 22px;border-radius:var(--r-lg);border:1px solid var(--line);background:var(--surface-2)}
+.evidence-kicker{font-size:11.5px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--faint);margin-bottom:6px}
+.evidence-lead{font-size:14.8px;color:var(--ink-2);line-height:1.55;margin:0 0 16px;max-width:70ch}
+.evidence-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+@media(max-width:900px){.evidence-grid{grid-template-columns:1fr}}
+.evidence-col{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:14px 14px 10px}
+.evidence-col.solid{border-top:3px solid var(--grn)}
+.evidence-col.operational{border-top:3px solid var(--blue)}
+.evidence-col.provisional{border-top:3px solid #6D28D9}
+.evidence-badge{font-size:12.5px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;margin-bottom:4px}
+.evidence-col.solid .evidence-badge{color:var(--grn)}
+.evidence-col.operational .evidence-badge{color:var(--blue)}
+.evidence-col.provisional .evidence-badge{color:#6D28D9}
+.evidence-sub{font-size:12.5px;color:var(--muted);margin-bottom:8px;line-height:1.4}
+.ev-list{margin:0;padding-left:1.1em;font-size:13.5px;color:var(--ink-2);line-height:1.45}
+.ev-list li{margin:0 0 6px}
+.evidence-foot{font-size:13px;color:var(--muted);margin:14px 0 0;line-height:1.5}
+.ev-tag{display:inline-block;font-size:11px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;padding:1px 6px;border-radius:4px;background:#F3EEF8;color:#6D28D9;border:1px solid #D9CEE8}
+[data-theme="dark"] .callout.evidence{background:#1a1530;border-color:#3b2f5c}
+[data-theme="dark"] .callout.evidence .ctitle{color:#c4b5fd}
+[data-theme="dark"] .evidence-panel{background:var(--surface);border-color:var(--line)}
+[data-theme="dark"] .evidence-col{background:var(--surface-2)}
+[data-theme="dark"] .ev-tag{background:#1a1530;border-color:#3b2f5c;color:#c4b5fd}
 
 /* ---------------- definition ---------------- */
 .defn{padding:13px 18px;border-left:3px solid var(--acc);background:var(--surface-2);border-radius:0 8px 8px 0;margin:14px 0;font-size:15px}

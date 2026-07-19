@@ -113,6 +113,21 @@ def autolink(html, current_slug, linked):
 # ---------------------------------------------------------------- paper page
 def render_paper(mod):
     secs = mod.SECTIONS
+    # Inject per-paper evidence confidence panel (solid / operational / provisional)
+    try:
+        from data import evidence as EV
+        _ep = EV.panel_html(mod.SLUG)
+        if _ep and secs:
+            # Prefer after first intro section; else front of paper
+            _ei = 1 if len(secs) > 1 else 0
+            secs.insert(_ei, {
+                "id": "evidence-notes",
+                "kicker": "How sure is this?",
+                "title": "Evidence notes for this paper",
+                "blocks": [_ep],
+            })
+    except Exception as _ee:
+        print("evidence panel skipped for", getattr(mod, "SLUG", "?"), repr(_ee))
     # embed any generated example images into their target sections (file-gated)
     for im in IMG.by_slug().get(mod.SLUG, []):
         # Prefer explicit ext, else try jpg then svg (fact-check pack uses both)
@@ -276,7 +291,9 @@ def render_index():
         '<div class="eyebrow">A field guide to growing, from zero</div>'
         + fit_title("The Cannabis White Papers", 60, cls="") +
         f'<p class="sub">Evidence-linked cultivation field guides, rewritten so a first-timer can actually '
-        f'follow it: every term defined, every claim cited, the working shown in diagrams. Filter the '
+        f'follow it: every term defined, every claim cited, the working shown in diagrams. '
+        f'Each paper labels what is <strong>solid</strong>, what is <strong>operational practice</strong>, '
+        f'and what is <strong>borderline / provisional</strong>. Filter the '
         f'{n} papers below, or press <strong>Ctrl&nbsp;K</strong> to search.</p></div>'
     )
     pills = [f'<button class="fpill on" data-filter="all">All <span>{n}</span></button>']
