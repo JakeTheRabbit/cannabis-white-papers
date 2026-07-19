@@ -10,7 +10,7 @@ TITLE = "Cleaning up cannabis genetics with tissue culture"
 EYEBROW = "Beginner · Tissue culture"
 SUB = ("Tissue culture grows a clean, vigorous, genetically identical mother from a speck of "
        "tissue off a tired or diseased plant. Explained from absolute zero.")
-META = [("spark", "Beginner"), ("image", "13 diagrams"),
+META = [("spark", "Beginner"), ("image", "17 step photos"),
         ("quote", "Evidence-linked · 11 sources"), ("clock", "~22 min read")]
 RELATED = ["mould-risk", "grow-room-systems", "gmp-hash-lab"]
 REF_IDS = ["hlvd_threat2023", "hlvd_mgmt2025", "holmes2021", "mdpi2024_media",
