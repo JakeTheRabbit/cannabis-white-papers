@@ -81,7 +81,7 @@ Here is the trick beginners miss: **as the substrate dries, the salt left behind
 
 ## Dryback: the engine of steering
 
-> **EVIDENCE — Community / evidence note**
+> **EVIDENCE — Grain of salt**
 >
 > **Borderline:** Caplan-style single late droughts are _related_ to generative drybacks but not the same experiment as multi-week daily sawteeth. Use dryback as a gentle bias; never wilt. Your probe-native % is not a universal media law.
 

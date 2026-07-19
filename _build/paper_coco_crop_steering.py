@@ -105,7 +105,7 @@ SECTIONS.append({"id": "reading", "kicker": "04 · The signals", "title": "Readi
 
 SECTIONS.append({"id": "dryback", "kicker": "05 · The engine", "title": "Dryback: the engine of steering",
   "blocks": [
-    callout("evidence", "Community / evidence note",
+    callout("evidence", "Grain of salt",
       "<p><strong>Borderline:</strong> Caplan-style single late droughts are <em>related</em> to generative drybacks "
       "but not the same experiment as multi-week daily sawteeth. Use dryback as a gentle bias; never wilt. "
       "Your probe-native % is not a universal media law.</p>"),

@@ -146,7 +146,7 @@ SECTIONS.append({"id": "chain", "kicker": "03 · The idea", "title": "The signal
 
 SECTIONS.append({"id": "bom", "kicker": "04 · What to buy", "title": "Bill of materials",
   "blocks": [
-    callout("evidence", "Community / evidence note",
+    callout("evidence", "Grain of salt",
       "<p><strong>Provisional / experimental:</strong> This build logs relative biopotentials for education and "
       "correlation hunting. It is <em>not</em> a validated water, nutrient, or stress meter. Do not irrigate or "
       "feed from this signal alone.</p>"),

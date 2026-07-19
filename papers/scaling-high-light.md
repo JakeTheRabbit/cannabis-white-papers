@@ -25,7 +25,7 @@ _Advanced · Scaling to high light · ~16 min read_
 
 ## Light is the throttle, not the engine
 
-> **EVIDENCE — Community / evidence note**
+> **EVIDENCE — Grain of salt**
 >
 > **Borderline:** High-rung EC and runoff ladders are advanced steering territory. Ambient CO₂ lowers efficiency of high PPFD but is not a hard 800 µmol canopy wall. Size HVAC and water from your meters, not from a single ladder cell.
 

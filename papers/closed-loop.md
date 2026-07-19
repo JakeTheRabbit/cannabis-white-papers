@@ -25,7 +25,7 @@ _Precision · Closed loop · ~17 min read_
 
 ## What this is (and why a grow room is a loop)
 
-> **EVIDENCE — Community / evidence note**
+> **EVIDENCE — Grain of salt**
 >
 > **Provisional:** Lead-time examples (tip burn in N days, whole-room health in seconds) are worked UX scenarios, not multi-site cannabis trials. Trust coupled thinking; treat prediction copy as illustrative until you measure your own false-positive rate.
 

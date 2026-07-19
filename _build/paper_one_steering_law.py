@@ -37,7 +37,7 @@ SECTIONS = []
 # ---------------------------------------------------------------- 0 promise
 SECTIONS.append({"id": "the-promise", "kicker": "Start here", "title": "The one sentence you’ll leave with",
   "blocks": [
-    callout("evidence", "Community / evidence note",
+    callout("evidence", "Grain of salt",
       "<p><strong>Borderline:</strong> Do not import high-intensity rockwool substrate EC (mid-3s to 6) into beginner "
       "coco recipes. DWC disease risk rises with heat and low dissolved oxygen &mdash; there is no universal "
       "&lsquo;above 23 &deg;C = dead tomorrow&rsquo; clock.</p>"),

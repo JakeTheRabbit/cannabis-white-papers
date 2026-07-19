@@ -23,7 +23,7 @@ SECTIONS = []
 
 SECTIONS.append({"id": "what-this-is", "kicker": "Start here", "title": "What this is, and the problem it solves",
   "blocks": [
-    callout("evidence", "Community / evidence note",
+    callout("evidence", "Grain of salt",
       "<p><strong>Provisional:</strong> Multi-signal caution is sound engineering. Claims of never flooding or "
       "never starving depend on sensor health, calibration, and fail-safes &mdash; keep hard VWC floors and "
       "human override.</p>"),

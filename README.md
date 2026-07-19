@@ -105,15 +105,19 @@ cd _build && python build.py
 
 **Add a paper:** create `_build/paper_<slug>.py` (`SLUG, TITLE, EYEBROW, SUB, META, SECTIONS, RELATED, REF_IDS`; `figure()` takes a raw inline `<svg>` string), register it in `build.py` (`PAPER_MODULES`) and `data/nav.py`, add interlink phrases in `links.py`, then rebuild. Citations live in `data/refs.py`.
 
-## Evidence tiers
+## Accuracy, self-review, and grain-of-salt notes
+
+We go to great lengths to keep these guides honest. Part of that is **self-review**: we deliberately highlight claims that are subjective, only lightly backed by literature, or based on grower experience when controlled studies do not exist. Those are still useful as starting points — but they are not lab proof. **Do what works for your plants and meters.**
 
 Each HTML paper includes a **How sure is this paper?** panel with three tiers:
 
-- **Solid** — strong physiology, standards, or multi-source consensus
-- **Operational** — commercial practice bands; calibrate to your crop
-- **Borderline / provisional** — thin cannabis data, single studies, product design, or folklore
+- **Solid** — well supported by plant science, standards, or broad multi-source consensus
+- **Operational** — what many growers and rooms actually run; start here, then tune
+- **Grain of salt** — thin literature, single studies, product design, or “this works for us” practice
 
-Inline **Community / evidence notes** flag the highest-risk over-trust points.
+Inline notes flag the highest-risk over-trust points in the text.
+
+**See something glaringly wrong?** Open a GitHub issue and we will fix it: https://github.com/JakeTheRabbit/cannabis-white-papers/issues/new
 
 ## Sources & disclaimer
 

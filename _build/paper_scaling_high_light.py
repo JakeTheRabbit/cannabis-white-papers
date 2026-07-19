@@ -34,7 +34,7 @@ SECTIONS = []
 SECTIONS.append({"id": "demand", "kicker": "01 · Read this first",
   "title": "Light is the throttle, not the engine",
   "blocks": [
-    callout("evidence", "Community / evidence note",
+    callout("evidence", "Grain of salt",
       "<p><strong>Borderline:</strong> High-rung EC and runoff ladders are advanced steering territory. "
       "Ambient CO&#8322; lowers efficiency of high PPFD but is not a hard 800 &micro;mol canopy wall. "
       "Size HVAC and water from your meters, not from a single ladder cell.</p>"),

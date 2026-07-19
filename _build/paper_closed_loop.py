@@ -24,7 +24,7 @@ SECTIONS = []
 
 SECTIONS.append({"id": "what-this-is", "kicker": "Start here", "title": "What this is (and why a grow room is a loop)",
   "blocks": [
-    callout("evidence", "Community / evidence note",
+    callout("evidence", "Grain of salt",
       "<p><strong>Provisional:</strong> Lead-time examples (tip burn in N days, whole-room health in seconds) are "
       "worked UX scenarios, not multi-site cannabis trials. Trust coupled thinking; treat prediction copy as "
       "illustrative until you measure your own false-positive rate.</p>"),

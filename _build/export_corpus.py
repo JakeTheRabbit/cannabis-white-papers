@@ -308,15 +308,23 @@ def render_readme(manifest):
              "`build.py` (`PAPER_MODULES`) and `data/nav.py`, add interlink phrases in `links.py`, then "
              "rebuild. Citations live in `data/refs.py`.")
     L.append("")
-    L.append("## Evidence tiers")
+    L.append("## Accuracy, self-review, and grain-of-salt notes")
+    L.append("")
+    L.append("We go to great lengths to keep these guides honest. Part of that is **self-review**: "
+             "we deliberately highlight claims that are subjective, only lightly backed by literature, "
+             "or based on grower experience when controlled studies do not exist. Those are still useful "
+             "as starting points — but they are not lab proof. **Do what works for your plants and meters.**")
     L.append("")
     L.append("Each HTML paper includes a **How sure is this paper?** panel with three tiers:")
     L.append("")
-    L.append("- **Solid** — strong physiology, standards, or multi-source consensus")
-    L.append("- **Operational** — commercial practice bands; calibrate to your crop")
-    L.append("- **Borderline / provisional** — thin cannabis data, single studies, product design, or folklore")
+    L.append("- **Solid** — well supported by plant science, standards, or broad multi-source consensus")
+    L.append("- **Operational** — what many growers and rooms actually run; start here, then tune")
+    L.append("- **Grain of salt** — thin literature, single studies, product design, or “this works for us” practice")
     L.append("")
-    L.append("Inline **Community / evidence notes** flag the highest-risk over-trust points.")
+    L.append("Inline notes flag the highest-risk over-trust points in the text.")
+    L.append("")
+    L.append("**See something glaringly wrong?** Open a GitHub issue and we will fix it: "
+             "https://github.com/JakeTheRabbit/cannabis-white-papers/issues/new")
     L.append("")
     L.append("## Sources & disclaimer")
     L.append("")
