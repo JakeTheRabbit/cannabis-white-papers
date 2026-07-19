@@ -24,7 +24,7 @@ SECTIONS = []
 SECTIONS.append({"id": "what-this-is", "kicker": "Start here",
   "title": "What this is, and why a grow room is really a listening problem",
   "blocks": [
-    callout("evidence", "Community / evidence note",
+    callout("evidence", "Grain of salt",
       "<p><strong>Borderline:</strong> Alarm-noise percentages and control-rule mashups should be replaced with "
       "<em>your</em> measured false-positive rate. Name Western Electric vs Nelson rules correctly if you implement them.</p>"),
     lead("Every sensor reading in your grow room is two things added together: the real story "

@@ -25,7 +25,7 @@ _Precision · Crop steering · ~18 min read_
 
 ## What this system is, and what crop steering means
 
-> **EVIDENCE — Community / evidence note**
+> **EVIDENCE — Grain of salt**
 >
 > **Operational / provisional:** Default VWC numbers are one facility’s probe-native placeholders after hand-watering. Caplan drought supports controlled deficit as a concept — not a copy-paste of these exact setpoints. Calibrate media before arming automation.
 

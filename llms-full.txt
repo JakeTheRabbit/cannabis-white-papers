@@ -609,7 +609,7 @@ Here is the trick beginners miss: **as the substrate dries, the salt left behind
 
 ## Dryback: the engine of steering
 
-> **EVIDENCE — Community / evidence note**
+> **EVIDENCE — Grain of salt**
 >
 > **Borderline:** Caplan-style single late droughts are _related_ to generative drybacks but not the same experiment as multi-week daily sawteeth. Use dryback as a gentle bias; never wilt. Your probe-native % is not a universal media law.
 
@@ -1290,7 +1290,7 @@ _Advanced · Scaling to high light · ~16 min read_
 
 ## Light is the throttle, not the engine
 
-> **EVIDENCE — Community / evidence note**
+> **EVIDENCE — Grain of salt**
 >
 > **Borderline:** High-rung EC and runoff ladders are advanced steering territory. Ambient CO₂ lowers efficiency of high PPFD but is not a hard 800 µmol canopy wall. Size HVAC and water from your meters, not from a single ladder cell.
 
@@ -3349,7 +3349,7 @@ Bulking climate runs around 26 to 28 C day, with RH down to about 55 to 62% to l
 
 ## Reading the plant: when to harvest
 
-> **EVIDENCE — Community / evidence note**
+> **EVIDENCE — Grain of salt**
 >
 > **Borderline:** Amber trichome share is a _maturity_ cue, not a clean pharmacological switch. Effect is multi-factor (terpenes, dose, genotype, set/setting). Human evidence that CBN alone drives ‘couch-lock’ is limited. Long plain-water flushes are traditional; controlled tests often show little taste/potency gain — ease EC as appetite falls rather than starving the plant.
 
@@ -3761,7 +3761,7 @@ _Precision · Smart watering · ~9 min read_
 
 ## What this is, and the problem it solves
 
-> **EVIDENCE — Community / evidence note**
+> **EVIDENCE — Grain of salt**
 >
 > **Provisional:** Multi-signal caution is sound engineering. Claims of never flooding or never starving depend on sensor health, calibration, and fail-safes — keep hard VWC floors and human override.
 
@@ -3901,7 +3901,7 @@ _Precision · Signal & noise · ~14 min read_
 
 ## What this is, and why a grow room is really a listening problem
 
-> **EVIDENCE — Community / evidence note**
+> **EVIDENCE — Grain of salt**
 >
 > **Borderline:** Alarm-noise percentages and control-rule mashups should be replaced with _your_ measured false-positive rate. Name Western Electric vs Nelson rules correctly if you implement them.
 
@@ -4107,7 +4107,7 @@ _Precision · Closed loop · ~17 min read_
 
 ## What this is (and why a grow room is a loop)
 
-> **EVIDENCE — Community / evidence note**
+> **EVIDENCE — Grain of salt**
 >
 > **Provisional:** Lead-time examples (tip burn in N days, whole-room health in seconds) are worked UX scenarios, not multi-site cannabis trials. Trust coupled thinking; treat prediction copy as illustrative until you measure your own false-positive rate.
 
@@ -4277,7 +4277,7 @@ _Precision · Dashboards · ~13 min read_
 
 ## What this is, and why it matters
 
-> **EVIDENCE — Community / evidence note**
+> **EVIDENCE — Grain of salt**
 >
 > **Provisional:** On-screen advisories (e.g. tip-burn risk timelines) are product-design examples for operator UX — not a validated prognostic model.
 
@@ -4484,7 +4484,7 @@ _Precision · Crop steering · ~18 min read_
 
 ## What this system is, and what crop steering means
 
-> **EVIDENCE — Community / evidence note**
+> **EVIDENCE — Grain of salt**
 >
 > **Operational / provisional:** Default VWC numbers are one facility’s probe-native placeholders after hand-watering. Caplan drought supports controlled deficit as a concept — not a copy-paste of these exact setpoints. Calibrate media before arming automation.
 
@@ -7003,7 +7003,7 @@ _Flowering · Crop steering · ~22 min read_
 
 ## The one sentence you’ll leave with
 
-> **EVIDENCE — Community / evidence note**
+> **EVIDENCE — Grain of salt**
 >
 > **Borderline:** Do not import high-intensity rockwool substrate EC (mid-3s to 6) into beginner coco recipes. DWC disease risk rises with heat and low dissolved oxygen — there is no universal ‘above 23 °C = dead tomorrow’ clock.
 
@@ -7669,7 +7669,7 @@ Everything is one line from plant to dashboard. Two electrodes sense the stem, o
 
 ## Bill of materials
 
-> **EVIDENCE — Community / evidence note**
+> **EVIDENCE — Grain of salt**
 >
 > **Provisional / experimental:** This build logs relative biopotentials for education and correlation hunting. It is _not_ a validated water, nutrient, or stress meter. Do not irrigate or feed from this signal alone.
 

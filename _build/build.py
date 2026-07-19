@@ -123,7 +123,7 @@ def render_paper(mod):
             secs.insert(_ei, {
                 "id": "evidence-notes",
                 "kicker": "How sure is this?",
-                "title": "Evidence notes for this paper",
+                "title": "Accuracy, self-review, and grain-of-salt notes",
                 "blocks": [_ep],
             })
     except Exception as _ee:
@@ -292,9 +292,11 @@ def render_index():
         + fit_title("The Cannabis White Papers", 60, cls="") +
         f'<p class="sub">Evidence-linked cultivation field guides, rewritten so a first-timer can actually '
         f'follow it: every term defined, every claim cited, the working shown in diagrams. '
-        f'Each paper labels what is <strong>solid</strong>, what is <strong>operational practice</strong>, '
-        f'and what is <strong>borderline / provisional</strong>. Filter the '
-        f'{n} papers below, or press <strong>Ctrl&nbsp;K</strong> to search.</p></div>'
+        f'We self-review hard and flag what is <strong>solid science</strong>, what is '
+        f'<strong>grower practice</strong>, and what should be taken with a <strong>grain of salt</strong> '
+        f'when the literature is thin. If something looks wrong, '
+        f'<a href="https://github.com/JakeTheRabbit/cannabis-white-papers/issues/new" target="_blank" rel="noopener">report it on GitHub</a>. '
+        f'Filter the {n} papers below, or press <strong>Ctrl&nbsp;K</strong> to search.</p></div>'
     )
     pills = [f'<button class="fpill on" data-filter="all">All <span>{n}</span></button>']
     groups = []

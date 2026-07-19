@@ -25,7 +25,7 @@ _Precision · Dashboards · ~13 min read_
 
 ## What this is, and why it matters
 
-> **EVIDENCE — Community / evidence note**
+> **EVIDENCE — Grain of salt**
 >
 > **Provisional:** On-screen advisories (e.g. tip-burn risk timelines) are product-design examples for operator UX — not a validated prognostic model.
 

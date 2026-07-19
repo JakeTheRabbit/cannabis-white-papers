@@ -22,7 +22,7 @@ SECTIONS = []
 
 SECTIONS.append({"id": "intro", "kicker": "Start here", "title": "What this is, and why it matters",
   "blocks": [
-    callout("evidence", "Community / evidence note",
+    callout("evidence", "Grain of salt",
       "<p><strong>Provisional:</strong> On-screen advisories (e.g. tip-burn risk timelines) are product-design "
       "examples for operator UX &mdash; not a validated prognostic model.</p>"),
     lead("A modern grow room is wired with sensors measuring air temperature, humidity, VPD, "

@@ -25,7 +25,7 @@ _Precision · Signal & noise · ~14 min read_
 
 ## What this is, and why a grow room is really a listening problem
 
-> **EVIDENCE — Community / evidence note**
+> **EVIDENCE — Grain of salt**
 >
 > **Borderline:** Alarm-noise percentages and control-rule mashups should be replaced with _your_ measured false-positive rate. Name Western Electric vs Nelson rules correctly if you implement them.
 

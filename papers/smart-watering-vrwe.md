@@ -25,7 +25,7 @@ _Precision · Smart watering · ~9 min read_
 
 ## What this is, and the problem it solves
 
-> **EVIDENCE — Community / evidence note**
+> **EVIDENCE — Grain of salt**
 >
 > **Provisional:** Multi-signal caution is sound engineering. Claims of never flooding or never starving depend on sensor health, calibration, and fail-safes — keep hard VWC floors and human override.
 

@@ -160,7 +160,7 @@ SECTIONS.append({"id": "bulking-ripening", "kicker": "05 · Weeks 5-10", "title"
 
 SECTIONS.append({"id": "when-to-harvest", "kicker": "06 · The decision", "title": "Reading the plant: when to harvest",
   "blocks": [
-    callout("evidence", "Community / evidence note",
+    callout("evidence", "Grain of salt",
       "<p><strong>Borderline:</strong> Amber trichome share is a <em>maturity</em> cue, not a clean pharmacological "
       "switch. Effect is multi-factor (terpenes, dose, genotype, set/setting). Human evidence that CBN alone drives "
       "&lsquo;couch-lock&rsquo; is limited. Long plain-water flushes are traditional; controlled tests often show little "

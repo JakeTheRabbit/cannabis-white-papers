@@ -552,39 +552,52 @@ def panel_html(slug: str) -> str:
     def lis(items):
         return "<ul class='ev-list'>" + "".join(f"<li>{x}</li>" for x in items) + "</ul>"
 
+    issues = (
+        "https://github.com/JakeTheRabbit/cannabis-white-papers/issues/new"
+        "?title=Accuracy%20report%3A%20" + slug +
+        "&body=Paper%3A%20" + slug + "%0A%0AWhat%20looks%20wrong%3A%0A%0AWhat%20you%20expected%20%2F%20source%20if%20you%20have%20one%3A%0A"
+    )
+
     return (
         "<div class='evidence-panel' id='evidence-notes'>"
         "<div class='evidence-h'>"
         "<div class='evidence-kicker'>How sure is this paper?</div>"
-        "<p class='evidence-lead'>These guides are <strong>evidence-linked field guides</strong>, not peer-reviewed "
-        "journal articles. Use three reading modes: what is well established, what is solid commercial practice, "
-        "and what is still thin, provisional, or easy to over-trust.</p>"
+        "<p class='evidence-lead'>We've gone to great lengths to keep these guides honest. One of the main ways we do "
+        "that is <strong>self-review</strong>: we actively look for claims that are subjective, only lightly backed by "
+        "literature, or based on grower practice rather than a controlled study &mdash; and we <strong>call those out</strong> "
+        "instead of dressing them up as settled science.</p>"
+        "<p class='evidence-lead'>Often there simply is no paper for the decision you're making. In those cases we're "
+        "drawing on what other growers report and what has worked in our own rooms. That can still be useful &mdash; "
+        "but it is not a lab proof. <strong>Do what works for your plants, your room, and your meters.</strong> "
+        "If a table disagrees with your crop, believe the crop and log the difference.</p>"
         "</div>"
         "<div class='evidence-grid'>"
         "<div class='evidence-col solid'>"
         "<div class='evidence-badge'>Solid</div>"
-        "<div class='evidence-sub'>Strong physiology, standards, or multi-source consensus</div>"
+        "<div class='evidence-sub'>Well supported by plant science, standards, or broad multi-source consensus</div>"
         + lis(e["solid"]) +
         "</div>"
         "<div class='evidence-col operational'>"
         "<div class='evidence-badge'>Operational</div>"
-        "<div class='evidence-sub'>Commercial practice — start here, then calibrate to your crop</div>"
+        "<div class='evidence-sub'>What many growers and rooms actually run &mdash; start here, then tune</div>"
         + lis(e["operational"]) +
         "</div>"
         "<div class='evidence-col provisional'>"
-        "<div class='evidence-badge'>Borderline / provisional</div>"
-        "<div class='evidence-sub'>Thin cannabis data, single studies, product design, or folklore — treat carefully</div>"
+        "<div class='evidence-badge'>Grain of salt</div>"
+        "<div class='evidence-sub'>Subjective, thin literature, single studies, or &ldquo;this works for us&rdquo; practice</div>"
         + lis(e["provisional"]) +
         "</div>"
         "</div>"
-        "<p class='evidence-foot'>Community note: if your meters and plants disagree with a table, believe the plant and log the delta. "
-        "Jurisdiction-specific rules (pesticides, residual solvents, security, PPE duties) always override any recipe here. "
-        "Inline <span class='ev-tag'>provisional</span> callouts flag the most common over-trust points where they appear.</p>"
+        "<p class='evidence-foot'><strong>See something glaringly wrong?</strong> Tell us and we'll fix it. "
+        "Please open a GitHub issue with the paper name and what looks off "
+        f"(include a source if you have one): <a href='{issues}' target='_blank' rel='noopener'>Report an accuracy issue</a>. "
+        "Local law, labels, and licences always override any recipe here. "
+        "Inline notes labelled <span class='ev-tag'>grain of salt</span> flag the highest-risk over-trust points in the text.</p>"
         "</div>"
     )
 
 
-def community_note(body: str, title: str = "Community / evidence note") -> str:
+def community_note(body: str, title: str = "Grain of salt") -> str:
     """Inline provisional callout (used from papers or build)."""
     from components import callout
     return callout("evidence", title, f"<p>{body}</p>")

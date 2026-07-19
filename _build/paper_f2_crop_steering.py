@@ -24,7 +24,7 @@ SECTIONS = []
 SECTIONS.append({"id": "what-this-is", "kicker": "Start here",
   "title": "What this system is, and what crop steering means",
   "blocks": [
-    callout("evidence", "Community / evidence note",
+    callout("evidence", "Grain of salt",
       "<p><strong>Operational / provisional:</strong> Default VWC numbers are one facility&rsquo;s probe-native "
       "placeholders after hand-watering. Caplan drought supports controlled deficit as a concept &mdash; not a "
       "copy-paste of these exact setpoints. Calibrate media before arming automation.</p>"),

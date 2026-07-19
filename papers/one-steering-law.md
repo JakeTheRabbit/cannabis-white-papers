@@ -25,7 +25,7 @@ _Flowering · Crop steering · ~22 min read_
 
 ## The one sentence you’ll leave with
 
-> **EVIDENCE — Community / evidence note**
+> **EVIDENCE — Grain of salt**
 >
 > **Borderline:** Do not import high-intensity rockwool substrate EC (mid-3s to 6) into beginner coco recipes. DWC disease risk rises with heat and low dissolved oxygen — there is no universal ‘above 23 °C = dead tomorrow’ clock.
 

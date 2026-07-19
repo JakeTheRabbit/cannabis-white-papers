@@ -61,7 +61,7 @@ Everything is one line from plant to dashboard. Two electrodes sense the stem, o
 
 ## Bill of materials
 
-> **EVIDENCE — Community / evidence note**
+> **EVIDENCE — Grain of salt**
 >
 > **Provisional / experimental:** This build logs relative biopotentials for education and correlation hunting. It is _not_ a validated water, nutrient, or stress meter. Do not irrigate or feed from this signal alone.
 
