@@ -4,8 +4,8 @@ title: "Airflow design for indoor cultivation"
 eyebrow: "Beginner · Airflow design"
 summary: "Every leaf sits inside a film of still air that limits how fast it can breathe. Airflow strips that film away. Done right it feeds the plant and dries the room. Done wrong it scorches leaves or breeds rot."
 track: "Environment & climate"
-read_time: "~14 min read"
-diagrams: "3 diagrams"
+read_time: "~16 min read"
+diagrams: "4 diagrams"
 related: ["grow-room-systems", "mould-risk", "coco-crop-steering"]
 url: "https://jaketherabbit.github.io/cannabis-white-papers/airflow-design.html"
 md_url: "https://jaketherabbit.github.io/cannabis-white-papers/papers/airflow-design.md"
@@ -14,12 +14,12 @@ updated: "2026-07-18"
 license: "CC BY-NC 4.0"
 license_url: "https://creativecommons.org/licenses/by-nc/4.0/"
 attribution: "The Cannabis White Papers"
-refs: [{"id": "schuepp1993-bl", "n": 1, "cite": "Schuepp PH (1993). Tansley Review No. 59: Leaf boundary layers. New Phytologist 125(3):477-507.", "url": "https://doi.org/10.1111/j.1469-8137.1993.tb03898.x", "peer": true}, {"id": "dupont2025-wind", "n": 2, "cite": "Dupont K, van den Berg TE, Zhang J, Moene AF, Vialet-Chabrand SRM (2025). Beyond the boundary: a new road to improve photosynthesis via wind. J. Exp. Bot. 76(20):5791-5813.", "url": "https://doi.org/10.1093/jxb/eraf325", "peer": true}, {"id": "kitaya2004-airvel", "n": 3, "cite": "Kitaya Y, Shibuya T, Yoshida M, Kiyota M (2004). Effects of air velocity on photosynthesis of plant canopies under elevated CO2 levels. Adv. Space Res. 34(7):1466-1469.", "url": "https://doi.org/10.1016/j.asr.2003.08.031", "peer": true}, {"id": "tjosvold2018-air", "n": 4, "cite": "Tjosvold SA (2018). Maximize photosynthesis with moving air. UC ANR Greenhouse & Floriculture (extension article).", "url": "https://ucanr.edu/blogs/blogcore/postdetail.cfm?postnum=28455", "peer": false}, {"id": "rm2021-light", "n": 5, "cite": "Rodriguez-Morrison V, Llewellyn D, Zheng Y (2021). Cannabis yield, potency, and leaf photosynthesis respond differently to increasing light levels in an indoor environment. Front. Plant Sci. 12:646020.", "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8144505/", "peer": true}, {"id": "kitaya2010-circ", "n": 6, "cite": "Kitaya Y, Tsuruyama J, Shibuya T, Yoshida M, Kiyota M (2010). CO2 and air circulation effects on photosynthesis and transpiration of tomato seedlings. Scientia Horticulturae 126(2):326-330.", "url": "https://www.sciencedirect.com/science/article/abs/pii/S0304423810003316", "peer": true}, {"id": "gilliham2011-ca", "n": 7, "cite": "Gilliham M, et al. (2011). Calcium delivery and storage in plant leaves: exploring the link with water flow. J. Exp. Bot. 62(7):2233-2250.", "url": "https://doi.org/10.1093/jxb/err111", "peer": true}, {"id": "chehab2009-thigmo", "n": 8, "cite": "Chehab EW, Eich E, Braam J (2009). Thigmomorphogenesis: a complex plant response to mechano-stimulation. J. Exp. Bot. 60(1):43-56.", "url": "https://doi.org/10.1093/jxb/ern315", "peer": true}, {"id": "chandra2008-photo", "n": 9, "cite": "Chandra S, Lata H, Khan IA, ElSohly MA (2008). Photosynthetic response of Cannabis sativa L. to variations in photosynthetic photon flux densities, temperature and CO2 conditions. Physiol. Mol. Biol. Plants 14(4):299-306.", "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3550641/", "peer": true}]
+refs: [{"id": "schuepp1993-bl", "n": 1, "cite": "Schuepp PH (1993). Tansley Review No. 59: Leaf boundary layers. New Phytologist 125(3):477-507.", "url": "https://doi.org/10.1111/j.1469-8137.1993.tb03898.x", "peer": true}, {"id": "dupont2025-wind", "n": 2, "cite": "Dupont K, van den Berg TE, Zhang J, Moene AF, Vialet-Chabrand SRM (2025). Beyond the boundary: a new road to improve photosynthesis via wind. J. Exp. Bot. 76(20):5791-5813.", "url": "https://doi.org/10.1093/jxb/eraf325", "peer": true}, {"id": "kitaya2004-airvel", "n": 3, "cite": "Kitaya Y, Shibuya T, Yoshida M, Kiyota M (2004). Effects of air velocity on photosynthesis of plant canopies under elevated CO2 levels. Adv. Space Res. 34(7):1466-1469.", "url": "https://doi.org/10.1016/j.asr.2003.08.031", "peer": true}, {"id": "tjosvold2018-air", "n": 4, "cite": "Tjosvold SA (2018). Maximize photosynthesis with moving air. UC ANR Greenhouse & Floriculture (extension article).", "url": "https://ucanr.edu/blogs/blogcore/postdetail.cfm?postnum=28455", "peer": false}, {"id": "rm2021-light", "n": 5, "cite": "Rodriguez-Morrison V, Llewellyn D, Zheng Y (2021). Cannabis yield, potency, and leaf photosynthesis respond differently to increasing light levels in an indoor environment. Front. Plant Sci. 12:646020.", "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8144505/", "peer": true}, {"id": "kitaya2010-circ", "n": 6, "cite": "Kitaya Y, Tsuruyama J, Shibuya T, Yoshida M, Kiyota M (2010). CO2 and air circulation effects on photosynthesis and transpiration of tomato seedlings. Scientia Horticulturae 126(2):326-330.", "url": "https://www.sciencedirect.com/science/article/abs/pii/S0304423810003316", "peer": true}, {"id": "gilliham2011-ca", "n": 7, "cite": "Gilliham M, et al. (2011). Calcium delivery and storage in plant leaves: exploring the link with water flow. J. Exp. Bot. 62(7):2233-2250.", "url": "https://doi.org/10.1093/jxb/err111", "peer": true}, {"id": "chehab2009-thigmo", "n": 8, "cite": "Chehab EW, Eich E, Braam J (2009). Thigmomorphogenesis: a complex plant response to mechano-stimulation. J. Exp. Bot. 60(1):43-56.", "url": "https://doi.org/10.1093/jxb/ern315", "peer": true}, {"id": "chandra2008-photo", "n": 9, "cite": "Chandra S, Lata H, Khan IA, ElSohly MA (2008). Photosynthetic response of Cannabis sativa L. to variations in photosynthetic photon flux densities, temperature and CO2 conditions. Physiol. Mol. Biol. Plants 14(4):299-306.", "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3550641/", "peer": true}, {"id": "pipp2026-airflow", "n": 10, "cite": "Anderson K (2026). What cannabis growers can finally learn about airflow. Pipp Horticulture — controlled flower-room trials with Dr. Allison Justice and the Cannabis Research Coalition. (Preliminary: one replicate reported, second underway.)", "url": "https://pipphorticulture.com/what-cannabis-growers-can-finally-learn-about-airflow/", "peer": false}]
 ---
 
 # Airflow design for indoor cultivation
 
-_Beginner · Airflow design · ~14 min read_
+_Beginner · Airflow design · ~16 min read_
 
 > Every leaf sits inside a film of still air that limits how fast it can breathe. Airflow strips that film away. Done right it feeds the plant and dries the room. Done wrong it scorches leaves or breeds rot.
 
@@ -96,6 +96,30 @@ Aiming one big fan straight down a row is tempting. Don't. A smooth, laminar jet
 >
 > Walk the room. Every leaf, top to bottom and inside the plants, should be gently moving. Still leaves anywhere = a pocket you need to reach. A leaf that is flapping hard = back that fan off.
 
+## What a controlled room trial shows
+
+Everything above is leaf physiology. Does it actually move yield in a real flower room? A controlled trial by Pipp Horticulture with Dr. Allison Justice and the Cannabis Research Coalition tested exactly that: three identical flower rooms with VPD, temperature and humidity held constant, changing only the airflow[^pipp2026-airflow].
+
+The rooms ran at different delivered air speeds, measured in feet per minute (FPM), the standard unit for room airflow. They compared near-still air against roughly 100, 200 and 400 FPM (about 0.5, 1.0 and 2.0 m/s). One clean result fell out:
+
+> **Diagram.** The response was a **threshold, not a gentle slope**: below ~200 FPM little changed; above it, yield, plant shape and uniformity improved together[^pipp2026-airflow].
+
+That looks like it fights the leaf-level plateau in Figure 2, but it does not. Figure 2 is the speed at a single _leaf_; FPM here is what the whole room _delivers_. Air slows as it pushes into the canopy, so a room has to move well over 1 m/s at the fans before the buried lower and interior leaves feel the gentle breeze Figure 3 asks for. Roughly 200 FPM delivered is about what it takes to land _every_ leaf in the sweet spot, not just the ones on the outside.
+
+Above that threshold, the higher-airflow rooms showed three things:
+
+- **More sellable flower.** Stems carried less biomass and more of the plant's energy went into bud. Trim ran about 42% in the still-air plants and was significantly lower with good airflow, so less of the harvest ended up as larf[^pipp2026-airflow].
+- **Less stress.** Still-air plants had redder stems and more anthocyanin, a visible stress marker; the well-aired plants looked more uniform and less stressed.
+- **Taller, not weaker.** Higher-airflow plants finished roughly 6 inches taller than the still-air controls, with most vertical growth done by the end of week three, while still putting _less_ into stem. Here the extra height is relief from still-air stress, not the mechanical dwarfing you would get under a harder, direct wind (see section 06).
+
+> **KEY — Uniformity is the real lesson**
+>
+> Even in a tightly engineered room, the crew saw a positional bias: the first 1–2 feet of each row behaved differently from the rest. Their takeaway is the one to keep, **“if airflow isn’t uniform, neither is your crop.”** That is the dead-zone problem from section 07, now measured. Making sure no leaf is left in still air beats chasing a high average fan speed.
+
+> **NOTE — How solid is this?**
+>
+> Treat it as strong early field evidence, not settled science: the results so far are one replicate, with a second run underway to firm up the statistics[^pipp2026-airflow]. The direction lines up cleanly with the leaf physiology in the rest of this paper.
+
 ## Troubleshooting
 
 | Symptom | Likely cause | What to do |
@@ -128,3 +152,4 @@ Airflow is one subsystem of the room. Read it alongside the [systems guide](grow
 [^gilliham2011-ca]: Gilliham M, et al. (2011). Calcium delivery and storage in plant leaves: exploring the link with water flow. J. Exp. Bot. 62(7):2233-2250. https://doi.org/10.1093/jxb/err111 (peer-reviewed)
 [^chehab2009-thigmo]: Chehab EW, Eich E, Braam J (2009). Thigmomorphogenesis: a complex plant response to mechano-stimulation. J. Exp. Bot. 60(1):43-56. https://doi.org/10.1093/jxb/ern315 (peer-reviewed)
 [^chandra2008-photo]: Chandra S, Lata H, Khan IA, ElSohly MA (2008). Photosynthetic response of Cannabis sativa L. to variations in photosynthetic photon flux densities, temperature and CO2 conditions. Physiol. Mol. Biol. Plants 14(4):299-306. https://pmc.ncbi.nlm.nih.gov/articles/PMC3550641/ (peer-reviewed)
+[^pipp2026-airflow]: Anderson K (2026). What cannabis growers can finally learn about airflow. Pipp Horticulture — controlled flower-room trials with Dr. Allison Justice and the Cannabis Research Coalition. (Preliminary: one replicate reported, second underway.) https://pipphorticulture.com/what-cannabis-growers-can-finally-learn-about-airflow/ (industry/manufacturer source)

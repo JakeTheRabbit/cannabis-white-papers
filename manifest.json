@@ -66,8 +66,8 @@
    "title": "Airflow design for indoor cultivation",
    "summary": "Every leaf sits inside a film of still air that limits how fast it can breathe. Airflow strips that film away. Done right it feeds the plant and dries the room. Done wrong it scorches leaves or breeds rot.",
    "track": "Environment & climate",
-   "read_time": "~14 min read",
-   "diagrams": "3 diagrams",
+   "read_time": "~16 min read",
+   "diagrams": "4 diagrams",
    "related": [
     "grow-room-systems",
     "mould-risk",
@@ -77,7 +77,7 @@
    "md_url": "https://jaketherabbit.github.io/cannabis-white-papers/papers/airflow-design.md",
    "version": "1.2",
    "updated": "2026-07-18",
-   "ref_count": 9
+   "ref_count": 10
   },
   {
    "slug": "co2-enrichment",

@@ -97,6 +97,7 @@ REFS = {
     "gilliham2011-ca": {"cite": "Gilliham M, et al. (2011). Calcium delivery and storage in plant leaves: exploring the link with water flow. <em>J. Exp. Bot.</em> 62(7):2233-2250.", "url": "https://doi.org/10.1093/jxb/err111", "peer": True},
     "chehab2009-thigmo": {"cite": "Chehab EW, Eich E, Braam J (2009). Thigmomorphogenesis: a complex plant response to mechano-stimulation. <em>J. Exp. Bot.</em> 60(1):43-56.", "url": "https://doi.org/10.1093/jxb/ern315", "peer": True},
     "tjosvold2018-air": {"cite": "Tjosvold SA (2018). Maximize photosynthesis with moving air. <em>UC ANR Greenhouse & Floriculture</em> (extension article).", "url": "https://ucanr.edu/blogs/blogcore/postdetail.cfm?postnum=28455", "peer": False},
+    "pipp2026-airflow": {"cite": "Anderson K (2026). What cannabis growers can finally learn about airflow. <em>Pipp Horticulture</em> — controlled flower-room trials with Dr. Allison Justice and the Cannabis Research Coalition. (Preliminary: one replicate reported, second underway.)", "url": "https://pipphorticulture.com/what-cannabis-growers-can-finally-learn-about-airflow/", "peer": False},
 
     # ---- mould ----
     "benedict2020-cdc": {"cite": "Benedict K, Thompson GR, Jackson BR (2020). Cannabis use and fungal infections in a commercially insured population, United States, 2016. <em>Emerg. Infect. Dis.</em> 26(6):1308-1310.", "url": "https://doi.org/10.3201/eid2606.191570", "peer": True},

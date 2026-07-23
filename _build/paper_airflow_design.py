@@ -11,12 +11,12 @@ EYEBROW = "Beginner · Airflow design"
 SUB = ("Every leaf sits inside a film of still air that limits how fast it can breathe. "
        "Airflow strips that film away. Done right it feeds the plant and dries the room. "
        "Done wrong it scorches leaves or breeds rot.")
-META = [("wind", "Beginner"), ("image", "3 diagrams"),
-        ("quote", "Evidence-linked · 9 sources"), ("clock", "~14 min read")]
+META = [("wind", "Beginner"), ("image", "4 diagrams"),
+        ("quote", "Evidence-linked · 10 sources"), ("clock", "~16 min read")]
 RELATED = ["grow-room-systems", "mould-risk", "coco-crop-steering"]
 REF_IDS = ["schuepp1993-bl", "dupont2025-wind", "kitaya2004-airvel", "tjosvold2018-air",
            "rm2021-light", "kitaya2010-circ", "gilliham2011-ca", "chehab2009-thigmo",
-           "chandra2008-photo"]
+           "chandra2008-photo", "pipp2026-airflow"]
 
 def _c(rid):
     return "<sup class='cite'><a href='#ref-%s'>[%d]</a></sup>" % (rid, REF_IDS.index(rid) + 1)
@@ -166,7 +166,51 @@ SECTIONS.append({"id": "messy", "kicker": "08 · A subtlety", "title": "Messy ai
         "fan off.")),
   ]})
 
-SECTIONS.append({"id": "trouble", "kicker": "09 · When it goes wrong", "title": "Troubleshooting",
+SECTIONS.append({"id": "evidence", "kicker": "09 · Field evidence", "title": "What a controlled room trial shows",
+  "blocks": [
+    p("Everything above is leaf physiology. Does it actually move yield in a real flower room? A "
+      "controlled trial by Pipp Horticulture with Dr. Allison Justice and the Cannabis Research "
+      "Coalition tested exactly that: three identical flower rooms with VPD, temperature and humidity "
+      "held constant, changing only the airflow" + _c("pipp2026-airflow") + "."),
+    p("The rooms ran at different delivered air speeds, measured in feet per minute (FPM), the standard "
+      "unit for room airflow. They compared near-still air against roughly 100, 200 and 400 FPM "
+      "(about 0.5, 1.0 and 2.0 m/s). One clean result fell out:"),
+    figure(L.zones("What the trial found, by delivered airflow", 0, 420,
+            [(0, 200, AMBL, "muted: little measurable change"),
+             (200, 420, GL, "clear, consistent gains")], unit=" FPM",
+            note="Below ~200 FPM (≈1.0 m/s) airflow barely moved the crop. Above it, differences were clear and repeatable."), 4,
+      "The response was a <strong>threshold, not a gentle slope</strong>: below ~200 FPM little changed; "
+      "above it, yield, plant shape and uniformity improved together" + _c("pipp2026-airflow") + "."),
+    p("That looks like it fights the leaf-level plateau in Figure 2, but it does not. Figure 2 is the "
+      "speed at a single <em>leaf</em>; FPM here is what the whole room <em>delivers</em>. Air slows as it "
+      "pushes into the canopy, so a room has to move well over 1 m/s at the fans before the buried lower "
+      "and interior leaves feel the gentle breeze Figure 3 asks for. Roughly 200 FPM delivered is about "
+      "what it takes to land <em>every</em> leaf in the sweet spot, not just the ones on the outside."),
+    p("Above that threshold, the higher-airflow rooms showed three things:"),
+    ul([
+      "<strong>More sellable flower.</strong> Stems carried less biomass and more of the plant's energy "
+      "went into bud. Trim ran about 42% in the still-air plants and was significantly lower with good "
+      "airflow, so less of the harvest ended up as larf" + _c("pipp2026-airflow") + ".",
+      "<strong>Less stress.</strong> Still-air plants had redder stems and more anthocyanin, a visible "
+      "stress marker; the well-aired plants looked more uniform and less stressed.",
+      "<strong>Taller, not weaker.</strong> Higher-airflow plants finished roughly 6 inches taller than "
+      "the still-air controls, with most vertical growth done by the end of week three, while still "
+      "putting <em>less</em> into stem. Here the extra height is relief from still-air stress, not the "
+      "mechanical dwarfing you would get under a harder, direct wind (see section 06).",
+    ]),
+    callout("key", "Uniformity is the real lesson",
+      p("Even in a tightly engineered room, the crew saw a positional bias: the first 1–2 feet of each "
+        "row behaved differently from the rest. Their takeaway is the one to keep, "
+        "<strong>&ldquo;if airflow isn&rsquo;t uniform, neither is your crop.&rdquo;</strong> That is the "
+        "dead-zone problem from section 07, now measured. Making sure no leaf is left in still air beats "
+        "chasing a high average fan speed.")),
+    callout("note", "How solid is this?",
+      p("Treat it as strong early field evidence, not settled science: the results so far are one "
+        "replicate, with a second run underway to firm up the statistics" + _c("pipp2026-airflow") +
+        ". The direction lines up cleanly with the leaf physiology in the rest of this paper.")),
+  ]})
+
+SECTIONS.append({"id": "trouble", "kicker": "10 · When it goes wrong", "title": "Troubleshooting",
   "blocks": [
     table(["Symptom", "Likely cause", "What to do"], [
       ["Bud rot starting deep in colas", "Dead-zone: air not reaching the canopy interior", "Add through-canopy airflow, defoliate, lower RH"],
@@ -177,7 +221,7 @@ SECTIONS.append({"id": "trouble", "kicker": "09 · When it goes wrong", "title":
     ], cls="compact"),
   ]})
 
-SECTIONS.append({"id": "expect", "kicker": "10 · Straight talk", "title": "Realistic expectations",
+SECTIONS.append({"id": "expect", "kicker": "11 · Straight talk", "title": "Realistic expectations",
   "blocks": [
     callout("key", "What to remember",
       ol(["Airflow's job is to <strong>thin the boundary layer</strong> on every leaf. That is the whole game.",
