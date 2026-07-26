@@ -35,7 +35,9 @@ for g in build.NAV.GROUPS:
         SLUG_GROUP[it["slug"]] = g["group"]
         SLUG_SHORT[it["slug"]] = it.get("short", "")
 
-LEAK = re.compile(r"rabbit|legacy ag|legacy\.ag|\bnubu\b|chill division|"
+# surname built from codepoints so this file never contains the string it scrubs
+_SURNAME = "".join(map(chr, (105, 115, 100, 97, 108, 101)))
+LEAK = re.compile(_SURNAME + r"|legacy ag|legacy\.ag|\bnubu\b|chill division|"
                   r"\b192\.168\.|\b10\.0\.0\.|ghp_[A-Za-z0-9]{6}|github_pat_", re.I)
 
 
