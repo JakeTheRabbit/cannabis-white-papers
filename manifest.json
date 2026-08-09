@@ -5,7 +5,7 @@
  "license": "CC BY-NC 4.0",
  "license_url": "https://creativecommons.org/licenses/by-nc/4.0/",
  "base": "https://jaketherabbit.github.io/cannabis-white-papers",
- "count": 37,
+ "count": 38,
  "papers": [
   {
    "slug": "tissue-culture",
@@ -681,6 +681,25 @@
    "version": "1.2",
    "updated": "2026-07-18",
    "ref_count": 6
+  },
+  {
+   "slug": "slab-irrigation-strategy",
+   "title": "Slab irrigation, end to end",
+   "summary": "The complete watering strategy for blocks on slabs: why a soaked slab starves a fresh block, the rooting-in procedure that prevents it, the P0-P3 daily cycle, the week-by-week schedule to chop, and how to flush without ever touching a hose.",
+   "track": "Flowering",
+   "read_time": "~25 min read",
+   "diagrams": "3 diagrams",
+   "related": [
+    "rockwool-crop-steering",
+    "irrigation-manual",
+    "root-zone-teros12",
+    "f2-crop-steering"
+   ],
+   "url": "https://jaketherabbit.github.io/cannabis-white-papers/slab-irrigation-strategy.html",
+   "md_url": "https://jaketherabbit.github.io/cannabis-white-papers/papers/slab-irrigation-strategy.md",
+   "version": "1.2",
+   "updated": "2026-07-18",
+   "ref_count": 16
   }
  ]
 }

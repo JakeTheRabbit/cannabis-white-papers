@@ -25,6 +25,7 @@ GROUPS = [
         {"slug": "coco-crop-steering", "title": "Coco & crop steering", "short": "Steer the plant with water",      "icon": "droplet", "status": "live", "track": "Flower"},
         {"slug": "rockwool-crop-steering", "title": "Rockwool & crop steering", "short": "Drybacks, saturation, the breaking point", "icon": "droplet", "status": "live", "track": "Flower"},
         {"slug": "one-steering-law", "title": "The one steering law", "short": "Coco, rockwool, soil and water, one way to steer", "icon": "droplet", "status": "live", "track": "Flower"},
+        {"slug": "slab-irrigation-strategy", "title": "Slab irrigation", "short": "Blocks on slabs, rooting-in to chop", "icon": "droplet", "status": "live", "track": "Flower"},
     ]},
     {"group": "Harvest, dry, trim & cure", "items": [
         {"slug": "harvest-dry-trim-cure", "title": "Harvest, dry, trim, cure", "short": "The whole post-harvest run", "icon": "leaf",  "status": "live", "track": "Harvest"},

@@ -47,6 +47,7 @@ PAPER_MODULES = [
     "paper_one_steering_law",
     "paper_under_canopy_lighting",
     "paper_plant_biosignal",
+    "paper_slab_irrigation",
 ]
 PAPERS, PAPER_ERRORS = [], []
 for _m in PAPER_MODULES:
