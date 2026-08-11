@@ -41,18 +41,6 @@ Seven slabs solve the length; verify the 1.2 m cross-section and airflowSeven on
 
 > **Diagram.** Figure 1. **Five per-table layout options.** Option 1 keeps a **clear centre**: two outside rows of **seven slabs**, one perforated FlowMax tube driven by its own **200 mm fan**, and two longitudinal under-canopy light runs. Options 2–5 use **three longitudinal rows** of seven slabs: slabs only; two fan-driven FlowMax tubes; tubes with longitudinal lighting; and tubes with evenly spaced transverse lighting. Arrows show fan direction and the small dots are schematic air-outlet holes. The selected option repeats on all three tables; balance perforations and confirm mounting details on site.
 
-#### Illustrated hardware examples
-
-These renders make the components easier to recognise. They are not as-built drawings; the scaled SVG, caught flow and tape measurements remain authoritative.
-
-Illustration 1. Clear-centre hardware concept. The render shows the relationship between the outside plant rows, perforated air tube, inlet fan and longitudinal lights. Use the scaled layout above—not this AI render—for counts and dimensions.
-
-Illustration 2. Dripper assembly concept. Punch point, pressure-compensating outlet, short feed tube, broad-wetting ring and catch vessel are all visible. Confirm the installed fittings and caught flow.
-
-Illustration 3. Three-plant slab concept. The cutaway highlights block-to-slab contact, root entry, the wrapped slab and drain-side slits; actual wrapper and slit geometry remain site-specific.
-
-Illustration 5. Sensor-placement concept. Use paired probes in representative rooted positions and reject edge, drain-end, emitter-adjacent or poorly contacted locations after a physical check.
-
 #### Normal dripper configurations
 
 Every runtime below delivers a 3% shot of about 221 mL or a 5% shot of about 368 mL into the assumed 7.35 L root-zone allocation. Nominal flow is only the first calculation. Catch-test representative outlets at operating pressure and replace the table runtime with the measured result.
@@ -61,11 +49,21 @@ Common per-plant emitter configurations. Runtime is rounded to the nearest secon
 
 Uniformity is part of the recipeCatch-test outlets near and far from the manifold, at the start and end of the longest active zone. Inspect filters and flush laterals to the emitter manufacturer's specification. A single dry plant among normal neighbours is an outlet or contact fault until proven otherwise.
 
+Concept 1. **Clear-centre under-canopy layout.** Recognise the hardware in the image; use the diagram for the two outside rows, seven-slab row count, clear centre, FlowMax, fan and lighting geometry.Raster is illustrative; the editable diagram and surrounding guide carry the factual definitions and operating values.
+
+Concept 2. **Dripper delivery chain.** Trace the complete delivery path, then replace nominal emitter flow with representative caught flow before programming runtime.Raster is illustrative; the editable diagram and surrounding guide carry the factual definitions and operating values.
+
+Concept 3. **Three-plant slab, roots and drainage.** The render makes the block-to-slab relationship recognisable; the diagram carries the three positions, shared slab and drain-side logic.Raster is illustrative; the editable diagram and surrounding guide carry the factual definitions and operating values.
+
+Concept 4. **Measured shot volume and runtime.** Shot percentage becomes millilitres from the verified substrate allocation, then caught flow—not the label on the emitter—sets controller seconds.Raster is illustrative; the editable diagram and surrounding guide carry the factual definitions and operating values.
+
 ## Definitions that prevent bad programming
 
 Field capacityThe stable VWC after free drainage. Measure it in this room; a printed guide value is not the sensor's field capacity.Absolute drybackDaily peak VWC minus trough VWC, in percentage points. Peak 70% and trough 50% equals a 20-point dryback. This is the controller unit used here.Relative drybackAbsolute dryback divided by starting VWC. A fall from 70% to 42% is a 28-point drop and a 40% relative dryback.P0 / P1 / P2 / P3P0 is the lights-on hold, P1 is the controlled refill, P2 maintains the daytime plateau and manages EC, and P3 is the lights-off-to-next-P1 dryback.Root-zone ECThe EC in the substrate solution, not the batch tank. Compare readings at similar VWC because EC rises automatically as water leaves.RunoffDrain volume divided by applied volume. Measure representative plants or slabs by irrigation zone; do not infer it from pump time.
 
 Convert relative dryback before programmingA 40% relative dryback from a 60% peak is a 24-point controller dryback. From a 70% peak it is 28 points. Convert the unit, then enforce the room's recovery floor.
+
+Concept 5. **VWC, field capacity and dryback units.** Absolute percentage points and relative percentage dryback are different quantities; the SVG keeps the arithmetic explicit.Raster is illustrative; the editable diagram and surrounding guide carry the factual definitions and operating values.
 
 ## Why a soaked slab pulls your block dry
 
@@ -81,7 +79,11 @@ This is why the stage you can see with your hands — top block feels light, sla
 
 If the block dries outAll the roots are in the block. If the block crosses the recovery floor it channels and the dripper cannot fix it[[12]](#ref-12) — you lose root mass in the only substrate the plant currently occupies, and the transplant stalls exactly when it should be accelerating. The reference grower's words: “if you're not watering that cube, it doesn't matter about the slab… you got to keep that cube hydrated so you don't lose your root base.”[[14]](#ref-14)
 
-Illustration 4. VWC cross-section concept. Blue indicates the wetter lower region expected after drainage; it is not a calibrated VWC scale.
+Concept 6. **Connected block-slab water column.** Full fibre contact links the block and slab hydraulically. The diagram separates the vertical gradient from plant uptake and rooting-in practice.Raster is illustrative; the editable diagram and surrounding guide carry the factual definitions and operating values.
+
+Concept 7. **Vertical VWC gradient and sampling volume.** A slab is vertically non-uniform after drainage, and the probe reports only its local sampling volume rather than the whole slab.Raster is illustrative; the editable diagram and surrounding guide carry the factual definitions and operating values.
+
+Concept 8. **Representative and misleading sensor placements.** Use paired representative probes and reject positions biased by edges, drain ends, emitter proximity or poor fibre contact.Raster is illustrative; the editable diagram and surrounding guide carry the factual definitions and operating values.
 
 ## Slab prep: level, soak, charge, slit
 
@@ -92,6 +94,8 @@ Everything downstream inherits the slab's starting state. Get it wrong here and 
 3. 3Cut drain slits after the soak, in stagesSmall slits first — 1–2 cm at 45° at the slab's lowest edge, offset from block positions, two or three per slab. Grodan cuts drainage in stages deliberately: a wetter slab early aids rooting-in; enlarge slits later when the generative phase needs faster drainage.[[3]](#ref-3) After slitting, the slab settles from saturation to field capacity.
 4. 4Open the wrapper under each block positionCut the plastic slightly smaller than the block footprint so fibre touches fibre with no plastic bridging — hydraulic contact is the whole mechanism, and a strip of wrapper under one corner of a block is an invisible rooting failure.
 5. 5Place blocks with full flat contactBlocks go down once roots are visible at the Hugo base, block at field capacity. Press down gently — no rocking. Contact area determines how fast the slab pulls the block dry _and_ how easily roots cross the boundary.[[1]](#ref-1)
+
+Concept 9. **Level, soak, charge and slit.** Preparation establishes the physical starting condition. The sequence diagram keeps level, saturation, charge and staged drainage distinct.Raster is illustrative; the editable diagram and surrounding guide carry the factual definitions and operating values.
 
 ## Rooting-in: measured shots, plant-led exit
 
@@ -106,6 +110,8 @@ The percentages below use the block plus that plant's allocated share of slab, a
 
 One outlet is a single point of failureA single ring-fed outlet is simple, but a blockage gives that plant zero water. Prefer two independently catch-tested outlets where the wetting hardware supports them, or make visible flow at every ring part of the daily SOP and alarm on zone-flow deviation.
 
+Concept 10. **Rooting-in progression and exit.** Use measured block shots while roots establish, then exit rooting-in from root penetration, plant response and stable traces rather than a fixed day alone.Raster is illustrative; the editable diagram and surrounding guide carry the factual definitions and operating values.
+
 ## P0-P3 on the controller
 
 Daily phases after root-in. The target is a repeatable curve, not a fixed timer.PhasePurposeOperating ruleP0Lights-on transpiration before irrigationAllow 1-5% additional relative dryback after lights-on, normally 30 minutes to two hours. End early at the recovery floor or a climate/feed interlock.P1Refill without channellingUse 2-6% substrate-volume shots, normally 3-5%, spaced 15-30 minutes apart. Stop at the stage-specific peak and runoff response.P2Maintain VWC and steer root-zone ECAdd or extend P2 to lower EC and dryback. Remove or shorten P2 to raise EC and dryback. This is the main fast EC lever.P3Overnight oxygenation and drybackStop routine irrigation and allow the programmed dryback. Dark-period irrigation is rescue-only when the recovery floor or plant safety requires it.
@@ -116,11 +122,13 @@ A 3-5% normal shot on the assumed 7.35 L allocation is about 221-368 mL per plan
 
 #### Irrigation-cycle cross-section
 
-Illustration 6. Irrigation-cycle concept. The four repeated cross-sections link the controller phases to VWC and pore-water EC direction. The base render is illustrative; the phase definitions and trend labels are editable overlays, not measured room history.
-
 #### Model curves for comparison
 
 Calculated exampleModel daily VWC traces for four absolute dryback depthsFour curves share a seventy percent peak and finish at sixty, fifty-five, fifty and forty-five percent VWC, representing ten, fifteen, twenty and twenty-five percentage-point drybacks.Daily VWC shape by absolute dryback depthSame 70% peak; trough changes by 10, 15, 20 or 25 absolute percentage pointsP0P1P2P340%50%60%70%10-point dryback15-point dryback20-point dryback25-point drybackModel photoperiod sequence · not room historyGraph 1. Representative model curves for the controller. Dryback is peak VWC minus trough VWC in absolute percentage points. These traces demonstrate shape and phase timing; replace them with room history before diagnosing a crop.Calculated exampleTeaching model comparing VWC and root-zone EC through drydown and refillAs volumetric water content falls, a simplified EC tendency rises. Refill restores VWC and dilutes the modelled root-zone concentration.VWC and EC must be compared at equivalent water contentTeaching model only · concentration tendency, not a substrate-sensor predictionrefillVWCEC tendencyDrydown → concentration → measured wet-up and dilutionGraph 2. A simplified teaching model: EC can rise automatically as water leaves, then fall as irrigation restores water and leaches ions. Compare actual EC readings at similar VWC; this curve is not a sensor prediction.
+
+Concept 11. **P0–P3 substrate states.** The raster shows four recognisable moisture states; the diagram defines the controller phases and the expected VWC/EC direction.Raster is illustrative; the editable diagram and surrounding guide carry the factual definitions and operating values.
+
+Concept 12. **Daily VWC and pore-water EC trace.** Read the two traces together and compare root-zone EC at similar VWC instead of treating concentration changes as independent of water content.Raster is illustrative; the editable diagram and surrounding guide carry the factual definitions and operating values.
 
 ## Veg to chop: the operating arc
 
@@ -130,6 +138,8 @@ Starting targets for LED flower in stone wool. Dryback is absolute VWC points be
 
 The phase switch is plant-ledUse the calendar to anticipate the change, then switch from generative setting to vegetative bulking when stretch actually slows. That prevents a fast cultivar being stressed for an extra week or a slow cultivar being bulked before flower set is complete.[[13]](#ref-13)[[16]](#ref-16)
 
+Concept 13. **Vegetative, setting, bulking and finish arc.** Stage changes follow plant development: stretch slowing ends setting, while slowing flower expansion begins the finish decision.Raster is illustrative; the editable diagram and surrounding guide carry the factual definitions and operating values.
+
 ## Sipkoi: simple measurements around a three-plant slab
 
 A commercial grower described a deliberately simple slab-irrigation system on the We The Growers podcast. It is useful as an operating example, not as a recipe to copy unchanged.[[15]](#ref-15)
@@ -137,6 +147,8 @@ A commercial grower described a deliberately simple slab-irrigation system on th
 Reported practiceWhat the episode describesPlants move from 4 × 4 × 2.5 in blocks onto pre-saturated slabs after about 16 days of veg. One whole slab is raised over a runoff tray; applied and drained volume are divided by its three plants. Staff report daily in/out volume and check runoff pH and EC once or twice weekly.For the first 48 hours on slabs, the reported starting program is about 12 lights-on events, two minutes each through a 0.5 GPH outlet. The grower then allows a hard three-to-four-day dryback before building toward full irrigation. Around day 14, a typical reported pattern is 10-12 four-minute events, with frequency adjusted to cultivar demand and observed drainage.Adopted hereWhat transfers wellMeasure a complete three-plant slab instead of guessing runoff from pump time.Keep event duration stable after validation and tune frequency to uptake and drainage.Use a scheduled room walk to confirm slabs are wetting and drainage has begun.Record deviations when a room or cultivar drinks differently, then use that record for the next cycle.Site-specificWhat is not copied blindlyThe 48-hour wetting period and following multi-day dryback are aggressive and need block/slab VWC, root inspection and a recovery floor.One outlet per plant has no emitter redundancy.Exact feed EC, runoff and frequency belong to that facility's media, climate, light and cultivar.Physical checks complement sensors; they do not justify ignoring a verified fault in either system.
 
 Podcast timestamps: slab placement 27:33-28:12; slab-scale runoff collection 31:43-32:33; initial flower irrigation 39:44-41:12; first-three-week adjustment 48:55-53:37.[[15]](#ref-15)
+
+Concept 14. **Three-plant measurement and runoff layout.** A representative check combines near/far caught outlet flow, paired substrate probes and physical runoff from the shared slab.Raster is illustrative; the editable diagram and surrounding guide carry the factual definitions and operating values.
 
 ## Correct EC first; use a defined finish
 
@@ -146,6 +158,8 @@ There is no blanket day-45 dilution and no automatic plain-water week.
 2. 2Correct excess EC with controlled leachingUse balanced feed whose EC is below the root-zone EC, increase P2 and runoff temporarily, and watch the next complete trace. Stop when root-zone and runoff EC return toward the stage band. Do not stack a feed-EC change and a timing change on the same day unless plant safety requires it.
 3. 3Final two weeksUse the cited two-part finish procedure at the scheduled EC rather than tapering by default. Recheck pH after the component change.[[17]](#ref-17)
 4. 4Final clean-water periodThe cited procedure uses its line-cleaning product in RO water for the final one to three days and specifies one day in stone wool. Use root-zone or runoff EC to confirm the finish. This is a defined product procedure, not a standing instruction to plain-water flush every crop.[[17]](#ref-17)
+
+Concept 15. **Root-zone EC correction and defined finish.** Correct the root zone from comparable measurements and bounded P2/runoff changes before using the cited component-change and final clean-water procedure.Raster is illustrative; the editable diagram and surrounding guide carry the factual definitions and operating values.
 
 ## Climate defines how fast the irrigation curve moves
 
@@ -159,15 +173,21 @@ DemandTreat light or VPD changes as irrigation changesAfter PPFD, under-canopy l
 
 Calculated exampleRelative air-delivery comparison along a 7.6 metre tableDimensionless model curves compare baseline air movement, one central perforated tube and two perforated tubes.Additional under-canopy airflow along 7.6 mRelative air-delivery index · dimensionless scenario, not measured velocity0.00.40.81.2BaselineOne centre tubeTwo tubesfan end · 0 mfar end · 7.6 mFinal perforations must be site-balanced with static-pressure and traverse measurementsGraph 3. Relative air-delivery scenarios show the intended comparison, not promised performance. Hole diameter and spacing remain site-balanced; verify the installed tube with static pressure and an anemometer traverse.Calculated exampleUnder-canopy electrical input converted to eventual room heat loadA linear conversion from zero to eight hundred watts and zero to two thousand seven hundred thirty British thermal units per hour, plus normalized local temperature-rise scenarios for three air-exchange levels.Under-canopy electrical load becomes room heatExact conversion: BTU/h = watts × 3.412 · local temperature depends on air exchange06821,3652,0472,7300 W200 W400 W600 W800 WBTU/hLocal heat indexlow air · 1.00med · 0.65high · 0.40model envelope800 W = 2,730 BTU/hAir movement redistributes local heat; it does not remove the electrical load from the room.Graph 4. Electrical input is converted directly: 800 W is approximately 2,730 BTU/h. The local heat-index bars are modelled envelopes for low, medium and high under-canopy air exchange—not predicted leaf-temperature changes.
 
+Concept 16. **Climate demand and irrigation response.** Light, VPD and airflow set transpiration demand; the resulting VWC slope determines whether timing or volume needs a bounded response.Raster is illustrative; the editable diagram and surrounding guide carry the factual definitions and operating values.
+
 ## Troubleshooting
 
 Table 4. Diagnose from the trace and representative runoff before changing a setpoint.SymptomLikely causeFirst actionRunoff high, VWC barely risesChannelling, poor block-slab contact, or emitter placementInspect physically; slow the event or hand-rewet with balanced feed; do not increase volume blindlyRoot-zone EC climbs day over day outside the stage bandToo little leaching, too much dryback, feed mismatch, or excessive demandVerify at equal VWC, check feed EC and climate, then add P2/runoff with one bounded changeRoot-zone EC falls below targetPeak/runoff too high for the steering phaseReduce P2 or peak slightly and observe one full dayP1 never reaches its targetTarget above achievable Vmax, blocked emitter, bad flow assumption, or undersized rampCatch-test, verify Vmax and substrate volume, then adjust the modelFresh transplants stall while the slab stays wetHugo is draining into the slab faster than roots can replace uptakeResume measured bridge shots to the block and inspect roots/contact; do not run the slab sensor as the sole triggerDryback suddenly deepensMissed event or demand change from PPFD, VPD, CO2 or airflowCheck logs and climate first; compensate with P2 only after identifying the causeOne plant wilts while neighbours track normallySingle-emitter failure or local contact problemRestore flow and hand-rescue that block with balanced feed if required
+
+Concept 17. **Symptom-to-cause troubleshooting.** Start with the observed symptom, run the physical check that separates likely causes, then change one steering lever and observe a full grow-day.Raster is illustrative; the editable diagram and surrounding guide carry the factual definitions and operating values.
 
 ## Combined setpoints
 
 Substrate model3.6 L block + one-third of assumed 11.25 L slab = 7.35 L/plant; confirm the wrapperShot guardrail2-6% = about 147-441 mL; calculate time from total caught flow per plantNormal P1 shot3-5% = about 221-368 mL; normally spaced 15-30 minutes during the rampP0 after lights-on1-5% additional relative dryback, normally 30 minutes to two hoursVegetative runoff8-16%; peak at or slightly above measured field capacityGenerative runoff1-7%; peak at or below measured field capacityController drybackVeg/bulk 10-15 points; setting builds from 15 toward 20-25; finish starts 20-25; all bounded by the recovery floorRoot-zone ECVeg 3-5; flower setting 5-10; bulk 3.5-6; finish 3-4Flower arcGenerative until stretch ends; vegetative bulk until expansion slows; lower EC plus generative dryback to finishDefined finishUse the cited component-change and final clean-water procedure; verify the endpoint from root-zone or runoff EC
 
 The five rulesConvert relative dryback to controller points before programming it.Change from setting to bulk when stretch ends, not because a calendar page turned.Use P2 and runoff as the fast root-zone EC control; keep feed EC as the slower recipe lever.Verify shot duration from actual outlet flow and total assigned substrate volume.Make one bounded change, observe a complete grow-day, then decide again.
+
+Concept 18. **Combined operating-setpoint dashboard.** The dashboard groups starting bands for shots, P0, runoff, dryback and finish EC; the crop, comparable sensors and representative runoff remain the authority.Raster is illustrative; the editable diagram and surrounding guide carry the factual definitions and operating values.
 
 ## References
 

@@ -97,7 +97,8 @@ _refs_match = re.search(
 )
 assert len(SECTIONS) == 13, "expected 13 guide sections"
 assert _refs_match, "missing audited reference list"
-assert _PAYLOAD.count('data-visual-kind="illustrative-render"') == 6
+assert len(re.findall(r'<figure\b[^>]*class="[^"]*\bconcept-pair\b', _PAYLOAD)) == 18
+assert len(re.findall(r'\bdata-concept="[^"]+"', _PAYLOAD)) == 18
 assert len(re.findall(r'<li\b[^>]*\bid="ref-[^"]+"', _PAYLOAD)) == 17
 assert "data:image" not in _PAYLOAD
 
@@ -109,7 +110,7 @@ RAW_REFERENCES = _refs_match.group(1)
 def _corpus_blocks(block: str) -> list[str]:
     if block.lstrip().startswith("<style"):
         return []
-    if "technical-plate" in block:
+    if "technical-plate" in block or "concept-pair" in block:
         return [
             f"<p>{caption}</p>"
             for caption in re.findall(r"<figcaption>(.*?)</figcaption>", block, re.S)
