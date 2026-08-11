@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""Verified neutral slab-irrigation field guide with editable technical overlays."""
+"""Verified neutral slab-irrigation field guide with anchored visual diagrams."""
 from __future__ import annotations
 
 import html as _html
@@ -16,7 +16,7 @@ SUB = (
 )
 META = [
     ("droplet", "Feed & steering"),
-    ("image", "6 technical plates"),
+    ("image", "18 anchored visual guides"),
     ("quote", "17 cited sources"),
     ("clock", "~30 min read"),
 ]
