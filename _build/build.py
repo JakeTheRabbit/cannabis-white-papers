@@ -2,7 +2,7 @@
 """Build orchestrator. Emits the static site to the repo root.
 Run:  cd /c/Github/white-papers/_build && python build.py
 """
-import os, re, json, sys, html as _h, hashlib
+import os, re, json, sys, html as _h, hashlib, shutil
 sys.path.insert(0, os.path.dirname(__file__))
 
 import theme, app_js, shell
@@ -241,9 +241,10 @@ def render_paper(mod):
     refs = (f'<div class="refs"><h3>References</h3><ol>{ref_lis}</ol>'
             f'<p class="foot">Citations marked in-text as [n] map to this list. Primary literature and official guidance '
             f'except where noted. Cannabis tissue culture is strongly genotype-dependent, verify '
-            f'dilutions, hormone doses and local regulations against the primary sources before relying on them.</p></div>')
+            f'dilutions, hormone doses and local regulations against the primary sources before relying on them.</p></div>') if ref_lis else ""
 
-    body = hero + index_card + "".join(body_secs) + related + refs
+    body = (hero + index_card + "".join(body_secs) + related + refs
+            + getattr(mod, "RAW_REFERENCES", ""))
     rail_toc = [(s["id"], s["title"]) for s in secs]
     return shell.page(mod.SLUG, mod.TITLE, body, desc=mod.SUB, rail_toc=rail_toc, mobile_active="papers")
 
@@ -529,6 +530,9 @@ def main():
     sizes["assets/app.css"] = w("assets/app.css", theme.CSS)
     sizes["assets/app.js"] = w("assets/app.js", app_js.JS)
     sizes["assets/search-index.js"] = w("assets/search-index.js", build_search_index())
+    static_assets = os.path.join(os.path.dirname(__file__), "static")
+    if os.path.isdir(static_assets):
+        shutil.copytree(static_assets, ASSETS, dirs_exist_ok=True)
     sizes["index.html"] = w("index.html", render_index())
     sizes["curriculum.html"] = w("curriculum.html", render_curriculum())
     sizes["papers.html"] = w("papers.html", render_papers())

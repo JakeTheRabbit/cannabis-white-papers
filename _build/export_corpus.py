@@ -207,7 +207,7 @@ def _meta(mod):
 def paper_md(mod):
     used = set()
     body = []
-    for sec in mod.SECTIONS:
+    for sec in getattr(mod, "CORPUS_SECTIONS", mod.SECTIONS):
         title = html.unescape(re.sub(r"<[^>]+>", "", sec["title"]))
         body.append(f"## {title}\n")
         for blk in sec["blocks"]:
@@ -216,7 +216,7 @@ def paper_md(mod):
                 body.append(md + "\n")
     # references (footnote defs for every declared ref, in order)
     refs_struct = []
-    foot = ["## References\n"]
+    foot = ["## References\n"] if mod.REF_IDS else []
     for n, rid in enumerate(mod.REF_IDS, 1):
         r = REFS.get(rid)
         if not r:

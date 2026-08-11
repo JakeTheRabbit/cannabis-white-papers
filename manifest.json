@@ -685,10 +685,10 @@
   {
    "slug": "slab-irrigation-strategy",
    "title": "Slab irrigation, end to end",
-   "summary": "The complete watering strategy for blocks on slabs: why a soaked slab starves a fresh block, the rooting-in procedure that prevents it, the P0-P3 daily cycle, the week-by-week schedule to chop, and how to flush without ever touching a hose.",
+   "summary": "A measured slab-irrigation field guide: room layout, common dripper runtimes, rooting-in, P0-P3 control, crop-stage steering, EC management and finish.",
    "track": "Flowering",
-   "read_time": "~25 min read",
-   "diagrams": "3 diagrams",
+   "read_time": "~30 min read",
+   "diagrams": "",
    "related": [
     "rockwool-crop-steering",
     "irrigation-manual",
@@ -699,7 +699,7 @@
    "md_url": "https://jaketherabbit.github.io/cannabis-white-papers/papers/slab-irrigation-strategy.md",
    "version": "1.2",
    "updated": "2026-07-18",
-   "ref_count": 16
+   "ref_count": 0
   }
  ]
 }
