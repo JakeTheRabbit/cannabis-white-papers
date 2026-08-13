@@ -79,6 +79,7 @@ GROUPS = [
         {"slug": "unit-economics",     "title": "Yield & unit economics", "short": "g/m², g/W, g/kWh and the true cost of a gram", "icon": "gauge", "status": "live", "track": "Facility"},
     ]},
     {"group": "Know the plant", "items": [
+        {"slug": "plant-biology",         "title": "Plant biology 101",     "short": "Anatomy, life cycle, photoperiod, hormones", "icon": "leaf",     "status": "live", "track": "Reference"},
         {"slug": "cannabinoids-terpenes", "title": "Cannabis chemistry",    "short": "Cannabinoids & terpenes, from gland to COA", "icon": "flask",    "status": "live", "track": "Reference"},
         {"slug": "genetics-phenohunting", "title": "Genetics & pheno hunt", "short": "Seed genetics, selection and the pheno hunt", "icon": "seedling", "status": "live", "track": "Reference"},
     ]},

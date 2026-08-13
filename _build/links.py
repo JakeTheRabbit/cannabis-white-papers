@@ -54,6 +54,7 @@ LINK_PHRASES = {
     "hvac-dehumidification": ["sensible and latent", "dehumidifier sizing", "lights-off humidity spike", "climate plant", "hot-gas reheat", "condensate", "N+1 redundancy"],
     "cannabinoids-terpenes": ["cannabinoids", "terpenes", "decarboxylation", "CBN", "entourage effect", "THCA"],
     "energy-sustainability": ["kWh per gram", "lighting efficacy", "double dividend", "demand charges", "heat-recovery dehumidification", "condensate reuse", "submetering", "energy benchmarking"],
+    "plant-biology": ["plant biology", "life cycle", "phytochrome", "critical night length", "source-sink", "axillary bud", "hermaphroditism", "silver thiosulfate"],
 }
 
 # Flat (phrase, slug) list, longest phrase first so multi-word wins over substrings.

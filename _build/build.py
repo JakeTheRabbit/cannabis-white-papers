@@ -61,6 +61,7 @@ PAPER_MODULES = [
     "paper_hvac",
     "paper_cannabinoids_terpenes",
     "paper_energy",
+    "paper_plant_biology",
 ]
 PAPERS, PAPER_ERRORS = [], []
 for _m in PAPER_MODULES:
@@ -422,7 +423,7 @@ CURRICULUM = [
    ("Compliance, licensing & track-and-trace", "compliance-track-trace"),
    ("Energy, utilities & sustainability", "energy-sustainability"), ("Yield per watt & unit economics", "unit-economics")]),
  ("Reference · Know the plant", "Background worth having.", [
-   ("Cannabis plant biology & life cycle", None), ("Cannabinoids & terpenes", "cannabinoids-terpenes"),
+   ("Cannabis plant biology & life cycle", "plant-biology"), ("Cannabinoids & terpenes", "cannabinoids-terpenes"),
    ("Genetics, seeds & phenotype hunting", "genetics-phenohunting")]),
 ]
 

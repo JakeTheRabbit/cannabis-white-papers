@@ -441,6 +441,19 @@ IMAGES += [
  {"slug":"energy-sustainability","n":4,"sec":12,"model":GK,"ar":"16:9","res":"2k",
   "prompt":"CT clamps submetering panel",
   "caption":"Submetering in practice: CT clamps per end-use turn one monthly utility number into per-room, per-system signals — the meter finds faults before the crop shows them.","alt":"Open electrical panel with CT clamps and an energy submeter beside a dashboard tablet"},
+ # ---- plant biology ----
+ {"slug":"plant-biology","n":1,"sec":4,"model":GK,"ar":"16:9","res":"2k",
+  "prompt":"bract and stigmas macro",
+  "caption":"Bracts and paired stigmas on a live flower — the single-flower unit from the diagram, in the flesh.","alt":"Macro photo of cannabis bracts with white stigmas"},
+ {"slug":"plant-biology","n":2,"sec":5,"model":GK,"ar":"16:9","res":"2k",
+  "prompt":"trichomes photomicrograph",
+  "caption":"Capitate-stalked trichomes under magnification — clear, milky and amber heads on their stalks.","alt":"Microscope view of stalked cannabis trichomes"},
+ {"slug":"plant-biology","n":3,"sec":9,"model":GK,"ar":"16:9","res":"2k",
+  "prompt":"female pre-flower at node",
+  "caption":"A female pre-flower at the node — the loupe check from the sexing diagram on a real plant.","alt":"Female cannabis pre-flower with white stigmas at a stem node"},
+ {"slug":"plant-biology","n":4,"sec":12,"model":GK,"ar":"16:9","res":"2k",
+  "prompt":"healthy white root ball",
+  "caption":"What healthy looks like below ground: bright white, densely branching roots at transplant.","alt":"Healthy white cannabis roots around coco coir substrate"},
 ]
 
 def by_slug():

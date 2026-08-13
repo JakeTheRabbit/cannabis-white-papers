@@ -13,7 +13,7 @@ SUB = ("What kind of plant cannabis actually is, every part of it named, and the
        "the life cycle stage by stage, how the night triggers flowering, sex and hermaphroditism, "
        "photosynthesis, roots and hormones. The biology every other paper on this site leans on.")
 META = [("leaf", "Reference"), ("image", "12 diagrams"),
-        ("quote", "Evidence-linked · 16 sources"), ("clock", "~19 min read")]
+        ("quote", "Evidence-linked · 16 sources"), ("clock", "~26 min read")]
 RELATED = ["flowering-stages", "seeds-germination", "lighting-fundamentals"]
 
 REF_IDS = [

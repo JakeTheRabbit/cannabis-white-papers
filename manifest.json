@@ -5,7 +5,7 @@
  "license": "CC BY-NC 4.0",
  "license_url": "https://creativecommons.org/licenses/by-nc/4.0/",
  "base": "https://jaketherabbit.github.io/cannabis-white-papers",
- "count": 51,
+ "count": 52,
  "papers": [
   {
    "slug": "tissue-culture",
@@ -929,6 +929,24 @@
    "version": "1.2",
    "updated": "2026-07-18",
    "ref_count": 14
+  },
+  {
+   "slug": "plant-biology",
+   "title": "Cannabis plant biology and the life cycle",
+   "summary": "What kind of plant cannabis actually is, every part of it named, and the machinery underneath: the life cycle stage by stage, how the night triggers flowering, sex and hermaphroditism, photosynthesis, roots and hormones. The biology every other paper on this site leans on.",
+   "track": "Know the plant",
+   "read_time": "~26 min read",
+   "diagrams": "12 diagrams",
+   "related": [
+    "flowering-stages",
+    "seeds-germination",
+    "lighting-fundamentals"
+   ],
+   "url": "https://jaketherabbit.github.io/cannabis-white-papers/plant-biology.html",
+   "md_url": "https://jaketherabbit.github.io/cannabis-white-papers/papers/plant-biology.md",
+   "version": "1.2",
+   "updated": "2026-07-18",
+   "ref_count": 16
   }
  ]
 }
