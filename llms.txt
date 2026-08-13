@@ -23,6 +23,7 @@ Licensed CC BY-NC 4.0 (https://creativecommons.org/licenses/by-nc/4.0/). Attribu
 ## Harvest, dry, trim & cure
 - [Harvest, dry, trim and cure](https://jaketherabbit.github.io/cannabis-white-papers/papers/harvest-dry-trim-cure.md): The whole post-harvest run
 - [GMP hash manufacturing: facility flow and quality control](https://jaketherabbit.github.io/cannabis-white-papers/papers/gmp-hash-lab.md): Turn flower into concentrate
+- [Hash rosin, pressed: a solventless systems guide](https://jaketherabbit.github.io/cannabis-white-papers/papers/hash-rosin-pressing.md): Heat, pressure, time & the micron screen
 
 ## Environment & climate
 - [The cannabis grow room: a systems guide](https://jaketherabbit.github.io/cannabis-white-papers/papers/grow-room-systems.md): The whole room as one system

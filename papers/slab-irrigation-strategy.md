@@ -222,3 +222,5 @@ We The Growers podcast, E.31 — Sipkoi, published 13 August 2024. Slab placemen
 Whipple J. _The CCI Black Book_, first edition, 2023, Garden Management chapter, pp. 56-63. (commercial cultivation guidance) [Publisher](https://ccibook.com/)
 
 Athena Agriculture. _Fade Procedure_. Replace Core with Fade for the final two weeks, feed Fade + Bloom at full EC, then use Cleanse in RO water for the final 1-3 days, one day in rockwool. (manufacturer product procedure) [Official Athena Fade procedure](https://support.athenaag.com/hc/en-us/article_attachments/14949498083739)
+
+

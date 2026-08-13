@@ -9,6 +9,7 @@ MODEL_LABEL = {
     "cinematic_studio_2_5": "Cinema Studio",
     "factcheck_pack": "Fact-check pack",
     "code_diagram": "Educational diagram",
+    "grok_imagine": "Grok Imagine",
 }
 
 # NB = photoreal practical, GPT = labelled/diagram, CIN = epic/cinematic hero
@@ -247,6 +248,41 @@ _SKIP = {("airflow-design", 2), ("smart-watering-vrwe", 1), ("signal-and-noise",
          ("closed-loop", 1), ("plant-state-dashboard", 1), ("f2-crop-steering", 1),
          ("gmp-hash-lab", 2), ("facility-3d", 1)}
 IMAGES = [im for im in IMAGES if (im["slug"], im["n"]) not in _SKIP]
+
+GK = "grok_imagine"
+IMAGES += [
+ # ---- hash rosin pressing (photoreal; sec = 0-based section index) ----
+ {"slug":"hash-rosin-pressing","n":1,"sec":0,"model":GK,"ar":"16:9","res":"2k",
+  "prompt":"macro frosty trichome-covered bud",
+  "caption":"The raw material: every frosty &lsquo;crystal&rsquo; is a trichome — a stalk holding a resin head. All of solventless is collecting these heads and squeezing them.","alt":"Macro of cannabis bud covered in trichomes"},
+ {"slug":"hash-rosin-pressing","n":2,"sec":1,"model":GK,"ar":"16:9","res":"2k",
+  "prompt":"rosin flowing from press onto parchment",
+  "caption":"The whole process in one frame: heated plates, folded parchment, and golden rosin flowing — heat to melt, pressure to move, mesh to clean.","alt":"Golden rosin flowing from a press onto parchment"},
+ {"slug":"hash-rosin-pressing","n":3,"sec":2,"model":GK,"ar":"16:9","res":"2k",
+  "prompt":"finished rosin jar and dab rig",
+  "caption":"Where the pipeline ends: a stable, finished concentrate and the rig that vaporises it. Everything upstream protects what's in this jar.","alt":"Jar of rosin next to a dab rig"},
+ {"slug":"hash-rosin-pressing","n":4,"sec":3,"model":GK,"ar":"16:9","res":"2k",
+  "prompt":"micron bags loaded with hash",
+  "caption":"Loading the micron bag: 2–7 g of hash in a fine nylon mesh, folded twice, over fresh parchment. The mesh size is the purity gate.","alt":"Filling micron press bags with bubble hash"},
+ {"slug":"hash-rosin-pressing","n":5,"sec":10,"model":GK,"ar":"16:9","res":"2k",
+  "prompt":"ice water hash washing vessel",
+  "caption":"The wash: near-freezing water, gentle agitation, and a stack of mesh bags below. Cold keeps the heads brittle so they snap off intact.","alt":"Ice-water hash washing vessel with paddle and bags"},
+ {"slug":"hash-rosin-pressing","n":6,"sec":10,"model":GK,"ar":"16:9","res":"2k",
+  "prompt":"microplaned hash on freeze dryer trays",
+  "caption":"Drying done right: microplaned hash spread thin on trays for the freeze-dryer — water leaves under vacuum, terpenes stay.","alt":"Microplaned bubble hash on freeze dryer trays"},
+ {"slug":"hash-rosin-pressing","n":7,"sec":11,"model":GK,"ar":"16:9","res":"2k",
+  "prompt":"press plates with PID controller",
+  "caption":"The hardware that matters: even plates and a PID holding the setpoint. Cheap plates swing and scorch; accuracy is what buys low-temp pressing.","alt":"Rosin press plates with PID temperature controller"},
+ {"slug":"hash-rosin-pressing","n":8,"sec":12,"model":GK,"ar":"16:9","res":"2k",
+  "prompt":"trichome heads under magnification",
+  "caption":"Read the material: under magnification you can see head size and how many are intact — that read picks your micron and your temperature.","alt":"Loose trichome heads under magnification"},
+ {"slug":"hash-rosin-pressing","n":9,"sec":13,"model":GK,"ar":"16:9","res":"2k",
+  "prompt":"cold-cure badder jar",
+  "caption":"Cold-cure badder: days to weeks sealed at 10–21 °C sets this creamy texture while the volatile terpenes stay in the jar.","alt":"Jar of whipped cold-cure rosin badder"},
+ {"slug":"hash-rosin-pressing","n":10,"sec":13,"model":GK,"ar":"16:9","res":"2k",
+  "prompt":"THCa diamonds in terp sauce",
+  "caption":"Diamonds and sauce: THCa crystallised out of solution, sitting in the terpene fraction. Only undecarbed THCa will ever do this.","alt":"THCa diamond crystals in golden terpene sauce"},
+]
 
 def by_slug():
     d = {}

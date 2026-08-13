@@ -5,7 +5,7 @@
  "license": "CC BY-NC 4.0",
  "license_url": "https://creativecommons.org/licenses/by-nc/4.0/",
  "base": "https://jaketherabbit.github.io/cannabis-white-papers",
- "count": 38,
+ "count": 39,
  "papers": [
   {
    "slug": "tissue-culture",
@@ -700,6 +700,23 @@
    "version": "1.2",
    "updated": "2026-07-18",
    "ref_count": 0
+  },
+  {
+   "slug": "hash-rosin-pressing",
+   "title": "Hash rosin, pressed: a solventless systems guide",
+   "summary": "Rosin is mechanical, not chemical: heat, pressure, time and a micron screen acting on a material whose quality ceiling was already fixed upstream — at harvest, in the wash, in the dry. This guide maps the whole chain, trichome to dab.",
+   "track": "Harvest, dry, trim & cure",
+   "read_time": "~22 min read",
+   "diagrams": "8 diagrams",
+   "related": [
+    "gmp-hash-lab",
+    "harvest-dry-trim-cure"
+   ],
+   "url": "https://jaketherabbit.github.io/cannabis-white-papers/hash-rosin-pressing.html",
+   "md_url": "https://jaketherabbit.github.io/cannabis-white-papers/papers/hash-rosin-pressing.md",
+   "version": "1.2",
+   "updated": "2026-07-18",
+   "ref_count": 16
   }
  ]
 }

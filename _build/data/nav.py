@@ -30,6 +30,7 @@ GROUPS = [
     {"group": "Harvest, dry, trim & cure", "items": [
         {"slug": "harvest-dry-trim-cure", "title": "Harvest, dry, trim, cure", "short": "The whole post-harvest run", "icon": "leaf",  "status": "live", "track": "Harvest"},
         {"slug": "gmp-hash-lab",          "title": "GMP hash lab",             "short": "Turn flower into concentrate", "icon": "flask", "status": "live", "track": "Harvest"},
+        {"slug": "hash-rosin-pressing",   "title": "Hash rosin, pressed",      "short": "Heat, pressure, time & the micron screen", "icon": "flask", "status": "live", "track": "Harvest"},
     ]},
     {"group": "Environment & climate", "items": [
         {"slug": "grow-room-systems",    "title": "Grow-room systems",     "short": "The whole room as one system",  "icon": "building", "status": "live", "track": "Environment"},

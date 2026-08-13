@@ -48,6 +48,7 @@ PAPER_MODULES = [
     "paper_under_canopy_lighting",
     "paper_plant_biosignal",
     "paper_slab_irrigation",
+    "paper_hash_rosin",
 ]
 PAPERS, PAPER_ERRORS = [], []
 for _m in PAPER_MODULES:
@@ -381,7 +382,7 @@ CURRICULUM = [
    ("Ripening, flush & harvest timing", None)]),
  ("4 · Harvest, dry, trim & cure", "Turn flower into finished product.", [
    ("Harvest, dry, trim & cure", "harvest-dry-trim-cure"), ("GMP hash manufacturing", "gmp-hash-lab"),
-   ("Extraction & concentrates", None), ("Lab testing, potency & COAs", None)]),
+   ("Hash rosin: solventless pressing", "hash-rosin-pressing"), ("Lab testing, potency & COAs", None)]),
  ("Runs every stage · Environment & climate", "The conditions the plant lives in.", [
    ("The grow room: a systems guide", "grow-room-systems"), ("Lighting: spectrum, PPFD & DLI", "lighting-fundamentals"),
    ("Airflow design", "airflow-design"), ("Under-canopy & inter-canopy lighting", "under-canopy-lighting"),
