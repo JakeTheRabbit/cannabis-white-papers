@@ -15,10 +15,13 @@ GROUPS = [
         {"slug": "seeds-germination",  "title": "Seeds & germination",  "short": "Pop seeds and raise seedlings",            "icon": "seedling", "status": "live", "track": "Propagation"},
         {"slug": "cloning",            "title": "Cloning",              "short": "Cuttings that root every time",            "icon": "seedling", "status": "live", "track": "Propagation"},
         {"slug": "tissue-culture",     "title": "Tissue culture",       "short": "Clean up genetics from a speck of tissue", "icon": "spark",    "status": "live", "track": "Propagation"},
+        {"slug": "transplanting",      "title": "Transplanting",        "short": "Pot up without stalling the plant",        "icon": "seedling", "status": "live", "track": "Propagation"},
+        {"slug": "mother-plants",      "title": "Mother plants",        "short": "Stock plants, HpLVd control & succession", "icon": "seedling", "status": "live", "track": "Propagation"},
     ]},
     {"group": "Vegetative growth", "items": [
         {"slug": "light-acclimation",    "title": "Light acclimation",     "short": "Ramp light without bleaching",   "icon": "sun",      "status": "live", "track": "Veg"},
         {"slug": "defoliation-training", "title": "Defoliation & training", "short": "Train the canopy for yield",     "icon": "scissors", "status": "live", "track": "Veg"},
+        {"slug": "veg-management",       "title": "Vegetative management",  "short": "Size veg by count, pot and canopy, then flip", "icon": "leaf", "status": "live", "track": "Veg"},
     ]},
     {"group": "Flowering", "items": [
         {"slug": "flowering-stages",   "title": "Flower week by week",  "short": "The flip through to ripe",       "icon": "spark",   "status": "live", "track": "Flower"},
@@ -26,11 +29,13 @@ GROUPS = [
         {"slug": "rockwool-crop-steering", "title": "Rockwool & crop steering", "short": "Drybacks, saturation, the breaking point", "icon": "droplet", "status": "live", "track": "Flower"},
         {"slug": "one-steering-law", "title": "The one steering law", "short": "Coco, rockwool, soil and water, one way to steer", "icon": "droplet", "status": "live", "track": "Flower"},
         {"slug": "slab-irrigation-strategy", "title": "Slab irrigation", "short": "Blocks on slabs, rooting-in to chop", "icon": "droplet", "status": "live", "track": "Flower"},
+        {"slug": "ripening-harvest-timing", "title": "Ripening & the chop", "short": "Trichome reads, flush truth, the harvest call", "icon": "spark", "status": "live", "track": "Flower"},
     ]},
     {"group": "Harvest, dry, trim & cure", "items": [
         {"slug": "harvest-dry-trim-cure", "title": "Harvest, dry, trim, cure", "short": "The whole post-harvest run", "icon": "leaf",  "status": "live", "track": "Harvest"},
         {"slug": "gmp-hash-lab",          "title": "GMP hash lab",             "short": "Turn flower into concentrate", "icon": "flask", "status": "live", "track": "Harvest"},
         {"slug": "hash-rosin-pressing",   "title": "Hash rosin, pressed",      "short": "Heat, pressure, time & the micron screen", "icon": "flask", "status": "live", "track": "Harvest"},
+        {"slug": "lab-testing-coas",      "title": "Lab testing & COAs",       "short": "Reading COAs: potency math, methods, limits", "icon": "flask", "status": "live", "track": "Harvest"},
     ]},
     {"group": "Environment & climate", "items": [
         {"slug": "grow-room-systems",    "title": "Grow-room systems",     "short": "The whole room as one system",  "icon": "building", "status": "live", "track": "Environment"},
@@ -39,6 +44,8 @@ GROUPS = [
         {"slug": "under-canopy-lighting","title": "Under-canopy lighting",  "short": "Photons at the floor: SCL & ICL",  "icon": "sun",      "status": "live", "track": "Environment"},
         {"slug": "co2-enrichment",       "title": "CO2 enrichment",        "short": "Feed the plant carbon, safely", "icon": "spark",    "status": "live", "track": "Environment"},
         {"slug": "scaling-high-light",   "title": "Scaling to high light", "short": "Find the limiting factor, dial to it", "icon": "gauge",  "status": "live", "track": "Environment"},
+        {"slug": "temp-humidity-vpd",    "title": "Temp, humidity & VPD",  "short": "Leaf VPD, dew point and stage bands",  "icon": "wave",   "status": "live", "track": "Environment"},
+        {"slug": "hvac-dehumidification","title": "HVAC & dehumidifiers",  "short": "Sensible vs latent: sizing the climate plant", "icon": "wind", "status": "live", "track": "Environment"},
     ]},
     {"group": "Water, substrate & feed", "items": [
         {"slug": "substrates-overview",  "title": "Substrates compared",     "short": "Coco, rockwool, soil, hydro",   "icon": "leaf",    "status": "live", "track": "Feed"},
@@ -67,6 +74,13 @@ GROUPS = [
     {"group": "Facility & quality", "items": [
         {"slug": "facility-3d",       "title": "3D facility model",  "short": "See the build before you build it", "icon": "building", "status": "live", "track": "Facility"},
         {"slug": "daily-checks",       "title": "Daily checks",       "short": "The self-completing facility round", "icon": "dashboard", "status": "live", "track": "Facility"},
+        {"slug": "compliance-track-trace", "title": "Compliance & tracking", "short": "Licences, batch records and seed-to-sale", "icon": "shield", "status": "live", "track": "Facility"},
+        {"slug": "energy-sustainability", "title": "Energy & utilities",    "short": "Where the kWh go and how to spend fewer",  "icon": "spark",  "status": "live", "track": "Facility"},
+        {"slug": "unit-economics",     "title": "Yield & unit economics", "short": "g/m², g/W, g/kWh and the true cost of a gram", "icon": "gauge", "status": "live", "track": "Facility"},
+    ]},
+    {"group": "Know the plant", "items": [
+        {"slug": "cannabinoids-terpenes", "title": "Cannabis chemistry",    "short": "Cannabinoids & terpenes, from gland to COA", "icon": "flask",    "status": "live", "track": "Reference"},
+        {"slug": "genetics-phenohunting", "title": "Genetics & pheno hunt", "short": "Seed genetics, selection and the pheno hunt", "icon": "seedling", "status": "live", "track": "Reference"},
     ]},
 ]
 

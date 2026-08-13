@@ -49,6 +49,18 @@ PAPER_MODULES = [
     "paper_plant_biosignal",
     "paper_slab_irrigation",
     "paper_hash_rosin",
+    "paper_ripening",
+    "paper_transplanting",
+    "paper_veg_management",
+    "paper_mother_plants",
+    "paper_genetics_phenohunting",
+    "paper_temp_humidity_vpd",
+    "paper_lab_testing",
+    "paper_unit_economics",
+    "paper_compliance",
+    "paper_hvac",
+    "paper_cannabinoids_terpenes",
+    "paper_energy",
 ]
 PAPERS, PAPER_ERRORS = [], []
 for _m in PAPER_MODULES:
@@ -370,24 +382,24 @@ CURRICULUM = [
  ("1 · Propagation", "Start the plants.", [
    ("Seeds, germination & seedlings", "seeds-germination"), ("Cloning", "cloning"),
    ("Tissue culture: clean genetics", "tissue-culture"),
-   ("Mother / stock-plant management", None), ("Transplanting & potting up", None)]),
+   ("Mother / stock-plant management", "mother-plants"), ("Transplanting & potting up", "transplanting")]),
  ("2 · Vegetative growth", "Build a big, healthy plant.", [
    ("Light acclimation", "light-acclimation"), ("Defoliation & plant training", "defoliation-training"),
-   ("Vegetative management & timing", None)]),
+   ("Vegetative management & timing", "veg-management")]),
  ("3 · Flowering", "Steer the plant to yield and quality.", [
    ("The flower cycle, week by week", "flowering-stages"),
    ("Precision coco cultivation: crop steering", "coco-crop-steering"),
    ("Rockwool crop steering: drybacks & saturation", "rockwool-crop-steering"),
    ("The one steering law: coco, rockwool, soil & water", "one-steering-law"),
-   ("Ripening, flush & harvest timing", None)]),
+   ("Ripening, flush & harvest timing", "ripening-harvest-timing")]),
  ("4 · Harvest, dry, trim & cure", "Turn flower into finished product.", [
    ("Harvest, dry, trim & cure", "harvest-dry-trim-cure"), ("GMP hash manufacturing", "gmp-hash-lab"),
-   ("Hash rosin: solventless pressing", "hash-rosin-pressing"), ("Lab testing, potency & COAs", None)]),
+   ("Hash rosin: solventless pressing", "hash-rosin-pressing"), ("Lab testing, potency & COAs", "lab-testing-coas")]),
  ("Runs every stage · Environment & climate", "The conditions the plant lives in.", [
    ("The grow room: a systems guide", "grow-room-systems"), ("Lighting: spectrum, PPFD & DLI", "lighting-fundamentals"),
    ("Airflow design", "airflow-design"), ("Under-canopy & inter-canopy lighting", "under-canopy-lighting"),
-   ("Temperature, humidity & VPD", None),
-   ("CO2 enrichment", "co2-enrichment"), ("HVAC, cooling & dehumidification", None)]),
+   ("Temperature, humidity & VPD", "temp-humidity-vpd"),
+   ("CO2 enrichment", "co2-enrichment"), ("HVAC, cooling & dehumidification", "hvac-dehumidification")]),
  ("Runs every stage · Water, substrate & feed", "What the roots get.", [
    ("Substrates compared: coco, rockwool, soil, hydro", "substrates-overview"),
    ("Source water, RO & alkalinity", "water-quality"), ("pH: hold it steady", "ph-management"),
@@ -407,11 +419,11 @@ CURRICULUM = [
  ("The operation · Facility & quality", "Run it as a business.", [
    ("Designing a facility in 3D", "facility-3d"),
    ("Daily checks: the self-completing round", "daily-checks"),
-   ("Compliance, licensing & track-and-trace", None),
-   ("Energy, utilities & sustainability", None), ("Yield per watt & unit economics", None)]),
+   ("Compliance, licensing & track-and-trace", "compliance-track-trace"),
+   ("Energy, utilities & sustainability", "energy-sustainability"), ("Yield per watt & unit economics", "unit-economics")]),
  ("Reference · Know the plant", "Background worth having.", [
-   ("Cannabis plant biology & life cycle", None), ("Cannabinoids & terpenes", None),
-   ("Genetics, seeds & phenotype hunting", None)]),
+   ("Cannabis plant biology & life cycle", None), ("Cannabinoids & terpenes", "cannabinoids-terpenes"),
+   ("Genetics, seeds & phenotype hunting", "genetics-phenohunting")]),
 ]
 
 def render_curriculum():

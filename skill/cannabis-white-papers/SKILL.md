@@ -1,18 +1,18 @@
 ---
 name: cannabis-white-papers
-description: "Beginner-friendly, evidence-linked cannabis cultivation reference: 39 white papers on propagation (seeds, cloning, tissue culture), crop steering (coco, rockwool, dryback, P0-P3), environment (VPD, lighting, airflow, CO2), water and nutrition (pH, EC, substrates, Athena mixing, deficiencies), plant health (mould, IPM, pest ID, PPE and biosecurity), precision irrigation (root-zone sensors, smart watering, F2, the closed loop), and facility and quality (GMP, QMS, daily checks). Use when answering questions about growing cannabis, crop steering, irrigation, drybacks, water content, nutrients, pests, mould, environment/VPD, or cultivation facility setup; read the relevant papers/<slug>.md for detail and citations."
+description: "Beginner-friendly, evidence-linked cannabis cultivation reference: 51 white papers on propagation (seeds, cloning, tissue culture), crop steering (coco, rockwool, dryback, P0-P3), environment (VPD, lighting, airflow, CO2), water and nutrition (pH, EC, substrates, Athena mixing, deficiencies), plant health (mould, IPM, pest ID, PPE and biosecurity), precision irrigation (root-zone sensors, smart watering, F2, the closed loop), and facility and quality (GMP, QMS, daily checks). Use when answering questions about growing cannabis, crop steering, irrigation, drybacks, water content, nutrients, pests, mould, environment/VPD, or cultivation facility setup; read the relevant papers/<slug>.md for detail and citations."
 ---
 
 # The Cannabis White Papers
 
-A library of 39 evidence-linked, beginner-friendly cannabis cultivation field guides. Every paper is a clean markdown file in `papers/` with sources preserved as `[^id]` footnotes.
+A library of 51 evidence-linked, beginner-friendly cannabis cultivation field guides. Every paper is a clean markdown file in `papers/` with sources preserved as `[^id]` footnotes.
 
 Licensed CC BY-NC 4.0 (https://creativecommons.org/licenses/by-nc/4.0/). Attribution: The Cannabis White Papers.
 
 ## How to use
 
 1. Match the user's question to a paper below (or grep `papers/` / read `manifest.json`).
-2. Read only the relevant `papers/<slug>.md` (progressive disclosure, do not load all 39).
+2. Read only the relevant `papers/<slug>.md` (progressive disclosure, do not load all 51).
 3. Answer from it and cite the paper's footnoted sources. Look up terms in `glossary.json`.
 
 ## Papers by stage
@@ -21,10 +21,13 @@ Licensed CC BY-NC 4.0 (https://creativecommons.org/licenses/by-nc/4.0/). Attribu
 - **Cleaning up cannabis genetics with tissue culture** (`papers/tissue-culture.md`): Clean up genetics from a speck of tissue
 - **Seeds, germination and seedlings** (`papers/seeds-germination.md`): Pop seeds and raise seedlings
 - **Cloning: cuttings that root every time** (`papers/cloning.md`): Cuttings that root every time
+- **Transplanting: potting up without the stall** (`papers/transplanting.md`): Pot up without stalling the plant
+- **Mother plants: stock management that never runs dry** (`papers/mother-plants.md`): Stock plants, HpLVd control & succession
 
 ### Vegetative growth
 - **Light acclimation: raise PPFD in steps so plants don't bleach** (`papers/light-acclimation.md`): Ramp light without bleaching
 - **Defoliation and plant training for maximum yield** (`papers/defoliation-training.md`): Train the canopy for yield
+- **Vegetative management: build the frame, then flip** (`papers/veg-management.md`): Size veg by count, pot and canopy, then flip
 
 ### Flowering
 - **Precision coco cultivation: crop steering in coir** (`papers/coco-crop-steering.md`): Steer the plant with water
@@ -32,11 +35,13 @@ Licensed CC BY-NC 4.0 (https://creativecommons.org/licenses/by-nc/4.0/). Attribu
 - **Crop steering in rockwool: drybacks, saturation and the breaking point** (`papers/rockwool-crop-steering.md`): Drybacks, saturation, the breaking point
 - **The one steering law: coco, rockwool, soil & water** (`papers/one-steering-law.md`): Coco, rockwool, soil and water, one way to steer
 - **Slab irrigation, end to end** (`papers/slab-irrigation-strategy.md`): Blocks on slabs, rooting-in to chop
+- **Ripening, flush and the harvest call** (`papers/ripening-harvest-timing.md`): Trichome reads, flush truth, the harvest call
 
 ### Harvest, dry, trim & cure
 - **Harvest, dry, trim and cure** (`papers/harvest-dry-trim-cure.md`): The whole post-harvest run
 - **GMP hash manufacturing: facility flow and quality control** (`papers/gmp-hash-lab.md`): Turn flower into concentrate
 - **Hash rosin, pressed: a solventless systems guide** (`papers/hash-rosin-pressing.md`): Heat, pressure, time & the micron screen
+- **Lab testing, potency and the COA** (`papers/lab-testing-coas.md`): Reading COAs: potency math, methods, limits
 
 ### Environment & climate
 - **The cannabis grow room: a systems guide** (`papers/grow-room-systems.md`): The whole room as one system
@@ -45,6 +50,8 @@ Licensed CC BY-NC 4.0 (https://creativecommons.org/licenses/by-nc/4.0/). Attribu
 - **Scaling light to the limiting factor** (`papers/scaling-high-light.md`): Find the limiting factor, dial to it
 - **Lighting: spectrum, PPFD and DLI** (`papers/lighting-fundamentals.md`): Spectrum, PPFD & DLI
 - **Under-canopy lighting: photons at the floor** (`papers/under-canopy-lighting.md`): Photons at the floor: SCL & ICL
+- **Temperature, humidity and VPD: the air the plant feels** (`papers/temp-humidity-vpd.md`): Leaf VPD, dew point and stage bands
+- **HVAC and dehumidification: the machinery of climate** (`papers/hvac-dehumidification.md`): Sensible vs latent: sizing the climate plant
 
 ### Water, substrate & feed
 - **Substrates compared: coco, rockwool, soil, hydro** (`papers/substrates-overview.md`): Coco, rockwool, soil, hydro
@@ -73,4 +80,11 @@ Licensed CC BY-NC 4.0 (https://creativecommons.org/licenses/by-nc/4.0/). Attribu
 ### Facility & quality
 - **Designing a grow facility in 3D before you build it** (`papers/facility-3d.md`): See the build before you build it
 - **Daily checks: the self-completing facility round** (`papers/daily-checks.md`): The self-completing facility round
+- **Yield per watt and the cost of a gram** (`papers/unit-economics.md`): g/m², g/W, g/kWh and the true cost of a gram
+- **Compliance, licensing and track-and-trace** (`papers/compliance-track-trace.md`): Licences, batch records and seed-to-sale
+- **Energy, utilities and sustainability** (`papers/energy-sustainability.md`): Where the kWh go and how to spend fewer
+
+### Know the plant
+- **Genetics, seeds and the pheno hunt** (`papers/genetics-phenohunting.md`): Seed genetics, selection and the pheno hunt
+- **Cannabinoids and terpenes: the chemistry that matters** (`papers/cannabinoids-terpenes.md`): Cannabinoids & terpenes, from gland to COA
 

@@ -12,7 +12,7 @@ LINK_PHRASES = {
     "slab-irrigation-strategy": ["slab irrigation", "block-on-slab", "rooting-in", "block on slab", "drain slits", "matric suction"],
     "one-steering-law": ["one steering law", "the steering law", "steering law"],
     "under-canopy-lighting": ["under-canopy lighting", "subcanopy lighting", "inter-canopy lighting", "intracanopy lighting", "photobleaching", "SCL", "ICL"],
-    "grow-room-systems": ["grow room as one", "coupled system", "vapour pressure deficit", "VPD", "daily light integral", "DLI"],
+    "grow-room-systems": ["grow room as one", "coupled system", "daily light integral", "DLI"],
     "airflow-design": ["airflow design", "boundary layer", "air velocity", "leaf boundary"],
     "co2-enrichment": ["CO2 enrichment", "CO2 supplementation", "carbon dioxide enrichment", "CO2 injection", "dark respiration", "CO2 compensation point", "photorespiration", "sealed grow room"],
     "mould-risk": ["bud rot", "botrytis", "powdery mildew", "mould risk", "water activity"],
@@ -42,6 +42,18 @@ LINK_PHRASES = {
     "flowering-stages": ["flowering cycle", "the stretch", "bud set", "the flip", "12/12"],
     "pest-id": ["spider mites", "russet mites", "broad mites", "thrips", "fungus gnats", "aphids"],
     "pppe": ["PPPE", "gowning", "de-gowning", "personal protective equipment", "biosecurity", "fomite", "cross-contamination", "hierarchy of controls"],
+    "ripening-harvest-timing": ["harvest window", "trichome maturity", "amber trichomes", "flushing", "when to harvest", "staggered harvest", "the fade"],
+    "transplanting": ["transplant shock", "potting up", "ready to transplant", "root ball", "air pruning", "root-bound", "transplant-ready clone"],
+    "veg-management": ["vegetative management", "veg duration", "flip height", "flowering stretch", "topping timing", "canopy levelling", "veg EC ramp"],
+    "mother-plants": ["mother plant", "mother plants", "stock plant", "mother room", "clone-from-clone", "dudding disease", "cutting factory"],
+    "genetics-phenohunting": ["pheno hunt", "phenotype hunt", "feminised seed", "keeper cut", "chemotype", "strain name", "S1 seed"],
+    "temp-humidity-vpd": ["vapour pressure deficit", "VPD", "leaf VPD", "dew point", "relative humidity", "night humidity"],
+    "lab-testing-coas": ["certificate of analysis", "COA", "total THC", "potency testing", "HPLC", "lab testing"],
+    "unit-economics": ["cost per gram", "grams per watt", "unit economics", "cycles per year", "break-even", "blended price", "hand-trim labour"],
+    "compliance-track-trace": ["seed-to-sale", "batch genealogy", "quality agreement", "mock recall", "inventory reconciliation", "GACP", "deviation log", "chain of custody"],
+    "hvac-dehumidification": ["sensible and latent", "dehumidifier sizing", "lights-off humidity spike", "climate plant", "hot-gas reheat", "condensate", "N+1 redundancy"],
+    "cannabinoids-terpenes": ["cannabinoids", "terpenes", "decarboxylation", "CBN", "entourage effect", "THCA"],
+    "energy-sustainability": ["kWh per gram", "lighting efficacy", "double dividend", "demand charges", "heat-recovery dehumidification", "condensate reuse", "submetering", "energy benchmarking"],
 }
 
 # Flat (phrase, slug) list, longest phrase first so multi-word wins over substrings.

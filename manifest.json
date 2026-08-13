@@ -5,7 +5,7 @@
  "license": "CC BY-NC 4.0",
  "license_url": "https://creativecommons.org/licenses/by-nc/4.0/",
  "base": "https://jaketherabbit.github.io/cannabis-white-papers",
- "count": 39,
+ "count": 51,
  "papers": [
   {
    "slug": "tissue-culture",
@@ -717,6 +717,218 @@
    "version": "1.2",
    "updated": "2026-07-18",
    "ref_count": 16
+  },
+  {
+   "slug": "ripening-harvest-timing",
+   "title": "Ripening, flush and the harvest call",
+   "summary": "The last two weeks and the call to chop: how buds actually ripen, how to read trichomes with a loupe properly, harvest windows by product goal, what the evidence really says about flushing, and how to keep botrytis from eating the reward while you wait.",
+   "track": "Flowering",
+   "read_time": "~17 min read",
+   "diagrams": "10 diagrams",
+   "related": [
+    "flowering-stages",
+    "harvest-dry-trim-cure",
+    "mould-risk"
+   ],
+   "url": "https://jaketherabbit.github.io/cannabis-white-papers/ripening-harvest-timing.html",
+   "md_url": "https://jaketherabbit.github.io/cannabis-white-papers/papers/ripening-harvest-timing.md",
+   "version": "1.2",
+   "updated": "2026-07-18",
+   "ref_count": 14
+  },
+  {
+   "slug": "transplanting",
+   "title": "Transplanting: potting up without the stall",
+   "summary": "Every transplant is a controlled injury: done on time, into a prepared home, the plant never notices; done late or rough, it stalls for a week. When to up-pot, the container ladder, the mechanics, media-to-media moves, the first irrigation, and transplant shock from cause to recovery.",
+   "track": "Propagation",
+   "read_time": "~17 min read",
+   "diagrams": "9 diagrams",
+   "related": [
+    "cloning",
+    "seeds-germination"
+   ],
+   "url": "https://jaketherabbit.github.io/cannabis-white-papers/transplanting.html",
+   "md_url": "https://jaketherabbit.github.io/cannabis-white-papers/papers/transplanting.md",
+   "version": "1.2",
+   "updated": "2026-07-18",
+   "ref_count": 13
+  },
+  {
+   "slug": "veg-management",
+   "title": "Vegetative management: build the frame, then flip",
+   "summary": "Veg is not the waiting room before the real grow. It is where plant count, pot size and canopy plan get converted into a number of days, and where almost every week-3-of-flower problem is either prevented or booked in.",
+   "track": "Vegetative growth",
+   "read_time": "~14 min read",
+   "diagrams": "11 diagrams",
+   "related": [
+    "defoliation-training",
+    "light-acclimation"
+   ],
+   "url": "https://jaketherabbit.github.io/cannabis-white-papers/veg-management.html",
+   "md_url": "https://jaketherabbit.github.io/cannabis-white-papers/papers/veg-management.md",
+   "version": "1.2",
+   "updated": "2026-07-18",
+   "ref_count": 14
+  },
+  {
+   "slug": "mother-plants",
+   "title": "Mother plants: stock management that never runs dry",
+   "summary": "How to keep cannabis mother plants healthy for the long haul — room setup, feeding, pruning architecture, viroid defence, testing rotation and succession — so every batch starts from a plant you can actually trust.",
+   "track": "Propagation",
+   "read_time": "~20 min read",
+   "diagrams": "13 diagrams",
+   "related": [
+    "cloning",
+    "tissue-culture"
+   ],
+   "url": "https://jaketherabbit.github.io/cannabis-white-papers/mother-plants.html",
+   "md_url": "https://jaketherabbit.github.io/cannabis-white-papers/papers/mother-plants.md",
+   "version": "1.2",
+   "updated": "2026-07-18",
+   "ref_count": 14
+  },
+  {
+   "slug": "genetics-phenohunting",
+   "title": "Genetics, seeds and the pheno hunt",
+   "summary": "Where keeper cultivars actually come from: what genotype, phenotype and chemotype mean, why every seed is a gamble by design, how to run a pheno hunt that finds a winner — and how to keep the cut once you have it.",
+   "track": "Know the plant",
+   "read_time": "~24 min read",
+   "diagrams": "10 diagrams",
+   "related": [
+    "seeds-germination",
+    "tissue-culture",
+    "cloning"
+   ],
+   "url": "https://jaketherabbit.github.io/cannabis-white-papers/genetics-phenohunting.html",
+   "md_url": "https://jaketherabbit.github.io/cannabis-white-papers/papers/genetics-phenohunting.md",
+   "version": "1.2",
+   "updated": "2026-07-18",
+   "ref_count": 14
+  },
+  {
+   "slug": "temp-humidity-vpd",
+   "title": "Temperature, humidity and VPD: the air the plant feels",
+   "summary": "VPD is the one climate number the plant actually feels. What it is, the equation in a form you can use, why leaf temperature — not air — sets the real number, stage bands you can defend, the night-time dew-point discipline that keeps mould out, and how to measure it all without lying to yourself.",
+   "track": "Environment & climate",
+   "read_time": "~19 min read",
+   "diagrams": "12 diagrams",
+   "related": [
+    "grow-room-systems",
+    "mould-risk",
+    "airflow-design"
+   ],
+   "url": "https://jaketherabbit.github.io/cannabis-white-papers/temp-humidity-vpd.html",
+   "md_url": "https://jaketherabbit.github.io/cannabis-white-papers/papers/temp-humidity-vpd.md",
+   "version": "1.2",
+   "updated": "2026-07-18",
+   "ref_count": 14
+  },
+  {
+   "slug": "lab-testing-coas",
+   "title": "Lab testing, potency and the COA",
+   "summary": "A certificate of analysis is a measurement of one small sample — not a property of your crop. This guide reads a COA line by line, checks the potency maths (the 0.877 factor and the chemistry behind it), explains every test family from qPCR to ICP-MS, and is honest about the part the industry keeps getting caught at: inflated numbers.",
+   "track": "Harvest, dry, trim & cure",
+   "read_time": "~24 min read",
+   "diagrams": "10 diagrams",
+   "related": [
+    "gmp-hash-lab",
+    "harvest-dry-trim-cure"
+   ],
+   "url": "https://jaketherabbit.github.io/cannabis-white-papers/lab-testing-coas.html",
+   "md_url": "https://jaketherabbit.github.io/cannabis-white-papers/papers/lab-testing-coas.md",
+   "version": "1.2",
+   "updated": "2026-07-18",
+   "ref_count": 16
+  },
+  {
+   "slug": "unit-economics",
+   "title": "Yield per watt and the cost of a gram",
+   "summary": "The three yield denominators — g/m² of canopy, g/W of light, g/kWh all-in — what each is actually for, what each hides, and a worked cost stack that turns a fictional 100 m² room into a cost per gram you can argue with. Every number cited or derived in front of you.",
+   "track": "Facility & quality",
+   "read_time": "~22 min read",
+   "diagrams": "11 diagrams",
+   "related": [
+    "energy-sustainability",
+    "scaling-high-light",
+    "lighting-fundamentals"
+   ],
+   "url": "https://jaketherabbit.github.io/cannabis-white-papers/unit-economics.html",
+   "md_url": "https://jaketherabbit.github.io/cannabis-white-papers/papers/unit-economics.md",
+   "version": "1.2",
+   "updated": "2026-07-18",
+   "ref_count": 14
+  },
+  {
+   "slug": "compliance-track-trace",
+   "title": "Compliance, licensing and track-and-trace",
+   "summary": "A licensed grow is a paperwork machine with a garden attached. This guide maps the spine: what a licence actually is, how batches and lots connect every gram to its history, how seed-to-sale tracking works, and how to keep records an auditor believes.",
+   "track": "Facility & quality",
+   "read_time": "~24 min read",
+   "diagrams": "9 diagrams",
+   "related": [
+    "gmp-hash-lab",
+    "daily-checks",
+    "auckland-ipm-blueprint"
+   ],
+   "url": "https://jaketherabbit.github.io/cannabis-white-papers/compliance-track-trace.html",
+   "md_url": "https://jaketherabbit.github.io/cannabis-white-papers/papers/compliance-track-trace.md",
+   "version": "1.2",
+   "updated": "2026-07-18",
+   "ref_count": 14
+  },
+  {
+   "slug": "hvac-dehumidification",
+   "title": "HVAC and dehumidification: the machinery of climate",
+   "summary": "Every watt you put into a grow room comes back out as heat, and nearly every litre you irrigate comes back out as vapour. The climate plant is the return path for both. This is how to size it, choose it, run it, and survive the night it fails.",
+   "track": "Environment & climate",
+   "read_time": "~22 min read",
+   "diagrams": "11 diagrams",
+   "related": [
+    "grow-room-systems",
+    "temp-humidity-vpd",
+    "airflow-design"
+   ],
+   "url": "https://jaketherabbit.github.io/cannabis-white-papers/hvac-dehumidification.html",
+   "md_url": "https://jaketherabbit.github.io/cannabis-white-papers/papers/hvac-dehumidification.md",
+   "version": "1.2",
+   "updated": "2026-07-18",
+   "ref_count": 14
+  },
+  {
+   "slug": "cannabinoids-terpenes",
+   "title": "Cannabinoids and terpenes: the chemistry that matters",
+   "summary": "Two families of molecules carry all the value in this industry — and both are built in the same microscopic gland, as acids, on one assembly line. This is the grower's field guide to that chemistry: where it is made, what each compound is and is not, how it degrades, and what you actually control.",
+   "track": "Know the plant",
+   "read_time": "~24 min read",
+   "diagrams": "10 diagrams",
+   "related": [
+    "lab-testing-coas",
+    "hash-rosin-pressing",
+    "harvest-dry-trim-cure"
+   ],
+   "url": "https://jaketherabbit.github.io/cannabis-white-papers/cannabinoids-terpenes.html",
+   "md_url": "https://jaketherabbit.github.io/cannabis-white-papers/papers/cannabinoids-terpenes.md",
+   "version": "1.2",
+   "updated": "2026-07-18",
+   "ref_count": 18
+  },
+  {
+   "slug": "energy-sustainability",
+   "title": "Energy, utilities and sustainability",
+   "summary": "Where the kilowatt-hours actually go in an indoor grow — lighting, HVAC, dehumidification — and the cited playbook for spending fewer of them: efficacy, the double dividend, demand charges, water reuse, and the retrofit order that pays.",
+   "track": "Facility & quality",
+   "read_time": "~18 min read",
+   "diagrams": "12 diagrams",
+   "related": [
+    "lighting-fundamentals",
+    "scaling-high-light",
+    "grow-room-systems"
+   ],
+   "url": "https://jaketherabbit.github.io/cannabis-white-papers/energy-sustainability.html",
+   "md_url": "https://jaketherabbit.github.io/cannabis-white-papers/papers/energy-sustainability.md",
+   "version": "1.2",
+   "updated": "2026-07-18",
+   "ref_count": 14
   }
  ]
 }
