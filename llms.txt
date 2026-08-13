@@ -6,6 +6,8 @@ Licensed CC BY-NC 4.0 (https://creativecommons.org/licenses/by-nc/4.0/). Attribu
 
 ## Propagation
 - [Cleaning up cannabis genetics with tissue culture](https://jaketherabbit.github.io/cannabis-white-papers/papers/tissue-culture.md): Clean up genetics from a speck of tissue
+- [Cannabis tissue culture, start to finish](https://jaketherabbit.github.io/cannabis-white-papers/papers/cannabis-tissue-culture-playbook.md): Start-to-finish cannabis tissue culture
+- [Cannabis tissue culture SOP](https://jaketherabbit.github.io/cannabis-white-papers/papers/cannabis-tissue-culture-sop.md): Jobs, forms, and a cheap hood from China
 - [Seeds, germination and seedlings](https://jaketherabbit.github.io/cannabis-white-papers/papers/seeds-germination.md): Pop seeds and raise seedlings
 - [Cloning: cuttings that root every time](https://jaketherabbit.github.io/cannabis-white-papers/papers/cloning.md): Cuttings that root every time
 - [Transplanting: potting up without the stall](https://jaketherabbit.github.io/cannabis-white-papers/papers/transplanting.md): Pot up without stalling the plant

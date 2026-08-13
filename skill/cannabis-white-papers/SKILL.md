@@ -1,24 +1,26 @@
 ---
 name: cannabis-white-papers
-description: "Beginner-friendly, evidence-linked cannabis cultivation reference: 52 white papers on propagation (seeds, cloning, tissue culture), crop steering (coco, rockwool, dryback, P0-P3), environment (VPD, lighting, airflow, CO2), water and nutrition (pH, EC, substrates, Athena mixing, deficiencies), plant health (mould, IPM, pest ID, PPE and biosecurity), precision irrigation (root-zone sensors, smart watering, F2, the closed loop), and facility and quality (GMP, QMS, daily checks). Use when answering questions about growing cannabis, crop steering, irrigation, drybacks, water content, nutrients, pests, mould, environment/VPD, or cultivation facility setup; read the relevant papers/<slug>.md for detail and citations."
+description: "Beginner-friendly, evidence-linked cannabis cultivation reference: 54 white papers on propagation (seeds, cloning, tissue culture), crop steering (coco, rockwool, dryback, P0-P3), environment (VPD, lighting, airflow, CO2), water and nutrition (pH, EC, substrates, Athena mixing, deficiencies), plant health (mould, IPM, pest ID, PPE and biosecurity), precision irrigation (root-zone sensors, smart watering, F2, the closed loop), and facility and quality (GMP, QMS, daily checks). Use when answering questions about growing cannabis, crop steering, irrigation, drybacks, water content, nutrients, pests, mould, environment/VPD, or cultivation facility setup; read the relevant papers/<slug>.md for detail and citations."
 ---
 
 # The Cannabis White Papers
 
-A library of 52 evidence-linked, beginner-friendly cannabis cultivation field guides. Every paper is a clean markdown file in `papers/` with sources preserved as `[^id]` footnotes.
+A library of 54 evidence-linked, beginner-friendly cannabis cultivation field guides. Every paper is a clean markdown file in `papers/` with sources preserved as `[^id]` footnotes.
 
 Licensed CC BY-NC 4.0 (https://creativecommons.org/licenses/by-nc/4.0/). Attribution: The Cannabis White Papers.
 
 ## How to use
 
 1. Match the user's question to a paper below (or grep `papers/` / read `manifest.json`).
-2. Read only the relevant `papers/<slug>.md` (progressive disclosure, do not load all 52).
+2. Read only the relevant `papers/<slug>.md` (progressive disclosure, do not load all 54).
 3. Answer from it and cite the paper's footnoted sources. Look up terms in `glossary.json`.
 
 ## Papers by stage
 
 ### Propagation
 - **Cleaning up cannabis genetics with tissue culture** (`papers/tissue-culture.md`): Clean up genetics from a speck of tissue
+- **Cannabis tissue culture, start to finish** (`papers/cannabis-tissue-culture-playbook.md`): Start-to-finish cannabis tissue culture
+- **Cannabis tissue culture SOP** (`papers/cannabis-tissue-culture-sop.md`): Jobs, forms, and a cheap hood from China
 - **Seeds, germination and seedlings** (`papers/seeds-germination.md`): Pop seeds and raise seedlings
 - **Cloning: cuttings that root every time** (`papers/cloning.md`): Cuttings that root every time
 - **Transplanting: potting up without the stall** (`papers/transplanting.md`): Pot up without stalling the plant

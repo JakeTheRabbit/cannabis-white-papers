@@ -5,7 +5,7 @@
  "license": "CC BY-NC 4.0",
  "license_url": "https://creativecommons.org/licenses/by-nc/4.0/",
  "base": "https://jaketherabbit.github.io/cannabis-white-papers",
- "count": 52,
+ "count": 54,
  "papers": [
   {
    "slug": "tissue-culture",
@@ -24,6 +24,44 @@
    "version": "1.2",
    "updated": "2026-07-18",
    "ref_count": 12
+  },
+  {
+   "slug": "cannabis-tissue-culture-playbook",
+   "title": "Cannabis tissue culture, start to finish",
+   "summary": "How to grow a cannabis plant from a small piece of tissue in a sterile jar, at home and in a licensed facility. Every term is defined. Every recipe has numbers. Follow the sections in order.",
+   "track": "Propagation",
+   "read_time": "",
+   "diagrams": "",
+   "related": [
+    "tissue-culture",
+    "cannabis-tissue-culture-sop",
+    "cloning",
+    "mother-plants"
+   ],
+   "url": "https://jaketherabbit.github.io/cannabis-white-papers/cannabis-tissue-culture-playbook.html",
+   "md_url": "https://jaketherabbit.github.io/cannabis-white-papers/papers/cannabis-tissue-culture-playbook.md",
+   "version": "1.2",
+   "updated": "2026-07-18",
+   "ref_count": 22
+  },
+  {
+   "slug": "cannabis-tissue-culture-sop",
+   "title": "Cannabis tissue culture SOP",
+   "summary": "Do these jobs in order. Each job has a diagram and a form. A star in brackets is a source, not extra reading you need before you start.",
+   "track": "Propagation",
+   "read_time": "",
+   "diagrams": "",
+   "related": [
+    "cannabis-tissue-culture-playbook",
+    "tissue-culture",
+    "cloning",
+    "mother-plants"
+   ],
+   "url": "https://jaketherabbit.github.io/cannabis-white-papers/cannabis-tissue-culture-sop.html",
+   "md_url": "https://jaketherabbit.github.io/cannabis-white-papers/papers/cannabis-tissue-culture-sop.md",
+   "version": "1.2",
+   "updated": "2026-07-18",
+   "ref_count": 22
   },
   {
    "slug": "coco-crop-steering",

@@ -15,6 +15,8 @@ GROUPS = [
         {"slug": "seeds-germination",  "title": "Seeds & germination",  "short": "Pop seeds and raise seedlings",            "icon": "seedling", "status": "live", "track": "Propagation"},
         {"slug": "cloning",            "title": "Cloning",              "short": "Cuttings that root every time",            "icon": "seedling", "status": "live", "track": "Propagation"},
         {"slug": "tissue-culture",     "title": "Tissue culture",       "short": "Clean up genetics from a speck of tissue", "icon": "spark",    "status": "live", "track": "Propagation"},
+        {"slug": "cannabis-tissue-culture-playbook", "title": "TC playbook", "short": "Start-to-finish cannabis tissue culture", "icon": "flask", "status": "live", "track": "Propagation"},
+        {"slug": "cannabis-tissue-culture-sop", "title": "TC SOP", "short": "Jobs, forms, and a cheap hood from China", "icon": "doc", "status": "live", "track": "Propagation"},
         {"slug": "transplanting",      "title": "Transplanting",        "short": "Pot up without stalling the plant",        "icon": "seedling", "status": "live", "track": "Propagation"},
         {"slug": "mother-plants",      "title": "Mother plants",        "short": "Stock plants, HpLVd control & succession", "icon": "seedling", "status": "live", "track": "Propagation"},
     ]},

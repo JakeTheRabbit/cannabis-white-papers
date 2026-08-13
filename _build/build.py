@@ -31,7 +31,8 @@ except Exception:
 # Papers in display order. Loaded defensively: a broken module is reported,
 # not fatal, and only successfully-loaded papers go live in the nav.
 PAPER_MODULES = [
-    "paper_tissue_culture", "paper_coco_crop_steering", "paper_grow_room_systems",
+    "paper_tissue_culture", "paper_cannabis_tc_playbook", "paper_cannabis_tc_sop",
+    "paper_coco_crop_steering", "paper_grow_room_systems",
     "paper_airflow_design", "paper_co2_enrichment", "paper_scaling_high_light", "paper_mould_risk",
     "paper_auckland_ipm_blueprint",
     "paper_seeds_germination", "paper_lighting_fundamentals", "paper_substrates_overview",
@@ -210,7 +211,7 @@ def render_paper(mod):
         f'<span>{esc(mod.EYEBROW.split("·")[0].strip())}</span><span class="sep">{icon("chevright",12)}</span>'
         f'<span>{esc(mod.TITLE)}</span></div>'
         f'<div class="eyebrow">{esc(mod.EYEBROW)}</div>'
-        f'{fit_title(mod.TITLE, 54)}'
+        f'{fit_title(mod.TITLE, getattr(mod, "TITLE_MAX_PX", 54))}'
         f'<p class="sub">{esc(mod.SUB)}</p>'
         f'<div class="metarow">{"".join(pills)}</div>'
         f'<div class="divider"></div>'
@@ -383,6 +384,8 @@ CURRICULUM = [
  ("1 · Propagation", "Start the plants.", [
    ("Seeds, germination & seedlings", "seeds-germination"), ("Cloning", "cloning"),
    ("Tissue culture: clean genetics", "tissue-culture"),
+   ("Tissue culture playbook", "cannabis-tissue-culture-playbook"),
+   ("Tissue culture SOP", "cannabis-tissue-culture-sop"),
    ("Mother / stock-plant management", "mother-plants"), ("Transplanting & potting up", "transplanting")]),
  ("2 · Vegetative growth", "Build a big, healthy plant.", [
    ("Light acclimation", "light-acclimation"), ("Defoliation & plant training", "defoliation-training"),

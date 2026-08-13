@@ -179,7 +179,8 @@ for _genmod in ("data.refs_gen", "data.refs_gen4", "data.refs_gen5", "data.refs_
                 "data.refs_add_ripening", "data.refs_add_lab_testing", "data.refs_add_temp_humidity_vpd",
                 "data.refs_add_hvac", "data.refs_add_compliance", "data.refs_add_energy",
                 "data.refs_add_unit_economics", "data.refs_add_plant_biology",
-                "data.refs_add_cannabinoids_terpenes", "data.refs_add_genetics_phenohunting"):
+                "data.refs_add_cannabinoids_terpenes", "data.refs_add_genetics_phenohunting",
+                "data.refs_add_tc_playbook"):
     try:
         _m = __import__(_genmod, fromlist=["REFS_ADD"])
         for _k, _v in _m.REFS_ADD.items():

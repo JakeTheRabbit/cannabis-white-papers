@@ -7,6 +7,8 @@ existing links). Curated to distinctive multi-word phrases to avoid noise/mis-li
 LINK_PHRASES = {
     "auckland-ipm-blueprint": ["Auckland medicinal IPM", "medicinal-cannabis input gate", "approved-input register", "rice root aphid", "Septoria leaf spot"],
     "tissue-culture": ["tissue culture", "micropropagation", "meristem culture", "meristem", "hop latent viroid", "HpLVd", "clean stock"],
+    "cannabis-tissue-culture-playbook": ["tissue culture playbook", "cannabis tissue culture, start to finish", "start-to-finish cannabis tissue culture"],
+    "cannabis-tissue-culture-sop": ["tissue culture SOP", "AliExpress laminar", "laminar-flow hood from China", "F-01", "F-12"],
     "coco-crop-steering": ["crop steering", "coco coir", "dryback", "field capacity", "generative steering", "vegetative steering"],
     "rockwool-crop-steering": ["rockwool crop steering", "recovery floor", "stone wool", "preferential flow", "channeling"],
     "slab-irrigation-strategy": ["slab irrigation", "block-on-slab", "rooting-in", "block on slab", "drain slits", "matric suction"],
