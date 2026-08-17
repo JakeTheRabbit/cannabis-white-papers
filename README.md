@@ -145,3 +145,5 @@ Inline notes flag the highest-risk over-trust points in the text.
 
 Every factual claim is cited inline `[n]` to a per-paper References list — peer-reviewed where possible; manufacturer/operational sources are labelled. Figures and numbers are planning-grade; validate against your own measured data before committing capital. *Not legal advice — follow the cannabis laws in your jurisdiction.*
 
+
+> **This repo is free. My 2am dryback debugging is not.** If it saved you a crop, a weekend, or a nervous breakdown — [buy the rabbit a bag of nutes](https://github.com/sponsors/JakeTheRabbit). If it didn't, keep your money. I respect a tight nutrient budget.
