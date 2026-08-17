@@ -5,7 +5,7 @@ eyebrow: "Beginner · Airflow design"
 summary: "Every leaf sits inside a film of still air that limits how fast it can breathe. Airflow strips that film away. Done right it feeds the plant and dries the room. Done wrong it scorches leaves or breeds rot."
 track: "Environment & climate"
 read_time: "~26 min read"
-diagrams: "8 diagrams"
+diagrams: "8 diagrams · 8 photos"
 related: ["grow-room-systems", "mould-risk", "coco-crop-steering"]
 url: "https://jaketherabbit.github.io/cannabis-white-papers/airflow-design.html"
 md_url: "https://jaketherabbit.github.io/cannabis-white-papers/papers/airflow-design.md"
@@ -137,6 +137,8 @@ Above that threshold, the higher-airflow rooms showed three things:
 ## The fan types, one by one
 
 Fans are not interchangeable. Each type makes a different _shape_ of air, and the shape decides which leaves get served. Pick by the shape you need, not by the price tag or the CFM on the box.
+
+What each one looks likeGrok ImagineHAF fanVAF fanOscillating fanClip fanDrum / floor fanUnder-canopy fanAir sockInline duct fan
 
 > **Diagram.** The eight types you will actually meet, drawn side-on with the air each one makes. The first six are recirculation kit; the air sock is a delivery method; the inline duct fan is exchange, not circulation at all.
 

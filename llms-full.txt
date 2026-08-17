@@ -2172,6 +2172,8 @@ Above that threshold, the higher-airflow rooms showed three things:
 
 Fans are not interchangeable. Each type makes a different _shape_ of air, and the shape decides which leaves get served. Pick by the shape you need, not by the price tag or the CFM on the box.
 
+What each one looks likeGrok ImagineHAF fanVAF fanOscillating fanClip fanDrum / floor fanUnder-canopy fanAir sockInline duct fan
+
 > **Diagram.** The eight types you will actually meet, drawn side-on with the air each one makes. The first six are recirculation kit; the air sock is a delivery method; the inline duct fan is exchange, not circulation at all.
 
 **HAF — horizontal airflow fan**

@@ -12,7 +12,7 @@ EYEBROW = "Beginner · Airflow design"
 SUB = ("Every leaf sits inside a film of still air that limits how fast it can breathe. "
        "Airflow strips that film away. Done right it feeds the plant and dries the room. "
        "Done wrong it scorches leaves or breeds rot.")
-META = [("wind", "Beginner"), ("image", "8 diagrams"),
+META = [("wind", "Beginner"), ("image", "8 diagrams · 8 photos"),
         ("quote", "Evidence-linked · 18 sources"), ("clock", "~26 min read")]
 RELATED = ["grow-room-systems", "mould-risk", "coco-crop-steering"]
 REF_IDS = ["schuepp1993-bl", "dupont2025-wind", "kitaya2004-airvel", "tjosvold2018-air",
@@ -185,6 +185,18 @@ def _fig_fan_gallery():
         p.append(f'<text x="{cx:.1f}" y="{y0+183}" text-anchor="middle" fill="{INK2}" font-size="10.2" style="{FS}">{r2}</text>')
     p.append('</svg>')
     return "".join(p)
+
+def _fan_photos():
+    """Photoreal reference shot of each type, reusing the site's .tgal gallery styling."""
+    shots = [("HAF fan", "haf"), ("VAF fan", "vaf"), ("Oscillating fan", "osc"),
+             ("Clip fan", "clip"), ("Drum / floor fan", "drum"), ("Under-canopy fan", "under"),
+             ("Air sock", "sock"), ("Inline duct fan", "duct")]
+    cells = "".join(
+        f"<figure class='tgal-item'><img src='assets/img/airflow-fan-{k}.jpg' alt='{t} in situ' "
+        f"loading='lazy'><figcaption>{t}</figcaption></figure>" for t, k in shots)
+    return ("<div class='tgal-wrap'><div class='kicker'>What each one looks like"
+            "<span class='fcredit'>Grok Imagine</span></div>"
+            f"<div class='tgal'>{cells}</div></div>")
 
 def _fig_haf_loop():
     """Plan view: HAF fans driving a racetrack loop, with the spacing rules called out."""
@@ -468,6 +480,7 @@ SECTIONS.append({"id": "fan-types", "kicker": "10 · The hardware", "title": "Th
     lead("Fans are not interchangeable. Each type makes a different <em>shape</em> of air, and the "
          "shape decides which leaves get served. Pick by the shape you need, not by the price tag "
          "or the CFM on the box."),
+    _fan_photos(),
     figure(_fig_fan_gallery(), 5,
       "The eight types you will actually meet, drawn side-on with the air each one makes. The first six "
       "are recirculation kit; the air sock is a delivery method; the inline duct fan is exchange, not "
