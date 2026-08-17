@@ -1,5 +1,7 @@
 # The Cannabis White Papers
 
+> **This repo is free. My 2am dryback debugging is not.** If it saved you a crop, a weekend, or a nervous breakdown — [buy the rabbit a bag of nutes](https://github.com/sponsors/JakeTheRabbit). If it didn't, keep your money. I respect a tight nutrient budget.
+
 > Beginner-first, evidence-linked field guides on indoor medical cannabis cultivation — propagation, crop steering, environment, plant health, precision irrigation, and facility & quality. **54 papers, each a self-contained interactive HTML page.**
 
 **▶ Read online → [https://jaketherabbit.github.io/cannabis-white-papers/](https://jaketherabbit.github.io/cannabis-white-papers/)**  ·  browse by stage: [Start here](https://jaketherabbit.github.io/cannabis-white-papers/curriculum.html)  ·  every page has offline search (**Ctrl/Cmd-K**).
@@ -144,6 +146,3 @@ Inline notes flag the highest-risk over-trust points in the text.
 ## Sources & disclaimer
 
 Every factual claim is cited inline `[n]` to a per-paper References list — peer-reviewed where possible; manufacturer/operational sources are labelled. Figures and numbers are planning-grade; validate against your own measured data before committing capital. *Not legal advice — follow the cannabis laws in your jurisdiction.*
-
-
-> **This repo is free. My 2am dryback debugging is not.** If it saved you a crop, a weekend, or a nervous breakdown — [buy the rabbit a bag of nutes](https://github.com/sponsors/JakeTheRabbit). If it didn't, keep your money. I respect a tight nutrient budget.
