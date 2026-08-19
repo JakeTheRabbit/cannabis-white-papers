@@ -5,7 +5,7 @@
  "license": "CC BY-NC 4.0",
  "license_url": "https://creativecommons.org/licenses/by-nc/4.0/",
  "base": "https://jaketherabbit.github.io/cannabis-white-papers",
- "count": 54,
+ "count": 55,
  "papers": [
   {
    "slug": "tissue-culture",
@@ -985,6 +985,26 @@
    "version": "1.2",
    "updated": "2026-07-18",
    "ref_count": 16
+  },
+  {
+   "slug": "deep-water-culture",
+   "title": "Deep water culture, from first principles",
+   "summary": "Roots hanging in nutrient water have no substrate to hide behind. This paper builds the system from the physics up: how much oxygen the water can actually hold, why more bubbling makes iron uptake worse, what an ORP probe is really measuring, and how a commercial RDWC programme is put together.",
+   "track": "Water, substrate & feed",
+   "read_time": "~34 min read",
+   "diagrams": "10 diagrams",
+   "related": [
+    "substrates-overview",
+    "water-quality",
+    "ph-management",
+    "nutrient-mixing-athena",
+    "one-steering-law"
+   ],
+   "url": "https://jaketherabbit.github.io/cannabis-white-papers/deep-water-culture.html",
+   "md_url": "https://jaketherabbit.github.io/cannabis-white-papers/papers/deep-water-culture.md",
+   "version": "1.2",
+   "updated": "2026-07-18",
+   "ref_count": 37
   }
  ]
 }

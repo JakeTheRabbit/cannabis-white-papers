@@ -51,6 +51,7 @@ GROUPS = [
     ]},
     {"group": "Water, substrate & feed", "items": [
         {"slug": "substrates-overview",  "title": "Substrates compared",     "short": "Coco, rockwool, soil, hydro",   "icon": "leaf",    "status": "live", "track": "Feed"},
+        {"slug": "deep-water-culture",   "title": "Deep water culture",      "short": "Oxygen, ORP & the reservoir",   "icon": "droplet", "status": "live", "track": "Feed"},
         {"slug": "water-quality",        "title": "Water quality",           "short": "Source water, RO & alkalinity", "icon": "droplet", "status": "live", "track": "Feed"},
         {"slug": "ph-management",        "title": "pH management",           "short": "Hold pH, avoid lockout",        "icon": "beaker",  "status": "live", "track": "Feed"},
         {"slug": "nutrient-mixing-athena","title": "Mixing nutrients",       "short": "Salts, in metric, done right",  "icon": "beaker",  "status": "live", "track": "Feed"},

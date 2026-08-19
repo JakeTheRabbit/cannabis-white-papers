@@ -1,18 +1,18 @@
 ---
 name: cannabis-white-papers
-description: "Beginner-friendly, evidence-linked cannabis cultivation reference: 54 white papers on propagation (seeds, cloning, tissue culture), crop steering (coco, rockwool, dryback, P0-P3), environment (VPD, lighting, airflow, CO2), water and nutrition (pH, EC, substrates, Athena mixing, deficiencies), plant health (mould, IPM, pest ID, PPE and biosecurity), precision irrigation (root-zone sensors, smart watering, F2, the closed loop), and facility and quality (GMP, QMS, daily checks). Use when answering questions about growing cannabis, crop steering, irrigation, drybacks, water content, nutrients, pests, mould, environment/VPD, or cultivation facility setup; read the relevant papers/<slug>.md for detail and citations."
+description: "Beginner-friendly, evidence-linked cannabis cultivation reference: 55 white papers on propagation (seeds, cloning, tissue culture), crop steering (coco, rockwool, dryback, P0-P3), environment (VPD, lighting, airflow, CO2), water and nutrition (pH, EC, substrates, Athena mixing, deficiencies), plant health (mould, IPM, pest ID, PPE and biosecurity), precision irrigation (root-zone sensors, smart watering, F2, the closed loop), and facility and quality (GMP, QMS, daily checks). Use when answering questions about growing cannabis, crop steering, irrigation, drybacks, water content, nutrients, pests, mould, environment/VPD, or cultivation facility setup; read the relevant papers/<slug>.md for detail and citations."
 ---
 
 # The Cannabis White Papers
 
-A library of 54 evidence-linked, beginner-friendly cannabis cultivation field guides. Every paper is a clean markdown file in `papers/` with sources preserved as `[^id]` footnotes.
+A library of 55 evidence-linked, beginner-friendly cannabis cultivation field guides. Every paper is a clean markdown file in `papers/` with sources preserved as `[^id]` footnotes.
 
 Licensed CC BY-NC 4.0 (https://creativecommons.org/licenses/by-nc/4.0/). Attribution: The Cannabis White Papers.
 
 ## How to use
 
 1. Match the user's question to a paper below (or grep `papers/` / read `manifest.json`).
-2. Read only the relevant `papers/<slug>.md` (progressive disclosure, do not load all 54).
+2. Read only the relevant `papers/<slug>.md` (progressive disclosure, do not load all 55).
 3. Answer from it and cite the paper's footnoted sources. Look up terms in `glossary.json`.
 
 ## Papers by stage
@@ -61,6 +61,7 @@ Licensed CC BY-NC 4.0 (https://creativecommons.org/licenses/by-nc/4.0/). Attribu
 - **pH: what it is and how to hold it** (`papers/ph-management.md`): Hold pH, avoid lockout
 - **Nutrient deficiency and toxicity diagnosis** (`papers/nutrient-deficiencies.md`): Read the leaves, fix the feed
 - **Mixing an Athena Pro Line stock tank (metric)** (`papers/nutrient-mixing-athena.md`): Salts, in metric, done right
+- **Deep water culture, from first principles** (`papers/deep-water-culture.md`): Oxygen, ORP & the reservoir
 
 ### Plant health
 - **Mould risk: preventing and stopping bud rot** (`papers/mould-risk.md`): Spot and stop bud rot

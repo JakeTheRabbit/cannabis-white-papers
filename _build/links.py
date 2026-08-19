@@ -10,6 +10,7 @@ LINK_PHRASES = {
     "cannabis-tissue-culture-playbook": ["tissue culture playbook", "cannabis tissue culture, start to finish", "start-to-finish cannabis tissue culture"],
     "cannabis-tissue-culture-sop": ["tissue culture SOP", "AliExpress laminar", "laminar-flow hood from China", "F-01", "F-12"],
     "coco-crop-steering": ["crop steering", "coco coir", "dryback", "field capacity", "generative steering", "vegetative steering"],
+    "deep-water-culture": ["deep water culture", "DWC", "RDWC", "recirculating deep water culture", "water culture", "dissolved oxygen", "oxidation-reduction potential", "nanobubble", "nanobubbles", "air stone", "control bucket"],
     "rockwool-crop-steering": ["rockwool crop steering", "recovery floor", "stone wool", "preferential flow", "channeling"],
     "slab-irrigation-strategy": ["slab irrigation", "block-on-slab", "rooting-in", "block on slab", "drain slits", "matric suction"],
     "one-steering-law": ["one steering law", "the steering law", "steering law"],

@@ -48,6 +48,7 @@ Licensed CC BY-NC 4.0 (https://creativecommons.org/licenses/by-nc/4.0/). Attribu
 - [pH: what it is and how to hold it](https://jaketherabbit.github.io/cannabis-white-papers/papers/ph-management.md): Hold pH, avoid lockout
 - [Nutrient deficiency and toxicity diagnosis](https://jaketherabbit.github.io/cannabis-white-papers/papers/nutrient-deficiencies.md): Read the leaves, fix the feed
 - [Mixing an Athena Pro Line stock tank (metric)](https://jaketherabbit.github.io/cannabis-white-papers/papers/nutrient-mixing-athena.md): Salts, in metric, done right
+- [Deep water culture, from first principles](https://jaketherabbit.github.io/cannabis-white-papers/papers/deep-water-culture.md): Oxygen, ORP & the reservoir
 
 ## Plant health
 - [Mould risk: preventing and stopping bud rot](https://jaketherabbit.github.io/cannabis-white-papers/papers/mould-risk.md): Spot and stop bud rot

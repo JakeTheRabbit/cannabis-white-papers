@@ -63,6 +63,7 @@ PAPER_MODULES = [
     "paper_cannabinoids_terpenes",
     "paper_energy",
     "paper_plant_biology",
+    "paper_deep_water_culture",
 ]
 PAPERS, PAPER_ERRORS = [], []
 for _m in PAPER_MODULES:
