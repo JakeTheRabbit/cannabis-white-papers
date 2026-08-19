@@ -1,8 +1,12 @@
 # -*- coding: utf-8 -*-
 """Paper: deep water culture from first principles - oxygen, redox, iron and the reservoir."""
 from components import (p, lead, ul, ol, callout, defterm, table, figure,
-                        grid, card, chip, kv, steps)
+                        grid, card, chip, kv, steps, photo, photo_sequence)
 import figs_lib as L
+import figs_dwc as D
+
+IMG = "assets/img/deep-water-culture"
+GPT = "gpt-image-1"
 
 SLUG = "deep-water-culture"
 TITLE = "Deep water culture, from first principles"
@@ -11,8 +15,8 @@ SUB = ("Roots hanging in nutrient water have no substrate to hide behind. This p
        "system from the physics up: how much oxygen the water can actually hold, why more bubbling "
        "makes iron uptake worse, what an ORP probe is really measuring, and how a commercial RDWC "
        "programme is put together.")
-META = [("droplet", "Water culture"), ("image", "10 diagrams"),
-        ("quote", "Evidence-linked · 37 sources"), ("clock", "~34 min read")]
+META = [("droplet", "Water culture"), ("image", "17 diagrams · 10 photos"),
+        ("quote", "Evidence-linked · 37 sources"), ("clock", "~36 min read")]
 RELATED = ["substrates-overview", "water-quality", "ph-management",
            "nutrient-mixing-athena", "one-steering-law"]
 
@@ -74,11 +78,23 @@ SECTIONS.append({"id": "intro", "kicker": "Start here", "title": "A reservoir do
       "In a substrate these four functions are split between the medium, the drip line and the "
       "drain. In water culture they collapse into one volume of moving water, and any one of them "
       "failing takes the others with it."),
+    photo(f"{IMG}/01-rdwc-room.jpg",
+      "A commercial RDWC room. Every bucket is plumbed to the same loop, which means every bucket "
+      "shares one EC, one pH, one temperature and one microbial population. That is the strength "
+      "and the risk in a single image.", model=GPT),
     defterm("Deep water culture (DWC)",
       "Roots suspended directly in an aerated nutrient solution, with the crown held above the "
       "waterline by a net pot and inert media such as expanded clay. A single bucket is DWC. "
       "Buckets plumbed to a shared control reservoir with a circulation pump is "
       "<strong>RDWC</strong>, recirculating deep water culture."),
+    figure(D.bucket_xsection(), 2,
+      "One site in section. Note the two volumes that are not the same number: the "
+      "<strong>operating volume</strong> you dose against, and the <strong>left-over volume</strong> "
+      "below the bulkhead that a drain cannot reach." + _c("dwc-athena-rdwc-2024")),
+    photo(f"{IMG}/02-bucket-open.jpg",
+      "The same thing in the flesh: net pot seated in the lid, expanded clay holding the crown "
+      "clear of the water, and the root curtain hanging free in solution. There is no substrate "
+      "between the feed and the root.", model=GPT),
     defterm("Control bucket",
       "A plant-free vessel in an RDWC loop that carries the pump, the top-off float, the probes "
       "and the heater or chiller. Every reading and every dose happens here, so no plant site is "
@@ -114,7 +130,7 @@ SECTIONS.append({"id": "oxygen-budget", "kicker": "Physics", "title": "How much 
              ("25", 8.26), ("28", 7.83), ("30", 7.56)],
             ["10 C", "14 C", "18 C", "20 C", "22 C", "25 C", "28 C", "30 C"],
             ylab="mg/L", ymin=6, ymax=12,
-            note="Fresh water, 1 atm, in equilibrium with air. Standard solubility tables."), 2,
+            note="Fresh water, 1 atm, in equilibrium with air. Standard solubility tables."), 3,
       "Warming the reservoir from 18 to 28 &deg;C removes about 17% of the oxygen the water can hold, "
       "before a single root has breathed any of it." + _c("dwc-benson-krause-1984")),
     callout("key", "Warming a reservoir is doubly bad",
@@ -152,6 +168,14 @@ SECTIONS.append({"id": "oxygen-budget", "kicker": "Physics", "title": "How much 
       "about <strong>70 days</strong>" + _c("dwc-ebina-2013-nanobubble") + ". That is a genuinely "
       "different transport regime, not a marketing gradient: the gas keeps dissolving long after "
       "the visible bubbling has stopped."),
+    figure(D.bubble_scale(), 4,
+      "Bubble size is not a quality gradient, it is three different physical regimes. Only the "
+      "nano regime delivers gas without delivering a rising plume &mdash; which, as the next "
+      "section shows, is the whole problem with coarse aeration." + _c("dwc-ebina-2013-nanobubble")),
+    photo(f"{IMG}/08-nanobubble.jpg",
+      "Left: a coarse air stone, large bubbles, visible turbulent plume. Right: nanobubble water, "
+      "an even opalescent haze with no rising column. Same gas, entirely different mechanical "
+      "consequence for the root zone.", model=GPT),
   ]})
 
 # 3 ------------------------------------------------------------ how much is enough
@@ -170,7 +194,7 @@ SECTIONS.append({"id": "how-much", "kicker": "Targets", "title": "How much oxyge
              ("Air sat. 20 C", 9.1), ("NFT enriched", 8.8), ("DWC enriched", 15.0),
              ("O2 concentrator", 20.0)], unit=" mg/L",
             note="Floors are experimentally derived; the top two are what enrichment systems deliver, not requirements.",
-            maxv=24), 3,
+            maxv=24), 5,
       "The gap between the ~5 mg/L physiological floor and the 15&ndash;20 mg/L that enrichment "
       "hardware delivers is where all the argument lives. Above roughly 8&ndash;10 mg/L the "
       "evidence for further benefit becomes crop-specific and cost-sensitive." +
@@ -187,7 +211,7 @@ SECTIONS.append({"id": "how-much", "kicker": "Targets", "title": "How much oxyge
              (3.8, 6.0, L.AMBL, "Marginal"),
              (6.0, 10.0, L.GL, "Good: air-sat and a bit over"),
              (10.0, 22.0, L.BLUL, "Enriched: crop-specific, pay for it")], unit=" mg/L",
-            note="Below 3.8 you are damaging roots. Above ~10 you are buying yield you may not get."), 4,
+            note="Below 3.8 you are damaging roots. Above ~10 you are buying yield you may not get."), 6,
       "Getting from hypoxic to comfortable is the single highest-return move in water culture. "
       "Getting from comfortable to enriched is an economics question, not a horticulture one."),
     callout("warn", "Hypoxia damages the plant before you can see it in the roots",
@@ -223,6 +247,11 @@ SECTIONS.append({"id": "aeration-paradox", "kicker": "The counter-intuitive part
         "is <em>the plant's own nutrient-acquisition machinery</em>. Bubbling stirs it away. Turning "
         "the aeration up does not just add oxygen; it demolishes the boundary layer the root built "
         "to feed itself." + _c("dwc-langenfeld-2025-agitation-iron"))),
+    figure(D.boundary_layer(), 7,
+      "The single most useful picture in this paper. Left: gentle flow, the unstirred layer holds, "
+      "the root has acidified it and iron is available. Right: the same root in the same solution "
+      "with the air turned up &mdash; the layer is gone, and the root is now negotiating with bulk "
+      "chemistry it has no way to modify." + _c("dwc-langenfeld-2025-agitation-iron")),
     p("There is a second, blunter mechanism. Aggressive aeration strips dissolved CO<sub>2</sub> out "
       "of the solution. Carbonic acid is a real contributor to solution pH, so venting it drives pH "
       "up. In a deep-water-culture aquaponics trial the heavily aerated beds yielded "
@@ -257,8 +286,8 @@ SECTIONS.append({"id": "aeration-paradox", "kicker": "The counter-intuitive part
             [(0, 40, L.REDL, "Too little: hypoxia"),
              (40, 160, L.GL, "The window"),
              (160, 400, L.AMBL, "Too much: rhizosphere stripped, CO2 vented, pH drifts up")],
-            unit=" mL/min/L",
-            note="Centred on ~100 mL/min/L. Most hobby DWC builds run far to the right of the green band."), 5,
+            unit="",
+            note="Air flow in mL per minute per litre of solution. Centred on ~100. Most hobby DWC builds sit far right."), 8,
       "Growers instinctively treat aeration as a safety margin and over-provision it. The evidence "
       "says the top of the range has its own failure mode, and it presents as an iron deficiency "
       "you cannot feed your way out of."),
@@ -267,6 +296,12 @@ SECTIONS.append({"id": "aeration-paradox", "kicker": "The counter-intuitive part
         "the root mass rather than through it. A stone directly under the net pot drives the "
         "highest-shear part of the plume straight through the youngest, most fragile root tips. "
         "Same air volume, completely different outcome." + _c("dwc-athena-rdwc-2024"))),
+    figure(D.airstone_placement(), 9,
+      "Identical hardware, identical air volume, opposite result. The left bucket aims the plume "
+      "through the root mass; the right one lets it rise alongside." + _c("dwc-athena-rdwc-2024")),
+    photo(f"{IMG}/06-airstone.jpg",
+      "What you are aiming for underwater: a fine, even column rising near the wall and past the "
+      "roots, not a rolling boil through the middle of them.", model=GPT),
     p("This is also the strongest argument for nanobubble generation over conventional stones. "
       "Nanobubbles dissolve gas without producing a rising plume, which decouples oxygen delivery "
       "from mechanical agitation &mdash; the two things a coarse air stone forces you to buy "
@@ -299,12 +334,16 @@ SECTIONS.append({"id": "orp", "kicker": "The misread number", "title": "What an 
         "the measured platinum potential is a mixed potential of limited quantitative meaning, and "
         "cannot be used to model speciation" + _c("dwc-stefansson-2005-redox") + ". A hydroponic "
         "reservoir is exactly such a water.")),
+    figure(D.orp_mixed_potential(), 10,
+      "Every redox-active species in the reservoir pulls the electrode toward its own potential, "
+      "weighted by how fast it exchanges electrons. The meter shows the compromise. Dissolved "
+      "oxygen is the weakest voice in the room." + _c("dwc-stefansson-2005-redox")),
     figure(L.hbars("What actually moves ORP in a nutrient reservoir",
             [("Hypochlorous acid dose", 100), ("Hydrogen peroxide dose", 85),
-             ("Iron redox state (Fe2+/Fe3+)", 55), ("Reduced organic load", 45),
-             ("Microbial respiration", 40), ("pH (~59 mV per unit)", 35),
+             ("Iron redox state", 55), ("Reduced organic load", 45),
+             ("Microbial respiration", 40), ("pH (59 mV per unit)", 35),
              ("Dissolved oxygen", 8)], unit="",
-            note="Relative influence on the reading, not absolute millivolts. Oxygen is at the bottom."), 6,
+            note="Relative influence on the reading, not absolute millivolts. Oxygen is at the bottom."), 11,
       "Growers reach for ORP as an oxygen gauge. It is closer to a sanitiser gauge and an organic-load "
       "gauge. If you dose no chemical oxidiser, ORP is mostly reporting how clean your water is." +
       _c("dwc-suslow-2004-orp") + _c("dwc-stefansson-2005-redox")),
@@ -375,6 +414,10 @@ SECTIONS.append({"id": "orp", "kicker": "The misread number", "title": "What an 
         "circulation but shielded from the air stone. Biofilm growing on the electrode surface "
         "itself shifts a platinum reading by hundreds of millivolts" + _c("dwc-sholikah-2025-pt-electrode") +
         ", so probe cleaning is a scheduled task, not a troubleshooting step.")),
+    photo(f"{IMG}/10-probe-reading.jpg",
+      "Calibration is not optional maintenance in water culture, it is the difference between a "
+      "diagnosis and a guess. A drifting ORP probe and a fouled ORP probe look identical on the "
+      "display.", model=GPT),
   ]})
 
 # 6 ------------------------------------------------------------------- iron
@@ -405,7 +448,7 @@ SECTIONS.append({"id": "iron", "kicker": "Chemistry", "title": "Iron, chelates, 
     figure(L.zones("Where each iron chelate still holds its iron", 3.0, 9.5,
             [(3.0, 6.5, L.AMBL, "Fe-EDTA"), (6.5, 7.5, L.GL, "DTPA territory"),
              (7.5, 9.5, L.BLUL, "EDDHA only")], unit=" pH",
-            note="Typical RDWC runs pH 5.8-6.3, which sits right at the top of the EDTA band."), 7,
+            note="Typical RDWC runs pH 5.8-6.3, which sits right at the top of the EDTA band."), 12,
       "A recirculating system that drifts to pH 6.5 has not left the range plants like, but it has "
       "left the range Fe-EDTA is comfortable in." + _c("dwc-ilyas-2025-fe-chelates")),
     callout("note", "What a commercial line actually does about this",
@@ -427,6 +470,10 @@ SECTIONS.append({"id": "iron", "kicker": "Chemistry", "title": "Iron, chelates, 
               ". Turn the air <em>down</em>."], "tight")
         + "<p>Adding more iron fixes neither, and in the second case makes the underlying "
           "mismanagement harder to see.</p>")),
+    photo(f"{IMG}/05-chlorosis.jpg",
+      "Interveinal chlorosis on new growth: pale blade, veins still dark green, older leaves below "
+      "unaffected. The pattern tells you it is iron. It does not tell you whether the cause is pH "
+      "or aeration &mdash; and those call for opposite corrections.", model=GPT),
     p("Research into alternative iron sources continues &mdash; Schiff-base Fe(II) complexes stable "
       "at alkaline pH have outperformed both Fe-EDTA and Fe-EDDHA on root and shoot dry weight in "
       "maize" + _c("dwc-mirbolook-2023-fe-source") + " &mdash; but none of it is commercially "
@@ -513,9 +560,15 @@ SECTIONS.append({"id": "pathology", "kicker": "Failure mode", "title": "Root rot
              ("Zoospores home in", "altered exudates are a chemical beacon"),
              ("Necrotrophic switch", "an elicitor triggers browning and active tissue kill"),
              ("Collapse", "root function lost, whole-plant carbon gain falls")],
-            note="Every arrow is downstream of the first box. Treating the pathogen without fixing oxygen restarts the cascade."), 8,
+            note="Every arrow is downstream of the first box. Treating the pathogen without fixing oxygen restarts the cascade."), 13,
       "Root rot in water culture is rarely a hygiene failure in isolation. It is usually an oxygen "
       "failure that a ubiquitous opportunist exploited." + _c("dwc-scott-2026-do-pythium") + _c("dwc-sutton-2006-pythium")),
+    photo_sequence("What the cascade looks like at the root",
+      [("Healthy", f"{IMG}/03-roots-healthy.jpg"), ("Collapsing", f"{IMG}/04-roots-rot.jpg")],
+      "Left: brilliant white, fine, densely branched, glistening. Right: the same root mass after "
+      "the cascade &mdash; tan-brown, matted and slimy at the core, with a fringe of white still "
+      "surviving at the periphery where oxygen still reaches. That fringe is the tell: this is a "
+      "gradient failure, not an infection that arrived all at once.", model=GPT),
     callout("key", "Where to spend your effort",
       p("The definitive review of <em>Pythium</em> in hydroponic crops draws a conclusion that "
         "contradicts how most systems are designed: measures that disinfest the nutrient solution "
@@ -558,6 +611,10 @@ SECTIONS.append({"id": "temperature", "kicker": "The master dial", "title": "Sol
       "yield and quality attribute measured, across three cropping seasons over two years" +
       _c("dwc-alrawahy-2019-rzt") + ". Note the second result: cooler roots did not respire less, "
       "they respired more, because they were no longer oxygen-limited."),
+    figure(D.supply_demand(), 14,
+      "The two curves that make temperature the master dial. Every degree of warming takes oxygen "
+      "out of the water and simultaneously asks the root for more of it." +
+      _c("dwc-benson-krause-1984") + _c("dwc-alrawahy-2019-rzt")),
     p("Commercial practice tracks a descending ramp rather than a single setpoint. A published RDWC "
       "programme steps solution temperature down through the crop" + _c("dwc-athena-rdwc-2024") + ":"),
     figure(L.line("Commercial RDWC solution-temperature schedule",
@@ -565,7 +622,7 @@ SECTIONS.append({"id": "temperature", "kicker": "The master dial", "title": "Sol
              ("Fl 5", 18.3), ("Fl 6", 17.8), ("Fl 7", 16.7), ("Fl 8", 16.7), ("Finish", 13.9)],
             ["Veg", "Fl1", "Fl2", "Fl3", "Fl4", "Fl5", "Fl6", "Fl7", "Fl8", "Fin"],
             ylab="°C", ymin=12, ymax=23,
-            note="Warm enough to establish, then progressively cooler as root mass and oxygen demand grow."), 9,
+            note="Warm enough to establish, then progressively cooler as root mass and oxygen demand grow."), 15,
       "The ramp is not arbitrary. Root mass and total oxygen demand rise through the crop, so the "
       "supply side has to rise with it &mdash; and the cheapest way to raise dissolved oxygen is to "
       "lower the temperature." + _c("dwc-athena-rdwc-2024")),
@@ -607,7 +664,7 @@ SECTIONS.append({"id": "feed", "kicker": "Nutrition", "title": "Why water cultur
              ("F3", 1.07), ("F4", 1.21), ("F5", 1.36), ("F6", 1.50), ("F7", 1.36), ("F8", 1.29)],
             ["Init", "V2", "V4", "F1", "F2", "F3", "F4", "F5", "F6", "F7", "F8"],
             ylab="EC (mS/cm)", ymin=0, ymax=1.8,
-            note="Feathering up gradually, peaking mid-late flower, then tapering. Finish runs 0-1.0."), 10,
+            note="Feathering up gradually, peaking mid-late flower, then tapering. Finish runs 0-1.0."), 16,
       "Peak EC around 1.5 mS/cm is roughly half what many coco programmes run at the same stage. "
       "The plant is not being underfed; the delivery mechanism is different." + _c("dwc-athena-rdwc-2024")),
     defterm("Feathering up",
@@ -707,6 +764,13 @@ SECTIONS.append({"id": "build", "kicker": "Build", "title": "Sizing and building
         "carries a crop for hours. A small, warm, marginal one is in trouble within one. Battery "
         "backup on the air pump buys more crop insurance per dollar than backup on almost anything "
         "else in the room, because the oxygen reserve is the resource with the shortest half-life.")),
+    figure(D.system_schematic(), 17,
+      "The whole loop. Plant sites are deliberately dumb &mdash; every probe, dose, pump and float "
+      "lives in the one bucket with no plant in it, so nothing concentrated ever meets a root and "
+      "no single site can be mistaken for the system." + _c("dwc-athena-rdwc-2024")),
+    photo(f"{IMG}/07-control-bucket.jpg",
+      "A control bucket in practice: pump, float valve on the RO line, and probes clipped into a "
+      "perforated stilling tube that shields them from the bubble plume.", model=GPT),
   ]})
 
 # 12 --------------------------------------------------------------------- run
@@ -754,6 +818,9 @@ SECTIONS.append({"id": "run", "kicker": "Operate", "title": "Running it: checks,
         "power the system down while you do it. Have the replacement water made and tempered "
         "<em>before</em> you open the drain &mdash; the worst version of this job is discovering "
         "mid-drain that the RO tank is empty.")),
+    photo(f"{IMG}/09-changeout.jpg",
+      "A change-out in progress. Drain open, refill line already staged. The clock is running on "
+      "root exposure from the moment the level drops.", model=GPT),
     p("Diagnosis is where the sections of this paper come together. Most water-culture faults present "
       "as one of three symptoms, and each has multiple causes calling for opposite actions:"),
     table(["What you see", "Likely causes", "First check", "Common wrong move"], [

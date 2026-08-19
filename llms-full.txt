@@ -14461,7 +14461,7 @@ From here, follow the plant's own order: [seeds and germination](seeds-germinati
 
 # Deep water culture, from first principles
 
-_Water culture · Root-zone oxygen · ~34 min read_
+_Water culture · Root-zone oxygen · ~36 min read_
 
 > Roots hanging in nutrient water have no substrate to hide behind. This paper builds the system from the physics up: how much oxygen the water can actually hold, why more bubbling makes iron uptake worse, what an ORP probe is really measuring, and how a commercial RDWC programme is put together.
 
@@ -14473,7 +14473,17 @@ That is the whole story of DWC in one sentence. Everything else in this paper is
 
 > **Diagram.** In a substrate these four functions are split between the medium, the drip line and the drain. In water culture they collapse into one volume of moving water, and any one of them failing takes the others with it.
 
+![A commercial RDWC room. Every bucket is plumbed to the same loop, which means every bucket shares one EC, one pH, one temperature and one microbial population. That is the strength and the risk in a single image.](assets/img/deep-water-culture/01-rdwc-room.jpg)
+
+*A commercial RDWC room. Every bucket is plumbed to the same loop, which means every bucket shares one EC, one pH, one temperature and one microbial population. That is the strength and the risk in a single image.gpt-image-1*
+
 **Deep water culture (DWC)** — Roots suspended directly in an aerated nutrient solution, with the crown held above the waterline by a net pot and inert media such as expanded clay. A single bucket is DWC. Buckets plumbed to a shared control reservoir with a circulation pump is **RDWC**, recirculating deep water culture.
+
+> **Diagram.** One site in section. Note the two volumes that are not the same number: the **operating volume** you dose against, and the **left-over volume** below the bulkhead that a drain cannot reach.[^dwc-athena-rdwc-2024]
+
+![The same thing in the flesh: net pot seated in the lid, expanded clay holding the crown clear of the water, and the root curtain hanging free in solution. There is no substrate between the feed and the root.](assets/img/deep-water-culture/02-bucket-open.jpg)
+
+*The same thing in the flesh: net pot seated in the lid, expanded clay holding the crown clear of the water, and the root curtain hanging free in solution. There is no substrate between the feed and the root.gpt-image-1*
 
 **Control bucket** — A plant-free vessel in an RDWC loop that carries the pump, the top-off float, the probes and the heater or chiller. Every reading and every dose happens here, so no plant site is ever the measurement point.[^dwc-athena-rdwc-2024]
 
@@ -14515,6 +14525,12 @@ A pressure-swing concentrator delivers roughly 90–95% oxygen. Henry's law scal
 
 The other lever is bubble size. Conventional air stones make bubbles of a few millimetres that rise and burst in seconds. Nanobubbles — below roughly 200 nm — carry a negatively charged surface that resists coalescence and a high internal pressure that keeps gas dissolving. In the original characterisation work they remained measurable in water for about **70 days**[^dwc-ebina-2013-nanobubble]. That is a genuinely different transport regime, not a marketing gradient: the gas keeps dissolving long after the visible bubbling has stopped.
 
+> **Diagram.** Bubble size is not a quality gradient, it is three different physical regimes. Only the nano regime delivers gas without delivering a rising plume — which, as the next section shows, is the whole problem with coarse aeration.[^dwc-ebina-2013-nanobubble]
+
+![Left: a coarse air stone, large bubbles, visible turbulent plume. Right: nanobubble water, an even opalescent haze with no rising column. Same gas, entirely different mechanical consequence for the root zone.](assets/img/deep-water-culture/08-nanobubble.jpg)
+
+*Left: a coarse air stone, large bubbles, visible turbulent plume. Right: nanobubble water, an even opalescent haze with no rising column. Same gas, entirely different mechanical consequence for the root zone.gpt-image-1*
+
 ## How much oxygen the plant actually needs
 
 The literature is unusually consistent about the bottom of the range and unusually messy about the top. Both facts are useful.
@@ -14545,6 +14561,8 @@ The clearest demonstration comes from deep-flow hydroponics run at aeration rate
 >
 > A root does not simply absorb whatever is in the bulk solution. It builds a thin unstirred boundary layer around itself and chemically engineers it — pumping out protons to acidify it, exuding reductants and chelators to make iron available. That microenvironment is _the plant's own nutrient-acquisition machinery_. Bubbling stirs it away. Turning the aeration up does not just add oxygen; it demolishes the boundary layer the root built to feed itself.[^dwc-langenfeld-2025-agitation-iron]
 
+> **Diagram.** The single most useful picture in this paper. Left: gentle flow, the unstirred layer holds, the root has acidified it and iron is available. Right: the same root in the same solution with the air turned up — the layer is gone, and the root is now negotiating with bulk chemistry it has no way to modify.[^dwc-langenfeld-2025-agitation-iron]
+
 There is a second, blunter mechanism. Aggressive aeration strips dissolved CO2 out of the solution. Carbonic acid is a real contributor to solution pH, so venting it drives pH up. In a deep-water-culture aquaponics trial the heavily aerated beds yielded **29% less** than unaerated controls at harvest — and dissolved oxygen never dropped below 5 mg/L in any treatment, so oxygen was never the limiting factor. The authors attributed the loss to the pH shift that came with the aeration[^dwc-bodenmiller-2017-aeration].
 
 So what rate is right? Two independent sources converge on almost exactly the same number, which is the most reassuring thing in this paper.
@@ -14567,6 +14585,12 @@ A commercial RDWC procedure specifies **one 5 × 5 cm medium round air stone per
 >
 > Air stones at the bottom of the bucket and offset from the wall let the column rise past the root mass rather than through it. A stone directly under the net pot drives the highest-shear part of the plume straight through the youngest, most fragile root tips. Same air volume, completely different outcome.[^dwc-athena-rdwc-2024]
 
+> **Diagram.** Identical hardware, identical air volume, opposite result. The left bucket aims the plume through the root mass; the right one lets it rise alongside.[^dwc-athena-rdwc-2024]
+
+![What you are aiming for underwater: a fine, even column rising near the wall and past the roots, not a rolling boil through the middle of them.](assets/img/deep-water-culture/06-airstone.jpg)
+
+*What you are aiming for underwater: a fine, even column rising near the wall and past the roots, not a rolling boil through the middle of them.gpt-image-1*
+
 This is also the strongest argument for nanobubble generation over conventional stones. Nanobubbles dissolve gas without producing a rising plume, which decouples oxygen delivery from mechanical agitation — the two things a coarse air stone forces you to buy together. Micro/nanobubble-aerated irrigation at 15 and 30 mg/L produced larger root volume, richer rhizosphere bacterial communities and higher yields than at 5 mg/L[^dwc-wang-2024-mnb-microbiome], and reviews of the technology in controlled environment agriculture frame it primarily as a way to keep the root zone aerobic enough for beneficial microbes to function[^dwc-mamun-2025-onb-health].
 
 ## What an ORP probe is actually telling you
@@ -14580,6 +14604,8 @@ Here is the first thing that surprises people: **dissolved oxygen barely moves O
 > **KEY — What a Pt electrode reads in a dilute solution is a mixed potential**
 >
 > A rigorous study of natural waters calculated the redox potential separately for six different couples in the same water. They disagreed by up to **1200 mV**. The authors concluded that in dilute waters with low concentrations of redox-active species, the measured platinum potential is a mixed potential of limited quantitative meaning, and cannot be used to model speciation[^dwc-stefansson-2005-redox]. A hydroponic reservoir is exactly such a water.
+
+> **Diagram.** Every redox-active species in the reservoir pulls the electrode toward its own potential, weighted by how fast it exchanges electrons. The meter shows the compromise. Dissolved oxygen is the weakest voice in the room.[^dwc-stefansson-2005-redox]
 
 > **Diagram.** Growers reach for ORP as an oxygen gauge. It is closer to a sanitiser gauge and an organic-load gauge. If you dose no chemical oxidiser, ORP is mostly reporting how clean your water is.[^dwc-suslow-2004-orp][^dwc-stefansson-2005-redox]
 
@@ -14625,6 +14651,10 @@ ORP is now tracking your oxidiser residual and the manufacturer's shock zone is 
 >
 > A probe sitting in an active bubble plume reads the bubbles as much as the water, which is the usual explanation for a DO reading that swings between 15 and 25 mg/L. Mount probes in a calm, flow-through pocket — a perforated bottle or a small stilling well fed by circulation but shielded from the air stone. Biofilm growing on the electrode surface itself shifts a platinum reading by hundreds of millivolts[^dwc-sholikah-2025-pt-electrode], so probe cleaning is a scheduled task, not a troubleshooting step.
 
+![Calibration is not optional maintenance in water culture, it is the difference between a diagnosis and a guess. A drifting ORP probe and a fouled ORP probe look identical on the display.](assets/img/deep-water-culture/10-probe-reading.jpg)
+
+*Calibration is not optional maintenance in water culture, it is the difference between a diagnosis and a guess. A drifting ORP probe and a fouled ORP probe look identical on the display.gpt-image-1*
+
 ## Iron, chelates, and the chlorosis you cannot feed away
 
 Iron is the element water culture punishes you over. It is required in large amounts relative to other micronutrients, it is almost insoluble in oxygenated water at anything above mildly acidic pH, and it only stays available because we wrap it in a chelate.
@@ -14650,6 +14680,10 @@ The three common chelates are not interchangeable. They differ in how high a pH 
 > **WARN — Two different causes, one symptom**
 >
 > Interveinal chlorosis in new growth — yellow between green veins on the youngest leaves — is the classic iron signature. In water culture it has at least two causes that call for opposite actions:**Chelate failure** — pH has drifted above what your chelate holds. Fix the pH, or move to a stronger chelate.**Rhizosphere stripping** — aeration is agitating away the boundary layer the root uses to acquire iron[^dwc-langenfeld-2025-agitation-iron]. Turn the air _down_.Adding more iron fixes neither, and in the second case makes the underlying mismanagement harder to see.
+
+![Interveinal chlorosis on new growth: pale blade, veins still dark green, older leaves below unaffected. The pattern tells you it is iron. It does not tell you whether the cause is pH or aeration &mdash; and those call for opposite corrections.](assets/img/deep-water-culture/05-chlorosis.jpg)
+
+*Interveinal chlorosis on new growth: pale blade, veins still dark green, older leaves below unaffected. The pattern tells you it is iron. It does not tell you whether the cause is pH or aeration — and those call for opposite corrections.gpt-image-1*
 
 Research into alternative iron sources continues — Schiff-base Fe(II) complexes stable at alkaline pH have outperformed both Fe-EDTA and Fe-EDDHA on root and shoot dry weight in maize[^dwc-mirbolook-2023-fe-source] — but none of it is commercially relevant yet. For now the lever is pH control and chelate selection.
 
@@ -14691,6 +14725,10 @@ A review synthesising hydroponic systems engineering, plant physiology and oomyc
 
 > **Diagram.** Root rot in water culture is rarely a hygiene failure in isolation. It is usually an oxygen failure that a ubiquitous opportunist exploited.[^dwc-scott-2026-do-pythium][^dwc-sutton-2006-pythium]
 
+![Healthy](assets/img/deep-water-culture/03-roots-healthy.jpg)
+
+*Left: brilliant white, fine, densely branched, glistening. Right: the same root mass after the cascade — tan-brown, matted and slimy at the core, with a fringe of white still surviving at the periphery where oxygen still reaches. That fringe is the tell: this is a gradient failure, not an infection that arrived all at once.gpt-image-1*
+
 > **KEY — Where to spend your effort**
 >
 > The definitive review of _Pythium_ in hydroponic crops draws a conclusion that contradicts how most systems are designed: measures that disinfest the nutrient solution _as it recirculates outside the crop_ have commonly minor impact on epidemics. What works is treatment that suppresses the pathogen **in the roots and root zone**[^dwc-sutton-2006-pythium]. A UV steriliser on the return line is doing less than the brochure implies if the root zone itself is warm and under-oxygenated.
@@ -14708,6 +14746,8 @@ On chemical oxidisers as a treatment: they work, and they have a cost. Hydrogen 
 If you take one operational lever away from this paper, take this one. Reservoir temperature simultaneously sets oxygen supply, oxygen demand, pathogen growth rate and pH stability. Nothing else you can adjust touches that many variables at once.
 
 The experimental case is clean. Cooling a recirculating hydroponic solution across four setpoints from 33 °C down to 22 °C raised dissolved oxygen in both the feed and the drain, raised measured _oxygen consumption by the roots_, and improved every growth, yield and quality attribute measured, across three cropping seasons over two years[^dwc-alrawahy-2019-rzt]. Note the second result: cooler roots did not respire less, they respired more, because they were no longer oxygen-limited.
+
+> **Diagram.** The two curves that make temperature the master dial. Every degree of warming takes oxygen out of the water and simultaneously asks the root for more of it.[^dwc-benson-krause-1984][^dwc-alrawahy-2019-rzt]
 
 Commercial practice tracks a descending ramp rather than a single setpoint. A published RDWC programme steps solution temperature down through the crop[^dwc-athena-rdwc-2024]:
 
@@ -14775,6 +14815,12 @@ Design decisions in water culture are mostly about buying yourself margin, becau
 >
 > Ask what happens when the power fails at 2 a.m. A large, cool, well-oxygenated volume carries a crop for hours. A small, warm, marginal one is in trouble within one. Battery backup on the air pump buys more crop insurance per dollar than backup on almost anything else in the room, because the oxygen reserve is the resource with the shortest half-life.
 
+> **Diagram.** The whole loop. Plant sites are deliberately dumb — every probe, dose, pump and float lives in the one bucket with no plant in it, so nothing concentrated ever meets a root and no single site can be mistaken for the system.[^dwc-athena-rdwc-2024]
+
+![A control bucket in practice: pump, float valve on the RO line, and probes clipped into a perforated stilling tube that shields them from the bubble plume.](assets/img/deep-water-culture/07-control-bucket.jpg)
+
+*A control bucket in practice: pump, float valve on the RO line, and probes clipped into a perforated stilling tube that shields them from the bubble plume.gpt-image-1*
+
 ## Running it: checks, change-outs and diagnosis
 
 Water culture rewards routine and punishes improvisation. The daily round is short; the value is in doing it every day, at the same time, and writing the numbers down.
@@ -14817,6 +14863,10 @@ Change-outs are the reset mechanism, and knowing when to reach for one is most o
 > **WARN — Change-outs are a race**
 >
 > Roots exposed to air are stressed and damaged fast. Drain quickly, refill immediately, and power the system down while you do it. Have the replacement water made and tempered _before_ you open the drain — the worst version of this job is discovering mid-drain that the RO tank is empty.
+
+![A change-out in progress. Drain open, refill line already staged. The clock is running on root exposure from the moment the level drops.](assets/img/deep-water-culture/09-changeout.jpg)
+
+*A change-out in progress. Drain open, refill line already staged. The clock is running on root exposure from the moment the level drops.gpt-image-1*
 
 Diagnosis is where the sections of this paper come together. Most water-culture faults present as one of three symptoms, and each has multiple causes calling for opposite actions:
 
