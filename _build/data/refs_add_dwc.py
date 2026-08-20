@@ -38,6 +38,15 @@ REFS_ADD = {
         "cite": "Al Mamun M, et al. (2025). Oxygenated nanobubbles as a sustainable strategy to strengthen plant health in controlled environment agriculture. <em>Sustainability</em> 17.",
         "url": "https://consensus.app/papers/details/41096736729a529ebc7b02735f1871f1/", "peer": True},
 
+    "dwc-yang-2025-microbubble-ros": {
+        "cite": "Yang S-Y, et al. (2025). Probing catalyst-free hydroxyl radical generation at microbubble interfaces. <em>Nature Communications</em>. (Hydroxide enrichment plus the interfacial electric field drives &middot;OH generation at the gas-liquid interface with no catalyst.)",
+        "url": "https://consensus.app/papers/details/3d365dd86d9f5e8f98a2a30f32dd33cf/", "peer": True},
+    "dwc-takahashi-2021-nb-radicals": {
+        "cite": "Takahashi M, Shirai Y, Sugawa S (2021). Free-radical generation from bulk nanobubbles in aqueous electrolyte solutions: ESR spin-trap observation of microbubble-treated water. <em>Langmuir</em> 37(16):5005-5011.",
+        "url": "https://consensus.app/papers/details/906a882e5eee54a980d4f667eb8c5358/", "peer": True},
+    "dwc-chae-2023-nb-ros-null": {
+        "cite": "Chae S, et al. (2023). Nanobubble reactivity: evaluating hydroxyl radical generation (or lack thereof) under ambient conditions. <em>ACS ES&amp;T Engineering</em>. (No detectable &middot;OH from oxygen nanobubbles; a widely used fluorescent probe gives a false positive because the bubble surface is proton-rich.)",
+        "url": "https://consensus.app/papers/details/af2d49c7b3f0597a9dbd2ae10d025fe9/", "peer": True},
     # ---------- oxygen physical chemistry ----------
     "dwc-benson-krause-1984": {
         "cite": "Benson BB, Krause D (1984). The concentration and isotopic fractionation of oxygen dissolved in freshwater and seawater in equilibrium with the atmosphere. <em>Limnology and Oceanography</em> 29(3):620-632. (The standard air-saturation tables.)",

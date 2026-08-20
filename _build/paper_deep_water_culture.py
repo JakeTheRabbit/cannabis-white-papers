@@ -16,7 +16,7 @@ SUB = ("Roots hanging in nutrient water have no substrate to hide behind. This p
        "makes iron uptake worse, what an ORP probe is really measuring, and how a commercial RDWC "
        "programme is put together.")
 META = [("droplet", "Water culture"), ("image", "17 diagrams · 10 photos"),
-        ("quote", "Evidence-linked · 37 sources"), ("clock", "~36 min read")]
+        ("quote", "Evidence-linked · 40 sources"), ("clock", "~38 min read")]
 RELATED = ["substrates-overview", "water-quality", "ph-management",
            "nutrient-mixing-athena", "one-steering-law"]
 
@@ -32,6 +32,7 @@ REF_IDS = [
     "dwc-bodenmiller-2017-aeration",
     # nanobubbles
     "dwc-ebina-2013-nanobubble", "dwc-wang-2024-mnb-microbiome", "dwc-mamun-2025-onb-health",
+    "dwc-yang-2025-microbubble-ros", "dwc-takahashi-2021-nb-radicals", "dwc-chae-2023-nb-ros-null",
     # redox
     "dwc-stefansson-2005-redox", "dwc-suslow-2004-orp", "dwc-sholikah-2025-pt-electrode",
     # iron
@@ -322,11 +323,56 @@ SECTIONS.append({"id": "orp", "kicker": "The misread number", "title": "What an 
       "The electrical potential, in millivolts, of an inert platinum electrode immersed in the "
       "solution, measured against a reference electrode. It reflects the balance of oxidising and "
       "reducing species &mdash; the solution's overall tendency to accept or donate electrons."),
-    p("Here is the first thing that surprises people: <strong>dissolved oxygen barely moves ORP.</strong> "
-      "The O<sub>2</sub>/H<sub>2</sub>O couple has a large standard potential on paper but exchanges "
-      "electrons extremely slowly at a platinum surface. In the language of electrochemistry it has "
-      "a very low exchange current density; it is kinetically irreversible. It therefore contributes "
-      "almost nothing to the potential the electrode settles on."),
+    p("Here is where most people go wrong, and the correction is not what you would guess. "
+      "<strong>Raising dissolved oxygen does reliably raise ORP &mdash; but almost none of that rise "
+      "is oxygen acting on the electrode.</strong> Both halves matter. Growers who are told &lsquo;ORP "
+      "is not an oxygen measurement&rsquo; and then watch their ORP jump 200 mV when they switch to an "
+      "oxygen concentrator quite reasonably conclude they have been misinformed. They have not; the "
+      "causal chain just runs through the water rather than through the electrode."),
+    p("The O<sub>2</sub>/H<sub>2</sub>O couple has a large standard potential on paper but exchanges "
+      "electrons extremely slowly at a platinum surface. In the language of electrochemistry it has a "
+      "very low exchange current density: it is kinetically irreversible. Two things follow. The "
+      "electrode never actually reaches oxygen equilibrium &mdash; at pH 5.8 a fully equilibrated "
+      "oxygen electrode would sit near <strong>690 mV</strong> against a silver/silver-chloride "
+      "reference, and real reservoirs read hundreds of millivolts below that. And the <em>direct</em> "
+      "response to oxygen concentration is small enough that you can calculate it on the back of an "
+      "envelope."),
+    callout("key", "Do the arithmetic before you attribute an ORP change to oxygen",
+      p("The Nernst slope for a four-electron couple is 59.16 &divide; 4 = <strong>14.8 mV per decade</strong> "
+        "of oxygen partial pressure. Going from air (<em>p</em>O<sub>2</sub> 0.21 atm) to a "
+        "concentrator at roughly 93% O<sub>2</sub> is 0.65 of a decade. Maximum direct shift: "
+        "<strong>about 10 mV</strong>. If your ORP moved by more than a few tens of millivolts, "
+        "oxygen did not do it directly. Something in the water changed &mdash; and that is worth "
+        "knowing, because it is usually the more important fact.")),
+    callout("evidence", "A field case: 220-260 mV on air, about 480 mV on an oxygen concentrator",
+      p("A grower running a nanobubbler reported ORP sitting at <strong>220-260 mV</strong> on plain "
+        "air. The system mostly worked, but new reservoirs with freshly transplanted clones brought "
+        "recurring <em>Pythium</em> and cyanobacteria, persistent biofilm, and one detail that gives "
+        "the whole game away: <em>the roots stayed up in the clay pebbles and would not grow down "
+        "into the water.</em> After switching the same system to an oxygen concentrator, ORP settled "
+        "around <strong>480 mV</strong>, biofilm essentially stopped, and the root-avoidance "
+        "resolved.")
+      + p("That is a ~240 mV shift where the arithmetic above allows about 10. The other ~230 mV is "
+          "not oxygen on the electrode &mdash; it is the reservoir itself having changed. At 220-260 mV "
+          "the water was carrying a real load of reduced organic carbon and supporting active "
+          "anaerobic and micro-aerophilic metabolism. Those reduced species <em>are</em> fast, "
+          "well-poised couples, and they were holding the electrode down. Flooding the system with "
+          "oxygen burned that load out and collapsed the population producing it. Remove the "
+          "reductants and the electrode floats up to a far higher mixed potential.")
+      + p("So the rise is real, it is useful, and it is worth acting on. It simply is not a "
+          "measurement of oxygen &mdash; it is the cleanliness readout responding to a cleanliness "
+          "change that oxygen caused. Which is exactly what ORP is for.")),
+    callout("note", "A second pathway, genuinely unsettled",
+      p("Gas-liquid interfaces at micro and nano scale have been shown to generate hydroxyl radicals "
+        "with no catalyst at all, driven by hydroxide enrichment and the interfacial electric field" +
+        _c("dwc-yang-2025-microbubble-ros") + ", and spin-trap work has detected radical signatures "
+        "in microbubble-treated water months after treatment" + _c("dwc-takahashi-2021-nb-radicals") +
+        ". Against that, a careful study found no detectable hydroxyl radical from oxygen nanobubbles "
+        "under ambient conditions, and showed that a widely used fluorescent probe returns a false "
+        "positive because the bubble surface is proton-rich" + _c("dwc-chae-2023-nb-ros-null") + ". "
+        "Treat any radical contribution as unproven and second-order. The reductant-removal mechanism "
+        "above is sufficient to explain what growers actually observe, and it does not require the "
+        "chemistry to be exotic.")),
     callout("key", "What a Pt electrode reads in a dilute solution is a mixed potential",
       p("A rigorous study of natural waters calculated the redox potential separately for six "
         "different couples in the same water. They disagreed by up to <strong>1200 mV</strong>. The "
@@ -340,13 +386,15 @@ SECTIONS.append({"id": "orp", "kicker": "The misread number", "title": "What an 
       "oxygen is the weakest voice in the room." + _c("dwc-stefansson-2005-redox")),
     figure(L.hbars("What actually moves ORP in a nutrient reservoir",
             [("Hypochlorous acid dose", 100), ("Hydrogen peroxide dose", 85),
-             ("Iron redox state", 55), ("Reduced organic load", 45),
-             ("Microbial respiration", 40), ("pH (59 mV per unit)", 35),
-             ("Dissolved oxygen", 8)], unit="",
-            note="Relative influence on the reading, not absolute millivolts. Oxygen is at the bottom."), 11,
-      "Growers reach for ORP as an oxygen gauge. It is closer to a sanitiser gauge and an organic-load "
-      "gauge. If you dose no chemical oxidiser, ORP is mostly reporting how clean your water is." +
-      _c("dwc-suslow-2004-orp") + _c("dwc-stefansson-2005-redox")),
+             ("Oxygen - INDIRECT", 78), ("Iron redox state", 55),
+             ("Reduced organic load", 45), ("Microbial respiration", 40),
+             ("pH (59 mV per unit)", 35), ("Oxygen - DIRECT on Pt", 8)], unit="",
+            note="Relative influence on the reading. Oxygen appears twice, and the two entries are not the same thing."), 11,
+      "The distinction that resolves most ORP arguments. Oxygen acting <em>directly</em> on the "
+      "electrode is the weakest effect on the chart, capped near 10 mV. Oxygen acting "
+      "<em>indirectly</em> &mdash; by oxidising out the reduced organic load and collapsing the "
+      "anaerobic population that was holding the reading down &mdash; is one of the strongest, and "
+      "is what growers actually observe." + _c("dwc-suslow-2004-orp") + _c("dwc-stefansson-2005-redox")),
     p("The second surprise is that <strong>ORP is meaningless without the pH beside it</strong>. Most "
       "environmentally relevant redox couples consume protons as they accept electrons. The Nernst "
       "equation makes the consequence exact: at 25 &deg;C the potential shifts by about "
@@ -381,8 +429,9 @@ SECTIONS.append({"id": "orp", "kicker": "The misread number", "title": "What an 
     p("A commercial RDWC procedure treats it exactly this way, and defines three zones with a "
       "sensory cross-check for each" + _c("dwc-athena-rdwc-2024") + ":"),
     table(["Zone", "What is happening", "Smell", "Consequence"], [
-      ["<strong>Anaerobic</strong>", "ORP has fallen; reduced organics and anaerobic metabolism dominate",
-       "Putrid", "Pathogen growth, root rot"],
+      ["<strong>Anaerobic</strong>", "ORP has fallen; reduced organics and anaerobic metabolism dominate. "
+       "A field report of a persistently biofilm-prone air-stone system put this at <strong>220-260 mV</strong>",
+       "Putrid", "Pathogen growth, root rot, roots refusing to enter the water"],
       ["<strong>Safe</strong>", "Clean water, oxidiser present but not accumulating",
        "Fresh bean sprouts", "White roots, normal uptake"],
       ["<strong>ORP shock</strong>", "Oxidiser over-dosed; highly oxidised environment",
@@ -400,8 +449,10 @@ SECTIONS.append({"id": "orp", "kicker": "The misread number", "title": "What an 
     grid([
       card("If you dose no chemical oxidiser",
            p("A high, stable ORP mostly means your solution is clean and free of reduced organic "
-             "load. There is no oxidiser present to shock anything. Read it as a hygiene indicator "
-             "and stop worrying about the absolute number.")),
+             "load. There is no oxidiser present to shock anything, so a high number is not a "
+             "warning &mdash; read it as a hygiene indicator. It is the <em>low</em> end that should "
+             "worry you: a reading that sits low and drifts lower, with no oxidiser in the system, "
+             "is reporting an accumulating reduced load and a reservoir heading anaerobic.")),
       card("If you dose hypochlorous or peroxide",
            p("ORP is now tracking your oxidiser residual and the manufacturer's shock zone is a real "
              "risk. This is when the number needs an upper limit, a logged pH beside it, and a "
@@ -582,6 +633,13 @@ SECTIONS.append({"id": "pathology", "kicker": "Failure mode", "title": "Root rot
       "<em>without</em> significantly reducing photosynthetic efficiency per unit leaf area" +
       _c("dwc-sutton-2006-pythium") + ". The plant is not sick-looking; it is just quietly building "
       "less canopy than it should. By the time it looks obviously wrong, you have lost weeks."),
+    callout("tip", "The tell that arrives before the brown roots",
+      p("In water culture there is an early behavioural sign worth more than any probe: "
+        "<strong>roots that stay up in the clay pebbles and will not grow down into the "
+        "solution.</strong> A root system actively declining to enter the water is telling you the "
+        "water is hostile &mdash; too warm, too low in oxygen, or carrying a microbial load it is "
+        "avoiding. Growers who fix the oxygen supply report the behaviour reversing. Read it as a "
+        "root-zone alarm, not as a slow-establishing plant.")),
     p("On chemical oxidisers as a treatment: they work, and they have a cost. Hydrogen peroxide "
       "applied into hydroponic solution across 0&ndash;400 mg/L produced visible root injury in "
       "every crop tested, with cucumber the most susceptible, and the concentrations needed for "
@@ -848,6 +906,14 @@ SECTIONS.append({"id": "run", "kicker": "Operate", "title": "Running it: checks,
        "Probe sitting in the bubble plume",
        "Probe placement &mdash; read in a calm pocket",
        "Believing the number"],
+      ["Roots stay in the clay, will not enter the water",
+       "Hostile solution: warm, low DO, or high microbial load",
+       "Temperature and DO, then reservoir cleanliness",
+       "Waiting it out as &lsquo;slow establishment&rsquo;"],
+      ["ORP jumped ~200 mV after an equipment change",
+       "The reservoir got cleaner &mdash; not a direct oxygen effect",
+       "Whether a chemical oxidiser is in play; log pH alongside",
+       "Reading it as a dissolved-oxygen measurement"],
     ], caption="The diagnostic table. Note how often the correct action is to turn something "
       "<em>down</em> rather than add something."),
     callout("key", "The five things that matter most, in order",

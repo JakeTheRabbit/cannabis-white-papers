@@ -991,7 +991,7 @@
    "title": "Deep water culture, from first principles",
    "summary": "Roots hanging in nutrient water have no substrate to hide behind. This paper builds the system from the physics up: how much oxygen the water can actually hold, why more bubbling makes iron uptake worse, what an ORP probe is really measuring, and how a commercial RDWC programme is put together.",
    "track": "Water, substrate & feed",
-   "read_time": "~36 min read",
+   "read_time": "~38 min read",
    "diagrams": "17 diagrams · 10 photos",
    "related": [
     "substrates-overview",
@@ -1004,7 +1004,7 @@
    "md_url": "https://jaketherabbit.github.io/cannabis-white-papers/papers/deep-water-culture.md",
    "version": "1.2",
    "updated": "2026-07-18",
-   "ref_count": 37
+   "ref_count": 40
   }
  ]
 }
