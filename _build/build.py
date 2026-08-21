@@ -128,10 +128,23 @@ def autolink(html, current_slug, linked):
     return masked
 
 # ---------------------------------------------------------------- paper page
+def _legacy_image_target(source_secs, evidence_sec, section_index):
+    """Resolve an image manifest's post-evidence index without coupling it to current placement."""
+    legacy_secs = source_secs
+    if evidence_sec is not None and source_secs:
+        legacy_secs = [source_secs[0], evidence_sec, *source_secs[1:]]
+    if not legacy_secs:
+        return None
+    legacy_index = max(0, min(section_index, len(legacy_secs) - 1))
+    return legacy_secs[legacy_index]
+
+
 def render_paper(mod):
     # Render from a disposable copy so injected panels and file-gated media do not
     # mutate the module's authoritative sections across repeated render calls.
     secs = [dict(sec, blocks=list(sec.get("blocks", []))) for sec in mod.SECTIONS]
+    source_secs = list(secs)
+    evidence_sec = None
     # Inject per-paper evidence confidence panel (solid / operational / provisional)
     try:
         from data import evidence as EV
@@ -140,12 +153,13 @@ def render_paper(mod):
             _definitions = next((i for i, sec in enumerate(secs)
                                  if sec.get("title") == "Definitions"), None)
             _ei = (_definitions + 1) if _definitions is not None else 1
-            secs.insert(_ei, {
+            evidence_sec = {
                 "id": "evidence-notes",
                 "kicker": "Evidence assessment",
                 "title": "Evidence and limitations",
                 "blocks": [_ep],
-            })
+            }
+            secs.insert(_ei, evidence_sec)
     except Exception as _ee:
         print("evidence panel skipped for", getattr(mod, "SLUG", "?"), repr(_ee))
     # embed any generated example images into their target sections (file-gated)
@@ -163,8 +177,8 @@ def render_paper(mod):
         fn = next((c for c in candidates
                    if os.path.exists(os.path.join(ASSETS, "img", c))), None)
         if fn and secs:
-            si = max(0, min(im["sec"], len(secs) - 1))
-            secs[si]["blocks"].append(
+            target_sec = _legacy_image_target(source_secs, evidence_sec, im["sec"])
+            target_sec["blocks"].append(
                 photo(f"assets/img/{fn}", im["caption"], im.get("alt", ""),
                       IMG.MODEL_LABEL.get(im["model"], "")))
     # embed term-image gallery + progression sequences (file-gated)

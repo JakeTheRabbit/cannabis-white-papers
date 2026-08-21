@@ -361,7 +361,7 @@ SECTIONS.append({"id": "worked-example", "kicker": "One change, traced", "title"
         "your nose for a few points of yield, a bad deal. Stay at 71 °C and accept the lower number.")),
   ]})
 
-SECTIONS.append({"id": "stages", "kicker": "Step by step", "title": "Process stage deep dives",
+SECTIONS.append({"id": "stages", "kicker": "Step by step", "title": "Stage-specific pressing methods",
   "blocks": [
     p("The full farm-to-dab chain, stage by stage, with the parameters that matter at each. Everything "
       "before the press is a cold-chain step where heat is the enemy."),

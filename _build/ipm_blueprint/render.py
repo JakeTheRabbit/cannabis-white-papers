@@ -272,7 +272,7 @@ def build_sections():
         {
             "id": "clean-stock",
             "kicker": "05 · Exclusion",
-            "title": "Clean stock as the foundation of IPM",
+            "title": "Clean-stock controls in IPM",
             "blocks": [
                 lead(
                     "The mother room is not just where clones come from. It is a source-material system. Its "

@@ -429,7 +429,7 @@ SECTIONS = [
  ]},
 
 # ------------------------------------------------------------------ 11 · testing
-{"id": "testing", "kicker": "Lab options", "title": "What genetic testing can and cannot tell you",
+{"id": "testing", "kicker": "Lab options", "title": "Genetic testing capabilities and limitations",
  "blocks": [
     p("Cheap genetic assays now cover three jobs that used to cost weeks of grow time. All three "
       "run off a small leaf sample."),

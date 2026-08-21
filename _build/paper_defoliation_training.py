@@ -88,7 +88,7 @@ SECTIONS.append({"id": "key-terms", "kicker": "Vocabulary", "title": "Definition
   ]})
 
 SECTIONS.append({"id": "training-light", "kicker": "The core idea",
-  "title": "How training and defoliation increase yield",
+  "title": "Yield effects of training and defoliation",
   "blocks": [
     p("The underlying mechanism is simple: <strong>light and air reaching more of the plant</strong>. "
       "A flat, spread canopy puts dozens of bud sites at the same height under strong light, instead "

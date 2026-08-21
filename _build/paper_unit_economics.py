@@ -89,7 +89,7 @@ SECTIONS.append({"id": "vocabulary", "kicker": "02 · The vocabulary", "title": 
   ]})
 
 # ---------------------------------------------------------------- 03 core answer
-SECTIONS.append({"id": "core-answer", "kicker": "03 · The core answer", "title": "Cost per gram in five lines",
+SECTIONS.append({"id": "core-answer", "kicker": "03 · The core answer", "title": "Cost-per-gram summary",
   "blocks": [
     callout("key", "Cost per gram is the only score that pays rent",
       ul(["<strong>Cost per gram = every dollar for the year ÷ every gram sold that year.</strong> Not "
