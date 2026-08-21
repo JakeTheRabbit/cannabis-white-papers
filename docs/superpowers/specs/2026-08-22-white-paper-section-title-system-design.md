@@ -35,6 +35,7 @@ This is a semantic order, not a mandatory nine-heading template. A biology refer
 
 ## Title rules
 
+- Every paper's first source section title must be `Purpose and scope`.
 - Use sentence case.
 - Prefer a short noun phrase or direct action phrase.
 - Use `Purpose and scope`, `Definitions`, `Troubleshooting`, `Expected results and limitations`, and `References` when those labels accurately describe the whole section.
@@ -54,6 +55,7 @@ Section `id` values are stable public anchors. Renaming or reordering a section 
 A repository checker will load every module in `_build/build.py::PAPER_MODULES` and fail when:
 
 - a paper lacks sections or reference metadata;
+- a paper's first source section title is not `Purpose and scope`;
 - section IDs are duplicated;
 - headings are not sentence case under the corpus convention;
 - headings contain banned editorial framing;

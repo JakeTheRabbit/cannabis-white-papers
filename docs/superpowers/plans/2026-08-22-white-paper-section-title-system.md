@@ -12,6 +12,7 @@
 
 ## Global Constraints
 
+- Every paper's first source section title must be `Purpose and scope`.
 - Use sentence case and direct, literal H2 wording.
 - Use `Purpose and scope`, `Definitions`, `Troubleshooting`, `Expected results and limitations`, and `References` when those labels accurately describe the whole section.
 - Preserve every paper slug and existing section `id` value.
@@ -63,7 +64,7 @@ git commit -m "docs: define white-paper section title system"
 
 - [ ] **Step 1: Write checker self-tests that contain known-bad fixtures**
 
-Create in-module tests for a duplicate ID, missing reference metadata, banned framing, misordered definitions, troubleshooting after expectations, and skipped numeric kickers. Each fixture must assert the exact diagnostic returned by `validate_modules`.
+Create in-module tests for a first section that is not `Purpose and scope`, a duplicate ID, missing reference metadata, banned framing, misordered definitions, troubleshooting after expectations, and skipped numeric kickers. Each fixture must assert the exact diagnostic returned by `validate_modules`.
 
 - [ ] **Step 2: Run the self-tests and verify they fail before implementation**
 
