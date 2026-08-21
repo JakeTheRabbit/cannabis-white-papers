@@ -63,7 +63,7 @@ git commit -m "docs: define white-paper section title system"
 
 - [ ] **Step 1: Write checker self-tests that contain known-bad fixtures**
 
-Create in-module tests for a duplicate ID, non-final references section, banned framing, misordered definitions, troubleshooting after expectations, and skipped numeric kickers. Each fixture must assert the exact diagnostic returned by `validate_modules`.
+Create in-module tests for a duplicate ID, missing reference metadata, banned framing, misordered definitions, troubleshooting after expectations, and skipped numeric kickers. Each fixture must assert the exact diagnostic returned by `validate_modules`.
 
 - [ ] **Step 2: Run the self-tests and verify they fail before implementation**
 

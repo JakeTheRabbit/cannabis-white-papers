@@ -45,7 +45,7 @@ This is a semantic order, not a mandatory nine-heading template. A biology refer
 
 ## Source and rendering architecture
 
-The authoritative section dictionaries remain in `_build/paper_*.py`. Common build-injected evidence material is maintained in `_build/build.py` and `_build/export_corpus.py`. Generated root HTML, `papers/*.md`, search indexes, manifests, LLM exports, bundles, and archives are never hand-edited.
+The authoritative section dictionaries remain in `_build/paper_*.py`. Common build-injected evidence material is maintained in `_build/build.py` and `_build/export_corpus.py`. Reference sections are generated from each module's `REF_IDS`; they are not stored in `SECTIONS`. Generated root HTML, `papers/*.md`, search indexes, manifests, LLM exports, bundles, and archives are never hand-edited.
 
 Section `id` values are stable public anchors. Renaming or reordering a section must not change its `id`. When sections move, kicker numbers, figure numbers, references, and any content-dependent navigation must remain coherent.
 
@@ -53,7 +53,7 @@ Section `id` values are stable public anchors. Renaming or reordering a section 
 
 A repository checker will load every module in `_build/build.py::PAPER_MODULES` and fail when:
 
-- a paper lacks sections or a final references section;
+- a paper lacks sections or reference metadata;
 - section IDs are duplicated;
 - headings are not sentence case under the corpus convention;
 - headings contain banned editorial framing;
@@ -64,7 +64,7 @@ A repository checker will load every module in `_build/build.py::PAPER_MODULES` 
 
 The checker may use explicit, reviewed exceptions for technically necessary terms and topic-specific structures. Exceptions must be narrow and explain why the general rule does not apply.
 
-Completion also requires a clean 55-paper build, a clean private-information leak scan, balanced emphasis tags, valid internal section links, and verification that the pushed GitHub Pages build serves the updated headings.
+Completion also requires a clean 55-paper build, a final `References` section in every generated paper, a clean private-information leak scan, balanced emphasis tags, valid internal section links, and verification that the pushed GitHub Pages build serves the updated headings.
 
 ## Non-goals
 
