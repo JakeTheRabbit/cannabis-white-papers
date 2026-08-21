@@ -69,9 +69,10 @@ def _violates_sentence_case(title):
 def _has_audited_slab_references(module, slug):
     # This payload owns a numbered reference list outside REF_IDS so its citations
     # remain stable; no other paper is permitted to use this alternate metadata.
-    return slug == "slab-irrigation-strategy" and _non_empty(
-        getattr(module, "RAW_REFERENCES", None)
-    )
+    raw_references = getattr(module, "RAW_REFERENCES", None)
+    return (slug == "slab-irrigation-strategy"
+            and isinstance(raw_references, str)
+            and _non_empty(raw_references))
 
 
 def validate_modules(modules: list[object]) -> list[str]:
@@ -204,6 +205,16 @@ def _run_self_test():
                 "<ol><li>Audited reference</li></ol>",
             ),
             [],
+        ),
+        (
+            "slab RAW_REFERENCES must be a string",
+            _fixture(
+                "slab-irrigation-strategy",
+                [{"id": "one", "title": "Purpose and scope", "kicker": "01 · First", "blocks": ["x"]}],
+                (),
+                {"audited": True},
+            ),
+            ["slab-irrigation-strategy: missing non-empty REF_IDS"],
         ),
         (
             "RAW_REFERENCES does not exempt another paper",
