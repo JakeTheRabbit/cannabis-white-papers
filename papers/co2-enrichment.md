@@ -23,7 +23,7 @@ _Environment & climate · CO2 · ~30 min read_
 
 > Carbon dioxide is the raw material a plant turns into sugar. Under strong light an indoor crop can use far more CO2 than the air provides, so adding it can lift yield by around a third. But CO2 only helps in the light, it is easy to waste, and at the wrong concentration it will erase the plants' returns or kill the people in the room. This is how it works, how much to add and when, and how to do it without hurting anyone.
 
-## CO2 is food, but only in the light
+## Purpose and scope
 
 A plant builds itself out of air. The carbon in every leaf, stem and flower comes from carbon dioxide (CO2) pulled out of the room and welded to water using the energy in light. Give a bright canopy more CO2 than the ~420 ppm in normal air and it can build faster, which is why growers add it. But CO2 enrichment is one of the easiest things in the room to get dangerously wrong.
 
@@ -37,7 +37,7 @@ A plant builds itself out of air. The carbon in every leaf, stem and flower come
 
 Everything below builds on those five. If you only take one thing away: **enrich in the light, seal the room, and put a CO2 alarm on the wall.**
 
-## The words you need
+## Definitions
 
 **CO2 (carbon dioxide)** — The gas plants turn into sugar using light. Normal outdoor air is about 420 ppm today[^noaa2024-co2].
 
@@ -59,7 +59,7 @@ Everything below builds on those five. If you only take one thing away: **enrich
 
 **TWA / STEL / IDLH** — Worker-safety limits: the 8-hour average you may breathe (TWA), the 15-minute short spike (STEL), and the level that is Immediately Dangerous to Life or Health (IDLH)[^niosh-co2].
 
-## How CO2 becomes flower
+## CO2 assimilation and flower growth
 
 Inside a lit leaf, an enzyme called Rubisco grabs CO2 out of the air and fixes it into sugar. The trouble is Rubisco is sloppy: it also grabs oxygen by mistake, and when it does it kicks off **photorespiration**, a reaction that burns energy and throws carbon away. The more CO2 there is relative to oxygen, the more often Rubisco does its real job instead of the wasteful one[^tolbert1995-compensation].
 
@@ -73,7 +73,7 @@ The climb does not go on forever. As CO2 rises, photosynthesis stops being limit
 >
 > CO2 and light limit each other, so the weaker one caps the plant (Liebig's law of the minimum). Adding CO2 under weak light is like flooring the accelerator with the handbrake on, nothing happens. Cannabis flower yield keeps climbing with light all the way to very high intensity[^rm2021-light], so CO2 only earns its keep once the light is already strong.
 
-## The plant breathes both ways
+## Photosynthesis and respiration across the light cycle
 
 Here is the fact that trips up beginners. Photosynthesis, the CO2-_consuming_ reaction, only runs in the light. **Respiration**, the CO2-_releasing_ one, never stops, day and night, in every living cell[^amthor2024-respiration]. During the light period the big inward pull of photosynthesis swamps the small outward push of respiration, so the canopy is a net CO2 _sink_. When the lights go off, photosynthesis stops dead and only respiration is left, so the same canopy flips to a net CO2 _source_.
 
@@ -81,7 +81,7 @@ Here is the fact that trips up beginners. Photosynthesis, the CO2-_consuming_ re
 
 Respiration also speeds up when it is warm, roughly doubling for every 10 °C rise (a Q10 of about 2)[^atkin2003-q10], and in soil or coco there is extra CO2 from microbes and roots in the root zone. But none of that changes the headline: **the plant only takes CO2 in while the lights are on.** That single fact is why you inject in the light and never in the dark.
 
-## Day use vs night release: they don't balance
+## Daytime CO2 uptake and nighttime release
 
 Growers often ask: if the plant uses CO2 all day and gives it back all night, doesn't it even out? **No, and the reason it doesn't is the reason enrichment works.** The carbon a plant fixes in the light does not all get burnt again. Across a season only about half of the carbon captured by photosynthesis is respired back out; the rest, roughly **46%**, is locked up as sugar, stem, leaf and flower[^collalti2019-npp] (the respired fraction is put at 30–60% by crop-physiology reviews[^amthor2024-respiration]). That retained carbon _is_ the crop. So the CO2 pulled in during the day always exceeds the CO2 breathed out at night, by the amount that became plant.
 
@@ -97,7 +97,7 @@ You can see the asymmetry in a sealed room. With the lights on and no CO2 added,
 
 This is the deeper answer to ‘how much do I need?’. Enrichment is not topping up a tank that empties overnight, it is holding CO2 _up_ during the light hours against a canopy that would otherwise strip the room bare.
 
-## How much, and what it buys you
+## CO2 targets and expected response
 
 The best cannabis-specific yield data come from controlled work at Utah State University: raising a sealed room from ambient (~420 ppm) to about 1,200 ppm lifted dry flower yield by roughly **40%**, and 1,200 ppm captured about **95%** of the achievable gain, so there is little point going higher[^westmoreland2023-usu]. General greenhouse crops tell the same story: many greenhouse C3 crops gain on the order of tens of percent at ~800–1,200 ppm (extreme published uplifts depend on depleted controls and system)[^doddrell2023-co2], and most C3 crops saturate around 1,000–1,300 ppm[^doddrell2023-co2].
 
@@ -132,7 +132,7 @@ There are four common ways to put CO2 in a room, and for a sealed indoor cannabi
 
 > **Diagram.** A sensor-driven enrichment loop. The controller injects to hold the setpoint during the light period and shuts off in the dark.
 
-## Sealed vs vented: why the room matters more than the gas
+## Sealed and vented rooms
 
 Here is where most CO2 money is wasted. An exhaust fan replaces room air with ~420 ppm outdoor air, so any CO2 you have added decays straight back toward ambient. The loss follows a simple curve: the richer the room and the faster the air changes, the faster the CO2 leaves. Run an exhaust fan and the injector at the same time and you are heating money and blowing it out the wall.
 
@@ -151,7 +151,7 @@ Even a room with the fans off leaks. In measured commercial greenhouses, more th
 >
 > You still need to flush the room sometimes, to reset humidity or clear stale air. Do it at **lights-off**, when the plants aren't using CO2 anyway, so you never vent gas you just paid to inject. CO2 pools low, so a floor-level exhaust clears it fastest.
 
-## Stale air: why a sealed room still needs a purge
+## Fresh-air purge in sealed rooms
 
 You seal the room to hold CO2 in, and then you're told to let fresh air in. That sounds like a contradiction, and it is where the filter question comes up: if carbon and HEPA are scrubbing the air non-stop, why exchange it at all? Because filters _clean_ the air, they do not _refresh_ it. What makes air ‘stale’ is mostly the plants' own invisible waste gases, plus their heat and moisture, and a carbon-and-HEPA stack removes almost none of that.
 
@@ -193,7 +193,7 @@ Ethylene is the sharpest reason to exchange air, but stale air is also carrying:
 
 How much exchange? Enough to hold ethylene and humidity down, not so much that you dump CO2 and dry the media out. Enclosed plant environments run anywhere from well under 1 to ~15 air changes an hour; a cannabis micropropagation study landed on about 4.4 changes an hour as optimal, with more than that drying the substrate and stressing the plants[^liang2026-cannabis-ach] (that was at plantlet scale, so treat it as a direction, not a flower-room setpoint). ‘Sealed’ never means ‘never exchanged.’
 
-## CO2 changes everything else in the room
+## Room conditions under CO2 enrichment
 
 Raising CO2 does not act alone, it pulls on the rest of the room. This is the same ‘inputs travel in convoys’ idea from the [grow-room systems](grow-room-systems.html) paper. Change CO2 and three other things want to move with it:
 
@@ -210,7 +210,7 @@ Raising CO2 does not act alone, it pulls on the rest of the room. This is the sa
 >
 > At 750 ppm versus 350 ppm CO2, Chandra measured about 42% lower stomatal conductance, 29% lower leaf transpiration and 111% higher instantaneous leaf water-use efficiency[^chandra2008-photo]. Those leaf measurements do not predict total room irrigation or humidity load. Leaf area, PPFD, temperature, VPD and crop duration can change the direction. After enrichment, measure irrigation input, drainage, substrate water content and dehumidifier condensate. Do not assume that the crop will use more or less water.
 
-## The drying room: CO2 with no light to burn it
+## CO2 accumulation in drying rooms
 
 A drying room is the dark side of everything above. You fill a sealed, dark, low-airflow room with tens or hundreds of kilos of freshly cut biomass, and that biomass keeps **respiring** for days after harvest, releasing CO2 the whole time, with no photosynthesis to soak any of it back up[^kader2002-respiration].
 
@@ -224,7 +224,7 @@ Cut leaf and flower is a fast-respiring tissue, in the same postharvest class as
 >
 > No peer-reviewed study has directly measured CO2 inside a cannabis drying room. The mechanism (respiring biomass in the dark) and the human-safety limits below are rock solid, but the exact ceiling a given room reaches is an engineering inference, not a measured cannabis value. The right response is not to guess, it is to **put a meter in your own drying room and find out**. The full drying environment is covered in the [harvest, dry, trim & cure](harvest-dry-trim-cure.html) paper.
 
-## CO2 and people: the numbers that matter most
+## CO2 exposure limits and worker safety
 
 Read this section even if you skip the rest. Your enrichment setpoint of 1,000–1,500 ppm is well below any worker limit and safe for brief occupancy. The danger is a leaking regulator, an overfilled room, a burner fault, or a sealed drying room, any of which can reach lethal CO2 while you notice nothing.
 
@@ -250,7 +250,7 @@ Every major safety authority agrees on the headline number: the 8-hour average a
 >
 > It is tempting to think CO2 just crowds out oxygen. It does that, but it is also directly toxic: above ~5% it acidifies the blood, and forensic reviews conclude the cause of death in CO2 incidents is the poisoning itself, not the lack of oxygen[^permentier2017-co2poison]. That is why it drops people so fast they can't open a door, and why rescuers who rush in without protection are so often the second victims. A sealed, high-CO2 room is a confined space. Ventilate and test the air before entry, every time.
 
-## Sensors, alarms and the MQ trap
+## CO2 sensors, alarms and MQ limitations
 
 You cannot manage or survive CO2 you cannot measure, and the sensor market is full of parts that don't actually measure it. The correct technology is **NDIR** (non-dispersive infrared), which reads CO2 by its specific infrared fingerprint[^sensirion-scd]. The cheap ‘MQ’ metal-oxide sensors sold as CO2 sensors are a trap:
 
@@ -268,7 +268,7 @@ You cannot manage or survive CO2 you cannot measure, and the sensor market is fu
 
 **Two sensors, two jobs.** Put a control sensor at canopy height to run the setpoint, and a separate _life-safety_ sensor low on the wall (~30 cm off the floor) because CO2 settles. For larger systems the International Fire Code (Section 5307) makes this mandatory: any installation over 100 lb of CO2 needs gas detection that alarms at 5,000 ppm, alarms hard at 30,000 ppm, and automatically shuts off the CO2 and starts ventilation[^ifc5307]. Even below that threshold, an alarm plus an occupancy interlock is cheap insurance.
 
-## Is it worth it, and when it isn't
+## Expected results and limitations
 
 CO2 is one of the highest-return upgrades in a sealed, high-light room, and a waste of money in any other[^okstate-co2]. The gas itself is cheap; the room around it is what decides the payback.
 

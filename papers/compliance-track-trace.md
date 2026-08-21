@@ -23,7 +23,7 @@ _Facility · Compliance · ~24 min read_
 
 > A licensed grow is a paperwork machine with a garden attached. This guide maps the spine: what a licence actually is, how batches and lots connect every gram to its history, how seed-to-sale tracking works, and how to keep records an auditor believes.
 
-## What This Is. And What It Is Not
+## Purpose and scope
 
 > **DANGER — Education, not legal advice**
 >
@@ -35,19 +35,7 @@ It is written for the person who just got handed ‘compliance’ along with the
 
 The route: what a licence actually is and how it lives; how to deal with the regulator; batch and lot thinking (the genealogy that connects everything); seed-to-sale tracking and the reconciliation habit; records that survive an audit; deviations without the bureaucracy; the GACP/GMP boundary and quality agreements; security and destruction; recall readiness; a walkthrough of audit day; and two real regimes, New Zealand and Australia, described from altitude as worked examples.
 
-## The Core Answer: Prove Control, to a Stranger, on Paper
-
-Every rule in every cannabis regime compresses to one demand: **demonstrate control**. Control of the material, nothing enters, moves, or leaves except as recorded. Control of the process. What happens to the plant follows written rules. And the demonstration must work for someone who was not there and trusts nothing but the record.
-
-> **Diagram.** The four layers of compliance. The licence grants permission, the quality system defines how you operate, records evidence that you did, and audits test the records against the rules.
-
-Most new operators obsess over layer one, getting the licence, and starve layer three. That is backwards. Licences are rarely lost on the day they are granted; they are lost years later, at the records layer, when an auditor asks a simple question the paperwork cannot answer. In pharmaceutical GMP, documentation is not admin support for the real work; it is defined as part of the quality system itself[^eu-gmp-vol4], and cannabis regimes borrow that DNA directly.
-
-> **KEY — The stranger test**
->
-> Write every record for a reader who was not in the room, knows nothing, and is mildly suspicious. If a competent stranger can reconstruct what happened (who, what, when, how much, why) from your records alone, you pass. If the record only makes sense with you standing next to it explaining, it is not a record; it is a memory aid.
-
-## Key Terms: The Words That Do the Work
+## Definitions
 
 Compliance conversations fail when two people use the same word for different things. These definitions are generic; your regime's legal definitions override them, and part of setting up a facility is writing down which definitions _you_ use.
 
@@ -79,7 +67,19 @@ Compliance conversations fail when two people use the same word for different th
 
 **Quality agreement** — A signed document splitting quality responsibilities between two parties (grower and processor, licensee and lab): who tests, who releases, who tells whom when something goes wrong.
 
-## Licence Anatomy: Activities, Conditions, Renewals
+## Compliance objective: documented control
+
+Every rule in every cannabis regime compresses to one demand: **demonstrate control**. Control of the material, nothing enters, moves, or leaves except as recorded. Control of the process. What happens to the plant follows written rules. And the demonstration must work for someone who was not there and trusts nothing but the record.
+
+> **Diagram.** The four layers of compliance. The licence grants permission, the quality system defines how you operate, records evidence that you did, and audits test the records against the rules.
+
+Most new operators obsess over layer one, getting the licence, and starve layer three. That is backwards. Licences are rarely lost on the day they are granted; they are lost years later, at the records layer, when an auditor asks a simple question the paperwork cannot answer. In pharmaceutical GMP, documentation is not admin support for the real work; it is defined as part of the quality system itself[^eu-gmp-vol4], and cannabis regimes borrow that DNA directly.
+
+> **KEY — The stranger test**
+>
+> Write every record for a reader who was not in the room, knows nothing, and is mildly suspicious. If a competent stranger can reconstruct what happened (who, what, when, how much, why) from your records alone, you pass. If the record only makes sense with you standing next to it explaining, it is not a record; it is a memory aid.
+
+## Licence activities, conditions and renewals
 
 A cannabis licence is not one permission; it is a **bundle of named activities** with strings attached. New Zealand's scheme, for example, builds each licence from activities such as cultivation, nursery (supplying seeds and propagation material), research, possession for manufacture, and supply[^nz-mca-activities]. Australia consolidated its federal structure in December 2021 into a single medicinal cannabis licence that can cover cultivation, production, manufacture and research, with permits underneath it[^au-odc-single-licence]. The naming differs; the pattern, _activities plus conditions plus quantities_, repeats almost everywhere.
 
@@ -99,7 +99,7 @@ Two habits prevent most licence trouble. First, a **compliance calendar**: every
 >
 > Print it. Read every condition aloud with the people who run the rooms. Operators are routinely surprised by what is actually written on the document they operate under, usually because the person who applied for it has left, and the conditions live in nobody's head.
 
-## The Regulator: Inspections, Notifications, Variations
+## Regulatory inspections, notifications and variations
 
 The regulator is not a customer, not a mate, and not an enemy. The productive mental model is **external quality assurance with statutory power**: they exist to verify control, and everything they ask maps back to that. In New Zealand that function sits with a dedicated agency inside the Ministry of Health that administers the scheme and its licensing[^nz-mca-scheme]; in Australia, with the Office of Drug Control at the federal layer[^au-odc-medcan]. Whoever it is, the relationship runs on three channels:
 
@@ -117,7 +117,7 @@ Inspection posture matters more than most operators think. Findings are conteste
 >
 > ‘Usually.’ As in ‘we usually log that’. Usually means the written procedure and the actual practice have separated, and the inspector now knows it. If practice has drifted from the SOP, fix one of them (formally, via a change note) before someone else finds the gap.
 
-## Batch and Lot Thinking: the Genealogy
+## Batch and lot traceability
 
 A batch is a promise of uniformity: a defined quantity of material that went through the same process at the same time, so one test result, one record, one decision can honestly speak for all of it. Everything in traceability hangs off that promise.
 
@@ -135,7 +135,7 @@ This is why one plant's records matter. Genealogy means records **inherit downwa
 >
 > When something goes wrong (a failed test, a pest found, a contamination scare) you lose material at batch granularity, because the batch is the largest unit your records can vouch for. Small, honestly defined batches turn disasters into write-offs. One big vague batch turns a single failed test into losing the room.
 
-## Seed-to-Sale: Tags, Movements, Reconciliation Points
+## Seed-to-sale tracking and reconciliation
 
 Track-and-trace is perpetual inventory for a controlled substance. Three ingredients: **identity** (every plant and package carries a tag or UID), **events** (every movement, transformation, sample and destruction is recorded when it happens), and a **ledger** that holds it all. The ledger can be a government-mandated platform, commercial software, or a paper book. The logic is identical.
 
@@ -155,7 +155,7 @@ Principles that survive any software choice:
 >
 > At small scale a disciplined spreadsheet or paper ledger can satisfy the concepts, if entries are contemporaneous, attributable (who made this entry?), backed up, and never silently edited. The tool is rarely the problem. A track-and-trace system nobody updates until Friday is a liability generator regardless of what it cost.
 
-## Inventory Drift: the Finding That Writes Itself
+## Inventory reconciliation and drift
 
 Inventory reconciliation is the audit test that needs no skill to run and no judgement to interpret: the book says X, the scales say Y, explain the difference. That is exactly why unexplained variance is the most reliable way for a small operator to fail. It is the easiest thing to check and the hardest to fake after the fact.
 
@@ -180,7 +180,7 @@ The fix is cadence plus honesty. Small operations do well with a **weekly cycle 
 >
 > Adjusting the book to match the count without a recorded investigation feels like tidying. In a controlled-substance ledger it is falsification. You have destroyed the evidence of a discrepancy and replaced it with a fiction that everything reconciled. Small visible variances with written explanations are survivable. Clean books that were made clean are not.
 
-## Records That Survive an Audit: ALCOA+
+## Audit-ready records and ALCOA+
 
 Regulators worldwide converge on the same definition of a trustworthy record, usually abbreviated **ALCOA**: Attributable, Legible, Contemporaneous, Original, Accurate, extended in practice with Complete, Consistent, Enduring and Available (ALCOA+). The US FDA's data-integrity guidance for drug manufacturing is built explicitly on these attributes[^fda-data-integrity-2018], and cannabis auditors inherit the framework wholesale.
 
@@ -200,7 +200,7 @@ Contemporaneous is the attribute that kills, because backfilling has a signature
 >
 > For every routine task, decide what the minimum honest record is, one line, five fields, and build the form so completing it takes less than a minute. Compliance systems fail at the exact point where recording became more effort than the task itself.
 
-## Deviations and CAPA-lite for Small Operators
+## Deviation management and corrective actions
 
 A deviation is any departure from your written process: the dehumidifier died overnight, the feed was mixed at the wrong EC, the wrong room got sprayed, a delivery arrived with no paperwork. The deviation is not the failure. **The unrecorded deviation is the failure**, because it means your system does not notice its own departures, and noticing is the entire point of a quality system[^pics-pe009-guide].
 
@@ -225,7 +225,7 @@ Calibrate the depth. A missed daily check gets three lines and a same-day close.
 >
 > Every real operation deviates. A log with nothing in it does not read as ‘flawless facility’; it reads as ‘nobody is looking’, or worse, ‘problems get handled off the books’. A healthy log full of small, honestly closed deviations is one of the strongest documents you can put in front of an inspector.
 
-## GACP vs GMP, and the Quality Agreements That Bridge Them
+## GACP, GMP and quality agreements
 
 Two rule-sets govern the journey from seed to medicine. **GACP**, Good Agricultural and Collection Practice, covers growing, harvesting and primary processing of medicinal plants: identity, hygiene, inputs, documentation, traceability at the farm layer. The foundational text is the WHO's 2003 guideline[^who-gacp-2003], and the European medicines regulator maintains a GACP guideline for herbal starting materials whose 2025 revision explicitly accounts for indoor, controlled-environment growing[^ema-gacp-rev1]. **GMP**, Good Manufacturing Practice, covers turning that material into a medicine: validated processes, batch manufacturing records, QC release, an independent quality unit[^eu-gmp-vol4]. The PIC/S GMP guide harmonises these expectations across dozens of national inspectorates, including New Zealand's and Australia's[^pics-pe009-guide].
 
@@ -252,7 +252,7 @@ For a grower the boundary has a practical meaning: **you are a starting-material
 >
 > A testing-lab agreement is a quality agreement too: agreed methods and detection limits, chain of custody for samples, what happens on an out-of-specification result (retest rules, notification), and turnaround. A surprise result from a lab you have no agreement with is a crisis; the same result under a good agreement is a procedure.
 
-## Security, Access and Destruction Records
+## Security, access and destruction records
 
 Every regime writes its own security prescriptions (safes, alarm standards, camera retention days) into licence conditions, so this section stays deliberately generic. The underlying logic is constant: **controlled material demands controlled custody**, and custody is proven the same way as everything else, with records.
 
@@ -278,7 +278,7 @@ Every regime writes its own security prescriptions (safes, alarm standards, came
 >
 > Whole buds visibly discarded, unrendered and unrecorded, is a diversion finding waiting for a drone photo. Render waste unusable by whatever method your regime accepts, weigh it, witness it, record it. Then it is rubbish. Before that, it is stock.
 
-## Recall Readiness and the Mock Recall
+## Recall readiness and mock recalls
 
 A recall is traceability run under stress: something already released turns out to be suspect, and you must find all of it, fast, and prove you found all of it. Formal GMP systems require a recall procedure and expect it to be tested[^pics-pe009-guide]; the concept scales down to the smallest licensed grower, because the question, _where did every gram of that lot go?_, is the same at every scale.
 
@@ -292,7 +292,7 @@ The **mock recall** is the drill version: pick a lot at random, pretend its test
 
 What breaks in most first attempts: transfers recorded without lot IDs (so the manifest cannot say _which_ lot the processor got); retained samples that exist in the SOP but not on the shelf; and waste weights too vague to close the mass balance. Every one of those is cheap to fix on a Tuesday afternoon and ruinous to discover during a real event.
 
-## Audit Day: a Walkthrough
+## Audit-day walkthrough
 
 Inspections vary (announced or not, desk or on-site, routine or triggered) but the shape of a survivable audit day is consistent. The work is 90% done before the knock on the door; the day itself is choreography.
 
@@ -333,7 +333,7 @@ Alarm codes and keys outlive employment by months. On paper, an unauthorised per
 
 Last audit’s findings acknowledged, promised, forgotten. Repeat findings are graded harder because they prove the system does not self-correct. **Fix:** findings live on the compliance calendar until verified closed.
 
-## Worked Examples: New Zealand and Australia, From Altitude
+## Worked examples: NZ and Australia
 
 > **WARN — Date-stamped description, verify before acting**
 >
@@ -355,7 +355,7 @@ Look at the two side by side and the generic pattern of this whole paper reappea
 - [AU Office of Drug Control, medicinal cannabis](https://www.odc.gov.au/medicinal-cannabis)
 - [AU TGA, quality requirements for medicinal cannabis](https://www.tga.gov.au/resources/guidance/complying-quality-requirements-medicinal-cannabis)
 
-## Troubleshooting and the Mental Model
+## Troubleshooting and control principles
 
 | Symptom | Likely cause | Fix |
 | --- | --- | --- |

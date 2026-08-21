@@ -23,7 +23,7 @@ _Beginner · Flower · ~12 min read_
 
 > A beginner's guide to the cannabis flowering stage: the flip to 12/12, the stretch, bud set, bulking, ripening, and reading the plant to know exactly when to cut.
 
-## What this is and who it's for
+## Purpose and scope
 
 Cannabis grows in two big phases: vegetative (building leaves, stems and roots) and flowering (building the buds you actually harvest). Flowering is triggered by changing the lights to 12 hours on and 12 hours off, and it runs for roughly 8 to 10 weeks for most plants. This guide walks that stretch one week at a time.
 
@@ -37,7 +37,7 @@ Only photoperiod plants need the light change to flower. Autoflower plants flowe
 >
 > Anyone about to flip their first photoperiod grow who wants a week-by-week map. Pairs with the [crop-steering](coco-crop-steering.html) and [harvest and cure](harvest-dry-trim-cure.html) papers.
 
-## Every term you need, defined
+## Definitions
 
 This page uses a handful of grower words repeatedly. Learn these six and the rest of the guide reads easily. None of them are complicated once defined.
 
@@ -55,7 +55,7 @@ This page uses a handful of grower words repeatedly. Learn these six and the res
 
 > **Diagram.** The same flower, named at different scales. Pistils and trichomes are the two signals you watch to time the harvest.
 
-## The flip: why 12/12 starts flowering
+## Photoperiod change and floral initiation
 
 Photoperiod cannabis measures the length of the dark period to decide whether it is spring (grow) or autumn (reproduce). When you give it 12 hours of uninterrupted darkness, it reads that as the days shortening and switches into flower production.[^spitzer-rimon-2019-florogenesis]
 
@@ -69,7 +69,7 @@ Twelve hours is the safe default, though research finds slightly longer nights c
 >
 > Stray light from chargers, timer LEDs, or door gaps during lights-off can cause re-vegging or hermaphroditism. Tape over indicator lights and seal the room before you flip.
 
-## The stretch and bud set (weeks 1-4)
+## Stretch and bud set (weeks 1–4)
 
 For the first 2 to 3 weeks after the flip the plant stretches, often nearly doubling in height as it builds the frame to hang buds on, while white pistils appear at the nodes.[^hesami-2023-morphological-lifecycle]
 
@@ -90,7 +90,7 @@ Around weeks 3 to 4 the stretch stops and those pistil sites organise into real 
 >
 > Lollipop and do your main defoliation between roughly day 7 and the end of week 3, before bud sites lock in. Do not defoliate heavily after week 3. See the [defoliation and training](defoliation-training.html) paper for technique.
 
-## Bulking and ripening (weeks 5-10)
+## Bulking and ripening (weeks 5–10)
 
 Weeks 5 to 7 are peak bulking: buds swell fastest, frost (trichomes) builds, and aroma intensifies, so this is when light, feed and CO2 pay off most.[^livingston-2020-trichome-maturation]
 
@@ -102,7 +102,7 @@ Bulking climate runs around 26 to 28 C day, with RH down to about 55 to 62% to l
 
 > **Diagram.** Humidity steps down stage by stage as buds get denser. The dense late canopy is where high humidity does the most damage.[^mahmoud-2023-botrytis-budrot]
 
-## Reading the plant: when to harvest
+## Harvest-readiness assessment
 
 > **EVIDENCE — Evidence limits**
 >
@@ -126,7 +126,7 @@ Wait until pistils are mostly darkened and curled in (roughly 70% or more), then
 
 *Read trichomes on bud at 60x or more. Pistil colour is only a first hint.[^livingston-2020-trichome-maturation]*
 
-## Common beginner mistakes
+## Troubleshooting
 
 Most first-grow failures in flower come from a few repeatable errors: light leaks, over-defoliating, chasing the calendar instead of the trichomes, and letting humidity stay high as buds get dense. Each is easy to avoid once you know it. The single most expensive mistake is harvesting too early because you ran out of patience.
 
@@ -144,7 +144,7 @@ Most first-grow failures in flower come from a few repeatable errors: light leak
 >
 > High humidity (60% and up) in dense late-flower canopies sharply increases bud rot risk. Botrytis starts inside the bud where you cannot see it, then collapses a whole cola. Keep air moving and humidity low through ripening.[^mahmoud-2023-botrytis-budrot]
 
-## Realistic expectations and a sample timeline
+## Expected results and limitations
 
 A typical photoperiod indoor grow runs about 8 to 10 weeks of flower on top of veg time, and your first harvest will rarely be your best. Yield and quality climb as you learn to read the plant. Strain genetics set the outer limits, while your light, climate and feed decide how close you get to them. Breeder-stated flowering times are estimates, and the actual finish varies with conditions by a week or more in either direction.[^hesami-2023-morphological-lifecycle]
 

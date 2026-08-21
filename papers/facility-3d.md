@@ -23,7 +23,7 @@ _Facility · Design · ~14 min read_
 
 > Lay out rooms, equipment and airflow in a 3D model on your screen, and catch the expensive mistakes before anyone pours concrete.
 
-## What 3D facility planning is (and why it beats a paper plan)
+## Purpose and scope
 
 > **NOTE — Jurisdiction**
 >
@@ -40,7 +40,7 @@ Describe the building as data instead of drawing it. You write a data file, a pl
 
 > **Diagram.** The same facility, two ways to read it. The 3D view does not replace the architect's drawing. It makes that drawing legible to everyone else.
 
-## Key terms, defined from zero
+## Definitions
 
 Here is the vocabulary. None of these need prior knowledge. They are the words this topic keeps using. Read this once and the rest of the paper reads easily.
 
@@ -60,7 +60,7 @@ Here is the vocabulary. None of these need prior knowledge. They are the words t
 
 **Digital twin** — A 3D model wired to live sensors, so it shows the real, current temperature and humidity of each room.
 
-## Model the building as data, not as a drawing
+## Data-based building model
 
 **Do not draw the building by hand in code.** This is the single most important decision in the whole approach. Describe it as data, and let the code interpret that data into geometry. The reference schema, the shape of the data file, needs only four kinds of record to capture almost any grow building.
 
@@ -102,7 +102,7 @@ Code builds the physical shell from the data: the floors, walls and stairs. **Fl
 
 *A stair sanity-check the model performs for free. The 203 mm riser is buildable but steep against code minimums[^ibc-2024-1011-5-2-stairs], a prompt to revisit it early.*
 
-## Fit-out: benches, plants, climate gear and airflow
+## Facility fit-out and airflow
 
 **Fit-out** turns a generic building into a grow facility, and every piece is built from simple shapes. No modelling software required. The reference flower rooms use 1.2 by 7.6 m rolling benches, three per room, giving 27.4 m² of canopy in a 44 m² room: about 62% of the floor, a number the model shows at a glance.
 
@@ -128,7 +128,7 @@ Moving air thins the still ‘boundary layer’ of humid air that clings to each
 >
 > A flat plan hides height. In 3D you immediately catch a carbon filter hung at 2.45 m over a walkway, an AC head sitting above a door swing, or a dehumidifier that lands on a bench. Pair this with the [airflow design](airflow-design.html) paper to size the fans before you place them.
 
-## The security and compliance layer you can actually see
+## Visible security and compliance controls
 
 Licensed cultivation is audited on its **security plan**, and modelling that layer turns a paper checklist into something you can walk an inspector through. Each camera gets a translucent **FOV cone**: its length is the usable range, its width is the lens angle. Blind spots show up as floor with no tint at all.
 
@@ -152,7 +152,7 @@ Cannabis security rules are jurisdiction-specific, but they are concrete: a typi
 
 *The device schedule and why each sits where it does. Cable runs and UPS placement are modelled because they are part of what an auditor checks.[^wac-314-55-083-cannabis-security]*
 
-## A step-by-step path from plan to clickable model
+## 3D modelling workflow
 
 Here is the practical order of work, with nothing skipped. The whole thing is one HTML file, a JSON block, and roughly 600 lines of generator code, small enough to lift straight from a reference document and adapt.
 
@@ -167,7 +167,7 @@ Here is the practical order of work, with nothing skipped. The whole thing is on
 >
 > To start a new facility, save the page, copy the importmap and script block, and replace the data tables with your own plan. The generator code does not change. Only the numbers do.
 
-## Common pitfalls and how to dodge them
+## Troubleshooting
 
 Most mistakes come from a handful of repeatable errors. The biggest by far is modelling in code instead of in data. Do that and every re-plan becomes painful, because you have thrown away your single source of truth. The rest are rendering details that are easy to fix once you know them.
 
@@ -186,7 +186,7 @@ Most mistakes come from a handful of repeatable errors. The biggest by far is mo
 >
 > Remember one thing: the moment you start hand-placing geometry in code, you have lost the ability to re-plan cheaply. Every ‘what if’ then means re-coding instead of re-typing a number.
 
-## What 3D planning realistically gets you, and what it does not
+## Expected results and limitations
 
 Set expectations honestly. This kind of model is light and fast: the reference demo draws a full two-storey facility, about 450 meshes plus instanced plants, at 60 frames per second on integrated graphics, and scales to whole campuses by instancing and merging geometry while keeping draw calls under about 300.
 

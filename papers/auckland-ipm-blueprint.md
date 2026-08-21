@@ -23,7 +23,7 @@ _Plant health · Auckland medicinal cannabis · ~55 min read_
 
 > An exclusion-first, residue-aware operating system for clean stock, pest and disease identification, lawful control selection, crop-cycle monitoring, CAPA, batch hold and release.
 
-## What this blueprint is, and what it refuses to pretend
+## Purpose and scope
 
 This is an operating blueprint for an indoor medicinal-cannabis facility in Auckland. It joins pest and disease identification to clean stock, New Zealand input legality, worker safety, residue release, traceability and CAPA. The point is not to own the most sprays. The point is to keep biology and compliance from cornering you at the same time.
 
@@ -40,7 +40,11 @@ The supplied 128-page IPM Book V15 was used as a coverage benchmark: IPM princip
 
 > **Diagram.** The control path. Skipping confirmation or the legal gate is how a small biological problem becomes a batch problem.
 
-## Six principles, four layers, one closed loop
+## Definitions
+
+The biological, diagnostic, operational and New Zealand regulatory terms used in this blueprint.
+
+## IPM principles, control layers and feedback loop
 
 IPM is a loop: prevent entry, monitor consistently, identify correctly, compare the finding with a controlled threshold, combine compatible controls, then record and verify. If the recheck fails, the loop runs again at a higher response level. The arthropod review and the existing cannabis literature support layered indoor management rather than a single calendar product[^ahmed-2024-hemp-pests-florida-jipm].
 
@@ -69,7 +73,7 @@ IPM is a loop: prevent entry, monitor consistently, identify correctly, compare 
 
 *A site severity scale. Incidence, trend and zero-tolerance overrides still apply.*
 
-## A control is not usable until the whole pathway is lawful
+## Legal eligibility of IPM controls in New Zealand
 
 New Zealand medicinal cannabis does not have one pest-rule book. The decision sits across the medicinal-cannabis regulations and minimum quality standard, ACVM, HSNO/EPA controls, WorkSafe, analytical release, and Auckland trade-waste/environmental requirements.
 
@@ -104,7 +108,7 @@ Most agricultural compounds require ACVM registration; some product classes are 
 
 Testing of pesticides and other non-critical minimum-quality-standard attributes may be performed by appropriately scoped GMP or ISO/IEC 17025:2017 laboratories, while critical tests require GMP capability. Confirm the laboratory scope and method before relying on a release plan[^moh-nz-mqs-2026].
 
-## Build the programme around clean stock, not rescue sprays
+## Clean-stock controls in IPM
 
 The mother room is not just where clones come from. It is a source-material system. Its failures multiply through every cutting, room and batch downstream.
 
@@ -132,7 +136,7 @@ HLVd can be asymptomatic, moves efficiently with vegetative propagation and cont
 >
 > If you cannot identify every daughter lot since the last verified negative, a positive mother turns into a building-wide guessing exercise. Build the trace tree first.
 
-## Control people, tools, air, water and waste as one system
+## Facility contamination pathways
 
 Pests and pathogens do not care which department owns a vector. A clean-stock programme fails if workers backtrack, scissors cross mothers, return air connects quarantine, or a shared reservoir moves root pathogens. Cannabis disease reviews repeatedly identify stock, tools, water, debris, density and environmental conditions as interacting routes[^punja-2021-emerging-diseases-cannabis].
 
@@ -164,7 +168,7 @@ Bag and log crop waste in the room; contain rinse/spill liquids; use approved di
 
 Watercare requires a trade-waste agreement when a business discharge is not low risk, with site controls and monitoring defined by the agreement[^watercare-nz-trade-waste]. Auckland's E33 framework prioritises avoiding contaminant discharge and requires appropriate onsite management, containment, treatment or lawful disposal[^auckland-unitary-plan-e33]. Site address, drainage and activity classification remain facility inputs.
 
-## Cultural and environmental controls do the heavy lifting
+## Cultural and environmental controls
 
 The quiet controls are the ones that scale: eliminate weeds, algae and plant debris; keep doors/screens/barriers functional; quarantine every genetic source; use one-way work; maintain a fixed scouting route; and commission root-zone and canopy conditions. They reduce both the chance of entry and the rate of spread after entry.
 
@@ -185,7 +189,7 @@ The quiet controls are the ones that scale: eliminate weeds, algae and plant deb
 
 > **Diagram.** Same route, same points, same plant parts. Consistency makes trend data comparable.
 
-## Biological control is a managed population, not a box of good bugs
+## Biological control programmes
 
 A biological programme succeeds when the right organism arrives alive, is released into a suitable crop and climate, survives existing residues, finds the target stage, establishes where needed and is verified. Generalist and specialist predators are not interchangeable; neither are aphid or whitefly parasitoids[^lopez-2023-amblyseius-swirskii-review-jipm][^vanmaanen-2010-broad-mite-swirskii-biocontrol].
 
@@ -211,7 +215,7 @@ A biological programme succeeds when the right organism arrives alive, is releas
 
 Imported invertebrates require species eligibility, permits/facilities where applicable and biosecurity/HSNO compliance. Do not turn a global supplier catalogue into an NZ release list[^mpi-nz-invertebrate-import].
 
-## Select and apply inputs without creating the next failure
+## Input selection and application
 
 Once a finding crosses threshold, select the fewest controls that cover the confirmed organism, life stage and plant part without breaking law, worker safety, beneficials or release. Rotate IRAC/FRAC modes where relevant; physical modes and living controls still need compatibility planning.
 
@@ -251,7 +255,7 @@ Once a finding crosses threshold, select the fewest controls that cover the conf
 
 *Do not release an input to stores until every applicable field is complete and approved.*
 
-## Arthropods: identify the organism and the life stage
+## Arthropod identification
 
 The plate is the start of the diagnosis. Confirm morphology, sample the right plant part, separate lookalikes, then choose controls that reach the actual life stage.
 
@@ -275,7 +279,7 @@ Cannabis supports diverse piercing/sucking and root-zone pests; primary reviews 
 
 #### 9. Budworms and caterpillars (Lepidopteran larvae; species confirmation required)
 
-## Diseases: symptoms point to the sample, not the answer
+## Disease diagnosis and sampling
 
 Disease symptoms overlap. Use them to choose tissue, environmental records and the right laboratory route. Do not convert a picture match into a release decision.
 
@@ -293,7 +297,7 @@ Cannabis disease literature supports distinct management for powdery mildew, Bot
 
 #### 6. Septoria leaf spot (Septoria cannabis, S. neocannabina, S. cannabicola and related diagnoses)
 
-## Healthy references and the lookalikes that waste treatments
+## Diagnostic lookalikes
 
 A diagnostic atlas without healthy controls trains people to see disease everywhere. Compare like with like: underside to underside, opened flower to opened flower, new meristem to new meristem, and roots at the same age and substrate.
 
@@ -309,7 +313,7 @@ Key terms, in the facilityOpenAI image generationHealthy leaf undersideHealthy w
 
 *The generated comparison plates are training aids, not reference specimens.*
 
-## Turn findings into a controlled weekly programme
+## Building the weekly IPM programme
 
 1. **Score consequence** — Room class, clean-stock status, target organism, crop stage and product-quality consequence.
 2. **Measure pressure** — Incidence, severity 0-4, life stages, spatial pattern, trap/root/lab trend and beneficial density.
@@ -369,7 +373,7 @@ Key terms, in the facilityOpenAI image generationHealthy leaf undersideHealthy w
 
 > **Diagram.** The minimum operational record for every threshold-triggering event.
 
-## Operate from receiving through release, not room by room in isolation
+## Crop-cycle IPM operations
 
 | Stage | Daily standard work | Weekly / scheduled work | Hard decision |
 | --- | --- | --- | --- |
@@ -386,7 +390,7 @@ Key terms, in the facilityOpenAI image generationHealthy leaf undersideHealthy w
 >
 > Contaminated tools, slow or uneven drying, dense uninspected flowers and dirty processing equipment can erase a clean cultivation run. Product remains on hold until the required quality evidence and deviation review are complete.
 
-## Contain the crop, then investigate the system
+## Containment, investigation and CAPA
 
 Classify events as local, room-wide or systemic. Containment comes first; root cause and batch impact follow while evidence is preserved. CAPA is incomplete until the effectiveness check proves the change worked.
 
@@ -404,7 +408,7 @@ Classify events as local, room-wide or systemic. Containment comes first; root c
 2. **Continue hold:** result, investigation, repeat sample or linked-lot status is incomplete.
 3. **Reject or validated remediation:** the lot fails a limit, has an indefensible treatment history, or is linked to a systemic contamination failure. Remediation is not a substitute for prevention.
 
-## The forms must make the right action easier than the shortcut
+## Controlled IPM tools
 
 #### Facility approval sheet
 
@@ -502,7 +506,7 @@ Facility address / Auckland zoneLicence and intended product linesControlled roo
 - Watercare and Auckland pollution-response triggers are posted and trained.
 - Waste contractors and disposal records are current; annual drill findings enter CAPA.
 
-## Attendance is not competence
+## Competency-based training
 
 | Module | Audience | Demonstrated outcome |
 | --- | --- | --- |
@@ -519,10 +523,6 @@ Facility address / Auckland zoneLicence and intended product linesControlled roo
 > **NOTE — Drill the ugly events**
 >
 > Run at least: HLVd-positive mother, Botrytis cluster in late flower, root disease on a shared circuit, unlawful input discovered after application, REI entry breach and a spill threatening a drain. A plan only earns trust after someone has tried to use it under pressure.
-
-## Glossary
-
-The biological, diagnostic, operational and New Zealand regulatory terms used in this blueprint.
 
 ## Evidence and revision register
 

@@ -23,7 +23,7 @@ _Standard operating procedure · forms included · _
 
 > Do these jobs in order. Each job has a diagram and a form. A star in brackets is a source, not extra reading you need before you start.
 
-## Scope, names, and how to use the stars
+## Purpose and scope
 
 This is the working SOP. The tissue culture playbook is the longer guide. Follow this document if you are doing the work today.
 
@@ -50,7 +50,7 @@ A small [n] after a number or a rule is a source. You do not need to open it to 
 
 **Lot** — One mix of medium, or one plating session, under one number.
 
-## Treat the room before you buy anything else
+## Preparing the workspace
 
 Pick one small room or a closed corner. No carpet. No house plants. No cardboard boxes stored in it. A spare bedroom, a laundry, or a sealed cupboard bay will do.
 
@@ -88,7 +88,7 @@ Pick one small room or a closed corner. No carpet. No house plants. No cardboard
 
 ***F-01** — Room daily clean*
 
-## Buy a cheap hood from China and set it up
+## Selecting and setting up a laminar-flow hood
 
 A still-air box works. A horizontal laminar-flow hood is easier. You can buy one from China for a few hundred dollars if you order the right spec and check it on arrival.
 
@@ -170,7 +170,7 @@ Send this as one message. If they cannot answer, do not buy.
 >
 > Use a still-air box: a clear tub on its side, two arm holes, 70% alcohol wipe, fans off. Same jobs. Slower. Cheaper. The SOP steps do not change.
 
-## Open the day
+## Opening procedure
 
 Do this every day you work, before any jar is opened.
 
@@ -254,7 +254,7 @@ One litre. Full-strength MS for start and multiply. Half-strength MS if you are 
 
 ***F-03** — Media batch*
 
-## Take the piece and surface-sterilise it
+## Explant preparation and surface sterilisation
 
 First runs: a stem piece with one bud, 10–15 mm. Not a meristem.
 
@@ -272,7 +272,7 @@ First runs: a stem piece with one bud, 10–15 mm. Not a meristem.
 
 *A stem piece with one bud. This is the first-run cut.Grok Imagine · illustration*
 
-## Plate, label, shelf
+## Plating, labelling and incubation
 
 One piece, one jar, until you know your rate.
 
@@ -301,7 +301,7 @@ One piece, one jar, until you know your rate.
 
 ***F-04** — Initiation / plate*
 
-## Scout and bin
+## Culture inspection and disposal
 
 Day 7 and day 21. Look through the glass. Do not open a doubtful jar.
 
@@ -335,7 +335,7 @@ Day 7 and day 21. Look through the glass. Do not open a doubtful jar.
 
 ***F-07** — Contamination cull*
 
-## Multiply every 3–4 weeks
+## Shoot multiplication and subculture
 
 Only from jars that were clean at day 21. New jar every time.
 
@@ -364,7 +364,7 @@ Only from jars that were clean at day 21. New jar every time.
 
 ***F-05** — Subculture*
 
-## Meristem cut (only after Jobs 1–6 work)
+## Meristem dissection after process validation
 
 Microscope. 0.2–0.4 mm. Then a lab test. This job does not make a plant “clean” by itself.
 
@@ -409,7 +409,7 @@ Microscope. 0.2–0.4 mm. Then a lab test. This job does not make a plant “cle
 
 ***F-06** — Meristem cut*
 
-## Root, then harden
+## Rooting and acclimatisation
 
 A shoot with no roots is not a plant. After roots, lower humidity in steps.
 
@@ -452,7 +452,7 @@ A shoot with no roots is not a plant. After roots, lower humidity in steps.
 
 ***F-09** — Harden*
 
-## Test, intake, and the lot register
+## Testing, intake and lot registration
 
 If F-10 is blank, the plant is a clone. Not a clean mother.
 
@@ -508,7 +508,7 @@ If F-10 is blank, the plant is a clone. Not a clean mother.
 >
 > 70% alcohol does not destroy Hop latent viroid RNA. Use 5–10% household bleach for 1–2 minutes, or 1000 ppm hypochlorous acid for 1 minute, then rinse.[^hlvd_mgmt2025] Dedicated blades per cultivar if you can.
 
-## The week
+## Weekly operating schedule
 
 | Day | Home | Licensed |
 | --- | --- | --- |
@@ -525,7 +525,7 @@ If F-10 is blank, the plant is a clone. Not a clean mother.
 - Test production mothers every 3–6 weeks (F-10).
 - Restart a production line by about five recuts from a tested backup.[^torkamaneh2024]
 
-## If it fails, change one thing
+## Troubleshooting
 
 | What you see | Change this only |
 | --- | --- |
@@ -539,7 +539,7 @@ If F-10 is blank, the plant is a clone. Not a clean mother.
 
 *Table 5. One variable per run.*
 
-## Sources
+## Source notes
 
 Stars in the text point here. You do not need this page to run a day.
 

@@ -23,7 +23,7 @@ _Beginner · Substrate · ~11 min read_
 
 > A from-zero guide to what cannabis roots grow in: how each medium holds water and air, how it handles nutrients, how forgiving it is, and how to pick one.
 
-## What this is (and who it's for)
+## Purpose and scope
 
 A **substrate** (also called a growing medium) is just the material a plant's roots live in. It holds the plant up and acts as the reservoir for water, air and dissolved nutrients. This guide compares the five materials cannabis growers actually use, assuming you know nothing yet.
 
@@ -35,7 +35,7 @@ By the end you will understand the two trade-offs that decide everything: how mu
 >
 > Total beginners choosing a first medium, and anyone who wants to know why their setup behaves the way it does. It pairs with the [coco crop-steering paper](coco-crop-steering.html), which goes deep on driving one specific medium hard once you have picked it.
 
-## Key terms, defined once
+## Definitions
 
 Two numbers describe how any medium behaves when wet. The rest are about nutrients. You do not need to memorise these, just get the gist.
 
@@ -75,7 +75,7 @@ Rockwool is roughly 96% total porosity but only about 11% air-filled, with aroun
 >
 > More water means less air. The medium that keeps air around the roots even when wet is the one that forgives a heavy hand on the watering.
 
-## How each medium handles nutrients
+## Nutrient buffering by substrate
 
 An inert medium like rockwool holds almost no nutrients of its own. Its native EC is negligible and its pH is alkaline, around 8, so whatever you feed is exactly what the roots get[^raviv-lieth-soilless-culture-afp]. That is precise, but unforgiving of a bad mix.
 
@@ -89,7 +89,7 @@ Living soil is the most forgiving of all. Microbes, organic matter and minerals 
 >
 > If you cannot promise a perfect feed every time, pick a medium that forgives you. The more control a medium gives, the less it protects you from yourself.
 
-## Re-use, cost and footprint
+## Reuse, cost and environmental footprint
 
 Media differ enormously in how many runs you get. Rockwool can be re-used for up to about three years with proper sanitation, but it is energy-intensive to make and banned from landfill in some countries, which is why it has declined in parts of Europe and Japan[^joseph-2024-rockwool-recovery-composting]. Coco can be rinsed, re-buffered and re-used for a few cycles, then composted into garden soil, though most is shipped from overseas.
 
@@ -105,7 +105,7 @@ Living soil is the re-use champion. A recycled organic living soil (ROLS) bed is
 
 *There is no clean winner. The lowest-waste option (living soil) needs the most up-front work.*
 
-## How to choose: a beginner's decision path
+## Substrate selection
 
 Match the medium to your tolerance for fiddling, not to what wins a yield contest. The right answer is the one whose daily demands you will actually keep up with.
 
@@ -117,7 +117,7 @@ Match the medium to your tolerance for fiddling, not to what wins a yield contes
 >
 > DWC can give explosive growth, but a warm reservoir or a dead air pump can kill a plant in a day[^frontiers-2026-do-pythium-strawberry-nft]. Learn the basics in a more forgiving medium first.
 
-## Setting up and running each, step by step
+## Setup and management by substrate
 
 Every medium has one non-negotiable prep step. Get that right and the rest is routine.
 
@@ -137,7 +137,7 @@ Every medium has one non-negotiable prep step. Get that right and the rest is ro
 
 > **Diagram.** Warmer water holds less dissolved oxygen, but Pythium risk has no universal 23C cliff. Set the operating band from the crop and system, then monitor temperature, dissolved oxygen and root health.[^le-pythium-hydroponic-epidemiology-review][^frontiers-2026-do-pythium-strawberry-nft]
 
-## Common pitfalls and how to dodge them
+## Troubleshooting
 
 The classic beginner mistakes are medium-specific, and most look like something they are not.
 
@@ -155,7 +155,7 @@ The classic beginner mistakes are medium-specific, and most look like something 
 >
 > Warm water reduces the dissolved-oxygen margin, and a failed air pump removes active aeration. Neither condition causes root rot by itself; disease risk also depends on the crop, pathogen, inoculum and exposure time[^le-pythium-hydroponic-epidemiology-review][^frontiers-2026-do-pythium-strawberry-nft]. Monitor temperature, dissolved oxygen and roots, keep a backup air pump ready, and add a chiller when the system cannot hold its validated range.
 
-## Realistic expectations
+## Expected results and limitations
 
 No medium grows the plant for you. They differ in where the difficulty sits, not in whether there is difficulty. Living soil front-loads the work of building the bed, then runs hands-off. Coco and rockwool spread the work across daily feeding and monitoring. DWC concentrates the risk into a few parameters that must never slip.
 

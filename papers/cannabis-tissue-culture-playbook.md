@@ -23,7 +23,7 @@ _Propagation · step-by-step · ~45 min · _
 
 > How to grow a cannabis plant from a small piece of tissue in a sterile jar, at home and in a licensed facility. Every term is defined. Every recipe has numbers. Follow the sections in order.
 
-## How to use this guide
+## Purpose and scope
 
 Read the sections in order the first time. After that, jump to the stage you are on. Printable jobs and forms live in the tissue culture SOP.
 
@@ -63,7 +63,53 @@ Section 15 shows the pictures. Section 19 is the fix list.
 
 **Agar** — A powder from seaweed that turns the liquid food into a firm jelly so the plant can stand in it.
 
-## The five stages, in order
+## Definitions
+
+Every technical term, in one place.
+
+| Term | Meaning |
+| --- | --- |
+| Acclimatization / hardening | Lowering humidity in steps so a jar plant can live in room air and soil. |
+| Activated charcoal | Black powder in the gel that binds brown leak compounds. It can also bind hormones. |
+| Agar / gellan / Phytagel | The setting agent. More agar = firmer gel = drier air in the jar = less glassy growth. |
+| Aseptic technique | Working so that stray microbes do not reach the sugar jelly. |
+| Autoclave | A machine that holds 121 °C steam at 15 psi. A pressure canner that holds 15 psi is the home version. |
+| Auxin (IBA, NAA, IAA) | A hormone class that tells tissue to make roots. |
+| Callus | A lump of unspecialised cells. Common as a side-effect. Not a useful production method for cannabis in Holmes 2021. |
+| Cytokinin (mT, TDZ, BA) | A hormone class that tells tissue to make shoots. |
+| DKW | Driver and Kuniyuki Walnut salts. An alternative mineral mix to MS. Results on cannabis depend on the cultivar. |
+| Endophyte | A microbe living inside tissue that looks healthy. Bleach on the surface cannot reach it. |
+| Explant | The piece of plant you put in the jar. |
+| GACP / GMP | Growing practice versus manufacturing practice. Starting plants sit between the two. |
+| HEPA / laminar-flow hood | A fan and filter that blow a sheet of clean air across the bench. Not a biosafety cabinet. |
+| HpLVd / HLVd | Hop latent viroid. The usual cause of “dudding.” 256 letters of RNA. |
+| Hyperhydricity / vitrification | Glassy, waterlogged, brittle growth in the jar. Often too much cytokinin or humidity. |
+| In vitro / ex vitro | In the jar / outside the jar. |
+| Indexing | Testing a plant for a named pathogen. The only basis for the word “clean”. |
+| Initiation (Stage I) | Getting the first living, uncontaminated culture. |
+| ISO 5 / ISO 7 | Air cleanliness ratings. ISO 5 is the hood work surface. ISO 7 is a typical room around the hood. |
+| Meristem | The dome of dividing cells at a shoot tip. No sap tubes yet. |
+| Meta-Topolin (mT) | A cytokinin that works for starting cannabis cultures. Too much of it makes glassy Stage II plants. |
+| Micropropagation | Using tissue culture to make many identical plants. |
+| MS salts | Murashige and Skoog, 1962. The default mineral mix. 4.4 g of powder per litre. |
+| Nodal segment | A stem piece with one bud. Easy. Often still contaminated inside. |
+| PGR | Plant growth regulator. A hormone you added on purpose. |
+| Phenolics / browning | Brown compounds that leak from a cut and stain the gel. |
+| Photoautotrophic micropropagation | No sugar. Ordinary fertiliser. Extra air. Plants look like nursery cuttings. |
+| PPM | Plant Preservative Mixture. An antimicrobial you can autoclave with the medium. |
+| qPCR / RT-qPCR | A lab test that looks for the viroid’s RNA. “Not detected” is not the same as “cannot exist.” |
+| Recalcitrant | A species that is hard to start in a jar. Cannabis is one. |
+| Somaclonal variation | Genetic changes that appear after many recuts in the jar. |
+| Still-air box | A clear tub with arm holes. Air inside is still, so spores do not drift onto open jars. |
+| Subculture | Moving tissue onto fresh medium. |
+| Temporary immersion | Liquid medium that wets the shoots on a timer, then drains. |
+| TDZ (thidiazuron) | A very strong cytokinin. Use small doses. |
+| Totipotency | A living plant cell can rebuild the whole plant. |
+| Vascular tissue | Xylem (water) and phloem (sap). The sap tubes are how the viroid moves. |
+
+*Table 13. Glossary.*
+
+## Tissue culture workflow
 
 Every tissue-culture run uses the same five stages. Cannabis adds two extra jobs: cutting the growing tip to leave disease behind, and a lab test that checks whether that worked.
 
@@ -81,7 +127,7 @@ Every tissue-culture run uses the same five stages. Cannabis adds two extra jobs
 
 *Left: green shoots on clear amber gel, no cloud, no fuzz. Middle: white roots visible in the gel. Right: plants under a humidity dome. If your jars never look like the left photo, stop and fix contamination before you cut more mother plants.Grok Imagine · illustration*
 
-## Why growers use tissue culture for cannabis
+## Applications of cannabis tissue culture
 
 A normal cutting copies the plant and also copies every pest, fungus and viroid the plant is carrying. Tissue culture can start a new plant from tissue that those organisms have not reached yet.
 
@@ -100,7 +146,7 @@ A 2021 industry survey of about 200,000 tissue tests is the figure most people q
 >
 > It does not change the cultivar. It removes diseases and pests the plant picked up. A cleaned plant can be infected again the next time a dirty blade or a shared tray touches it.
 
-## The shoot tip: meristem, young leaves, and sap tubes
+## Shoot-tip anatomy
 
 Viroids and viruses move in the sap tubes. The meristem is a dome of dividing cells at the very tip of a shoot. Those cells do not have sap tubes yet, and they divide faster than the pathogen can move forward. If you cut just that dome, you sometimes leave the disease behind.
 
@@ -129,7 +175,7 @@ How often? Punja (2025) cut meristems 0.2–0.4 mm across from 91 infected plant
 - **Best first piece (Das 2024):** Shoot tip under 5 mm, less fungus than stem pieces, less glassy growth than a bare meristem
 - **How often stem pieces still contaminate:** About 50% in Holmes 2021 (range 10–80%), even after bleach. The microbes are inside the stem, not only on the skin.
 
-## How to set up a home lab
+## Home laboratory setup
 
 You need three things: a pocket of still clean air to work in, a way to heat jars to 121 °C, and a warm lit shelf. You do not need a white coat. You do not need a hospital cabinet.
 
@@ -177,7 +223,7 @@ A fan pushes room air through a HEPA filter. The filter removes more than 99% of
 >
 > If you dip tools in alcohol and pass them through a flame, keep the open alcohol far from the flame. A glass-bead steriliser at about 250 °C for about 20 seconds is safer inside a plastic box. Punja (2025): 70% ethanol does not destroy Hop latent viroid RNA. Household bleach at 5–10% of 8.25% sodium hypochlorite for 1–2 minutes does, as does 1000 ppm hypochlorous acid for 1 minute. An Instant Pot is not an autoclave.
 
-## How a licensed facility lab is laid out
+## Licensed facility laboratory layout
 
 A licensed lab is the same plant work plus written records and a disease-testing programme. It is not a larger kitchen box.
 
@@ -211,7 +257,7 @@ Medicinal flower is usually grown under GACP (Good Agricultural and Collection P
 >
 > After Stage I is clean and you have a recipe that works for that cultivar. Kodym and Leeb (2019): 97.5% of shoots rooted and hardened in 3 weeks on rockwool with no sugar and no hormones. Do not buy a bioreactor to cover a 60% contamination rate.
 
-## How to work without contaminating the jars
+## Aseptic technique
 
 Most first-run losses are contamination. Contamination is almost always a technique problem, not bad luck.
 
@@ -232,7 +278,7 @@ Most first-run losses are contamination. Contamination is almost always a techni
 >
 > Holmes (2021): about half of stem pieces from commercial mothers still grew fungi or bacteria after a full bleach protocol. The microbes live inside the pith. PPM at 2 mL per litre delayed them by 1–3 weeks. It did not remove them. Meristems were cleaner. That is why section 11 exists.
 
-## How to mix and sterilise the medium
+## Medium preparation and sterilisation
 
 The jelly is mineral salts, sugar, vitamins, optional hormones, and agar. Set the pH first. Add agar second. Heat last. The sealed jar is too dim for the plant to feed itself, so the sugar is the energy source.
 
@@ -278,7 +324,7 @@ The jelly is mineral salts, sugar, vitamins, optional hormones, and agar. Set th
 4. **Heat-sterilise** — 121 °C at 15 psi for 20 minutes. In a pressure cooker: same numbers, jars on a rack, not sitting in a flood of water.
 5. **Cool** — You can cool the jars on a slant so the gel surface is easier to plant into. Leave new jars for 7 days. If they stay clear, use them.
 
-## How to surface-sterilise the plant piece
+## Explant surface sterilisation
 
 Surface sterilising kills microbes on the outside of the plant. It cannot reach microbes living inside the stem. Times are a compromise: long enough to kill the surface, short enough not to kill the plant.
 
@@ -325,7 +371,7 @@ Das (2024) got the best start on MS plus 0.48 mg/L meta-Topolin. Shoot tips unde
 >
 > A jar that looks clean on day 7 can still grow microbes in week 3. Do not cut new pieces from a culture that has not sat out that wait.
 
-## How to cut a meristem to remove disease
+## Meristem dissection for pathogen elimination
 
 This is the cut that has the best chance of leaving Hop latent viroid behind. You need a stereo microscope. Do two months of stem-piece cultures first so your sterile technique is solid.
 
@@ -464,7 +510,7 @@ Inside the jar the air is saturated and the plant is eating sugar. The leaf surf
 >
 > A plant that rooted on rockwool with no sugar already has a thicker leaf surface and a real root. Hardening takes a few days instead of two weeks.
 
-## What failed cultures look like
+## Failed culture symptoms
 
 Most failures are one of four things. Match the picture. Change one variable. Run again.
 
@@ -495,7 +541,7 @@ Most failures are one of four things. Match the picture. Change one variable. Ru
 >
 > Das (2024): 45–95% of first pieces lost, depending on cultivar. One hemp line kept about 75%. Holmes: up to half of stem pieces contaminated. Keeping 40% of a new cultivar alive and clean is a good first week.
 
-## How to test whether a plant is actually clean
+## Testing for pathogen-free stock
 
 A meristem plant that was never tested is a clone. Licensed facilities ship a test report. If you skip this section, do not say you cleaned the plant.
 
@@ -523,7 +569,7 @@ qPCR (and RT-qPCR) is a lab test that looks for the viroid’s RNA. “Not detec
 >
 > Hop latent viroid survives on tools, hands, pots and benches. It lasts about a week in sap and about a month in dried tissue. It can pass through seed.[^hlvd_mgmt2025] Use dedicated blades. Disinfect with 5–10% household bleach or 1000 ppm hypochlorous acid, not 70% alcohol. Do not share trays.
 
-## PPM, kits, and what the labels say
+## Plant Preservative Mixture (PPM) and commercial kits
 
 Plant Preservative Mixture (PPM) is the antimicrobial most cannabis tissue-culture forums mention. These are the label rates, not forum guesses.
 
@@ -544,7 +590,7 @@ Plant Preservative Mixture (PPM) is the antimicrobial most cannabis tissue-cultu
 
 > **Diagram.** What a typical grower kit includes, and what it leaves out: the published recipe, and the disease test.
 
-## Weekly work at home and in a licensed lab
+## Weekly tissue-culture operations
 
 How many plants you ship is your contamination rate multiplied by hours at the hood. Fix the contamination rate before you hire more people.
 
@@ -570,7 +616,7 @@ How many plants you ship is your contamination rate multiplied by hours at the h
 >
 > Keep a small block of tested mother plants for recuts and for checking cannabinoid content. Use tissue culture to refresh that block and to make the plants you send to flower. A lab that throws away all mothers and lives only in agar will drift and will not notice until flower. A facility that never uses tissue culture will eventually carry Hop latent viroid through the clone line.
 
-## Troubleshooting: change one thing
+## Troubleshooting
 
 | What happened | Likely cause | Change this, only this |
 | --- | --- | --- |
@@ -589,53 +635,7 @@ How many plants you ship is your contamination rate multiplied by hours at the h
 >
 > Date, cultivar, what you cut, bleach strength and time, medium, number plated, number clean at day 7, number clean at day 21, number rooted. That notebook is worth more than a second hood.
 
-## Glossary
-
-Every technical term, in one place.
-
-| Term | Meaning |
-| --- | --- |
-| Acclimatization / hardening | Lowering humidity in steps so a jar plant can live in room air and soil. |
-| Activated charcoal | Black powder in the gel that binds brown leak compounds. It can also bind hormones. |
-| Agar / gellan / Phytagel | The setting agent. More agar = firmer gel = drier air in the jar = less glassy growth. |
-| Aseptic technique | Working so that stray microbes do not reach the sugar jelly. |
-| Autoclave | A machine that holds 121 °C steam at 15 psi. A pressure canner that holds 15 psi is the home version. |
-| Auxin (IBA, NAA, IAA) | A hormone class that tells tissue to make roots. |
-| Callus | A lump of unspecialised cells. Common as a side-effect. Not a useful production method for cannabis in Holmes 2021. |
-| Cytokinin (mT, TDZ, BA) | A hormone class that tells tissue to make shoots. |
-| DKW | Driver and Kuniyuki Walnut salts. An alternative mineral mix to MS. Results on cannabis depend on the cultivar. |
-| Endophyte | A microbe living inside tissue that looks healthy. Bleach on the surface cannot reach it. |
-| Explant | The piece of plant you put in the jar. |
-| GACP / GMP | Growing practice versus manufacturing practice. Starting plants sit between the two. |
-| HEPA / laminar-flow hood | A fan and filter that blow a sheet of clean air across the bench. Not a biosafety cabinet. |
-| HpLVd / HLVd | Hop latent viroid. The usual cause of “dudding.” 256 letters of RNA. |
-| Hyperhydricity / vitrification | Glassy, waterlogged, brittle growth in the jar. Often too much cytokinin or humidity. |
-| In vitro / ex vitro | In the jar / outside the jar. |
-| Indexing | Testing a plant for a named pathogen. The only basis for the word “clean”. |
-| Initiation (Stage I) | Getting the first living, uncontaminated culture. |
-| ISO 5 / ISO 7 | Air cleanliness ratings. ISO 5 is the hood work surface. ISO 7 is a typical room around the hood. |
-| Meristem | The dome of dividing cells at a shoot tip. No sap tubes yet. |
-| Meta-Topolin (mT) | A cytokinin that works for starting cannabis cultures. Too much of it makes glassy Stage II plants. |
-| Micropropagation | Using tissue culture to make many identical plants. |
-| MS salts | Murashige and Skoog, 1962. The default mineral mix. 4.4 g of powder per litre. |
-| Nodal segment | A stem piece with one bud. Easy. Often still contaminated inside. |
-| PGR | Plant growth regulator. A hormone you added on purpose. |
-| Phenolics / browning | Brown compounds that leak from a cut and stain the gel. |
-| Photoautotrophic micropropagation | No sugar. Ordinary fertiliser. Extra air. Plants look like nursery cuttings. |
-| PPM | Plant Preservative Mixture. An antimicrobial you can autoclave with the medium. |
-| qPCR / RT-qPCR | A lab test that looks for the viroid’s RNA. “Not detected” is not the same as “cannot exist.” |
-| Recalcitrant | A species that is hard to start in a jar. Cannabis is one. |
-| Somaclonal variation | Genetic changes that appear after many recuts in the jar. |
-| Still-air box | A clear tub with arm holes. Air inside is still, so spores do not drift onto open jars. |
-| Subculture | Moving tissue onto fresh medium. |
-| Temporary immersion | Liquid medium that wets the shoots on a timer, then drains. |
-| TDZ (thidiazuron) | A very strong cytokinin. Use small doses. |
-| Totipotency | A living plant cell can rebuild the whole plant. |
-| Vascular tissue | Xylem (water) and phloem (sap). The sap tubes are how the viroid moves. |
-
-*Table 13. Glossary.*
-
-## Sources and how this guide was written
+## Evidence sources and image methods
 
 The beginner paper on this site is a shorter first-timer walk-through of the same cleanup idea.[^cwp_tc_beginner] The recipes and survival numbers come from the papers listed below, read in full where they are open: Holmes 2021, Das 2024, Kodym and Leeb 2019, Ioannidis 2022, Lata 2009 and 2016, Punja 2025. Plant Cell Technology pages were used for product label rates and for the papers they cite, not as a substitute for those papers.
 

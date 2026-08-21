@@ -23,7 +23,7 @@ _Post-harvest · Process · ~14 min read_
 
 > A beginner's guide to the full post-harvest process: when to cut, how to dry, how to trim, and how to cure flower so it is safe from mould and keeps its smell, weight and quality.
 
-## Why the last two weeks decide everything
+## Purpose and scope
 
 Post-harvest is everything that happens after the plant is cut down: drying, trimming, curing and storage. Weeks of careful growing can be ruined in a few days here. Dry too fast or too dry and you lose smell and weight. Dry too slow or too wet and mould takes hold.
 
@@ -35,7 +35,7 @@ Aim for a narrow safe zone: dry enough that mould cannot grow, but not so dry th
 >
 > Anyone harvesting their first crop who wants results they can repeat. This guide assumes zero prior knowledge and defines every term as it appears. It pairs with the [mould-risk](mould-risk.html) and [airflow-design](airflow-design.html) papers.
 
-## The words you need before we start
+## Definitions
 
 Two ideas do most of the work here. Don't memorise them. Each one comes back in context.
 
@@ -53,7 +53,7 @@ Two ideas do most of the work here. Don't memorise them. Each one comes back in 
 
 > **Diagram.** Water activity is the gauge you steer by. Moisture content is the gauge you report. Confusing the two is the most common beginner mistake.[^aroya-drying-water-activity-guide]
 
-## When to harvest: reading the plant, not the calendar
+## Harvest timing
 
 Harvest is cutting the plants down once they have finished flowering. Judge maturity by the flower itself, not by a date on the calendar.
 
@@ -70,7 +70,7 @@ The clearest signal is the trichomes. Under a loupe they shift from clear, to mi
 >
 > If the calendar says cut but the trichomes are still mostly clear, wait. Read maturity off the flower. The date is only a rough guide.
 
-## Cutting down and weighing the wet plant
+## Harvest method and wet-plant weighing
 
 Cut plants whole and hang them to dry, rather than stripping the buds first. Cutters free each plant from the lower two layers of trellis netting (the support grid the plant grew through), leave the top layer on for support, then cut the main stalk at its base.
 
@@ -83,7 +83,7 @@ Before anything is hung, weigh every bin to record the **wet weight**, the start
 
 > **Diagram.** Roughly nine-tenths of a freshly cut plant's weight is water that must leave during drying. Whole-plant hanging slows that loss and lets moisture move out of the stem evenly.
 
-## The drying environment: slow, cool, dark, moving air
+## Drying environment
 
 Hold the dry room at 60°F and 60% RH, with fans running and the lights off, in a room that was deep-cleaned before any plant went in. At these setpoints whole plants are typically ready in 10-14 days.[^aroya-drying-water-activity-guide]
 
@@ -96,7 +96,7 @@ Going slow and cool protects the terpenes, which evaporate in heat and dry air, 
 
 > **Diagram.** The green band is the 60% RH target. Drift above it and you invite mould. Sit below it for long and terpenes start to evaporate.[^aroya-drying-water-activity-guide]
 
-## Water activity: the number that controls mould and yield
+## Water activity
 
 Water activity is the safe-zone gauge for cannabis. Mould and yeast can grow at 0.70 aw and above, pathogenic bacteria at 0.85, and risk rises sharply toward ~0.70 aw and above; below ~0.55 quality often suffers even as microbes slow. ASTM’s 0.55–0.65 window is the practical target for dried flower.[^aqualab-microbial-water-activity] That sets the ceiling. Quality sets the floor: below 0.55 aw the terpenes dry up and quality falls off.
 
@@ -112,7 +112,7 @@ Together that leaves a sweet spot of 0.55-0.65 aw, the exact range written into 
 > - In one example, measuring on water activity gave roughly 10x tighter yield precision (±1% down to ±0.12%).
 > - Denser flowers tend to finish at a slightly lower aw than fluffy ones. Use the meter as a guide, but also trust your nose.
 
-## Trimming: wet vs dry, and protecting the trichomes
+## Trimming and trichome protection
 
 Trimming removes leaf so the bud looks clean and presentable. There are two timings. **Wet trim** means trimming right after cutting, before drying. **Dry trim** means trimming after the hang-dry. Dry trimming slows the dry and is gentler on the aromatic oils, which is why many operations choose it for better terpene retention.[^brikenstein-2024-trimming]
 
@@ -134,7 +134,7 @@ Never touch the flower itself. Handling knocks off the trichomes that carry pote
 
 *Wet vs dry trim. This guide dry-trims for better terpene retention and a gentler dry.[^brikenstein-2024-trimming]*
 
-## Curing and storage: burp, stabilise, then seal
+## Curing and storage
 
 Curing lets the whole batch settle to one even water activity, and preserves terpenes that would otherwise break down in storage. Hold flower in containers at 60-65°F and 58-62% RH. Read a humidity sensor, and **burp** any bin reading above about 60% RH: lid off for 5-10 minutes, then rotate the barrel and log the reading.
 
@@ -146,7 +146,7 @@ Once the trimmed flower sits at 0.58-0.60 aw, it is finished: seal it and stop b
 >
 > Every burp past the finish line evaporates terpenes and water weight you could have sold. When trimmed flower reaches 0.58-0.60 aw, seal it. Bags should be free of air but not compressed, and not stacked, to protect bud structure.
 
-## Common mistakes and how to avoid them
+## Troubleshooting
 
 Most post-harvest failures are variations on going too fast, too dry, or too crowded. Over-drying is the quiet killer. A cheap moisture meter with ±1% error can read ‘11% moisture’ while the flower is anywhere from 0.53 aw (ruined, too dry) to 0.66 aw (mould risk), so growers chasing a single number often dry too far and lose weight and smell.[^astm-d8197-water-activity]
 
@@ -163,7 +163,7 @@ Most post-harvest failures are variations on going too fast, too dry, or too cro
 
 *The big six post-harvest mistakes and their fixes.*
 
-## What realistic results look like
+## Expected results and limitations
 
 Expect roughly 10-14 days of hang-drying plus several more days of curing before flower is truly finished. The whole post-harvest stage is two-to-three weeks, not overnight, and there is no rushing it.
 

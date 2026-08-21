@@ -23,7 +23,7 @@ _Precision · Dashboards · ~13 min read_
 
 > A grow-room screen should show what the plant is doing, not a wall of raw sensor numbers. Here is how to design one that does.
 
-## What this is, and why it matters
+## Purpose and scope
 
 > **EVIDENCE — Grain of salt**
 >
@@ -41,7 +41,7 @@ This paper makes the case for a different design centre, which we will call **Pl
 
 > **Diagram.** The telemetry-dump path (above) leaves all the reasoning to the human. Plant-State Intelligence moves that step into the software: sensors → fusion and inference → one plain-language judgement.
 
-## Key terms, defined from zero
+## Definitions
 
 Here are the words before the argument. Don't memorise them. Each one comes back in context.
 
@@ -63,7 +63,7 @@ Here are the words before the argument. Don't memorise them. Each one comes back
 
 **PPFD / DLI** — PPFD is instantaneous light intensity. DLI is the total daily light delivered. EC is the salt concentration in the feed or root-zone pore water.
 
-## Why the sensor dashboard falls short
+## Limitations of sensor-only dashboards
 
 The conventional dashboard rests on one implicit theory: ‘expose every measurement and a skilled grower will know what to do.’ That fails in seven predictable ways. Every sensor measures the plant's **surroundings**, air, root zone, light, and none measures vigour, stress or transpiration directly. That leaves an inference gap the human must cross unaided. Capacitive moisture probes, for instance, report water content in the substrate, never the plant's own water status[^capacitive-soil-moisture].
 
@@ -77,7 +77,7 @@ It is also reactive. By the time a line crosses a threshold, salt accumulation o
 >
 > The real story about plant health lives in cross-signal, multivariate patterns: moisture, EC, VPD and transpiration moving together. A wall of single-channel gauges structurally cannot express that pattern, no matter how many you add.
 
-## Six inversions: from gauge cluster to calm dashboard
+## Plant-state dashboard design principles
 
 Plant-State Intelligence inverts six assumptions baked into the sensor dashboard. None of these throws the raw data away. It just moves to the ‘basement,’ still available on drill-down for the expert and the post-mortem.
 
@@ -96,7 +96,7 @@ Plant-State Intelligence inverts six assumptions baked into the sensor dashboard
 >
 > An always-on wall of graphs competes with the plant for the grower's attention, and the plant should win. That is why a prescription replaces a bare alert. It names the action, the deadline, and the consequence of ignoring it. And it is why silence, not a full screen, is the healthy resting state.
 
-## What the system actually infers
+## Plant-state inference model
 
 The pipeline estimates four (really five) interacting states. **Environmental state**, temperature, RH, VPD, CO₂, light, is reframed as integrals and rates: VPD-hours accumulated today, DLI to date, not instants. Plant response to VPD is non-linear and cumulative rather than tied to any single reading[^vpd-plant-response], so the accumulated quantity is the meaningful one. **Substrate state** adds derived crop-steering metrics: dryback depth and rate, field-capacity recovery, and shot-to-shot moisture response.
 
@@ -117,7 +117,7 @@ The **plant physiological state** is not measured but **estimated**, by fusing t
 >
 > This layer does not emit fifteen numbers. It emits a short list of **named conditions**: ‘dryback stalling,’ ‘salt accumulating,’ ‘over-transpiring,’ each with a confidence and an evidence chain. Cameras already on site for security become a horticultural input: canopy colour and uniformity, lights-on wilt, height and stacking over days, early discoloration.
 
-## The six-layer pipeline
+## Six-layer dashboard architecture
 
 The system is a six-layer pipeline that maps cleanly onto a Home Assistant–centred stack. Most operations already have layers 0 and 1 without realising it. The intelligence moves to the dashboard long before the actuation does: autonomous control is earned channel by channel, after advisories prove correct.
 
@@ -134,7 +134,7 @@ The system is a six-layer pipeline that maps cleanly onto a Home Assistant–cen
 >
 > The human-in-the-loop posture is deliberate. An operation can run permanently at ‘advise only’ and capture most of the value. Layer 5b auto-applies only the low-risk, explicitly-licensed actions. Anything irreversible or expensive stays human-approved.
 
-## The new dashboard surface: four zones
+## Dashboard layout and priority zones
 
 What the grower opens has four zones, in priority order, and on a good day, three of them are empty. Zone 1 is the **Headline**: one line of plant truth in plain language with a status colour, which is 90% of what a busy grower needs 90% of the time. Zone 2 is the **Watchlist** of things drifting but not yet wrong, the precursors, and it exists precisely to make the next zone rare. Zone 3 is **Advisories**, the only zone that should ever interrupt, each prescriptive and time-bound. Zone 4 is the **Evidence and raw basement**, demoted but never deleted.
 
@@ -160,7 +160,7 @@ Colour and layout do real work here. A calm dashboard leans on pre-attentive cue
 >
 > ‘Reduce dryback target 3% in Room 3 (Day 24)… Tip burn likely soon (illustrative) if unaddressed. Confidence: high. _[Show evidence]_’, and the evidence expands to the fused signals, the baseline it violated, and the historical precedent. The old dashboard was 100% Zone 4. The new one leads with Zones 1–3 and keeps 4 in the basement.
 
-## The adoption path: crawl, walk, run
+## Implementation path
 
 This is not a boil-the-ocean rebuild. Each stage ships value and earns the next, and most of the payoff lands by Stage 3, long before any closed-loop control.
 
@@ -193,7 +193,7 @@ An advisory system that is wrong _and_ confident is worse than no system at all.
 >
 > A drifted, noisy or flatlined sensor is itself an advisory. For example: ‘EC probe in Room 2 reads implausibly flat: suspect failure, EC-derived advisories paused.’ A grower who can't see _why_ will, correctly, stop trusting the _what_. The system's job is to make the decision obvious, not to make it alone on anything irreversible or expensive.
 
-## Measuring success and realistic expectations
+## Expected results and limitations
 
 If the new dashboard is working, the grower looks at it **less**, is surprised **less**, and harvests **more consistently**. Six run-over-run metrics make that concrete, and for half of them, the success direction is _down_.
 

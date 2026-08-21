@@ -23,7 +23,7 @@ _Feed · Rockwool steering · ~18 min read_
 
 > Rockwool is the most controllable substrate there is, and the least forgiving. This is the guide to what water content really means, how to read and calculate dryback, how dry a block can get before it is gone, and how to hold the right saturation from clone to chop without ever hand-flushing or topping up a cube.
 
-## Why rockwool rewards and punishes you
+## Purpose and scope
 
 Rockwool (stone wool) is spun rock fibre. It holds no nutrients of its own and reacts with nothing you feed it, so **root-zone EC is essentially the EC of the pore water (unused feed still leaves as runoff or concentrates on dryback)**[^grodan-irrigation-medicinal]. That makes it the most precise substrate you can steer with. It also means the block has no buffer: get the water wrong and the plant feels it the same hour.
 
@@ -37,7 +37,7 @@ This guide is only about the water and salt in the block, the part most growers 
 >
 > Assumes a slab-and-cube setup on pressure-compensating drippers, with a substrate moisture and EC sensor and an irrigation controller, the Athena-style 4″ cube on a 3×6×36 slab being typical[^athena-spacing-irrigation]. The smaller the dripper, the finer your control of the root zone[^athena-spacing-irrigation].
 
-## The words you need
+## Definitions
 
 **Water content (WC%)** — The share of the block's volume that is water right now, as a percentage. A slab at 70% WC is 70% full of water by volume. This single number is what you steer.
 
@@ -59,7 +59,7 @@ This guide is only about the water and salt in the block, the part most growers 
 
 **Shot** — A single timed irrigation pulse. Shot size and spacing build the daily water-content curve.
 
-## Where the water actually sits
+## Water distribution in rockwool
 
 A rockwool block is mostly air. Around 95% of its volume is space between the fibres; the fibre itself is a tiny fraction[^malik2025-media]. Water clings to the fibres as a film and fills the smaller gaps, while the larger gaps stay full of air. Water content is simply how much of that space is water versus air at any moment.
 
@@ -67,7 +67,7 @@ A rockwool block is mostly air. Around 95% of its volume is space between the fi
 
 Two consequences fall straight out of this. First, when water leaves the block the salt does not, so the EC of the water left behind climbs as the block dries. Second, because the medium buffers nothing, the EC and water content you set are the EC and water content the roots get, which is why rockwool can be steered so precisely and why mistakes show up so fast.
 
-## What a water-content percentage means
+## Interpreting water-content percentage
 
 Everything in rockwool steering is a position on one vertical scale: how full the block is. Learn the band and where the danger is, and the rest is timing.
 
@@ -79,7 +79,7 @@ Everything in rockwool steering is a position on one vertical scale: how full th
 
 Note where the headroom is. The block can sit happily anywhere from field capacity down into the mid-40s. The cliff is only at the bottom. That asymmetry is the whole reason a controlled dryback is safe but an uncontrolled one is fatal.
 
-## Dryback: what it is, and how to calculate it
+## Dryback calculation and management
 
 A dryback is the block losing water between its daily high and its next low. You create the high by irrigating to field capacity; the plant and evaporation create the low. The _size_ of that swing and _when_ you let it happen is the single biggest lever you have over how the plant grows.
 
@@ -102,7 +102,7 @@ A dryback is the block losing water between its daily high and its next low. You
 >
 > As the block dries overnight, air refills the gaps and the roots and beneficial microbes get oxygen. Grodan's trials found that easing the standard night dryback by about 10% (a slightly wetter night) lifted yield in medicinal crops, because the root zone keeps working even while the canopy rests[^grodan-irrigation-medicinal]. Some night dryback is essential; too much is not.
 
-## What happens to a block as it dries
+## Block dry-out dynamics
 
 A dryback is good up to a point and dangerous past it. The same process, water leaving the block, does four different things in sequence as it goes too far.
 
@@ -114,7 +114,7 @@ The middle stage is the one that catches people out. Because rockwool holds no s
 >
 > When you push a generative dryback, you are not only making the plant work for water, you are also concentrating its food. Watch substrate EC, not just water content. If EC climbs faster than you intend on the dryback, shrink the dryback or lower the feed EC.
 
-## The breaking point: when a block is gone
+## Critical dry-out threshold
 
 There is a water content below which a rockwool block will not rewet from the dripper no matter how long you run it. Nothing else here matters as much, because it is invisible until it has already happened.
 
@@ -133,7 +133,7 @@ Below roughly **25-30% WC** the dry fibre stops wicking and preferential flow ta
 >
 > Set a hard minimum water content in your controller and never let the trough cross it. The dryback is steering; the floor is a safety limit. They are not the same number and you should know both for every slab.
 
-## The minimum you must feed
+## Minimum irrigation volume
 
 Feeding rockwool is a balance of two jobs: put back the water the plant drank, and flush enough fresh feed through to stop salt stacking. Underfeed and EC climbs and the block trends toward the floor; overfeed and you drown the roots and lose your dryback.
 
@@ -149,7 +149,7 @@ Feeding rockwool is a balance of two jobs: put back the water the plant drank, a
 >
 > The minimum is whatever volume keeps the block above its recovery floor and substrate EC on target. In heavy flower under high light that can be a lot of small shots; in propagation it is very little. Let the sensor and the runoff EC set the number, not a fixed clock[^nemali-2006-set-point-irrigation].
 
-## Generative vs vegetative, in rockwool
+## Vegetative and generative steering in rockwool
 
 You steer the plant by choosing where the block sits in the band, how big the daily dryback is, and when you let it happen. Drier and bigger and earlier is generative; wetter and smaller and later is vegetative[^caplan2019-drought].
 
@@ -167,7 +167,7 @@ You steer the plant by choosing where the block sits in the band, how big the da
 >
 > Grodan's trials found a consistently wetter daytime strategy produced higher yield with the same cannabinoid levels, especially across the first six of eight flowering weeks[^grodan-irrigation-medicinal]. Steer generative with timing and dryback, but do not starve the plant of water and feed while it is still building the crop.
 
-## Holding saturation the whole grow, no hand-flushing
+## Maintaining rockwool saturation
 
 The goal is to never touch a hose: the controller holds the block in the right zone from clone to chop, flushing salt with daily runoff so you never have to manually leach or top up a dry cube. The strategy is a planned arc of water content and dryback across the grow.
 
@@ -187,7 +187,7 @@ The goal is to never touch a hose: the controller holds the block in the right z
 >
 > A daily controlled runoff continuously replaces the salty water in the block with fresh feed, so EC never stacks to the point of needing a manual leach. And because the trough never crosses the recovery floor, no cube ever dries out enough to need a manual soak. The system holds the equilibrium for you, every day, if you set the limits correctly.
 
-## Running it on sensors and a controller
+## Sensor-based crop-steering systems
 
 None of this works on a timer alone. Steering rockwool means measuring the block and letting the controller act on the measurement, closing the loop[^nemali-2006-set-point-irrigation][^tavan-2021-sensor-irrigation-soilless].
 
@@ -202,7 +202,7 @@ The companion papers cover the hardware and the daily cycle in depth: what the s
 >
 > Because rockwool buffers nothing, a closed-loop controller can steer it to a tighter tolerance than any buffered medium[^grodan-irrigation-medicinal]. The inertness that makes it unforgiving is exactly what makes it the best substrate to automate.
 
-## Reading the block's symptoms
+## Troubleshooting
 
 | Symptom | Likely cause | Fix |
 | --- | --- | --- |
@@ -215,7 +215,7 @@ The companion papers cover the hardware and the daily cycle in depth: what the s
 
 *Most rockwool problems are a water-content or EC reading drifting from plan. The sensor tells you which, and the fix follows.*
 
-## The numbers, in one place
+## Quick-reference targets
 
 - **Working band:** ~55-92% WC
 - **Recovery floor (do not cross):** ~25-30% WC

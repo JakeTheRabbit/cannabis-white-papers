@@ -23,7 +23,7 @@ _Beginner · Coco & crop steering · ~16 min read_
 
 > Coco coir lets you talk to your plants through water. This paper shows you what the root zone is telling you, and how a daily rhythm of wetting and drying steers a plant toward leaves or toward flower, explained from zero.
 
-## What this paper is
+## Purpose and scope
 
 ‘Crop steering’ is a simple idea behind a jargon name: by controlling _when_ and _how much_ you water, you can push a plant to grow bigger and leafier, or to focus on dense, resinous flower. Coco coir is the easiest substrate to do this in, because it responds fast and predictably.
 
@@ -33,7 +33,7 @@ You do not need to have measured a root zone before to use this guide. Every ter
 >
 > Anyone growing in coco, or thinking about it, who wants results they can repeat instead of watering ‘when it feels dry.’ Pairs with the [root-zone sensor](root-zone-teros12.html) and [grow-room systems](grow-room-systems.html) papers.
 
-## The words you need
+## Definitions
 
 You do not need to memorise these, just get the gist. Each one comes back in context.
 
@@ -53,7 +53,7 @@ You do not need to memorise these, just get the gist. Each one comes back in con
 
 **Shot** — One short irrigation pulse. Crop steering replaces one big daily soak with several small, timed shots.
 
-## Why coco behaves differently
+## Coco substrate properties
 
 Coco holds a lot of water **and** a lot of air at the same time. At field capacity, roughly a fifth to a third of its volume is still air-filled pore space[^abad2005-coir]. That oxygen is what keeps roots healthy and lets you water often without drowning them.
 
@@ -79,7 +79,7 @@ Here is the trick beginners miss: **as the substrate dries, the salt left behind
 > - **EC drifting up** as VWC falls is normal. A big jump means the root zone is getting too salty, so water it.
 > - **EC drifting down** over days means the plant is eating salt faster than you feed, so raise feed EC.
 
-## Dryback: the engine of steering
+## Dryback: the steering mechanism
 
 > **EVIDENCE — Grain of salt**
 >
@@ -95,7 +95,7 @@ When the root zone dries a little, the plant makes a stress hormone called **abs
 
 Bigger drybacks push generative (flower). Smaller drybacks, kept wetter, push vegetative (leaves and size). That one dial, how far you let it dry, is most of crop steering.
 
-## The daily cycle: P0–P3
+## Daily irrigation cycle: P0–P3
 
 Growers split the lights-on day into four phases. You do not need fancy gear to think this way. It is a rhythm of dry, refill, maintain, dry.
 
@@ -112,7 +112,7 @@ Growers split the lights-on day into four phases. You do not need fancy gear to 
 
 *The P0–P3 framework. The numbers you choose for each phase are your steering recipe.*
 
-## Steering generative vs vegetative
+## Vegetative and generative steering
 
 ‘Generative’ means flowers, density and resin. ‘Vegetative’ means leaves, stems and size. You bias the plant with a handful of levers that all work by changing how hard the plant has to work for water.
 
@@ -132,7 +132,7 @@ Temperature is on that list because the gap between day and night temperature co
 >
 > Every lever interacts. If you yank the dryback, raise EC, drop humidity and cool the night all at once, you will not know what helped or hurt, and you may tip a steer into real stress. Move one dial, watch for a few days, then adjust.
 
-## A week-by-week shape
+## Flowering steering by week
 
 Flowering indoors usually runs about 8–10 weeks once you flip the lights to a 12-hour night[^moher2023-photoperiod]. The steering changes across that arc:
 
@@ -153,7 +153,7 @@ Flowering indoors usually runs about 8–10 weeks once you flip the lights to a 
 | Early cal-mag deficiency | Fresh coco not buffered | Pre-charge coco, add cal-mag to early feeds |
 | Wilting between shots | Dryback gone too far (drought, not steer) | Water sooner, shorten P0/P3. Never let it actually wilt |
 
-## Realistic expectations
+## Expected results and limitations
 
 > **KEY — Three rules**
 >

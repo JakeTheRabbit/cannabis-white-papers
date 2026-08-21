@@ -23,13 +23,13 @@ _Beginner · Airflow design · ~26 min read_
 
 > Every leaf sits inside a film of still air that limits how fast it can breathe. Airflow strips that film away. Done right it feeds the plant and dries the room. Done wrong it scorches leaves or breeds rot.
 
-## Why airflow is not optional
+## Purpose and scope
 
 Airflow is plumbing for gases, and it is as important as light and feed. Without moving air, even a perfect light and a perfect feed cannot reach the leaf properly. A still, humid canopy is exactly where bud rot begins.
 
 This guide explains, from zero, what air movement does at the leaf, how much you want, which fans actually make that air, how to rank them, and where to hang them.
 
-## The words you need
+## Definitions
 
 **Boundary layer** — The thin film of still air that clings to every leaf surface. Gases have to diffuse across it slowly, so it is the bottleneck airflow attacks.
 
@@ -47,7 +47,7 @@ This guide explains, from zero, what air movement does at the leaf, how much you
 
 **Throw and entrainment** — **Throw** is how far a fan's jet stays useful. **Entrainment** is the jet dragging still room air along with it, which is why a modest hanging fan can stir far more air than it actually pushes through its own blades. It is the whole reason HAF loops work.
 
-## The invisible skin of still air
+## Leaf boundary layers
 
 Air right against a leaf barely moves. It forms a stagnant film called the **boundary layer**. CO2 going in, and water vapour and heat coming out, all have to crawl across that film by slow diffusion. The thicker it is, the more it slows the leaf[^schuepp1993-bl].
 
@@ -55,7 +55,7 @@ Air right against a leaf barely moves. It forms a stagnant film called the **bou
 
 Moving air thins that film. Even small breezes make a real difference: gentle wind (under ~0.2 m/s added) has been shown to lift daytime photosynthesis by 10–20%[^dupont2025-wind]. This is the reason fans belong in a grow room.
 
-## How much air is the right amount?
+## Airflow targets
 
 More airflow helps, but with sharply diminishing returns. Photosynthesis climbs steeply as you go from dead-still up to a gentle breeze, then flattens out. Most of the benefit is won by the time leaves are gently fluttering[^kitaya2004-airvel].
 
@@ -63,7 +63,7 @@ More airflow helps, but with sharply diminishing returns. Photosynthesis climbs 
 
 > **Diagram.** Below ~0.2 m/s, humid pockets and disease creep in. Above ~1.2 m/s you risk wind-stress and drying the plants out. Aim for the middle.[^tjosvold2018-air]
 
-## Match airflow to your light
+## Matching airflow to light intensity
 
 The brighter the room, the more the leaf needs air. High light drives high photosynthesis and high transpiration, and both depend on the boundary layer staying thin. Cannabis yield keeps rising with light to very high levels[^rm2021-light], but only if airflow and climate scale with it. A bright room with weak airflow wastes the light.
 
@@ -71,7 +71,7 @@ The brighter the room, the more the leaf needs air. High light drives high photo
 >
 > Light, CO2, temperature, humidity and airflow work together (see the [systems guide](grow-room-systems.html)). Turning up the light without turning up the air leaves hot leaves sitting in their own humid film[^chandra2008-photo].
 
-## Faster air means a hungrier plant
+## Airflow, transpiration and nutrient demand
 
 Thinning the boundary layer feeds CO2 in and pulls water out faster. More airflow means more transpiration, which means the plant needs more water and nutrient at the roots. There are two beginner gotchas here:
 
@@ -82,7 +82,7 @@ Thinning the boundary layer feeds CO2 in and pulls water out faster. More airflo
 >
 > Tip-burn cuts both ways, and the direction depends on _where_ the still air is. Too much airflow with too little feed starves the leaf of calcium. But so does a dead-still pocket _buried inside_ a dense canopy, because the leaves in there cannot transpire at all, so no calcium arrives. In lettuce, this is the classic result: blowing air directly into the inner leaves raises their calcium and largely stops tip-burn[^goto1992-tipburn]. That is the single best argument for the top-down fans in section 10.
 
-## Three jobs, three sets of kit
+## Airflow system functions and equipment
 
 “Add a fan” hides three separate jobs. Buying the wrong one for the job you actually have is the most common airflow mistake in a first room:
 
@@ -102,7 +102,7 @@ An air conditioner, dehumidifier or air-handling unit changes the air's temperat
 >
 > Air takes the easy path and skips corners, the lower canopy, and the inside of dense plants. Those still, humid pockets are where bud rot starts. Place fans to push air _through_ the canopy, not just over the top of it, and defoliate enough to let air in.
 
-## Messy air beats smooth air
+## Turbulent airflow and canopy mixing
 
 Aiming one big fan straight down a row is tempting. Don't. A smooth, laminar jet builds its own thick boundary layer on whatever it hits, and leaves everything off-axis still. **Turbulent, mixing air**, from many fans at varied angles with oscillation, constantly disturbs the film on every leaf from every direction, which is exactly what thins it best[^schuepp1993-bl][^dupont2025-wind].
 
@@ -110,7 +110,7 @@ Aiming one big fan straight down a row is tempting. Don't. A smooth, laminar jet
 >
 > Walk the room. Every leaf, top to bottom and inside the plants, should be gently moving. Still leaves anywhere = a pocket you need to reach. A leaf that is flapping hard = back that fan off.
 
-## What a controlled room trial shows
+## Evidence from controlled room trials
 
 Everything above is leaf physiology. Does it actually move yield in a real flower room? A controlled trial by Pipp Horticulture with Dr. Allison Justice and the Cannabis Research Coalition tested exactly that: three identical flower rooms with VPD, temperature and humidity held constant, changing only the airflow[^pipp2026-airflow].
 
@@ -134,7 +134,7 @@ Above that threshold, the higher-airflow rooms showed three things:
 >
 > Treat it as strong early field evidence, not settled science: the results so far are one replicate, with a second run underway to firm up the statistics[^pipp2026-airflow]. The direction lines up cleanly with the leaf physiology in the rest of this paper.
 
-## The fan types, one by one
+## Fan types
 
 Fans are not interchangeable. Each type makes a different _shape_ of air, and the shape decides which leaves get served. Pick by the shape you need, not by the price tag or the CFM on the box.
 
@@ -206,7 +206,7 @@ The air-handling unit that actually heats, cools and dries. It sets your VPD. It
 
 Recirculation · vertical rackingIn-rack airflow systems (vertical farms)If you grow on multi-tier racking, none of the above works on its own: each tier is a low, enclosed slot that overhead fans physically cannot reach. Purpose-built systems mount a ducted fan bar into the racking itself and push air along or down through every tier[^vas-inrack]. On racking it is the only thing that works, and it is the setup the Pipp trial in section 09 was built to test.
 
-## Which fans earn their place
+## Selecting fans for canopy airflow
 
 A ranking is only honest if you say what it is ranking _for_. This one scores **crop-relevant airflow bought per dollar installed, in a sealed, single-tier indoor flower room** of roughly 20–200 m² of canopy. Change the room and the order changes; the callout below says how.
 
@@ -235,7 +235,7 @@ A ranking is only honest if you say what it is ranking _for_. This one scores **
 >
 > Almost every underperforming room has the same shape of problem: **plenty of total CFM, badly distributed**. Two drum fans in the corners produce an impressive number on paper and a still, humid middle. Six small hanging fans on a loop produce a smaller number and a room where every leaf moves. Buy the pattern, not the peak.
 
-## Where to actually put them
+## Fan placement
 
 Fan placement is a pattern problem, not a coverage problem. You are not trying to hit every plant with a jet; you are trying to set the whole volume of air in the room turning slowly and consistently, then punch that moving air down into the canopy.
 
@@ -299,7 +299,7 @@ One last number, and it is the one that saves the most money. Fan airflow rises 
 | Room humidity stuck high | Recirculation OK but not enough air exchange | Increase intake/exhaust / dehumidification |
 | Cold or dry patch under the AC outlet | Conditioned air dumped in one spot instead of distributed | Duct it into an air sock along the row |
 
-## Realistic expectations
+## Expected results and limitations
 
 > **KEY — What to remember**
 >

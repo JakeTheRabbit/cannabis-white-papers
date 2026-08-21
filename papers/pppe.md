@@ -23,7 +23,7 @@ _Plant health · PPE & biosecurity · ~17 min read_
 
 > Coveralls, hairnets, gloves and shoe covers do two jobs at once: they keep the human safe, and they keep the human's particles, microbes and pests off the crop. People are the number-one contamination source in any clean space. This is the full rundown: how bad we are, the bare minimum, the room-by-room kit, and the procedures that actually work.
 
-## Two jobs, one suit
+## Purpose and scope
 
 > **NOTE — Jurisdiction**
 >
@@ -41,7 +41,7 @@ People are typically the dominant contamination source in any clean space (exact
 >
 > In cultivation, dry and trim, PPE protects the product. In **extraction** it flips to protecting the worker (solvents, fire), and in the vault it is mostly security. Same word, different purpose, different kit. This paper is about the biosecurity side, with the legal duties that sit under all of it.
 
-## The words you need
+## Definitions
 
 **PPE / PPPE** — Personal protective equipment. Here, plant _and_ personal: the same gear protects the crop from the person and the person from hazards.
 
@@ -59,7 +59,7 @@ People are typically the dominant contamination source in any clean space (exact
 
 **Reasonably practicable** — The legal standard for how far you must go: weigh the risk against the effort and cost of controlling it. High-consequence, cheap-to-control risks must be controlled.
 
-## How bad humans actually are
+## Personnel contamination risks
 
 It is worth sitting with the numbers, because they are the entire argument for gowning up.
 
@@ -74,7 +74,7 @@ It is worth sitting with the numbers, because they are the entire argument for g
 >
 > Washing helps but does not sterilise: alcohol rubs often achieve ~2–3 log reductions (~99–99.9%) under test conditions; plain soap and water remove soil and many organisms without sterilising hands[^hand-hygiene-logreduction]. That is why hand hygiene is a frequent loop at every transition, and why gloves and barriers carry the rest.
 
-## The bare minimum, everywhere
+## Minimum PPE requirements
 
 Before any room-specific extras, there is a non-negotiable baseline for entering any production or handling area. It mirrors food-GMP personnel rules[^fda-21cfr117-personnel] and WHO good agricultural and collection practice[^who-gacp-2003].
 
@@ -89,7 +89,7 @@ Before any room-specific extras, there is a non-negotiable baseline for entering
 >
 > Remove jewellery, watches and makeup and store your phone before you put anything on. They cannot be cleaned, they shed particles, and a ring or watch hides bacteria a glove then traps against the crop.
 
-## Different rooms, different kit
+## Room-specific PPE requirements
 
 PPE intensity tracks the value and vulnerability of what is in the room, not a single suit everywhere. Strictest where the genetics live and where product is open and headed to a patient.
 
@@ -110,7 +110,7 @@ PPE intensity tracks the value and vulnerability of what is in the room, not a s
 >
 > A contractor or visitor is the same contamination risk as staff, often worse (they were just somewhere else). Gown them to the room's standard or keep them out of mother, propagation, tissue culture and dry rooms entirely, and log every entry.
 
-## Gowning, in the right order
+## Gowning procedure
 
 Order matters. You gown top-to-bottom so that particles shed while dressing fall onto areas you have not covered yet, and you cross a physical clean/dirty line as you go[^gmp-gowning-procedure].
 
@@ -132,7 +132,7 @@ Hands are the main transfer bridge, so hand hygiene is the most repeated action 
 >
 > A glove is a barrier, not a clean hand. Wash before you don and immediately after you doff[^cdc-glove-removal], and change gloves between plants in mother and propagation and any time they touch a non-clean surface. A dirty glove spreads viroid just as well as a dirty hand.
 
-## The scenarios that catch people out
+## Common non-compliance scenarios
 
 #### Phones and personal items
 
@@ -156,7 +156,7 @@ No eating, drinking, gum or vaping in production. De-gown to leave for a break a
 
 > **Diagram.** Move people and clean materials clean → dirty; waste and used PPE only dirty → exit. Never back. Backtracking means re-gowning, and a dirty-side hand or sleeve must never touch the clean side.
 
-## Who is responsible: HSWA 2015
+## Responsibilities under HSWA 2015
 
 In New Zealand, PPE and hygiene are not just good practice, they are legal duties under the Health and Safety at Work Act 2015[^hswa-2015], overseen by WorkSafe[^worksafe-grwm].
 
@@ -180,7 +180,7 @@ In New Zealand, PPE and hygiene are not just good practice, they are legal dutie
 >
 > PPE supplements higher controls, it does not replace them[^worksafe-grwm]. Design the rooms, airflow and flow to remove the hazard first; the gown is what catches what is left. And the business pays for it, charging a worker for required PPE is an offence[^hswa-2015].
 
-## The whole thing, in one place
+## Quick-reference requirements
 
 - **Baseline, every room:** gown, hairnet + beard net, gloves, room shoes, wash, no personal items
 - **Gown order:** hair -> mask -> eyewear -> inner gloves -> coverall -> hood -> boot covers -> outer gloves

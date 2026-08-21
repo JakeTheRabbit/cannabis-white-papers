@@ -23,7 +23,7 @@ _Precision · Signal & noise · ~14 min read_
 
 > Tell a real change in your plants and root zone apart from random sensor wobble, and act only when it matters.
 
-## What this is, and why a grow room is really a listening problem
+## Purpose and scope
 
 > **EVIDENCE — Grain of salt**
 >
@@ -41,7 +41,7 @@ A single flower room can generate hundreds of thousands of datapoints a week[^gr
 >
 > You don't have a data problem. You have a **signal-to-noise problem**. Most grow-room ‘alerts’, are often noise until tuned: transients that fix themselves before any action would have mattered.
 
-## Key terms, defined once
+## Definitions
 
 The vocabulary comes from radio engineering, manufacturing and statistics, so the words can sound intimidating. They are not. **Signal-to-noise ratio (SNR)** is how loud the thing you care about is compared to everything else competing for your attention[^snr-engineering-origin]. A high-SNR room is calm and decisive. A low-SNR room is anxious and reactive.
 
@@ -67,7 +67,7 @@ The vocabulary comes from radio engineering, manufacturing and statistics, so th
 
 *At a glance: the shapes of signal versus the shapes of noise.*
 
-## Where the noise comes from
+## Sources of measurement noise
 
 You cannot reduce what you cannot name. Grow-room noise enters through six channels. Three are **physical and inherent**: the sensor itself (electronic jitter, drift, no calibration), placement (a probe near a vent or light, or a sample of one), and biology (one plant differs from the next). The other three are **procedural**, and therefore the cheapest to fix: the environment (doors, HVAC cycling), the operator (inconsistent manual sampling) and the data pipeline (logging gaps, mixed-up units, clock skew).
 
@@ -90,7 +90,7 @@ Sensor-specific calibration is not a nicety. In low-cost permittivity soil-moist
 
 *Six sources, cheapest fix first. Attack the procedural rows before the physical ones.*
 
-## Averaging and how often to measure
+## Sampling and averaging
 
 The most powerful, most ignored noise filter in horticulture is **replication**. Ask one plant how the room is doing and you get a rumour. Average twelve plants across the bench and the individual quirks cancel, leaving only the shared room signal. The maths is friendly: the error of an average shrinks with the square root of how many readings you combine[^replication-reduces-variance]. Four probes roughly halve the noise, nine cut it to a third.
 
@@ -112,7 +112,7 @@ How often you measure matters just as much. Sample too slowly and a fast pattern
 
 *A sensible cadence per channel. Match the sample rate to how fast the thing actually moves.*
 
-## Control limits: knowing when a wiggle deserves a response
+## Control limits and response thresholds
 
 The most valuable idea in the paper comes from manufacturing's quality revolution: **statistical process control (SPC)**. Walter Shewhart, working at Bell Laboratories, split all variation into two kinds[^shewhart-control-chart]. **Common-cause** variation is the natural jitter of a stable process: it lives inside the control limits and should be left alone. **Special-cause** variation is a real, assignable event that breaks outside the limits and earns investigation.
 
@@ -128,7 +128,7 @@ Control limits are computed from the process's own history, conventionally the m
 
 These pattern rules catch real shifts that a single out-of-limits point would miss, and they do it without raising false alarms on ordinary noise[^western-electric-rules-anhoj]. The lesson is blunt: the over-reactive grower, nudging a stable process all day, is usually the room's single biggest noise source.
 
-## The operator's playbook, step by step
+## Operating procedure
 
 None of the highest-return moves needs new capital. Most need only discipline, tackled top-down. Here is the order to do it in.
 
@@ -151,7 +151,7 @@ Three workhorse filters cover almost all grow data: the **moving average** (simp
 
 > **Diagram.** A noisy raw line with the smoothed trend running through its centre. The dry-down is now obvious. The only price is a small, predictable lag, which is why you keep the raw view handy for genuine emergencies.
 
-## Common pitfalls
+## Troubleshooting
 
 The two opposite failures are **over-smoothing** and **tampering**. Filtering is sugar: a little clarifies, too much rots. Crank the window too wide and you erase a real fast event, a pump failure or an EC spike from a clogged dripper, at exactly the moment you needed to see it. The opposite mistake is reacting to every twitch, which destabilises the very room you were trying to steady[^deming-funnel-tampering].
 
@@ -163,7 +163,7 @@ A specific systems failure is **hunting**. A feedback loop fed noisy data, or tu
 >
 > A wider dead-band plus a filtered input often fixes ‘broken’ climate gear that was never broken. Filter the controller's input right at the sensor's output, before it decides anything. Otherwise every loop in the room is reacting to static.
 
-## Realistic expectations
+## Expected results and limitations
 
 Facilities climb a predictable ladder, and knowing which rung you're on tells you what to do next.
 

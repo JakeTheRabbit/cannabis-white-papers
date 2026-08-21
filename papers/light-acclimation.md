@@ -23,7 +23,7 @@ _Beginner · Light · ~11 min read_
 
 > Light is a curve, not a switch. Raise PPFD in steps the plant can keep up with, and match CO2 to set how high you can go. Updated with the latest research (2024-2026) on high-light quality gains, far-red, and UV.
 
-## Light is a ramp, not a switch
+## Purpose and scope
 
 Two beginner mistakes cause most light damage in a grow room: blasting weak, freshly-rooted clones with full-power light, and the opposite, under-lighting flowering plants out of fear of burning them[^rodriguez-morrison-2021-cannabis-light-intensity-yield].
 
@@ -37,7 +37,7 @@ The light a plant can take ranges enormously across a full cycle: roughly 80 µm
 >
 > Anyone who has cooked a clone or been afraid to turn the lights up. Pairs with the [crop-steering](coco-crop-steering.html) and [plant-state dashboard](plant-state-dashboard.html) papers.
 
-## The words you need before we start
+## Definitions
 
 These five terms carry the whole guide. Read them once and the rest reads easily. Each one comes back in context.
 
@@ -53,7 +53,7 @@ These five terms carry the whole guide. Read them once and the rest reads easily
 
 > **Diagram.** PPFD is a snapshot of intensity. DLI is the accumulated total over the day. Changing the photoperiod changes DLI even when PPFD stays the same.
 
-## What the plant builds as it adapts
+## Plant acclimation to increased PPFD
 
 The plant invests in hardware to match rising light. Week over week it builds more chloroplasts (the tiny green factories that catch light), thicker protective leaf surfaces, and a higher density of the enzymes that turn captured energy into sugar[^sun-shade-leaf-thickness-chloroplast-acclimation]. Each new increment of light then has machinery ready and waiting to use it.
 
@@ -69,7 +69,7 @@ This is the whole case for incremental ramping. Add light in small steps the pla
 >
 > Pale, white-tipped upper leaves are not ‘light hunger’. They are the leaf burning itself with energy it can't use. The cure is less light or more capacity, never more light.
 
-## Light is the accelerator, CO2 is the fuel
+## Light and CO2 coordination
 
 Photosynthesis has two halves. The **light reactions** capture energy from photons. The **Calvin cycle** then uses CO2 from the air to turn that captured energy into sugar. Both halves have to scale together[^chandra-2008-cannabis-photosynthesis-ppfd-co2-temperature].
 
@@ -85,7 +85,7 @@ High-light setups demand matched CO2. On ambient air (around 400–600 ppm CO2),
 >
 > Light is the accelerator, CO2 is the fuel. Flooring the pedal with an empty tank doesn't go faster. It stalls and overheats.
 
-## A week-by-week PPFD ramp by growth stage
+## PPFD acclimation schedule by growth stage
 
 A representative indoor cycle runs about 14 weeks (~98 days) and ramps light stage by stage[^moher-2022-cannabis-vegetative-light-intensity-morphology]. Clones start soft, veg climbs steadily, and after the flip to flower the plant rebuilds toward its peak before tapering at the end.
 
@@ -107,7 +107,7 @@ The 12/12 flip cuts total daily light (DLI) by about one-third (~33%) even at th
 >
 > The DLI drop at 12/12 is normal and expected. Let early flower re-acclimate from ~600 back up toward 950 rather than slamming the lights to peak the day you flip.
 
-## How high you push depends on what you control
+## Setting the PPFD ceiling
 
 Your environment sets your safe peak PPFD, not your ambition. The number you can hold is whatever your CO2, climate and cooling actually support today. Raising the ceiling means raising the whole system, not just the dimmer.
 
@@ -127,7 +127,7 @@ On ambient air the honest ceiling is about 950 µmol/m²/s, with real diminishin
 >
 > Running Tier-3 light on Tier-1 air is the most expensive way to bleach plants. Max out the honest ceiling you can fuel before chasing a higher one.
 
-## Hanging height and dimming: how you deliver the ramp
+## Fixture height and dimming
 
 Two levers set canopy PPFD: the fixture's **dimmer** and its **hanging height** above the plants. Both change how much light lands on the leaves, but they don't behave the same way.
 
@@ -141,7 +141,7 @@ Whichever lever you use, **verify the real number.** Measure PPFD at the canopy 
 >
 > A plant that stretched 15 cm toward the light this week is getting noticeably more PPFD even though you touched nothing. Re-measure after every growth spurt.
 
-## Signs of too much light, and the traps that cause it
+## Troubleshooting
 
 Too much light shows up as **bleached or white tips on the upper canopy**, the leaves closest to the source, together with stalled growth[^pospisil-2016-ros-photosystem-ii-light-temperature]. The catch: the same symptom comes from two different mistakes, and you cannot tell which from the leaf alone.
 
@@ -160,7 +160,7 @@ Mistake one is ramping intensity too fast. Mistake two is high light with low CO
 >
 > After one bleaching scare, growers often crank flower light far too low and leave yield on the table. Chronic under-lighting wastes a crop just as surely as bleaching wastes plants[^rodriguez-morrison-2021-cannabis-light-intensity-yield]. Back down one step, then climb again deliberately.
 
-## What the newest studies add
+## Recent research
 
 Acclimation and CO2 matching are the foundation, and they haven't changed. Recent work (2024-2026) sharpens three things: how much a high ceiling actually buys you, and two spectrum levers, far-red and UV, that get oversold.
 
@@ -176,7 +176,7 @@ Acclimation and CO2 matching are the foundation, and they haven't changed. Recen
 >
 > Get the ramp and the CO2 right before touching spectrum. Far-red and UV are marginal, trade-off-laden add-ons on top of a dialled-in intensity programme, not shortcuts around it. A clean, fully-fuelled climb to your honest ceiling beats any spectrum trick on a half-acclimated, CO2-starved plant.
 
-## What to actually expect from your setup
+## Expected results and limitations
 
 Light is the schedule, not the whole system. Every PPFD target in this guide assumes the rest of the environment is in range: leaf temperature around 26–28°C, VPD of 1.2–1.5 kPa, adequate root-zone capacity, and a strain that can handle the load[^chandra-2008-cannabis-photosynthesis-ppfd-co2-temperature]. Push light and CO2 without those and you get heated, stressed plants, not bigger yields.
 

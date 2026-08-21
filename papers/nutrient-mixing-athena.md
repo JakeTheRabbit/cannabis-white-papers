@@ -23,7 +23,7 @@ _Feed · Nutrient mixing · ~11 min read_
 
 > Dissolve a full 25 lb bag of Athena Pro Line into a 50 L stock tank to make a concentrate you dose into your feed later. Covers the chemistry of getting ~227 g/L of salt fully into solution, and why each part needs its own tank.
 
-## What a stock tank is, and why you make one
+## Purpose and scope
 
 This guide covers one job: dissolving a **full 25 lb bag** of Athena Pro Line into a **50 L tank** to make a concentrated **stock solution**. You don't feed plants with this. It's far too strong. You make it once, then dose small amounts into your watering tank to make the actual feed.
 
@@ -37,7 +37,7 @@ A stock tank turns an awkward powder into an easy liquid. Weighing powder every 
 >
 > Written for exactly what you have: a full 25 lb bag, a 50 L tank, jugs of hot water, and a paint-mixer paddle on a drill. The paddle is not optional at this concentration. You cannot hand-stir 11 kg of salt into solution.
 
-## The words you need
+## Definitions
 
 **Stock solution (concentrate)** — A strong nutrient solution you store and dose from. Here, one whole bag in 50 L. Never fed to plants neat.
 
@@ -55,7 +55,7 @@ A stock tank turns an awkward powder into an easy liquid. Weighing powder every 
 
 **EC (electrical conductivity)** — A meter reading of total dissolved salt. This is how you check the strength of your finished feed.
 
-## Two parts, two tanks, never combine concentrated
+## Separate part A and part B stock solutions
 
 Part A and Part B each get their own stock tank, and the two concentrates must never touch. **This is the rule that saves your crop and your pump.** One 25 lb bag of Pro Core → one 50 L tank. One 25 lb bag of Pro Grow/Bloom → a different 50 L tank.
 
@@ -69,7 +69,7 @@ The reason is chemistry. Part A is loaded with **calcium**. Part B carries **sul
 > - Never add the two concentrates to feed water at the same moment. Add A, stir, then add B, stir.
 > - Never reuse a dosing jug between A and B without rinsing.
 
-## What it takes to dissolve 11 kg in 50 L
+## Solubility and mixing conditions
 
 227 grams of salt per litre is a lot, roughly six to seven times saltier than seawater. Getting it fully into solution isn't automatic. Two bits of physics work against you.
 
@@ -82,7 +82,7 @@ The reason is chemistry. Part A is loaded with **calcium**. Part B carries **sul
 >
 > Use hot tap water (about 40-50 °C), not boiling. Boiling water can damage some compounds and is a scald hazard with a spinning paddle. Warm is enough to win the solubility fight.
 
-## Step-by-step: one bag into one 50 L tank
+## Stock-tank mixing procedure
 
 Do this once per part: once for the Pro Core bag (Tank A), once for the Pro Grow/Bloom bag (Tank B). Same steps each time.
 
@@ -96,7 +96,7 @@ Do this once per part: once for the Pro Core bag (Tank A), once for the Pro Grow
 
 > **Diagram.** The whole method on one line. Run it twice: once per bag, into two separate tanks.
 
-## Your stock strength, and how to dose it
+## Stock concentration and dosing
 
 A full 25 lb bag is **11.34 kg**. In 50 L that gives a stock of:
 
@@ -121,7 +121,7 @@ To use it, you dilute. If your bag (or Athena's chart) says to feed a part at a 
 >
 > Dosing math gets you close. Your **EC meter** confirms it. Mix the feed, read EC, and trust the meter over the calculator, because water and formulas vary[^valdrighi-reservoir-water-quality].
 
-## What strength to feed, by stage
+## Stage-specific feed-strength targets
 
 The stock is only a delivery system. The plant cares about the _feed_ strength, read as EC. Young plants want it weak, bulking plants want it strong, and you taper at the end. Cannabis nutrient demand genuinely shifts across the cycle[^saloner-mineral-uptake-dynamics].
 
@@ -131,7 +131,7 @@ The stock is only a delivery system. The plant cares about the _feed_ strength, 
 >
 > Cranking EC does not mean more growth. Too much salt in the root zone pulls water back out of the roots (osmotic stress) and burns the plant[^yep-nacl-cannabis-stress]. When in doubt, feed slightly weaker.
 
-## Storage & troubleshooting
+## Storage and troubleshooting
 
 | Symptom | Likely cause | What to do |
 | --- | --- | --- |
@@ -145,7 +145,7 @@ The stock is only a delivery system. The plant cares about the _feed_ strength, 
 >
 > Keep each stock tank sealed, labelled, out of cold and out of light. Mix before each use in case anything has settled. Make what you'll use in a reasonable window rather than a year's supply[^valdrighi-reservoir-water-quality].
 
-## What good looks like
+## Expected results and limitations
 
 > **KEY — Remember**
 >

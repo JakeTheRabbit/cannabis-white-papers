@@ -23,13 +23,13 @@ _Beginner · Mould risk · ~15 min read_
 
 > Mould is the disease most likely to wipe out a harvest in the final weeks, and the one that can quietly make your flower unsafe to consume. Learn the conditions it needs, how to deny them, and what to do the moment you find it.
 
-## Why mould is the harvest-killer
+## Purpose and scope
 
 You can do everything right for ten weeks and lose it all to grey fuzz in the last two. Mould thrives in exactly the warm, humid, densely-flowered conditions that also grow big buds. The worst of it hides _inside_ the bud, where you can't see it until it's spreading.
 
 There is also a health stake. Cannabis users have been found to get fungal infections at about **3.5× more often** than non-users in one claims analysis (absolute rates still low; immunocompromised patients are the high-stakes group)[^benedict2020-cdc], and some moulds leave behind toxins that survive drying[^gwinn2023-mycotoxin]. This isn't only about yield. It is about safe medicine. This guide assumes you know nothing. Every term is defined.
 
-## The words you need
+## Definitions
 
 **Bud rot (Botrytis)** — _Botrytis cinerea_, a grey mould that rots flowers from the inside out. The number-one late-flower killer.
 
@@ -43,7 +43,7 @@ There is also a health stake. Cannabis users have been found to get fungal infec
 
 **Mycotoxin** — A poison made by some moulds (e.g. _Aspergillus_). It can remain in the flower even after the mould itself is gone[^gwinn2023-mycotoxin].
 
-## The two moulds you'll meet
+## Common cannabis mould diseases
 
 **Bud rot, Botrytis**
 
@@ -57,7 +57,7 @@ White, dusty patches on the tops of leaves that wipe off like flour, then return
 >
 > Indoor cannabis also hosts _Penicillium_, _Cladosporium_, _Fusarium_ and _Aspergillus_[^punja2019-pathogens]. Botrytis and PM are the two you'll meet first and most.
 
-## The conditions that invite mould
+## Conditions that promote mould
 
 Mould isn't bad luck. It is a recipe. Bud rot takes off when humidity climbs above about **70%** at moderate temperatures (~17–24 °C), especially when there's free moisture and still air[^punja2025-budrot-epi]. Deny the recipe and you deny the mould.
 
@@ -69,7 +69,7 @@ Mould isn't bad luck. It is a recipe. Bud rot takes off when humidity climbs abo
 >
 > A thick, undefoliated canopy traps warm, humid, still air inside itself, a private climate far wetter than your room reading[^punja-budrot-cjb]. Packing plants tight for yield directly raises rot risk. Spacing and defoliation are mould control, not just tidiness.
 
-## Prevention: the daily routine
+## Daily mould prevention
 
 Prevention is a handful of boring habits done consistently:
 
@@ -80,7 +80,7 @@ Prevention is a handful of boring habits done consistently:
 5. **Keep it clean** — Sanitise tools, surfaces and hands. HEPA-filter incoming air to cut the airborne spore count[^buirs2024-idm].
 6. **Scout every day** — In the last few weeks, inspect daily. Catching one rotten bud early can save the room.
 
-## Scouting: find it before it spreads
+## Mould scouting and early detection
 
 Spend five minutes a day in late flower with a bright light, looking _into_ the plants, not just at them:
 
@@ -89,7 +89,7 @@ Spend five minutes a day in late flower with a bright light, looking _into_ the 
 - **Powdery mildew.** White dust on upper leaf surfaces that smears like flour.
 - **Smell.** A musty, hay-like or ‘off’ smell can precede visible rot.
 
-## What to do when you find it
+## Response to detected mould
 
 1. **Stop and isolate** — Don't fan it around. Hold a bag over the spot, cut well below the rot, and remove it from the room before opening the bag.
 2. **Cut generously** — Bud rot runs further inside than it looks. Take the whole affected bud and a margin of healthy tissue.
@@ -101,7 +101,7 @@ Spend five minutes a day in late flower with a bright light, looking _into_ the 
 >
 > Once a bud has rotted, it's waste, not something to dry and smoke. Drying lowers microbe levels but won't undo rot or remove mycotoxins[^sun2025-drying]. Prevention is the only real cure.
 
-## Drying & storage: don't lose it at the finish
+## Mould prevention during drying and storage
 
 Mould can still strike clean flower during a sloppy dry or in storage. The defence is to drive down available water:
 
@@ -109,7 +109,7 @@ Mould can still strike clean flower during a sloppy dry or in storage. The defen
 - **Cure and store dry.** Aim for a stable, low water activity. Curing around ~18 °C and ~50–55% RH is a defensible target[^alubeed2022-postharvest].
 - **Glass beats plastic.** Sealed glass jars outperform bags for keeping microbes down and cannabinoids stable[^sun2025-drying].
 
-## Why ‘looks fine’ isn't proof
+## Limitations of visual mould assessment
 
 Flower can carry dangerous fungi while looking, smelling and even _testing_ clean. Standard culture-based mould tests can miss some toxin-producing _Aspergillus_[^mckernan2016-micro], and contamination rates across the market are high and inconsistently regulated[^gwinn2023-mycotoxin].
 
@@ -127,7 +127,7 @@ Flower can carry dangerous fungi while looking, smelling and even _testing_ clea
 | Condensation at lights-off | Surfaces hitting dew point on the night drop | Soften the temperature drop, keep air moving |
 | Mould in jars after cure | Stored too wet | Dry or cure to lower water activity, use sealed glass[^alubeed2022-postharvest] |
 
-## Realistic expectations
+## Expected results and limitations
 
 > **KEY — What to remember**
 >

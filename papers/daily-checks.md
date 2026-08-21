@@ -23,7 +23,7 @@ _Operations · Daily checks · ~16 min read_
 
 > The best daily check is the one that mostly fills itself in. Let Home Assistant confirm everything it can measure, leave the human only the physical walk-around, make the rest one tap, and the check gets done every day, honestly, with an audit trail that holds up.
 
-## Why daily checks fail, and the fix
+## Purpose and scope
 
 Every facility has a daily check sheet. Most are half-fiction. Not because staff don't care, but because the sheet is slow, nobody owns it, and nothing visibly happens with it. The fix is not more discipline. It is better design: make the check fast, make most of it complete itself, and make the part a human does almost effortless.
 
@@ -37,7 +37,7 @@ A famous surgical study found records showing **100% checklist compliance** whil
 >
 > Any indoor or controlled-environment grow with sensors and an irrigation controller, scaling from a tent to a licensed medical facility. The behaviour and checklist principles hold even with no automation at all, the Home Assistant section is how you remove the busywork.
 
-## The words you need
+## Definitions
 
 **Pause point** — A named moment a short checklist runs at (lights-on, first irrigation, pre-dark), instead of one long sheet done whenever[^gawande-checklist-manifesto].
 
@@ -53,7 +53,7 @@ A famous surgical study found records showing **100% checklist compliance** whil
 
 **Implementation intention** — An if-then plan tying a task to a fixed time and person, which makes follow-through far more likely[^gollwitzer-implementation-intentions].
 
-## What makes a check actually get done
+## Check design and completion reliability
 
 Adherence is a design problem, not a character problem. Decades of checklist and behaviour research point at the same handful of levers.
 
@@ -71,7 +71,7 @@ Adherence is a design problem, not a character problem. Decades of checklist and
 >
 > When genuinely performed, the WHO Surgical Safety Checklist cut deaths from 3.7% to 1.4% and lifted adherence to key steps from 18.6% to 50.7%[^haynes-surgical-checklist-2009]. The gain comes from the check actually happening, never from the mandate or the tick-rate alone.
 
-## What to actually check, and when
+## Daily check schedule and contents
 
 Split the day into a few short pause-point lists, each tied to the moment it matters. Each line has a pre-set green / amber / red limit so the judgement is already made.
 
@@ -93,7 +93,7 @@ Split the day into a few short pause-point lists, each tied to the moment it mat
 >
 > Confirm dehumidification ramps within minutes of lights-off and air keeps moving all night. A quiet failure here is how a clean late-flower room turns into a bud-rot room overnight.
 
-## Auto-complete it with Home Assistant
+## Home Assistant check automation
 
 Most of a daily check is data the building already knows. Let Home Assistant confirm those items so the human never re-types what a sensor can prove.
 
@@ -114,7 +114,7 @@ Most of a daily check is data the building already knows. Let Home Assistant con
 >
 > Build `binary_sensor.environment_ok` = temp, RH, VPD and CO2 all in their stage bands. An automation watches it; once it has held true across the lights-on window, it calls `todo.update_item` to complete 'Environment in range' on today's list. The grower opens the list and that line is already green, with the numbers in the history for the record.
 
-## Make the human part almost nothing
+## Daily-check user interface
 
 For the items a person must do, design for the lowest possible interaction. The happy path should be nearly empty; effort appears only where there is a problem.
 
@@ -126,7 +126,7 @@ For the items a person must do, design for the lowest possible interaction. The 
 - **Route, don't hunt.** Model the walk-around as an ordered route; let the next station's card come up on arrival rather than scrolling a list.
 - **Voice for the note.** Spoken exception notes are the fast path when hands are gloved or on the plant, and they measurably increase how often observations get logged.
 
-## Getting people to do it, honestly
+## Adherence and accountability
 
 Two failure modes remain even with a great list: it gets skipped, or it gets faked. Design against both directly.
 
@@ -143,7 +143,7 @@ Two failure modes remain even with a great list: it gets skipped, or it gets fak
 >
 > The most common escalation bug is no path when the owner is on leave or sick. Name a backup and route to them automatically, or the safety net quietly fails on exactly the days you need it.
 
-## The audit trail, and how to build it
+## Audit trail and implementation
 
 Because the data entry is near zero but the system stamps who, where, when and what on every action, you get the easiest-to-fill check and a defensible record from the same design.
 

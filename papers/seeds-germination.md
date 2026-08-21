@@ -23,7 +23,7 @@ _Beginner · Propagation · ~14 min read_
 
 > From a dry seed to a thriving seedling: what a seed is, how to choose one, how to wake it up, and how to keep it alive through its most fragile three weeks.
 
-## What this is
+## Purpose and scope
 
 This paper takes a complete beginner from a dry cannabis seed to a healthy two-to-three-week-old seedling, defining every term along the way. A seed is a tiny dormant plant in a protective shell, waiting for the right cues to wake up. Germination is the act of waking it. A seedling is the baby plant in its first weeks of life.
 
@@ -38,7 +38,7 @@ Get these early stages right and the rest of the grow is far easier, because mos
 > - Most beginner failures (rot, no-sprouts, stunting) trace back to these first three weeks
 > - Every technical term is defined in plain language the first time it appears
 
-## Key terms, defined once
+## Definitions
 
 Before the how-to, here is the small vocabulary the rest of this paper relies on. You do not need to memorise it, each term comes back in context.
 
@@ -71,7 +71,7 @@ Before the how-to, here is the small vocabulary the rest of this paper relies on
 
 *Glossary quick-reference. Scan back to this while reading later sections.*
 
-## Inside a seed, and how to judge a good one
+## Seed anatomy and quality assessment
 
 A cannabis seed is a complete dormant plant. A tough seed coat protects an embryo that already contains a taproot, two cotyledons and a tiny shoot, plus stored food to fuel the first days of growth before the plant can feed itself.
 
@@ -94,7 +94,7 @@ Fresh seeds stored cool, dark and dry stay viable for years, but germination rat
 >
 > Immature pale seeds can still sprout, but they tend to give weaker, lower-quality plants. If you have a choice, plant the dark, firm, striped ones first.
 
-## Feminised, regular and autoflower: which seed to buy
+## Cannabis seed types
 
 There are three seed types and the choice shapes your whole grow. Regular seeds produce roughly half male and half female plants. Only females make the flower (the ‘bud’) most growers want, so males are usually removed.
 
@@ -117,7 +117,7 @@ Autoflower seeds carry Cannabis ruderalis genetics that make the plant flower au
 >
 > Photoperiod plants flower when nights are long enough (growers usually use 12 hours light / 12 hours dark). Autoflowers flower when they reach a certain age, whatever the lights are doing.
 
-## Three ways to germinate, and why
+## Germination methods
 
 Germination just means giving the seed three things: water and warmth (darkness is optional convenience). The embryo swells, drinks, and pushes the taproot out through the seed coat. There are three common ways to deliver those three things.
 
@@ -138,7 +138,7 @@ The paper-towel method (seeds between damp paper towels, sandwiched between two 
 > - **Direct-sow:** plant the seed straight into moist medium about 1-1.5 cm deep, taproot pointing down. No transplant shock, but you cannot see progress.
 > - **Pre-soak:** soak seeds in room-temperature water for 12-24 hours to soften the coat. Useful for old or hard seeds, then move them to towel or medium.
 
-## The conditions seeds need, and what to expect when
+## Germination conditions and timeline
 
 Seeds are sensitive to their environment. Three settings matter: temperature, moisture and light. Get all three in range and most viable seeds sprout on their own.
 
@@ -178,7 +178,7 @@ Do not feed at first. The cotyledons supply the plant's food. Start a weak nutri
 >
 > Overwatering and feeding too early kill more seedlings than anything else. When in doubt, water less and feed later. A seedling that looks a little hungry recovers. One that has rotted does not.
 
-## Damping-off and other common failures
+## Troubleshooting
 
 The most lethal seedling disease is damping-off, caused by soil fungi such as Pythium, Fusarium and Rhizoctonia. A previously healthy seedling suddenly pinches, blackens and topples at the soil line, and it is almost always fatal once it strikes.[^lamichhane-2017-damping-off-management]
 
@@ -200,7 +200,7 @@ The dominant cause is overwatering combined with too-high humidity and poor airf
 >
 > Once a seedling pinches at the base it will not recover. Everything you do for damping-off is prevention: sterile fresh medium, sparing water, good airflow, and humidity eased to 40-50% after the true leaves show.[^umn-extension-prevent-damping-off]
 
-## Realistic expectations
+## Expected results and limitations
 
 Even with good seeds and care, not every seed sprouts. Fresh quality feminised seed often runs well above 90% germination, but a dud or two is normal and not a sign you did something wrong.[^bazzaz-1975-seed-storage-viability]
 

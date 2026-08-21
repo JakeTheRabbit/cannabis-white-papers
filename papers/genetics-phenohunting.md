@@ -23,7 +23,7 @@ _Reference · Genetics · ~24 min read_
 
 > Where keeper cultivars actually come from: what genotype, phenotype and chemotype mean, why every seed is a gamble by design, how to run a pheno hunt that finds a winner, and how to keep the cut once you have it.
 
-## What this is
+## Purpose and scope
 
 Every cultivar worth growing started life as one individual plant that somebody noticed, kept and copied. This paper explains the machinery behind that: what genetics can and cannot promise, why two seeds from the same pack grow into different plants, what the words on a seed listing actually mean, and how to run a phenotype hunt, a structured search through seeds for the one plant worth keeping.
 
@@ -39,7 +39,7 @@ It is written for someone starting from zero, but the process at the end is the 
 
 The paper runs in grow order: the three layers of what a plant is, where cultivars came from, why seeds vary, the seed types you can buy, the hunt itself, selection and sample size, then keeping, testing and breeding from the winner.
 
-## Genotype, phenotype, chemotype, the three layers
+## Genotype, phenotype and chemotype
 
 Three words carry the whole subject. Get them straight and everything downstream (seed types, hunts, testing, breeding) becomes simple mechanics.
 
@@ -65,7 +65,7 @@ The layers are linked but not interchangeable. The THC:CBD _ratio_ is close to h
 >
 > A clone in two rooms is one genotype and two phenotypes. When a cut ‘performs differently’ at a mate's place, the genetics did not change. The environment did. Keep this straight and half of all genetics arguments dissolve.
 
-## Landraces, polyhybrids, and why strain names mean little
+## Landraces, polyhybrids and unreliable strain names
 
 Cannabis was domesticated in East Asia around the early Neolithic, and everything grown today, hemp and drug types alike, descends from that ancestral pool.[^ren-2021-domestication] As people carried it around the world, isolated regions developed **landraces**: locally adapted, open-pollinated populations shaped by their climate and their farmers over many generations.
 
@@ -81,7 +81,7 @@ None of this means genetics do not matter. They matter enormously. It means the 
 >
 > Judge seed by the breeder's documentation: named parents, filial generation, how the seed was feminised, tested germination rate, and whether they describe the variation to expect. A breeder who tells you their line still varies is being honest, not weak, the one promising uniformity from a polyhybrid cross is the one guessing.
 
-## Why seeds vary: heterozygosity and segregation
+## Seed variation: heterozygosity and segregation
 
 Cannabis is naturally an outcrossing species, separate male and female plants, wind pollination, constant mixing. That history makes it highly **heterozygous**: at many positions in the genome, each plant carries two different versions of the gene.
 
@@ -103,7 +103,7 @@ Maize breeders solved this a century ago with inbred parent lines and true F1 hy
 >
 > Breeders and hunters _want_ segregation. It is where new keepers come from. The problem is only being surprised by it: plan for a spread, and the spread works for you.
 
-## Stability: what breeders actually mean
+## Genetic stability
 
 Seed catalogues throw around F1, IBL and ‘stable’ loosely. Here is the vocabulary with its real meaning, so you can read a listing critically.
 
@@ -169,7 +169,7 @@ The ‘fem seeds are weak / hermie-prone’ folklore confuses the method with th
 
 *The five constructions side by side. Uniformity here means plant-to-plant similarity within a pack, not quality.*
 
-## The pheno hunt, step by step
+## Phenotype-hunting workflow
 
 A **pheno hunt** is a controlled comparison: grow a batch of seeds under conditions as identical as you can manage, score every plant against criteria fixed in advance, and keep the best individual as a clone. The enemy is confounding, any difference in position, pot, feed or timing that lets a mediocre plant look special, or hides a great one.
 
@@ -219,7 +219,7 @@ Potency is the loudest criterion and the worst one to select on alone. A 26% pla
 >
 > Decide in veg what a 3 on mould resilience is worth against a 3 on terps, and which scores are automatic culls. Rubrics written after smelling week-5 flower are rationalisations, the halo effect of one spectacular trait will launder every other weakness.
 
-## Sample-size honesty: 10 seeds vs 100
+## Sample-size limitations
 
 Here is the arithmetic nobody puts on the seed pack. Suppose a genuine keeper, a plant that clears your bar on _every_ criterion, shows up in about one seed in twenty from a decent cross. That 5% is generous for a strict rubric, and it compounds like this:
 
@@ -234,7 +234,7 @@ This is not an argument against small hunts. It is an argument for honest langua
 > - Say ‘best of N’, and know your N. It calibrates every claim you make about the plant afterwards.
 > - Never crown after one run. A single grow confounds genotype with position, season and luck, round 2 from the backup cuts is what separates a keeper from a good week.
 
-## Keeping the cut: mothers, backups, archive
+## Maintaining a keeper cut
 
 The hunt ends with the most valuable object in the facility: one plant. From here the job is redundancy. A keeper held as a single mother is one root-rot event, one viroid infection or one labelling mistake away from not existing.
 
@@ -254,7 +254,7 @@ For long-term insurance, a [tissue-culture archive](tissue-culture.html) holds t
 >
 > Every grower who has lost a cut says the same thing afterwards: the second mother and the backup tray cost almost nothing, and the cut was irreplaceable. Redundancy is not paranoia. It is the price of admission for calling something a keeper.
 
-## Genetic testing: what a swab can and cannot tell you
+## Genetic testing capabilities and limitations
 
 Cheap genetic assays now cover three jobs that used to cost weeks of grow time. All three run off a small leaf sample.
 
@@ -272,7 +272,7 @@ The boundary to hold in your head: a swab reads the _genotype_ layer. Sex and ch
 >
 > Markers prune the search space, fewer males fed, CBD plants out of a THC hunt early. The hunt itself still happens in the flower room, because that is where phenotype exists.
 
-## Breeding basics for growers
+## Breeding basics for cultivators
 
 Once you hold a keeper, the next itch is making seed from it. Two modes exist. **Open pollination**, males and females loose in one space, is how landraces work: maximum recombination, zero control, fine for making a big diverse seed batch from a population you like. A **controlled cross** is one chosen father onto chosen branches of one chosen mother, and it is the only way to know what you made.
 
@@ -288,13 +288,13 @@ The reason for all the ceremony: pollen is nearly invisible and absurdly effecti
 >
 > Dedicated clothes for the male room, hands and tools washed after contact, no shared airflow, and males culled before flowers open anywhere outside the breeding space. If you would not handle powder that costs you a seeded crop, do not handle pollen casually.
 
-## IP and licensing, lightly
+## Intellectual property and licensing
 
 Cultivar ownership is real but patchy, and it varies by jurisdiction. A few generic truths hold. Strain _names_ are mostly unprotected marketing, and as covered earlier, often do not even track a consistent genotype.[^schwabe-2019-strain-names] Actual protection, where it exists, attaches to the plant material or the registered variety: plant variety rights / plant breeders' rights schemes, patents in some countries, and increasingly, contract terms attached to licensed clone releases, nurseries supplying verified cuts under agreements that limit propagation, resale or breeding.
 
 Practical hygiene for an operator, anywhere: keep records of where every cultivar came from and under what terms; read the terms on licensed cuts before breeding from or distributing them; and treat your own keeper's provenance log, hunt records, dates, test results, as the documentation you would want if you ever release or license it. For anything beyond that, the rules are local: check them where you are before selling genetics in any form. This is orientation, not legal advice.
 
-## Classic ways a hunt fails
+## Common phenotype-hunting failures
 
 Most failed hunts fail the same six ways, and every one is preventable for the cost of discipline.
 
@@ -337,7 +337,7 @@ A breeding male, or an unnoticed hermaphrodite, shares air with the hunt. Seeded
 
 *Match the symptom to the mechanism before blaming genetics, and before trusting them.*
 
-## The mental model: lottery, rubric, vault
+## Phenotype hunting: selection, validation and preservation
 
 > **KEY — Carry these three objects**
 >

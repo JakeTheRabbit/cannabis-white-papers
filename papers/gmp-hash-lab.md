@@ -23,7 +23,7 @@ _Facility · GMP · ~18 min read_
 
 > How to design a clean, compliant hash and extract factory from scratch: what GMP means, how rooms and people and product move, and how a batch earns its way to market.
 
-## What This Is: GMP and the Hash Lab From Zero
+## Purpose and scope
 
 GMP stands for **Good Manufacturing Practice**: a written, audited system that proves a product is exactly what its label says and that nothing harmful rode along. A GMP hash lab turns cannabis biomass into purified resin concentrates (bubble hash, rosin, live resin, distillate) under tight contamination control.
 
@@ -48,7 +48,7 @@ Two rule-sets do most of the governing. **EU-GMP Annex 1** sets the cleanroom cl
 
 *The governing standards and which part of the building each one rules.*
 
-## Key Terms: The Words You Need First
+## Definitions
 
 A handful of terms do the heavy lifting before any diagram makes sense. You don't need to memorise them: each comes back in context.
 
@@ -72,7 +72,7 @@ QA, the Quality Assurance function, owns the final release decision, and QA is i
 
 > **Diagram.** The three exclusive status states. Physical location and computer status must always agree.
 
-## Zoning and Cleanroom Grades: Nested Shells
+## Zoning and cleanroom grades
 
 The building is a set of nested cleanliness shells, like the layers of an onion. The **dirty** operations, intake, milling and waste, sit at the outer perimeter. The **cleanest** operations, collection, filling and packaging of open product, sit at the protected core.
 
@@ -93,7 +93,7 @@ The flow rule is simple and absolute: **product moves inward toward purity; peop
 
 *Each room with its grade, ISO class, air-change rate, and key activity.*
 
-## Pressure Cascade, HVAC, and Gowning
+## Pressure cascade, HVAC, and gowning
 
 Air is the main way contamination travels, so the building runs a **positive-pressure cascade**: clean rooms are held at higher pressure than dirtier ones, so air always blows _outward_ from clean to dirty. Open a door and clean air rushes out. It can never suck dirty air toward the product.
 
@@ -119,7 +119,7 @@ People are the single largest source of particles and microbes in a cleanroom[^s
 
 *HVAC control matrix: temperature, humidity, filtration, pressure and air changes per grade.*
 
-## How the Product Is Actually Made
+## Hash manufacturing process flow
 
 Two routes leave the weigh-in. **Solventless** separates the trichome heads (the resin glands) mechanically. **Solvent extraction** dissolves the resin and then recovers it. They share a goal but carry very different hazards.
 
@@ -139,7 +139,7 @@ For the solventless line, water is treated as an **ingredient**, not a utility. 
 
 > **Diagram.** The linear water-treatment train with its three sampling points and out-of-spec quarantine logic.
 
-## Step-by-Step: Testing, Sampling, and Batch Release
+## Testing, sampling, and batch release
 
 Testing happens at **three tiers**, incoming biomass, in-process, and release, across four sampling stations along the value stream. Retained reference samples are kept to expiry + 1 year so any later complaint can be investigated against the actual material.
 
@@ -172,7 +172,7 @@ QA, not production, then runs three sequential gates. Any ‘no’ diverts the b
 
 > **Diagram.** The three sequential gates, records, results and deviations, routing to QA release or to the return/OOS/hold lanes.
 
-## When It Goes Wrong: Deviations, CAPA, and Common Traps
+## Deviations, CAPA, and troubleshooting
 
 When reality departs from the approved process, the **deviation system** catches it. ICH Q10 establishes the pharmaceutical quality system, including CAPA and change control, that this loop sits inside[^pmc-capa-ich-q10-2024]. Every deviation runs through a five-stage CAPA loop, and it is _not_ closed until the final effectiveness check passes.
 
@@ -188,7 +188,7 @@ Severity triage sets the urgency and the sign-off level. A **critical** deviatio
 
 > **Diagram.** Off-spec product and spent biomass into a locked quarantine cage, rendered unusable, then licensed disposal with a witnessed manifest; solvent waste runs as a separate hazmat stream.
 
-## Realistic Expectations: Cost, Cadence, and What 'Compliant' Really Means
+## Expected results and limitations
 
 Compliance is a continuous program measured by data, not a one-time build. Management review tracks a handful of KPIs: right-first-time release rate (target ≥98%), deviation rate per batch (<5%), median CAPA closure (≤30 days), environmental-monitoring results within limits (≥95%), and mock-recall retrieval (<24h).
 

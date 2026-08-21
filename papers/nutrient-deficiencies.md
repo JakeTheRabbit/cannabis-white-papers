@@ -23,7 +23,7 @@ _Plant health · Diagnosis · ~14 min read_
 
 > A beginner's visual guide to reading cannabis leaf symptoms: mobile vs immobile nutrients, deficiency vs toxicity vs pH lockout, and how to confirm and fix the real problem before you reach for fertiliser.
 
-## What this is: reading the plant like a gauge
+## Purpose and scope
 
 A cannabis plant tells you what it lacks, or has too much of, through the colour, shape and position of its leaves. This paper teaches you to read those signals systematically instead of guessing, so you fix the actual cause rather than randomly adding fertiliser.
 
@@ -47,7 +47,7 @@ Three different problems can look almost identical on a leaf: a true deficiency 
 >
 > Reading symptoms is diagnostic, not instant. By the time a leaf shows damage the plant has been short for days, and that leaf will not recover even after you fix the cause. You are watching new growth for recovery, not the old leaves.
 
-## Key terms, defined plainly
+## Definitions
 
 Before diagnosing anything you need a handful of words that growers use constantly. These are deliberately defined in everyday language. Skim once and refer back as needed.
 
@@ -71,7 +71,7 @@ Before diagnosing anything you need a handful of words that growers use constant
 
 > **Diagram.** Every common element sorts into mobile or immobile, and that decides whether old or new leaves show symptoms first.[^vyn-2007-ufl-nutrient-mobility-diagnosis]
 
-## Why old leaves vs new leaves is the first question
+## Leaf position and nutrient mobility
 
 When a plant runs short of a mobile nutrient, it cannibalises its oldest leaves to feed new growth, so damage appears at the bottom first and climbs upward. When it runs short of an immobile nutrient, it cannot move existing stores, so the newest top growth starves while old leaves stay fine.[^maillard-2015-leaf-nutrient-remobilization]
 
@@ -87,7 +87,7 @@ This single rule lets you cut the list of suspects roughly in half before you ev
 >
 > Nitrogen fading from the bottom up is normal in late flowering as the plant remobilises N into the buds. The same symptom is healthy at week 7 and a problem at week 2, so always check the calendar before you act.
 
-## Deficiency vs toxicity vs pH lockout
+## Deficiency, toxicity and pH lockout
 
 The biggest beginner trap is seeing yellow leaves, assuming hungry, and adding more fertiliser, which makes a toxicity or lockout dramatically worse. A toxicity shows as dark green clawed leaves and burnt tips, the opposite of a hunger symptom. A pH lockout means the nutrient is sitting right there in the pot but the roots physically cannot take it up because the water is too acidic or too alkaline.
 
@@ -109,7 +109,7 @@ The biggest beginner trap is seeing yellow leaves, assuming hungry, and adding m
 >
 > Before treating any suspected deficiency, check pH. If pH is out of range, fix that and re-observe for several days before concluding the plant is actually short of anything. pH outside range causes lockout despite a perfectly good feed.[^neilsen-1993-rhizosphere-ph-fe-mn-zn]
 
-## pH: the gatekeeper, and why your medium sets the target
+## pH targets by substrate
 
 Each nutrient only dissolves and stays available across a specific pH band, so if root-zone pH drifts out of range, several nutrients drop out of solution at once and the plant starves in a full pantry. Getting pH right prevents more deficiencies than any fertiliser ever fixes.
 
@@ -153,7 +153,7 @@ Two of these look almost identical and trip up beginners constantly: magnesium a
 
 > **Diagram.** Nitrogen and potassium dominate flowering uptake, which is why their deficiencies are the ones you will meet most.[^bevan-2021-npk-soilless-cannabis-flowering]
 
-## Confirm before you treat: pH + EC + runoff
+## Confirming diagnosis with pH, EC and runoff
 
 Diagnosis is a loop, not a guess. You observe the leaves, then confirm with two cheap meters before changing anything. Measuring the EC and pH of both what goes in and what runs out of the pot tells you whether the root zone is starving, overloaded or locked out.
 
@@ -168,7 +168,7 @@ Diagnosis is a loop, not a guess. You observe the leaves, then confirm with two 
 >
 > Coco runoff EC should approximate input EC. Runoff rising ~0.3–0.5 mS/cm above feed for days indicates salt is building up faster than the plant can use it, and a flush, not more feed, is the answer.
 
-## Common traps and look-alikes that fool beginners
+## Troubleshooting
 
 Most deficiencies beginners post about are actually pH lockout, overwatering or light burn wearing a deficiency costume. Knowing the impostors stops you from dumping fertiliser on a plant that is drowning, burning or locked out. When in doubt, change one variable at a time and wait.
 
@@ -186,7 +186,7 @@ Antagonism is the subtle one: too much of one nutrient blocks another. Excess po
 
 > **Diagram.** Overwatering and light stress mimic nutrient disorders, so a true single-nutrient deficiency is the last conclusion, not the first.[^fageria-2001-nutrient-interactions-antagonism]
 
-## What to realistically expect
+## Expected results and limitations
 
 Diagnosis gives you a confident shortlist, not lab certainty. Visual symptoms overlap, and only a tissue or substrate test is definitive.[^cockson-2019-nutrient-disorders-cannabis] Damaged leaves never heal, so success looks like healthy new growth, not the recovery of burnt ones.
 

@@ -23,7 +23,7 @@ _Precision · Root zone · ~18 min read_
 
 > A TEROS-12 capacitance probe measures three things in your pot. This guide explains what each number means, why the raw reading is not the truth, and how to turn it into safe irrigation decisions.
 
-## What this is, and who it's for
+## Purpose and scope
 
 A TEROS-12 is a small probe you bury in growing media: coco, rockwool or soil. It reports three things down a single digital wire: how much water is in the media, how salty that water is, and the temperature. This guide explains, from zero, what each of those numbers means, how the probe arrives at them, and why you should never wire the probe straight to a valve.
 
@@ -40,7 +40,7 @@ A single probe is one noisy local witness. It samples a roughly 1010 mL pocket o
 >
 > This is for anyone putting a moisture probe in a pot who wants to steer on it honestly. It pairs with the [smart watering (VWC/EC) guide](smart-watering-vrwe.html) and the [coco crop-steering paper](coco-crop-steering.html).
 
-## Key terms, defined once
+## Definitions
 
 Here is the small set of words this whole field hangs on. You don't need to memorise them. Each one comes back in context.
 
@@ -60,7 +60,7 @@ Here is the small set of words this whole field hangs on. You don't need to memo
 
 > **Diagram.** A unit volume of media splits into solids, air and water. VWC is just the water slice divided by the whole.
 
-## How the probe turns an electric field into a water number
+## TEROS-12 measurement principle
 
 The TEROS-12 is a **capacitance probe**. Its prongs create a high-frequency electric field in the surrounding media and measure how strongly the media stores that field, which is its permittivity. Because water's permittivity (~80) towers over dry media (~3–5) and air (~1), the bulk permittivity rises steeply and predictably as water content rises. That makes permittivity a stand-in for VWC.[^topp-1980-dielectric-vwc]
 
@@ -75,7 +75,7 @@ The sensor then applies a **calibration equation** (a generic mineral-soil curve
 
 > **Diagram.** From electric field to a number: every output is downstream of the same physical measurement.
 
-## Calibration: why the default number lies a little
+## TEROS-12 calibration
 
 Out of the box the TEROS-12 uses a generic mineral-soil calibration, which makes VWC accurate to only ±0.03 m³/m³. A **substrate-specific** calibration for your exact coco or rockwool tightens that to ±0.01–0.02 m³/m³.[^fragkos-2024-teros12-soils-ec] That difference is not academic. Crop-steering dryback windows are often _narrower_ than the ±0.03 generic error band, so steering on uncalibrated VWC means steering inside the noise.
 
@@ -94,7 +94,7 @@ A worked headroom example shows the consequence directly. A naive 256 mL of ‘r
 >
 > Calibration corrects an additive _offset_, but gain error and nonlinearity near saturation persist and do not cancel out in later math. Treat substrate-specific calibration as **mandatory** for tight steering, not optional, and still respect the residual error.
 
-## What EC tells you, and what the probe cannot see
+## Root-zone EC and sensor limitations
 
 The TEROS-12 measures **bulk EC**, the conductivity of the whole wet-media mixture, 0–20000 µS/cm. What growers care about is **pore-water EC**: the salt concentration in the solution actually touching the roots. You get pore-water EC by combining bulk EC, VWC and temperature through the Hilhorst (2000) model.[^hilhorst-2000-pore-water-ec]
 
@@ -116,7 +116,7 @@ That model is genuinely useful, but it is parameter-sensitive at roughly ±20% a
 
 *What one TEROS-12 can and cannot tell you, and the second witness that fills each gap.*
 
-## Using it to steer irrigation, step by step
+## Irrigation steering with TEROS-12
 
 The practical recipe is one demotion and one promotion. **Demote** the raw VWC reading from ‘truth’ to ‘one noisy witness with a confidence score’. **Promote** a small running water-balance model that holds the belief about stored water and is only _nudged_ by trusted readings.
 
@@ -132,7 +132,7 @@ You track **dryback** (the VWC fall between shots), watch **specific yield** (S 
 
 > **Diagram.** Every reading passes through a confidence score, a belief model and a second-witness gate before it is allowed to move water.[^tavan-2021-sensor-irrigation-soilless]
 
-## Troubleshooting and pitfalls
+## Troubleshooting
 
 Most TEROS-12 disappointments are not the sensor breaking. They are the sensor being _believed_ when it shouldn't be. Make the first distinction clearly. A **wrong reading** (the probe is fine but its 1010 mL isn't the zone) is a representativeness fault that should lower your trust in absolute VWC. A **railed, flatline, NaN or stale value** is a hardware or cable fault that should stop you acting entirely.
 
@@ -157,7 +157,7 @@ Watch for VWC that tracks the daily substrate-temperature swing. That is a conta
 >
 > Never let one manual reading or a single human observation hard-write your capacity anchor or override a safety interlock. Anchors earn their place from corroborated events, not from one good look.
 
-## Realistic expectations
+## Expected results and limitations
 
 > **KEY — What one probe can and cannot earn**
 >

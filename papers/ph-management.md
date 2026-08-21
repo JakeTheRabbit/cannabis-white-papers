@@ -23,7 +23,7 @@ _Feed · pH · ~14 min read_
 
 > A beginner's guide to root-zone pH: why one number decides which nutrients your plant can actually eat, what to aim for in coco, hydro and soil, and how to measure, adjust and hold it without chasing ghosts.
 
-## What this is (and why one number matters so much)
+## Purpose and scope
 
 pH is a 0-14 scale for how acidic or alkaline a liquid is. 7 is neutral, lower is acidic, higher is alkaline. For a grower it is the single setting that decides whether the nutrients you already paid for can actually enter the roots. Get it wrong and a fully fed plant can still starve.
 
@@ -37,7 +37,7 @@ One thing trips people up: the scale is logarithmic, so each whole number is a t
 >
 > You can have perfect nutrients and perfect light and still get deficiencies purely from bad pH. The number gates everything downstream.
 
-## Key terms in plain English
+## Definitions
 
 These words come back through the rest of the guide. Read them once and the troubleshooting section will read cleanly.
 
@@ -57,7 +57,7 @@ These words come back through the rest of the guide. Read them once and the trou
 
 **Runoff** — The solution that drains out the bottom of the pot after watering.
 
-## Why pH controls availability (and causes lockout)
+## pH, nutrient availability and lockout
 
 Each nutrient stays dissolved, and therefore absorbable, only across a certain pH band. Outside that band it binds into forms the roots cannot take up. That is lockout: the plant is surrounded by food it cannot eat because the root-zone chemistry drifted out of the window.
 
@@ -87,7 +87,7 @@ In soil, organic matter and microbes buffer the root zone, so aim for inflow wat
 
 Some growers nudge the target slightly within range across the week to favour specific nutrients. As a beginner, pick one number in the sweet spot and hold it.
 
-## Measuring it: pen, calibration and care
+## pH measurement, calibration and meter care
 
 A pH pen is only as honest as its last calibration. An uncalibrated or dried-out probe is worse than no reading, because it lies with confidence.
 
@@ -99,7 +99,7 @@ Calibrate with fresh two-point buffers, pH 7.0 first then pH 4.0, about once a m
 >
 > Give the reading time to stop moving before you trust it. Temperature and stirring both shift the number, so read at room temperature and wait for it to hold steady.
 
-## Adjusting with pH up/down, and the water you start with
+## pH adjustment and source-water effects
 
 Mix your nutrients first, then adjust pH last. Adding nutrients shifts pH on its own, so if you set pH before mixing you will have to redo it.
 
@@ -117,7 +117,7 @@ Common pH downs include phosphoric, nitric, sulfuric, or organic acids; common p
 >
 > UMass gives different alkalinity ranges for different container volumes. About 40-80 ppm CaCO3 can suit small containers, while larger pots can tolerate more. Use the media, fertiliser, crop and observed pH drift to set the working range. Very hard water may need acid treatment or filtration.[^umass-water-quality-ph-alkalinity]
 
-## Runoff pH and a by-stage routine
+## Runoff pH and stage-specific routine
 
 Runoff is the solution that drains from the pot, and beginners over-rely on it. In inert media like coco it is a momentary, indirect sample distorted by salt buildup and what the roots have done locally. It is not a soil test.[^malik-tlustos-2025-soilless-media-cannabis]
 
@@ -139,7 +139,7 @@ The reliable lever is the inflow pH you set going in. For the root zone itself, 
 > - Log inflow pH and EC so you can see drift.
 > - Adjust slowly, in drops, and let buffering work.
 
-## Common mistakes and how to avoid them
+## Troubleshooting
 
 Most pH problems are self-inflicted. The classic error is feeding nutrient solution outside the safe range to fix a runoff reading, which causes the very lockout the grower fears.[^malik-tlustos-2025-soilless-media-cannabis] The rest are about tools and patience.
 
@@ -152,7 +152,7 @@ Most pH problems are self-inflicted. The classic error is feeding nutrient solut
 | Adding more nutrients to fix a deficiency | Check pH first; it is often lockout, not a shortage |
 | Ignoring source-water alkalinity | Test alkalinity; treat hard water before it creeps pH up |
 
-## Realistic expectations
+## Expected results and limitations
 
 pH will drift between feeds, and that is normal, not a crisis. The goal is to keep the root zone inside a band, not to pin a single decimal. Soil buffers and corrects slowly. Coco and hydro move fast and need checking every feed.
 

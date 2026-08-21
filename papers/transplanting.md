@@ -23,7 +23,7 @@ _Propagation · Transplant · ~17 min read_
 
 > Every transplant is a controlled injury: done on time, into a prepared home, the plant never notices; done late or rough, it stalls for a week. When to up-pot, the container ladder, the mechanics, media-to-media moves, the first irrigation, and transplant shock from cause to recovery.
 
-## What potting up is, in plain English
+## Purpose and scope
 
 **Transplanting** (or **potting up**) is moving a plant into a bigger container, or into a different growing medium, before the one it’s in starts holding it back. Cannabis spends its whole indoor life in containers, so most plants get moved two or three times between cutting and harvest. Each move is a small, deliberate injury: you disturb the roots on purpose, so the plant can earn a bigger root system than the old pot allowed.
 
@@ -35,7 +35,7 @@ This guide assumes you’ve never done it before and defines every term as it ap
 >
 > Anyone moving a rooted cutting or seedling onward: home growers stepping up pots, and operators running plug → block → slab lines. It picks up where the [cloning](cloning.html) and [seeds & germination](seeds-germination.html) guides leave off, at a plant with roots that’s ready for a bigger home.
 
-## Eight words that make the rest read plainly
+## Definitions
 
 Transplanting has less jargon than most grow topics, but the few terms it does have carry the whole logic. Learn these eight and every later section reads in plain English.
 
@@ -55,7 +55,7 @@ Transplanting has less jargon than most grow topics, but the few terms it does h
 
 **Air pruning** — What happens when a root tip grows into open air and dries off: the tip stops, and the plant branches new roots behind it instead of circling. Fabric pots and open-sided trays use this on purpose.
 
-## Why pots run out: rooting volume is a growth ceiling
+## Rooting-volume limits
 
 A container isn’t just a bucket that holds media. It’s a hard limit on how big the plant’s engine can get. A meta-analysis of 65 pot-size experiments found that, on average, **doubling the container volume increased plant biomass by 43%**[^poorter2012-potsize]. The interesting part is the mechanism: plants in small pots didn’t just run out of water or feed. They _downregulated photosynthesis per unit of leaf area_. The plant senses the restriction and throttles itself before you see a single symptom[^poorter2012-potsize].
 
@@ -67,7 +67,7 @@ Horticulture has known the practical half of this for decades: transplants raise
 >
 > The same meta-analysis suggests plants stop behaving ‘unrestricted’ once dry biomass passes roughly **1 gram per litre of pot**[^poorter2012-potsize]. You don’t need to weigh anything. The takeaway is that the ceiling arrives well before the pot _looks_ full, and long before roots show at the drain holes. If the plant looks too big for the pot, it’s already paying rent.
 
-## What roots actually do in a container
+## Root function in containers
 
 Roots grow outward and down until they hit something. In a smooth-walled pot, ‘something’ is plastic: the tip deflects sideways and keeps going, tracing the wall in circles. A circling tip keeps elongating instead of branching, so the ball develops a dense mat at the wall and stays sparse in the middle, exactly backwards from what you want.
 
@@ -81,7 +81,7 @@ The other physiology that matters is the **wound response**. Cut or torn roots a
 >
 > In trees, circling roots eventually girdle the trunk. Cannabis never lives that long, your cost is different: a circled mat stays pot-shaped for weeks inside the new container, irrigation channels around it instead of through it, and the plant runs on a fraction of the volume you paid for. You see it as a plant that wilts fast _and_ sits in wet media.
 
-## When to up-pot: the signs, in order of trust
+## Indicators for transplant timing
 
 The calendar is the least reliable signal you have. Genetics, pot size, temperature and light all change how fast roots fill a container, so read the pot, not the date. In rough order of trust:
 
@@ -108,7 +108,7 @@ How costly is being late? Autoflowering cannabis gives the cleanest published an
 >
 > Moving slightly _early_ costs a little media and a crumblier ball. Moving _late_ costs a throttled plant, a circling mat, and a slower restart. When in doubt, move. The window opens when the ball holds together and never truly reopens once circling sets in.
 
-## The container ladder: sizes that step, not leap
+## Container size progression
 
 Indoor cannabis typically climbs a ladder of two to four containers, each step roughly **2–4× the volume** of the last. The exact litres matter less than the ratio: big enough that the plant gets weeks of headroom, small enough that roots claim the new volume fast and the pot still wets and dries on a manageable cycle.
 
@@ -129,7 +129,7 @@ Why steps instead of one leap into the final pot? Water and oxygen. A small root
 >
 > Air-pruning containers keep the ball fibrous instead of circling[^amoroso2010-airpots], which makes long stays in one size more forgiving and transplants out of them gentler, the ball is all branch-tips, no mat. They dry faster than plastic, so they shift your irrigation, not your ladder.
 
-## Direct-to-final vs staged: the honest trade-offs
+## Direct-to-final versus staged transplanting
 
 Some growers skip the ladder entirely and start seeds or clones in the final container. It’s a legitimate strategy with real costs, and the right answer depends on your plant type and your irrigation discipline, not on forum ideology.
 
@@ -145,7 +145,7 @@ Some growers skip the ladder entirely and start seeds or clones in the final con
 
 The verdict most rooms land on: **photoperiod plants get staged**, because veg length is elastic and the control is worth the labour; **autoflowers go direct to final** (or move once, very early, by about day 15 at the latest[^bhattacharya2023-autoflower]). And in drip-irrigated commercial rooms the question dissolves: the ladder is built into the media itself, plug → block → slab, which is the next section.
 
-## The transplant, step by step
+## Transplant procedure
 
 The whole job takes two minutes per plant once staged. Do it late in the light period or under dimmed light. Transpiration is lower, so the plant loses less water while its roots are disturbed (practitioner convention). Have everything ready before you touch a plant: filled pots, mixed solution, clean hands or gloves.
 
@@ -160,7 +160,7 @@ The whole job takes two minutes per plant once staged. Do it late in the light p
 
 > **Diagram.** Depth is a one-decision step: ball proud of the surface wicks dry and kills the top roots; ball at grade with a thin cover is right; a buried crown puts soft stem in permanently wet media and invites collar rot.
 
-## Crossing media: plug to coco, plug to block, block to slab
+## Transitions between propagation media
 
 Up-potting soil into soil is the easy case. Commercial cannabis mostly moves plants _between_ media (rockwool plug into coco, plug into block, block onto slab) and every one of those moves lives or dies at the **interface**. Three rules govern it: the surfaces must _touch_ (capillary flow breaks at an air gap), the destination must be _wet enough to accept roots_ on day one, and after that it should run slightly _drier than the ball_, so roots chase the water out into the new volume.
 
@@ -186,7 +186,7 @@ Same-family moves (seedling mix into potting soil, potting soil into a bigger po
 >
 > After any cross-media move, the old ball and the new media are two different hydraulic systems until roots bridge them. Drippers wet the _new_ media; capillarity across the interface is weak; the ball becomes a dry island in a wet pot, and the plant wilts while your sensors read perfect. Hand-water directly over the ball for the first days, or place a dripper on the ball itself, until roots have visibly crossed. Assume the island until proven bridged.
 
-## Watering-in: the EC and pH of the first drink
+## Watering-in: initial EC and pH
 
 The first irrigation after a transplant does two jobs. **Hydraulic:** it settles the new media into full contact with the ball, closing the air gaps that block both water movement and root crossing[^umd-planting-transplants]. **Chemical:** it sets the root-zone solution the disturbed roots wake up to, and disturbed roots want continuity, not surprises.
 
@@ -223,7 +223,7 @@ The first irrigation after a transplant does two jobs. **Hydraulic:** it settles
 >
 > Marketed shock remedies are mostly dilute nutrients plus hope. Nothing in a bottle substitutes for an intact ball, a wet touching interface, chemical continuity, and 48 easy hours. Get those four right and there’s nothing left for a tonic to fix; get them wrong and no tonic will.
 
-## The six ways transplants die
+## Common transplant failures
 
 Six patterns cover nearly every transplant loss. Learn their shapes and you’ll catch them in the act instead of in the post-mortem.
 
@@ -264,7 +264,7 @@ For a photoperiod clone on a typical 4-week veg: up-pot the rooted plug into its
 - **Autoflowers compress everything.** Their calendar runs itself: direct-sow or move by ~day 15, and after that treat the container decision as final[^bhattacharya2023-autoflower].
 - **Mothers break the ladder rule.** A mother plant is kept _slightly_ root-restricted on purpose, big enough to stay healthy, small enough to stay manageable, refreshed by root-pruning or re-potting on its own maintenance cycle, not on the crop’s.
 
-## Troubleshooting: symptom → cause → fix
+## Troubleshooting
 
 Work the table top to bottom. It’s ordered by how often each cause turns out to be the real one. Change one thing, give it 24 hours, reassess.
 
@@ -281,7 +281,7 @@ Work the table top to bottom. It’s ordered by how often each cause turns out t
 
 *Give each fix a day before layering the next. Most post-transplant problems are one cause, not three.*
 
-## The mental model: sell the roots a better house
+## Root-zone expansion principles
 
 Strip the detail away and transplanting is a real-estate pitch aimed at roots: the new volume has to be easier to live in than the old one, on day one, or the plant declines the offer and stalls.
 

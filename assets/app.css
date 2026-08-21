@@ -216,7 +216,7 @@ code{font-family:var(--mono);font-size:.85em;background:var(--surface-2);border:
 
 /* ---------------- footer / refs ---------------- */
 .refs{margin-top:60px;padding-top:26px;border-top:1px solid var(--line)}
-.refs h3{font-family:var(--serif);font-size:20px;font-weight:600;color:var(--ink);margin-bottom:14px}
+.refs h2{font-family:var(--serif);font-size:20px;font-weight:600;color:var(--ink);margin-bottom:14px}
 .refs ol{padding-left:1.4em;font-size:13px;color:var(--muted);line-height:1.65}
 .refs li{margin-bottom:8px} .refs li.np{opacity:.85}
 .refs a{color:var(--acc);text-decoration:underline;text-underline-offset:2px}

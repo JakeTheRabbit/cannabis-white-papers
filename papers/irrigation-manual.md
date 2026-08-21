@@ -23,7 +23,7 @@ _Precision · Irrigation · ~14 min read_
 
 > Install, run, and maintain a sensor-driven crop-steering irrigation system on Home Assistant, explained from zero.
 
-## What this is and what it does
+## Purpose and scope
 
 This is an automated watering system for plants grown in pots of soil-less media. Sensors buried in each pot measure how wet the media is and how much fertiliser salt it holds, and the software decides when and how much to water. That replaces watering by hand or on a ‘dumb’ timer.
 
@@ -40,7 +40,7 @@ The three-layer design lets you **start simple and add intelligence later** with
 
 > **Diagram.** The three layers stack. Each one adds intelligence on top of the layer below, and you can stop at whichever level you trust.
 
-## Key terms, defined from scratch
+## Definitions
 
 These are the words this manual uses constantly. You don't need to memorise them, each one comes back in context.
 
@@ -62,7 +62,7 @@ These are the words this manual uses constantly. You don't need to memorise them
 
 > **Diagram.** A quick reference for the three terms that trip up beginners most: the two steering directions and what runoff is telling you.
 
-## The hardware: what gets wired up
+## Irrigation system hardware
 
 The brain of the valve control is a **KC868 E16S relay board** connected over Ethernet and running ESPHome firmware. It physically switches every valve: the 6 tables plus the mains, mainline, and manifold valves.
 
@@ -87,7 +87,7 @@ Each table has a substrate probe that reads VWC, EC, and temperature over **SDI-
 
 > **Diagram.** Water only moves when both the mainline and a table valve are open. The pump never runs dry because it keys off mainline pressure, not a software command.
 
-## The phase logic: P0 to P3
+## P0–P3 irrigation phases
 
 Crop steering splits each lights-on day into four phases that control how the plant uses water and nutrients. A **controlled dryback**, letting the media dry by a set amount before watering again, is the signal that steers the plant toward vegetative root growth or generative flower production.[^yang-2022-rdi-review]
 
@@ -107,7 +107,7 @@ Crop steering splits each lights-on day into four phases that control how the pl
 
 > **Diagram.** P2 is not a fixed threshold: the system reads how salty the root zone is and lets it dry to concentrate feed, or waters extra to flush, keeping EC in range.[^yang-2022-rdi-review]
 
-## Environment control and the safety net
+## Environmental controls and safety interlocks
 
 The system manages room climate as well as watering. Dehumidifiers turn on when humidity is 5% above target (the 4 relays stagger on with 10-second delays to avoid an inrush spike) and off 2% below. The humidifier mirrors that logic. CO2 injects when 50 ppm below target and only during lights-on, always closing at lights-off.
 
@@ -131,7 +131,7 @@ Several independent safety layers run in parallel so that one failure never leav
 
 *The safety layers. Two of them (leak, tank-low) only fire once their physical sensors are installed. See the final section.*
 
-## Commissioning: getting it running from scratch
+## Commissioning procedure
 
 Bring the system up in order so each layer is proven before the next one is switched on. Rushing straight to crop steering on unverified hardware is the fastest way to flood a table.
 
@@ -154,7 +154,7 @@ Bring the system up in order so each layer is proven before the next one is swit
 
 *Safe starting setpoints. These are intentionally cautious; tighten them only after a week of watching the trends.*
 
-## Day-to-day operation and the dashboard
+## Daily operation and dashboard
 
 Daily checks are quick. On the Command Center, all 6 tables should read VWC between 30 and 70%, EC in your target range (typically 2 to 6 mS/cm by stage), and substrate temperatures 20 to 26 °C, with every safety indicator green.
 
@@ -177,7 +177,7 @@ On the Trends tab the VWC graph should show a **sawtooth**: a gradual drop, then
 
 > **Diagram.** The healthy pattern: repeated drop-then-refill. If your trace falls steadily with no rises, treat it as a fault and check the troubleshooting matrix.
 
-## Troubleshooting and tuning
+## Troubleshooting
 
 Most problems are diagnosable from a short checklist. Work top to bottom, because the cheapest checks (is it on? is the window open?) catch the most cases.
 
@@ -206,7 +206,7 @@ If irrigation will not run, confirm the system is on, maintenance mode is off, t
 
 *The tuning parameters. Shot duration is computed from these, so a wrong substrate volume or flow rate produces wrong (or zero) shot times.*
 
-## Realistic expectations and limits
+## Expected results and limitations
 
 > **KEY — This is guidance, not a guarantee**
 >

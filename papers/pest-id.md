@@ -23,7 +23,7 @@ _Plant health · Pests · ~18 min read_
 
 > A beginner's field guide to the eight pests that hit cannabis hardest: how to spot each one, understand its life cycle, monitor for it, and knock it down with biological controls and targeted treatments. The companion to your IPM decision process.
 
-## What this guide is (and is not)
+## Purpose and scope
 
 > **NOTE — Jurisdiction**
 >
@@ -40,7 +40,7 @@ It is the ‘who’s who’ companion to the IPM SOP, which is the separate deci
 
 > **Diagram.** Eight pest groups, where to look, what to look for, and the first beneficial to reach for.
 
-## Key terms, defined once
+## Definitions
 
 A handful of words appear throughout this guide and the IPM SOP, so define them now. You do not need to memorise them, each one comes back in context.
 
@@ -60,7 +60,7 @@ A handful of words appear throughout this guide and the IPM SOP, so define them 
 
 > **Diagram.** A preventative beneficial established early keeps the population flat. Waiting until threshold means treating a spike that is already well ahead of you.[^lopez-2023-amblyseius-swirskii-review-jipm]
 
-## Leaf sap-suckers: spider mites, thrips, aphids and whitefly
+## Leaf sap-feeding pests: spider mites, thrips, aphids and whiteflies
 
 These four feed on leaves and stems by piercing cells and sucking sap, so they share a look: pale stippling, distortion and loss of vigour[^pulkoski-burrack-2023-piercing-sucking-hemp]. Telling them apart is about the secondary signs each one leaves.
 
@@ -75,7 +75,7 @@ The aphid most associated with cannabis is its own species, the cannabis aphid (
 
 > **Diagram.** The warmer and drier the room, the faster the spider mite cycle, from about 3 days in a hot dry room to nearly 3 weeks in the cold.[^ahmed-2024-hemp-pests-florida-jipm]
 
-## The hidden ones: russet and broad mites, fungus gnats, root aphids and caterpillars
+## Hidden pests: russet and broad mites, fungus gnats, root aphids and caterpillars
 
 This group is dangerous because the damage shows before the pest does. Russet mites (_Aculops cannabicola_, under 1 mm, needs 80-100x) and broad mites (needs ~60x) are invisible to the naked eye and announce themselves through cupped, glossy or ‘wet-looking’ new growth, twisted tops and stunting. Those symptoms are often misread as nutrient or heat stress[^vanmaanen-2010-broad-mite-swirskii-biocontrol].
 
@@ -92,7 +92,7 @@ Fungus gnat larvae weaken plants and wound roots, and the damage they cause inte
 
 > **Diagram.** Map your inspection to where each pest actually lives. Glancing at the mid-canopy misses all four of these.
 
-## Monitoring: traps, loupes and a weekly scouting routine
+## Pest monitoring and weekly scouting
 
 You cannot control what you do not measure, and early detection is the single biggest lever you have. Run a fixed weekly scouting walk on the same day, inspecting leaf undersides, growing tips, flowers and the root zone, and step up to twice weekly as rooms warm up.
 
@@ -108,7 +108,7 @@ Hang yellow sticky cards at canopy height for thrips, whitefly and fungus-gnat a
 
 > **Diagram.** A repeatable five-step walk. The point is consistency: same day, same plants, same cards, every week.
 
-## Biological controls and treatments, pest by pest
+## Biological controls and treatments by pest
 
 Match the tool to the pest, and to whether you are preventing or reacting. For spider mites the specialist predator _Phytoseiulus persimilis_ is the fast curative, but it wants humidity above ~60% RH, while _Neoseiulus californicus_ or _Amblyseius swirskii_ establish preventatively. Thrips are managed with _Amblyseius cucumeris_ or swirskii at about 100-300 mites per square metre, with control typically visible around 3 weeks[^lopez-2023-amblyseius-swirskii-review-jipm].
 
@@ -120,7 +120,7 @@ Aphids respond to species-matched parasitoid wasps (_Aphidius colemani_ for gree
 
 > **Diagram.** Pick the agent by pest and by whether you are preventing or reacting. Timing beats dose: beneficials only out-breed pests if released before the pest gets a head start.
 
-## Troubleshooting and common pitfalls
+## Troubleshooting
 
 Most pest disasters are diagnosis and timing failures, not product failures. The classic mistakes repeat across facilities, and all of them are avoidable with a scope and a calendar.
 
@@ -139,7 +139,7 @@ Most pest disasters are diagnosis and timing failures, not product failures. The
 
 > **Diagram.** Never treat on a guess. The confirmation step, between suspecting and acting, is where most wasted sprays get prevented.
 
-## Realistic expectations and prevention payoff
+## Expected results and limitations
 
 Eradication is rarely the goal. Durable suppression below the action threshold is. Expect biological control to take time: thrips control is often visible only around 3 weeks after release, and breaking a fungus-gnat cycle by trapping adults while killing larvae usually takes 4-8 weeks[^cloyd-2015-fungus-gnat-ecology-management].
 

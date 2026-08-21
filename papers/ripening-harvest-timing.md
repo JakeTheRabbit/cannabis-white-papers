@@ -23,7 +23,7 @@ _Flowering · Finish · ~17 min read_
 
 > The last two weeks and the call to chop: how buds actually ripen, how to read trichomes with a loupe properly, harvest windows by product goal, what the evidence really says about flushing, and how to keep botrytis from eating the reward while you wait.
 
-## The last two weeks decide the grade
+## Purpose and scope
 
 Everything you did for eighteen weeks converges on one decision: when to cut. Cut early and you hand back weight and maturity the plant was still building. Wait too long and you are gambling finished flower against bud rot for marginal gains. This paper is the finish: how buds ripen, how to read them honestly, and how to land the chop where your product goal wants it.
 
@@ -37,7 +37,7 @@ Two jobs run in parallel through the final fortnight. Job one: let the plant fin
 >
 > Anyone in week 6+ of flower wondering how close they are. Pairs with [the flower cycle week by week](flowering-stages.html) upstream and [harvest, dry, trim and cure](harvest-dry-trim-cure.html) downstream. This paper ends the moment the shears close.
 
-## Eight terms that carry the whole paper
+## Definitions
 
 Late flower has its own dialect. These eight terms cover everything below, learn them once and the rest reads easily.
 
@@ -57,7 +57,7 @@ Late flower has its own dialect. These eight terms cover everything below, learn
 
 **Staggered harvest** — Cutting the ripe top canopy first and giving the lower canopy extra days under light to catch up, instead of chopping the whole plant at once.
 
-## It is a window, not a date - and the product picks the spot
+## Ripening windows by product goal
 
 Strip away the forum noise and the harvest call reduces to three sentences. Ripeness is read from the trichomes on the calyx surface, not from the calendar, not from pistils. The right moment inside the ripening arc depends on what the flower is for, hash-makers cut earlier than flower growers, and extract-bound biomass is the most forgiving of all. And mould pressure, not impatience, is the only good reason to cut before your target: clean flower cut a few days early beats perfectly ripe flower with botrytis in it, every time.
 
@@ -71,7 +71,7 @@ Why waiting is usually right: harvest-timing trials keep finding that infloresce
 >
 > Read trichomes on the calyx, mid-cola, every two days from week 7. Cut where your product wants: cloudy-dominant with minimal amber for hash, cloudy with 5–15% amber for typical flower. If botrytis shows up, the debate is over, cut now.
 
-## What ripening actually is
+## Ripening biology
 
 Four visible processes run together in the final weeks, and each one is a signal you can read. Knowing what drives them is what stops you being fooled when one of them lies.
 
@@ -89,7 +89,7 @@ Four visible processes run together in the final weeks, and each one is a signal
 >
 > The colour shift is the visible face of resin chemistry: thin fresh resin reads glassy, mature contents scatter light and read milky, and ageing oxidised resin yellows. That is why the read works. And why it is a proxy, not an assay. Two cultivars at the same colour stage are not guaranteed the same chemistry[^punja-2023-trichome-maturation].
 
-## Using a loupe properly: where, what, how often
+## Assessing ripeness with a loupe
 
 Most bad harvest calls are not bad judgement. They are bad sampling. The grower reads one photogenic spot, or reads sugar leaves, or reads a different bud each visit, and the ‘data’ wanders. Fix the sampling and the call gets easy.
 
@@ -109,7 +109,7 @@ Most bad harvest calls are not bad judgement. They are bad sampling. The grower 
 
 > **Diagram.** The signal ladder. Everything above the loupe row is context that schedules your scoping. Only the trichome read on the calyx makes the chop decision.
 
-## Flower, hash and carts want different chops
+## Harvest windows by product type
 
 The single most useful upgrade to ‘when do I harvest?’ is realising it is the wrong question. The right question is ‘what is this flower for?’, because the product defines the window.
 
@@ -134,7 +134,7 @@ The single most useful upgrade to ‘when do I harvest?’ is realising it is th
 >
 > Running one cultivar for both hash and flower? Stagger by product: take the hash plants (or the hash-destined top canopy) at cloudy max, and give the flower plants the extra ripening days. One room, two chops, both products in their window.
 
-## Flushing: what testing found, and what it didn't
+## Flushing: evidence and limitations
 
 The tradition: feed plain water for the last 7–14 days so the plant ‘uses up’ stored nutrients, giving smoother smoke, better flavour and white ash. It is one of the most confidently repeated rules in cultivation. It is also the one with the least supportive evidence, so here is what happens when someone actually tests it.
 
@@ -160,7 +160,7 @@ The tradition: feed plain water for the last 7–14 days so the plant ‘uses up
 >
 > Positions genuinely run both ways. Many commercial SOPs still specify a 7–14 day plain-water flush, partly tradition, partly market expectation, and buyers asking ‘was it flushed?’ is a real commercial force. Others feed full-strength to the day of chop, citing the trials above. A common middle path tapers feed EC over the final week, matching falling uptake without starving the plant. What the evidence rules out is the strong claim: that a long plain-water flush detectably improves the smoke. If you flush anyway, keep it short; nobody has shown a benefit that pays for three weeks of starvation.
 
-## Late-flower environment: taper the room, clamp the ceiling
+## Late-flower climate management
 
 The environmental job in the last fortnight is asymmetric. The temperature moves are nice-to-have practitioner practice. The humidity discipline is survival. Get the priority right: RH ceiling first, everything else after.
 
@@ -178,7 +178,7 @@ The environmental job in the last fortnight is asymmetric. The temperature moves
 >
 > Every extra ripening day is bought with rot exposure. If your room cannot hold the RH band (undersized dehumidifier, dense canopy, lights-off spikes) the honest play is to harvest at the early edge of your window, not to white-knuckle a late chop in botrytis territory[^punja2025-budrot-epi].
 
-## Cutting the plant in instalments
+## Staggered harvesting
 
 The vertical gradient is real: top colas get the most light, mature first, and carry the highest cannabinoid and terpene content, with both falling measurably toward the bottom of the plant[^namdar-2018-inflorescence-position]. A whole-plant chop therefore harvests the top at peak and the bottom early. The staggered alternative: take the ripe top third now, then give the suddenly well-lit lower canopy another 4–10 days to swell and finish before a second cut.
 
@@ -198,7 +198,7 @@ It works because the two things the lower canopy lacked, light and time, both ar
 >
 > After the top cut, re-mark scoping spots on the remaining canopy and restart the two-day loupe cadence. The lower buds accelerate under new light. They often close the gap faster than the original schedule suggests. And handle the cut surfaces cleanly: sanitise shears between plants so the first harvest doesn't inoculate the second.
 
-## Day-of-chop logistics: the boring list that protects the crop
+## Harvest-day logistics
 
 By chop day the quality is already grown. The job now is purely defensive: move the crop from room to dry space without bruising it, contaminating it, or stalling it in a bin. Everything below is decided _before_ the first cut.
 
@@ -215,7 +215,7 @@ Two chop-day traditions deserve a flag. **48 hours of darkness before harvest** 
 >
 > Removing half a room of transpiring plants crashes the humidity load and the climate control's assumptions. If other plants remain (staggered harvest, mixed-age rooms), re-check RH and airflow within the hour, setpoints tuned for a full canopy behave differently in a half-empty one.
 
-## The six ways the finish goes wrong
+## Common finishing failures
 
 Late-flower mistakes cluster hard. Six patterns account for nearly all of them, three are impatience, two are bad reads, one is neglect.
 
@@ -247,7 +247,7 @@ Every extra day is bought with rot exposure. Waiting for perfect ripeness with R
 Three weeks of plain water ‘to be safe’ starves the plant through its final bulking, forces a hard early fade, and buys smoke quality that blind panels can't detect[^rxgreen-2019-flushing-trial]
 . If you flush, keep it short.
 
-## Late-flower symptoms, decoded
+## Troubleshooting
 
 Quick lookups for the confusing reads. Most of these are the plant and the room disagreeing with the calendar, believe the plant, then fix the room.
 
@@ -263,7 +263,7 @@ Quick lookups for the confusing reads. Most of these are the plant and the room 
 
 *The two dangerous rows are the last ones: a stalled-but-clean plant costs patience, botrytis costs the crop.*
 
-## Ripeness is a distribution, not a state
+## Ripeness variation and harvest decisions
 
 If one idea from this paper survives contact with your first harvest, make it this one:
 

@@ -23,13 +23,13 @@ _Environment · Lighting · ~16 min read_
 
 > Under-canopy (SCL) and inter-canopy (ICL) lighting put photons where the overhead array can't reach. The research is consistent: at equal flux you upgrade grade and uniformity more than gross weight. This covers the light, spectrum, placement, training, and the thermal and airflow bill most guides skip.
 
-## Photons at the floor
+## Purpose and scope
 
 A top fixture lights a roof, not a plant. By the time photons fight through three or four leaf layers, the lower third of the canopy is sitting at a fraction of the light its buds need to fill out, so it doesn’t. Under-canopy lighting (SCL) and inter-canopy lighting (ICL) put photons where the overhead array can’t, and the published work is now consistent: you don’t necessarily gain gross weight at equal total flux, but you upgrade grade, tighten uniformity, and lift the bottom of the plant from larf to saleable flower.
 
 None of that is free. Every watt you push below the canopy is a watt of heat in the worst-ventilated zone in the room, and you’re now growing dense bud in air that used to be dead space. This paper covers the light, the spectrum, the placement, the training, and, the part most guides skip, the thermal and airflow bill that comes due.
 
-## The lower canopy is light-starved
+## Lower-canopy light deficit
 
 Light attenuates fast through a cannabis canopy. Leaves are extremely good at absorbing the exact wavelengths that drive photosynthesis, so each layer strips the red and blue out of the beam before it reaches the next. A top canopy running a healthy 800–1200 µmol·m⁻²·s⁻¹ commonly drops to 100–200 µmol at the lower bud sites, well under the rough 400–500 µmol floor that cannabis needs to set and fill competitive flower.
 
@@ -51,7 +51,7 @@ The result is the larf you already know: airy, underweight bud on the bottom thi
 > - **ICL (inter-canopy / intracanopy):** bars hung _within_ the canopy, among the branches, at the basal and middle tiers.
 > - Same goal, different mounting, different airflow consequences.
 
-## What the research actually shows
+## Evidence on yield, quality and uniformity
 
 The marketing decks all cite ‘20–60% yield gains’ without naming a source. The honest picture from peer-reviewed and controlled commercial work is more specific, and more useful, because it tells you _where_ the gain comes from.
 
@@ -73,7 +73,7 @@ The marketing decks all cite ‘20–60% yield gains’ without naming a source.
 >
 > If a vendor promises ‘+40% yield’, ask at what total flux. Adding fixtures adds photons adds yield, trivially. The defensible claim is: **at the same total power, do you get better grade and uniformity?** The controlled answer is yes. Field data lands realistic averages around 25–35%[^aroya-undercanopy], conditional on cultivar, a willingness to _reduce plant count_ for the fixtures and airflow, and the accommodations this paper is about. Achievable, not automatic.
 
-## The heavy-red trap
+## Spectrum selection below the canopy
 
 Here’s the most expensive mistake in the category. Most under-canopy products are **heavy red**, cheap, efficient per photon, looks ‘powerful’. It is also the wrong spectrum below the canopy, and the trials prove it.
 
@@ -97,7 +97,7 @@ Two things are happening. First, the mid and lower canopy is _already_ green/FR-
 
 *Spectrum decision below the canopy. The category default should be broad, not red.*
 
-## PAR targets and how much light to add
+## PAR targets and supplemental light
 
 The goal isn’t to match top-canopy intensity at the floor. It’s to lift the starved zone over the threshold where bud development becomes viable, without bleaching.
 
@@ -115,7 +115,7 @@ Think in **added flux at depth**, not bar wattage. A modest contribution, on the
 >
 > To test whether SCL ‘works’, run it at **constant total facility flux** first  (pull a little off the top, add it at depth) and measure grade and uniformity. That isolates the geometric benefit from the trivial ‘more light = more yield’ effect. Then decide whether to add net flux.
 
-## The leaf was built by yesterday's light
+## Light acclimation in the lower canopy
 
 A leaf is not a fixed solar panel. While it expands it builds its own photosynthetic hardware, chloroplast structure, electron-transport capacity, Rubisco, photoprotection, calibrated to the light it experiences _during_ development. A shade-grown leaf builds thin, low-capacity, lightly-defended hardware; the same genetics under bright light build a thicker, higher-capacity leaf. Rodriguez-Morrison, Llewellyn & Zheng (2021) measured this in cannabis[^rm2021-light]: leaves acclimated to ~91 vs ~1,238 µmol differed by about **50%** at high intensity. Same cultivar, different light history, different machine.
 
@@ -143,7 +143,7 @@ A leaf is not a fixed solar panel. While it expands it builds its own photosynth
 
 > **Diagram.** SCL lights from the bench upward, easy to install and clean. ICL places bars among the branches at multiple depths, stronger response on tall, unpruned plants, but it costs you plant lanes and airflow clearance.
 
-## Plant training changes when you light from below
+## Plant training for under-canopy lighting
 
 This separates operators who get the 30% from operators who bleach their bottoms and rot their cores. Under-canopy lighting and your training regime are one system, not two.
 
@@ -160,7 +160,7 @@ This separates operators who get the 30% from operators who bleach their bottoms
 
 **Timing:** run structural defoliation around the usual windows (~day 21, a lighter pass ~day 42 if still dense), but re-target it. You’re opening airflow lanes and removing shade _onto lit bud sites_, not clearing dead zone. Go light late in flower; aggressive late defoliation swings transpiration unpredictably in a zone you’ve made humid on purpose.
 
-## The heat bill: a watt is a watt
+## Thermal load from under-canopy lighting
 
 Ignore the marketing about LEDs ‘running cool’. For HVAC sizing it’s false in the way that matters. In a sealed room, **essentially all the electrical power you feed a fixture ends up as heat your HVAC has to remove.** A 600 W LED and a 600 W HPS impose the same cooling load. The LED’s advantage is hitting your target PPFD at _fewer watts_. You install fewer watts, not cooler ones.
 
@@ -206,7 +206,7 @@ That covers _bulk_ exchange. It does not solve the sub-canopy microclimate, beca
 >
 > SCL adds bud mass → in the most humid zone → with the worst airflow → transpiring into still air → at lights-off when RH spikes. Each factor is survivable alone. Stacked, they’re a botrytis machine. The lighting upgrade is only as good as the air and dehumidification upgrade that goes with it. Budget for both, or don’t do it.
 
-## Commissioning: how to dial it in
+## Commissioning under-canopy lighting
 
 Don’t install to a spec sheet and walk away. Install, measure, adjust, log. The whole value of SCL is in the lower-canopy numbers, so that’s where you measure.
 
@@ -223,7 +223,7 @@ Don’t install to a spec sheet and walk away. Install, measure, adjust, log. Th
 >
 > **Bleaching** (days, near fixtures) → **basal RH / dew point** (every lights-off) → **stretch** (if running FR) → **grade uniformity** (at harvest) → **energy-use efficiency** (per cycle, the number that justifies the capex).
 
-## The economics, framed honestly
+## Expected results and limitations
 
 The return on under-canopy lighting is mostly a **grade story**, not a gross-weight story. The clearest financial mechanism in the research is converting B/C-grade lower bud into A/B-grade saleable flower, plus reduced variability, worth more in a price-pressured, quality-led market than raw biomass.
 

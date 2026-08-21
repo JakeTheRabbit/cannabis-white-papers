@@ -23,7 +23,7 @@ _Precision · Smart watering · ~9 min read_
 
 > A grow room can water plants on its own by combining several sensor signals instead of trusting one moisture probe that might be lying.
 
-## What this is, and the problem it solves
+## Purpose and scope
 
 > **EVIDENCE — Grain of salt**
 >
@@ -39,7 +39,7 @@ Each pot has only one moisture sensor, and that sensor feels only a tiny spot of
 >
 > This is operational, product-style guidance for how the system _behaves_, not a lab study. It pairs with the [root-zone sensor](root-zone-teros12.html) paper (what a single probe actually measures) and the [signal & noise](signal-and-noise.html) paper (telling a real change from sensor jitter).
 
-## Key terms, defined once
+## Definitions
 
 Five words carry the whole idea, so we define them up front. Don’t memorise them. Each one comes back in context.
 
@@ -63,7 +63,7 @@ Five words carry the whole idea, so we define them up front. Don’t memorise th
 
 *The five words that carry the whole idea.*
 
-## Why fuse signals: the water bank account
+## Signal fusion for root-zone water estimation
 
 VRWE keeps a **checkbook for water** instead of believing one probe. Money IN is the water the drippers squirted, known precisely because drippers are calibrated, so you know exactly how much you put in. Money OUT is what the plant drank plus what drained away. The running balance is the water really in the pot.
 
@@ -77,7 +77,7 @@ The plant’s drinking, its **transpiration**, can be estimated from heat and li
 >
 > Listen to only one sensor and a single bad reading becomes a bad decision. When several independent signals all feed the estimate, one liar gets outvoted. The system stays right even when one input is wrong.
 
-## How trust and uncertainty work
+## Confidence and uncertainty
 
 The brain carries a **confidence meter** alongside every estimate, answering ‘how sure am I?’. A number on its own (‘58% wet’) tells you nothing about whether to bet on it.
 
@@ -92,7 +92,7 @@ Confidence is high when the independent signals agree, when the sensor, the bank
 > - Low confidence triggers caution, never bold action.
 > - A faulty sensor biases toward ‘wait’, never toward flooding or starving.
 
-## What it actually decides
+## Irrigation decisions
 
 The brain only ever picks one of three outcomes, driven by **confidence** and **headroom** (how much room is left before the pot is full).
 
@@ -104,7 +104,7 @@ It waters a bit when the brain is confident and there is room to fill. It waits 
 >
 > Water more only when confident. When in doubt, do the safe thing. That single bound is what turns ‘automatic watering’ from a scary idea into a safe one.
 
-## The shared-drain puzzle, and how it is untangled
+## Interpreting shared-drain measurements
 
 A real install is messier than one pot. Often **three grow rooms drain into one shared sump** (a collection bucket with a pump), and the air conditioner and dehumidifier drip into that same bucket. When the pump flushes, who caused it is unclear: a plant overflowing, or just the AC condensate. VRWE untangles this in three steps.
 
@@ -120,7 +120,7 @@ A real install is messier than one pot. Often **three grow rooms drain into one 
 >
 > A flush _right after_ a given room waters is a clear read-back: that room reached ‘full pot’ and the extra ran off. That is useful information, not a fault.
 
-## Pitfalls, and what fools a single sensor
+## Troubleshooting
 
 The failure modes below are the situations VRWE is built to survive. They are the reason it exists. The defence is the same in every case: cross-check against the water balance and drop confidence, rather than acting on a lone suspicious reading.
 
@@ -134,7 +134,7 @@ Channeling is worth a closer look, because it is sneaky. In container substrate,
 >
 > VRWE does not obey a reading that looks suspicious. It reconciles against the bank balance, and if they disagree it lowers confidence and acts cautiously. A single fooled sensor never becomes a flooded or starved plant.
 
-## Realistic expectations
+## Expected results and limitations
 
 > **KEY — What VRWE promises, and what it does not**
 >

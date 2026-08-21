@@ -23,7 +23,7 @@ _Environment · Climate · ~19 min read_
 
 > VPD is the one climate number the plant actually feels. What it is, the equation in a form you can use, why leaf temperature (not air) sets the real number, stage bands you can defend, the night-time dew-point discipline that keeps mould out, and how to measure it all without lying to yourself.
 
-## The air the plant feels
+## Purpose and scope
 
 Two rooms both read 55% humidity. One is at 20 °C and the plants are coasting. The other is at 28 °C and the same cultivar is stalled, leaf edges curling, drinking hard. Same number on the controller, completely different rooms, because relative humidity is a percentage of a moving target, and the plant doesn’t feel percentages. It feels the **pull**: how hard the air is trying to drag water out of its leaves.
 
@@ -31,7 +31,7 @@ That pull has a name (**vapour pressure deficit**, VPD) and it is the number you
 
 This paper is the psychrometrics you need without the textbook: what VPD is, the equation in a form you can punch into a phone, why _leaf_ temperature is the real number and how your fixture type skews it, stage bands and where they come from, the day/night strategy, the dew-point discipline that keeps bud rot out, and how to measure it all without the sensor lying to you. No prior physics assumed. Every term is defined.
 
-## Ten terms and you can read any climate chart
+## Definitions
 
 **Water vapour** — Water as a gas, mixed invisibly into the air. Steam you can see is droplets; vapour you can’t.
 
@@ -53,7 +53,7 @@ This paper is the psychrometrics you need without the textbook: what VPD is, the
 
 **Stomata** — The adjustable pores (mostly on the leaf underside) where vapour leaves and CO2 enters. Guard cells open and close them by the minute. Singular: stoma.
 
-## A ceiling, a level, and the gap between them
+## VPD fundamentals
 
 Think of air as a tank whose height changes with temperature. Warm the air and the tank gets taller. It _can_ hold more vapour. The water already in it doesn’t change just because you warmed the room; only the headroom changes. That headroom, the gap between the ceiling (es) and the level (ea), is VPD.
 
@@ -71,7 +71,7 @@ The curve is the single most useful piece of physics in climate control, because
 >
 > RH is a percentage of a moving ceiling. VPD _is_ the gap. The plant lives in the gap.
 
-## The equation, in a form you can actually use
+## Calculating VPD
 
 Everything runs on one empirical formula for the ceiling, good to a fraction of a percent over grow-room temperatures. It is the Tetens equation as standardised in FAO Irrigation and Drainage Paper 56[^fao56-1998], with T in °C and the result in kPa:
 
@@ -106,7 +106,7 @@ If you’d rather not raise e to anything before coffee, a lookup row of ceiling
 >
 > 1 kPa = 10 mbar = 10 hPa. Some US charts use pounds per square inch or grains of moisture, ignore them, the cultivation literature and every serious controller speak kPa. Ranges you will meet in a grow room: roughly 0.2 (fog) to 2.5 (desert).
 
-## Leaf temperature, not air temperature, sets the pull
+## Leaf temperature and leaf VPD
 
 Here is the correction that separates people who chart VPD from people who control it. The air _inside_ a leaf is saturated at the _leaf’s_ temperature. So the gradient driving transpiration is not es(air) − ea. It is **es(leaf) − ea**[^grossiord2020-vpd]. If leaf and air were always the same temperature the distinction wouldn’t matter. They aren’t.
 
@@ -124,7 +124,7 @@ Run the worked example again with real leaf temperatures and watch the answer mo
 >
 > The offsets above assume a transpiring, well-watered canopy. A drought-stressed leaf that has shut its stomata loses its evaporative cooling and can climb 6–12 °C above air temperature[^nelson2015-leaftemp]. If your IR thermometer reads a leaf running hot, the plant isn’t asking for a chart correction. It’s telling you transpiration has stopped. Check the root zone before you touch the climate.
 
-## The VPD chart and how to read it
+## Using a VPD chart
 
 The classic grower chart is just the equation pre-computed: temperature down the side, RH across the top, the deficit in every cell. Here it is, coloured by the stage bands from the next section:
 
@@ -140,7 +140,7 @@ The classic grower chart is just the equation pre-computed: temperature down the
 >
 > 27 °C / 65% and 21 °C / 45% both land near 1.3 kPa, but they are not interchangeable climates: temperature has its own biology on top of VPD. Cannabis photosynthesis peaks around 25–30 °C[^chandra2008-photo], morphology and stretch respond to the day/night temperature difference[^moe1995-dif], and disease pressure rides on absolute humidity. Pick the temperature your stage and fixture want first; use humidity to dial the VPD around it.
 
-## Stage bands: convention, hedged honestly
+## Stage-specific VPD targets
 
 The bands below are the industry’s working convention, not a law of nature. They come from grower practice converging over a decade[^pulse-vpd-guide], they sit inside the ranges recommended by the cannabis production literature[^jin2019-cannabis-env], and the one controlled cannabis humidity experiment we have brackets them from the wet side: flowering at 0.05–0.25 kPa instead of ~0.9–1.3 kPa cost 71% of flower biomass, delayed flowering three weeks and slashed cannabinoid concentration[^corredor2025-rh]. Treat the band as the middle of the road; your cultivar, light intensity and mould ceiling steer within it.
 
@@ -160,7 +160,7 @@ The bands below are the industry’s working convention, not a law of nature. Th
 >
 > Nobody has published a dose–response curve of cannabis yield against VPD across stages; the bands interpolate physiology, production reviews and fleet practice. What the evidence does say clearly: far too wet is expensive[^corredor2025-rh], far too dry shuts stomata and throttles photosynthesis[^grossiord2020-vpd], and stable beats perfect, plants held at a steady moderate VPD out-grow ones yo-yoing around the ‘ideal’ number[^inoue2021-vpd].
 
-## Transpiration: what the deficit actually drives
+## How VPD drives transpiration
 
 VPD matters because transpiration is the crop’s engine, and VPD is its throttle. Water evaporates from cell walls inside the leaf and diffuses out of the stomata into the deficit. That loss puts the whole water column under tension, pulling water, and everything dissolved in it, from the root zone up through the plant. Calcium in particular only travels with this stream, which is why chronically wet, low-VPD air shows up later as weak tissue and tip burn in fast growth. Evaporation also carries heat away: transpiration is the plant’s own air-conditioner, the reason a healthy LED canopy reads cooler than the room[^nelson2015-leaftemp].
 
@@ -176,7 +176,7 @@ The crucial subtlety: the response is not linear. As VPD climbs past the plant�
 >
 > Work in controlled environments keeps finding the same thing: minimising VPD _fluctuation_ holds stomata open and photosynthesis higher than chasing an ideal set-point through swings[^inoue2021-vpd]. A room that holds 1.1 all day beats a room that averages 1.2 by bouncing between 0.8 and 1.6.
 
-## Day and night are two different jobs
+## Day and night climate objectives
 
 Daytime VPD control is about growth: hold the stage band, keep it stable, let the engine run. Night-time VPD control is about _protection_. And it is where most rooms actually get hurt, because the moment the lights cut out, every term in the equation moves at once: the heat load vanishes, air temperature falls, the ceiling drops with it, and RH rockets even though not a gram of water entered the room.
 
@@ -191,7 +191,7 @@ Daytime VPD control is about growth: hold the stage band, keep it stable, let th
 >
 > The day–night temperature difference (‘DIF’) steers internode stretch in greenhouse crops, warmer days than nights stretch, flat or negative DIF compacts[^moe1995-dif]. Keep the night drop modest (2–4 °C) and you get manageable morphology _and_ a smaller RH spike to fight. A big macho night drop buys you compact plants and a condensation problem.
 
-## Dew point: where night humidity turns into liquid
+## Dew point and nighttime condensation risk
 
 RH tells you how full the air is. **Dew point** tells you where that fullness becomes free water: it is the temperature at which your actual vapour content saturates[^fao56-1998]. Any surface at or below the dew point (an exterior wall, bare steel, port glass, the outside of a fat cola radiating heat to a cold ceiling) collects liquid water. And free water plus spores is the bud-rot recipe: botrytis risk climbs steeply once canopy humidity passes about 70%[^punja2025-budrot-epi].
 
@@ -212,7 +212,7 @@ Dew point moves only when the actual water content moves. Dehumidify and it fall
 >
 > Inside a dense canopy, transpiration and still air hold humidity 15–25% above the room reading[^zhang2020-canopy-rh]. A room logging a smug 60% at night can be carrying an 80%+ microclimate inside the colas. Which is exactly where the rot starts. Defoliation and through-canopy airflow are humidity tools; see the [airflow paper](airflow-design.html) and [mould paper](mould-risk.html).
 
-## Measure where the plant lives, not where the wall is
+## Sensor placement at canopy level
 
 Climate control inherits every sin of its sensors. Three questions decide whether your VPD number is real: _where_ the sensor sits, whether radiation is heating it, and whether you know the leaf temperature at all.
 
@@ -227,7 +227,7 @@ Climate control inherits every sin of its sensors. Three questions decide whethe
 >
 > Park all your RH sensors together overnight in a sealed box with a saturated table-salt slurry: the air above it settles at ~75% RH. Anything reading more than a few points off gets offset or binned. Do it quarterly; capacitive RH elements drift.
 
-## Humidification and dehumidification: make the hardware pull together
+## Humidification and dehumidification equipment
 
 Almost all the water you irrigate ends up in the room air, transpiration returns it as vapour, and that latent load, not the lights, is what your dehumidification actually fights[^hpac-latent]. Size for it: a room feeding 100 L/day must be able to remove the better part of 100 L/day of vapour, with the hardest hours right after lights-off. Undersized dehumidification is the single most common root cause behind ‘mystery’ night humidity.
 
@@ -241,7 +241,7 @@ The classic self-inflicted wound is the humidifier and dehumidifier duelling: hu
 
 > **Diagram.** The adjustment order that keeps you out of oscillation: humidity is the fine dial, temperature the coarse one.
 
-## Common mistakes, named and shamed
+## Common VPD control mistakes
 
 **Chasing VPD with temperature**
 
@@ -267,7 +267,7 @@ Hammering the room between heat, humidifier and dehu to hold 1.25 exactly produc
 
 Plants droop, so RH goes up. But wilt is usually a supply problem (dry or drowned root zone), not a demand problem. Now the root zone is still broken _and_ the canopy is wet. Check substrate moisture before touching the air; a hot leaf on the IR gun is the tell that transpiration already stopped[^nelson2015-leaftemp].
 
-## Troubleshooting table
+## Troubleshooting
 
 | You see… | Likely climate cause | Do this |
 | --- | --- | --- |
@@ -279,7 +279,7 @@ Plants droop, so RH goes up. But wilt is usually a supply problem (dry or drowne
 | Two sensors disagree by 5%+ RH or 1 °C+ | Placement or radiation error, or drift | Shield and aspirate, move out of beams and blasts, salt-test quarterly[^tarara2007-shield] |
 | VPD perfect on paper, plants limp anyway | It's not the air, supply side (roots, substrate, EC) or leaf temp assumption wrong | IR the canopy, weigh or probe the substrate, re-derive VPD from leaf temperature[^nelson2015-leaftemp] |
 
-## The model to keep in your head
+## VPD control principles
 
 > **KEY — Five things, and you understand grow-room climate**
 >

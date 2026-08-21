@@ -23,7 +23,7 @@ _Veg · Timing · ~14 min read_
 
 > Veg is not the waiting room before the real grow. It is where plant count, pot size and canopy plan get converted into a number of days, and where almost every week-3-of-flower problem is either prevented or booked in.
 
-## Veg is where the crop is decided
+## Purpose and scope
 
 By the time you flip to 12/12, most of what the harvest can be is already locked in: how many bud sites exist, how much leaf powers them, whether the canopy is level, and whether the roots can fund the stretch. Flower doesn't build any of that. Veg does. Flower just runs the machine that veg built.
 
@@ -37,7 +37,7 @@ The working logic: veg exists to build a **frame** (roots, stems, nodes and leaf
 >
 > Anyone who has ever flipped 'when it looked big enough', from a first tent to a licensed room. Pairs with [defoliation & training](defoliation-training.html) (the how of cutting and bending) and [light acclimation](light-acclimation.html) (the how of raising PPFD). This paper is the _when and how long_.
 
-## The words you need before we start
+## Definitions
 
 Eight terms carry this whole guide. Skim them once; each comes back in context.
 
@@ -57,7 +57,7 @@ Eight terms carry this whole guide. Skim them once; each comes back in context.
 
 **EC (electrical conductivity)** — The strength of the nutrient solution, in mS/cm. Higher EC = more dissolved fertiliser. Veg feeds ramp EC up as the plant grows.
 
-## Build the frame that carries flower
+## Vegetative growth objectives
 
 Flowering doesn't create structure. Buds form at nodes and branch tips that already exist when you flip, plus whatever the stretch adds in its first weeks. So the size of the frame at flip is a hard ceiling on what one plant can carry. This shows up cleanly in trial data: in a controlled study that varied veg length from 1 to 4 weeks, each extra week of veg added about **3.3 g of dry flower per plant**, near-linearly[^schober-2024-veg-duration-density].
 
@@ -71,7 +71,7 @@ So veg length is not a lever you push for yield. It is the variable that _balanc
 >
 > **Veg for exactly as long as it takes each plant to build its share of the canopy at or below the maximum flip height, then flip.** Every day short of that is unfilled canopy in flower; every day past it is a lost fraction of a turn.
 
-## Plant count × pot size × canopy → days
+## Vegetative duration: plant count, pot size, canopy and days
 
 Work the chain in this order. Days come out the far end. They are never the input.
 
@@ -93,7 +93,7 @@ Work the chain in this order. Days come out the far end. They are never the inpu
 
 One nuance from the meta-analysis worth knowing: floral _biomass_ favoured short veg, but cannabinoid _concentration_ peaked with longer veg (roughly 6-7 weeks) in the pooled data[^dang-2022-photoperiod-switch-meta]. Treat that as a weak, cultivar-dependent signal, not a target. Potency is mostly genetics and flowering conditions. It mainly says: if you're forced into long veg by a plant-count cap, you are not obviously giving quality away.
 
-## Pot size sets how long veg can run
+## Pot size and vegetative duration
 
 Roots are the half of the frame you can't see, and they cap everything. A meta-analysis of 65 container studies found that, on average, **doubling root-zone volume increased plant biomass by ~43%**, and that cramped roots throttle growth mainly by cutting photosynthesis per unit leaf area, not just by limiting water[^poorter-2012-pot-size]. A root-bound plant is a solar array running at part load: it looks leafy, it just quietly stops producing.
 
@@ -114,7 +114,7 @@ The practical consequence: **every pot size buys a limited veg window** before t
 >
 > Stretch roughly doubles water and nutrient demand in three weeks, precisely when a root-bound pot can least supply it. The result is wilting between irrigations, early deficiency in week 2-3 of flower, and small, airy bud on a plant that looked fine at flip. If roots are circling and the pot dries in hours, pot up and give it a week _before_ the flip, not after.
 
-## Stretch: plan the flip height backwards from the ceiling
+## Planning flip height from ceiling clearance
 
 The most common veg sin isn't vegging too short. It's flipping too tall. After the flip, most cultivars surge vertically for 1-3 weeks, with the stretch largely finished around day 21 of flower[^ilgm-stretch-guide]. How much they stretch is strongly cultivar-dependent: compact indica-leaning plants might add ~50%, typical hybrids roughly double, and stretchy sativa-leaning cultivars can double or more[^gwe-flowering-stretch][^ilgm-stretch-guide]. Final height ≈ flip height × 1.5-2 for most plants you'll run. And you must budget for it before you flip, because you cannot un-stretch a plant into a fixed ceiling.
 
@@ -153,7 +153,7 @@ The working rule: top when the plant has **4-6 true nodes**, typically 3-4 weeks
 >
 > Count backwards from flip day: **flip minus 10-14 days is the last day for any major cut.** Topping later than that means either postponing the flip (a real cost, decide it deliberately) or flipping mid-recovery with uneven leaders, which the stretch then amplifies into an uneven canopy for the whole flower run.
 
-## Canopy establishment: level in veg or suffer in flower
+## Canopy establishment in vegetative growth
 
 Light height is a room-level setting: one fixture height serves every plant under it. That makes the _tallest_ plant the dictator, raise the light to protect it and every shorter plant is suddenly under-lit; hold the light down and the tall plant bleaches and heat-stresses. An uneven canopy at flip locks in a PPFD spread of hundreds of µmol between neighbouring plants for the entire flower cycle.
 
@@ -170,7 +170,7 @@ Uniformity is also a commercial property, not just an agronomic one: denser, les
 >
 > Nets installed in week 3 of flower (over sticky, branched, tangled plants) break branches and cost hours. The net's job is to receive the stretch as it happens. If it isn't on by flip day, it mostly isn't going on.
 
-## Veg environment: temperature, humidity, light, CO2
+## Vegetative climate targets
 
 Veg wants a slightly warmer, wetter, gentler room than flower: the plant is all leaf, shallow-rooted early on, and building tissue rather than ripening it. The table gives working bands; the two figures below unpack the ones people argue about.
 
@@ -195,7 +195,7 @@ Veg wants a slightly warmer, wetter, gentler room than flower: the plant is all 
 >
 > Modern cultivars are not all '12 hours or nothing': in a ten-cultivar trial, every one initiated flowering at photoperiods up to 14 h[^moher2023-photoperiod]. A veg room drifting toward short days, a failing timer, a mis-set sunrise/sunset controller, a long power cut, can start flipping plants you meant to keep vegetative. Hold veg at 16-18 h and put the light schedule on your daily checks.
 
-## Veg nutrition: N-forward, EC on a ramp
+## Vegetative nutrition
 
 Veg tissue is protein and chlorophyll factory-work, and both are nitrogen-hungry, which is why every veg feed is 'N-forward' relative to bloom formulas. The dose-response work is unusually clean here: in fertigation trials on medical cannabis, vegetative growth peaked around **160 mg/L N**, with 30 mg/L plants visibly starved and 320 mg/L plants going backwards[^saloner-2020-cannabis-nitrogen-supply]. More nitrogen is not more growth; it's a curve with a top.
 
@@ -215,7 +215,7 @@ Two rules of thumb do most of the work. **Colour before calendar:** a veg plant 
 >
 > Week-3 lower-leaf yellowing gets blamed on bloom nutrients constantly. The cause is usually two weeks earlier: an under-fed, root-limited or light-crushed plant that entered stretch with no nitrogen reserve. Fix it in veg, by flip day it is largely pre-paid.
 
-## Root-zone establishment before the flip
+## Root-zone establishment before flowering
 
 The fastest way to lose a week of veg is to drown a fresh transplant. A just-potted plant has a small root ball in a large, wet volume: keep that volume saturated and the roots have no reason to explore and no oxygen to do it with. Manufacturer stone-wool guidance for veg is small, frequent shots, on the order of ~3% of substrate volume, with a modest 5-15% runoff fraction, while avoiding hard drybacks (below roughly 25-30% water content in blocks) that stall young roots[^grodan-growguide-steering]. The rhythm is: wet enough to live, dry enough that roots keep chasing the water down and out.
 
@@ -233,7 +233,7 @@ By flip day the root zone, not the calendar, is the report card. Three checks: r
 >
 > All five, or you don't flip. You fix the failing one first. A flip delayed two days to finish root-in costs you two days. A flip forced past a failing gate costs you the weak version of the entire flower cycle.
 
-## Veg-length economics: turns versus plant count
+## Vegetative duration economics
 
 Flower length is written in the genetics, call it 56-63 days and largely untouchable. Veg length is therefore _the_ schedule lever you own, and it trades three currencies: turns per year plants per gram risk per plant.
 
@@ -252,7 +252,7 @@ Flower length is written in the genetics, call it 56-63 days and largely untouch
 >
 > Free plant count → sell time: short veg, high density, maximum turns. Capped plant count → sell frame: long veg, big pots, trees. The worst position is the unexamined middle, medium plants, medium density, chosen by habit, optimising nothing.
 
-## The six classic veg mistakes
+## Common vegetative-growth mistakes
 
 Every one of these is cheap to prevent in veg and expensive to discover in flower. Most rooms that struggle in week 3 of flower committed one of them a month earlier.
 
@@ -280,7 +280,7 @@ Big new pot kept saturated 'to help it settle in': oxygen-starved roots, no expl
 
 'One more week' by vibes, no canopy spec, no gate. Every unplanned week is a lost fraction of a turn, the most expensive habit in the room. **Fix:** write count × share × max height before transplant; flip on the gate.
 
-## Troubleshooting veg, and the model to keep
+## Troubleshooting
 
 Veg problems telegraph themselves early if you read the plant against the plan. The common ones:
 

@@ -23,7 +23,7 @@ _Harvest · Quality · ~24 min read_
 
 > A certificate of analysis is a measurement of one small sample, not a property of your crop. This guide reads a COA line by line, checks the potency maths (the 0.877 factor and the chemistry behind it), explains every test family from qPCR to ICP-MS, and is honest about the part the industry keeps getting caught at: inflated numbers.
 
-## The Piece of Paper That Prices Your Crop
+## Purpose and scope
 
 Every batch you sell (and in a medicinal system, every batch you release) ends its life as a one-page document from a testing laboratory: the **certificate of analysis**, or **COA**. It says what is in the flower (cannabinoids, terpenes) and what must not be (mould, heavy metals, pesticides, mycotoxins). Buyers mostly read one number on it, **total THC**, and that number moves the price. Which is exactly why it is the most gamed number in the industry, with peer-reviewed studies documenting systematic inflation on retail labels[^schwabe2023-inflated][^zoorob2021-bunching].
 
@@ -45,7 +45,7 @@ Here is the single idea that makes every section of this paper make sense: **a C
 >
 > The certificate is a _photograph of one gram_, taken through one lab's lens. It can be a sharp, honest photograph, that is what good sampling and a good lab buy you, but it is never the landscape. Everything in this paper is about knowing how much landscape your photograph actually shows.
 
-## Core Answer
+## Laboratory testing overview
 
 To read a COA in sixty seconds, check eight things in order:
 
@@ -60,7 +60,7 @@ To read a COA in sixty seconds, check eight things in order:
 
 And the honesty part, up front: the peer-reviewed record shows reported retail potency in several legal markets is systematically inflated, 70% of tested Colorado flower samples ran more than 15% below label in one study[^schwabe2023-inflated], 70% of a three-state audit fell outside ±20% of label[^geweda2024-audit], and product frequencies ‘bunch’ suspiciously just above the 20%-THC price threshold[^zoorob2021-bunching]. When a single number sets the price, someone will lean on it. The defence is knowing how the number is made. Which is the rest of this paper.
 
-## How a Test Actually Happens
+## Laboratory testing workflow
 
 Between ‘cut a sample’ and ‘PDF lands in your inbox’ sits a pipeline, and every stage of it shapes the final numbers. The instrument is the glamorous part; the sampling and the prep are where the number is really decided.
 
@@ -85,7 +85,7 @@ Each family of tests uses different physics, which is why one lab houses half a 
 >
 > Culture-based microbiology is the slow lane, colonies need days to grow. qPCR collapses that to hours, which is one reason labs and regulators have been migrating to it, with trade-offs covered in the microbial section below.
 
-## Reading a COA, Block by Block
+## How to read a certificate of analysis
 
 Below is a mock certificate from a fictional lab, _Example Analytical Ltd_, laid out the way most real ones are. The eight callouts are the eight places your eyes should go, in order.
 
@@ -104,7 +104,7 @@ Below is a mock certificate from a fictional lab, _Example Analytical Ltd_, laid
 >
 > Accredited labs will confirm a report number if you ring them, and many print a QR code or portal link for verification. Fake and altered COAs circulate in every market. A two-minute check beats arguing with a buyer later.
 
-## Total THC: the Maths and the Chemistry
+## Total THC: calculation and chemistry
 
 The living plant barely makes any THC. It makes **THCA**, tetrahydrocannabinolic acid, the same molecule wearing a carboxyl group (–COOH). THCA is not intoxicating; heat converts it to THC by **decarboxylation**: the carboxyl group breaks off and leaves as CO₂ gas[^wang2016-decarb]. A lighter, a vape, an oven. That is where most of the THC in your life is actually created.
 
@@ -126,7 +126,7 @@ Slow decarboxylation also happens at room temperature, during curing and storage
 >
 > CBDA → CBD uses its own molecular-weight ratio (also 0.877, since the acids and neutrals differ by the same CO₂ group): total CBD = CBD + 0.877 × CBDA. Any ‘total’ cannabinoid on a COA should be exactly this arithmetic, recompute it when it matters.
 
-## Why the Instrument Changes the Answer
+## How analytical method affects results
 
 Two chromatography families dominate potency testing, and they do not see the same molecules. **HPLC** (high-performance liquid chromatography) pushes the extract through a column in liquid at near-room temperature, so THCA and THC arrive at the detector as separate peaks. **GC** (gas chromatography) must vaporise the sample in an injector inlet at roughly 250–300 °C, and at that temperature THCA decarboxylates on the spot. The acid never reaches the detector as itself[^lazarjani2020-methods].
 
@@ -148,7 +148,7 @@ The nasty detail is that the in-inlet conversion is _incomplete and variable_. C
 >
 > Either the lab ran GC (fine, but the total is a floor, not an exact number), or the report is hiding detail. Both are reasons to ask for the method reference, which any accredited lab lists on the certificate.
 
-## Percent, mg/g and the Moisture Basis
+## Units and moisture basis
 
 Units first, because this one is mercifully simple: **% w/w and mg/g are the same number, one decimal place apart.** 1% w/w = 10 mg/g. Flower COAs usually report %, oils and edibles often report mg/g or mg per unit. 22.14% = 221.4 mg/g. No trap here beyond unfamiliarity.
 
@@ -169,7 +169,7 @@ The basis is the real trap. Flower is roughly 10–13% water when properly dried
 >
 > Your 22% dry-weight COA against a competitor's 20% as-received COA compares two different denominators. Check the basis line first, convert, then compare. Interlaboratory studies show labs vary meaningfully even on the moisture measurement itself[^nist-cannaqap2], so small cross-COA gaps are noise.
 
-## The Sample Defines the Number
+## Sampling and result representativeness
 
 Everything the instrument will ever see is decided before the courier arrives. A batch might be 12 kg; the composite sample a few tens of grams; the analytical portion that actually gets extracted, **half a gram to a gram**. That gram speaks for everything. Which is why pharmacopoeial guidance treats sampling procedure as a quality attribute in its own right, not paperwork[^sarma2020-usp].
 
@@ -189,7 +189,7 @@ Cannabis makes this harder than most matrices because the analyte lives in the t
 
 Even perfect sampling leaves honest variance: duplicate composites from one batch, run by one lab, routinely land a point or so of THC apart. Treat differences of one to two percentage points as the noise floor of the whole exercise, not as information.
 
-## Microbial Testing: Plates, qPCR and Aspergillus
+## Microbial testing methods
 
 Microbial testing asks two kinds of question. _How much is growing on this?_, answered by counts: total aerobic microbial count (**TAMC**), total yeast and mould (**TYM** / TYMC), bile-tolerant Gram-negatives. And _is anything dangerous present?_, answered by presence/absence tests for specified organisms: _Salmonella_, pathogenic _E. coli_, and in inhaled products the four pathogenic _Aspergillus_ species.
 
@@ -223,7 +223,7 @@ Plates and qPCR genuinely disagree, and metagenomic sequencing has shown why: cu
 >
 > Inhaled _Aspergillus_ can cause invasive aspergillosis in immunocompromised people, exactly the population medicinal cannabis serves. A count-based limit makes no sense for an organism where the acceptable inhaled dose for a transplant patient is effectively zero; hence ‘not detected in 1 g’.
 
-## The Big Four and the ICP-MS
+## Heavy-metal testing by ICP-MS
 
 Cannabis is an enthusiastic accumulator of metals. The same trait that gets hemp planted for soil remediation pulls cadmium and lead out of your substrate, fertiliser and water and stores them in tissue. The panel nearly everywhere centres on the **big four**: arsenic, cadmium, lead and mercury, with some frameworks screening a wider element list[^nist-cannaqap2].
 
@@ -242,7 +242,7 @@ The instrument is **ICP-MS**, inductively coupled plasma mass spectrometry. The 
 >
 > Flower fails metals because something upstream carried them in. Collect certificates for every fertiliser and substrate lot, test source water, and a metals fail becomes a lookup instead of a mystery. Inhalation limits are tight enough that one contaminated input lot can sink a batch.
 
-## Pesticide Panels: a List, Not a Guarantee
+## Pesticide panels and their limits
 
 A pesticide test is a _panel_: a defined list of compounds, each measured against an action limit. Pass means ‘nothing on _this list_ was found above _these limits_’, it does not mean pesticide-free, and it says nothing about compounds the panel doesn't include. That distinction matters because panels differ absurdly between jurisdictions: a survey of US state rules found 551 distinct pesticides regulated somewhere, with action limits for the same compound spanning up to four orders of magnitude between states[^jameson2022-stateregs].
 
@@ -255,7 +255,7 @@ A pesticide test is a _panel_: a defined list of compounds, each measured agains
 >
 > Look for: the panel size (how many analytes), the action limits and their source, the LOQ per analyte, and the method (LC-MS/MS, GC-MS/MS or both). A one-line ‘Pesticides: PASS’ with none of that attached is a vibe, not a result.
 
-## Residual Solvents and Mycotoxins
+## Residual-solvent and mycotoxin testing
 
 **Residual solvents** apply to extracts: whatever chemistry pulled the resin out, butane, propane, ethanol, CO₂ with ethanol polish. Traces can remain, and headspace GC measures them in the finished product. Limits are set per solvent, loosely following pharmaceutical solvent classes: near-zero tolerance for the genuinely toxic ones (benzene, toluene, never used deliberately, but present as impurities in cheap gas), workaday limits for the common process solvents.
 
@@ -270,7 +270,7 @@ Why does a _solventless_ hash or rosin still carry a solvent test? Three honest 
 >
 > Irradiated or heat-treated flower that now passes plate counts still carries whatever toxins the mould made first, and its dead DNA may still fail qPCR. If a batch needed remediation, the mycotoxin line is the one to read hardest.
 
-## Water Activity vs Moisture Content
+## Water activity and moisture content
 
 Two water numbers appear on flower COAs and they answer different questions. **Moisture content** (%) is _how much_ water is in the sample, mass of water over total mass. **Water activity** (aw, scale 0–1) is _how available_ that water is to microbes, the equilibrium relative humidity the sample generates in a sealed space. Mould does not care how much water you have; it cares whether it can get at it. That makes aw the microbially meaningful number, and it is why pharmacopoeial thinking on stored cannabis centres on a water-activity specification of ≤0.65[^sarma2020-usp].
 
@@ -287,7 +287,7 @@ Two water numbers appear on flower COAs and they answer different questions. **M
 
 Operationally: dry and cure to a water-activity target, and let moisture content be whatever it is. The paired numbers on the COA also sanity-check each other, aw 0.75 with 11% moisture claims a strange sample; question it.
 
-## The Inflation Problem: What the Record Shows
+## COA inflation: evidence and warning signs
 
 If a single number sets the price, the number comes under pressure. That is the documented, peer-reviewed history of legal cannabis markets, and any grower choosing a lab should know it cold.
 
@@ -305,7 +305,7 @@ The mechanism is visible in state datasets. Reported potency for chemotype-I flo
 
 What an operator does with this: pick a lab for its accreditation scope and method transparency, not its averages; split-sample occasionally against a second lab and expect ~1–2 points of honest scatter; keep retained samples; and treat any account manager who _promises_ numbers as a walking licence risk. In GMP-style medicinal systems the incentive flips, the lab serves batch release, not marketing. Which is a large part of why those numbers are steadier[^tga-tgo93][^nz-mcs-mqs].
 
-## What One Number Can and Can't Tell You
+## Interpretation limits of a single result
 
 A COA is genuinely useful, inside its limits. What a single certificate _can_ tell you: the potency class of the sampled material (a 15% batch and a 25% batch are truly different things); the pass/fail status of that sample against that panel; and, over many batches from your own room with consistent sampling, a trend worth steering by. What it _cannot_ tell you:
 
@@ -358,7 +358,7 @@ Reissued certificates happen; reissues that only ever move THC upward with no ex
 >
 > One certificate = one photograph of one gram, through one lab's lens, on one day. Photographs are useful. Just never confuse a photograph with the landscape, and be suspicious of anyone whose photographs are always sunnier than everyone else's.
 
-## NZ and Australia: Testing as Release, Not Marketing
+## Testing for release in NZ and Australia
 
 In the Australasian medicinal systems the COA plays a structurally different role from a retail label. In Australia, unapproved medicinal cannabis products must conform to **TGO 93** (Therapeutic Goods (Standard for Medicinal Cannabis) Order 2017): assayed cannabinoid content must sit within 90.0–110.0% of the label claim, contaminant limits (including aflatoxins and pesticide residues) apply, and the regulator can pull and test product at any time[^tga-tgo93]. In New Zealand, products must meet the **minimum quality standard** under the Misuse of Drugs (Medicinal Cannabis) Regulations 2019, with critical tests performed by GMP-certified facilities and ISO/IEC 17025 accreditation recognised for the rest[^nz-mcs-mqs].
 

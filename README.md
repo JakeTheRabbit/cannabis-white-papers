@@ -128,11 +128,11 @@ cd _build && python build.py
 
 **Add a paper:** create `_build/paper_<slug>.py` (`SLUG, TITLE, EYEBROW, SUB, META, SECTIONS, RELATED, REF_IDS`; `figure()` takes a raw inline `<svg>` string), register it in `build.py` (`PAPER_MODULES`) and `data/nav.py`, add interlink phrases in `links.py`, then rebuild. Citations live in `data/refs.py`.
 
-## Accuracy, self-review, and grain-of-salt notes
+## Evidence and limitations
 
 We go to great lengths to keep these guides honest. Part of that is **self-review**: we deliberately highlight claims that are subjective, only lightly backed by literature, or based on grower experience when controlled studies do not exist. Those are still useful as starting points — but they are not lab proof. **Do what works for your plants and meters.**
 
-Each HTML paper includes a **How sure is this paper?** panel with three tiers:
+Each HTML paper includes an **Evidence and limitations** panel with three tiers:
 
 - **Solid** — well supported by plant science, standards, or broad multi-source consensus
 - **Operational** — what many growers and rooms actually run; start here, then tune

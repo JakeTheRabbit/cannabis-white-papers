@@ -23,7 +23,7 @@ _Canopy · Training · ~12 min read_
 
 > A beginner's guide to topping, low-stress training, trellising, lollipopping and defoliation: what each one does, when to do it, and how to avoid overdoing it.
 
-## Why we cut and bend the plant on purpose
+## Purpose and scope
 
 Plant training and defoliation are deliberate physical interventions, bending, tying, and selectively removing leaves and branches, that reshape a cannabis plant so more of its energy lands in the flowers you actually harvest.
 
@@ -40,7 +40,7 @@ Left alone, a plant grows tall with one dominant top and a tangle of weak, shade
 >
 > Anyone growing cannabis who wants repeatable yield instead of a jungle. Pairs with the [airflow design](airflow-design.html) and [mould risk](mould-risk.html) papers, since canopy work is half about light and half about keeping air moving.
 
-## Every term, defined once
+## Definitions
 
 Before the how-to, here is the full vocabulary used throughout. These terms come up constantly in grow rooms and many beginners conflate them. Don't memorise them. Each comes back in context.
 
@@ -66,7 +66,7 @@ Before the how-to, here is the full vocabulary used throughout. These terms come
 
 > **Diagram.** The parts of the plant each technique acts on, from the bare lower ‘lollipop zone’ up to the growing tip that topping removes.
 
-## How training and defoliation actually raise yield
+## Yield effects of training and defoliation
 
 The underlying mechanism is simple: **light and air reaching more of the plant**. A flat, spread canopy puts dozens of bud sites at the same height under strong light, instead of one top hogging it all while the rest sits in shade.
 
@@ -111,7 +111,7 @@ In commercial veg, the first topping is typically done around **day 5–7** of v
 >
 > If you are new, skip topping for your first run and use LST. Bending and tying gives you most of the flat-canopy benefit with none of the recovery risk. You can always add topping once you know how your genetics stretch.
 
-## Trellising and spreading: locking the canopy flat
+## Trellising and canopy management
 
 A **trellis** is horizontal netting stretched over the table that the plants grow up through. It does two jobs: early on it holds a spread canopy in place, and later it stops heavy buds from snapping their branches. Spreading the branches so light reaches the whole table is what makes the high mid-bloom PPFD actually translate into yield[^anthony-2020-training-light-interception].
 
@@ -130,7 +130,7 @@ A common workflow sets all three trellis layers on **day 1 of flower**, with the
 >
 > The better you spread the canopy early, the fewer fan leaves you will have to remove later. A well-spread table is already open to light, so defoliation is then a light touch-up, not major surgery.
 
-## The defoliation and training schedule, day by day
+## Defoliation and training schedule
 
 Here is a clear flower-room timeline you can follow as a default and adjust to your genetics. It runs from trellising on day 1 through to an optional final defan late in bloom.
 
@@ -158,7 +158,7 @@ Here is a clear flower-room timeline you can follow as a default and adjust to y
 >
 > Phase 1 lollipopping belongs in the first week or two of flower, while the plant can still recover and redirect energy. Stripping the base hard late in bloom just wounds the plant when it should be bulking flower.
 
-## What NOT to overdo, and common beginner mistakes
+## Troubleshooting
 
 The single biggest mistake is **removing too many fan leaves**. Fan leaves are ‘sources’ that make more energy than they use, so the goal is to leave as many on as possible while still achieving light penetration and airflow. Strip too many and you starve the buds you are trying to grow. Over-pruning can cut into both yield and cannabinoid content rather than helping[^massuela-2022-pruning-cbd-yield].
 
@@ -184,7 +184,7 @@ A common starting point is about 2.3 sqft per plant, with a typical working rang
 >
 > It is tempting to keep cutting until the plant looks ‘clean.’ Resist it. Every fan leaf you remove was feeding flower. Open the canopy enough for light and air, then stop. If the room still smells musty, the answer is more airflow, not more cutting. Read the [airflow design](airflow-design.html) paper.[^massuela-2022-pruning-cbd-yield]
 
-## Realistic expectations and how to learn your plants
+## Expected results and limitations
 
 Training and defoliation are real yield and quality levers, but they are not magic, and the numbers depend on your genetics, light and environment. Treat the whole approach as data-driven and iterative: expect to refine over about three runs of the same cultivar before you hit its sweet spot for yield and quality.
 

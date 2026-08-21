@@ -23,7 +23,7 @@ _Precision · Crop steering · ~18 min read_
 
 > Run an autonomous crop-steering irrigation controller day to day. This is the plain-language starter guide: the P0–P3 cycle, moisture and salt targets, the controls you actually touch, the safety fail-safes, and what to do when something looks wrong.
 
-## What this system is, and what crop steering means
+## Purpose and scope
 
 > **EVIDENCE — Grain of salt**
 >
@@ -44,7 +44,7 @@ The system runs in two cooperating layers. A **Home Assistant integration** give
 > - The **‘Phase (manual set)’** dropdown is an _override_. It shows what you last picked, not the live phase. Read `sensor.crop_steering_current_phase` for the truth.
 > - Disarming is always safe by design. `switch.crop_steering_system_enabled = OFF` means nothing can fire, ever.
 
-## Key terms, defined
+## Definitions
 
 Three measurements run the whole system. Learn these first. Everything else builds on them.
 
@@ -88,7 +88,7 @@ The two steering modes pick which targets the engine chases. **Vegetative** mean
 
 *The two steering recipes. Choose one per row, or let a row follow the main setting.*
 
-## The controls and targets that matter
+## Irrigation controls and targets
 
 Day to day you touch a handful of controls. Two arm switches set how ‘on’ the system is. **System enabled** is the master arm. OFF means nothing irrigates ever, and the engine fails safe to OFF if it cannot read the switch. **Auto irrigation** only governs engine-driven shots. Turning it OFF still lets manual shots through, which is how you run ‘watch mode.’
 
@@ -112,7 +112,7 @@ The targets that steer growth are the per-phase VWC numbers (`p1_target_vwc`, `p
 >
 > Run **System enabled ON, Auto irrigation OFF** while you confirm your numbers. The engine is armed and computing decisions but will not fire on its own. You can fire manual test shots and watch how the room responds before granting full autonomy.
 
-## How a single irrigation decision is made (the gates)
+## Irrigation decision gates
 
 When the engine decides a shot is needed, that shot only fires if it passes **every safety gate in order**. A single failed gate blocks it. This is what stops an autonomous system making a bad call.
 
@@ -128,7 +128,7 @@ When the engine decides a shot is needed, that shot only fires if it passes **ev
 >
 > Source water that drifts out of the pH or EC window can lock out nutrients or burn roots. Gating on it, and alerting you rather than watering quietly, guards against feeding a bad solution to the whole room.
 
-## Calibration: getting the numbers right before you trust it
+## Calibration procedure
 
 Calibration is the most important practical step. The system only behaves correctly if its number entities match your _actual_ medium. The factory defaults are placeholders (50% VWC / 50% dryback), not your substrate. Dielectric moisture probes read differently in every medium, so a substrate-specific calibration is what makes the numbers mean anything.[^zawilski-calibration-2023]
 
@@ -157,7 +157,7 @@ Root growth itself changes how the probe reads over a run, so re-check the band 
 >
 > If you skip calibration and run the 50%/50% factory defaults, the steering is meaningless. The engine chases numbers that have nothing to do with your medium. Calibrate first, then arm.
 
-## How-to recipes for common jobs
+## Routine operating procedures
 
 Most routine actions have a safe, prescribed method. Prefer the integration services over raw switch-flipping. The services run the full gated hardware sequence so you cannot skip a safety check by accident.
 
@@ -177,7 +177,7 @@ Most routine actions have a safe, prescribed method. Prefer the integration serv
 >
 > It grants a 30-minute bypass of the _pH/EC gate only_. Every other interlock still applies: system armed, tank not empty, daily-volume cap. It auto-clears the moment pH/EC return in range.
 
-## Safety fail-safes, emergency stop, and troubleshooting
+## Safety interlocks and troubleshooting
 
 The system has layered fail-safes: the pH/EC source-water gate, a tank dry-run guard (blocks only when the low float reads empty), a blocked-dripper guard that parks a row for 2 hours after too many failed shots, fail-safe reads (an unconfirmed arm switch is treated as disabled), and persistent state saved every 5 minutes so zones come back in their saved phase after a restart.
 
@@ -214,7 +214,7 @@ The system has layered fail-safes: the pH/EC source-water gate, a tank dry-run g
 >
 > The source flags that `sensor.crop_steering_dryback_percentage` and substrate EC reads can be suspiciously low (Row 1 at 0.48 mS/cm). Salinity strongly affects how dielectric probes report.[^qi-salinity-2024] Check probe calibration before trusting EC steering.
 
-## Realistic expectations
+## Expected results and limitations
 
 > **KEY — This is a controller, not a magic autopilot**
 >

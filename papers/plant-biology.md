@@ -23,7 +23,7 @@ _Reference · Biology · ~26 min read_
 
 > What kind of plant cannabis actually is, every part of it named, and the machinery underneath: the life cycle stage by stage, how the night triggers flowering, sex and hermaphroditism, photosynthesis, roots and hormones. The biology every other paper on this site leans on.
 
-## What this is and how to use it
+## Purpose and scope
 
 Every other paper on this site quietly assumes you know what a node is, why the dark period is sacred, and what a trichome actually does. This is the paper that teaches it. It is the reference chapter: the plant itself, part by part and stage by stage, with the mechanisms underneath explained in plain language.
 
@@ -35,7 +35,7 @@ Where a topic has its own dedicated paper, this chapter gives you the biology an
 >
 > Anyone starting out, and anyone mid-grow who keeps meeting words like bract, internode, phytochrome or sink and wants them nailed down once, properly, with sources.
 
-## What kind of plant cannabis is
+## Cannabis growth form and taxonomy
 
 Cannabis sativa L. is an annual, normally dioecious, wind-pollinated flowering herb in the family Cannabaceae, the same small family as hops. It completes its whole life in one season, keeps male and female flowers on separate plants, and mails its pollen on the wind.[^small-2015-cannabis-taxonomy][^mcpartland-2018-cannabis-systematics]
 
@@ -58,7 +58,7 @@ Each of those dry facts is a grow-room rule wearing a lab coat:
 >
 > Annual, dioecious, wind-pollinated, night-triggered. Nearly every hard rule in cultivation  (cull males early, seal the dark period, plan the whole cycle before you start) is one of these four facts asserting itself.
 
-## Sativa, indica, ruderalis: the honest version
+## Sativa, indica and ruderalis classification
 
 The folk story says there are two (or three) kinds of cannabis: tall, airy, energising _sativas_; short, dense, sedating _indicas_; and a tiny weedy _ruderalis_ that flowers on its own. It is a useful shorthand for growth habit. As biology, and especially as a predictor of effect, it does not hold up.
 
@@ -88,7 +88,7 @@ Genomics settled the practical question. A 2021 study genotyped over 100 commerc
 >
 > Buy and breed on chemotype (COA numbers), documented cultivar behaviour (stretch, finish time, mould tolerance) and your own grow logs. 'Sativa' and 'indica' still earn their keep as rough descriptions of plant shape, nothing more.
 
-## A tour of the plant, top to bottom
+## Plant anatomy
 
 Strip away the mystique and a cannabis plant is a repeating unit stacked on itself: a stem segment, a node carrying leaves, and a dormant growing tip tucked into each leaf angle. Learn that unit and you can read any plant in any room.
 
@@ -114,7 +114,7 @@ The stem is the plumbing between the two halves of the plant: xylem hauls water 
 >
 > A seed-grown plant builds a taproot with laterals branching off it. A rooted cutting never gets one. It grows a fibrous ball of adventitious roots from the cut stem instead (see the [cloning](cloning.html) paper). Both work; clones are simply shallower and quicker to dry out at the base.
 
-## Inside the flower: bract, calyx, pistil, stigma
+## Flower anatomy
 
 An individual female cannabis flower is tiny and easy to misread: one small ovary wrapped in a resin-coated leaf-like pod, with two white hairs reaching out of the top. What growers call a bud is hundreds of these units packed along a stem axis with small sugar leaves between them.[^spitzer-rimon-2019-florogenesis]
 
@@ -138,7 +138,7 @@ Male flowers are a different design for a different job: five small tepals and f
 >
 > A single flowering male sheds millions of airborne grains, and HVAC will deliver them for you. Unless you are deliberately breeding, males get identified early (section 10) and removed before any flower opens.
 
-## Trichomes: where the value is made
+## Trichome anatomy and function
 
 Everything the market pays for (THC, CBD, the aroma terpenes) is manufactured and stored in glandular trichomes: microscopic mushroom-shaped glands on the flower surface. The cannabinoids are not 'in the bud' in some general sense; they sit in a resin reservoir inside each gland head, between the secretory cells and their waxy cap.[^livingston-2020-trichome-maturation]
 
@@ -160,7 +160,7 @@ Two practical consequences. First, gland heads change colour with age, clear, th
 >
 > A NZ$15 jeweller's loupe (60x) turns trichomes from folklore into data: type, density, colour, damage. It is the single cheapest instrument in cultivation.
 
-## The life cycle, stage by stage
+## Cannabis life cycle
 
 Cannabis is monocarpic: it flowers once, with everything it has, and then dies. Harvest is you interrupting its senescence at the profitable moment. The stages below are one continuous program; each hands the next its starting conditions.[^hesami-2023-morphological-lifecycle]
 
@@ -177,7 +177,7 @@ Cannabis is monocarpic: it flowers once, with everything it has, and then dies. 
 
 Autoflowering cultivars compress this map and ignore the light schedule entirely. They get their own section (09) because the difference is genetic, not managerial.
 
-## Photoperiodism: the plant counts the night
+## Photoperiodism and flowering
 
 How does a plant with no eyes measure the seasons? With a light-switchable pigment called phytochrome. It exists in two interconvertible forms: Pr (inactive) flips to Pfr (active) the instant red light (~660 nm) hits it, and Pfr flips back under far-red light (~730 nm), or slowly, over hours, in darkness. Daylight is rich in red, so all day Pfr stays high: a chemical flag reading 'the lights are on'.[^legris-2019-phytochrome-mechanisms]
 
@@ -199,7 +199,7 @@ Two subtleties worth owning. First, the full mechanism is more than the toggle: 
 >
 > Walk the flowering room during lights-off after 10 minutes of letting your eyes adapt. Tape over equipment LEDs, seal door frames, check pinholes in ducting. Repeated light leaks delay and degrade flowering and are one of the stress inputs behind hermaphroditism (section 11).[^punja-holmes-2020-hermaphroditism]
 
-## Autoflowers: ruderalis and the broken night-counter
+## Autoflowering and ruderalis traits
 
 Far northern feral cannabis, the populations often called Cannabis ruderalis, though its rank as a species is contested, faced summers where nights barely happen. Waiting for long nights there means dying unpollinated in the frost, so those populations evolved day-neutrality: flower on age, ignore the photoperiod.[^small-2015-cannabis-taxonomy][^mcpartland-2018-cannabis-systematics]
 
@@ -218,7 +218,7 @@ Running autos is a different management contract. You gain schedule freedom (18-
 
 *Two contracts with the same species. Autos trade control for speed and schedule freedom.*
 
-## Sex: XX, XY, and reading pre-flowers
+## Sex determination and pre-flower identification
 
 Cannabis carries true sex chromosomes, which is rare in plants: females are XX, males are XY, and the male is the heterogametic sex, exactly the human arrangement. The X is the largest chromosome in the set and the Y is larger than any autosome, so sex is decided at fertilisation, not by growing conditions.[^divashuk-2014-xy-sex-chromosomes] Regular seed therefore runs close to 50:50, and every regular-seed grow is a sexing exercise: identify the males early, remove them before any flower opens.
 
@@ -246,7 +246,7 @@ Commercial feminised seed uses the same loophole deliberately, with chemistry in
 >
 > Treat an exposed anther exactly like a male in the room: isolate or cull the plant, note the cultivar and the stress that preceded it, and check its neighbours daily for a week. Anthers can self-seed the plant that made them and everything downwind.[^punja-holmes-2020-hermaphroditism]
 
-## Photosynthesis for growers: light, CO2 and heat are one system
+## Photosynthesis: light, CO2 and temperature
 
 Photosynthesis in one breath: chloroplasts in the leaves use light energy to split water and bolt CO2 from the air onto sugar molecules. Sugar is the plant's only income, every gram of root, leaf and flower is bought with it. Light drives the reaction, CO2 is the raw material, and temperature sets how fast the enzymatic machinery can run.
 
@@ -262,7 +262,7 @@ This model earns its keep daily: it is why healthy fan leaves are kept until lat
 
 **Source and sink** — Source: a tissue exporting sugar (mature sunlit leaf). Sink: a tissue importing it (root tip, young leaf, flower). Yield is sources funding the sinks you care about.
 
-## Roots: the half you never see
+## Root systems
 
 Half the organism is underground and invisible, and most beginner disasters happen there first. The architecture is simple: from seed, a taproot drives down and lateral roots branch off it; from a cutting, a fibrous ball of adventitious roots forms instead. Either way the absorbing surface is not the thick white cables you see at transplant. It is the fuzz of root hairs just behind the growing tips, fragile, short-lived and constantly rebuilt as the roots explore.
 
@@ -276,7 +276,7 @@ The last few millimetres around each root, the rhizosphere, is its own ecosystem
 >
 > Pot weight, dryback rate, runoff EC/pH, root colour at transplant (white and branching = good; brown, slimy or smelly = oxygen problem). The roots report daily, through instruments, not eyesight.
 
-## Hormones in one table
+## Plant hormones
 
 Five hormone families explain most of what a cannabis plant does, and most of what growers do to it. Every training technique is hormone manipulation performed with scissors and timers; every rooting gel and feminisation spray is the chemical version of the same game.
 
@@ -294,7 +294,7 @@ Five hormone families explain most of what a cannabis plant does, and most of wh
 >
 > Hormones act by concentration and ratio, varying tissue by tissue. That is why topping releases only the nearest few nodes, why rooting gel goes on the cut and not the leaves, and why one stressor rarely has one tidy effect.
 
-## Failure modes: biology biting back
+## Common biological failure modes
 
 Most cultivation disasters are one of the mechanisms in this paper running exactly as designed, against you. The six below account for a large share of ruined first grows.
 
@@ -322,7 +322,7 @@ Topping and heavy training in flower spends the plant's budget on recovery while
 
 Buying 'a relaxing indica' is buying label art: the labels are genetically indistinct and predict aroma at best. **Fix:** chemotype and COA numbers, cultivar sheets, your own logs.[^watts-2021-terpene-synthase-labels]
 
-## Quick reference: the whole vocabulary in one table
+## Plant biology quick reference
 
 The working vocabulary of this site, one line each. Bookmark this section, every other paper uses these words without stopping to define them.
 

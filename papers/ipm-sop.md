@@ -23,7 +23,7 @@ _Plant health · IPM · ~14 min read_
 
 > A plain-language standard operating procedure for keeping pests and disease out of an indoor cannabis grow. How to scout, when to act, how to use good bugs and sprays, and how to keep records that hold up.
 
-## What IPM is and why a grow lives or dies by it
+## Purpose and scope
 
 > **NOTE — Jurisdiction**
 >
@@ -39,7 +39,7 @@ One missed mite colony or one powdery-mildew outbreak can destroy an entire harv
 >
 > Use the lightest effective control first and escalate to sprays only when thresholds force it. A small problem caught early is cheap. A missed one can cost the whole crop.
 
-## Every term you need, defined once
+## Definitions
 
 Here is the language before the procedure. You do not need to memorise it. Each term comes back in context below.
 
@@ -61,7 +61,7 @@ Here is the language before the procedure. You do not need to memorise it. Each 
 
 > **Diagram.** Two separate clocks start the moment you spray: one for people (REI), one for the crop (withholding period).
 
-## Scouting: find it before it finds you
+## Scouting procedure
 
 Scouting is the engine of IPM. Everything downstream depends on catching pests early. A practical baseline is for the room lead to visually inspect at least 5 percent of the room at every check, logging any finding immediately, while dedicated IPM scouts do deeper precision inspections[^punja-2021-emerging-diseases-cannabis].
 
@@ -75,7 +75,7 @@ Work a fixed route every time: scout the tables and substrate for frass and debr
 >
 > Russet mites and broad mites are invisible to the naked eye. Use a jeweler's loupe to confirm tiny pests before you decide what to do.
 
-## Action thresholds: knowing exactly when to act
+## Action thresholds
 
 A threshold turns observation into a decision so nobody has to guess. A workable two-tier model reflects a common commercial action approach[^punja-2021-emerging-diseases-cannabis]. At the first sign of a single mite, aphid, or similar pest, assume there are more: scout the entire room, begin exclusion measures (limit who enters), and line up biological controls. As an example planning default, once more than 3 percent of a room is affected, escalate to approved pesticide (zero-tolerance organisms override any percentage) applications, subject to growth stage and management sign-off.
 
@@ -89,7 +89,7 @@ Growth stage is itself a hard gate. In a regulated soilless facility, plants are
 >
 > Restrict sulphur to mothers and vegetative growth, not flowering[^scott-punja-2021-powdery-mildew-management]. Applied late, it taints the finished flower.
 
-## Biological controls: putting good bugs to work
+## Biological controls
 
 Biocontrol releases predators that hunt your pests when legal in your jurisdiction. They usually leave no chemical residue on the cannabis plant at every stage, and if they run out of prey they simply die off and fall away. The job is to match the predator to the pest and the conditions.
 
@@ -117,7 +117,7 @@ Set every spray rate, interval, crop stage, restricted-entry interval and pre-ha
 >
 > Spraying at full media saturation reduces foliar uptake and burn risk[^scott-punja-2021-powdery-mildew-management]. Time it to the irrigation transition when the substrate is wettest.
 
-## Sanitation and quarantine: stop pests at the door
+## Sanitation and quarantine
 
 Most pests are walked in, so the cheapest control is keeping them out. The biggest single entry point is footwear[^punja-2021-emerging-diseases-cannabis], so replace shoes or use overboots before entering grow rooms, wash hands on entry and after every break, and wear nitrile gloves at all times, changing them after breaks or after handling chemicals (when in doubt, change them).
 
@@ -131,7 +131,7 @@ Every incoming plant goes through quarantine: dunk or wash it in an approved fol
 >
 > Scissors, buckets, sprayers, and PPE stay with one room and get cleaned after every task. A shared tool is a highway for pests.
 
-## The daily routine, the decision flow, and record-keeping
+## Daily IPM routine, decision flow, and records
 
 Put it together as a repeatable shift routine. The daily loop is short, and the decision flow handles whatever you find.
 
@@ -150,7 +150,7 @@ Put it together as a repeatable shift routine. The daily loop is short, and the 
 >
 > REI signage must be posted on the room door and removed only after the interval, with the room calendar marked during and after application[^epa-wps-notice-to-workers]. Good records double as proof a treatment worked. Compare trap counts before and after.
 
-## Common mistakes and what good IPM actually looks like
+## Troubleshooting and operating expectations
 
 The frequent failures are predictable: skipping scouting until damage is visible, spraying without confirming the pest, ignoring the treatment window and spraying in late flower, sharing tools or PPE between rooms, and letting good bugs wash into the irrigation system.
 

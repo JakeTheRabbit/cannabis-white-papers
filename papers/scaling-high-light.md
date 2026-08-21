@@ -23,7 +23,7 @@ _Advanced · Scaling to high light · ~16 min read_
 
 > Light sets the demand. CO₂, water, airflow, feed and heat-removal have to supply it. Your yield ceiling is whichever one tops out first, so size every system to the light, find the wall, and dial the light down to meet it.
 
-## Light is the throttle, not the engine
+## Purpose and scope
 
 > **EVIDENCE — Grain of salt**
 >
@@ -39,7 +39,7 @@ Calculate **which system tops out first**, then raise that ceiling or set the li
 >
 > Light is a demand you create. CO₂, water, feed, airflow and heat-removal are the supply. Yield tracks light _only while every supply line keeps up_, the first one that can't is your real ceiling.
 
-## The words you need
+## Definitions
 
 Six terms carry the rest of the guide. If these are already second nature, skip to the ladder.
 
@@ -55,7 +55,7 @@ Six terms carry the rest of the guide. If these are already second nature, skip 
 
 **Mass flow** — Nutrients ride into the roots dissolved in the transpiration stream. Faster transpiration pulls more water, and more feed, through the plant, which is why [airflow](airflow-design.html), feed EC and light are all bolted together.
 
-## The scaling ladder
+## Light-scaling sequence
 
 Here is the whole system on two tables, rung by rung. Pick your light level on the left and read across: everything in that row has to be true at the same time, or the light in that row is a lie. The rungs run from an ambient-CO₂ room (600 µmol) up to a fully-supported sealed room (1500 µmol).
 
@@ -87,7 +87,7 @@ The second table is the **water, feed and heat** side of the same row, what you 
 
 Read the two tables together and the shape of the problem jumps out. Going from 600 to 1500 µmol is 2.5× the light, but also 2.5× the transpiration, feed and heat. And because you now raise _both_ feed EC and irrigation volume, the actual nutrient you push through the plant each day climbs roughly **five-fold**, not 2.5-fold. High-light plants are not a bit hungrier. They are dramatically hungrier, wetter and hotter, all at once.
 
-## One room, five light levels
+## Light-scaling example: a 50 m² flowering room
 
 Per-m² numbers are abstract, so put them in a real box. Take a **50 m² flowering canopy**, a 10 m × 5 m room, roughly 35 × 650 W fixtures, about 150 m³ of air. Multiply the ladder through and you get the actual gear list.
 
@@ -104,7 +104,7 @@ Per-m² numbers are abstract, so put them in a real box. Take a **50 m² floweri
 
 Notice the last two columns between 1000 and 1500 µmol. The fixtures rise 50%, but dehumidification jumps from 391 to 587 pints a day, two grow dehumidifiers to three, and cooling goes from about five tons to eight. **The photons are the cheap part.** The tonnage and the pints are where the money and the failures live, and they are almost always what caps a real room before the lights do.
 
-## EC climbs with light
+## EC management under high light
 
 The feed column deserves its own look, because raising EC with light is the step growers most often skip, and the one that quietly caps yield. The logic is mass flow: brighter light means faster growth, which means the plant pulls more nutrient every day. It gets that nutrient two ways at once, and **both** scale with light, more water moves through the plant (Table 2's transpiration column)[^collado2025-light], and each millilitre of that water carries more salt (higher EC). Under-feed a bright canopy and it fades from the bottom up; the light is there but the raw material isn't.
 
@@ -121,7 +121,7 @@ The feed column deserves its own look, because raising EC with light is the step
 
 There is a second reason EC and light move together: EC is also a [steering](one-steering-law.html) lever. A higher root-zone EC raises osmotic pressure and gently reins in water uptake, pushing the plant generative, useful in flower. So at high light you raise EC for two jobs at once: to feed the faster growth, and to hold generative balance against all that extra irrigation. The trap is raising EC to steer while forgetting volume has to rise too; starve the volume and the salts simply concentrate and burn.
 
-## Find your limiting factor
+## Identifying the limiting factor
 
 Now the payoff. Every support system can sustain some maximum light level, a PPFD ceiling of its own. Work out the ceiling for each, and **the lowest number is your room's real ceiling.** Everything above it is wasted light. Here is how to turn each piece of installed gear into a PPFD number, per m² of canopy.
 
@@ -143,7 +143,7 @@ Run the six numbers, take the minimum, and you have found the wall. The diagram 
 
 > **Diagram.** Four systems, four different ceilings. Cooling could take 1140 and CO₂ could feed 1500, but the dehumidifier tops out at 1050 µmol, the amber line. That is the room's real ceiling. Run the lights at 1300 and the extra 250 µmol just makes humidity the dehu can't remove. Dial to 1050, or buy more dehu.
 
-## Four rooms, four walls
+## Limiting-factor case studies
 
 The same method, four common rooms. Each has plenty of everything except one thing, and that one thing is the yield. The fix is never ‘more light.’
 
@@ -163,7 +163,7 @@ The same method, four common rooms. Each has plenty of everything except one thi
 >
 > **The room:** climate and gas all support 1300, but irrigation is a couple of short shots and feed EC is stuck at 2.4. **The math:** the canopy wants 4.5+ L/m²/day and 3.4 EC; it's getting ~3 L and 2.4. Water ceiling 200×(deliverable L)÷m² lands near **900**, and the low EC caps the same rung. **The wall:** irrigation volume + EC. **The tell:** midday wilt and a pale, fading lower canopy. **The fix:** get shot volume and frequency right first, _then_ climb EC up Table 4 — not the other way round.
 
-## Dial the light to the wall
+## Setting light intensity to the limiting factor
 
 Once you know your lowest ceiling, you have exactly two honest moves.
 
@@ -191,7 +191,7 @@ Every row here is a limiting factor showing itself. The symptom tells you which 
 | Tip burn, crispy leaf margins | Feed EC too high for the light (above the rung) | Drop EC a step, or raise light/volume to match |
 | Lush outside, larfy damp interior | Airflow gate, boundary layer not stripped inside | Defoliate + under-canopy air; CO₂ can't work in dead air |
 
-## Realistic expectations
+## Expected results and limitations
 
 Cannabis yield really does track light almost linearly, up to roughly 1500–1800 µmol[^rm2021-light]. But that finding comes with fine print those studies never hide: it holds _only_ when CO₂, temperature, water and feed are all lifted to match. Strip the support away and the same lights give you bleached tops and a heat problem. The linear curve is a promise conditional on the whole convoy keeping up.
 

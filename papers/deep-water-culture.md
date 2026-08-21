@@ -23,7 +23,7 @@ _Water culture · Root-zone oxygen · ~38 min read_
 
 > Roots hanging in nutrient water have no substrate to hide behind. This paper builds the system from the physics up: how much oxygen the water can actually hold, why more bubbling makes iron uptake worse, what an ORP probe is really measuring, and how a commercial RDWC programme is put together.
 
-## A reservoir doing four jobs at once
+## Purpose and scope
 
 In coco or rockwool the substrate is a buffer. It holds water, holds air, holds a charge, and quietly forgives the feed you got slightly wrong this morning. Deep water culture deletes that buffer. The roots hang in the nutrient solution itself, and the reservoir has to do every job the substrate used to do, simultaneously, continuously, with no margin.
 
@@ -55,7 +55,7 @@ Everything else in this paper is a consequence of it. The highest growth rates i
 >
 > Anyone running or considering water culture, and anyone who has looked at an ORP reading and not known what to do about it. It assumes you already know what EC and pH are. If you do not, read the pH and water-quality papers first. Cannabis is the worked example, but the physics applies to any crop.
 
-## How much oxygen water can actually hold
+## Oxygen solubility in nutrient solution
 
 Start with the constraint nobody can negotiate. Oxygen is barely soluble in water. At 20 °C under normal air at sea level, water holds about **9.1 mg/L** of dissolved oxygen at equilibrium[^dwc-benson-krause-1984]. Air itself, by comparison, is about 280 mg/L of oxygen. Water at saturation carries roughly one-thirtieth of the oxygen that the same volume of air carries. That is the number a submerged root has to live on.
 
@@ -89,7 +89,7 @@ The other lever is bubble size. Conventional air stones make bubbles of a few mi
 
 *Left: a coarse air stone, large bubbles, visible turbulent plume. Right: nanobubble water, an even opalescent haze with no rising column. Same gas, entirely different mechanical consequence for the root zone.gpt-image-1*
 
-## How much oxygen the plant actually needs
+## Plant oxygen demand
 
 The literature is unusually consistent about the bottom of the range and unusually messy about the top. Both facts are useful.
 
@@ -109,7 +109,7 @@ At the top, the honest answer is that returns diminish and then stop. Raising NF
 >
 > A deficiency pattern that does not respond to correcting the feed, in a system whose EC and pH are on target, should send you to the DO meter and the thermometer before it sends you to the nutrient shelf.
 
-## More bubbling is not more better
+## Aeration limits and dissolved oxygen
 
 This is the section most likely to change how you run your system. Aeration delivers oxygen, which is good. Aeration also delivers _agitation_, which is not. Past a modest rate, the agitation costs you more than the oxygen buys.
 
@@ -151,7 +151,7 @@ A commercial RDWC procedure specifies **one 5 × 5 cm medium round air stone per
 
 This is also the strongest argument for nanobubble generation over conventional stones. Nanobubbles dissolve gas without producing a rising plume, which decouples oxygen delivery from mechanical agitation, the two things a coarse air stone forces you to buy together. Micro/nanobubble-aerated irrigation at 15 and 30 mg/L produced larger root volume, richer rhizosphere bacterial communities and higher yields than at 5 mg/L[^dwc-wang-2024-mnb-microbiome], and reviews of the technology in controlled environment agriculture frame it primarily as a way to keep the root zone aerobic enough for beneficial microbes to function[^dwc-mamun-2025-onb-health].
 
-## What an ORP probe is actually telling you
+## Interpreting ORP readings
 
 Oxidation-reduction potential is the most commonly misinterpreted measurement in water culture. It is worth getting right, because the correct interpretation changes the action you take.
 
@@ -229,7 +229,7 @@ ORP is now tracking your oxidiser residual and the manufacturer's shock zone is 
 
 *Calibration is not optional maintenance in water culture, it is the difference between a diagnosis and a guess. A drifting ORP probe and a fouled ORP probe look identical on the display.gpt-image-1*
 
-## Iron, chelates, and the chlorosis you cannot feed away
+## Iron chelation and chlorosis
 
 Iron is the element water culture punishes you over. It is required in large amounts relative to other micronutrients, it is almost insoluble in oxygenated water at anything above mildly acidic pH, and it only stays available because we wrap it in a chelate.
 
@@ -261,7 +261,7 @@ The three common chelates are not interchangeable. They differ in how high a pH 
 
 Research into alternative iron sources continues, Schiff-base Fe(II) complexes stable at alkaline pH have outperformed both Fe-EDTA and Fe-EDDHA on root and shoot dry weight in maize[^dwc-mirbolook-2023-fe-source], but none of it is commercially relevant yet. For now the lever is pH control and chelate selection.
 
-## Organic inputs in a water reservoir
+## Organic inputs in recirculating reservoirs
 
 Ask whether to run kelp, fulvic acid or microbial inoculants in DWC and you will get two confident, opposite answers. Both camps are describing real experience. The disagreement is about which constraint binds in _their_ system.
 
@@ -291,7 +291,7 @@ Plants exert a stronger selective influence on their own rhizosphere than the wa
 
 If you do want biology, targeted inoculants have better evidence behind them than general-purpose organic feeds. _Bacillus subtilis_ and _Pseudomonas fluorescens_ applied together suppressed _Pythium aphanidermatum_ synergistically, upregulating defence genes and raising survival to 83%[^dwc-rashad-2024-biocontrol], and _Pseudomonas_ biocontrol across crops can match chemical fungicides, with the consistent caveat that field performance is far less reliable than laboratory performance[^dwc-alattas-2024-pseudomonas].
 
-## Root rot is an oxygen problem wearing a pathogen costume
+## Root rot: oxygen stress and pathogen risk
 
 The single most important finding in the water-culture pathology literature is that low dissolved oxygen and _Pythium_ root rot are not two independent risks. They are one coupled failure with a shared pathway through root-zone oxygen status.
 
@@ -319,7 +319,7 @@ On chemical oxidisers as a treatment: they work, and they have a cost. Hydrogen 
 >
 > Dumping peroxide into a reservoir at the first sign of brown roots is understandable and usually counterproductive. It burns root tissue that is already compromised, it is consumed within hours so it does nothing durable, and it treats the symptom while the cause, warm, under-oxygenated water, is untouched. Check the thermometer and the air manifold first. A hypochlorous product dosed at a maintenance rate is a more defensible routine approach than peroxide shocks, and the manufacturer schedules it that way: a large dose at fill and change-out, then a small continuous maintenance rate through the run[^dwc-athena-rdwc-2024].
 
-## Solution temperature controls everything else
+## Solution temperature
 
 If you take one operational lever away from this paper, take this one. Reservoir temperature simultaneously sets oxygen supply, oxygen demand, pathogen growth rate and pH stability. Nothing else you can adjust touches that many variables at once.
 
@@ -344,7 +344,7 @@ Commercial practice tracks a descending ramp rather than a single setpoint. A pu
 >
 > In any room warmer than about 24 °C with lights on, an uninsulated reservoir will equilibrate somewhere unhelpful. Insulate first. It is free and it flattens the diurnal swing. Then chill if you still cannot hold the band. Note the interaction with aeration: a blower drawing hot room air is also a heater, which is one more reason the air supply belongs outside the canopy space. In a CO2-enriched flower room the air pump should sit outside the room entirely[^dwc-athena-rdwc-2024].
 
-## Why water culture runs a leaner feed than you expect
+## Nutrient concentration in deep-water culture
 
 Growers moving from coco to RDWC almost always over-feed at first, because the EC numbers look wrong. They are not wrong. Water culture genuinely runs lower, and the reason is structural.
 
@@ -372,7 +372,7 @@ Two more line items worth understanding. Potassium silicate is commonly used in 
 >
 > Controlled drought stress applied late in flower has been shown to raise cannabinoid concentration and yield per unit area substantially in container-grown cannabis[^dwc-caplan-2019-drought]. Water culture cannot execute it. If your steering strategy depends on generative dryback, DWC is structurally the wrong system, not a worse one, a different one. Its advantages lie in uninterrupted vegetative-phase growth rate, not in water-based steering.
 
-## Sizing and building the system
+## DWC system sizing and construction
 
 Design decisions in water culture are mostly about buying yourself margin, because the system has none by default.
 
@@ -399,7 +399,7 @@ Design decisions in water culture are mostly about buying yourself margin, becau
 
 *A control bucket in practice: pump, float valve on the RO line, and probes clipped into a perforated stilling tube that shields them from the bubble plume.gpt-image-1*
 
-## Running it: checks, change-outs and diagnosis
+## Operation and troubleshooting
 
 Water culture rewards routine and punishes improvisation. The daily round is short; the value is in doing it every day, at the same time, and writing the numbers down.
 

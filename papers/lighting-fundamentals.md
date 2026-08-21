@@ -23,7 +23,7 @@ _Beginner · Light · ~14 min read_
 
 > A from-zero guide to how grow light actually works: what to measure, what to aim for at each stage, and how to avoid cooking your plants.
 
-## What this is (and why light is the engine)
+## Purpose and scope
 
 Light is not just ‘on or off.’ It is the raw fuel a plant turns into sugar, and the single biggest lever on yield and quality you control indoors. This paper assumes you know nothing: it defines every term, gives concrete numbers to aim for at each growth stage, and explains the one switch that makes a plant flower.
 
@@ -35,7 +35,7 @@ Plants eat light. Photosynthesis converts light energy plus CO2 and water into s
 >
 > Read this one for the targets. Read the [light acclimation](light-acclimation.html) paper for how to ramp up to them safely, so young plants adapt instead of bleaching.
 
-## PAR, PPFD, DLI and umol/J in plain English
+## Definitions
 
 Get the gist of these five terms and the rest of the paper falls into place. They all describe the same thing from different angles: how much usable light a plant is getting.
 
@@ -53,7 +53,7 @@ Get the gist of these five terms and the rest of the paper falls into place. The
 
 > **Diagram.** PAR is the 400 to 700 nm band plants use. Lux meters weight toward green, so they are the wrong tool for plant light.[^eichhorn-bilodeau-2019-photobiology-cannabis-review]
 
-## Spectrum: what each color does
+## Spectrum and plant responses
 
 Blue light, roughly 400 to 500 nm, keeps plants compact with tight internode spacing and is linked to denser growth and resin in flower[^magagnini-2018-light-spectrum-morphology-cannabinoids]. Red light, 600 to 700 nm, is the most photosynthetically efficient band and drives flowering and stretch[^westmoreland-2021-blue-fraction-efficacy-cannabis].
 
@@ -73,7 +73,7 @@ Blue light, roughly 400 to 500 nm, keeps plants compact with tight internode spa
 >
 > A quality full-spectrum white LED covers veg and flower. Intensity beats spectrum tuning, so spend your attention on PPFD and DLI before you chase color recipes.
 
-## Intensity and the daily dose: targets by stage
+## Light intensity and daily light integral: targets by stage
 
 Young tissue cannot process intense light, so targets climb as the plant matures. Clones and seedlings want about 100-250 PPFD (DLI roughly ~6-16 mol)[^rodriguez-morrison-2021-light-levels-yield-photosynthesis], early-to-late veg about 300-600 PPFD (DLI ~20-35 mol), and flower about 700-900 PPFD without added CO2 (DLI ~30-45 mol)[^llewellyn-2022-light-intensity-proportional-uv-no-effect].
 
@@ -93,7 +93,7 @@ Pushing past about 900 PPFD only pays off if you also raise CO2 to 1000-1200 ppm
 
 *Stage targets. 600 PPFD x 18h (~39 mol) is closer to ~900 PPFD x 12h than to 800 PPFD x 12h.*
 
-## The photoperiod flip that triggers flowering
+## Photoperiod and floral initiation
 
 Photoperiod-type cannabis stays vegetative under long days (commonly 18/6) and is forced to flower by switching to 12 hours light and 12 hours uninterrupted dark[^kusuma-2021-nir-leds-delay-flowering-phytochrome]. This is ‘the flip.’
 
@@ -105,7 +105,7 @@ The plant does not count light hours. It measures the length of the unbroken dar
 >
 > Light leaks during the dark period are the number one beginner flowering failure: stalled bloom, re-veg, or hermaphrodites. Far-red and red are exactly what phytochrome senses. Seal pinholes, cover indicator LEDs, use light-proof ducting. If you can see in the dark, so can the plant.
 
-## LED vs HPS vs CMH, and reading efficacy
+## LED, HPS and CMH fixtures: efficacy and selection
 
 Modern LED is the efficiency leader at roughly 2.7-3.0 umol/J for good fixtures (budget units 2.0-2.3), runs cooler, and lasts longer[^nelson-bugbee-2014-efficacy-led-vs-hps]. HPS (high-pressure sodium) sits around 1.7-1.9 umol/J and runs hot but is cheap to buy. CMH/LEC (ceramic metal halide) lands lower, around 1.3-1.9 umol/J, but has a pleasant broad spectrum.
 
@@ -121,7 +121,7 @@ Efficacy (umol/J) is the number to compare. A 3.0 umol/J LED makes about 60% mor
 
 *Compare on efficacy and total PPF plus a real PPFD map, never on lumens or 'equivalent watts.'*
 
-## Hanging height, coverage, and a stage-by-stage setup
+## Lighting setup by growth stage
 
 Intensity falls with distance, but the inverse-square rule (a quarter of the light at twice the distance) is a point-source ideal that LED bars only approximate, so map PPFD with a meter rather than trusting the arithmetic. Height is your coarse intensity dial, the dimmer is the fine one. Hang about 24 in for seedlings and clones, ~18 in for veg, and ~12-16 in for flower, then fine-tune with the dimmer and a PAR meter.
 
@@ -141,7 +141,7 @@ Verify coverage by taking PPFD readings at nine points: four corners, four edge-
 >
 > Pair this with the [light acclimation](light-acclimation.html) paper: raise the dimmer or lower the fixture over several days rather than jumping a fresh clone to full intensity.
 
-## Light stress, far-red and UV, and common mistakes
+## Troubleshooting
 
 Too much light shows as bleaching (white or yellow bud tips directly under the fixture), upward-cupping or ‘taco’ leaves, and faded color even when nutrients are fine. The fix is to dim or raise the light, not to feed more.
 
@@ -157,7 +157,7 @@ Far-red (~730 nm) can speed the transition to dark via the phytochrome system an
 
 *The biggest avoidable errors: jumping a clone to flower-level PPFD, trusting lux/wattage over a PAR meter, and ignoring light leaks.*
 
-## Realistic expectations
+## Expected results and limitations
 
 More light only helps up to the point where something else (CO2, water, nutrients, temperature or genetics) becomes the limiting factor. Past saturation you pay for electricity and heat with no extra yield, and eventually with stress[^rodriguez-morrison-2021-light-levels-yield-photosynthesis].
 

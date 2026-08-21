@@ -23,7 +23,7 @@ _Facility · Energy · ~18 min read_
 
 > Where the kilowatt-hours actually go in an indoor grow (lighting, HVAC, dehumidification) and the cited playbook for spending fewer of them: efficacy, the double dividend, demand charges, water reuse, and the retrofit order that pays.
 
-## Your power bill is a design choice
+## Purpose and scope
 
 Indoor cannabis is one of the most energy-intensive ways humans make anything. Growing one kilogram of flower in a conventional indoor room takes thousands of kilowatt-hours, the classic model puts it around 6,000 kWh, about six units of electricity per gram[^mills2012-carbon]. At industry scale that added up to roughly 1% of US national electricity use back in 2012, and the 2025 update puts the industry's climate footprint at 44 million tonnes of CO₂e a year, the emissions of about 10 million cars, with a US energy bill near US$11 billion[^mills2025-oneearth].
 
@@ -33,23 +33,7 @@ Almost none of that intensity is compulsory. The spread between an efficient roo
 >
 > It walks a beginner from reading their own power bill to running a cited efficiency retrofit. You do not need an engineering background. Every term is defined on the way through. It pairs with [lighting fundamentals](lighting-fundamentals.html) (what the photons do), [grow-room systems](grow-room-systems.html) (what the equipment does), and [scaling to high light](scaling-high-light.html) (what happens when you push intensity up).
 
-## Four facts that explain the whole bill
-
-**1. Lighting is the biggest single line, climate is the biggest family.** In the classic end-use model, lighting takes about a third of total energy, and ventilation, dehumidification and air conditioning together take almost half[^mills2012-carbon]. A Pacific Northwest utility survey of licensed producers found lighting closer to three quarters of indoor electric load in that mild climate[^nwpcc2018-cannabis]. In greenhouse-gas terms, the big 2021 life-cycle study found HVAC the largest contributor in every US location it modelled, with lights second everywhere[^summers2021-natsust]. Whichever way you slice it: lights plus climate is 80–90% of the story, everything else is noise.
-
-> **Diagram.** The end-use split from Mills' 2012 model of a standard indoor production module: lighting 33%, ventilation + dehumidification 27%, air conditioning 19%, everything else about 21%[^mills2012-carbon]. The exact split moves with climate and lighting era, but lights + climate dominating does not.
-
-**2. Every lighting watt is paid for twice.** Essentially all fixture input power ends up as heat in the room, which your cooling then removes at a cost of roughly one extra watt for every three of heat. Cut lighting power and the cooling bill falls with it, the double dividend (Section 7).
-
-**3. You are billed for kW as well as kWh.** Commercial tariffs commonly charge for your peak demand (kW) on top of your energy (kWh)[^nrel2017-demand]. Three flower rooms flipping on at the same second can set a peak that costs you all month, for zero extra yield.
-
-**4. You cannot manage what you do not meter.** The facilities that benchmark (kWh per square metre of canopy, grams per kWh) are the ones that improve, the benchmarking bodies estimate most growers can cut at least 30% of energy spend with existing measures[^rii-powerscore].
-
-> **KEY — The one-sentence version**
->
-> Photons are the product; every other kilowatt-hour is cleaning up after the photons, so buy photons more efficiently first, then move the heat and moisture more intelligently, and meter everything so you can prove it worked.
-
-## kWh literacy: the vocabulary of the bill
+## Definitions
 
 Energy talk collapses into a handful of units. Get these straight and every spec sheet, tariff and benchmark in this paper reads easily.
 
@@ -69,7 +53,23 @@ Energy talk collapses into a handful of units. Get these straight and every spec
 
 One more habit: convert everything to the same basis before comparing. US sources quote kWh per square foot and kWh per pound; multiply by 10.8 to get kWh/m² and by 2.2 to get kWh/kg.
 
-## Where the kilowatt-hours go, measured
+## Energy-cost fundamentals
+
+**1. Lighting is the biggest single line, climate is the biggest family.** In the classic end-use model, lighting takes about a third of total energy, and ventilation, dehumidification and air conditioning together take almost half[^mills2012-carbon]. A Pacific Northwest utility survey of licensed producers found lighting closer to three quarters of indoor electric load in that mild climate[^nwpcc2018-cannabis]. In greenhouse-gas terms, the big 2021 life-cycle study found HVAC the largest contributor in every US location it modelled, with lights second everywhere[^summers2021-natsust]. Whichever way you slice it: lights plus climate is 80–90% of the story, everything else is noise.
+
+> **Diagram.** The end-use split from Mills' 2012 model of a standard indoor production module: lighting 33%, ventilation + dehumidification 27%, air conditioning 19%, everything else about 21%[^mills2012-carbon]. The exact split moves with climate and lighting era, but lights + climate dominating does not.
+
+**2. Every lighting watt is paid for twice.** Essentially all fixture input power ends up as heat in the room, which your cooling then removes at a cost of roughly one extra watt for every three of heat. Cut lighting power and the cooling bill falls with it, the double dividend (Section 7).
+
+**3. You are billed for kW as well as kWh.** Commercial tariffs commonly charge for your peak demand (kW) on top of your energy (kWh)[^nrel2017-demand]. Three flower rooms flipping on at the same second can set a peak that costs you all month, for zero extra yield.
+
+**4. You cannot manage what you do not meter.** The facilities that benchmark (kWh per square metre of canopy, grams per kWh) are the ones that improve, the benchmarking bodies estimate most growers can cut at least 30% of energy spend with existing measures[^rii-powerscore].
+
+> **KEY — The one-sentence version**
+>
+> Photons are the product; every other kilowatt-hour is cleaning up after the photons, so buy photons more efficiently first, then move the heat and moisture more intelligently, and meter everything so you can prove it worked.
+
+## Measured energy use by system
 
 Mills (2012) built the first transparent end-use model of a standard indoor production module and it is still the reference skeleton: lighting about 33% of energy, ventilation and dehumidification 27%, air conditioning 19%, with CO₂ injection, water handling, space heat and drying making up the rest[^mills2012-carbon][^zheng2021-review]. Power density in a flowering room runs near 200 W per square foot, the same order as a data centre[^remillard2017-aceee].
 
@@ -81,7 +81,7 @@ Real facilities scatter around that skeleton. The Northwest Power and Conservati
 >
 > Mills' 33/27/19 split describes an HPS-era room. Swap to LED and lighting kWh falls ~40% while the plants keep transpiring, so the dehumidifier's _share_ of the bill rises even as the total falls. Post-retrofit, climate is usually your biggest family of load. Plan the HVAC work (Section 8) as the second act of the same project, not a separate one.
 
-## kWh per gram: the honest spread
+## Energy-intensity benchmarks
 
 How much electricity does a gram of flower take? The studies disagree, usefully. The spread tells you how much of the number is physics and how much is choices.
 
@@ -103,7 +103,7 @@ To make the units concrete: 4,400 kWh/kg is 4.4 kWh per gram, about the electric
 >
 > These studies draw different lines. Some count electricity only; the 2021 model adds natural gas, upstream materials and CO₂ supply; per-canopy figures ignore veg rooms, drying and offices unless stated. Comparing your metered kWh/g to a study with a different boundary proves nothing. Pick one metric you can measure consistently, total facility kWh per gram of saleable dry flower per cycle is the honest one, and compare yourself to yourself, cycle over cycle.
 
-## Efficacy: the most important number you can buy
+## Lighting efficacy
 
 A grow light's job is photons. Efficacy, photosynthetic photons out per joule of electricity in, written µmol/J, is the number that decides your lighting bill at any given light level. A 1,000 W double-ended HPS delivers about 1.72 µmol/J[^kusuma2020-efficacy]. By 2020, commercial LED fixtures had reached 2.5–2.8 µmol/J for white+red spectra and 3.0 for blue+red, with practical limits near 3.4 and 4.1 respectively[^kusuma2020-efficacy]. The DesignLights Consortium's horticultural qualification floor, the minimum to get on the QPL that rebate programmes reference, is 2.5 µmol/J from April 2025, which the DLC notes is more than 45% above the best non-LED option[^dlc-hort-v4].
 
@@ -120,7 +120,7 @@ Two honesty notes. First, efficacy differences within the LED market are now big
 > - Dimmed LEDs usually run slightly _more_ efficiently per photon, so sizing fixtures with headroom and running at 80–90% costs little.
 > - Efficacy buys you either the same light for less power or more light for the same power, decide which before you buy (see [scaling to high light](scaling-high-light.html)).
 
-## Every lighting watt is paid for twice
+## Lighting heat and HVAC load
 
 Here is the physics that makes lighting efficiency the anchor measure. Essentially every watt you feed a fixture ends up as heat in the room. The photons themselves are absorbed by leaves and surfaces and become heat too. While lights are on, your cooling must remove that heat, and a vapour-compression system spends roughly one watt of compressor power per three watts of heat moved (the ACEEE industry analysis assumed 1.2 kW per ton, a COP of about 2.9, with cooling required year-round during lights-on)[^remillard2017-aceee].
 
@@ -133,7 +133,7 @@ Run the numbers over a year and the dividend is most of the payback case. The AC
 > - **Winter heating can claw some back.** In cold climates, HPS waste heat was doing free heating during lights-on. After an LED swap you may buy some of that heat back, ideally with a heat pump at COP 3, not resistance coils at COP 1.
 > - **The latent load does not shrink.** Transpiration is driven by the environment and canopy, not by fixture wattage. Your dehumidifier keeps working. Less AC runtime also means less incidental moisture removal on the AC coil, so the dedicated dehu often works _harder_ post-retrofit. Budget for it (Section 8).
 
-## Moving heat and water for fewer watts
+## HVAC and dehumidification efficiency
 
 After lighting, the climate plant is where the remaining kilowatt-hours live[^mills2012-carbon][^summers2021-natsust]. You cannot opt out of the work. The room's heat must leave and the transpired water must leave, but the same work can be done at wildly different efficiencies. Four levers, roughly in order of how much they save:
 
@@ -151,7 +151,7 @@ After lighting, the climate plant is where the remaining kilowatt-hours live[^mi
 >
 > Every controller has a deadband, the gap between 'start cooling' and 'start heating'. Rooms tuned to fight for ±0.3 °C burn energy purely on nervous equipment. Widen deadbands to what the plants actually notice (±1 °C is generous), make sure heating and cooling setpoints can never overlap, and stop the AC and dehu fighting each other, reheat wars between two controllers are a classic silent kWh leak.
 
-## kW, kWh, and why lights-on time is a billing decision
+## Demand charges, energy use and photoperiod
 
 Your bill has two different products on it. **Energy** (kWh) is the total you used. **Demand** (kW) is the fastest you used it, typically the highest 15- or 30-minute average in the month, and commercial tariffs commonly price it separately. In a US survey, nearly five million commercial customers were on tariffs with demand charges above US$15 per kW-month[^nrel2017-demand]; at that rate a 190 kW peak costs ~US$2,850 a month before you have paid for a single kWh.
 
@@ -175,7 +175,7 @@ This is the cheapest retrofit in the whole paper: it is a scheduling change. Flo
 >
 > Demand-charge and TOU structures vary enormously between utilities and countries, some meter demand only at peak times, some all day, some ratchet your worst month across the year. The strategy above is universal; the arithmetic is not. Model your specific tariff with a spreadsheet and one month of interval data before committing the facility to a night schedule.
 
-## The water bill is an energy bill wearing a raincoat
+## Water-system energy use
 
 Indoor cannabis is thirsty in a specific, recoverable way. Reported irrigation demand runs around 9–11 litres per plant per day for mature indoor plants in peak season, and about 22.7 L/day for outdoor plants at the height of summer[^zheng2021-review], though per-plant numbers vary so much with pot size, plant size and stage that the benchmarking bodies deliberately measure water per unit of canopy instead[^rii-powerscore]. In drain-to-waste systems another 10–30% is pushed through deliberately as runoff to control salts (see the irrigation papers for why).
 
@@ -189,7 +189,7 @@ Rules of thumb for the loop. Treat condensate before reuse, carbon/sediment filt
 >
 > Log your daily condensate volume. It tracks whole-room transpiration, so a sudden drop flags stalled plants, a failed dehu, or an irrigation fault, often a day before anything looks wrong. Facilities instrumented for it treat condensate litres as a crop biosignal, not just reclaimed water.
 
-## The carbon story: grid × kWh, and the greenhouse question
+## Carbon intensity and greenhouse emissions
 
 Carbon follows the same arithmetic as the bill: kWh consumed × the grid's emissions per kWh. The 2021 national study put cradle-to-gate emissions of indoor production at 2,283–5,184 kg CO₂e per kg of dried flower depending on location (median 3,658), with US grid intensities spanning roughly 245–766 g CO₂e/kWh[^summers2021-natsust]. Mills' earlier central estimate was 4,600 kg CO₂e/kg, enough that a single joint carried about 1.5 kg of CO₂[^mills2012-carbon]. The 2025 industry-wide update lands at 44 Mt CO₂e per year, about 1% of total US emissions, with roughly 90% of it attributable to indoor production[^mills2025-oneearth].
 
@@ -206,7 +206,7 @@ For licensed indoor growers the route is usually fixed by regulation, security a
 > - Never net off purchased offsets against an intensity claim without saying so.
 > - If you sell into markets with sustainability reporting, per-gram energy and water intensity are the two numbers buyers increasingly ask for[^rii-powerscore].
 
-## Measure → LED → controls → dehu → envelope
+## Energy retrofit priorities
 
 Efficiency projects fail by sequencing, not by technology. The order below exists because each step changes the sizing maths of the next, do them backwards and you buy equipment twice. It also front-loads the cheap wins so the early savings fund the later capital.
 
@@ -222,7 +222,7 @@ Efficiency projects fail by sequencing, not by technology. The order below exist
 >
 > LED before HVAC, always: relighting cuts the sensible load 30–40%, so HVAC bought first is HVAC bought oversized, and oversized units short-cycle and dehumidify badly forever. The only exception is a failed unit that must be replaced today; even then, size it for the post-LED room you are about to build.
 
-## You can't manage what you don't meter
+## Energy metering
 
 The utility meter tells you one number a month about a building full of separate machines. Everything in this paper becomes manageable the day you split that number: current-transformer (CT) submeters on the lighting circuits, the HVAC plant, the dehumidifiers and the pump/controls remainder cost little per circuit and connect to any modern monitoring or home-automation platform. From there, three habits do the work:
 
@@ -236,7 +236,7 @@ The utility meter tells you one number a month about a building full of separate
 
 This is also where the honest sustainability numbers come from (Section 11): a metered kWh/g trend, cycle over cycle, is the entire audit trail. Facilities that submitted benchmarking data found on average that at least 30% savings were available with existing measures[^rii-powerscore], but every one of those savings was discovered by a meter, not a hunch.
 
-## The six ways energy projects go wrong
+## Common energy-project failures
 
 These are the recurring wrecks. Every one of them is avoidable at design time and expensive afterwards.
 
@@ -264,7 +264,7 @@ Free water, straight to the roots, plus dissolved coil metals and a drain-pan bi
 
 Quoting a flattering kWh/g against a study with a different boundary, electricity-only vs life-cycle, canopy-only vs whole facility, convinces nobody who checks. **Fix:** define your boundary once, publish it with the number, and compare against your own prior cycles first (Section 5).
 
-## Symptom → likely cause → what to check
+## Troubleshooting
 
 Energy faults announce themselves on the meter before the crop. Work this table with your interval data open.
 
@@ -280,7 +280,7 @@ Energy faults announce themselves on the meter before the crop. Work this table 
 
 *The meter is the first diagnostic instrument. Most rows here are visible in energy data 24–48 h before they are visible on plants.*
 
-## Photons are the product; everything else is overhead
+## Energy-management principles
 
 Strip the whole subject to one sentence: an indoor grow converts electricity into photons, and then spends more electricity cleaning up the heat and humidity the first spend created. Every kilowatt-hour on your bill is one or the other. That is why efficacy compounds (Section 6), why the double dividend exists (Section 7), and why the retrofit order runs lighting before HVAC (Section 12).
 

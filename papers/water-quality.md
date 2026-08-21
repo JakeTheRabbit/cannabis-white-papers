@@ -23,7 +23,7 @@ _Feed · Water · ~14 min read_
 
 > What is in your water before nutrients ever go in: tap vs RO vs well, starting EC, alkalinity and carbonates, chlorine and chloramine, hardness, and when reverse osmosis is actually worth the money.
 
-## Your water is the first ingredient, not a blank slate
+## Purpose and scope
 
 Every feed you give a cannabis plant starts with water, and that water is almost never pure. Tap, well, and rainwater all arrive carrying dissolved minerals, gases, and treatment chemicals that change pH, take up room in your nutrient recipe, and can harm roots or beneficial microbes before you add a single drop of fertiliser.
 
@@ -35,7 +35,7 @@ The plant never tastes your nutrients in isolation. It tastes water plus mineral
 >
 > It walks an absolute beginner from understanding what is in their source water, to testing it, to deciding whether reverse osmosis is worth the cost. Pairs with the [pH management](ph-management.html) and [nutrient mixing](nutrient-mixing-athena.html) papers.
 
-## The vocabulary, in plain words
+## Definitions
 
 Water-quality talk is full of jargon that hides simple ideas. Get the gist of these and the rest of the paper reads easily. The big one to grasp early: alkalinity is not the same thing as pH.
 
@@ -53,7 +53,7 @@ Water-quality talk is full of jargon that hides simple ideas. Get the gist of th
 
 > **Diagram.** pH is where the water sits at this moment. Alkalinity is the buffer that drags it back up afterwards, which is why a perfect tank reading can still drift in the root zone.[^umass-water-quality-ph-alkalinity]
 
-## Tap, well, and rain: three very different starting points
+## Water source types
 
 Municipal tap water is treated and consistent but carries chlorine or chloramine and often moderate-to-high mineral content, sometimes 150-300+ ppm straight from the faucet[^umass-water-quality-ph-alkalinity]. Well water is the wild card: it can be very hard, high in iron, manganese, or sulfur, and it varies seasonally, so it must be tested. Rainwater is naturally low in dissolved minerals but offers little buffering and can pick up roof and storage contaminants.
 
@@ -67,7 +67,7 @@ Starting EC contributes to the final feed EC, but a 300 ppm TDS display does not
 > - **Well:** free and unmetered, but composition swings. Test at least twice a year and after heavy rain.
 > - **Rain:** low starting PPM like RO, but low buffering. Filter it and watch for sodium and contaminants.
 
-## Alkalinity and carbonates: why your pH won't stay put
+## Alkalinity and carbonate buffering
 
 Alkalinity is the single most misunderstood water parameter for beginners. It is caused by dissolved carbonates and bicarbonates, and it acts like a chemical spring that drags root-zone pH back upward even after you adjust the tank to 5.8. A common acceptable range for container cannabis is roughly 40-100 ppm CaCO3, with many growers targeting 30-60 ppm as an optimum[^fisher-purdue-ho242-alkalinity-soilless]. The conversions to know: 1 meq/L equals 50 ppm CaCO3 equals 61 ppm bicarbonate[^umass-water-quality-ph-alkalinity].
 
@@ -77,7 +77,7 @@ Above roughly 100-150 ppm CaCO3, alkalinity steadily raises substrate pH and loc
 
 > **Diagram.** The workable window. Below 30 ppm you lose your buffer, the 30-100 ppm band is comfortable, and above 150 ppm you fight rising pH and micronutrient lockout.[^fisher-purdue-ho242-alkalinity-soilless]
 
-## Chlorine, chloramine, and hardness: what helps and what harms
+## Chlorine, chloramine and hardness
 
 Municipalities disinfect with chlorine or the more stable chloramine, and both can damage root tips and beneficial microbes. Root-tip injury has been reported at chlorine concentrations as low as 0.4 ppm[^ferrarezi-2023-chlorine-phytotoxicity-rex-lettuce], which matters most for living-soil and microbe-driven growers. Chlorine off-gasses if water sits and aerates for about 24 hours, but chloramine does not, and removing it requires a catalytic carbon filter or RO[^date-2005-chloramines-lettuce-hydroponic].
 
@@ -102,7 +102,7 @@ Hardness is the one part of your starting water that is genuinely useful. It is 
 
 *Hardness classes. Helpful minerals at the soft end, pH trouble at the hard end.*
 
-## Why growers use RO, build back, and when you actually need it
+## Reverse osmosis and mineral rebuilding
 
 Reverse osmosis strips water to near-zero PPM, typically 0-10 ppm TDS, giving a blank canvas so every mineral the plant gets is one you chose[^umass-water-quality-ph-alkalinity]. Because RO removes calcium and magnesium too, you must build back. That usually means adding a CalMag supplement plus your base nutrients to reach a target of roughly 100-200 ppm with good Ca and Mg before the rest of the feed[^kpai-2024-mineral-nutrition-vegetative-cannabis].
 
@@ -116,7 +116,7 @@ Reverse osmosis strips water to near-zero PPM, typically 0-10 ppm TDS, giving a 
 > - **Often skippable when:** tap is soft, low-alkalinity, chlorine-only (off-gassable), and under about 150 ppm.
 > - **The cost:** a wastewater ratio of often 1-4 gallons wasted per gallon made, membrane replacement, and a slower fill rate.
 
-## Testing your source water, step by step
+## Source-water testing
 
 Before buying any equipment, get real numbers for your water. A cheap EC/PPM pen and pH pen tell you starting strength and acidity in seconds, but they will not reveal alkalinity, sodium, or specific minerals. For that, send a sample to a lab or read your municipal water report, which lists EC/TDS, pH, alkalinity, calcium, magnesium, sodium, chloride, and any chlorine or chloramine note.
 
@@ -130,7 +130,7 @@ Before buying any equipment, get real numbers for your water. A cheap EC/PPM pen
 
 > **Diagram.** Order matters because each addition shifts pH. Adjust pH last, once the full recipe is mixed, then verify both EC and pH before you feed.[^bevan-2021-npk-flowering-cannabis]
 
-## Water temperature and the mistakes beginners make
+## Water temperature and common mistakes
 
 Water temperature quietly controls dissolved oxygen and disease risk. Aim for roughly 18-22 C (65-72 F). Saturation dissolved oxygen falls only gently across that range, from about 9 mg/L at 20 C to about 8 mg/L at 26 C[^fao-dissolved-oxygen-temperature], but warm, poorly aerated water still raises pathogen risk, and root pathogens like Pythium accelerate above about 23 C[^sutton-2006-pythium-hydroponic-etiology]. Warm water plus low oxygen is an open invitation to root rot.
 
@@ -146,7 +146,7 @@ Water temperature quietly controls dissolved oxygen and disease risk. Aim for ro
 
 *The five beginner traps, and what to do instead.*
 
-## What good water gets you, and what it doesn't
+## Expected results and limitations
 
 Sorting out your water removes a whole category of mystery problems: stable pH, no chlorine damage, predictable feed strength. It will not fix bad genetics, poor light, or a broken nutrient schedule. Good water quality is a foundation, not a yield button. It prevents problems more than it boosts numbers.
 

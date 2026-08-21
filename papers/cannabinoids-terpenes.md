@@ -23,7 +23,7 @@ _Reference · Chemistry · ~24 min read_
 
 > Two families of molecules carry all the value in this industry. And both are built in the same microscopic gland, as acids, on one assembly line. This is the grower's field guide to that chemistry: where it is made, what each compound is and is not, how it degrades, and what you actually control.
 
-## The Chemistry in Plain English
+## Purpose and scope
 
 Every price negotiation, every lab report, every argument about quality in this industry comes down to two families of molecules: **cannabinoids** (the potency) and **terpenes** (the smell and flavour). Both are made in the same microscopic gland on the flower surface, the **trichome**, and almost everything a grower does either builds that gland's contents or wastes them. This paper is the field guide: where the compounds are made, how the plant assembles them, what each one is and is not, how they fall apart, and which levers you actually hold.
 
@@ -49,7 +49,7 @@ The scale of the chemistry is bigger than the market suggests: researchers have 
 >
 > It will not tell you what any compound does to a patient. Effects are described here only as _reported_ or _under study_, because that is the honest state of most of the evidence, and because therapeutic claims are the regulator's and clinician's lane, not a grow guide's. This is chemistry for growers: what the molecules are, where they come from, and how not to lose them.
 
-## Core Answer
+## Chemistry overview
 
 Everything the industry trades on is made in **trichome heads**, as **acids** (THCA, CBDA, not THC and CBD), on **one assembly line** whose hub is a single molecule: **CBGA**, the ‘mother cannabinoid’[^gulck2020-biosynthesis]. Genetics decide the _ratio_ of the outputs (the chemotype) and largely fix the terpene palette[^demeijer2003-chemotype]; the grow decides _how much_ gets made; and everything after harvest only subtracts.
 
@@ -59,7 +59,7 @@ The two families die differently, and that difference runs half this paper. **Te
 >
 > Potency and flavour are built once, in the same gland, as fragile acids and volatile oils, the grower's job is to pick genetics that can make them, keep the plant healthy enough to fill the warehouse, and then get out of chemistry's way: cool, dark, gentle, sealed.
 
-## Where the Chemistry Is Made: Trichome Secretory Cells
+## Trichome secretory cells
 
 Cannabis carries three kinds of glandular trichome: tiny **bulbous** glands, **sessile** glands that sit flat on the surface, and the money-maker, the **capitate-stalked** trichome, a resin head lifted on a stalk. Detailed microscopy shows the stalked heads carry **12–16 secretory disc cells** at their base, versus eight in sessile heads, and it is the stalked type whose signature tracks high cannabinoid content[^livingston2020-trichomes]. Strikingly, stalked trichomes develop _from_ sessile-looking intermediates as the flower matures, the frost you watch build through flowering is a population growing up, not just growing more[^livingston2020-trichomes].
 
@@ -77,7 +77,7 @@ Three practical consequences fall straight out of the anatomy:
 >
 > A loupe tells you more than a lab turnaround: head density, head size, and how intact the heads are after handling. If your trim room's product looks sandblasted under 60×, the potency you grew is in the machine, not the bag.
 
-## Biosynthesis: Two Feedstocks, One Hub
+## Cannabinoid and terpene biosynthesis
 
 The pathway reads like a small factory diagram, and it is worth learning because chemotypes, CBG flower, THCV and half the COA make sense only downstream of it. The plant starts with **hexanoyl-CoA**, a six-carbon starter drawn from fatty-acid metabolism, and extends it with three **malonyl-CoA** units to build **olivetolic acid**, the aromatic core, using a polyketide synthase working with olivetolic acid cyclase (OAC)[^gulck2020-biosynthesis].
 
@@ -93,7 +93,7 @@ Two footnotes worth knowing. First, the **propyl series**: when the line starts 
 >
 > Because it converts three market curiosities into obvious chemistry: CBG-rich flower is a plant whose downstream synthases are broken, so the hub piles up; chemotype is which synthase alleles you inherited, so no environment trick flips THC into CBD; and CBN on a COA is a storage report, not a genetic trait you can breed toward or away from at the synthase level.
 
-## THCA Is Not THC: Decarboxylation
+## Decarboxylation: THCA and THC
 
 The single most misunderstood fact in cannabis chemistry: **the living plant does not make THC** in any meaningful quantity. It makes THCA, the same molecule wearing a carboxyl group (–COOH). And THCA is **not intoxicating** in that form. Raw flower is, chemically speaking, a bag of inactive acid. Heat removes the carboxyl group as CO₂ gas and switches the molecule on: that is **decarboxylation**[^wang2016-decarb].
 
@@ -113,7 +113,7 @@ Decarb is a two-front war. Stop too early and inactive acid remains; push too ho
 >
 > Room temperature is just a very slow oven. Flower in storage drifts from acid toward neutral over months. Which is why an old jar assays differently from the COA printed at harvest, before any potency was actually lost. If total THC is stable but the THCA:THC split has moved, you are watching decarb, not degradation.
 
-## The Cannabinoids, One by One
+## Major cannabinoids
 
 Six cannabinoids cover nearly every commercial conversation. For each: what it is, where it comes from, and, just as important, what it is _not_. Effects language here is deliberately conservative: _reported_ means human use reports and early studies, not established medicine.
 
@@ -151,7 +151,7 @@ Six cannabinoids cover nearly every commercial conversation. For each: what it i
 >
 > Most of the remaining catalogued cannabinoids are trace relatives, isomers, or artefacts of heat, light and analysis, real chemistry, marginal commerce[^radwan2021-constituents]. If a product sheet leads with an exotic letter combination, ask for the COA line that quantifies it.
 
-## Chemotypes I–V: The Ratio Is Inherited
+## Chemotypes I–V and inherited ratios
 
 Cross a true THC plant with a true CBD plant and score the offspring, and cannabinoid ratio behaves like a textbook Mendelian trait. The classic genetic work resolved it to a single locus, **B**, with two codominant alleles: BT (functional THCA synthase) and BD (functional CBDA synthase). Two copies of BT gives a THC-dominant plant (chemotype I); two of BD gives CBD-dominant (chemotype III); one of each gives the mixed, roughly 1:1 chemotype II, and F₂ crosses segregate 1:2:1, exactly as Mendel would have it[^demeijer2003-chemotype].
 
@@ -165,7 +165,7 @@ The crucial nuance: the locus controls the **ratio**, not the **amount**. How mu
 >
 > Chemotype is testable from a young plant's leaf assay. You do not need to flower out a room to learn a ‘CBD line’ is really chemotype II and will run hot on THC. For a medicinal market that buys certified ratios, verify chemotype before a cultivar earns bench space.
 
-## Terpene Classes: Mono vs Sesqui, and Why Volatility Rules
+## Terpene classes and volatility
 
 Terpenes are built from five-carbon isoprene units, and the count is the classification: **monoterpenes** (two units, C10 — myrcene, limonene, pinene, terpinolene, linalool) and **sesquiterpenes** (three units, C15 — caryophyllene, humulene)[^booth2019-terpenes]. Cannabis makes both in the same trichomes as the cannabinoids, around 61 monoterpenes and 51 sesquiterpenes have been reported across the species[^radwan2021-constituents], and a dedicated family of terpene synthase genes sets which ones a cultivar leans on[^booth2019-terpenes].
 
@@ -179,7 +179,7 @@ This single chart explains the drying room. Track the volatile oil of the same b
 >
 > Potency survives sloppy logistics; aroma does not. A sample can hold its THC number through a hot van and a month on a shelf while its monoterpenes quietly leave. When flower smells flat but assays fine, this ladder is what happened.
 
-## The Terpenes That Run the Market
+## Commercially relevant terpenes
 
 Commercial cannabis clusters into a small number of terpene profiles. Analysis of tens of thousands of US retail samples found products fall into three broad groups: high **caryophyllene + limonene**, high **myrcene + pinene**, and high **terpinolene + myrcene**[^smith2022-diversity], and that popular indica/sativa/hybrid labels map poorly onto the underlying chemistry[^smith2022-diversity]. Here are the eight names worth knowing; aroma is fact, effect folklore is flagged as folklore.
 
@@ -219,7 +219,7 @@ Monoterpene. Sweet, green, herbal. A frequent supporting player that spikes in s
 >
 > Every terpene gets marketed with receptor language; caryophyllene is the only one where the receptor claim is demonstrated, replicated pharmacology[^gertsch2008-caryophyllene]. Careful screening of the other majors found no direct CB1 or CB2 activity at plausible concentrations[^finlay2020-terpenoids]. One real example and many assumed ones, which is the entourage story in miniature.
 
-## The Entourage Effect: Demonstrated vs Marketed
+## Entourage effect: evidence and marketing claims
 
 The claim: cannabis compounds work better together than in isolation, terpenes and minor cannabinoids shape, soften or steer THC's effect. The most influential statement of it is Russo's 2011 review proposing phytocannabinoid–terpenoid synergy across a range of indications[^russo2011-entourage]. It is a genuinely interesting hypothesis paper, and its own language is conditional: synergy, _if proven_, would open new product pipelines[^russo2011-entourage].
 
@@ -241,7 +241,7 @@ The honest reading is narrow: mixtures _might_ matter, one mechanism is real, th
 >
 > State what you measured: cannabinoid ratio, total terpenes, the top five by weight, harvest and test dates. Describe aroma in aroma words. Leave effects to the people licensed to discuss them. In a medicinal framework, that is a compliance requirement.
 
-## Degradation: How the Chemistry Dies
+## Cannabinoid and terpene degradation
 
 Two decays run in parallel from the moment of harvest, and they have different physics. **Terpenes evaporate**, fastest when warm, monoterpenes first (previous sections). **Cannabinoids oxidise**. THC's endpoint is CBN, and the drivers are oxygen, heat, light and time. Neither decay reverses. Every storage decision is a rate control on these two processes.
 
@@ -265,7 +265,7 @@ Terpenes degrade in storage too, not only by evaporation but by **oxidation**, w
 >
 > A clear jar under retail lighting combines the top killer (light), warmth from the fixtures, and a headspace refreshed at every opening. It is the perfect machine for converting flower into CBN and flat aroma, keep display stock separate from sale stock.
 
-## What the Grower Actually Controls
+## Cultivation levers and their limits
 
 Ranked by how much they move the number, with the evidence state attached. Because this is where vendor claims and grow-forum folklore concentrate.
 
@@ -281,7 +281,7 @@ The **UV myth** deserves its own paragraph because it sells hardware. The story,
 >
 > Controlled trials keep finding the same shape: genetics and plant health dominate; environmental ‘stress hacks’ deliver small, inconsistent, cultivar-specific chemistry changes at real cost to yield. Any input promising +30% terpenes should come with a COA pair and a cultivar name, or it's a story.
 
-## How It All Shows Up on a COA
+## Cannabinoids and terpenes on a COA
 
 A COA is this whole paper compressed into a table. The cannabinoid section reports **acid and neutral forms separately**, fresh, well-kept flower shows nearly everything as THCA with a sliver of THC. The two are combined with the decarb arithmetic from Figure 3:
 
@@ -304,7 +304,7 @@ Terpene panels typically report a percent-by-weight list with the top handful of
 >
 > One COA describes a sample. Two COAs of the same lot, at packaging and months later, describe your storage. The deltas (THCA→THC drift, CBN appearance, monoterpene fade) are exactly the degradation chemistry of this paper, measured on your own product.
 
-## Failure Modes: Six Ways to Lose What You Grew
+## Common causes of cannabinoid and terpene loss
 
 Every one of these is chemistry from earlier sections wearing work clothes. The COA tell is how you catch it after the fact; the fix is how you stop paying for it twice.
 
@@ -344,7 +344,7 @@ UV rigs and stress protocols sold on decades-old data; the controlled trial foun
 **Tell:** spend rises, COAs don't move.
 **Fix:** demand paired-COA evidence on your cultivar before buying photons you can't sell.
 
-## Quick Reference
+## Quick reference
 
 | Compound | Acid parent | Origin | What it is | What it is not |
 | --- | --- | --- | --- | --- |
@@ -382,7 +382,7 @@ UV rigs and stress protocols sold on decades-old data; the controlled trial foun
 
 *Six numbers that carry most of this paper.*
 
-## The Mental Model
+## Cannabinoid and terpene control principles
 
 > **Diagram.** The whole paper in one row. Left of harvest you can build chemistry; right of harvest you can only protect it.
 

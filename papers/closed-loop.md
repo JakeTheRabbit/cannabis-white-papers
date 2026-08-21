@@ -23,7 +23,7 @@ _Precision · Closed loop · ~17 min read_
 
 > Run a grow room as one self-correcting system. This beginner's guide covers the controls you pull, how to read what the plants are actually doing, and how to feed that back without the room chasing its own tail.
 
-## What this is (and why a grow room is a loop)
+## Purpose and scope
 
 > **EVIDENCE — Grain of salt**
 >
@@ -41,7 +41,7 @@ A **closed loop** means the output feeds back to the input: what the plant tells
 >
 > A mature loop tells you whole-room health and whether to act quickly when the dashboard is well designed, and it stays quiet when nothing needs you. Silence is a feature, not a fault.
 
-## Key terms, defined once
+## Definitions
 
 This field is loaded with jargon, so here is every term you need before the real content. Most are everyday ideas with intimidating names. Don't memorise them. Each one comes back in context.
 
@@ -57,7 +57,7 @@ This field is loaded with jargon, so here is every term you need before the real
 
 **Plant state** — The plant's actual condition (stressed, steering generative, on-track), inferred from many signals together rather than read off one gauge.
 
-## The levers: every control moves four things at once
+## Control levers and coupled effects
 
 The room is one **coupled** system, not a set of independent knobs. Turn up the light and you have not just added light: you have added heat, made the plants drink and sweat faster (raising humidity), increased CO2 demand, and sped up how fast the root zone dries and concentrates salt[^huber-dli-co2-2021]. Light is at once a heat source, a transpiration driver, a CO2-demand creator and an HVAC load[^kim-co2-temp-light-msu].
 
@@ -80,7 +80,7 @@ Everything you can do sorts into four **balances** you are always disturbing: en
 >
 > Cooling that creates humidity, dehumidification that overheats the room, CO2 fighting the exhaust: nothing broke. The levers were just set as if they were independent. The fix is order of operations: set biological demand first (stage, light, CO2), then size climate capacity to match, then set the root-zone strategy to that.
 
-## Reading the signal, then reading the plant
+## Sensor and plant-state interpretation
 
 You have to _see_ the room's response without being fooled, then turn it into meaning. Every measurement is signal plus noise, and in practice **many raw alerts are noise** that must be rejected before they ever reach a decision[^isa-18-2-alarm-mgmt].
 
@@ -100,7 +100,7 @@ Then **aggregate, don't trust one reading**: believe n-of-12, not n-of-1. A clea
 
 > **Diagram.** A calm dashboard leads with one green plant-truth headline (‘Flower Day 24, on-track, no action needed’). Yellow is drifting precursors, orange is the only interrupt, and the raw graphs sit last.
 
-## Closing the loop: one problem, traced all the way round
+## Closed-loop diagnosis and corrective action
 
 The three jobs become one machine here. Watch a single ordinary problem, slow **salt creep** in the root zone, travel the whole loop.
 
@@ -130,7 +130,7 @@ Bridge metrics let the three jobs talk to each other. Dryback %, VPD and VPD-hou
 
 *Five failures, one fusion. A flatlined, drifting or noisy probe is itself a detectable special-cause signal[^szerement-dielectric-2019].*
 
-## How to build the loop, step by step
+## Closed-loop control implementation
 
 You build the loop one rung at a time, and you do not earn the next rung until the previous one is genuinely running. Almost none of this needs new capital. Most of it is discipline.
 
@@ -143,7 +143,7 @@ You build the loop one rung at a time, and you do not earn the next rung until t
 >
 > The most valuable upgrades on this list cost nothing but habit: a sampling cadence, a rolling average and a control limit are free. Buy hardware only once the discipline is in place to use it.
 
-## Pitfalls: oscillation and chasing noise
+## Troubleshooting
 
 Two failure modes ruin a loop: **chasing noise** and **oscillation**. Feed a controller noise, meaning single spikes, jitter and ghost trends, and it acts on events that never happened, actively destabilising the room. A loop fed noise doesn't help, it amplifies. Oscillation comes from reacting too fast, too hard, or to readings still inside normal variation, so the room swings back and forth instead of settling[^mohammed-spc-2024].
 
@@ -157,7 +157,7 @@ Two failure modes ruin a loop: **chasing noise** and **oscillation**. Feed a con
 - **The Stage-2 trap**: reacting to live numbers is more stressful than flying blind. It's a wall of noise to panic at.
 - **Walk the loop, not the wiggle**: smooth enough to act calmly, but never so smooth you go blind to a real fast event. Keep raw data one click away.
 
-## Realistic expectations
+## Expected results and limitations
 
 > **KEY — The end state is quieter, not flashier**
 >

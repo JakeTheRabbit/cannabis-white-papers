@@ -23,7 +23,7 @@ _Propagation · Cloning · ~12 min read_
 
 > Take cannabis cuttings that root reliably. This walks a beginner from picking a mother plant to a transplant-ready clone in 14 days.
 
-## What cloning is and why growers do it
+## Purpose and scope
 
 A **clone** is a cutting taken from a living plant that grows its own roots and becomes a new, genetically identical plant. No flowers and no seeds are involved. You are rooting a piece of stem, not germinating a seed.
 
@@ -69,7 +69,7 @@ Water the mother thoroughly the day before so cuttings are hydrated and turgid; 
 
 > **Diagram.** Upright shoots from the well-lit upper-to-mid canopy root most reliably. Weak shaded interior growth lags well behind.[^esposito-2026-morphology-predictors]
 
-## Rooting hormone and the cube
+## Rooting hormone and propagation cubes
 
 Cuttings have no roots yet, so a **rooting hormone** pushes the stem to grow them. The active ingredient is usually **IBA (indole-3-butyric acid)**, an auxin used in rooting products[^landis-2022-iba-hemp-i3]. Inside the stem the plant converts IBA into the active rooting auxin (IAA), which is what triggers new roots[^fattorini-2017-iba-to-iaa]. It sells as a gel or a liquid.
 
@@ -109,7 +109,7 @@ Keep light gentle, about 60–100 PPFD (a measure of light intensity reaching th
 >
 > Gentle air movement in the room is good, but never aim a fan directly at un-rooted clones. With no roots to replace lost water, a direct breeze dries them out and wilts them fast.
 
-## The 14-day routine, day by day
+## 14-day cloning schedule
 
 Most of cloning is knowing when to leave the tray alone.
 
@@ -131,7 +131,7 @@ Clone feed starts mild (~0.6–1.2 mS/cm, product-dependent) and rises only once
 
 *The day-by-day routine condensed. Transplant criteria are the key go/no-go at the end.*
 
-## Why clones fail, and the fix
+## Troubleshooting
 
 Most clone failures trace to a handful of causes, and they look distinct enough to diagnose at a glance.
 
@@ -150,7 +150,7 @@ Most clone failures trace to a handful of causes, and they look distinct enough 
 >
 > Disease in a propagation room spreads cutting to cutting through tools and hands. Sterilize tools for at least 2 minutes in 71% isopropyl alcohol (or chlorine dioxide for at least 180 seconds), and handle cubes with gloves only. Bare hands spread algae and pathogens[^punja-2023-fusarium-pythium-biocontrol]. Good hygiene prevents the damping-off and root-rot organisms that wipe out whole trays[^punja-2023-fusarium-pythium-biocontrol].
 
-## Expected results
+## Expected results and limitations
 
 A realistic first goal is **90 percent** rooting, with experienced rooms hitting 95 percent or higher[^caplan-2018-stem-cuttings]. Expect roots in 10 to 14 days, and treat anything past 21 days with no roots as a problem to escalate, not a clone to keep waiting on.
 

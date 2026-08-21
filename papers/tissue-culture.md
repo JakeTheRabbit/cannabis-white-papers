@@ -23,7 +23,7 @@ _Beginner · Tissue culture · ~22 min read_
 
 > Tissue culture grows a clean, vigorous, genetically identical mother from a speck of tissue off a tired or diseased plant. Explained from absolute zero.
 
-## What this guide is, and what you'll achieve
+## Purpose and scope
 
 This guide takes you from picking a donor plant to holding a clean, rooted, hardened young mother in your hands. You will learn what plant tissue culture is, why cannabis growers use it to “clean up” their genetics, and exactly how to run the whole process yourself.
 
@@ -51,7 +51,7 @@ Jump to section 19 (Troubleshooting) and section 20, the honest reality check on
 >
 > Cannabis is a **recalcitrant** species: it fights back in the jar. Losing most of your first batch to contamination or browning is _normal_, not failure. Published labs report anywhere from ~55% of pieces surviving down to 90–95% losses at the very first stage. Treat your first run as a training run.
 
-## Tissue culture in plain English
+## Tissue culture fundamentals
 
 Tissue culture rests on one fact about plants that animals do not share. Almost every cell holds the full instructions to rebuild the whole plant.
 
@@ -81,7 +81,7 @@ Here is the vocabulary you need. Get the gist rather than memorising it. Each te
 >
 > It does **not** mean editing or improving the DNA. The strain stays exactly the same strain. It means stripping away the _diseases and pests_ the plant has picked up over years of cloning, so the original genetics can finally perform the way they were bred to. It is a factory reset on plant health, not a genetic upgrade.
 
-## Why clean up genetics? Meet Hop Latent Viroid
+## Hop latent viroid and clean-stock genetics
 
 Take cuttings from the same mother for years and two things creep in: invisible **diseases** that spread cutting-to-cutting, and the slow accumulation of **damage**. The plant looks fine, then yields quietly drop, buds get smaller, smell fades. The number-one culprit in cannabis has a name.
 
@@ -117,7 +117,7 @@ It survives on tools, hands, pots and benches, rides in sap for ~a week and in d
 >
 > HpLVd gets the headlines, but meristem work plus indexing mainly targets systemic agents (viroids/viruses); surface sterilisation removes many surface microbes and hitch-hikers, but endophytes can still emerge and mites remain an IPM problem. You begin clean at the cellular level instead of fire-fighting forever.
 
-## The whole journey at a glance
+## Tissue culture workflow
 
 Every plant tissue culture workflow follows the same five classic stages, whether for orchids, bananas or cannabis. They were first laid out by a scientist named Murashige. Learn this skeleton and everything that follows hangs neatly on it.
 
@@ -138,7 +138,7 @@ Longer than you'd hope, and that's worth knowing up front. There are two honest 
 > - **A clean, rooted, hardened clone** (no lab proof of disease status): roughly **10–15 weeks**.
 > - **A confirmed HpLVd-free mother** (meristem culture + RT-qPCR testing): realistically **5–6 months or more**. It is not a two-week job.
 
-## Why a meristem tip beats the disease
+## Meristem culture for pathogen elimination
 
 This is the single most important concept in the whole guide. Once it clicks, everything about ‘cleaning genetics’ makes sense.
 
@@ -159,7 +159,7 @@ Which piece you cut decides whether you merely clone the plant or actually clean
 >
 > Meristem culture can produce a viroid-**free** plant. It does **not** make a viroid-**resistant** one. A cleaned plant can be re-infected the moment a dirty blade or hand touches it. Clean stock only stays clean with disciplined hygiene afterwards, and it's only truly ‘clean’ once a lab test says so (section 13).
 
-## Your lab and your kit
+## Laboratory setup and equipment
 
 You do not need a white-coat laboratory. You need a small pocket of genuinely clean air to work in, a way to sterilise things with heat, and somewhere lit and warm to keep the jars. Here is the whole picture.
 
@@ -204,7 +204,7 @@ What's confirmed to be in the box:
 >
 > A DIY equivalent (still-air box, a $60 pressure cooker as the autoclave, generic MS media powder, agar, bleach) runs roughly **$200–$550** to start. The kit buys convenience and a real flow hood, not a different outcome. Where this guide gives a recipe, it gives both the DIY version and the Athena-sachet version.
 
-## Aseptic technique: the skill that decides everything
+## Aseptic technique
 
 Learn this one thing well above all others. Ninety percent of beginner failures are contamination, and contamination is a technique problem, not a luck problem.
 
@@ -334,7 +334,7 @@ The standard, best-supported beginner protocol is a two-punch: a quick alcohol d
 >
 > Beyond ~30 minutes in bleach, cannabis tissue starts dying (one study saw ~75% tissue death by 45+ min). Under-sterilise and you get contamination; over-sterilise and you get a dead brown explant. 15–20 minutes is the beginner sweet spot. Adjust from there.
 
-## Initiation: waking the explant up
+## Culture initiation
 
 ‘Initiation’ (also called establishment) is the period after you've placed the sterile explant on its medium, while it settles in and starts to grow. Your jobs here are to watch like a hawk for contamination and to keep the tissue from browning to death.
 
@@ -348,7 +348,7 @@ IEstablish a clean, growing culture2–4 weeksPut the plated vessels in the cult
 >
 > Initiation is where recalcitrant cannabis sheds the most cultures. Published labs report anywhere from ~55% of explants surviving to 90–95% loss across varieties. Start more explants than you think you need, and don't be discouraged by a thin survival rate on run one.
 
-## Meristem dissection: the actual genetic clean-up
+## Meristem dissection for genetic cleanup
 
 Everything so far also describes ordinary cloning. **This** is the step that removes the disease. Instead of a 1 cm node, you excise only the tiny meristem dome from section 5, the part the viroid hasn't reached, and grow your new plant from that.
 
@@ -369,7 +369,7 @@ Here is where honesty matters most. Meristem culture _can_ clear HpLVd, but how 
 >
 > The kit lets you do the meristem cut. It includes **no heat-treatment hardware and no DNA test**. So after this step you have a plant that is _probably_ clean until a lab RT-qPCR says so, not a _proven_ clean one. That proof is the next section, and it's non-negotiable.
 
-## Indexing: proving it's actually clean
+## Indexing: verifying pathogen-free stock
 
 A meristem plant that _looks_ healthy is not a clean plant until a lab test says so. ‘Indexing’ is that test. Skip it and you can spend six months building a ‘clean’ mother that quietly re-seeds your whole room with viroid.
 
@@ -387,7 +387,7 @@ A meristem plant that _looks_ healthy is not a clean plant until a lab test says
 >
 > This is the line item the kit marketing skips. Independent HpLVd testing is the difference between hope and proof. Factor a few lab tests per candidate mother into your plan. It's cheap compared to losing a crop.
 
-## Multiplication, and the hyperhydricity trap
+## Multiplication and hyperhydricity
 
 Once you have a clean, established shoot, multiplication turns one into many. You move it onto a cytokinin (shoot-pushing) medium; it produces several shoots; you cut those apart and move them onto fresh medium; repeat. Each round is a **subculture**, roughly every 4 weeks.
 
@@ -418,7 +418,7 @@ Every time you subculture, a few tiny DNA copying errors (mutations) sneak in. R
 >
 > Aim to use a culture line for **about 5 subcultures**, then start again from a freshly cleaned explant or cryo-stored stock. This keeps your clones genuinely true-to-type.
 
-## Rooting: turning a shoot into a plant
+## Root induction
 
 A multiplied shoot has no roots. Rooting fixes that with an **auxin** (the root-pushing hormone family). There are two routes; both work, and the second is simpler for beginners.
 
@@ -436,7 +436,7 @@ IIIInduce roots2–4 weeks**IBA is the best auxin for cannabis**, roughly double
 >
 > Athena's ROOTS medium is their pre-mixed version of a rooting/callus medium, hormones already blended. Same idea as Route A, no measuring. As always, you can't see or tune what's in it.
 
-## Acclimatisation: weaning the plantlet to the real world
+## Plantlet acclimatisation
 
 This is the most heartbreaking stage to rush. A plantlet raised in a sealed jar has been living in a tropical paradise: ~100% humidity, constant warmth, sugar fed to it, dim light. Its leaves never bothered to grow a proper waxy skin or working pores. Throw it straight into room air and it wilts and dies in hours.
 
@@ -469,7 +469,7 @@ You've arrived. The hardened plantlet, ideally one you've had lab-tested clean, 
 >
 > Research confirms tissue-cultured mothers are **chemically faithful**: cannabinoid content of plants from micropropagation, retips and ordinary cuttings was the same. TC doesn't change your strain, it just hands it back to you healthy.
 
-## Storing genetics: synthetic seed & cryo (the cutting edge)
+## Genetic storage: synthetic seeds and cryopreservation
 
 Once you can clean and multiply a strain, you can also _bank_ it, preserving a clean genotype so you never have to re-clean it. Two methods are worth knowing, even as a beginner, because they're where the field is heading.
 
@@ -506,7 +506,7 @@ Nearly every beginner problem is on this list. Match the symptom, apply the fix,
 | Cleaned plant tests positive for HpLVd anyway | Meristem too large, or strain hard to clean | Cut a smaller dome; clean several meristems per strain; consider thermotherapy adjunct; always re-index. |
 | Clones drifting from the original over time | Too many subcultures (mutation build-up) | Reset from fresh/cryo stock by ~5 subcultures. |
 
-## The honest reality check: cost, success, and limits
+## Expected results and limitations
 
 So you can decide with eyes open.
 

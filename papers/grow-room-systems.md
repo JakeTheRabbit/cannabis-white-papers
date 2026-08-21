@@ -23,13 +23,13 @@ _Beginner · Grow-room systems · ~18 min read_
 
 > A grow room is one connected system, not a list of gadgets. Light, heat, humidity, air and water all pull on each other. Learn to see the whole machine, so a fix in one place doesn't break another.
 
-## The room is one machine
+## Purpose and scope
 
 Those four things are one problem, not four. Beginners buy a light, a fan, a humidifier and a nutrient bottle and treat each as a separate job. Turn the light up and the room gets hotter, the plants drink more, the air gets more humid, and your dehumidifier works harder. Everything is connected.
 
 This guide shows you those connections, so you set things up in the right order instead of chasing one problem into the next. No prior knowledge needed.
 
-## The words you need
+## Definitions
 
 **PPFD** — How bright the usable light hitting the canopy is, measured in µmol/m²/s. Think ‘brightness right now.’
 
@@ -45,7 +45,7 @@ This guide shows you those connections, so you set things up in the right order 
 
 **Substrate** — What the roots grow in (coco, rockwool, peat). It changes how water, air and salt behave at the root[^malik2025-media].
 
-## How it's all coupled
+## Interactions between grow-room systems
 
 One chain runs your room. Push the first link and every link after it moves:
 
@@ -55,7 +55,7 @@ One chain runs your room. Push the first link and every link after it moves:
 >
 > Raise one input, then ask ‘what must move with it?’ More light → more transpiration → more humidity → more dehumidification and more water and feed. Inputs travel in convoys, not alone.
 
-## Light: set the demand first
+## Lighting demand
 
 Light is the upstream lever: it sets how much of everything else the plant wants. In cannabis, flower yield climbs roughly **linearly with light** all the way up to very high intensities (~1800 µmol/m²/s in one study, about a 4.5× yield increase)[^rm2021-light]. Bright works, as long as you can pay the bills downstream.
 
@@ -65,7 +65,7 @@ Light is the upstream lever: it sets how much of everything else the plant wants
 >
 > Measure one leaf and photosynthesis ‘maxes out’ at modest light, which tempts you to stop there. The whole canopy keeps converting more light into more flower well beyond that point[^rm2021-light]. Don't set room light by leaf-level numbers.
 
-## Climate: temperature, humidity & VPD
+## Climate: temperature, humidity and VPD
 
 Temperature and humidity are not two separate dials. Together they make **VPD**, which controls how fast the plant transpires. There is a workable middle band. Too low and everything slows. Too high and the plant shuts its stomata to save water, stalling CO2 uptake and growth[^inoue2021-vpd].
 
@@ -73,7 +73,7 @@ Temperature and humidity are not two separate dials. Together they make **VPD**,
 
 **CO2** is the other climate lever. Adding CO2 raises photosynthesis and water-use efficiency, and, counter-intuitively, it makes the plant transpire _less_ and partly close its stomata, not open them[^chandra2008-photo]. It only pays off when light is already high.
 
-## Airflow ties it together
+## Airflow in the integrated system
 
 Moving air does two quiet but vital jobs. It strips away the thin film of still, humid air that clings to each leaf, and it cools the leaf by convection. Faster air thins that film, improving CO2 uptake and water-use efficiency (more carbon fixed per unit water). Absolute water use often still rises in bright rooms[^schymanski2016-wind]. It also keeps every plant in the room living in the same climate.
 
@@ -81,13 +81,13 @@ Moving air does two quiet but vital jobs. It strips away the thin film of still,
 >
 > Boundary layers, fan placement, velocity targets and dead zones are covered in depth in [Airflow design for indoor cultivation](airflow-design.html). Here, just know that without air movement your light, climate and CO2 settings don't reach the leaf evenly.
 
-## Root zone: feeding the demand
+## Root-zone supply
 
 Everything upstream creates _thirst_, and the root zone has to satisfy it. The brighter and drier the room, the more the plant transpires, and the more water and nutrient it needs at the roots. Your substrate and irrigation are the supply side of the same system[^malik2025-media].
 
 The root zone is also a steering lever: a controlled root-zone dryback nudges the plant generative and can raise potency[^caplan2019-drought]. The full mechanics are in the [coco & crop steering](coco-crop-steering.html) paper. The point here is that irrigation must _match_ the demand the rest of the room is creating, not run on a fixed timer.
 
-## Set it up in the right order
+## System setup sequence
 
 Inputs are coupled, so the order you set them in matters. Work top-down:
 
@@ -97,7 +97,7 @@ Inputs are coupled, so the order you set them in matters. Work top-down:
 4. **4. Feed to match** — Size irrigation and feed EC to the transpiration the above creates, then steer with dryback.
 5. **5. Then steer & refine** — Only now nudge generative or vegetative, one lever at a time, watching the whole chain.
 
-## The system can breed disease
+## Disease risk in integrated systems
 
 The same warm, humid, densely-planted room that grows big plants also grows mould. Bud rot (_Botrytis_) takes off above ~70% humidity at moderate temperatures, and a thick canopy traps humid, still air inside itself where your room sensor never sees it[^punja-budrot-cjb].
 
@@ -105,7 +105,7 @@ The same warm, humid, densely-planted room that grows big plants also grows moul
 >
 > A sensor in open air can read a comfortable 60% while the inside of a fat cola sits at 85% and rotting. Airflow through the canopy and sensible plant spacing, not just the room average, are what keep disease out[^punja2019-pathogens]. Full detail in the [mould risk](mould-risk.html) paper.
 
-## Troubleshooting the system
+## Troubleshooting
 
 | Symptom | Where the system broke | What to do |
 | --- | --- | --- |
@@ -115,7 +115,7 @@ The same warm, humid, densely-planted room that grows big plants also grows moul
 | Hot canopy, slow growth | Airflow too weak, so the leaf can't shed heat | Increase canopy-level air movement |
 | Bud rot in week 6+ | Dense canopy + trapped humidity | Defoliate/space plants, airflow through the canopy, lower RH |
 
-## Realistic expectations
+## Expected results and limitations
 
 > **KEY — The mindset that separates good growers from frustrated ones**
 >

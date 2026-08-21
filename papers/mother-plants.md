@@ -23,7 +23,7 @@ _Propagation · Stock · ~20 min read_
 
 > How to keep cannabis mother plants healthy for the long haul, room setup, feeding, pruning architecture, viroid defence, testing rotation and succession. So every batch starts from a plant you can actually trust.
 
-## What a mother plant is and why it runs the whole grow
+## Purpose and scope
 
 A **mother plant** is a plant you keep permanently in leafy growth and never flower. Her only job is to supply **cuttings**, genetically identical copies, on schedule. Every plant that ever reaches your flower room started as a piece of her.
 
@@ -37,7 +37,27 @@ That position, upstream of everything, is why mother management is worth doing p
 >
 > Anyone keeping their first mother, through to operators running a stock room against a production calendar. This paper is about the plant you cut _from_. The cutting technique itself (blades, gel, domes, humidity) is covered in the [cloning guide](cloning.html); keeping the room clean is the [IPM hygiene](ipm-sop.html) guide.
 
-## The whole job on one page
+## Definitions
+
+Mother-room talk borrows from horticulture, virology and factory scheduling. These eight terms cover it; everything else is defined where it appears.
+
+**Mother / stock plant** — A plant held permanently in vegetative (leafy) growth, never flowered, kept purely as a source of cuttings. 'Mother' and 'stock plant' mean the same thing.
+
+**Photoperiod** — The hours of light per day. Photoperiod-dependent cannabis flowers when nights get long; mothers are kept on long days (18 h light) so they never switch.
+
+**PPFD** — Photosynthetic photon flux density, how much usable light lands on the leaves, in µmol·m⁻²·s⁻¹. Mothers run moderate PPFD, not flower-room intensity.
+
+**Node** — The point on a stem where leaves and side-shoots attach. Cuts are made relative to nodes, and every stub left with a node can regrow new shoots.
+
+**EC** — Electrical conductivity of the feed water, in mS/cm, a proxy for total dissolved nutrient strength. Mothers run moderate EC; high EC pushes soft, salty growth.
+
+**Viroid** — The smallest known infectious agent: a bare loop of RNA with no protein coat, a fraction the size of a virus. Hop latent viroid (HpLVd) is the one that matters in cannabis.
+
+**Dudding** — The disease syndrome HpLVd causes: outwardly normal plants that finish small, brittle and weak, with poor trichome set and badly reduced potency.
+
+**Indexing** — Systematically testing stock plants for pathogens on a fixed rotation, so a clean result is recent enough to mean something. Borrowed from certified clean-stock horticulture.
+
+## Mother-plant programme overview
 
 If you only read one section, read this one. Everything after it is the why and the how.
 
@@ -63,27 +83,7 @@ Five rules carry most of the value:
 >
 > Keep a genetically known, pathogen-tested plant in permanent vegetative growth, and turn her into a predictable weekly stream of cuttings without ever letting her tell you a lie.
 
-## Eight words that make the rest read plainly
-
-Mother-room talk borrows from horticulture, virology and factory scheduling. These eight terms cover it; everything else is defined where it appears.
-
-**Mother / stock plant** — A plant held permanently in vegetative (leafy) growth, never flowered, kept purely as a source of cuttings. 'Mother' and 'stock plant' mean the same thing.
-
-**Photoperiod** — The hours of light per day. Photoperiod-dependent cannabis flowers when nights get long; mothers are kept on long days (18 h light) so they never switch.
-
-**PPFD** — Photosynthetic photon flux density, how much usable light lands on the leaves, in µmol·m⁻²·s⁻¹. Mothers run moderate PPFD, not flower-room intensity.
-
-**Node** — The point on a stem where leaves and side-shoots attach. Cuts are made relative to nodes, and every stub left with a node can regrow new shoots.
-
-**EC** — Electrical conductivity of the feed water, in mS/cm, a proxy for total dissolved nutrient strength. Mothers run moderate EC; high EC pushes soft, salty growth.
-
-**Viroid** — The smallest known infectious agent: a bare loop of RNA with no protein coat, a fraction the size of a virus. Hop latent viroid (HpLVd) is the one that matters in cannabis.
-
-**Dudding** — The disease syndrome HpLVd causes: outwardly normal plants that finish small, brittle and weak, with poor trichome set and badly reduced potency.
-
-**Indexing** — Systematically testing stock plants for pathogens on a fixed rotation, so a clean result is recent enough to mean something. Borrowed from certified clean-stock horticulture.
-
-## The room: 18/6, moderate light, boring climate
+## Mother-room environment
 
 Photoperiod is the load-bearing wall. Photoperiod-dependent cannabis initiates flowering when the dark period gets long enough, and the threshold is closer than most people think: in a six-photoperiod trial, every cultivar tested initiated flowers at photoperiods up to 14 h of light, and some began initiating at 15 h[^mp-ahrens-2023-photoperiod]. An 18 h day is not a magic number. It is a 3–4 hour safety margin over the worst-case switch point.
 
@@ -97,7 +97,7 @@ Why moderate light and not flower-room intensity? Vegetative cannabis will happi
 
 Climate: nothing exotic. Around 22–26 °C days, roughly 55–70% relative humidity, gentle continuous air movement (practitioner convention). The mother room should be the most boring room in the facility. Every stress event shows up two weeks later as a batch of cuttings that roots at 60% instead of 90, and you will struggle to connect the two.
 
-## Feeding a cutting factory: nitrogen-forward, never lush
+## Mother-plant nutrition
 
 Mother nutrition has a different goal from flower nutrition. You are not growing buds and you are not even really growing a plant. You are farming _stems and growing tips_, continuously, from the same root system, for months. That means a vegetative, nitrogen-forward feed, held at moderate strength.
 
@@ -121,7 +121,7 @@ The nitrogen number has actual research behind it: in a five-level dose trial on
 >
 > Your real feedback loop is the **rooting percentage of her cuttings, batch over batch**. If strike rate drifts down over two or three batches and pests and viroid are ruled out, audit the feed before you reach for anything exotic. The fix is usually _less_: less N, less EC, firmer shoots.
 
-## Build the frame once, then farm the regrowth
+## Mother-plant architecture and regrowth
 
 Cutting count is mostly architecture, not vigour. A mother left to grow naturally makes one dominant leader and a handful of weak laterals, a Christmas tree, and a terrible factory. The fix is the same trick hedge-layers and fruit growers use: remove the leader early, force the plant wide, and keep it flat.
 
@@ -168,7 +168,7 @@ Stagger the harvests. Split the bank into A and B cohorts and alternate passes s
 >
 > A smaller bank of well-run, well-tested mothers on a stagger out-produces a crowd of neglected ones, and every extra plant is another thing to water, prune and test on rotation[^mp-tumi-hlvd-testing]. Size the bank to the calendar, not to comfort.
 
-## Do mothers wear out? What the genetics actually say
+## Mother-plant age and genetic stability
 
 Grower folklore says a mother 'degrades' and should be replaced every 6–12 months. Plenty of operators, meanwhile, hold the same mother for five-plus years and swear she is identical. Both camps are pointing at something real. They are just pointing at different mechanisms.
 
@@ -184,7 +184,7 @@ What actually degrades long-held mothers, in practice, is usually not the genome
 >
 > Keep a mother for as long as she (a) tests clean and (b) her cuttings' rooting rate and downstream performance hold steady in your records. Replace on evidence, not anniversaries. And when you do re-mother, start from low-generation, tested material, not from the far end of a long clone-of-clone chain[^mp-adamek-2024-subcultures].
 
-## The mother room is a pathogen amplifier
+## Pathogen amplification in mother rooms
 
 Whatever lives in the mother room ships to every room downstream, on schedule, with a courtesy label on the tray. Spider mites, root aphids, fungus gnats, powdery mildew, root-rot organisms. The mother room is the reservoir that re-seeds them all, which is why IPM effort concentrated there pays off everywhere (see the [IPM SOP](ipm-sop.html)).
 
@@ -196,7 +196,7 @@ Whatever lives in the mother room ships to every room downstream, on schedule, w
 
 Three habits close most of the routes: mothers get **dedicated tools** that never visit other rooms; work runs **cleanest-first** (mothers before veg, veg before flower, never backwards through a dirty room); and anything that touches sap gets sanitised or swapped **between plants**, not between benches. Then there is the organism that turned all of this from good practice into survival, next section.
 
-## Hop latent viroid: the quiet destroyer of stock
+## Hop latent viroid (HLVd) in mother stock
 
 **Hop latent viroid (HpLVd)** is a bare, circular strand of RNA about 256 nucleotides long, no protein coat, no cell, a fraction the size of a virus[^mp-punja-2025-hplvd-mgmt]. It was first tied to failing cannabis crops in California in 2019, as the cause of what growers had been calling **dudding**[^mp-warren-2019-hplvd-ca]: plants that look normal through veg, then finish small and brittle with poor trichome set and badly reduced potency.
 
@@ -216,7 +216,7 @@ Tool protocol: the gold standard is a **fresh single-use blade per mother**. Fai
 >
 > In trials, HpLVd spread through the plant _faster_ once plants moved to a 12/12 flowering photoperiod than under continuous light[^mp-punja-2025-hplvd-mgmt]. A mother on 18 h days can carry a low, slow, hard-to-detect infection that only shows its teeth downstream in flower. 'My mothers look clean' and 'my mothers are clean' are different sentences, only a test connects them.
 
-## Indexing: a testing rotation that keeps the bank clean
+## Testing rotation for mother-stock health
 
 **Indexing** is the clean-stock habit of testing every stock plant on a fixed rotation, so that 'she tested clean' always has a date on it. In cannabis the workhorse assay is RT-qPCR for HpLVd, run from a small tissue sample[^mp-medgen-hlvd], cheap enough now that the rotation, not the test, is the discipline.
 
@@ -234,7 +234,7 @@ Keep records like they are part of the plant: per-mother ID, test dates and resu
 >
 > Isolate the plant immediately. Re-test to confirm, fresh sample, roots. Trace every plant the same tools touched since the last clean test and test those. Cull confirmed positives: bag the plant _at the bench_ and carry it out sealed, don't walk loose infected material through the facility. Elite genetics can sometimes be rescued through meristem tissue culture, averaging ~41% pathogen-free recovery, anywhere from 0–100% by genotype[^mp-punja-2025-hplvd-mgmt]. But that is a months-long lab job (see [tissue culture](tissue-culture.html)), not a way to save production stock this cycle.
 
-## Replacing a mother without dropping a batch
+## Mother-plant replacement without production gaps
 
 Mothers are replaced for five reasons: a confirmed pathogen (immediate, no debate); a rooting rate that trends down across three or more batches with other causes ruled out; a frame gone woody and slow after many months of harvest; a root-bound pot that feeding can't compensate; or simple space economics. Only the first one is urgent. Everything else earns a planned succession. And succession has a shape.
 
@@ -250,7 +250,7 @@ The overlap is the insurance policy, never cut over cold-turkey. If the candidat
 
 Two maintenance notes that extend service life: root-bound decline responds to repotting or root-pruning on a schedule rather than waiting for symptoms (practitioner convention). And **re-mothering**, starting a fresh mother from the old one's best shoot, resets her architecture and her pot, but it does _not_ reset her pathogens or her accumulated mutations: whatever she carries, the new plant carries[^mp-adamek-2024-subcultures]. Test before you promote.
 
-## Clone-from-clone: running without mothers
+## Clone-from-clone propagation
 
 Some operations skip dedicated mothers entirely: each round, they take the next batch of cuttings from production plants in early veg, just before those plants flip to flower. The cuttings root while the donors finish. No mother room, no mother labour, a whole room's rent back. It is a real system with a real cost structure, and a real failure mode.
 
@@ -267,7 +267,7 @@ The problem is not any single hop. It is what the chain accumulates:
 
 The verdict: clone-from-clone is a legitimate **bridge**, during a build-out, for short runs, for cultivars you plan to drop, provided every donor round gets tested. As the _permanent_ plan for genetics you care about, it is a slow-motion loss. The middle path many operators land on: a tissue-culture bank or one modest, well-tested mother per keeper cultivar as the anchor[^mp-monthony-2021-tc], plus clone-from-clone for volume in between.
 
-## How mother programmes die
+## Mother-stock failure modes
 
 Mother programmes rarely die loudly. They die in one of six quiet ways, most of them preventable with the habits already covered.
 
@@ -295,7 +295,7 @@ A year of clone-from-clone with no tests and no reference. The cultivar 'isn't w
 
 Replacing proven, clean, productive mothers every six months on folklore, while blade hygiene, the thing that actually kills stock, goes unmanaged. **Counter:** replace on evidence[^mp-adamek-2024-subcultures]; spend the saved effort on testing.
 
-## Symptom → cause → fix
+## Troubleshooting
 
 Diagnose from the symptom, check the likely cause, act, and give it one batch cycle before judging the fix. Most mother problems announce themselves through the cuttings first.
 
@@ -311,7 +311,7 @@ Diagnose from the symptom, check the likely cause, act, and give it one batch cy
 
 *The recurring theme: the cuttings are the assay. A mother's problems show up in her clones' numbers before they show up on her leaves.*
 
-## The mental model: a living backup that must prove it restores
+## Mother-stock continuity and recovery
 
 Treat a mother plant exactly like a backup drive. Nobody trusts a backup because it looks fine on the shelf. You trust it because you test restores. The mother-room translation: the **restore test** is her cuttings' rooting rate, batch over batch. The **integrity check** is the qPCR rotation. The **off-site copy** is the second mother or the tissue-culture bank. The **retention policy** is evidence-based replacement with overlap. Run those four and the factory never runs dry.
 

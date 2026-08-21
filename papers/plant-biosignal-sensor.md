@@ -23,7 +23,7 @@ _Build · Precision & automation · ~14 min read_
 
 > Commercial plant-biosignal sensors clip electrodes to a plant, amplify the tiny voltages it makes, and log the drift for education, not as a validated water/nutrient/stress meter. You can build the acquisition side from an M5Stack ESP32, an ECG front-end chip and ESPHome for about NZ$110, and stream it straight into Home Assistant.
 
-## A plant is quietly electric
+## Purpose and scope
 
 Plants generate tiny electrical signals. Ions move across cell membranes when the plant responds to light, water, wounding or nutrient change, and that movement shows up as a sub-millivolt voltage you can read with electrodes on the stem[^pb_pmc_plantsignals]. Commercial units like the Vivent VITA1 do exactly this, then use trained models to infer water and stress state from how the signal drifts[^pb_vivent].
 
@@ -35,7 +35,7 @@ Electrically, reading a plant is the same problem as reading a heartbeat: a smal
 > - **It does not reproduce the paid model.** A VITA1's N/P/K/Ca read-outs come from a trained model on a curated signal library. You get the millivolts; you build your own correlations over time.
 > - **ESPHome polls, it doesn't capture waveforms.** Fast sub-second spikes need the high-rate sketch noted at the end. For trend work, polling is the right tool, and it already samples finer than a VITA1's 5-minute dashboard.
 
-## The words you need
+## Definitions
 
 **Biopotential** — A voltage a living thing makes across its tissue. In plants it is microvolts to a few millivolts, riding on a slowly-drifting baseline.
 
@@ -228,7 +228,7 @@ binary_sensor:
 >
 > With electrodes attached and settled, read `Plant Biopotential (raw)` in Home Assistant. Whatever steady voltage it sits at _is_ your baseline, so replace the `1.5` in the lambda with that number. Then `Plant Biopotential` reads ~0 mV at rest and swings signed around it[^pb_esphome_ads1115].
 
-## Reading the data
+## Interpreting plant-biosignal data
 
 These are _changes_ in potential, not a calibrated physiological unit. Compare a plant to itself over time, never plant-to-plant in raw millivolts.
 
@@ -243,7 +243,7 @@ These are _changes_ in potential, not a calibrated physiological unit. Compare a
 
 To approach a commercial unit's _inference_, log the raw trace alongside VPD, light and irrigation events for a few weeks, then hunt for **your own** repeatable correlations, for example signal amplitude collapsing before visible wilt as an early water-stress warning. That correlation library is exactly what the paid product ships pre-built. Feed the trace into the [plant-state dashboard](plant-state-dashboard.html) to combine it with your other telemetry.
 
-## Limits, calibration and safety
+## Limitations, calibration and safety
 
 > **KEY — Set expectations before you solder**
 >

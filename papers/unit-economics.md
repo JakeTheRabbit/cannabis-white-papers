@@ -23,7 +23,7 @@ _Facility · Economics · ~22 min read_
 
 > The three yield denominators (g/m² of canopy, g/W of light, g/kWh all-in) what each is actually for, what each hides, and a worked cost stack that turns a fictional 100 m² room into a cost per gram you can argue with. Every number cited or derived in front of you.
 
-## Start here
+## Purpose and scope
 
 > **WARN — Education, not financial advice**
 >
@@ -35,17 +35,7 @@ The trouble is that the industry's favourite yardsticks, grams per square metre,
 
 Beginner-first, as always. If you can divide two numbers, you can follow all of it, the entire discipline of unit economics is choosing _which_ two numbers to divide.
 
-## The whole paper in five lines
-
-> **KEY — Cost per gram is the only score that pays rent**
->
-> - **Cost per gram = every dollar for the year ÷ every gram sold that year.** Not per cycle, not per room, not ‘once we're dialled in’. The bank statement, over the scale.
-> - That one fraction hides three dials: **grams per cycle** (agronomy), **cycles per year** (operations), and **dollars per year** (everything else). Every improvement you will ever make is one of the three.
-> - g/m², g/W and g/kWh are **partial views**, useful for diagnosis, dangerous as scoreboards, because each one deletes a cost the others see.
-> - Published benchmarks span roughly **6× in g/W and far more in g/m²** depending on conditions, quote ranges with context or don't quote them at all.
-> - Labour and turn time move the answer more than the gear you're being sold. Run the sensitivity before the credit card.
-
-## Words that keep the maths honest
+## Definitions
 
 Nine terms carry the rest of the paper. Most economic arguments between growers are two people using the same word for different fractions.
 
@@ -67,7 +57,17 @@ Nine terms carry the rest of the paper. Most economic arguments between growers 
 
 **Break-even** — The point where revenue equals cost: the yield, price or cycle count at which profit is exactly zero. Everything in this paper is ultimately about which side of it you're on.
 
-## g/m², g/W, g/kWh, pick the right lens
+## Cost-per-gram summary
+
+> **KEY — Cost per gram is the only score that pays rent**
+>
+> - **Cost per gram = every dollar for the year ÷ every gram sold that year.** Not per cycle, not per room, not ‘once we're dialled in’. The bank statement, over the scale.
+> - That one fraction hides three dials: **grams per cycle** (agronomy), **cycles per year** (operations), and **dollars per year** (everything else). Every improvement you will ever make is one of the three.
+> - g/m², g/W and g/kWh are **partial views**, useful for diagnosis, dangerous as scoreboards, because each one deletes a cost the others see.
+> - Published benchmarks span roughly **6× in g/W and far more in g/m²** depending on conditions, quote ranges with context or don't quote them at all.
+> - Labour and turn time move the answer more than the gear you're being sold. Run the sensitivity before the credit card.
+
+## g/m², g/W and g/kWh: selecting the right metric
 
 All three metrics divide the same harvest by a different resource, and each answers a different question. The mistake is not using them. It's using one of them as the scoreboard and forgetting what it can't see.
 
@@ -92,7 +92,7 @@ All three metrics divide the same harvest by a different resource, and each answ
 >
 > Whenever anyone quotes a per-m² number, yours included, ask _which m²_. Canopy, room floor, or whole building? A 450 g/m² canopy figure becomes ≈180 g/m² of building the moment you include aisles, veg and dry space at a typical 40% canopy-to-floor ratio. Both are true; only one of them divides into the rent.
 
-## What the published numbers actually say, and how hard to hedge
+## Published yield benchmarks and their limits
 
 Published cannabis yield figures are a minefield of mixed conditions, mixed denominators and outright projection. Before you benchmark against anything, look at what the honest sources actually report, and how far apart they are.
 
@@ -120,7 +120,7 @@ Published cannabis yield figures are a minefield of mixed conditions, mixed deno
 >
 > Plant density, cultivar, light level, pot size, flowering length, and, above all, _what counted as yield_ (whole flower? trimmed A-bud? paper projection?) all differ between studies. None of that makes the studies wrong. It makes single-number benchmarks wrong. When someone quotes ‘you should be getting X’, the only professional response is: _under what conditions, measured how?_
 
-## Grams per watt: a lighting-era metric aging badly
+## Grams per watt as a legacy lighting metric
 
 ‘A gram a watt’ was a useful rule of thumb when every serious room ran the same lamp. Under LED it has quietly become a measure of _when you bought your fixtures_, because the denominator changed underneath the metric.
 
@@ -140,7 +140,7 @@ The efficacy shift also rewrites the buying decision. In Bugbee's lighting trial
 > - Never compare across fixture generations, and never let a vendor do it for you.
 > - For decisions, translate to **g/kWh all-in** (add hours run and HVAC) and then to **$ per gram**. Watts don't appear on invoices; kilowatt-hours do.
 
-## Every line that ends up in the gram
+## Cost components per gram
 
 Cost per gram is built from a short, boring list. The skill isn't clever accounting. It's refusing to leave lines out. Eight lines cover a small indoor facility:
 
@@ -159,7 +159,7 @@ Cost per gram is built from a short, boring list. The skill isn't clever account
 >
 > A per-cycle cost ignores the days the room earned nothing, turn time, a failed batch, the month the dehumidifier died. Twelve months of dollars over twelve months of grams captures all of it automatically. It's also the only version your accountant, your bank and your licence renewal will recognise.
 
-## A fictional 100 m² room, every step shown
+## Worked example: a fictional 100 m² room
 
 > **WARN — Fictional facility, assumptions, not survey data**
 >
@@ -213,7 +213,7 @@ Now score the same room on every denominator from Section 04, so you can see wha
 
 *One room, five numbers, all simultaneously true. Only the last one decides anything.*
 
-## Labour: the biggest line nobody models
+## Labour costs
 
 Ask a new grower what indoor production costs and they'll talk about power. The fictional room's power bill is $0.23 a gram. Its people are $0.77 — the largest line by a factor of three, and the one most plans either omit or price at zero because ‘I'll do it myself’.
 
@@ -227,7 +227,7 @@ Notice the gap: tasks sum to ≈18 h/kg but payroll says ≈31. The missing 13 h
 - **Smooth the spikes.** Harvest weeks need 3× the hands of week 3 of flower. Staggered rooms (Section 10) turn a hiring problem into a scheduling one.
 - **Price the founder.** If your own hours enter at $0, every bad room you'll ever build will look profitable on paper.
 
-## Cycles per year: the quietest big number in the model
+## Annual crop cycles
 
 Everything you produce in a year is grams-per-cycle × cycles-per-year. The industry obsesses over the first term and lets the second one rot. Turn time, the days between harvesting one crop and flipping the next, multiplies _everything_.
 
@@ -246,7 +246,7 @@ Backer's meta-analysis found longer _flowering_ raised yield per m²[^backer2019
 >
 > Grams per cycle is agronomy. Cycles per year is discipline. The second is cheaper to improve, invisible on every per-cycle metric, and shows up whole in the annual division. When cost per gram drifts and nothing agronomic changed, check the calendar first.
 
-## Quality premiums vs volume, the other side of the fraction
+## Quality premiums and yield volume
 
 Cost per gram is half the story; the cheque depends on the price per gram, and price is tiered. US spot-market averages in early 2024 ran ≈$1,378/lb for indoor flower (≈$3.04/g), $725/lb greenhouse (≈$1.60/g) and $418/lb outdoor (≈$0.92/g)[^cannabisbenchmarks-q1-2024] — a 3× spread on production method alone, before grade tiers _within_ each method split further into A-flower, B/smalls and trim, each with its own price.
 
@@ -270,7 +270,7 @@ This is why **blended price**, not headline price, belongs in the model, and why
 >
 > Path B only works if the channel genuinely pays the A-tier price for your extra grade, a promise worth getting in writing before you rebuild the room around it. Chasing top-shelf raises trim hours, lowers plant density, and often stretches the cycle; if the market then pays you B-tier money anyway, you've built Path B's cost base with Path A's revenue. Quality-tier discounts, not yield, are where most ‘profitable’ models die.
 
-## Which input actually moves cost per gram
+## Cost-per-gram sensitivity
 
 Before spending a dollar to improve the room, ask the model which dial is worth touching. The method: take the fictional baseline ($1.90/g), move **one input at a time** across a plausible swing, hold everything else, and recompute. Plot the results widest-first and you get a tornado:
 
@@ -293,7 +293,7 @@ Read the order, because it's the whole strategy. A 20% yield move swings cost pe
 >
 > Rebuild the baseline with your numbers, then move each line ±20% and rank the spans. It takes twenty minutes in a spreadsheet and it will re-order your capex wishlist, usually by moving the trim process and the turn calendar above every piece of hardware on it.
 
-## Break-even thinking: where zero lives
+## Break-even analysis
 
 Break-even is the yield, price or cycle count where profit crosses zero, and knowing where it sits turns vague anxiety into specific targets. Three divisions, same fictional room:
 
@@ -314,7 +314,7 @@ Break-even is the yield, price or cycle count where profit crosses zero, and kno
 
 Two habits make break-even thinking useful rather than depressing. First, compute it _per constraint_ (a price floor, a yield floor, a calendar ceiling) so every team member owns a number they can actually influence. Second, recompute after every change: costs creep, prices sag, and last year's comfortable margin can become this year's break-even without a single dramatic event. Falling wholesale prices have been the norm in maturing markets[^cannabisbenchmarks-q1-2024], build the model expecting the band to move down, not up.
 
-## Common economic mistakes
+## Common unit-economics mistakes
 
 Every one of these is survivable once and fatal as a habit. All of them are denominators or missing lines. None of them is agronomy.
 
@@ -342,7 +342,7 @@ Comparing your LED g/W to an HPS grower's is comparing fixture efficacy[^kusuma2
 
 Moisture loss, failed tests, remediation, short-shipped orders. California's modelled testing failure rate alone was ≈4%[^valdes2020-testing]. Grams sold, not grams harvested, belong in the denominator.
 
-## When the money number drifts
+## Troubleshooting
 
 Symptoms first, causes second, same as diagnosing a sick plant, except the sensor is the bank statement and the lag is a full quarter.
 
@@ -357,7 +357,7 @@ Symptoms first, causes second, same as diagnosing a sick plant, except the senso
 
 *The common thread: the fix is almost always measurement cadence, not a purchase.*
 
-## Run the room like a factory with three dials
+## Unit-economics control variables
 
 > **KEY — The one-paragraph version**
 >
