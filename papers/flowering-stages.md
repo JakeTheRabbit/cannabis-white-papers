@@ -106,11 +106,11 @@ Bulking climate runs around 26 to 28 C day, with RH down to about 55 to 62% to l
 
 > **EVIDENCE — Grain of salt**
 >
-> **Borderline:** Amber trichome share is a _maturity_ cue, not a clean pharmacological switch. Effect is multi-factor (terpenes, dose, genotype, set/setting). Human evidence that CBN alone drives ‘couch-lock’ is limited. Long plain-water flushes are traditional; controlled tests often show little taste/potency gain — ease EC as appetite falls rather than starving the plant.
+> **Borderline:** Amber trichome share is a _maturity_ cue, not a clean pharmacological switch. Effect is multi-factor (terpenes, dose, genotype, set/setting). Human evidence that CBN alone drives ‘couch-lock’ is limited. Long plain-water flushes are traditional; controlled tests often show little taste/potency gain, ease EC as appetite falls rather than starving the plant.
 
 Pistils are a rough early signal but they lie. Trichomes are the true clock, and you read them with a cheap jeweler's loupe or pocket microscope.[^livingston-2020-trichome-maturation]
 
-Harvest when most trichomes have turned from clear to milky or cloudy, with a small fraction going amber. A common target is 80 to 90% milky with 5 to 15% amber. More clear or milky gives a more energetic, heady effect. More amber means THC is degrading toward CBN for a heavier feel for some people — multi-factor, not a CBN switch.[^livingston-2020-trichome-maturation]
+Harvest when most trichomes have turned from clear to milky or cloudy, with a small fraction going amber. A common target is 80 to 90% milky with 5 to 15% amber. More clear or milky gives a more energetic, heady effect. More amber means THC is degrading toward CBN for a heavier feel for some people, multi-factor, not a CBN switch.[^livingston-2020-trichome-maturation]
 
 Wait until pistils are mostly darkened and curled in (roughly 70% or more), then switch to checking trichomes for the real call. Use 60x or higher magnification on actual bud, not sugar leaves, and check several spots, since maturity varies across the plant. Do not harvest on the calendar alone: a week 9 strain can need week 10 depending on conditions and phenotype.
 
@@ -161,7 +161,7 @@ A typical photoperiod indoor grow runs about 8 to 10 weeks of flower on top of v
 
 > **Diagram.** Plan your effort around bulking. That is where light, climate and feed move the harvest most.
 
-> **KEY — Three honest truths**
+> **KEY — Three rules**
 >
 > 1. **Conditions move the finish date.** Genetics set the range, but your climate and feed decide where in it you land, often by a week or more.
 > 2. **Keep simple notes.** Week, height, climate, feed, what you removed. This is the fastest way to make each grow better than the last.

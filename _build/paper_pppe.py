@@ -39,9 +39,8 @@ SECTIONS.append({"id": "intro", "kicker": "Start here", "title": "Two jobs, one 
          "keeps your contamination off the crop. That is why we call it PPPE, plant <em>and</em> personal "
          "protective equipment."),
     p("People are typically the dominant contamination source in any clean space (exact share varies by facility design)" + _c("cleanroom-humans-source") + ". You cannot stop a human shedding. You can "
-      "only put a barrier around the human and move them through the building in a controlled way. That is "
-      "the whole game."),
-    callout("key", "Why this pays for itself",
+      "only put a barrier around the human and move them through the building in a controlled way."),
+    callout("key", "One shared glove can infect a crop",
       p("One contaminated mother plant or one shared glove can spread Hop Latent Viroid to an entire crop, "
         "and under experimental conditions infection of linked cuttings can approach complete cohort infection within weeks of propagation from infected "
         "stock" + _c("hlvd-transmission-2025") + ". The spread is mechanical, on tools, cuttings and hands, not "
@@ -88,8 +87,8 @@ SECTIONS.append({"id": "how-bad", "kicker": "The problem", "title": "How bad hum
       "<strong>Movement is the multiplier.</strong> A gowned person emits about 100,000 particles a minute "
       "standing still, a million walking, and up to five million working fast" + _c("cleanroom-humans-source") +
       ". Slow, calm movement is itself a control.",
-      "<strong>Your phone is a high-touch fomite.</strong> Phones carry skin and environmental flora and "
-      "order of magnitude more bacteria than a public high-touch fomite that contacts faces and hands, and they ride to your face and back to "
+      "<strong>Your phone is a high-touch fomite.</strong> Phones carry skin and environmental flora, "
+      "and they ride to your face and back to "
       "your hands all day" + _c("phone-fomite") + ".",
       "<strong>Your shoes are a pest and spore taxi.</strong> Soles carry live pathogens and fungal spores, "
       "and walking re-launches settled organisms into the air" + _c("shoe-floor-contamination") + ". Mites and "

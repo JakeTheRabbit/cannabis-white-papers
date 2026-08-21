@@ -198,7 +198,7 @@ SECTIONS.append({"id": "trouble", "kicker": "09 · When it goes wrong", "title":
 
 SECTIONS.append({"id": "expect", "kicker": "10 · Straight talk", "title": "Realistic expectations",
   "blocks": [
-    callout("key", "Three honest truths",
+    callout("key", "Three rules",
       ol(["<strong>There is no universal recipe.</strong> The right VWC, EC and dryback numbers depend on your strain, pot size, climate and light. Start from the ranges here and tune to <em>your</em> plants.",
           "<strong>Steering is a bias, not a switch.</strong> You are nudging odds over days, not flipping a plant overnight.",
           "<strong>The root zone is only one lever.</strong> Light, temperature, humidity and airflow all push the same plant. Read the <a href='grow-room-systems.html'>systems guide</a> next."])),

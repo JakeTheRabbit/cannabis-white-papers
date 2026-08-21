@@ -29,7 +29,7 @@ SECTIONS.append({"id": "intro", "kicker": "Start here", "title": "Why the last t
          "curing and storage. Weeks of careful growing can be ruined in a few days here. Dry too "
          "fast or too dry and you lose smell and weight. Dry too slow or too wet and mould takes hold."),
     p("Aim for a narrow safe zone: dry enough that mould cannot grow, but not so dry that the smell "
-      "and weight evaporate away. Done well, dialling in this stage often recovers sellable mass versus bone-dry flower; vendor education sometimes cites ~5-10% "
+      "and weight evaporate away. Done well, dialling in this stage recovers sellable mass you would lose to bone-dry flower. Vendor figures of ~5-10% "
       "to final yield, because most growers are accidentally over-drying and "
       "losing sellable weight." + _c("aroya-drying-water-activity-guide")),
     figure(L.flow("The post-harvest pipeline, start to finish",
@@ -48,7 +48,7 @@ SECTIONS.append({"id": "intro", "kicker": "Start here", "title": "Why the last t
 
 SECTIONS.append({"id": "key-terms", "kicker": "Vocabulary", "title": "The words you need before we start",
   "blocks": [
-    p("Two ideas do most of the work in this guide. Don't memorise them. Each one comes back "
+    p("Two ideas do most of the work here. Don't memorise them. Each one comes back "
       "in context."),
     defterm("Water activity (aw)", "How &lsquo;available&rsquo; the water in the flower is, on a 0 "
             "to 1.00 scale. It is the single best predictor of whether mould will grow. When the "
@@ -88,7 +88,7 @@ SECTIONS.append({"id": "harvest-timing", "kicker": "Step 1 of the science", "tit
             [(0, 1), (1, 2), (2, 3), (3, 4), (4, 5)],
             ["trellis d1", "lollipop d7-10", "defan d21-28", "final defan d42-49", "harvest"],
             ylab="plant-work stage", note="Each milestone is a scheduled task. Harvest is the last one."), 3,
-      "Harvest is not a surprise. It is the planned end of a sequence of plant-work milestones "
+      "Harvest is the planned end of a sequence of plant-work milestones "
       "across the flowering room."),
     callout("tip", "Let the plant decide",
       p("If the calendar says cut but the trichomes are still mostly clear, wait. Read maturity "
@@ -102,7 +102,7 @@ SECTIONS.append({"id": "harvest-method", "kicker": "Step 2, hands on", "title": 
       "leave the top layer on for support, then cut the main stalk at its base."),
     p("Before anything is hung, weigh every bin to record the <strong>wet weight</strong>, the "
       "starting weight. Compared against the final dry weight later, this gives the "
-      "dry-to-wet ratio for each genetic, which is often ~10% of whole-plant wet weight in many rooms (example batch "
+      "dry-to-wet ratio for each genetic, which is around 10% of whole-plant wet weight (one example batch "
       "came in at 10.46%). That tells you how much of the harvested mass is water."),
     steps([
       ("Free the plant", "Cut a circle through the bottom and middle trellis layers. Leave the top layer attached for support."),
@@ -184,7 +184,7 @@ SECTIONS.append({"id": "trimming", "kicker": "Step 3, hands on", "title": "Trimm
         "Never touch the flower. Handling damages trichomes",
         "Remove fan leaves (large, few trichomes) by hand, then scissor off sugar leaves",
         "Clean scissors in 71% alcohol when resin builds up",
-        "After dry-trim, re-check aw &mdash; handling and leaf removal can change the reading, so do not assume the hang-dry number still holds"]),
+        "After dry-trim, re-check aw, handling and leaf removal can change the reading, so do not assume the hang-dry number still holds"]),
     table(["", "Wet trim", "Dry trim (this guide)"], [
       ["When", "Right after cutting", "After the 10-14 day hang-dry"],
       ["Drying speed", "Faster, harsher", "Slower, gentler"],
@@ -255,7 +255,7 @@ SECTIONS.append({"id": "expectations", "kicker": "Reality check", "title": "What
       "settles in curing before the batch is sealed." + _c("astm-d8197-water-activity")),
     callout("key", "Three honest truths",
       ol(["<strong>It takes weeks, not days.</strong> Plan two-to-three weeks for the whole post-harvest stage and do not rush the dry.",
-          "<strong>The payoff is real.</strong> Dialling in drying and curing can lift sellable weight when you stop over-drying (vendor ~5-10% figures are illustrative)." + _c("aroya-drying-water-activity-guide"),
+          "<strong>Stop over-drying.</strong> Dialling in drying and curing recovers sellable weight you would otherwise lose. The ~5-10% figures vendors quote are illustrative." + _c("aroya-drying-water-activity-guide"),
           "<strong>Genetics matter.</strong> Drying and curing are strain-dependent. Dense and fluffy flowers finish at slightly different aw points, so log every batch." + _c("birenboim-2024-cultivar-drying")])),
     p("Record the aw, RH, dates and outcomes for every genetic so good results are repeatable. The "
       "instrument is a guide, not a boss: inside the safe aw zone, trust smell and feel for the "

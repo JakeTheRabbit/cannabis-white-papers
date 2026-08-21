@@ -276,32 +276,32 @@ SECTIONS.append({"id": "latest-research", "kicker": "Latest research · 2024-202
       "heavier inflorescence and higher concentrations, at roughly constant light-use efficiency" +
       _c("saetang2024-high-light-metabolites") + ". Alongside the older result that dry flower yield "
       "rises roughly linearly with PPFD up to ~1800 &micro;mol" + _c("rodriguez-morrison-2021-cannabis-light-intensity-yield") +
-      ", the message is consistent: a clean ramp to a high ceiling pays in grade as well as mass "
-      "&mdash; <em>provided</em> CO2 and climate keep pace. Without that fuel, the extra light still "
+      ", the message is consistent: a clean ramp to a high ceiling pays in grade as well as mass"
+      ", <em>provided</em> CO2 and climate keep pace. Without that fuel, the extra light still "
       "just bleaches (Section above)."),
     figure(L.bars("Pushing PPFD 600 -> 1200 (with matched CO2): metabolite gains",
             [("Cannabinoid content", 60), ("Terpenoid content", 40)], unit="%", maxv=70,
             note="From a 2024 trial; gains came from both more inflorescence mass and higher concentrations."), 10,
-      "More light, properly fuelled, lifts concentration as well as weight &mdash; it is a quality lever, "
+      "More light, properly fuelled, lifts concentration as well as weight. It is a quality lever, "
       "not only a yield one." + _c("saetang2024-high-light-metabolites")),
     p("<strong>Far-red is a dosed scalpel, with a trade-off.</strong> End-of-day far-red can shorten the "
       "photoperiod (12 to 10 hours, around 5.5% energy saving) and lift cannabinoid yield in <em>some</em> "
-      "cultivars &mdash; one strain showed roughly a 70% jump in total cannabinoid yield" +
+      "cultivars, one strain showed roughly a 70% jump in total cannabinoid yield" +
       _c("farred2025-scirep") + ". But pushing far-red across the whole spectrum (a lower red-to-far-red "
       "ratio) tends to <em>raise inflorescence mass while diluting</em> cannabinoid and terpene "
-      "concentration &mdash; taller, bigger, looser, weaker bud" + _c("rfr2024-yield-vs-metabolites") + ". "
+      "concentration, taller, bigger, looser, weaker bud" + _c("rfr2024-yield-vs-metabolites") + ". "
       "Far-red also drives stretch. Treat it as a deliberate, strain-by-strain tool, never a default "
       "&lsquo;more is better&rsquo; spectrum component."),
     p("<strong>UV rarely adds potency in modern cultivars.</strong> Earlier work found supplemental "
       "UV-B did not raise yield or cannabinoid content" + _c("llewellyn-2022-cannabis-yield-proportional-light-uv") +
-      ", and a 2024 UV-spectra trial confirmed no cannabinoid gain &mdash; high UV-B actually <em>cut</em> "
+      ", and a 2024 UV-spectra trial confirmed no cannabinoid gain, high UV-B actually <em>cut</em> "
       "THC and scorched leaves. Only the lowest UV-A dose nudged the terpene profile (linalool +29%, "
       "limonene +25%, myrcene +22%) while holding yield" + _c("huebner2024-uv-spectra") + ". Modern "
       "high-THC genetics already run near their ceiling, so don't expect UV to boost potency; at most a "
       "careful low UV-A dose tweaks aroma, and supplemental UV usually costs efficiency."),
     callout("key", "Intensity first, spectrum second",
       p("Get the ramp and the CO2 right before touching spectrum. Far-red and UV are marginal, "
-        "trade-off-laden add-ons on top of a dialled-in intensity programme &mdash; not shortcuts around "
+        "trade-off-laden add-ons on top of a dialled-in intensity programme, not shortcuts around "
         "it. A clean, fully-fuelled climb to your honest ceiling beats any spectrum trick on a "
         "half-acclimated, CO2-starved plant.")),
   ]})

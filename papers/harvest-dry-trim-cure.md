@@ -27,7 +27,7 @@ _Post-harvest · Process · ~14 min read_
 
 Post-harvest is everything that happens after the plant is cut down: drying, trimming, curing and storage. Weeks of careful growing can be ruined in a few days here. Dry too fast or too dry and you lose smell and weight. Dry too slow or too wet and mould takes hold.
 
-Aim for a narrow safe zone: dry enough that mould cannot grow, but not so dry that the smell and weight evaporate away. Done well, dialling in this stage often recovers sellable mass versus bone-dry flower; vendor education sometimes cites ~5-10% to final yield, because most growers are accidentally over-drying and losing sellable weight.[^aroya-drying-water-activity-guide]
+Aim for a narrow safe zone: dry enough that mould cannot grow, but not so dry that the smell and weight evaporate away. Done well, dialling in this stage recovers sellable mass you would lose to bone-dry flower. Vendor figures of ~5-10% to final yield, because most growers are accidentally over-drying and losing sellable weight.[^aroya-drying-water-activity-guide]
 
 > **Diagram.** The five steps that turn a living plant into a finished, stable product. The numbers on each box are what you steer toward, explained section by section below.
 
@@ -37,7 +37,7 @@ Aim for a narrow safe zone: dry enough that mould cannot grow, but not so dry th
 
 ## The words you need before we start
 
-Two ideas do most of the work in this guide. Don't memorise them. Each one comes back in context.
+Two ideas do most of the work here. Don't memorise them. Each one comes back in context.
 
 **Water activity (aw)** — How ‘available’ the water in the flower is, on a 0 to 1.00 scale. It is the single best predictor of whether mould will grow. When the flower and the air around it reach balance, the air's relative humidity equals water activity times 100.[^fda-water-activity-foods]
 
@@ -64,7 +64,7 @@ The clearest signal is the trichomes. Under a loupe they shift from clear, to mi
 - Keep each plant's tracking tag attached as it is cut. This is how batches stay traceable
 - Collect loose buds that fall on the table (‘table nugs’) per strain, label them, and dry them separately
 
-> **Diagram.** Harvest is not a surprise. It is the planned end of a sequence of plant-work milestones across the flowering room.
+> **Diagram.** Harvest is the planned end of a sequence of plant-work milestones across the flowering room.
 
 > **TIP — Let the plant decide**
 >
@@ -74,7 +74,7 @@ The clearest signal is the trichomes. Under a loupe they shift from clear, to mi
 
 Cut plants whole and hang them to dry, rather than stripping the buds first. Cutters free each plant from the lower two layers of trellis netting (the support grid the plant grew through), leave the top layer on for support, then cut the main stalk at its base.
 
-Before anything is hung, weigh every bin to record the **wet weight**, the starting weight. Compared against the final dry weight later, this gives the dry-to-wet ratio for each genetic, which is often ~10% of whole-plant wet weight in many rooms (example batch came in at 10.46%). That tells you how much of the harvested mass is water.
+Before anything is hung, weigh every bin to record the **wet weight**, the starting weight. Compared against the final dry weight later, this gives the dry-to-wet ratio for each genetic, which is around 10% of whole-plant wet weight (one example batch came in at 10.46%). That tells you how much of the harvested mass is water.
 
 1. **Free the plant** — Cut a circle through the bottom and middle trellis layers. Leave the top layer attached for support.
 2. **Cut the stalk** — Sever the main stalk at its base so the whole plant comes away in one piece.
@@ -122,7 +122,7 @@ Never touch the flower itself. Handling knocks off the trichomes that carry pote
 - Never touch the flower. Handling damages trichomes
 - Remove fan leaves (large, few trichomes) by hand, then scissor off sugar leaves
 - Clean scissors in 71% alcohol when resin builds up
-- After dry-trim, re-check aw — handling and leaf removal can change the reading, so do not assume the hang-dry number still holds
+- After dry-trim, re-check aw, handling and leaf removal can change the reading, so do not assume the hang-dry number still holds
 
 |  | Wet trim | Dry trim (this guide) |
 | --- | --- | --- |
@@ -172,7 +172,7 @@ Expect roughly 10-14 days of hang-drying plus several more days of curing before
 > **KEY — Three honest truths**
 >
 > 1. **It takes weeks, not days.** Plan two-to-three weeks for the whole post-harvest stage and do not rush the dry.
-> 2. **The payoff is real.** Dialling in drying and curing can lift sellable weight when you stop over-drying (vendor ~5-10% figures are illustrative).[^aroya-drying-water-activity-guide]
+> 2. **Stop over-drying.** Dialling in drying and curing recovers sellable weight you would otherwise lose. The ~5-10% figures vendors quote are illustrative.[^aroya-drying-water-activity-guide]
 > 3. **Genetics matter.** Drying and curing are strain-dependent. Dense and fluffy flowers finish at slightly different aw points, so log every batch.[^birenboim-2024-cultivar-drying]
 
 Record the aw, RH, dates and outcomes for every genetic so good results are repeatable. The instrument is a guide, not a boss: inside the safe aw zone, trust smell and feel for the final call. When you are ready, read the [mould-risk](mould-risk.html) guide for what to do if a batch slips above the line, and the [nutrient-mixing](nutrient-mixing-athena.html) guide for the feed side of quality.

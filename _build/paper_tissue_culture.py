@@ -129,10 +129,10 @@ SECTIONS.append({
       "undetected until production has quietly collapsed."),
     h(3, "Why HpLVd is such a big deal"),
     grid([
-      card("It's everywhere", "Industry and research surveys have reported very high facility infection rates in California (~90% in one large testing programme) and frequent positives in Canadian retail flower (~40% in one study) &mdash; treat as warning signals, not permanent global prevalence. If you've cloned for years, assume you may have it." + R["hlvd_mgmt2025"], tag="Prevalence"),
-      card("It's expensive", "In severe symptomatic dud outbreaks, infected plants can lose a large fraction of cannabinoids (sometimes approaching ~50%)</strong>, plus terpenes, trichomes and yield. Industry losses run into tens of millions of dollars a year.", tag="Impact"),
+      card("It's everywhere", "Industry and research surveys have reported very high facility infection rates in California (~90% in one large testing programme) and frequent positives in Canadian retail flower (~40% in one study), treat as warning signals, not permanent global prevalence. If you've cloned for years, assume you may have it." + R["hlvd_mgmt2025"], tag="Prevalence"),
+      card("It's expensive", "In severe dud outbreaks, infected plants can lose <strong>up to about half their cannabinoids</strong>, plus terpenes, trichomes and yield. Industry losses run into tens of millions of dollars a year.", tag="Impact"),
       card("It's stealthy", "It can sit <strong>symptomless</strong> for a long time and is &lsquo;latent&rsquo; by name. By the time plants visibly dud, the whole room is usually infected.", tag="Latent"),
-      card("It's tough", "It survives on tools, hands, pots and benches, rides in sap for ~a week and in dried tissue for ~a month, and even passes through seed (at genotype-dependent rates (often single digits to tens of percent — test seed lots)).", tag="Persistent"),
+      card("It's tough", "It survives on tools, hands, pots and benches, rides in sap for ~a week and in dried tissue for ~a month, and even passes through seed at genotype-dependent rates, from single digits to tens of percent, so test your seed lots.", tag="Persistent"),
     ], cols=2),
     callout("warn", "Why you can't just spray it away",
       p("No spray cures a viroid-infected plant. It lives <em>inside</em> the plant's "
@@ -332,7 +332,7 @@ SECTIONS.append({
       ["PPM (a biocide)", "<span class='num'>1&ndash;2 mL</span> (optional)", "Extra insurance against microbes that survive sterilisation."],
       ["Top up water to", "<span class='num'>1 L</span>; pH to <span class='num'>5.6&ndash;5.8</span>", "Set pH BEFORE adding agar and before sterilising."],
     ], caption="DIY all-purpose cannabis medium. Use full-strength MS for initiation/multiplication; switch to half-strength MS for rooting (section 15)."),
-    callout("note", "Order of operations matters",
+    callout("note", "Set the pH before the agar",
       p("Dissolve salts and sugar in the water first, <strong>adjust the pH to 5.6&ndash;5.8</strong> "
         "(nudge down with a drop of dilute acid, up with dilute base), <em>then</em> add the agar, "
         "then heat to dissolve the agar, then pour into jars (~&#8531; full) and sterilise. pH set "

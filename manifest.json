@@ -138,7 +138,7 @@
   {
    "slug": "scaling-high-light",
    "title": "Scaling light to the limiting factor",
-   "summary": "Light sets the demand. CO₂, water, airflow, feed and heat-removal have to supply it. Your yield ceiling is whichever one tops out first — so size every system to the light, find the wall, and dial the light down to meet it.",
+   "summary": "Light sets the demand. CO₂, water, airflow, feed and heat-removal have to supply it. Your yield ceiling is whichever one tops out first, so size every system to the light, find the wall, and dial the light down to meet it.",
    "track": "Environment & climate",
    "read_time": "~16 min read",
    "diagrams": "1 diagram · 5 tables",
@@ -705,7 +705,7 @@
   {
    "slug": "plant-biosignal-sensor",
    "title": "DIY plant-biosignal sensor: read a plant's electrical signals",
-   "summary": "Commercial plant-biosignal sensors clip electrodes to a plant, amplify the tiny voltages it makes, and log the drift for education — not as a validated water/nutrient/stress meter. You can build the acquisition side from an M5Stack ESP32, an ECG front-end chip and ESPHome for about NZ$110, and stream it straight into Home Assistant.",
+   "summary": "Commercial plant-biosignal sensors clip electrodes to a plant, amplify the tiny voltages it makes, and log the drift for education, not as a validated water/nutrient/stress meter. You can build the acquisition side from an M5Stack ESP32, an ECG front-end chip and ESPHome for about NZ$110, and stream it straight into Home Assistant.",
    "track": "Precision & automation",
    "read_time": "~14 min read",
    "diagrams": "",
@@ -742,7 +742,7 @@
   {
    "slug": "hash-rosin-pressing",
    "title": "Hash rosin, pressed: a solventless systems guide",
-   "summary": "Rosin is mechanical, not chemical: heat, pressure, time and a micron screen acting on a material whose quality ceiling was already fixed upstream — at harvest, in the wash, in the dry. This guide maps the whole chain, trichome to dab.",
+   "summary": "Rosin is mechanical, not chemical: heat, pressure, time and a micron screen acting on a material whose quality ceiling was already fixed upstream, at harvest, in the wash, in the dry. This guide maps the whole chain, trichome to dab.",
    "track": "Harvest, dry, trim & cure",
    "read_time": "~22 min read",
    "diagrams": "8 diagrams",
@@ -811,7 +811,7 @@
   {
    "slug": "mother-plants",
    "title": "Mother plants: stock management that never runs dry",
-   "summary": "How to keep cannabis mother plants healthy for the long haul — room setup, feeding, pruning architecture, viroid defence, testing rotation and succession — so every batch starts from a plant you can actually trust.",
+   "summary": "How to keep cannabis mother plants healthy for the long haul, room setup, feeding, pruning architecture, viroid defence, testing rotation and succession. So every batch starts from a plant you can actually trust.",
    "track": "Propagation",
    "read_time": "~20 min read",
    "diagrams": "13 diagrams",
@@ -828,7 +828,7 @@
   {
    "slug": "genetics-phenohunting",
    "title": "Genetics, seeds and the pheno hunt",
-   "summary": "Where keeper cultivars actually come from: what genotype, phenotype and chemotype mean, why every seed is a gamble by design, how to run a pheno hunt that finds a winner — and how to keep the cut once you have it.",
+   "summary": "Where keeper cultivars actually come from: what genotype, phenotype and chemotype mean, why every seed is a gamble by design, how to run a pheno hunt that finds a winner, and how to keep the cut once you have it.",
    "track": "Know the plant",
    "read_time": "~24 min read",
    "diagrams": "10 diagrams",
@@ -846,7 +846,7 @@
   {
    "slug": "temp-humidity-vpd",
    "title": "Temperature, humidity and VPD: the air the plant feels",
-   "summary": "VPD is the one climate number the plant actually feels. What it is, the equation in a form you can use, why leaf temperature — not air — sets the real number, stage bands you can defend, the night-time dew-point discipline that keeps mould out, and how to measure it all without lying to yourself.",
+   "summary": "VPD is the one climate number the plant actually feels. What it is, the equation in a form you can use, why leaf temperature (not air) sets the real number, stage bands you can defend, the night-time dew-point discipline that keeps mould out, and how to measure it all without lying to yourself.",
    "track": "Environment & climate",
    "read_time": "~19 min read",
    "diagrams": "12 diagrams",
@@ -864,7 +864,7 @@
   {
    "slug": "lab-testing-coas",
    "title": "Lab testing, potency and the COA",
-   "summary": "A certificate of analysis is a measurement of one small sample — not a property of your crop. This guide reads a COA line by line, checks the potency maths (the 0.877 factor and the chemistry behind it), explains every test family from qPCR to ICP-MS, and is honest about the part the industry keeps getting caught at: inflated numbers.",
+   "summary": "A certificate of analysis is a measurement of one small sample, not a property of your crop. This guide reads a COA line by line, checks the potency maths (the 0.877 factor and the chemistry behind it), explains every test family from qPCR to ICP-MS, and is honest about the part the industry keeps getting caught at: inflated numbers.",
    "track": "Harvest, dry, trim & cure",
    "read_time": "~24 min read",
    "diagrams": "10 diagrams",
@@ -881,7 +881,7 @@
   {
    "slug": "unit-economics",
    "title": "Yield per watt and the cost of a gram",
-   "summary": "The three yield denominators — g/m² of canopy, g/W of light, g/kWh all-in — what each is actually for, what each hides, and a worked cost stack that turns a fictional 100 m² room into a cost per gram you can argue with. Every number cited or derived in front of you.",
+   "summary": "The three yield denominators (g/m² of canopy, g/W of light, g/kWh all-in) what each is actually for, what each hides, and a worked cost stack that turns a fictional 100 m² room into a cost per gram you can argue with. Every number cited or derived in front of you.",
    "track": "Facility & quality",
    "read_time": "~22 min read",
    "diagrams": "11 diagrams",
@@ -935,7 +935,7 @@
   {
    "slug": "cannabinoids-terpenes",
    "title": "Cannabinoids and terpenes: the chemistry that matters",
-   "summary": "Two families of molecules carry all the value in this industry — and both are built in the same microscopic gland, as acids, on one assembly line. This is the grower's field guide to that chemistry: where it is made, what each compound is and is not, how it degrades, and what you actually control.",
+   "summary": "Two families of molecules carry all the value in this industry. And both are built in the same microscopic gland, as acids, on one assembly line. This is the grower's field guide to that chemistry: where it is made, what each compound is and is not, how it degrades, and what you actually control.",
    "track": "Know the plant",
    "read_time": "~24 min read",
    "diagrams": "10 diagrams",
@@ -953,7 +953,7 @@
   {
    "slug": "energy-sustainability",
    "title": "Energy, utilities and sustainability",
-   "summary": "Where the kilowatt-hours actually go in an indoor grow — lighting, HVAC, dehumidification — and the cited playbook for spending fewer of them: efficacy, the double dividend, demand charges, water reuse, and the retrofit order that pays.",
+   "summary": "Where the kilowatt-hours actually go in an indoor grow (lighting, HVAC, dehumidification) and the cited playbook for spending fewer of them: efficacy, the double dividend, demand charges, water reuse, and the retrofit order that pays.",
    "track": "Facility & quality",
    "read_time": "~18 min read",
    "diagrams": "12 diagrams",

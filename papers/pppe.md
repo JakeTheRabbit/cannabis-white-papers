@@ -31,9 +31,9 @@ _Plant health · PPE & biosecurity · ~17 min read_
 
 PPE in a grow is not really about you. In most rooms the gear is there to protect the **plant** from you: from the skin you shed, the spores on your jacket, the mites on your shoes and the viroid on your hands. The same coverall that keeps your clothes clean also keeps your contamination off the crop. That is why we call it PPPE, plant _and_ personal protective equipment.
 
-People are typically the dominant contamination source in any clean space (exact share varies by facility design)[^cleanroom-humans-source]. You cannot stop a human shedding. You can only put a barrier around the human and move them through the building in a controlled way. That is the whole game.
+People are typically the dominant contamination source in any clean space (exact share varies by facility design)[^cleanroom-humans-source]. You cannot stop a human shedding. You can only put a barrier around the human and move them through the building in a controlled way.
 
-> **KEY — Why this pays for itself**
+> **KEY — One shared glove can infect a crop**
 >
 > One contaminated mother plant or one shared glove can spread Hop Latent Viroid to an entire crop, and under experimental conditions infection of linked cuttings can approach complete cohort infection within weeks of propagation from infected stock[^hlvd-transmission-2025]. The spread is mechanical, on tools, cuttings and hands, not airborne. Gloves-per-plant and gowning are not box-ticking; they are crop insurance.
 
@@ -66,7 +66,7 @@ It is worth sitting with the numbers, because they are the entire argument for g
 > **Diagram.** People are the number-one contamination source in a clean space[^cleanroom-humans-source]. You shed roughly ten million skin flakes a day, about a tenth carrying live bacteria[^cdc-skin-squames], and an occupied room gains tens of millions of bacteria and millions of fungal spores per person per hour[^human-microbial-cloud].
 
 - **Movement is the multiplier.** A gowned person emits about 100,000 particles a minute standing still, a million walking, and up to five million working fast[^cleanroom-humans-source]. Slow, calm movement is itself a control.
-- **Your phone is a high-touch fomite.** Phones carry skin and environmental flora and order of magnitude more bacteria than a public high-touch fomite that contacts faces and hands, and they ride to your face and back to your hands all day[^phone-fomite].
+- **Your phone is a high-touch fomite.** Phones carry skin and environmental flora, and they ride to your face and back to your hands all day[^phone-fomite].
 - **Your shoes are a pest and spore taxi.** Soles carry live pathogens and fungal spores, and walking re-launches settled organisms into the air[^shoe-floor-contamination]. Mites and powdery mildew arrive on clothing and footwear.
 - **The toilet throws a plume.** A flush lofts aerosols to about 1.5 m within seconds, viable for minutes to hours; a closed lid cuts it sharply[^toilet-plume].
 

@@ -24,7 +24,7 @@ SECTIONS.append({"id": "intro", "kicker": "Start here", "title": "What this is, 
   "blocks": [
     callout("evidence", "Grain of salt",
       "<p><strong>Provisional:</strong> On-screen advisories (e.g. tip-burn risk timelines) are product-design "
-      "examples for operator UX &mdash; not a validated prognostic model.</p>"),
+      "examples for operator UX, not a validated prognostic model.</p>"),
     lead("A modern grow room is wired with sensors measuring air temperature, humidity, VPD, "
          "CO&#8322;, light, substrate moisture, EC, root-zone temperature, pH and power draw, "
          "second by second. The dashboards built to show all of this are walls of "
@@ -148,7 +148,7 @@ SECTIONS.append({"id": "plant-state-model", "kicker": "Core content", "title": "
       ", so the accumulated quantity is the meaningful one. <strong>Substrate state</strong> adds "
       "derived crop-steering metrics: dryback depth and rate, field-capacity recovery, and "
       "shot-to-shot moisture response."),
-    p("The <strong>plant physiological state</strong> is the whole point. It is not measured but "
+    p("The <strong>plant physiological state</strong> is not measured but "
       "<strong>estimated</strong>, by fusing the others into a transpiration proxy, a stress index, "
       "a vigour/stacking trajectory and a steering-response readout. <strong>Operational/equipment "
       "state</strong> and an optional <strong>vision state</strong> (canopy cameras) round it out. "

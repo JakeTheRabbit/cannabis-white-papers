@@ -212,7 +212,7 @@ Raising CO2 does not act alone, it pulls on the rest of the room. This is the sa
 
 ## The drying room: CO2 with no light to burn it
 
-A drying room is the dark side of everything above, literally. You fill a sealed, dark, low-airflow room with tens or hundreds of kilos of freshly cut biomass, and that biomass keeps **respiring** for days after harvest, releasing CO2 the whole time, with no photosynthesis to soak any of it back up[^kader2002-respiration].
+A drying room is the dark side of everything above. You fill a sealed, dark, low-airflow room with tens or hundreds of kilos of freshly cut biomass, and that biomass keeps **respiring** for days after harvest, releasing CO2 the whole time, with no photosynthesis to soak any of it back up[^kader2002-respiration].
 
 Cut leaf and flower is a fast-respiring tissue, in the same postharvest class as leafy greens and cut herbs, and warmth speeds it up (that Q10-of-2 again)[^kader2002-respiration]. A drying room held at 15–18 °C with the air barely moving is a near-perfect CO2 trap. Sealed, planted greenhouses already climb to 600–1,000+ ppm overnight from living plants[^ahdb-co2]; a room packed with cut biomass and almost no ventilation can go substantially higher, into the thousands of ppm and, in the worst unventilated cases, potentially toward percent-level concentrations.
 
@@ -226,7 +226,7 @@ Cut leaf and flower is a fast-respiring tissue, in the same postharvest class as
 
 ## CO2 and people: the numbers that matter most
 
-Read this section even if you skip the rest. Your enrichment setpoint of 1,000–1,500 ppm is well below any worker limit and safe for brief occupancy. The danger is not the setpoint, it is a leaking regulator, an overfilled room, a burner fault, or a sealed drying room, any of which can reach lethal CO2 while you notice nothing.
+Read this section even if you skip the rest. Your enrichment setpoint of 1,000–1,500 ppm is well below any worker limit and safe for brief occupancy. The danger is a leaking regulator, an overfilled room, a burner fault, or a sealed drying room, any of which can reach lethal CO2 while you notice nothing.
 
 > **Diagram.** The normal enrichment band against the occupational limit. Correctly run, enrichment is nowhere near the danger zone, which is exactly why a runaway leak is so easy to ignore until it isn't[^osha-pel-co2].
 
@@ -236,7 +236,7 @@ Every major safety authority agrees on the headline number: the 8-hour average a
 | --- | --- | --- |
 | ~420 ppm | Normal outdoor air | Baseline[^noaa2024-co2] |
 | 1,000–1,500 ppm | Typical enrichment target, safe for short work | 3–5× below the worker limit |
-| 1,000–2,500 ppm | Some studies report small cognitive effects (literature mixed) | Cognition, not danger[^azuma2018-cognition] |
+| 1,000–2,500 ppm | Small cognitive effects reported, evidence mixed | Cognition, not danger[^azuma2018-cognition] |
 | 5,000 ppm (0.5%) | 8-hour worker exposure limit (TWA) | OSHA / NIOSH / ACGIH / WorkSafe NZ[^worksafenz-co2] |
 | 30,000 ppm (3%) | 15-minute short-term limit (STEL); headache, fast breathing | NIOSH / ACGIH / WorkSafe NZ[^niosh-co2] |
 | 40,000 ppm (4%) | IDLH, immediately dangerous to life or health | Escape-impairing[^niosh-co2] |

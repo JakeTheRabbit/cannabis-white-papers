@@ -2,7 +2,7 @@
 slug: "plant-biosignal-sensor"
 title: "DIY plant-biosignal sensor: read a plant's electrical signals"
 eyebrow: "Build · Precision & automation"
-summary: "Commercial plant-biosignal sensors clip electrodes to a plant, amplify the tiny voltages it makes, and log the drift for education — not as a validated water/nutrient/stress meter. You can build the acquisition side from an M5Stack ESP32, an ECG front-end chip and ESPHome for about NZ$110, and stream it straight into Home Assistant."
+summary: "Commercial plant-biosignal sensors clip electrodes to a plant, amplify the tiny voltages it makes, and log the drift for education, not as a validated water/nutrient/stress meter. You can build the acquisition side from an M5Stack ESP32, an ECG front-end chip and ESPHome for about NZ$110, and stream it straight into Home Assistant."
 track: "Precision & automation"
 read_time: "~14 min read"
 diagrams: ""
@@ -21,7 +21,7 @@ refs: [{"id": "pb_mdpi_ad8232", "n": 1, "cite": "Marques JAL et al. (2023). From
 
 _Build · Precision & automation · ~14 min read_
 
-> Commercial plant-biosignal sensors clip electrodes to a plant, amplify the tiny voltages it makes, and log the drift for education — not as a validated water/nutrient/stress meter. You can build the acquisition side from an M5Stack ESP32, an ECG front-end chip and ESPHome for about NZ$110, and stream it straight into Home Assistant.
+> Commercial plant-biosignal sensors clip electrodes to a plant, amplify the tiny voltages it makes, and log the drift for education, not as a validated water/nutrient/stress meter. You can build the acquisition side from an M5Stack ESP32, an ECG front-end chip and ESPHome for about NZ$110, and stream it straight into Home Assistant.
 
 ## A plant is quietly electric
 
@@ -75,7 +75,7 @@ About NZ$110. M5Stack parts come as plug-together Grove modules; the two non-M5S
 | **1-to-3 HUB Unit** (passive I2C splitter) | Share one bus across three devices | [shop.m5stack.com](https://shop.m5stack.com/products/mini-hub-module) | 6 |
 | **AD8232 ECG module** (SparkFun SEN-12650 or clone) | Biopotential front-end [non-M5Stack] | [sparkfun.com](https://www.sparkfun.com/sparkfun-single-lead-heart-rate-monitor-ad8232.html) · clone on AliExpress ~NZ$9 | 9 |
 | **ADS1115 breakout** (16-bit I2C ADC) | Digitise the analog output [non-M5Stack] | [adafruit.com/product/1085](https://www.adafruit.com/product/1085) · clone ~NZ$6 | 6 |
-| **Electrodes** — Ag/AgCl EEG cups _or_ stainless probes + snap leads | Skin contact [non-M5Stack] | [SparkFun sensor cable](https://www.sparkfun.com/products/12970) + [electrode pads](https://www.sparkfun.com/products/12969), or medical Ag/AgCl set | 14 |
+| **Electrodes**, Ag/AgCl EEG cups _or_ stainless probes + snap leads | Skin contact [non-M5Stack] | [SparkFun sensor cable](https://www.sparkfun.com/products/12970) + [electrode pads](https://www.sparkfun.com/products/12969), or medical Ag/AgCl set | 14 |
 | **Electrode gel** (Ten20) + micropore tape | Low-impedance contact | Pharmacy | 9 |
 | DuPont jumpers, small proto board, heatshrink | Glue between AD8232 and ADS1115 | Junk box / any hobby shop | 8 |
 | Total ≈ NZ$110. A bare M5StampS3 instead of the StickC drops it below NZ$95 at the cost of the on-board screen. |

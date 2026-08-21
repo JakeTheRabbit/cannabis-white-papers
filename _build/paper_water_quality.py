@@ -210,7 +210,7 @@ SECTIONS.append({"id": "testing-stepbystep", "kicker": "Practical: test and trea
     steps([
       ("Buy and calibrate pens", "Get an EC/PPM pen and a pH pen first. Calibrate with fresh calibration solution, never with tap water."),
       ("Get the full picture", "For alkalinity, sodium, Ca, Mg and micronutrients, use a lab test or your city's annual water-quality report."),
-      ("Record starting EC", "Note how much room you have before the ~your total EC budget (set targets in mS/cm) feed ceiling, so you know your nutrient headroom."),
+      ("Record starting EC", "Note how much of your EC budget the raw water already spends, so you know your nutrient headroom. Set targets in mS/cm, not ppm."),
       ("Mix in the right order", "Fill water, let chlorine off-gas or filter it, add CalMag if RO or soft, add base nutrients, then adjust pH last."),
       ("Re-test seasonally", "Re-check well and rain sources through the year. Municipal supplies can also switch chlorine to chloramine periodically."),
     ]),
@@ -226,18 +226,19 @@ SECTIONS.append({"id": "temperature-pitfalls", "kicker": "Troubleshooting and pi
   "title": "Water temperature and the mistakes beginners make",
   "blocks": [
     p("Water temperature quietly controls dissolved oxygen and disease risk. Aim for roughly "
-      "18-22 C (65-72 F), because warm, poorly aerated water raises pathogen risk even though saturation DO is still roughly ~9 mg/L at 20 C and ~8 mg/L at 26 C. Target "
-      "at 26 C" + _c("fao-dissolved-oxygen-temperature") + ", and root pathogens like Pythium "
+      "18-22 C (65-72 F). Saturation dissolved oxygen falls only gently across that range, from about "
+      "9 mg/L at 20 C to about 8 mg/L at 26 C" + _c("fao-dissolved-oxygen-temperature") + ", but warm, "
+      "poorly aerated water still raises pathogen risk, and root pathogens like Pythium "
       "accelerate above about 23 C" + _c("sutton-2006-pythium-hydroponic-etiology") + ". Warm water "
       "plus low oxygen is an open invitation to root rot."),
     figure(L.line("Warmer water holds less oxygen",
-            [(0, 6.0), (1, 5.5), (2, 5.0), (3, 4.4), (4, 3.8), (5, 3.4)],
+            [(0, 9.9), (1, 9.5), (2, 9.1), (3, 8.7), (4, 8.4), (5, 8.1)],
             ["16 C", "18 C", "20 C", "22 C", "24 C", "26 C"],
-            ylab="dissolved O2 ppm", ymin=2, ymax=7,
-            note="Dissolved oxygen drops as water warms. The 18-22 C band is the safe target.",
-            bands=[(4.8, 6.5, L.GL, "target O2")]), 11,
-      "Saturation dissolved oxygen declines gently as water warms (roughly ~9 mg/L near 20 C toward "
-      "~8 mg/L saturation at 26 C. Above roughly 23 C you also enter Pythium risk." + _c("fao-dissolved-oxygen-temperature") + _c("sutton-2006-pythium-hydroponic-etiology")),
+            ylab="saturation O2 mg/L", ymin=7, ymax=11,
+            note="Saturation oxygen falls only gently over this range. The 18-22 C band is the safe target.",
+            bands=[(8.7, 9.9, L.GL, "target O2")]), 11,
+      "Saturation dissolved oxygen declines gently as water warms, from about 9 mg/L at 20 C to about "
+      "8 mg/L at 26 C. The bigger risk above roughly 23 C is Pythium, not oxygen starvation." + _c("fao-dissolved-oxygen-temperature") + _c("sutton-2006-pythium-hydroponic-etiology")),
     table(["Common mistake", "What actually happens, and the fix"], [
       ["Comparing PPM across meters", "A 500 vs 700 scale makes two pens disagree on the same water. Pick one scale and stick to it"],
       ["pH the tank, ignore alkalinity", "Root-zone pH creeps up within days. Correct the alkalinity, not just the one reading"],

@@ -209,7 +209,7 @@ SECTIONS.append({"id": "sanitation-quarantine", "kicker": "Prevention", "title":
     figure(L.flow("Clean entry, every time",
             [("Change shoes", "overboots or dedicated footwear"), ("Wash hands", "on entry"),
              ("Glove up", "nitrile, always"), ("Foot bath", "step through"), ("Enter", "reverse + new gloves on exit")]), 11,
-      "Footwear is the number-one route pests are walked in. The entry sequence is non-negotiable, and "
+      "Footwear is the number-one route pests are walked in. Follow the entry sequence every time, and "
       "it runs in reverse on the way out."),
     figure(L.line("A new plant's quarantine journey",
             [(0, 1), (7, 1), (14, 1), (15, 0)],

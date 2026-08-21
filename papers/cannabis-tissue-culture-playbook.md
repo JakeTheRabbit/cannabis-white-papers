@@ -126,7 +126,7 @@ How often? Punja (2025) cut meristems 0.2–0.4 mm across from 91 infected plant
 
 - **Meristem size used for cleanup:** 0.2–0.4 mm dome, two or fewer tiny leaves
 - **Holmes method:** Leave two tiny leaves on the tip as a shield, then bleach, then plate
-- **Best first piece (Das 2024):** Shoot tip under 5 mm — less fungus than stem pieces, less glassy growth than a bare meristem
+- **Best first piece (Das 2024):** Shoot tip under 5 mm, less fungus than stem pieces, less glassy growth than a bare meristem
 - **How often stem pieces still contaminate:** About 50% in Holmes 2021 (range 10–80%), even after bleach. The microbes are inside the stem, not only on the skin.
 
 ## How to set up a home lab
@@ -353,7 +353,7 @@ This is the cut that has the best chance of leaving Hop latent viroid behind. Yo
 
 ![Forceps and scalpel peeling a cannabis shoot tip under a microscope](assets/img/tc-playbook/16-meristem-hands.jpg)
 
-*Left forceps hold the stem. Right scalpel peels a leaf away from the tip. Work under the microscope ring light. Discard peeled leaves to the side. This photo is a larger shoot than the final meristem — the hand positions are the same when the piece is 1 mm.Grok Imagine · illustration*
+*Left forceps hold the stem. Right scalpel peels a leaf away from the tip. Work under the microscope ring light. Discard peeled leaves to the side. This photo is a larger shoot than the final meristem. The hand positions are the same when the piece is 1 mm.Grok Imagine · illustration*
 
 #### The eight movements
 
@@ -591,7 +591,7 @@ How many plants you ship is your contamination rate multiplied by hours at the h
 
 ## Glossary
 
-Every technical term in this guide, in one place.
+Every technical term, in one place.
 
 | Term | Meaning |
 | --- | --- |

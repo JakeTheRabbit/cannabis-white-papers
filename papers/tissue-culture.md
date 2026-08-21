@@ -93,11 +93,12 @@ Take cuttings from the same mother for years and two things creep in: invisible 
 
 **It's everywhere**
 
-Industry and research surveys have reported very high facility infection rates in California (~90% in one large testing programme) and frequent positives in Canadian retail flower (~40% in one study) — treat as warning signals, not permanent global prevalence. If you've cloned for years, assume you may have it.[^hlvd_mgmt2025]
+Industry and research surveys have reported very high facility infection rates in California (~90% in one large testing programme) and frequent positives in Canadian retail flower (~40% in one study), treat as warning signals, not permanent global prevalence. If you've cloned for years, assume you may have it.[^hlvd_mgmt2025]
 
 **It's expensive**
 
-In severe symptomatic dud outbreaks, infected plants can lose a large fraction of cannabinoids (sometimes approaching ~50%)**, plus terpenes, trichomes and yield. Industry losses run into tens of millions of dollars a year.
+In severe dud outbreaks, infected plants can lose **up to about half their cannabinoids**
+, plus terpenes, trichomes and yield. Industry losses run into tens of millions of dollars a year.
 
 **It's stealthy**
 
@@ -106,7 +107,7 @@ for a long time and is ‘latent’ by name. By the time plants visibly dud, the
 
 **It's tough**
 
-It survives on tools, hands, pots and benches, rides in sap for ~a week and in dried tissue for ~a month, and even passes through seed (at genotype-dependent rates (often single digits to tens of percent — test seed lots)).
+It survives on tools, hands, pots and benches, rides in sap for ~a week and in dried tissue for ~a month, and even passes through seed at genotype-dependent rates, from single digits to tens of percent, so test your seed lots.
 
 > **WARN — Why you can't just spray it away**
 >
@@ -256,7 +257,7 @@ This is a solid, widely-used DIY initiation/multiplication medium. Make it once 
 
 *DIY all-purpose cannabis medium. Use full-strength MS for initiation/multiplication; switch to half-strength MS for rooting (section 15).*
 
-> **NOTE — Order of operations matters**
+> **NOTE — Set the pH before the agar**
 >
 > Dissolve salts and sugar in the water first, **adjust the pH to 5.6–5.8** (nudge down with a drop of dilute acid, up with dilute base), _then_ add the agar, then heat to dissolve the agar, then pour into jars (~⅓ full) and sterilise. pH set after the agar is in is much harder to do.
 

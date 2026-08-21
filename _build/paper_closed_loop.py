@@ -117,8 +117,8 @@ SECTIONS.append({"id": "the-levers", "kicker": "Core content: the action half", 
 SECTIONS.append({"id": "reading-plant-state", "kicker": "Core content: sensing and meaning", "title": "Reading the signal, then reading the plant",
   "blocks": [
     p("You have to <em>see</em> the room's response without being fooled, then turn it into meaning. "
-      "Every measurement is signal plus noise, and in practice many <strong>raw alerts are "
-      "noise</strong> that must be rejected before they ever reach a decision" + _c("isa-18-2-alarm-mgmt") + "."),
+      "Every measurement is signal plus noise, and in practice <strong>many raw alerts are noise</strong> "
+      "that must be rejected before they ever reach a decision" + _c("isa-18-2-alarm-mgmt") + "."),
     p("Reading plant state is the leap from &lsquo;VWC fell 12% overnight&rsquo; (a number) to "
       "&lsquo;the plant is steering generative as intended, no action needed&rsquo; or &lsquo;reduce "
       "dryback 3% tonight or expect tip burn in about 48 hours&rsquo; (a decision). The goal is to "

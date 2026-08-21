@@ -155,7 +155,7 @@ Flowering indoors usually runs about 8–10 weeks once you flip the lights to a 
 
 ## Realistic expectations
 
-> **KEY — Three honest truths**
+> **KEY — Three rules**
 >
 > 1. **There is no universal recipe.** The right VWC, EC and dryback numbers depend on your strain, pot size, climate and light. Start from the ranges here and tune to _your_ plants.
 > 2. **Steering is a bias, not a switch.** You are nudging odds over days, not flipping a plant overnight.

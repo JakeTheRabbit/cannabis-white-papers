@@ -486,7 +486,7 @@ SECTIONS.append({"id": "fan-types", "kicker": "10 · The hardware", "title": "Th
       "are recirculation kit; the air sock is a delivery method; the inline duct fan is exchange, not "
       "circulation at all."),
     grid([
-      card("HAF &mdash; horizontal airflow fan",
+      card("HAF, horizontal airflow fan",
         p("A hanging basket fan, typically a 300&ndash;500&nbsp;mm (12&ndash;20&nbsp;inch) blade on a "
           "small 1/10&ndash;1/15&nbsp;hp motor, hung above head height and aimed sideways down the "
           "room" + _c("bartok-haf") + ". Several of them together drive one slow <strong>racetrack "
@@ -495,7 +495,7 @@ SECTIONS.append({"id": "fan-types", "kicker": "10 · The hardware", "title": "Th
           "<br><br><strong>Where:</strong> above the canopy, a quarter of the room width in from the "
           "wall. <strong>The catch:</strong> its air runs <em>over</em> the top of the crop. In a dense "
           "canopy it never reaches the middle."), tag="Recirculation · the backbone"),
-      card("VAF &mdash; vertical airflow fan",
+      card("VAF, vertical airflow fan",
         p("Hangs above the canopy and blows <strong>straight down through it</strong>, usually with a "
           "flared diffuser on top so it draws air from a wide area and delivers a broad column rather "
           "than a narrow jet. This is the one type that reliably reaches leaves buried inside a plant."
@@ -566,14 +566,14 @@ SECTIONS.append({"id": "fan-types", "kicker": "10 · The hardware", "title": "Th
         tag="Exchange · bulk"),
       card("AHU / HVAC supply",
         p("The air-handling unit that actually heats, cools and dries. It sets your VPD. It still needs "
-          "a distribution method &mdash; typically ducting into socks &mdash; to get that treated air "
+          "a distribution method, typically ducting into socks, to get that treated air "
           "evenly across a canopy."), tag="Conditioning"),
     ], cols=3),
     card("In-rack airflow systems (vertical farms)",
       p("If you grow on multi-tier racking, none of the above works on its own: each tier is a low, "
         "enclosed slot that overhead fans physically cannot reach. Purpose-built systems mount a "
         "ducted fan bar into the racking itself and push air along or down through every tier" +
-        _c("vas-inrack") + ". On racking this is not an upgrade, it is the only thing that works, and "
+        _c("vas-inrack") + ". On racking it is the only thing that works, and "
         "it is the setup the Pipp trial in section 09 was built to test."), tag="Recirculation · vertical racking"),
   ]})
 
@@ -588,7 +588,7 @@ SECTIONS.append({"id": "ranking", "kicker": "11 · The ranking", "title": "Which
              ("Oscillating wall fan", 68), ("Air sock off the AHU", 62),
              ("HVLS / destratification", 44), ("Drum / pedestal fan", 30), ("Clip fan", 22)],
             note="Relative score, not a measurement. Judged on airflow delivered to leaves per dollar and per watt."), 6,
-      "The backbone is cheap and the glamour is not. Note that the two lowest-ranked fans are the two "
+      "The backbone is cheap and the glamour is not. The two lowest-ranked fans are the two "
       "most first-time growers actually buy."),
     table(["#", "Fan type", "What it buys you", "Reach into the canopy", "Verdict"], [
       ["1", "<strong>HAF fan</strong>", "A room-wide loop, running 24/7 on very few watts",
@@ -596,7 +596,7 @@ SECTIONS.append({"id": "ranking", "kicker": "11 · The ranking", "title": "Which
       ["2", "<strong>Under-canopy fan</strong>", "Kills the wettest, stillest zone in the room",
        "Bottom of the plant", "<strong>Best value add-on.</strong> Targets exactly where bud rot starts"],
       ["3", "<strong>VAF fan</strong>", "Air driven down into the middle of the plant",
-       "Full depth &mdash; the only one that gets there", "<strong>Buy once density rises.</strong> Peer-reviewed for interior-leaf calcium" + _c("goto1992-tipburn") + _c("moosavi2025-vaf")],
+       "Full depth. The only one that gets there", "<strong>Buy once density rises.</strong> Peer-reviewed for interior-leaf calcium" + _c("goto1992-tipburn") + _c("moosavi2025-vaf")],
       ["4", "Oscillating wall fan", "Cheap, varied, turbulent air", "Over and around, in bursts",
        "Fine as the backbone below ~20&nbsp;m&sup2;. Falls behind above it"],
       ["5", "Air sock off the AHU", "Even delivery of <em>conditioned</em> air, no draughts",
@@ -638,7 +638,7 @@ SECTIONS.append({"id": "placement", "kicker": "12 · Placement", "title": "Where
       "plant with a jet; you are trying to set the whole volume of air in the room turning slowly and "
       "consistently, then punch that moving air down into the canopy."),
     figure(_fig_haf_loop(), 7,
-      "The horizontal loop, from above. Fans do not each cover a patch &mdash; they hand air to each other "
+      "The horizontal loop, from above. Fans do not each cover a patch. They hand air to each other "
       "around a circuit. First fan roughly 3&ndash;4.5&nbsp;m (10&ndash;15&nbsp;ft) off the end wall, then "
       "12&ndash;15&nbsp;m (40&ndash;50&nbsp;ft) apart, about a quarter of the room width in from the "
       "side" + _c("bartok-haf") + _c("uconn-haf") + "."),
@@ -650,7 +650,7 @@ SECTIONS.append({"id": "placement", "kicker": "12 · Placement", "title": "Where
     steps([
       ("Set the loop first",
        "Pick a direction and commit. Hang HAF fans so that air runs down one side of the room and "
-       "back the other, each fan feeding the next. Never point two fans at each other &mdash; you will "
+       "back the other, each fan feeding the next. Never point two fans at each other. You will "
        "cancel the loop and create a dead spot exactly where they meet" + _c("bartok-haf") + "."),
       ("Get the height right",
        "Above head height, roughly 2.1&ndash;2.4&nbsp;m (7&ndash;8&nbsp;ft) off the floor for a "
@@ -666,7 +666,7 @@ SECTIONS.append({"id": "placement", "kicker": "12 · Placement", "title": "Where
        "overhead fan will move it."),
       ("Aim to mix, never to blast",
        "Angle fans slightly off-parallel and let oscillation vary the direction. You want a room full "
-       "of slow, turbulent, mixing air &mdash; not a set of jets" + _c("schuepp1993-bl") + "."),
+       "of slow, turbulent, mixing air, not a set of jets" + _c("schuepp1993-bl") + "."),
       ("Walk it and correct",
        "Run the flutter test at all three heights: over the tops, hand pushed into the middle of a "
        "plant, and down at pot level. Whichever height fails is the fan you are missing. A cheap "
@@ -677,7 +677,7 @@ SECTIONS.append({"id": "placement", "kicker": "12 · Placement", "title": "Where
       p("Circulation fans should run <strong>24 hours a day</strong>, lights on and lights off. The "
         "extension guidance is to run them continuously except when exhaust fans are running or vents "
         "are open, because that is when the room is being flushed anyway" + _c("bartok-haf") + ". "
-        "Lights-off is when leaf temperature drops toward dew point and condensation forms &mdash; "
+        "Lights-off is when leaf temperature drops toward dew point and condensation forms, "
         "precisely when you least want still air" + _c("uconn-haf") + ".")),
   ]})
 
@@ -739,7 +739,7 @@ SECTIONS.append({"id": "trouble", "kicker": "14 · When it goes wrong", "title":
       ["Tip-burn only on new inner growth", "Inner leaves too still to transpire, so no calcium arrives", "Get air into the canopy interior, not just over it"],
       ["Leaves clawing / wind-burnt edges", "Air velocity too high / fan pointed at plants", "Reduce speed, aim fans to mix, not blast"],
       ["One end of a row always behaves differently", "Broken loop: fans spaced too far apart or facing each other", "Re-set the racetrack; never point two fans head-on"],
-      ["Big fans, loud room, still stratified", "Too few fans running flat out", "More fans at lower speed &mdash; power rises with the cube of speed"],
+      ["Big fans, loud room, still stratified", "Too few fans running flat out", "More fans at lower speed. Power rises with the cube of speed"],
       ["Tall, weak, floppy stems", "Too little air movement: no mechanical signal", "Add gentle constant breeze across the canopy"],
       ["Room humidity stuck high", "Recirculation OK but not enough air exchange", "Increase intake/exhaust / dehumidification"],
       ["Cold or dry patch under the AC outlet", "Conditioned air dumped in one spot instead of distributed", "Duct it into an air sock along the row"],
@@ -749,10 +749,10 @@ SECTIONS.append({"id": "trouble", "kicker": "14 · When it goes wrong", "title":
 SECTIONS.append({"id": "expect", "kicker": "15 · Straight talk", "title": "Realistic expectations",
   "blocks": [
     callout("key", "What to remember",
-      ol(["Airflow's job is to <strong>thin the boundary layer</strong> on every leaf. That is the whole game.",
+      ol(["Airflow's job is to <strong>thin the boundary layer</strong> on every leaf.",
           "Aim for a <strong>gentle, turbulent breeze (~0.3–1.0 m/s)</strong> everywhere, including inside the plants.",
           "Buy the <strong>pattern, not the peak</strong>: many small fans on a loop beat two big ones in the corners.",
-          "Serve <strong>all three heights</strong> &mdash; above, through and below the canopy. Only the first is easy.",
+          "Serve <strong>all three heights</strong>, above, through and below the canopy. Only the first is easy.",
           "More air = more thirst: <strong>feed and humidity must keep up</strong>" + _c("gilliham2011-ca") + ".",
           "Most benefit comes early. You do not need a wind tunnel" + _c("kitaya2004-airvel") + "."])),
     p("Airflow is one subsystem of the room. Read it alongside the "

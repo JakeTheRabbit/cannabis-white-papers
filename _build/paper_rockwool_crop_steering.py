@@ -142,7 +142,7 @@ SECTIONS.append({"id": "dryback", "kicker": "The main lever", "title": "Dryback:
        ["Generative flower push", "20-30 points", "Stacks flower, slows stretch"],
        ["Overnight (any phase)", "add 5-15 points", "Re-oxygenates the root zone"]],
       caption="Dryback sizes as a starting framework. Bigger and earlier is more generative; smaller and later is more vegetative."),
-    callout("note", "Why the night dryback matters",
+    callout("note", "What the night dryback does",
       p("As the block dries overnight, air refills the gaps and the roots and beneficial microbes get "
         "oxygen. Grodan's trials found that easing the standard night dryback by about 10% (a slightly "
         "wetter night) lifted yield in medicinal crops, because the root zone keeps working even while "
@@ -176,7 +176,7 @@ SECTIONS.append({"id": "dryout", "kicker": "The physics", "title": "What happens
 SECTIONS.append({"id": "breaking-point", "kicker": "The cliff", "title": "The breaking point: when a block is gone",
   "blocks": [
     p("There is a water content below which a rockwool block will not rewet from the dripper no matter how "
-      "long you run it. This is the single most important thing in this guide, because it is invisible "
+      "long you run it. Nothing else here matters as much, because it is invisible "
       "until it has already happened."),
     figure(R.fig_rewet(), 5,
       "A block still in the working band rewets evenly: water spreads through the moist fibre. A block "
@@ -223,7 +223,7 @@ SECTIONS.append({"id": "minimum-feed", "kicker": "How much", "title": "The minim
     figure(L.bars("Where a feed's water goes, by phase",
       [("Prop", 4), ("Veg/wet", 14), ("Bulk", 18), ("Generative", 12)], unit="%",
       note="Indicative daily runoff target as a share of feed volume. Higher runoff flushes more salt; too little lets EC stack."),
-      6, "Runoff is not waste, it is your salt-management and measurement tool. Size the daily feed so a "
+      6, "Runoff is your salt-management and measurement tool. Size the daily feed so a "
       "controlled fraction drains."),
     callout("note", "Minimum feed is a floor, not a target",
       p("The minimum is whatever volume keeps the block above its recovery floor and substrate EC on "

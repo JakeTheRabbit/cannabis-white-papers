@@ -96,7 +96,7 @@ SECTIONS.append({"id": "sap-suckers", "kicker": "The core pests, part 1",
         "<strong>Thrips:</strong> silvery rasping streaks plus tiny black frass dots. They drop to the medium to pupate, so leaf sprays alone miss a whole life stage.",
         "<strong>Aphids:</strong> soft-bodied clusters on new growth, cast white skins, honeydew that grows black sooty mould. They can give live birth, so buildup is explosive.",
         "<strong>Whitefly:</strong> tiny white moth-like adults that flush up in a cloud when disturbed, with uniform yellowing and lower-canopy decline."]),
-    p("Note that the aphid most associated with cannabis is its own species, the cannabis aphid "
+    p("The aphid most associated with cannabis is its own species, the cannabis aphid "
       "(<em>Phorodon cannabis</em>), now recognised as a pest in North America" + _c("cranshaw-2018-phorodon-cannabis-north-america") +
       ". The shared driver across all four is environment: warm plus dry shortens every life cycle, "
       "so climate control is the first lever, not the spray bottle."),

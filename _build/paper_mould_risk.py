@@ -96,9 +96,9 @@ SECTIONS.append({"id": "conditions", "kicker": "04, The trigger", "title": "The 
 
 SECTIONS.append({"id": "prevention", "kicker": "05, The routine", "title": "Prevention: the daily routine",
   "blocks": [
-    p("Prevention is a handful of boring habits done consistently. This is the whole job:"),
+    p("Prevention is a handful of boring habits done consistently:"),
     steps([
-      ("Hold humidity down", "Keep flowering RH in the ~45–65% stage-dependent band (mid/late flower often ~45–55%), lower in late flower. A dehumidifier sized to your transpiration load is non-negotiable" + _c("buirs2024-idm") + "."),
+      ("Hold humidity down", "Keep flowering RH in the ~45–65% stage-dependent band (mid/late flower often ~45–55%), lower in late flower. Size the dehumidifier to your transpiration load" + _c("buirs2024-idm") + "."),
       ("Move air through the canopy", "Aim for ~0.5–1.0 m/s of gentle, turbulent air reaching inside the plants, not just over the top" + _c("buirs2024-idm") + ". See the airflow paper."),
       ("Open the canopy", "Defoliate and space plants so air and light penetrate. Density is the silent risk multiplier."),
       ("Avoid free moisture", "No overhead watering or spraying in flower. Prevent condensation by avoiding big temperature swings at lights-off, so surfaces never hit dew point."),

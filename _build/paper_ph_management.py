@@ -155,7 +155,7 @@ SECTIONS.append({"id": "adjusting-and-water", "kicker": "Making the number",
       ("Stir and wait", "Mix it in and give it a moment to react."),
       ("Re-measure", "Read again. Repeat in small steps, never dump and chase."),
     ]),
-    p("Common pH downs include phosphoric, nitric, sulfuric, or organic acids; common pH ups include KOH or potassium carbonate. Each adds nutrients &mdash; account for them." + _c("saloner-bernstein-2022-nitrogen-source-cannabis") +
+    p("Common pH downs include phosphoric, nitric, sulfuric, or organic acids; common pH ups include KOH or potassium carbonate. Each adds nutrients, account for them." + _c("saloner-bernstein-2022-nitrogen-source-cannabis") +
       " Your starting water matters more than beginners expect. Alkalinity is the water's built-in "
       "acid-absorbing capacity, mostly bicarbonates, reported as ppm CaCO3, and it is distinct from a "
       "high pH reading." + _c("umass-water-quality-ph-alkalinity") + " High-alkalinity water fights "
@@ -179,8 +179,8 @@ SECTIONS.append({"id": "runoff-and-routine", "kicker": "Daily practice",
       "roots have done locally. It is not a soil test." + _c("malik-tlustos-2025-soilless-media-cannabis")),
     p("The reliable lever is the inflow pH you set going in. For the root zone itself, watch runoff "
       "EC for salt accumulation rather than runoff pH: a flush is due when runoff EC climbs well "
-      "above your feed EC. Treat large runaway gaps (runoff much higher than feed) as salt buildup; advanced steering may hold higher root-zone EC on purpose. Keep an eye on feed and runoff EC each "
-      "other." + _c("kpai-2024-cannabis-nutrient-solution-ph-cation-uptake")),
+      "above your feed EC. Treat a runaway gap between runoff and feed as salt buildup, though advanced "
+      "steering may hold root-zone EC higher on purpose." + _c("kpai-2024-cannabis-nutrient-solution-ph-cation-uptake")),
     table(["Stage", "Inflow pH target", "EC watch", "Calibration", "Flush trigger"], [
       ["Seedling", "5.8-6.2", "Low feed EC, gentle", "Monthly", "Runoff EC well above feed"],
       ["Veg", "5.8-6.2", "Rising EC means salt buildup", "Monthly", "Runoff EC running away above feed"],

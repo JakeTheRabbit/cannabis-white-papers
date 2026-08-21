@@ -104,7 +104,7 @@ Autoflower seeds carry Cannabis ruderalis genetics that make the plant flower au
 
 |  | Regular | Feminised | Autoflower |
 | --- | --- | --- | --- |
-| Sex outcome | ('~50% male / 50% female', '~99% female (if feminised)', 'Feminised autos ~99% female; regular autos ~50/50') |
+| Sex outcome | ~50% male / 50% female | ~99% female | Feminised autos ~99% female; regular autos ~50/50 |
 | Flowering trigger | Switch to 12h light | Switch to 12h light | Automatic, by age |
 | Time to harvest | Longer | Longer | ~60-90 days from sprout |
 | Plant size | Large | Large | Small (~2-4 ft) |
@@ -156,7 +156,7 @@ Hold temperature at a steady 21-25C (70-77F). Cooler slows germination, and warm
 
 ## Seedling care: the first two to three weeks
 
-The newborn seedling has almost no roots, so it has a tiny root system, so it loses water easily. High humidity reduces evaporative demand until roots expand — roots still do the drinking.4-0.8 kPa), often using a humidity dome or a vented clear bag for the first 7-10 days.[^zhang-2021-vpd-stomatal-conductance-growth] VPD (vapour pressure deficit) is just a measure of how thirsty the air is. Lower means more humid.
+The newborn seedling has a tiny root system, so it loses water faster than it can take it up. High humidity cuts evaporative demand until the roots expand: aim for 65-80% RH (a VPD of about 0.4-0.8 kPa), often using a humidity dome or a vented clear bag for the first 7-10 days.[^zhang-2021-vpd-stomatal-conductance-growth] VPD (vapour pressure deficit) is just a measure of how thirsty the air is. Lower means more humid.
 
 Keep light gentle: roughly 100-200 PPFD in the first week, rising to 200-300 PPFD by week two (a DLI near 10-15), with LEDs kept well back to avoid stretch or burn.[^rodriguez-2021-cannabis-light-intensity-photosynthesis] PPFD is the amount of usable light hitting the plant right now. DLI is the total it receives over a day.
 

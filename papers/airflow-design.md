@@ -142,13 +142,13 @@ What each one looks likeGrok ImagineHAF fanVAF fanOscillating fanClip fanDrum / 
 
 > **Diagram.** The eight types you will actually meet, drawn side-on with the air each one makes. The first six are recirculation kit; the air sock is a delivery method; the inline duct fan is exchange, not circulation at all.
 
-**HAF — horizontal airflow fan**
+**HAF, horizontal airflow fan**
 
 A hanging basket fan, typically a 300–500 mm (12–20 inch) blade on a small 1/10–1/15 hp motor, hung above head height and aimed sideways down the room[^bartok-haf]. Several of them together drive one slow **racetrack loop**: air runs down one side of the room and back the other. Its jet drags surrounding still air along with it (entrainment), so a modest fan stirs a large volume.
 
 **Where:** above the canopy, a quarter of the room width in from the wall. **The catch:** its air runs _over_ the top of the crop. In a dense canopy it never reaches the middle.
 
-**VAF — vertical airflow fan**
+**VAF, vertical airflow fan**
 
 Hangs above the canopy and blows **straight down through it**, usually with a flared diffuser on top so it draws air from a wide area and delivers a broad column rather than a narrow jet. This is the one type that reliably reaches leaves buried inside a plant.
 
@@ -202,21 +202,21 @@ Bulk air exchange for greenhouses and large rooms, with gravity or motorised shu
 
 **AHU / HVAC supply**
 
-The air-handling unit that actually heats, cools and dries. It sets your VPD. It still needs a distribution method — typically ducting into socks — to get that treated air evenly across a canopy.
+The air-handling unit that actually heats, cools and dries. It sets your VPD. It still needs a distribution method, typically ducting into socks, to get that treated air evenly across a canopy.
 
-Recirculation · vertical rackingIn-rack airflow systems (vertical farms)If you grow on multi-tier racking, none of the above works on its own: each tier is a low, enclosed slot that overhead fans physically cannot reach. Purpose-built systems mount a ducted fan bar into the racking itself and push air along or down through every tier[^vas-inrack]. On racking this is not an upgrade, it is the only thing that works, and it is the setup the Pipp trial in section 09 was built to test.
+Recirculation · vertical rackingIn-rack airflow systems (vertical farms)If you grow on multi-tier racking, none of the above works on its own: each tier is a low, enclosed slot that overhead fans physically cannot reach. Purpose-built systems mount a ducted fan bar into the racking itself and push air along or down through every tier[^vas-inrack]. On racking it is the only thing that works, and it is the setup the Pipp trial in section 09 was built to test.
 
 ## Which fans earn their place
 
 A ranking is only honest if you say what it is ranking _for_. This one scores **crop-relevant airflow bought per dollar installed, in a sealed, single-tier indoor flower room** of roughly 20–200 m² of canopy. Change the room and the order changes; the callout below says how.
 
-> **Diagram.** The backbone is cheap and the glamour is not. Note that the two lowest-ranked fans are the two most first-time growers actually buy.
+> **Diagram.** The backbone is cheap and the glamour is not. The two lowest-ranked fans are the two most first-time growers actually buy.
 
 | # | Fan type | What it buys you | Reach into the canopy | Verdict |
 | --- | --- | --- | --- | --- |
 | 1 | **HAF fan** | A room-wide loop, running 24/7 on very few watts | Over the top only | **Build the room on these.** Cheapest uniformity you can buy[^bartok-haf] |
 | 2 | **Under-canopy fan** | Kills the wettest, stillest zone in the room | Bottom of the plant | **Best value add-on.** Targets exactly where bud rot starts |
-| 3 | **VAF fan** | Air driven down into the middle of the plant | Full depth — the only one that gets there | **Buy once density rises.** Peer-reviewed for interior-leaf calcium[^goto1992-tipburn][^moosavi2025-vaf] |
+| 3 | **VAF fan** | Air driven down into the middle of the plant | Full depth. The only one that gets there | **Buy once density rises.** Peer-reviewed for interior-leaf calcium[^goto1992-tipburn][^moosavi2025-vaf] |
 | 4 | Oscillating wall fan | Cheap, varied, turbulent air | Over and around, in bursts | Fine as the backbone below ~20 m². Falls behind above it |
 | 5 | Air sock off the AHU | Even delivery of _conditioned_ air, no draughts | Along the row, gentle | Excellent, but it is capex plus design work[^perfduct2025] |
 | 6 | HVLS / destratification | Breaks the hot layer under the ceiling | Bulk mixing only | Only pays in tall rooms. Wasted under a low ceiling |
@@ -239,22 +239,22 @@ A ranking is only honest if you say what it is ranking _for_. This one scores **
 
 Fan placement is a pattern problem, not a coverage problem. You are not trying to hit every plant with a jet; you are trying to set the whole volume of air in the room turning slowly and consistently, then punch that moving air down into the canopy.
 
-> **Diagram.** The horizontal loop, from above. Fans do not each cover a patch — they hand air to each other around a circuit. First fan roughly 3–4.5 m (10–15 ft) off the end wall, then 12–15 m (40–50 ft) apart, about a quarter of the room width in from the side[^bartok-haf][^uconn-haf].
+> **Diagram.** The horizontal loop, from above. Fans do not each cover a patch. They hand air to each other around a circuit. First fan roughly 3–4.5 m (10–15 ft) off the end wall, then 12–15 m (40–50 ft) apart, about a quarter of the room width in from the side[^bartok-haf][^uconn-haf].
 
 Then cut the room the other way. Most rooms buy airflow for the top of the canopy only, and that is exactly why rot starts at the bottom and in the middle:
 
 > **Diagram.** The same room in section. Three heights, three different jobs, three different fans. If you only own HAF fans you own the top band, and the two bands where disease actually starts are unserved.
 
-1. **Set the loop first** — Pick a direction and commit. Hang HAF fans so that air runs down one side of the room and back the other, each fan feeding the next. Never point two fans at each other — you will cancel the loop and create a dead spot exactly where they meet[^bartok-haf].
+1. **Set the loop first** — Pick a direction and commit. Hang HAF fans so that air runs down one side of the room and back the other, each fan feeding the next. Never point two fans at each other. You will cancel the loop and create a dead spot exactly where they meet[^bartok-haf].
 2. **Get the height right** — Above head height, roughly 2.1–2.4 m (7–8 ft) off the floor for a floor-grown crop, so the jet clears the canopy rather than ploughing into it[^uconn-haf]. Where there are hanging baskets or a light rack in the way, go a clear distance above or below, not level with them.
 3. **Punch down into the canopy** — Add top-down fans over the crop on a grid, spaced so their down-columns overlap. This is the step almost everyone skips, and it is the one that reaches the interior leaves[^goto1992-tipburn].
 4. **Serve the floor** — Put low fans at pot level blowing along the rows. Cold, wet air pools down there and no overhead fan will move it.
-5. **Aim to mix, never to blast** — Angle fans slightly off-parallel and let oscillation vary the direction. You want a room full of slow, turbulent, mixing air — not a set of jets[^schuepp1993-bl].
+5. **Aim to mix, never to blast** — Angle fans slightly off-parallel and let oscillation vary the direction. You want a room full of slow, turbulent, mixing air, not a set of jets[^schuepp1993-bl].
 6. **Walk it and correct** — Run the flutter test at all three heights: over the tops, hand pushed into the middle of a plant, and down at pot level. Whichever height fails is the fan you are missing. A cheap anemometer, or a length of flagging tape taped to a cane, turns this from a guess into a reading.
 
 > **TIP — Run them all the time**
 >
-> Circulation fans should run **24 hours a day**, lights on and lights off. The extension guidance is to run them continuously except when exhaust fans are running or vents are open, because that is when the room is being flushed anyway[^bartok-haf]. Lights-off is when leaf temperature drops toward dew point and condensation forms — precisely when you least want still air[^uconn-haf].
+> Circulation fans should run **24 hours a day**, lights on and lights off. The extension guidance is to run them continuously except when exhaust fans are running or vents are open, because that is when the room is being flushed anyway[^bartok-haf]. Lights-off is when leaf temperature drops toward dew point and condensation forms, precisely when you least want still air[^uconn-haf].
 
 ## Sizing the system
 
@@ -294,7 +294,7 @@ One last number, and it is the one that saves the most money. Fan airflow rises 
 | Tip-burn only on new inner growth | Inner leaves too still to transpire, so no calcium arrives | Get air into the canopy interior, not just over it |
 | Leaves clawing / wind-burnt edges | Air velocity too high / fan pointed at plants | Reduce speed, aim fans to mix, not blast |
 | One end of a row always behaves differently | Broken loop: fans spaced too far apart or facing each other | Re-set the racetrack; never point two fans head-on |
-| Big fans, loud room, still stratified | Too few fans running flat out | More fans at lower speed — power rises with the cube of speed |
+| Big fans, loud room, still stratified | Too few fans running flat out | More fans at lower speed. Power rises with the cube of speed |
 | Tall, weak, floppy stems | Too little air movement: no mechanical signal | Add gentle constant breeze across the canopy |
 | Room humidity stuck high | Recirculation OK but not enough air exchange | Increase intake/exhaust / dehumidification |
 | Cold or dry patch under the AC outlet | Conditioned air dumped in one spot instead of distributed | Duct it into an air sock along the row |
@@ -303,10 +303,10 @@ One last number, and it is the one that saves the most money. Fan airflow rises 
 
 > **KEY — What to remember**
 >
-> 1. Airflow's job is to **thin the boundary layer** on every leaf. That is the whole game.
+> 1. Airflow's job is to **thin the boundary layer** on every leaf.
 > 2. Aim for a **gentle, turbulent breeze (~0.3–1.0 m/s)** everywhere, including inside the plants.
 > 3. Buy the **pattern, not the peak**: many small fans on a loop beat two big ones in the corners.
-> 4. Serve **all three heights** — above, through and below the canopy. Only the first is easy.
+> 4. Serve **all three heights**, above, through and below the canopy. Only the first is easy.
 > 5. More air = more thirst: **feed and humidity must keep up**[^gilliham2011-ca].
 > 6. Most benefit comes early. You do not need a wind tunnel[^kitaya2004-airvel].
 

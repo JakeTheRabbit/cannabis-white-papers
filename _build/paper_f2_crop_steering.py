@@ -26,7 +26,7 @@ SECTIONS.append({"id": "what-this-is", "kicker": "Start here",
   "blocks": [
     callout("evidence", "Grain of salt",
       "<p><strong>Operational / provisional:</strong> Default VWC numbers are one facility&rsquo;s probe-native "
-      "placeholders after hand-watering. Caplan drought supports controlled deficit as a concept &mdash; not a "
+      "placeholders after hand-watering. Caplan drought supports controlled deficit as a concept, not a "
       "copy-paste of these exact setpoints. Calibrate media before arming automation.</p>"),
     lead("F2 is an <strong>autonomous irrigation controller</strong> for a veg grow room. It is software "
          "that reads moisture and salt probes in the root zone and decides, on its own, when to fire "
@@ -195,7 +195,7 @@ SECTIONS.append({"id": "decision-gates", "kicker": "How it decides",
              ("Zone valve ON", "hold calculated duration"), ("Shut down", "valve &rarr; main &rarr; pump OFF")],
             note="Components shut off in reverse order to avoid water hammer and dead-heading the pump."), 7,
       "The physical watering sequence: build pressure first, open the row, hold for the computed duration, then back out in reverse."),
-    callout("note", "Why pH/EC gating matters",
+    callout("note", "What ungated source water does",
       p("Source water that drifts out of the pH or EC window can lock out nutrients or burn roots. "
         "Gating on it, and alerting you rather than watering quietly, guards against feeding a bad "
         "solution to the whole room.")),

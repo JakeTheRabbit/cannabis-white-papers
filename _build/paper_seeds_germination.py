@@ -119,7 +119,7 @@ SECTIONS.append({"id": "seed-types", "kicker": "Core concept 2", "title": "Femin
       "from sprout." + _c("toth-2022-autoflower1-locus") + " Photoperiod plants (regular and "
       "feminised) flower when nights are long enough without light interruptions (12/12 is the usual default)." + _c("moher-2023-twelve-hour-photoperiod-flowering")),
     table(["", "Regular", "Feminised", "Autoflower"], [
-      ["Sex outcome", ("~50% male / 50% female", "~99% female (if feminised)", "Feminised autos ~99% female; regular autos ~50/50")],
+      ["Sex outcome", "~50% male / 50% female", "~99% female", "Feminised autos ~99% female; regular autos ~50/50"],
       ["Flowering trigger", "Switch to 12h light", "Switch to 12h light", "Automatic, by age"],
       ["Time to harvest", "Longer", "Longer", "~60-90 days from sprout"],
       ["Plant size", "Large", "Large", "Small (~2-4 ft)"],
@@ -188,7 +188,9 @@ SECTIONS.append({"id": "conditions-and-timeline", "kicker": "By stage", "title":
 
 SECTIONS.append({"id": "seedling-care", "kicker": "By stage", "title": "Seedling care: the first two to three weeks",
   "blocks": [
-    p("The newborn seedling has almost no roots, so it has a tiny root system, so it loses water easily. High humidity reduces evaporative demand until roots expand — roots still do the drinking.4-0.8 kPa), often using "
+    p("The newborn seedling has a tiny root system, so it loses water faster than it can take it up. "
+      "High humidity cuts evaporative demand until the roots expand: aim for 65-80% RH (a VPD of about "
+      "0.4-0.8 kPa), often using "
       "a humidity dome or a vented clear bag for the first 7-10 days." + _c("zhang-2021-vpd-stomatal-conductance-growth") +
       " VPD (vapour pressure deficit) is just a measure of how thirsty the air is. Lower means "
       "more humid."),

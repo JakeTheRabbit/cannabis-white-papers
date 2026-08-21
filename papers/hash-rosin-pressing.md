@@ -2,7 +2,7 @@
 slug: "hash-rosin-pressing"
 title: "Hash rosin, pressed: a solventless systems guide"
 eyebrow: "Harvest · Solventless"
-summary: "Rosin is mechanical, not chemical: heat, pressure, time and a micron screen acting on a material whose quality ceiling was already fixed upstream — at harvest, in the wash, in the dry. This guide maps the whole chain, trichome to dab."
+summary: "Rosin is mechanical, not chemical: heat, pressure, time and a micron screen acting on a material whose quality ceiling was already fixed upstream, at harvest, in the wash, in the dry. This guide maps the whole chain, trichome to dab."
 track: "Harvest, dry, trim & cure"
 read_time: "~22 min read"
 diagrams: "8 diagrams"
@@ -21,11 +21,11 @@ refs: [{"id": "pressclub-temp", "n": 1, "cite": "The Press Club. Rosin press tem
 
 _Harvest · Solventless · ~22 min read_
 
-> Rosin is mechanical, not chemical: heat, pressure, time and a micron screen acting on a material whose quality ceiling was already fixed upstream — at harvest, in the wash, in the dry. This guide maps the whole chain, trichome to dab.
+> Rosin is mechanical, not chemical: heat, pressure, time and a micron screen acting on a material whose quality ceiling was already fixed upstream, at harvest, in the wash, in the dry. This guide maps the whole chain, trichome to dab.
 
 ## Rosin in Plain English
 
-A cannabis plant is covered in thousands of tiny, mushroom-shaped glands called **trichomes** — the frosty ‘crystals’ you can see on good flower. Each trichome head is a microscopic sac of **resin**: the sticky oil that carries almost all of the plant's potency, smell and flavour. Every solventless concentrate is really just _those heads, collected and then gently squeezed_ — with no chemical solvents like butane or alcohol anywhere in the process.
+A cannabis plant is covered in thousands of tiny, mushroom-shaped glands called **trichomes**, the frosty ‘crystals’ you can see on good flower. Each trichome head is a microscopic sac of **resin**: the sticky oil that carries almost all of the plant's potency, smell and flavour. Every solventless concentrate is really just _those heads, collected and then gently squeezed_, with no chemical solvents like butane or alcohol anywhere in the process.
 
 > **Diagram.** The frosty ‘crystals’ on cannabis are trichomes. Solventless hash-making is the art of collecting these heads and squeezing the resin out of them.
 
@@ -34,17 +34,17 @@ It happens in two halves:
 1. **Make the hash.** Knock the trichome heads off the plant and gather them into a powder or paste. Two common ways: stir the plant in _ice water_ so the brittle heads snap off and sink (**bubble hash**), or rub dried plant over fine _screens_ (**dry sift**).
 2. **Press the hash into rosin.** Seal the hash in a small mesh bag and squeeze it between two gently heated metal plates. Heat softens the resin; pressure pushes it out through the mesh as a golden oil. That oil is **rosin**.
 
-That is the whole idea — **heat + pressure, no solvents**. The craft is in restraint: too much heat boils away the flavour, and too much force bursts the bag and pushes plant matter through the mesh. After pressing, the rosin is **cured** (rested under controlled warmth or cold) to set its final texture, then either **dabbed** (a small dose flash-vaporised on a hot surface and inhaled) or loaded into a vape cartridge.
+That is the whole idea, **heat + pressure, no solvents**. The craft is in restraint: too much heat boils away the flavour, and too much force bursts the bag and pushes plant matter through the mesh. After pressing, the rosin is **cured** (rested under controlled warmth or cold) to set its final texture, then either **dabbed** (a small dose flash-vaporised on a hot surface and inhaled) or loaded into a vape cartridge.
 
 > **Diagram.** Two gently heated plates squeeze the bag. Heat thins the resin; pressure pushes it through the mesh as golden rosin, leaving plant matter trapped inside.
 
-**Trichome** — The tiny resin gland on the plant — the visible ‘crystal’. Its head holds the oil you want.
+**Trichome** — The tiny resin gland on the plant, the visible ‘crystal’. Its head holds the oil you want.
 
 **Hash** — Trichome heads gathered into a powder or paste, before pressing.
 
 **Rosin** — The oil pressed out of hash (or flower) using only heat and pressure.
 
-**Solventless** — Made with only force, heat, water and ice — never butane, CO₂ or alcohol. That's the appeal.
+**Solventless** — Made with only force, heat, water and ice, never butane, CO₂ or alcohol. That's the appeal.
 
 **Micron (µm)** — One-thousandth of a millimetre; the mesh size of the press bag. Smaller number = finer mesh = cleaner rosin but lower yield.
 
@@ -52,13 +52,13 @@ That is the whole idea — **heat + pressure, no solvents**. The craft is in res
 
 > **KEY — The one big idea of the whole guide**
 >
-> The press cannot _add_ quality — it can only lose less of it. Your starting material (the genetics, the harvest, the wash) sets the ceiling. Heat, pressure, time and mesh size only decide how close to that ceiling you land.
+> The press cannot _add_ quality. It can only lose less of it. Your starting material (the genetics, the harvest, the wash) sets the ceiling. Heat, pressure, time and mesh size only decide how close to that ceiling you land.
 
-From here on, the guide treats the press as a set of **levers** you can pull — temperature, pressure, time and mesh (‘micron’) size — and shows what each one does to yield and quality, what goes wrong, and how to fix it. Hit a word you don't know? Jump to the glossary at the end.
+From here on, the guide treats the press as a set of **levers** you can pull, temperature, pressure, time and mesh (‘micron’) size. And shows what each one does to yield and quality, what goes wrong, and how to fix it. Hit a word you don't know? Jump to the glossary at the end.
 
 ## Core Answer
 
-A rosin press has only four levers — **heat, pressure, time and screen (micron)** — and they all negotiate a single tension: _yield versus quality_ (terpene retention, colour, clarity)[^pressclub-temp]. Heat lowers resin viscosity so it flows; the micron bag decides what flows _with_ it (pure trichome oil, or fats and plant matter too); pressure and time only push the process along[^pressclub-pressure]. None of them can lift the ceiling set upstream.
+A rosin press has only four levers (**heat, pressure, time and screen (micron)**) and they all negotiate a single tension: _yield versus quality_ (terpene retention, colour, clarity)[^pressclub-temp]. Heat lowers resin viscosity so it flows; the micron bag decides what flows _with_ it (pure trichome oil, or fats and plant matter too); pressure and time only push the process along[^pressclub-pressure]. None of them can lift the ceiling set upstream.
 
 > **KEY — Quality in, quality out**
 >
@@ -70,11 +70,11 @@ So the whole craft reduces to: fix the input, pick the product, choose a micron 
 
 Hash rosin is the back half of a longer chain. Cold-chain steps (where heat is the enemy) are marked in blue in the map below; the press and the cure are where heat becomes a tool.
 
-> **Diagram.** Eleven stages from living plant to finished concentrate. Blue marks the cold-chain steps where heat is the enemy; amber marks the heat steps — the press and the cure. Follow the arrows.
+> **Diagram.** Eleven stages from living plant to finished concentrate. Blue marks the cold-chain steps where heat is the enemy; amber marks the heat steps, the press and the cure. Follow the arrows.
 
 1. **Harvest** — Cut at 80–90% cloudy trichomes, at lights-off.
 2. **Freeze or dry** — Fresh-freeze for live products; slow-dry for dry sift.
-3. **Wash or sift** — Ice-water hash or dry-sift screens — cold room, gentle hands.
+3. **Wash or sift** — Ice-water hash or dry-sift screens, cold room, gentle hands.
 4. **Dry the hash** — Freeze-dry, or cold air-dry as the budget option.
 5. **Grade** — Melt-test and star-grade 1–6★; the grade decides the product options.
 6. **Condition** — Moisture check and pre-chill; pre-press pucks for flower and sift only.
@@ -88,20 +88,20 @@ The stage deep-dives later in this paper break each step down with its own param
 
 ## Starting Setpoints by Input Material
 
-Where to begin for each of the four input materials. These are _starting points_ to dial in from — not targets to chase[^triminator-tempchart]. Temperatures are platen temperature; press _to flow_, not to the clock. Hash sits cooler than flower because its trichome heads are already isolated and need only enough heat to melt resin[^pressclub-temp].
+Where to begin for each of the four input materials. These are _starting points_ to dial in from, not targets to chase[^triminator-tempchart]. Temperatures are platen temperature; press _to flow_, not to the clock. Hash sits cooler than flower because its trichome heads are already isolated and need only enough heat to melt resin[^pressclub-temp].
 
 | Input material | Bag micron | Plate temp | Band (°C) | Dwell (s) | Pressure approach | Pre-press | Typical products |
 | --- | --- | --- | --- | --- | --- | --- | --- |
 | Dried flower | 90 µm (75–160) | 88 °C | 82–93 | 90–180 | Low–medium; slow 30–60 s ramp as resin flows, then ease to firm contact | Yes | Badder, fresh press; carts at 75 µm |
-| Dry sift / kief | 72 µm (25–90 by grade) | 82 °C | 71–88 | 60–90 | Low; add _time_, not pressure — finer material already has good contact | Yes | Badder, diamonds |
-| Fresh-frozen hash (5–6★) | 36 µm (25–45) | 71 °C | 60–77 | 60–180 | Very low; add heat only if flow stalls. **More pressure is NOT better** — it pushes fats through | Cold puck only | Live rosin, cold-cure badder, live diamonds, carts, hash holes |
+| Dry sift / kief | 72 µm (25–90 by grade) | 82 °C | 71–88 | 60–90 | Low; add _time_, not pressure. Finer material already has good contact | Yes | Badder, diamonds |
+| Fresh-frozen hash (5–6★) | 36 µm (25–45) | 71 °C | 60–77 | 60–180 | Very low; add heat only if flow stalls. **More pressure is NOT better**. It pushes fats through | Cold puck only | Live rosin, cold-cure badder, live diamonds, carts, hash holes |
 | Dried / cured bubble hash | 45 µm (25–90 by grade) | 77 °C | 71–82 | 60–120 | Low; a few °C hotter than full-melt to coax flow, but stay gentle | Cold puck only | Badder, diamonds, carts |
 
 *Starting setpoints by material. Dial in from here, one lever per run.*
 
 > **NOTE — Temperature bands at a glance**
 >
-> **Cold-cure hold (post-press, not platen):** 10–21 °C for days to ~2 weeks — sets creamy badder while keeping volatile terpenes[^triminator-coldcure]. **Low-temp press (flavour):** 60–85 °C — max terpene retention, lightest colour; hash ~60–77 °C, premium flower ~82–88 °C. **Balanced sweet spot (flower):** 88–99 °C — strong yield, minimal terpene loss; a good default for unknown _flower_. **High-temp press (yield / sauce / carts):** 99–104 °C — max yield, fastest flow, darker; use it to rescue degraded material[^triminator-tempchart].
+> **Cold-cure hold (post-press, not platen):** 10–21 °C for days to ~2 weeks, sets creamy badder while keeping volatile terpenes[^triminator-coldcure]. **Low-temp press (flavour):** 60–85 °C, max terpene retention, lightest colour; hash ~60–77 °C, premium flower ~82–88 °C. **Balanced sweet spot (flower):** 88–99 °C, strong yield, minimal terpene loss; a good default for unknown _flower_. **High-temp press (yield / sauce / carts):** 99–104 °C, max yield, fastest flow, darker; use it to rescue degraded material[^triminator-tempchart].
 
 > **Diagram.** Where each input material and goal sits on the platen-temperature scale. Hash presses coolest; flower needs more heat; the hottest end trades flavour for yield.
 
@@ -111,7 +111,7 @@ Where to begin for each of the four input materials. These are _starting points_
 
 - Lower platen temperature preserves terpenes and colour; higher temperature buys yield and flow at their expense[^pressclub-temp].
 - A tighter (smaller-micron) bag yields _cleaner, lighter_ rosin at _lower_ yield; a coarser bag does the reverse.
-- Hash and dry sift press cooler than flower — their heads are already separated from plant matter.
+- Hash and dry sift press cooler than flower. Their heads are already separated from plant matter.
 - Sealed heat preserves terpenes better than open-air heat: a sealed headspace saturates so net evaporation stops, while open air oxidises and strips them[^hashtek-decarb]. The lightest monoterpenes are the most volatile and go first[^eyal2023-terpenes].
 - Only **THCa** crystallises into diamonds; once decarboxylated to THC it stays liquid[^lowtemp-diamonds]. Carts need full decarb, diamonds need preserved THCa.
 
@@ -123,10 +123,10 @@ Where to begin for each of the four input materials. These are _starting points_
 
 #### Unknowns that change the exact numbers
 
-- **Trichome head size & distribution** — cultivar-dependent; dictates the micron more than anything else.
-- **Lipid / wax load** — varies by genetics and material type; flower carries more than hash.
-- **Crystallisation tendency** — the terpene-to-THCa ratio decides how readily (or stubbornly) diamonds form.
-- **Exact moisture** — a few points of RH swing flow, clarity and blowout risk.
+- **Trichome head size & distribution**, cultivar-dependent; dictates the micron more than anything else.
+- **Lipid / wax load**, varies by genetics and material type; flower carries more than hash.
+- **Crystallisation tendency**, the terpene-to-THCa ratio decides how readily (or stubbornly) diamonds form.
+- **Exact moisture**, a few points of RH swing flow, clarity and blowout risk.
 
 ## The Press as Four Coupled Balances
 
@@ -138,7 +138,7 @@ Platen heat versus the thermal mass of the bag. Enough heat melts resin and drop
 
 **B-02 · Pressure & flow**
 
-Applied force versus the bag's resistance and the resin's flow rate. Force should follow the oil, not lead it — excess force ruptures the bag and drives contaminants through the screen. **Drive ↔ Blowout.**
+Applied force versus the bag's resistance and the resin's flow rate. Force should follow the oil, not lead it, excess force ruptures the bag and drives contaminants through the screen. **Drive ↔ Blowout.**
 
 **B-03 · Moisture**
 
@@ -146,13 +146,13 @@ Water in the input versus flow and stability. A little aids flow; too much cause
 
 **B-04 · Purity (screen)**
 
-Screen selectivity: oil passing through versus contaminants held back. The micron is the gate — tighter holds more back (cleaner, less yield), coarser lets more through. **Yield ↔ Clarity.**
+Screen selectivity: oil passing through versus contaminants held back. The micron is the gate. Tighter holds more back (cleaner, less yield), coarser lets more through. **Yield ↔ Clarity.**
 
 > **KEY — The master tension**
 >
 > All four balances feed one trade: **yield ↔ quality**. Almost every adjustment trades one for the other. Decide which you are optimising _before_ you touch a lever.
 
-> **Diagram.** Push the temperature up and yield climbs — but terpenes and clarity fall. Where the lines cross is a judgement call: cool for flavour, hot for volume.
+> **Diagram.** Push the temperature up and yield climbs, but terpenes and clarity fall. Where the lines cross is a judgement call: cool for flavour, hot for volume.
 
 ## Lever Inventory
 
@@ -180,7 +180,7 @@ The full set of controls, grouped by where they sit in the chain. Upstream lever
 | Micron bag | Screen selectivity (the gate) | Tighter ↑ purity, ↓ yield; coarser the reverse |
 | Fill / loading density | Flow path & pressure distribution | Even, air-free fill → even flow, fewer channels and blowouts |
 | Pre-press | Forms a dense, air-free puck | Reduces channeling and blowouts (flower / sift); skip for full-melt hash |
-| Plate size vs load | Heat coverage & throughput | Match to batch — overfilling cold edges chokes flow |
+| Plate size vs load | Heat coverage & throughput | Match to batch, overfilling cold edges chokes flow |
 
 #### Finishing levers
 
@@ -234,9 +234,9 @@ Plate temperature +6 °C, still inside the hash band (60–77 °C), 36 µm bag, 
 
 #### Immediate effects
 
-- Resin viscosity drops — the seam wets sooner and oil runs faster.
+- Resin viscosity drops, the seam wets sooner and oil runs faster.
 - Yield rises; less oil is left trapped in the puck.
-- Blowout risk falls slightly — thinner oil escapes before pressure has to build.
+- Blowout risk falls slightly, thinner oil escapes before pressure has to build.
 
 #### Secondary effects
 
@@ -253,7 +253,7 @@ Plate temperature +6 °C, still inside the hash band (60–77 °C), 36 µm bag, 
 
 > **NOTE — When not to**
 >
-> Pressing 5–6★ fresh-frozen for a terpene-forward live badder. Here those six degrees trade your nose for a few points of yield — a bad deal. Stay at 71 °C and accept the lower number.
+> Pressing 5–6★ fresh-frozen for a terpene-forward live badder. Here those six degrees trade your nose for a few points of yield, a bad deal. Stay at 71 °C and accept the lower number.
 
 ## Stage Deep-Dives
 
@@ -261,7 +261,7 @@ The full farm-to-dab chain, stage by stage, with the parameters that matter at e
 
 #### Harvest & trichome maturity
 
-Everything downstream is capped here. The common practice target is **80–90% milky / cloudy** capitate-stalked trichomes with **10–20% amber** and zero clear — a preference band, not a hard rule, and hash-makers often run _less_ amber because amber heads press darker and greasier. Harvesting at lights-off is common practice rather than settled science. For dry sift, lean slightly earlier — overripe stalks turn brittle and fragment into contamination[^hightimes-bubbleman].
+Everything downstream is capped here. The common practice target is **80–90% milky / cloudy** capitate-stalked trichomes with **10–20% amber** and zero clear, a preference band, not a hard rule, and hash-makers often run _less_ amber because amber heads press darker and greasier. Harvesting at lights-off is common practice rather than settled science. For dry sift, lean slightly earlier, overripe stalks turn brittle and fragment into contamination[^hightimes-bubbleman].
 
 #### Fresh-freeze vs dry / cure
 
@@ -282,19 +282,19 @@ For bubble hash, agitate fresh-frozen material in near-freezing water so trichom
 
 #### Dry-sift alternative (cold chain)
 
-No water — work frozen material across a descending screen cascade in a cold room (below 10 °C), carding gently 3–5 min per pass[^hightimes-bubbleman].
+No water, work frozen material across a descending screen cascade in a cold room (below 10 °C), carding gently 3–5 min per pass[^hightimes-bubbleman].
 
 - **Screen stack:** 140 µm (110 LPI) work screen → 107 µm → **70 µm (200 LPI) ‘money’ screen** (70–120 µm heads are the gold) → sub-70 µm catch (edible grade).
-- **Static glove tek:** on a 70 µm (200 LPI) screen, sweep a freezer-chilled black nitrile glove in smooth circles — static lifts pure heads and leaves contaminants behind. Whisk off, re-chill, repeat 3–5 passes. Hover and sweep; never mash[^pressclub-static].
+- **Static glove tek:** on a 70 µm (200 LPI) screen, sweep a freezer-chilled black nitrile glove in smooth circles. Static lifts pure heads and leaves contaminants behind. Whisk off, re-chill, repeat 3–5 passes. Hover and sweep; never mash[^pressclub-static].
 
 #### Drying the hash (cold chain)
 
-- **Freeze-dry (lyophilise) — best:** condenser −40 to −50 °C, vacuum ~100–200 mTorr (below ~500 workable), 24–48 h until fully dry. Removes water without heat or oxidation.
-- **Cold air-dry — budget:** microplane the patties onto parchment or screens and dry in a cold room over 24–72 h. More oxidation and contamination risk; watch for mould.
+- **Freeze-dry (lyophilise), best:** condenser −40 to −50 °C, vacuum ~100–200 mTorr (below ~500 workable), 24–48 h until fully dry. Removes water without heat or oxidation.
+- **Cold air-dry, budget:** microplane the patties onto parchment or screens and dry in a cold room over 24–72 h. More oxidation and contamination risk; watch for mould.
 
 #### Grading & moisture conditioning
 
-Melt-test on a hot nail and grade **1–6 star** (6★ = 95%+ heads, full melt). The grade sets which products are open to you and how tight and cool you can press. Pre-chill the hash and the bag before pressing — cold material in the bag means fewer blowouts.
+Melt-test on a hot nail and grade **1–6 star** (6★ = 95%+ heads, full melt). The grade sets which products are open to you and how tight and cool you can press. Pre-chill the hash and the bag before pressing, cold material in the bag means fewer blowouts.
 
 | Grade | Purity | Use |
 | --- | --- | --- |
@@ -302,27 +302,27 @@ Melt-test on a hot nail and grade **1–6 star** (6★ = 95%+ heads, full melt).
 | 5★ near full melt | 85–95% | Excellent rosin; cart grade with good pressing |
 | 4★ half melt | 70–85% | Good rosin; may need more cleaning for carts |
 | 3★ | 50–70% | Cooking grade, or needs cleaning |
-| 1–2★ | <50% | Edibles only — too contaminated for rosin |
+| 1–2★ | <50% | Edibles only, too contaminated for rosin |
 
 > **NOTE — Do you even press 6★?**
 >
-> Worth knowing: many hash-makers treat **3–4★ as the classic pressing grade** and keep true 5–6★ full-melt to dab as-is[^pressclub-temp] — it already melts clean without a press. Pressing full-melt into rosin is a choice about texture and product form, not an upgrade.
+> Worth knowing: many hash-makers treat **3–4★ as the classic pressing grade** and keep true 5–6★ full-melt to dab as-is[^pressclub-temp]. It already melts clean without a press. Pressing full-melt into rosin is a choice about texture and product form, not an upgrade.
 
 #### Pre-press & bag loading
 
-- Load **2–7 g** into the inner bag; fold the open end over twice. Don't overfill — leave room for flow.
+- Load **2–7 g** into the inner bag; fold the open end over twice. Don't overfill, leave room for flow.
 - For diamonds / mech-sep and any blowout-prone run, sleeve the inner bag inside a **120–160 µm support bag**.
-- Flower and sift: form a dense, air-free pre-press puck to stop channeling. Full-melt hash: no heated pre-press — at most a gentle cold-formed puck to consolidate the load; melty high-grade material flows without one.
+- Flower and sift: form a dense, air-free pre-press puck to stop channeling. Full-melt hash: no heated pre-press, at most a gentle cold-formed puck to consolidate the load; melty high-grade material flows without one.
 - Place in folded parchment, open seam facing out toward you.
 
 #### The press
 
 1. Pre-heat the closed (or near-closed) plates against the bag **30–60 s, no pressure**.
 2. **Slowly ramp** force over 15–20 s, watching for the seam to wet and oil to run.
-3. Hold at working force **60–120 s** (up to 180 s) or until flow stops — press _to flow-stop_, not to a number[^pressclub-pressure].
+3. Hold at working force **60–120 s** (up to 180 s) or until flow stops, press _to flow-stop_, not to a number[^pressclub-pressure].
 4. Release. Yield from clean 5–6★ input typically runs **60–80%**[^pressclub-thca] — if you're under 50% on good input, something upstream is wrong.
 
-> **Diagram.** Preheat with little pressure, then ramp up slowly and hold until flow stops. Rushing the ramp (red) spikes pressure before the resin can escape — and bursts the bag.
+> **Diagram.** Preheat with little pressure, then ramp up slowly and hold until flow stops. Rushing the ramp (red) spikes pressure before the resin can escape, and bursts the bag.
 
 #### Collection (cold chain)
 
@@ -338,10 +338,10 @@ Each tool exposes its own sub-levers. Match the press class to the batch size, a
 | --- | --- | --- | --- | --- |
 | Manual lever | 0.5–5 t | 0.5–12 g | Personal → craft | Fine for small hash runs; force is harder to hold steady |
 | Hydraulic | 5–25 t | 4–150 g | Craft → commercial | The workhorse; pair with PID plates for accuracy |
-| Pneumatic | 5–8 t | 7–35 g | Craft → commercial | Smooth, repeatable ramp — ideal for gentle hash pressing |
+| Pneumatic | 5–8 t | 7–35 g | Craft → commercial | Smooth, repeatable ramp, ideal for gentle hash pressing |
 | Electric / hybrid | 0.75–20 t | 1–115 g | Personal → commercial | Hands-free; app / PID control for tight low-temp accuracy |
 
-*Typical market ranges, not spec-sheet law — individual presses vary.*
+*Typical market ranges, not spec-sheet law, individual presses vary.*
 
 #### Plates, bags & cold-chain gear
 
@@ -349,7 +349,7 @@ Each tool exposes its own sub-levers. Match the press class to the batch size, a
 | --- | --- | --- |
 | Plates & heat zones | PID accuracy, even heat | Tight, even temperature = predictable flow and colour; cheap plates swing and scorch |
 | Micron bag | Mesh size (the gate) | Hash 25–45 µm (full-melt) to 90 µm (lower grade); flower 75–160 µm; sift 25–90 µm |
-| Support sleeve | 120–160 µm outer bag | Backs the inner bag against rupture — the main blowout defence |
+| Support sleeve | 120–160 µm outer bag | Backs the inner bag against rupture, the main blowout defence |
 | Pre-press mould | Puck density & shape | Even, air-free puck → even flow; flower and sift only |
 | Wash vessel & bags | Agitation, micron stack | Gentle agitation + a clean stack = cleaner heads |
 | Freeze dryer | Condenser temp, vacuum, time | Heat-free drying preserves the live profile; the quality default for hash |
@@ -357,7 +357,7 @@ Each tool exposes its own sub-levers. Match the press class to the batch size, a
 
 ## Input / Trichome Interaction Matrix
 
-Read the material — under a loupe or scope — and let it pick the settings. The micron is dictated by head size and debris, never chased for its own sake.
+Read the material, under a loupe or scope, and let it pick the settings. The micron is dictated by head size and debris, never chased for its own sake.
 
 > **Diagram.** Bigger, cleaner heads can use a coarser bag for more yield. Small heads and broken fragments slip through or clog a coarse screen, so they need a tighter bag and a slower, gentler ramp.
 
@@ -365,7 +365,7 @@ Read the material — under a loupe or scope — and let it pick the settings. T
 | --- | --- | --- | --- | --- |
 | Heads >100 µm, low contaminant | 90 µm (115 if very clean flower) | cold end | gentle | Badder |
 | Heads 70–100 µm | 45–73 µm | 88–99 °C flower / cooler hash | moderate | Badder / live |
-| Heads <70 µm or high fines | 25–37 µm | slightly higher to push through | slow, don't overfill | Careful — blowout-prone |
+| Heads <70 µm or high fines | 25–37 µm | slightly higher to push through | slow, don't overfill | Careful, blowout-prone |
 | Mostly cloudy + high intact % | match head size | 71–85 °C | gentle | Cold-cure badder |
 | Low intact % (ruptured / degraded) | match head size | 99–104 °C, shorter dwell | moderate | Carts / sauce |
 | High contaminant % | tighter (25–37 µm) | + a few °C | firm pre-press, slow ramp | Recover, don't chase melt |
@@ -373,7 +373,7 @@ Read the material — under a loupe or scope — and let it pick the settings. T
 
 > **KEY — The rule the matrix encodes**
 >
-> Small heads and fines escape or channel a coarse screen — the classic blowout trigger. Tighten the micron, slow the ramp, and don't overfill.
+> Small heads and fines escape or channel a coarse screen, the classic blowout trigger. Tighten the micron, slow the ramp, and don't overfill.
 
 ## Post-Press Product Paths
 
@@ -386,7 +386,7 @@ The same fresh-pressed rosin diverges into every solventless product through the
 | Fresh-press live rosin | Cool 60–77 °C (hash) | Use fresh; keep cold | Sappy, terpene-forward |
 | Cold-cure badder / jam | Cool press | Sealed jar **10–21 °C**, days–2 weeks[^triminator-coldcure] | Creamy, buttery |
 | Sauce | Cool press, then nucleate | Warm cure | Wet, high-terpene |
-| Diamonds & sauce (mechanical separation) | Nucleate first (cold cure 13–16 °C) | Progressive press **40 → 46 → 52 → 57 °C**[^hashtek-thca-tek]; briefly melt the THCa puck to pour (community practice ~120–130 °C — hot enough to start decarb, keep it short); recombine with the sauce to taste (~70/30 is a common ratio) | Clear diamonds in sauce |
+| Diamonds & sauce (mechanical separation) | Nucleate first (cold cure 13–16 °C) | Progressive press **40 → 46 → 52 → 57 °C**[^hashtek-thca-tek]; briefly melt the THCa puck to pour (community practice ~120–130 °C, hot enough to start decarb, keep it short); recombine with the sauce to taste (~70/30 is a common ratio) | Clear diamonds in sauce |
 | Diamonds (jar / jam tek) | Press clean rosin | Sealed jar: heat **93 °C, 1–2 h**, then crystallise at **38 °C for 1–2 weeks**[^hashtek-jam-tek] | Crystal balls in jam |
 | Vape / cart oil | Press clean & cool (low-lipid hash is ideal) | Decarb sealed, low and slow: whole rosin at ~71 °C for ~6 days measured only ~3% terpene loss[^hashtek-decarb]; hotter sealed decarbs are faster but cost terps[^lowtemp-carts]. Degas, fridge-test 24 h, fill at ~32 °C[^triminator-carts] | Clear, stable cart oil |
 | Hash hole core | Cool 60–77 °C, cohesive full-melt | Roll to a rope while pliable | A donut core that melts clean |
@@ -395,11 +395,11 @@ The same fresh-pressed rosin diverges into every solventless product through the
 
 > **DANGER — The one irreversible rule**
 >
-> **Never start a diamond press hot.** At high temperature THCa dissolves _into_ the terpenes and flows out with them — your diamonds leave with the sauce[^hashtek-thca-tek]. Progressive low-temp pressing removes terpenes gradually so the THCa runs out of solvent and stays behind. And decarboxylation is one-way[^wang2016-decarb]: decarbed THC will never crystallise[^lowtemp-diamonds].
+> **Never start a diamond press hot.** At high temperature THCa dissolves _into_ the terpenes and flows out with them, your diamonds leave with the sauce[^hashtek-thca-tek]. Progressive low-temp pressing removes terpenes gradually so the THCa runs out of solvent and stays behind. And decarboxylation is one-way[^wang2016-decarb]: decarbed THC will never crystallise[^lowtemp-diamonds].
 
 > **WARN — Sealed vessels build pressure**
 >
-> Sealed decarbs and jam teks pressurise as CO₂ comes off. Standard mason-jar lids self-vent at roughly ~5 psi[^hashtek-decarb] — use jars and lids rated for the job, keep them away from your face, and open only after they've cooled.
+> Sealed decarbs and jam teks pressurise as CO₂ comes off. Standard mason-jar lids self-vent at roughly ~5 psi[^hashtek-decarb], use jars and lids rated for the job, keep them away from your face, and open only after they've cooled.
 
 ## Main Failure Modes
 
@@ -431,7 +431,7 @@ drop into the cold-press band; shorten dwell; collect cold; store sealed, cold a
 
 Colour headed the wrong way. **Cause:**
 overheated, over-pressed, or contaminated low-grade input. **Fix:**
-lower temp; gentler ramp; tighten micron; start from cleaner 5–6★ material — colour is mostly an input problem.
+lower temp; gentler ramp; tighten micron; start from cleaner 5–6★ material. Colour is mostly an input problem.
 
 **F-06 · Auto-budders vs won't butter**
 
@@ -443,29 +443,29 @@ control input moisture; to butter on purpose, cold-cure sealed at 13–16 °C fo
 
 No crystals, no terpene layer. **Cause:**
 cure temperature too high (THCa stays dissolved), material already decarbed, not nucleated, or the wrong terpene ratio. **Fix:**
-drop to ~38 °C; start from fresh, undecarbed, nucleated rosin; press progressively — never start hot.
+drop to ~38 °C; start from fresh, undecarbed, nucleated rosin; press progressively, never start hot.
 
 **F-08 · Batch-to-batch inconsistency**
 
 Every run a surprise. **Cause:**
 uncontrolled moisture, an eyeballed ramp, no record of what you did. **Fix:**
-log every run — material, grade, micron, temp, time, yield, outcome — and change one lever at a time.
+log every run (material, grade, micron, temp, time, yield, outcome) and change one lever at a time.
 
 ## Practical Control Hierarchy
 
 Set these in order. Each step constrains the next; skipping upstream steps wastes the downstream ones.
 
 1. **Fix the input ceiling first** — Genetics, harvest maturity, wash / sift quality and moisture set the maximum. You cannot out-press bad input.
-2. **Pick the product** — Badder, live rosin, diamonds, cart or hash hole — this choice sets the temperature band and the cure.
+2. **Pick the product** — Badder, live rosin, diamonds, cart or hash hole. This choice sets the temperature band and the cure.
 3. **Choose the micron from head size & contamination** — Big clean heads → coarser; small heads or fines → tighter. Don't chase a small micron for its own sake.
 4. **Set the temperature band for material × product** — The lowest temperature that still flows. Hash cool, flower warmer, degraded material warmer still.
-5. **Ramp pressure to flow — never chase pressure** — Heat first, force second. Pressure only completes a flow that heat has already started.
+5. **Ramp pressure to flow, never chase pressure** — Heat first, force second. Pressure only completes a flow that heat has already started.
 6. **Collect cold, then cure to texture** — Cold collection locks terpenes; the cure (cold / warm / staged) decides badder, sauce or diamonds.
 7. **Store & validate** — Seal cold, dark, airtight. Log yield and grade, and adjust one lever next run.
 
 ## Minimal Operating Matrix for Troubleshooting
 
-Observation → likely cause → first checks. Start at the top — most problems are upstream of the plates.
+Observation → likely cause → first checks. Start at the top. Most problems are upstream of the plates.
 
 | Observation | Likely cause | First checks |
 | --- | --- | --- |
@@ -475,7 +475,7 @@ Observation → likely cause → first checks. Start at the top — most problem
 | Weak smell / taste | Heat or oxygen exposure | Cooler press; cold collection; sealed cold storage |
 | Bag ruptured | Ramp too fast / overfilled / micron too coarse | Support sleeve; slower ramp; smaller load; match micron |
 | Diamonds won't crystallise | Cure temp too high, or decarbed / un-nucleated rosin | Drop to ~38 °C; confirm fresh, nucleated, undecarbed rosin |
-| Cart clogs / re-crystallises | Incomplete decarb — oil still above ~50% THCa by weight recrystallises | Re-decarb sealed to ≥90% conversion; fridge-test 24 h before filling[^lowtemp-carts] |
+| Cart clogs / re-crystallises | Incomplete decarb, oil still above ~50% THCa by weight recrystallises | Re-decarb sealed to ≥90% conversion; fridge-test 24 h before filling[^lowtemp-carts] |
 | Results vary run to run | Uncontrolled variables | Log everything; change one lever per run |
 
 ## The Simplest Mental Model
@@ -486,7 +486,7 @@ If you keep only one thing, keep the chain:
 >
 > **Trichome grade & moisture** set the ceiling → **heat** lowers resin viscosity → **pressure** drives flow through the screen → **micron** selects what passes (pure oil vs fats and plant matter) → so **yield and purity trade** against each other → **collection temperature** locks the texture → the **cure** decides badder, sauce or diamonds → **cold, dark, sealed storage** keeps it.
 
-Heat to flow, screen to clean, pressure only to finish — then cure for texture. Quality is set upstream; the press only preserves it or squanders it.
+Heat to flow, screen to clean, pressure only to finish, then cure for texture. Quality is set upstream; the press only preserves it or squanders it.
 
 ## Glossary
 
@@ -498,18 +498,18 @@ Plain-English definitions for the terms this guide leans on. Skim it once and th
 | Badder / batter | A creamy, whipped rosin texture, like frosting. Set by curing and stirring. |
 | Blowout | The mesh bag bursting under pressure so raw plant matter floods the oil, ruining the batch. |
 | Bubble hash | Hash made by stirring cannabis in ice water so the brittle trichome heads snap off and sink through mesh bags. |
-| Capitate-stalked trichome | The large, lollipop-shaped gland that holds the most resin — the prize fraction. |
+| Capitate-stalked trichome | The large, lollipop-shaped gland that holds the most resin, the prize fraction. |
 | Chromatography (reabsorption) | Oil that already flowed out soaking back into the spent material because flow stalled; shows up as poor yield. |
 | Cloudy / milky trichome | A head at peak ripeness (peak THCa and terpenes); the target window at harvest. |
-| Cold chain | The steps that must stay cold — harvest, wash, dry, collection, storage — because heat degrades quality there. |
+| Cold chain | The steps that must stay cold (harvest, wash, dry, collection, storage) because heat degrades quality there. |
 | Cold cure | Resting sealed rosin cool (about 10–21 °C) for days to weeks to set a creamy badder. |
 | Decarb (decarboxylation) | Heating to convert raw THCa into active THC; required for vape carts, but it destroys diamond potential. |
 | Diamonds (THCa diamonds) | Clear crystals of nearly pure THCa grown from rosin, sitting in a pool of ‘sauce’. |
 | Dry sift (kief) | Hash made by rubbing dried plant over fine screens so trichome heads fall through; the powder is kief. |
 | Dwell time | How long the bag is held squeezed under heat during a press. |
-| Effective pressure (PSI) | The force actually felt by the bag (force ÷ bag area) — what matters, not the raw gauge number. |
+| Effective pressure (PSI) | The force actually felt by the bag (force ÷ bag area). What matters, not the raw gauge number. |
 | Emulsion | A hazy, unstable blend caused by water trapped in the oil; the rosin looks cloudy. |
-| Freeze-dryer (lyophiliser) | A machine that pulls water out under vacuum while frozen — drying hash with no heat. The quality option. |
+| Freeze-dryer (lyophiliser) | A machine that pulls water out under vacuum while frozen, drying hash with no heat. The quality option. |
 | Fresh-frozen | Plant flash-frozen right after cutting and never dried, preserving the ‘live’ aroma; the basis of live rosin. |
 | Full-melt | Top-grade hash (5–6 star) pure enough to melt to almost nothing on a hot nail; the cleanest press input. |
 | Hash hole | A pre-rolled joint with a core of hash or rosin running down the middle. |
@@ -528,7 +528,7 @@ Plain-English definitions for the terms this guide leans on. Skim it once and th
 | Water activity (aw) | A precise measure of free moisture (0–1) used to judge when flower is properly dried (optimal 0.58–0.62). |
 | Yield | How much rosin you get back, usually given as a percentage of the hash weight pressed. |
 
-Setpoints, micron guidance and the trichome-to-press logic in this guide are drawn from the author's solventless knowledge base and operational SOPs, cross-checked against the cited sources. It is a field guide, not a substitute for testing your own material — verify by logging your runs.
+Setpoints, micron guidance and the trichome-to-press logic in this guide are drawn from the author's solventless knowledge base and operational SOPs, cross-checked against the cited sources. It is a field guide, not a substitute for testing your own material, verify by logging your runs.
 
 ## References
 

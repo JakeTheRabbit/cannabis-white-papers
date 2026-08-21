@@ -328,7 +328,7 @@ SECTIONS.append({"id": "expectations", "kicker": "Reality check",
       "Yield and quality typically climb across the first three runs of a cultivar as you learn how "
       "it stretches and how much canopy work it actually wants."),
     p("Good planning of genetics and spacing is one of the cheapest gains available. Choosing "
-      "the right plant count and layout can move yield per area and uniformity in ways that often matter more than expensive gear with no "
+      "the right plant count and layout can move yield per area and uniformity more than expensive gear does, with no "
       "extra overhead, because uniformity and light interception both improve" +
       _c("danziger-2022-planting-density") + _c("anthony-2020-training-light-interception") + "."),
     ul(["Expect to refine over about 3 runs of a cultivar before you hit its yield/quality sweet spot.",
@@ -337,7 +337,7 @@ SECTIONS.append({"id": "expectations", "kicker": "Reality check",
         "Not every strain needs every phase. The optional Phase 3 defan is decided per strain by observation.",
         "Track and photograph each run so changes are based on your own data, not generic advice.",
         "Slow-growing genetics behave differently and need a gentler, less aggressive hand."]),
-    callout("key", "Three honest truths",
+    callout("key", "Three rules",
       ol(["<strong>There is no universal recipe.</strong> Start from this timeline and tune the day "
           "ranges and how much you remove to <em>your</em> genetics, light and room.",
           "<strong>Less is usually more.</strong> Leave the leaves that feed the plant; open the "

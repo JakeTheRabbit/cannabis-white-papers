@@ -27,7 +27,7 @@ _Precision · Smart watering · ~9 min read_
 
 > **EVIDENCE — Grain of salt**
 >
-> **Provisional:** Multi-signal caution is sound engineering. Claims of never flooding or never starving depend on sensor health, calibration, and fail-safes — keep hard VWC floors and human override.
+> **Provisional:** Multi-signal caution is sound engineering. Claims of never flooding or never starving depend on sensor health, calibration, and fail-safes, keep hard VWC floors and human override.
 
 VRWE stands for **Virtual Root-Zone Water Estimator**: software that decides when and how much to water a plant by combining several signals instead of obeying one sensor. It is a ‘virtual’ estimator because it never reads the water directly. It works the amount out from several clues, the way you can tell a kettle is nearly empty from its weight and how long it has been boiling.
 

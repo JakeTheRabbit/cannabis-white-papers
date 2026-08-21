@@ -124,7 +124,7 @@ Before buying any equipment, get real numbers for your water. A cheap EC/PPM pen
 
 1. **Buy and calibrate pens** — Get an EC/PPM pen and a pH pen first. Calibrate with fresh calibration solution, never with tap water.
 2. **Get the full picture** — For alkalinity, sodium, Ca, Mg and micronutrients, use a lab test or your city's annual water-quality report.
-3. **Record starting EC** — Note how much room you have before the ~your total EC budget (set targets in mS/cm) feed ceiling, so you know your nutrient headroom.
+3. **Record starting EC** — Note how much of your EC budget the raw water already spends, so you know your nutrient headroom. Set targets in mS/cm, not ppm.
 4. **Mix in the right order** — Fill water, let chlorine off-gas or filter it, add CalMag if RO or soft, add base nutrients, then adjust pH last.
 5. **Re-test seasonally** — Re-check well and rain sources through the year. Municipal supplies can also switch chlorine to chloramine periodically.
 
@@ -132,9 +132,9 @@ Before buying any equipment, get real numbers for your water. A cheap EC/PPM pen
 
 ## Water temperature and the mistakes beginners make
 
-Water temperature quietly controls dissolved oxygen and disease risk. Aim for roughly 18-22 C (65-72 F), because warm, poorly aerated water raises pathogen risk even though saturation DO is still roughly ~9 mg/L at 20 C and ~8 mg/L at 26 C. Target at 26 C[^fao-dissolved-oxygen-temperature], and root pathogens like Pythium accelerate above about 23 C[^sutton-2006-pythium-hydroponic-etiology]. Warm water plus low oxygen is an open invitation to root rot.
+Water temperature quietly controls dissolved oxygen and disease risk. Aim for roughly 18-22 C (65-72 F). Saturation dissolved oxygen falls only gently across that range, from about 9 mg/L at 20 C to about 8 mg/L at 26 C[^fao-dissolved-oxygen-temperature], but warm, poorly aerated water still raises pathogen risk, and root pathogens like Pythium accelerate above about 23 C[^sutton-2006-pythium-hydroponic-etiology]. Warm water plus low oxygen is an open invitation to root rot.
 
-> **Diagram.** Saturation dissolved oxygen declines gently as water warms (roughly ~9 mg/L near 20 C toward ~8 mg/L saturation at 26 C. Above roughly 23 C you also enter Pythium risk.[^fao-dissolved-oxygen-temperature][^sutton-2006-pythium-hydroponic-etiology]
+> **Diagram.** Saturation dissolved oxygen declines gently as water warms, from about 9 mg/L at 20 C to about 8 mg/L at 26 C. The bigger risk above roughly 23 C is Pythium, not oxygen starvation.[^fao-dissolved-oxygen-temperature][^sutton-2006-pythium-hydroponic-etiology]
 
 | Common mistake | What actually happens, and the fix |
 | --- | --- |

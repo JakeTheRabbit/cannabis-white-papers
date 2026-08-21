@@ -384,7 +384,7 @@ SECTIONS.append({"id": "climate", "kicker": "10 · The knock-on effects", "title
 # ---------------------------------------------------------------- 11
 SECTIONS.append({"id": "drying", "kicker": "11 · The hidden hazard", "title": "The drying room: CO2 with no light to burn it",
   "blocks": [
-    p("A drying room is the dark side of everything above, literally. You fill a sealed, dark, low-airflow "
+    p("A drying room is the dark side of everything above. You fill a sealed, dark, low-airflow "
       "room with tens or hundreds of kilos of freshly cut biomass, and that biomass keeps "
       "<strong>respiring</strong> for days after harvest, releasing CO2 the whole time, with no "
       "photosynthesis to soak any of it back up" + _c("kader2002-respiration") + "."),
@@ -413,7 +413,7 @@ SECTIONS.append({"id": "drying", "kicker": "11 · The hidden hazard", "title": "
 SECTIONS.append({"id": "safety", "kicker": "12 · The part that can kill you", "title": "CO2 and people: the numbers that matter most",
   "blocks": [
     lead("Read this section even if you skip the rest. Your enrichment setpoint of 1,000&ndash;1,500 ppm is "
-         "well below any worker limit and safe for brief occupancy. The danger is not the setpoint, it is a "
+         "well below any worker limit and safe for brief occupancy. The danger is a "
          "leaking regulator, an overfilled room, a burner fault, or a sealed drying room, any of which can "
          "reach lethal CO2 while you notice nothing."),
     figure(L.zones("Enrichment sits far below the worker limit", 0, 5000,
@@ -430,7 +430,7 @@ SECTIONS.append({"id": "safety", "kicker": "12 · The part that can kill you", "
     table(["CO2 level", "What happens", "Reference point"], [
       ["~420 ppm", "Normal outdoor air", "Baseline" + _c("noaa2024-co2")],
       ["1,000&ndash;1,500 ppm", "Typical enrichment target, safe for short work", "3&ndash;5&times; below the worker limit"],
-      ["1,000&ndash;2,500 ppm", "Some studies report small cognitive effects (literature mixed)", "Cognition, not danger" + _c("azuma2018-cognition")],
+      ["1,000&ndash;2,500 ppm", "Small cognitive effects reported, evidence mixed", "Cognition, not danger" + _c("azuma2018-cognition")],
       ["5,000 ppm (0.5%)", "8-hour worker exposure limit (TWA)", "OSHA / NIOSH / ACGIH / WorkSafe NZ" + _c("worksafenz-co2")],
       ["30,000 ppm (3%)", "15-minute short-term limit (STEL); headache, fast breathing", "NIOSH / ACGIH / WorkSafe NZ" + _c("niosh-co2")],
       ["40,000 ppm (4%)", "IDLH, immediately dangerous to life or health", "Escape-impairing" + _c("niosh-co2")],

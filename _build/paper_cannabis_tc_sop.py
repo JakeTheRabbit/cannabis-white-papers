@@ -159,7 +159,7 @@ SECTIONS.append({
             "A used Athena-style portable hood from the second-hand market can cost more than a new Chinese bench. Compare the filter spec, not the logo.",
         ]),
         callout("danger", "Do not buy",
-                p("Cardboard mushroom boxes with a furnace filter. Vertical “nail salon” tables with no HEPA grade. Anything that says HEPA but shows a foam sheet. A biosafety cabinet unless you already know you need operator protection — it is the wrong tool and costs more.")),
+                p("Cardboard mushroom boxes with a furnace filter. Vertical “nail salon” tables with no HEPA grade. Anything that says HEPA but shows a foam sheet. A biosafety cabinet unless you already know you need operator protection. It is the wrong tool and costs more.")),
         h(3, "When it arrives"),
         figure(S.fig_hood_setup(), 6, "Unbox. Place. Match voltage. Run empty 30 minutes. Check the air stream with a tissue. Wipe steel only. Log F-12."),
         steps([

@@ -25,7 +25,7 @@ SECTIONS.append({"id": "what-this-is", "kicker": "Start here", "title": "What th
   "blocks": [
     callout("evidence", "Grain of salt",
       "<p><strong>Provisional:</strong> Multi-signal caution is sound engineering. Claims of never flooding or "
-      "never starving depend on sensor health, calibration, and fail-safes &mdash; keep hard VWC floors and "
+      "never starving depend on sensor health, calibration, and fail-safes, keep hard VWC floors and "
       "human override.</p>"),
     lead("VRWE stands for <strong>Virtual Root-Zone Water Estimator</strong>: software that decides "
          "when and how much to water a plant by combining several signals instead of obeying one "

@@ -141,7 +141,7 @@ SECTIONS.append({
         kv([
             ("Meristem size used for cleanup", "0.2–0.4 mm dome, two or fewer tiny leaves"),
             ("Holmes method", "Leave two tiny leaves on the tip as a shield, then bleach, then plate"),
-            ("Best first piece (Das 2024)", "Shoot tip under 5 mm — less fungus than stem pieces, less glassy growth than a bare meristem"),
+            ("Best first piece (Das 2024)", "Shoot tip under 5 mm, less fungus than stem pieces, less glassy growth than a bare meristem"),
             ("How often stem pieces still contaminate", "About 50% in Holmes 2021 (range 10–80%), even after bleach. The microbes are inside the stem, not only on the skin."),
         ]),
     ]})
@@ -383,7 +383,7 @@ SECTIONS.append({
         h(3, "Hands"),
         figure(FP.fig_meristem_hands(), 17, "Left hand holds. Right hand cuts. Do not swap. Rest both wrists on the bench so the tools do not shake."),
         photo(f"{IMG}/16-meristem-hands.jpg",
-              "Left forceps hold the stem. Right scalpel peels a leaf away from the tip. Work under the microscope ring light. Discard peeled leaves to the side. This photo is a larger shoot than the final meristem — the hand positions are the same when the piece is 1 mm.",
+              "Left forceps hold the stem. Right scalpel peels a leaf away from the tip. Work under the microscope ring light. Discard peeled leaves to the side. This photo is a larger shoot than the final meristem. The hand positions are the same when the piece is 1 mm.",
               alt="Forceps and scalpel peeling a cannabis shoot tip under a microscope",
               model="Grok Imagine · illustration"),
         h(3, "The eight movements"),
@@ -654,7 +654,7 @@ SECTIONS.append({
     "kicker": "20",
     "title": "Glossary",
     "blocks": [
-        lead("Every technical term in this guide, in one place."),
+        lead("Every technical term, in one place."),
         table(
             ["Term", "Meaning"],
             [["Acclimatization / hardening", "Lowering humidity in steps so a jar plant can live in room air and soil."],

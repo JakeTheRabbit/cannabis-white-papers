@@ -27,7 +27,7 @@ _Precision · Dashboards · ~13 min read_
 
 > **EVIDENCE — Grain of salt**
 >
-> **Provisional:** On-screen advisories (e.g. tip-burn risk timelines) are product-design examples for operator UX — not a validated prognostic model.
+> **Provisional:** On-screen advisories (e.g. tip-burn risk timelines) are product-design examples for operator UX, not a validated prognostic model.
 
 A modern grow room is wired with sensors measuring air temperature, humidity, VPD, CO₂, light, substrate moisture, EC, root-zone temperature, pH and power draw, second by second. The dashboards built to show all of this are walls of live numbers and graphs. They tell you _what_ is happening. They never tell you what it _means_, what is about to happen, or what to do about it.
 
@@ -100,7 +100,7 @@ Plant-State Intelligence inverts six assumptions baked into the sensor dashboard
 
 The pipeline estimates four (really five) interacting states. **Environmental state**, temperature, RH, VPD, CO₂, light, is reframed as integrals and rates: VPD-hours accumulated today, DLI to date, not instants. Plant response to VPD is non-linear and cumulative rather than tied to any single reading[^vpd-plant-response], so the accumulated quantity is the meaningful one. **Substrate state** adds derived crop-steering metrics: dryback depth and rate, field-capacity recovery, and shot-to-shot moisture response.
 
-The **plant physiological state** is the whole point. It is not measured but **estimated**, by fusing the others into a transpiration proxy, a stress index, a vigour/stacking trajectory and a steering-response readout. **Operational/equipment state** and an optional **vision state** (canopy cameras) round it out. Sensor health itself is treated as a first-class signal, so the system knows when it is blind.
+The **plant physiological state** is not measured but **estimated**, by fusing the others into a transpiration proxy, a stress index, a vigour/stacking trajectory and a steering-response readout. **Operational/equipment state** and an optional **vision state** (canopy cameras) round it out. Sensor health itself is treated as a first-class signal, so the system knows when it is blind.
 
 > **Diagram.** Environmental, substrate and equipment/vision states feed inward into the inferred plant physiological state. That centre is what the grower actually cares about, and the only thing no sensor reports.
 

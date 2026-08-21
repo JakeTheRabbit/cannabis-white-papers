@@ -27,7 +27,7 @@ _Precision · Crop steering · ~18 min read_
 
 > **EVIDENCE — Grain of salt**
 >
-> **Operational / provisional:** Default VWC numbers are one facility’s probe-native placeholders after hand-watering. Caplan drought supports controlled deficit as a concept — not a copy-paste of these exact setpoints. Calibrate media before arming automation.
+> **Operational / provisional:** Default VWC numbers are one facility’s probe-native placeholders after hand-watering. Caplan drought supports controlled deficit as a concept, not a copy-paste of these exact setpoints. Calibrate media before arming automation.
 
 F2 is an **autonomous irrigation controller** for a veg grow room. It is software that reads moisture and salt probes in the root zone and decides, on its own, when to fire a watering shot through a pump and valves. You set the targets. It does the watering.
 
@@ -124,7 +124,7 @@ When the engine decides a shot is needed, that shot only fires if it passes **ev
 
 > **Diagram.** The physical watering sequence: build pressure first, open the row, hold for the computed duration, then back out in reverse.
 
-> **NOTE — Why pH/EC gating matters**
+> **NOTE — What ungated source water does**
 >
 > Source water that drifts out of the pH or EC window can lock out nutrients or burn roots. Gating on it, and alerting you rather than watering quietly, guards against feeding a bad solution to the whole room.
 

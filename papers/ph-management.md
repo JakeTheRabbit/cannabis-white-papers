@@ -109,7 +109,7 @@ Mix your nutrients first, then adjust pH last. Adding nutrients shifts pH on its
 4. **Stir and wait** — Mix it in and give it a moment to react.
 5. **Re-measure** — Read again. Repeat in small steps, never dump and chase.
 
-Common pH downs include phosphoric, nitric, sulfuric, or organic acids; common pH ups include KOH or potassium carbonate. Each adds nutrients — account for them.[^saloner-bernstein-2022-nitrogen-source-cannabis] Your starting water matters more than beginners expect. Alkalinity is the water's built-in acid-absorbing capacity, mostly bicarbonates, reported as ppm CaCO3, and it is distinct from a high pH reading.[^umass-water-quality-ph-alkalinity] High-alkalinity water fights your acid and creeps the pH back up after you set it.
+Common pH downs include phosphoric, nitric, sulfuric, or organic acids; common pH ups include KOH or potassium carbonate. Each adds nutrients, account for them.[^saloner-bernstein-2022-nitrogen-source-cannabis] Your starting water matters more than beginners expect. Alkalinity is the water's built-in acid-absorbing capacity, mostly bicarbonates, reported as ppm CaCO3, and it is distinct from a high pH reading.[^umass-water-quality-ph-alkalinity] High-alkalinity water fights your acid and creeps the pH back up after you set it.
 
 > **Diagram.** Alkalinity, not the pH reading, sets how much acid it takes to move the water. Hard, high-alkalinity tap water resists adjustment and drifts back up.[^umass-water-quality-ph-alkalinity]
 
@@ -121,7 +121,7 @@ Common pH downs include phosphoric, nitric, sulfuric, or organic acids; common p
 
 Runoff is the solution that drains from the pot, and beginners over-rely on it. In inert media like coco it is a momentary, indirect sample distorted by salt buildup and what the roots have done locally. It is not a soil test.[^malik-tlustos-2025-soilless-media-cannabis]
 
-The reliable lever is the inflow pH you set going in. For the root zone itself, watch runoff EC for salt accumulation rather than runoff pH: a flush is due when runoff EC climbs well above your feed EC. Treat large runaway gaps (runoff much higher than feed) as salt buildup; advanced steering may hold higher root-zone EC on purpose. Keep an eye on feed and runoff EC each other.[^kpai-2024-cannabis-nutrient-solution-ph-cation-uptake]
+The reliable lever is the inflow pH you set going in. For the root zone itself, watch runoff EC for salt accumulation rather than runoff pH: a flush is due when runoff EC climbs well above your feed EC. Treat a runaway gap between runoff and feed as salt buildup, though advanced steering may hold root-zone EC higher on purpose.[^kpai-2024-cannabis-nutrient-solution-ph-cation-uptake]
 
 | Stage | Inflow pH target | EC watch | Calibration | Flush trigger |
 | --- | --- | --- | --- | --- |

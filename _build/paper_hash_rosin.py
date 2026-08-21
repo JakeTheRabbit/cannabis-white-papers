@@ -10,7 +10,7 @@ SLUG = "hash-rosin-pressing"
 TITLE = "Hash rosin, pressed: a solventless systems guide"
 EYEBROW = "Harvest · Solventless"
 SUB = ("Rosin is mechanical, not chemical: heat, pressure, time and a micron screen acting on a "
-       "material whose quality ceiling was already fixed upstream — at harvest, in the wash, in the "
+       "material whose quality ceiling was already fixed upstream, at harvest, in the wash, in the "
        "dry. This guide maps the whole chain, trichome to dab.")
 META = [("flask", "Solventless"), ("image", "8 diagrams"),
         ("quote", "Evidence-linked · 16 sources"), ("clock", "~22 min read")]
@@ -28,10 +28,10 @@ SECTIONS = []
 SECTIONS.append({"id": "start-here", "kicker": "Start here", "title": "Rosin in Plain English",
   "blocks": [
     lead("A cannabis plant is covered in thousands of tiny, mushroom-shaped glands called "
-         "<strong>trichomes</strong> — the frosty &lsquo;crystals&rsquo; you can see on good flower. Each "
+         "<strong>trichomes</strong>, the frosty &lsquo;crystals&rsquo; you can see on good flower. Each "
          "trichome head is a microscopic sac of <strong>resin</strong>: the sticky oil that carries almost "
          "all of the plant's potency, smell and flavour. Every solventless concentrate is really just "
-         "<em>those heads, collected and then gently squeezed</em> — with no chemical solvents like butane "
+         "<em>those heads, collected and then gently squeezed</em>, with no chemical solvents like butane "
          "or alcohol anywhere in the process."),
     figure(_FIGS["trichome"], 1,
       "The frosty &lsquo;crystals&rsquo; on cannabis are trichomes. Solventless hash-making is the art of "
@@ -44,7 +44,7 @@ SECTIONS.append({"id": "start-here", "kicker": "Start here", "title": "Rosin in 
         "<strong>Press the hash into rosin.</strong> Seal the hash in a small mesh bag and squeeze it "
         "between two gently heated metal plates. Heat softens the resin; pressure pushes it out through "
         "the mesh as a golden oil. That oil is <strong>rosin</strong>."]),
-    p("That is the whole idea — <strong>heat + pressure, no solvents</strong>. The craft is in restraint: "
+    p("That is the whole idea, <strong>heat + pressure, no solvents</strong>. The craft is in restraint: "
       "too much heat boils away the flavour, and too much force bursts the bag and pushes plant matter "
       "through the mesh. After pressing, the rosin is <strong>cured</strong> (rested under controlled "
       "warmth or cold) to set its final texture, then either <strong>dabbed</strong> (a small dose "
@@ -52,29 +52,29 @@ SECTIONS.append({"id": "start-here", "kicker": "Start here", "title": "Rosin in 
     figure(_FIGS["press"], 2,
       "Two gently heated plates squeeze the bag. Heat thins the resin; pressure pushes it through the "
       "mesh as golden rosin, leaving plant matter trapped inside."),
-    defterm("Trichome", "The tiny resin gland on the plant — the visible &lsquo;crystal&rsquo;. Its head "
+    defterm("Trichome", "The tiny resin gland on the plant, the visible &lsquo;crystal&rsquo;. Its head "
             "holds the oil you want."),
     defterm("Hash", "Trichome heads gathered into a powder or paste, before pressing."),
     defterm("Rosin", "The oil pressed out of hash (or flower) using only heat and pressure."),
-    defterm("Solventless", "Made with only force, heat, water and ice — never butane, CO&#8322; or "
+    defterm("Solventless", "Made with only force, heat, water and ice, never butane, CO&#8322; or "
             "alcohol. That's the appeal."),
     defterm("Micron (µm)", "One-thousandth of a millimetre; the mesh size of the press bag. Smaller "
             "number = finer mesh = cleaner rosin but lower yield."),
     defterm("Cure", "Resting fresh rosin at a set temperature for hours to weeks to fix its texture "
             "and flavour."),
     callout("key", "The one big idea of the whole guide",
-      p("The press cannot <em>add</em> quality — it can only lose less of it. Your starting material "
+      p("The press cannot <em>add</em> quality. It can only lose less of it. Your starting material "
         "(the genetics, the harvest, the wash) sets the ceiling. Heat, pressure, time and mesh size only "
         "decide how close to that ceiling you land.")),
-    p("From here on, the guide treats the press as a set of <strong>levers</strong> you can pull — "
-      "temperature, pressure, time and mesh (&lsquo;micron&rsquo;) size — and shows what each one does to "
+    p("From here on, the guide treats the press as a set of <strong>levers</strong> you can pull, "
+      "temperature, pressure, time and mesh (&lsquo;micron&rsquo;) size. And shows what each one does to "
       "yield and quality, what goes wrong, and how to fix it. Hit a word you don't know? Jump to the "
       "glossary at the end."),
   ]})
 
 SECTIONS.append({"id": "core-answer", "kicker": "The short version", "title": "Core Answer",
   "blocks": [
-    p("A rosin press has only four levers — <strong>heat, pressure, time and screen (micron)</strong> — "
+    p("A rosin press has only four levers (<strong>heat, pressure, time and screen (micron)</strong>) "
       "and they all negotiate a single tension: <em>yield versus quality</em> (terpene retention, colour, "
       "clarity)" + _c("pressclub-temp") + ". Heat lowers resin viscosity so it flows; the micron bag "
       "decides what flows <em>with</em> it (pure trichome oil, or fats and plant matter too); pressure and "
@@ -95,11 +95,11 @@ SECTIONS.append({"id": "pipeline", "kicker": "The map", "title": "The Pipeline a
       "marked in blue in the map below; the press and the cure are where heat becomes a tool."),
     figure(_FIGS["pipeline"], 3,
       "Eleven stages from living plant to finished concentrate. Blue marks the cold-chain steps where "
-      "heat is the enemy; amber marks the heat steps — the press and the cure. Follow the arrows."),
+      "heat is the enemy; amber marks the heat steps, the press and the cure. Follow the arrows."),
     steps([
       ("Harvest", "Cut at 80–90% cloudy trichomes, at lights-off."),
       ("Freeze or dry", "Fresh-freeze for live products; slow-dry for dry sift."),
-      ("Wash or sift", "Ice-water hash or dry-sift screens — cold room, gentle hands."),
+      ("Wash or sift", "Ice-water hash or dry-sift screens, cold room, gentle hands."),
       ("Dry the hash", "Freeze-dry, or cold air-dry as the budget option."),
       ("Grade", "Melt-test and star-grade 1–6★; the grade decides the product options."),
       ("Condition", "Moisture check and pre-chill; pre-press pucks for flower and sift only."),
@@ -116,7 +116,7 @@ SECTIONS.append({"id": "pipeline", "kicker": "The map", "title": "The Pipeline a
 SECTIONS.append({"id": "setpoints", "kicker": "Numbers to start from", "title": "Starting Setpoints by Input Material",
   "blocks": [
     p("Where to begin for each of the four input materials. These are <em>starting points</em> to dial "
-      "in from — not targets to chase" + _c("triminator-tempchart") + ". Temperatures are platen "
+      "in from, not targets to chase" + _c("triminator-tempchart") + ". Temperatures are platen "
       "temperature; press <em>to flow</em>, not to the clock. Hash sits cooler than flower because its "
       "trichome heads are already isolated and need only enough heat to melt resin" + _c("pressclub-temp") + "."),
     table(["Input material", "Bag micron", "Plate temp", "Band (°C)", "Dwell (s)", "Pressure approach", "Pre-press", "Typical products"], [
@@ -124,23 +124,23 @@ SECTIONS.append({"id": "setpoints", "kicker": "Numbers to start from", "title": 
        "Low–medium; slow 30–60 s ramp as resin flows, then ease to firm contact", "Yes",
        "Badder, fresh press; carts at 75 µm"],
       ["Dry sift / kief", "72 µm (25–90 by grade)", "82 °C", "71–88", "60–90",
-       "Low; add <em>time</em>, not pressure — finer material already has good contact", "Yes",
+       "Low; add <em>time</em>, not pressure. Finer material already has good contact", "Yes",
        "Badder, diamonds"],
       ["Fresh-frozen hash (5–6★)", "36 µm (25–45)", "71 °C", "60–77", "60–180",
-       "Very low; add heat only if flow stalls. <strong>More pressure is NOT better</strong> — it pushes fats through", "Cold puck only",
+       "Very low; add heat only if flow stalls. <strong>More pressure is NOT better</strong>. It pushes fats through", "Cold puck only",
        "Live rosin, cold-cure badder, live diamonds, carts, hash holes"],
       ["Dried / cured bubble hash", "45 µm (25–90 by grade)", "77 °C", "71–82", "60–120",
        "Low; a few °C hotter than full-melt to coax flow, but stay gentle", "Cold puck only",
        "Badder, diamonds, carts"],
     ], cls="compact", caption="Starting setpoints by material. Dial in from here, one lever per run."),
     callout("note", "Temperature bands at a glance",
-      p("<strong>Cold-cure hold (post-press, not platen):</strong> 10–21 °C for days to ~2 weeks — sets "
+      p("<strong>Cold-cure hold (post-press, not platen):</strong> 10–21 °C for days to ~2 weeks, sets "
         "creamy badder while keeping volatile terpenes" + _c("triminator-coldcure") + ". "
-        "<strong>Low-temp press (flavour):</strong> 60–85 °C — max terpene retention, lightest colour; "
+        "<strong>Low-temp press (flavour):</strong> 60–85 °C, max terpene retention, lightest colour; "
         "hash ~60–77 °C, premium flower ~82–88 °C. "
-        "<strong>Balanced sweet spot (flower):</strong> 88–99 °C — strong yield, minimal terpene loss; a "
+        "<strong>Balanced sweet spot (flower):</strong> 88–99 °C, strong yield, minimal terpene loss; a "
         "good default for unknown <em>flower</em>. "
-        "<strong>High-temp press (yield / sauce / carts):</strong> 99–104 °C — max yield, fastest flow, "
+        "<strong>High-temp press (yield / sauce / carts):</strong> 99–104 °C, max yield, fastest flow, "
         "darker; use it to rescue degraded material" + _c("triminator-tempchart") + ".")),
     figure(_FIGS["tempmap"], 4,
       "Where each input material and goal sits on the platen-temperature scale. Hash presses coolest; "
@@ -154,7 +154,7 @@ SECTIONS.append({"id": "known-unknown", "kicker": "Honesty first", "title": "Kno
         "at their expense" + _c("pressclub-temp") + ".",
         "A tighter (smaller-micron) bag yields <em>cleaner, lighter</em> rosin at <em>lower</em> yield; a "
         "coarser bag does the reverse.",
-        "Hash and dry sift press cooler than flower — their heads are already separated from plant matter.",
+        "Hash and dry sift press cooler than flower. Their heads are already separated from plant matter.",
         "Sealed heat preserves terpenes better than open-air heat: a sealed headspace saturates so net "
         "evaporation stops, while open air oxidises and strips them" + _c("hashtek-decarb") + ". The "
         "lightest monoterpenes are the most volatile and go first" + _c("eyal2023-terpenes") + ".",
@@ -167,13 +167,13 @@ SECTIONS.append({"id": "known-unknown", "kicker": "Honesty first", "title": "Kno
         "both plates.",
         "You work clean and cold, and you log runs so you can move one lever at a time."]),
     h(3, "Unknowns that change the exact numbers"),
-    ul(["<strong>Trichome head size &amp; distribution</strong> — cultivar-dependent; dictates the micron "
+    ul(["<strong>Trichome head size &amp; distribution</strong>, cultivar-dependent; dictates the micron "
         "more than anything else.",
-        "<strong>Lipid / wax load</strong> — varies by genetics and material type; flower carries more "
+        "<strong>Lipid / wax load</strong>, varies by genetics and material type; flower carries more "
         "than hash.",
-        "<strong>Crystallisation tendency</strong> — the terpene-to-THCa ratio decides how readily (or "
+        "<strong>Crystallisation tendency</strong>, the terpene-to-THCa ratio decides how readily (or "
         "stubbornly) diamonds form.",
-        "<strong>Exact moisture</strong> — a few points of RH swing flow, clarity and blowout risk."]),
+        "<strong>Exact moisture</strong>, a few points of RH swing flow, clarity and blowout risk."]),
   ]})
 
 SECTIONS.append({"id": "balances", "kicker": "Core concept", "title": "The Press as Four Coupled Balances",
@@ -185,20 +185,20 @@ SECTIONS.append({"id": "balances", "kicker": "Core concept", "title": "The Press
            "drops its viscosity so it flows; too much volatilises terpenes and darkens colour. "
            "<strong>Flow ↔ Flavour.</strong>"),
       card("B-02 · Pressure &amp; flow", "Applied force versus the bag's resistance and the resin's flow "
-           "rate. Force should follow the oil, not lead it — excess force ruptures the bag and drives "
+           "rate. Force should follow the oil, not lead it, excess force ruptures the bag and drives "
            "contaminants through the screen. <strong>Drive ↔ Blowout.</strong>"),
       card("B-03 · Moisture", "Water in the input versus flow and stability. A little aids flow; too much "
            "causes emulsion, haze and instability, and raises blowout risk. Properly dried hash is the "
            "baseline. <strong>Flow ↔ Haze.</strong>"),
       card("B-04 · Purity (screen)", "Screen selectivity: oil passing through versus contaminants held "
-           "back. The micron is the gate — tighter holds more back (cleaner, less yield), coarser lets "
+           "back. The micron is the gate. Tighter holds more back (cleaner, less yield), coarser lets "
            "more through. <strong>Yield ↔ Clarity.</strong>"),
     ], cols=2),
     callout("key", "The master tension",
       p("All four balances feed one trade: <strong>yield ↔ quality</strong>. Almost every adjustment "
         "trades one for the other. Decide which you are optimising <em>before</em> you touch a lever.")),
     figure(_FIGS["tradeoff"], 5,
-      "Push the temperature up and yield climbs — but terpenes and clarity fall. Where the lines cross "
+      "Push the temperature up and yield climbs, but terpenes and clarity fall. Where the lines cross "
       "is a judgement call: cool for flavour, hot for volume."),
   ]})
 
@@ -235,7 +235,7 @@ SECTIONS.append({"id": "levers", "kicker": "The controls", "title": "Lever Inven
       ["Pre-press", "Forms a dense, air-free puck",
        "Reduces channeling and blowouts (flower / sift); skip for full-melt hash"],
       ["Plate size vs load", "Heat coverage &amp; throughput",
-       "Match to batch — overfilling cold edges chokes flow"],
+       "Match to batch, overfilling cold edges chokes flow"],
     ], cls="compact"),
     h(3, "Finishing levers"),
     table(["Lever", "What it controls", "Direction of effect"], [
@@ -297,9 +297,9 @@ SECTIONS.append({"id": "worked-example", "kicker": "One change, traced", "title"
     h(3, "Lever pulled"),
     p("Plate temperature +6 °C, still inside the hash band (60–77 °C), 36 µm bag, gentle ramp."),
     h(3, "Immediate effects"),
-    ul(["Resin viscosity drops — the seam wets sooner and oil runs faster.",
+    ul(["Resin viscosity drops, the seam wets sooner and oil runs faster.",
         "Yield rises; less oil is left trapped in the puck.",
-        "Blowout risk falls slightly — thinner oil escapes before pressure has to build."]),
+        "Blowout risk falls slightly, thinner oil escapes before pressure has to build."]),
     h(3, "Secondary effects"),
     table(["Knock-on", "Direction", "Why"], [
       ["Terpene retention", "↓", "Volatile monoterpenes (&alpha;-pinene, myrcene) start leaving as "
@@ -313,7 +313,7 @@ SECTIONS.append({"id": "worked-example", "kicker": "One change, traced", "title"
         "cart feedstock where a little terpene trade is acceptable for flow and yield.")),
     callout("note", "When not to",
       p("Pressing 5–6★ fresh-frozen for a terpene-forward live badder. Here those six degrees trade "
-        "your nose for a few points of yield — a bad deal. Stay at 71 °C and accept the lower number.")),
+        "your nose for a few points of yield, a bad deal. Stay at 71 °C and accept the lower number.")),
   ]})
 
 SECTIONS.append({"id": "stages", "kicker": "Step by step", "title": "Stage Deep-Dives",
@@ -322,10 +322,10 @@ SECTIONS.append({"id": "stages", "kicker": "Step by step", "title": "Stage Deep-
       "before the press is a cold-chain step where heat is the enemy."),
     h(3, "Harvest &amp; trichome maturity"),
     p("Everything downstream is capped here. The common practice target is <strong>80–90% milky / "
-      "cloudy</strong> capitate-stalked trichomes with <strong>10–20% amber</strong> and zero clear — a "
+      "cloudy</strong> capitate-stalked trichomes with <strong>10–20% amber</strong> and zero clear, a "
       "preference band, not a hard rule, and hash-makers often run <em>less</em> amber because amber "
       "heads press darker and greasier. Harvesting at lights-off is common practice rather than settled "
-      "science. For dry sift, lean slightly earlier — overripe stalks turn brittle and fragment into "
+      "science. For dry sift, lean slightly earlier, overripe stalks turn brittle and fragment into "
       "contamination" + _c("hightimes-bubbleman") + "."),
     h(3, "Fresh-freeze vs dry / cure"),
     ul(["<strong>Fresh-frozen (for live / ice-water hash):</strong> flash-freeze whole, undried material "
@@ -348,53 +348,53 @@ SECTIONS.append({"id": "stages", "kicker": "Step by step", "title": "Stage Deep-
       ["Cycles", "2–4 washes", "The first wash is gentlest and highest quality; later washes give more, dirtier yield"],
     ], cls="compact"),
     h(3, "Dry-sift alternative (cold chain)"),
-    p("No water — work frozen material across a descending screen cascade in a cold room (below "
+    p("No water, work frozen material across a descending screen cascade in a cold room (below "
       "10 °C), carding gently 3–5 min per pass" + _c("hightimes-bubbleman") + "."),
     ul(["<strong>Screen stack:</strong> 140 µm (110 LPI) work screen → 107 µm → <strong>70 µm (200 LPI) "
         "&lsquo;money&rsquo; screen</strong> (70–120 µm heads are the gold) → sub-70 µm catch (edible grade).",
         "<strong>Static glove tek:</strong> on a 70 µm (200 LPI) screen, sweep a freezer-chilled black "
-        "nitrile glove in smooth circles — static lifts pure heads and leaves contaminants behind. Whisk "
+        "nitrile glove in smooth circles. Static lifts pure heads and leaves contaminants behind. Whisk "
         "off, re-chill, repeat 3–5 passes. Hover and sweep; never mash" + _c("pressclub-static") + "."]),
     h(3, "Drying the hash (cold chain)"),
-    ul(["<strong>Freeze-dry (lyophilise) — best:</strong> condenser −40 to −50 °C, vacuum ~100–200 mTorr "
+    ul(["<strong>Freeze-dry (lyophilise), best:</strong> condenser −40 to −50 °C, vacuum ~100–200 mTorr "
         "(below ~500 workable), 24–48 h until fully dry. Removes water without heat or oxidation.",
-        "<strong>Cold air-dry — budget:</strong> microplane the patties onto parchment or screens and dry "
+        "<strong>Cold air-dry, budget:</strong> microplane the patties onto parchment or screens and dry "
         "in a cold room over 24–72 h. More oxidation and contamination risk; watch for mould."]),
     h(3, "Grading &amp; moisture conditioning"),
     p("Melt-test on a hot nail and grade <strong>1–6 star</strong> (6★ = 95%+ heads, full melt). The "
       "grade sets which products are open to you and how tight and cool you can press. Pre-chill the "
-      "hash and the bag before pressing — cold material in the bag means fewer blowouts."),
+      "hash and the bag before pressing, cold material in the bag means fewer blowouts."),
     table(["Grade", "Purity", "Use"], [
       ["6★ full melt", "95%+ heads", "Dab direct; premium rosin; cart grade"],
       ["5★ near full melt", "85–95%", "Excellent rosin; cart grade with good pressing"],
       ["4★ half melt", "70–85%", "Good rosin; may need more cleaning for carts"],
       ["3★", "50–70%", "Cooking grade, or needs cleaning"],
-      ["1–2★", "&lt;50%", "Edibles only — too contaminated for rosin"],
+      ["1–2★", "&lt;50%", "Edibles only, too contaminated for rosin"],
     ], cls="compact"),
     callout("note", "Do you even press 6★?",
       p("Worth knowing: many hash-makers treat <strong>3–4★ as the classic pressing grade</strong> and "
-        "keep true 5–6★ full-melt to dab as-is" + _c("pressclub-temp") + " — it already melts clean "
+        "keep true 5–6★ full-melt to dab as-is" + _c("pressclub-temp") + ". It already melts clean "
         "without a press. Pressing full-melt into rosin is a choice about texture and product form, not "
         "an upgrade.")),
     h(3, "Pre-press &amp; bag loading"),
-    ul(["Load <strong>2–7 g</strong> into the inner bag; fold the open end over twice. Don't overfill — "
+    ul(["Load <strong>2–7 g</strong> into the inner bag; fold the open end over twice. Don't overfill, "
         "leave room for flow.",
         "For diamonds / mech-sep and any blowout-prone run, sleeve the inner bag inside a "
         "<strong>120–160 µm support bag</strong>.",
         "Flower and sift: form a dense, air-free pre-press puck to stop channeling. Full-melt hash: no "
-        "heated pre-press — at most a gentle cold-formed puck to consolidate the load; melty high-grade "
+        "heated pre-press, at most a gentle cold-formed puck to consolidate the load; melty high-grade "
         "material flows without one.",
         "Place in folded parchment, open seam facing out toward you."]),
     h(3, "The press"),
     ol(["Pre-heat the closed (or near-closed) plates against the bag <strong>30–60 s, no pressure</strong>.",
         "<strong>Slowly ramp</strong> force over 15–20 s, watching for the seam to wet and oil to run.",
-        "Hold at working force <strong>60–120 s</strong> (up to 180 s) or until flow stops — press "
+        "Hold at working force <strong>60–120 s</strong> (up to 180 s) or until flow stops, press "
         "<em>to flow-stop</em>, not to a number" + _c("pressclub-pressure") + ".",
         "Release. Yield from clean 5–6★ input typically runs <strong>60–80%</strong>" + _c("pressclub-thca") + " — "
         "if you're under 50% on good input, something upstream is wrong."]),
     figure(_FIGS["ramp"], 6,
       "Preheat with little pressure, then ramp up slowly and hold until flow stops. Rushing the ramp "
-      "(red) spikes pressure before the resin can escape — and bursts the bag."),
+      "(red) spikes pressure before the resin can escape, and bursts the bag."),
     h(3, "Collection (cold chain)"),
     p("Collect immediately with a cold dab tool onto fresh parchment, then into pre-chilled glass; "
       "seal. Cold collection preserves terpenes and sets a cleaner texture. Move straight to your "
@@ -409,14 +409,14 @@ SECTIONS.append({"id": "equipment", "kicker": "The hardware", "title": "Equipmen
     table(["Class", "Force", "Batch", "Best for", "Note"], [
       ["Manual lever", "0.5–5 t", "0.5–12 g", "Personal → craft", "Fine for small hash runs; force is harder to hold steady"],
       ["Hydraulic", "5–25 t", "4–150 g", "Craft → commercial", "The workhorse; pair with PID plates for accuracy"],
-      ["Pneumatic", "5–8 t", "7–35 g", "Craft → commercial", "Smooth, repeatable ramp — ideal for gentle hash pressing"],
+      ["Pneumatic", "5–8 t", "7–35 g", "Craft → commercial", "Smooth, repeatable ramp, ideal for gentle hash pressing"],
       ["Electric / hybrid", "0.75–20 t", "1–115 g", "Personal → commercial", "Hands-free; app / PID control for tight low-temp accuracy"],
-    ], cls="compact", caption="Typical market ranges, not spec-sheet law — individual presses vary."),
+    ], cls="compact", caption="Typical market ranges, not spec-sheet law, individual presses vary."),
     h(3, "Plates, bags &amp; cold-chain gear"),
     table(["Tool", "Lever", "Effect"], [
       ["Plates &amp; heat zones", "PID accuracy, even heat", "Tight, even temperature = predictable flow and colour; cheap plates swing and scorch"],
       ["Micron bag", "Mesh size (the gate)", "Hash 25–45 µm (full-melt) to 90 µm (lower grade); flower 75–160 µm; sift 25–90 µm"],
-      ["Support sleeve", "120–160 µm outer bag", "Backs the inner bag against rupture — the main blowout defence"],
+      ["Support sleeve", "120–160 µm outer bag", "Backs the inner bag against rupture, the main blowout defence"],
       ["Pre-press mould", "Puck density &amp; shape", "Even, air-free puck → even flow; flower and sift only"],
       ["Wash vessel &amp; bags", "Agitation, micron stack", "Gentle agitation + a clean stack = cleaner heads"],
       ["Freeze dryer", "Condenser temp, vacuum, time", "Heat-free drying preserves the live profile; the quality default for hash"],
@@ -426,7 +426,7 @@ SECTIONS.append({"id": "equipment", "kicker": "The hardware", "title": "Equipmen
 
 SECTIONS.append({"id": "trichome-matrix", "kicker": "Read the material", "title": "Input / Trichome Interaction Matrix",
   "blocks": [
-    p("Read the material — under a loupe or scope — and let it pick the settings. The micron is "
+    p("Read the material, under a loupe or scope, and let it pick the settings. The micron is "
       "dictated by head size and debris, never chased for its own sake."),
     figure(_FIGS["mesh"], 7,
       "Bigger, cleaner heads can use a coarser bag for more yield. Small heads and broken fragments "
@@ -434,14 +434,14 @@ SECTIONS.append({"id": "trichome-matrix", "kicker": "Read the material", "title"
     table(["Material / trichome read", "Bag micron", "Plate temp", "Ramp", "Best product"], [
       ["Heads &gt;100 µm, low contaminant", "90 µm (115 if very clean flower)", "cold end", "gentle", "Badder"],
       ["Heads 70–100 µm", "45–73 µm", "88–99 °C flower / cooler hash", "moderate", "Badder / live"],
-      ["Heads &lt;70 µm or high fines", "25–37 µm", "slightly higher to push through", "slow, don't overfill", "Careful — blowout-prone"],
+      ["Heads &lt;70 µm or high fines", "25–37 µm", "slightly higher to push through", "slow, don't overfill", "Careful, blowout-prone"],
       ["Mostly cloudy + high intact %", "match head size", "71–85 °C", "gentle", "Cold-cure badder"],
       ["Low intact % (ruptured / degraded)", "match head size", "99–104 °C, shorter dwell", "moderate", "Carts / sauce"],
       ["High contaminant %", "tighter (25–37 µm)", "+ a few °C", "firm pre-press, slow ramp", "Recover, don't chase melt"],
       ["Fresh-frozen hash (clean, large heads)", "36–90 µm", "60–85 °C", "gentle", "Live rosin"],
     ], cls="compact"),
     callout("key", "The rule the matrix encodes",
-      p("Small heads and fines escape or channel a coarse screen — the classic blowout trigger. Tighten "
+      p("Small heads and fines escape or channel a coarse screen, the classic blowout trigger. Tighten "
         "the micron, slow the ramp, and don't overfill.")),
   ]})
 
@@ -459,7 +459,7 @@ SECTIONS.append({"id": "products", "kicker": "Where it ends up", "title": "Post-
       ["Sauce", "Cool press, then nucleate", "Warm cure", "Wet, high-terpene"],
       ["Diamonds &amp; sauce (mechanical separation)", "Nucleate first (cold cure 13–16 °C)",
        "Progressive press <strong>40 → 46 → 52 → 57 °C</strong>" + _c("hashtek-thca-tek") + "; briefly "
-       "melt the THCa puck to pour (community practice ~120–130 °C — hot enough to start decarb, keep "
+       "melt the THCa puck to pour (community practice ~120–130 °C, hot enough to start decarb, keep "
        "it short); recombine with the sauce to taste (~70/30 is a common ratio)", "Clear diamonds in sauce"],
       ["Diamonds (jar / jam tek)", "Press clean rosin",
        "Sealed jar: heat <strong>93 °C, 1–2 h</strong>, then crystallise at <strong>38 °C for "
@@ -472,13 +472,13 @@ SECTIONS.append({"id": "products", "kicker": "Where it ends up", "title": "Post-
     ], cls="compact", caption="One press, many products: the cure is the fork in the road."),
     callout("danger", "The one irreversible rule",
       p("<strong>Never start a diamond press hot.</strong> At high temperature THCa dissolves <em>into</em> "
-        "the terpenes and flows out with them — your diamonds leave with the sauce" + _c("hashtek-thca-tek") + ". "
+        "the terpenes and flows out with them, your diamonds leave with the sauce" + _c("hashtek-thca-tek") + ". "
         "Progressive low-temp pressing removes terpenes gradually so the THCa runs out of solvent and "
         "stays behind. And decarboxylation is one-way" + _c("wang2016-decarb") + ": decarbed THC will "
         "never crystallise" + _c("lowtemp-diamonds") + ".")),
     callout("warn", "Sealed vessels build pressure",
       p("Sealed decarbs and jam teks pressurise as CO&#8322; comes off. Standard mason-jar lids "
-        "self-vent at roughly ~5 psi" + _c("hashtek-decarb") + " — use jars and lids rated for the job, "
+        "self-vent at roughly ~5 psi" + _c("hashtek-decarb") + ", use jars and lids rated for the job, "
         "keep them away from your face, and open only after they've cooled.")),
   ]})
 
@@ -502,7 +502,7 @@ SECTIONS.append({"id": "failure-modes", "kicker": "What goes wrong", "title": "M
            "cold-press band; shorten dwell; collect cold; store sealed, cold and dark.", tag="heat"),
       card("F-05 · Dark or green rosin", "Colour headed the wrong way. <strong>Cause:</strong> overheated, "
            "over-pressed, or contaminated low-grade input. <strong>Fix:</strong> lower temp; gentler ramp; "
-           "tighten micron; start from cleaner 5–6★ material — colour is mostly an input problem.", tag="colour"),
+           "tighten micron; start from cleaner 5–6★ material. Colour is mostly an input problem.", tag="colour"),
       card("F-06 · Auto-budders vs won't butter", "Texture with a mind of its own. <strong>Cause:</strong> "
            "residual moisture makes it auto-budder greasy; fresh sap simply hasn't nucleated. "
            "<strong>Fix:</strong> control input moisture; to butter on purpose, cold-cure sealed at "
@@ -510,10 +510,10 @@ SECTIONS.append({"id": "failure-modes", "kicker": "What goes wrong", "title": "M
       card("F-07 · Diamonds won't form", "No crystals, no terpene layer. <strong>Cause:</strong> cure "
            "temperature too high (THCa stays dissolved), material already decarbed, not nucleated, or "
            "the wrong terpene ratio. <strong>Fix:</strong> drop to ~38 °C; start from fresh, undecarbed, "
-           "nucleated rosin; press progressively — never start hot.", tag="crystals"),
+           "nucleated rosin; press progressively, never start hot.", tag="crystals"),
       card("F-08 · Batch-to-batch inconsistency", "Every run a surprise. <strong>Cause:</strong> "
            "uncontrolled moisture, an eyeballed ramp, no record of what you did. <strong>Fix:</strong> "
-           "log every run — material, grade, micron, temp, time, yield, outcome — and change one lever "
+           "log every run (material, grade, micron, temp, time, yield, outcome) and change one lever "
            "at a time.", tag="process"),
     ], cols=2),
   ]})
@@ -525,13 +525,13 @@ SECTIONS.append({"id": "hierarchy", "kicker": "In order", "title": "Practical Co
     steps([
       ("Fix the input ceiling first", "Genetics, harvest maturity, wash / sift quality and moisture set "
        "the maximum. You cannot out-press bad input."),
-      ("Pick the product", "Badder, live rosin, diamonds, cart or hash hole — this choice sets the "
+      ("Pick the product", "Badder, live rosin, diamonds, cart or hash hole. This choice sets the "
        "temperature band and the cure."),
       ("Choose the micron from head size &amp; contamination", "Big clean heads → coarser; small heads "
        "or fines → tighter. Don't chase a small micron for its own sake."),
       ("Set the temperature band for material × product", "The lowest temperature that still flows. "
        "Hash cool, flower warmer, degraded material warmer still."),
-      ("Ramp pressure to flow — never chase pressure", "Heat first, force second. Pressure only "
+      ("Ramp pressure to flow, never chase pressure", "Heat first, force second. Pressure only "
        "completes a flow that heat has already started."),
       ("Collect cold, then cure to texture", "Cold collection locks terpenes; the cure (cold / warm / "
        "staged) decides badder, sauce or diamonds."),
@@ -542,7 +542,7 @@ SECTIONS.append({"id": "hierarchy", "kicker": "In order", "title": "Practical Co
 
 SECTIONS.append({"id": "troubleshooting", "kicker": "Quick reference", "title": "Minimal Operating Matrix for Troubleshooting",
   "blocks": [
-    p("Observation → likely cause → first checks. Start at the top — most problems are upstream of "
+    p("Observation → likely cause → first checks. Start at the top. Most problems are upstream of "
       "the plates."),
     table(["Observation", "Likely cause", "First checks"], [
       ["Yield far below 50% on a good grade", "Temp / pressure too low, or material too dry",
@@ -553,7 +553,7 @@ SECTIONS.append({"id": "troubleshooting", "kicker": "Quick reference", "title": 
       ["Bag ruptured", "Ramp too fast / overfilled / micron too coarse", "Support sleeve; slower ramp; smaller load; match micron"],
       ["Diamonds won't crystallise", "Cure temp too high, or decarbed / un-nucleated rosin",
        "Drop to ~38 °C; confirm fresh, nucleated, undecarbed rosin"],
-      ["Cart clogs / re-crystallises", "Incomplete decarb — oil still above ~50% THCa by weight recrystallises",
+      ["Cart clogs / re-crystallises", "Incomplete decarb, oil still above ~50% THCa by weight recrystallises",
        "Re-decarb sealed to ≥90% conversion; fridge-test 24 h before filling" + _c("lowtemp-carts")],
       ["Results vary run to run", "Uncontrolled variables", "Log everything; change one lever per run"],
     ], cls="compact"),
@@ -569,7 +569,7 @@ SECTIONS.append({"id": "mental-model", "kicker": "Keep one thing", "title": "The
         "against each other → <strong>collection temperature</strong> locks the texture → the "
         "<strong>cure</strong> decides badder, sauce or diamonds → <strong>cold, dark, sealed storage</strong> "
         "keeps it.")),
-    p("Heat to flow, screen to clean, pressure only to finish — then cure for texture. Quality is set "
+    p("Heat to flow, screen to clean, pressure only to finish, then cure for texture. Quality is set "
       "upstream; the press only preserves it or squanders it."),
   ]})
 
@@ -582,18 +582,18 @@ SECTIONS.append({"id": "glossary", "kicker": "The words", "title": "Glossary",
       ["Badder / batter", "A creamy, whipped rosin texture, like frosting. Set by curing and stirring."],
       ["Blowout", "The mesh bag bursting under pressure so raw plant matter floods the oil, ruining the batch."],
       ["Bubble hash", "Hash made by stirring cannabis in ice water so the brittle trichome heads snap off and sink through mesh bags."],
-      ["Capitate-stalked trichome", "The large, lollipop-shaped gland that holds the most resin — the prize fraction."],
+      ["Capitate-stalked trichome", "The large, lollipop-shaped gland that holds the most resin, the prize fraction."],
       ["Chromatography (reabsorption)", "Oil that already flowed out soaking back into the spent material because flow stalled; shows up as poor yield."],
       ["Cloudy / milky trichome", "A head at peak ripeness (peak THCa and terpenes); the target window at harvest."],
-      ["Cold chain", "The steps that must stay cold — harvest, wash, dry, collection, storage — because heat degrades quality there."],
+      ["Cold chain", "The steps that must stay cold (harvest, wash, dry, collection, storage) because heat degrades quality there."],
       ["Cold cure", "Resting sealed rosin cool (about 10–21 °C) for days to weeks to set a creamy badder."],
       ["Decarb (decarboxylation)", "Heating to convert raw THCa into active THC; required for vape carts, but it destroys diamond potential."],
       ["Diamonds (THCa diamonds)", "Clear crystals of nearly pure THCa grown from rosin, sitting in a pool of &lsquo;sauce&rsquo;."],
       ["Dry sift (kief)", "Hash made by rubbing dried plant over fine screens so trichome heads fall through; the powder is kief."],
       ["Dwell time", "How long the bag is held squeezed under heat during a press."],
-      ["Effective pressure (PSI)", "The force actually felt by the bag (force ÷ bag area) — what matters, not the raw gauge number."],
+      ["Effective pressure (PSI)", "The force actually felt by the bag (force ÷ bag area). What matters, not the raw gauge number."],
       ["Emulsion", "A hazy, unstable blend caused by water trapped in the oil; the rosin looks cloudy."],
-      ["Freeze-dryer (lyophiliser)", "A machine that pulls water out under vacuum while frozen — drying hash with no heat. The quality option."],
+      ["Freeze-dryer (lyophiliser)", "A machine that pulls water out under vacuum while frozen, drying hash with no heat. The quality option."],
       ["Fresh-frozen", "Plant flash-frozen right after cutting and never dried, preserving the &lsquo;live&rsquo; aroma; the basis of live rosin."],
       ["Full-melt", "Top-grade hash (5–6 star) pure enough to melt to almost nothing on a hot nail; the cleanest press input."],
       ["Hash hole", "A pre-rolled joint with a core of hash or rosin running down the middle."],
@@ -614,6 +614,6 @@ SECTIONS.append({"id": "glossary", "kicker": "The words", "title": "Glossary",
     ], cls="compact"),
     p("Setpoints, micron guidance and the trichome-to-press logic in this guide are drawn from the "
       "author's solventless knowledge base and operational SOPs, cross-checked against the cited "
-      "sources. It is a field guide, not a substitute for testing your own material — verify by "
+      "sources. It is a field guide, not a substitute for testing your own material, verify by "
       "logging your runs."),
   ]})

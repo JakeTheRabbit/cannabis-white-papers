@@ -9,7 +9,7 @@ SLUG = "plant-biosignal-sensor"
 TITLE = "DIY plant-biosignal sensor: read a plant's electrical signals"
 EYEBROW = "Build · Precision & automation"
 SUB = ("Commercial plant-biosignal sensors clip electrodes to a plant, amplify the tiny voltages it "
-       "makes, and log the drift for education — not as a validated water/nutrient/stress meter. You can build the acquisition side "
+       "makes, and log the drift for education, not as a validated water/nutrient/stress meter. You can build the acquisition side "
        "from an M5Stack ESP32, an ECG front-end chip and ESPHome for about NZ$110, and stream it "
        "straight into Home Assistant.")
 META = [("wave", "Build guide"), ("gauge", "DIY hardware"),
@@ -26,8 +26,8 @@ def _c(rid):
 # ---- code block that survives the auto-interlinker (wrapped in <code>) ----
 def code(text):
     esc = text.replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;")
-    return ("<pre style=\"background:var(--surface-2);border:1px solid var(--line);"
-            "border-radius:10px;padding:16px 18px;overflow:auto;font-family:var(--mono);"
+    return ("<pre style=\"background:var(--surface-2);border:1px solid var(--line); "
+            "border-radius:10px;padding:16px 18px;overflow:auto;font-family:var(--mono); "
             "font-size:12.5px;line-height:1.55;color:var(--ink)\"><code>" + esc + "</code></pre>")
 
 
@@ -178,7 +178,7 @@ SECTIONS.append({"id": "bom", "kicker": "04 · What to buy", "title": "Bill of m
        "Digitise the analog output <span style='color:var(--faint)'>[non-M5Stack]</span>",
        "<a href='https://www.adafruit.com/product/1085' target='_blank' rel='noopener'>adafruit.com/product/1085</a> · clone ~NZ$6",
        "6"],
-      ["<strong>Electrodes</strong> — Ag/AgCl EEG cups <em>or</em> stainless probes + snap leads",
+      ["<strong>Electrodes</strong>, Ag/AgCl EEG cups <em>or</em> stainless probes + snap leads",
        "Skin contact <span style='color:var(--faint)'>[non-M5Stack]</span>",
        "<a href='https://www.sparkfun.com/products/12970' target='_blank' rel='noopener'>SparkFun sensor cable</a> + <a href='https://www.sparkfun.com/products/12969' target='_blank' rel='noopener'>electrode pads</a>, or medical Ag/AgCl set",
        "14"],

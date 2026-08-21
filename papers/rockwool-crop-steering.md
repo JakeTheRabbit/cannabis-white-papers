@@ -98,7 +98,7 @@ A dryback is the block losing water between its daily high and its next low. You
 
 *Dryback sizes as a starting framework. Bigger and earlier is more generative; smaller and later is more vegetative.*
 
-> **NOTE — Why the night dryback matters**
+> **NOTE — What the night dryback does**
 >
 > As the block dries overnight, air refills the gaps and the roots and beneficial microbes get oxygen. Grodan's trials found that easing the standard night dryback by about 10% (a slightly wetter night) lifted yield in medicinal crops, because the root zone keeps working even while the canopy rests[^grodan-irrigation-medicinal]. Some night dryback is essential; too much is not.
 
@@ -116,7 +116,7 @@ The middle stage is the one that catches people out. Because rockwool holds no s
 
 ## The breaking point: when a block is gone
 
-There is a water content below which a rockwool block will not rewet from the dripper no matter how long you run it. This is the single most important thing in this guide, because it is invisible until it has already happened.
+There is a water content below which a rockwool block will not rewet from the dripper no matter how long you run it. Nothing else here matters as much, because it is invisible until it has already happened.
 
 > **Diagram.** A block still in the working band rewets evenly: water spreads through the moist fibre. A block taken too dry develops a dry core that the fibre can no longer pull water into. New water finds the few open channels, runs straight down them and exits as runoff while the core stays bone dry[^owen-norden-preferential-flow-2024].
 
@@ -143,7 +143,7 @@ Feeding rockwool is a balance of two jobs: put back the water the plant drank, a
 4. **Use runoff EC as the feedback** — If substrate or runoff EC is climbing day over day, you are not flushing enough, increase shot size or frequency. If EC is falling below target, cut runoff back.
 5. **Never let the trough hit the floor** — Whatever the dryback, the pre-irrigation low must stay above the recovery floor with margin.
 
-> **Diagram.** Runoff is not waste, it is your salt-management and measurement tool. Size the daily feed so a controlled fraction drains.
+> **Diagram.** Runoff is your salt-management and measurement tool. Size the daily feed so a controlled fraction drains.
 
 > **NOTE — Minimum feed is a floor, not a target**
 >

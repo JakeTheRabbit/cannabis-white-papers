@@ -123,7 +123,7 @@ Most pests are walked in, so the cheapest control is keeping them out. The bigge
 
 Every incoming plant goes through quarantine: dunk or wash it in an approved foliar solution on receipt, then hold it in a separate quarantine tent for 2 or more weeks under observation before it joins the crop[^punja-2021-emerging-diseases-cannabis]. Treat all plant waste as hazardous: bag it in the room, weigh and log it, and move it straight to green waste. Keep equipment room-specific and cleaned after every task so a tool never carries pests between rooms.
 
-> **Diagram.** Footwear is the number-one route pests are walked in. The entry sequence is non-negotiable, and it runs in reverse on the way out.
+> **Diagram.** Footwear is the number-one route pests are walked in. Follow the entry sequence every time, and it runs in reverse on the way out.
 
 > **Diagram.** New plants are isolated and watched for at least two weeks. A clean run is the only ticket into the main crop.
 

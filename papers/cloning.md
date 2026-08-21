@@ -27,9 +27,9 @@ _Propagation · Cloning · ~12 min read_
 
 A **clone** is a cutting taken from a living plant that grows its own roots and becomes a new, genetically identical plant. No flowers and no seeds are involved. You are rooting a piece of stem, not germinating a seed.
 
-Cloning gives every plant in a batch the same genetics as a known, proven plant called the **mother**. Same genetics means the same growth speed, the same yield and the same chemistry, so the whole grow runs predictable. That predictability is why nearly every commercial grow clones rather than seeds.
+Cloning gives every plant in a batch the same genetics as a known, proven plant called the **mother**. Same genetics means the same growth speed, the same yield and the same chemistry, so the batch finishes together and yields what the last one did. That is why nearly every commercial grow clones rather than seeds.
 
-Well-run propagation rooms often root clones at ~90 percent or better as an operational target[^caplan-2018-stem-cuttings], with cuttings ready to transplant in about 10 to 14 days[^kim-2025-light-temp-rh]. This guide assumes you have never taken a cutting before and defines every term as it appears.
+Well-run propagation rooms often root clones at ~90 percent or better as an operational target[^caplan-2018-stem-cuttings], with cuttings ready to transplant in about 10 to 14 days[^kim-2025-light-temp-rh].
 
 > **Diagram.** The whole job in five steps. Roots appear between day 7 and day 14, and the clone is ready to move on at around two weeks.[^kim-2025-light-temp-rh]
 
@@ -39,7 +39,7 @@ Well-run propagation rooms often root clones at ~90 percent or better as an oper
 
 ## The words you need before you start
 
-Cloning has its own jargon, and most beginner mistakes come from not knowing what a term means. Learn these six and the step-by-step sections read plainly.
+Most beginner mistakes come from not knowing what a term means. These six come up constantly.
 
 **Node** — The point on a stem where leaves and side-shoots attach. New roots and new growth both come from nodes, so your cut and your rooting both depend on them.
 
@@ -59,19 +59,19 @@ Cloning has its own jargon, and most beginner mistakes come from not knowing wha
 
 A good clone starts with a good shoot. Pick upright shoots from the upper-to-mid canopy that are at least 3 mm thick and 15 cm long. Thicker, well-lit shoots carry more stored energy and root faster than thin, shaded interior growth[^esposito-2026-morphology-predictors]. Shoot thickness and leaf colour reliably predict how well a cutting will root[^esposito-2026-morphology-predictors].
 
-Water the mother thoroughly the day before so cuttings are fully hydrated and turgid. Avoid drought-stressed mothers; wilted tissue roots poorly. ht cycle with a sterile blade, making a clean 45-degree cut just below a node, and drop each cutting straight into a holding jug of dilute solution so the cut end never sits in air.
+Water the mother thoroughly the day before so cuttings are hydrated and turgid; wilted tissue roots poorly. Take cuttings at the start of the light cycle with a sterile blade, making a clean 45-degree cut just below a node, and drop each cutting straight into a holding jug of dilute solution so the cut end never sits in air.
 
 > **TIP — Why a 45° cut, and why no air**
 >
 > - A **45° cut** exposes more surface area than a flat cut, so more cells can turn into roots.
-> - If the cut end sits in air, the stem draws in an **dried cut that stalls water uptake. ment it is cut.
+> - If the cut end sits in air, the stem draws in an **air embolism**, an air bubble at the dried cut that stalls water uptake. Keep the end wet from the moment it is cut.
 > - Sterilize the blade between mother plants so you don't carry disease from one to the next.[^punja-2023-fusarium-pythium-biocontrol]
 
 > **Diagram.** Upright shoots from the well-lit upper-to-mid canopy root most reliably. Weak shaded interior growth lags well behind.[^esposito-2026-morphology-predictors]
 
 ## Rooting hormone and the cube
 
-Cuttings have no roots yet, so a **rooting hormone** pushes the stem to grow them. The active ingredient is usually **IBA (indole-3-butyric acid)**, a an auxin used in rooting products (often converted to IAA in the plant)[^landis-2022-iba-hemp-i3]. Inside the stem the plant converts IBA into the active rooting auxin (IAA), which is what triggers new roots[^fattorini-2017-iba-to-iaa]. It sells as a gel or a liquid.
+Cuttings have no roots yet, so a **rooting hormone** pushes the stem to grow them. The active ingredient is usually **IBA (indole-3-butyric acid)**, an auxin used in rooting products[^landis-2022-iba-hemp-i3]. Inside the stem the plant converts IBA into the active rooting auxin (IAA), which is what triggers new roots[^fattorini-2017-iba-to-iaa]. It sells as a gel or a liquid.
 
 Make a fresh 45-degree cut right before sticking to expose new tissue, coat the bottom 1–2 cm of stem in rooting gel, and insert it 1.5–2.5 cm into a pre-soaked cube. Firm it just enough that the cube lifts with the stem when you tug gently, the _lift test_, but don't crush the cube.
 
@@ -80,17 +80,17 @@ Make a fresh 45-degree cut right before sticking to expose new tissue, coat the 
 3. **Apply hormone** — Gel: dip the cut end about 0.5 in (the lower 1–2 cm). Liquid/alcohol dip: soak the cut end about 30 seconds.
 4. **Stick & lift-test** — Insert 1.5–2.5 cm deep. Tug gently: the cube should rise with the stem.
 
-> **WARN — Speed matters**
+> **WARN — Under 30 seconds from cut to cube**
 >
 > Keep the time from the final cut to sticking under about 30 seconds. The longer a fresh cut end sits in air, the more likely an air bubble blocks water uptake and the cutting stalls.
 
-> **Diagram.** There is a sweet spot. Too little hormone and rooting is slow. Too much scorches the stem base. Commercial gels come pre-mixed to land in the productive range.[^landis-2022-iba-hemp-i3]
+> **Diagram.** Too little hormone and rooting is slow; too much scorches the stem base. Commercial gels come pre-mixed to land in the productive range.[^landis-2022-iba-hemp-i3]
 
 ## Dome, humidity, temperature and light
 
-A cutting with no roots cannot pull water up the stem, so it survives on humidity until roots form. That is the entire point of the dome. The dome traps moisture so water enters the leaves directly from the air while the stem grows roots.
+A cutting with no roots cannot pull water up the stem, so it survives on humidity until roots form. The dome traps moisture so water enters the leaves directly from the air while the stem grows roots.
 
-Keep the air around 24–26°C and start with very high humidity (85–95% RH) inside a closed dome, then step it down as roots develop[^kim-2025-light-temp-rh]. Put a heat mat under the tray to keep the cube itself at 22–24°C. Roots form faster in warm media than in warm air, because warm roots grow quicker[^olympios-rootzone-temp].
+Keep the air around 24–26°C and start with high humidity (85–95% RH) inside a closed dome, then step it down as roots develop[^kim-2025-light-temp-rh]. Put a heat mat under the tray to keep the cube itself at 22–24°C. Cube temperature sets rooting speed more than air temperature does[^olympios-rootzone-temp].
 
 Keep light gentle, about 60–100 PPFD (a measure of light intensity reaching the plant) in the first days, rising toward 150–200 by hardening off[^kim-2025-light-temp-rh]. Measure it **with the dome in place**, because the plastic cuts the light reaching the cutting underneath.
 
@@ -111,13 +111,13 @@ Keep light gentle, about 60–100 PPFD (a measure of light intensity reaching th
 
 ## The 14-day routine, day by day
 
-Cloning is mostly leaving the tray alone at the right times and intervening at the right times. The schedule below is the whole job.
+Most of cloning is knowing when to leave the tray alone.
 
 > **Diagram.** Closed and untouched at the start, then the dome opens in stages as roots appear and the clone learns to drink for itself.
 
 **Days 1–4:** vents fully closed, do not touch. The trapped humidity makes the cutting close its leaf pores and focus on rooting. **Days 5–7:** the first watering usually comes due. Judge it by tray weight. Irrigate when the tray has dropped 40–50% below its Day 0 weight, and never let it fall below 30% loss, because a permanently soggy cube rots[^msu-moisture-propagation]. The cube fading from dark to light brown is the same signal.
 
-Clone feed often starts milder (~0.6–1.2 mS/cm, product-dependent) and rises only after roots appear; ~1.5 mS/cm can burn soft cuttings at pH 5.5–6.0, with the water at 20–22°C. From day 7 start a daily **burp**, begin propping the vents open, and lift one edge cube to look for emerging white roots. On day 11 run the hardening-off test: lift the domes, wait 10 minutes, and if fewer than 5 clones per tray wilt, leave the dome off; if 5 or more wilt, re-dome and retry tomorrow. Transplant at around day 14.
+Clone feed starts mild (~0.6–1.2 mS/cm, product-dependent) and rises only once roots appear; ~1.5 mS/cm can burn soft cuttings. Run it at pH 5.5–6.0 with the water at 20–22°C. From day 7 start a daily **burp**, begin propping the vents open, and lift one edge cube to look for emerging white roots. On day 11 run the hardening-off test: lift the domes, wait 10 minutes, and if fewer than 5 clones per tray wilt, leave the dome off; if 5 or more wilt, re-dome and retry tomorrow. Transplant at around day 14.
 
 > **Diagram.** How far the dome vents are open by day. Closed at the start protects rootless cuttings; fully open by the end hardens them for room air.
 
@@ -133,7 +133,7 @@ Clone feed often starts milder (~0.6–1.2 mS/cm, product-dependent) and rises o
 
 ## Why clones fail, and the fix
 
-Most clone failures trace to a handful of causes, and they look distinct enough to diagnose at a glance. The table below maps each symptom to its likely cause and the fix.
+Most clone failures trace to a handful of causes, and they look distinct enough to diagnose at a glance.
 
 | Symptom | Likely cause | What to do |
 | --- | --- | --- |
@@ -146,7 +146,7 @@ Most clone failures trace to a handful of causes, and they look distinct enough 
 
 *Diagnose by symptom, then act. Many of these overlap, so fix the most likely cause first and watch for a day.*
 
-> **DANGER — Hygiene is non-negotiable**
+> **DANGER — Tools and hands spread disease**
 >
 > Disease in a propagation room spreads cutting to cutting through tools and hands. Sterilize tools for at least 2 minutes in 71% isopropyl alcohol (or chlorine dioxide for at least 180 seconds), and handle cubes with gloves only. Bare hands spread algae and pathogens[^punja-2023-fusarium-pythium-biocontrol]. Good hygiene prevents the damping-off and root-rot organisms that wipe out whole trays[^punja-2023-fusarium-pythium-biocontrol].
 
@@ -154,21 +154,21 @@ Most clone failures trace to a handful of causes, and they look distinct enough 
 
 A realistic first goal is **90 percent** rooting, with experienced rooms hitting 95 percent or higher[^caplan-2018-stem-cuttings]. Expect roots in 10 to 14 days, and treat anything past 21 days with no roots as a problem to escalate, not a clone to keep waiting on.
 
-Not every cutting will make it, and that is normal. Sorting at transplant, called **culling**, is part of the process. **Keepers** have strong roots and light-green tops. **Rejects** rooted but only put out one to three weak roots. **Kills** have zero roots and get discarded. Plan for this by taking 15 to 40 percent more cuttings than the number of plants you actually need, so culls don't leave you short.
+Not every cutting will make it. Sorting at transplant, called **culling**, is part of the process. **Keepers** have strong roots and light-green tops. **Rejects** rooted but only put out one to three weak roots. **Kills** have zero roots and get discarded. Plan for this by taking 15 to 40 percent more cuttings than the number of plants you actually need, so culls don't leave you short.
 
 > **Diagram.** Working back from the number you need to flower, take a healthy surplus up front so culls at rooting and veg still land you on target.
 
 > **Diagram.** What a good tray looks like when sorted: most cuttings are strong keepers, with a small tail of weak rejects and a few kills.[^caplan-2018-stem-cuttings]
 
-Some genetics root slower. For slow-to-root cultivars, take the cuttings a few days earlier so they still hit the transplant date on schedule. Record everything, tray weights, EC and pH, success rate per batch, because clone data drives every decision downstream in the grow.
+Some genetics root slower. For slow-to-root cultivars, take the cuttings a few days earlier so they still hit the transplant date on schedule. Record tray weights, EC and pH, and success rate per batch, so next run you know which cultivars to cut early and whether the room has drifted.
 
-> **KEY — Three honest truths**
+> **KEY — Three rules**
 >
 > 1. **90% is the floor, not the ceiling.** A new grower hitting 90% is doing well; a dialed room runs 95%+. Below 80% means something in the environment or hygiene is off.
-> 2. **Culling is success, not failure.** Throwing out weak clones up front protects the uniformity of the whole batch.
+> 2. **Cull hard at transplant.** Throwing out weak clones up front protects the uniformity of the whole batch.
 > 3. **The environment does the work.** Humidity, cube temperature and light matter more than any brand of hormone. Dial those in first.
 
-Once your clones are rooted and hardened off, the next job is moving them into stronger light without shocking them. See the [light acclimation](light-acclimation.html) guide. Keep the propagation room clean from day one with the [IPM hygiene](ipm-sop.html) routine, because a clean room is most of a high success rate.
+Once your clones are rooted and hardened off, the next job is moving them into stronger light without shocking them. See the [light acclimation](light-acclimation.html) guide. Keep the propagation room clean from day one with the [IPM hygiene](ipm-sop.html) routine.
 
 ## References
 

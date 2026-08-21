@@ -164,13 +164,13 @@ SECTIONS.append({"id": "when-to-harvest", "kicker": "06 · The decision", "title
       "<p><strong>Borderline:</strong> Amber trichome share is a <em>maturity</em> cue, not a clean pharmacological "
       "switch. Effect is multi-factor (terpenes, dose, genotype, set/setting). Human evidence that CBN alone drives "
       "&lsquo;couch-lock&rsquo; is limited. Long plain-water flushes are traditional; controlled tests often show little "
-      "taste/potency gain &mdash; ease EC as appetite falls rather than starving the plant.</p>"),
+      "taste/potency gain, ease EC as appetite falls rather than starving the plant.</p>"),
     p("Pistils are a rough early signal but they lie. Trichomes are the true clock, and you read "
       "them with a cheap jeweler's loupe or pocket microscope." + _c("livingston-2020-trichome-maturation")),
     p("Harvest when most trichomes have turned from clear to milky or cloudy, with a small fraction "
       "going amber. A common target is 80 to 90% milky with 5 to 15% amber. More clear or milky "
       "gives a more energetic, heady effect. More amber means THC is degrading toward CBN for a "
-      "heavier feel for some people &mdash; multi-factor, not a CBN switch." + _c("livingston-2020-trichome-maturation")),
+      "heavier feel for some people, multi-factor, not a CBN switch." + _c("livingston-2020-trichome-maturation")),
     p("Wait until pistils are mostly darkened and curled in (roughly 70% or more), then switch to "
       "checking trichomes for the real call. Use 60x or higher magnification on actual bud, not "
       "sugar leaves, and check several spots, since maturity varies across the plant. Do not harvest "
@@ -232,7 +232,7 @@ SECTIONS.append({"id": "expectations", "kicker": "08 · Reality check", "title":
             [("Stretch", 10), ("Bud set", 20), ("Bulking", 55), ("Ripening", 15)],
             unit="%", note="Bulking is where most of the final mass is laid down.", maxv=65), 9,
       "Plan your effort around bulking. That is where light, climate and feed move the harvest most."),
-    callout("key", "Three honest truths",
+    callout("key", "Three rules",
       ol(["<strong>Conditions move the finish date.</strong> Genetics set the range, but your climate "
           "and feed decide where in it you land, often by a week or more.",
           "<strong>Keep simple notes.</strong> Week, height, climate, feed, what you removed. This is "

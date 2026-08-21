@@ -69,7 +69,7 @@ These four feed on leaves and stems by piercing cells and sucking sap, so they s
 - **Aphids:** soft-bodied clusters on new growth, cast white skins, honeydew that grows black sooty mould. They can give live birth, so buildup is explosive.
 - **Whitefly:** tiny white moth-like adults that flush up in a cloud when disturbed, with uniform yellowing and lower-canopy decline.
 
-Note that the aphid most associated with cannabis is its own species, the cannabis aphid (_Phorodon cannabis_), now recognised as a pest in North America[^cranshaw-2018-phorodon-cannabis-north-america]. The shared driver across all four is environment: warm plus dry shortens every life cycle, so climate control is the first lever, not the spray bottle.
+The aphid most associated with cannabis is its own species, the cannabis aphid (_Phorodon cannabis_), now recognised as a pest in North America[^cranshaw-2018-phorodon-cannabis-north-america]. The shared driver across all four is environment: warm plus dry shortens every life cycle, so climate control is the first lever, not the spray bottle.
 
 > **Diagram.** Four sap-suckers, four damage signatures. The piercing-feeding habit is shared, the secondary signs are how you tell them apart.
 

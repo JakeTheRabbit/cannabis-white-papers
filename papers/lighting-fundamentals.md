@@ -64,7 +64,7 @@ Blue light, roughly 400 to 500 nm, keeps plants compact with tight internode spa
 | 280-400 | UV | Stress response, possible resin; safety hazard | Optional, end of flower |
 | 400-500 | Blue | Compact growth, tight internodes, thicker leaves | Veg |
 | 500-600 | Green | Penetrates deeper into the canopy than expected | Minor lever, all stages |
-| 600-700 | Red | Highest photosynthetic efficiency, is highly photosynthetic (stretch is more about low blue and far-red; flowering is photoperiod) | Flower |
+| 600-700 | Red | Highest photosynthetic efficiency; stretch is driven more by low blue and far-red, and flowering by photoperiod | Flower |
 | 700-750 | Far-red | Speeds the dark response, adds stem stretch | Fine-tuning only |
 
 *What each part of the spectrum does. Green is not wasted: it reaches lower leaves, but it is a minor lever.*
@@ -123,7 +123,7 @@ Efficacy (umol/J) is the number to compare. A 3.0 umol/J LED makes about 60% mor
 
 ## Hanging height, coverage, and a stage-by-stage setup
 
-Intensity falls with distance, but inverse-square (quarter at 2× distance) is a point-source ideal for LEDs. Use a PPFD map and meter. About hang height:  Height is your coarse intensity dial, the dimmer is the fine dial. Hang about 24 in for seedlings and clones, ~18 in for veg, and ~12-16 in for flower, then fine-tune with the dimmer and a PAR meter.
+Intensity falls with distance, but the inverse-square rule (a quarter of the light at twice the distance) is a point-source ideal that LED bars only approximate, so map PPFD with a meter rather than trusting the arithmetic. Height is your coarse intensity dial, the dimmer is the fine one. Hang about 24 in for seedlings and clones, ~18 in for veg, and ~12-16 in for flower, then fine-tune with the dimmer and a PAR meter.
 
 Verify coverage by taking PPFD readings at nine points: four corners, four edge-midpoints, and the center. Aim for a min-to-average ratio above 0.75 so edge plants are not starved while the center bleaches. Hanging higher trades peak intensity for more even spread, so use a manufacturer PPFD map as your starting point and confirm with real readings at canopy height.
 

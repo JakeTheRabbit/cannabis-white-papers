@@ -137,7 +137,7 @@ Send this as one message. If they cannot answer, do not buy.
 
 > **DANGER — Do not buy**
 >
-> Cardboard mushroom boxes with a furnace filter. Vertical “nail salon” tables with no HEPA grade. Anything that says HEPA but shows a foam sheet. A biosafety cabinet unless you already know you need operator protection — it is the wrong tool and costs more.
+> Cardboard mushroom boxes with a furnace filter. Vertical “nail salon” tables with no HEPA grade. Anything that says HEPA but shows a foam sheet. A biosafety cabinet unless you already know you need operator protection. It is the wrong tool and costs more.
 
 #### When it arrives
 
