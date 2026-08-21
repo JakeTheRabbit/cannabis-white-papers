@@ -533,6 +533,14 @@ def build_search_index():
 
 # ---------------------------------------------------------------- main
 def main():
+    # Validate the source dictionaries before export/rendering mutates any sections
+    # or writes generated artifacts.
+    from check_section_structure import validate_modules
+    section_diagnostics = validate_modules(PAPERS)
+    if section_diagnostics:
+        for diagnostic in section_diagnostics:
+            print(diagnostic)
+        raise SystemExit(1)
     # Export the clean machine-readable corpus FIRST, before render_paper() mutates
     # SECTIONS by appending galleries/diagrams (keeps the corpus prose-only).
     try:
