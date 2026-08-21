@@ -13,6 +13,8 @@
 ## Global Constraints
 
 - Every paper's first source section title must be `Purpose and scope`.
+- When a genuine `Definitions` section exists, it must be the second source section, immediately after `Purpose and scope`.
+- The energy paper's summary follows `Definitions` because it uses the energy metrics defined there.
 - Use sentence case and direct, literal H2 wording.
 - Use `Purpose and scope`, `Definitions`, `Troubleshooting`, `Expected results and limitations`, and `References` when those labels accurately describe the whole section.
 - Preserve every paper slug and existing section `id` value.
@@ -20,6 +22,7 @@
 - Do not alter body claims, citations, paper titles, unrelated navigation, imagery, or theme code.
 - Edit authoritative `_build` sources only; regenerate root outputs with `python _build/build.py`.
 - Never stage `AGENTS.md`, `CLAUDE.md`, or `setpoints.html`.
+- Preserve the nine approved source reorders. A future exception to the Definitions-second rule requires an exact `(slug, section_id, exact_title)` entry and a documented semantic reason.
 
 ---
 

@@ -28,8 +28,8 @@ try:
 except Exception:
     EMBED = {}
 
-# Papers in display order. Loaded defensively: a broken module is reported,
-# not fatal, and only successfully-loaded papers go live in the nav.
+# Papers in display order. Import failures are recorded here and rejected by the
+# first guard in main() before export or generated-file writes can occur.
 PAPER_MODULES = [
     "paper_tissue_culture", "paper_cannabis_tc_playbook", "paper_cannabis_tc_sop",
     "paper_coco_crop_steering", "paper_grow_room_systems",
@@ -65,6 +65,55 @@ PAPER_MODULES = [
     "paper_plant_biology",
     "paper_deep_water_culture",
 ]
+
+
+def validate_paper_imports(module_names, papers, import_errors):
+    """Return import/completeness diagnostics without importing or writing anything."""
+    diagnostics = [
+        f"paper import failed: {module_name}: {error}"
+        for module_name, error in import_errors
+    ]
+    if len(papers) != len(module_names):
+        diagnostics.append(
+            f"paper import count mismatch: loaded {len(papers)} of "
+            f"{len(module_names)} declared modules"
+        )
+    return diagnostics
+
+
+def _run_import_guard_self_test():
+    clean_papers = [object(), object()]
+    cases = [
+        (
+            "clean imports",
+            ["paper_a", "paper_b"],
+            clean_papers,
+            [],
+            [],
+        ),
+        (
+            "recorded import error",
+            ["paper_a", "paper_b"],
+            clean_papers[:1],
+            [("paper_b", "RuntimeError('boom')")],
+            [
+                "paper import failed: paper_b: RuntimeError('boom')",
+                "paper import count mismatch: loaded 1 of 2 declared modules",
+            ],
+        ),
+        (
+            "count mismatch without error record",
+            ["paper_a", "paper_b"],
+            clean_papers[:1],
+            [],
+            ["paper import count mismatch: loaded 1 of 2 declared modules"],
+        ),
+    ]
+    for name, module_names, papers, errors, expected in cases:
+        actual = validate_paper_imports(module_names, papers, errors)
+        assert actual == expected, f"{name}: expected {expected!r}, got {actual!r}"
+
+
 PAPERS, PAPER_ERRORS = [], []
 for _m in PAPER_MODULES:
     try:
@@ -238,6 +287,9 @@ def render_paper(mod):
     toc_items = ""
     for i, s in enumerate(secs, 1):
         toc_items += f'<a href="#{s["id"]}"><span class="n">{i:02d}</span> {esc(s["title"])}</a>'
+    toc_items += (
+        f'<a href="#references"><span class="n">{len(secs) + 1:02d}</span> References</a>'
+    )
     index_card = (f'<div class="toc-card"><div class="kicker">{icon("list",14)} In this guide</div>'
                   f'<div class="toc">{toc_items}</div></div>')
     # sections (with auto-interlinking across the page)
@@ -271,14 +323,14 @@ def render_paper(mod):
         link = f' <a href="{r["url"]}" target="_blank" rel="noopener">{r["url"]}</a>' if r.get("url") else ""
         cls = "" if r.get("peer") else " class='np'"
         ref_lis += f'<li id="ref-{rid}"{cls}>{r["cite"]}{npc}{link}</li>'
-    refs = (f'<div class="refs"><h2>References</h2><ol>{ref_lis}</ol>'
+    refs = (f'<div class="refs" id="references"><h2>References</h2><ol>{ref_lis}</ol>'
             f'<p class="foot">Citations marked in-text as [n] map to this list. Primary literature and official guidance '
             f'except where noted. Cannabis tissue culture is strongly genotype-dependent, verify '
             f'dilutions, hormone doses and local regulations against the primary sources before relying on them.</p></div>') if ref_lis else ""
 
     body = (hero + index_card + "".join(body_secs) + related + refs
             + getattr(mod, "RAW_REFERENCES", ""))
-    rail_toc = [(s["id"], s["title"]) for s in secs]
+    rail_toc = [(s["id"], s["title"]) for s in secs] + [("references", "References")]
     return shell.page(mod.SLUG, mod.TITLE, body, desc=mod.SUB, rail_toc=rail_toc, mobile_active="papers")
 
 # ---------------------------------------------------------------- track grid
@@ -550,8 +602,13 @@ def build_search_index():
 
 # ---------------------------------------------------------------- main
 def main():
-    # Validate the source dictionaries before export/rendering mutates any sections
-    # or writes generated artifacts.
+    # Fail closed on incomplete imports before export or any generated-file write.
+    import_diagnostics = validate_paper_imports(PAPER_MODULES, PAPERS, PAPER_ERRORS)
+    if import_diagnostics:
+        for diagnostic in import_diagnostics:
+            print(diagnostic)
+        raise SystemExit(1)
+    # Validate the source dictionaries before export/rendering writes artifacts.
     from check_section_structure import validate_modules
     section_diagnostics = validate_modules(PAPERS)
     if section_diagnostics:
@@ -589,6 +646,13 @@ def main():
     except Exception as _se:
         print("standalone IPM build failed:", repr(_se))
         raise
+    from check_generated_structure import validate_generated_structure
+    generated_diagnostics = validate_generated_structure(ROOT, PAPERS)
+    if generated_diagnostics:
+        for diagnostic in generated_diagnostics:
+            print(diagnostic)
+        raise SystemExit(1)
+    print(f"generated-structure OK: {len(PAPERS)} papers")
     for k, v in sizes.items():
         print(f"  {k:28} {v//1024 if v>1024 else v}{'K' if v>1024 else 'B'}")
     print("build OK ->", ROOT, "| live papers:", len(PAPERS))
@@ -598,4 +662,8 @@ def main():
             print("   ", m, "->", e)
 
 if __name__ == "__main__":
-    main()
+    if sys.argv[1:] == ["--self-test-import-guard"]:
+        _run_import_guard_self_test()
+        print("paper-import guard self-test OK")
+    else:
+        main()

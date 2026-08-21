@@ -33,6 +33,8 @@ Papers should follow this sequence when those functions exist:
 
 This is a semantic order, not a mandatory nine-heading template. A biology reference, a sequential SOP, and an economics paper should keep the order required by their subjects. Sections move only when the existing order impairs comprehension or operation.
 
+When a genuine `Definitions` section exists, it is always the second source section, immediately after `Purpose and scope`. The energy paper therefore places its summary after `Definitions`: that summary uses the energy metrics established in the definitions section. The nine approved source reorders preserve this rule and remain unchanged. Any future exception must be recorded as an exact `(slug, section_id, exact_title)` entry with a documented semantic reason.
+
 ## Title rules
 
 - Every paper's first source section title must be `Purpose and scope`.
@@ -64,7 +66,7 @@ A repository checker will load every module in `_build/build.py::PAPER_MODULES` 
 - `Troubleshooting` follows `Expected results and limitations`;
 - section kickers with numeric prefixes are not sequential.
 
-The checker may use explicit, reviewed exceptions for technically necessary terms and topic-specific structures. Exceptions must be narrow and explain why the general rule does not apply.
+The checker may use explicit, reviewed exceptions for technically necessary terms and topic-specific structures. Title exceptions must be keyed by exact `(slug, section_id, exact_title)` values. Any future ordering exception must use the same exact key and document the semantic reason the general rule does not apply.
 
 Completion also requires a clean 55-paper build, a final `References` section in every generated paper, a clean private-information leak scan, balanced emphasis tags, valid internal section links, and verification that the pushed GitHub Pages build serves the updated headings.
 

@@ -104,7 +104,11 @@ assert "data:image" not in _PAYLOAD
 
 # The site renderer appends these audited, number-stable citations after the
 # related-paper cards; the machine-readable corpus receives only guide content.
-RAW_REFERENCES = _refs_match.group(1)
+RAW_REFERENCES = _refs_match.group(1).replace(
+    '<div class="refs">',
+    '<div class="refs" id="references">',
+    1,
+)
 
 
 def _corpus_blocks(block: str) -> list[str]:

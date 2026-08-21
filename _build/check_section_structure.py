@@ -34,9 +34,37 @@ ACRONYMS = {
     "CO2", "EC", "VPD", "HVAC", "GMP", "GACP", "CAPA", "ALCOA+", "PPFD",
     "DLI", "PAR", "LED", "HPS", "CMH", "PPE", "IPM", "ORP", "PPM", "THC",
     "THCA", "COA", "ICP-MS", "HLVD", "HSWA", "NZ", "P0", "P1", "P2", "P3",
+    "VWC", "MQ", "FIM", "LEDS", "A", "B", "W", "I-V",
+}
+PROPER_NAME_EXCEPTIONS = {
+    (
+        "cannabis-tissue-culture-playbook",
+        "ppm",
+        "Plant Preservative Mixture (PPM) and commercial kits",
+    ),
+    (
+        "auckland-ipm-blueprint",
+        "nz-legal-gate",
+        "Legal eligibility of IPM controls in New Zealand",
+    ),
+    (
+        "daily-checks",
+        "autocomplete",
+        "Home Assistant check automation",
+    ),
+    (
+        "lab-testing-coas",
+        "nz-au",
+        "Testing for release in NZ and Australia",
+    ),
+    (
+        "compliance-track-trace",
+        "worked-examples",
+        "Worked examples: NZ and Australia",
+    ),
 }
 KICKER_NUMBER = re.compile(r"^\s*(\d{2})\s*·\s+\S")
-TITLE_WORD = re.compile(r"[A-Za-z][A-Za-z0-9+–-]*")
+TITLE_WORD = re.compile(r"[^\W_][\w+–-]*", re.UNICODE)
 
 
 def _non_empty(value):
@@ -57,13 +85,47 @@ def _is_acronym(word):
             or bool(re.fullmatch(r"[IVXLCDM]+", normalized)))
 
 
-def _violates_sentence_case(title):
+def _is_technical_token(word):
+    return any(character.isdigit() for character in word) or _is_acronym(word)
+
+
+def _violates_sentence_case(slug, section_id, title):
+    if (slug, section_id, title) in PROPER_NAME_EXCEPTIONS:
+        return False
     words = TITLE_WORD.findall(title)
-    uppercase_words = [
-        word for word in words[1:]
-        if word[0].isupper() and not _is_acronym(word)
-    ]
-    return len(uppercase_words) >= 3
+    return any(
+        word[0].isupper() and not _is_technical_token(word)
+        for word in words[1:]
+    )
+
+
+def validate_title_policy(slug, section_id, title):
+    """Return strict title-policy diagnostics for one authoritative title record."""
+    diagnostics = []
+    normalized_title = title.casefold()
+    banned = _has_banned_framing(title)
+    if normalized_title == "expected results" or "realistic expectations" in normalized_title:
+        diagnostics.append(
+            f"{slug}: section '{section_id}': must use canonical title "
+            f"'Expected results and limitations' instead of '{title}'"
+        )
+    elif any(normalized_title.startswith(prefix) for prefix in DEFINITIONS_VARIANTS):
+        diagnostics.append(
+            f"{slug}: section '{section_id}': must use canonical title "
+            f"'Definitions' instead of '{title}'"
+        )
+    elif banned:
+        diagnostics.append(
+            f"{slug}: section '{section_id}': banned editorial framing "
+            f"'{banned}' in title '{title}'"
+        )
+    if "?" in title:
+        diagnostics.append(
+            f"{slug}: section '{section_id}': title must not contain '?': '{title}'"
+        )
+    if _violates_sentence_case(slug, section_id, title):
+        diagnostics.append(f"{slug}: section '{section_id}': title is not sentence case: '{title}'")
+    return diagnostics
 
 
 def _has_audited_slab_references(module, slug):
@@ -124,24 +186,7 @@ def validate_modules(modules: list[object]) -> list[str]:
             if isinstance(title, str) and title.strip():
                 normalized_title = title.casefold()
                 title_positions.setdefault(normalized_title, position)
-                banned = _has_banned_framing(title)
-                if normalized_title == "expected results" or "realistic expectations" in normalized_title:
-                    diagnostics.append(
-                        f"{label}: section '{section_id}': must use canonical title "
-                        f"'Expected results and limitations' instead of '{title}'"
-                    )
-                elif any(normalized_title.startswith(prefix) for prefix in DEFINITIONS_VARIANTS):
-                    diagnostics.append(
-                        f"{label}: section '{section_id}': must use canonical title "
-                        f"'Definitions' instead of '{title}'"
-                    )
-                elif banned:
-                    diagnostics.append(
-                        f"{label}: section '{section_id}': banned editorial framing "
-                        f"'{banned}' in title '{title}'"
-                    )
-                if _violates_sentence_case(title):
-                    diagnostics.append(f"{label}: section '{section_id}': title is not sentence case: '{title}'")
+                diagnostics.extend(validate_title_policy(label, section_id, title))
 
             if isinstance(kicker, str):
                 match = KICKER_NUMBER.match(kicker)
@@ -261,6 +306,62 @@ def _run_self_test():
             ]),
             ["kicker-gap: numeric kicker for section 'next' is 03; expected 02"],
         ),
+        (
+            "two-word title case",
+            _fixture("two-word", [
+                {"id": "start", "title": "Purpose and scope", "kicker": "01 · Start", "blocks": ["x"]},
+                {"id": "water", "title": "Water Quality", "kicker": "02 · Water", "blocks": ["x"]},
+            ]),
+            ["two-word: section 'water': title is not sentence case: 'Water Quality'"],
+        ),
+        (
+            "three-word title case",
+            _fixture("three-word", [
+                {"id": "start", "title": "Purpose and scope", "kicker": "01 · Start", "blocks": ["x"]},
+                {"id": "water", "title": "Water Quality Standards", "kicker": "02 · Water", "blocks": ["x"]},
+            ]),
+            ["three-word: section 'water': title is not sentence case: 'Water Quality Standards'"],
+        ),
+        (
+            "teaser question",
+            _fixture("question", [
+                {"id": "start", "title": "Purpose and scope", "kicker": "01 · Start", "blocks": ["x"]},
+                {"id": "leds", "title": "Can LEDs save energy?", "kicker": "02 · LEDs", "blocks": ["x"]},
+            ]),
+            ["question: section 'leds': title must not contain '?': 'Can LEDs save energy?'"],
+        ),
+        (
+            "allowed acronym",
+            _fixture("acronym", [
+                {"id": "start", "title": "Purpose and scope", "kicker": "01 · Start", "blocks": ["x"]},
+                {"id": "ec", "title": "Root-zone EC", "kicker": "02 · EC", "blocks": ["x"]},
+            ]),
+            [],
+        ),
+        (
+            "allowed digit-bearing token",
+            _fixture("digit-token", [
+                {"id": "start", "title": "Purpose and scope", "kicker": "01 · Start", "blocks": ["x"]},
+                {"id": "sensor", "title": "Irrigation with TEROS-12", "kicker": "02 · Sensor", "blocks": ["x"]},
+            ]),
+            [],
+        ),
+        (
+            "allowed proper-name exception",
+            _fixture("daily-checks", [
+                {"id": "start", "title": "Purpose and scope", "kicker": "01 · Start", "blocks": ["x"]},
+                {"id": "autocomplete", "title": "Home Assistant check automation", "kicker": "02 · Automation", "blocks": ["x"]},
+            ]),
+            [],
+        ),
+        (
+            "proper-name near miss",
+            _fixture("daily-checks", [
+                {"id": "start", "title": "Purpose and scope", "kicker": "01 · Start", "blocks": ["x"]},
+                {"id": "autocomplete", "title": "Home Assistant automation", "kicker": "02 · Automation", "blocks": ["x"]},
+            ]),
+            ["daily-checks: section 'autocomplete': title is not sentence case: 'Home Assistant automation'"],
+        ),
     ]
     for name, module, expected in fixtures:
         actual = validate_modules([module])
@@ -283,7 +384,7 @@ def _run_corpus_check():
         for diagnostic in diagnostics:
             print(diagnostic)
         raise SystemExit(1)
-    print("section-structure OK: 55 papers")
+    print(f"section-structure OK: {len(modules)} papers")
 
 
 if __name__ == "__main__":
