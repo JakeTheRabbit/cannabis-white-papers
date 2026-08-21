@@ -6359,7 +6359,7 @@ Well-run propagation rooms often root clones at ~90 percent or better as an oper
 >
 > Anyone who wants to copy a plant they like and get a uniform batch every time. Pair it with the [light acclimation](light-acclimation.html) guide for moving fresh clones into stronger light, and the [IPM hygiene](ipm-sop.html) guide for keeping the room clean.
 
-## The words you need before you start
+## Definitions
 
 Most beginner mistakes come from not knowing what a term means. These six come up constantly.
 
@@ -6377,7 +6377,7 @@ Most beginner mistakes come from not knowing what a term means. These six come u
 
 > **Diagram.** A cutting prepared for sticking: a clean angled cut below a node, lower leaves stripped, large fan-leaf tips trimmed back, and the stem set well into the cube.
 
-## Choosing a mother and making the cut
+## Selecting and cutting shoots
 
 A good clone starts with a good shoot. Pick upright shoots from the upper-to-mid canopy that are at least 3 mm thick and 15 cm long. Thicker, well-lit shoots carry more stored energy and root faster than thin, shaded interior growth[^esposito-2026-morphology-predictors]. Shoot thickness and leaf colour reliably predict how well a cutting will root[^esposito-2026-morphology-predictors].
 
@@ -6472,7 +6472,7 @@ Most clone failures trace to a handful of causes, and they look distinct enough 
 >
 > Disease in a propagation room spreads cutting to cutting through tools and hands. Sterilize tools for at least 2 minutes in 71% isopropyl alcohol (or chlorine dioxide for at least 180 seconds), and handle cubes with gloves only. Bare hands spread algae and pathogens[^punja-2023-fusarium-pythium-biocontrol]. Good hygiene prevents the damping-off and root-rot organisms that wipe out whole trays[^punja-2023-fusarium-pythium-biocontrol].
 
-## What good looks like, and what to expect
+## Expected results
 
 A realistic first goal is **90 percent** rooting, with experienced rooms hitting 95 percent or higher[^caplan-2018-stem-cuttings]. Expect roots in 10 to 14 days, and treat anything past 21 days with no roots as a problem to escalate, not a clone to keep waiting on.
 

@@ -46,7 +46,7 @@ SECTIONS.append({"id": "intro", "kicker": "01 · Start here", "title": "What clo
         "stronger light, and the <a href='ipm-sop.html'>IPM hygiene</a> guide for keeping the room clean.")),
   ]})
 
-SECTIONS.append({"id": "key-terms", "kicker": "02 · The vocabulary", "title": "The words you need before you start",
+SECTIONS.append({"id": "key-terms", "kicker": "02 · The vocabulary", "title": "Definitions",
   "blocks": [
     p("Most beginner mistakes come from not knowing what a term means. These six come up constantly."),
     defterm("Node", "The point on a stem where leaves and side-shoots attach. New roots and new "
@@ -69,7 +69,7 @@ SECTIONS.append({"id": "key-terms", "kicker": "02 · The vocabulary", "title": "
       "fan-leaf tips trimmed back, and the stem set well into the cube."),
   ]})
 
-SECTIONS.append({"id": "mother-and-cut", "kicker": "03 · The how & why", "title": "Choosing a mother and making the cut",
+SECTIONS.append({"id": "mother-and-cut", "kicker": "03 · The how & why", "title": "Selecting and cutting shoots",
   "blocks": [
     p("A good clone starts with a good shoot. Pick upright shoots from the upper-to-mid canopy that are "
       "at least 3 mm thick and 15 cm long. Thicker, well-lit shoots carry more stored energy and "
@@ -207,7 +207,7 @@ SECTIONS.append({"id": "troubleshooting", "kicker": "07 · When it goes wrong", 
         ". Good hygiene prevents the damping-off and root-rot organisms that wipe out whole trays" + _c("punja-2023-fusarium-pythium-biocontrol") + ".")),
   ]})
 
-SECTIONS.append({"id": "expectations", "kicker": "08 · Reality check", "title": "What good looks like, and what to expect",
+SECTIONS.append({"id": "expectations", "kicker": "08 · Reality check", "title": "Expected results",
   "blocks": [
     p("A realistic first goal is <strong>90 percent</strong> rooting, with experienced rooms hitting 95 "
       "percent or higher" + _c("caplan-2018-stem-cuttings") + ". Expect roots in 10 to 14 days, and treat "
