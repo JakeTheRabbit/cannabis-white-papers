@@ -10,12 +10,12 @@ EYEBROW = "Facility · GMP"
 SUB = ("How to design a clean, compliant hash and extract factory from scratch: what GMP "
        "means, how rooms and people and product move, and how a batch earns its way to market.")
 META = [("building", "Facility"), ("image", "13 diagrams"),
-        ("quote", "Evidence-linked · 8 sources"), ("clock", "~18 min read")]
+        ("quote", "Evidence-linked · 9 sources"), ("clock", "~18 min read")]
 RELATED = ["mould-risk", "facility-3d"]
 REF_IDS = ["ecfr-21cfr211", "ich-q3c-r9-ema", "ehp-cannabis-contaminants-2019",
            "en1822-h14-hepa", "sciencedirect-cleanroom-personnel-emissions-2024",
            "pmc-capa-ich-q10-2024", "fda-process-validation-2011",
-           "ispe-cleanroom-design-iso14644-16"]
+           "ispe-cleanroom-design-iso14644-16", "luca2020-pesticide-partition-hemp-extract"]
 
 def _c(rid):
     return "<sup class='cite'><a href='#ref-%s'>[%d]</a></sup>" % (rid, REF_IDS.index(rid) + 1)
@@ -28,12 +28,11 @@ SECTIONS.append({"id": "what-this-is", "kicker": "Start here", "title": "What Th
          "system that proves a product is exactly what its label says and that nothing harmful rode "
          "along. A GMP hash lab turns cannabis biomass into purified resin concentrates (bubble hash, "
          "rosin, live resin, distillate) under tight contamination control."),
-    p("The same physics that concentrate the cannabinoids you want also "
-      "concentrate the contaminants you don't. Extraction can concentrate both the good and the bad (often several-fold when mass yield is low) "
-      "roughly five- to ten-fold" + _c("ehp-cannabis-contaminants-2019") + ", so a pesticide or mould "
-      "level that looked fine on the raw flower can fail badly once it is squeezed into a gram of "
-      "resin. Every step in the building is designed to answer one question: <em>can we prove this "
-      "material is safe and correctly labelled?</em> If yes, it moves forward. If not, it holds."),
+    p("Extraction can concentrate, reduce or redistribute contaminants according to the analyte, process "
+      "and mass yield" + _c("luca2020-pesticide-partition-hemp-extract") + ". A passing flower result does not establish "
+      "that the finished concentrate complies. Test incoming material and the finished batch, then use paired "
+      "results to calculate process-specific transfer. Material moves forward only when the release data prove "
+      "that it is safe and correctly labelled."),
     p("Two rule-sets do most of the governing. <strong>EU-GMP Annex 1</strong> sets the cleanroom "
       "classifications and the contamination-control strategy, and the U.S. <strong>cGMP rules in 21 "
       "CFR 210/211</strong> set the production controls, the records, and the authority of the quality "
@@ -236,10 +235,11 @@ SECTIONS.append({"id": "qc-and-release", "kicker": "How-to", "title": "Step-by-S
       "(lead, cadmium, arsenic, mercury) are quantified by ICP-MS, the standard method" + _c("ehp-cannabis-contaminants-2019") +
       ", and the regulated mycotoxins, aflatoxins B1/B2/G1/G2 and ochratoxin&nbsp;A, are "
       "carcinogens controlled at parts-per-billion levels."),
-    callout("tip", "Always test the concentrate, never just the flower",
-      p("A pesticide or metal level that passes comfortably on raw flower can fail once it is "
-        "concentrated five- to ten-fold into resin" + _c("ehp-cannabis-contaminants-2019") + ". Release decisions "
-        "are made on the <em>finished concentrate</em>, full stop.")),
+    callout("tip", "Test the finished concentrate",
+      p("A raw-flower pass does not guarantee that the finished concentrate passes because contaminants "
+        "partition differently during extraction" + _c("luca2020-pesticide-partition-hemp-extract") + ". Make the release "
+        "decision on the finished concentrate and use paired input-output results to set process-specific "
+        "carryover factors.")),
     table(["Family", "Analytes", "Method", "Why"], [
       ["Potency", "THC, CBD, total cannabinoids", "HPLC-DAD", "Label accuracy"],
       ["Residual solvents", "Butane, propane, ethanol", "Headspace GC-MS", "Solvent safety"],

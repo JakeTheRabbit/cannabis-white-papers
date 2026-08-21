@@ -11,11 +11,11 @@ SUB = ("A plain-language standard operating procedure for keeping pests and dise
        "indoor cannabis grow. How to scout, when to act, how to use good bugs and sprays, and "
        "how to keep records that hold up.")
 META = [("shield", "Operational"), ("doc", "Operational guide"),
-        ("quote", "Evidence-linked · 4 sources"), ("clock", "~14 min read")]
+        ("quote", "Evidence-linked · 5 sources"), ("clock", "~14 min read")]
 RELATED = ["mould-risk", "airflow-design", "harvest-dry-trim-cure"]
 REF_IDS = ["punja-2021-emerging-diseases-cannabis", "scott-punja-2021-powdery-mildew-management",
            "elmoghazy-2024-swirskii-functional-response", "mumtaz-2023-californicus-functional-response",
-           "koppert-persimilis-tech", "epa-wps-notice-to-workers"]
+           "koppert-persimilis-tech", "epa-wps-notice-to-workers", "moh-nz-pesticide-use-2024"]
 
 def _c(rid):
     return "<sup class='cite'><a href='#ref-%s'>[%d]</a></sup>" % (rid, REF_IDS.index(rid) + 1)
@@ -168,12 +168,13 @@ SECTIONS.append({"id": "spray-rotation", "kicker": "Core practice 4", "title": "
       "improvisation. Use only products approved for cannabis in your jurisdiction, always follow the "
       "label dilution and withholding periods, and never freelance with off-list nutrients or "
       "supplements that could fail residue testing" + _c("scott-punja-2021-powdery-mildew-management") + "."),
-    p("A preventative program can be as simple as a weekly foliar of an approved wash plus sulphur (1 "
-      "only at the current registered product label rate and REI/PHI if lawful (never kitchen tablespoon rates; veg and mothers only when residues allow), "
-      "stepping up to 3 times a week curatively at low pest levels" + _c("scott-punja-2021-powdery-mildew-management") +
-      ". Rotate chemistries and tank-mix only combinations the labels allow, adding products in the "
-      "label-specified order. Avoid spraying under high light, high VPD, or drought stress so the product is not forced onto "
-      "into the leaves and burns them."),
+    p("Set every spray rate, interval, crop stage, restricted-entry interval and pre-harvest interval from "
+      "the current registered label for that product, pest and jurisdiction" + _c("moh-nz-pesticide-use-2024") +
+      ". A research trial does not authorise a weekly or three-times-weekly schedule. Use sulphur only when "
+      "the product is registered for cannabis and the label permits the crop stage; never convert a rate into "
+      "kitchen tablespoons" + _c("scott-punja-2021-powdery-mildew-management") + ". Rotate chemistries and "
+      "tank-mix only combinations the labels allow, adding products in the label-specified order. Avoid high "
+      "light, high VPD and drought stress during application because stressed leaves are more prone to injury."),
     figure(L.flow("Coverage order: media to leaf top",
             [("1 Media top", "soak the substrate surface"), ("2 Up the stalk", "trunk and lower stems"),
              ("3 Leaf undersides", "where pests hide"), ("4 Leaf tops", "finish the canopy")]), 9,

@@ -161,14 +161,16 @@ SECTIONS.append({"id": "adjusting-and-water", "kicker": "Making the number",
       "high pH reading." + _c("umass-water-quality-ph-alkalinity") + " High-alkalinity water fights "
       "your acid and creeps the pH back up after you set it."),
     figure(L.bars("Same pH, very different effort to move it",
-            [("Low alkalinity (soft)", 3), ("Target (60-100 ppm)", 8), ("High alkalinity (hard)", 22)],
-            unit=" drops", note="Two waters can read pH 7 yet need wildly different amounts of acid to shift.",
+            [("Low alkalinity (soft)", 3), ("Example small-container range", 8), ("High alkalinity (hard)", 22)],
+            unit=" drops", note="The suitable alkalinity range changes with container volume, media, crop and fertiliser.",
             maxv=26), 4,
       "Alkalinity, not the pH reading, sets how much acid it takes to move the water. Hard, "
       "high-alkalinity tap water resists adjustment and drifts back up." + _c("umass-water-quality-ph-alkalinity")),
-    callout("note", "Aim for 60-100 ppm CaCO3",
-      p("Ideal irrigation alkalinity is roughly 40-80 ppm CaCO3 (many soilless programmes sit near 60-100). Very hard water may need more acid "
-        "or pre-treatment before it will hold a target." + _c("umass-water-quality-ph-alkalinity"))),
+    callout("note", "Match alkalinity to the container system",
+      p("UMass gives different alkalinity ranges for different container volumes. About 40-80 ppm CaCO3 "
+        "can suit small containers, while larger pots can tolerate more. Use the media, fertiliser, crop and "
+        "observed pH drift to set the working range. Very hard water may need acid treatment or filtration." +
+        _c("umass-water-quality-ph-alkalinity"))),
   ]})
 
 SECTIONS.append({"id": "runoff-and-routine", "kicker": "Daily practice",

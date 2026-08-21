@@ -160,17 +160,18 @@ SECTIONS.append({"id": "bulking-ripening", "kicker": "05 · Weeks 5-10", "title"
 
 SECTIONS.append({"id": "when-to-harvest", "kicker": "06 · The decision", "title": "Reading the plant: when to harvest",
   "blocks": [
-    callout("evidence", "Grain of salt",
-      "<p><strong>Borderline:</strong> Amber trichome share is a <em>maturity</em> cue, not a clean pharmacological "
-      "switch. Effect is multi-factor (terpenes, dose, genotype, set/setting). Human evidence that CBN alone drives "
-      "&lsquo;couch-lock&rsquo; is limited. Long plain-water flushes are traditional; controlled tests often show little "
-      "taste/potency gain, ease EC as appetite falls rather than starving the plant.</p>"),
+    callout("evidence", "Evidence limits",
+      "<p>Trichome colour tracks maturation. Livingston measured trichome morphology and metabolite content; "
+      "the study did not test perceived effects or validate a pharmacological harvest target" +
+      _c("livingston-2020-trichome-maturation") + ". Long plain-water flushes are traditional; controlled "
+      "tests often show little taste or potency gain, so ease EC as appetite falls rather than starving the plant.</p>"),
     p("Pistils are a rough early signal but they lie. Trichomes are the true clock, and you read "
       "them with a cheap jeweler's loupe or pocket microscope." + _c("livingston-2020-trichome-maturation")),
     p("Harvest when most trichomes have turned from clear to milky or cloudy, with a small fraction "
-      "going amber. A common target is 80 to 90% milky with 5 to 15% amber. More clear or milky "
-      "gives a more energetic, heady effect. More amber means THC is degrading toward CBN for a "
-      "heavier feel for some people, multi-factor, not a CBN switch." + _c("livingston-2020-trichome-maturation")),
+      "going amber. The 80 to 90% milky and 5 to 15% amber split is a grower convention, not a "
+      "validated effect target. Clear, milky and amber ratios alone do not reliably predict an energetic "
+      "or heavy experience. If the intended chemical profile matters, compare harvest samples by "
+      "cannabinoid and terpene analysis." + _c("livingston-2020-trichome-maturation")),
     p("Wait until pistils are mostly darkened and curled in (roughly 70% or more), then switch to "
       "checking trichomes for the real call. Use 60x or higher magnification on actual bud, not "
       "sugar leaves, and check several spots, since maturity varies across the plant. Do not harvest "

@@ -36,7 +36,8 @@ SECTIONS.append({"id": "demand", "kicker": "01 · Read this first",
   "blocks": [
     callout("evidence", "Grain of salt",
       "<p><strong>Borderline:</strong> High-rung EC and runoff ladders are advanced steering territory. "
-      "Ambient CO&#8322; lowers efficiency of high PPFD but is not a hard 800 &micro;mol canopy wall. "
+      "Ambient CO&#8322; lowers marginal efficiency at high PPFD; no study supports a universal "
+      "800 &micro;mol canopy ceiling. "
       "Size HVAC and water from your meters, not from a single ladder cell.</p>"),
 
     lead("Photosynthesis runs at the speed of whatever is in shortest supply. Light can be the "
@@ -46,13 +47,12 @@ SECTIONS.append({"id": "demand", "kicker": "01 · Read this first",
       "grows at the rate set by its scarcest resource, no matter how abundant everything else is. "
       "Blackman's <strong>law of limiting factors</strong> says the same about the moment-to-moment "
       "rate of photosynthesis: raise the input that is currently limiting and the rate climbs; raise "
-      "anything else and nothing happens. Cannabis yield keeps rising with light to very high "
-      "levels" + _c("rm2021-light") + ", but only because CO&#8322;, warmth, water and feed rise with "
-      "it" + _c("chandra2008-photo") + ". A room at 1500 &micro;mol on ambient CO&#8322; is really a "
-      "room running at its 800 &micro;mol ceiling, with 700 &micro;mol of wasted, heat-making light "
-      "on top."),
-    p("So the job is not &lsquo;turn the lights up.&rsquo; The job is to work out <strong>which "
-      "system tops out first</strong>, and then either raise that ceiling or set the light to it. "
+      "anything else and nothing happens. Rodriguez-Morrison et al. measured a linear yield increase to "
+      "1,800 &micro;mol under ambient CO&#8322;" + _c("rm2021-light") + ". Leaf measurements show that "
+      "CO&#8322;, light and temperature interact, but they do not establish an 800 &micro;mol canopy ceiling" +
+      _c("chandra2008-photo") + ". A room at 1,500 &micro;mol on ambient CO&#8322; may be inefficient or "
+      "stress a sensitive cultivar, so judge it from crop response and yield per kWh."),
+    p("Calculate <strong>which system tops out first</strong>, then raise that ceiling or set the light below it. "
       "The companion paper <a href='grow-room-systems.html'>Grow-room systems</a> makes the case "
       "that the room is one machine; this paper puts numbers on it and shows you how to find the "
       "machine's weakest link."),
@@ -196,7 +196,7 @@ SECTIONS.append({"id": "find", "kicker": "06 · The method", "title": "Find your
     table(
       ["System", "What you have", "Its PPFD ceiling"],
       [
-        ["<strong>CO&#8322;</strong>", "Your setpoint", "Ambient 420 ppm &rarr; ~800+ &micro;mol with diminishing returns (not a hard wall) &middot; 800 ppm &rarr; ~1000 &middot; 1200 ppm &rarr; ~1300 &middot; 1500 ppm &rarr; ~1500"],
+        ["<strong>CO&#8322;</strong>", "Setpoint plus measured crop response", "No fixed PPFD ceiling from setpoint alone; ambient CO&#8322; can support yield above 800 &micro;mol, while enrichment may improve marginal efficiency at high PPFD"],
         ["<strong>Cooling</strong>", "Installed sensible tons", "PPFD &le; 9,500 &times; tons &divide; m&sup2;"],
         ["<strong>Dehumidification</strong>", "Rated pints/day", "PPFD &le; 128 &times; pints/day &divide; m&sup2;"],
         ["<strong>Irrigation</strong>", "Max deliverable L/day", "PPFD &le; 200 &times; L/day &divide; m&sup2;"],
@@ -234,11 +234,13 @@ SECTIONS.append({"id": "cases", "kicker": "07 · Case studies", "title": "Four r
         "already allows. Then cooling becomes the next wall.")),
     callout("note", "Case B &middot; The ambient-air ceiling " + _tag("g", "cheap to fix"),
       p("<strong>The room:</strong> big cooling and dehu, but <em>no</em> CO&#8322; supplementation, "
-        "ambient 420 ppm. <strong>The math:</strong> cooling and dehu might support 1200, but at ambient "
-        "Under ambient CO&#8322;, leaf curves flatten earlier than canopy yield, which can still rise well past 800 " + _c("chandra2008-photo") +
-        ". <strong>The practical limit:</strong> ambient CO&#8322; lowers efficiency as PPFD climbs. <strong>The fix:</strong> above ~800&ndash;1000 without enrichment, extra light often just "
-        "bleaches tops and adds heat, dial down to 800, or add CO&#8322; and suddenly all that cooling and "
-        "dehu headroom means something. The cheapest ceiling in the building to raise.")),
+        "ambient 420 ppm. <strong>The evidence:</strong> leaf efficiency falls as PPFD climbs" +
+        _c("chandra2008-photo") + ", yet Rodriguez-Morrison et al. reported linear canopy yield through 1,800 &micro;mol "
+        "under ambient CO&#8322; in a single cultivar and room" + _c("rm2021-light") +
+        ". <strong>The practical limit:</strong> there is no universal 800 &micro;mol ceiling. Track canopy "
+        "temperature, bleaching, DLI and yield per kWh. Dial light down when the crop is damaged or the "
+        "marginal yield no longer pays for power and climate control. Add CO&#8322; only after confirming "
+        "that the room can carry the added heat, water and safety load.")),
     callout("note", "Case C &middot; The stagnant canopy " + _tag("w", "hidden"),
       p("<strong>The room:</strong> CO&#8322; to 1200, strong cooling and dehu, but a thick canopy with "
         "dead, laminar air in the lower half. <strong>The math:</strong> no clean number; the boundary layer "
@@ -288,7 +290,7 @@ SECTIONS.append({"id": "trouble", "kicker": "09 · When it goes wrong", "title":
     table(
       ["Symptom", "Which wall you hit", "What to do"],
       [
-        ["Bleached, foxtailed tops under big light", "Light above your CO&#8322; ceiling; tops light-saturated", "Add CO&#8322;, or dial light to the ambient ceiling (~800)"],
+        ["Bleached, foxtailed tops under big light", "The cultivar or canopy exceeded its tolerated PPFD, temperature or DLI", "Measure canopy temperature and light distribution; lower PPFD while testing CO&#8322; as a separate variable"],
         ["RH won't come down; VPD collapses midday", "Transpiration outran dehumidification", "Add dehu capacity or trim light, usually the real ceiling"],
         ["Big light, flat yield", "CO&#8322;, water or feed didn't scale with the light", "Find the lowest ceiling; raise it or dial light to it"],
         ["Midday wilt at peak light", "Irrigation volume &lt; transpiration", "Bigger/more shots; fix volume before touching EC"],

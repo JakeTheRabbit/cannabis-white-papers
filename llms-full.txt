@@ -91,9 +91,9 @@ In severe dud outbreaks, infected plants can lose **up to about half their canna
 It can sit **symptomless**
 for a long time and is ‘latent’ by name. By the time plants visibly dud, the whole room is usually infected.
 
-**It's tough**
+**It spreads easily**
 
-It survives on tools, hands, pots and benches, rides in sap for ~a week and in dried tissue for ~a month, and even passes through seed at genotype-dependent rates, from single digits to tens of percent, so test your seed lots.
+It survives on tools, hands, pots and benches, rides in sap for ~a week and in dried tissue for ~a month. The 2025 North American transmission study reported seed transmission as high as 100%; the rate varies by seed lot and study design, so test every lot.[^hlvd_mgmt2025]
 
 > **WARN — Why you can't just spray it away**
 >
@@ -2555,15 +2555,15 @@ Raising CO2 does not act alone, it pulls on the rest of the room. This is the sa
 | Lever | What elevated CO2 does | What to do about it |
 | --- | --- | --- |
 | Temperature | Shifts the plant's ideal temperature up a few degrees[^lv2022-topt] | Run warmer, ~28–30 °C instead of ~25 °C, _if_ light supports it. Cannabis photosynthesis peaks near 30 °C[^chandra2008-photo] |
-| Stomata & water | Partly closes the leaf pores: ~42% less stomatal conductance, ~29% less transpiration per leaf[^chandra2008-photo] | Per leaf it drinks less, but a bigger, hotter canopy usually drinks more overall. Re-check your VPD target, irrigation volume and feed EC |
+| Stomata & water | Partly closes the leaf pores: ~42% less stomatal conductance, ~29% less transpiration per leaf[^chandra2008-photo] | Per-leaf loss falls; total crop water use may fall, hold or rise with leaf area, PPFD, temperature and VPD. Measure it |
 | Light | Nothing, unless light is already high[^rm2021-light] | Only enrich rooms running strong light. Otherwise CO2 is wasted |
 | Feed | Less transpiration can let salts concentrate at the root | Watch runoff EC and adjust feed strength |
 
 *Raise CO2, then ask what must move with it. The temperature and water changes are the ones growers most often miss.*
 
-> **NOTE — Water use: efficiency goes up, volume usually goes up too**
+> **NOTE — Measure water use at crop scale**
 >
-> Elevated CO2 partly closes the stomata, so a leaf loses less water _per unit of leaf_ for the same photosynthesis, and its water-use efficiency often rises substantially (sometimes toward a large fraction of a doubling in short-term leaf measurements), about twice the growth per litre transpired[^chandra2008-photo]. But that is _efficiency_, not less water, and in a real enriched room the total usually moves the _other_ way. CO2 grows a bigger, faster canopy with far more leaf area, and the room is run hotter and brighter to exploit it[^lv2022-topt], which more than cancels the per-leaf stomatal closure. So in practice **total water use and humidity load commonly go up, not down**, most growers running CO2 end up feeding and dehumidifying _more_. Don't assume a wetter substrate, and re-tune irrigation by watching VWC, dryback and runoff on the actual crop rather than copying an old schedule.
+> At 750 ppm versus 350 ppm CO2, Chandra measured about 42% lower stomatal conductance, 29% lower leaf transpiration and 111% higher instantaneous leaf water-use efficiency[^chandra2008-photo]. Those leaf measurements do not predict total room irrigation or humidity load. Leaf area, PPFD, temperature, VPD and crop duration can change the direction. After enrichment, measure irrigation input, drainage, substrate water content and dehumidifier condensate. Do not assume that the crop will use more or less water.
 
 ## The drying room: CO2 with no light to burn it
 
@@ -2715,13 +2715,13 @@ _Advanced · Scaling to high light · ~16 min read_
 
 > **EVIDENCE — Grain of salt**
 >
-> **Borderline:** High-rung EC and runoff ladders are advanced steering territory. Ambient CO₂ lowers efficiency of high PPFD but is not a hard 800 µmol canopy wall. Size HVAC and water from your meters, not from a single ladder cell.
+> **Borderline:** High-rung EC and runoff ladders are advanced steering territory. Ambient CO₂ lowers marginal efficiency at high PPFD; no study supports a universal 800 µmol canopy ceiling. Size HVAC and water from your meters, not from a single ladder cell.
 
 Photosynthesis runs at the speed of whatever is in shortest supply. Light can be the thing that sets the pace, but only up to the point where something else runs out. Past that point, more light does nothing except make heat and stress the plant.
 
-This is an old rule with two names. Liebig's **law of the minimum** says a crop grows at the rate set by its scarcest resource, no matter how abundant everything else is. Blackman's **law of limiting factors** says the same about the moment-to-moment rate of photosynthesis: raise the input that is currently limiting and the rate climbs; raise anything else and nothing happens. Cannabis yield keeps rising with light to very high levels[^rm2021-light], but only because CO₂, warmth, water and feed rise with it[^chandra2008-photo]. A room at 1500 µmol on ambient CO₂ is really a room running at its 800 µmol ceiling, with 700 µmol of wasted, heat-making light on top.
+This is an old rule with two names. Liebig's **law of the minimum** says a crop grows at the rate set by its scarcest resource, no matter how abundant everything else is. Blackman's **law of limiting factors** says the same about the moment-to-moment rate of photosynthesis: raise the input that is currently limiting and the rate climbs; raise anything else and nothing happens. Rodriguez-Morrison et al. measured a linear yield increase to 1,800 µmol under ambient CO₂[^rm2021-light]. Leaf measurements show that CO₂, light and temperature interact, but they do not establish an 800 µmol canopy ceiling[^chandra2008-photo]. A room at 1,500 µmol on ambient CO₂ may be inefficient or stress a sensitive cultivar, so judge it from crop response and yield per kWh.
 
-So the job is not ‘turn the lights up.’ The job is to work out **which system tops out first**, and then either raise that ceiling or set the light to it. The companion paper [Grow-room systems](grow-room-systems.html) makes the case that the room is one machine; this paper puts numbers on it and shows you how to find the machine's weakest link.
+Calculate **which system tops out first**, then raise that ceiling or set the light below it. The companion paper [Grow-room systems](grow-room-systems.html) makes the case that the room is one machine; this paper puts numbers on it and shows you how to find the machine's weakest link.
 
 > **KEY — The whole paper in one line**
 >
@@ -2815,7 +2815,7 @@ Now the payoff. Every support system can sustain some maximum light level, a PPF
 
 | System | What you have | Its PPFD ceiling |
 | --- | --- | --- |
-| **CO₂** | Your setpoint | Ambient 420 ppm → ~800+ µmol with diminishing returns (not a hard wall) · 800 ppm → ~1000 · 1200 ppm → ~1300 · 1500 ppm → ~1500 |
+| **CO₂** | Setpoint plus measured crop response | No fixed PPFD ceiling from setpoint alone; ambient CO₂ can support yield above 800 µmol, while enrichment may improve marginal efficiency at high PPFD |
 | **Cooling** | Installed sensible tons | PPFD ≤ 9,500 × tons ÷ m² |
 | **Dehumidification** | Rated pints/day | PPFD ≤ 128 × pints/day ÷ m² |
 | **Irrigation** | Max deliverable L/day | PPFD ≤ 200 × L/day ÷ m² |
@@ -2841,7 +2841,7 @@ The same method, four common rooms. Each has plenty of everything except one thi
 
 > **NOTE — Case B · The ambient-air ceiling cheap to fix**
 >
-> **The room:** big cooling and dehu, but _no_ CO₂ supplementation, ambient 420 ppm. **The math:** cooling and dehu might support 1200, but at ambient Under ambient CO₂, leaf curves flatten earlier than canopy yield, which can still rise well past 800 [^chandra2008-photo]. **The practical limit:** ambient CO₂ lowers efficiency as PPFD climbs. **The fix:** above ~800–1000 without enrichment, extra light often just bleaches tops and adds heat, dial down to 800, or add CO₂ and suddenly all that cooling and dehu headroom means something. The cheapest ceiling in the building to raise.
+> **The room:** big cooling and dehu, but _no_ CO₂ supplementation, ambient 420 ppm. **The evidence:** leaf efficiency falls as PPFD climbs[^chandra2008-photo], yet Rodriguez-Morrison et al. reported linear canopy yield through 1,800 µmol under ambient CO₂ in a single cultivar and room[^rm2021-light]. **The practical limit:** there is no universal 800 µmol ceiling. Track canopy temperature, bleaching, DLI and yield per kWh. Dial light down when the crop is damaged or the marginal yield no longer pays for power and climate control. Add CO₂ only after confirming that the room can carry the added heat, water and safety load.
 
 > **NOTE — Case C · The stagnant canopy hidden**
 >
@@ -2871,7 +2871,7 @@ Every row here is a limiting factor showing itself. The symptom tells you which 
 
 | Symptom | Which wall you hit | What to do |
 | --- | --- | --- |
-| Bleached, foxtailed tops under big light | Light above your CO₂ ceiling; tops light-saturated | Add CO₂, or dial light to the ambient ceiling (~800) |
+| Bleached, foxtailed tops under big light | The cultivar or canopy exceeded its tolerated PPFD, temperature or DLI | Measure canopy temperature and light distribution; lower PPFD while testing CO₂ as a separate variable |
 | RH won't come down; VPD collapses midday | Transpiration outran dehumidification | Add dehu capacity or trim light, usually the real ceiling |
 | Big light, flat yield | CO₂, water or feed didn't scale with the light | Find the lowest ceiling; raise it or dial light to it |
 | Midday wilt at peak light | Irrigation volume < transpiration | Bigger/more shots; fix volume before touching EC |
@@ -4104,11 +4104,11 @@ Every medium has one non-negotiable prep step. Get that right and the rest is ro
 | Coco | Rinse + cal-mag buffer | Feed every watering, low EC | 5.8-6.2 | The pre-buffer soak |
 | Rockwool | Pre-soak at pH ~5.5 | Frequent, never dry out | 5.5-6.0 | Conditioning before planting |
 | Living soil | Cycle a few weeks | Water-only | Leave alone | Not pH-ing the water |
-| DWC | Set up pump + chiller | Recirculating reservoir | 5.5-6.0 | Air pump on 24/7 |
+| DWC | Set up pump + temperature control | Recirculating reservoir | 5.5-6.0 | Air pump on 24/7 |
 
 *The single thing most beginners skip is the prep column. Each one is the difference between a smooth start and an early problem.[^cockson-2019-cannabis-nutrient-disorders]*
 
-> **Diagram.** Keep the reservoir in the green band. Above about 23C the dissolved oxygen drops and Pythium root rot takes hold.[^le-pythium-hydroponic-epidemiology-review][^frontiers-2026-do-pythium-strawberry-nft]
+> **Diagram.** Warmer water holds less dissolved oxygen, but Pythium risk has no universal 23C cliff. Set the operating band from the crop and system, then monitor temperature, dissolved oxygen and root health.[^le-pythium-hydroponic-epidemiology-review][^frontiers-2026-do-pythium-strawberry-nft]
 
 ## Common pitfalls and how to dodge them
 
@@ -4120,13 +4120,13 @@ The classic beginner mistakes are medium-specific, and most look like something 
 | Rockwool | Planting into dry cubes | Pale, locked-out plant (pH-8 lockout) | Pre-soak at pH ~5.5 before transplant |
 | Rockwool | Overwatering low-air matrix | Slow, soggy, suffocating roots | Fewer shots, let it breathe between |
 | Living soil | pH-ing water or adding salts | Stalled growth, dying microbes | Water-only, leave the pH alone |
-| DWC | Warm water or dead air pump | Root health can collapse quickly | Chill below 23C, keep the pump running |
+| DWC | Warm water or dead air pump | Root health can collapse quickly | Hold the validated temperature and aeration band; monitor DO |
 
 *The coco and rockwool rows are misread as feeding problems. They are really prep problems.[^cockson-2019-cannabis-nutrient-disorders][^le-pythium-hydroponic-epidemiology-review]*
 
-> **DANGER — The number one DWC killer**
+> **DANGER — DWC temperature and aeration**
 >
-> A warm reservoir above 23C or a failed air pump crashes dissolved oxygen and brings on root rot can progress quickly[^frontiers-2026-do-pythium-strawberry-nft]. If you run DWC, a chiller and a backup air pump are not optional.
+> Warm water reduces the dissolved-oxygen margin, and a failed air pump removes active aeration. Neither condition causes root rot by itself; disease risk also depends on the crop, pathogen, inoculum and exposure time[^le-pythium-hydroponic-epidemiology-review][^frontiers-2026-do-pythium-strawberry-nft]. Monitor temperature, dissolved oxygen and roots, keep a backup air pump ready, and add a chiller when the system cannot hold its validated range.
 
 ## Realistic expectations
 
@@ -4200,9 +4200,9 @@ Water-quality talk is full of jargon that hides simple ideas. Get the gist of th
 
 Municipal tap water is treated and consistent but carries chlorine or chloramine and often moderate-to-high mineral content, sometimes 150-300+ ppm straight from the faucet[^umass-water-quality-ph-alkalinity]. Well water is the wild card: it can be very hard, high in iron, manganese, or sulfur, and it varies seasonally, so it must be tested. Rainwater is naturally low in dissolved minerals but offers little buffering and can pick up roof and storage contaminants.
 
-> **Diagram.** Where your water starts on the PPM scale. RO and rain arrive near zero, soft tap is workable, and hard tap or well water can eat most of your nutrient headroom before you begin.[^umass-water-quality-ph-alkalinity]
+> **Diagram.** Where your water starts on the PPM scale. RO and rain arrive near zero, soft tap is workable, and hard tap or well water contributes part of the final feed EC.[^umass-water-quality-ph-alkalinity]
 
-Headroom is the point beginners miss. A working feed strength is commonly capped near your total EC budget (set targets in mS/cm), so hard tap water at 300+ ppm leaves almost no room before you hit that ceiling[^bevan-2021-npk-flowering-cannabis]. Rainwater typically arrives at only 0-20 ppm, which is closer to RO, but it brings little to no buffering and a risk of pathogens, roofing contaminants, or sodium near coasts.
+Starting EC contributes to the final feed EC, but a 300 ppm TDS display does not reveal the water's ion balance or alkalinity and does not prove that the water is unusable. Check source EC, alkalinity, sodium, chloride, calcium and magnesium, then account for usable nutrients in the feed. The Bevan trial defines crop-specific NPK response ranges, not a raw-water cutoff[^bevan-2021-npk-flowering-cannabis][^umass-water-quality-ph-alkalinity]. Rainwater typically arrives at only 0-20 ppm, which is closer to RO, but it brings little to no buffering and a risk of pathogens, roofing contaminants, or sodium near coasts.
 
 > **TIP — Match the source to the habit**
 >
@@ -4414,9 +4414,9 @@ Common pH downs include phosphoric, nitric, sulfuric, or organic acids; common p
 
 > **Diagram.** Alkalinity, not the pH reading, sets how much acid it takes to move the water. Hard, high-alkalinity tap water resists adjustment and drifts back up.[^umass-water-quality-ph-alkalinity]
 
-> **NOTE — Aim for 60-100 ppm CaCO3**
+> **NOTE — Match alkalinity to the container system**
 >
-> Ideal irrigation alkalinity is roughly 40-80 ppm CaCO3 (many soilless programmes sit near 60-100). Very hard water may need more acid or pre-treatment before it will hold a target.[^umass-water-quality-ph-alkalinity]
+> UMass gives different alkalinity ranges for different container volumes. About 40-80 ppm CaCO3 can suit small containers, while larger pots can tolerate more. Use the media, fertiliser, crop and observed pH drift to set the working range. Very hard water may need acid treatment or filtration.[^umass-water-quality-ph-alkalinity]
 
 ## Runoff pH and a by-stage routine
 
@@ -4772,13 +4772,13 @@ Bulking climate runs around 26 to 28 C day, with RH down to about 55 to 62% to l
 
 ## Reading the plant: when to harvest
 
-> **EVIDENCE — Grain of salt**
+> **EVIDENCE — Evidence limits**
 >
-> **Borderline:** Amber trichome share is a _maturity_ cue, not a clean pharmacological switch. Effect is multi-factor (terpenes, dose, genotype, set/setting). Human evidence that CBN alone drives ‘couch-lock’ is limited. Long plain-water flushes are traditional; controlled tests often show little taste/potency gain, ease EC as appetite falls rather than starving the plant.
+> Trichome colour tracks maturation. Livingston measured trichome morphology and metabolite content; the study did not test perceived effects or validate a pharmacological harvest target[^livingston-2020-trichome-maturation]. Long plain-water flushes are traditional; controlled tests often show little taste or potency gain, so ease EC as appetite falls rather than starving the plant.
 
 Pistils are a rough early signal but they lie. Trichomes are the true clock, and you read them with a cheap jeweler's loupe or pocket microscope.[^livingston-2020-trichome-maturation]
 
-Harvest when most trichomes have turned from clear to milky or cloudy, with a small fraction going amber. A common target is 80 to 90% milky with 5 to 15% amber. More clear or milky gives a more energetic, heady effect. More amber means THC is degrading toward CBN for a heavier feel for some people, multi-factor, not a CBN switch.[^livingston-2020-trichome-maturation]
+Harvest when most trichomes have turned from clear to milky or cloudy, with a small fraction going amber. The 80 to 90% milky and 5 to 15% amber split is a grower convention, not a validated effect target. Clear, milky and amber ratios alone do not reliably predict an energetic or heavy experience. If the intended chemical profile matters, compare harvest samples by cannabinoid and terpene analysis.[^livingston-2020-trichome-maturation]
 
 Wait until pistils are mostly darkened and curled in (roughly 70% or more), then switch to checking trichomes for the real call. Use 60x or higher magnification on actual bud, not sugar leaves, and check several spots, since maturity varies across the plant. Do not harvest on the calendar alone: a week 9 strain can need week 10 depending on conditions and phenotype.
 
@@ -7153,7 +7153,7 @@ _Amblyseius swirskii_ is a generalist that eats thrips larvae, whitefly, and bro
 
 When thresholds force a spray, the rules are about residue safety and effective coverage, not improvisation. Use only products approved for cannabis in your jurisdiction, always follow the label dilution and withholding periods, and never freelance with off-list nutrients or supplements that could fail residue testing[^scott-punja-2021-powdery-mildew-management].
 
-A preventative program can be as simple as a weekly foliar of an approved wash plus sulphur (1 only at the current registered product label rate and REI/PHI if lawful (never kitchen tablespoon rates; veg and mothers only when residues allow), stepping up to 3 times a week curatively at low pest levels[^scott-punja-2021-powdery-mildew-management]. Rotate chemistries and tank-mix only combinations the labels allow, adding products in the label-specified order. Avoid spraying under high light, high VPD, or drought stress so the product is not forced onto into the leaves and burns them.
+Set every spray rate, interval, crop stage, restricted-entry interval and pre-harvest interval from the current registered label for that product, pest and jurisdiction[^moh-nz-pesticide-use-2024]. A research trial does not authorise a weekly or three-times-weekly schedule. Use sulphur only when the product is registered for cannabis and the label permits the crop stage; never convert a rate into kitchen tablespoons[^scott-punja-2021-powdery-mildew-management]. Rotate chemistries and tank-mix only combinations the labels allow, adding products in the label-specified order. Avoid high light, high VPD and drought stress during application because stressed leaves are more prone to injury.
 
 > **Diagram.** Coverage is everything. Use a fan tip and a dedicated sprayer per product to avoid cross-contamination.
 
@@ -7220,6 +7220,7 @@ Build the quiet routine first and the dramatic rescues mostly disappear. Pair th
 [^mumtaz-2023-californicus-functional-response]: Mumtaz, M., Rahman, V. J., Saba, T., et al. (2023). Functional response of Neoseiulus californicus (Acari: Phytoseiidae) to Tetranychus urticae (Acari: Tetranychidae) at different temperatures. PeerJ, 11, e16461. https://doi.org/10.7717/peerj.16461 (peer-reviewed)
 [^koppert-persimilis-tech]: Koppert Biological Systems. Phytoseiulus persimilis - Predatory Mite for Spider Mite Control (technical/product sheet). https://www.koppert.com/crop-protection/biological-pest-control/predatory-mites/phytoseiulus-persimilis/ (industry/manufacturer source)
 [^epa-wps-notice-to-workers]: U.S. Environmental Protection Agency. Notice to Workers About Pesticide Applications and Pesticide-Treated Areas (Worker Protection Standard). https://www.epa.gov/pesticide-worker-safety/notice-workers-about-pesticide-applications-and-pesticide-treated-areas (industry/manufacturer source)
+[^moh-nz-pesticide-use-2024]: New Zealand Ministry of Health. Pesticide use during cultivation of medicinal cannabis. Guidance under the Misuse of Drugs (Medicinal Cannabis) Regulations 2019; updated guidance effective from July 2024. https://www.health.govt.nz/regulation-legislation/medicinal-cannabis/information-for-industry/pesticide-use-during-cultivation (industry/manufacturer source)
 
 
 ---
@@ -7410,7 +7411,7 @@ _Facility · GMP · ~18 min read_
 
 GMP stands for **Good Manufacturing Practice**: a written, audited system that proves a product is exactly what its label says and that nothing harmful rode along. A GMP hash lab turns cannabis biomass into purified resin concentrates (bubble hash, rosin, live resin, distillate) under tight contamination control.
 
-The same physics that concentrate the cannabinoids you want also concentrate the contaminants you don't. Extraction can concentrate both the good and the bad (often several-fold when mass yield is low) roughly five- to ten-fold[^ehp-cannabis-contaminants-2019], so a pesticide or mould level that looked fine on the raw flower can fail badly once it is squeezed into a gram of resin. Every step in the building is designed to answer one question: _can we prove this material is safe and correctly labelled?_ If yes, it moves forward. If not, it holds.
+Extraction can concentrate, reduce or redistribute contaminants according to the analyte, process and mass yield[^luca2020-pesticide-partition-hemp-extract]. A passing flower result does not establish that the finished concentrate complies. Test incoming material and the finished batch, then use paired results to calculate process-specific transfer. Material moves forward only when the release data prove that it is safe and correctly labelled.
 
 Two rule-sets do most of the governing. **EU-GMP Annex 1** sets the cleanroom classifications and the contamination-control strategy, and the U.S. **cGMP rules in 21 CFR 210/211** set the production controls, the records, and the authority of the quality unit to release product[^ecfr-21cfr211]. This paper is a reference architecture, not legal advice. The exact limits and grades vary by jurisdiction.
 
@@ -7530,9 +7531,9 @@ Testing happens at **three tiers**, incoming biomass, in-process, and release, a
 
 The finished-goods release panel is the legal gate to market. It covers **seven families**: potency, residual solvents, pesticides, microbials, heavy metals, mycotoxins, and water activity/moisture[^ehp-cannabis-contaminants-2019]. Heavy metals (lead, cadmium, arsenic, mercury) are quantified by ICP-MS, the standard method[^ehp-cannabis-contaminants-2019], and the regulated mycotoxins, aflatoxins B1/B2/G1/G2 and ochratoxin A, are carcinogens controlled at parts-per-billion levels.
 
-> **TIP — Always test the concentrate, never just the flower**
+> **TIP — Test the finished concentrate**
 >
-> A pesticide or metal level that passes comfortably on raw flower can fail once it is concentrated five- to ten-fold into resin[^ehp-cannabis-contaminants-2019]. Release decisions are made on the _finished concentrate_, full stop.
+> A raw-flower pass does not guarantee that the finished concentrate passes because contaminants partition differently during extraction[^luca2020-pesticide-partition-hemp-extract]. Make the release decision on the finished concentrate and use paired input-output results to set process-specific carryover factors.
 
 | Family | Analytes | Method | Why |
 | --- | --- | --- | --- |
@@ -7609,6 +7610,7 @@ Once the system runs, the contamination side of the picture is where most failur
 [^pmc-capa-ich-q10-2024]: Enhancing Pharmaceutical Product Quality With a Comprehensive Corrective and Preventive Actions (CAPA) Framework: From Reactive to Proactive. Cureus, 2024. PMC11490658. https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11490658/ (peer-reviewed)
 [^fda-process-validation-2011]: U.S. Food and Drug Administration, CDER/CBER/CVM. Guidance for Industry, Process Validation: General Principles and Practices. January 2011 (Revision 1). https://www.fda.gov/files/drugs/published/Process-Validation--General-Principles-and-Practices.pdf (industry/manufacturer source)
 [^ispe-cleanroom-design-iso14644-16]: Pharmaceutical Engineering (ISPE). Pharmaceutical Cleanroom Design & ISO 14644-16, Sep/Oct 2021, air-change-rate optimization for classified cleanrooms. https://ispe.org/pharmaceutical-engineering/september-october-2021/pharmaceutical-cleanroom-design-iso-14644-16 (industry/manufacturer source)
+[^luca2020-pesticide-partition-hemp-extract]: Luca SV, Roehrer S, Kleigrewe K, Minceva M (2020). Approach for simultaneous cannabidiol isolation and pesticide removal from hemp extracts with liquid-liquid chromatography. Industrial Crops and Products 155:112726. doi:10.1016/j.indcrop.2020.112726. https://doi.org/10.1016/j.indcrop.2020.112726 (peer-reviewed)
 
 
 ---

@@ -113,9 +113,9 @@ Common pH downs include phosphoric, nitric, sulfuric, or organic acids; common p
 
 > **Diagram.** Alkalinity, not the pH reading, sets how much acid it takes to move the water. Hard, high-alkalinity tap water resists adjustment and drifts back up.[^umass-water-quality-ph-alkalinity]
 
-> **NOTE — Aim for 60-100 ppm CaCO3**
+> **NOTE — Match alkalinity to the container system**
 >
-> Ideal irrigation alkalinity is roughly 40-80 ppm CaCO3 (many soilless programmes sit near 60-100). Very hard water may need more acid or pre-treatment before it will hold a target.[^umass-water-quality-ph-alkalinity]
+> UMass gives different alkalinity ranges for different container volumes. About 40-80 ppm CaCO3 can suit small containers, while larger pots can tolerate more. Use the media, fertiliser, crop and observed pH drift to set the working range. Very hard water may need acid treatment or filtration.[^umass-water-quality-ph-alkalinity]
 
 ## Runoff pH and a by-stage routine
 

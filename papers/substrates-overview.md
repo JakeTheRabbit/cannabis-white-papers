@@ -131,11 +131,11 @@ Every medium has one non-negotiable prep step. Get that right and the rest is ro
 | Coco | Rinse + cal-mag buffer | Feed every watering, low EC | 5.8-6.2 | The pre-buffer soak |
 | Rockwool | Pre-soak at pH ~5.5 | Frequent, never dry out | 5.5-6.0 | Conditioning before planting |
 | Living soil | Cycle a few weeks | Water-only | Leave alone | Not pH-ing the water |
-| DWC | Set up pump + chiller | Recirculating reservoir | 5.5-6.0 | Air pump on 24/7 |
+| DWC | Set up pump + temperature control | Recirculating reservoir | 5.5-6.0 | Air pump on 24/7 |
 
 *The single thing most beginners skip is the prep column. Each one is the difference between a smooth start and an early problem.[^cockson-2019-cannabis-nutrient-disorders]*
 
-> **Diagram.** Keep the reservoir in the green band. Above about 23C the dissolved oxygen drops and Pythium root rot takes hold.[^le-pythium-hydroponic-epidemiology-review][^frontiers-2026-do-pythium-strawberry-nft]
+> **Diagram.** Warmer water holds less dissolved oxygen, but Pythium risk has no universal 23C cliff. Set the operating band from the crop and system, then monitor temperature, dissolved oxygen and root health.[^le-pythium-hydroponic-epidemiology-review][^frontiers-2026-do-pythium-strawberry-nft]
 
 ## Common pitfalls and how to dodge them
 
@@ -147,13 +147,13 @@ The classic beginner mistakes are medium-specific, and most look like something 
 | Rockwool | Planting into dry cubes | Pale, locked-out plant (pH-8 lockout) | Pre-soak at pH ~5.5 before transplant |
 | Rockwool | Overwatering low-air matrix | Slow, soggy, suffocating roots | Fewer shots, let it breathe between |
 | Living soil | pH-ing water or adding salts | Stalled growth, dying microbes | Water-only, leave the pH alone |
-| DWC | Warm water or dead air pump | Root health can collapse quickly | Chill below 23C, keep the pump running |
+| DWC | Warm water or dead air pump | Root health can collapse quickly | Hold the validated temperature and aeration band; monitor DO |
 
 *The coco and rockwool rows are misread as feeding problems. They are really prep problems.[^cockson-2019-cannabis-nutrient-disorders][^le-pythium-hydroponic-epidemiology-review]*
 
-> **DANGER — The number one DWC killer**
+> **DANGER — DWC temperature and aeration**
 >
-> A warm reservoir above 23C or a failed air pump crashes dissolved oxygen and brings on root rot can progress quickly[^frontiers-2026-do-pythium-strawberry-nft]. If you run DWC, a chiller and a backup air pump are not optional.
+> Warm water reduces the dissolved-oxygen margin, and a failed air pump removes active aeration. Neither condition causes root rot by itself; disease risk also depends on the crop, pathogen, inoculum and exposure time[^le-pythium-hydroponic-epidemiology-review][^frontiers-2026-do-pythium-strawberry-nft]. Monitor temperature, dissolved oxygen and roots, keep a backup air pump ready, and add a chiller when the system cannot hold its validated range.
 
 ## Realistic expectations
 

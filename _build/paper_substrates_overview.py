@@ -185,15 +185,16 @@ SECTIONS.append({"id": "by-stage-setup", "kicker": "Do it", "title": "Setting up
       ["Coco", "Rinse + cal-mag buffer", "Feed every watering, low EC", "5.8-6.2", "The pre-buffer soak"],
       ["Rockwool", "Pre-soak at pH ~5.5", "Frequent, never dry out", "5.5-6.0", "Conditioning before planting"],
       ["Living soil", "Cycle a few weeks", "Water-only", "Leave alone", "Not pH-ing the water"],
-      ["DWC", "Set up pump + chiller", "Recirculating reservoir", "5.5-6.0", "Air pump on 24/7"],
+      ["DWC", "Set up pump + temperature control", "Recirculating reservoir", "5.5-6.0", "Air pump on 24/7"],
     ], cls="compact", caption="The single thing most beginners skip is the prep column. Each one is "
       "the difference between a smooth start and an early problem." + _c("cockson-2019-cannabis-nutrient-disorders")),
     figure(L.zones("DWC reservoir: the kill-zone made visible", 14, 28,
             [(14, 18, L.AMBL, "cool"), (18, 20, L.GL, "target 18-20C"),
-             (20, 23, L.AMBL, "caution"), (23, 28, L.REDL, "root-rot risk >23C")], unit="C",
-            note="Pythium root rot climbs sharply above ~23C reservoir temperature. Keep dissolved oxygen 7-9 mg/L."), 7,
-      "Keep the reservoir in the green band. Above about 23C the dissolved oxygen drops and Pythium "
-      "root rot takes hold." + _c("le-pythium-hydroponic-epidemiology-review") + _c("frontiers-2026-do-pythium-strawberry-nft")),
+             (20, 23, L.AMBL, "less oxygen margin"), (23, 28, L.REDL, "warm-water risk")], unit="C",
+            note="Water temperature, dissolved oxygen, crop and pathogen species interact; 23C is not a universal disease threshold."), 7,
+      "Warmer water holds less dissolved oxygen, but Pythium risk has no universal 23C cliff. Set the "
+      "operating band from the crop and system, then monitor temperature, dissolved oxygen and root health." +
+      _c("le-pythium-hydroponic-epidemiology-review") + _c("frontiers-2026-do-pythium-strawberry-nft")),
   ]})
 
 SECTIONS.append({"id": "pitfalls", "kicker": "Avoid", "title": "Common pitfalls and how to dodge them",
@@ -204,13 +205,15 @@ SECTIONS.append({"id": "pitfalls", "kicker": "Avoid", "title": "Common pitfalls 
       ["Rockwool", "Planting into dry cubes", "Pale, locked-out plant (pH-8 lockout)", "Pre-soak at pH ~5.5 before transplant"],
       ["Rockwool", "Overwatering low-air matrix", "Slow, soggy, suffocating roots", "Fewer shots, let it breathe between"],
       ["Living soil", "pH-ing water or adding salts", "Stalled growth, dying microbes", "Water-only, leave the pH alone"],
-      ["DWC", "Warm water or dead air pump", "Root health can collapse quickly", "Chill below 23C, keep the pump running"],
+      ["DWC", "Warm water or dead air pump", "Root health can collapse quickly", "Hold the validated temperature and aeration band; monitor DO"],
     ], cls="compact", caption="The coco and rockwool rows are misread as feeding problems. They are "
       "really prep problems." + _c("cockson-2019-cannabis-nutrient-disorders") + _c("le-pythium-hydroponic-epidemiology-review")),
-    callout("danger", "The number one DWC killer",
-      p("A warm reservoir above 23C or a failed air pump crashes dissolved oxygen and brings on root "
-        "rot can progress quickly" + _c("frontiers-2026-do-pythium-strawberry-nft") + ". If you run DWC, a "
-        "chiller and a backup air pump are not optional.")),
+    callout("danger", "DWC temperature and aeration",
+      p("Warm water reduces the dissolved-oxygen margin, and a failed air pump removes active aeration. "
+        "Neither condition causes root rot by itself; disease risk also depends on the crop, pathogen, "
+        "inoculum and exposure time" + _c("le-pythium-hydroponic-epidemiology-review") +
+        _c("frontiers-2026-do-pythium-strawberry-nft") + ". Monitor temperature, dissolved oxygen and roots, "
+        "keep a backup air pump ready, and add a chiller when the system cannot hold its validated range.")),
   ]})
 
 SECTIONS.append({"id": "expectations", "kicker": "Reality check", "title": "Realistic expectations",

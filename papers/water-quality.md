@@ -57,9 +57,9 @@ Water-quality talk is full of jargon that hides simple ideas. Get the gist of th
 
 Municipal tap water is treated and consistent but carries chlorine or chloramine and often moderate-to-high mineral content, sometimes 150-300+ ppm straight from the faucet[^umass-water-quality-ph-alkalinity]. Well water is the wild card: it can be very hard, high in iron, manganese, or sulfur, and it varies seasonally, so it must be tested. Rainwater is naturally low in dissolved minerals but offers little buffering and can pick up roof and storage contaminants.
 
-> **Diagram.** Where your water starts on the PPM scale. RO and rain arrive near zero, soft tap is workable, and hard tap or well water can eat most of your nutrient headroom before you begin.[^umass-water-quality-ph-alkalinity]
+> **Diagram.** Where your water starts on the PPM scale. RO and rain arrive near zero, soft tap is workable, and hard tap or well water contributes part of the final feed EC.[^umass-water-quality-ph-alkalinity]
 
-Headroom is the point beginners miss. A working feed strength is commonly capped near your total EC budget (set targets in mS/cm), so hard tap water at 300+ ppm leaves almost no room before you hit that ceiling[^bevan-2021-npk-flowering-cannabis]. Rainwater typically arrives at only 0-20 ppm, which is closer to RO, but it brings little to no buffering and a risk of pathogens, roofing contaminants, or sodium near coasts.
+Starting EC contributes to the final feed EC, but a 300 ppm TDS display does not reveal the water's ion balance or alkalinity and does not prove that the water is unusable. Check source EC, alkalinity, sodium, chloride, calcium and magnesium, then account for usable nutrients in the feed. The Bevan trial defines crop-specific NPK response ranges, not a raw-water cutoff[^bevan-2021-npk-flowering-cannabis][^umass-water-quality-ph-alkalinity]. Rainwater typically arrives at only 0-20 ppm, which is closer to RO, but it brings little to no buffering and a risk of pathogens, roofing contaminants, or sodium near coasts.
 
 > **TIP — Match the source to the habit**
 >

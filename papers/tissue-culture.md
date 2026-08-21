@@ -105,9 +105,9 @@ In severe dud outbreaks, infected plants can lose **up to about half their canna
 It can sit **symptomless**
 for a long time and is ‘latent’ by name. By the time plants visibly dud, the whole room is usually infected.
 
-**It's tough**
+**It spreads easily**
 
-It survives on tools, hands, pots and benches, rides in sap for ~a week and in dried tissue for ~a month, and even passes through seed at genotype-dependent rates, from single digits to tens of percent, so test your seed lots.
+It survives on tools, hands, pots and benches, rides in sap for ~a week and in dried tissue for ~a month. The 2025 North American transmission study reported seed transmission as high as 100%; the rate varies by seed lot and study design, so test every lot.[^hlvd_mgmt2025]
 
 > **WARN — Why you can't just spray it away**
 >

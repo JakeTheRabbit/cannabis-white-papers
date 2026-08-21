@@ -132,7 +132,7 @@ SECTIONS.append({
       card("It's everywhere", "Industry and research surveys have reported very high facility infection rates in California (~90% in one large testing programme) and frequent positives in Canadian retail flower (~40% in one study), treat as warning signals, not permanent global prevalence. If you've cloned for years, assume you may have it." + R["hlvd_mgmt2025"], tag="Prevalence"),
       card("It's expensive", "In severe dud outbreaks, infected plants can lose <strong>up to about half their cannabinoids</strong>, plus terpenes, trichomes and yield. Industry losses run into tens of millions of dollars a year.", tag="Impact"),
       card("It's stealthy", "It can sit <strong>symptomless</strong> for a long time and is &lsquo;latent&rsquo; by name. By the time plants visibly dud, the whole room is usually infected.", tag="Latent"),
-      card("It's tough", "It survives on tools, hands, pots and benches, rides in sap for ~a week and in dried tissue for ~a month, and even passes through seed at genotype-dependent rates, from single digits to tens of percent, so test your seed lots.", tag="Persistent"),
+      card("It spreads easily", "It survives on tools, hands, pots and benches, rides in sap for ~a week and in dried tissue for ~a month. The 2025 North American transmission study reported seed transmission as high as 100%; the rate varies by seed lot and study design, so test every lot." + R["hlvd_mgmt2025"], tag="Seed risk"),
     ], cols=2),
     callout("warn", "Why you can't just spray it away",
       p("No spray cures a viroid-infected plant. It lives <em>inside</em> the plant's "

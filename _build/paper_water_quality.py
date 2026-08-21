@@ -92,10 +92,12 @@ SECTIONS.append({"id": "source-types", "kicker": "The core: where it comes from"
             unit="", note="Approximate ppm before any nutrients. Well water is highly variable (50-600+).",
             maxv=600), 3,
       "Where your water starts on the PPM scale. RO and rain arrive near zero, soft tap is workable, "
-      "and hard tap or well water can eat most of your nutrient headroom before you begin." + _c("umass-water-quality-ph-alkalinity")),
-    p("Headroom is the point beginners miss. A working feed strength is commonly capped near "
-      "your total EC budget (set targets in mS/cm), so hard tap water at 300+ ppm leaves almost no room before you hit that "
-      "ceiling" + _c("bevan-2021-npk-flowering-cannabis") + ". Rainwater typically arrives at only "
+      "and hard tap or well water contributes part of the final feed EC." + _c("umass-water-quality-ph-alkalinity")),
+    p("Starting EC contributes to the final feed EC, but a 300 ppm TDS display does not reveal the "
+      "water's ion balance or alkalinity and does not prove that the water is unusable. Check source EC, "
+      "alkalinity, sodium, chloride, calcium and magnesium, then account for usable nutrients in the feed. "
+      "The Bevan trial defines crop-specific NPK response ranges, not a raw-water cutoff" +
+      _c("bevan-2021-npk-flowering-cannabis") + _c("umass-water-quality-ph-alkalinity") + ". Rainwater typically arrives at only "
       "0-20 ppm, which is closer to RO, but it brings little to no buffering and a risk of pathogens, "
       "roofing contaminants, or sodium near coasts."),
     callout("tip", "Match the source to the habit",

@@ -27,13 +27,13 @@ _Advanced · Scaling to high light · ~16 min read_
 
 > **EVIDENCE — Grain of salt**
 >
-> **Borderline:** High-rung EC and runoff ladders are advanced steering territory. Ambient CO₂ lowers efficiency of high PPFD but is not a hard 800 µmol canopy wall. Size HVAC and water from your meters, not from a single ladder cell.
+> **Borderline:** High-rung EC and runoff ladders are advanced steering territory. Ambient CO₂ lowers marginal efficiency at high PPFD; no study supports a universal 800 µmol canopy ceiling. Size HVAC and water from your meters, not from a single ladder cell.
 
 Photosynthesis runs at the speed of whatever is in shortest supply. Light can be the thing that sets the pace, but only up to the point where something else runs out. Past that point, more light does nothing except make heat and stress the plant.
 
-This is an old rule with two names. Liebig's **law of the minimum** says a crop grows at the rate set by its scarcest resource, no matter how abundant everything else is. Blackman's **law of limiting factors** says the same about the moment-to-moment rate of photosynthesis: raise the input that is currently limiting and the rate climbs; raise anything else and nothing happens. Cannabis yield keeps rising with light to very high levels[^rm2021-light], but only because CO₂, warmth, water and feed rise with it[^chandra2008-photo]. A room at 1500 µmol on ambient CO₂ is really a room running at its 800 µmol ceiling, with 700 µmol of wasted, heat-making light on top.
+This is an old rule with two names. Liebig's **law of the minimum** says a crop grows at the rate set by its scarcest resource, no matter how abundant everything else is. Blackman's **law of limiting factors** says the same about the moment-to-moment rate of photosynthesis: raise the input that is currently limiting and the rate climbs; raise anything else and nothing happens. Rodriguez-Morrison et al. measured a linear yield increase to 1,800 µmol under ambient CO₂[^rm2021-light]. Leaf measurements show that CO₂, light and temperature interact, but they do not establish an 800 µmol canopy ceiling[^chandra2008-photo]. A room at 1,500 µmol on ambient CO₂ may be inefficient or stress a sensitive cultivar, so judge it from crop response and yield per kWh.
 
-So the job is not ‘turn the lights up.’ The job is to work out **which system tops out first**, and then either raise that ceiling or set the light to it. The companion paper [Grow-room systems](grow-room-systems.html) makes the case that the room is one machine; this paper puts numbers on it and shows you how to find the machine's weakest link.
+Calculate **which system tops out first**, then raise that ceiling or set the light below it. The companion paper [Grow-room systems](grow-room-systems.html) makes the case that the room is one machine; this paper puts numbers on it and shows you how to find the machine's weakest link.
 
 > **KEY — The whole paper in one line**
 >
@@ -127,7 +127,7 @@ Now the payoff. Every support system can sustain some maximum light level, a PPF
 
 | System | What you have | Its PPFD ceiling |
 | --- | --- | --- |
-| **CO₂** | Your setpoint | Ambient 420 ppm → ~800+ µmol with diminishing returns (not a hard wall) · 800 ppm → ~1000 · 1200 ppm → ~1300 · 1500 ppm → ~1500 |
+| **CO₂** | Setpoint plus measured crop response | No fixed PPFD ceiling from setpoint alone; ambient CO₂ can support yield above 800 µmol, while enrichment may improve marginal efficiency at high PPFD |
 | **Cooling** | Installed sensible tons | PPFD ≤ 9,500 × tons ÷ m² |
 | **Dehumidification** | Rated pints/day | PPFD ≤ 128 × pints/day ÷ m² |
 | **Irrigation** | Max deliverable L/day | PPFD ≤ 200 × L/day ÷ m² |
@@ -153,7 +153,7 @@ The same method, four common rooms. Each has plenty of everything except one thi
 
 > **NOTE — Case B · The ambient-air ceiling cheap to fix**
 >
-> **The room:** big cooling and dehu, but _no_ CO₂ supplementation, ambient 420 ppm. **The math:** cooling and dehu might support 1200, but at ambient Under ambient CO₂, leaf curves flatten earlier than canopy yield, which can still rise well past 800 [^chandra2008-photo]. **The practical limit:** ambient CO₂ lowers efficiency as PPFD climbs. **The fix:** above ~800–1000 without enrichment, extra light often just bleaches tops and adds heat, dial down to 800, or add CO₂ and suddenly all that cooling and dehu headroom means something. The cheapest ceiling in the building to raise.
+> **The room:** big cooling and dehu, but _no_ CO₂ supplementation, ambient 420 ppm. **The evidence:** leaf efficiency falls as PPFD climbs[^chandra2008-photo], yet Rodriguez-Morrison et al. reported linear canopy yield through 1,800 µmol under ambient CO₂ in a single cultivar and room[^rm2021-light]. **The practical limit:** there is no universal 800 µmol ceiling. Track canopy temperature, bleaching, DLI and yield per kWh. Dial light down when the crop is damaged or the marginal yield no longer pays for power and climate control. Add CO₂ only after confirming that the room can carry the added heat, water and safety load.
 
 > **NOTE — Case C · The stagnant canopy hidden**
 >
@@ -183,7 +183,7 @@ Every row here is a limiting factor showing itself. The symptom tells you which 
 
 | Symptom | Which wall you hit | What to do |
 | --- | --- | --- |
-| Bleached, foxtailed tops under big light | Light above your CO₂ ceiling; tops light-saturated | Add CO₂, or dial light to the ambient ceiling (~800) |
+| Bleached, foxtailed tops under big light | The cultivar or canopy exceeded its tolerated PPFD, temperature or DLI | Measure canopy temperature and light distribution; lower PPFD while testing CO₂ as a separate variable |
 | RH won't come down; VPD collapses midday | Transpiration outran dehumidification | Add dehu capacity or trim light, usually the real ceiling |
 | Big light, flat yield | CO₂, water or feed didn't scale with the light | Find the lowest ceiling; raise it or dial light to it |
 | Midday wilt at peak light | Irrigation volume < transpiration | Bigger/more shots; fix volume before touching EC |

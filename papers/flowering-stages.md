@@ -104,13 +104,13 @@ Bulking climate runs around 26 to 28 C day, with RH down to about 55 to 62% to l
 
 ## Reading the plant: when to harvest
 
-> **EVIDENCE — Grain of salt**
+> **EVIDENCE — Evidence limits**
 >
-> **Borderline:** Amber trichome share is a _maturity_ cue, not a clean pharmacological switch. Effect is multi-factor (terpenes, dose, genotype, set/setting). Human evidence that CBN alone drives ‘couch-lock’ is limited. Long plain-water flushes are traditional; controlled tests often show little taste/potency gain, ease EC as appetite falls rather than starving the plant.
+> Trichome colour tracks maturation. Livingston measured trichome morphology and metabolite content; the study did not test perceived effects or validate a pharmacological harvest target[^livingston-2020-trichome-maturation]. Long plain-water flushes are traditional; controlled tests often show little taste or potency gain, so ease EC as appetite falls rather than starving the plant.
 
 Pistils are a rough early signal but they lie. Trichomes are the true clock, and you read them with a cheap jeweler's loupe or pocket microscope.[^livingston-2020-trichome-maturation]
 
-Harvest when most trichomes have turned from clear to milky or cloudy, with a small fraction going amber. A common target is 80 to 90% milky with 5 to 15% amber. More clear or milky gives a more energetic, heady effect. More amber means THC is degrading toward CBN for a heavier feel for some people, multi-factor, not a CBN switch.[^livingston-2020-trichome-maturation]
+Harvest when most trichomes have turned from clear to milky or cloudy, with a small fraction going amber. The 80 to 90% milky and 5 to 15% amber split is a grower convention, not a validated effect target. Clear, milky and amber ratios alone do not reliably predict an energetic or heavy experience. If the intended chemical profile matters, compare harvest samples by cannabinoid and terpene analysis.[^livingston-2020-trichome-maturation]
 
 Wait until pistils are mostly darkened and curled in (roughly 70% or more), then switch to checking trichomes for the real call. Use 60x or higher magnification on actual bud, not sugar leaves, and check several spots, since maturity varies across the plant. Do not harvest on the calendar alone: a week 9 strain can need week 10 depending on conditions and phenotype.
 

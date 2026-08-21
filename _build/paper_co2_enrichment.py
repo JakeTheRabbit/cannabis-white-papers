@@ -362,23 +362,19 @@ SECTIONS.append({"id": "climate", "kicker": "10 · The knock-on effects", "title
       ["Temperature", "Shifts the plant's ideal temperature up a few degrees" + _c("lv2022-topt"),
        "Run warmer, ~28&ndash;30&nbsp;&deg;C instead of ~25&nbsp;&deg;C, <em>if</em> light supports it. Cannabis photosynthesis peaks near 30&nbsp;&deg;C" + _c("chandra2008-photo")],
       ["Stomata &amp; water", "Partly closes the leaf pores: ~42% less stomatal conductance, ~29% less transpiration per leaf" + _c("chandra2008-photo"),
-       "Per leaf it drinks less, but a bigger, hotter canopy usually drinks more overall. Re-check your VPD target, irrigation volume and feed EC"],
+        "Per-leaf loss falls; total crop water use may fall, hold or rise with leaf area, PPFD, temperature and VPD. Measure it"],
       ["Light", "Nothing, unless light is already high" + _c("rm2021-light"),
        "Only enrich rooms running strong light. Otherwise CO2 is wasted"],
       ["Feed", "Less transpiration can let salts concentrate at the root",
        "Watch runoff EC and adjust feed strength"],
     ], cls="compact", caption="Raise CO2, then ask what must move with it. The temperature and water changes are the ones growers most often miss."),
-    callout("note", "Water use: efficiency goes up, volume usually goes up too",
-      p("Elevated CO2 partly closes the stomata, so a leaf loses less water <em>per unit of leaf</em> for "
-        "the same photosynthesis, and its water-use efficiency often rises substantially (sometimes toward a large fraction of a doubling in short-term leaf measurements), about "
-        "twice the growth per litre transpired" + _c("chandra2008-photo") + ". But that is <em>efficiency</em>, "
-        "not less water, and in a real enriched room the total usually moves the <em>other</em> way. CO2 "
-        "grows a bigger, faster canopy with far more leaf area, and the room is run hotter and brighter to "
-        "exploit it" + _c("lv2022-topt") + ", which more than cancels the per-leaf stomatal closure. So in "
-        "practice <strong>total water use and humidity load commonly go up, not down</strong>, most growers "
-        "running CO2 end up feeding and dehumidifying <em>more</em>. Don't assume a wetter substrate, and "
-        "re-tune irrigation by watching VWC, dryback and runoff on the actual crop rather than copying an "
-        "old schedule.")),
+    callout("note", "Measure water use at crop scale",
+      p("At 750 ppm versus 350 ppm CO2, Chandra measured about 42% lower stomatal conductance, 29% "
+        "lower leaf transpiration and 111% higher instantaneous leaf water-use efficiency" +
+        _c("chandra2008-photo") + ". Those leaf measurements do not predict total room irrigation or "
+        "humidity load. Leaf area, PPFD, temperature, VPD and crop duration can change the direction. "
+        "After enrichment, measure irrigation input, drainage, substrate water content and dehumidifier "
+        "condensate. Do not assume that the crop will use more or less water.")),
   ]})
 
 # ---------------------------------------------------------------- 11

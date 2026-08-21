@@ -200,15 +200,15 @@ Raising CO2 does not act alone, it pulls on the rest of the room. This is the sa
 | Lever | What elevated CO2 does | What to do about it |
 | --- | --- | --- |
 | Temperature | Shifts the plant's ideal temperature up a few degrees[^lv2022-topt] | Run warmer, ~28–30 °C instead of ~25 °C, _if_ light supports it. Cannabis photosynthesis peaks near 30 °C[^chandra2008-photo] |
-| Stomata & water | Partly closes the leaf pores: ~42% less stomatal conductance, ~29% less transpiration per leaf[^chandra2008-photo] | Per leaf it drinks less, but a bigger, hotter canopy usually drinks more overall. Re-check your VPD target, irrigation volume and feed EC |
+| Stomata & water | Partly closes the leaf pores: ~42% less stomatal conductance, ~29% less transpiration per leaf[^chandra2008-photo] | Per-leaf loss falls; total crop water use may fall, hold or rise with leaf area, PPFD, temperature and VPD. Measure it |
 | Light | Nothing, unless light is already high[^rm2021-light] | Only enrich rooms running strong light. Otherwise CO2 is wasted |
 | Feed | Less transpiration can let salts concentrate at the root | Watch runoff EC and adjust feed strength |
 
 *Raise CO2, then ask what must move with it. The temperature and water changes are the ones growers most often miss.*
 
-> **NOTE — Water use: efficiency goes up, volume usually goes up too**
+> **NOTE — Measure water use at crop scale**
 >
-> Elevated CO2 partly closes the stomata, so a leaf loses less water _per unit of leaf_ for the same photosynthesis, and its water-use efficiency often rises substantially (sometimes toward a large fraction of a doubling in short-term leaf measurements), about twice the growth per litre transpired[^chandra2008-photo]. But that is _efficiency_, not less water, and in a real enriched room the total usually moves the _other_ way. CO2 grows a bigger, faster canopy with far more leaf area, and the room is run hotter and brighter to exploit it[^lv2022-topt], which more than cancels the per-leaf stomatal closure. So in practice **total water use and humidity load commonly go up, not down**, most growers running CO2 end up feeding and dehumidifying _more_. Don't assume a wetter substrate, and re-tune irrigation by watching VWC, dryback and runoff on the actual crop rather than copying an old schedule.
+> At 750 ppm versus 350 ppm CO2, Chandra measured about 42% lower stomatal conductance, 29% lower leaf transpiration and 111% higher instantaneous leaf water-use efficiency[^chandra2008-photo]. Those leaf measurements do not predict total room irrigation or humidity load. Leaf area, PPFD, temperature, VPD and crop duration can change the direction. After enrichment, measure irrigation input, drainage, substrate water content and dehumidifier condensate. Do not assume that the crop will use more or less water.
 
 ## The drying room: CO2 with no light to burn it
 
