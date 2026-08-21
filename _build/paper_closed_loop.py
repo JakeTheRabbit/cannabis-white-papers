@@ -22,7 +22,7 @@ def _c(rid):
 
 SECTIONS = []
 
-SECTIONS.append({"id": "what-this-is", "kicker": "Start here", "title": "What this is (and why a grow room is a loop)",
+SECTIONS.append({"id": "what-this-is", "kicker": "Start here", "title": "Purpose and scope",
   "blocks": [
     callout("evidence", "Grain of salt",
       "<p><strong>Provisional:</strong> Lead-time examples (tip burn in N days, whole-room health in seconds) are "
@@ -53,7 +53,7 @@ SECTIONS.append({"id": "what-this-is", "kicker": "Start here", "title": "What th
         "stays quiet when nothing needs you. Silence is a feature, not a fault.")),
   ]})
 
-SECTIONS.append({"id": "key-terms", "kicker": "Plain-language dictionary", "title": "Key terms, defined once",
+SECTIONS.append({"id": "key-terms", "kicker": "Plain-language dictionary", "title": "Definitions",
   "blocks": [
     p("This field is loaded with jargon, so here is every term you need before the real content. Most "
       "are everyday ideas with intimidating names. Don't memorise them. Each one comes back in "
@@ -74,7 +74,7 @@ SECTIONS.append({"id": "key-terms", "kicker": "Plain-language dictionary", "titl
             "inferred from many signals together rather than read off one gauge."),
   ]})
 
-SECTIONS.append({"id": "the-levers", "kicker": "Core content: the action half", "title": "The levers: every control moves four things at once",
+SECTIONS.append({"id": "the-levers", "kicker": "Core content: the action half", "title": "Control levers and coupled effects",
   "blocks": [
     p("The room is one <strong>coupled</strong> system, not a set of independent knobs. Turn up the "
       "light and you have not just added light: you have added heat, made the plants drink and sweat "
@@ -114,7 +114,7 @@ SECTIONS.append({"id": "the-levers", "kicker": "Core content: the action half", 
         "capacity to match, then set the root-zone strategy to that.")),
   ]})
 
-SECTIONS.append({"id": "reading-plant-state", "kicker": "Core content: sensing and meaning", "title": "Reading the signal, then reading the plant",
+SECTIONS.append({"id": "reading-plant-state", "kicker": "Core content: sensing and meaning", "title": "Sensor and plant-state interpretation",
   "blocks": [
     p("You have to <em>see</em> the room's response without being fooled, then turn it into meaning. "
       "Every measurement is signal plus noise, and in practice <strong>many raw alerts are noise</strong> "
@@ -157,7 +157,7 @@ SECTIONS.append({"id": "reading-plant-state", "kicker": "Core content: sensing a
       "graphs sit last."),
   ]})
 
-SECTIONS.append({"id": "closing-the-loop", "kicker": "Core content: putting it together", "title": "Closing the loop: one problem, traced all the way round",
+SECTIONS.append({"id": "closing-the-loop", "kicker": "Core content: putting it together", "title": "Closed-loop diagnosis and corrective action",
   "blocks": [
     p("The three jobs become one machine here. Watch a single ordinary problem, slow "
       "<strong>salt creep</strong> in the root zone, travel the whole loop."),
@@ -195,7 +195,7 @@ SECTIONS.append({"id": "closing-the-loop", "kicker": "Core content: putting it t
     ], cls="compact", caption="Five failures, one fusion. A flatlined, drifting or noisy probe is itself a detectable special-cause signal" + _c("szerement-dielectric-2019") + "."),
   ]})
 
-SECTIONS.append({"id": "how-to", "kicker": "Do this first", "title": "How to build the loop, step by step",
+SECTIONS.append({"id": "how-to", "kicker": "Do this first", "title": "Closed-loop control implementation",
   "blocks": [
     p("You build the loop one rung at a time, and you do not earn the next rung until the previous one "
       "is genuinely running. Almost none of this needs new capital. Most of it is discipline."),
@@ -211,7 +211,7 @@ SECTIONS.append({"id": "how-to", "kicker": "Do this first", "title": "How to bui
         "use it.")),
   ]})
 
-SECTIONS.append({"id": "pitfalls", "kicker": "What goes wrong", "title": "Pitfalls: oscillation and chasing noise",
+SECTIONS.append({"id": "pitfalls", "kicker": "What goes wrong", "title": "Troubleshooting",
   "blocks": [
     p("Two failure modes ruin a loop: <strong>chasing noise</strong> and <strong>oscillation</strong>. "
       "Feed a controller noise, meaning single spikes, jitter and ghost trends, and it acts on events "
@@ -238,7 +238,7 @@ SECTIONS.append({"id": "pitfalls", "kicker": "What goes wrong", "title": "Pitfal
         "smooth you go blind to a real fast event. Keep raw data one click away."]),
   ]})
 
-SECTIONS.append({"id": "expectations", "kicker": "What to actually expect", "title": "Realistic expectations",
+SECTIONS.append({"id": "expectations", "kicker": "What to actually expect", "title": "Expected results and limitations",
   "blocks": [
     callout("key", "The end state is quieter, not flashier",
       p("A working loop means you look at the dashboard less, are surprised less, and harvest more "

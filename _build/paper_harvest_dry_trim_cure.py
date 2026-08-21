@@ -23,7 +23,7 @@ def _c(rid):
 
 SECTIONS = []
 
-SECTIONS.append({"id": "intro", "kicker": "Start here", "title": "Why the last two weeks decide everything",
+SECTIONS.append({"id": "intro", "kicker": "Start here", "title": "Purpose and scope",
   "blocks": [
     lead("Post-harvest is everything that happens after the plant is cut down: drying, trimming, "
          "curing and storage. Weeks of careful growing can be ruined in a few days here. Dry too "
@@ -46,7 +46,7 @@ SECTIONS.append({"id": "intro", "kicker": "Start here", "title": "Why the last t
         "<a href='airflow-design.html'>airflow-design</a> papers.")),
   ]})
 
-SECTIONS.append({"id": "key-terms", "kicker": "Vocabulary", "title": "The words you need before we start",
+SECTIONS.append({"id": "key-terms", "kicker": "Vocabulary", "title": "Definitions",
   "blocks": [
     p("Two ideas do most of the work here. Don't memorise them. Each one comes back "
       "in context."),
@@ -72,7 +72,7 @@ SECTIONS.append({"id": "key-terms", "kicker": "Vocabulary", "title": "The words 
       "the two is the most common beginner mistake." + _c("aroya-drying-water-activity-guide")),
   ]})
 
-SECTIONS.append({"id": "harvest-timing", "kicker": "Step 1 of the science", "title": "When to harvest: reading the plant, not the calendar",
+SECTIONS.append({"id": "harvest-timing", "kicker": "Step 1 of the science", "title": "Harvest timing",
   "blocks": [
     p("Harvest is cutting the plants down once they have finished flowering. Judge maturity by the "
       "flower itself, not by a date on the calendar."),
@@ -95,7 +95,7 @@ SECTIONS.append({"id": "harvest-timing", "kicker": "Step 1 of the science", "tit
         "off the flower. The date is only a rough guide.")),
   ]})
 
-SECTIONS.append({"id": "harvest-method", "kicker": "Step 2, hands on", "title": "Cutting down and weighing the wet plant",
+SECTIONS.append({"id": "harvest-method", "kicker": "Step 2, hands on", "title": "Harvest method and wet-plant weighing",
   "blocks": [
     p("Cut plants whole and hang them to dry, rather than stripping the buds first. Cutters free each "
       "plant from the lower two layers of trellis netting (the support grid the plant grew through), "
@@ -117,7 +117,7 @@ SECTIONS.append({"id": "harvest-method", "kicker": "Step 2, hands on", "title": 
       "Whole-plant hanging slows that loss and lets moisture move out of the stem evenly."),
   ]})
 
-SECTIONS.append({"id": "drying", "kicker": "The core science", "title": "The drying environment: slow, cool, dark, moving air",
+SECTIONS.append({"id": "drying", "kicker": "The core science", "title": "Drying environment",
   "blocks": [
     p("Hold the dry room at 60&deg;F and 60% RH, with fans running and the lights off, in a room "
       "that was deep-cleaned before any plant went in. At these setpoints whole plants are typically "
@@ -141,7 +141,7 @@ SECTIONS.append({"id": "drying", "kicker": "The core science", "title": "The dry
       "and terpenes start to evaporate." + _c("aroya-drying-water-activity-guide")),
   ]})
 
-SECTIONS.append({"id": "water-activity", "kicker": "The core science", "title": "Water activity: the number that controls mould and yield",
+SECTIONS.append({"id": "water-activity", "kicker": "The core science", "title": "Water activity",
   "blocks": [
     p("Water activity is the safe-zone gauge for cannabis. Mould and yeast can grow at 0.70 aw and "
       "above, pathogenic bacteria at 0.85, and risk rises sharply toward ~0.70 aw and above; below ~0.55 quality often suffers even as microbes slow. ASTM&rsquo;s 0.55&ndash;0.65 window is the practical target for dried flower." + _c("aqualab-microbial-water-activity") +
@@ -169,7 +169,7 @@ SECTIONS.append({"id": "water-activity", "kicker": "The core science", "title": 
           "Denser flowers tend to finish at a slightly lower aw than fluffy ones. Use the meter as a guide, but also trust your nose."], "tight")),
   ]})
 
-SECTIONS.append({"id": "trimming", "kicker": "Step 3, hands on", "title": "Trimming: wet vs dry, and protecting the trichomes",
+SECTIONS.append({"id": "trimming", "kicker": "Step 3, hands on", "title": "Trimming and trichome protection",
   "blocks": [
     p("Trimming removes leaf so the bud looks clean and presentable. There are two timings. "
       "<strong>Wet trim</strong> means trimming right after cutting, before drying. <strong>Dry "
@@ -194,7 +194,7 @@ SECTIONS.append({"id": "trimming", "kicker": "Step 3, hands on", "title": "Trimm
     ], cls="compact", caption="Wet vs dry trim. This guide dry-trims for better terpene retention and a gentler dry." + _c("brikenstein-2024-trimming")),
   ]})
 
-SECTIONS.append({"id": "curing", "kicker": "The core science", "title": "Curing and storage: burp, stabilise, then seal",
+SECTIONS.append({"id": "curing", "kicker": "The core science", "title": "Curing and storage",
   "blocks": [
     p("Curing lets the whole batch settle to one even water activity, and preserves terpenes that "
       "would otherwise break down in storage. Hold flower in containers at 60-65&deg;F and "
@@ -217,7 +217,7 @@ SECTIONS.append({"id": "curing", "kicker": "The core science", "title": "Curing 
         "compressed, and not stacked, to protect bud structure.")),
   ]})
 
-SECTIONS.append({"id": "pitfalls", "kicker": "What goes wrong", "title": "Common mistakes and how to avoid them",
+SECTIONS.append({"id": "pitfalls", "kicker": "What goes wrong", "title": "Troubleshooting",
   "blocks": [
     p("Most post-harvest failures are variations on going too fast, too dry, or too crowded. "
       "Over-drying is the quiet killer. A cheap moisture meter with &plusmn;1% error can read "
@@ -240,7 +240,7 @@ SECTIONS.append({"id": "pitfalls", "kicker": "What goes wrong", "title": "Common
     ], cls="compact", caption="The big six post-harvest mistakes and their fixes."),
   ]})
 
-SECTIONS.append({"id": "expectations", "kicker": "Reality check", "title": "What realistic results look like",
+SECTIONS.append({"id": "expectations", "kicker": "Reality check", "title": "Expected results and limitations",
   "blocks": [
     p("Expect roughly 10-14 days of hang-drying plus several more days of curing before flower is "
       "truly finished. The whole post-harvest stage is two-to-three weeks, not overnight, and there "

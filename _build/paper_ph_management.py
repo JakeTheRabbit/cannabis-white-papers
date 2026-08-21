@@ -28,7 +28,7 @@ def _c(rid):
 SECTIONS = []
 
 SECTIONS.append({"id": "what-this-is", "kicker": "Start here",
-  "title": "What this is (and why one number matters so much)",
+  "title": "Purpose and scope",
   "blocks": [
     lead("pH is a 0-14 scale for how acidic or alkaline a liquid is. 7 is neutral, lower is acidic, "
          "higher is alkaline. For a grower it is the single setting that decides whether the "
@@ -53,7 +53,7 @@ SECTIONS.append({"id": "what-this-is", "kicker": "Start here",
         "pH. The number gates everything downstream.")),
   ]})
 
-SECTIONS.append({"id": "key-terms", "kicker": "Vocabulary", "title": "Key terms in plain English",
+SECTIONS.append({"id": "key-terms", "kicker": "Vocabulary", "title": "Definitions",
   "blocks": [
     p("These words come back through the rest of the guide. Read them once and the troubleshooting "
       "section will read cleanly."),
@@ -74,7 +74,7 @@ SECTIONS.append({"id": "key-terms", "kicker": "Vocabulary", "title": "Key terms 
   ]})
 
 SECTIONS.append({"id": "why-ph-controls-availability", "kicker": "The core idea",
-  "title": "Why pH controls availability (and causes lockout)",
+  "title": "pH, nutrient availability and lockout",
   "blocks": [
     p("Each nutrient stays dissolved, and therefore absorbable, only across a certain pH band. "
       "Outside that band it binds into forms the roots cannot take up. That is lockout: the plant is "
@@ -120,7 +120,7 @@ SECTIONS.append({"id": "targets-by-substrate", "kicker": "Your numbers",
   ]})
 
 SECTIONS.append({"id": "measuring-calibrating", "kicker": "The tool",
-  "title": "Measuring it: pen, calibration and care",
+  "title": "pH measurement, calibration and meter care",
   "blocks": [
     p("A pH pen is only as honest as its last calibration. An uncalibrated or dried-out probe is "
       "worse than no reading, because it lies with confidence."),
@@ -144,7 +144,7 @@ SECTIONS.append({"id": "measuring-calibrating", "kicker": "The tool",
   ]})
 
 SECTIONS.append({"id": "adjusting-and-water", "kicker": "Making the number",
-  "title": "Adjusting with pH up/down, and the water you start with",
+  "title": "pH adjustment and source-water effects",
   "blocks": [
     p("Mix your nutrients first, then adjust pH last. Adding nutrients shifts pH on its own, so if "
       "you set pH before mixing you will have to redo it."),
@@ -174,7 +174,7 @@ SECTIONS.append({"id": "adjusting-and-water", "kicker": "Making the number",
   ]})
 
 SECTIONS.append({"id": "runoff-and-routine", "kicker": "Daily practice",
-  "title": "Runoff pH and a by-stage routine",
+  "title": "Runoff pH and stage-specific routine",
   "blocks": [
     p("Runoff is the solution that drains from the pot, and beginners over-rely on it. In inert "
       "media like coco it is a momentary, indirect sample distorted by salt buildup and what the "
@@ -197,7 +197,7 @@ SECTIONS.append({"id": "runoff-and-routine", "kicker": "Daily practice",
   ]})
 
 SECTIONS.append({"id": "pitfalls", "kicker": "Don't do this",
-  "title": "Common mistakes and how to avoid them",
+  "title": "Troubleshooting",
   "blocks": [
     p("Most pH problems are self-inflicted. The classic error is feeding nutrient solution outside "
       "the safe range to fix a runoff reading, which causes the very lockout the grower fears." + _c("malik-tlustos-2025-soilless-media-cannabis") +
@@ -212,7 +212,7 @@ SECTIONS.append({"id": "pitfalls", "kicker": "Don't do this",
     ], cls="compact"),
   ]})
 
-SECTIONS.append({"id": "expectations", "kicker": "Reality check", "title": "Realistic expectations",
+SECTIONS.append({"id": "expectations", "kicker": "Reality check", "title": "Expected results and limitations",
   "blocks": [
     p("pH will drift between feeds, and that is normal, not a crisis. The goal is to keep the root "
       "zone inside a band, not to pin a single decimal. Soil buffers and corrects slowly. Coco and "

@@ -23,7 +23,7 @@ def _c(rid):
 
 SECTIONS = []
 
-SECTIONS.append({"id": "start", "kicker": "01, Read this first", "title": "Why mould is the harvest-killer",
+SECTIONS.append({"id": "start", "kicker": "01, Read this first", "title": "Purpose and scope",
   "blocks": [
     lead("You can do everything right for ten weeks and lose it all to grey fuzz in the last two. "
          "Mould thrives in exactly the warm, humid, densely-flowered conditions that also grow big "
@@ -36,7 +36,7 @@ SECTIONS.append({"id": "start", "kicker": "01, Read this first", "title": "Why m
       "term is defined."),
   ]})
 
-SECTIONS.append({"id": "terms", "kicker": "02, The vocabulary", "title": "The words you need",
+SECTIONS.append({"id": "terms", "kicker": "02, The vocabulary", "title": "Definitions",
   "blocks": [
     defterm("Bud rot (Botrytis)", "<em>Botrytis cinerea</em>, a grey mould that rots flowers from "
             "the inside out. The number-one late-flower killer."),
@@ -52,7 +52,7 @@ SECTIONS.append({"id": "terms", "kicker": "02, The vocabulary", "title": "The wo
             "the flower even after the mould itself is gone" + _c("gwinn2023-mycotoxin") + "."),
   ]})
 
-SECTIONS.append({"id": "the-two", "kicker": "03, Know the enemy", "title": "The two moulds you'll meet",
+SECTIONS.append({"id": "the-two", "kicker": "03, Know the enemy", "title": "Common cannabis mould diseases",
   "blocks": [
     grid([
       card("Bud rot, Botrytis", p("Starts deep in a dense cola, often at a stem or where a leaf "
@@ -69,7 +69,7 @@ SECTIONS.append({"id": "the-two", "kicker": "03, Know the enemy", "title": "The 
         "meet first and most.")),
   ]})
 
-SECTIONS.append({"id": "conditions", "kicker": "04, The trigger", "title": "The conditions that invite mould",
+SECTIONS.append({"id": "conditions", "kicker": "04, The trigger", "title": "Conditions that promote mould",
   "blocks": [
     p("Mould isn't bad luck. It is a recipe. Bud rot takes off when humidity climbs above "
       "about <strong>70%</strong> at moderate temperatures (~17–24&nbsp;°C), especially when there's "
@@ -94,7 +94,7 @@ SECTIONS.append({"id": "conditions", "kicker": "04, The trigger", "title": "The 
         "yield directly raises rot risk. Spacing and defoliation are mould control, not just tidiness.")),
   ]})
 
-SECTIONS.append({"id": "prevention", "kicker": "05, The routine", "title": "Prevention: the daily routine",
+SECTIONS.append({"id": "prevention", "kicker": "05, The routine", "title": "Daily mould prevention",
   "blocks": [
     p("Prevention is a handful of boring habits done consistently:"),
     steps([
@@ -107,7 +107,7 @@ SECTIONS.append({"id": "prevention", "kicker": "05, The routine", "title": "Prev
     ]),
   ]})
 
-SECTIONS.append({"id": "scouting", "kicker": "06, The habit", "title": "Scouting: find it before it spreads",
+SECTIONS.append({"id": "scouting", "kicker": "06, The habit", "title": "Mould scouting and early detection",
   "blocks": [
     p("Spend five minutes a day in late flower with a bright light, looking <em>into</em> the plants, "
       "not just at them:"),
@@ -121,7 +121,7 @@ SECTIONS.append({"id": "scouting", "kicker": "06, The habit", "title": "Scouting
     ]),
   ]})
 
-SECTIONS.append({"id": "when-found", "kicker": "07, Damage control", "title": "What to do when you find it",
+SECTIONS.append({"id": "when-found", "kicker": "07, Damage control", "title": "Response to detected mould",
   "blocks": [
     steps([
       ("Stop and isolate", "Don't fan it around. Hold a bag over the spot, cut well below the rot, and remove it from the room before opening the bag."),
@@ -136,7 +136,7 @@ SECTIONS.append({"id": "when-found", "kicker": "07, Damage control", "title": "W
         "the only real cure.")),
   ]})
 
-SECTIONS.append({"id": "drying", "kicker": "08, After harvest", "title": "Drying & storage: don't lose it at the finish",
+SECTIONS.append({"id": "drying", "kicker": "08, After harvest", "title": "Mould prevention during drying and storage",
   "blocks": [
     p("Mould can still strike clean flower during a sloppy dry or in storage. The defence is to "
       "drive down available water:"),
@@ -150,7 +150,7 @@ SECTIONS.append({"id": "drying", "kicker": "08, After harvest", "title": "Drying
     ]),
   ]})
 
-SECTIONS.append({"id": "health", "kicker": "09, The stakes", "title": "Why &lsquo;looks fine&rsquo; isn't proof",
+SECTIONS.append({"id": "health", "kicker": "09, The stakes", "title": "Limitations of visual mould assessment",
   "blocks": [
     p("Flower can carry dangerous fungi while looking, smelling and even "
       "<em>testing</em> clean. Standard culture-based mould tests can miss some toxin-producing "
@@ -174,7 +174,7 @@ SECTIONS.append({"id": "trouble", "kicker": "10, Quick reference", "title": "Tro
     ], cls="compact"),
   ]})
 
-SECTIONS.append({"id": "expect", "kicker": "11, Straight talk", "title": "Realistic expectations",
+SECTIONS.append({"id": "expect", "kicker": "11, Straight talk", "title": "Expected results and limitations",
   "blocks": [
     callout("key", "What to remember",
       ol(["Mould is a <strong>recipe (humidity + still air + density + moisture)</strong>. Remove an ingredient and you remove the risk.",

@@ -21,7 +21,7 @@ def _c(rid):
 
 SECTIONS = []
 
-SECTIONS.append({"id": "what-this-is", "kicker": "Start here", "title": "What this is, and the problem it solves",
+SECTIONS.append({"id": "what-this-is", "kicker": "Start here", "title": "Purpose and scope",
   "blocks": [
     callout("evidence", "Grain of salt",
       "<p><strong>Provisional:</strong> Multi-signal caution is sound engineering. Claims of never flooding or "
@@ -52,7 +52,7 @@ SECTIONS.append({"id": "what-this-is", "kicker": "Start here", "title": "What th
         "real change from sensor jitter).")),
   ]})
 
-SECTIONS.append({"id": "key-terms", "kicker": "Vocabulary", "title": "Key terms, defined once",
+SECTIONS.append({"id": "key-terms", "kicker": "Vocabulary", "title": "Definitions",
   "blocks": [
     p("Five words carry the whole idea, so we define them up front. Don&rsquo;t memorise "
       "them. Each one comes back in context."),
@@ -75,7 +75,7 @@ SECTIONS.append({"id": "key-terms", "kicker": "Vocabulary", "title": "Key terms,
     ], cls="compact", caption="The five words that carry the whole idea."),
   ]})
 
-SECTIONS.append({"id": "why-fuse", "kicker": "Core idea 1", "title": "Why fuse signals: the water bank account",
+SECTIONS.append({"id": "why-fuse", "kicker": "Core idea 1", "title": "Signal fusion for root-zone water estimation",
   "blocks": [
     p("VRWE keeps a <strong>checkbook for water</strong> instead of believing one probe. Money IN "
       "is the water the drippers squirted, known precisely because drippers are calibrated, so "
@@ -106,7 +106,7 @@ SECTIONS.append({"id": "why-fuse", "kicker": "Core idea 1", "title": "Why fuse s
         "right even when one input is wrong.")),
   ]})
 
-SECTIONS.append({"id": "trust-and-uncertainty", "kicker": "Core idea 2", "title": "How trust and uncertainty work",
+SECTIONS.append({"id": "trust-and-uncertainty", "kicker": "Core idea 2", "title": "Confidence and uncertainty",
   "blocks": [
     p("The brain carries a <strong>confidence meter</strong> alongside every estimate, answering "
       "&lsquo;how sure am I?&rsquo;. A number on its own (&lsquo;58% wet&rsquo;) "
@@ -132,7 +132,7 @@ SECTIONS.append({"id": "trust-and-uncertainty", "kicker": "Core idea 2", "title"
           "A faulty sensor biases toward &lsquo;wait&rsquo;, never toward flooding or starving."], "tight")),
   ]})
 
-SECTIONS.append({"id": "what-it-decides", "kicker": "Core idea 3", "title": "What it actually decides",
+SECTIONS.append({"id": "what-it-decides", "kicker": "Core idea 3", "title": "Irrigation decisions",
   "blocks": [
     p("The brain only ever picks one of three outcomes, driven by "
       "<strong>confidence</strong> and <strong>headroom</strong> (how much room is left before the "
@@ -153,7 +153,7 @@ SECTIONS.append({"id": "what-it-decides", "kicker": "Core idea 3", "title": "Wha
         "turns &lsquo;automatic watering&rsquo; from a scary idea into a safe one.")),
   ]})
 
-SECTIONS.append({"id": "shared-drain-howto", "kicker": "In practice", "title": "The shared-drain puzzle, and how it is untangled",
+SECTIONS.append({"id": "shared-drain-howto", "kicker": "In practice", "title": "Interpreting shared-drain measurements",
   "blocks": [
     p("A real install is messier than one pot. Often <strong>three grow rooms drain into one shared "
       "sump</strong> (a collection bucket with a pump), and the air conditioner and dehumidifier "
@@ -186,7 +186,7 @@ SECTIONS.append({"id": "shared-drain-howto", "kicker": "In practice", "title": "
         "&lsquo;full pot&rsquo; and the extra ran off. That is useful information, not a fault.")),
   ]})
 
-SECTIONS.append({"id": "pitfalls", "kicker": "Watch out", "title": "Pitfalls, and what fools a single sensor",
+SECTIONS.append({"id": "pitfalls", "kicker": "Watch out", "title": "Troubleshooting",
   "blocks": [
     p("The failure modes below are the situations VRWE is built to survive. They are "
       "the reason it exists. The defence is the same in every case: cross-check against the water "
@@ -219,7 +219,7 @@ SECTIONS.append({"id": "pitfalls", "kicker": "Watch out", "title": "Pitfalls, an
         "sensor never becomes a flooded or starved plant.")),
   ]})
 
-SECTIONS.append({"id": "expectations", "kicker": "Reality check", "title": "Realistic expectations",
+SECTIONS.append({"id": "expectations", "kicker": "Reality check", "title": "Expected results and limitations",
   "blocks": [
     callout("key", "What VRWE promises, and what it does not",
       ol(["<strong>The golden rule.</strong> It waters more only when confident; otherwise it does the safe thing. It is a safety-first estimator, not a mind reader.",

@@ -310,14 +310,14 @@ def render_readme(manifest):
              "`build.py` (`PAPER_MODULES`) and `data/nav.py`, add interlink phrases in `links.py`, then "
              "rebuild. Citations live in `data/refs.py`.")
     L.append("")
-    L.append("## Accuracy, self-review, and grain-of-salt notes")
+    L.append("## Evidence and limitations")
     L.append("")
     L.append("We go to great lengths to keep these guides honest. Part of that is **self-review**: "
              "we deliberately highlight claims that are subjective, only lightly backed by literature, "
              "or based on grower experience when controlled studies do not exist. Those are still useful "
              "as starting points — but they are not lab proof. **Do what works for your plants and meters.**")
     L.append("")
-    L.append("Each HTML paper includes a **How sure is this paper?** panel with three tiers:")
+    L.append("Each HTML paper includes an **Evidence and limitations** panel with three tiers:")
     L.append("")
     L.append("- **Solid** — well supported by plant science, standards, or broad multi-source consensus")
     L.append("- **Operational** — what many growers and rooms actually run; start here, then tune")

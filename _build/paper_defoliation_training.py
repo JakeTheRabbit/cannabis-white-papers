@@ -22,7 +22,7 @@ def _c(rid):
 
 SECTIONS = []
 
-SECTIONS.append({"id": "intro", "kicker": "Start here", "title": "Why we cut and bend the plant on purpose",
+SECTIONS.append({"id": "intro", "kicker": "Start here", "title": "Purpose and scope",
   "blocks": [
     lead("Plant training and defoliation are deliberate physical interventions, bending, "
          "tying, and selectively removing leaves and branches, that reshape a cannabis plant "
@@ -52,7 +52,7 @@ SECTIONS.append({"id": "intro", "kicker": "Start here", "title": "Why we cut and
         "and half about keeping air moving.")),
   ]})
 
-SECTIONS.append({"id": "key-terms", "kicker": "Vocabulary", "title": "Every term, defined once",
+SECTIONS.append({"id": "key-terms", "kicker": "Vocabulary", "title": "Definitions",
   "blocks": [
     p("Before the how-to, here is the full vocabulary used throughout. These terms come up "
       "constantly in grow rooms and many beginners conflate them. Don't memorise them. "
@@ -88,7 +88,7 @@ SECTIONS.append({"id": "key-terms", "kicker": "Vocabulary", "title": "Every term
   ]})
 
 SECTIONS.append({"id": "training-light", "kicker": "The core idea",
-  "title": "How training and defoliation actually raise yield",
+  "title": "How training and defoliation increase yield",
   "blocks": [
     p("The underlying mechanism is simple: <strong>light and air reaching more of the plant</strong>. "
       "A flat, spread canopy puts dozens of bud sites at the same height under strong light, instead "
@@ -182,7 +182,7 @@ SECTIONS.append({"id": "topping-lst", "kicker": "The core idea",
   ]})
 
 SECTIONS.append({"id": "trellis-spread", "kicker": "The core idea",
-  "title": "Trellising and spreading: locking the canopy flat",
+  "title": "Trellising and canopy management",
   "blocks": [
     p("A <strong>trellis</strong> is horizontal netting stretched over the table that the plants grow "
       "up through. It does two jobs: early on it holds a spread canopy in place, and later it stops "
@@ -219,7 +219,7 @@ SECTIONS.append({"id": "trellis-spread", "kicker": "The core idea",
   ]})
 
 SECTIONS.append({"id": "schedule", "kicker": "Do this",
-  "title": "The defoliation and training schedule, day by day",
+  "title": "Defoliation and training schedule",
   "blocks": [
     p("Here is a clear flower-room timeline you can follow as a default and adjust to your genetics. "
       "It runs from trellising on day 1 through to an optional final defan late in bloom."),
@@ -262,7 +262,7 @@ SECTIONS.append({"id": "schedule", "kicker": "Do this",
   ]})
 
 SECTIONS.append({"id": "pitfalls", "kicker": "Avoid these",
-  "title": "What NOT to overdo, and common beginner mistakes",
+  "title": "Troubleshooting",
   "blocks": [
     p("The single biggest mistake is <strong>removing too many fan leaves</strong>. Fan leaves are "
       "&lsquo;sources&rsquo; that make more energy than they use, so the goal is to leave as many on "
@@ -314,7 +314,7 @@ SECTIONS.append({"id": "pitfalls", "kicker": "Avoid these",
   ]})
 
 SECTIONS.append({"id": "expectations", "kicker": "Reality check",
-  "title": "Realistic expectations and how to learn your plants",
+  "title": "Expected results and limitations",
   "blocks": [
     p("Training and defoliation are real yield and quality levers, but they are not magic, and the "
       "numbers depend on your genetics, light and environment. Treat the whole approach as "

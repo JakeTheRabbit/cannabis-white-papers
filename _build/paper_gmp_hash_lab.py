@@ -22,7 +22,7 @@ def _c(rid):
 
 SECTIONS = []
 
-SECTIONS.append({"id": "what-this-is", "kicker": "Start here", "title": "What This Is: GMP and the Hash Lab From Zero",
+SECTIONS.append({"id": "what-this-is", "kicker": "Start here", "title": "Purpose and scope",
   "blocks": [
     lead("GMP stands for <strong>Good Manufacturing Practice</strong>: a written, audited "
          "system that proves a product is exactly what its label says and that nothing harmful rode "
@@ -60,7 +60,7 @@ SECTIONS.append({"id": "what-this-is", "kicker": "Start here", "title": "What Th
     ], cls="compact", caption="The governing standards and which part of the building each one rules."),
   ]})
 
-SECTIONS.append({"id": "key-terms", "kicker": "Vocabulary", "title": "Key Terms: The Words You Need First",
+SECTIONS.append({"id": "key-terms", "kicker": "Vocabulary", "title": "Definitions",
   "blocks": [
     p("A handful of terms do the heavy lifting before any diagram makes sense. You don't need to memorise them: "
       "each comes back in context."),
@@ -91,7 +91,7 @@ SECTIONS.append({"id": "key-terms", "kicker": "Vocabulary", "title": "Key Terms:
       "The three exclusive status states. Physical location and computer status must always agree."),
   ]})
 
-SECTIONS.append({"id": "zoning", "kicker": "Core concept", "title": "Zoning and Cleanroom Grades: Nested Shells",
+SECTIONS.append({"id": "zoning", "kicker": "Core concept", "title": "Zoning and cleanroom grades",
   "blocks": [
     p("The building is a set of nested cleanliness shells, like the layers of an onion. The "
       "<strong>dirty</strong> operations, intake, milling and waste, sit at the outer "
@@ -126,7 +126,7 @@ SECTIONS.append({"id": "zoning", "kicker": "Core concept", "title": "Zoning and 
     ], cls="compact", caption="Each room with its grade, ISO class, air-change rate, and key activity."),
   ]})
 
-SECTIONS.append({"id": "pressure-and-people", "kicker": "Core concept", "title": "Pressure Cascade, HVAC, and Gowning",
+SECTIONS.append({"id": "pressure-and-people", "kicker": "Core concept", "title": "Pressure cascade, HVAC, and gowning",
   "blocks": [
     p("Air is the main way contamination travels, so the building runs a <strong>positive-pressure "
       "cascade</strong>: clean rooms are held at higher pressure than dirtier ones, so air always "
@@ -169,7 +169,7 @@ SECTIONS.append({"id": "pressure-and-people", "kicker": "Core concept", "title":
     ], cls="compact", caption="HVAC control matrix: temperature, humidity, filtration, pressure and air changes per grade."),
   ]})
 
-SECTIONS.append({"id": "process-flows", "kicker": "Core concept", "title": "How the Product Is Actually Made",
+SECTIONS.append({"id": "process-flows", "kicker": "Core concept", "title": "Hash manufacturing process flow",
   "blocks": [
     p("Two routes leave the weigh-in. <strong>Solventless</strong> separates the trichome heads (the "
       "resin glands) mechanically. <strong>Solvent extraction</strong> dissolves the resin and then "
@@ -217,7 +217,7 @@ SECTIONS.append({"id": "process-flows", "kicker": "Core concept", "title": "How 
       "The linear water-treatment train with its three sampling points and out-of-spec quarantine logic."),
   ]})
 
-SECTIONS.append({"id": "qc-and-release", "kicker": "How-to", "title": "Step-by-Step: Testing, Sampling, and Batch Release",
+SECTIONS.append({"id": "qc-and-release", "kicker": "How-to", "title": "Testing, sampling, and batch release",
   "blocks": [
     p("Testing happens at <strong>three tiers</strong>, incoming biomass, in-process, and "
       "release, across four sampling stations along the value stream. Retained reference "
@@ -266,7 +266,7 @@ SECTIONS.append({"id": "qc-and-release", "kicker": "How-to", "title": "Step-by-S
       "to the return/OOS/hold lanes."),
   ]})
 
-SECTIONS.append({"id": "deviations-and-pitfalls", "kicker": "Pitfalls", "title": "When It Goes Wrong: Deviations, CAPA, and Common Traps",
+SECTIONS.append({"id": "deviations-and-pitfalls", "kicker": "Pitfalls", "title": "Deviations, CAPA, and troubleshooting",
   "blocks": [
     p("When reality departs from the approved process, the <strong>deviation system</strong> catches "
       "it. ICH Q10 establishes the pharmaceutical quality system, including CAPA and change "
@@ -297,7 +297,7 @@ SECTIONS.append({"id": "deviations-and-pitfalls", "kicker": "Pitfalls", "title":
       "licensed disposal with a witnessed manifest; solvent waste runs as a separate hazmat stream."),
   ]})
 
-SECTIONS.append({"id": "realistic-expectations", "kicker": "Reality check", "title": "Realistic Expectations: Cost, Cadence, and What 'Compliant' Really Means",
+SECTIONS.append({"id": "realistic-expectations", "kicker": "Reality check", "title": "Expected results and limitations",
   "blocks": [
     p("Compliance is a continuous program measured by data, not a one-time build. Management review "
       "tracks a handful of KPIs: right-first-time release rate (target &ge;98%), deviation rate per "

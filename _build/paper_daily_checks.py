@@ -26,7 +26,7 @@ def _c(rid):
 SECTIONS = []
 
 # 1 -----------------------------------------------------------------
-SECTIONS.append({"id": "intro", "kicker": "Start here", "title": "Why daily checks fail, and the fix",
+SECTIONS.append({"id": "intro", "kicker": "Start here", "title": "Purpose and scope",
   "blocks": [
     lead("Every facility has a daily check sheet. Most are half-fiction. Not because staff don't care, "
          "but because the sheet is slow, nobody owns it, and nothing visibly happens with it. The fix is "
@@ -49,7 +49,7 @@ SECTIONS.append({"id": "intro", "kicker": "Start here", "title": "Why daily chec
   ]})
 
 # 2 -----------------------------------------------------------------
-SECTIONS.append({"id": "terms", "kicker": "Vocabulary", "title": "The words you need",
+SECTIONS.append({"id": "terms", "kicker": "Vocabulary", "title": "Definitions",
   "blocks": [
     defterm("Pause point", "A named moment a short checklist runs at (lights-on, first irrigation, "
             "pre-dark), instead of one long sheet done whenever" + _c("gawande-checklist-manifesto") + "."),
@@ -69,7 +69,7 @@ SECTIONS.append({"id": "terms", "kicker": "Vocabulary", "title": "The words you 
   ]})
 
 # 3 -----------------------------------------------------------------
-SECTIONS.append({"id": "science", "kicker": "The science", "title": "What makes a check actually get done",
+SECTIONS.append({"id": "science", "kicker": "The science", "title": "Check design and completion reliability",
   "blocks": [
     p("Adherence is a design problem, not a character problem. Decades of checklist and behaviour research "
       "point at the same handful of levers."),
@@ -98,7 +98,7 @@ SECTIONS.append({"id": "science", "kicker": "The science", "title": "What makes 
   ]})
 
 # 4 -----------------------------------------------------------------
-SECTIONS.append({"id": "content", "kicker": "The content", "title": "What to actually check, and when",
+SECTIONS.append({"id": "content", "kicker": "The content", "title": "Daily check schedule and contents",
   "blocks": [
     p("Split the day into a few short pause-point lists, each tied to the moment it matters. Each line has a "
       "pre-set green / amber / red limit so the judgement is already made."),
@@ -121,7 +121,7 @@ SECTIONS.append({"id": "content", "kicker": "The content", "title": "What to act
   ]})
 
 # 5 -----------------------------------------------------------------
-SECTIONS.append({"id": "autocomplete", "kicker": "The automation", "title": "Auto-complete it with Home Assistant",
+SECTIONS.append({"id": "autocomplete", "kicker": "The automation", "title": "Home Assistant check automation",
   "blocks": [
     p("Most of a daily check is data the building already knows. Let Home Assistant confirm those items so the "
       "human never re-types what a sensor can prove."),
@@ -156,7 +156,7 @@ SECTIONS.append({"id": "autocomplete", "kicker": "The automation", "title": "Aut
   ]})
 
 # 6 -----------------------------------------------------------------
-SECTIONS.append({"id": "ui", "kicker": "The interface", "title": "Make the human part almost nothing",
+SECTIONS.append({"id": "ui", "kicker": "The interface", "title": "Daily-check user interface",
   "blocks": [
     p("For the items a person must do, design for the lowest possible interaction. The happy path should be "
       "nearly empty; effort appears only where there is a problem."),
@@ -179,7 +179,7 @@ SECTIONS.append({"id": "ui", "kicker": "The interface", "title": "Make the human
   ]})
 
 # 7 -----------------------------------------------------------------
-SECTIONS.append({"id": "adherence", "kicker": "Make it stick", "title": "Getting people to do it, honestly",
+SECTIONS.append({"id": "adherence", "kicker": "Make it stick", "title": "Adherence and accountability",
   "blocks": [
     p("Two failure modes remain even with a great list: it gets skipped, or it gets faked. Design against "
       "both directly."),
@@ -205,7 +205,7 @@ SECTIONS.append({"id": "adherence", "kicker": "Make it stick", "title": "Getting
   ]})
 
 # 8 -----------------------------------------------------------------
-SECTIONS.append({"id": "audit-build", "kicker": "Proof & build", "title": "The audit trail, and how to build it",
+SECTIONS.append({"id": "audit-build", "kicker": "Proof & build", "title": "Audit trail and implementation",
   "blocks": [
     p("Because the data entry is near zero but the system stamps who, where, when and what on every action, "
       "you get the easiest-to-fill check and a defensible record from the same design."),

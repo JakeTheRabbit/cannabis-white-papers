@@ -27,7 +27,7 @@ def _c(rid):
 SECTIONS = []
 
 # ---------------------------------------------------------------- 01 start here
-SECTIONS.append({"id": "start-here", "kicker": "01 · Start here", "title": "What potting up is, in plain English",
+SECTIONS.append({"id": "start-here", "kicker": "01 · Start here", "title": "Purpose and scope",
   "blocks": [
     lead("<strong>Transplanting</strong> (or <strong>potting up</strong>) is moving a plant into a bigger "
          "container, or into a different growing medium, before the one it&rsquo;s in starts holding it "
@@ -49,7 +49,7 @@ SECTIONS.append({"id": "start-here", "kicker": "01 · Start here", "title": "Wha
   ]})
 
 # ---------------------------------------------------------------- 02 vocabulary
-SECTIONS.append({"id": "vocabulary", "kicker": "02 · The vocabulary", "title": "Eight words that make the rest read plainly",
+SECTIONS.append({"id": "vocabulary", "kicker": "02 · The vocabulary", "title": "Definitions",
   "blocks": [
     p("Transplanting has less jargon than most grow topics, but the few terms it does have carry the "
       "whole logic. Learn these eight and every later section reads in plain English."),
@@ -75,7 +75,7 @@ SECTIONS.append({"id": "vocabulary", "kicker": "02 · The vocabulary", "title": 
   ]})
 
 # ---------------------------------------------------------------- 03 pot size science
-SECTIONS.append({"id": "pot-size-science", "kicker": "03 · The why", "title": "Why pots run out: rooting volume is a growth ceiling",
+SECTIONS.append({"id": "pot-size-science", "kicker": "03 · The why", "title": "Rooting-volume limits",
   "blocks": [
     p("A container isn&rsquo;t just a bucket that holds media. It&rsquo;s a hard limit on how big "
       "the plant&rsquo;s engine can get. A meta-analysis of 65 pot-size experiments found that, on "
@@ -103,7 +103,7 @@ SECTIONS.append({"id": "pot-size-science", "kicker": "03 · The why", "title": "
   ]})
 
 # ---------------------------------------------------------------- 04 root physiology
-SECTIONS.append({"id": "root-physiology", "kicker": "04 · The why", "title": "What roots actually do in a container",
+SECTIONS.append({"id": "root-physiology", "kicker": "04 · The why", "title": "Root function in containers",
   "blocks": [
     p("Roots grow outward and down until they hit something. In a smooth-walled pot, &lsquo;something&rsquo; "
       "is plastic: the tip deflects sideways and keeps going, tracing the wall in circles. A circling tip "
@@ -132,7 +132,7 @@ SECTIONS.append({"id": "root-physiology", "kicker": "04 · The why", "title": "W
   ]})
 
 # ---------------------------------------------------------------- 05 when to up-pot
-SECTIONS.append({"id": "when-to-up-pot", "kicker": "05 · Reading the plant", "title": "When to up-pot: the signs, in order of trust",
+SECTIONS.append({"id": "when-to-up-pot", "kicker": "05 · Reading the plant", "title": "Indicators for transplant timing",
   "blocks": [
     p("The calendar is the least reliable signal you have. Genetics, pot size, temperature and light all "
       "change how fast roots fill a container, so read the pot, not the date. In rough order of trust:"),
@@ -174,7 +174,7 @@ SECTIONS.append({"id": "when-to-up-pot", "kicker": "05 · Reading the plant", "t
   ]})
 
 # ---------------------------------------------------------------- 06 container ladder
-SECTIONS.append({"id": "container-ladder", "kicker": "06 · The plan", "title": "The container ladder: sizes that step, not leap",
+SECTIONS.append({"id": "container-ladder", "kicker": "06 · The plan", "title": "Container size progression",
   "blocks": [
     p("Indoor cannabis typically climbs a ladder of two to four containers, each step roughly "
       "<strong>2&ndash;4&times; the volume</strong> of the last. The exact litres matter less than the "
@@ -204,7 +204,7 @@ SECTIONS.append({"id": "container-ladder", "kicker": "06 · The plan", "title": 
   ]})
 
 # ---------------------------------------------------------------- 07 direct vs staged
-SECTIONS.append({"id": "direct-vs-staged", "kicker": "07 · The debate", "title": "Direct-to-final vs staged: the honest trade-offs",
+SECTIONS.append({"id": "direct-vs-staged", "kicker": "07 · The debate", "title": "Direct-to-final versus staged transplanting",
   "blocks": [
     p("Some growers skip the ladder entirely and start seeds or clones in the final container. "
       "It&rsquo;s a legitimate strategy with real costs, and the right answer depends on your plant type "
@@ -234,7 +234,7 @@ SECTIONS.append({"id": "direct-vs-staged", "kicker": "07 · The debate", "title"
   ]})
 
 # ---------------------------------------------------------------- 08 procedure
-SECTIONS.append({"id": "procedure", "kicker": "08 · Do this", "title": "The transplant, step by step",
+SECTIONS.append({"id": "procedure", "kicker": "08 · Do this", "title": "Transplant procedure",
   "blocks": [
     p("The whole job takes two minutes per plant once staged. Do it late in the light period or under "
       "dimmed light. Transpiration is lower, so the plant loses less water while its roots are "
@@ -284,7 +284,7 @@ SECTIONS.append({"id": "procedure", "kicker": "08 · Do this", "title": "The tra
   ]})
 
 # ---------------------------------------------------------------- 09 media transitions
-SECTIONS.append({"id": "media-transitions", "kicker": "09 · Media to media", "title": "Crossing media: plug to coco, plug to block, block to slab",
+SECTIONS.append({"id": "media-transitions", "kicker": "09 · Media to media", "title": "Transitions between propagation media",
   "blocks": [
     p("Up-potting soil into soil is the easy case. Commercial cannabis mostly moves plants "
       "<em>between</em> media (rockwool plug into coco, plug into block, block onto slab) "
@@ -329,7 +329,7 @@ SECTIONS.append({"id": "media-transitions", "kicker": "09 · Media to media", "t
   ]})
 
 # ---------------------------------------------------------------- 10 watering in
-SECTIONS.append({"id": "watering-in", "kicker": "10 · First irrigation", "title": "Watering-in: the EC and pH of the first drink",
+SECTIONS.append({"id": "watering-in", "kicker": "10 · First irrigation", "title": "Watering-in: initial EC and pH",
   "blocks": [
     p("The first irrigation after a transplant does two jobs. <strong>Hydraulic:</strong> it settles the "
       "new media into full contact with the ball, closing the air gaps that block both water movement and "
@@ -407,7 +407,7 @@ SECTIONS.append({"id": "transplant-shock", "kicker": "11 · When it hurts", "tit
   ]})
 
 # ---------------------------------------------------------------- 12 failure modes
-SECTIONS.append({"id": "failure-modes", "kicker": "12 · Failure modes", "title": "The six ways transplants die",
+SECTIONS.append({"id": "failure-modes", "kicker": "12 · Failure modes", "title": "Common transplant failures",
   "blocks": [
     p("Six patterns cover nearly every transplant loss. Learn their shapes and you&rsquo;ll catch them "
       "in the act instead of in the post-mortem."),
@@ -467,7 +467,7 @@ SECTIONS.append({"id": "veg-schedule", "kicker": "13 · The calendar", "title": 
   ]})
 
 # ---------------------------------------------------------------- 14 troubleshooting
-SECTIONS.append({"id": "troubleshooting", "kicker": "14 · Triage", "title": "Troubleshooting: symptom &rarr; cause &rarr; fix",
+SECTIONS.append({"id": "troubleshooting", "kicker": "14 · Triage", "title": "Troubleshooting",
   "blocks": [
     p("Work the table top to bottom. It&rsquo;s ordered by how often each cause turns out to be "
       "the real one. Change one thing, give it 24 hours, reassess."),
@@ -484,7 +484,7 @@ SECTIONS.append({"id": "troubleshooting", "kicker": "14 · Triage", "title": "Tr
   ]})
 
 # ---------------------------------------------------------------- 15 mental model
-SECTIONS.append({"id": "mental-model", "kicker": "15 · Take this with you", "title": "The mental model: sell the roots a better house",
+SECTIONS.append({"id": "mental-model", "kicker": "15 · Take this with you", "title": "Root-zone expansion principles",
   "blocks": [
     p("Strip the detail away and transplanting is a real-estate pitch aimed at roots: the new volume has "
       "to be easier to live in than the old one, on day one, or the plant declines the offer and stalls."),

@@ -31,7 +31,7 @@ def _c(rid):
 
 SECTIONS = []
 
-SECTIONS.append({"id": "intro", "kicker": "Start here", "title": "Light is a ramp, not a switch",
+SECTIONS.append({"id": "intro", "kicker": "Start here", "title": "Purpose and scope",
   "blocks": [
     lead("Two beginner mistakes cause most light damage in a grow room: blasting weak, "
          "freshly-rooted clones with full-power light, and the opposite, under-lighting "
@@ -60,7 +60,7 @@ SECTIONS.append({"id": "intro", "kicker": "Start here", "title": "Light is a ram
         "<a href='plant-state-dashboard.html'>plant-state dashboard</a> papers.")),
   ]})
 
-SECTIONS.append({"id": "key-terms", "kicker": "Plain-language glossary", "title": "The words you need before we start",
+SECTIONS.append({"id": "key-terms", "kicker": "Plain-language glossary", "title": "Definitions",
   "blocks": [
     p("These five terms carry the whole guide. Read them once and the rest reads easily. "
       "Each one comes back in context."),
@@ -86,7 +86,7 @@ SECTIONS.append({"id": "key-terms", "kicker": "Plain-language glossary", "title"
       "photoperiod changes DLI even when PPFD stays the same."),
   ]})
 
-SECTIONS.append({"id": "how-acclimation-works", "kicker": "The why", "title": "What the plant builds as it adapts",
+SECTIONS.append({"id": "how-acclimation-works", "kicker": "The why", "title": "Plant acclimation to increased PPFD",
   "blocks": [
     p("The plant invests in hardware to match rising light. Week over week it builds "
       "more chloroplasts (the tiny green factories that catch light), thicker protective leaf "
@@ -121,7 +121,7 @@ SECTIONS.append({"id": "how-acclimation-works", "kicker": "The why", "title": "W
         "light.")),
   ]})
 
-SECTIONS.append({"id": "co2-partnership", "kicker": "The why, part two", "title": "Light is the accelerator, CO2 is the fuel",
+SECTIONS.append({"id": "co2-partnership", "kicker": "The why, part two", "title": "Light and CO2 coordination",
   "blocks": [
     p("Photosynthesis has two halves. The <strong>light reactions</strong> capture energy from "
       "photons. The <strong>Calvin cycle</strong> then uses CO2 from the air to turn that captured "
@@ -157,7 +157,7 @@ SECTIONS.append({"id": "co2-partnership", "kicker": "The why, part two", "title"
         "faster. It stalls and overheats.")),
   ]})
 
-SECTIONS.append({"id": "ppfd-schedule", "kicker": "The practical schedule", "title": "A week-by-week PPFD ramp by growth stage",
+SECTIONS.append({"id": "ppfd-schedule", "kicker": "The practical schedule", "title": "PPFD acclimation schedule by growth stage",
   "blocks": [
     p("A representative indoor cycle runs about 14 weeks (~98 days) and ramps light stage by stage" +
       _c("moher-2022-cannabis-vegetative-light-intensity-morphology") + ". Clones start soft, veg "
@@ -187,7 +187,7 @@ SECTIONS.append({"id": "ppfd-schedule", "kicker": "The practical schedule", "tit
         "up toward 950 rather than slamming the lights to peak the day you flip.")),
   ]})
 
-SECTIONS.append({"id": "how-high", "kicker": "Setting your ceiling", "title": "How high you push depends on what you control",
+SECTIONS.append({"id": "how-high", "kicker": "Setting your ceiling", "title": "Setting the PPFD ceiling",
   "blocks": [
     p("Your environment sets your safe peak PPFD, not your ambition. The number you can hold is "
       "whatever your CO2, climate and cooling actually support today. Raising the ceiling "
@@ -215,7 +215,7 @@ SECTIONS.append({"id": "how-high", "kicker": "Setting your ceiling", "title": "H
         "honest ceiling you can fuel before chasing a higher one.")),
   ]})
 
-SECTIONS.append({"id": "hanging-and-dimming", "kicker": "Doing it physically", "title": "Hanging height and dimming: how you deliver the ramp",
+SECTIONS.append({"id": "hanging-and-dimming", "kicker": "Doing it physically", "title": "Fixture height and dimming",
   "blocks": [
     p("Two levers set canopy PPFD: the fixture's <strong>dimmer</strong> and its "
       "<strong>hanging height</strong> above the plants. Both change how much light lands on the "
@@ -242,7 +242,7 @@ SECTIONS.append({"id": "hanging-and-dimming", "kicker": "Doing it physically", "
         "though you touched nothing. Re-measure after every growth spurt.")),
   ]})
 
-SECTIONS.append({"id": "troubleshooting", "kicker": "Reading the plant", "title": "Signs of too much light, and the traps that cause it",
+SECTIONS.append({"id": "troubleshooting", "kicker": "Reading the plant", "title": "Troubleshooting",
   "blocks": [
     p("Too much light shows up as <strong>bleached or white tips on the upper canopy</strong>, "
       "the leaves closest to the source, together with stalled growth" +
@@ -265,7 +265,7 @@ SECTIONS.append({"id": "troubleshooting", "kicker": "Reading the plant", "title"
         "climb again deliberately.")),
   ]})
 
-SECTIONS.append({"id": "latest-research", "kicker": "Latest research · 2024-2026", "title": "What the newest studies add",
+SECTIONS.append({"id": "latest-research", "kicker": "Latest research · 2024-2026", "title": "Recent research",
   "blocks": [
     lead("Acclimation and CO2 matching are the foundation, and they haven't changed. Recent work "
          "(2024-2026) sharpens three things: how much a high ceiling actually buys you, and two "
@@ -306,7 +306,7 @@ SECTIONS.append({"id": "latest-research", "kicker": "Latest research · 2024-202
         "half-acclimated, CO2-starved plant.")),
   ]})
 
-SECTIONS.append({"id": "expectations", "kicker": "Realistic expectations", "title": "What to actually expect from your setup",
+SECTIONS.append({"id": "expectations", "kicker": "Realistic expectations", "title": "Expected results and limitations",
   "blocks": [
     p("Light is the schedule, not the whole system. Every PPFD target in this guide assumes the rest "
       "of the environment is in range: leaf temperature around 26&ndash;28&deg;C, VPD of "

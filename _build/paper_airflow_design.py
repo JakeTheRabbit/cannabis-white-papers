@@ -293,7 +293,7 @@ def _fig_zones():
 
 SECTIONS = []
 
-SECTIONS.append({"id": "start", "kicker": "01 · Read this first", "title": "Why airflow is not optional",
+SECTIONS.append({"id": "start", "kicker": "01 · Read this first", "title": "Purpose and scope",
   "blocks": [
     lead("Airflow is plumbing for gases, and it is as important as light and feed. Without moving "
          "air, even a perfect light and a perfect feed cannot reach the leaf properly. A still, "
@@ -302,7 +302,7 @@ SECTIONS.append({"id": "start", "kicker": "01 · Read this first", "title": "Why
       "which fans actually make that air, how to rank them, and where to hang them."),
   ]})
 
-SECTIONS.append({"id": "terms", "kicker": "02 · The vocabulary", "title": "The words you need",
+SECTIONS.append({"id": "terms", "kicker": "02 · The vocabulary", "title": "Definitions",
   "blocks": [
     defterm("Boundary layer", "The thin film of still air that clings to every leaf surface. Gases "
             "have to diffuse across it slowly, so it is the bottleneck airflow attacks."),
@@ -327,7 +327,7 @@ SECTIONS.append({"id": "terms", "kicker": "02 · The vocabulary", "title": "The 
             "blades. It is the whole reason HAF loops work."),
   ]})
 
-SECTIONS.append({"id": "boundary", "kicker": "03 · The core idea", "title": "The invisible skin of still air",
+SECTIONS.append({"id": "boundary", "kicker": "03 · The core idea", "title": "Leaf boundary layers",
   "blocks": [
     p("Air right against a leaf barely moves. It forms a stagnant film called the "
       "<strong>boundary layer</strong>. CO2 going in, and water vapour and heat coming out, all have "
@@ -341,7 +341,7 @@ SECTIONS.append({"id": "boundary", "kicker": "03 · The core idea", "title": "Th
       ". This is the reason fans belong in a grow room."),
   ]})
 
-SECTIONS.append({"id": "how-much", "kicker": "04 · The target", "title": "How much air is the right amount?",
+SECTIONS.append({"id": "how-much", "kicker": "04 · The target", "title": "Airflow targets",
   "blocks": [
     p("More airflow helps, but with sharply diminishing returns. Photosynthesis climbs "
       "steeply as you go from dead-still up to a gentle breeze, then flattens out. Most of the "
@@ -361,7 +361,7 @@ SECTIONS.append({"id": "how-much", "kicker": "04 · The target", "title": "How m
       "drying the plants out. Aim for the middle." + _c("tjosvold2018-air")),
   ]})
 
-SECTIONS.append({"id": "match-light", "kicker": "05 · The link", "title": "Match airflow to your light",
+SECTIONS.append({"id": "match-light", "kicker": "05 · The link", "title": "Matching airflow to light intensity",
   "blocks": [
     p("The brighter the room, the more the leaf needs air. High light drives high photosynthesis and "
       "high transpiration, and both depend on the boundary layer staying thin. Cannabis yield keeps "
@@ -373,7 +373,7 @@ SECTIONS.append({"id": "match-light", "kicker": "05 · The link", "title": "Matc
         "the air leaves hot leaves sitting in their own humid film" + _c("chandra2008-photo") + ".")),
   ]})
 
-SECTIONS.append({"id": "transpiration", "kicker": "06 · The trade-off", "title": "Faster air means a hungrier plant",
+SECTIONS.append({"id": "transpiration", "kicker": "06 · The trade-off", "title": "Airflow, transpiration and nutrient demand",
   "blocks": [
     p("Thinning the boundary layer feeds CO2 in and pulls water out faster. More "
       "airflow means more transpiration, which means the plant needs more water and nutrient at the "
@@ -397,7 +397,7 @@ SECTIONS.append({"id": "transpiration", "kicker": "06 · The trade-off", "title"
         ". That is the single best argument for the top-down fans in section 10.")),
   ]})
 
-SECTIONS.append({"id": "build", "kicker": "07 · The layout", "title": "Three jobs, three sets of kit",
+SECTIONS.append({"id": "build", "kicker": "07 · The layout", "title": "Airflow system functions and equipment",
   "blocks": [
     p("&ldquo;Add a fan&rdquo; hides three separate jobs. Buying the wrong one for the job you "
       "actually have is the most common airflow mistake in a first room:"),
@@ -418,7 +418,7 @@ SECTIONS.append({"id": "build", "kicker": "07 · The layout", "title": "Three jo
         "<em>through</em> the canopy, not just over the top of it, and defoliate enough to let air in.")),
   ]})
 
-SECTIONS.append({"id": "messy", "kicker": "08 · A subtlety", "title": "Messy air beats smooth air",
+SECTIONS.append({"id": "messy", "kicker": "08 · A subtlety", "title": "Turbulent airflow and canopy mixing",
   "blocks": [
     p("Aiming one big fan straight down a row is tempting. Don't. A smooth, laminar jet builds its "
       "own thick boundary layer on whatever it hits, and leaves everything off-axis still. "
@@ -431,7 +431,7 @@ SECTIONS.append({"id": "messy", "kicker": "08 · A subtlety", "title": "Messy ai
         "fan off.")),
   ]})
 
-SECTIONS.append({"id": "evidence", "kicker": "09 · Field evidence", "title": "What a controlled room trial shows",
+SECTIONS.append({"id": "evidence", "kicker": "09 · Field evidence", "title": "Evidence from controlled room trials",
   "blocks": [
     p("Everything above is leaf physiology. Does it actually move yield in a real flower room? A "
       "controlled trial by Pipp Horticulture with Dr. Allison Justice and the Cannabis Research "
@@ -475,7 +475,7 @@ SECTIONS.append({"id": "evidence", "kicker": "09 · Field evidence", "title": "W
         ". The direction lines up cleanly with the leaf physiology in the rest of this paper.")),
   ]})
 
-SECTIONS.append({"id": "fan-types", "kicker": "10 · The hardware", "title": "The fan types, one by one",
+SECTIONS.append({"id": "fan-types", "kicker": "10 · The hardware", "title": "Fan types",
   "blocks": [
     lead("Fans are not interchangeable. Each type makes a different <em>shape</em> of air, and the "
          "shape decides which leaves get served. Pick by the shape you need, not by the price tag "
@@ -577,7 +577,7 @@ SECTIONS.append({"id": "fan-types", "kicker": "10 · The hardware", "title": "Th
         "it is the setup the Pipp trial in section 09 was built to test."), tag="Recirculation · vertical racking"),
   ]})
 
-SECTIONS.append({"id": "ranking", "kicker": "11 · The ranking", "title": "Which fans earn their place",
+SECTIONS.append({"id": "ranking", "kicker": "11 · The ranking", "title": "Selecting fans for canopy airflow",
   "blocks": [
     p("A ranking is only honest if you say what it is ranking <em>for</em>. This one scores "
       "<strong>crop-relevant airflow bought per dollar installed, in a sealed, single-tier indoor "
@@ -632,7 +632,7 @@ SECTIONS.append({"id": "ranking", "kicker": "11 · The ranking", "title": "Which
         "and a room where every leaf moves. Buy the pattern, not the peak.")),
   ]})
 
-SECTIONS.append({"id": "placement", "kicker": "12 · Placement", "title": "Where to actually put them",
+SECTIONS.append({"id": "placement", "kicker": "12 · Placement", "title": "Fan placement",
   "blocks": [
     p("Fan placement is a pattern problem, not a coverage problem. You are not trying to hit every "
       "plant with a jet; you are trying to set the whole volume of air in the room turning slowly and "
@@ -746,7 +746,7 @@ SECTIONS.append({"id": "trouble", "kicker": "14 · When it goes wrong", "title":
     ], cls="compact"),
   ]})
 
-SECTIONS.append({"id": "expect", "kicker": "15 · Straight talk", "title": "Realistic expectations",
+SECTIONS.append({"id": "expect", "kicker": "15 · Straight talk", "title": "Expected results and limitations",
   "blocks": [
     callout("key", "What to remember",
       ol(["Airflow's job is to <strong>thin the boundary layer</strong> on every leaf.",

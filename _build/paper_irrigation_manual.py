@@ -20,7 +20,7 @@ def _c(rid):
 
 SECTIONS = []
 
-SECTIONS.append({"id": "what-this-is", "kicker": "Start here", "title": "What this is and what it does",
+SECTIONS.append({"id": "what-this-is", "kicker": "Start here", "title": "Purpose and scope",
   "blocks": [
     lead("This is an automated watering system for plants grown in pots of soil-less media. "
          "Sensors buried in each pot measure how wet the media is and how much fertiliser salt it "
@@ -57,7 +57,7 @@ SECTIONS.append({"id": "what-this-is", "kicker": "Start here", "title": "What th
       "stop at whichever level you trust."),
   ]})
 
-SECTIONS.append({"id": "key-terms", "kicker": "Vocabulary", "title": "Key terms, defined from scratch",
+SECTIONS.append({"id": "key-terms", "kicker": "Vocabulary", "title": "Definitions",
   "blocks": [
     p("These are the words this manual uses constantly. You don't need to memorise them, each one "
       "comes back in context."),
@@ -88,7 +88,7 @@ SECTIONS.append({"id": "key-terms", "kicker": "Vocabulary", "title": "Key terms,
       "and what runoff is telling you."),
   ]})
 
-SECTIONS.append({"id": "hardware", "kicker": "The physical kit", "title": "The hardware: what gets wired up",
+SECTIONS.append({"id": "hardware", "kicker": "The physical kit", "title": "Irrigation system hardware",
   "blocks": [
     p("The brain of the valve control is a <strong>KC868 E16S relay board</strong> connected over "
       "Ethernet and running ESPHome firmware. It physically switches every valve: the 6 tables "
@@ -122,7 +122,7 @@ SECTIONS.append({"id": "hardware", "kicker": "The physical kit", "title": "The h
       "because it keys off mainline pressure, not a software command."),
   ]})
 
-SECTIONS.append({"id": "phases", "kicker": "The core idea", "title": "The phase logic: P0 to P3",
+SECTIONS.append({"id": "phases", "kicker": "The core idea", "title": "P0–P3 irrigation phases",
   "blocks": [
     p("Crop steering splits each lights-on day into four phases that control how the plant uses water "
       "and nutrients. A <strong>controlled dryback</strong>, letting the media dry by a set amount "
@@ -167,7 +167,7 @@ SECTIONS.append({"id": "phases", "kicker": "The core idea", "title": "The phase 
   ]})
 
 SECTIONS.append({"id": "environment-and-safety", "kicker": "Climate and protection",
-  "title": "Environment control and the safety net",
+  "title": "Environmental controls and safety interlocks",
   "blocks": [
     p("The system manages room climate as well as watering. Dehumidifiers turn on when humidity is 5% "
       "above target (the 4 relays stagger on with 10-second delays to avoid an inrush spike) and off "
@@ -197,7 +197,7 @@ SECTIONS.append({"id": "environment-and-safety", "kicker": "Climate and protecti
   ]})
 
 SECTIONS.append({"id": "commissioning", "kicker": "Step by step",
-  "title": "Commissioning: getting it running from scratch",
+  "title": "Commissioning procedure",
   "blocks": [
     p("Bring the system up in order so each layer is proven before the next one is switched on. "
       "Rushing straight to crop steering on unverified hardware is the fastest way to flood a table."),
@@ -228,7 +228,7 @@ SECTIONS.append({"id": "commissioning", "kicker": "Step by step",
   ]})
 
 SECTIONS.append({"id": "daily-operation", "kicker": "Living with it",
-  "title": "Day-to-day operation and the dashboard",
+  "title": "Daily operation and dashboard",
   "blocks": [
     p("Daily checks are quick. On the Command Center, all 6 tables should read VWC between 30 and 70%, "
       "EC in your target range (typically 2 to 6 mS/cm by stage), and substrate temperatures 20 to "
@@ -257,7 +257,7 @@ SECTIONS.append({"id": "daily-operation", "kicker": "Living with it",
       "treat it as a fault and check the troubleshooting matrix."),
   ]})
 
-SECTIONS.append({"id": "troubleshooting", "kicker": "When it breaks", "title": "Troubleshooting and tuning",
+SECTIONS.append({"id": "troubleshooting", "kicker": "When it breaks", "title": "Troubleshooting",
   "blocks": [
     p("Most problems are diagnosable from a short checklist. Work top to bottom, because the cheapest "
       "checks (is it on? is the window open?) catch the most cases."),
@@ -293,7 +293,7 @@ SECTIONS.append({"id": "troubleshooting", "kicker": "When it breaks", "title": "
       "substrate volume or flow rate produces wrong (or zero) shot times."),
   ]})
 
-SECTIONS.append({"id": "expectations", "kicker": "Reality check", "title": "Realistic expectations and limits",
+SECTIONS.append({"id": "expectations", "kicker": "Reality check", "title": "Expected results and limitations",
   "blocks": [
     callout("key", "This is guidance, not a guarantee",
       p("The core system automates timing and sensor-driven decisions, but it is only as good as its "

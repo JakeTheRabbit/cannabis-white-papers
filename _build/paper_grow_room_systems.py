@@ -22,7 +22,7 @@ def _c(rid):
 
 SECTIONS = []
 
-SECTIONS.append({"id": "start", "kicker": "01 · Read this first", "title": "The room is one machine",
+SECTIONS.append({"id": "start", "kicker": "01 · Read this first", "title": "Purpose and scope",
   "blocks": [
     lead("Those four things are one problem, not four. Beginners buy a light, a fan, a humidifier and "
          "a nutrient bottle and treat each as a separate job. Turn the light up and the room gets "
@@ -32,7 +32,7 @@ SECTIONS.append({"id": "start", "kicker": "01 · Read this first", "title": "The
       "chasing one problem into the next. No prior knowledge needed."),
   ]})
 
-SECTIONS.append({"id": "terms", "kicker": "02 · The vocabulary", "title": "The words you need",
+SECTIONS.append({"id": "terms", "kicker": "02 · The vocabulary", "title": "Definitions",
   "blocks": [
     defterm("PPFD", "How bright the usable light hitting the canopy is, measured in µmol/m²/s. "
             "Think &lsquo;brightness right now.&rsquo;"),
@@ -50,7 +50,7 @@ SECTIONS.append({"id": "terms", "kicker": "02 · The vocabulary", "title": "The 
             "salt behave at the root" + _c("malik2025-media") + "."),
   ]})
 
-SECTIONS.append({"id": "one-system", "kicker": "03 · The big idea", "title": "How it's all coupled",
+SECTIONS.append({"id": "one-system", "kicker": "03 · The big idea", "title": "Interactions between grow-room systems",
   "blocks": [
     p("One chain runs your room. Push the first link and every link after it moves:"),
     figure(L.flow("Push the light, and everything downstream moves",
@@ -67,7 +67,7 @@ SECTIONS.append({"id": "one-system", "kicker": "03 · The big idea", "title": "H
         "Inputs travel in convoys, not alone.")),
   ]})
 
-SECTIONS.append({"id": "light", "kicker": "04 · The biggest lever", "title": "Light: set the demand first",
+SECTIONS.append({"id": "light", "kicker": "04 · The biggest lever", "title": "Lighting demand",
   "blocks": [
     p("Light is the upstream lever: it sets how much of everything else the plant wants. In "
       "cannabis, flower yield climbs roughly <strong>linearly with light</strong> all the way up to "
@@ -86,7 +86,7 @@ SECTIONS.append({"id": "light", "kicker": "04 · The biggest lever", "title": "L
         "beyond that point" + _c("rm2021-light") + ". Don't set room light by leaf-level numbers.")),
   ]})
 
-SECTIONS.append({"id": "climate", "kicker": "05 · The air", "title": "Climate: temperature, humidity & VPD",
+SECTIONS.append({"id": "climate", "kicker": "05 · The air", "title": "Climate: temperature, humidity and VPD",
   "blocks": [
     p("Temperature and humidity are not two separate dials. Together they make "
       "<strong>VPD</strong>, which controls how fast the plant transpires. There is a workable "
@@ -105,7 +105,7 @@ SECTIONS.append({"id": "climate", "kicker": "05 · The air", "title": "Climate: 
       "pays off when light is already high."),
   ]})
 
-SECTIONS.append({"id": "air", "kicker": "06 · Movement", "title": "Airflow ties it together",
+SECTIONS.append({"id": "air", "kicker": "06 · Movement", "title": "Airflow in the integrated system",
   "blocks": [
     p("Moving air does two quiet but vital jobs. It strips away the thin film of still, humid air "
       "that clings to each leaf, and it cools the leaf by convection. Faster air thins that film, "
@@ -117,7 +117,7 @@ SECTIONS.append({"id": "air", "kicker": "06 · Movement", "title": "Airflow ties
         "that without air movement your light, climate and CO2 settings don't reach the leaf evenly.")),
   ]})
 
-SECTIONS.append({"id": "rootzone", "kicker": "07 · The supply", "title": "Root zone: feeding the demand",
+SECTIONS.append({"id": "rootzone", "kicker": "07 · The supply", "title": "Root-zone supply",
   "blocks": [
     p("Everything upstream creates <em>thirst</em>, and the root zone has to satisfy it. The brighter "
       "and drier the room, the more the plant transpires, and the more water and nutrient it needs at "
@@ -129,7 +129,7 @@ SECTIONS.append({"id": "rootzone", "kicker": "07 · The supply", "title": "Root 
       "fixed timer."),
   ]})
 
-SECTIONS.append({"id": "order", "kicker": "08 · The method", "title": "Set it up in the right order",
+SECTIONS.append({"id": "order", "kicker": "08 · The method", "title": "System setup sequence",
   "blocks": [
     p("Inputs are coupled, so the order you set them in matters. Work top-down:"),
     steps([
@@ -141,7 +141,7 @@ SECTIONS.append({"id": "order", "kicker": "08 · The method", "title": "Set it u
     ]),
   ]})
 
-SECTIONS.append({"id": "disease", "kicker": "09 · The hidden cost", "title": "The system can breed disease",
+SECTIONS.append({"id": "disease", "kicker": "09 · The hidden cost", "title": "Disease risk in integrated systems",
   "blocks": [
     p("The same warm, humid, densely-planted room that grows big plants also grows mould. Bud rot "
       "(<em>Botrytis</em>) takes off above ~70% humidity at moderate temperatures, and a thick canopy "
@@ -153,7 +153,7 @@ SECTIONS.append({"id": "disease", "kicker": "09 · The hidden cost", "title": "T
         "<a href='mould-risk.html'>mould risk</a> paper.")),
   ]})
 
-SECTIONS.append({"id": "trouble", "kicker": "10 · When it goes wrong", "title": "Troubleshooting the system",
+SECTIONS.append({"id": "trouble", "kicker": "10 · When it goes wrong", "title": "Troubleshooting",
   "blocks": [
     table(["Symptom", "Where the system broke", "What to do"], [
       ["Room humidity won't come down", "Light/transpiration outran your dehumidification", "Add dehumid capacity or trim light, and improve air exchange"],
@@ -164,7 +164,7 @@ SECTIONS.append({"id": "trouble", "kicker": "10 · When it goes wrong", "title":
     ], cls="compact"),
   ]})
 
-SECTIONS.append({"id": "expect", "kicker": "11 · Straight talk", "title": "Realistic expectations",
+SECTIONS.append({"id": "expect", "kicker": "11 · Straight talk", "title": "Expected results and limitations",
   "blocks": [
     callout("key", "The mindset that separates good growers from frustrated ones",
       ul(["Think in <strong>convoys</strong>: change one input and pre-empt what must move with it.",

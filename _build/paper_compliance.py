@@ -27,7 +27,7 @@ def _c(rid):
 SECTIONS = []
 
 # ---------------------------------------------------------------- 1. start here
-SECTIONS.append({"id": "start-here", "kicker": "Start here", "title": "What This Is. And What It Is Not",
+SECTIONS.append({"id": "start-here", "kicker": "Start here", "title": "Purpose and scope",
   "blocks": [
     callout("danger", "Education, not legal advice",
       p("This paper explains how cannabis licensing, traceability and record-keeping work <em>in "
@@ -52,38 +52,8 @@ SECTIONS.append({"id": "start-here", "kicker": "Start here", "title": "What This
       "Australia, described from altitude as worked examples."),
   ]})
 
-# ---------------------------------------------------------------- 2. core answer
-SECTIONS.append({"id": "spine", "kicker": "Core answer", "title": "The Core Answer: Prove Control, to a Stranger, on Paper",
-  "blocks": [
-    lead("Every rule in every cannabis regime compresses to one demand: <strong>demonstrate "
-         "control</strong>. Control of the material, nothing enters, moves, or leaves except as "
-         "recorded. Control of the process. What happens to the plant follows written rules. And "
-         "the demonstration must work for someone who was not there and trusts nothing but the "
-         "record."),
-    figure(L.flow("The paperwork spine",
-            [("Licence", "permission to operate, with conditions attached"),
-             ("Quality system", "the rules you wrote for your own operation"),
-             ("Records", "proof that you followed your own rules"),
-             ("Audit", "a stranger tests proof against rules")],
-            note="Each layer only means something because of the layer before it. Records without rules prove nothing; rules without records are decoration."), 1,
-      "The four layers of compliance. The licence grants permission, the quality system defines "
-      "how you operate, records evidence that you did, and audits test the records against the "
-      "rules."),
-    p("Most new operators obsess over layer one, getting the licence, and starve layer three. "
-      "That is backwards. Licences are rarely lost on the day they are granted; they are lost "
-      "years later, at the records layer, when an auditor asks a simple question the paperwork "
-      "cannot answer. In pharmaceutical GMP, documentation is not admin support for the real "
-      "work; it is defined as part of the quality system itself" + _c("eu-gmp-vol4") + ", and "
-      "cannabis regimes borrow that DNA directly."),
-    callout("key", "The stranger test",
-      p("Write every record for a reader who was not in the room, knows nothing, and is mildly "
-        "suspicious. If a competent stranger can reconstruct what happened (who, what, when, how "
-        "much, why) from your records alone, you pass. If the record only makes sense with you "
-        "standing next to it explaining, it is not a record; it is a memory aid.")),
-  ]})
-
 # ---------------------------------------------------------------- 3. vocabulary
-SECTIONS.append({"id": "key-terms", "kicker": "Vocabulary", "title": "Key Terms: The Words That Do the Work",
+SECTIONS.append({"id": "key-terms", "kicker": "Vocabulary", "title": "Definitions",
   "blocks": [
     p("Compliance conversations fail when two people use the same word for different things. These "
       "definitions are generic; your regime's legal definitions override them, and part of setting "
@@ -125,8 +95,38 @@ SECTIONS.append({"id": "key-terms", "kicker": "Vocabulary", "title": "Key Terms:
             "tells whom when something goes wrong."),
   ]})
 
+# ---------------------------------------------------------------- 2. core answer
+SECTIONS.append({"id": "spine", "kicker": "Core answer", "title": "Compliance objective: documented control",
+  "blocks": [
+    lead("Every rule in every cannabis regime compresses to one demand: <strong>demonstrate "
+         "control</strong>. Control of the material, nothing enters, moves, or leaves except as "
+         "recorded. Control of the process. What happens to the plant follows written rules. And "
+         "the demonstration must work for someone who was not there and trusts nothing but the "
+         "record."),
+    figure(L.flow("The paperwork spine",
+            [("Licence", "permission to operate, with conditions attached"),
+             ("Quality system", "the rules you wrote for your own operation"),
+             ("Records", "proof that you followed your own rules"),
+             ("Audit", "a stranger tests proof against rules")],
+            note="Each layer only means something because of the layer before it. Records without rules prove nothing; rules without records are decoration."), 1,
+      "The four layers of compliance. The licence grants permission, the quality system defines "
+      "how you operate, records evidence that you did, and audits test the records against the "
+      "rules."),
+    p("Most new operators obsess over layer one, getting the licence, and starve layer three. "
+      "That is backwards. Licences are rarely lost on the day they are granted; they are lost "
+      "years later, at the records layer, when an auditor asks a simple question the paperwork "
+      "cannot answer. In pharmaceutical GMP, documentation is not admin support for the real "
+      "work; it is defined as part of the quality system itself" + _c("eu-gmp-vol4") + ", and "
+      "cannabis regimes borrow that DNA directly."),
+    callout("key", "The stranger test",
+      p("Write every record for a reader who was not in the room, knows nothing, and is mildly "
+        "suspicious. If a competent stranger can reconstruct what happened (who, what, when, how "
+        "much, why) from your records alone, you pass. If the record only makes sense with you "
+        "standing next to it explaining, it is not a record; it is a memory aid.")),
+  ]})
+
 # ---------------------------------------------------------------- 4. licence anatomy
-SECTIONS.append({"id": "licence-anatomy", "kicker": "The licence", "title": "Licence Anatomy: Activities, Conditions, Renewals",
+SECTIONS.append({"id": "licence-anatomy", "kicker": "The licence", "title": "Licence activities, conditions and renewals",
   "blocks": [
     p("A cannabis licence is not one permission; it is a <strong>bundle of named activities</strong> "
       "with strings attached. New Zealand's scheme, for example, builds each licence from "
@@ -175,7 +175,7 @@ SECTIONS.append({"id": "licence-anatomy", "kicker": "The licence", "title": "Lic
   ]})
 
 # ---------------------------------------------------------------- 5. regulator
-SECTIONS.append({"id": "regulator", "kicker": "The relationship", "title": "The Regulator: Inspections, Notifications, Variations",
+SECTIONS.append({"id": "regulator", "kicker": "The relationship", "title": "Regulatory inspections, notifications and variations",
   "blocks": [
     p("The regulator is not a customer, not a mate, and not an enemy. The productive mental model "
       "is <strong>external quality assurance with statutory power</strong>: they exist to verify "
@@ -209,7 +209,7 @@ SECTIONS.append({"id": "regulator", "kicker": "The relationship", "title": "The 
   ]})
 
 # ---------------------------------------------------------------- 6. batches
-SECTIONS.append({"id": "batches", "kicker": "Core concept", "title": "Batch and Lot Thinking: the Genealogy",
+SECTIONS.append({"id": "batches", "kicker": "Core concept", "title": "Batch and lot traceability",
   "blocks": [
     lead("A batch is a promise of uniformity: a defined quantity of material that went through the "
          "same process at the same time, so one test result, one record, one decision can honestly "
@@ -248,7 +248,7 @@ SECTIONS.append({"id": "batches", "kicker": "Core concept", "title": "Batch and 
   ]})
 
 # ---------------------------------------------------------------- 7. track and trace
-SECTIONS.append({"id": "track-trace", "kicker": "Systems", "title": "Seed-to-Sale: Tags, Movements, Reconciliation Points",
+SECTIONS.append({"id": "track-trace", "kicker": "Systems", "title": "Seed-to-sale tracking and reconciliation",
   "blocks": [
     p("Track-and-trace is perpetual inventory for a controlled substance. Three ingredients: "
       "<strong>identity</strong> (every plant and package carries a tag or UID), "
@@ -293,7 +293,7 @@ SECTIONS.append({"id": "track-trace", "kicker": "Systems", "title": "Seed-to-Sal
   ]})
 
 # ---------------------------------------------------------------- 8. reconciliation
-SECTIONS.append({"id": "reconciliation", "kicker": "The #1 finding", "title": "Inventory Drift: the Finding That Writes Itself",
+SECTIONS.append({"id": "reconciliation", "kicker": "The #1 finding", "title": "Inventory reconciliation and drift",
   "blocks": [
     lead("Inventory reconciliation is the audit test that needs no skill to run and no judgement "
          "to interpret: the book says X, the scales say Y, explain the difference. That is exactly "
@@ -334,7 +334,7 @@ SECTIONS.append({"id": "reconciliation", "kicker": "The #1 finding", "title": "I
   ]})
 
 # ---------------------------------------------------------------- 9. records
-SECTIONS.append({"id": "records", "kicker": "Evidence", "title": "Records That Survive an Audit: ALCOA+",
+SECTIONS.append({"id": "records", "kicker": "Evidence", "title": "Audit-ready records and ALCOA+",
   "blocks": [
     p("Regulators worldwide converge on the same definition of a trustworthy record, usually "
       "abbreviated <strong>ALCOA</strong>: Attributable, Legible, Contemporaneous, Original, "
@@ -379,7 +379,7 @@ SECTIONS.append({"id": "records", "kicker": "Evidence", "title": "Records That S
   ]})
 
 # ---------------------------------------------------------------- 10. deviations
-SECTIONS.append({"id": "deviations", "kicker": "When it goes wrong", "title": "Deviations and CAPA-lite for Small Operators",
+SECTIONS.append({"id": "deviations", "kicker": "When it goes wrong", "title": "Deviation management and corrective actions",
   "blocks": [
     p("A deviation is any departure from your written process: the dehumidifier died overnight, "
       "the feed was mixed at the wrong EC, the wrong room got sprayed, a delivery arrived with "
@@ -419,7 +419,7 @@ SECTIONS.append({"id": "deviations", "kicker": "When it goes wrong", "title": "D
   ]})
 
 # ---------------------------------------------------------------- 11. gacp/gmp + quality agreements
-SECTIONS.append({"id": "gacp-gmp", "kicker": "The boundary", "title": "GACP vs GMP, and the Quality Agreements That Bridge Them",
+SECTIONS.append({"id": "gacp-gmp", "kicker": "The boundary", "title": "GACP, GMP and quality agreements",
   "blocks": [
     p("Two rule-sets govern the journey from seed to medicine. <strong>GACP</strong>, Good "
       "Agricultural and Collection Practice, covers growing, harvesting and primary processing "
@@ -468,7 +468,7 @@ SECTIONS.append({"id": "gacp-gmp", "kicker": "The boundary", "title": "GACP vs G
   ]})
 
 # ---------------------------------------------------------------- 12. security + destruction
-SECTIONS.append({"id": "security-waste", "kicker": "Custody", "title": "Security, Access and Destruction Records",
+SECTIONS.append({"id": "security-waste", "kicker": "Custody", "title": "Security, access and destruction records",
   "blocks": [
     p("Every regime writes its own security prescriptions (safes, alarm standards, camera "
       "retention days) into licence conditions, so this section stays deliberately generic. The "
@@ -506,7 +506,7 @@ SECTIONS.append({"id": "security-waste", "kicker": "Custody", "title": "Security
   ]})
 
 # ---------------------------------------------------------------- 13. recall
-SECTIONS.append({"id": "recall", "kicker": "Readiness", "title": "Recall Readiness and the Mock Recall",
+SECTIONS.append({"id": "recall", "kicker": "Readiness", "title": "Recall readiness and mock recalls",
   "blocks": [
     p("A recall is traceability run under stress: something already released turns out to be "
       "suspect, and you must find all of it, fast, and prove you found all of it. Formal GMP "
@@ -545,7 +545,7 @@ SECTIONS.append({"id": "recall", "kicker": "Readiness", "title": "Recall Readine
   ]})
 
 # ---------------------------------------------------------------- 14. audit day
-SECTIONS.append({"id": "audit-day", "kicker": "The test", "title": "Audit Day: a Walkthrough",
+SECTIONS.append({"id": "audit-day", "kicker": "The test", "title": "Audit-day walkthrough",
   "blocks": [
     p("Inspections vary (announced or not, desk or on-site, routine or triggered) but the shape "
       "of a survivable audit day is consistent. The work is 90% done before the knock on the "
@@ -613,7 +613,7 @@ SECTIONS.append({"id": "audit-day", "kicker": "The test", "title": "Audit Day: a
   ]})
 
 # ---------------------------------------------------------------- 15. worked examples
-SECTIONS.append({"id": "worked-examples", "kicker": "Two regimes", "title": "Worked Examples: New Zealand and Australia, From Altitude",
+SECTIONS.append({"id": "worked-examples", "kicker": "Two regimes", "title": "Worked examples: NZ and Australia",
   "blocks": [
     callout("warn", "Date-stamped description, verify before acting",
       p("What follows describes two real regimes at a high level <strong>as at August 2026</strong>, "
@@ -657,7 +657,7 @@ SECTIONS.append({"id": "worked-examples", "kicker": "Two regimes", "title": "Wor
   ]})
 
 # ---------------------------------------------------------------- 16. field guide
-SECTIONS.append({"id": "field-guide", "kicker": "Reference", "title": "Troubleshooting and the Mental Model",
+SECTIONS.append({"id": "field-guide", "kicker": "Reference", "title": "Troubleshooting and control principles",
   "blocks": [
     table(["Symptom", "Likely cause", "Fix"], [
       ["Stocktake variance every month", "Unlogged moisture loss and waste",

@@ -26,7 +26,7 @@ JURISDICTION_NOTE = 'Jurisdiction note: security and egress examples may cite US
 
 
 SECTIONS.append({"id": "intro", "kicker": "Start here",
-  "title": "What 3D facility planning is (and why it beats a paper plan)",
+  "title": "Purpose and scope",
   "blocks": [
     callout("NOTE", "Jurisdiction", JURISDICTION_NOTE),
     
@@ -61,7 +61,7 @@ SECTIONS.append({"id": "intro", "kicker": "Start here",
   ]})
 
 SECTIONS.append({"id": "key-terms", "kicker": "Plain-English dictionary",
-  "title": "Key terms, defined from zero",
+  "title": "Definitions",
   "blocks": [
     p("Here is the vocabulary. None of these need prior knowledge. They are the words this topic "
       "keeps using. Read this once and the rest of the paper reads easily."),
@@ -84,7 +84,7 @@ SECTIONS.append({"id": "key-terms", "kicker": "Plain-English dictionary",
   ]})
 
 SECTIONS.append({"id": "model-the-data", "kicker": "Core idea 1",
-  "title": "Model the building as data, not as a drawing",
+  "title": "Data-based building model",
   "blocks": [
     p("<strong>Do not draw the building by hand in code.</strong> This is the single most "
       "important decision in the whole approach. Describe it as data, and let the code interpret "
@@ -165,7 +165,7 @@ SECTIONS.append({"id": "shell-and-storeys", "kicker": "Core idea 2",
   ]})
 
 SECTIONS.append({"id": "fit-out-airflow", "kicker": "Core idea 3",
-  "title": "Fit-out: benches, plants, climate gear and airflow",
+  "title": "Facility fit-out and airflow",
   "blocks": [
     p("<strong>Fit-out</strong> turns a generic building into a grow facility, and every "
       "piece is built from simple shapes. No modelling software required. The reference "
@@ -213,7 +213,7 @@ SECTIONS.append({"id": "fit-out-airflow", "kicker": "Core idea 3",
   ]})
 
 SECTIONS.append({"id": "security-layer", "kicker": "Core idea 4",
-  "title": "The security and compliance layer you can actually see",
+  "title": "Visible security and compliance controls",
   "blocks": [
     p("Licensed cultivation is audited on its <strong>security plan</strong>, and modelling that "
       "layer turns a paper checklist into something you can walk an inspector through. Each camera "
@@ -255,7 +255,7 @@ SECTIONS.append({"id": "security-layer", "kicker": "Core idea 4",
   ]})
 
 SECTIONS.append({"id": "how-to", "kicker": "Do it yourself",
-  "title": "A step-by-step path from plan to clickable model",
+  "title": "3D modelling workflow",
   "blocks": [
     p("Here is the practical order of work, with nothing skipped. The whole thing is one HTML file, "
       "a JSON block, and roughly 600 lines of generator code, small enough to lift straight "
@@ -281,7 +281,7 @@ SECTIONS.append({"id": "how-to", "kicker": "Do it yourself",
   ]})
 
 SECTIONS.append({"id": "pitfalls", "kicker": "Avoid these",
-  "title": "Common pitfalls and how to dodge them",
+  "title": "Troubleshooting",
   "blocks": [
     p("Most mistakes come from a handful of repeatable errors. The biggest by far is modelling in "
       "code instead of in data. Do that and every re-plan becomes painful, because you have "
@@ -304,7 +304,7 @@ SECTIONS.append({"id": "pitfalls", "kicker": "Avoid these",
   ]})
 
 SECTIONS.append({"id": "expectations", "kicker": "Reality check",
-  "title": "What 3D planning realistically gets you, and what it does not",
+  "title": "Expected results and limitations",
   "blocks": [
     p("Set expectations honestly. This kind of model is light and fast: the reference demo draws a "
       "full two-storey facility, about 450 meshes plus instanced plants, at 60 frames "

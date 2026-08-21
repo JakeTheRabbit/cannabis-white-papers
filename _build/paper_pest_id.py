@@ -27,7 +27,7 @@ SECTIONS = []
 JURISDICTION_NOTE = 'Jurisdiction note: named biocontrol agents and rates are planning examples only. Confirm legal status and supplier availability in your country (NZ readers: check HSNO/MPI before release).'
 
 
-SECTIONS.append({"id": "intro", "kicker": "Start here", "title": "What this guide is (and is not)",
+SECTIONS.append({"id": "intro", "kicker": "Start here", "title": "Purpose and scope",
   "blocks": [
     callout("NOTE", "Jurisdiction", JURISDICTION_NOTE),
     
@@ -57,7 +57,7 @@ SECTIONS.append({"id": "intro", "kicker": "Start here", "title": "What this guid
       "Eight pest groups, where to look, what to look for, and the first beneficial to reach for."),
   ]})
 
-SECTIONS.append({"id": "key-terms", "kicker": "Vocabulary", "title": "Key terms, defined once",
+SECTIONS.append({"id": "key-terms", "kicker": "Vocabulary", "title": "Definitions",
   "blocks": [
     p("A handful of words appear throughout this guide and the IPM SOP, so define them now. You do "
       "not need to memorise them, each one comes back in context."),
@@ -87,7 +87,7 @@ SECTIONS.append({"id": "key-terms", "kicker": "Vocabulary", "title": "Key terms,
   ]})
 
 SECTIONS.append({"id": "sap-suckers", "kicker": "The core pests, part 1",
-  "title": "Leaf sap-suckers: spider mites, thrips, aphids and whitefly",
+  "title": "Leaf sap-feeding pests: spider mites, thrips, aphids and whiteflies",
   "blocks": [
     p("These four feed on leaves and stems by piercing cells and sucking sap, so they share a look: "
       "pale stippling, distortion and loss of vigour" + _c("pulkoski-burrack-2023-piercing-sucking-hemp") +
@@ -117,7 +117,7 @@ SECTIONS.append({"id": "sap-suckers", "kicker": "The core pests, part 1",
   ]})
 
 SECTIONS.append({"id": "hidden-pests", "kicker": "The core pests, part 2",
-  "title": "The hidden ones: russet and broad mites, fungus gnats, root aphids and caterpillars",
+  "title": "Hidden pests: russet and broad mites, fungus gnats, root aphids and caterpillars",
   "blocks": [
     p("This group is dangerous because the damage shows before the pest does. Russet mites "
       "(<em>Aculops cannabicola</em>, under 1 mm, needs 80-100x) and broad mites (needs ~60x) are "
@@ -148,7 +148,7 @@ SECTIONS.append({"id": "hidden-pests", "kicker": "The core pests, part 2",
   ]})
 
 SECTIONS.append({"id": "monitoring", "kicker": "Catch it early",
-  "title": "Monitoring: traps, loupes and a weekly scouting routine",
+  "title": "Pest monitoring and weekly scouting",
   "blocks": [
     p("You cannot control what you do not measure, and early detection is the single biggest lever "
       "you have. Run a fixed weekly scouting walk on the same day, inspecting leaf undersides, "
@@ -180,7 +180,7 @@ SECTIONS.append({"id": "monitoring", "kicker": "Catch it early",
   ]})
 
 SECTIONS.append({"id": "controls", "kicker": "What to release and spray",
-  "title": "Biological controls and treatments, pest by pest",
+  "title": "Biological controls and treatments by pest",
   "blocks": [
     p("Match the tool to the pest, and to whether you are preventing or reacting. For spider mites "
       "the specialist predator <em>Phytoseiulus persimilis</em> is the fast curative, but it wants "
@@ -213,7 +213,7 @@ SECTIONS.append({"id": "controls", "kicker": "What to release and spray",
   ]})
 
 SECTIONS.append({"id": "pitfalls", "kicker": "Where growers go wrong",
-  "title": "Troubleshooting and common pitfalls",
+  "title": "Troubleshooting",
   "blocks": [
     p("Most pest disasters are diagnosis and timing failures, not product failures. The classic "
       "mistakes repeat across facilities, and all of them are avoidable with a scope and a calendar."),
@@ -239,7 +239,7 @@ SECTIONS.append({"id": "pitfalls", "kicker": "Where growers go wrong",
   ]})
 
 SECTIONS.append({"id": "expectations", "kicker": "What success looks like",
-  "title": "Realistic expectations and prevention payoff",
+  "title": "Expected results and limitations",
   "blocks": [
     p("Eradication is rarely the goal. Durable suppression below the action threshold is. Expect "
       "biological control to take time: thrips control is often visible only around 3 weeks after "

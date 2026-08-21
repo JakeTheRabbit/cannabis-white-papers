@@ -25,7 +25,7 @@ def _c(rid):
 
 SECTIONS = []
 
-SECTIONS.append({"id": "start-here", "kicker": "Start here", "title": "Rosin in Plain English",
+SECTIONS.append({"id": "start-here", "kicker": "Start here", "title": "Purpose and scope",
   "blocks": [
     lead("A cannabis plant is covered in thousands of tiny, mushroom-shaped glands called "
          "<strong>trichomes</strong>, the frosty &lsquo;crystals&rsquo; you can see on good flower. Each "
@@ -72,7 +72,52 @@ SECTIONS.append({"id": "start-here", "kicker": "Start here", "title": "Rosin in 
       "glossary at the end."),
   ]})
 
-SECTIONS.append({"id": "core-answer", "kicker": "The short version", "title": "Core Answer",
+SECTIONS.append({"id": "glossary", "kicker": "The words", "title": "Definitions",
+  "blocks": [
+    p("Plain-English definitions for the terms this guide leans on. Skim it once and the technical "
+      "sections read easily."),
+    table(["Term", "Meaning"], [
+      ["Amber trichome", "A resin head aged past its peak, turned amber. A little adds a heavier body effect; too much means lost potency."],
+      ["Badder / batter", "A creamy, whipped rosin texture, like frosting. Set by curing and stirring."],
+      ["Blowout", "The mesh bag bursting under pressure so raw plant matter floods the oil, ruining the batch."],
+      ["Bubble hash", "Hash made by stirring cannabis in ice water so the brittle trichome heads snap off and sink through mesh bags."],
+      ["Capitate-stalked trichome", "The large, lollipop-shaped gland that holds the most resin, the prize fraction."],
+      ["Chromatography (reabsorption)", "Oil that already flowed out soaking back into the spent material because flow stalled; shows up as poor yield."],
+      ["Cloudy / milky trichome", "A head at peak ripeness (peak THCa and terpenes); the target window at harvest."],
+      ["Cold chain", "The steps that must stay cold (harvest, wash, dry, collection, storage) because heat degrades quality there."],
+      ["Cold cure", "Resting sealed rosin cool (about 10–21 °C) for days to weeks to set a creamy badder."],
+      ["Decarb (decarboxylation)", "Heating to convert raw THCa into active THC; required for vape carts, but it destroys diamond potential."],
+      ["Diamonds (THCa diamonds)", "Clear crystals of nearly pure THCa grown from rosin, sitting in a pool of &lsquo;sauce&rsquo;."],
+      ["Dry sift (kief)", "Hash made by rubbing dried plant over fine screens so trichome heads fall through; the powder is kief."],
+      ["Dwell time", "How long the bag is held squeezed under heat during a press."],
+      ["Effective pressure (PSI)", "The force actually felt by the bag (force ÷ bag area). What matters, not the raw gauge number."],
+      ["Emulsion", "A hazy, unstable blend caused by water trapped in the oil; the rosin looks cloudy."],
+      ["Freeze-dryer (lyophiliser)", "A machine that pulls water out under vacuum while frozen, drying hash with no heat. The quality option."],
+      ["Fresh-frozen", "Plant flash-frozen right after cutting and never dried, preserving the &lsquo;live&rsquo; aroma; the basis of live rosin."],
+      ["Full-melt", "Top-grade hash (5–6 star) pure enough to melt to almost nothing on a hot nail; the cleanest press input."],
+      ["Hash hole", "A pre-rolled joint with a core of hash or rosin running down the middle."],
+      ["Lipids / waxes", "Natural plant fats that can cloud rosin; flower carries more of them than hash."],
+      ["Live rosin", "Rosin pressed from fresh-frozen hash; prized for the most vivid aroma and flavour."],
+      ["Melt / star grade (1–6★)", "A quality scale for hash by how cleanly it melts; 6-star is full-melt, 1–2 star is edible-only."],
+      ["Monoterpenes", "The lightest, most volatile terpenes (such as pinene and myrcene); the first aromas lost to heat."],
+      ["Nucleation", "The moment rosin begins to crystallise or &lsquo;butter up&rsquo;; triggered by cold, time, or stirring."],
+      ["PID", "A precise temperature controller that holds the press plates steady at the set temperature."],
+      ["Pre-press", "Forming the material into a dense, air-free puck before pressing, to stop channels and blowouts."],
+      ["Puck", "The flattened, spent material left inside the bag after pressing."],
+      ["Sauce", "The liquid, terpene-rich oil surrounding THCa diamonds (high-terpene solventless hash oil)."],
+      ["Static glove tek", "A cleaning trick where a static-charged glove lifts pure trichome heads off a screen, leaving debris behind."],
+      ["THCa / THC", "THCa is the raw, non-intoxicating acid in fresh material; heat turns it into active THC. Only THCa forms diamonds."],
+      ["Viscosity", "How thick or runny the oil is; heat lowers viscosity so rosin flows."],
+      ["Water activity (a<sub>w</sub>)", "A precise measure of free moisture (0–1) used to judge when flower is properly dried (optimal 0.58–0.62)."],
+      ["Yield", "How much rosin you get back, usually given as a percentage of the hash weight pressed."],
+    ], cls="compact"),
+    p("Setpoints, micron guidance and the trichome-to-press logic in this guide are drawn from the "
+      "author's solventless knowledge base and operational SOPs, cross-checked against the cited "
+      "sources. It is a field guide, not a substitute for testing your own material, verify by "
+      "logging your runs."),
+  ]})
+
+SECTIONS.append({"id": "core-answer", "kicker": "The short version", "title": "Core press principles",
   "blocks": [
     p("A rosin press has only four levers (<strong>heat, pressure, time and screen (micron)</strong>) "
       "and they all negotiate a single tension: <em>yield versus quality</em> (terpene retention, colour, "
@@ -89,7 +134,7 @@ SECTIONS.append({"id": "core-answer", "kicker": "The short version", "title": "C
       "flow, collect cold, and cure for texture."),
   ]})
 
-SECTIONS.append({"id": "pipeline", "kicker": "The map", "title": "The Pipeline at a Glance",
+SECTIONS.append({"id": "pipeline", "kicker": "The map", "title": "Rosin production workflow",
   "blocks": [
     p("Hash rosin is the back half of a longer chain. Cold-chain steps (where heat is the enemy) are "
       "marked in blue in the map below; the press and the cure are where heat becomes a tool."),
@@ -113,7 +158,7 @@ SECTIONS.append({"id": "pipeline", "kicker": "The map", "title": "The Pipeline a
       "matrices and failure modes tell you which lever to move when a stage goes wrong."),
   ]})
 
-SECTIONS.append({"id": "setpoints", "kicker": "Numbers to start from", "title": "Starting Setpoints by Input Material",
+SECTIONS.append({"id": "setpoints", "kicker": "Numbers to start from", "title": "Starting setpoints by input material",
   "blocks": [
     p("Where to begin for each of the four input materials. These are <em>starting points</em> to dial "
       "in from, not targets to chase" + _c("triminator-tempchart") + ". Temperatures are platen "
@@ -147,7 +192,7 @@ SECTIONS.append({"id": "setpoints", "kicker": "Numbers to start from", "title": 
       "flower needs more heat; the hottest end trades flavour for yield."),
   ]})
 
-SECTIONS.append({"id": "known-unknown", "kicker": "Honesty first", "title": "Known, Assumed, Unknown",
+SECTIONS.append({"id": "known-unknown", "kicker": "Honesty first", "title": "Evidence, assumptions and unknowns",
   "blocks": [
     h(3, "Knowns (settled)"),
     ul(["Lower platen temperature preserves terpenes and colour; higher temperature buys yield and flow "
@@ -176,7 +221,7 @@ SECTIONS.append({"id": "known-unknown", "kicker": "Honesty first", "title": "Kno
         "<strong>Exact moisture</strong>, a few points of RH swing flow, clarity and blowout risk."]),
   ]})
 
-SECTIONS.append({"id": "balances", "kicker": "Core concept", "title": "The Press as Four Coupled Balances",
+SECTIONS.append({"id": "balances", "kicker": "Core concept", "title": "Four coupled press balances",
   "blocks": [
     p("Like a grow room, a press is best read as a few coupled balances rather than independent knobs. "
       "Move one and the others shift."),
@@ -202,7 +247,7 @@ SECTIONS.append({"id": "balances", "kicker": "Core concept", "title": "The Press
       "is a judgement call: cool for flavour, hot for volume."),
   ]})
 
-SECTIONS.append({"id": "levers", "kicker": "The controls", "title": "Lever Inventory",
+SECTIONS.append({"id": "levers", "kicker": "The controls", "title": "Press control variables",
   "blocks": [
     p("The full set of controls, grouped by where they sit in the chain. Upstream levers cap the "
       "ceiling; press levers set the trade; finishing levers set the texture."),
@@ -252,7 +297,7 @@ SECTIONS.append({"id": "levers", "kicker": "The controls", "title": "Lever Inven
     ], cls="compact"),
   ]})
 
-SECTIONS.append({"id": "interaction", "kicker": "Cause and effect", "title": "Main Lever Interaction Matrix",
+SECTIONS.append({"id": "interaction", "kicker": "Cause and effect", "title": "Press-control interaction matrix",
   "blocks": [
     p("What happens to each outcome when you turn a press lever <em>up</em> (or, for micron, "
       "<em>tighter</em>). Direction of effect, all else held equal. ↑ = increases / improves, "
@@ -270,7 +315,7 @@ SECTIONS.append({"id": "interaction", "kicker": "Cause and effect", "title": "Ma
       "complete a flow that heat has already started" + _c("pressclub-pressure") + "."),
   ]})
 
-SECTIONS.append({"id": "symptoms", "kicker": "Read the result", "title": "Symptom-to-Parameter Matrix",
+SECTIONS.append({"id": "symptoms", "kicker": "Read the result", "title": "Symptom-to-parameter matrix",
   "blocks": [
     p("Read a result, find the lever that moved too far, make the one corrective change. Adjust a "
       "single lever per run so the next result is interpretable."),
@@ -290,7 +335,7 @@ SECTIONS.append({"id": "symptoms", "kicker": "Read the result", "title": "Sympto
     ], cls="compact"),
   ]})
 
-SECTIONS.append({"id": "worked-example", "kicker": "One change, traced", "title": "Worked Example: Raising Plate Temp +6 °C",
+SECTIONS.append({"id": "worked-example", "kicker": "One change, traced", "title": "Worked example: raising plate temperature by 6 °C",
   "blocks": [
     p("A single nudge cascades. Take full-melt fresh-frozen hash and raise the platen from "
       "<strong>71 °C → 77 °C</strong>, holding everything else constant."),
@@ -316,7 +361,7 @@ SECTIONS.append({"id": "worked-example", "kicker": "One change, traced", "title"
         "your nose for a few points of yield, a bad deal. Stay at 71 °C and accept the lower number.")),
   ]})
 
-SECTIONS.append({"id": "stages", "kicker": "Step by step", "title": "Stage Deep-Dives",
+SECTIONS.append({"id": "stages", "kicker": "Step by step", "title": "Process stage deep dives",
   "blocks": [
     p("The full farm-to-dab chain, stage by stage, with the parameters that matter at each. Everything "
       "before the press is a cold-chain step where heat is the enemy."),
@@ -401,7 +446,7 @@ SECTIONS.append({"id": "stages", "kicker": "Step by step", "title": "Stage Deep-
       "product path."),
   ]})
 
-SECTIONS.append({"id": "equipment", "kicker": "The hardware", "title": "Equipment-Specific Effects",
+SECTIONS.append({"id": "equipment", "kicker": "The hardware", "title": "Equipment-specific effects",
   "blocks": [
     p("Each tool exposes its own sub-levers. Match the press class to the batch size, and favour "
       "accurate temperature control for low-temp work."),
@@ -424,7 +469,7 @@ SECTIONS.append({"id": "equipment", "kicker": "The hardware", "title": "Equipmen
     ], cls="compact"),
   ]})
 
-SECTIONS.append({"id": "trichome-matrix", "kicker": "Read the material", "title": "Input / Trichome Interaction Matrix",
+SECTIONS.append({"id": "trichome-matrix", "kicker": "Read the material", "title": "Input and trichome interaction matrix",
   "blocks": [
     p("Read the material, under a loupe or scope, and let it pick the settings. The micron is "
       "dictated by head size and debris, never chased for its own sake."),
@@ -445,7 +490,7 @@ SECTIONS.append({"id": "trichome-matrix", "kicker": "Read the material", "title"
         "the micron, slow the ramp, and don't overfill.")),
   ]})
 
-SECTIONS.append({"id": "products", "kicker": "Where it ends up", "title": "Post-Press Product Paths",
+SECTIONS.append({"id": "products", "kicker": "Where it ends up", "title": "Post-press product pathways",
   "blocks": [
     p("The same fresh-pressed rosin diverges into every solventless product through the finishing "
       "levers. The press setpoint sets the starting oil; the cure sets the destination."),
@@ -482,7 +527,7 @@ SECTIONS.append({"id": "products", "kicker": "Where it ends up", "title": "Post-
         "keep them away from your face, and open only after they've cooled.")),
   ]})
 
-SECTIONS.append({"id": "failure-modes", "kicker": "What goes wrong", "title": "Main Failure Modes",
+SECTIONS.append({"id": "failure-modes", "kicker": "What goes wrong", "title": "Common failure modes",
   "blocks": [
     grid([
       card("F-01 · Blowout", "The bag ruptures and contamination floods the slab. <strong>Cause:</strong> "
@@ -518,7 +563,7 @@ SECTIONS.append({"id": "failure-modes", "kicker": "What goes wrong", "title": "M
     ], cols=2),
   ]})
 
-SECTIONS.append({"id": "hierarchy", "kicker": "In order", "title": "Practical Control Hierarchy",
+SECTIONS.append({"id": "hierarchy", "kicker": "In order", "title": "Practical control hierarchy",
   "blocks": [
     p("Set these in order. Each step constrains the next; skipping upstream steps wastes the "
       "downstream ones."),
@@ -540,7 +585,7 @@ SECTIONS.append({"id": "hierarchy", "kicker": "In order", "title": "Practical Co
     ]),
   ]})
 
-SECTIONS.append({"id": "troubleshooting", "kicker": "Quick reference", "title": "Minimal Operating Matrix for Troubleshooting",
+SECTIONS.append({"id": "troubleshooting", "kicker": "Quick reference", "title": "Troubleshooting",
   "blocks": [
     p("Observation → likely cause → first checks. Start at the top. Most problems are upstream of "
       "the plates."),
@@ -559,7 +604,7 @@ SECTIONS.append({"id": "troubleshooting", "kicker": "Quick reference", "title": 
     ], cls="compact"),
   ]})
 
-SECTIONS.append({"id": "mental-model", "kicker": "Keep one thing", "title": "The Simplest Mental Model",
+SECTIONS.append({"id": "mental-model", "kicker": "Keep one thing", "title": "Rosin process-control principles",
   "blocks": [
     p("If you keep only one thing, keep the chain:"),
     callout("key", "The pressing chain",
@@ -571,49 +616,4 @@ SECTIONS.append({"id": "mental-model", "kicker": "Keep one thing", "title": "The
         "keeps it.")),
     p("Heat to flow, screen to clean, pressure only to finish, then cure for texture. Quality is set "
       "upstream; the press only preserves it or squanders it."),
-  ]})
-
-SECTIONS.append({"id": "glossary", "kicker": "The words", "title": "Glossary",
-  "blocks": [
-    p("Plain-English definitions for the terms this guide leans on. Skim it once and the technical "
-      "sections read easily."),
-    table(["Term", "Meaning"], [
-      ["Amber trichome", "A resin head aged past its peak, turned amber. A little adds a heavier body effect; too much means lost potency."],
-      ["Badder / batter", "A creamy, whipped rosin texture, like frosting. Set by curing and stirring."],
-      ["Blowout", "The mesh bag bursting under pressure so raw plant matter floods the oil, ruining the batch."],
-      ["Bubble hash", "Hash made by stirring cannabis in ice water so the brittle trichome heads snap off and sink through mesh bags."],
-      ["Capitate-stalked trichome", "The large, lollipop-shaped gland that holds the most resin, the prize fraction."],
-      ["Chromatography (reabsorption)", "Oil that already flowed out soaking back into the spent material because flow stalled; shows up as poor yield."],
-      ["Cloudy / milky trichome", "A head at peak ripeness (peak THCa and terpenes); the target window at harvest."],
-      ["Cold chain", "The steps that must stay cold (harvest, wash, dry, collection, storage) because heat degrades quality there."],
-      ["Cold cure", "Resting sealed rosin cool (about 10–21 °C) for days to weeks to set a creamy badder."],
-      ["Decarb (decarboxylation)", "Heating to convert raw THCa into active THC; required for vape carts, but it destroys diamond potential."],
-      ["Diamonds (THCa diamonds)", "Clear crystals of nearly pure THCa grown from rosin, sitting in a pool of &lsquo;sauce&rsquo;."],
-      ["Dry sift (kief)", "Hash made by rubbing dried plant over fine screens so trichome heads fall through; the powder is kief."],
-      ["Dwell time", "How long the bag is held squeezed under heat during a press."],
-      ["Effective pressure (PSI)", "The force actually felt by the bag (force ÷ bag area). What matters, not the raw gauge number."],
-      ["Emulsion", "A hazy, unstable blend caused by water trapped in the oil; the rosin looks cloudy."],
-      ["Freeze-dryer (lyophiliser)", "A machine that pulls water out under vacuum while frozen, drying hash with no heat. The quality option."],
-      ["Fresh-frozen", "Plant flash-frozen right after cutting and never dried, preserving the &lsquo;live&rsquo; aroma; the basis of live rosin."],
-      ["Full-melt", "Top-grade hash (5–6 star) pure enough to melt to almost nothing on a hot nail; the cleanest press input."],
-      ["Hash hole", "A pre-rolled joint with a core of hash or rosin running down the middle."],
-      ["Lipids / waxes", "Natural plant fats that can cloud rosin; flower carries more of them than hash."],
-      ["Live rosin", "Rosin pressed from fresh-frozen hash; prized for the most vivid aroma and flavour."],
-      ["Melt / star grade (1–6★)", "A quality scale for hash by how cleanly it melts; 6-star is full-melt, 1–2 star is edible-only."],
-      ["Monoterpenes", "The lightest, most volatile terpenes (such as pinene and myrcene); the first aromas lost to heat."],
-      ["Nucleation", "The moment rosin begins to crystallise or &lsquo;butter up&rsquo;; triggered by cold, time, or stirring."],
-      ["PID", "A precise temperature controller that holds the press plates steady at the set temperature."],
-      ["Pre-press", "Forming the material into a dense, air-free puck before pressing, to stop channels and blowouts."],
-      ["Puck", "The flattened, spent material left inside the bag after pressing."],
-      ["Sauce", "The liquid, terpene-rich oil surrounding THCa diamonds (high-terpene solventless hash oil)."],
-      ["Static glove tek", "A cleaning trick where a static-charged glove lifts pure trichome heads off a screen, leaving debris behind."],
-      ["THCa / THC", "THCa is the raw, non-intoxicating acid in fresh material; heat turns it into active THC. Only THCa forms diamonds."],
-      ["Viscosity", "How thick or runny the oil is; heat lowers viscosity so rosin flows."],
-      ["Water activity (a<sub>w</sub>)", "A precise measure of free moisture (0–1) used to judge when flower is properly dried (optimal 0.58–0.62)."],
-      ["Yield", "How much rosin you get back, usually given as a percentage of the hash weight pressed."],
-    ], cls="compact"),
-    p("Setpoints, micron guidance and the trichome-to-press logic in this guide are drawn from the "
-      "author's solventless knowledge base and operational SOPs, cross-checked against the cited "
-      "sources. It is a field guide, not a substitute for testing your own material, verify by "
-      "logging your runs."),
   ]})

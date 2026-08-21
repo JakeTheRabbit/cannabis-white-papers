@@ -27,7 +27,7 @@ def _c(rid):
 
 SECTIONS = []
 
-SECTIONS.append({"id": "intro", "kicker": "01 · Start here", "title": "What this is (and why light is the engine)",
+SECTIONS.append({"id": "intro", "kicker": "01 · Start here", "title": "Purpose and scope",
   "blocks": [
     lead("Light is not just &lsquo;on or off.&rsquo; It is the raw fuel a plant turns into sugar, "
          "and the single biggest lever on yield and quality you control indoors. This paper assumes "
@@ -48,7 +48,7 @@ SECTIONS.append({"id": "intro", "kicker": "01 · Start here", "title": "What thi
         "safely, so young plants adapt instead of bleaching.")),
   ]})
 
-SECTIONS.append({"id": "key-terms", "kicker": "02 · The vocabulary", "title": "PAR, PPFD, DLI and umol/J in plain English",
+SECTIONS.append({"id": "key-terms", "kicker": "02 · The vocabulary", "title": "Definitions",
   "blocks": [
     p("Get the gist of these five terms and the rest of the paper falls into place. They all describe "
       "the same thing from different angles: how much usable light a plant is getting."),
@@ -78,7 +78,7 @@ SECTIONS.append({"id": "key-terms", "kicker": "02 · The vocabulary", "title": "
       "tool for plant light." + _c("eichhorn-bilodeau-2019-photobiology-cannabis-review")),
   ]})
 
-SECTIONS.append({"id": "spectrum", "kicker": "03 · Core concept 1", "title": "Spectrum: what each color does",
+SECTIONS.append({"id": "spectrum", "kicker": "03 · Core concept 1", "title": "Spectrum and plant responses",
   "blocks": [
     p("Blue light, roughly 400 to 500 nm, keeps plants compact with tight internode spacing and is "
       "linked to denser growth and resin in flower" + _c("magagnini-2018-light-spectrum-morphology-cannabinoids") +
@@ -101,7 +101,7 @@ SECTIONS.append({"id": "spectrum", "kicker": "03 · Core concept 1", "title": "S
         "spend your attention on PPFD and DLI before you chase color recipes.")),
   ]})
 
-SECTIONS.append({"id": "intensity-dli", "kicker": "04 · Core concept 2", "title": "Intensity and the daily dose: targets by stage",
+SECTIONS.append({"id": "intensity-dli", "kicker": "04 · Core concept 2", "title": "Light intensity and daily light integral: targets by stage",
   "blocks": [
     p("Young tissue cannot process intense light, so targets climb as the plant matures. "
       "Clones and seedlings want about 100-250 PPFD (DLI roughly ~6-16 mol)" + _c("rodriguez-morrison-2021-light-levels-yield-photosynthesis") +
@@ -134,7 +134,7 @@ SECTIONS.append({"id": "intensity-dli", "kicker": "04 · Core concept 2", "title
     ], cls="compact", caption="Stage targets. 600 PPFD x 18h (~39 mol) is closer to ~900 PPFD x 12h than to 800 PPFD x 12h."),
   ]})
 
-SECTIONS.append({"id": "photoperiod-flip", "kicker": "05 · Core concept 3", "title": "The photoperiod flip that triggers flowering",
+SECTIONS.append({"id": "photoperiod-flip", "kicker": "05 · Core concept 3", "title": "Photoperiod and floral initiation",
   "blocks": [
     p("Photoperiod-type cannabis stays vegetative under long days (commonly 18/6) and is forced to "
       "flower by switching to 12 hours light and 12 hours uninterrupted dark" + _c("kusuma-2021-nir-leds-delay-flowering-phytochrome") +
@@ -159,7 +159,7 @@ SECTIONS.append({"id": "photoperiod-flip", "kicker": "05 · Core concept 3", "ti
         "pinholes, cover indicator LEDs, use light-proof ducting. If you can see in the dark, so can the plant.")),
   ]})
 
-SECTIONS.append({"id": "fixtures", "kicker": "06 · The hardware", "title": "LED vs HPS vs CMH, and reading efficacy",
+SECTIONS.append({"id": "fixtures", "kicker": "06 · The hardware", "title": "LED, HPS and CMH fixtures: efficacy and selection",
   "blocks": [
     p("Modern LED is the efficiency leader at roughly 2.7-3.0 umol/J for good fixtures (budget units "
       "2.0-2.3), runs cooler, and lasts longer" + _c("nelson-bugbee-2014-efficacy-led-vs-hps") +
@@ -183,7 +183,7 @@ SECTIONS.append({"id": "fixtures", "kicker": "06 · The hardware", "title": "LED
     ], cls="compact", caption="Compare on efficacy and total PPF plus a real PPFD map, never on lumens or 'equivalent watts.'"),
   ]})
 
-SECTIONS.append({"id": "setup-by-stage", "kicker": "07 · Do this", "title": "Hanging height, coverage, and a stage-by-stage setup",
+SECTIONS.append({"id": "setup-by-stage", "kicker": "07 · Do this", "title": "Lighting setup by growth stage",
   "blocks": [
     p("Intensity falls with distance, but the inverse-square rule (a quarter of the light at twice the "
       "distance) is a point-source ideal that LED bars only approximate, so map PPFD with a meter rather "
@@ -211,7 +211,7 @@ SECTIONS.append({"id": "setup-by-stage", "kicker": "07 · Do this", "title": "Ha
         "dimmer or lower the fixture over several days rather than jumping a fresh clone to full intensity.")),
   ]})
 
-SECTIONS.append({"id": "pitfalls", "kicker": "08 · When it goes wrong", "title": "Light stress, far-red and UV, and common mistakes",
+SECTIONS.append({"id": "pitfalls", "kicker": "08 · When it goes wrong", "title": "Troubleshooting",
   "blocks": [
     p("Too much light shows as bleaching (white or yellow bud tips directly under the fixture), "
       "upward-cupping or &lsquo;taco&rsquo; leaves, and faded color even when nutrients are fine. The "
@@ -230,7 +230,7 @@ SECTIONS.append({"id": "pitfalls", "kicker": "08 · When it goes wrong", "title"
     ], cls="compact", caption="The biggest avoidable errors: jumping a clone to flower-level PPFD, trusting lux/wattage over a PAR meter, and ignoring light leaks."),
   ]})
 
-SECTIONS.append({"id": "expectations", "kicker": "09 · Reality check", "title": "Realistic expectations",
+SECTIONS.append({"id": "expectations", "kicker": "09 · Reality check", "title": "Expected results and limitations",
   "blocks": [
     p("More light only helps up to the point where something else (CO2, water, nutrients, temperature "
       "or genetics) becomes the limiting factor. Past saturation you pay for electricity and heat with "

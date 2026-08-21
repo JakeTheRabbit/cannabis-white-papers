@@ -32,7 +32,7 @@ def _fig_ceiling():
 SECTIONS = []
 
 SECTIONS.append({"id": "demand", "kicker": "01 · Read this first",
-  "title": "Light is the throttle, not the engine",
+  "title": "Purpose and scope",
   "blocks": [
     callout("evidence", "Grain of salt",
       "<p><strong>Borderline:</strong> High-rung EC and runoff ladders are advanced steering territory. "
@@ -62,7 +62,7 @@ SECTIONS.append({"id": "demand", "kicker": "01 · Read this first",
         "one that can't is your real ceiling.")),
   ]})
 
-SECTIONS.append({"id": "terms", "kicker": "02 · The vocabulary", "title": "The words you need",
+SECTIONS.append({"id": "terms", "kicker": "02 · The vocabulary", "title": "Definitions",
   "blocks": [
     p("Six terms carry the rest of the guide. If these are already second nature, skip to the ladder."),
     defterm("PPFD", "The intensity of usable light landing on the canopy, in &micro;mol/m&sup2;/s. "
@@ -85,7 +85,7 @@ SECTIONS.append({"id": "terms", "kicker": "02 · The vocabulary", "title": "The 
             "why <a href='airflow-design.html'>airflow</a>, feed EC and light are all bolted together."),
   ]})
 
-SECTIONS.append({"id": "ladder", "kicker": "03 · The core reference", "title": "The scaling ladder",
+SECTIONS.append({"id": "ladder", "kicker": "03 · The core reference", "title": "Light-scaling sequence",
   "blocks": [
     p("Here is the whole system on two tables, rung by rung. Pick your light level on the left and "
       "read across: everything in that row has to be true at the same time, or the light in that row "
@@ -130,7 +130,7 @@ SECTIONS.append({"id": "ladder", "kicker": "03 · The core reference", "title": 
       "all at once."),
   ]})
 
-SECTIONS.append({"id": "room", "kicker": "04 · Worked example", "title": "One room, five light levels",
+SECTIONS.append({"id": "room", "kicker": "04 · Worked example", "title": "Light-scaling example: a 50 m² flowering room",
   "blocks": [
     p("Per-m&sup2; numbers are abstract, so put them in a real box. Take a <strong>50 m&sup2; "
       "flowering canopy</strong>, a 10&nbsp;m &times; 5&nbsp;m room, roughly 35 &times; 650&nbsp;W "
@@ -156,7 +156,7 @@ SECTIONS.append({"id": "room", "kicker": "04 · Worked example", "title": "One r
       "what caps a real room before the lights do."),
   ]})
 
-SECTIONS.append({"id": "ec", "kicker": "05 · The root zone", "title": "EC climbs with light",
+SECTIONS.append({"id": "ec", "kicker": "05 · The root zone", "title": "EC management under high light",
   "blocks": [
     p("The feed column deserves its own look, because raising EC with light is the step growers most "
       "often skip, and the one that quietly caps yield. The logic is mass flow: brighter light "
@@ -187,7 +187,7 @@ SECTIONS.append({"id": "ec", "kicker": "05 · The root zone", "title": "EC climb
       "rise too; starve the volume and the salts simply concentrate and burn."),
   ]})
 
-SECTIONS.append({"id": "find", "kicker": "06 · The method", "title": "Find your limiting factor",
+SECTIONS.append({"id": "find", "kicker": "06 · The method", "title": "Identifying the limiting factor",
   "blocks": [
     p("Now the payoff. Every support system can sustain some maximum light level, a PPFD ceiling "
       "of its own. Work out the ceiling for each, and <strong>the lowest number is your room's real "
@@ -221,7 +221,7 @@ SECTIONS.append({"id": "find", "kicker": "06 · The method", "title": "Find your
       "more dehu."),
   ]})
 
-SECTIONS.append({"id": "cases", "kicker": "07 · Case studies", "title": "Four rooms, four walls",
+SECTIONS.append({"id": "cases", "kicker": "07 · Case studies", "title": "Limiting-factor case studies",
   "blocks": [
     p("The same method, four common rooms. Each has plenty of everything except one thing, and "
       "that one thing is the yield. The fix is never &lsquo;more light.&rsquo;"),
@@ -258,7 +258,7 @@ SECTIONS.append({"id": "cases", "kicker": "07 · Case studies", "title": "Four r
         "shot volume and frequency right first, <em>then</em> climb EC up Table 4 &mdash; not the other way round.")),
   ]})
 
-SECTIONS.append({"id": "dial", "kicker": "08 · The decision", "title": "Dial the light to the wall",
+SECTIONS.append({"id": "dial", "kicker": "08 · The decision", "title": "Setting light intensity to the limiting factor",
   "blocks": [
     p("Once you know your lowest ceiling, you have exactly two honest moves."),
     p("<strong>Move one: set the light to the wall.</strong> If your ceiling is 1050 &micro;mol, run 1050. "
@@ -301,7 +301,7 @@ SECTIONS.append({"id": "trouble", "kicker": "09 · When it goes wrong", "title":
       cls="compact"),
   ]})
 
-SECTIONS.append({"id": "expect", "kicker": "10 · Straight talk", "title": "Realistic expectations",
+SECTIONS.append({"id": "expect", "kicker": "10 · Straight talk", "title": "Expected results and limitations",
   "blocks": [
     p("Cannabis yield really does track light almost linearly, up to roughly 1500&ndash;1800 &micro;mol" +
       _c("rm2021-light") + ". But that finding comes with fine print those studies never hide: it "

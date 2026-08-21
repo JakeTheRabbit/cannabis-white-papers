@@ -24,7 +24,7 @@ def _c(rid):
 
 SECTIONS = []
 
-SECTIONS.append({"id": "what-this-is", "kicker": "Start here", "title": "What this is: reading the plant like a gauge",
+SECTIONS.append({"id": "what-this-is", "kicker": "Start here", "title": "Purpose and scope",
   "blocks": [
     lead("A cannabis plant tells you what it lacks, or has too much of, through the colour, shape and "
          "position of its leaves. This paper teaches you to read those signals systematically instead "
@@ -56,7 +56,7 @@ SECTIONS.append({"id": "what-this-is", "kicker": "Start here", "title": "What th
         "watching new growth for recovery, not the old leaves.")),
   ]})
 
-SECTIONS.append({"id": "key-terms", "kicker": "Vocabulary", "title": "Key terms, defined plainly",
+SECTIONS.append({"id": "key-terms", "kicker": "Vocabulary", "title": "Definitions",
   "blocks": [
     p("Before diagnosing anything you need a handful of words that growers use constantly. These are "
       "deliberately defined in everyday language. Skim once and refer back as needed."),
@@ -84,7 +84,7 @@ SECTIONS.append({"id": "key-terms", "kicker": "Vocabulary", "title": "Key terms,
       "show symptoms first." + _c("vyn-2007-ufl-nutrient-mobility-diagnosis")),
   ]})
 
-SECTIONS.append({"id": "mobility-why-position", "kicker": "Core concept 1", "title": "Why old leaves vs new leaves is the first question",
+SECTIONS.append({"id": "mobility-why-position", "kicker": "Core concept 1", "title": "Leaf position and nutrient mobility",
   "blocks": [
     p("When a plant runs short of a mobile nutrient, it cannibalises its oldest leaves to feed new "
       "growth, so damage appears at the bottom first and climbs upward. When it runs short of an "
@@ -109,7 +109,7 @@ SECTIONS.append({"id": "mobility-why-position", "kicker": "Core concept 1", "tit
         "check the calendar before you act.")),
   ]})
 
-SECTIONS.append({"id": "deficiency-vs-toxicity-vs-lockout", "kicker": "Core concept 2", "title": "Deficiency vs toxicity vs pH lockout",
+SECTIONS.append({"id": "deficiency-vs-toxicity-vs-lockout", "kicker": "Core concept 2", "title": "Deficiency, toxicity and pH lockout",
   "blocks": [
     p("The biggest beginner trap is seeing yellow leaves, assuming hungry, and adding more "
       "fertiliser, which makes a toxicity or lockout dramatically worse. A toxicity shows as dark "
@@ -139,7 +139,7 @@ SECTIONS.append({"id": "deficiency-vs-toxicity-vs-lockout", "kicker": "Core conc
         "outside range causes lockout despite a perfectly good feed." + _c("neilsen-1993-rhizosphere-ph-fe-mn-zn"))),
   ]})
 
-SECTIONS.append({"id": "ph-windows", "kicker": "Core concept 3", "title": "pH: the gatekeeper, and why your medium sets the target",
+SECTIONS.append({"id": "ph-windows", "kicker": "Core concept 3", "title": "pH targets by substrate",
   "blocks": [
     p("Each nutrient only dissolves and stays available across a specific pH band, so if root-zone pH "
       "drifts out of range, several nutrients drop out of solution at once and the plant starves in a "
@@ -195,7 +195,7 @@ SECTIONS.append({"id": "field-guide", "kicker": "Practical reference", "title": 
       "you will meet most." + _c("bevan-2021-npk-soilless-cannabis-flowering")),
   ]})
 
-SECTIONS.append({"id": "confirm-and-fix", "kicker": "Step by step", "title": "Confirm before you treat: pH + EC + runoff",
+SECTIONS.append({"id": "confirm-and-fix", "kicker": "Step by step", "title": "Confirming diagnosis with pH, EC and runoff",
   "blocks": [
     p("Diagnosis is a loop, not a guess. You observe the leaves, then confirm with two cheap meters "
       "before changing anything. Measuring the EC and pH of both what goes in and what runs out of "
@@ -219,7 +219,7 @@ SECTIONS.append({"id": "confirm-and-fix", "kicker": "Step by step", "title": "Co
         "is the answer.")),
   ]})
 
-SECTIONS.append({"id": "pitfalls", "kicker": "Troubleshooting", "title": "Common traps and look-alikes that fool beginners",
+SECTIONS.append({"id": "pitfalls", "kicker": "Troubleshooting", "title": "Troubleshooting",
   "blocks": [
     p("Most deficiencies beginners post about are actually pH lockout, overwatering or light burn "
       "wearing a deficiency costume. Knowing the impostors stops you from dumping fertiliser on a "
@@ -246,7 +246,7 @@ SECTIONS.append({"id": "pitfalls", "kicker": "Troubleshooting", "title": "Common
       "the last conclusion, not the first." + _c("fageria-2001-nutrient-interactions-antagonism")),
   ]})
 
-SECTIONS.append({"id": "realistic-expectations", "kicker": "Reality check", "title": "What to realistically expect",
+SECTIONS.append({"id": "realistic-expectations", "kicker": "Reality check", "title": "Expected results and limitations",
   "blocks": [
     p("Diagnosis gives you a confident shortlist, not lab certainty. Visual symptoms overlap, and "
       "only a tissue or substrate test is definitive." + _c("cockson-2019-nutrient-disorders-cannabis") +

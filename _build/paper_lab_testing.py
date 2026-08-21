@@ -28,7 +28,7 @@ def _c(rid):
 SECTIONS = []
 
 # ---------------------------------------------------------------- 1. start here
-SECTIONS.append({"id": "start-here", "kicker": "Start here", "title": "The Piece of Paper That Prices Your Crop",
+SECTIONS.append({"id": "start-here", "kicker": "Start here", "title": "Purpose and scope",
   "blocks": [
     lead("Every batch you sell (and in a medicinal system, every batch you release) ends its life as a "
          "one-page document from a testing laboratory: the <strong>certificate of analysis</strong>, or "
@@ -63,7 +63,7 @@ SECTIONS.append({"id": "start-here", "kicker": "Start here", "title": "The Piece
   ]})
 
 # ---------------------------------------------------------------- 2. core answer
-SECTIONS.append({"id": "core-answer", "kicker": "The short version", "title": "Core Answer",
+SECTIONS.append({"id": "core-answer", "kicker": "The short version", "title": "Laboratory testing overview",
   "blocks": [
     p("To read a COA in sixty seconds, check eight things in order:"),
     ol(["<strong>Who tested it</strong>, a named lab with a checkable accreditation (ISO/IEC 17025 or, in "
@@ -92,7 +92,7 @@ SECTIONS.append({"id": "core-answer", "kicker": "The short version", "title": "C
   ]})
 
 # ---------------------------------------------------------------- 3. pipeline
-SECTIONS.append({"id": "pipeline", "kicker": "The map", "title": "How a Test Actually Happens",
+SECTIONS.append({"id": "pipeline", "kicker": "The map", "title": "Laboratory testing workflow",
   "blocks": [
     p("Between &lsquo;cut a sample&rsquo; and &lsquo;PDF lands in your inbox&rsquo; sits a pipeline, and "
       "every stage of it shapes the final numbers. The instrument is the glamorous part; the sampling and the "
@@ -124,7 +124,7 @@ SECTIONS.append({"id": "pipeline", "kicker": "The map", "title": "How a Test Act
   ]})
 
 # ---------------------------------------------------------------- 4. read a COA
-SECTIONS.append({"id": "read-a-coa", "kicker": "Line by line", "title": "Reading a COA, Block by Block",
+SECTIONS.append({"id": "read-a-coa", "kicker": "Line by line", "title": "How to read a certificate of analysis",
   "blocks": [
     p("Below is a mock certificate from a fictional lab, <em>Example Analytical Ltd</em>, laid out the way "
       "most real ones are. The eight callouts are the eight places your eyes should go, in order."),
@@ -161,7 +161,7 @@ SECTIONS.append({"id": "read-a-coa", "kicker": "Line by line", "title": "Reading
   ]})
 
 # ---------------------------------------------------------------- 5. potency math
-SECTIONS.append({"id": "potency-math", "kicker": "The 0.877 factor", "title": "Total THC: the Maths and the Chemistry",
+SECTIONS.append({"id": "potency-math", "kicker": "The 0.877 factor", "title": "Total THC: calculation and chemistry",
   "blocks": [
     p("The living plant barely makes any THC. It makes <strong>THCA</strong>, tetrahydrocannabinolic acid, "
       "the same molecule wearing a carboxyl group (–COOH). THCA is not intoxicating; heat converts it to THC "
@@ -203,7 +203,7 @@ SECTIONS.append({"id": "potency-math", "kicker": "The 0.877 factor", "title": "T
   ]})
 
 # ---------------------------------------------------------------- 6. methods
-SECTIONS.append({"id": "methods", "kicker": "HPLC vs GC", "title": "Why the Instrument Changes the Answer",
+SECTIONS.append({"id": "methods", "kicker": "HPLC vs GC", "title": "How analytical method affects results",
   "blocks": [
     p("Two chromatography families dominate potency testing, and they do not see the same molecules. "
       "<strong>HPLC</strong> (high-performance liquid chromatography) pushes the extract through a column in "
@@ -236,7 +236,7 @@ SECTIONS.append({"id": "methods", "kicker": "HPLC vs GC", "title": "Why the Inst
   ]})
 
 # ---------------------------------------------------------------- 7. units & basis
-SECTIONS.append({"id": "units-basis", "kicker": "Units and water", "title": "Percent, mg/g and the Moisture Basis",
+SECTIONS.append({"id": "units-basis", "kicker": "Units and water", "title": "Units and moisture basis",
   "blocks": [
     p("Units first, because this one is mercifully simple: <strong>% w/w and mg/g are the same number, one "
       "decimal place apart.</strong> 1% w/w = 10 mg/g. Flower COAs usually report %, oils and edibles often "
@@ -263,7 +263,7 @@ SECTIONS.append({"id": "units-basis", "kicker": "Units and water", "title": "Per
   ]})
 
 # ---------------------------------------------------------------- 8. sampling
-SECTIONS.append({"id": "sampling", "kicker": "Sampling theory", "title": "The Sample Defines the Number",
+SECTIONS.append({"id": "sampling", "kicker": "Sampling theory", "title": "Sampling and result representativeness",
   "blocks": [
     p("Everything the instrument will ever see is decided before the courier arrives. A batch might be 12 kg; "
       "the composite sample a few tens of grams; the analytical portion that actually gets extracted, "
@@ -300,7 +300,7 @@ SECTIONS.append({"id": "sampling", "kicker": "Sampling theory", "title": "The Sa
   ]})
 
 # ---------------------------------------------------------------- 9. microbial
-SECTIONS.append({"id": "microbial", "kicker": "Microbiology", "title": "Microbial Testing: Plates, qPCR and Aspergillus",
+SECTIONS.append({"id": "microbial", "kicker": "Microbiology", "title": "Microbial testing methods",
   "blocks": [
     p("Microbial testing asks two kinds of question. <em>How much is growing on this?</em>, answered by "
       "counts: total aerobic microbial count (<strong>TAMC</strong>), total yeast and mould "
@@ -339,7 +339,7 @@ SECTIONS.append({"id": "microbial", "kicker": "Microbiology", "title": "Microbia
   ]})
 
 # ---------------------------------------------------------------- 10. metals
-SECTIONS.append({"id": "metals", "kicker": "Heavy metals", "title": "The Big Four and the ICP-MS",
+SECTIONS.append({"id": "metals", "kicker": "Heavy metals", "title": "Heavy-metal testing by ICP-MS",
   "blocks": [
     p("Cannabis is an enthusiastic accumulator of metals. The same trait that gets hemp planted for soil "
       "remediation pulls cadmium and lead out of your substrate, fertiliser and water and stores them in "
@@ -363,7 +363,7 @@ SECTIONS.append({"id": "metals", "kicker": "Heavy metals", "title": "The Big Fou
   ]})
 
 # ---------------------------------------------------------------- 11. pesticides
-SECTIONS.append({"id": "pesticides", "kicker": "Pesticides", "title": "Pesticide Panels: a List, Not a Guarantee",
+SECTIONS.append({"id": "pesticides", "kicker": "Pesticides", "title": "Pesticide panels and their limits",
   "blocks": [
     p("A pesticide test is a <em>panel</em>: a defined list of compounds, each measured against an action "
       "limit. Pass means &lsquo;nothing on <em>this list</em> was found above <em>these limits</em>&rsquo;, "
@@ -387,7 +387,7 @@ SECTIONS.append({"id": "pesticides", "kicker": "Pesticides", "title": "Pesticide
   ]})
 
 # ---------------------------------------------------------------- 12. solvents & mycotoxins
-SECTIONS.append({"id": "solvents-myco", "kicker": "Solvents · mycotoxins", "title": "Residual Solvents and Mycotoxins",
+SECTIONS.append({"id": "solvents-myco", "kicker": "Solvents · mycotoxins", "title": "Residual-solvent and mycotoxin testing",
   "blocks": [
     p("<strong>Residual solvents</strong> apply to extracts: whatever chemistry pulled the resin out, "
       "butane, propane, ethanol, CO₂ with ethanol polish. Traces can remain, and headspace GC measures them "
@@ -416,7 +416,7 @@ SECTIONS.append({"id": "solvents-myco", "kicker": "Solvents · mycotoxins", "tit
   ]})
 
 # ---------------------------------------------------------------- 13. water activity
-SECTIONS.append({"id": "water-activity", "kicker": "Water in two numbers", "title": "Water Activity vs Moisture Content",
+SECTIONS.append({"id": "water-activity", "kicker": "Water in two numbers", "title": "Water activity and moisture content",
   "blocks": [
     p("Two water numbers appear on flower COAs and they answer different questions. <strong>Moisture "
       "content</strong> (%) is <em>how much</em> water is in the sample, mass of water over total mass. "
@@ -446,7 +446,7 @@ SECTIONS.append({"id": "water-activity", "kicker": "Water in two numbers", "titl
   ]})
 
 # ---------------------------------------------------------------- 14. inflation
-SECTIONS.append({"id": "inflation", "kicker": "Honesty section", "title": "The Inflation Problem: What the Record Shows",
+SECTIONS.append({"id": "inflation", "kicker": "Honesty section", "title": "COA inflation: evidence and warning signs",
   "blocks": [
     p("If a single number sets the price, the number comes under pressure. That is the "
       "documented, peer-reviewed history of legal cannabis markets, and any grower choosing a lab should "
@@ -502,7 +502,7 @@ SECTIONS.append({"id": "inflation", "kicker": "Honesty section", "title": "The I
   ]})
 
 # ---------------------------------------------------------------- 15. one number
-SECTIONS.append({"id": "single-number", "kicker": "Interpretation", "title": "What One Number Can and Can't Tell You",
+SECTIONS.append({"id": "single-number", "kicker": "Interpretation", "title": "Interpretation limits of a single result",
   "blocks": [
     p("A COA is genuinely useful, inside its limits. What a single certificate <em>can</em> tell you: the "
       "potency class of the sampled material (a 15% batch and a 25% batch are truly different things); the "
@@ -549,7 +549,7 @@ SECTIONS.append({"id": "single-number", "kicker": "Interpretation", "title": "Wh
   ]})
 
 # ---------------------------------------------------------------- 16. NZ/AU
-SECTIONS.append({"id": "nz-au", "kicker": "Medicinal context", "title": "NZ and Australia: Testing as Release, Not Marketing",
+SECTIONS.append({"id": "nz-au", "kicker": "Medicinal context", "title": "Testing for release in NZ and Australia",
   "blocks": [
     p("In the Australasian medicinal systems the COA plays a structurally different role from a retail "
       "label. In Australia, unapproved medicinal cannabis products must conform to <strong>TGO 93</strong> "

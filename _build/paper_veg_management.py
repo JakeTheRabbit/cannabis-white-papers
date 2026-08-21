@@ -36,7 +36,7 @@ def _c(rid):
 SECTIONS = []
 
 # ---------------------------------------------------------------- 1 · start here
-SECTIONS.append({"id": "intro", "kicker": "Start here", "title": "Veg is where the crop is decided",
+SECTIONS.append({"id": "intro", "kicker": "Start here", "title": "Purpose and scope",
   "blocks": [
     lead("By the time you flip to 12/12, most of what the harvest can be is already locked in: how "
          "many bud sites exist, how much leaf powers them, whether the canopy is level, and whether "
@@ -69,7 +69,7 @@ SECTIONS.append({"id": "intro", "kicker": "Start here", "title": "Veg is where t
   ]})
 
 # ---------------------------------------------------------------- 2 · glossary
-SECTIONS.append({"id": "key-terms", "kicker": "Plain-language glossary", "title": "The words you need before we start",
+SECTIONS.append({"id": "key-terms", "kicker": "Plain-language glossary", "title": "Definitions",
   "blocks": [
     p("Eight terms carry this whole guide. Skim them once; each comes back in context."),
     defterm("Flip", "Switching the light schedule from long days (usually 18 hours on) to 12/12, "
@@ -95,7 +95,7 @@ SECTIONS.append({"id": "key-terms", "kicker": "Plain-language glossary", "title"
   ]})
 
 # ---------------------------------------------------------------- 3 · the why
-SECTIONS.append({"id": "what-veg-is-for", "kicker": "The why", "title": "Build the frame that carries flower",
+SECTIONS.append({"id": "what-veg-is-for", "kicker": "The why", "title": "Vegetative growth objectives",
   "blocks": [
     p("Flowering doesn't create structure. Buds form at nodes and branch tips that already exist "
       "when you flip, plus whatever the stretch adds in its first weeks. So the size of the frame "
@@ -131,7 +131,7 @@ SECTIONS.append({"id": "what-veg-is-for", "kicker": "The why", "title": "Build t
   ]})
 
 # ---------------------------------------------------------------- 4 · the core decision
-SECTIONS.append({"id": "veg-duration", "kicker": "The core decision", "title": "Plant count × pot size × canopy → days",
+SECTIONS.append({"id": "veg-duration", "kicker": "The core decision", "title": "Vegetative duration: plant count, pot size, canopy and days",
   "blocks": [
     p("Work the chain in this order. Days come out the far end. They are never the input."),
     steps([
@@ -170,7 +170,7 @@ SECTIONS.append({"id": "veg-duration", "kicker": "The core decision", "title": "
   ]})
 
 # ---------------------------------------------------------------- 5 · pot size
-SECTIONS.append({"id": "pot-size", "kicker": "The clock inside the pot", "title": "Pot size sets how long veg can run",
+SECTIONS.append({"id": "pot-size", "kicker": "The clock inside the pot", "title": "Pot size and vegetative duration",
   "blocks": [
     p("Roots are the half of the frame you can't see, and they cap everything. A meta-analysis of "
       "65 container studies found that, on average, <strong>doubling root-zone volume increased "
@@ -205,7 +205,7 @@ SECTIONS.append({"id": "pot-size", "kicker": "The clock inside the pot", "title"
   ]})
 
 # ---------------------------------------------------------------- 6 · stretch
-SECTIONS.append({"id": "stretch", "kicker": "Height planning", "title": "Stretch: plan the flip height backwards from the ceiling",
+SECTIONS.append({"id": "stretch", "kicker": "Height planning", "title": "Planning flip height from ceiling clearance",
   "blocks": [
     p("The most common veg sin isn't vegging too short. It's flipping too tall. After the "
       "flip, most cultivars surge vertically for 1-3 weeks, with the stretch largely finished "
@@ -279,7 +279,7 @@ SECTIONS.append({"id": "topping", "kicker": "Cutting on schedule", "title": "Top
   ]})
 
 # ---------------------------------------------------------------- 8 · canopy plan
-SECTIONS.append({"id": "canopy-plan", "kicker": "One level, one light", "title": "Canopy establishment: level in veg or suffer in flower",
+SECTIONS.append({"id": "canopy-plan", "kicker": "One level, one light", "title": "Canopy establishment in vegetative growth",
   "blocks": [
     p("Light height is a room-level setting: one fixture height serves every plant under it. That "
       "makes the <em>tallest</em> plant the dictator, raise the light to protect it and "
@@ -315,7 +315,7 @@ SECTIONS.append({"id": "canopy-plan", "kicker": "One level, one light", "title":
   ]})
 
 # ---------------------------------------------------------------- 9 · environment
-SECTIONS.append({"id": "environment", "kicker": "Targets with sources", "title": "Veg environment: temperature, humidity, light, CO2",
+SECTIONS.append({"id": "environment", "kicker": "Targets with sources", "title": "Vegetative climate targets",
   "blocks": [
     p("Veg wants a slightly warmer, wetter, gentler room than flower: the plant is all leaf, "
       "shallow-rooted early on, and building tissue rather than ripening it. The table gives "
@@ -368,7 +368,7 @@ SECTIONS.append({"id": "environment", "kicker": "Targets with sources", "title":
   ]})
 
 # ---------------------------------------------------------------- 10 · nutrition
-SECTIONS.append({"id": "nutrition", "kicker": "Feeding the build", "title": "Veg nutrition: N-forward, EC on a ramp",
+SECTIONS.append({"id": "nutrition", "kicker": "Feeding the build", "title": "Vegetative nutrition",
   "blocks": [
     p("Veg tissue is protein and chlorophyll factory-work, and both are nitrogen-hungry, "
       "which is why every veg feed is 'N-forward' relative to bloom formulas. The dose-response "
@@ -400,7 +400,7 @@ SECTIONS.append({"id": "nutrition", "kicker": "Feeding the build", "title": "Veg
   ]})
 
 # ---------------------------------------------------------------- 11 · root zone
-SECTIONS.append({"id": "rootzone", "kicker": "Below the deck", "title": "Root-zone establishment before the flip",
+SECTIONS.append({"id": "rootzone", "kicker": "Below the deck", "title": "Root-zone establishment before flowering",
   "blocks": [
     p("The fastest way to lose a week of veg is to drown a fresh transplant. A just-potted plant "
       "has a small root ball in a large, wet volume: keep that volume saturated and the roots "
@@ -440,7 +440,7 @@ SECTIONS.append({"id": "rootzone", "kicker": "Below the deck", "title": "Root-zo
   ]})
 
 # ---------------------------------------------------------------- 12 · economics
-SECTIONS.append({"id": "economics", "kicker": "The business of days", "title": "Veg-length economics: turns versus plant count",
+SECTIONS.append({"id": "economics", "kicker": "The business of days", "title": "Vegetative duration economics",
   "blocks": [
     p("Flower length is written in the genetics, call it 56-63 days and largely "
       "untouchable. Veg length is therefore <em>the</em> schedule lever you own, and it trades "
@@ -481,7 +481,7 @@ SECTIONS.append({"id": "economics", "kicker": "The business of days", "title": "
   ]})
 
 # ---------------------------------------------------------------- 13 · mistakes
-SECTIONS.append({"id": "mistakes", "kicker": "Where veg goes wrong", "title": "The six classic veg mistakes",
+SECTIONS.append({"id": "mistakes", "kicker": "Where veg goes wrong", "title": "Common vegetative-growth mistakes",
   "blocks": [
     p("Every one of these is cheap to prevent in veg and expensive to discover in flower. Most "
       "rooms that struggle in week 3 of flower committed one of them a month earlier."),
@@ -519,7 +519,7 @@ SECTIONS.append({"id": "mistakes", "kicker": "Where veg goes wrong", "title": "T
   ]})
 
 # ---------------------------------------------------------------- 14 · troubleshooting
-SECTIONS.append({"id": "troubleshooting", "kicker": "Read and fix", "title": "Troubleshooting veg, and the model to keep",
+SECTIONS.append({"id": "troubleshooting", "kicker": "Read and fix", "title": "Troubleshooting",
   "blocks": [
     p("Veg problems telegraph themselves early if you read the plant against the plan. The "
       "common ones:"),

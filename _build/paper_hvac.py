@@ -27,7 +27,7 @@ def _c(rid):
 SECTIONS = []
 
 # ---------------------------------------------------------------- 01 start here
-SECTIONS.append({"id": "start", "kicker": "01 · Read this first", "title": "The other half of the machine",
+SECTIONS.append({"id": "start", "kicker": "01 · Read this first", "title": "Purpose and scope",
   "blocks": [
     lead("A grow room is a machine that turns electricity into light, light into plant, and water "
          "into vapour. The lights are the half everyone budgets for. The climate plant, "
@@ -51,7 +51,7 @@ SECTIONS.append({"id": "start", "kicker": "01 · Read this first", "title": "The
   ]})
 
 # ---------------------------------------------------------------- 02 vocabulary
-SECTIONS.append({"id": "terms", "kicker": "02 · The vocabulary", "title": "Eight words that unlock every spec sheet",
+SECTIONS.append({"id": "terms", "kicker": "02 · The vocabulary", "title": "Definitions",
   "blocks": [
     defterm("Sensible heat", "Heat that changes air <em>temperature</em>, the kind a thermometer "
             "sees. Lights are almost entirely a sensible load."),
@@ -80,7 +80,7 @@ SECTIONS.append({"id": "terms", "kicker": "02 · The vocabulary", "title": "Eigh
   ]})
 
 # ---------------------------------------------------------------- 03 core answer
-SECTIONS.append({"id": "two-loads", "kicker": "03 · The core idea", "title": "Two loads, two exits: sensible and latent",
+SECTIONS.append({"id": "two-loads", "kicker": "03 · The core idea", "title": "Sensible and latent loads",
   "blocks": [
     p("A comfort air conditioner in an office does one job: remove dry heat. A grow room asks for "
       "two: remove heat <em>and</em> remove water. Engineers split these as the <strong>sensible "
@@ -114,7 +114,7 @@ SECTIONS.append({"id": "two-loads", "kicker": "03 · The core idea", "title": "T
   ]})
 
 # ---------------------------------------------------------------- 04 the loads
-SECTIONS.append({"id": "loads", "kicker": "04 · The loads", "title": "Counting the watts: an example room",
+SECTIONS.append({"id": "loads", "kicker": "04 · The loads", "title": "Calculating room heat loads",
   "blocks": [
     p("Everything from here on uses one worked room so the numbers stay honest: <strong>40 m&sup2; "
       "of flowering canopy</strong> (~430 sq ft), 10 &times; 700 W LED fixtures, sealed and "
@@ -146,7 +146,7 @@ SECTIONS.append({"id": "loads", "kicker": "04 · The loads", "title": "Counting 
   ]})
 
 # ---------------------------------------------------------------- 05 water balance
-SECTIONS.append({"id": "water-balance", "kicker": "05 · The water balance", "title": "Water in equals water to remove",
+SECTIONS.append({"id": "water-balance", "kicker": "05 · The water balance", "title": "Water balance and dehumidification load",
   "blocks": [
     p("Here is the single most useful sizing fact in this paper: <strong>your dehumidification "
       "requirement is written by your irrigation schedule</strong>. Not by room volume, not by "
@@ -186,7 +186,7 @@ SECTIONS.append({"id": "water-balance", "kicker": "05 · The water balance", "ti
   ]})
 
 # ---------------------------------------------------------------- 06 folklore vs load calc
-SECTIONS.append({"id": "rules-of-thumb", "kicker": "06 · Sizing the cooling", "title": "BTU-per-light folklore vs an actual load calc",
+SECTIONS.append({"id": "rules-of-thumb", "kicker": "06 · Sizing the cooling", "title": "Cooling-load calculation",
   "blocks": [
     p("Every forum will tell you &ldquo;3,000&ndash;4,000 BTU per 1,000 W of light&rdquo;. "
       "Here&rsquo;s the secret: that isn&rsquo;t horticultural wisdom, it&rsquo;s a unit "
@@ -228,7 +228,7 @@ SECTIONS.append({"id": "rules-of-thumb", "kicker": "06 · Sizing the cooling", "
   ]})
 
 # ---------------------------------------------------------------- 07 dehu sizing
-SECTIONS.append({"id": "dehu-sizing", "kicker": "07 · Sizing the dehumidification", "title": "From litres per day to a dehumidifier order",
+SECTIONS.append({"id": "dehu-sizing", "kicker": "07 · Sizing the dehumidification", "title": "Dehumidifier sizing",
   "blocks": [
     p("Dehumidifier sizing is the water balance from Section 05 plus two corrections everyone "
       "skips: <strong>when</strong> the moisture arrives, and <strong>what the machine actually "
@@ -276,7 +276,7 @@ SECTIONS.append({"id": "dehu-sizing", "kicker": "07 · Sizing the dehumidificati
   ]})
 
 # ---------------------------------------------------------------- 08 equipment classes
-SECTIONS.append({"id": "equipment", "kicker": "08 · The hardware", "title": "Equipment classes: what actually gets installed",
+SECTIONS.append({"id": "equipment", "kicker": "08 · The hardware", "title": "HVAC equipment classes",
   "blocks": [
     p("Four families of cooling, plus the dehumidifiers that bolt onto all of them. Engineering "
       "firms describe the same ladder: packaged DX with standalone dehus at entry level, DX with "
@@ -323,7 +323,7 @@ SECTIONS.append({"id": "equipment", "kicker": "08 · The hardware", "title": "Eq
   ]})
 
 # ---------------------------------------------------------------- 09 lights-off
-SECTIONS.append({"id": "lights-off", "kicker": "09 · The hard part", "title": "The lights-off spike: why RH jumps at night",
+SECTIONS.append({"id": "lights-off", "kicker": "09 · The hard part", "title": "Lights-off humidity spike",
   "blocks": [
     p("Watch any grow room&rsquo;s trend graph and you&rsquo;ll see the same signature: the moment "
       "the lights cut, RH leaps 15&ndash;25 points in under an hour. Three things happen at once, "
@@ -379,7 +379,7 @@ SECTIONS.append({"id": "lights-off", "kicker": "09 · The hard part", "title": "
   ]})
 
 # ---------------------------------------------------------------- 10 airflow integration
-SECTIONS.append({"id": "airflow", "kicker": "10 · Air distribution", "title": "HVAC airflow and circulation fans are different jobs",
+SECTIONS.append({"id": "airflow", "kicker": "10 · Air distribution", "title": "HVAC supply, return and circulation",
   "blocks": [
     p("The climate plant conditions air; the room still has to <em>distribute</em> it. Two "
       "systems, two jobs: the air handling loop delivers conditioned air and drags moist warm air "
@@ -411,7 +411,7 @@ SECTIONS.append({"id": "airflow", "kicker": "10 · Air distribution", "title": "
   ]})
 
 # ---------------------------------------------------------------- 11 condensate
-SECTIONS.append({"id": "condensate", "kicker": "11 · The water coming back", "title": "Condensate: manage it, meter it, maybe reuse it",
+SECTIONS.append({"id": "condensate", "kicker": "11 · The water coming back", "title": "Condensate management and reuse",
   "blocks": [
     p("Everything the coils and dehumidifiers condense has to go somewhere, in the example "
       "room, ~175 L/day of it. That flow is a maintenance liability, a free instrument, and a "
@@ -445,7 +445,7 @@ SECTIONS.append({"id": "condensate", "kicker": "11 · The water coming back", "t
   ]})
 
 # ---------------------------------------------------------------- 12 redundancy
-SECTIONS.append({"id": "redundancy", "kicker": "12 · When it breaks", "title": "Redundancy: the week-6 dehumidifier funeral",
+SECTIONS.append({"id": "redundancy", "kicker": "12 · When it breaks", "title": "Redundancy planning",
   "blocks": [
     p("Run the failure before it runs you. Example room, week 6, 23:00: two 80 L/day units are "
       "carrying the night at &asymp;⅔ nameplate. One trips on a failed capacitor. Do the "
@@ -501,7 +501,7 @@ SECTIONS.append({"id": "redundancy", "kicker": "12 · When it breaks", "title": 
   ]})
 
 # ---------------------------------------------------------------- 13 controls
-SECTIONS.append({"id": "controls", "kicker": "13 · Controls", "title": "Staging, deadbands, and machines that don't fight",
+SECTIONS.append({"id": "controls", "kicker": "13 · Controls", "title": "HVAC staging and deadbands",
   "blocks": [
     p("A grow room runs heating, cooling and dehumidification within metres of each other, and "
       "two of the three make the third&rsquo;s job worse: cooling raises RH; dehumidifying adds "
@@ -540,7 +540,7 @@ SECTIONS.append({"id": "controls", "kicker": "13 · Controls", "title": "Staging
   ]})
 
 # ---------------------------------------------------------------- 14 efficiency
-SECTIONS.append({"id": "efficiency", "kicker": "14 · The power bill", "title": "Efficiency: COP, reheat, and heat you already own",
+SECTIONS.append({"id": "efficiency", "kicker": "14 · The power bill", "title": "HVAC efficiency, reheat and heat recovery",
   "blocks": [
     p("Climate is where the money goes. Energy runs 30&ndash;60% of indoor operating expense"
       + _c("rii-hvac-bpg") + ", and life-cycle analysis of US indoor production found "
@@ -578,7 +578,7 @@ SECTIONS.append({"id": "efficiency", "kicker": "14 · The power bill", "title": 
   ]})
 
 # ---------------------------------------------------------------- 15 troubleshooting
-SECTIONS.append({"id": "trouble", "kicker": "15 · When it goes wrong", "title": "Troubleshooting: symptom to first move",
+SECTIONS.append({"id": "trouble", "kicker": "15 · When it goes wrong", "title": "Troubleshooting",
   "blocks": [
     table(["Symptom", "Likely cause", "First moves"], [
       ["RH pins 80%+ every lights-off", "Night latent load exceeds real (derated) dehu capacity; AC idle at night", "Measure water-in minus runoff vs installed capacity at night temp (Sections 05&ndash;07); pre-dry the last hour; add nameplate"],
@@ -594,7 +594,7 @@ SECTIONS.append({"id": "trouble", "kicker": "15 · When it goes wrong", "title":
   ]})
 
 # ---------------------------------------------------------------- 16 mental model
-SECTIONS.append({"id": "remember", "kicker": "16 · Keep this", "title": "Follow the watt, follow the litre",
+SECTIONS.append({"id": "remember", "kicker": "16 · Keep this", "title": "Heat and moisture balance",
   "blocks": [
     callout("key", "The mental model",
       p("A grow room is an accounting problem wearing a plant costume. <strong>Follow the "

@@ -34,7 +34,7 @@ def _c(rid):
 SECTIONS = []
 
 # ---------------------------------------------------------------- 01
-SECTIONS.append({"id": "start", "kicker": "01 · Read this first", "title": "CO2 is food, but only in the light",
+SECTIONS.append({"id": "start", "kicker": "01 · Read this first", "title": "Purpose and scope",
   "blocks": [
     lead("A plant builds itself out of air. The carbon in every leaf, stem and flower comes from carbon "
          "dioxide (CO2) pulled out of the room and welded to water using the energy in light. Give a "
@@ -58,7 +58,7 @@ SECTIONS.append({"id": "start", "kicker": "01 · Read this first", "title": "CO2
   ]})
 
 # ---------------------------------------------------------------- 02
-SECTIONS.append({"id": "terms", "kicker": "02 · The vocabulary", "title": "The words you need",
+SECTIONS.append({"id": "terms", "kicker": "02 · The vocabulary", "title": "Definitions",
   "blocks": [
     defterm("CO2 (carbon dioxide)", "The gas plants turn into sugar using light. Normal outdoor air is "
             "about 420 ppm today" + _c("noaa2024-co2") + "."),
@@ -84,7 +84,7 @@ SECTIONS.append({"id": "terms", "kicker": "02 · The vocabulary", "title": "The 
   ]})
 
 # ---------------------------------------------------------------- 03
-SECTIONS.append({"id": "how", "kicker": "03 · The mechanism", "title": "How CO2 becomes flower",
+SECTIONS.append({"id": "how", "kicker": "03 · The mechanism", "title": "CO2 assimilation and flower growth",
   "blocks": [
     p("Inside a lit leaf, an enzyme called Rubisco grabs CO2 out of the air and fixes it into sugar. The "
       "trouble is Rubisco is sloppy: it also grabs oxygen by mistake, and when it does it kicks off "
@@ -116,7 +116,7 @@ SECTIONS.append({"id": "how", "kicker": "03 · The mechanism", "title": "How CO2
   ]})
 
 # ---------------------------------------------------------------- 04
-SECTIONS.append({"id": "daynight", "kicker": "04 · Day and night", "title": "The plant breathes both ways",
+SECTIONS.append({"id": "daynight", "kicker": "04 · Day and night", "title": "Photosynthesis and respiration across the light cycle",
   "blocks": [
     p("Here is the fact that trips up beginners. Photosynthesis, the CO2-<em>consuming</em> reaction, only "
       "runs in the light. <strong>Respiration</strong>, the CO2-<em>releasing</em> one, never stops, day "
@@ -141,7 +141,7 @@ SECTIONS.append({"id": "daynight", "kicker": "04 · Day and night", "title": "Th
   ]})
 
 # ---------------------------------------------------------------- 05
-SECTIONS.append({"id": "massbalance", "kicker": "05 · The mass balance", "title": "Day use vs night release: they don't balance",
+SECTIONS.append({"id": "massbalance", "kicker": "05 · The mass balance", "title": "Daytime CO2 uptake and nighttime release",
   "blocks": [
     p("Growers often ask: if the plant uses CO2 all day and gives it back all night, doesn't it even out? "
       "<strong>No, and the reason it doesn't is the reason enrichment works.</strong> The carbon a plant "
@@ -180,7 +180,7 @@ SECTIONS.append({"id": "massbalance", "kicker": "05 · The mass balance", "title
   ]})
 
 # ---------------------------------------------------------------- 06
-SECTIONS.append({"id": "howmuch", "kicker": "06 · The dose", "title": "How much, and what it buys you",
+SECTIONS.append({"id": "howmuch", "kicker": "06 · The dose", "title": "CO2 targets and expected response",
   "blocks": [
     p("The best cannabis-specific yield data come from controlled work at Utah State University: raising a "
       "sealed room from ambient (~420 ppm) to about 1,200 ppm lifted dry flower yield by roughly "
@@ -245,7 +245,7 @@ SECTIONS.append({"id": "delivery", "kicker": "07 · Getting it in", "title": "De
   ]})
 
 # ---------------------------------------------------------------- 08
-SECTIONS.append({"id": "sealed", "kicker": "08 · Holding it in", "title": "Sealed vs vented: why the room matters more than the gas",
+SECTIONS.append({"id": "sealed", "kicker": "08 · Holding it in", "title": "Sealed and vented rooms",
   "blocks": [
     p("Here is where most CO2 money is wasted. An exhaust fan replaces room air with ~420 ppm outdoor air, "
       "so any CO2 you have added decays straight back toward ambient. The loss follows a simple curve: the "
@@ -270,7 +270,7 @@ SECTIONS.append({"id": "sealed", "kicker": "08 · Holding it in", "title": "Seal
   ]})
 
 # ---------------------------------------------------------------- 09
-SECTIONS.append({"id": "purge", "kicker": "09 · Fresh air", "title": "Stale air: why a sealed room still needs a purge",
+SECTIONS.append({"id": "purge", "kicker": "09 · Fresh air", "title": "Fresh-air purge in sealed rooms",
   "blocks": [
     lead("You seal the room to hold CO2 in, and then you're told to let fresh air in. That sounds like a "
          "contradiction, and it is where the filter question comes up: if carbon and HEPA are scrubbing the "
@@ -352,7 +352,7 @@ SECTIONS.append({"id": "purge", "kicker": "09 · Fresh air", "title": "Stale air
   ]})
 
 # ---------------------------------------------------------------- 10
-SECTIONS.append({"id": "climate", "kicker": "10 · The knock-on effects", "title": "CO2 changes everything else in the room",
+SECTIONS.append({"id": "climate", "kicker": "10 · The knock-on effects", "title": "Room conditions under CO2 enrichment",
   "blocks": [
     p("Raising CO2 does not act alone, it pulls on the rest of the room. This is the same "
       "&lsquo;inputs travel in convoys&rsquo; idea from the "
@@ -378,7 +378,7 @@ SECTIONS.append({"id": "climate", "kicker": "10 · The knock-on effects", "title
   ]})
 
 # ---------------------------------------------------------------- 11
-SECTIONS.append({"id": "drying", "kicker": "11 · The hidden hazard", "title": "The drying room: CO2 with no light to burn it",
+SECTIONS.append({"id": "drying", "kicker": "11 · The hidden hazard", "title": "CO2 accumulation in drying rooms",
   "blocks": [
     p("A drying room is the dark side of everything above. You fill a sealed, dark, low-airflow "
       "room with tens or hundreds of kilos of freshly cut biomass, and that biomass keeps "
@@ -406,7 +406,7 @@ SECTIONS.append({"id": "drying", "kicker": "11 · The hidden hazard", "title": "
   ]})
 
 # ---------------------------------------------------------------- 12
-SECTIONS.append({"id": "safety", "kicker": "12 · The part that can kill you", "title": "CO2 and people: the numbers that matter most",
+SECTIONS.append({"id": "safety", "kicker": "12 · The part that can kill you", "title": "CO2 exposure limits and worker safety",
   "blocks": [
     lead("Read this section even if you skip the rest. Your enrichment setpoint of 1,000&ndash;1,500 ppm is "
          "well below any worker limit and safe for brief occupancy. The danger is a "
@@ -444,7 +444,7 @@ SECTIONS.append({"id": "safety", "kicker": "12 · The part that can kill you", "
   ]})
 
 # ---------------------------------------------------------------- 13
-SECTIONS.append({"id": "monitoring", "kicker": "13 · Measuring and alarming", "title": "Sensors, alarms and the MQ trap",
+SECTIONS.append({"id": "monitoring", "kicker": "13 · Measuring and alarming", "title": "CO2 sensors, alarms and MQ limitations",
   "blocks": [
     p("You cannot manage or survive CO2 you cannot measure, and the sensor market is full of parts that "
       "don't actually measure it. The correct technology is <strong>NDIR</strong> (non-dispersive "
@@ -470,7 +470,7 @@ SECTIONS.append({"id": "monitoring", "kicker": "13 · Measuring and alarming", "
   ]})
 
 # ---------------------------------------------------------------- 14
-SECTIONS.append({"id": "worth", "kicker": "14 · Straight talk", "title": "Is it worth it, and when it isn't",
+SECTIONS.append({"id": "worth", "kicker": "14 · Straight talk", "title": "Expected results and limitations",
   "blocks": [
     p("CO2 is one of the highest-return upgrades in a sealed, high-light room, and a waste of money in any "
       "other" + _c("okstate-co2") + ". The gas itself is cheap; the room around it is what decides the payback."),

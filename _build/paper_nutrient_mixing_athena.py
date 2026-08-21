@@ -24,7 +24,7 @@ def _c(rid):
 SECTIONS = []
 
 # 1 -----------------------------------------------------------------
-SECTIONS.append({"id": "intro", "kicker": "Start here", "title": "What a stock tank is, and why you make one",
+SECTIONS.append({"id": "intro", "kicker": "Start here", "title": "Purpose and scope",
   "blocks": [
     lead("This guide covers one job: dissolving a <strong>full 25 lb bag</strong> of "
          "Athena Pro Line into a <strong>50 L tank</strong> to make a concentrated "
@@ -47,7 +47,7 @@ SECTIONS.append({"id": "intro", "kicker": "Start here", "title": "What a stock t
   ]})
 
 # 2 -----------------------------------------------------------------
-SECTIONS.append({"id": "terms", "kicker": "Vocabulary", "title": "The words you need",
+SECTIONS.append({"id": "terms", "kicker": "Vocabulary", "title": "Definitions",
   "blocks": [
     defterm("Stock solution (concentrate)", "A strong nutrient solution you store and dose from. "
             "Here, one whole bag in 50 L. Never fed to plants neat."),
@@ -69,7 +69,7 @@ SECTIONS.append({"id": "terms", "kicker": "Vocabulary", "title": "The words you 
   ]})
 
 # 3 -----------------------------------------------------------------
-SECTIONS.append({"id": "cardinal-rule", "kicker": "The one rule", "title": "Two parts, two tanks, never combine concentrated",
+SECTIONS.append({"id": "cardinal-rule", "kicker": "The one rule", "title": "Separate part A and part B stock solutions",
   "blocks": [
     p("Part A and Part B each get their own stock tank, and the two concentrates must never touch. "
       "<strong>This is the rule that saves your crop and your pump.</strong> One 25 lb "
@@ -94,7 +94,7 @@ SECTIONS.append({"id": "cardinal-rule", "kicker": "The one rule", "title": "Two 
   ]})
 
 # 4 -----------------------------------------------------------------
-SECTIONS.append({"id": "chemistry", "kicker": "The why", "title": "What it takes to dissolve 11 kg in 50 L",
+SECTIONS.append({"id": "chemistry", "kicker": "The why", "title": "Solubility and mixing conditions",
   "blocks": [
     p("227 grams of salt per litre is a lot, roughly six to seven times saltier than "
       "seawater. Getting it fully into solution isn't automatic. Two bits of physics work against "
@@ -121,7 +121,7 @@ SECTIONS.append({"id": "chemistry", "kicker": "The why", "title": "What it takes
   ]})
 
 # 5 -----------------------------------------------------------------
-SECTIONS.append({"id": "method", "kicker": "The method", "title": "Step-by-step: one bag into one 50 L tank",
+SECTIONS.append({"id": "method", "kicker": "The method", "title": "Stock-tank mixing procedure",
   "blocks": [
     p("Do this once per part: once for the Pro Core bag (Tank A), once for the Pro "
       "Grow/Bloom bag (Tank B). Same steps each time."),
@@ -143,7 +143,7 @@ SECTIONS.append({"id": "method", "kicker": "The method", "title": "Step-by-step:
   ]})
 
 # 6 -----------------------------------------------------------------
-SECTIONS.append({"id": "numbers", "kicker": "The numbers", "title": "Your stock strength, and how to dose it",
+SECTIONS.append({"id": "numbers", "kicker": "The numbers", "title": "Stock concentration and dosing",
   "blocks": [
     p("A full 25 lb bag is <strong>11.34 kg</strong>. In 50 L that gives a stock of:"),
     figure(L.bars("Stock concentration from a full bag in 50 L",
@@ -169,7 +169,7 @@ SECTIONS.append({"id": "numbers", "kicker": "The numbers", "title": "Your stock 
   ]})
 
 # 7 -----------------------------------------------------------------
-SECTIONS.append({"id": "targets", "kicker": "Downstream", "title": "What strength to feed, by stage",
+SECTIONS.append({"id": "targets", "kicker": "Downstream", "title": "Stage-specific feed-strength targets",
   "blocks": [
     p("The stock is only a delivery system. The plant cares about the <em>feed</em> strength, read "
       "as EC. Young plants want it weak, bulking plants want it strong, and you taper at the end. "
@@ -188,7 +188,7 @@ SECTIONS.append({"id": "targets", "kicker": "Downstream", "title": "What strengt
   ]})
 
 # 8 -----------------------------------------------------------------
-SECTIONS.append({"id": "trouble", "kicker": "When it goes wrong", "title": "Storage & troubleshooting",
+SECTIONS.append({"id": "trouble", "kicker": "When it goes wrong", "title": "Storage and troubleshooting",
   "blocks": [
     table(["Symptom", "Likely cause", "What to do"], [
       ["Grit on the tank bottom", "Hit saturation - water too cold or under-mixed", "Re-mix with the paddle; warm it; if it won't clear, add a little more volume"],
@@ -204,7 +204,7 @@ SECTIONS.append({"id": "trouble", "kicker": "When it goes wrong", "title": "Stor
   ]})
 
 # 9 -----------------------------------------------------------------
-SECTIONS.append({"id": "expect", "kicker": "Straight talk", "title": "What good looks like",
+SECTIONS.append({"id": "expect", "kicker": "Straight talk", "title": "Expected results and limitations",
   "blocks": [
     callout("key", "Remember",
       ol(["<strong>Two bags, two tanks, never combined concentrated.</strong> This is the rule that prevents ruined stock.",

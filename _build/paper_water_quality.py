@@ -28,7 +28,7 @@ def _c(rid):
 SECTIONS = []
 
 SECTIONS.append({"id": "intro", "kicker": "What this is",
-  "title": "Your water is the first ingredient, not a blank slate",
+  "title": "Purpose and scope",
   "blocks": [
     lead("Every feed you give a cannabis plant starts with water, and that water is almost never "
          "pure. Tap, well, and rainwater all arrive carrying dissolved minerals, gases, and "
@@ -52,7 +52,7 @@ SECTIONS.append({"id": "intro", "kicker": "What this is",
   ]})
 
 SECTIONS.append({"id": "key-terms", "kicker": "Key terms",
-  "title": "The vocabulary, in plain words",
+  "title": "Definitions",
   "blocks": [
     p("Water-quality talk is full of jargon that hides simple ideas. Get the gist of these and the "
       "rest of the paper reads easily. The big one to grasp early: alkalinity is not the same thing "
@@ -80,7 +80,7 @@ SECTIONS.append({"id": "key-terms", "kicker": "Key terms",
   ]})
 
 SECTIONS.append({"id": "source-types", "kicker": "The core: where it comes from",
-  "title": "Tap, well, and rain: three very different starting points",
+  "title": "Water source types",
   "blocks": [
     p("Municipal tap water is treated and consistent but carries chlorine or chloramine and often "
       "moderate-to-high mineral content, sometimes 150-300+ ppm straight from the faucet" + _c("umass-water-quality-ph-alkalinity") +
@@ -107,7 +107,7 @@ SECTIONS.append({"id": "source-types", "kicker": "The core: where it comes from"
   ]})
 
 SECTIONS.append({"id": "alkalinity-carbonates", "kicker": "The core: the hidden pH driver",
-  "title": "Alkalinity and carbonates: why your pH won't stay put",
+  "title": "Alkalinity and carbonate buffering",
   "blocks": [
     p("Alkalinity is the single most misunderstood water parameter for beginners. It is caused by "
       "dissolved carbonates and bicarbonates, and it acts like a chemical spring that drags root-zone "
@@ -136,7 +136,7 @@ SECTIONS.append({"id": "alkalinity-carbonates", "kicker": "The core: the hidden 
   ]})
 
 SECTIONS.append({"id": "chlorine-hardness", "kicker": "The core: chemicals and minerals",
-  "title": "Chlorine, chloramine, and hardness: what helps and what harms",
+  "title": "Chlorine, chloramine and hardness",
   "blocks": [
     p("Municipalities disinfect with chlorine or the more stable chloramine, and both can damage "
       "root tips and beneficial microbes. Root-tip injury has been reported at chlorine "
@@ -170,7 +170,7 @@ SECTIONS.append({"id": "chlorine-hardness", "kicker": "The core: chemicals and m
   ]})
 
 SECTIONS.append({"id": "ro-buildback", "kicker": "The core: the RO decision",
-  "title": "Why growers use RO, build back, and when you actually need it",
+  "title": "Reverse osmosis and mineral rebuilding",
   "blocks": [
     p("Reverse osmosis strips water to near-zero PPM, typically 0-10 ppm TDS, giving a blank canvas "
       "so every mineral the plant gets is one you chose" + _c("umass-water-quality-ph-alkalinity") +
@@ -196,7 +196,7 @@ SECTIONS.append({"id": "ro-buildback", "kicker": "The core: the RO decision",
   ]})
 
 SECTIONS.append({"id": "testing-stepbystep", "kicker": "Practical: test and treat",
-  "title": "Testing your source water, step by step",
+  "title": "Source-water testing",
   "blocks": [
     p("Before buying any equipment, get real numbers for your water. A cheap EC/PPM pen and pH pen "
       "tell you starting strength and acidity in seconds, but they will not reveal alkalinity, "
@@ -225,7 +225,7 @@ SECTIONS.append({"id": "testing-stepbystep", "kicker": "Practical: test and trea
   ]})
 
 SECTIONS.append({"id": "temperature-pitfalls", "kicker": "Troubleshooting and pitfalls",
-  "title": "Water temperature and the mistakes beginners make",
+  "title": "Water temperature and common mistakes",
   "blocks": [
     p("Water temperature quietly controls dissolved oxygen and disease risk. Aim for roughly "
       "18-22 C (65-72 F). Saturation dissolved oxygen falls only gently across that range, from about "
@@ -251,7 +251,7 @@ SECTIONS.append({"id": "temperature-pitfalls", "kicker": "Troubleshooting and pi
   ]})
 
 SECTIONS.append({"id": "expectations", "kicker": "Realistic expectations",
-  "title": "What good water gets you, and what it doesn't",
+  "title": "Expected results and limitations",
   "blocks": [
     p("Sorting out your water removes a whole category of mystery problems: stable pH, no chlorine "
       "damage, predictable feed strength. It will not fix bad genetics, poor light, or a broken "

@@ -33,7 +33,7 @@ def fig(key_or_svg, cap):
 SECTIONS = []
 
 # ---------------------------------------------------------------- 01 start here
-SECTIONS.append({"id": "start-here", "kicker": "01 · Read this first", "title": "Start here",
+SECTIONS.append({"id": "start-here", "kicker": "01 · Read this first", "title": "Purpose and scope",
   "blocks": [
     callout("warn", "Education, not financial advice",
       p("This paper teaches the <strong>arithmetic</strong> of growing economics: how to build a cost "
@@ -56,25 +56,8 @@ SECTIONS.append({"id": "start-here", "kicker": "01 · Read this first", "title":
       "discipline of unit economics is choosing <em>which</em> two numbers to divide."),
   ]})
 
-# ---------------------------------------------------------------- 02 core answer
-SECTIONS.append({"id": "core-answer", "kicker": "02 · The core answer", "title": "The whole paper in five lines",
-  "blocks": [
-    callout("key", "Cost per gram is the only score that pays rent",
-      ul(["<strong>Cost per gram = every dollar for the year ÷ every gram sold that year.</strong> Not "
-          "per cycle, not per room, not ‘once we're dialled in’. The bank statement, over the scale.",
-          "That one fraction hides three dials: <strong>grams per cycle</strong> (agronomy), "
-          "<strong>cycles per year</strong> (operations), and <strong>dollars per year</strong> (everything "
-          "else). Every improvement you will ever make is one of the three.",
-          "g/m², g/W and g/kWh are <strong>partial views</strong>, useful for diagnosis, dangerous as "
-          "scoreboards, because each one deletes a cost the others see.",
-          "Published benchmarks span roughly <strong>6× in g/W and far more in g/m²</strong> depending on "
-          "conditions, quote ranges with context or don't quote them at all.",
-          "Labour and turn time move the answer more than the gear you're being sold. Run the sensitivity "
-          "before the credit card."])),
-  ]})
-
-# ---------------------------------------------------------------- 03 vocabulary
-SECTIONS.append({"id": "vocabulary", "kicker": "03 · The vocabulary", "title": "Words that keep the maths honest",
+# ---------------------------------------------------------------- 02 vocabulary
+SECTIONS.append({"id": "vocabulary", "kicker": "02 · The vocabulary", "title": "Definitions",
   "blocks": [
     p("Nine terms carry the rest of the paper. Most economic arguments between growers are two people "
       "using the same word for different fractions."),
@@ -105,8 +88,25 @@ SECTIONS.append({"id": "vocabulary", "kicker": "03 · The vocabulary", "title": 
             "profit is exactly zero. Everything in this paper is ultimately about which side of it you're on."),
   ]})
 
+# ---------------------------------------------------------------- 03 core answer
+SECTIONS.append({"id": "core-answer", "kicker": "03 · The core answer", "title": "Cost per gram in five lines",
+  "blocks": [
+    callout("key", "Cost per gram is the only score that pays rent",
+      ul(["<strong>Cost per gram = every dollar for the year ÷ every gram sold that year.</strong> Not "
+          "per cycle, not per room, not ‘once we're dialled in’. The bank statement, over the scale.",
+          "That one fraction hides three dials: <strong>grams per cycle</strong> (agronomy), "
+          "<strong>cycles per year</strong> (operations), and <strong>dollars per year</strong> (everything "
+          "else). Every improvement you will ever make is one of the three.",
+          "g/m², g/W and g/kWh are <strong>partial views</strong>, useful for diagnosis, dangerous as "
+          "scoreboards, because each one deletes a cost the others see.",
+          "Published benchmarks span roughly <strong>6× in g/W and far more in g/m²</strong> depending on "
+          "conditions, quote ranges with context or don't quote them at all.",
+          "Labour and turn time move the answer more than the gear you're being sold. Run the sensitivity "
+          "before the credit card."])),
+  ]})
+
 # ---------------------------------------------------------------- 04 three denominators
-SECTIONS.append({"id": "three-denominators", "kicker": "04 · The three denominators", "title": "g/m², g/W, g/kWh, pick the right lens",
+SECTIONS.append({"id": "three-denominators", "kicker": "04 · The three denominators", "title": "g/m², g/W and g/kWh: selecting the right metric",
   "blocks": [
     p("All three metrics divide the same harvest by a different resource, and each answers a different "
       "question. The mistake is not using them. It's using one of them as the scoreboard and forgetting "
@@ -143,7 +143,7 @@ SECTIONS.append({"id": "three-denominators", "kicker": "04 · The three denomina
   ]})
 
 # ---------------------------------------------------------------- 05 benchmarks
-SECTIONS.append({"id": "benchmarks", "kicker": "05 · Benchmarks", "title": "What the published numbers actually say, and how hard to hedge",
+SECTIONS.append({"id": "benchmarks", "kicker": "05 · Benchmarks", "title": "Published yield benchmarks and their limits",
   "blocks": [
     lead("Published cannabis yield figures are a minefield of mixed conditions, mixed denominators and "
          "outright projection. Before you benchmark against anything, look at what the honest sources "
@@ -193,7 +193,7 @@ SECTIONS.append({"id": "benchmarks", "kicker": "05 · Benchmarks", "title": "Wha
   ]})
 
 # ---------------------------------------------------------------- 06 g/W autopsy
-SECTIONS.append({"id": "gram-per-watt", "kicker": "06 · The aging metric", "title": "Grams per watt: a lighting-era metric aging badly",
+SECTIONS.append({"id": "gram-per-watt", "kicker": "06 · The aging metric", "title": "Grams per watt as a legacy lighting metric",
   "blocks": [
     lead("‘A gram a watt’ was a useful rule of thumb when every serious room ran the same "
          "lamp. Under LED it has quietly become a measure of <em>when you bought your fixtures</em>, "
@@ -234,7 +234,7 @@ SECTIONS.append({"id": "gram-per-watt", "kicker": "06 · The aging metric", "tit
   ]})
 
 # ---------------------------------------------------------------- 07 cost stack
-SECTIONS.append({"id": "cost-stack", "kicker": "07 · The cost stack", "title": "Every line that ends up in the gram",
+SECTIONS.append({"id": "cost-stack", "kicker": "07 · The cost stack", "title": "Cost components per gram",
   "blocks": [
     p("Cost per gram is built from a short, boring list. The skill isn't clever accounting. It's "
       "refusing to leave lines out. Eight lines cover a small indoor facility:"),
@@ -269,7 +269,7 @@ SECTIONS.append({"id": "cost-stack", "kicker": "07 · The cost stack", "title": 
   ]})
 
 # ---------------------------------------------------------------- 08 worked example
-SECTIONS.append({"id": "worked-example", "kicker": "08 · The worked example", "title": "A fictional 100 m² room, every step shown",
+SECTIONS.append({"id": "worked-example", "kicker": "08 · The worked example", "title": "Worked example: a fictional 100 m² room",
   "blocks": [
     callout("warn", "Fictional facility, assumptions, not survey data",
       p("Everything below is a <strong>made-up room with stated assumptions</strong>, chosen to be "
@@ -335,7 +335,7 @@ SECTIONS.append({"id": "worked-example", "kicker": "08 · The worked example", "
   ]})
 
 # ---------------------------------------------------------------- 09 labour
-SECTIONS.append({"id": "labour", "kicker": "09 · The sneaky #1", "title": "Labour: the biggest line nobody models",
+SECTIONS.append({"id": "labour", "kicker": "09 · The sneaky #1", "title": "Labour costs",
   "blocks": [
     lead("Ask a new grower what indoor production costs and they'll talk about power. The fictional "
          "room's power bill is $0.23 a gram. Its people are $0.77 — the largest line by a factor of "
@@ -371,7 +371,7 @@ SECTIONS.append({"id": "labour", "kicker": "09 · The sneaky #1", "title": "Labo
   ]})
 
 # ---------------------------------------------------------------- 10 cycles per year
-SECTIONS.append({"id": "cycles", "kicker": "10 · The hidden multiplier", "title": "Cycles per year: the quietest big number in the model",
+SECTIONS.append({"id": "cycles", "kicker": "10 · The hidden multiplier", "title": "Annual crop cycles",
   "blocks": [
     lead("Everything you produce in a year is grams-per-cycle × cycles-per-year. The industry obsesses "
          "over the first term and lets the second one rot. Turn time, the days between harvesting one "
@@ -405,7 +405,7 @@ SECTIONS.append({"id": "cycles", "kicker": "10 · The hidden multiplier", "title
   ]})
 
 # ---------------------------------------------------------------- 11 quality vs volume
-SECTIONS.append({"id": "quality-vs-volume", "kicker": "11 · Price tiers", "title": "Quality premiums vs volume, the other side of the fraction",
+SECTIONS.append({"id": "quality-vs-volume", "kicker": "11 · Price tiers", "title": "Quality premiums and yield volume",
   "blocks": [
     p("Cost per gram is half the story; the cheque depends on the price per gram, and price is tiered. "
       "US spot-market averages in early 2024 ran ≈$1,378/lb for indoor flower (≈$3.04/g), $725/lb "
@@ -441,7 +441,7 @@ SECTIONS.append({"id": "quality-vs-volume", "kicker": "11 · Price tiers", "titl
   ]})
 
 # ---------------------------------------------------------------- 12 sensitivity
-SECTIONS.append({"id": "sensitivity", "kicker": "12 · Sensitivity", "title": "Which input actually moves cost per gram",
+SECTIONS.append({"id": "sensitivity", "kicker": "12 · Sensitivity", "title": "Cost-per-gram sensitivity",
   "blocks": [
     p("Before spending a dollar to improve the room, ask the model which dial is worth touching. The "
       "method: take the fictional baseline ($1.90/g), move <strong>one input at a time</strong> across "
@@ -472,7 +472,7 @@ SECTIONS.append({"id": "sensitivity", "kicker": "12 · Sensitivity", "title": "W
   ]})
 
 # ---------------------------------------------------------------- 13 break-even
-SECTIONS.append({"id": "break-even", "kicker": "13 · Break-even", "title": "Break-even thinking: where zero lives",
+SECTIONS.append({"id": "break-even", "kicker": "13 · Break-even", "title": "Break-even analysis",
   "blocks": [
     p("Break-even is the yield, price or cycle count where profit crosses zero, and knowing where it "
       "sits turns vague anxiety into specific targets. Three divisions, same fictional room:"),
@@ -506,7 +506,7 @@ SECTIONS.append({"id": "break-even", "kicker": "13 · Break-even", "title": "Bre
   ]})
 
 # ---------------------------------------------------------------- 14 mistakes
-SECTIONS.append({"id": "mistakes", "kicker": "14 · Failure modes", "title": "Common economic mistakes",
+SECTIONS.append({"id": "mistakes", "kicker": "14 · Failure modes", "title": "Common unit-economics mistakes",
   "blocks": [
     p("Every one of these is survivable once and fatal as a habit. All of them are denominators or "
       "missing lines. None of them is agronomy."),
@@ -534,7 +534,7 @@ SECTIONS.append({"id": "mistakes", "kicker": "14 · Failure modes", "title": "Co
   ]})
 
 # ---------------------------------------------------------------- 15 troubleshooting
-SECTIONS.append({"id": "troubleshooting", "kicker": "15 · Troubleshooting", "title": "When the money number drifts",
+SECTIONS.append({"id": "troubleshooting", "kicker": "15 · Troubleshooting", "title": "Troubleshooting",
   "blocks": [
     p("Symptoms first, causes second, same as diagnosing a sick plant, except the sensor is the bank "
       "statement and the lag is a full quarter."),
@@ -561,7 +561,7 @@ SECTIONS.append({"id": "troubleshooting", "kicker": "15 · Troubleshooting", "ti
   ]})
 
 # ---------------------------------------------------------------- 16 mental model
-SECTIONS.append({"id": "mental-model", "kicker": "16 · The mental model", "title": "Run the room like a factory with three dials",
+SECTIONS.append({"id": "mental-model", "kicker": "16 · The mental model", "title": "Unit-economics control variables",
   "blocks": [
     callout("key", "The one-paragraph version",
       p("Upstairs there is one number: <strong>dollars per finished gram, per year</strong>. Downstairs "

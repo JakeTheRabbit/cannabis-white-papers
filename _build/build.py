@@ -129,18 +129,21 @@ def autolink(html, current_slug, linked):
 
 # ---------------------------------------------------------------- paper page
 def render_paper(mod):
-    secs = mod.SECTIONS
+    # Render from a disposable copy so injected panels and file-gated media do not
+    # mutate the module's authoritative sections across repeated render calls.
+    secs = [dict(sec, blocks=list(sec.get("blocks", []))) for sec in mod.SECTIONS]
     # Inject per-paper evidence confidence panel (solid / operational / provisional)
     try:
         from data import evidence as EV
         _ep = EV.panel_html(mod.SLUG)
         if _ep and secs:
-            # Prefer after first intro section; else front of paper
-            _ei = 1 if len(secs) > 1 else 0
+            _definitions = next((i for i, sec in enumerate(secs)
+                                 if sec.get("title") == "Definitions"), None)
+            _ei = (_definitions + 1) if _definitions is not None else 1
             secs.insert(_ei, {
                 "id": "evidence-notes",
-                "kicker": "How sure is this?",
-                "title": "Accuracy, self-review, and grain-of-salt notes",
+                "kicker": "Evidence assessment",
+                "title": "Evidence and limitations",
                 "blocks": [_ep],
             })
     except Exception as _ee:

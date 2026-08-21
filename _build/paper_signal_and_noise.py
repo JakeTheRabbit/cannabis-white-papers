@@ -22,7 +22,7 @@ def _c(rid):
 SECTIONS = []
 
 SECTIONS.append({"id": "what-this-is", "kicker": "Start here",
-  "title": "What this is, and why a grow room is really a listening problem",
+  "title": "Purpose and scope",
   "blocks": [
     callout("evidence", "Grain of salt",
       "<p><strong>Borderline:</strong> Alarm-noise percentages and control-rule mashups should be replaced with "
@@ -51,7 +51,7 @@ SECTIONS.append({"id": "what-this-is", "kicker": "Start here",
   ]})
 
 SECTIONS.append({"id": "key-terms", "kicker": "Plain-language dictionary",
-  "title": "Key terms, defined once",
+  "title": "Definitions",
   "blocks": [
     p("The vocabulary comes from radio engineering, manufacturing and statistics, so the words can "
       "sound intimidating. They are not. <strong>Signal-to-noise ratio (SNR)</strong> is how loud the "
@@ -80,7 +80,7 @@ SECTIONS.append({"id": "key-terms", "kicker": "Plain-language dictionary",
   ]})
 
 SECTIONS.append({"id": "where-noise-comes-from", "kicker": "Core idea 1",
-  "title": "Where the noise comes from",
+  "title": "Sources of measurement noise",
   "blocks": [
     p("You cannot reduce what you cannot name. Grow-room noise enters through six channels. Three are "
       "<strong>physical and inherent</strong>: the sensor itself (electronic jitter, drift, no "
@@ -114,7 +114,7 @@ SECTIONS.append({"id": "where-noise-comes-from", "kicker": "Core idea 1",
   ]})
 
 SECTIONS.append({"id": "averaging-and-sampling", "kicker": "Core idea 2",
-  "title": "Averaging and how often to measure",
+  "title": "Sampling and averaging",
   "blocks": [
     p("The most powerful, most ignored noise filter in horticulture is <strong>replication</strong>. "
       "Ask one plant how the room is doing and you get a rumour. Average twelve plants across the bench "
@@ -147,7 +147,7 @@ SECTIONS.append({"id": "averaging-and-sampling", "kicker": "Core idea 2",
   ]})
 
 SECTIONS.append({"id": "control-limits-spc", "kicker": "Core idea 3",
-  "title": "Control limits: knowing when a wiggle deserves a response",
+  "title": "Control limits and response thresholds",
   "blocks": [
     p("The most valuable idea in the paper comes from manufacturing's quality revolution: "
       "<strong>statistical process control (SPC)</strong>. Walter Shewhart, working at Bell "
@@ -181,7 +181,7 @@ SECTIONS.append({"id": "control-limits-spc", "kicker": "Core idea 3",
   ]})
 
 SECTIONS.append({"id": "playbook", "kicker": "Do this Monday",
-  "title": "The operator's playbook, step by step",
+  "title": "Operating procedure",
   "blocks": [
     p("None of the highest-return moves needs new capital. Most need only discipline, "
       "tackled top-down. Here is the order to do it in."),
@@ -221,7 +221,7 @@ SECTIONS.append({"id": "playbook", "kicker": "Do this Monday",
   ]})
 
 SECTIONS.append({"id": "pitfalls", "kicker": "Watch out",
-  "title": "Common pitfalls",
+  "title": "Troubleshooting",
   "blocks": [
     p("The two opposite failures are <strong>over-smoothing</strong> and <strong>tampering</strong>. "
       "Filtering is sugar: a little clarifies, too much rots. Crank the window too wide and you erase a "
@@ -249,7 +249,7 @@ SECTIONS.append({"id": "pitfalls", "kicker": "Watch out",
   ]})
 
 SECTIONS.append({"id": "realistic-expectations", "kicker": "What to expect",
-  "title": "Realistic expectations",
+  "title": "Expected results and limitations",
   "blocks": [
     p("Facilities climb a predictable ladder, and knowing which rung you're on tells you what to do "
       "next."),

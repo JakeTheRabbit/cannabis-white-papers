@@ -24,7 +24,7 @@ def _c(rid):
 
 SECTIONS = []
 
-SECTIONS.append({"id": "what-this-is", "kicker": "Start here", "title": "What this is",
+SECTIONS.append({"id": "what-this-is", "kicker": "Start here", "title": "Purpose and scope",
   "blocks": [
     lead("This paper takes a complete beginner from a dry cannabis seed to a healthy "
          "two-to-three-week-old seedling, defining every term along the way. A seed is a tiny "
@@ -46,7 +46,7 @@ SECTIONS.append({"id": "what-this-is", "kicker": "Start here", "title": "What th
           "Every technical term is defined in plain language the first time it appears"], "tight")),
   ]})
 
-SECTIONS.append({"id": "key-terms", "kicker": "Vocabulary", "title": "Key terms, defined once",
+SECTIONS.append({"id": "key-terms", "kicker": "Vocabulary", "title": "Definitions",
   "blocks": [
     p("Before the how-to, here is the small vocabulary the rest of this paper relies on. You do "
       "not need to memorise it, each term comes back in context."),
@@ -76,7 +76,7 @@ SECTIONS.append({"id": "key-terms", "kicker": "Vocabulary", "title": "Key terms,
     ], cls="compact", caption="Glossary quick-reference. Scan back to this while reading later sections."),
   ]})
 
-SECTIONS.append({"id": "anatomy-and-quality", "kicker": "Core concept 1", "title": "Inside a seed, and how to judge a good one",
+SECTIONS.append({"id": "anatomy-and-quality", "kicker": "Core concept 1", "title": "Seed anatomy and quality assessment",
   "blocks": [
     p("A cannabis seed is a complete dormant plant. A tough seed coat protects an embryo that "
       "already contains a taproot, two cotyledons and a tiny shoot, plus stored food to fuel the "
@@ -105,7 +105,7 @@ SECTIONS.append({"id": "anatomy-and-quality", "kicker": "Core concept 1", "title
         "If you have a choice, plant the dark, firm, striped ones first.")),
   ]})
 
-SECTIONS.append({"id": "seed-types", "kicker": "Core concept 2", "title": "Feminised, regular and autoflower: which seed to buy",
+SECTIONS.append({"id": "seed-types", "kicker": "Core concept 2", "title": "Cannabis seed types",
   "blocks": [
     p("There are three seed types and the choice shapes your whole grow. Regular seeds produce "
       "roughly half male and half female plants. Only females make the flower (the &lsquo;bud&rsquo;) "
@@ -131,7 +131,7 @@ SECTIONS.append({"id": "seed-types", "kicker": "Core concept 2", "title": "Femin
         "flower when they reach a certain age, whatever the lights are doing.")),
   ]})
 
-SECTIONS.append({"id": "germination-methods", "kicker": "Core concept 3", "title": "Three ways to germinate, and why",
+SECTIONS.append({"id": "germination-methods", "kicker": "Core concept 3", "title": "Germination methods",
   "blocks": [
     p("Germination just means giving the seed three things: water and warmth (darkness is optional convenience). The "
       "embryo swells, drinks, and pushes the taproot out through the seed coat. There are three "
@@ -157,7 +157,7 @@ SECTIONS.append({"id": "germination-methods", "kicker": "Core concept 3", "title
           "<strong>Pre-soak:</strong> soak seeds in room-temperature water for 12-24 hours to soften the coat. Useful for old or hard seeds, then move them to towel or medium."], "tight")),
   ]})
 
-SECTIONS.append({"id": "conditions-and-timeline", "kicker": "By stage", "title": "The conditions seeds need, and what to expect when",
+SECTIONS.append({"id": "conditions-and-timeline", "kicker": "By stage", "title": "Germination conditions and timeline",
   "blocks": [
     p("Seeds are sensitive to their environment. Three settings matter: temperature, moisture and "
       "light. Get all three in range and most viable seeds sprout on their own."),
@@ -221,7 +221,7 @@ SECTIONS.append({"id": "seedling-care", "kicker": "By stage", "title": "Seedling
         "rotted does not.")),
   ]})
 
-SECTIONS.append({"id": "troubleshooting", "kicker": "When it goes wrong", "title": "Damping-off and other common failures",
+SECTIONS.append({"id": "troubleshooting", "kicker": "When it goes wrong", "title": "Troubleshooting",
   "blocks": [
     p("The most lethal seedling disease is damping-off, caused by soil fungi such as Pythium, "
       "Fusarium and Rhizoctonia. A previously healthy seedling suddenly pinches, blackens and "
@@ -250,7 +250,7 @@ SECTIONS.append({"id": "troubleshooting", "kicker": "When it goes wrong", "title
         "40-50% after the true leaves show." + _c("umn-extension-prevent-damping-off"))),
   ]})
 
-SECTIONS.append({"id": "realistic-expectations", "kicker": "Reality check", "title": "Realistic expectations",
+SECTIONS.append({"id": "realistic-expectations", "kicker": "Reality check", "title": "Expected results and limitations",
   "blocks": [
     p("Even with good seeds and care, not every seed sprouts. Fresh quality feminised seed often "
       "runs well above 90% germination, but a dud or two is normal and not a sign you did something "

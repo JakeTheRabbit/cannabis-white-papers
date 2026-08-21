@@ -57,7 +57,7 @@ SECTIONS = []
 SECTIONS.append({
     "id": "scope",
     "kicker": "00",
-    "title": "Scope, names, and how to use the stars",
+    "title": "Purpose and scope",
     "blocks": [
         lead("This is the working SOP. The tissue culture playbook is the longer guide. Follow this document if you are doing the work today."),
         p("Two setups share the same jobs. Home: one room, a still-air box or a cheap hood, a pressure canner. Licensed: the same jobs plus lot numbers and a disease test."),
@@ -81,7 +81,7 @@ SECTIONS.append({
 SECTIONS.append({
     "id": "room",
     "kicker": "Job 0A",
-    "title": "Treat the room before you buy anything else",
+    "title": "Preparing the workspace",
     "blocks": [
         lead("Pick one small room or a closed corner. No carpet. No house plants. No cardboard boxes stored in it. A spare bedroom, a laundry, or a sealed cupboard bay will do."),
         figure(S.fig_room_treat(), 3, "Empty. Wash. Bleach. Alcohol. Seal. Then turn the hood on and wait."),
@@ -114,7 +114,7 @@ SECTIONS.append({
 SECTIONS.append({
     "id": "hood-buy",
     "kicker": "Job 0B",
-    "title": "Buy a cheap hood from China and set it up",
+    "title": "Selecting and setting up a laminar-flow hood",
     "blocks": [
         lead("A still-air box works. A horizontal laminar-flow hood is easier. You can buy one from China for a few hundred dollars if you order the right spec and check it on arrival."),
         figure(S.fig_hood_buy(), 4, "Horizontal flow. H13 or H14 HEPA plus a pre-filter. Metal body. Certificate from the seller."),
@@ -184,7 +184,7 @@ SECTIONS.append({
 SECTIONS.append({
     "id": "open",
     "kicker": "Job 1",
-    "title": "Open the day",
+    "title": "Opening procedure",
     "blocks": [
         lead("Do this every day you work, before any jar is opened."),
         figure(S.fig_day_open(), 7, "Clothes. Hood on 20 minutes. Wipe room. Wipe hood steel. New gloves. Only today’s tools."),
@@ -250,7 +250,7 @@ SECTIONS.append({
 SECTIONS.append({
     "id": "cut",
     "kicker": "Job 3",
-    "title": "Take the piece and surface-sterilise it",
+    "title": "Explant preparation and surface sterilisation",
     "blocks": [
         lead("First runs: a stem piece with one bud, 10–15 mm. Not a meristem."),
         figure(S.fig_bleach_steps(), 9, "Cut. Soap. 70% alcohol 30–60 s. Bleach 20–30 min. Rinse three times. Trim the burned ends in the hood."),
@@ -273,7 +273,7 @@ SECTIONS.append({
 SECTIONS.append({
     "id": "plate",
     "kicker": "Job 4",
-    "title": "Plate, label, shelf",
+    "title": "Plating, labelling and incubation",
     "blocks": [
         lead("One piece, one jar, until you know your rate."),
         figure(S.fig_plate_steps(), 10, "Open one jar in the air stream. Stand the piece. Lid on. Label. Shelf. Scout day 7."),
@@ -296,7 +296,7 @@ SECTIONS.append({
 SECTIONS.append({
     "id": "scout",
     "kicker": "Job 5",
-    "title": "Scout and bin",
+    "title": "Culture inspection and disposal",
     "blocks": [
         lead("Day 7 and day 21. Look through the glass. Do not open a doubtful jar."),
         figure(S.fig_scout(), 12, "Keep. Bin. Watch. If you hesitate, it is a bin."),
@@ -322,7 +322,7 @@ SECTIONS.append({
 SECTIONS.append({
     "id": "multiply",
     "kicker": "Job 6",
-    "title": "Multiply every 3–4 weeks",
+    "title": "Shoot multiplication and subculture",
     "blocks": [
         lead("Only from jars that were clean at day 21. New jar every time."),
         figure(FX.fig_subculture(), 13, "Recut. Fresh medium. New lot line on F-05."),
@@ -346,7 +346,7 @@ SECTIONS.append({
 SECTIONS.append({
     "id": "meristem",
     "kicker": "Job 7",
-    "title": "Meristem cut (only after Jobs 1–6 work)",
+    "title": "Meristem dissection after process validation",
     "blocks": [
         lead("Microscope. 0.2–0.4 mm. Then a lab test. This job does not make a plant “clean” by itself."),
         figure(FP.fig_meristem_setup(), 14, "Same five zones as the hood layout. Microscope in the middle."),
@@ -384,7 +384,7 @@ SECTIONS.append({
 SECTIONS.append({
     "id": "root",
     "kicker": "Job 8",
-    "title": "Root, then harden",
+    "title": "Rooting and acclimatisation",
     "blocks": [
         lead("A shoot with no roots is not a plant. After roots, lower humidity in steps."),
         photo(f"{IMG}/08-rooted-plantlet.jpg",
@@ -416,7 +416,7 @@ SECTIONS.append({
 SECTIONS.append({
     "id": "index",
     "kicker": "Job 9",
-    "title": "Test, intake, and the lot register",
+    "title": "Testing, intake and lot registration",
     "blocks": [
         lead("If F-10 is blank, the plant is a clone. Not a clean mother."),
         figure(FX.fig_hlvd_clearance(), 20, "Cut. Grow new leaves. Sample. Freeze a retain. Test again."),
@@ -445,7 +445,7 @@ SECTIONS.append({
 SECTIONS.append({
     "id": "week",
     "kicker": "Job 10",
-    "title": "The week",
+    "title": "Weekly operating schedule",
     "blocks": [
         table(
             ["Day", "Home", "Licensed"],
@@ -468,7 +468,7 @@ SECTIONS.append({
 SECTIONS.append({
     "id": "fix",
     "kicker": "Job 11",
-    "title": "If it fails, change one thing",
+    "title": "Troubleshooting",
     "blocks": [
         table(
             ["What you see", "Change this only"],
@@ -487,7 +487,7 @@ SECTIONS.append({
 SECTIONS.append({
     "id": "sources",
     "kicker": "12",
-    "title": "Sources",
+    "title": "Source notes",
     "blocks": [
         p("Stars in the text point here. You do not need this page to run a day."),
         p("Photographs are illustrations. Diagrams are the ones to follow for size and order."),

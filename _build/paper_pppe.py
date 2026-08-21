@@ -29,7 +29,7 @@ JURISDICTION_NOTE = 'Jurisdiction note: PPE duties and HSWA wording below are NZ
 
 
 # 1 -----------------------------------------------------------------
-SECTIONS.append({"id": "intro", "kicker": "Start here", "title": "Two jobs, one suit",
+SECTIONS.append({"id": "intro", "kicker": "Start here", "title": "Purpose and scope",
   "blocks": [
     callout("NOTE", "Jurisdiction", JURISDICTION_NOTE),
     
@@ -53,7 +53,7 @@ SECTIONS.append({"id": "intro", "kicker": "Start here", "title": "Two jobs, one 
   ]})
 
 # 2 -----------------------------------------------------------------
-SECTIONS.append({"id": "terms", "kicker": "Vocabulary", "title": "The words you need",
+SECTIONS.append({"id": "terms", "kicker": "Vocabulary", "title": "Definitions",
   "blocks": [
     defterm("PPE / PPPE", "Personal protective equipment. Here, plant <em>and</em> personal: the same gear "
             "protects the crop from the person and the person from hazards."),
@@ -75,7 +75,7 @@ SECTIONS.append({"id": "terms", "kicker": "Vocabulary", "title": "The words you 
   ]})
 
 # 3 -----------------------------------------------------------------
-SECTIONS.append({"id": "how-bad", "kicker": "The problem", "title": "How bad humans actually are",
+SECTIONS.append({"id": "how-bad", "kicker": "The problem", "title": "Personnel contamination risks",
   "blocks": [
     p("It is worth sitting with the numbers, because they are the entire argument for gowning up."),
     figure(PP.human_contamination(), 1,
@@ -103,7 +103,7 @@ SECTIONS.append({"id": "how-bad", "kicker": "The problem", "title": "How bad hum
   ]})
 
 # 4 -----------------------------------------------------------------
-SECTIONS.append({"id": "bare-minimum", "kicker": "The floor", "title": "The bare minimum, everywhere",
+SECTIONS.append({"id": "bare-minimum", "kicker": "The floor", "title": "Minimum PPE requirements",
   "blocks": [
     p("Before any room-specific extras, there is a non-negotiable baseline for entering any production or "
       "handling area. It mirrors food-GMP personnel rules" + _c("fda-21cfr117-personnel") + " and WHO good "
@@ -125,7 +125,7 @@ SECTIONS.append({"id": "bare-minimum", "kicker": "The floor", "title": "The bare
   ]})
 
 # 5 -----------------------------------------------------------------
-SECTIONS.append({"id": "by-room", "kicker": "Room by room", "title": "Different rooms, different kit",
+SECTIONS.append({"id": "by-room", "kicker": "Room by room", "title": "Room-specific PPE requirements",
   "blocks": [
     p("PPE intensity tracks the value and vulnerability of what is in the room, not a single suit "
       "everywhere. Strictest where the genetics live and where product is open and headed to a patient."),
@@ -147,7 +147,7 @@ SECTIONS.append({"id": "by-room", "kicker": "Room by room", "title": "Different 
   ]})
 
 # 6 -----------------------------------------------------------------
-SECTIONS.append({"id": "gowning", "kicker": "The procedure", "title": "Gowning, in the right order",
+SECTIONS.append({"id": "gowning", "kicker": "The procedure", "title": "Gowning procedure",
   "blocks": [
     p("Order matters. You gown top-to-bottom so that particles shed while dressing fall onto areas you have "
       "not covered yet, and you cross a physical clean/dirty line as you go" + _c("gmp-gowning-procedure") + "."),
@@ -182,7 +182,7 @@ SECTIONS.append({"id": "hands", "kicker": "The procedure", "title": "Hands and g
   ]})
 
 # 8 -----------------------------------------------------------------
-SECTIONS.append({"id": "scenarios", "kicker": "The daily traps", "title": "The scenarios that catch people out",
+SECTIONS.append({"id": "scenarios", "kicker": "The daily traps", "title": "Common non-compliance scenarios",
   "blocks": [
     h(3, "Phones and personal items"),
     p("No phones, earbuds, jewellery, watches or makeup in production or clean areas. A phone is a fomite "
@@ -209,7 +209,7 @@ SECTIONS.append({"id": "scenarios", "kicker": "The daily traps", "title": "The s
   ]})
 
 # 9 -----------------------------------------------------------------
-SECTIONS.append({"id": "hswa", "kicker": "The law (NZ)", "title": "Who is responsible: HSWA 2015",
+SECTIONS.append({"id": "hswa", "kicker": "The law (NZ)", "title": "Responsibilities under HSWA 2015",
   "blocks": [
     p("In New Zealand, PPE and hygiene are not just good practice, they are legal duties under the Health "
       "and Safety at Work Act 2015" + _c("hswa-2015") + ", overseen by WorkSafe" + _c("worksafe-grwm") + "."),
@@ -237,7 +237,7 @@ SECTIONS.append({"id": "hswa", "kicker": "The law (NZ)", "title": "Who is respon
   ]})
 
 # 10 -----------------------------------------------------------------
-SECTIONS.append({"id": "quick-reference", "kicker": "Cheat sheet", "title": "The whole thing, in one place",
+SECTIONS.append({"id": "quick-reference", "kicker": "Cheat sheet", "title": "Quick-reference requirements",
   "blocks": [
     kv([("Baseline, every room", "gown, hairnet + beard net, gloves, room shoes, wash, no personal items"),
         ("Gown order", "hair -> mask -> eyewear -> inner gloves -> coverall -> hood -> boot covers -> outer gloves"),

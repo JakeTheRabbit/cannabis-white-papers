@@ -23,7 +23,7 @@ def _c(rid):
 
 SECTIONS = []
 
-SECTIONS.append({"id": "what-this-is", "kicker": "Start here", "title": "What this is (and who it's for)",
+SECTIONS.append({"id": "what-this-is", "kicker": "Start here", "title": "Purpose and scope",
   "blocks": [
     lead("A <strong>substrate</strong> (also called a growing medium) is just the material a plant's "
          "roots live in. It holds the plant up and acts as the reservoir for water, air and dissolved "
@@ -45,7 +45,7 @@ SECTIONS.append({"id": "what-this-is", "kicker": "Start here", "title": "What th
         "one specific medium hard once you have picked it.")),
   ]})
 
-SECTIONS.append({"id": "key-terms", "kicker": "Vocabulary", "title": "Key terms, defined once",
+SECTIONS.append({"id": "key-terms", "kicker": "Vocabulary", "title": "Definitions",
   "blocks": [
     p("Two numbers describe how any medium behaves when wet. The rest are about nutrients. You do "
       "not need to memorise these, just get the gist."),
@@ -99,7 +99,7 @@ SECTIONS.append({"id": "water-vs-air", "kicker": "Core concept 1", "title": "Wat
         "one that forgives a heavy hand on the watering.")),
   ]})
 
-SECTIONS.append({"id": "ec-buffering", "kicker": "Core concept 2", "title": "How each medium handles nutrients",
+SECTIONS.append({"id": "ec-buffering", "kicker": "Core concept 2", "title": "Nutrient buffering by substrate",
   "blocks": [
     p("An inert medium like rockwool holds almost no nutrients of its own. Its native EC is "
       "negligible and its pH is alkaline, around 8, so whatever you feed is exactly what the roots "
@@ -125,7 +125,7 @@ SECTIONS.append({"id": "ec-buffering", "kicker": "Core concept 2", "title": "How
         "control a medium gives, the less it protects you from yourself.")),
   ]})
 
-SECTIONS.append({"id": "reuse-cost", "kicker": "Core concept 3", "title": "Re-use, cost and footprint",
+SECTIONS.append({"id": "reuse-cost", "kicker": "Core concept 3", "title": "Reuse, cost and environmental footprint",
   "blocks": [
     p("Media differ enormously in how many runs you get. Rockwool can be re-used for up to about "
       "three years with proper sanitation, but it is energy-intensive to make and banned from "
@@ -148,7 +148,7 @@ SECTIONS.append({"id": "reuse-cost", "kicker": "Core concept 3", "title": "Re-us
       "the most up-front work."),
   ]})
 
-SECTIONS.append({"id": "choose-by-stage", "kicker": "Decide", "title": "How to choose: a beginner's decision path",
+SECTIONS.append({"id": "choose-by-stage", "kicker": "Decide", "title": "Substrate selection",
   "blocks": [
     p("Match the medium to your tolerance for fiddling, not to what wins a yield contest. The right "
       "answer is the one whose daily demands you will actually keep up with."),
@@ -172,7 +172,7 @@ SECTIONS.append({"id": "choose-by-stage", "kicker": "Decide", "title": "How to c
         "forgiving medium first.")),
   ]})
 
-SECTIONS.append({"id": "by-stage-setup", "kicker": "Do it", "title": "Setting up and running each, step by step",
+SECTIONS.append({"id": "by-stage-setup", "kicker": "Do it", "title": "Setup and management by substrate",
   "blocks": [
     p("Every medium has one non-negotiable prep step. Get that right and the rest is routine."),
     steps([
@@ -197,7 +197,7 @@ SECTIONS.append({"id": "by-stage-setup", "kicker": "Do it", "title": "Setting up
       _c("le-pythium-hydroponic-epidemiology-review") + _c("frontiers-2026-do-pythium-strawberry-nft")),
   ]})
 
-SECTIONS.append({"id": "pitfalls", "kicker": "Avoid", "title": "Common pitfalls and how to dodge them",
+SECTIONS.append({"id": "pitfalls", "kicker": "Avoid", "title": "Troubleshooting",
   "blocks": [
     p("The classic beginner mistakes are medium-specific, and most look like something they are not."),
     table(["Medium", "Classic mistake", "What you see", "The fix"], [
@@ -216,7 +216,7 @@ SECTIONS.append({"id": "pitfalls", "kicker": "Avoid", "title": "Common pitfalls 
         "keep a backup air pump ready, and add a chiller when the system cannot hold its validated range.")),
   ]})
 
-SECTIONS.append({"id": "expectations", "kicker": "Reality check", "title": "Realistic expectations",
+SECTIONS.append({"id": "expectations", "kicker": "Reality check", "title": "Expected results and limitations",
   "blocks": [
     p("No medium grows the plant for you. They differ in where the difficulty sits, not in whether "
       "there is difficulty. Living soil front-loads the work of building the bed, then runs "

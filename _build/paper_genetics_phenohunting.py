@@ -28,7 +28,7 @@ def _c(rid):
 SECTIONS = [
 
 # ------------------------------------------------------------------ 1 · start here
-{"id": "start-here", "kicker": "Start here", "title": "What this is",
+{"id": "start-here", "kicker": "Start here", "title": "Purpose and scope",
  "blocks": [
     lead("Every cultivar worth growing started life as one individual plant that somebody noticed, "
          "kept and copied. This paper explains the machinery behind that: what genetics can and "
@@ -50,7 +50,7 @@ SECTIONS = [
  ]},
 
 # ------------------------------------------------------------------ 2 · three layers
-{"id": "three-layers", "kicker": "Core concept 1", "title": "Genotype, phenotype, chemotype, the three layers",
+{"id": "three-layers", "kicker": "Core concept 1", "title": "Genotype, phenotype and chemotype",
  "blocks": [
     p("Three words carry the whole subject. Get them straight and everything downstream (seed "
       "types, hunts, testing, breeding) becomes simple mechanics."),
@@ -88,7 +88,7 @@ SECTIONS = [
  ]},
 
 # ------------------------------------------------------------------ 3 · landraces & names
-{"id": "landraces-and-names", "kicker": "Core concept 2", "title": "Landraces, polyhybrids, and why strain names mean little",
+{"id": "landraces-and-names", "kicker": "Core concept 2", "title": "Landraces, polyhybrids and unreliable strain names",
  "blocks": [
     p("Cannabis was domesticated in East Asia around the early Neolithic, and everything grown "
       "today, hemp and drug types alike, descends from that ancestral pool." + _c("ren-2021-domestication") +
@@ -118,7 +118,7 @@ SECTIONS = [
  ]},
 
 # ------------------------------------------------------------------ 4 · why seeds vary
-{"id": "why-seeds-vary", "kicker": "Core concept 3", "title": "Why seeds vary: heterozygosity and segregation",
+{"id": "why-seeds-vary", "kicker": "Core concept 3", "title": "Seed variation: heterozygosity and segregation",
  "blocks": [
     p("Cannabis is naturally an outcrossing species, separate male and female plants, wind "
       "pollination, constant mixing. That history makes it highly "
@@ -160,7 +160,7 @@ SECTIONS = [
  ]},
 
 # ------------------------------------------------------------------ 5 · stability vocabulary
-{"id": "stability", "kicker": "Vocabulary", "title": "Stability: what breeders actually mean",
+{"id": "stability", "kicker": "Vocabulary", "title": "Genetic stability",
  "blocks": [
     p("Seed catalogues throw around F1, IBL and &lsquo;stable&rsquo; loosely. Here is the "
       "vocabulary with its real meaning, so you can read a listing critically."),
@@ -262,7 +262,7 @@ SECTIONS = [
  ]},
 
 # ------------------------------------------------------------------ 7 · the hunt
-{"id": "the-hunt", "kicker": "The process", "title": "The pheno hunt, step by step",
+{"id": "the-hunt", "kicker": "The process", "title": "Phenotype-hunting workflow",
  "blocks": [
     p("A <strong>pheno hunt</strong> is a controlled comparison: grow a batch of seeds under "
       "conditions as identical as you can manage, score every plant against criteria fixed in "
@@ -364,7 +364,7 @@ SECTIONS = [
  ]},
 
 # ------------------------------------------------------------------ 9 · sample size
-{"id": "sample-size", "kicker": "Reality check", "title": "Sample-size honesty: 10 seeds vs 100",
+{"id": "sample-size", "kicker": "Reality check", "title": "Sample-size limitations",
  "blocks": [
     p("Here is the arithmetic nobody puts on the seed pack. Suppose a genuine keeper, a plant "
       "that clears your bar on <em>every</em> criterion, shows up in about one seed in twenty "
@@ -395,7 +395,7 @@ SECTIONS = [
  ]},
 
 # ------------------------------------------------------------------ 10 · keeping the cut
-{"id": "keeping-the-cut", "kicker": "Aftercare", "title": "Keeping the cut: mothers, backups, archive",
+{"id": "keeping-the-cut", "kicker": "Aftercare", "title": "Maintaining a keeper cut",
  "blocks": [
     p("The hunt ends with the most valuable object in the facility: one plant. From here the job "
       "is redundancy. A keeper held as a single mother is one root-rot event, one viroid "
@@ -429,7 +429,7 @@ SECTIONS = [
  ]},
 
 # ------------------------------------------------------------------ 11 · testing
-{"id": "testing", "kicker": "Lab options", "title": "Genetic testing: what a swab can and cannot tell you",
+{"id": "testing", "kicker": "Lab options", "title": "What genetic testing can and cannot tell you",
  "blocks": [
     p("Cheap genetic assays now cover three jobs that used to cost weeks of grow time. All three "
       "run off a small leaf sample."),
@@ -460,7 +460,7 @@ SECTIONS = [
  ]},
 
 # ------------------------------------------------------------------ 12 · breeding basics
-{"id": "breeding-basics", "kicker": "Going further", "title": "Breeding basics for growers",
+{"id": "breeding-basics", "kicker": "Going further", "title": "Breeding basics for cultivators",
  "blocks": [
     p("Once you hold a keeper, the next itch is making seed from it. Two modes exist. "
       "<strong>Open pollination</strong>, males and females loose in one space, is how "
@@ -493,7 +493,7 @@ SECTIONS = [
  ]},
 
 # ------------------------------------------------------------------ 13 · IP
-{"id": "ip-and-licensing", "kicker": "The fine print", "title": "IP and licensing, lightly",
+{"id": "ip-and-licensing", "kicker": "The fine print", "title": "Intellectual property and licensing",
  "blocks": [
     p("Cultivar ownership is real but patchy, and it varies by jurisdiction. A few generic "
       "truths hold. Strain <em>names</em> are mostly unprotected marketing, and as covered "
@@ -512,7 +512,7 @@ SECTIONS = [
  ]},
 
 # ------------------------------------------------------------------ 14 · failure modes
-{"id": "failure-modes", "kicker": "When it goes wrong", "title": "Classic ways a hunt fails",
+{"id": "failure-modes", "kicker": "When it goes wrong", "title": "Common phenotype-hunting failures",
  "blocks": [
     p("Most failed hunts fail the same six ways, and every one is preventable for the cost of "
       "discipline."),
@@ -577,7 +577,7 @@ SECTIONS = [
  ]},
 
 # ------------------------------------------------------------------ 16 · mental model
-{"id": "mental-model", "kicker": "Take-away", "title": "The mental model: lottery, rubric, vault",
+{"id": "mental-model", "kicker": "Take-away", "title": "Phenotype hunting: selection, validation and preservation",
  "blocks": [
     callout("key", "Carry these three objects",
       ul(["<strong>The lottery.</strong> Seeds are tickets. Heterozygous parents guarantee the draw is random, names on the packet do not change the odds, and the number of tickets, not enthusiasm, sets your chance of a real keeper.",

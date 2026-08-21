@@ -29,7 +29,7 @@ def _c(rid):
 SECTIONS = []
 
 # ---------------------------------------------------------------- 01 start here
-SECTIONS.append({"id": "start-here", "kicker": "01 · Start here", "title": "The air the plant feels",
+SECTIONS.append({"id": "start-here", "kicker": "01 · Start here", "title": "Purpose and scope",
   "blocks": [
     lead("Two rooms both read 55% humidity. One is at 20&nbsp;°C and the plants are coasting. The "
          "other is at 28&nbsp;°C and the same cultivar is stalled, leaf edges curling, drinking hard. "
@@ -50,7 +50,7 @@ SECTIONS.append({"id": "start-here", "kicker": "01 · Start here", "title": "The
   ]})
 
 # ---------------------------------------------------------------- 02 vocabulary
-SECTIONS.append({"id": "vocabulary", "kicker": "02 · The vocabulary", "title": "Ten terms and you can read any climate chart",
+SECTIONS.append({"id": "vocabulary", "kicker": "02 · The vocabulary", "title": "Definitions",
   "blocks": [
     defterm("Water vapour", "Water as a gas, mixed invisibly into the air. Steam you can see is "
             "droplets; vapour you can&rsquo;t."),
@@ -77,7 +77,7 @@ SECTIONS.append({"id": "vocabulary", "kicker": "02 · The vocabulary", "title": 
   ]})
 
 # ---------------------------------------------------------------- 03 what VPD is
-SECTIONS.append({"id": "what-vpd-is", "kicker": "03 · The core idea", "title": "A ceiling, a level, and the gap between them",
+SECTIONS.append({"id": "what-vpd-is", "kicker": "03 · The core idea", "title": "VPD fundamentals",
   "blocks": [
     p("Think of air as a tank whose height changes with temperature. Warm the air and the tank gets "
       "taller. It <em>can</em> hold more vapour. The water already in it doesn&rsquo;t change "
@@ -110,7 +110,7 @@ SECTIONS.append({"id": "what-vpd-is", "kicker": "03 · The core idea", "title": 
   ]})
 
 # ---------------------------------------------------------------- 04 the equation
-SECTIONS.append({"id": "equation", "kicker": "04 · The maths", "title": "The equation, in a form you can actually use",
+SECTIONS.append({"id": "equation", "kicker": "04 · The maths", "title": "Calculating VPD",
   "blocks": [
     p("Everything runs on one empirical formula for the ceiling, good to a fraction of a percent "
       "over grow-room temperatures. It is the Tetens equation as standardised in FAO Irrigation and "
@@ -144,7 +144,7 @@ SECTIONS.append({"id": "equation", "kicker": "04 · The maths", "title": "The eq
   ]})
 
 # ---------------------------------------------------------------- 05 leaf VPD
-SECTIONS.append({"id": "leaf-vpd", "kicker": "05 · The real number", "title": "Leaf temperature, not air temperature, sets the pull",
+SECTIONS.append({"id": "leaf-vpd", "kicker": "05 · The real number", "title": "Leaf temperature and leaf VPD",
   "blocks": [
     p("Here is the correction that separates people who chart VPD from people who control it. The "
       "air <em>inside</em> a leaf is saturated at the <em>leaf&rsquo;s</em> temperature. So the "
@@ -183,7 +183,7 @@ SECTIONS.append({"id": "leaf-vpd", "kicker": "05 · The real number", "title": "
   ]})
 
 # ---------------------------------------------------------------- 06 the chart
-SECTIONS.append({"id": "the-chart", "kicker": "06 · The lookup", "title": "The VPD chart and how to read it",
+SECTIONS.append({"id": "the-chart", "kicker": "06 · The lookup", "title": "Using a VPD chart",
   "blocks": [
     p("The classic grower chart is just the equation pre-computed: temperature down the side, RH "
       "across the top, the deficit in every cell. Here it is, coloured by the stage bands from the "
@@ -209,7 +209,7 @@ SECTIONS.append({"id": "the-chart", "kicker": "06 · The lookup", "title": "The 
   ]})
 
 # ---------------------------------------------------------------- 07 stage targets
-SECTIONS.append({"id": "stage-targets", "kicker": "07 · The targets", "title": "Stage bands: convention, hedged honestly",
+SECTIONS.append({"id": "stage-targets", "kicker": "07 · The targets", "title": "Stage-specific VPD targets",
   "blocks": [
     p("The bands below are the industry&rsquo;s working convention, not a law of nature. They come "
       "from grower practice converging over a decade" + _c("pulse-vpd-guide") + ", they sit inside "
@@ -254,7 +254,7 @@ SECTIONS.append({"id": "stage-targets", "kicker": "07 · The targets", "title": 
   ]})
 
 # ---------------------------------------------------------------- 08 transpiration
-SECTIONS.append({"id": "transpiration", "kicker": "08 · The engine", "title": "Transpiration: what the deficit actually drives",
+SECTIONS.append({"id": "transpiration", "kicker": "08 · The engine", "title": "How VPD drives transpiration",
   "blocks": [
     p("VPD matters because transpiration is the crop&rsquo;s engine, and VPD is its throttle. Water "
       "evaporates from cell walls inside the leaf and diffuses out of the stomata into the deficit. "
@@ -290,7 +290,7 @@ SECTIONS.append({"id": "transpiration", "kicker": "08 · The engine", "title": "
   ]})
 
 # ---------------------------------------------------------------- 09 day / night
-SECTIONS.append({"id": "day-night", "kicker": "09 · The clock", "title": "Day and night are two different jobs",
+SECTIONS.append({"id": "day-night", "kicker": "09 · The clock", "title": "Day and night climate objectives",
   "blocks": [
     p("Daytime VPD control is about growth: hold the stage band, keep it stable, let the engine "
       "run. Night-time VPD control is about <em>protection</em>. And it is where most rooms "
@@ -316,7 +316,7 @@ SECTIONS.append({"id": "day-night", "kicker": "09 · The clock", "title": "Day a
   ]})
 
 # ---------------------------------------------------------------- 10 dew point
-SECTIONS.append({"id": "night-dew", "kicker": "10 · The mould lever", "title": "Dew point: where night humidity turns into liquid",
+SECTIONS.append({"id": "night-dew", "kicker": "10 · The mould lever", "title": "Dew point and nighttime condensation risk",
   "blocks": [
     p("RH tells you how full the air is. <strong>Dew point</strong> tells you where that fullness "
       "becomes free water: it is the temperature at which your actual vapour content saturates" +
@@ -356,7 +356,7 @@ SECTIONS.append({"id": "night-dew", "kicker": "10 · The mould lever", "title": 
   ]})
 
 # ---------------------------------------------------------------- 11 measurement
-SECTIONS.append({"id": "measurement", "kicker": "11 · The instruments", "title": "Measure where the plant lives, not where the wall is",
+SECTIONS.append({"id": "measurement", "kicker": "11 · The instruments", "title": "Sensor placement at canopy level",
   "blocks": [
     p("Climate control inherits every sin of its sensors. Three questions decide whether your VPD "
       "number is real: <em>where</em> the sensor sits, whether radiation is heating it, and whether "
@@ -388,7 +388,7 @@ SECTIONS.append({"id": "measurement", "kicker": "11 · The instruments", "title"
   ]})
 
 # ---------------------------------------------------------------- 12 the kit
-SECTIONS.append({"id": "kit", "kicker": "12 · The kit", "title": "Humidification and dehumidification: make the hardware pull together",
+SECTIONS.append({"id": "kit", "kicker": "12 · The kit", "title": "Humidification and dehumidification equipment",
   "blocks": [
     p("Almost all the water you irrigate ends up in the room air, transpiration returns it "
       "as vapour, and that latent load, not the lights, is what your dehumidification actually "
@@ -427,7 +427,7 @@ SECTIONS.append({"id": "kit", "kicker": "12 · The kit", "title": "Humidificatio
   ]})
 
 # ---------------------------------------------------------------- 13 mistakes
-SECTIONS.append({"id": "mistakes", "kicker": "13 · The classics", "title": "Common mistakes, named and shamed",
+SECTIONS.append({"id": "mistakes", "kicker": "13 · The classics", "title": "Common VPD control mistakes",
   "blocks": [
     grid([
       card("Chasing VPD with temperature",
@@ -463,7 +463,7 @@ SECTIONS.append({"id": "mistakes", "kicker": "13 · The classics", "title": "Com
   ]})
 
 # ---------------------------------------------------------------- 14 troubleshooting
-SECTIONS.append({"id": "troubleshooting", "kicker": "14 · Quick reference", "title": "Troubleshooting table",
+SECTIONS.append({"id": "troubleshooting", "kicker": "14 · Quick reference", "title": "Troubleshooting",
   "blocks": [
     table(["You see…", "Likely climate cause", "Do this"], [
       ["Leaf edges curl up, margins crisp, growth stalls mid-day",
@@ -491,7 +491,7 @@ SECTIONS.append({"id": "troubleshooting", "kicker": "14 · Quick reference", "ti
   ]})
 
 # ---------------------------------------------------------------- 15 mental model
-SECTIONS.append({"id": "mental-model", "kicker": "15 · Straight talk", "title": "The model to keep in your head",
+SECTIONS.append({"id": "mental-model", "kicker": "15 · Straight talk", "title": "VPD control principles",
   "blocks": [
     callout("key", "Five things, and you understand grow-room climate",
       ol([

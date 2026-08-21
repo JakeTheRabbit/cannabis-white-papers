@@ -83,7 +83,7 @@ def wiring_svg():
 
 SECTIONS = []
 
-SECTIONS.append({"id": "start", "kicker": "01 · Read this first", "title": "A plant is quietly electric",
+SECTIONS.append({"id": "start", "kicker": "01 · Read this first", "title": "Purpose and scope",
   "blocks": [
     lead("Plants generate tiny electrical signals. Ions move across cell membranes when the plant "
          "responds to light, water, wounding or nutrient change, and that movement shows up as a "
@@ -107,7 +107,7 @@ SECTIONS.append({"id": "start", "kicker": "01 · Read this first", "title": "A p
           "already samples finer than a VITA1's 5-minute dashboard."])),
   ]})
 
-SECTIONS.append({"id": "terms", "kicker": "02 · The vocabulary", "title": "The words you need",
+SECTIONS.append({"id": "terms", "kicker": "02 · The vocabulary", "title": "Definitions",
   "blocks": [
     defterm("Biopotential", "A voltage a living thing makes across its tissue. In plants it is "
             "microvolts to a few millivolts, riding on a slowly-drifting baseline."),
@@ -355,7 +355,7 @@ binary_sensor:
         "~0 mV at rest and swings signed around it" + _c("pb_esphome_ads1115") + ".")),
   ]})
 
-SECTIONS.append({"id": "read", "kicker": "08 · Make sense of it", "title": "Reading the data",
+SECTIONS.append({"id": "read", "kicker": "08 · Make sense of it", "title": "Interpreting plant-biosignal data",
   "blocks": [
     p("These are <em>changes</em> in potential, not a calibrated physiological unit. Compare a plant "
       "to itself over time, never plant-to-plant in raw millivolts."),
@@ -375,7 +375,7 @@ SECTIONS.append({"id": "read", "kicker": "08 · Make sense of it", "title": "Rea
       "to combine it with your other telemetry."),
   ]})
 
-SECTIONS.append({"id": "limits", "kicker": "09 · Straight talk", "title": "Limits, calibration and safety",
+SECTIONS.append({"id": "limits", "kicker": "09 · Straight talk", "title": "Limitations, calibration and safety",
   "blocks": [
     callout("key", "Set expectations before you solder",
       ul(["<strong>Relative, not absolute.</strong> Good for trends and events on one plant, not for "

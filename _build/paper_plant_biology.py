@@ -41,7 +41,7 @@ def _c(rid):
 SECTIONS = []
 
 # ------------------------------------------------------------------ 01 start here
-SECTIONS.append({"id": "start-here", "kicker": "01 · Start here", "title": "What this is and how to use it",
+SECTIONS.append({"id": "start-here", "kicker": "01 · Start here", "title": "Purpose and scope",
   "blocks": [
     lead("Every other paper on this site quietly assumes you know what a node is, why the dark period "
          "is sacred, and what a trichome actually does. This is the paper that teaches it. It is the "
@@ -63,7 +63,7 @@ SECTIONS.append({"id": "start-here", "kicker": "01 · Start here", "title": "Wha
   ]})
 
 # ------------------------------------------------------------------ 02 core answer
-SECTIONS.append({"id": "what-kind-of-plant", "kicker": "02 · The core answer", "title": "What kind of plant cannabis is",
+SECTIONS.append({"id": "what-kind-of-plant", "kicker": "02 · The core answer", "title": "Cannabis growth form and taxonomy",
   "blocks": [
     lead("Cannabis sativa L. is an annual, normally dioecious, wind-pollinated flowering herb in the "
          "family Cannabaceae, the same small family as hops. It completes its whole life in one "
@@ -98,7 +98,7 @@ SECTIONS.append({"id": "what-kind-of-plant", "kicker": "02 · The core answer", 
   ]})
 
 # ------------------------------------------------------------------ 03 taxonomy
-SECTIONS.append({"id": "taxonomy", "kicker": "03 · Naming", "title": "Sativa, indica, ruderalis: the honest version",
+SECTIONS.append({"id": "taxonomy", "kicker": "03 · Naming", "title": "Sativa, indica and ruderalis classification",
   "blocks": [
     p("The folk story says there are two (or three) kinds of cannabis: tall, airy, energising "
       "<em>sativas</em>; short, dense, sedating <em>indicas</em>; and a tiny weedy <em>ruderalis</em> "
@@ -156,7 +156,7 @@ SECTIONS.append({"id": "taxonomy", "kicker": "03 · Naming", "title": "Sativa, i
   ]})
 
 # ------------------------------------------------------------------ 04 anatomy tour
-SECTIONS.append({"id": "anatomy-tour", "kicker": "04 · Anatomy I", "title": "A tour of the plant, top to bottom",
+SECTIONS.append({"id": "anatomy-tour", "kicker": "04 · Anatomy I", "title": "Plant anatomy",
   "blocks": [
     p("Strip away the mystique and a cannabis plant is a repeating unit stacked on itself: a stem "
       "segment, a node carrying leaves, and a dormant growing tip tucked into each leaf angle. "
@@ -203,7 +203,7 @@ SECTIONS.append({"id": "anatomy-tour", "kicker": "04 · Anatomy I", "title": "A 
   ]})
 
 # ------------------------------------------------------------------ 05 flower anatomy
-SECTIONS.append({"id": "flower-anatomy", "kicker": "05 · Anatomy II", "title": "Inside the flower: bract, calyx, pistil, stigma",
+SECTIONS.append({"id": "flower-anatomy", "kicker": "05 · Anatomy II", "title": "Flower anatomy",
   "blocks": [
     p("An individual female cannabis flower is tiny and easy to misread: one small ovary wrapped in "
       "a resin-coated leaf-like pod, with two white hairs reaching out of the top. What growers call "
@@ -246,7 +246,7 @@ SECTIONS.append({"id": "flower-anatomy", "kicker": "05 · Anatomy II", "title": 
   ]})
 
 # ------------------------------------------------------------------ 06 trichomes
-SECTIONS.append({"id": "trichomes", "kicker": "06 · Anatomy III", "title": "Trichomes: where the value is made",
+SECTIONS.append({"id": "trichomes", "kicker": "06 · Anatomy III", "title": "Trichome anatomy and function",
   "blocks": [
     p("Everything the market pays for (THC, CBD, the aroma terpenes) is manufactured and stored "
       "in glandular trichomes: microscopic mushroom-shaped glands on the flower surface. The "
@@ -290,7 +290,7 @@ SECTIONS.append({"id": "trichomes", "kicker": "06 · Anatomy III", "title": "Tri
   ]})
 
 # ------------------------------------------------------------------ 07 life cycle
-SECTIONS.append({"id": "life-cycle", "kicker": "07 · The arc", "title": "The life cycle, stage by stage",
+SECTIONS.append({"id": "life-cycle", "kicker": "07 · The arc", "title": "Cannabis life cycle",
   "blocks": [
     p("Cannabis is monocarpic: it flowers once, with everything it has, and then dies. Harvest is "
       "you interrupting its senescence at the profitable moment. The stages below are one "
@@ -338,7 +338,7 @@ SECTIONS.append({"id": "life-cycle", "kicker": "07 · The arc", "title": "The li
   ]})
 
 # ------------------------------------------------------------------ 08 photoperiodism
-SECTIONS.append({"id": "photoperiodism", "kicker": "08 · The trigger", "title": "Photoperiodism: the plant counts the night",
+SECTIONS.append({"id": "photoperiodism", "kicker": "08 · The trigger", "title": "Photoperiodism and flowering",
   "blocks": [
     p("How does a plant with no eyes measure the seasons? With a light-switchable pigment called "
       "phytochrome. It exists in two interconvertible forms: Pr (inactive) flips to Pfr (active) "
@@ -394,7 +394,7 @@ SECTIONS.append({"id": "photoperiodism", "kicker": "08 · The trigger", "title":
   ]})
 
 # ------------------------------------------------------------------ 09 autoflowers
-SECTIONS.append({"id": "autoflowers", "kicker": "09 · No clock needed", "title": "Autoflowers: ruderalis and the broken night-counter",
+SECTIONS.append({"id": "autoflowers", "kicker": "09 · No clock needed", "title": "Autoflowering and ruderalis traits",
   "blocks": [
     p("Far northern feral cannabis, the populations often called Cannabis ruderalis, though its "
       "rank as a species is contested, faced summers where nights barely happen. Waiting for long "
@@ -423,7 +423,7 @@ SECTIONS.append({"id": "autoflowers", "kicker": "09 · No clock needed", "title"
   ]})
 
 # ------------------------------------------------------------------ 10 sex determination
-SECTIONS.append({"id": "sex-determination", "kicker": "10 · Sex", "title": "Sex: XX, XY, and reading pre-flowers",
+SECTIONS.append({"id": "sex-determination", "kicker": "10 · Sex", "title": "Sex determination and pre-flower identification",
   "blocks": [
     p("Cannabis carries true sex chromosomes, which is rare in plants: females are XX, males are "
       "XY, and the male is the heterogametic sex, exactly the human arrangement. The X is the "
@@ -491,7 +491,7 @@ SECTIONS.append({"id": "herms-feminised", "kicker": "11 · When sex bends", "tit
   ]})
 
 # ------------------------------------------------------------------ 12 photosynthesis
-SECTIONS.append({"id": "photosynthesis", "kicker": "12 · The engine", "title": "Photosynthesis for growers: light, CO2 and heat are one system",
+SECTIONS.append({"id": "photosynthesis", "kicker": "12 · The engine", "title": "Photosynthesis: light, CO2 and temperature",
   "blocks": [
     p("Photosynthesis in one breath: chloroplasts in the leaves use light energy to split water and "
       "bolt CO2 from the air onto sugar molecules. Sugar is the plant's only income, every gram of "
@@ -539,7 +539,7 @@ SECTIONS.append({"id": "photosynthesis", "kicker": "12 · The engine", "title": 
   ]})
 
 # ------------------------------------------------------------------ 13 roots
-SECTIONS.append({"id": "roots", "kicker": "13 · The hidden half", "title": "Roots: the half you never see",
+SECTIONS.append({"id": "roots", "kicker": "13 · The hidden half", "title": "Root systems",
   "blocks": [
     p("Half the organism is underground and invisible, and most beginner disasters happen there "
       "first. The architecture is simple: from seed, a taproot drives down and lateral roots branch "
@@ -572,7 +572,7 @@ SECTIONS.append({"id": "roots", "kicker": "13 · The hidden half", "title": "Roo
   ]})
 
 # ------------------------------------------------------------------ 14 hormones
-SECTIONS.append({"id": "hormones", "kicker": "14 · The levers", "title": "Hormones in one table",
+SECTIONS.append({"id": "hormones", "kicker": "14 · The levers", "title": "Plant hormones",
   "blocks": [
     p("Five hormone families explain most of what a cannabis plant does, and most of what growers "
       "do to it. Every training technique is hormone manipulation performed with scissors and "
@@ -611,7 +611,7 @@ SECTIONS.append({"id": "hormones", "kicker": "14 · The levers", "title": "Hormo
   ]})
 
 # ------------------------------------------------------------------ 15 failure modes
-SECTIONS.append({"id": "failure-modes", "kicker": "15 · What goes wrong", "title": "Failure modes: biology biting back",
+SECTIONS.append({"id": "failure-modes", "kicker": "15 · What goes wrong", "title": "Common biological failure modes",
   "blocks": [
     p("Most cultivation disasters are one of the mechanisms in this paper running exactly as "
       "designed, against you. The six below account for a large share of ruined first grows."),
@@ -650,7 +650,7 @@ SECTIONS.append({"id": "failure-modes", "kicker": "15 · What goes wrong", "titl
   ]})
 
 # ------------------------------------------------------------------ 16 quick reference
-SECTIONS.append({"id": "quick-reference", "kicker": "16 · Keep this", "title": "Quick reference: the whole vocabulary in one table",
+SECTIONS.append({"id": "quick-reference", "kicker": "16 · Keep this", "title": "Plant biology quick reference",
   "blocks": [
     p("The working vocabulary of this site, one line each. Bookmark this section, every other "
       "paper uses these words without stopping to define them."),

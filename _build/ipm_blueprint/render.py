@@ -93,7 +93,7 @@ def build_sections():
         {
             "id": "how-to-use",
             "kicker": "01 · Read this first",
-            "title": "What this blueprint is, and what it refuses to pretend",
+            "title": "Purpose and scope",
             "blocks": [
                 lead(
                     "This is an operating blueprint for an indoor medicinal-cannabis facility in Auckland. "
@@ -146,9 +146,21 @@ def build_sections():
 
     sections.append(
         {
+            "id": "glossary",
+            "kicker": "02 · Reference",
+            "title": "Definitions",
+            "blocks": [
+                p("The biological, diagnostic, operational and New Zealand regulatory terms used in this blueprint."),
+                grid([defterm(term, definition) for term, definition in GLOSSARY], cols=2),
+            ],
+        }
+    )
+
+    sections.append(
+        {
             "id": "ipm-system",
-            "kicker": "02 · System",
-            "title": "Six principles, four layers, one closed loop",
+            "kicker": "03 · System",
+            "title": "IPM principles, control layers and feedback loop",
             "blocks": [
                 p(
                     "IPM is a loop: prevent entry, monitor consistently, identify correctly, compare the "
@@ -200,8 +212,8 @@ def build_sections():
     sections.append(
         {
             "id": "nz-legal-gate",
-            "kicker": "03 · New Zealand gate",
-            "title": "A control is not usable until the whole pathway is lawful",
+            "kicker": "04 · New Zealand gate",
+            "title": "Legal eligibility of IPM controls in New Zealand",
             "blocks": [
                 lead(
                     "New Zealand medicinal cannabis does not have one pest-rule book. The decision sits across "
@@ -259,8 +271,8 @@ def build_sections():
     sections.append(
         {
             "id": "clean-stock",
-            "kicker": "04 · Exclusion",
-            "title": "Build the programme around clean stock, not rescue sprays",
+            "kicker": "05 · Exclusion",
+            "title": "Clean stock as the foundation of IPM",
             "blocks": [
                 lead(
                     "The mother room is not just where clones come from. It is a source-material system. Its "
@@ -322,8 +334,8 @@ def build_sections():
     sections.append(
         {
             "id": "facility-pathways",
-            "kicker": "05 · Contamination pathways",
-            "title": "Control people, tools, air, water and waste as one system",
+            "kicker": "06 · Contamination pathways",
+            "title": "Facility contamination pathways",
             "blocks": [
                 p(
                     "Pests and pathogens do not care which department owns a vector. A clean-stock programme "
@@ -371,8 +383,8 @@ def build_sections():
     sections.append(
         {
             "id": "cultural-environmental",
-            "kicker": "06 · Prevention",
-            "title": "Cultural and environmental controls do the heavy lifting",
+            "kicker": "07 · Prevention",
+            "title": "Cultural and environmental controls",
             "blocks": [
                 p(
                     "The quiet controls are the ones that scale: eliminate weeds, algae and plant debris; keep "
@@ -423,8 +435,8 @@ def build_sections():
     sections.append(
         {
             "id": "biological-controls",
-            "kicker": "07 · Living controls",
-            "title": "Biological control is a managed population, not a box of good bugs",
+            "kicker": "08 · Living controls",
+            "title": "Biological control programmes",
             "blocks": [
                 p(
                     "A biological programme succeeds when the right organism arrives alive, is released into a "
@@ -461,8 +473,8 @@ def build_sections():
     sections.append(
         {
             "id": "input-application",
-            "kicker": "08 · Controlled exception",
-            "title": "Select and apply inputs without creating the next failure",
+            "kicker": "09 · Controlled exception",
+            "title": "Input selection and application",
             "blocks": [
                 p(
                     "Once a finding crosses threshold, select the fewest controls that cover the confirmed "
@@ -508,8 +520,8 @@ def build_sections():
     sections.append(
         {
             "id": "arthropod-atlas",
-            "kicker": "09 · Field atlas",
-            "title": "Arthropods: identify the organism and the life stage",
+            "kicker": "10 · Field atlas",
+            "title": "Arthropod identification",
             "blocks": [
                 lead(
                     "The plate is the start of the diagnosis. Confirm morphology, sample the right plant part, "
@@ -530,8 +542,8 @@ def build_sections():
     sections.append(
         {
             "id": "disease-atlas",
-            "kicker": "10 · Field atlas",
-            "title": "Diseases: symptoms point to the sample, not the answer",
+            "kicker": "11 · Field atlas",
+            "title": "Disease diagnosis and sampling",
             "blocks": [
                 lead(
                     "Disease symptoms overlap. Use them to choose tissue, environmental records and the right "
@@ -554,8 +566,8 @@ def build_sections():
     sections.append(
         {
             "id": "lookalikes",
-            "kicker": "11 · Diagnostic controls",
-            "title": "Healthy references and the lookalikes that waste treatments",
+            "kicker": "12 · Diagnostic controls",
+            "title": "Diagnostic lookalikes",
             "blocks": [
                 p(
                     "A diagnostic atlas without healthy controls trains people to see disease everywhere. Compare "
@@ -582,8 +594,8 @@ def build_sections():
     sections.append(
         {
             "id": "build-programme",
-            "kicker": "12 · Runtime",
-            "title": "Turn findings into a controlled weekly programme",
+            "kicker": "13 · Runtime",
+            "title": "Building the weekly IPM programme",
             "blocks": [
                 steps(
                     [
@@ -661,8 +673,8 @@ def build_sections():
     sections.append(
         {
             "id": "crop-cycle",
-            "kicker": "13 · Crop cycle",
-            "title": "Operate from receiving through release, not room by room in isolation",
+            "kicker": "14 · Crop cycle",
+            "title": "Crop-cycle IPM operations",
             "blocks": [
                 table(
                     ["Stage", "Daily standard work", "Weekly / scheduled work", "Hard decision"],
@@ -693,8 +705,8 @@ def build_sections():
     sections.append(
         {
             "id": "capa-release",
-            "kicker": "14 · Quality system",
-            "title": "Contain the crop, then investigate the system",
+            "kicker": "15 · Quality system",
+            "title": "Containment, investigation and CAPA",
             "blocks": [
                 p(
                     "Classify events as local, room-wide or systemic. Containment comes first; root cause and "
@@ -727,8 +739,8 @@ def build_sections():
     sections.append(
         {
             "id": "controlled-toolkit",
-            "kicker": "15 · Working tools",
-            "title": "The forms must make the right action easier than the shortcut",
+            "kicker": "16 · Working tools",
+            "title": "Controlled IPM tools",
             "blocks": [
                 h(3, "Facility approval sheet"),
                 "<style>.facility-input{display:grid;gap:6px}.facility-input input,.facility-input textarea{width:100%;padding:10px;border:1px solid var(--line);border-radius:6px;background:var(--paper);color:var(--ink);font:inherit}.facility-form{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.facility-input.wide{grid-column:1/-1}@media(max-width:720px){.facility-form{grid-template-columns:1fr}}</style>",
@@ -831,8 +843,8 @@ def build_sections():
     sections.append(
         {
             "id": "training",
-            "kicker": "16 · Competency",
-            "title": "Attendance is not competence",
+            "kicker": "17 · Competency",
+            "title": "Competency-based training",
             "blocks": [
                 table(
                     ["Module", "Audience", "Demonstrated outcome"],
@@ -857,18 +869,6 @@ def build_sections():
                         "threatening a drain. A plan only earns trust after someone has tried to use it under pressure."
                     ),
                 ),
-            ],
-        }
-    )
-
-    sections.append(
-        {
-            "id": "glossary",
-            "kicker": "17 · Reference",
-            "title": "Glossary",
-            "blocks": [
-                p("The biological, diagnostic, operational and New Zealand regulatory terms used in this blueprint."),
-                grid([defterm(term, definition) for term, definition in GLOSSARY], cols=2),
             ],
         }
     )

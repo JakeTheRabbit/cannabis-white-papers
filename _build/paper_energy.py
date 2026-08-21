@@ -32,7 +32,7 @@ SECTIONS = []
 
 # ---------------------------------------------------------------- 1 start here
 SECTIONS.append({"id": "start-here", "kicker": "Start here",
-  "title": "Your power bill is a design choice",
+  "title": "Purpose and scope",
   "blocks": [
     lead("Indoor cannabis is one of the most energy-intensive ways humans make anything. Growing one "
          "kilogram of flower in a conventional indoor room takes thousands of kilowatt-hours, the "
@@ -57,9 +57,40 @@ SECTIONS.append({"id": "start-here", "kicker": "Start here",
         "intensity up).")),
   ]})
 
+# ---------------------------------------------------------------- 3 key terms
+SECTIONS.append({"id": "key-terms", "kicker": "Key terms",
+  "title": "Definitions",
+  "blocks": [
+    p("Energy talk collapses into a handful of units. Get these straight and every spec sheet, tariff "
+      "and benchmark in this paper reads easily."),
+    defterm("kWh (kilowatt-hour)", "The unit of energy you buy. One kWh runs a 1,000 W load for one "
+            "hour, a single 660 W LED bar on a 12-hour flower day uses about 7.9 kWh per day, "
+            "roughly 2,900 kWh a year."),
+    defterm("kW (kilowatt) and demand", "The rate of use. How hard you are pulling right now. Utilities "
+            "record your highest sustained draw (often the worst 15- or 30-minute window) each month "
+            "and many charge for it separately. kWh fills the tank; kW is the size of the hose."),
+    defterm("Efficacy (µmol/J)", "How many photosynthetic photons a fixture makes per joule of "
+            "electricity. The single most important number on a grow-light spec sheet. HPS ~1.7, "
+            "modern LED 2.5–3.5+ (Section 6)."),
+    defterm("COP (coefficient of performance)", "How many units of heat a cooling (or heating) system "
+            "moves per unit of electricity it eats. COP 3 means 1 kW of compressor power removes 3 kW "
+            "of heat. Higher is better; resistance heating is COP 1 by definition."),
+    defterm("Energy intensity metrics", "kWh per square metre (or square foot) of canopy per year "
+            "compares facilities; kWh per gram (or its inverse, grams per kWh) compares production "
+            "efficiency. The industry benchmarking platform tracks both" + _c("rii-powerscore") + "."),
+    defterm("Sensible vs latent load", "Sensible heat changes air temperature; latent heat is the "
+            "energy carried by water vapour. A grow room's latent load, everything the plants "
+            "transpire. Is why dehumidification is its own major energy line."),
+    defterm("Time-of-use (TOU) tariff", "A price schedule where a kWh costs more at peak hours and "
+            "less off-peak, as opposed to a flat rate. With lights running only half the day anyway, "
+            "grows are unusually well placed to exploit it."),
+    p("One more habit: convert everything to the same basis before comparing. US sources quote kWh per "
+      "square foot and kWh per pound; multiply by 10.8 to get kWh/m² and by 2.2 to get kWh/kg."),
+  ]})
+
 # ---------------------------------------------------------------- 2 core answer
 SECTIONS.append({"id": "core-answer", "kicker": "The core answer",
-  "title": "Four facts that explain the whole bill",
+  "title": "Energy-cost fundamentals",
   "blocks": [
     p("<strong>1. Lighting is the biggest single line, climate is the biggest family.</strong> In the "
       "classic end-use model, lighting takes about a third of total energy, and ventilation, "
@@ -89,40 +120,9 @@ SECTIONS.append({"id": "core-answer", "kicker": "The core answer",
         "everything so you can prove it worked.")),
   ]})
 
-# ---------------------------------------------------------------- 3 key terms
-SECTIONS.append({"id": "key-terms", "kicker": "Key terms",
-  "title": "kWh literacy: the vocabulary of the bill",
-  "blocks": [
-    p("Energy talk collapses into a handful of units. Get these straight and every spec sheet, tariff "
-      "and benchmark in this paper reads easily."),
-    defterm("kWh (kilowatt-hour)", "The unit of energy you buy. One kWh runs a 1,000 W load for one "
-            "hour, a single 660 W LED bar on a 12-hour flower day uses about 7.9 kWh per day, "
-            "roughly 2,900 kWh a year."),
-    defterm("kW (kilowatt) and demand", "The rate of use. How hard you are pulling right now. Utilities "
-            "record your highest sustained draw (often the worst 15- or 30-minute window) each month "
-            "and many charge for it separately. kWh fills the tank; kW is the size of the hose."),
-    defterm("Efficacy (µmol/J)", "How many photosynthetic photons a fixture makes per joule of "
-            "electricity. The single most important number on a grow-light spec sheet. HPS ~1.7, "
-            "modern LED 2.5–3.5+ (Section 6)."),
-    defterm("COP (coefficient of performance)", "How many units of heat a cooling (or heating) system "
-            "moves per unit of electricity it eats. COP 3 means 1 kW of compressor power removes 3 kW "
-            "of heat. Higher is better; resistance heating is COP 1 by definition."),
-    defterm("Energy intensity metrics", "kWh per square metre (or square foot) of canopy per year "
-            "compares facilities; kWh per gram (or its inverse, grams per kWh) compares production "
-            "efficiency. The industry benchmarking platform tracks both" + _c("rii-powerscore") + "."),
-    defterm("Sensible vs latent load", "Sensible heat changes air temperature; latent heat is the "
-            "energy carried by water vapour. A grow room's latent load, everything the plants "
-            "transpire. Is why dehumidification is its own major energy line."),
-    defterm("Time-of-use (TOU) tariff", "A price schedule where a kWh costs more at peak hours and "
-            "less off-peak, as opposed to a flat rate. With lights running only half the day anyway, "
-            "grows are unusually well placed to exploit it."),
-    p("One more habit: convert everything to the same basis before comparing. US sources quote kWh per "
-      "square foot and kWh per pound; multiply by 10.8 to get kWh/m² and by 2.2 to get kWh/kg."),
-  ]})
-
 # ---------------------------------------------------------------- 4 energy anatomy
 SECTIONS.append({"id": "energy-anatomy", "kicker": "Energy anatomy",
-  "title": "Where the kilowatt-hours go, measured",
+  "title": "Measured energy use by system",
   "blocks": [
     p("Mills (2012) built the first transparent end-use model of a standard indoor production module "
       "and it is still the reference skeleton: lighting about 33% of energy, ventilation and "
@@ -154,7 +154,7 @@ SECTIONS.append({"id": "energy-anatomy", "kicker": "Energy anatomy",
 
 # ---------------------------------------------------------------- 5 benchmarks
 SECTIONS.append({"id": "benchmarks", "kicker": "Benchmarks",
-  "title": "kWh per gram: the honest spread",
+  "title": "Energy-intensity benchmarks",
   "blocks": [
     p("How much electricity does a gram of flower take? The studies disagree, usefully. The spread "
       "tells you how much of the number is physics and how much is choices."),
@@ -194,7 +194,7 @@ SECTIONS.append({"id": "benchmarks", "kicker": "Benchmarks",
 
 # ---------------------------------------------------------------- 6 lighting
 SECTIONS.append({"id": "lighting", "kicker": "Lighting",
-  "title": "Efficacy: the most important number you can buy",
+  "title": "Lighting efficacy",
   "blocks": [
     p("A grow light's job is photons. Efficacy, photosynthetic photons out per joule of electricity "
       "in, written µmol/J, is the number that decides your lighting bill at any given light level. A "
@@ -233,7 +233,7 @@ SECTIONS.append({"id": "lighting", "kicker": "Lighting",
 
 # ---------------------------------------------------------------- 7 double dividend
 SECTIONS.append({"id": "double-dividend", "kicker": "The double dividend",
-  "title": "Every lighting watt is paid for twice",
+  "title": "Lighting heat and HVAC load",
   "blocks": [
     p("Here is the physics that makes lighting efficiency the anchor measure. Essentially every watt "
       "you feed a fixture ends up as heat in the room. The photons themselves are absorbed by leaves "
@@ -264,7 +264,7 @@ SECTIONS.append({"id": "double-dividend", "kicker": "The double dividend",
 
 # ---------------------------------------------------------------- 8 hvac
 SECTIONS.append({"id": "hvac", "kicker": "HVAC & dehumidification",
-  "title": "Moving heat and water for fewer watts",
+  "title": "HVAC and dehumidification efficiency",
   "blocks": [
     p("After lighting, the climate plant is where the remaining kilowatt-hours live" + _c("mills2012-carbon") +
       _c("summers2021-natsust") + ". You cannot opt out of the work. The room's heat must leave and "
@@ -313,7 +313,7 @@ SECTIONS.append({"id": "hvac", "kicker": "HVAC & dehumidification",
 
 # ---------------------------------------------------------------- 9 demand & tariffs
 SECTIONS.append({"id": "demand-tariffs", "kicker": "Power vs energy",
-  "title": "kW, kWh, and why lights-on time is a billing decision",
+  "title": "Demand charges, energy use and photoperiod",
   "blocks": [
     p("Your bill has two different products on it. <strong>Energy</strong> (kWh) is the total you "
       "used. <strong>Demand</strong> (kW) is the fastest you used it, typically the highest 15- or "
@@ -355,7 +355,7 @@ SECTIONS.append({"id": "demand-tariffs", "kicker": "Power vs energy",
 
 # ---------------------------------------------------------------- 10 water
 SECTIONS.append({"id": "water", "kicker": "Water",
-  "title": "The water bill is an energy bill wearing a raincoat",
+  "title": "Water-system energy use",
   "blocks": [
     p("Indoor cannabis is thirsty in a specific, recoverable way. Reported irrigation demand runs "
       "around 9–11 litres per plant per day for mature indoor plants in peak season, and about 22.7 "
@@ -394,7 +394,7 @@ SECTIONS.append({"id": "water", "kicker": "Water",
 
 # ---------------------------------------------------------------- 11 carbon
 SECTIONS.append({"id": "carbon", "kicker": "Carbon",
-  "title": "The carbon story: grid × kWh, and the greenhouse question",
+  "title": "Carbon intensity and greenhouse emissions",
   "blocks": [
     p("Carbon follows the same arithmetic as the bill: kWh consumed × the grid's emissions per kWh. "
       "The 2021 national study put cradle-to-gate emissions of indoor production at 2,283–5,184 kg "
@@ -436,7 +436,7 @@ SECTIONS.append({"id": "carbon", "kicker": "Carbon",
 
 # ---------------------------------------------------------------- 12 retrofit order
 SECTIONS.append({"id": "retrofit-order", "kicker": "The retrofit order",
-  "title": "Measure → LED → controls → dehu → envelope",
+  "title": "Energy retrofit priorities",
   "blocks": [
     p("Efficiency projects fail by sequencing, not by technology. The order below exists because "
       "each step changes the sizing maths of the next, do them backwards and you buy equipment "
@@ -485,7 +485,7 @@ SECTIONS.append({"id": "retrofit-order", "kicker": "The retrofit order",
 
 # ---------------------------------------------------------------- 13 metering
 SECTIONS.append({"id": "metering", "kicker": "Metering",
-  "title": "You can't manage what you don't meter",
+  "title": "Energy metering",
   "blocks": [
     p("The utility meter tells you one number a month about a building full of separate machines. "
       "Everything in this paper becomes manageable the day you split that number: current-transformer "
@@ -514,7 +514,7 @@ SECTIONS.append({"id": "metering", "kicker": "Metering",
 
 # ---------------------------------------------------------------- 14 failure modes
 SECTIONS.append({"id": "failure-modes", "kicker": "Failure modes",
-  "title": "The six ways energy projects go wrong",
+  "title": "Common energy-project failures",
   "blocks": [
     p("These are the recurring wrecks. Every one of them is avoidable at design time and expensive "
       "afterwards."),
@@ -556,7 +556,7 @@ SECTIONS.append({"id": "failure-modes", "kicker": "Failure modes",
 
 # ---------------------------------------------------------------- 15 troubleshooting
 SECTIONS.append({"id": "troubleshooting", "kicker": "Troubleshooting",
-  "title": "Symptom → likely cause → what to check",
+  "title": "Troubleshooting",
   "blocks": [
     p("Energy faults announce themselves on the meter before the crop. Work this table with your "
       "interval data open."),
@@ -580,7 +580,7 @@ SECTIONS.append({"id": "troubleshooting", "kicker": "Troubleshooting",
 
 # ---------------------------------------------------------------- 16 mental model
 SECTIONS.append({"id": "mental-model", "kicker": "The mental model",
-  "title": "Photons are the product; everything else is overhead",
+  "title": "Energy-management principles",
   "blocks": [
     p("Strip the whole subject to one sentence: an indoor grow converts electricity into photons, "
       "and then spends more electricity cleaning up the heat and humidity the first spend created. "

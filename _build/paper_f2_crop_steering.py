@@ -22,7 +22,7 @@ def _c(rid):
 SECTIONS = []
 
 SECTIONS.append({"id": "what-this-is", "kicker": "Start here",
-  "title": "What this system is, and what crop steering means",
+  "title": "Purpose and scope",
   "blocks": [
     callout("evidence", "Grain of salt",
       "<p><strong>Operational / provisional:</strong> Default VWC numbers are one facility&rsquo;s probe-native "
@@ -61,7 +61,7 @@ SECTIONS.append({"id": "what-this-is", "kicker": "Start here",
           "<code>switch.crop_steering_system_enabled = OFF</code> means nothing can fire, ever."], "tight")),
   ]})
 
-SECTIONS.append({"id": "key-terms", "kicker": "Vocabulary", "title": "Key terms, defined",
+SECTIONS.append({"id": "key-terms", "kicker": "Vocabulary", "title": "Definitions",
   "blocks": [
     p("Three measurements run the whole system. Learn these first. Everything else builds on them."),
     defterm("VWC (volumetric water content)", "How wet the growing medium is, shown as a percent. "
@@ -130,7 +130,7 @@ SECTIONS.append({"id": "p0-p3-cycle", "kicker": "The core loop", "title": "The P
   ]})
 
 SECTIONS.append({"id": "controls-and-targets", "kicker": "What you touch",
-  "title": "The controls and targets that matter",
+  "title": "Irrigation controls and targets",
   "blocks": [
     p("Day to day you touch a handful of controls. Two arm switches set how &lsquo;on&rsquo; the system "
       "is. <strong>System enabled</strong> is the master arm. OFF means nothing irrigates ever, and the "
@@ -167,7 +167,7 @@ SECTIONS.append({"id": "controls-and-targets", "kicker": "What you touch",
   ]})
 
 SECTIONS.append({"id": "decision-gates", "kicker": "How it decides",
-  "title": "How a single irrigation decision is made (the gates)",
+  "title": "Irrigation decision gates",
   "blocks": [
     p("When the engine decides a shot is needed, that shot only fires if it passes <strong>every "
       "safety gate in order</strong>. A single failed gate blocks it. This is what stops an autonomous "
@@ -202,7 +202,7 @@ SECTIONS.append({"id": "decision-gates", "kicker": "How it decides",
   ]})
 
 SECTIONS.append({"id": "calibration-howto", "kicker": "Do this first",
-  "title": "Calibration: getting the numbers right before you trust it",
+  "title": "Calibration procedure",
   "blocks": [
     p("Calibration is the most important practical step. The system only behaves correctly if its "
       "number entities match your <em>actual</em> medium. The factory defaults are placeholders "
@@ -246,7 +246,7 @@ SECTIONS.append({"id": "calibration-howto", "kicker": "Do this first",
         "engine chases numbers that have nothing to do with your medium. Calibrate first, then arm.")),
   ]})
 
-SECTIONS.append({"id": "recipes", "kicker": "Everyday tasks", "title": "How-to recipes for common jobs",
+SECTIONS.append({"id": "recipes", "kicker": "Everyday tasks", "title": "Routine operating procedures",
   "blocks": [
     p("Most routine actions have a safe, prescribed method. Prefer the integration services over raw "
       "switch-flipping. The services run the full gated hardware sequence so you cannot skip a safety "
@@ -267,7 +267,7 @@ SECTIONS.append({"id": "recipes", "kicker": "Everyday tasks", "title": "How-to r
   ]})
 
 SECTIONS.append({"id": "safety-troubleshooting", "kicker": "When it goes wrong",
-  "title": "Safety fail-safes, emergency stop, and troubleshooting",
+  "title": "Safety interlocks and troubleshooting",
   "blocks": [
     p("The system has layered fail-safes: the pH/EC source-water gate, a tank dry-run guard (blocks "
       "only when the low float reads empty), a blocked-dripper guard that parks a row for 2 hours after "
@@ -306,7 +306,7 @@ SECTIONS.append({"id": "safety-troubleshooting", "kicker": "When it goes wrong",
         "trusting EC steering.")),
   ]})
 
-SECTIONS.append({"id": "expectations", "kicker": "Reality check", "title": "Realistic expectations",
+SECTIONS.append({"id": "expectations", "kicker": "Reality check", "title": "Expected results and limitations",
   "blocks": [
     callout("key", "This is a controller, not a magic autopilot",
       ul(["<strong>Steering quality is bounded by calibration.</strong> The factory 50%/50% defaults "

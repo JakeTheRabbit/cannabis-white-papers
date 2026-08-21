@@ -46,7 +46,7 @@ SECTIONS = []
 
 # ---- 1. Start here -------------------------------------------------------
 SECTIONS.append({
-  "id": "start", "kicker": "01: Read this first", "title": "What this guide is, and what you'll achieve",
+  "id": "start", "kicker": "01: Read this first", "title": "Purpose and scope",
   "blocks": [
     lead("This guide takes you from picking a donor plant to holding a clean, rooted, hardened "
          "young mother in your hands. You will learn what plant tissue culture is, why cannabis "
@@ -77,7 +77,7 @@ SECTIONS.append({
 
 # ---- 2. Plain English ---------------------------------------------------
 SECTIONS.append({
-  "id": "basics", "kicker": "02: The concepts", "title": "Tissue culture in plain English",
+  "id": "basics", "kicker": "02: The concepts", "title": "Tissue culture fundamentals",
   "blocks": [
     p("Tissue culture rests on one fact about plants that animals do not share. Almost every cell "
       "holds the full instructions to rebuild the whole plant."),
@@ -113,7 +113,7 @@ SECTIONS.append({
 
 # ---- 3. Why -------------------------------------------------------------
 SECTIONS.append({
-  "id": "why", "kicker": "03: The reason", "title": "Why clean up genetics? Meet Hop Latent Viroid",
+  "id": "why", "kicker": "03: The reason", "title": "Hop latent viroid and clean-stock genetics",
   "blocks": [
     p("Take cuttings from the same mother for years and two things creep in: invisible "
       "<strong>diseases</strong> that spread cutting-to-cutting, and the slow accumulation of "
@@ -146,7 +146,7 @@ SECTIONS.append({
 
 # ---- 4. Big picture -----------------------------------------------------
 SECTIONS.append({
-  "id": "overview", "kicker": "04: The map", "title": "The whole journey at a glance",
+  "id": "overview", "kicker": "04: The map", "title": "Tissue culture workflow",
   "blocks": [
     p("Every plant tissue culture workflow follows the same five classic stages, whether for "
       "orchids, bananas or cannabis. They were first laid out by a scientist named Murashige. "
@@ -178,7 +178,7 @@ SECTIONS.append({
 
 # ---- 5. The science of clean -------------------------------------------
 SECTIONS.append({
-  "id": "science", "kicker": "05: The clever bit", "title": "Why a meristem tip beats the disease",
+  "id": "science", "kicker": "05: The clever bit", "title": "Meristem culture for pathogen elimination",
   "blocks": [
     p("This is the single most important concept in the whole guide. Once it clicks, everything "
       "about &lsquo;cleaning genetics&rsquo; makes sense."),
@@ -213,7 +213,7 @@ SECTIONS.append({
 
 # ---- 6. Lab & kit -------------------------------------------------------
 SECTIONS.append({
-  "id": "lab", "kicker": "06: Your setup", "title": "Your lab and your kit",
+  "id": "lab", "kicker": "06: Your setup", "title": "Laboratory setup and equipment",
   "blocks": [
     p("You do not need a white-coat laboratory. You need a small pocket of genuinely clean air to "
       "work in, a way to sterilise things with heat, and somewhere lit and warm to keep the jars. "
@@ -270,7 +270,7 @@ SECTIONS.append({
 
 # ---- 7. Aseptic technique ----------------------------------------------
 SECTIONS.append({
-  "id": "aseptic", "kicker": "07: The core skill", "title": "Aseptic technique: the skill that decides everything",
+  "id": "aseptic", "kicker": "07: The core skill", "title": "Aseptic technique",
   "blocks": [
     lead("Learn this one thing well above all others. Ninety percent of beginner failures are "
          "contamination, and contamination is a technique problem, not a luck problem."),
@@ -428,7 +428,7 @@ SECTIONS.append({
 
 # ---- 11. Stage 2 initiation --------------------------------------------
 SECTIONS.append({
-  "id": "initiation", "kicker": "11: Stage I", "title": "Initiation: waking the explant up",
+  "id": "initiation", "kicker": "11: Stage I", "title": "Culture initiation",
   "blocks": [
     p("&lsquo;Initiation&rsquo; (also called establishment) is the period after you've placed "
       "the sterile explant on its medium, while it settles in and starts to grow. Your jobs here are "
@@ -455,7 +455,7 @@ SECTIONS.append({
 
 # ---- 12. Meristem cleanup ----------------------------------------------
 SECTIONS.append({
-  "id": "cleanup", "kicker": "12: The cleanup", "title": "Meristem dissection: the actual genetic clean-up",
+  "id": "cleanup", "kicker": "12: The cleanup", "title": "Meristem dissection for genetic cleanup",
   "blocks": [
     p("Everything so far also describes ordinary cloning. <strong>This</strong> is the step that "
       "removes the disease. Instead of a 1 cm node, you excise only the tiny meristem dome from "
@@ -491,7 +491,7 @@ SECTIONS.append({
 
 # ---- 13. Indexing -------------------------------------------------------
 SECTIONS.append({
-  "id": "indexing", "kicker": "13: The proof", "title": "Indexing: proving it's actually clean",
+  "id": "indexing", "kicker": "13: The proof", "title": "Indexing: verifying pathogen-free stock",
   "blocks": [
     p("A meristem plant that <em>looks</em> healthy is not a clean plant until a lab test says so. "
       "&lsquo;Indexing&rsquo; is that test. Skip it and you can spend six months building a "
@@ -517,7 +517,7 @@ SECTIONS.append({
 
 # ---- 14. Multiplication -------------------------------------------------
 SECTIONS.append({
-  "id": "multiplication", "kicker": "14: Stage II", "title": "Multiplication, and the hyperhydricity trap",
+  "id": "multiplication", "kicker": "14: Stage II", "title": "Multiplication and hyperhydricity",
   "blocks": [
     p("Once you have a clean, established shoot, multiplication turns one into many. You move it onto "
       "a cytokinin (shoot-pushing) medium; it produces several shoots; you cut those apart and move "
@@ -569,7 +569,7 @@ SECTIONS.append({
 
 # ---- 15. Rooting --------------------------------------------------------
 SECTIONS.append({
-  "id": "rooting", "kicker": "15: Stage III", "title": "Rooting: turning a shoot into a plant",
+  "id": "rooting", "kicker": "15: Stage III", "title": "Root induction",
   "blocks": [
     p("A multiplied shoot has no roots. Rooting fixes that with an <strong>auxin</strong> (the "
       "root-pushing hormone family). There are two routes; both work, and the second is simpler for "
@@ -600,7 +600,7 @@ SECTIONS.append({
 
 # ---- 16. Acclimatization ------------------------------------------------
 SECTIONS.append({
-  "id": "acclim", "kicker": "16: Stage IV", "title": "Acclimatisation: weaning the plantlet to the real world",
+  "id": "acclim", "kicker": "16: Stage IV", "title": "Plantlet acclimatisation",
   "blocks": [
     p("This is the most heartbreaking stage to rush. A plantlet raised in a sealed jar has been "
       "living in a tropical paradise: ~100% humidity, constant warmth, sugar fed to it, dim light. "
@@ -657,7 +657,7 @@ SECTIONS.append({
 
 # ---- 18. Storage / latest ----------------------------------------------
 SECTIONS.append({
-  "id": "advances", "kicker": "18: Going further", "title": "Storing genetics: synthetic seed & cryo (the cutting edge)",
+  "id": "advances", "kicker": "18: Going further", "title": "Genetic storage: synthetic seeds and cryopreservation",
   "blocks": [
     p("Once you can clean and multiply a strain, you can also <em>bank</em> it, preserving a "
       "clean genotype so you never have to re-clean it. Two methods are worth knowing, even as a "
@@ -706,7 +706,7 @@ SECTIONS.append({
 
 # ---- 20. Reality check --------------------------------------------------
 SECTIONS.append({
-  "id": "reality", "kicker": "20: Straight talk", "title": "The honest reality check: cost, success, and limits",
+  "id": "reality", "kicker": "20: Straight talk", "title": "Expected results and limitations",
   "blocks": [
     p("So you can decide with eyes open."),
     h(3, "What success rates to actually expect"),

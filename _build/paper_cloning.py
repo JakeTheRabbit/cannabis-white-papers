@@ -22,7 +22,7 @@ def _c(rid):
 
 SECTIONS = []
 
-SECTIONS.append({"id": "intro", "kicker": "01 · Start here", "title": "What cloning is and why growers do it",
+SECTIONS.append({"id": "intro", "kicker": "01 · Start here", "title": "Purpose and scope",
   "blocks": [
     lead("A <strong>clone</strong> is a cutting taken from a living plant that grows its own roots and "
          "becomes a new, genetically identical plant. No flowers and no seeds are involved. You are "
@@ -91,7 +91,7 @@ SECTIONS.append({"id": "mother-and-cut", "kicker": "03 · The how & why", "title
       "growth lags well behind." + _c("esposito-2026-morphology-predictors")),
   ]})
 
-SECTIONS.append({"id": "hormone-and-cube", "kicker": "04 · The how & why", "title": "Rooting hormone and the cube",
+SECTIONS.append({"id": "hormone-and-cube", "kicker": "04 · The how & why", "title": "Rooting hormone and propagation cubes",
   "blocks": [
     p("Cuttings have no roots yet, so a <strong>rooting hormone</strong> pushes the stem to "
       "grow them. The active ingredient is usually <strong>IBA (indole-3-butyric acid)</strong>, "
@@ -151,7 +151,7 @@ SECTIONS.append({"id": "dome-environment", "kicker": "05 · The how & why", "tit
         "With no roots to replace lost water, a direct breeze dries them out and wilts them fast.")),
   ]})
 
-SECTIONS.append({"id": "timeline", "kicker": "06 · Do this", "title": "The 14-day routine, day by day",
+SECTIONS.append({"id": "timeline", "kicker": "06 · Do this", "title": "14-day cloning schedule",
   "blocks": [
     p("Most of cloning is knowing when to leave the tray alone."),
     figure(L.flow("The 14-day arc",
@@ -188,7 +188,7 @@ SECTIONS.append({"id": "timeline", "kicker": "06 · Do this", "title": "The 14-d
     ], cls="compact", caption="The day-by-day routine condensed. Transplant criteria are the key go/no-go at the end."),
   ]})
 
-SECTIONS.append({"id": "troubleshooting", "kicker": "07 · When it goes wrong", "title": "Why clones fail, and the fix",
+SECTIONS.append({"id": "troubleshooting", "kicker": "07 · When it goes wrong", "title": "Troubleshooting",
   "blocks": [
     p("Most clone failures trace to a handful of causes, and they look distinct enough to diagnose at a "
       "glance."),
@@ -207,7 +207,7 @@ SECTIONS.append({"id": "troubleshooting", "kicker": "07 · When it goes wrong", 
         ". Good hygiene prevents the damping-off and root-rot organisms that wipe out whole trays" + _c("punja-2023-fusarium-pythium-biocontrol") + ".")),
   ]})
 
-SECTIONS.append({"id": "expectations", "kicker": "08 · Reality check", "title": "Expected results",
+SECTIONS.append({"id": "expectations", "kicker": "08 · Reality check", "title": "Expected results and limitations",
   "blocks": [
     p("A realistic first goal is <strong>90 percent</strong> rooting, with experienced rooms hitting 95 "
       "percent or higher" + _c("caplan-2018-stem-cuttings") + ". Expect roots in 10 to 14 days, and treat "

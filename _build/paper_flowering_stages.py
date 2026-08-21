@@ -22,7 +22,7 @@ def _c(rid):
 
 SECTIONS = []
 
-SECTIONS.append({"id": "what-this-is", "kicker": "01 · Start here", "title": "What this is and who it's for",
+SECTIONS.append({"id": "what-this-is", "kicker": "01 · Start here", "title": "Purpose and scope",
   "blocks": [
     lead("Cannabis grows in two big phases: vegetative (building leaves, stems and roots) and "
          "flowering (building the buds you actually harvest). Flowering is triggered by changing "
@@ -48,7 +48,7 @@ SECTIONS.append({"id": "what-this-is", "kicker": "01 · Start here", "title": "W
         "<a href='harvest-dry-trim-cure.html'>harvest and cure</a> papers.")),
   ]})
 
-SECTIONS.append({"id": "key-terms", "kicker": "02 · Vocabulary", "title": "Every term you need, defined",
+SECTIONS.append({"id": "key-terms", "kicker": "02 · Vocabulary", "title": "Definitions",
   "blocks": [
     p("This page uses a handful of grower words repeatedly. Learn these six and the rest of the "
       "guide reads easily. None of them are complicated once defined."),
@@ -75,7 +75,7 @@ SECTIONS.append({"id": "key-terms", "kicker": "02 · Vocabulary", "title": "Ever
       "watch to time the harvest."),
   ]})
 
-SECTIONS.append({"id": "the-flip", "kicker": "03 · How it works", "title": "The flip: why 12/12 starts flowering",
+SECTIONS.append({"id": "the-flip", "kicker": "03 · How it works", "title": "Photoperiod change and floral initiation",
   "blocks": [
     p("Photoperiod cannabis measures the length of the dark period to decide whether it is spring "
       "(grow) or autumn (reproduce). When you give it 12 hours of uninterrupted darkness, it reads "
@@ -101,7 +101,7 @@ SECTIONS.append({"id": "the-flip", "kicker": "03 · How it works", "title": "The
         "or hermaphroditism. Tape over indicator lights and seal the room before you flip.")),
   ]})
 
-SECTIONS.append({"id": "stretch-bud-set", "kicker": "04 · Weeks 1-4", "title": "The stretch and bud set (weeks 1-4)",
+SECTIONS.append({"id": "stretch-bud-set", "kicker": "04 · Weeks 1-4", "title": "Stretch and bud set (weeks 1–4)",
   "blocks": [
     p("For the first 2 to 3 weeks after the flip the plant stretches, often nearly doubling in "
       "height as it builds the frame to hang buds on, while white pistils appear at the nodes." + _c("hesami-2023-morphological-lifecycle")),
@@ -130,7 +130,7 @@ SECTIONS.append({"id": "stretch-bud-set", "kicker": "04 · Weeks 1-4", "title": 
         "<a href='defoliation-training.html'>defoliation and training</a> paper for technique.")),
   ]})
 
-SECTIONS.append({"id": "bulking-ripening", "kicker": "05 · Weeks 5-10", "title": "Bulking and ripening (weeks 5-10)",
+SECTIONS.append({"id": "bulking-ripening", "kicker": "05 · Weeks 5-10", "title": "Bulking and ripening (weeks 5–10)",
   "blocks": [
     p("Weeks 5 to 7 are peak bulking: buds swell fastest, frost (trichomes) builds, and aroma "
       "intensifies, so this is when light, feed and CO2 pay off most." + _c("livingston-2020-trichome-maturation")),
@@ -158,7 +158,7 @@ SECTIONS.append({"id": "bulking-ripening", "kicker": "05 · Weeks 5-10", "title"
       "humidity does the most damage." + _c("mahmoud-2023-botrytis-budrot")),
   ]})
 
-SECTIONS.append({"id": "when-to-harvest", "kicker": "06 · The decision", "title": "Reading the plant: when to harvest",
+SECTIONS.append({"id": "when-to-harvest", "kicker": "06 · The decision", "title": "Harvest-readiness assessment",
   "blocks": [
     callout("evidence", "Evidence limits",
       "<p>Trichome colour tracks maturation. Livingston measured trichome morphology and metabolite content; "
@@ -192,7 +192,7 @@ SECTIONS.append({"id": "when-to-harvest", "kicker": "06 · The decision", "title
     ], cls="compact", caption="Read trichomes on bud at 60x or more. Pistil colour is only a first hint." + _c("livingston-2020-trichome-maturation")),
   ]})
 
-SECTIONS.append({"id": "pitfalls", "kicker": "07 · Avoid these", "title": "Common beginner mistakes",
+SECTIONS.append({"id": "pitfalls", "kicker": "07 · Avoid these", "title": "Troubleshooting",
   "blocks": [
     p("Most first-grow failures in flower come from a few repeatable errors: light leaks, "
       "over-defoliating, chasing the calendar instead of the trichomes, and letting humidity stay "
@@ -211,7 +211,7 @@ SECTIONS.append({"id": "pitfalls", "kicker": "07 · Avoid these", "title": "Comm
         "air moving and humidity low through ripening." + _c("mahmoud-2023-botrytis-budrot"))),
   ]})
 
-SECTIONS.append({"id": "expectations", "kicker": "08 · Reality check", "title": "Realistic expectations and a sample timeline",
+SECTIONS.append({"id": "expectations", "kicker": "08 · Reality check", "title": "Expected results and limitations",
   "blocks": [
     p("A typical photoperiod indoor grow runs about 8 to 10 weeks of flower on top of veg time, and "
       "your first harvest will rarely be your best. Yield and quality climb as you learn to read the "

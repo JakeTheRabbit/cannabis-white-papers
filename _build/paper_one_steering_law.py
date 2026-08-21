@@ -35,7 +35,7 @@ def _c(rid):
 SECTIONS = []
 
 # ---------------------------------------------------------------- 0 promise
-SECTIONS.append({"id": "the-promise", "kicker": "Start here", "title": "The one sentence you’ll leave with",
+SECTIONS.append({"id": "the-promise", "kicker": "Start here", "title": "Purpose and scope",
   "blocks": [
     callout("evidence", "Grain of salt",
       "<p><strong>Borderline:</strong> Do not import high-intensity rockwool substrate EC (mid-3s to 6) into beginner "
@@ -76,8 +76,39 @@ SECTIONS.append({"id": "the-promise", "kicker": "Start here", "title": "The one 
         "coco, rockwool, soil and water just change the numbers, not the steering.")),
   ]})
 
+# ---------------------------------------------------------------- glossary
+SECTIONS.append({"id": "plain-words", "kicker": "Plain-words glossary", "title": "Definitions",
+  "blocks": [
+    p("If a word ever felt like jargon, it&rsquo;s here in plain words. Grower&rsquo;s term first, what it "
+      "really means second."),
+    defterm("Crop steering", "Controlling when and how much you water to nudge a plant toward leaves (a bigger green plant) or toward flower (the buds you harvest). A gentle bias built over days, not a switch you flip overnight."),
+    defterm("Growing medium / substrate (the sponge)", "The stuff a plant&rsquo;s roots live in, coco, rockwool, soil or a tank of water. Throughout this paper we just call it &lsquo;the sponge&rsquo;."),
+    defterm("How-full % (VWC)", "How full the sponge is with water, as a percent of its space. 60% means water fills 60 of every 100 holes. The steering-wheel position, the one number you steer on."),
+    defterm("Drink-down (dryback)", "The fall in how-full % between waterings, the high minus the low, counted in percentage POINTS (78% to 58% is a 20-point drink-down). How hard the plant wrings the sponge. The single most important steering tool."),
+    defterm("Percentage points vs percent", "We always count the drink-down in POINTS: 78 down to 58 is a fall of 20 points. A bare &lsquo;20%&rsquo; is ambiguous, so this paper never writes a bare &lsquo;%&rsquo; for a drink-down."),
+    defterm("Feed strength (EC)", "How strong the fertiliser feed is around the roots. Higher means stronger and saltier. It rises on its own as the sponge dries, because the water leaves but the food stays. (Electrical conductivity, in mS/cm, think of it as a 1-to-10 strength scale.)"),
+    defterm("The &lsquo;full&rsquo; mark (field capacity)", "The wettest the sponge gets right after it stops dripping. Your daily &lsquo;full&rsquo; mark. A property of your exact pot and sponge, not a textbook number, and it shrinks as roots fill the pot."),
+    defterm("The danger line (recovery floor)", "The hard line the drink-down must never cross (about 25&ndash;30% full in rockwool). Below it the sponge stops soaking water back up and water tunnels straight through. The dripper can&rsquo;t fix it."),
+    defterm("Leaves mode (vegetative)", "Steering the plant toward leaves, stems and size, kept wetter, with a small drink-down, a weaker feed and many small sips. &lsquo;Grow-the-body.&rsquo;"),
+    defterm("Flower mode (generative)", "Steering toward flower, density and resin, let drier, with a bigger drink-down, a stronger feed and fewer larger sips. &lsquo;Make-the-buds&rsquo;, the part you harvest."),
+    defterm("The thirst alarm (ABA)", "The plant&rsquo;s stress hormone. A little controlled thirst makes the plant release it, which nudges the plant away from leaves and toward flower and resin, the reason a drink-down steers. You never measure it."),
+    defterm("The four daily beats (P0&ndash;P3)", "The four beats of every steered day: dry a little at lights-on, fill up to the &lsquo;full&rsquo; mark in small sips, hold the band all day, then wind down and let the big overnight drink-down reset everything."),
+    defterm("Sip (shot)", "One small timed splash of water, sized as a percent of the sponge&rsquo;s volume. Steering replaces one big daily soak with several small sips; how long each runs is worked out from pot size, dripper speed and dripper count."),
+    defterm("Zig-zag / sawtooth", "The shape of a healthy how-full graph, a gradual fall (drink-down) then a sharp rise (sip), over and over. A flat or only-falling line means watering isn&rsquo;t actually happening."),
+    defterm("Forgiveness (CEC / buffer)", "How much a sponge cushions your feeding mistakes by holding and releasing food. Coco has lots, living soil self-fixes, rockwool has almost none, plain water has none."),
+    defterm("Drip-out (runoff)", "The small fraction of feed that drains out the bottom (about 10&ndash;20%). Not waste. It washes off stacked salt and is the dipstick that reads the sponge&rsquo;s true feed strength."),
+    defterm("Channeling (water tunnelling through)", "When water runs straight down one path and out the bottom, missing the roots, while the core stays dry. You spot it by how fast the water came out, not how much."),
+    defterm("Permittivity (how strongly it reacts to the probe)", "How strongly a material responds to the probe&rsquo;s tiny electric field. Water reacts a lot, dry sponge barely, air almost none. That gap lets a buried probe feel water it can&rsquo;t see."),
+    defterm("Precise vs right (resolution vs accuracy)", "Precise = lots of decimals shown; right = actually close to the truth. A sensor can be precise and still be off by a few points until you calibrate it."),
+    defterm("Second witness", "An independent check (water dripping out the bottom, or the pot&rsquo;s weight) required to confirm a probe reading before any water moves."),
+    defterm("Water tally / piggy bank (water balance)", "A running count of water IN (the dripper sips) minus water OUT (the plant breathing it out, plus what drains), giving the real water in the pot without trusting one sensor."),
+    defterm("Confidence", "How much to trust today&rsquo;s reading, high when the clues agree, low when they disagree. High lets an auto-waterer give a full sip; low means a tiny sip, wait, or ask a human."),
+    defterm("Never flood, never starve", "The single safety rule on all automatic watering, water more only when sure there&rsquo;s room, and when in doubt do the safe thing. A lying sensor can only make the system more careful, never trick it into overwatering."),
+    defterm("The gearbox (transfer function)", "The plain idea that the sponge takes your watering and changes it by fixed amounts before the roots feel it, same input, different output per sponge."),
+  ]})
+
 # ---------------------------------------------------------------- 1 sponge
-SECTIONS.append({"id": "everything-is-a-sponge", "kicker": "The one spine image", "title": "Everything is a sponge",
+SECTIONS.append({"id": "everything-is-a-sponge", "kicker": "The one spine image", "title": "Substrate water storage",
   "blocks": [
     callout("tip", "Think of it like a kitchen sponge",
       p("Hold a kitchen sponge under the tap until it&rsquo;s full, then let it drip. Every way of growing "
@@ -113,7 +144,7 @@ SECTIONS.append({"id": "everything-is-a-sponge", "kicker": "The one spine image"
   ]})
 
 # ---------------------------------------------------------------- 2 wheel & engine
-SECTIONS.append({"id": "wheel-and-engine", "kicker": "The wheel and the engine", "title": "Water is the steering wheel, the drink-down is the engine",
+SECTIONS.append({"id": "wheel-and-engine", "kicker": "The wheel and the engine", "title": "Water availability and dryback",
   "blocks": [
     callout("tip", "Think of it like wringing a sponge",
       p("Water isn&rsquo;t just food. It&rsquo;s the steering wheel. Picture the plant gripping the "
@@ -162,7 +193,7 @@ SECTIONS.append({"id": "wheel-and-engine", "kicker": "The wheel and the engine",
   ]})
 
 # ---------------------------------------------------------------- 3 second dial
-SECTIONS.append({"id": "the-second-dial", "kicker": "The second dial", "title": "Feed strength, and why the sponge gets saltier as it dries",
+SECTIONS.append({"id": "the-second-dial", "kicker": "The second dial", "title": "Feed strength and root-zone EC",
   "blocks": [
     callout("tip", "Think of it like squash on a windowsill",
       p("Make a glass of squash, then leave it on a sunny windowsill. As the water evaporates, the drink gets "
@@ -197,7 +228,7 @@ SECTIONS.append({"id": "the-second-dial", "kicker": "The second dial", "title": 
   ]})
 
 # ---------------------------------------------------------------- 4 the cliff
-SECTIONS.append({"id": "the-cliff", "kicker": "The two limits", "title": "The cliff: the ‘full’ mark and the danger line",
+SECTIONS.append({"id": "the-cliff", "kicker": "The two limits", "title": "Field capacity and dryback limits",
   "blocks": [
     callout("tip", "Think of it like a lift in a building",
       p("The top floor is &lsquo;full&rsquo;, fill past it and water just spills out the bottom. The "
@@ -234,7 +265,7 @@ SECTIONS.append({"id": "the-cliff", "kicker": "The two limits", "title": "The cl
   ]})
 
 # ---------------------------------------------------------------- 5 four beats
-SECTIONS.append({"id": "one-day-four-beats", "kicker": "The daily rhythm", "title": "One day, four beats",
+SECTIONS.append({"id": "one-day-four-beats", "kicker": "The daily rhythm", "title": "Daily irrigation phases",
   "blocks": [
     callout("tip", "Think of it like breathing on a schedule",
       p("A small morning exhale (dry down a little), a big drink (fill up in sips), steady breathing all day "
@@ -272,7 +303,7 @@ SECTIONS.append({"id": "one-day-four-beats", "kicker": "The daily rhythm", "titl
   ]})
 
 # ---------------------------------------------------------------- 6 gearbox
-SECTIONS.append({"id": "sponge-is-the-gearbox", "kicker": "The keystone", "title": "The sponge is the gearbox",
+SECTIONS.append({"id": "sponge-is-the-gearbox", "kicker": "The keystone", "title": "Substrate moisture as the control variable",
   "blocks": [
     callout("tip", "Think of it like a gearbox",
       p("You already know how to drive. A gearbox sits between your foot and the wheels, same pedal, "
@@ -320,7 +351,7 @@ SECTIONS.append({"id": "sponge-is-the-gearbox", "kicker": "The keystone", "title
   ]})
 
 # ---------------------------------------------------------------- 7 nerd: probe
-SECTIONS.append({"id": "the-probe-can-lie", "kicker": "Nerd bonus, skip if growing by hand", "title": "The dashboard can lie",
+SECTIONS.append({"id": "the-probe-can-lie", "kicker": "Nerd bonus, skip if growing by hand", "title": "Sensor reliability and interpretation",
   "blocks": [
     callout("note", "Optional section",
       p("Skip this whole part unless you want to understand the sensors. Growing by hand, you don&rsquo;t need "
@@ -353,7 +384,7 @@ SECTIONS.append({"id": "the-probe-can-lie", "kicker": "Nerd bonus, skip if growi
   ]})
 
 # ---------------------------------------------------------------- 8 nerd: brain
-SECTIONS.append({"id": "the-auto-waterer-brain", "kicker": "Nerd bonus, skip if growing by hand", "title": "The brain behind an auto-waterer",
+SECTIONS.append({"id": "the-auto-waterer-brain", "kicker": "Nerd bonus, skip if growing by hand", "title": "Automated irrigation decision logic",
   "blocks": [
     callout("note", "Optional section",
       p("Skip this unless you&rsquo;re building an automatic waterer. By hand, <em>you</em> are the brain and "
@@ -385,7 +416,7 @@ SECTIONS.append({"id": "the-auto-waterer-brain", "kicker": "Nerd bonus, skip if 
   ]})
 
 # ---------------------------------------------------------------- 9 one law
-SECTIONS.append({"id": "one-law-any-sponge", "kicker": "It all snaps together", "title": "One law, any sponge",
+SECTIONS.append({"id": "one-law-any-sponge", "kicker": "It all snaps together", "title": "Applying the steering law across substrates",
   "blocks": [
     callout("tip", "Step back and look",
       p("Past the dashboard, the gearbox, all of it. You see one grower doing one thing: watching the "
@@ -422,35 +453,4 @@ SECTIONS.append({"id": "one-law-any-sponge", "kicker": "It all snaps together", 
       "<a href='smart-watering-vrwe.html'>smart watering</a> brain."),
     callout("key", "The promise, now earned",
       p("Steering is one law; the sponge only changes the constants.")),
-  ]})
-
-# ---------------------------------------------------------------- glossary
-SECTIONS.append({"id": "plain-words", "kicker": "Plain-words glossary", "title": "Every term, in plain English",
-  "blocks": [
-    p("If a word ever felt like jargon, it&rsquo;s here in plain words. Grower&rsquo;s term first, what it "
-      "really means second."),
-    defterm("Crop steering", "Controlling when and how much you water to nudge a plant toward leaves (a bigger green plant) or toward flower (the buds you harvest). A gentle bias built over days, not a switch you flip overnight."),
-    defterm("Growing medium / substrate (the sponge)", "The stuff a plant&rsquo;s roots live in, coco, rockwool, soil or a tank of water. Throughout this paper we just call it &lsquo;the sponge&rsquo;."),
-    defterm("How-full % (VWC)", "How full the sponge is with water, as a percent of its space. 60% means water fills 60 of every 100 holes. The steering-wheel position, the one number you steer on."),
-    defterm("Drink-down (dryback)", "The fall in how-full % between waterings, the high minus the low, counted in percentage POINTS (78% to 58% is a 20-point drink-down). How hard the plant wrings the sponge. The single most important steering tool."),
-    defterm("Percentage points vs percent", "We always count the drink-down in POINTS: 78 down to 58 is a fall of 20 points. A bare &lsquo;20%&rsquo; is ambiguous, so this paper never writes a bare &lsquo;%&rsquo; for a drink-down."),
-    defterm("Feed strength (EC)", "How strong the fertiliser feed is around the roots. Higher means stronger and saltier. It rises on its own as the sponge dries, because the water leaves but the food stays. (Electrical conductivity, in mS/cm, think of it as a 1-to-10 strength scale.)"),
-    defterm("The &lsquo;full&rsquo; mark (field capacity)", "The wettest the sponge gets right after it stops dripping. Your daily &lsquo;full&rsquo; mark. A property of your exact pot and sponge, not a textbook number, and it shrinks as roots fill the pot."),
-    defterm("The danger line (recovery floor)", "The hard line the drink-down must never cross (about 25&ndash;30% full in rockwool). Below it the sponge stops soaking water back up and water tunnels straight through. The dripper can&rsquo;t fix it."),
-    defterm("Leaves mode (vegetative)", "Steering the plant toward leaves, stems and size, kept wetter, with a small drink-down, a weaker feed and many small sips. &lsquo;Grow-the-body.&rsquo;"),
-    defterm("Flower mode (generative)", "Steering toward flower, density and resin, let drier, with a bigger drink-down, a stronger feed and fewer larger sips. &lsquo;Make-the-buds&rsquo;, the part you harvest."),
-    defterm("The thirst alarm (ABA)", "The plant&rsquo;s stress hormone. A little controlled thirst makes the plant release it, which nudges the plant away from leaves and toward flower and resin, the reason a drink-down steers. You never measure it."),
-    defterm("The four daily beats (P0&ndash;P3)", "The four beats of every steered day: dry a little at lights-on, fill up to the &lsquo;full&rsquo; mark in small sips, hold the band all day, then wind down and let the big overnight drink-down reset everything."),
-    defterm("Sip (shot)", "One small timed splash of water, sized as a percent of the sponge&rsquo;s volume. Steering replaces one big daily soak with several small sips; how long each runs is worked out from pot size, dripper speed and dripper count."),
-    defterm("Zig-zag / sawtooth", "The shape of a healthy how-full graph, a gradual fall (drink-down) then a sharp rise (sip), over and over. A flat or only-falling line means watering isn&rsquo;t actually happening."),
-    defterm("Forgiveness (CEC / buffer)", "How much a sponge cushions your feeding mistakes by holding and releasing food. Coco has lots, living soil self-fixes, rockwool has almost none, plain water has none."),
-    defterm("Drip-out (runoff)", "The small fraction of feed that drains out the bottom (about 10&ndash;20%). Not waste. It washes off stacked salt and is the dipstick that reads the sponge&rsquo;s true feed strength."),
-    defterm("Channeling (water tunnelling through)", "When water runs straight down one path and out the bottom, missing the roots, while the core stays dry. You spot it by how fast the water came out, not how much."),
-    defterm("Permittivity (how strongly it reacts to the probe)", "How strongly a material responds to the probe&rsquo;s tiny electric field. Water reacts a lot, dry sponge barely, air almost none. That gap lets a buried probe feel water it can&rsquo;t see."),
-    defterm("Precise vs right (resolution vs accuracy)", "Precise = lots of decimals shown; right = actually close to the truth. A sensor can be precise and still be off by a few points until you calibrate it."),
-    defterm("Second witness", "An independent check (water dripping out the bottom, or the pot&rsquo;s weight) required to confirm a probe reading before any water moves."),
-    defterm("Water tally / piggy bank (water balance)", "A running count of water IN (the dripper sips) minus water OUT (the plant breathing it out, plus what drains), giving the real water in the pot without trusting one sensor."),
-    defterm("Confidence", "How much to trust today&rsquo;s reading, high when the clues agree, low when they disagree. High lets an auto-waterer give a full sip; low means a tiny sip, wait, or ask a human."),
-    defterm("Never flood, never starve", "The single safety rule on all automatic watering, water more only when sure there&rsquo;s room, and when in doubt do the safe thing. A lying sensor can only make the system more careful, never trick it into overwatering."),
-    defterm("The gearbox (transfer function)", "The plain idea that the sponge takes your watering and changes it by fixed amounts before the roots feel it, same input, different output per sponge."),
   ]})

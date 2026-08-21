@@ -56,7 +56,7 @@ def _c(rid):
 SECTIONS = []
 
 # 1 ------------------------------------------------------------------ intro
-SECTIONS.append({"id": "intro", "kicker": "Start here", "title": "A reservoir doing four jobs at once",
+SECTIONS.append({"id": "intro", "kicker": "Start here", "title": "Purpose and scope",
   "blocks": [
     lead("In coco or rockwool the substrate is a buffer. It holds water, holds air, holds a charge, "
          "and quietly forgives the feed you got slightly wrong this morning. Deep water culture "
@@ -115,7 +115,7 @@ SECTIONS.append({"id": "intro", "kicker": "Start here", "title": "A reservoir do
   ]})
 
 # 2 ------------------------------------------------------------- oxygen budget
-SECTIONS.append({"id": "oxygen-budget", "kicker": "Physics", "title": "How much oxygen water can actually hold",
+SECTIONS.append({"id": "oxygen-budget", "kicker": "Physics", "title": "Oxygen solubility in nutrient solution",
   "blocks": [
     p("Start with the constraint nobody can negotiate. Oxygen is barely soluble in water. At 20 &deg;C "
       "under normal air at sea level, water holds about <strong>9.1 mg/L</strong> of dissolved "
@@ -180,7 +180,7 @@ SECTIONS.append({"id": "oxygen-budget", "kicker": "Physics", "title": "How much 
   ]})
 
 # 3 ------------------------------------------------------------ how much is enough
-SECTIONS.append({"id": "how-much", "kicker": "Targets", "title": "How much oxygen the plant actually needs",
+SECTIONS.append({"id": "how-much", "kicker": "Targets", "title": "Plant oxygen demand",
   "blocks": [
     p("The literature is unusually consistent about the bottom of the range and unusually messy "
       "about the top. Both facts are useful."),
@@ -231,7 +231,7 @@ SECTIONS.append({"id": "how-much", "kicker": "Targets", "title": "How much oxyge
   ]})
 
 # 4 --------------------------------------------------------- the aeration paradox
-SECTIONS.append({"id": "aeration-paradox", "kicker": "The counter-intuitive part", "title": "More bubbling is not more better",
+SECTIONS.append({"id": "aeration-paradox", "kicker": "The counter-intuitive part", "title": "Aeration limits and dissolved oxygen",
   "blocks": [
     lead("This is the section most likely to change how you run your system. Aeration delivers "
          "oxygen, which is good. Aeration also delivers <em>agitation</em>, which is not. Past a "
@@ -314,7 +314,7 @@ SECTIONS.append({"id": "aeration-paradox", "kicker": "The counter-intuitive part
   ]})
 
 # 5 -------------------------------------------------------------------- ORP
-SECTIONS.append({"id": "orp", "kicker": "The misread number", "title": "What an ORP probe is actually telling you",
+SECTIONS.append({"id": "orp", "kicker": "The misread number", "title": "Interpreting ORP readings",
   "blocks": [
     lead("Oxidation-reduction potential is the most commonly misinterpreted measurement in water "
          "culture. It is worth getting right, because the correct interpretation changes the "
@@ -472,7 +472,7 @@ SECTIONS.append({"id": "orp", "kicker": "The misread number", "title": "What an 
   ]})
 
 # 6 ------------------------------------------------------------------- iron
-SECTIONS.append({"id": "iron", "kicker": "Chemistry", "title": "Iron, chelates, and the chlorosis you cannot feed away",
+SECTIONS.append({"id": "iron", "kicker": "Chemistry", "title": "Iron chelation and chlorosis",
   "blocks": [
     p("Iron is the element water culture punishes you over. It is required in large amounts relative "
       "to other micronutrients, it is almost insoluble in oxygenated water at anything above mildly "
@@ -532,7 +532,7 @@ SECTIONS.append({"id": "iron", "kicker": "Chemistry", "title": "Iron, chelates, 
   ]})
 
 # 7 ---------------------------------------------------------------- organics
-SECTIONS.append({"id": "organics", "kicker": "The live-reservoir argument", "title": "Organic inputs in a water reservoir",
+SECTIONS.append({"id": "organics", "kicker": "The live-reservoir argument", "title": "Organic inputs in recirculating reservoirs",
   "blocks": [
     p("Ask whether to run kelp, fulvic acid or microbial inoculants in DWC and you will get two "
       "confident, opposite answers. Both camps are describing real experience. The disagreement is "
@@ -594,7 +594,7 @@ SECTIONS.append({"id": "organics", "kicker": "The live-reservoir argument", "tit
   ]})
 
 # 8 ----------------------------------------------------------------- pathology
-SECTIONS.append({"id": "pathology", "kicker": "Failure mode", "title": "Root rot is an oxygen problem wearing a pathogen costume",
+SECTIONS.append({"id": "pathology", "kicker": "Failure mode", "title": "Root rot: oxygen stress and pathogen risk",
   "blocks": [
     lead("The single most important finding in the water-culture pathology literature is that low "
          "dissolved oxygen and <em>Pythium</em> root rot are not two independent risks. They are one "
@@ -658,7 +658,7 @@ SECTIONS.append({"id": "pathology", "kicker": "Failure mode", "title": "Root rot
   ]})
 
 # 9 --------------------------------------------------------------- temperature
-SECTIONS.append({"id": "temperature", "kicker": "The master dial", "title": "Solution temperature controls everything else",
+SECTIONS.append({"id": "temperature", "kicker": "The master dial", "title": "Solution temperature",
   "blocks": [
     p("If you take one operational lever away from this paper, take this one. Reservoir temperature "
       "simultaneously sets oxygen supply, oxygen demand, pathogen growth rate and pH stability. "
@@ -705,7 +705,7 @@ SECTIONS.append({"id": "temperature", "kicker": "The master dial", "title": "Sol
   ]})
 
 # 10 -------------------------------------------------------------------- feed
-SECTIONS.append({"id": "feed", "kicker": "Nutrition", "title": "Why water culture runs a leaner feed than you expect",
+SECTIONS.append({"id": "feed", "kicker": "Nutrition", "title": "Nutrient concentration in deep-water culture",
   "blocks": [
     p("Growers moving from coco to RDWC almost always over-feed at first, because the EC numbers "
       "look wrong. They are not wrong. Water culture genuinely runs lower, and the reason is "
@@ -770,7 +770,7 @@ SECTIONS.append({"id": "feed", "kicker": "Nutrition", "title": "Why water cultur
   ]})
 
 # 11 ------------------------------------------------------------------- build
-SECTIONS.append({"id": "build", "kicker": "Build", "title": "Sizing and building the system",
+SECTIONS.append({"id": "build", "kicker": "Build", "title": "DWC system sizing and construction",
   "blocks": [
     p("Design decisions in water culture are mostly about buying yourself margin, because the "
       "system has none by default."),
@@ -832,7 +832,7 @@ SECTIONS.append({"id": "build", "kicker": "Build", "title": "Sizing and building
   ]})
 
 # 12 --------------------------------------------------------------------- run
-SECTIONS.append({"id": "run", "kicker": "Operate", "title": "Running it: checks, change-outs and diagnosis",
+SECTIONS.append({"id": "run", "kicker": "Operate", "title": "Operation and troubleshooting",
   "blocks": [
     p("Water culture rewards routine and punishes improvisation. The daily round is short; the value "
       "is in doing it every day, at the same time, and writing the numbers down."),

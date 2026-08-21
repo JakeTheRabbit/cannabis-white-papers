@@ -20,7 +20,7 @@ def _c(rid):
 
 SECTIONS = []
 
-SECTIONS.append({"id": "intro", "kicker": "Start here", "title": "What this is, and why it matters",
+SECTIONS.append({"id": "intro", "kicker": "Start here", "title": "Purpose and scope",
   "blocks": [
     callout("evidence", "Grain of salt",
       "<p><strong>Provisional:</strong> On-screen advisories (e.g. tip-burn risk timelines) are product-design "
@@ -50,7 +50,7 @@ SECTIONS.append({"id": "intro", "kicker": "Start here", "title": "What this is, 
       "one plain-language judgement."),
   ]})
 
-SECTIONS.append({"id": "key-terms", "kicker": "Vocabulary", "title": "Key terms, defined from zero",
+SECTIONS.append({"id": "key-terms", "kicker": "Vocabulary", "title": "Definitions",
   "blocks": [
     p("Here are the words before the argument. Don't memorise them. Each one comes back in context."),
     defterm("Telemetry", "The raw measurements streamed off your sensors, second by second: "
@@ -78,7 +78,7 @@ SECTIONS.append({"id": "key-terms", "kicker": "Vocabulary", "title": "Key terms,
             "delivered. EC is the salt concentration in the feed or root-zone pore water."),
   ]})
 
-SECTIONS.append({"id": "sensor-problem", "kicker": "The problem", "title": "Why the sensor dashboard falls short",
+SECTIONS.append({"id": "sensor-problem", "kicker": "The problem", "title": "Limitations of sensor-only dashboards",
   "blocks": [
     p("The conventional dashboard rests on one implicit theory: &lsquo;expose every measurement and a skilled "
       "grower will know what to do.&rsquo; That fails in seven predictable ways. Every sensor "
@@ -119,7 +119,7 @@ SECTIONS.append({"id": "sensor-problem", "kicker": "The problem", "title": "Why 
         "structurally cannot express that pattern, no matter how many you add.")),
   ]})
 
-SECTIONS.append({"id": "six-inversions", "kicker": "The shift", "title": "Six inversions: from gauge cluster to calm dashboard",
+SECTIONS.append({"id": "six-inversions", "kicker": "The shift", "title": "Plant-state dashboard design principles",
   "blocks": [
     p("Plant-State Intelligence inverts six assumptions baked into the sensor "
       "dashboard. None of these throws the raw data away. It just moves to the "
@@ -139,7 +139,7 @@ SECTIONS.append({"id": "six-inversions", "kicker": "The shift", "title": "Six in
         "the healthy resting state.")),
   ]})
 
-SECTIONS.append({"id": "plant-state-model", "kicker": "Core content", "title": "What the system actually infers",
+SECTIONS.append({"id": "plant-state-model", "kicker": "Core content", "title": "Plant-state inference model",
   "blocks": [
     p("The pipeline estimates four (really five) interacting states. <strong>Environmental "
       "state</strong>, temperature, RH, VPD, CO&#8322;, light, is reframed as integrals "
@@ -177,7 +177,7 @@ SECTIONS.append({"id": "plant-state-model", "kicker": "Core content", "title": "
         "uniformity, lights-on wilt, height and stacking over days, early discoloration.")),
   ]})
 
-SECTIONS.append({"id": "architecture", "kicker": "Core content", "title": "The six-layer pipeline",
+SECTIONS.append({"id": "architecture", "kicker": "Core content", "title": "Six-layer dashboard architecture",
   "blocks": [
     p("The system is a six-layer pipeline that maps cleanly onto a Home Assistant&ndash;centred "
       "stack. Most operations already have layers 0 and 1 without realising it. The intelligence "
@@ -205,7 +205,7 @@ SECTIONS.append({"id": "architecture", "kicker": "Core content", "title": "The s
         "human-approved.")),
   ]})
 
-SECTIONS.append({"id": "dashboard-surface", "kicker": "Core content", "title": "The new dashboard surface: four zones",
+SECTIONS.append({"id": "dashboard-surface", "kicker": "Core content", "title": "Dashboard layout and priority zones",
   "blocks": [
     p("What the grower opens has four zones, in priority order, and on a good day, "
       "three of them are empty. Zone&nbsp;1 is the <strong>Headline</strong>: one line of plant truth "
@@ -232,7 +232,7 @@ SECTIONS.append({"id": "dashboard-surface", "kicker": "Core content", "title": "
         "basement.")),
   ]})
 
-SECTIONS.append({"id": "how-to", "kicker": "How to", "title": "The adoption path: crawl, walk, run",
+SECTIONS.append({"id": "how-to", "kicker": "How to", "title": "Implementation path",
   "blocks": [
     p("This is not a boil-the-ocean rebuild. Each stage ships value and earns the next, and most of "
       "the payoff lands by Stage&nbsp;3, long before any closed-loop control."),
@@ -279,7 +279,7 @@ SECTIONS.append({"id": "pitfalls", "kicker": "Pitfalls", "title": "Trust, confid
         "anything irreversible or expensive.")),
   ]})
 
-SECTIONS.append({"id": "expectations", "kicker": "Reality check", "title": "Measuring success and realistic expectations",
+SECTIONS.append({"id": "expectations", "kicker": "Reality check", "title": "Expected results and limitations",
   "blocks": [
     p("If the new dashboard is working, the grower looks at it <strong>less</strong>, is surprised "
       "<strong>less</strong>, and harvests <strong>more consistently</strong>. Six run-over-run "

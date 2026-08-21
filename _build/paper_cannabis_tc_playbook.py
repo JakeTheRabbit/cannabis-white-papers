@@ -42,7 +42,7 @@ SECTIONS = []
 SECTIONS.append({
     "id": "how",
     "kicker": "01",
-    "title": "How to use this guide",
+    "title": "Purpose and scope",
     "blocks": [
         lead("Read the sections in order the first time. After that, jump to the stage you are on. Printable jobs and forms live in the tissue culture SOP."),
         p("This guide is for two setups. A home bench using a plastic box and a pressure cooker. "
@@ -68,9 +68,59 @@ SECTIONS.append({
 
 # ---------------------------------------------------------------------------
 SECTIONS.append({
-    "id": "map",
+    "id": "glossary",
     "kicker": "02",
-    "title": "The five stages, in order",
+    "title": "Definitions",
+    "blocks": [
+        lead("Every technical term, in one place."),
+        table(
+            ["Term", "Meaning"],
+            [["Acclimatization / hardening", "Lowering humidity in steps so a jar plant can live in room air and soil."],
+             ["Activated charcoal", "Black powder in the gel that binds brown leak compounds. It can also bind hormones."],
+             ["Agar / gellan / Phytagel", "The setting agent. More agar = firmer gel = drier air in the jar = less glassy growth."],
+             ["Aseptic technique", "Working so that stray microbes do not reach the sugar jelly."],
+             ["Autoclave", "A machine that holds 121 °C steam at 15 psi. A pressure canner that holds 15 psi is the home version."],
+             ["Auxin (IBA, NAA, IAA)", "A hormone class that tells tissue to make roots."],
+             ["Callus", "A lump of unspecialised cells. Common as a side-effect. Not a useful production method for cannabis in Holmes 2021."],
+             ["Cytokinin (mT, TDZ, BA)", "A hormone class that tells tissue to make shoots."],
+             ["DKW", "Driver and Kuniyuki Walnut salts. An alternative mineral mix to MS. Results on cannabis depend on the cultivar."],
+             ["Endophyte", "A microbe living inside tissue that looks healthy. Bleach on the surface cannot reach it."],
+             ["Explant", "The piece of plant you put in the jar."],
+             ["GACP / GMP", "Growing practice versus manufacturing practice. Starting plants sit between the two."],
+             ["HEPA / laminar-flow hood", "A fan and filter that blow a sheet of clean air across the bench. Not a biosafety cabinet."],
+             ["HpLVd / HLVd", "Hop latent viroid. The usual cause of “dudding.” 256 letters of RNA."],
+             ["Hyperhydricity / vitrification", "Glassy, waterlogged, brittle growth in the jar. Often too much cytokinin or humidity."],
+             ["In vitro / ex vitro", "In the jar / outside the jar."],
+             ["Indexing", "Testing a plant for a named pathogen. The only basis for the word “clean”."],
+             ["Initiation (Stage I)", "Getting the first living, uncontaminated culture."],
+             ["ISO 5 / ISO 7", "Air cleanliness ratings. ISO 5 is the hood work surface. ISO 7 is a typical room around the hood."],
+             ["Meristem", "The dome of dividing cells at a shoot tip. No sap tubes yet."],
+             ["Meta-Topolin (mT)", "A cytokinin that works for starting cannabis cultures. Too much of it makes glassy Stage II plants."],
+             ["Micropropagation", "Using tissue culture to make many identical plants."],
+             ["MS salts", "Murashige and Skoog, 1962. The default mineral mix. 4.4 g of powder per litre."],
+             ["Nodal segment", "A stem piece with one bud. Easy. Often still contaminated inside."],
+             ["PGR", "Plant growth regulator. A hormone you added on purpose."],
+             ["Phenolics / browning", "Brown compounds that leak from a cut and stain the gel."],
+             ["Photoautotrophic micropropagation", "No sugar. Ordinary fertiliser. Extra air. Plants look like nursery cuttings."],
+             ["PPM", "Plant Preservative Mixture. An antimicrobial you can autoclave with the medium."],
+             ["qPCR / RT-qPCR", "A lab test that looks for the viroid’s RNA. “Not detected” is not the same as “cannot exist.”"],
+             ["Recalcitrant", "A species that is hard to start in a jar. Cannabis is one."],
+             ["Somaclonal variation", "Genetic changes that appear after many recuts in the jar."],
+             ["Still-air box", "A clear tub with arm holes. Air inside is still, so spores do not drift onto open jars."],
+             ["Subculture", "Moving tissue onto fresh medium."],
+             ["Temporary immersion", "Liquid medium that wets the shoots on a timer, then drains."],
+             ["TDZ (thidiazuron)", "A very strong cytokinin. Use small doses."],
+             ["Totipotency", "A living plant cell can rebuild the whole plant."],
+             ["Vascular tissue", "Xylem (water) and phloem (sap). The sap tubes are how the viroid moves."]],
+            caption="Table 13. Glossary.",
+        ),
+    ]})
+
+# ---------------------------------------------------------------------------
+SECTIONS.append({
+    "id": "map",
+    "kicker": "03",
+    "title": "Tissue culture workflow",
     "blocks": [
         lead("Every tissue-culture run uses the same five stages. Cannabis adds two extra jobs: cutting the growing tip to leave disease behind, and a lab test that checks whether that worked."),
         figure(F.fig_5stages(), 1, "Stage 0 is the mother plant you cut from. Stages I–IV are the jar and the move into a pot."),
@@ -92,8 +142,8 @@ SECTIONS.append({
 # ---------------------------------------------------------------------------
 SECTIONS.append({
     "id": "why",
-    "kicker": "03",
-    "title": "Why growers use tissue culture for cannabis",
+    "kicker": "04",
+    "title": "Applications of cannabis tissue culture",
     "blocks": [
         lead("A normal cutting copies the plant and also copies every pest, fungus and viroid the plant is carrying. Tissue culture can start a new plant from tissue that those organisms have not reached yet."),
         figure(F.fig_hplvd(), 4, "Left: an uninfected plant. Right: a plant with Hop latent viroid. Early infection often has no visible symptoms, so it spreads through a clone line for years before anyone notices."),
@@ -115,8 +165,8 @@ SECTIONS.append({
 # ---------------------------------------------------------------------------
 SECTIONS.append({
     "id": "anatomy",
-    "kicker": "04",
-    "title": "The shoot tip: meristem, young leaves, and sap tubes",
+    "kicker": "05",
+    "title": "Shoot-tip anatomy",
     "blocks": [
         lead("Viroids and viruses move in the sap tubes. The meristem is a dome of dividing cells at the very tip of a shoot. Those cells do not have sap tubes yet, and they divide faster than the pathogen can move forward. If you cut just that dome, you sometimes leave the disease behind."),
         p(f"How often? Punja (2025) cut meristems 0.2–0.4 mm across from 91 infected plants of 8 cultivars. At six months, 40.7% tested negative for Hop latent viroid. The range by cultivar was 0% to 100%.{_c("hlvd_mgmt2025")} A meristem cut is a filter. It is not a guarantee."),
@@ -149,8 +199,8 @@ SECTIONS.append({
 # ---------------------------------------------------------------------------
 SECTIONS.append({
     "id": "home",
-    "kicker": "05",
-    "title": "How to set up a home lab",
+    "kicker": "06",
+    "title": "Home laboratory setup",
     "blocks": [
         lead("You need three things: a pocket of still clean air to work in, a way to heat jars to 121 °C, and a warm lit shelf. You do not need a white coat. You do not need a hospital cabinet."),
         photo(f"{IMG}/05-home-lab-sab.jpg",
@@ -197,8 +247,8 @@ SECTIONS.append({
 # ---------------------------------------------------------------------------
 SECTIONS.append({
     "id": "facility",
-    "kicker": "06",
-    "title": "How a licensed facility lab is laid out",
+    "kicker": "07",
+    "title": "Licensed facility laboratory layout",
     "blocks": [
         lead("A licensed lab is the same plant work plus written records and a disease-testing programme. It is not a larger kitchen box."),
         photo(f"{IMG}/06-facility-lab.jpg",
@@ -231,8 +281,8 @@ SECTIONS.append({
 # ---------------------------------------------------------------------------
 SECTIONS.append({
     "id": "aseptic",
-    "kicker": "07",
-    "title": "How to work without contaminating the jars",
+    "kicker": "08",
+    "title": "Aseptic technique",
     "blocks": [
         lead("Most first-run losses are contamination. Contamination is almost always a technique problem, not bad luck."),
         figure(FX.fig_contam(), 11, "Bacteria turn the gel cloudy. Fungi throw white, green or black threads. Yeast makes cream-coloured colonies. Internal microbes (endophytes) can wait two weeks, then grow out of the cut stem."),
@@ -257,8 +307,8 @@ SECTIONS.append({
 # ---------------------------------------------------------------------------
 SECTIONS.append({
     "id": "media",
-    "kicker": "08",
-    "title": "How to mix and sterilise the medium",
+    "kicker": "09",
+    "title": "Medium preparation and sterilisation",
     "blocks": [
         lead("The jelly is mineral salts, sugar, vitamins, optional hormones, and agar. Set the pH first. Add agar second. Heat last. The sealed jar is too dim for the plant to feed itself, so the sugar is the energy source."),
         figure(FP.fig_hormone(), 12, "Cytokinins tell the tissue to make shoots. Auxins tell it to make roots. Cannabis often does better with less hormone than orchid recipes, especially when you are multiplying shoots."),
@@ -306,8 +356,8 @@ SECTIONS.append({
 # ---------------------------------------------------------------------------
 SECTIONS.append({
     "id": "sterile",
-    "kicker": "09",
-    "title": "How to surface-sterilise the plant piece",
+    "kicker": "10",
+    "title": "Explant surface sterilisation",
     "blocks": [
         lead("Surface sterilising kills microbes on the outside of the plant. It cannot reach microbes living inside the stem. Times are a compromise: long enough to kill the surface, short enough not to kill the plant."),
         figure(F.fig_sterilize(), 13, "The sequence. From the alcohol step onward, work inside the box or hood with sterile tools. Woody or dirty tissue needs longer bleach. Soft new growth needs less."),
@@ -340,7 +390,7 @@ SECTIONS.append({
 # ---------------------------------------------------------------------------
 SECTIONS.append({
     "id": "initiate",
-    "kicker": "10",
+    "kicker": "11",
     "title": "Stage I: starting the first culture",
     "blocks": [
         lead("One plant piece, one jar. The job this month is a living, uncontaminated culture. Not a tray of plants."),
@@ -363,8 +413,8 @@ SECTIONS.append({
 # ---------------------------------------------------------------------------
 SECTIONS.append({
     "id": "meristem",
-    "kicker": "11",
-    "title": "How to cut a meristem to remove disease",
+    "kicker": "12",
+    "title": "Meristem dissection for pathogen elimination",
     "blocks": [
         lead("This is the cut that has the best chance of leaving Hop latent viroid behind. You need a stereo microscope. Do two months of stem-piece cultures first so your sterile technique is solid."),
         figure(FP.fig_meristem_size(), 14, "The cleanup piece is 0.2–0.4 mm. That is much smaller than a rice grain. You cannot do this by eye."),
@@ -420,7 +470,7 @@ SECTIONS.append({
 # ---------------------------------------------------------------------------
 SECTIONS.append({
     "id": "multiply",
-    "kicker": "12",
+    "kicker": "13",
     "title": "Stage II: multiplying shoots",
     "blocks": [
         lead("The aim is more shoots from one clean culture. Cannabis often does better as one healthy main shoot that you recut, not as a hormone-forced clump of glassy leaves."),
@@ -447,7 +497,7 @@ SECTIONS.append({
 # ---------------------------------------------------------------------------
 SECTIONS.append({
     "id": "root",
-    "kicker": "13",
+    "kicker": "14",
     "title": "Stage III: growing roots",
     "blocks": [
         lead("A shoot with no roots is not a plant you can pot. Growing roots is a separate step."),
@@ -476,7 +526,7 @@ SECTIONS.append({
 # ---------------------------------------------------------------------------
 SECTIONS.append({
     "id": "harden",
-    "kicker": "14",
+    "kicker": "15",
     "title": "Stage IV: moving the plant out of the jar",
     "blocks": [
         lead("Inside the jar the air is saturated and the plant is eating sugar. The leaf surface is thin. If you put that plant straight onto a dry bench, the leaves collapse. You lower the humidity in steps."),
@@ -506,8 +556,8 @@ SECTIONS.append({
 # ---------------------------------------------------------------------------
 SECTIONS.append({
     "id": "fail",
-    "kicker": "15",
-    "title": "What failed cultures look like",
+    "kicker": "16",
+    "title": "Failed culture symptoms",
     "blocks": [
         lead("Most failures are one of four things. Match the picture. Change one variable. Run again."),
         photo(f"{IMG}/09-contamination.jpg",
@@ -541,8 +591,8 @@ SECTIONS.append({
 # ---------------------------------------------------------------------------
 SECTIONS.append({
     "id": "index",
-    "kicker": "16",
-    "title": "How to test whether a plant is actually clean",
+    "kicker": "17",
+    "title": "Testing for pathogen-free stock",
     "blocks": [
         lead("A meristem plant that was never tested is a clone. Licensed facilities ship a test report. If you skip this section, do not say you cleaned the plant."),
         figure(FX.fig_hlvd_clearance(), 23, "The sequence: meristem cut, grow new leaves, send a sample for qPCR, keep a frozen backup sample, test again after a month in the nursery."),
@@ -571,8 +621,8 @@ SECTIONS.append({
 # ---------------------------------------------------------------------------
 SECTIONS.append({
     "id": "ppm",
-    "kicker": "17",
-    "title": "PPM, kits, and what the labels say",
+    "kicker": "18",
+    "title": "Plant Preservative Mixture (PPM) and commercial kits",
     "blocks": [
         lead("Plant Preservative Mixture (PPM) is the antimicrobial most cannabis tissue-culture forums mention. These are the label rates, not forum guesses."),
         table(
@@ -596,8 +646,8 @@ SECTIONS.append({
 # ---------------------------------------------------------------------------
 SECTIONS.append({
     "id": "facility-run",
-    "kicker": "18",
-    "title": "Weekly work at home and in a licensed lab",
+    "kicker": "19",
+    "title": "Weekly tissue-culture operations",
     "blocks": [
         lead("How many plants you ship is your contamination rate multiplied by hours at the hood. Fix the contamination rate before you hire more people."),
         table(
@@ -628,8 +678,8 @@ SECTIONS.append({
 # ---------------------------------------------------------------------------
 SECTIONS.append({
     "id": "trouble",
-    "kicker": "19",
-    "title": "Troubleshooting: change one thing",
+    "kicker": "20",
+    "title": "Troubleshooting",
     "blocks": [
         table(
             ["What happened", "Likely cause", "Change this, only this"],
@@ -650,59 +700,9 @@ SECTIONS.append({
 
 # ---------------------------------------------------------------------------
 SECTIONS.append({
-    "id": "glossary",
-    "kicker": "20",
-    "title": "Glossary",
-    "blocks": [
-        lead("Every technical term, in one place."),
-        table(
-            ["Term", "Meaning"],
-            [["Acclimatization / hardening", "Lowering humidity in steps so a jar plant can live in room air and soil."],
-             ["Activated charcoal", "Black powder in the gel that binds brown leak compounds. It can also bind hormones."],
-             ["Agar / gellan / Phytagel", "The setting agent. More agar = firmer gel = drier air in the jar = less glassy growth."],
-             ["Aseptic technique", "Working so that stray microbes do not reach the sugar jelly."],
-             ["Autoclave", "A machine that holds 121 °C steam at 15 psi. A pressure canner that holds 15 psi is the home version."],
-             ["Auxin (IBA, NAA, IAA)", "A hormone class that tells tissue to make roots."],
-             ["Callus", "A lump of unspecialised cells. Common as a side-effect. Not a useful production method for cannabis in Holmes 2021."],
-             ["Cytokinin (mT, TDZ, BA)", "A hormone class that tells tissue to make shoots."],
-             ["DKW", "Driver and Kuniyuki Walnut salts. An alternative mineral mix to MS. Results on cannabis depend on the cultivar."],
-             ["Endophyte", "A microbe living inside tissue that looks healthy. Bleach on the surface cannot reach it."],
-             ["Explant", "The piece of plant you put in the jar."],
-             ["GACP / GMP", "Growing practice versus manufacturing practice. Starting plants sit between the two."],
-             ["HEPA / laminar-flow hood", "A fan and filter that blow a sheet of clean air across the bench. Not a biosafety cabinet."],
-             ["HpLVd / HLVd", "Hop latent viroid. The usual cause of “dudding.” 256 letters of RNA."],
-             ["Hyperhydricity / vitrification", "Glassy, waterlogged, brittle growth in the jar. Often too much cytokinin or humidity."],
-             ["In vitro / ex vitro", "In the jar / outside the jar."],
-             ["Indexing", "Testing a plant for a named pathogen. The only basis for the word “clean”."],
-             ["Initiation (Stage I)", "Getting the first living, uncontaminated culture."],
-             ["ISO 5 / ISO 7", "Air cleanliness ratings. ISO 5 is the hood work surface. ISO 7 is a typical room around the hood."],
-             ["Meristem", "The dome of dividing cells at a shoot tip. No sap tubes yet."],
-             ["Meta-Topolin (mT)", "A cytokinin that works for starting cannabis cultures. Too much of it makes glassy Stage II plants."],
-             ["Micropropagation", "Using tissue culture to make many identical plants."],
-             ["MS salts", "Murashige and Skoog, 1962. The default mineral mix. 4.4 g of powder per litre."],
-             ["Nodal segment", "A stem piece with one bud. Easy. Often still contaminated inside."],
-             ["PGR", "Plant growth regulator. A hormone you added on purpose."],
-             ["Phenolics / browning", "Brown compounds that leak from a cut and stain the gel."],
-             ["Photoautotrophic micropropagation", "No sugar. Ordinary fertiliser. Extra air. Plants look like nursery cuttings."],
-             ["PPM", "Plant Preservative Mixture. An antimicrobial you can autoclave with the medium."],
-             ["qPCR / RT-qPCR", "A lab test that looks for the viroid’s RNA. “Not detected” is not the same as “cannot exist.”"],
-             ["Recalcitrant", "A species that is hard to start in a jar. Cannabis is one."],
-             ["Somaclonal variation", "Genetic changes that appear after many recuts in the jar."],
-             ["Still-air box", "A clear tub with arm holes. Air inside is still, so spores do not drift onto open jars."],
-             ["Subculture", "Moving tissue onto fresh medium."],
-             ["Temporary immersion", "Liquid medium that wets the shoots on a timer, then drains."],
-             ["TDZ (thidiazuron)", "A very strong cytokinin. Use small doses."],
-             ["Totipotency", "A living plant cell can rebuild the whole plant."],
-             ["Vascular tissue", "Xylem (water) and phloem (sap). The sap tubes are how the viroid moves."]],
-            caption="Table 13. Glossary.",
-        ),
-    ]})
-
-# ---------------------------------------------------------------------------
-SECTIONS.append({
     "id": "sources",
     "kicker": "21",
-    "title": "Sources and how this guide was written",
+    "title": "Evidence sources and image methods",
     "blocks": [
         p("The beginner paper on this site is a shorter first-timer walk-through of the same cleanup idea." + _c("cwp_tc_beginner") + " The recipes and survival numbers come from the papers listed below, read in full where they are open: Holmes 2021, Das 2024, Kodym and Leeb 2019, Ioannidis 2022, Lata 2009 and 2016, Punja 2025. "
           "Plant Cell Technology pages were used for product label rates and for the papers they cite, not as a substitute for those papers."),

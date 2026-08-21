@@ -28,7 +28,7 @@ SECTIONS = []
 
 # ---------------------------------------------------------------- 01 start here
 SECTIONS.append({"id": "start-here", "kicker": "01 · Start here",
-  "title": "What a mother plant is and why it runs the whole grow",
+  "title": "Purpose and scope",
   "blocks": [
     lead("A <strong>mother plant</strong> is a plant you keep permanently in leafy growth and never "
          "flower. Her only job is to supply <strong>cuttings</strong>, genetically identical copies, "
@@ -55,9 +55,33 @@ SECTIONS.append({"id": "start-here", "kicker": "01 · Start here",
         "<a href='ipm-sop.html'>IPM hygiene</a> guide.")),
   ]})
 
-# ---------------------------------------------------------------- 02 core answer
-SECTIONS.append({"id": "core-answer", "kicker": "02 · The short version",
-  "title": "The whole job on one page",
+# ---------------------------------------------------------------- 02 vocabulary
+SECTIONS.append({"id": "vocab", "kicker": "02 · The vocabulary",
+  "title": "Definitions",
+  "blocks": [
+    p("Mother-room talk borrows from horticulture, virology and factory scheduling. These eight terms "
+      "cover it; everything else is defined where it appears."),
+    defterm("Mother / stock plant", "A plant held permanently in vegetative (leafy) growth, never "
+            "flowered, kept purely as a source of cuttings. 'Mother' and 'stock plant' mean the same thing."),
+    defterm("Photoperiod", "The hours of light per day. Photoperiod-dependent cannabis flowers when "
+            "nights get long; mothers are kept on long days (18 h light) so they never switch."),
+    defterm("PPFD", "Photosynthetic photon flux density, how much usable light lands on the leaves, "
+            "in µmol·m⁻²·s⁻¹. Mothers run moderate PPFD, not flower-room intensity."),
+    defterm("Node", "The point on a stem where leaves and side-shoots attach. Cuts are made relative "
+            "to nodes, and every stub left with a node can regrow new shoots."),
+    defterm("EC", "Electrical conductivity of the feed water, in mS/cm, a proxy for total dissolved "
+            "nutrient strength. Mothers run moderate EC; high EC pushes soft, salty growth."),
+    defterm("Viroid", "The smallest known infectious agent: a bare loop of RNA with no protein coat, "
+            "a fraction the size of a virus. Hop latent viroid (HpLVd) is the one that matters in cannabis."),
+    defterm("Dudding", "The disease syndrome HpLVd causes: outwardly normal plants that finish small, "
+            "brittle and weak, with poor trichome set and badly reduced potency."),
+    defterm("Indexing", "Systematically testing stock plants for pathogens on a fixed rotation, so a "
+            "clean result is recent enough to mean something. Borrowed from certified clean-stock horticulture."),
+  ]})
+
+# ---------------------------------------------------------------- 03 core answer
+SECTIONS.append({"id": "core-answer", "kicker": "03 · The short version",
+  "title": "Mother-plant programme overview",
   "blocks": [
     lead("If you only read one section, read this one. Everything after it is the why and the how."),
     kv([
@@ -84,33 +108,9 @@ SECTIONS.append({"id": "core-answer", "kicker": "02 · The short version",
         "into a predictable weekly stream of cuttings without ever letting her tell you a lie.")),
   ]})
 
-# ---------------------------------------------------------------- 03 vocabulary
-SECTIONS.append({"id": "vocab", "kicker": "03 · The vocabulary",
-  "title": "Eight words that make the rest read plainly",
-  "blocks": [
-    p("Mother-room talk borrows from horticulture, virology and factory scheduling. These eight terms "
-      "cover it; everything else is defined where it appears."),
-    defterm("Mother / stock plant", "A plant held permanently in vegetative (leafy) growth, never "
-            "flowered, kept purely as a source of cuttings. 'Mother' and 'stock plant' mean the same thing."),
-    defterm("Photoperiod", "The hours of light per day. Photoperiod-dependent cannabis flowers when "
-            "nights get long; mothers are kept on long days (18 h light) so they never switch."),
-    defterm("PPFD", "Photosynthetic photon flux density, how much usable light lands on the leaves, "
-            "in µmol·m⁻²·s⁻¹. Mothers run moderate PPFD, not flower-room intensity."),
-    defterm("Node", "The point on a stem where leaves and side-shoots attach. Cuts are made relative "
-            "to nodes, and every stub left with a node can regrow new shoots."),
-    defterm("EC", "Electrical conductivity of the feed water, in mS/cm, a proxy for total dissolved "
-            "nutrient strength. Mothers run moderate EC; high EC pushes soft, salty growth."),
-    defterm("Viroid", "The smallest known infectious agent: a bare loop of RNA with no protein coat, "
-            "a fraction the size of a virus. Hop latent viroid (HpLVd) is the one that matters in cannabis."),
-    defterm("Dudding", "The disease syndrome HpLVd causes: outwardly normal plants that finish small, "
-            "brittle and weak, with poor trichome set and badly reduced potency."),
-    defterm("Indexing", "Systematically testing stock plants for pathogens on a fixed rotation, so a "
-            "clean result is recent enough to mean something. Borrowed from certified clean-stock horticulture."),
-  ]})
-
 # ---------------------------------------------------------------- 04 the room
 SECTIONS.append({"id": "room-setup", "kicker": "04 · The how & why",
-  "title": "The room: 18/6, moderate light, boring climate",
+  "title": "Mother-room environment",
   "blocks": [
     p("Photoperiod is the load-bearing wall. Photoperiod-dependent cannabis initiates flowering when "
       "the dark period gets long enough, and the threshold is closer than most people think: in a "
@@ -152,7 +152,7 @@ SECTIONS.append({"id": "room-setup", "kicker": "04 · The how & why",
 
 # ---------------------------------------------------------------- 05 feeding
 SECTIONS.append({"id": "nutrition", "kicker": "05 · The how & why",
-  "title": "Feeding a cutting factory: nitrogen-forward, never lush",
+  "title": "Mother-plant nutrition",
   "blocks": [
     p("Mother nutrition has a different goal from flower nutrition. You are not growing buds and you "
       "are not even really growing a plant. You are farming <em>stems and growing tips</em>, "
@@ -193,7 +193,7 @@ SECTIONS.append({"id": "nutrition", "kicker": "05 · The how & why",
 
 # ---------------------------------------------------------------- 06 architecture
 SECTIONS.append({"id": "architecture", "kicker": "06 · Do this",
-  "title": "Build the frame once, then farm the regrowth",
+  "title": "Mother-plant architecture and regrowth",
   "blocks": [
     p("Cutting count is mostly architecture, not vigour. A mother left to grow naturally makes one "
       "dominant leader and a handful of weak laterals, a Christmas tree, and a terrible factory. The "
@@ -276,7 +276,7 @@ SECTIONS.append({"id": "scheduling", "kicker": "07 · Do this",
 
 # ---------------------------------------------------------------- 08 age & drift
 SECTIONS.append({"id": "age-drift", "kicker": "08 · The debate",
-  "title": "Do mothers wear out? What the genetics actually say",
+  "title": "Mother-plant age and genetic stability",
   "blocks": [
     p("Grower folklore says a mother 'degrades' and should be replaced every 6–12 months. Plenty of "
       "operators, meanwhile, hold the same mother for five-plus years and swear she is identical. "
@@ -316,7 +316,7 @@ SECTIONS.append({"id": "age-drift", "kicker": "08 · The debate",
 
 # ---------------------------------------------------------------- 09 pathogen amplifier
 SECTIONS.append({"id": "pathogen-risk", "kicker": "09 · The risk",
-  "title": "The mother room is a pathogen amplifier",
+  "title": "Pathogen amplification in mother rooms",
   "blocks": [
     p("Whatever lives in the mother room ships to every room downstream, on schedule, with a courtesy "
       "label on the tray. Spider mites, root aphids, fungus gnats, powdery mildew, root-rot organisms"
@@ -338,7 +338,7 @@ SECTIONS.append({"id": "pathogen-risk", "kicker": "09 · The risk",
 
 # ---------------------------------------------------------------- 10 HpLVd
 SECTIONS.append({"id": "hplvd", "kicker": "10 · The threat",
-  "title": "Hop latent viroid: the quiet destroyer of stock",
+  "title": "Hop latent viroid (HLVd) in mother stock",
   "blocks": [
     p("<strong>Hop latent viroid (HpLVd)</strong> is a bare, circular strand of RNA about 256 "
       "nucleotides long, no protein coat, no cell, a fraction the size of a virus" + _c("mp-punja-2025-hplvd-mgmt") +
@@ -394,7 +394,7 @@ SECTIONS.append({"id": "hplvd", "kicker": "10 · The threat",
 
 # ---------------------------------------------------------------- 11 indexing
 SECTIONS.append({"id": "indexing", "kicker": "11 · Do this",
-  "title": "Indexing: a testing rotation that keeps the bank clean",
+  "title": "Testing rotation for mother-stock health",
   "blocks": [
     p("<strong>Indexing</strong> is the clean-stock habit of testing every stock plant on a fixed "
       "rotation, so that 'she tested clean' always has a date on it. In cannabis the workhorse assay "
@@ -439,7 +439,7 @@ SECTIONS.append({"id": "indexing", "kicker": "11 · Do this",
 
 # ---------------------------------------------------------------- 12 replacement
 SECTIONS.append({"id": "replacement", "kicker": "12 · Do this",
-  "title": "Replacing a mother without dropping a batch",
+  "title": "Mother-plant replacement without production gaps",
   "blocks": [
     p("Mothers are replaced for five reasons: a confirmed pathogen (immediate, no debate); a rooting "
       "rate that trends down across three or more batches with other causes ruled out; a frame gone "
@@ -472,7 +472,7 @@ SECTIONS.append({"id": "replacement", "kicker": "12 · Do this",
 
 # ---------------------------------------------------------------- 13 clone-from-clone
 SECTIONS.append({"id": "clone-from-clone", "kicker": "13 · The alternative",
-  "title": "Clone-from-clone: running without mothers",
+  "title": "Clone-from-clone propagation",
   "blocks": [
     p("Some operations skip dedicated mothers entirely: each round, they take the next batch of "
       "cuttings from production plants in early veg, just before those plants flip to flower. The "
@@ -503,7 +503,7 @@ SECTIONS.append({"id": "clone-from-clone", "kicker": "13 · The alternative",
 
 # ---------------------------------------------------------------- 14 failure modes
 SECTIONS.append({"id": "failure-modes", "kicker": "14 · When it goes wrong",
-  "title": "How mother programmes die",
+  "title": "Mother-stock failure modes",
   "blocks": [
     p("Mother programmes rarely die loudly. They die in one of six quiet ways, most of them "
       "preventable with the habits already covered."),
@@ -543,7 +543,7 @@ SECTIONS.append({"id": "failure-modes", "kicker": "14 · When it goes wrong",
 
 # ---------------------------------------------------------------- 15 troubleshooting
 SECTIONS.append({"id": "troubleshooting", "kicker": "15 · When it goes wrong",
-  "title": "Symptom → cause → fix",
+  "title": "Troubleshooting",
   "blocks": [
     p("Diagnose from the symptom, check the likely cause, act, and give it one batch cycle before "
       "judging the fix. Most mother problems announce themselves through the cuttings first."),
@@ -560,7 +560,7 @@ SECTIONS.append({"id": "troubleshooting", "kicker": "15 · When it goes wrong",
 
 # ---------------------------------------------------------------- 16 mental model
 SECTIONS.append({"id": "mental-model", "kicker": "16 · Take this with you",
-  "title": "The mental model: a living backup that must prove it restores",
+  "title": "Mother-stock continuity and recovery",
   "blocks": [
     p("Treat a mother plant exactly like a backup drive. Nobody trusts a backup because it looks fine "
       "on the shelf. You trust it because you test restores. The mother-room translation: the "

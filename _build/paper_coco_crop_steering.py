@@ -22,7 +22,7 @@ def _c(rid):
 
 SECTIONS = []
 
-SECTIONS.append({"id": "start", "kicker": "01 · Read this first", "title": "What this paper is",
+SECTIONS.append({"id": "start", "kicker": "01 · Read this first", "title": "Purpose and scope",
   "blocks": [
     lead("&lsquo;Crop steering&rsquo; is a simple idea behind a jargon name: by controlling "
          "<em>when</em> and <em>how much</em> you water, you can push a plant to grow bigger and "
@@ -38,7 +38,7 @@ SECTIONS.append({"id": "start", "kicker": "01 · Read this first", "title": "Wha
         "<a href='grow-room-systems.html'>grow-room systems</a> papers.")),
   ]})
 
-SECTIONS.append({"id": "terms", "kicker": "02 · The vocabulary", "title": "The words you need",
+SECTIONS.append({"id": "terms", "kicker": "02 · The vocabulary", "title": "Definitions",
   "blocks": [
     p("You do not need to memorise these, just get the gist. Each one comes back in context."),
     defterm("Coco coir", "A growing medium made from the fibrous husk of coconuts. It holds water "
@@ -59,7 +59,7 @@ SECTIONS.append({"id": "terms", "kicker": "02 · The vocabulary", "title": "The 
             "several small, timed shots."),
   ]})
 
-SECTIONS.append({"id": "why-coco", "kicker": "03 · The substrate", "title": "Why coco behaves differently",
+SECTIONS.append({"id": "why-coco", "kicker": "03 · The substrate", "title": "Coco substrate properties",
   "blocks": [
     p("Coco holds a lot of water <strong>and</strong> a lot of air at the "
       "same time. At field capacity, roughly a fifth to a third of its volume is still "
@@ -103,7 +103,7 @@ SECTIONS.append({"id": "reading", "kicker": "04 · The signals", "title": "Readi
           "<strong>EC drifting down</strong> over days means the plant is eating salt faster than you feed, so raise feed EC."], "tight")),
   ]})
 
-SECTIONS.append({"id": "dryback", "kicker": "05 · The engine", "title": "Dryback: the engine of steering",
+SECTIONS.append({"id": "dryback", "kicker": "05 · The engine", "title": "Dryback: the steering mechanism",
   "blocks": [
     callout("evidence", "Grain of salt",
       "<p><strong>Borderline:</strong> Caplan-style single late droughts are <em>related</em> to generative drybacks "
@@ -126,7 +126,7 @@ SECTIONS.append({"id": "dryback", "kicker": "05 · The engine", "title": "Drybac
       "(leaves and size). That one dial, how far you let it dry, is most of crop steering."),
   ]})
 
-SECTIONS.append({"id": "phases", "kicker": "06 · The daily rhythm", "title": "The daily cycle: P0–P3",
+SECTIONS.append({"id": "phases", "kicker": "06 · The daily rhythm", "title": "Daily irrigation cycle: P0–P3",
   "blocks": [
     p("Growers split the lights-on day into four phases. You do not need fancy gear to think this "
       "way. It is a rhythm of dry, refill, maintain, dry."),
@@ -149,7 +149,7 @@ SECTIONS.append({"id": "phases", "kicker": "06 · The daily rhythm", "title": "T
     ], caption="The P0–P3 framework. The numbers you choose for each phase are your steering recipe."),
   ]})
 
-SECTIONS.append({"id": "steering", "kicker": "07 · The steering wheel", "title": "Steering generative vs vegetative",
+SECTIONS.append({"id": "steering", "kicker": "07 · The steering wheel", "title": "Vegetative and generative steering",
   "blocks": [
     p("&lsquo;Generative&rsquo; means flowers, density and resin. &lsquo;Vegetative&rsquo; means "
       "leaves, stems and size. You bias the plant with a handful of levers that all work by changing "
@@ -171,7 +171,7 @@ SECTIONS.append({"id": "steering", "kicker": "07 · The steering wheel", "title"
         "stress. Move one dial, watch for a few days, then adjust.")),
   ]})
 
-SECTIONS.append({"id": "week", "kicker": "08 · The arc", "title": "A week-by-week shape",
+SECTIONS.append({"id": "week", "kicker": "08 · The arc", "title": "Flowering steering by week",
   "blocks": [
     p("Flowering indoors usually runs about 8–10 weeks once you flip the lights to a 12-hour "
       "night" + _c("moher2023-photoperiod") + ". The steering changes across that arc:"),
@@ -196,7 +196,7 @@ SECTIONS.append({"id": "trouble", "kicker": "09 · When it goes wrong", "title":
     ], cls="compact"),
   ]})
 
-SECTIONS.append({"id": "expect", "kicker": "10 · Straight talk", "title": "Realistic expectations",
+SECTIONS.append({"id": "expect", "kicker": "10 · Straight talk", "title": "Expected results and limitations",
   "blocks": [
     callout("key", "Three rules",
       ol(["<strong>There is no universal recipe.</strong> The right VWC, EC and dryback numbers depend on your strain, pot size, climate and light. Start from the ranges here and tune to <em>your</em> plants.",

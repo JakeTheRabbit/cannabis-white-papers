@@ -29,7 +29,7 @@ def _c(rid):
 SECTIONS = []
 
 # ---------------------------------------------------------------- 01 start here
-SECTIONS.append({"id": "start-here", "kicker": "01 · Start here", "title": "The last two weeks decide the grade",
+SECTIONS.append({"id": "start-here", "kicker": "01 · Start here", "title": "Purpose and scope",
   "blocks": [
     lead("Everything you did for eighteen weeks converges on one decision: when to cut. Cut early and "
          "you hand back weight and maturity the plant was still building. Wait too long and you are "
@@ -63,7 +63,7 @@ SECTIONS.append({"id": "start-here", "kicker": "01 · Start here", "title": "The
   ]})
 
 # ---------------------------------------------------------------- 02 vocabulary
-SECTIONS.append({"id": "vocab", "kicker": "02 · Vocabulary", "title": "Eight terms that carry the whole paper",
+SECTIONS.append({"id": "vocab", "kicker": "02 · Vocabulary", "title": "Definitions",
   "blocks": [
     p("Late flower has its own dialect. These eight terms cover everything below, learn them "
       "once and the rest reads easily."),
@@ -89,7 +89,7 @@ SECTIONS.append({"id": "vocab", "kicker": "02 · Vocabulary", "title": "Eight te
   ]})
 
 # ---------------------------------------------------------------- 03 core answer
-SECTIONS.append({"id": "core-answer", "kicker": "03 · The core answer", "title": "It is a window, not a date - and the product picks the spot",
+SECTIONS.append({"id": "core-answer", "kicker": "03 · The core answer", "title": "Ripening windows by product goal",
   "blocks": [
     p("Strip away the forum noise and the harvest call reduces to three sentences. Ripeness is read "
       "from the trichomes on the calyx surface, not from the calendar, not from pistils. The right "
@@ -124,7 +124,7 @@ SECTIONS.append({"id": "core-answer", "kicker": "03 · The core answer", "title"
   ]})
 
 # ---------------------------------------------------------------- 04 biology
-SECTIONS.append({"id": "how-buds-ripen", "kicker": "04 · The biology", "title": "What ripening actually is",
+SECTIONS.append({"id": "how-buds-ripen", "kicker": "04 · The biology", "title": "Ripening biology",
   "blocks": [
     p("Four visible processes run together in the final weeks, and each one is a signal you can "
       "read. Knowing what drives them is what stops you being fooled when one of them lies."),
@@ -165,7 +165,7 @@ SECTIONS.append({"id": "how-buds-ripen", "kicker": "04 · The biology", "title":
   ]})
 
 # ---------------------------------------------------------------- 05 the read
-SECTIONS.append({"id": "reading-ripeness", "kicker": "05 · The read", "title": "Using a loupe properly: where, what, how often",
+SECTIONS.append({"id": "reading-ripeness", "kicker": "05 · The read", "title": "Assessing ripeness with a loupe",
   "blocks": [
     p("Most bad harvest calls are not bad judgement. They are bad sampling. The grower reads "
       "one photogenic spot, or reads sugar leaves, or reads a different bud each visit, and the "
@@ -202,7 +202,7 @@ SECTIONS.append({"id": "reading-ripeness", "kicker": "05 · The read", "title": 
   ]})
 
 # ---------------------------------------------------------------- 06 product goal
-SECTIONS.append({"id": "product-windows", "kicker": "06 · Product goal", "title": "Flower, hash and carts want different chops",
+SECTIONS.append({"id": "product-windows", "kicker": "06 · Product goal", "title": "Harvest windows by product type",
   "blocks": [
     p("The single most useful upgrade to &lsquo;when do I harvest?&rsquo; is realising it is the "
       "wrong question. The right question is &lsquo;what is this flower for?&rsquo;, because "
@@ -240,7 +240,7 @@ SECTIONS.append({"id": "product-windows", "kicker": "06 · Product goal", "title
   ]})
 
 # ---------------------------------------------------------------- 07 flush debate
-SECTIONS.append({"id": "flush-debate", "kicker": "07 · The flush debate", "title": "Flushing: what testing found, and what it didn't",
+SECTIONS.append({"id": "flush-debate", "kicker": "07 · The flush debate", "title": "Flushing: evidence and limitations",
   "blocks": [
     p("The tradition: feed plain water for the last 7&ndash;14 days so the plant &lsquo;uses up&rsquo; "
       "stored nutrients, giving smoother smoke, better flavour and white ash. It is one of the most "
@@ -293,7 +293,7 @@ SECTIONS.append({"id": "flush-debate", "kicker": "07 · The flush debate", "titl
   ]})
 
 # ---------------------------------------------------------------- 08 the room
-SECTIONS.append({"id": "late-environment", "kicker": "08 · The room", "title": "Late-flower environment: taper the room, clamp the ceiling",
+SECTIONS.append({"id": "late-environment", "kicker": "08 · The room", "title": "Late-flower climate management",
   "blocks": [
     p("The environmental job in the last fortnight is asymmetric. The temperature moves are "
       "nice-to-have practitioner practice. The humidity discipline is survival. Get the priority "
@@ -345,7 +345,7 @@ SECTIONS.append({"id": "late-environment", "kicker": "08 · The room", "title": 
   ]})
 
 # ---------------------------------------------------------------- 09 staggered
-SECTIONS.append({"id": "staggered-harvest", "kicker": "09 · Staggered harvest", "title": "Cutting the plant in instalments",
+SECTIONS.append({"id": "staggered-harvest", "kicker": "09 · Staggered harvest", "title": "Staggered harvesting",
   "blocks": [
     p("The vertical gradient is real: top colas get the most light, mature first, and carry the "
       "highest cannabinoid and terpene content, with both falling measurably toward the bottom of "
@@ -373,7 +373,7 @@ SECTIONS.append({"id": "staggered-harvest", "kicker": "09 · Staggered harvest",
   ]})
 
 # ---------------------------------------------------------------- 10 chop day
-SECTIONS.append({"id": "day-of-chop", "kicker": "10 · Chop day", "title": "Day-of-chop logistics: the boring list that protects the crop",
+SECTIONS.append({"id": "day-of-chop", "kicker": "10 · Chop day", "title": "Harvest-day logistics",
   "blocks": [
     p("By chop day the quality is already grown. The job now is purely defensive: move the crop "
       "from room to dry space without bruising it, contaminating it, or stalling it in a bin. "
@@ -418,7 +418,7 @@ SECTIONS.append({"id": "day-of-chop", "kicker": "10 · Chop day", "title": "Day-
   ]})
 
 # ---------------------------------------------------------------- 11 failure modes
-SECTIONS.append({"id": "failure-modes", "kicker": "11 · Failure modes", "title": "The six ways the finish goes wrong",
+SECTIONS.append({"id": "failure-modes", "kicker": "11 · Failure modes", "title": "Common finishing failures",
   "blocks": [
     p("Late-flower mistakes cluster hard. Six patterns account for nearly all of them, "
       "three are impatience, two are bad reads, one is neglect."),
@@ -443,7 +443,7 @@ SECTIONS.append({"id": "failure-modes", "kicker": "11 · Failure modes", "title"
   ]})
 
 # ---------------------------------------------------------------- 12 troubleshooting
-SECTIONS.append({"id": "troubleshooting", "kicker": "12 · Troubleshooting", "title": "Late-flower symptoms, decoded",
+SECTIONS.append({"id": "troubleshooting", "kicker": "12 · Troubleshooting", "title": "Troubleshooting",
   "blocks": [
     p("Quick lookups for the confusing reads. Most of these are the plant and the room disagreeing "
       "with the calendar, believe the plant, then fix the room."),
@@ -473,7 +473,7 @@ SECTIONS.append({"id": "troubleshooting", "kicker": "12 · Troubleshooting", "ti
   ]})
 
 # ---------------------------------------------------------------- 13 mental model
-SECTIONS.append({"id": "mental-model", "kicker": "13 · The mental model", "title": "Ripeness is a distribution, not a state",
+SECTIONS.append({"id": "mental-model", "kicker": "13 · The mental model", "title": "Ripeness variation and harvest decisions",
   "blocks": [
     p("If one idea from this paper survives contact with your first harvest, make it this one:"),
     callout("key", "The distribution model",

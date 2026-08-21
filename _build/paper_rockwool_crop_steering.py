@@ -28,7 +28,7 @@ def _c(rid):
 SECTIONS = []
 
 # 1 -----------------------------------------------------------------
-SECTIONS.append({"id": "intro", "kicker": "Start here", "title": "Why rockwool rewards and punishes you",
+SECTIONS.append({"id": "intro", "kicker": "Start here", "title": "Purpose and scope",
   "blocks": [
     lead("Rockwool (stone wool) is spun rock fibre. It holds no nutrients of its own and reacts with "
          "nothing you feed it, so <strong>root-zone EC is essentially the EC of the pore water (unused feed still leaves as runoff or concentrates on dryback)</strong>" + _c("grodan-irrigation-medicinal") +
@@ -53,7 +53,7 @@ SECTIONS.append({"id": "intro", "kicker": "Start here", "title": "Why rockwool r
   ]})
 
 # 2 -----------------------------------------------------------------
-SECTIONS.append({"id": "terms", "kicker": "Vocabulary", "title": "The words you need",
+SECTIONS.append({"id": "terms", "kicker": "Vocabulary", "title": "Definitions",
   "blocks": [
     defterm("Water content (WC%)", "The share of the block's volume that is water right now, as a "
             "percentage. A slab at 70% WC is 70% full of water by volume. This single number is what "
@@ -82,7 +82,7 @@ SECTIONS.append({"id": "terms", "kicker": "Vocabulary", "title": "The words you 
   ]})
 
 # 3 -----------------------------------------------------------------
-SECTIONS.append({"id": "anatomy", "kicker": "How it works", "title": "Where the water actually sits",
+SECTIONS.append({"id": "anatomy", "kicker": "How it works", "title": "Water distribution in rockwool",
   "blocks": [
     p("A rockwool block is mostly air. Around 95% of its volume is space between the fibres; the fibre "
       "itself is a tiny fraction" + _c("malik2025-media") + ". Water clings to the fibres as a film and fills "
@@ -99,7 +99,7 @@ SECTIONS.append({"id": "anatomy", "kicker": "How it works", "title": "Where the 
   ]})
 
 # 4 -----------------------------------------------------------------
-SECTIONS.append({"id": "water-content", "kicker": "The number", "title": "What a water-content percentage means",
+SECTIONS.append({"id": "water-content", "kicker": "The number", "title": "Interpreting water-content percentage",
   "blocks": [
     p("Everything in rockwool steering is a position on one vertical scale: how full the block is. Learn "
       "the band and where the danger is, and the rest is timing."),
@@ -119,7 +119,7 @@ SECTIONS.append({"id": "water-content", "kicker": "The number", "title": "What a
 _curve = [(0, 70), (1, 66), (2, 62), (3, 59), (4, 56), (5, 57), (6, 65),
           (7, 73), (8, 79), (9, 77), (10, 78), (11, 76), (12, 71)]
 _curve_x = ["off", "", "", "", "pre-dawn low", "on · P0", "P1", "", "FC", "P2", "", "P3", "off"]
-SECTIONS.append({"id": "dryback", "kicker": "The main lever", "title": "Dryback: what it is, and how to calculate it",
+SECTIONS.append({"id": "dryback", "kicker": "The main lever", "title": "Dryback calculation and management",
   "blocks": [
     p("A dryback is the block losing water between its daily high and its next low. You create the high by "
       "irrigating to field capacity; the plant and evaporation create the low. The <em>size</em> of that "
@@ -150,7 +150,7 @@ SECTIONS.append({"id": "dryback", "kicker": "The main lever", "title": "Dryback:
   ]})
 
 # 6 -----------------------------------------------------------------
-SECTIONS.append({"id": "dryout", "kicker": "The physics", "title": "What happens to a block as it dries",
+SECTIONS.append({"id": "dryout", "kicker": "The physics", "title": "Block dry-out dynamics",
   "blocks": [
     p("A dryback is good up to a point and dangerous past it. The same process, water leaving the block, "
       "does four different things in sequence as it goes too far."),
@@ -173,7 +173,7 @@ SECTIONS.append({"id": "dryout", "kicker": "The physics", "title": "What happens
   ]})
 
 # 7 -----------------------------------------------------------------
-SECTIONS.append({"id": "breaking-point", "kicker": "The cliff", "title": "The breaking point: when a block is gone",
+SECTIONS.append({"id": "breaking-point", "kicker": "The cliff", "title": "Critical dry-out threshold",
   "blocks": [
     p("There is a water content below which a rockwool block will not rewet from the dripper no matter how "
       "long you run it. Nothing else here matters as much, because it is invisible "
@@ -203,7 +203,7 @@ SECTIONS.append({"id": "breaking-point", "kicker": "The cliff", "title": "The br
   ]})
 
 # 8 -----------------------------------------------------------------
-SECTIONS.append({"id": "minimum-feed", "kicker": "How much", "title": "The minimum you must feed",
+SECTIONS.append({"id": "minimum-feed", "kicker": "How much", "title": "Minimum irrigation volume",
   "blocks": [
     p("Feeding rockwool is a balance of two jobs: put back the water the plant drank, and flush enough "
       "fresh feed through to stop salt stacking. Underfeed and EC climbs and the block trends toward the "
@@ -232,7 +232,7 @@ SECTIONS.append({"id": "minimum-feed", "kicker": "How much", "title": "The minim
   ]})
 
 # 9 -----------------------------------------------------------------
-SECTIONS.append({"id": "steering", "kicker": "The lever in use", "title": "Generative vs vegetative, in rockwool",
+SECTIONS.append({"id": "steering", "kicker": "The lever in use", "title": "Vegetative and generative steering in rockwool",
   "blocks": [
     p("You steer the plant by choosing where the block sits in the band, how big the daily dryback is, and "
       "when you let it happen. Drier and bigger and earlier is generative; wetter and smaller and later is "
@@ -254,7 +254,7 @@ SECTIONS.append({"id": "steering", "kicker": "The lever in use", "title": "Gener
 # 10 -----------------------------------------------------------------
 _season = [(0, 8), (1, 10), (2, 12), (3, 15), (4, 20), (5, 24), (6, 26), (7, 22)]
 _season_x = ["Clone", "Veg", "Wk1", "Wk2", "Wk3", "Wk4-5", "Wk6", "Wk7-8"]
-SECTIONS.append({"id": "maintain", "kicker": "Start to finish", "title": "Holding saturation the whole grow, no hand-flushing",
+SECTIONS.append({"id": "maintain", "kicker": "Start to finish", "title": "Maintaining rockwool saturation",
   "blocks": [
     p("The goal is to never touch a hose: the controller holds the block in the right zone from clone to "
       "chop, flushing salt with daily runoff so you never have to manually leach or top up a dry cube. The "
@@ -279,7 +279,7 @@ SECTIONS.append({"id": "maintain", "kicker": "Start to finish", "title": "Holdin
   ]})
 
 # 11 -----------------------------------------------------------------
-SECTIONS.append({"id": "systems", "kicker": "The kit", "title": "Running it on sensors and a controller",
+SECTIONS.append({"id": "systems", "kicker": "The kit", "title": "Sensor-based crop-steering systems",
   "blocks": [
     p("None of this works on a timer alone. Steering rockwool means measuring the block and letting the "
       "controller act on the measurement, closing the loop" + _c("nemali-2006-set-point-irrigation") + _c("tavan-2021-sensor-irrigation-soilless") + "."),
@@ -305,7 +305,7 @@ SECTIONS.append({"id": "systems", "kicker": "The kit", "title": "Running it on s
   ]})
 
 # 12 -----------------------------------------------------------------
-SECTIONS.append({"id": "troubleshooting", "kicker": "When it goes wrong", "title": "Reading the block's symptoms",
+SECTIONS.append({"id": "troubleshooting", "kicker": "When it goes wrong", "title": "Troubleshooting",
   "blocks": [
     table(["Symptom", "Likely cause", "Fix"],
       [["Runoff high, sensor barely moves", "Block channeling, core too dry", "Hand-soak to rewet, then raise the floor and check drippers"],
@@ -318,7 +318,7 @@ SECTIONS.append({"id": "troubleshooting", "kicker": "When it goes wrong", "title
   ]})
 
 # 13 -----------------------------------------------------------------
-SECTIONS.append({"id": "quick-reference", "kicker": "Cheat sheet", "title": "The numbers, in one place",
+SECTIONS.append({"id": "quick-reference", "kicker": "Cheat sheet", "title": "Quick-reference targets",
   "blocks": [
     kv([("Working band", "~55-92% WC"),
         ("Recovery floor (do not cross)", "~25-30% WC"),

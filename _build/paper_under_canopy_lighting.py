@@ -34,7 +34,7 @@ def _c(rid):
 SECTIONS = []
 
 # ---------------------------------------------------------------- abstract
-SECTIONS.append({"id": "abstract", "kicker": "Abstract", "title": "Photons at the floor",
+SECTIONS.append({"id": "abstract", "kicker": "Abstract", "title": "Purpose and scope",
   "blocks": [
     lead("A top fixture lights a roof, not a plant. By the time photons fight through three or four leaf "
          "layers, the lower third of the canopy is sitting at a fraction of the light its buds need to fill "
@@ -49,7 +49,7 @@ SECTIONS.append({"id": "abstract", "kicker": "Abstract", "title": "Photons at th
   ]})
 
 # ---------------------------------------------------------------- 1 problem
-SECTIONS.append({"id": "light-starved", "kicker": "The problem", "title": "The lower canopy is light-starved",
+SECTIONS.append({"id": "light-starved", "kicker": "The problem", "title": "Lower-canopy light deficit",
   "blocks": [
     p("Light attenuates fast through a cannabis canopy. Leaves are extremely good at absorbing the exact "
       "wavelengths that drive photosynthesis, so each layer strips the red and blue out of the beam before it "
@@ -76,7 +76,7 @@ SECTIONS.append({"id": "light-starved", "kicker": "The problem", "title": "The l
   ]})
 
 # ---------------------------------------------------------------- 2 evidence
-SECTIONS.append({"id": "the-evidence", "kicker": "The evidence", "title": "What the research actually shows",
+SECTIONS.append({"id": "the-evidence", "kicker": "The evidence", "title": "Evidence on yield, quality and uniformity",
   "blocks": [
     p("The marketing decks all cite &lsquo;20&ndash;60% yield gains&rsquo; without naming a source. The honest "
       "picture from peer-reviewed and controlled commercial work is more specific, and more useful, because it "
@@ -111,7 +111,7 @@ SECTIONS.append({"id": "the-evidence", "kicker": "The evidence", "title": "What 
   ]})
 
 # ---------------------------------------------------------------- 3 spectrum
-SECTIONS.append({"id": "spectrum", "kicker": "Spectrum", "title": "The heavy-red trap",
+SECTIONS.append({"id": "spectrum", "kicker": "Spectrum", "title": "Spectrum selection below the canopy",
   "blocks": [
     p("Here&rsquo;s the most expensive mistake in the category. Most under-canopy products are <strong>heavy "
       "red</strong>, cheap, efficient per photon, looks &lsquo;powerful&rsquo;. It is also the wrong "
@@ -144,7 +144,7 @@ SECTIONS.append({"id": "spectrum", "kicker": "Spectrum", "title": "The heavy-red
   ]})
 
 # ---------------------------------------------------------------- 4 par targets
-SECTIONS.append({"id": "par-targets", "kicker": "Dose", "title": "PAR targets and how much light to add",
+SECTIONS.append({"id": "par-targets", "kicker": "Dose", "title": "PAR targets and supplemental light",
   "blocks": [
     p("The goal isn&rsquo;t to match top-canopy intensity at the floor. It&rsquo;s to lift the starved "
       "zone over the threshold where bud development becomes viable, without bleaching."),
@@ -165,7 +165,7 @@ SECTIONS.append({"id": "par-targets", "kicker": "Dose", "title": "PAR targets an
   ]})
 
 # ---------------------------------------------------------------- 5 light history
-SECTIONS.append({"id": "light-history", "kicker": "Photoacclimation", "title": "The leaf was built by yesterday's light",
+SECTIONS.append({"id": "light-history", "kicker": "Photoacclimation", "title": "Light acclimation in the lower canopy",
   "blocks": [
     p("A leaf is not a fixed solar panel. While it expands it builds its own photosynthetic hardware, "
       "chloroplast structure, electron-transport capacity, Rubisco, photoprotection, calibrated to the "
@@ -215,7 +215,7 @@ SECTIONS.append({"id": "placement", "kicker": "Geometry", "title": "Fixture plac
   ]})
 
 # ---------------------------------------------------------------- 7 training
-SECTIONS.append({"id": "training", "kicker": "Training", "title": "Plant training changes when you light from below",
+SECTIONS.append({"id": "training", "kicker": "Training", "title": "Plant training for under-canopy lighting",
   "blocks": [
     p("This separates operators who get the 30% from operators who bleach their bottoms and rot their cores. "
       "Under-canopy lighting and your training regime are one system, not two."),
@@ -242,7 +242,7 @@ SECTIONS.append({"id": "training", "kicker": "Training", "title": "Plant trainin
   ]})
 
 # ---------------------------------------------------------------- 8 heat
-SECTIONS.append({"id": "heat", "kicker": "Thermal", "title": "The heat bill: a watt is a watt",
+SECTIONS.append({"id": "heat", "kicker": "Thermal", "title": "Thermal load from under-canopy lighting",
   "blocks": [
     p("Ignore the marketing about LEDs &lsquo;running cool&rsquo;. For HVAC sizing it&rsquo;s false in the way "
       "that matters. In a sealed room, <strong>essentially all the electrical power you feed a fixture ends up "
@@ -308,7 +308,7 @@ SECTIONS.append({"id": "airflow", "kicker": "Airflow", "title": "The lower-canop
   ]})
 
 # ---------------------------------------------------------------- 10 commissioning
-SECTIONS.append({"id": "commissioning", "kicker": "Setup", "title": "Commissioning: how to dial it in",
+SECTIONS.append({"id": "commissioning", "kicker": "Setup", "title": "Commissioning under-canopy lighting",
   "blocks": [
     p("Don&rsquo;t install to a spec sheet and walk away. Install, measure, adjust, log. The whole value of "
       "SCL is in the lower-canopy numbers, so that&rsquo;s where you measure."),
@@ -330,7 +330,7 @@ SECTIONS.append({"id": "commissioning", "kicker": "Setup", "title": "Commissioni
   ]})
 
 # ---------------------------------------------------------------- 11 economics
-SECTIONS.append({"id": "economics", "kicker": "Economics", "title": "The economics, framed honestly",
+SECTIONS.append({"id": "economics", "kicker": "Economics", "title": "Expected results and limitations",
   "blocks": [
     p("The return on under-canopy lighting is mostly a <strong>grade story</strong>, not a gross-weight story. "
       "The clearest financial mechanism in the research is converting B/C-grade lower bud into A/B-grade "

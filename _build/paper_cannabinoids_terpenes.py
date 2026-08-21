@@ -30,7 +30,7 @@ def _c(rid):
 SECTIONS = []
 
 # ---------------------------------------------------------------- 0 · start here
-SECTIONS.append({"id": "start-here", "kicker": "Start here", "title": "The Chemistry in Plain English",
+SECTIONS.append({"id": "start-here", "kicker": "Start here", "title": "Purpose and scope",
   "blocks": [
     lead("Every price negotiation, every lab report, every argument about quality in this industry comes "
          "down to two families of molecules: <strong>cannabinoids</strong> (the potency) and "
@@ -71,7 +71,7 @@ SECTIONS.append({"id": "start-here", "kicker": "Start here", "title": "The Chemi
   ]})
 
 # ---------------------------------------------------------------- 1 · core answer
-SECTIONS.append({"id": "core-answer", "kicker": "The short version", "title": "Core Answer",
+SECTIONS.append({"id": "core-answer", "kicker": "The short version", "title": "Chemistry overview",
   "blocks": [
     p("Everything the industry trades on is made in <strong>trichome heads</strong>, as <strong>acids</strong> "
       "(THCA, CBDA, not THC and CBD), on <strong>one assembly line</strong> whose hub is a single molecule: "
@@ -92,7 +92,7 @@ SECTIONS.append({"id": "core-answer", "kicker": "The short version", "title": "C
   ]})
 
 # ---------------------------------------------------------------- 2 · where it's made
-SECTIONS.append({"id": "where-made", "kicker": "The factory", "title": "Where the Chemistry Is Made: Trichome Secretory Cells",
+SECTIONS.append({"id": "where-made", "kicker": "The factory", "title": "Trichome secretory cells",
   "blocks": [
     p("Cannabis carries three kinds of glandular trichome: tiny <strong>bulbous</strong> glands, "
       "<strong>sessile</strong> glands that sit flat on the surface, and the money-maker, the "
@@ -129,7 +129,7 @@ SECTIONS.append({"id": "where-made", "kicker": "The factory", "title": "Where th
   ]})
 
 # ---------------------------------------------------------------- 3 · biosynthesis
-SECTIONS.append({"id": "biosynthesis", "kicker": "The assembly line", "title": "Biosynthesis: Two Feedstocks, One Hub",
+SECTIONS.append({"id": "biosynthesis", "kicker": "The assembly line", "title": "Cannabinoid and terpene biosynthesis",
   "blocks": [
     p("The pathway reads like a small factory diagram, and it is worth learning because chemotypes, CBG "
       "flower, THCV and half the COA make sense only downstream of it. The plant starts with "
@@ -167,7 +167,7 @@ SECTIONS.append({"id": "biosynthesis", "kicker": "The assembly line", "title": "
   ]})
 
 # ---------------------------------------------------------------- 4 · acids & decarb
-SECTIONS.append({"id": "acids-decarb", "kicker": "Acid vs neutral", "title": "THCA Is Not THC: Decarboxylation",
+SECTIONS.append({"id": "acids-decarb", "kicker": "Acid vs neutral", "title": "Decarboxylation: THCA and THC",
   "blocks": [
     p("The single most misunderstood fact in cannabis chemistry: <strong>the living plant does not make "
       "THC</strong> in any meaningful quantity. It makes THCA, the same molecule wearing a carboxyl "
@@ -217,7 +217,7 @@ SECTIONS.append({"id": "acids-decarb", "kicker": "Acid vs neutral", "title": "TH
   ]})
 
 # ---------------------------------------------------------------- 5 · cannabinoid roster
-SECTIONS.append({"id": "cannabinoid-roster", "kicker": "The majors", "title": "The Cannabinoids, One by One",
+SECTIONS.append({"id": "cannabinoid-roster", "kicker": "The majors", "title": "Major cannabinoids",
   "blocks": [
     p("Six cannabinoids cover nearly every commercial conversation. For each: what it is, where it comes "
       "from, and, just as important, what it is <em>not</em>. Effects language here is deliberately "
@@ -272,7 +272,7 @@ SECTIONS.append({"id": "cannabinoid-roster", "kicker": "The majors", "title": "T
   ]})
 
 # ---------------------------------------------------------------- 6 · chemotypes
-SECTIONS.append({"id": "chemotypes", "kicker": "Genetics first", "title": "Chemotypes I–V: The Ratio Is Inherited",
+SECTIONS.append({"id": "chemotypes", "kicker": "Genetics first", "title": "Chemotypes I–V and inherited ratios",
   "blocks": [
     p("Cross a true THC plant with a true CBD plant and score the offspring, and cannabinoid ratio "
       "behaves like a textbook Mendelian trait. The classic genetic work resolved it to a single locus, "
@@ -303,7 +303,7 @@ SECTIONS.append({"id": "chemotypes", "kicker": "Genetics first", "title": "Chemo
   ]})
 
 # ---------------------------------------------------------------- 7 · terpene classes
-SECTIONS.append({"id": "terpene-classes", "kicker": "The volatile half", "title": "Terpene Classes: Mono vs Sesqui, and Why Volatility Rules",
+SECTIONS.append({"id": "terpene-classes", "kicker": "The volatile half", "title": "Terpene classes and volatility",
   "blocks": [
     p("Terpenes are built from five-carbon isoprene units, and the count is the classification: "
       "<strong>monoterpenes</strong> (two units, C10 — myrcene, limonene, pinene, terpinolene, linalool) "
@@ -337,7 +337,7 @@ SECTIONS.append({"id": "terpene-classes", "kicker": "The volatile half", "title"
   ]})
 
 # ---------------------------------------------------------------- 8 · terpene roster
-SECTIONS.append({"id": "terpene-roster", "kicker": "The big eight", "title": "The Terpenes That Run the Market",
+SECTIONS.append({"id": "terpene-roster", "kicker": "The big eight", "title": "Commercially relevant terpenes",
   "blocks": [
     p("Commercial cannabis clusters into a small number of terpene profiles. Analysis of tens of "
       "thousands of US retail samples found products fall into three broad groups: high "
@@ -384,7 +384,7 @@ SECTIONS.append({"id": "terpene-roster", "kicker": "The big eight", "title": "Th
   ]})
 
 # ---------------------------------------------------------------- 9 · entourage honesty
-SECTIONS.append({"id": "entourage", "kicker": "Honesty section", "title": "The Entourage Effect: Demonstrated vs Marketed",
+SECTIONS.append({"id": "entourage", "kicker": "Honesty section", "title": "Entourage effect: evidence and marketing claims",
   "blocks": [
     p("The claim: cannabis compounds work better together than in isolation, terpenes and minor "
       "cannabinoids shape, soften or steer THC's effect. The most influential statement of it is Russo's "
@@ -425,7 +425,7 @@ SECTIONS.append({"id": "entourage", "kicker": "Honesty section", "title": "The E
   ]})
 
 # ---------------------------------------------------------------- 10 · degradation
-SECTIONS.append({"id": "degradation", "kicker": "The clock", "title": "Degradation: How the Chemistry Dies",
+SECTIONS.append({"id": "degradation", "kicker": "The clock", "title": "Cannabinoid and terpene degradation",
   "blocks": [
     p("Two decays run in parallel from the moment of harvest, and they have different physics. "
       "<strong>Terpenes evaporate</strong>, fastest when warm, monoterpenes first (previous sections). "
@@ -472,7 +472,7 @@ SECTIONS.append({"id": "degradation", "kicker": "The clock", "title": "Degradati
   ]})
 
 # ---------------------------------------------------------------- 11 · grower levers
-SECTIONS.append({"id": "grower-levers", "kicker": "Control, honestly ranked", "title": "What the Grower Actually Controls",
+SECTIONS.append({"id": "grower-levers", "kicker": "Control, honestly ranked", "title": "Cultivation levers and their limits",
   "blocks": [
     p("Ranked by how much they move the number, with the evidence state attached. Because this is where vendor claims and "
       "grow-forum folklore concentrate."),
@@ -506,7 +506,7 @@ SECTIONS.append({"id": "grower-levers", "kicker": "Control, honestly ranked", "t
   ]})
 
 # ---------------------------------------------------------------- 12 · COA tie-in
-SECTIONS.append({"id": "coa", "kicker": "The receipt", "title": "How It All Shows Up on a COA",
+SECTIONS.append({"id": "coa", "kicker": "The receipt", "title": "Cannabinoids and terpenes on a COA",
   "blocks": [
     p("A COA is this whole paper compressed into a table. The cannabinoid section reports <strong>acid "
       "and neutral forms separately</strong>, fresh, well-kept flower shows nearly everything as THCA "
@@ -537,7 +537,7 @@ SECTIONS.append({"id": "coa", "kicker": "The receipt", "title": "How It All Show
   ]})
 
 # ---------------------------------------------------------------- 13 · failure modes
-SECTIONS.append({"id": "failure-modes", "kicker": "Where potency goes to die", "title": "Failure Modes: Six Ways to Lose What You Grew",
+SECTIONS.append({"id": "failure-modes", "kicker": "Where potency goes to die", "title": "Common causes of cannabinoid and terpene loss",
   "blocks": [
     p("Every one of these is chemistry from earlier sections wearing work clothes. The COA tell is how "
       "you catch it after the fact; the fix is how you stop paying for it twice."),
@@ -575,7 +575,7 @@ SECTIONS.append({"id": "failure-modes", "kicker": "Where potency goes to die", "
   ]})
 
 # ---------------------------------------------------------------- 14 · quick reference
-SECTIONS.append({"id": "quick-reference", "kicker": "Look-up tables", "title": "Quick Reference",
+SECTIONS.append({"id": "quick-reference", "kicker": "Look-up tables", "title": "Quick reference",
   "blocks": [
     table(["Compound", "Acid parent", "Origin", "What it is", "What it is not"], [
       ["Δ9-THC", "THCA", "THCA synthase ← CBGA", "The intoxicating one; the priced number", "A quality verdict on its own"],
@@ -607,7 +607,7 @@ SECTIONS.append({"id": "quick-reference", "kicker": "Look-up tables", "title": "
   ]})
 
 # ---------------------------------------------------------------- 15 · mental model
-SECTIONS.append({"id": "mental-model", "kicker": "Take this with you", "title": "The Mental Model",
+SECTIONS.append({"id": "mental-model", "kicker": "Take this with you", "title": "Cannabinoid and terpene control principles",
   "blocks": [
     figure(L.flow("From seed to certificate: where chemistry is decided",
         [("Genetics", "chemotype + terpene menu locked at seed"),

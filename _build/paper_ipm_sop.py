@@ -26,7 +26,7 @@ SECTIONS = []
 JURISDICTION_NOTE = 'Jurisdiction note: product legality, REI/PHI, and organism status are local (e.g. NZ ACVM/HSNO/WorkSafe vs US EPA WPS). Verify current law and labels before any spray or release.'
 
 
-SECTIONS.append({"id": "intro", "kicker": "Start here", "title": "What IPM is and why a grow lives or dies by it",
+SECTIONS.append({"id": "intro", "kicker": "Start here", "title": "Purpose and scope",
   "blocks": [
     callout("NOTE", "Jurisdiction", JURISDICTION_NOTE),
     
@@ -49,7 +49,7 @@ SECTIONS.append({"id": "intro", "kicker": "Start here", "title": "What IPM is an
         "problem caught early is cheap. A missed one can cost the whole crop.")),
   ]})
 
-SECTIONS.append({"id": "key-terms", "kicker": "Vocabulary", "title": "Every term you need, defined once",
+SECTIONS.append({"id": "key-terms", "kicker": "Vocabulary", "title": "Definitions",
   "blocks": [
     p("Here is the language before the procedure. You do not need to memorise it. Each term comes back in "
       "context below."),
@@ -72,7 +72,7 @@ SECTIONS.append({"id": "key-terms", "kicker": "Vocabulary", "title": "Every term
       "(withholding period)."),
   ]})
 
-SECTIONS.append({"id": "scouting", "kicker": "Core practice 1", "title": "Scouting: find it before it finds you",
+SECTIONS.append({"id": "scouting", "kicker": "Core practice 1", "title": "Scouting procedure",
   "blocks": [
     p("Scouting is the engine of IPM. Everything downstream depends on catching pests early. A "
       "practical baseline is for the room lead to visually inspect at least 5 percent of the room at "
@@ -100,7 +100,7 @@ SECTIONS.append({"id": "scouting", "kicker": "Core practice 1", "title": "Scouti
         "confirm tiny pests before you decide what to do.")),
   ]})
 
-SECTIONS.append({"id": "thresholds", "kicker": "Core practice 2", "title": "Action thresholds: knowing exactly when to act",
+SECTIONS.append({"id": "thresholds", "kicker": "Core practice 2", "title": "Action thresholds",
   "blocks": [
     p("A threshold turns observation into a decision so nobody has to guess. A workable two-tier model "
       "reflects a common commercial action approach" + _c("punja-2021-emerging-diseases-cannabis") +
@@ -129,7 +129,7 @@ SECTIONS.append({"id": "thresholds", "kicker": "Core practice 2", "title": "Acti
         ". Applied late, it taints the finished flower.")),
   ]})
 
-SECTIONS.append({"id": "biocontrol", "kicker": "Core practice 3", "title": "Biological controls: putting good bugs to work",
+SECTIONS.append({"id": "biocontrol", "kicker": "Core practice 3", "title": "Biological controls",
   "blocks": [
     p("Biocontrol releases predators that hunt your pests when legal in your jurisdiction. They usually leave no chemical residue on the cannabis plant "
       "at every stage, and if they run out of prey they simply die off and fall away. The job is to match "
@@ -194,7 +194,7 @@ SECTIONS.append({"id": "spray-rotation", "kicker": "Core practice 4", "title": "
         ". Time it to the irrigation transition when the substrate is wettest.")),
   ]})
 
-SECTIONS.append({"id": "sanitation-quarantine", "kicker": "Prevention", "title": "Sanitation and quarantine: stop pests at the door",
+SECTIONS.append({"id": "sanitation-quarantine", "kicker": "Prevention", "title": "Sanitation and quarantine",
   "blocks": [
     p("Most pests are walked in, so the cheapest control is keeping them out. The biggest single entry "
       "point is footwear" + _c("punja-2021-emerging-diseases-cannabis") + ", so replace shoes or use "
@@ -224,7 +224,7 @@ SECTIONS.append({"id": "sanitation-quarantine", "kicker": "Prevention", "title":
         "shared tool is a highway for pests.")),
   ]})
 
-SECTIONS.append({"id": "records-decision-flow", "kicker": "Step-by-step", "title": "The daily routine, the decision flow, and record-keeping",
+SECTIONS.append({"id": "records-decision-flow", "kicker": "Step-by-step", "title": "Daily IPM routine, decision flow, and records",
   "blocks": [
     p("Put it together as a repeatable shift routine. The daily loop is short, and the decision flow "
       "handles whatever you find."),
@@ -261,7 +261,7 @@ SECTIONS.append({"id": "records-decision-flow", "kicker": "Step-by-step", "title
         "Good records double as proof a treatment worked. Compare trap counts before and after.")),
   ]})
 
-SECTIONS.append({"id": "pitfalls-expectations", "kicker": "Reality check", "title": "Common mistakes and what good IPM actually looks like",
+SECTIONS.append({"id": "pitfalls-expectations", "kicker": "Reality check", "title": "Troubleshooting and operating expectations",
   "blocks": [
     p("The frequent failures are predictable: skipping scouting until damage is visible, spraying "
       "without confirming the pest, ignoring the treatment window and spraying in late flower, sharing "

@@ -22,7 +22,7 @@ def _c(rid):
 
 SECTIONS = []
 
-SECTIONS.append({"id": "what-this-is", "kicker": "Start here", "title": "What this is, and who it's for",
+SECTIONS.append({"id": "what-this-is", "kicker": "Start here", "title": "Purpose and scope",
   "blocks": [
     lead("A TEROS-12 is a small probe you bury in growing media: coco, rockwool or soil. It reports three "
          "things down a single digital wire: how much water is in the media, how salty that water is, and "
@@ -52,7 +52,7 @@ SECTIONS.append({"id": "what-this-is", "kicker": "Start here", "title": "What th
         "<a href='coco-crop-steering.html'>coco crop-steering paper</a>.")),
   ]})
 
-SECTIONS.append({"id": "key-terms", "kicker": "Vocabulary", "title": "Key terms, defined once",
+SECTIONS.append({"id": "key-terms", "kicker": "Vocabulary", "title": "Definitions",
   "blocks": [
     p("Here is the small set of words this whole field hangs on. You don't need to memorise them. Each one "
       "comes back in context."),
@@ -87,7 +87,7 @@ SECTIONS.append({"id": "key-terms", "kicker": "Vocabulary", "title": "Key terms,
       "A unit volume of media splits into solids, air and water. VWC is just the water slice divided by the whole."),
   ]})
 
-SECTIONS.append({"id": "how-it-measures", "kicker": "Core content", "title": "How the probe turns an electric field into a water number",
+SECTIONS.append({"id": "how-it-measures", "kicker": "Core content", "title": "TEROS-12 measurement principle",
   "blocks": [
     p("The TEROS-12 is a <strong>capacitance probe</strong>. Its prongs create a high-frequency "
       "electric field in the surrounding media and measure how strongly the media stores that field, "
@@ -122,7 +122,7 @@ SECTIONS.append({"id": "how-it-measures", "kicker": "Core content", "title": "Ho
       "From electric field to a number: every output is downstream of the same physical measurement."),
   ]})
 
-SECTIONS.append({"id": "calibration", "kicker": "Core content", "title": "Calibration: why the default number lies a little",
+SECTIONS.append({"id": "calibration", "kicker": "Core content", "title": "TEROS-12 calibration",
   "blocks": [
     p("Out of the box the TEROS-12 uses a generic mineral-soil calibration, which makes VWC accurate to "
       "only &plusmn;0.03 m&sup3;/m&sup3;. A <strong>substrate-specific</strong> calibration for your "
@@ -150,7 +150,7 @@ SECTIONS.append({"id": "calibration", "kicker": "Core content", "title": "Calibr
         "<strong>mandatory</strong> for tight steering, not optional, and still respect the residual error.")),
   ]})
 
-SECTIONS.append({"id": "ec-and-limits", "kicker": "Core content", "title": "What EC tells you, and what the probe cannot see",
+SECTIONS.append({"id": "ec-and-limits", "kicker": "Core content", "title": "Root-zone EC and sensor limitations",
   "blocks": [
     p("The TEROS-12 measures <strong>bulk EC</strong>, the conductivity of the whole wet-media mixture, "
       "0&ndash;20000 &micro;S/cm. What growers care about is <strong>pore-water EC</strong>: the salt "
@@ -184,7 +184,7 @@ SECTIONS.append({"id": "ec-and-limits", "kicker": "Core content", "title": "What
     ], cls="compact", caption="What one TEROS-12 can and cannot tell you, and the second witness that fills each gap."),
   ]})
 
-SECTIONS.append({"id": "steering", "kicker": "How-to", "title": "Using it to steer irrigation, step by step",
+SECTIONS.append({"id": "steering", "kicker": "How-to", "title": "Irrigation steering with TEROS-12",
   "blocks": [
     p("The practical recipe is one demotion and one promotion. <strong>Demote</strong> the raw VWC "
       "reading from &lsquo;truth&rsquo; to &lsquo;one noisy witness with a confidence score&rsquo;. "
@@ -219,7 +219,7 @@ SECTIONS.append({"id": "steering", "kicker": "How-to", "title": "Using it to ste
       "is allowed to move water." + _c("tavan-2021-sensor-irrigation-soilless")),
   ]})
 
-SECTIONS.append({"id": "troubleshooting", "kicker": "When it goes wrong", "title": "Troubleshooting and pitfalls",
+SECTIONS.append({"id": "troubleshooting", "kicker": "When it goes wrong", "title": "Troubleshooting",
   "blocks": [
     p("Most TEROS-12 disappointments are not the sensor breaking. They are the sensor being "
       "<em>believed</em> when it shouldn't be. Make the first distinction clearly. A <strong>wrong "
@@ -253,7 +253,7 @@ SECTIONS.append({"id": "troubleshooting", "kicker": "When it goes wrong", "title
         "override a safety interlock. Anchors earn their place from corroborated events, not from one good look.")),
   ]})
 
-SECTIONS.append({"id": "expectations", "kicker": "Reality check", "title": "Realistic expectations",
+SECTIONS.append({"id": "expectations", "kicker": "Reality check", "title": "Expected results and limitations",
   "blocks": [
     callout("key", "What one probe can and cannot earn",
       p("A single TEROS-12 will not give you a per-zone, ground-truth picture of your root zone, and "
