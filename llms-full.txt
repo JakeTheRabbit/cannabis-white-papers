@@ -7377,7 +7377,7 @@ Expect roughly 10-14 days of hang-drying plus several more days of curing before
 
 > **Diagram.** A realistic arc: water activity falls from harvest, enters the safe zone at takedown, and settles in curing before the batch is sealed.[^astm-d8197-water-activity]
 
-> **KEY — Three honest truths**
+> **KEY — Three rules**
 >
 > 1. **It takes weeks, not days.** Plan two-to-three weeks for the whole post-harvest stage and do not rush the dry.
 > 2. **Stop over-drying.** Dialling in drying and curing recovers sellable weight you would otherwise lose. The ~5-10% figures vendors quote are illustrative.[^aroya-drying-water-activity-guide]

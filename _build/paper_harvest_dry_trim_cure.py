@@ -253,7 +253,7 @@ SECTIONS.append({"id": "expectations", "kicker": "Reality check", "title": "What
             note="Testing starts ~day 7-8. Takedown ~day 10-14 at 0.60-0.62 aw. Cure settles to 0.58-0.60 aw, then seal."), 10,
       "A realistic arc: water activity falls from harvest, enters the safe zone at takedown, and "
       "settles in curing before the batch is sealed." + _c("astm-d8197-water-activity")),
-    callout("key", "Three honest truths",
+    callout("key", "Three rules",
       ol(["<strong>It takes weeks, not days.</strong> Plan two-to-three weeks for the whole post-harvest stage and do not rush the dry.",
           "<strong>Stop over-drying.</strong> Dialling in drying and curing recovers sellable weight you would otherwise lose. The ~5-10% figures vendors quote are illustrative." + _c("aroya-drying-water-activity-guide"),
           "<strong>Genetics matter.</strong> Drying and curing are strain-dependent. Dense and fluffy flowers finish at slightly different aw points, so log every batch." + _c("birenboim-2024-cultivar-drying")])),
