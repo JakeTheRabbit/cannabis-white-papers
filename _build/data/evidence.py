@@ -559,7 +559,7 @@ def panel_html(slug: str) -> str:
     )
 
     return (
-        "<div class='evidence-panel' id='evidence-notes'>"
+        "<div class='evidence-panel'>"
         "<div class='evidence-h'>"
         "<div class='evidence-kicker'>How sure is this paper?</div>"
         "<p class='evidence-lead'>We've gone to great lengths to keep these guides honest. One of the main ways we do "

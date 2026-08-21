@@ -300,7 +300,7 @@ SECTIONS.append({"id": "purge", "kicker": "09 · Fresh air", "title": "Fresh-air
             [(0, 10, L.GL, "clean air"), (10, 20, L.GXL, "keep below ~20 ppb"),
              (20, 100, L.AMBL, "chronic: stunting, bud abortion"), (100, 400, L.REDL, "acute: epinasty, abscission")],
             unit=" ppb",
-            note="Plants respond at 10 ppb and a sealed room self-generates 40-120 ppb. Carbon and HEPA don't reliably remove it - air exchange or a KMnO4 scrubber does."), 7,
+            note="Plants respond at 10 ppb and a sealed room self-generates 40-120 ppb. Carbon and HEPA don't reliably remove it - air exchange or a KMnO4 scrubber does."), 6,
       "The ethylene damage scale, in parts per <em>billion</em>. A sealed room of plants climbs into the "
       "chronic-damage band on its own" + _c("wheeler1996-ethylene") + _c("hudelson2023-ethylene") + "."),
     callout("warn", "Why the filters don't save you here",
@@ -416,7 +416,7 @@ SECTIONS.append({"id": "safety", "kicker": "12 · The part that can kill you", "
             [(0, 420, L.BLUL, "outdoor air"), (420, 1500, L.GL, "enrichment target"),
              (1500, 5000, L.AMBL, "toward the 5,000 ppm 8-hour worker limit")],
             unit=" ppm",
-            note="Your grow-room setpoint (green) is 3-5x below the 5,000 ppm worker exposure limit. The problem is never the setpoint, it's a leak that runs away past it."), 6,
+            note="Your grow-room setpoint (green) is 3-5x below the 5,000 ppm worker exposure limit. The problem is never the setpoint, it's a leak that runs away past it."), 7,
       "The normal enrichment band against the occupational limit. Correctly run, enrichment is nowhere "
       "near the danger zone, which is exactly why a runaway leak is so easy to ignore until it isn't" + _c("osha-pel-co2") + "."),
     p("Every major safety authority agrees on the headline number: the 8-hour average a worker may breathe "

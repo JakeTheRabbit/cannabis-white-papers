@@ -271,7 +271,7 @@ def render_paper(mod):
         link = f' <a href="{r["url"]}" target="_blank" rel="noopener">{r["url"]}</a>' if r.get("url") else ""
         cls = "" if r.get("peer") else " class='np'"
         ref_lis += f'<li id="ref-{rid}"{cls}>{r["cite"]}{npc}{link}</li>'
-    refs = (f'<div class="refs"><h3>References</h3><ol>{ref_lis}</ol>'
+    refs = (f'<div class="refs"><h2>References</h2><ol>{ref_lis}</ol>'
             f'<p class="foot">Citations marked in-text as [n] map to this list. Primary literature and official guidance '
             f'except where noted. Cannabis tissue culture is strongly genotype-dependent, verify '
             f'dilutions, hormone doses and local regulations against the primary sources before relying on them.</p></div>') if ref_lis else ""
