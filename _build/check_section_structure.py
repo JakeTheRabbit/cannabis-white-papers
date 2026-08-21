@@ -66,6 +66,14 @@ def _violates_sentence_case(title):
     return len(uppercase_words) >= 3
 
 
+def _has_audited_slab_references(module, slug):
+    # This payload owns a numbered reference list outside REF_IDS so its citations
+    # remain stable; no other paper is permitted to use this alternate metadata.
+    return slug == "slab-irrigation-strategy" and _non_empty(
+        getattr(module, "RAW_REFERENCES", None)
+    )
+
+
 def validate_modules(modules: list[object]) -> list[str]:
     """Return all section-structure policy violations without modifying modules."""
     diagnostics = []
@@ -79,7 +87,7 @@ def validate_modules(modules: list[object]) -> list[str]:
         if not _non_empty(sections):
             diagnostics.append(f"{label}: missing non-empty SECTIONS")
         ref_ids = getattr(module, "REF_IDS", None)
-        if not _non_empty(ref_ids):
+        if not _non_empty(ref_ids) and not _has_audited_slab_references(module, slug):
             diagnostics.append(f"{label}: missing non-empty REF_IDS")
         if not isinstance(sections, (list, tuple)):
             continue
@@ -160,8 +168,11 @@ def validate_modules(modules: list[object]) -> list[str]:
     return diagnostics
 
 
-def _fixture(slug, sections, ref_ids=("ref",)):
-    return SimpleNamespace(SLUG=slug, SECTIONS=sections, REF_IDS=list(ref_ids))
+def _fixture(slug, sections, ref_ids=("ref",), raw_references=None):
+    fixture = SimpleNamespace(SLUG=slug, SECTIONS=sections, REF_IDS=list(ref_ids))
+    if raw_references is not None:
+        fixture.RAW_REFERENCES = raw_references
+    return fixture
 
 
 def _run_self_test():
@@ -183,6 +194,26 @@ def _run_self_test():
             "absent REF_IDS",
             _fixture("missing-refs", [{"id": "one", "title": "Purpose and scope", "kicker": "01 · First", "blocks": ["x"]}], ()),
             ["missing-refs: missing non-empty REF_IDS"],
+        ),
+        (
+            "audited slab references",
+            _fixture(
+                "slab-irrigation-strategy",
+                [{"id": "one", "title": "Purpose and scope", "kicker": "01 · First", "blocks": ["x"]}],
+                (),
+                "<ol><li>Audited reference</li></ol>",
+            ),
+            [],
+        ),
+        (
+            "RAW_REFERENCES does not exempt another paper",
+            _fixture(
+                "other-paper",
+                [{"id": "one", "title": "Purpose and scope", "kicker": "01 · First", "blocks": ["x"]}],
+                (),
+                "<ol><li>Audited reference</li></ol>",
+            ),
+            ["other-paper: missing non-empty REF_IDS"],
         ),
         (
             "banned editorial framing",
