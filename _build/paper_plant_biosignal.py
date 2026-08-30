@@ -6,12 +6,14 @@ import figs_lib as L
 from figs import INK, INK2, MUT, LINE, G, GD, GL, BLU, BLUL, AMB, RED, PAPER, FS, MN
 
 SLUG = "plant-biosignal-sensor"
-TITLE = "DIY plant-biosignal sensor: read a plant's electrical signals"
+TITLE = "Build a plant-biosignal sensor with M5Stack and ESPHome"
 EYEBROW = "Build · Precision & automation"
-SUB = ("Commercial plant-biosignal sensors clip electrodes to a plant, amplify the tiny voltages it "
-       "makes, and log the drift for education, not as a validated water/nutrient/stress meter. You can build the acquisition side "
-       "from an M5Stack ESP32, an ECG front-end chip and ESPHome for about NZ$110, and stream it "
-       "straight into Home Assistant.")
+SUB = ("Plants produce tiny electrical signals — microvolts to a few millivolts — that shift when "
+       "light turns on, water runs low, or the plant is stressed. This guide walks you through "
+       "building the sensor that captures those signals: an M5Stack ESP32, an ECG front-end chip, "
+       "and ESPHome for about NZ$110. You will log the raw trace into Home Assistant and learn to "
+       "read the daily rhythm and stress events — not as a validated water or nutrient meter, but "
+       "as a real-time window into plant electrical activity.")
 META = [("wave", "Build guide"), ("gauge", "DIY hardware"),
         ("quote", "Evidence-linked · 4 sources"), ("clock", "~14 min read")]
 RELATED = ["plant-state-dashboard", "signal-and-noise", "closed-loop"]
@@ -93,8 +95,7 @@ SECTIONS.append({"id": "start", "kicker": "01 · Read this first", "title": "Pur
     p("Electrically, reading a plant is the same problem as reading a heartbeat: a small, noisy, "
       "high-impedance voltage you must amplify cleanly. That means the cheap, proven ECG front-end "
       "chip, the <strong>AD8232</strong>, works straight out of the box for plants" + _c("pb_mdpi_ad8232") +
-      ". Bolt it to an ESP32 and ESPHome and you have a logging plant-biosignal sensor for the price "
-      "of a night out."),
+      ". Bolt it to an ESP32 and ESPHome and you have a logging plant-biosignal sensor for about NZ$110."),
     callout("note", "What this build is, and isn't",
       ul(["<strong>It reproduces the acquisition</strong>: the raw signal, the daily rhythm, the "
           "big deflections after a stress event, light-on/off detection (one study reported ~85% under its protocol, not guaranteed on this exact "
@@ -109,22 +110,32 @@ SECTIONS.append({"id": "start", "kicker": "01 · Read this first", "title": "Pur
 
 SECTIONS.append({"id": "terms", "kicker": "02 · The vocabulary", "title": "Definitions",
   "blocks": [
-    defterm("Biopotential", "A voltage a living thing makes across its tissue. In plants it is "
-            "microvolts to a few millivolts, riding on a slowly-drifting baseline."),
-    defterm("Variation potential", "The big, slow depolarisation that spreads after a wound or "
-            "sharp stress. The clearest single event you will see on a DIY rig."),
-    defterm("Action potential", "A fast, self-propagating electrical spike. Real but sub-second, so "
-            "it needs high-rate sampling to catch, unlike the slow trends."),
+    defterm("Biopotential", "Every living cell maintains a charge difference across its membrane — "
+            "like a tiny battery, with a positive side and a negative side. When ions move in response "
+            "to light, water, or stress, that charge difference shifts, and you can measure the "
+            "resulting voltage from outside the tissue. In plants it runs microvolts to a few millivolts, "
+            "riding on a slowly-drifting baseline."),
+    defterm("Variation potential", "When part of a plant is wounded or sharply stressed, the charge "
+            "balance across cell membranes in that region shifts rapidly, and that shift spreads along "
+            "the plant as an electrical wave. This is a variation potential — the big, slow deflection "
+            "that shows up on your trace after a clear stress event, and the clearest single event you "
+            "will see on a DIY rig."),
+    defterm("Action potential", "A fast, self-propagating electrical spike — similar in concept to "
+            "the nerve signals animals use, but slower and driven by different ion channels. Real in "
+            "plants but sub-second, so it needs high-rate sampling to catch, unlike the slow trends "
+            "this build is designed to log."),
     defterm("Electrode", "The metal contact that couples the plant's voltage into your circuit. "
             "Ag/AgCl with gel, or a stainless probe just under the skin."),
-    defterm("Common-mode rejection", "An amplifier's ability to ignore noise that appears equally on "
-            "both inputs (like mains hum) and keep only the difference. The whole reason to use an "
-            "instrumentation front-end rather than a bare ADC."),
+    defterm("Common-mode rejection", "Noise-cancelling headphones compare the sound on both sides of "
+            "the earcup and subtract what they share, leaving only what differs. An instrumentation "
+            "amplifier does the same electrically: it discards anything that appears equally on both "
+            "inputs — mains hum, for example — and amplifies only the difference between them. "
+            "This is the whole reason to use a front-end chip rather than a bare ADC."),
     defterm("ADC", "Analog-to-digital converter. Turns the amplifier's analog voltage into numbers a "
             "microcontroller can read. Here, a 16-bit ADS1115 over I2C."),
   ]})
 
-SECTIONS.append({"id": "chain", "kicker": "03 · The idea", "title": "The signal chain",
+SECTIONS.append({"id": "chain", "kicker": "03 · How the sensor works", "title": "The signal chain",
   "blocks": [
     p("Everything is one line from plant to dashboard. Two electrodes sense the stem, one references "
       "the soil; the AD8232 amplifies and filters; the ADS1115 digitises; the ESP32 publishes."),
@@ -138,10 +149,12 @@ SECTIONS.append({"id": "chain", "kicker": "03 · The idea", "title": "The signal
       "The chain. Amplify first, digitise second, and the same I2C bus also carries the light, "
       "temperature and humidity sensors that give the plant trace its context."),
     callout("key", "Why not just wire electrodes to the ADC?",
-      p("Plant signals are tiny and sit on a high-impedance source, so mains hum swamps them. The "
-        "ADS1115 alone has no common-mode rejection and no reference drive. The AD8232 gives you the "
-        "gain, the band-pass filter <em>and</em> a driven soil-reference electrode that holds the "
-        "reading steady" + _c("pb_mdpi_ad8232") + ". It is the difference between a signal and a mess.")),
+      p("Plant signals are a few millivolts at most, and the plant cannot supply much current — "
+        "any resistance in the measurement path drains the signal before it arrives. The ADS1115 alone "
+        "has no common-mode rejection and no reference drive, so mains hum swamps the reading. "
+        "The AD8232 gives you the gain, a band-pass filter that passes only the frequencies plant "
+        "signals occupy, <em>and</em> a driven soil-reference electrode that holds the reading "
+        "steady" + _c("pb_mdpi_ad8232") + ". It is the difference between a signal and a mess.")),
   ]})
 
 SECTIONS.append({"id": "bom", "kicker": "04 · What to buy", "title": "Bill of materials",
@@ -220,26 +233,30 @@ SECTIONS.append({"id": "wiring", "kicker": "05 · Put it together", "title": "Wi
         "ballasts and pumps. Battery power (the StickC's LiPo) beats USB for noise.")),
   ]})
 
-SECTIONS.append({"id": "electrodes", "kicker": "06 · The hard part", "title": "Electrodes and placement",
+SECTIONS.append({"id": "electrodes", "kicker": "06 · Electrode attachment", "title": "Electrodes and placement",
   "blocks": [
-    p("This is where a DIY rig lives or dies. The AD8232 is happy; your <strong>contact impedance</strong> "
-      "is the enemy. Two workable options" + _c("pb_hackster_flora") + ":"),
+    p("<strong>Contact impedance</strong> is the resistance between the electrode metal and the plant's "
+      "tissue. Think of it like a loose headphone jack — a poor connection weakens the signal and lets "
+      "noise in before it reaches the amplifier. The AD8232 handles everything downstream; your "
+      "electrode contact quality is the one variable you control. Two workable options" + _c("pb_hackster_flora") + ":"),
     grid([
       card("Ag/AgCl EEG cups", p("Best signal quality. Fill the cup with conductive gel and tape it "
            "to the stem. Non-invasive, but the gel dries and must be refreshed every few days.")),
-      card("Stainless probes / needles", p("Insert 2&#8211;3 mm just under the epidermis. More stable "
+      card("Stainless probes / needles", p("Insert 2&#8211;3 mm (0.08&#8211;0.12&nbsp;in) just under the epidermis. More stable "
            "and closest to how commercial pin-contacts read &lsquo;inside&rsquo; the plant, but it "
            "wounds the plant, so use one clean, sterilised insertion.")),
     ], cols=2),
     steps([
       ("Place the pair along the stem", "LA (sense +) on the upper stem near a node; RA (sense &#8722;) "
-       "5&#8211;15 cm lower on the same stem. This pair captures the travelling signal."),
+       "5&#8211;15 cm (2&#8211;6&nbsp;in) lower on the same stem. This pair captures the travelling signal."),
       ("Reference into the soil", "RL (the driven reference) goes into the moist root-zone soil. It is "
        "what cancels common-mode hum, so don't skip it."),
       ("Gel and tape", "A dab of Ten20 under each surface contact, then micropore tape for light, "
        "steady pressure. A rising, noisy baseline is usually a drying electrode, not a sick plant."),
-      ("Let it settle", "The baseline drifts for 10&#8211;30 minutes as the half-cell potentials "
-       "equalise. Ignore that window."),
+      ("Let it settle", "When metal contacts wet tissue, ions exchange at the surface and build a "
+       "small voltage of their own — a <strong>half-cell potential</strong>, the same effect that "
+       "makes a lemon and two different coins into a battery. Allow 10&#8211;30 minutes for this to "
+       "stabilise. The initial drift is electrode chemistry settling, not plant activity."),
     ]),
     callout("danger", "Needle electrodes wound the plant",
       p("A fresh insertion itself triggers a variation potential, useful once as a known stimulus, "
@@ -355,7 +372,7 @@ binary_sensor:
         "~0 mV at rest and swings signed around it" + _c("pb_esphome_ads1115") + ".")),
   ]})
 
-SECTIONS.append({"id": "read", "kicker": "08 · Make sense of it", "title": "Interpreting plant-biosignal data",
+SECTIONS.append({"id": "read", "kicker": "08 · Reading the output", "title": "Interpreting plant-biosignal data",
   "blocks": [
     p("These are <em>changes</em> in potential, not a calibrated physiological unit. Compare a plant "
       "to itself over time, never plant-to-plant in raw millivolts."),
@@ -375,7 +392,7 @@ SECTIONS.append({"id": "read", "kicker": "08 · Make sense of it", "title": "Int
       "to combine it with your other telemetry."),
   ]})
 
-SECTIONS.append({"id": "limits", "kicker": "09 · Straight talk", "title": "Limitations, calibration and safety",
+SECTIONS.append({"id": "limits", "kicker": "09 · Limitations and calibration", "title": "Limitations, calibration and safety",
   "blocks": [
     callout("key", "Set expectations before you solder",
       ul(["<strong>Relative, not absolute.</strong> Good for trends and events on one plant, not for "

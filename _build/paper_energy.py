@@ -9,9 +9,10 @@ _FIGS = json.load(open(os.path.join(os.path.dirname(__file__), "figs_energy.json
 SLUG = "energy-sustainability"
 TITLE = "Energy, utilities and sustainability"
 EYEBROW = "Facility · Energy"
-SUB = ("Where the kilowatt-hours actually go in an indoor grow (lighting, HVAC, dehumidification) "
-      "and the cited playbook for spending fewer of them: efficacy, the double dividend, demand "
-      "charges, water reuse, and the retrofit order that pays.")
+SUB = ("Map where your electricity goes across lighting, HVAC, and dehumidification, then work "
+      "through the cited retrofit order — efficacy, the double dividend, demand charges, water "
+      "reuse — so you can identify which cuts pay fastest in your room and measure whether they "
+      "did.")
 META = [("spark", "Energy"), ("image", "12 diagrams"),
         ("quote", "Evidence-linked · 14 sources"), ("clock", "~18 min read")]
 RELATED = ["lighting-fundamentals", "scaling-high-light", "grow-room-systems"]
@@ -78,9 +79,13 @@ SECTIONS.append({"id": "key-terms", "kicker": "Key terms",
     defterm("Energy intensity metrics", "kWh per square metre (or square foot) of canopy per year "
             "compares facilities; kWh per gram (or its inverse, grams per kWh) compares production "
             "efficiency. The industry benchmarking platform tracks both" + _c("rii-powerscore") + "."),
-    defterm("Sensible vs latent load", "Sensible heat changes air temperature; latent heat is the "
-            "energy carried by water vapour. A grow room's latent load, everything the plants "
-            "transpire. Is why dehumidification is its own major energy line."),
+    defterm("Sensible vs latent load", "Air conditioning removes two completely different things at "
+            "once. Sensible heat is what a thermometer measures: it changes air temperature. Latent "
+            "heat is energy locked inside water vapour: the air carries it invisibly, and the "
+            "temperature does not change until that moisture condenses. In a grow room, the latent "
+            "load comes almost entirely from transpiration — the plants keep releasing vapour whether "
+            "the room feels warm or cool. That is why dehumidification is its own separate energy "
+            "line and not simply a byproduct of running the AC."),
     defterm("Time-of-use (TOU) tariff", "A price schedule where a kWh costs more at peak hours and "
             "less off-peak, as opposed to a flat rate. With lights running only half the day anyway, "
             "grows are unusually well placed to exploit it."),
@@ -128,12 +133,13 @@ SECTIONS.append({"id": "energy-anatomy", "kicker": "Energy anatomy",
       "and it is still the reference skeleton: lighting about 33% of energy, ventilation and "
       "dehumidification 27%, air conditioning 19%, with CO₂ injection, water handling, space heat and "
       "drying making up the rest" + _c("mills2012-carbon") + _c("zheng2021-review") + ". Power "
-      "density in a flowering room runs near 200 W per square foot, the same order as a data "
+      "density in a flowering room runs near 2,150 W/m² (200 W/ft²), the same order as a data "
       "centre" + _c("remillard2017-aceee") + "."),
     p("Real facilities scatter around that skeleton. The Northwest Power and Conservation Council "
       "surveyed licensed producers in Oregon and Washington and measured indoor operations at about "
-      "128 kWh per square foot of canopy per year (≈1,380 kWh/m²), roughly 100 of it lighting and 28 "
-      "HVAC and pumping, against 12 for greenhouses and about 1 for outdoor" + _c("nwpcc2018-cannabis") +
+      "1,380 kWh/m²·yr (128 kWh/ft²·yr) of canopy — roughly 1,075 kWh/m² (100 kWh/ft²) lighting "
+      "and 300 kWh/m² (28 kWh/ft²) HVAC and pumping — against 130 kWh/m² (12 kWh/ft²) for "
+      "greenhouses and about 11 kWh/m² (1 kWh/ft²) for outdoor" + _c("nwpcc2018-cannabis") +
       ". Mild-climate rooms lean harder on lighting; hot, humid or freezing climates push the HVAC "
       "share up. The 2021 national life-cycle study modelled a facility in every US county and found "
       "climate control the largest greenhouse-gas contributor in all of them, driven partly by "
@@ -165,19 +171,19 @@ SECTIONS.append({"id": "benchmarks", "kicker": "Benchmarks",
             maxv=7000),
       "Published electricity intensities for indoor production: the 2021 national model spans roughly "
       "1,700–5,300 kWh/kg depending on location" + _c("summers2021-natsust") + ", the trade "
-      "literature's rule of thumb is ~2,000 kWh per pound (≈4,400 kWh/kg)" + _c("remillard2017-aceee") +
+      "literature's rule of thumb is ≈4,400 kWh/kg (~2,000 kWh/lb)" + _c("remillard2017-aceee") +
       ", and Mills' 2012 module works out near 6,074 kWh/kg" + _c("mills2012-carbon") + "."),
     table(["Source", "What it measured", "Headline number"], [
       ["Mills 2012 (Energy Policy)" + _c("mills2012-carbon"), "Model of a standard indoor module, US average practice",
-       "≈6,074 kWh/kg; ~13,000 kWh per year per 4'×4'×8' module"],
+       "≈6,074 kWh/kg; ~13,000 kWh per year per 1.2 m × 1.2 m × 2.4 m (4'×4'×8') module"],
       ["Summers et al. 2021 (Nature Sustainability)" + _c("summers2021-natsust"), "Modelled facility in every US county, cradle-to-gate",
        "Electricity ≈1,700–5,300 kWh/kg by location; GHG 2,283–5,184 kg CO₂e/kg"],
       ["ACEEE industry review 2017" + _c("remillard2017-aceee"), "Trade + utility programme data",
-       "~2,000 kWh/lb (≈4,400 kWh/kg); ~200 W/ft² power density"],
+       "≈4,400 kWh/kg (~2,000 kWh/lb); ~2,150 W/m² (200 W/ft²) power density"],
       ["NW Power &amp; Conservation Council" + _c("nwpcc2018-cannabis"), "Survey of licensed OR/WA producers",
-       "Indoor 128 vs greenhouse 12 vs outdoor 1 kWh/ft²·yr"],
+       "Indoor ≈1,380 vs greenhouse ≈130 vs outdoor ≈11 kWh/m²·yr (128, 12, 1 kWh/ft²·yr)"],
       ["Cannabis PowerScore (RII)" + _c("rii-powerscore"), "Self-reported facility benchmarking dataset",
-       "Tracks kWh/ft² and g/kWh; most facilities can save ≥30%"],
+       "Tracks kWh/m² (kWh/ft²) and g/kWh; most facilities can save ≥30%"],
     ], cls="compact", caption="The benchmark landscape. Read the 'what it measured' column before quoting any of the numbers."),
     p("To make the units concrete: 4,400 kWh/kg is 4.4 kWh per gram, about the electricity a typical "
       "fridge uses in three days, per gram. Flip it into the benchmarking platform's preferred metric "
@@ -305,9 +311,9 @@ SECTIONS.append({"id": "hvac", "kicker": "HVAC & dehumidification",
       "is a mould-risk control as much as an energy line (see <a href='mould-risk.html'>mould risk</a>)."),
     callout("tip", "Deadbands are free money",
       p("Every controller has a deadband, the gap between 'start cooling' and 'start heating'. "
-        "Rooms tuned to fight for ±0.3 °C burn energy purely on nervous equipment. Widen deadbands "
-        "to what the plants actually notice (±1 °C is generous), make sure heating and cooling "
-        "setpoints can never overlap, and stop the AC and dehu fighting each other, reheat wars "
+        "Rooms tuned to fight for ±0.3 °C (±0.5 °F) burn energy purely on nervous equipment. Widen deadbands "
+        "to what the plants actually notice (±1 °C / ±1.8 °F is generous), make sure heating and cooling "
+        "setpoints can never overlap, and stop the AC and dehu fighting each other — reheat wars "
         "between two controllers are a classic silent kWh leak.")),
   ]})
 
@@ -358,8 +364,8 @@ SECTIONS.append({"id": "water", "kicker": "Water",
   "title": "Water-system energy use",
   "blocks": [
     p("Indoor cannabis is thirsty in a specific, recoverable way. Reported irrigation demand runs "
-      "around 9–11 litres per plant per day for mature indoor plants in peak season, and about 22.7 "
-      "L/day for outdoor plants at the height of summer" + _c("zheng2021-review") + ", though "
+      "around 9–11 L/plant/day (2.4–2.9 gal/plant/day) for mature indoor plants in peak season, and about 22.7 "
+      "L/day (6.0 gal/day) for outdoor plants at the height of summer" + _c("zheng2021-review") + ", though "
       "per-plant numbers vary so much with pot size, plant size and stage that the benchmarking "
       "bodies deliberately measure water per unit of canopy instead" + _c("rii-powerscore") + ". In "
       "drain-to-waste systems another 10–30% is pushed through deliberately as runoff to control "
@@ -367,7 +373,7 @@ SECTIONS.append({"id": "water", "kicker": "Water",
     p("Here is the part beginners miss: in a sealed room, <strong>almost every litre you irrigate "
       "ends up in the air</strong>, because the plant transpires the overwhelming majority of what "
       "it drinks. Your dehumidifier and AC coils then condense it back to liquid, a large flower-"
-      "room dehumidifier can yield around 270 litres a day, roughly 1,900 litres a week, of "
+      "room dehumidifier can yield around 270 L/day (71 gal/day), roughly 1,900 L/week (502 gal/week), of "
       "near-distilled condensate" + _c("cbt-condensate") + ". That is water you already paid to "
       "pump, treat, and then remove from the air at real electrical cost. Sending it down the drain "
       "is paying full price for a product and binning it at the door."),

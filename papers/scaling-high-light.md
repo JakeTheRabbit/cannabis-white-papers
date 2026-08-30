@@ -2,7 +2,7 @@
 slug: "scaling-high-light"
 title: "Scaling light to the limiting factor"
 eyebrow: "Advanced · Scaling to high light"
-summary: "Light sets the demand. CO₂, water, airflow, feed and heat-removal have to supply it. Your yield ceiling is whichever one tops out first, so size every system to the light, find the wall, and dial the light down to meet it."
+summary: "Light sets the demand; CO₂, water, airflow, feed, and heat-removal have to supply it. This paper shows you how to calculate which supply system runs out first, how to read that number as your real light ceiling, and what to upgrade if you want to go higher."
 track: "Environment & climate"
 read_time: "~16 min read"
 diagrams: "1 diagram · 5 tables"
@@ -21,7 +21,7 @@ refs: [{"id": "rm2021-light", "n": 1, "cite": "Rodriguez-Morrison V, Llewellyn D
 
 _Advanced · Scaling to high light · ~16 min read_
 
-> Light sets the demand. CO₂, water, airflow, feed and heat-removal have to supply it. Your yield ceiling is whichever one tops out first, so size every system to the light, find the wall, and dial the light down to meet it.
+> Light sets the demand; CO₂, water, airflow, feed, and heat-removal have to supply it. This paper shows you how to calculate which supply system runs out first, how to read that number as your real light ceiling, and what to upgrade if you want to go higher.
 
 ## Purpose and scope
 
@@ -51,9 +51,9 @@ Six terms carry the rest of the guide. If these are already second nature, skip 
 
 **Limiting factor** — The single input in shortest supply relative to demand. It, and only it, sets the growth rate. Every plan in this paper is a hunt for this one thing.
 
-**Sensible vs latent load** — Two kinds of heat your climate gear fights. **Sensible** is dry heat off the fixtures, the air-conditioner's job. **Latent** is heat locked in the water vapour the plants transpire, the dehumidifier's job. Light drives both.
+**Sensible vs latent load** — Your climate gear fights two kinds of heat at once. Picture a hot, humid summer day: the heat radiating off the pavement is sensible heat — dry warmth you can measure with a thermometer. The clammy, heavy feeling is latent heat, energy locked inside water vapour that does not register on a thermometer until the moisture condenses. **Sensible heat** comes off the fixtures as dry warmth; that is the air-conditioner's job. **Latent heat** leaves the room inside the water vapour the plants transpire; that is the dehumidifier's job. More light means more of both — the two bills grow together.
 
-**Mass flow** — Nutrients ride into the roots dissolved in the transpiration stream. Faster transpiration pulls more water, and more feed, through the plant, which is why [airflow](airflow-design.html), feed EC and light are all bolted together.
+**Mass flow** — Plants do not pump water upward the way a heart pumps blood. Water evaporates out of tiny pores on each leaf (the stomata), and that evaporation pulls a continuous thread of water up from the roots — the same way sucking on one end of a straw pulls liquid from the other end. The technical name for this movement is the **transpiration stream**. Nutrients dissolve into that stream at the root zone and ride it to the leaf. This is **mass flow**: nutrient delivery scales with how fast the plant transpires. Brighter light drives faster evaporation, which pulls more water, which carries more nutrient per day. That is why [airflow](airflow-design.html), feed EC and irrigation volume all have to rise together with light.
 
 ## Light-scaling sequence
 
@@ -76,11 +76,11 @@ The second table is the **water, feed and heat** side of the same row, what you 
 
 | Light (PPFD) | Transpiration (water out) | Irrigation (water in) | Feed EC | Light heat | Sensible cooling | Dehumidification |
 | --- | --- | --- | --- | --- | --- | --- |
-| 600 | 2.2 L/m²/d | 3.0 L/m²/d | 2.0–2.4 | 222 W/m² | 0.6 ton /10 m² | 4.7 pt/m²/d |
-| 800 | 3.0 L/m²/d | 4.0 L/m²/d | 2.4–2.8 | 296 W/m² | 0.8 ton /10 m² | 6.3 pt/m²/d |
-| 1000 | 3.7 L/m²/d | 4.9 L/m²/d | 2.8–3.2 | 370 W/m² | 1.1 ton /10 m² | 7.8 pt/m²/d |
-| 1200 | 4.4 L/m²/d | 5.9 L/m²/d | 3.2–3.6 | 444 W/m² | 1.3 ton /10 m² | 9.4 pt/m²/d |
-| 1500 | 5.6 L/m²/d | 7.4 L/m²/d | 2.4–3.2 (advanced: up to ~3.6) | 556 W/m² | 1.6 ton /10 m² | 11.7 pt/m²/d |
+| 600 | 2.2 L/m²/d | 3.0 L/m²/d | 2.0–2.4 | 222 W/m² | 2.1 kW /10 m² (0.6 ton) | 2.2 L/m²/d (4.7 pt) |
+| 800 | 3.0 L/m²/d | 4.0 L/m²/d | 2.4–2.8 | 296 W/m² | 2.8 kW /10 m² (0.8 ton) | 3.0 L/m²/d (6.3 pt) |
+| 1000 | 3.7 L/m²/d | 4.9 L/m²/d | 2.8–3.2 | 370 W/m² | 3.9 kW /10 m² (1.1 ton) | 3.7 L/m²/d (7.8 pt) |
+| 1200 | 4.4 L/m²/d | 5.9 L/m²/d | 3.2–3.6 | 444 W/m² | 4.6 kW /10 m² (1.3 ton) | 4.4 L/m²/d (9.4 pt) |
+| 1500 | 5.6 L/m²/d | 7.4 L/m²/d | 2.4–3.2 (advanced: up to ~3.6) | 556 W/m² | 5.6 kW /10 m² (1.6 ton) | 5.6 L/m²/d (11.7 pt) |
 | Rules used: transpiration ≈ PPFD × 0.0037 L/m²/d; irrigation = transpiration ÷ 0.75; light heat = PPFD ÷ 2.7; dehu load = transpiration (1 L ≈ 2.1 US pints)[^collado2025-light]. Heavy CO₂ trims transpiration a little at the top. On HPS or 2.0 µmol/J LED, add ~35% to every heat, cooling and airflow figure. |
 
 *Table 2 · Water, feed & heat-removal by light level (per m² of canopy, ~25% runoff, LED @ 2.7 µmol/J)*
@@ -93,16 +93,16 @@ Per-m² numbers are abstract, so put them in a real box. Take a **50 m² floweri
 
 | Light (PPFD) | Fixture load | Sensible cooling | Air-handler airflow | Dehumidification | Irrigation | CO₂ to hold |
 | --- | --- | --- | --- | --- | --- | --- |
-| 600 | 11.1 kW | 3.1 tons | ~1,250 CFM | 235 pt/day (111 L) | 148 L/day | ambient |
-| 800 | 14.8 kW | 4.2 tons | ~1,680 CFM | 313 pt/day (148 L) | 197 L/day | ~700 ppm |
-| 1000 | 18.5 kW | 5.3 tons | ~2,120 CFM | 391 pt/day (185 L) | 247 L/day | ~1000 ppm |
-| 1200 | 22.2 kW | 6.3 tons | ~2,520 CFM | 469 pt/day (222 L) | 296 L/day | ~1200 ppm |
-| 1500 | 27.8 kW | 7.9 tons | ~3,160 CFM | 587 pt/day (278 L) | 370 L/day | ~1400 ppm |
-| Sensible cooling covers the fixtures only, add the dehumidifier's reject heat and pumps in a sealed room. Air-handler airflow at ~400 CFM/ton is _separate_ from the in-canopy fans that keep 0.5–1.0 m/s moving through the leaves. First CO₂ charge of a sealed 150 m³ room to 1000 ppm is only ~90 L of gas; daily burn depends mostly on how well the room seals. |
+| 600 | 11.1 kW | 10.9 kW (3.1 ton) | ~2,100 m³/h (1,250 CFM) | 111 L/day (235 pt) | 148 L/day | ambient |
+| 800 | 14.8 kW | 14.8 kW (4.2 ton) | ~2,850 m³/h (1,680 CFM) | 148 L/day (313 pt) | 197 L/day | ~700 ppm |
+| 1000 | 18.5 kW | 18.6 kW (5.3 ton) | ~3,600 m³/h (2,120 CFM) | 185 L/day (391 pt) | 247 L/day | ~1000 ppm |
+| 1200 | 22.2 kW | 22.2 kW (6.3 ton) | ~4,280 m³/h (2,520 CFM) | 222 L/day (469 pt) | 296 L/day | ~1200 ppm |
+| 1500 | 27.8 kW | 27.8 kW (7.9 ton) | ~5,370 m³/h (3,160 CFM) | 278 L/day (587 pt) | 370 L/day | ~1400 ppm |
+| Sensible cooling covers the fixtures only, add the dehumidifier's reject heat and pumps in a sealed room. Air-handler airflow at ~680 m³/h per cooling ton (400 CFM/ton; 1 cooling ton = 3.5 kW) is _separate_ from the in-canopy fans that keep 0.5–1.0 m/s moving through the leaves. First CO₂ charge of a sealed 150 m³ room to 1000 ppm is only ~90 L of gas; daily burn depends mostly on how well the room seals. |
 
 *Table 3 · What a 50 m² canopy demands at each light level*
 
-Notice the last two columns between 1000 and 1500 µmol. The fixtures rise 50%, but dehumidification jumps from 391 to 587 pints a day, two grow dehumidifiers to three, and cooling goes from about five tons to eight. **The photons are the cheap part.** The tonnage and the pints are where the money and the failures live, and they are almost always what caps a real room before the lights do.
+Notice the last two columns between 1000 and 1500 µmol. The fixtures rise 50%, but dehumidification jumps from 185 L/day to 278 L/day (391 to 587 pints), two grow dehumidifiers to three, and cooling goes from about 18.6 kW to 27.8 kW (5.3 to 7.9 tons). **The photons are the cheap part.** The cooling load and the water removal are where the money and the failures live, and they are almost always what caps a real room before the lights do.
 
 ## EC management under high light
 
@@ -119,7 +119,7 @@ The feed column deserves its own look, because raising EC with light is the step
 
 *Table 4 · Feed EC and root-zone strategy by light level (managed substrate, clean source water)*
 
-There is a second reason EC and light move together: EC is also a [steering](one-steering-law.html) lever. A higher root-zone EC raises osmotic pressure and gently reins in water uptake, pushing the plant generative, useful in flower. So at high light you raise EC for two jobs at once: to feed the faster growth, and to hold generative balance against all that extra irrigation. The trap is raising EC to steer while forgetting volume has to rise too; starve the volume and the salts simply concentrate and burn.
+There is a second reason EC and light move together: EC is also a [steering](one-steering-law.html) lever. When you raise the salt concentration in the solution surrounding the roots, you make it harder for the roots to pull water in — a higher salt concentration outside the root resists inward flow the same way rubbing salt onto a cucumber slice draws the moisture out rather than letting it flow in. That resistance is **osmotic pressure**. A higher root-zone EC raises osmotic pressure and gently throttles water uptake, slowing vegetative growth and pushing the plant toward reproductive mode — useful in flower. So at high light you raise EC for two jobs at once: to feed the faster growth, and to hold generative balance against all that extra irrigation. The trap is raising EC to steer while forgetting volume has to rise too; starve the volume and the salts simply concentrate and burn.
 
 ## Identifying the limiting factor
 
@@ -128,8 +128,8 @@ Now the payoff. Every support system can sustain some maximum light level, a PPF
 | System | What you have | Its PPFD ceiling |
 | --- | --- | --- |
 | **CO₂** | Setpoint plus measured crop response | No fixed PPFD ceiling from setpoint alone; ambient CO₂ can support yield above 800 µmol, while enrichment may improve marginal efficiency at high PPFD |
-| **Cooling** | Installed sensible tons | PPFD ≤ 9,500 × tons ÷ m² |
-| **Dehumidification** | Rated pints/day | PPFD ≤ 128 × pints/day ÷ m² |
+| **Cooling** | Installed sensible kW | PPFD ≤ 2,700 × kW ÷ m² (or 9,500 × ton ÷ m²) |
+| **Dehumidification** | Rated L/day | PPFD ≤ 270 × L/day ÷ m² (or 128 × pints/day ÷ m²) |
 | **Irrigation** | Max deliverable L/day | PPFD ≤ 200 × L/day ÷ m² |
 | **Feed / EC** | Highest EC you can run | Match the EC to its rung in Table 4 |
 | **Airflow** | Canopy air movement | A _gate_, not a dial, see below |
@@ -137,7 +137,7 @@ Now the payoff. Every support system can sustain some maximum light level, a PPF
 
 *Table 5 · Turn each system into its PPFD ceiling (per m² of canopy)*
 
-Airflow is the odd one out on purpose. You can have 1500 ppm of CO₂ in the room and still starve the leaf if the [boundary layer](airflow-design.html), the film of still air on every leaf surface. Never gets stripped away. Dead air inside a dense canopy is a CO₂ ceiling you can't see on the room sensor. Treat airflow as a pass/fail gate you clear _before_ reading any other ceiling.
+Airflow is the odd one out on purpose. Every leaf is coated in a thin, still film of air — no matter how much CO₂ is circulating in the room, CO₂ can only reach the leaf's pores by diffusing through that film. Think of it like the still water layer right against the riverbed even when the current above is fast: the layer barely moves, and things have to diffuse across it slowly. The technical name is the **boundary layer**. Strip it thin with airflow and CO₂ moves freely into the stomata; let it sit thick and the plant sees close to ambient CO₂ even in a 1500-ppm room. You can have 1500 ppm of CO₂ in the room and still starve the leaf if the [boundary layer](airflow-design.html) never gets stripped away. Dead air inside a dense canopy is a CO₂ ceiling you can't see on the room sensor. Treat airflow as a pass/fail gate you clear _before_ reading any other ceiling.
 
 Run the six numbers, take the minimum, and you have found the wall. The diagram makes it concrete for a real room.
 
@@ -149,7 +149,7 @@ The same method, four common rooms. Each has plenty of everything except one thi
 
 > **NOTE — Case A · The dehumidifier is the wall most common**
 >
-> **The room:** 50 m², 6 tons of cooling, CO₂ to 1500 ppm, good fans, two 205-pint dehumidifiers (410 pints/day). **The math:** cooling ceiling 9,500×6÷50 = **1140**; dehu ceiling 128×410÷50 = **1050**; CO₂ ceiling **1500**. **The wall:** dehumidification, at ~1050 µmol. **The fix:** run the lights at 1050, _or_ add a third dehumidifier to unlock the 1140 the cooling already allows. Then cooling becomes the next wall.
+> **The room:** 50 m², 21 kW (6 ton) of cooling, CO₂ to 1500 ppm, good fans, two 97 L/day dehumidifiers (410 pints/day total, 194 L/day). **The math:** cooling ceiling 2,700×21.1÷50 ≈ **1140**; dehu ceiling 270×194÷50 ≈ **1050**; CO₂ ceiling **1500**. **The wall:** dehumidification, at ~1050 µmol. **The fix:** run the lights at 1050, _or_ add a third dehumidifier to unlock the 1140 the cooling already allows. Then cooling becomes the next wall.
 
 > **NOTE — Case B · The ambient-air ceiling cheap to fix**
 >
@@ -175,7 +175,7 @@ Once you know your lowest ceiling, you have exactly two honest moves.
 >
 > It isn't neutral. Excess light past your limiting factor bleaches and foxtails tops, drives leaf temp and VPD up, and, when the dehu is the wall, pushes humidity into [bud-rot](mould-risk.html) territory. You pay for the extra electricity _and_ lose quality. The dial-down is the rare free lunch.
 
-There is also an economic ceiling below the biological one. Yield keeps climbing toward 1500–1800 µmol[^rm2021-light], but the tons and pints needed to support the top rungs climb faster than the yield does. The last 300 µmol might cost a third dehumidifier and a bigger AC to buy a single-digit-percent bump. Find your _economic_ wall, where the next 100 µmol stops paying for its own climate gear. And it often sits a rung below what the plants could theoretically use.
+There is also an economic ceiling below the biological one. Yield keeps climbing toward 1500–1800 µmol[^rm2021-light], but the cooling load and water removal needed to support the top rungs climb faster than the yield does. The last 300 µmol might cost a third dehumidifier and a bigger AC to buy a single-digit-percent bump. Find your _economic_ wall, where the next 100 µmol stops paying for its own climate gear. And it often sits a rung below what the plants could theoretically use.
 
 ## Troubleshooting
 

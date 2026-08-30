@@ -7,9 +7,10 @@ import figs_lib as L
 SLUG = "harvest-dry-trim-cure"
 TITLE = "Harvest, dry, trim and cure"
 EYEBROW = "Post-harvest · Process"
-SUB = ("A beginner's guide to the full post-harvest process: when to cut, how to dry, "
-       "how to trim, and how to cure flower so it is safe from mould and keeps its smell, "
-       "weight and quality.")
+SUB = ("This paper covers every post-harvest step from cut plant to sealed, finished flower: "
+       "when to harvest, how to dry without losing terpenes or inviting mould, how to trim "
+       "without damaging trichomes, and how to cure to a stable water activity. After reading, "
+       "you will have target numbers at each step and a method you can repeat.")
 META = [("scissors", "Post-harvest"), ("image", "9 figures"),
         ("quote", "Evidence-linked · 4 sources"), ("clock", "~14 min read")]
 RELATED = ["mould-risk", "airflow-design", "nutrient-mixing-athena"]
@@ -107,7 +108,7 @@ SECTIONS.append({"id": "harvest-method", "kicker": "Step 2, hands on", "title": 
     steps([
       ("Free the plant", "Cut a circle through the bottom and middle trellis layers. Leave the top layer attached for support."),
       ("Cut the stalk", "Sever the main stalk at its base so the whole plant comes away in one piece."),
-      ("Load the bin", "Place 7-10 whole plants per 55-gallon bin. Do not overfill or you bruise the flower."),
+      ("Load the bin", "Place 7-10 whole plants per 208 L (55 gal) bin. Do not overfill or you bruise the flower."),
       ("Weigh wet", "Tare the bin first, then weigh it to capture wet weight, the baseline for all yield tracking."),
     ]),
     figure(L.bars("How much of a fresh plant is water",
@@ -119,7 +120,7 @@ SECTIONS.append({"id": "harvest-method", "kicker": "Step 2, hands on", "title": 
 
 SECTIONS.append({"id": "drying", "kicker": "The core science", "title": "Drying environment",
   "blocks": [
-    p("Hold the dry room at 60&deg;F and 60% RH, with fans running and the lights off, in a room "
+    p("Hold the dry room at 16 °C (60 °F) and 60% RH, with fans running and the lights off, in a room "
       "that was deep-cleaned before any plant went in. At these setpoints whole plants are typically "
       "ready in 10-14 days." + _c("aroya-drying-water-activity-guide")),
     p("Going slow and cool protects the terpenes, which evaporate in heat and dry air, and it stops "
@@ -127,7 +128,7 @@ SECTIONS.append({"id": "drying", "kicker": "The core science", "title": "Drying 
       "mould. Keep the light off because it degrades cannabinoids and terpenes over time." + _c("fairbairn-1976-light-stability") +
       " Different cultivars even reward slightly different drying approaches, so the setpoints are a "
       "strong default, not a law." + _c("birenboim-2024-cultivar-drying")),
-    ul(["Setpoints: 60&deg;F, 60% RH, fans on, lights off, doors closed. Minimise foot traffic so the environment stays stable",
+    ul(["Setpoints: 16 °C (60 °F), 60% RH, fans on, lights off, doors closed. Minimise foot traffic so the environment stays stable",
         "Whole-plant drying takes about 10-14 days at these setpoints",
         "If the room runs above 60% RH and dehumidification is undersized, exhaust fans can pull humidity down",
         "Keep racks evenly spaced so air reaches every plant and buds dry uniformly. A deep clean precedes every load"]),
@@ -143,8 +144,11 @@ SECTIONS.append({"id": "drying", "kicker": "The core science", "title": "Drying 
 
 SECTIONS.append({"id": "water-activity", "kicker": "The core science", "title": "Water activity",
   "blocks": [
-    p("Water activity is the safe-zone gauge for cannabis. Mould and yeast can grow at 0.70 aw and "
-      "above, pathogenic bacteria at 0.85, and risk rises sharply toward ~0.70 aw and above; below ~0.55 quality often suffers even as microbes slow. ASTM&rsquo;s 0.55&ndash;0.65 window is the practical target for dried flower." + _c("aqualab-microbial-water-activity") +
+    p("After the hang-dry, the flower still contains some moisture—but not all moisture is equally dangerous. "
+      "Think of a squeezed sponge sitting in a closed drawer: the water trapped deep in the fibres is harmless; "
+      "the free surface water is what microbes actually feed on. Water activity (aw) measures how available that "
+      "remaining moisture is to microbes, on a 0 to 1.00 scale. Mould and yeast can grow at 0.70 aw and "
+      "above, pathogenic bacteria at 0.85, and risk rises sharply near that threshold; below ~0.55 aw, quality often suffers even as microbes slow. ASTM&rsquo;s 0.55&ndash;0.65 window is the practical target for dried flower." + _c("aqualab-microbial-water-activity") +
       " That sets the ceiling. Quality sets the floor: below 0.55 aw the terpenes dry up and quality "
       "falls off."),
     p("Together that leaves a sweet spot of 0.55-0.65 aw, the exact range written into the "
@@ -178,7 +182,7 @@ SECTIONS.append({"id": "trimming", "kicker": "Step 3, hands on", "title": "Trimm
       "retention." + _c("brikenstein-2024-trimming")),
     p("Never touch the flower itself. Handling knocks off the trichomes that "
       "carry potency and smell, leaving buds looking shaved and dull. To dry-trim, take plants down, "
-      "cut them into 8-12 inch sections, remove the large fan leaves by hand, then scissor off the "
+      "cut them into 20–30 cm (8–12 in) sections, remove the large fan leaves by hand, then scissor off the "
       "smaller sugar leaves, swapping scissors into 71% alcohol as resin builds up."),
     ul(["<strong>Buck</strong> = cut the finished buds off the stem. Do this into a sealed bag so the flower does not over-dry in open air",
         "Never touch the flower. Handling damages trichomes",
@@ -197,7 +201,7 @@ SECTIONS.append({"id": "trimming", "kicker": "Step 3, hands on", "title": "Trimm
 SECTIONS.append({"id": "curing", "kicker": "The core science", "title": "Curing and storage",
   "blocks": [
     p("Curing lets the whole batch settle to one even water activity, and preserves terpenes that "
-      "would otherwise break down in storage. Hold flower in containers at 60-65&deg;F and "
+      "would otherwise break down in storage. Hold flower in containers at 16–18 °C (60–65 °F) and "
       "58-62% RH. Read a humidity sensor, and <strong>burp</strong> any bin reading above about "
       "60% RH: lid off for 5-10 minutes, then rotate the barrel "
       "and log the reading."),
@@ -232,7 +236,7 @@ SECTIONS.append({"id": "pitfalls", "kicker": "What goes wrong", "title": "Troubl
       "mould-risk. Water activity closes that gap to a fraction of a point." + _c("astm-d8197-water-activity")),
     table(["Mistake", "What happens", "Fix"], [
       ["Over-drying below 0.55 aw", "Terpenes evaporate, smell fades, water weight lost", "Take down at 0.60-0.62 aw, stop curing at 0.58-0.60 aw"],
-      ["Drying too hot / fast", "Outside dries while inside stays wet, trapping mould", "Hold 60&deg;F / 60% RH and let it take 10-14 days"],
+      ["Drying too hot / fast", "Outside dries while inside stays wet, trapping mould", "Hold 16 °C (60 °F) / 60% RH and let it take 10-14 days"],
       ["Trusting a cheap moisture meter", "&plusmn;1% spans 0.53-0.66 aw, too dry to mouldy", "Use water-activity testing to decide done"],
       ["Overfilling containers", "Crushed buds, trapped moisture", "Fill totes/barrels no more than ~2/3, curing barrels no more than half"],
       ["Touching the flower / skipping the deep clean", "Knocked-off trichomes, contamination", "Handle by stem only, deep-clean before every load"],

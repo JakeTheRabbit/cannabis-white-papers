@@ -63,6 +63,14 @@ for _genmod in ("data.glossary_gen", "data.glossary_gen4", "data.glossary_gen5",
     except Exception:
         pass
 
+# Stamp each term with the paper slug that teaches it (None when no paper does).
+try:
+    from data.glossary_slugs import TERM_SLUGS
+except Exception:
+    TERM_SLUGS = {}
+for _g in GLOSSARY:
+    _g["slug"] = TERM_SLUGS.get(_g["term"])
+
 def by_letter():
     buckets = {}
     for g in sorted(GLOSSARY, key=lambda x: x["term"].lower()):

@@ -9,9 +9,10 @@ _FIGS = json.load(open(os.path.join(os.path.dirname(__file__), "figs_veg_managem
 SLUG = "veg-management"
 TITLE = "Vegetative management: build the frame, then flip"
 EYEBROW = "Veg · Timing"
-SUB = ("Veg is not the waiting room before the real grow. It is where plant count, pot size and "
-       "canopy plan get converted into a number of days, and where almost every week-3-of-flower "
-       "problem is either prevented or booked in.")
+SUB = ("This paper shows you how to calculate the right veg length for your room — from plant count, "
+       "pot size and canopy area — and explains why almost every week-3 flower problem is either "
+       "prevented or locked in during veg. By the end you will have the decision chain to set a "
+       "flip day from a spec, not a guess.")
 META = [("leaf", "Vegetative"), ("image", "11 diagrams"),
         ("quote", "Evidence-linked · 14 sources"), ("clock", "~14 min read")]
 RELATED = ["defoliation-training", "light-acclimation"]
@@ -111,11 +112,11 @@ SECTIONS.append({"id": "what-veg-is-for", "kicker": "The why", "title": "Vegetat
       "frame, more to carry" + _c("schober-2024-veg-duration-density") + ". The catch: per-plant "
       "is not the same metric as per-room."),
     p("Here is the twist that makes veg length a real decision instead of 'more is better': "
-      "<strong>the room doesn't pay you per plant, it pays you per square metre.</strong> A full "
-      "canopy of many small plants and a full canopy of a few big plants intercept roughly the "
-      "same light. In trial data, packing plants tighter cuts yield per plant while yield per "
+      "<strong>the room doesn't pay you per plant, it pays you per square metre (sq ft).</strong> "
+      "A full canopy of many small plants and a full canopy of a few big plants intercept roughly "
+      "the same light. In trial data, packing plants tighter cuts yield per plant while yield per "
       "area holds or climbs" + _c("danziger-2022-planting-density") + ", and across studies plant "
-      "density is a poor predictor of yield per m&sup2;" + _c("backer-2019-yield-gap") + ". "
+      "density is a poor predictor of yield per m&sup2; (ft&sup2;)" + _c("backer-2019-yield-gap") + ". "
       "Meta-analysis of photoperiod-switch timing points the same way: at fixed area, short veg "
       "periods maximise floral output per unit time, because the canopy refills faster with more, "
       "smaller frames" + _c("dang-2022-photoperiod-switch-meta") + "."),
@@ -138,11 +139,11 @@ SECTIONS.append({"id": "veg-duration", "kicker": "The core decision", "title": "
       ("Fix the plant count",
        "Licence condition, tag budget, risk appetite or plan, whatever binds first. This is "
        "usually the least negotiable number in the room."),
-      ("Measure the canopy", "Bench or tray area you intend to fill wall-to-wall, in m&sup2;. "
-       "Divide by plant count: that is each plant's share. The frame it must build."),
+      ("Measure the canopy", "Bench or tray area you intend to fill wall-to-wall, in m&sup2; "
+       "(ft&sup2;). Divide by plant count: that is each plant's share. The frame it must build."),
       ("Match the pot to the frame", "A root zone can only carry so much plant. Small shares run "
-       "in 4-6 L; half-metre shares want 10-30 L; full-metre trees want 30 L+ or beds (next "
-       "section for why)."),
+       "in 4–6 L (1.1–1.6 gal); half-square-metre shares want 10–30 L (2.6–7.9 gal); "
+       "full-square-metre trees want 30 L+ (7.9 gal+) or beds (next section for why)."),
       ("Pick the training that makes the shape", "Untopped single colas for small shares; one "
        "topping round plus tie-downs for standard shares; staged topping rounds for trees. See "
        "<a href='defoliation-training.html'>defoliation &amp; training</a>."),
@@ -170,14 +171,19 @@ SECTIONS.append({"id": "veg-duration", "kicker": "The core decision", "title": "
   ]})
 
 # ---------------------------------------------------------------- 5 · pot size
-SECTIONS.append({"id": "pot-size", "kicker": "The clock inside the pot", "title": "Pot size and vegetative duration",
+SECTIONS.append({"id": "pot-size", "kicker": "Container size sets the veg window", "title": "Pot size and vegetative duration",
   "blocks": [
-    p("Roots are the half of the frame you can't see, and they cap everything. A meta-analysis of "
-      "65 container studies found that, on average, <strong>doubling root-zone volume increased "
-      "plant biomass by ~43%</strong>, and that cramped roots throttle growth mainly by "
-      "cutting photosynthesis per unit leaf area, not just by limiting water" +
-      _c("poorter-2012-pot-size") + ". A root-bound plant is a solar array running at part load: "
-      "it looks leafy, it just quietly stops producing."),
+    p("Roots are the half of the frame you can't see, and they cap everything. Each leaf works "
+      "like a kitchen in reverse: instead of burning fuel to produce heat, it uses captured light "
+      "to manufacture sugar. That process is called photosynthesis, and it is what powers every "
+      "gram of new tissue the plant adds. When the root zone runs out of room, that manufacturing "
+      "line is the first thing to slow — the leaf still looks green but it processes less. "
+      "A meta-analysis of 65 container studies found that, on average, <strong>doubling root-zone "
+      "volume increased plant biomass by ~43%</strong>, and that cramped roots throttle growth "
+      "mainly by cutting photosynthesis per unit leaf area, not just by limiting water" +
+      _c("poorter-2012-pot-size") + ". A root-bound plant is like a thermostat stuck at a lower "
+      "setting: from the outside the plant looks fine, but the growth rate has been quietly "
+      "throttled."),
     figure(L.bars("Double the root volume, roughly +43% plant",
             [("Pot volume V", 100), ("Pot volume 2V", 143)],
             unit="%", maxv=160,
@@ -216,14 +222,15 @@ SECTIONS.append({"id": "stretch", "kicker": "Height planning", "title": "Plannin
       "&times; 1.5-2 for most plants you'll run. And you must budget for it before you "
       "flip, because you cannot un-stretch a plant into a fixed ceiling."),
     p("The arithmetic is three lines. Take the room height, subtract the fixture, its hang gap and "
-      "the clearance the canopy needs below it (commonly ~60-90 cm all-in for LED, more for HPS), "
-      "subtract pot-plus-bench height (~30 cm). What's left is <strong>usable plant height "
-      "H</strong>. Divide H by your cultivar's stretch multiplier: that is your <strong>maximum "
-      "flip height</strong>. Unknown cultivar? Assume &times;2 &mdash; the industry default of "
-      "'flip at half your available height'" + _c("gwe-flowering-stretch") + "."),
+      "the clearance the canopy needs below it (commonly ~60–90 cm (24–35 in) all-in for LED, "
+      "more for HPS), subtract pot-plus-bench height (~30 cm (12 in)). What's left is "
+      "<strong>usable plant height H</strong>. Divide H by your cultivar's stretch multiplier: "
+      "that is your <strong>maximum flip height</strong>. Unknown cultivar? Assume &times;2 "
+      "&mdash; the industry default of 'flip at half your available height'" +
+      _c("gwe-flowering-stretch") + "."),
     figure(_FIGS["stretch"], 5,
       "Work backwards: ceiling minus fixture stack minus bench gives usable height H; H divided "
-      "by the stretch multiplier gives max flip height. The same 45 cm flip is safe at "
+      "by the stretch multiplier gives max flip height. The same 45 cm (18 in) flip is safe at "
       "&times;1.5-2.0 and in the fixture at &times;2.5."),
     table(["Cultivar type", "Typical multiplier", "Max flip height (H = 100 cm)"], [
       ["Compact / indica-leaning", "&times;1.5", "&le;65 cm"],
@@ -319,7 +326,15 @@ SECTIONS.append({"id": "environment", "kicker": "Targets with sources", "title":
   "blocks": [
     p("Veg wants a slightly warmer, wetter, gentler room than flower: the plant is all leaf, "
       "shallow-rooted early on, and building tissue rather than ripening it. The table gives "
-      "working bands; the two figures below unpack the ones people argue about."),
+      "working bands; the two figures below unpack the ones people argue about. One row — VPD — "
+      "needs a brief introduction before you hit the numbers. At any given temperature, air can "
+      "hold only so much water vapour. The gap between what the air actually holds and its "
+      "maximum is how hungry that air is for moisture right now. Picture a wet sponge left on a "
+      "warm counter: on a dry day it dries in an hour; on a humid day it stays damp for hours. "
+      "The plant leaf is the sponge. Vapour-pressure deficit (VPD, measured in kPa) is that gap "
+      "— the bigger the number, the harder the air pulls on the leaf. The target steps from "
+      "around 0.8 kPa early in veg up to 1.0–1.3 kPa as the plant matures; the table below "
+      "carries the full context."),
     table(["Parameter", "Early veg (fresh transplant)", "Late veg (pre-flip)", "Basis"], [
       ["Air temp, lights on", "25-28 &deg;C", "25-30 &deg;C",
        "Cannabis leaf photosynthesis peaks around 25-30 &deg;C" + _c("chandra2008-photo") +
@@ -400,7 +415,7 @@ SECTIONS.append({"id": "nutrition", "kicker": "Feeding the build", "title": "Veg
   ]})
 
 # ---------------------------------------------------------------- 11 · root zone
-SECTIONS.append({"id": "rootzone", "kicker": "Below the deck", "title": "Root-zone establishment before flowering",
+SECTIONS.append({"id": "rootzone", "kicker": "Root zone before the flip", "title": "Root-zone establishment before flowering",
   "blocks": [
     p("The fastest way to lose a week of veg is to drown a fresh transplant. A just-potted plant "
       "has a small root ball in a large, wet volume: keep that volume saturated and the roots "
@@ -410,24 +425,29 @@ SECTIONS.append({"id": "rootzone", "kicker": "Below the deck", "title": "Root-zo
       "water content in blocks) that stall young roots" + _c("grodan-growguide-steering") + ". "
       "The rhythm is: wet enough to live, dry enough that roots keep chasing the water down and "
       "out."),
-    p("By flip day the root zone, not the calendar, is the report card. Three checks: roots "
-      "visible at the container walls and drain holes (or slab face); a <em>predictable</em> "
-      "overnight dryback, the pot measurably lighter or the sensor showing a repeatable "
-      "morning dip; and irrigation demand trending up day over day. That established, exploring "
-      "root system is what funds the stretch, when water and nutrient demand roughly doubles in "
+    p("By flip day the root zone, not the calendar, is the report card. Overnight dryback is "
+      "the drop in substrate moisture between your last irrigation shot and first light the next "
+      "morning — roots keep pulling water through the dark hours, so the pot gets measurably "
+      "lighter by dawn. Think of a sponge left after washing dishes: it keeps releasing water "
+      "long after you put it down. When that overnight dip repeats reliably, two or three "
+      "nights running, the roots are established and actively exploring. Three checks confirm "
+      "they are ready: roots visible at the container walls and drain holes (or slab face); a "
+      "<em>predictable</em> overnight dryback, the sensor showing the same morning dip each "
+      "day; and irrigation demand trending up day over day. That established, exploring root "
+      "system is what funds the stretch, when water and nutrient demand roughly doubles in "
       "three weeks. Flip before it exists and the stretch stalls; flip long after and you're "
       "root-bound (section above)."),
     figure(_FIGS["timeline"], 10,
-      "An indicative 18-day clone-to-flip block for a topped plant in 10-11 L: root-in, top, "
-      "recover, level, then a gate. SOG compresses the same shape to ~7-10 days; trees stretch it "
-      "to 5-8 weeks. The gate decides the flip, the calendar just forecasts it."),
+      "An indicative 18-day clone-to-flip block for a topped plant in 10–11 L (2.6–2.9 gal): "
+      "root-in, top, recover, level, then a gate. SOG compresses the same shape to ~7–10 days; "
+      "trees stretch it to 5–8 weeks. The gate decides the flip, the calendar just forecasts it."),
     steps([
       ("Roots at the walls", "White roots at the pot walls/drain holes or wrapping the block "
        "face; daily water demand trending up."),
       ("Height under the line", "Tallest top at or below max flip height (usable height &divide; "
        "stretch multiplier)."),
-      ("Canopy level and full", "Tops within ~10 cm of each other; ~80-90% of each plant's canopy "
-       "share filled; net on."),
+      ("Canopy level and full", "Tops within ~10 cm (4 in) of each other; ~80-90% of each plant's "
+       "canopy share filled; net on."),
       ("Cuts recovered", "Last topping &ge;10-14 days ago; leaders even; no fresh major wounds "
        "going into stretch" + _c("rqs-topping-guide") + "."),
       ("Fed and green", "No active deficiency; feed at late-veg EC; plant an even mid-green with "
@@ -440,7 +460,7 @@ SECTIONS.append({"id": "rootzone", "kicker": "Below the deck", "title": "Root-zo
   ]})
 
 # ---------------------------------------------------------------- 12 · economics
-SECTIONS.append({"id": "economics", "kicker": "The business of days", "title": "Vegetative duration economics",
+SECTIONS.append({"id": "economics", "kicker": "Veg length and room economics", "title": "Vegetative duration economics",
   "blocks": [
     p("Flower length is written in the genetics, call it 56-63 days and largely "
       "untouchable. Veg length is therefore <em>the</em> schedule lever you own, and it trades "
@@ -464,9 +484,9 @@ SECTIONS.append({"id": "economics", "kicker": "The business of days", "title": "
       _c("dang-2022-photoperiod-switch-meta") + "."),
     p("<strong>Veg length also has to fit your veg room.</strong> At steady state, a flower room "
       "flipping a new cohort every N weeks needs the veg area to hold each cohort for the full "
-      "veg length. The longer the veg, the more cohorts stack up on the veg benches at once"
-      ", long-veg strategies quietly demand a bigger veg room, more veg light, and more "
-      "weeks of exposure to a veg-room pest outbreak. Cheap per m&sup2;, but not free."),
+      "veg length. The longer the veg, the more cohorts stack up on the veg benches at once — "
+      "long-veg strategies quietly demand a bigger veg room, more veg light, and more "
+      "weeks of exposure to a veg-room pest outbreak. Cheap per m&sup2; (ft&sup2;), but not free."),
     kv([
       ("Flower block", "56-63 days, fixed by genetics, not negotiable"),
       ("Veg ~10 days", "&asymp;5 turns/yr &middot; most plants and tags &middot; least per-plant risk exposure"),

@@ -2,7 +2,7 @@
 slug: "harvest-dry-trim-cure"
 title: "Harvest, dry, trim and cure"
 eyebrow: "Post-harvest · Process"
-summary: "A beginner's guide to the full post-harvest process: when to cut, how to dry, how to trim, and how to cure flower so it is safe from mould and keeps its smell, weight and quality."
+summary: "This paper covers every post-harvest step from cut plant to sealed, finished flower: when to harvest, how to dry without losing terpenes or inviting mould, how to trim without damaging trichomes, and how to cure to a stable water activity. After reading, you will have target numbers at each step and a method you can repeat."
 track: "Harvest, dry, trim & cure"
 read_time: "~14 min read"
 diagrams: ""
@@ -21,7 +21,7 @@ refs: [{"id": "punja-2023-trichome-maturation", "n": 1, "cite": "Punja, Z.K., Su
 
 _Post-harvest · Process · ~14 min read_
 
-> A beginner's guide to the full post-harvest process: when to cut, how to dry, how to trim, and how to cure flower so it is safe from mould and keeps its smell, weight and quality.
+> This paper covers every post-harvest step from cut plant to sealed, finished flower: when to harvest, how to dry without losing terpenes or inviting mould, how to trim without damaging trichomes, and how to cure to a stable water activity. After reading, you will have target numbers at each step and a method you can repeat.
 
 ## Purpose and scope
 
@@ -78,18 +78,18 @@ Before anything is hung, weigh every bin to record the **wet weight**, the start
 
 1. **Free the plant** — Cut a circle through the bottom and middle trellis layers. Leave the top layer attached for support.
 2. **Cut the stalk** — Sever the main stalk at its base so the whole plant comes away in one piece.
-3. **Load the bin** — Place 7-10 whole plants per 55-gallon bin. Do not overfill or you bruise the flower.
+3. **Load the bin** — Place 7-10 whole plants per 208 L (55 gal) bin. Do not overfill or you bruise the flower.
 4. **Weigh wet** — Tare the bin first, then weigh it to capture wet weight, the baseline for all yield tracking.
 
 > **Diagram.** Roughly nine-tenths of a freshly cut plant's weight is water that must leave during drying. Whole-plant hanging slows that loss and lets moisture move out of the stem evenly.
 
 ## Drying environment
 
-Hold the dry room at 60°F and 60% RH, with fans running and the lights off, in a room that was deep-cleaned before any plant went in. At these setpoints whole plants are typically ready in 10-14 days.[^aroya-drying-water-activity-guide]
+Hold the dry room at 16 °C (60 °F) and 60% RH, with fans running and the lights off, in a room that was deep-cleaned before any plant went in. At these setpoints whole plants are typically ready in 10-14 days.[^aroya-drying-water-activity-guide]
 
 Going slow and cool protects the terpenes, which evaporate in heat and dry air, and it stops the outside of the bud drying while the inside stays wet, the classic recipe for hidden mould. Keep the light off because it degrades cannabinoids and terpenes over time.[^fairbairn-1976-light-stability] Different cultivars even reward slightly different drying approaches, so the setpoints are a strong default, not a law.[^birenboim-2024-cultivar-drying]
 
-- Setpoints: 60°F, 60% RH, fans on, lights off, doors closed. Minimise foot traffic so the environment stays stable
+- Setpoints: 16 °C (60 °F), 60% RH, fans on, lights off, doors closed. Minimise foot traffic so the environment stays stable
 - Whole-plant drying takes about 10-14 days at these setpoints
 - If the room runs above 60% RH and dehumidification is undersized, exhaust fans can pull humidity down
 - Keep racks evenly spaced so air reaches every plant and buds dry uniformly. A deep clean precedes every load
@@ -98,7 +98,7 @@ Going slow and cool protects the terpenes, which evaporate in heat and dry air, 
 
 ## Water activity
 
-Water activity is the safe-zone gauge for cannabis. Mould and yeast can grow at 0.70 aw and above, pathogenic bacteria at 0.85, and risk rises sharply toward ~0.70 aw and above; below ~0.55 quality often suffers even as microbes slow. ASTM’s 0.55–0.65 window is the practical target for dried flower.[^aqualab-microbial-water-activity] That sets the ceiling. Quality sets the floor: below 0.55 aw the terpenes dry up and quality falls off.
+After the hang-dry, the flower still contains some moisture—but not all moisture is equally dangerous. Think of a squeezed sponge sitting in a closed drawer: the water trapped deep in the fibres is harmless; the free surface water is what microbes actually feed on. Water activity (aw) measures how available that remaining moisture is to microbes, on a 0 to 1.00 scale. Mould and yeast can grow at 0.70 aw and above, pathogenic bacteria at 0.85, and risk rises sharply near that threshold; below ~0.55 aw, quality often suffers even as microbes slow. ASTM’s 0.55–0.65 window is the practical target for dried flower.[^aqualab-microbial-water-activity] That sets the ceiling. Quality sets the floor: below 0.55 aw the terpenes dry up and quality falls off.
 
 Together that leaves a sweet spot of 0.55-0.65 aw, the exact range written into the ASTM D8197 standard for dry cannabis flower.[^astm-d8197-water-activity] Start sample testing around day 7-8, and take plants down when the batch averages 0.60-0.62 aw, leaving a safety margin below the 0.65 mould line.
 
@@ -116,7 +116,7 @@ Together that leaves a sweet spot of 0.55-0.65 aw, the exact range written into 
 
 Trimming removes leaf so the bud looks clean and presentable. There are two timings. **Wet trim** means trimming right after cutting, before drying. **Dry trim** means trimming after the hang-dry. Dry trimming slows the dry and is gentler on the aromatic oils, which is why many operations choose it for better terpene retention.[^brikenstein-2024-trimming]
 
-Never touch the flower itself. Handling knocks off the trichomes that carry potency and smell, leaving buds looking shaved and dull. To dry-trim, take plants down, cut them into 8-12 inch sections, remove the large fan leaves by hand, then scissor off the smaller sugar leaves, swapping scissors into 71% alcohol as resin builds up.
+Never touch the flower itself. Handling knocks off the trichomes that carry potency and smell, leaving buds looking shaved and dull. To dry-trim, take plants down, cut them into 20–30 cm (8–12 in) sections, remove the large fan leaves by hand, then scissor off the smaller sugar leaves, swapping scissors into 71% alcohol as resin builds up.
 
 - **Buck** = cut the finished buds off the stem. Do this into a sealed bag so the flower does not over-dry in open air
 - Never touch the flower. Handling damages trichomes
@@ -136,7 +136,7 @@ Never touch the flower itself. Handling knocks off the trichomes that carry pote
 
 ## Curing and storage
 
-Curing lets the whole batch settle to one even water activity, and preserves terpenes that would otherwise break down in storage. Hold flower in containers at 60-65°F and 58-62% RH. Read a humidity sensor, and **burp** any bin reading above about 60% RH: lid off for 5-10 minutes, then rotate the barrel and log the reading.
+Curing lets the whole batch settle to one even water activity, and preserves terpenes that would otherwise break down in storage. Hold flower in containers at 16–18 °C (60–65 °F) and 58-62% RH. Read a humidity sensor, and **burp** any bin reading above about 60% RH: lid off for 5-10 minutes, then rotate the barrel and log the reading.
 
 Once the trimmed flower sits at 0.58-0.60 aw, it is finished: seal it and stop burping. Further burping just evaporates terpenes (lost smell) and water (lost sellable weight). Curing also keeps cannabinoids more stable by keeping the product cool and dark, the same conditions that slow degradation during storage.[^fairbairn-1976-light-stability]
 
@@ -155,7 +155,7 @@ Most post-harvest failures are variations on going too fast, too dry, or too cro
 | Mistake | What happens | Fix |
 | --- | --- | --- |
 | Over-drying below 0.55 aw | Terpenes evaporate, smell fades, water weight lost | Take down at 0.60-0.62 aw, stop curing at 0.58-0.60 aw |
-| Drying too hot / fast | Outside dries while inside stays wet, trapping mould | Hold 60°F / 60% RH and let it take 10-14 days |
+| Drying too hot / fast | Outside dries while inside stays wet, trapping mould | Hold 16 °C (60 °F) / 60% RH and let it take 10-14 days |
 | Trusting a cheap moisture meter | ±1% spans 0.53-0.66 aw, too dry to mouldy | Use water-activity testing to decide done |
 | Overfilling containers | Crushed buds, trapped moisture | Fill totes/barrels no more than ~2/3, curing barrels no more than half |
 | Touching the flower / skipping the deep clean | Knocked-off trichomes, contamination | Handle by stem only, deep-clean before every load |

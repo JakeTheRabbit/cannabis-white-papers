@@ -11,7 +11,7 @@ SLUG = "unit-economics"
 TITLE = "Yield per watt and the cost of a gram"
 EYEBROW = "Facility · Economics"
 SUB = ("The three yield denominators (g/m² of canopy, g/W of light, g/kWh all-in) what each is "
-       "actually for, what each hides, and a worked cost stack that turns a fictional 100 m² room "
+       "actually for, what each hides, and a worked cost stack that turns a fictional 100 m² (1,076 ft²) room "
        "into a cost per gram you can argue with. Every number cited or derived in front of you.")
 META = [("gauge", "Economics"), ("image", "11 diagrams"),
         ("quote", "Evidence-linked · 14 sources"), ("clock", "~22 min read")]
@@ -49,10 +49,10 @@ SECTIONS.append({"id": "start-here", "kicker": "01 · Read this first", "title":
       ", were built for other arguments. They are agronomy metrics and forum-bragging metrics, and they "
       "each quietly delete part of the bill. This paper walks through the three common denominators and "
       "what each is actually for, hedges the published benchmarks hard (because they deserve it), then "
-      "builds a complete cost stack for a fictional 100 m² room with every step of the arithmetic shown. "
+      "builds a complete cost stack for a fictional 100 m² (1,076 ft²) room with every step of the arithmetic shown. "
       "From there: labour (the cost line that sneaks up on almost everyone), cycles per year (the hidden "
       "multiplier), quality tiers, a sensitivity tornado, and break-even thinking."),
-    p("Beginner-first, as always. If you can divide two numbers, you can follow all of it, the entire "
+    p("If you can divide two numbers, you can follow all of it, the entire "
       "discipline of unit economics is choosing <em>which</em> two numbers to divide."),
   ]})
 
@@ -193,7 +193,7 @@ SECTIONS.append({"id": "benchmarks", "kicker": "05 · Benchmarks", "title": "Pub
   ]})
 
 # ---------------------------------------------------------------- 06 g/W autopsy
-SECTIONS.append({"id": "gram-per-watt", "kicker": "06 · The aging metric", "title": "Grams per watt as a legacy lighting metric",
+SECTIONS.append({"id": "gram-per-watt", "kicker": "06 · g/W as a dated metric", "title": "Grams per watt as a legacy lighting metric",
   "blocks": [
     lead("‘A gram a watt’ was a useful rule of thumb when every serious room ran the same "
          "lamp. Under LED it has quietly become a measure of <em>when you bought your fixtures</em>, "
@@ -275,7 +275,7 @@ SECTIONS.append({"id": "worked-example", "kicker": "08 · The worked example", "
       p("Everything below is a <strong>made-up room with stated assumptions</strong>, chosen to be "
         "plausible and to divide cleanly. It is not any real facility's numbers and not a target. The "
         "point is the <em>method</em>: swap in your own values line by line and the arithmetic carries.")),
-    kv([("Flowering canopy", "100 m² (≈250 m² gross floor, 40% canopy ratio)"),
+    kv([("Flowering canopy", "100 m² (1,076 ft²) — ≈250 m² (2,691 ft²) gross floor — 40% canopy ratio"),
         ("Lighting", "LED, 2.6 µmol/J, 350 W per m² of canopy → 35 kW installed"),
         ("Photoperiod / flower", "12 h · 56 days in flower"),
         ("Turn time", "7 days (harvest-out, clean, reset, flip)"),
@@ -335,7 +335,7 @@ SECTIONS.append({"id": "worked-example", "kicker": "08 · The worked example", "
   ]})
 
 # ---------------------------------------------------------------- 09 labour
-SECTIONS.append({"id": "labour", "kicker": "09 · The sneaky #1", "title": "Labour costs",
+SECTIONS.append({"id": "labour", "kicker": "09 · Labour costs in detail", "title": "Labour costs",
   "blocks": [
     lead("Ask a new grower what indoor production costs and they'll talk about power. The fictional "
          "room's power bill is $0.23 a gram. Its people are $0.77 — the largest line by a factor of "
@@ -343,7 +343,7 @@ SECTIONS.append({"id": "labour", "kicker": "09 · The sneaky #1", "title": "Labo
     p("Start with the honest division: $200,000 of payroll over 261 kg is <strong>$766 per kg</strong>. "
       "At a loaded $25/hour that's ≈31 hours of paid time per finished kilogram. Where does it go? "
       "Mostly one place: <strong>hand trimming</strong>. Industry throughput for a hand trimmer is "
-      "roughly 1–3 lb (0.45–1.4 kg) of dried flower per 8-hour shift, at $15–20/hour or "
+      "roughly 0.45–1.4 kg (1–3 lb) of dried flower per 8-hour shift, at $15–20/hour or "
       "$100–200 per shift piece-rate" + _c("triminator-industrial") + ". Run the division: that's "
       "≈6–18 hours per kg for trim alone. Call it 10 — at $25/hour loaded, <strong>$250 per kg, "
       "$0.25 per gram, just for trimming</strong>. The scissors out-cost the electricity."),
@@ -361,8 +361,8 @@ SECTIONS.append({"id": "labour", "kicker": "09 · The sneaky #1", "title": "Labo
       "plain idle time between tasks. That gap is <strong>utilisation</strong>, and it's why headcount "
       "models built from task lists always come in under the real payroll. Budget from payroll; use "
       "task minutes to find what to fix."),
-    ul(["<strong>Measure before you buy.</strong> A trim machine at 20–40 lb/hour" + _c("triminator-industrial") +
-        " looks unanswerable next to 2 lb/shift, but weigh the grade impact on your product and your "
+    ul(["<strong>Measure before you buy.</strong> A trim machine at 9–18 kg/h (20–40 lb/h)" + _c("triminator-industrial") +
+        " looks unanswerable next to 0.9 kg/shift (2 lb/shift), but weigh the grade impact on your product and your "
         "buyer before the capex (Sections 11 and 14).",
         "<strong>Smooth the spikes.</strong> Harvest weeks need 3× the hands of week 3 of flower. "
         "Staggered rooms (Section 10) turn a hiring problem into a scheduling one.",
@@ -371,7 +371,7 @@ SECTIONS.append({"id": "labour", "kicker": "09 · The sneaky #1", "title": "Labo
   ]})
 
 # ---------------------------------------------------------------- 10 cycles per year
-SECTIONS.append({"id": "cycles", "kicker": "10 · The hidden multiplier", "title": "Annual crop cycles",
+SECTIONS.append({"id": "cycles", "kicker": "10 · Cycles per year", "title": "Annual crop cycles",
   "blocks": [
     lead("Everything you produce in a year is grams-per-cycle × cycles-per-year. The industry obsesses "
          "over the first term and lets the second one rot. Turn time, the days between harvesting one "
@@ -550,7 +550,7 @@ SECTIONS.append({"id": "troubleshooting", "kicker": "15 · Troubleshooting", "ti
        "Meter the lighting circuit separately; track kWh/kg against your own baseline, not folklore"],
       ["Trim backlog after every harvest",
        "Throughput planned at folklore rates rather than measured ones",
-       "Time one shift: hand trim commonly runs 0.45–1.4 kg per 8 h" + _c("triminator-industrial")],
+       "Time one shift: hand trim commonly runs 0.45–1.4 kg (1–3 lb) per 8 h" + _c("triminator-industrial")],
       ["Wholesale cheque smaller than the spreadsheet",
        "Quality discounts, moisture loss, failed or short batches",
        "Reconcile invoiced $ vs modelled $ per batch; track shrink % as its own line"],
@@ -561,7 +561,7 @@ SECTIONS.append({"id": "troubleshooting", "kicker": "15 · Troubleshooting", "ti
   ]})
 
 # ---------------------------------------------------------------- 16 mental model
-SECTIONS.append({"id": "mental-model", "kicker": "16 · The mental model", "title": "Unit-economics control variables",
+SECTIONS.append({"id": "mental-model", "kicker": "16 · Control variables", "title": "Unit-economics control variables",
   "blocks": [
     callout("key", "The one-paragraph version",
       p("Upstairs there is one number: <strong>dollars per finished gram, per year</strong>. Downstairs "

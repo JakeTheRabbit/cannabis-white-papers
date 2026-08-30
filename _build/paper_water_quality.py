@@ -5,11 +5,12 @@ from components import (p, lead, h, ul, ol, callout, defterm, table, figure,
 import figs_lib as L
 
 SLUG = "water-quality"
-TITLE = "Source water, RO and alkalinity"
+TITLE = "Testing and treating source water for cannabis"
 EYEBROW = "Feed · Water"
-SUB = ("What is in your water before nutrients ever go in: tap vs RO vs well, starting EC, "
-       "alkalinity and carbonates, chlorine and chloramine, hardness, and when reverse "
-       "osmosis is actually worth the money.")
+SUB = ("This paper explains what is dissolved in tap, well, and rainwater before you add "
+       "any nutrients — EC, alkalinity, carbonates, chlorine, chloramine, and hardness. "
+       "By the end you will know how to read a water report, decide whether reverse osmosis "
+       "is worth the cost, and account for your source water in the nutrient recipe.")
 META = [("droplet", "Beginner"), ("image", "13 figures"),
         ("quote", "Evidence-linked · 6 sources"), ("clock", "~14 min read")]
 RELATED = ["ph-management", "nutrient-mixing-athena", "irrigation-manual"]
@@ -45,7 +46,7 @@ SECTIONS.append({"id": "intro", "kicker": "What this is",
       "Your source water and its dissolved load are the starting point. Mixing only adds to what is "
       "already there, so a problem in the first box follows the water all the way to the root."),
     callout("note", "What this paper does",
-      p("It walks an absolute beginner from understanding what is in their source water, to testing "
+      p("It walks a beginner from understanding what is in their source water, to testing "
         "it, to deciding whether reverse osmosis is worth the cost. Pairs with the "
         "<a href='ph-management.html'>pH management</a> and "
         "<a href='nutrient-mixing-athena.html'>nutrient mixing</a> papers.")),
@@ -54,36 +55,39 @@ SECTIONS.append({"id": "intro", "kicker": "What this is",
 SECTIONS.append({"id": "key-terms", "kicker": "Key terms",
   "title": "Definitions",
   "blocks": [
-    p("Water-quality talk is full of jargon that hides simple ideas. Get the gist of these and the "
-      "rest of the paper reads easily. The big one to grasp early: alkalinity is not the same thing "
+    p("Water-quality discussion is full of jargon that hides simple ideas. Get the gist of these and the "
+      "rest of the paper reads easily. The important one to grasp early: alkalinity is not the same thing "
       "as pH."),
-    defterm("EC (electrical conductivity)", "How well water conducts electricity, which rises with "
-            "dissolved salts. Measured in mS/cm or uS/cm. Higher EC means more dissolved stuff."),
-    defterm("PPM / TDS (parts per million / total dissolved solids)", "The same idea as EC but "
-            "expressed as a weight. Note that PPM pens use a conversion factor (a 500 or 700 scale), "
-            "so two meters can disagree on the same water."),
-    defterm("pH", "Acidity on a 0-14 scale. Most cannabis nutrient uptake targets pH 5.8-6.2 in "
-            "hydro and coco, and 6.2-6.8 in soil."),
-    defterm("Alkalinity", "The water's buffering capacity from carbonates and bicarbonates, reported "
-            "as ppm CaCO3. High alkalinity pushes root-zone pH up over time even after you pH-down "
-            "the tank. This is a different thing from pH itself."),
-    defterm("Hardness", "Dissolved calcium and magnesium, reported as ppm CaCO3 or grains per gallon "
-            "(1 GPG = 17.1 mg/L)."),
+    defterm("EC (electrical conductivity)", "Dissolved minerals carry a slight electrical charge, so "
+            "measuring how well water conducts electricity tells you roughly how much is dissolved in it. "
+            "EC is that conductivity reading, measured in mS/cm or µS/cm. Higher EC means more dissolved content."),
+    defterm("PPM / TDS (parts per million / total dissolved solids)", "EC converted into an estimated "
+            "weight per litre using a fixed conversion factor. PPM pens use either a 500 or 700 scale, "
+            "so two meters on the same water can give different readings. Pick one scale and stay with it."),
+    defterm("pH", "Acidity on a 0–14 scale. Most cannabis nutrient uptake targets pH 5.8–6.2 in "
+            "hydro and coco, and 6.2–6.8 in soil."),
+    defterm("Alkalinity", "Think of alkalinity like a thermostat wired to push the water back toward "
+            "neutral: after you dose acid to reach pH 5.8, dissolved carbonates slowly neutralise the "
+            "acid and pH climbs back up over hours to days. Alkalinity is the carbonate buffering "
+            "capacity of the water, measured in ppm CaCO3. It is a separate quantity from pH — "
+            "high alkalinity means the water fights your acid dose even when the initial reading looked right."),
+    defterm("Hardness", "Dissolved calcium and magnesium, reported in ppm CaCO3. "
+            "The older unit grains per gallon (GPG) converts as 1 GPG = 17.1 mg/L."),
     defterm("RO (reverse osmosis)", "Filtration that forces water through a membrane and strips most "
             "dissolved minerals, leaving near-zero PPM water."),
     figure(L.flow("pH is a snapshot, alkalinity is a spring",
             [("pH now", "a single reading right now"), ("You pH-down", "tank drops to 5.8"),
              ("Alkalinity resists", "carbonates fight back"), ("pH creeps up", "back toward 6.8+")],
             note="pH tells you where you are. Alkalinity tells you how hard the water fights to go back."), 2,
-      "pH is where the water sits at this moment. Alkalinity is the buffer that drags it back up "
-      "afterwards, which is why a perfect tank reading can still drift in the root zone." + _c("umass-water-quality-ph-alkalinity")),
+      "pH is where the water sits at this moment. Alkalinity is the carbonate buffer that drives pH "
+      "back up afterwards, which is why a perfect tank reading can still drift in the root zone." + _c("umass-water-quality-ph-alkalinity")),
   ]})
 
 SECTIONS.append({"id": "source-types", "kicker": "The core: where it comes from",
   "title": "Water source types",
   "blocks": [
     p("Municipal tap water is treated and consistent but carries chlorine or chloramine and often "
-      "moderate-to-high mineral content, sometimes 150-300+ ppm straight from the faucet" + _c("umass-water-quality-ph-alkalinity") +
+      "moderate-to-high mineral content, sometimes 150–300+ ppm straight from the tap" + _c("umass-water-quality-ph-alkalinity") +
       ". Well water is the wild card: it can be very hard, high in iron, manganese, or sulfur, and "
       "it varies seasonally, so it must be tested. Rainwater is naturally low in dissolved minerals "
       "but offers little buffering and can pick up roof and storage contaminants."),
@@ -98,7 +102,7 @@ SECTIONS.append({"id": "source-types", "kicker": "The core: where it comes from"
       "alkalinity, sodium, chloride, calcium and magnesium, then account for usable nutrients in the feed. "
       "The Bevan trial defines crop-specific NPK response ranges, not a raw-water cutoff" +
       _c("bevan-2021-npk-flowering-cannabis") + _c("umass-water-quality-ph-alkalinity") + ". Rainwater typically arrives at only "
-      "0-20 ppm, which is closer to RO, but it brings little to no buffering and a risk of pathogens, "
+      "0–20 ppm, which is closer to RO, but it brings little to no buffering and a risk of pathogens, "
       "roofing contaminants, or sodium near coasts."),
     callout("tip", "Match the source to the habit",
       ul(["<strong>Tap:</strong> consistent and convenient, but expect chlorine or chloramine and a starting EC that eats into your nutrient room.",
@@ -109,10 +113,10 @@ SECTIONS.append({"id": "source-types", "kicker": "The core: where it comes from"
 SECTIONS.append({"id": "alkalinity-carbonates", "kicker": "The core: the hidden pH driver",
   "title": "Alkalinity and carbonate buffering",
   "blocks": [
-    p("Alkalinity is the single most misunderstood water parameter for beginners. It is caused by "
-      "dissolved carbonates and bicarbonates, and it acts like a chemical spring that drags root-zone "
-      "pH back upward even after you adjust the tank to 5.8. A common acceptable range for container "
-      "cannabis is roughly 40-100 ppm CaCO3, with many growers targeting 30-60 ppm as an "
+    p("Alkalinity is the most commonly misunderstood water parameter for beginners. It is caused by "
+      "dissolved carbonates and bicarbonates, and it drives root-zone pH back upward even after you "
+      "dose the tank down to 5.8. A common acceptable range for container cannabis is roughly "
+      "40–100 ppm CaCO3, with many growers targeting 30–60 ppm as an "
       "optimum" + _c("fisher-purdue-ho242-alkalinity-soilless") + ". The conversions to know: "
       "1 meq/L equals 50 ppm CaCO3 equals 61 ppm bicarbonate" + _c("umass-water-quality-ph-alkalinity") + "."),
     figure(L.line("High alkalinity drags root-zone pH back up",
@@ -121,8 +125,8 @@ SECTIONS.append({"id": "alkalinity-carbonates", "kicker": "The core: the hidden 
             ylab="root-zone pH", ymin=5.4, ymax=7.4,
             note="You pH the tank to 5.8, but high-alkalinity water climbs back over days."), 4,
       "A high-alkalinity water that you pH-down to 5.8 climbs back to 6.8+ within days. A corrected or "
-      "naturally low-alkalinity water holds near 5.8-6.0 instead." + _c("fisher-purdue-ho242-alkalinity-soilless")),
-    p("Above roughly 100-150 ppm CaCO3, alkalinity steadily raises substrate pH and locks out iron, "
+      "naturally low-alkalinity water holds near 5.8–6.0 instead." + _c("fisher-purdue-ho242-alkalinity-soilless")),
+    p("Above roughly 100–150 ppm CaCO3, alkalinity steadily raises substrate pH and locks out iron, "
       "manganese, and other micronutrients" + _c("umass-water-quality-ph-alkalinity") + ". You "
       "correct excess alkalinity by adding acid, such as phosphoric, nitric, or citric, to neutralise "
       "the carbonates, not just to hit a pH number once. At the other extreme, very low alkalinity "
@@ -131,7 +135,7 @@ SECTIONS.append({"id": "alkalinity-carbonates", "kicker": "The core: the hidden 
             [(0, 30, L.AMBL, "too low / no buffer"), (30, 100, L.GL, "ideal"),
              (100, 150, L.AMBL, "borderline"), (150, 200, L.REDL, "problematic")],
             unit="", note="Most container cannabis sits happiest in the 30-100 ppm band."), 5,
-      "The workable window. Below 30 ppm you lose your buffer, the 30-100 ppm band is comfortable, "
+      "The workable window. Below 30 ppm you lose your buffer, the 30–100 ppm band is comfortable, "
       "and above 150 ppm you fight rising pH and micronutrient lockout." + _c("fisher-purdue-ho242-alkalinity-soilless")),
   ]})
 
@@ -157,25 +161,25 @@ SECTIONS.append({"id": "chlorine-hardness", "kicker": "The core: chemicals and m
     p("Hardness is the one part of your starting water that is genuinely useful. It is dissolved "
       "calcium and magnesium, and cannabis needs both" + _c("kpai-2024-mineral-nutrition-vegetative-cannabis") +
       ". The catch: in hard water those minerals usually ride along with high alkalinity, so the "
-      "helpful Ca and Mg arrive locked up with the carbonates that cause pH problems. Soft water at "
-      "under 1 GPG (about 17 ppm) can be low in Ca and Mg and need a CalMag supplement regardless of "
+      "helpful Ca and Mg arrive locked up with the carbonates that cause pH problems. Soft water "
+      "at under 17 mg/L (1 GPG) can be low in Ca and Mg and need a CalMag supplement regardless of "
       "whether you run RO."),
     table(["Class", "Hardness", "Cannabis-relevant note"], [
-      ["Soft", "<1 GPG / <17 mg/L", "May be low in Ca/Mg, add CalMag"],
-      ["Slightly hard", "1-3.5 GPG", "Usually fine, check alkalinity"],
-      ["Moderately hard", "3.5-7 GPG", "Watch alkalinity creeping up"],
-      ["Hard", "7-10.5 GPG", "Ca/Mg useful but alkalinity likely high"],
-      ["Very hard", ">10.5 GPG / >180 mg/L", "Expect lockout and pH problems, consider RO"],
-    ], cls="compact", caption="Hardness classes. Helpful minerals at the soft end, pH trouble at the hard end."),
+      ["Soft", "<17 mg/L (<1 GPG)", "May be low in Ca/Mg, add CalMag"],
+      ["Slightly hard", "17–60 mg/L (1–3.5 GPG)", "Usually fine, check alkalinity"],
+      ["Moderately hard", "60–120 mg/L (3.5–7 GPG)", "Watch alkalinity creeping up"],
+      ["Hard", "120–180 mg/L (7–10.5 GPG)", "Ca/Mg useful but alkalinity likely high"],
+      ["Very hard", ">180 mg/L (>10.5 GPG)", "Expect lockout and pH problems, consider RO"],
+    ], cls="compact", caption="Hardness classes. Useful minerals at the soft end, pH trouble at the hard end."),
   ]})
 
 SECTIONS.append({"id": "ro-buildback", "kicker": "The core: the RO decision",
   "title": "Reverse osmosis and mineral rebuilding",
   "blocks": [
-    p("Reverse osmosis strips water to near-zero PPM, typically 0-10 ppm TDS, giving a blank canvas "
+    p("Reverse osmosis strips water to near-zero PPM, typically 0–10 ppm TDS, giving a blank canvas "
       "so every mineral the plant gets is one you chose" + _c("umass-water-quality-ph-alkalinity") +
       ". Because RO removes calcium and magnesium too, you must build back. That usually means adding "
-      "a CalMag supplement plus your base nutrients to reach a target of roughly 100-200 ppm with "
+      "a CalMag supplement plus your base nutrients to reach a target of roughly 100–200 ppm with "
       "good Ca and Mg before the rest of the feed" + _c("kpai-2024-mineral-nutrition-vegetative-cannabis") + "."),
     figure(L.flow("RO strips the water, then you build it back",
             [("Tap or well", "mixed ions, alkalinity"), ("RO membrane", "stripped to ~0 ppm"),
@@ -192,7 +196,7 @@ SECTIONS.append({"id": "ro-buildback", "kicker": "The core: the RO decision",
     callout("key", "When RO is worth it, and when it is not",
       ul(["<strong>Worth it when:</strong> starting EC is high, sodium is elevated, alkalinity is high, or chloramine is present.",
           "<strong>Often skippable when:</strong> tap is soft, low-alkalinity, chlorine-only (off-gassable), and under about 150 ppm.",
-          "<strong>The cost:</strong> a wastewater ratio of often 1-4 gallons wasted per gallon made, membrane replacement, and a slower fill rate."], "tight")),
+          "<strong>The cost:</strong> a wastewater ratio of often 1–4 gallons wasted per gallon made, membrane replacement, and a slower fill rate."], "tight")),
   ]})
 
 SECTIONS.append({"id": "testing-stepbystep", "kicker": "Practical: test and treat",
@@ -228,10 +232,10 @@ SECTIONS.append({"id": "temperature-pitfalls", "kicker": "Troubleshooting and pi
   "title": "Water temperature and common mistakes",
   "blocks": [
     p("Water temperature quietly controls dissolved oxygen and disease risk. Aim for roughly "
-      "18-22 C (65-72 F). Saturation dissolved oxygen falls only gently across that range, from about "
-      "9 mg/L at 20 C to about 8 mg/L at 26 C" + _c("fao-dissolved-oxygen-temperature") + ", but warm, "
+      "18–22 °C (65–72 °F). Saturation dissolved oxygen falls only gently across that range, from about "
+      "9 mg/L at 20 °C to about 8 mg/L at 26 °C" + _c("fao-dissolved-oxygen-temperature") + ", but warm, "
       "poorly aerated water still raises pathogen risk, and root pathogens like Pythium "
-      "accelerate above about 23 C" + _c("sutton-2006-pythium-hydroponic-etiology") + ". Warm water "
+      "accelerate above about 23 °C" + _c("sutton-2006-pythium-hydroponic-etiology") + ". Warm water "
       "plus low oxygen is an open invitation to root rot."),
     figure(L.line("Warmer water holds less oxygen",
             [(0, 9.9), (1, 9.5), (2, 9.1), (3, 8.7), (4, 8.4), (5, 8.1)],
@@ -239,22 +243,22 @@ SECTIONS.append({"id": "temperature-pitfalls", "kicker": "Troubleshooting and pi
             ylab="saturation O2 mg/L", ymin=7, ymax=11,
             note="Saturation oxygen falls only gently over this range. The 18-22 C band is the safe target.",
             bands=[(8.7, 9.9, L.GL, "target O2")]), 11,
-      "Saturation dissolved oxygen declines gently as water warms, from about 9 mg/L at 20 C to about "
-      "8 mg/L at 26 C. The bigger risk above roughly 23 C is Pythium, not oxygen starvation." + _c("fao-dissolved-oxygen-temperature") + _c("sutton-2006-pythium-hydroponic-etiology")),
+      "Saturation dissolved oxygen declines gently as water warms, from about 9 mg/L at 20 °C to about "
+      "8 mg/L at 26 °C. The bigger risk above roughly 23 °C is Pythium, not oxygen starvation." + _c("fao-dissolved-oxygen-temperature") + _c("sutton-2006-pythium-hydroponic-etiology")),
     table(["Common mistake", "What actually happens, and the fix"], [
       ["Comparing PPM across meters", "A 500 vs 700 scale makes two pens disagree on the same water. Pick one scale and stick to it"],
       ["pH the tank, ignore alkalinity", "Root-zone pH creeps up within days. Correct the alkalinity, not just the one reading"],
       ["Feeding plain RO or rain", "Calcium and magnesium deficiency. Add CalMag before base nutrients"],
       ["Leaving chloramine to sit out", "Chloramine is stable and survives the night. Use catalytic carbon or RO"],
-      ["Water too warm", "Low oxygen and root rot. Cool the reservoir to 18-22 C"],
-    ], cls="compact", caption="The five beginner traps, and what to do instead."),
+      ["Water too warm", "Low oxygen and root rot. Cool the reservoir to 18–22 °C (65–72 °F)"],
+    ], cls="compact", caption="Five common beginner mistakes, and what to do instead."),
   ]})
 
 SECTIONS.append({"id": "expectations", "kicker": "Realistic expectations",
   "title": "Expected results and limitations",
   "blocks": [
     p("Sorting out your water removes a whole category of mystery problems: stable pH, no chlorine "
-      "damage, predictable feed strength. It will not fix bad genetics, poor light, or a broken "
+      "damage, predictable feed strength. It will not fix poor genetics, insufficient light, or a broken "
       "nutrient schedule. Good water quality is a foundation, not a yield button. It prevents "
       "problems more than it boosts numbers."),
     figure(L.zones("Do you need RO?", 0, 3,
@@ -263,7 +267,7 @@ SECTIONS.append({"id": "expectations", "kicker": "Realistic expectations",
       "A plain-language verdict. Soft low-alkalinity tap usually needs no RO. Hard, high-sodium, "
       "high-alkalinity, or chloraminated water is where RO earns its cost."),
     callout("key", "The honest summary",
-      ol(["<strong>Most home growers on clean, soft, low-alkalinity tap</strong> can succeed with simple dechlorination and pH control, and never need RO.",
+      ol(["<strong>Most growers on clean, soft, low-alkalinity tap</strong> can succeed with simple dechlorination and pH control, and never need RO.",
           "<strong>RO matters most</strong> for very hard, high-sodium, or high-alkalinity sources, for chloramine, and for precision hydro.",
           "<strong>You still manage pH, EC, temperature and CalMag</strong> regardless of which water source you choose."])),
     p("Spend on a water test first, and let the numbers, not marketing, decide whether RO is worth "

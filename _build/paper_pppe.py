@@ -7,10 +7,12 @@ import figs_pppe as PP
 SLUG = "pppe"
 TITLE = "PPPE: plant and personal protective equipment"
 EYEBROW = "Plant health · PPE & biosecurity"
-SUB = ("Coveralls, hairnets, gloves and shoe covers do two jobs at once: they keep the human safe, and "
-       "they keep the human's particles, microbes and pests off the crop. People are the number-one "
-       "contamination source in any clean space. This is the full rundown: how bad we are, the bare "
-       "minimum, the room-by-room kit, and the procedures that actually work.")
+SUB = ("Coveralls, hairnets, gloves, and shoe covers do two jobs at once: they protect the worker from "
+       "hazards, and they keep the worker's particles, microbes, and pests off the crop. People are the "
+       "primary contamination source in any clean production space. This paper covers how much "
+       "contamination a person actually sheds, the minimum PPE for each production area, the room-by-room "
+       "kit, and the gowning and hand hygiene procedures that stop contamination from crossing the "
+       "clean/dirty line.")
 META = [("shield", "Biosecurity & PPE"), ("image", "9 diagrams"),
         ("quote", "Research-backed · 15 sources"), ("clock", "~17 min read")]
 RELATED = ["ipm-sop", "mould-risk", "tissue-culture", "daily-checks"]
@@ -32,7 +34,7 @@ JURISDICTION_NOTE = 'Jurisdiction note: PPE duties and HSWA wording below are NZ
 SECTIONS.append({"id": "intro", "kicker": "Start here", "title": "Purpose and scope",
   "blocks": [
     callout("NOTE", "Jurisdiction", JURISDICTION_NOTE),
-    
+
     lead("PPE in a grow is not really about you. In most rooms the gear is there to protect the "
          "<strong>plant</strong> from you: from the skin you shed, the spores on your jacket, the mites on "
          "your shoes and the viroid on your hands. The same coverall that keeps your clothes clean also "
@@ -77,7 +79,8 @@ SECTIONS.append({"id": "terms", "kicker": "Vocabulary", "title": "Definitions",
 # 3 -----------------------------------------------------------------
 SECTIONS.append({"id": "how-bad", "kicker": "The problem", "title": "Personnel contamination risks",
   "blocks": [
-    p("It is worth sitting with the numbers, because they are the entire argument for gowning up."),
+    p("A person working in a cultivation room is the dominant contamination source in the space—generating "
+      "particles, microbes, and pests continuously just by being present."),
     figure(PP.human_contamination(), 1,
       "People are the number-one contamination source in a clean space" + _c("cleanroom-humans-source") +
       ". You shed roughly ten million skin flakes a day, about a tenth carrying live bacteria" + _c("cdc-skin-squames") +
@@ -93,7 +96,7 @@ SECTIONS.append({"id": "how-bad", "kicker": "The problem", "title": "Personnel c
       "<strong>Your shoes are a pest and spore taxi.</strong> Soles carry live pathogens and fungal spores, "
       "and walking re-launches settled organisms into the air" + _c("shoe-floor-contamination") + ". Mites and "
       "powdery mildew arrive on clothing and footwear.",
-      "<strong>The toilet throws a plume.</strong> A flush lofts aerosols to about 1.5 m within seconds, "
+      "<strong>The toilet throws a plume.</strong> A flush lofts aerosols to about 1.5 m (4.9 ft) within seconds, "
       "viable for minutes to hours; a closed lid cuts it sharply" + _c("toilet-plume") + ".",
     ]),
     callout("note", "Hands are the main bridge, and hygiene is not a cure",
@@ -189,7 +192,7 @@ SECTIONS.append({"id": "scenarios", "kicker": "The daily traps", "title": "Commo
       "you hold to your face and cannot clean" + _c("phone-fomite") + ". Lockers outside the gowning room, "
       "everything in before you gown."),
     h(3, "The toilet"),
-    p("Toilets must not open into production. A flush throws a viable bioaerosol over a metre in "
+    p("Toilets must not open into production. A flush throws a viable bioaerosol over 1 m (3 ft) in "
       "seconds" + _c("toilet-plume") + ", so anyone back from the restroom is a bridge until they have washed and "
       "re-gowned."),
     figure(PP.toilet_protocol(), 6,

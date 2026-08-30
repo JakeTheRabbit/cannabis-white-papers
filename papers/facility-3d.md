@@ -31,7 +31,7 @@ _Facility · Design · ~14 min read_
 
 A grow facility is a building full of rooms, equipment, airflow paths and security cameras. The usual way to plan one, a flat top-down architect's drawing, can only really be read by experts. A **3D model** is the same plan rebuilt on your screen as a thing you can rotate, zoom into and click on, so investors, electricians, inspectors and staff all understand it instantly.
 
-Describe the building as data instead of drawing it. You write a data file, a plain list of rooms and their dimensions, and let code draw the building from that data. Re-planning the facility for the next harvest then becomes nothing more than editing some numbers. The worked example throughout this paper is a real two-storey licensed cultivation facility measuring 14.8 by 16.7 metres.
+Describe the building as data instead of drawing it. You write a data file, a plain list of rooms and their dimensions, and let code draw the building from that data. Re-planning the facility for the next harvest then becomes nothing more than editing some numbers. The worked example throughout this paper is a real two-storey licensed cultivation facility measuring 14.8 by 16.7 m (48.6 by 54.8 ft).
 
 - A 3D model makes spatial relationships visible: airflow paths, camera sightlines, bench density, and where the ducts and drains run.
 - It is built with Three.js, a free web library, so the whole thing is one HTML file that opens in any browser with nothing to install.[^threejs-repo]
@@ -64,12 +64,12 @@ Here is the vocabulary. None of these need prior knowledge. They are the words t
 
 **Do not draw the building by hand in code.** This is the single most important decision in the whole approach. Describe it as data, and let the code interpret that data into geometry. The reference schema, the shape of the data file, needs only four kinds of record to capture almost any grow building.
 
-Each **room** is stored as a rectangle, `[x, y, width, depth]` in metres. Each **wall** is a centre-line with openings positioned by how far along the run they sit, and a single global wall thickness (0.15 m) avoids a whole class of typos. Everything uses one unit equals one metre, so the millimetre numbers on the architect's plan (4800, 9200) are divided by 1000 once, at data-entry time, and never thought about again.
+Each **room** is stored as a rectangle, `[x, y, width, depth]` in metres. Each **wall** is a centre-line with openings positioned by how far along the run they sit, and a single global wall thickness of 0.15 m (5.9 in) avoids a whole class of typos. Everything uses one unit equals one metre, so the millimetre numbers on the architect's plan (4800, 9200) are divided by 1000 once, at data-entry time, and never thought about again.
 
 > **KEY — The four record types**
 >
 > - **Rooms**: an interior footprint rectangle in metres.
-> - **Walls**: a centre-line with openings (doors, the 4.6 m roller door, pass-throughs) placed by distance along the run.
+> - **Walls**: a centre-line with openings (doors, the 4.6 m (15.1 ft) roller door, pass-throughs) placed by distance along the run.
 > - **Equipment**: benches, dehumidifiers, AC heads, CO₂ tanks.
 > - **Devices**: cameras, sirens, safes, network and power racks.
 
@@ -83,7 +83,7 @@ Doors, the roller door and pass-throughs are all the _same_ thing: an ‘opening
 
 Code builds the physical shell from the data: the floors, walls and stairs. **Floor slabs** are flat 2D shapes ‘extruded’ (pushed up) into thickness, and they can include holes. You need a hole for the void where the stairwell drops through. Each **wall run** is split by its openings into solid segments, with a lintel (a short beam) filling the gap above each door.
 
-**Stairs** are a loop of step-shaped boxes. The reference building climbs 3.25 m over a 4.5 m run as 16 steps of 203 mm each. Drawing the stair this way doubles as a buildability check: if the steps don't fit the space at a sensible riser height, you find out now, on screen, not on site. Standard building codes cap a stair riser at about 178 mm (7 inches) with a tread of at least 279 mm (11 inches), so a 203 mm riser flags as steep and tells you to lengthen the run.[^ibc-2024-1011-5-2-stairs]
+**Stairs** are a loop of step-shaped boxes. The reference building climbs 3.25 m (10.7 ft) over a 4.5 m (14.8 ft) run as 16 steps of 203 mm (8 in) each. Drawing the stair this way doubles as a buildability check: if the steps don't fit the space at a sensible riser height, you find out now, on screen, not on site. Standard building codes cap a stair riser at about 178 mm (7 in) with a tread of at least 279 mm (11 in), so a 203 mm (8 in) riser flags as steep and tells you to lengthen the run.[^ibc-2024-1011-5-2-stairs]
 
 - Floor slabs are extruded shapes that can carry holes for stairwells and service voids.
 - A wall is a centre-line plus openings; openings split it into segments with lintels above. No complex geometry needed.
@@ -94,21 +94,21 @@ Code builds the physical shell from the data: the floors, walls and stairs. **Fl
 
 | Check | Value | Verdict |
 | --- | --- | --- |
-| Total rise | 3.25 m | fixed by the two floor heights |
-| Horizontal run | 4.5 m | the space allotted on the plan |
-| Risers | 16 × 203 mm | steep, over the 178 mm code max |
-| Treads | 281 mm | comfortable, above the 279 mm min |
+| Total rise | 3.25 m (10.7 ft) | fixed by the two floor heights |
+| Horizontal run | 4.5 m (14.8 ft) | the space allotted on the plan |
+| Risers | 16 × 203 mm (8 in) | steep, over the 178 mm code max |
+| Treads | 281 mm (11.1 in) | comfortable, above the 279 mm min |
 | Fit | Fits the 4.5 m run | OK, but lengthen run to ease the riser |
 
 *A stair sanity-check the model performs for free. The 203 mm riser is buildable but steep against code minimums[^ibc-2024-1011-5-2-stairs], a prompt to revisit it early.*
 
 ## Facility fit-out and airflow
 
-**Fit-out** turns a generic building into a grow facility, and every piece is built from simple shapes. No modelling software required. The reference flower rooms use 1.2 by 7.6 m rolling benches, three per room, giving 27.4 m² of canopy in a 44 m² room: about 62% of the floor, a number the model shows at a glance.
+**Fit-out** turns a generic building into a grow facility, and every piece is built from simple shapes. No modelling software required. The reference flower rooms use 1.2 by 7.6 m (3.9 by 24.9 ft) rolling benches, three per room, giving 27.4 m² (295 ft²) of canopy in a 44 m² (474 ft²) room: about 62% of the floor, a number the model shows at a glance.
 
-Plants are the highest-count object, 210 of them here, so they are ‘instanced’, meaning drawn in one batch rather than one at a time. That single trick is the biggest performance lever in the whole model. The climate gear (dehumidifiers, carbon filter/fan units hung at 2.45 m, mini-split AC heads, CO₂ cylinders) each get a tiny builder, sized straight from the datasheet.
+Plants are the highest-count object, 210 of them here, so they are ‘instanced’, meaning drawn in one batch rather than one at a time. That single trick is the biggest performance lever in the whole model. The climate gear (dehumidifiers, carbon filter/fan units hung at 2.45 m (8.0 ft), mini-split AC heads, CO₂ cylinders) each get a tiny builder, sized straight from the datasheet.
 
-Moving air thins the still ‘boundary layer’ of humid air that clings to each leaf, which is what lets the leaf actually exchange water vapour and CO₂ with the room[^kitaya-2003-air-current-gas-exchange]. The plan's target of 3500 m³/h of horizontal airflow per flower room is drawn as toggleable arrows that an HVAC contractor reads instantly. Modest, even air movement across the canopy keeps that boundary-layer conductance high and uniform. Too little leaves dead spots, too much can close stomata[^kimura-2020-leaf-boundary-layer].
+Each leaf releases water vapour and absorbs CO₂ continuously. In still air, the layer of air right at the leaf surface quickly becomes saturated with moisture and depleted of CO₂ — like the warm, humid air that settles around your face when you stand very still: even in a cool room that thin film cuts off further exchange with the air around it. This is the leaf boundary layer: a shallow, stationary pocket of air already altered by the leaf’s own transpiration.[^kitaya-2003-air-current-gas-exchange] Moving air strips that film away and replaces it with fresh room air, restoring the gradient that drives gas exchange. The plan’s target of 3500 m³/h of horizontal airflow per flower room is drawn as toggleable arrows that an HVAC contractor reads instantly. Modest, even air movement across the canopy keeps boundary-layer conductance high and uniform. Too little leaves dead spots; too much can close stomata.[^kimura-2020-leaf-boundary-layer]
 
 > **Diagram.** The model surfaces canopy density automatically. You never measure it by hand. 62% is a healthy, walkable density for a flower room.
 
@@ -116,9 +116,9 @@ Moving air thins the still ‘boundary layer’ of humid air that clings to each
 
 | Item | Built from | Count |
 | --- | --- | --- |
-| Rolling bench | Box + leg rails, 1.2 × 7.6 m | 9 (3 per flower room) |
+| Rolling bench | Box + leg rails, 1.2 × 7.6 m (3.9 × 24.9 ft) | 9 (3 per flower room) |
 | Dehumidifier | Box + grille face | 7 |
-| Carbon filter / fan | Cylinder + duct, hung at 2.45 m | 10 |
+| Carbon filter / fan | Cylinder + duct, hung at 2.45 m (8.0 ft) | 10 |
 | AC head (mini-split) | Flattened box above doors | 8 |
 | CO₂ cylinder | Capped cylinder, floor-standing | 6 |
 
@@ -126,7 +126,7 @@ Moving air thins the still ‘boundary layer’ of humid air that clings to each
 
 > **TIP — Clashes you only see in 3D**
 >
-> A flat plan hides height. In 3D you immediately catch a carbon filter hung at 2.45 m over a walkway, an AC head sitting above a door swing, or a dehumidifier that lands on a bench. Pair this with the [airflow design](airflow-design.html) paper to size the fans before you place them.
+> A flat plan hides height. In 3D you immediately catch a carbon filter hung at 2.45 m (8.0 ft) over a walkway, an AC head sitting above a door swing, or a dehumidifier that lands on a bench. Pair this with the [airflow design](airflow-design.html) paper to size the fans before you place them.
 
 ## Visible security and compliance controls
 
@@ -138,7 +138,7 @@ Cannabis security rules are jurisdiction-specific, but they are concrete: a typi
 - Blind spots appear as un-tinted floor, far easier to spot than reading a coverage list.
 - Sirens, safes, the vault and the network/power racks are all modelled, because cable runs and UPS placement are part of the security story.
 - One checkbox shows or hides the whole security layer: audit mode versus tour mode.
-- The roof PTZ camera's 70°, 12 m cone is checked against the upper open-plan office for intrusion coverage.
+- The roof PTZ camera's 70°, 12 m (39 ft) cone is checked against the upper open-plan office for intrusion coverage.
 
 > **Diagram.** Top-down camera coverage. Any floor outside every cone is a blind spot. Here, a gap between cameras 2 and 3 that re-aiming closes.[^wac-314-55-083-cannabis-security]
 
@@ -178,7 +178,7 @@ Most mistakes come from a handful of repeatable errors. The biggest by far is mo
 | Pure-white walls blow out | Under ACES tone mapping, white clips. Use a warm off-white (0xe8e6e0) at high roughness. |
 | Shadow camera too big | An oversized shadow camera makes mushy shadows. Size it to the building, not the world. |
 | Picking against the whole scene | Users accidentally select walls. Raycast a curated ‘pickables’ list instead. |
-| Forgetting wall thickness as a global | Set thickness once (0.15 m) and reuse it. This removes a whole class of typos. |
+| Forgetting wall thickness as a global | Set thickness once (0.15 m / 5.9 in) and reuse it. This removes a whole class of typos. |
 
 *Six common pitfalls and the recommended fix for each. The first one is the only one that costs you weeks. The rest cost minutes.*
 

@@ -10,8 +10,9 @@ SLUG = "transplanting"
 TITLE = "Transplanting: potting up without the stall"
 EYEBROW = "Propagation · Transplant"
 SUB = ("Every transplant is a controlled injury: done on time, into a prepared home, the plant never "
-       "notices; done late or rough, it stalls for a week. When to up-pot, the container ladder, the "
-       "mechanics, media-to-media moves, the first irrigation, and transplant shock from cause to recovery.")
+       "notices; done late or rough, it stalls for a week. This paper covers when to move, what container "
+       "to use, the physical procedure, cross-media transitions, the first irrigation, and how to read "
+       "and prevent transplant shock.")
 META = [("seedling", "Propagation"), ("image", "9 diagrams"),
         ("quote", "Evidence-linked · 13 sources"), ("clock", "~17 min read")]
 RELATED = ["cloning", "seeds-germination"]
@@ -51,15 +52,15 @@ SECTIONS.append({"id": "start-here", "kicker": "01 · Start here", "title": "Pur
 # ---------------------------------------------------------------- 02 vocabulary
 SECTIONS.append({"id": "vocabulary", "kicker": "02 · The vocabulary", "title": "Definitions",
   "blocks": [
-    p("Transplanting has less jargon than most grow topics, but the few terms it does have carry the "
-      "whole logic. Learn these eight and every later section reads in plain English."),
+    p("Transplanting has few technical terms, but each one carries load. Learn these eight and the rest "
+      "of the paper uses them freely."),
     defterm("Root ball", "The roots plus the media they hold together, in the shape of the old "
             "container. A good root ball slides out whole and keeps its shape in your hand."),
     defterm("Root-bound (pot-bound)", "The state where roots have filled the container, hit the walls, "
             "and started circling instead of branching. The longer it runs, the worse the plant handles "
             "water and the slower it restarts after the move."),
     defterm("Plug / starter cube", "The small rockwool, peat or foam cell a cutting or seed starts in. "
-            "Usually 25&ndash;100 mL, a temporary home measured in days, not weeks."),
+            "Usually 25&ndash;100 mL (0.85&ndash;3.4 fl oz), a temporary home measured in days, not weeks."),
     defterm("Up-potting", "Moving a plant from a smaller container to a larger one, same media family. "
             "The bread-and-butter transplant."),
     defterm("Watering-in", "The first irrigation immediately after transplanting. It settles the new "
@@ -77,8 +78,8 @@ SECTIONS.append({"id": "vocabulary", "kicker": "02 · The vocabulary", "title": 
 # ---------------------------------------------------------------- 03 pot size science
 SECTIONS.append({"id": "pot-size-science", "kicker": "03 · The why", "title": "Rooting-volume limits",
   "blocks": [
-    p("A container isn&rsquo;t just a bucket that holds media. It&rsquo;s a hard limit on how big "
-      "the plant&rsquo;s engine can get. A meta-analysis of 65 pot-size experiments found that, on "
+    p("A container is a hard limit on how big the plant&rsquo;s engine can get. "
+      "A meta-analysis of 65 pot-size experiments found that, on "
       "average, <strong>doubling the container volume increased plant biomass by 43%</strong>" + _c("poorter2012-potsize") +
       ". The interesting part is the mechanism: plants in small pots didn&rsquo;t just run out of water "
       "or feed. They <em>downregulated photosynthesis per unit of leaf area</em>. The plant senses "
@@ -157,14 +158,14 @@ SECTIONS.append({"id": "when-to-up-pot", "kicker": "05 · Reading the plant", "t
     ], cls="compact", caption="Read at least two signals before moving. Any single one can mislead; two agreeing rarely do."),
     p("How costly is being late? Autoflowering cannabis gives the cleanest published answer, because its "
       "fixed internal clock refuses to wait for you. In a New York hemp-program greenhouse trial, "
-      "seedlings moved from 40 mL plugs into ~11 L (3-gal) pots at <strong>day 8 or day 15</strong> grew "
+      "seedlings moved from 40 mL (1.4 fl oz) plugs into ~11 L (3 gal) pots at <strong>day 8 or day 15</strong> grew "
       "the same as plants sown directly into the final pot. Held in the plug until <strong>day 22</strong>, "
       "two of three cultivars finished at barely half the height, with fewer branches" + _c("bhattacharya2023-autoflower") + "."),
     figure(L.bars("The window closes: autoflower height vs when it left the plug",
             [("Direct sow", 100), ("Moved day 8", 100), ("Moved day 15", 100), ("Moved day 22", 45)],
             unit="%", note="Final height as % of direct-sown. Two of three CBD autoflower cultivars; the third fell to ~78%.",
             maxv=110), 3,
-      "One week too long in a 40 mL plug halved final plant height in two of three autoflower cultivars. "
+      "One week too long in a 40 mL (1.4 fl oz) plug halved final plant height in two of three autoflower cultivars. "
       "Photoperiod plants forgive more, you can extend veg to let them recover, but they pay "
       "the same class of penalty in time." + _c("bhattacharya2023-autoflower")),
     callout("key", "The asymmetry that decides everything",
@@ -181,14 +182,15 @@ SECTIONS.append({"id": "container-ladder", "kicker": "06 · The plan", "title": 
       "ratio: big enough that the plant gets weeks of headroom, small enough that roots claim the new "
       "volume fast and the pot still wets and dries on a manageable cycle."),
     figure(_FIGS["ladder"], 4,
-      "A typical indoor photoperiod ladder: plug &rarr; 0.5&ndash;1 L &rarr; 4&ndash;7 L &rarr; "
-      "11&ndash;19 L final, each step 2&ndash;4&times; the volume, moving on root readiness rather than "
-      "dates. Autoflowers skip the ladder: direct to final, or one very early move" + _c("bhattacharya2023-autoflower") + "."),
+      "A typical indoor photoperiod ladder: plug &rarr; 0.5&ndash;1 L (0.13&ndash;0.26 gal) &rarr; "
+      "4&ndash;7 L (1.1&ndash;1.8 gal) &rarr; 11&ndash;19 L (2.9&ndash;5.0 gal) final, each step "
+      "2&ndash;4&times; the volume, moving on root readiness rather than dates. Autoflowers skip the "
+      "ladder: direct to final, or one very early move" + _c("bhattacharya2023-autoflower") + "."),
     table(["Stage", "Container", "Typical volume", "Time in it", "Move when"], [
-      ["Propagation", "Plug / cube", "25&ndash;100 mL", "10&ndash;14 d", "Roots show on multiple faces"],
-      ["Early veg", "First pot", "0.5&ndash;1 L", "~1&ndash;2 wk", "Ball slides out whole, white tips"],
-      ["Veg", "Mid pot", "4&ndash;7 L", "~1&ndash;2 wk", "Daily drink-down, edge tips"],
-      ["Late veg &rarr; flower", "Final pot", "11&ndash;19 L indoor", "Root-in, then flip", "&mdash;"],
+      ["Propagation", "Plug / cube", "25&ndash;100 mL (0.85&ndash;3.4 fl oz)", "10&ndash;14 d", "Roots show on multiple faces"],
+      ["Early veg", "First pot", "0.5&ndash;1 L (0.13&ndash;0.26 gal)", "~1&ndash;2 wk", "Ball slides out whole, white tips"],
+      ["Veg", "Mid pot", "4&ndash;7 L (1.1&ndash;1.8 gal)", "~1&ndash;2 wk", "Daily drink-down, edge tips"],
+      ["Late veg &rarr; flower", "Final pot", "11&ndash;19 L (2.9&ndash;5.0 gal) indoor", "Root-in, then flip", "&mdash;"],
     ], cls="compact", caption="Volumes are hedged practitioner convention for indoor photoperiod plants; outdoor full-season plants run far larger. The ratios and the move-when signals are the transferable part."),
     p("Why steps instead of one leap into the final pot? Water and oxygen. A small root ball in a huge "
       "container can only drink a fraction of the volume, so the surrounding media stays wet for days. "
@@ -213,7 +215,7 @@ SECTIONS.append({"id": "direct-vs-staged", "kicker": "07 · The debate", "title"
       card("Staged up-potting", ul([
         "<strong>For:</strong> tight moisture control at every stage; roots colonise each volume fully, "
         "building a dense, layered ball; small plants stay mobile and dense under lights; culls cost a "
-        "plug, not 15 L of media.",
+        "plug, not 15 L (4 gal) of media.",
         "<strong>Against:</strong> every move is labour and a shock opportunity; more handling means more "
         "chances to do it rough; miss a window and you&rsquo;ve built the root-bound problem yourself."], "tight"),
         tag="Photoperiod default"),
@@ -237,14 +239,17 @@ SECTIONS.append({"id": "direct-vs-staged", "kicker": "07 · The debate", "title"
 SECTIONS.append({"id": "procedure", "kicker": "08 · Do this", "title": "Transplant procedure",
   "blocks": [
     p("The whole job takes two minutes per plant once staged. Do it late in the light period or under "
-      "dimmed light. Transpiration is lower, so the plant loses less water while its roots are "
-      "disturbed (practitioner convention). Have everything ready before you touch a plant: filled pots, "
-      "mixed solution, clean hands or gloves."),
+      "dimmed light. The plant constantly draws water up through its roots and releases it as vapour "
+      "through tiny pores in its leaves &mdash; this is <strong>transpiration</strong>, and it works "
+      "like a slow continuous pump: the hotter and drier the air, the faster the pump runs. Later in "
+      "the light period the pump slows, so the root system faces less demand at exactly the time it is "
+      "most disturbed (practitioner convention). Have everything ready before you touch a plant: "
+      "filled pots, mixed solution, clean hands or gloves."),
     steps([
       ("Pre-fill and pre-moisten the new home",
        "Fill the destination with media and wet it with nutrient solution before the plant arrives: coco "
        "pre-buffered and wet through; rockwool conditioned and saturated to its target weight (a 15 cm "
-       "block should sink when dunked, and weigh in around its stated saturated minimum)" + _c("grodan-growguide-v2") + "; "
+       "(6 in) block should sink when dunked, and weigh in around its stated saturated minimum)" + _c("grodan-growguide-v2") + "; "
        "soil damp, not soggy. Scoop a hole the size of the incoming ball."),
       ("Water the plant 12&ndash;24 h before the move",
        "A moist ball holds together; a dry one shatters and a saturated one smears. Moistening before "
@@ -260,7 +265,7 @@ SECTIONS.append({"id": "procedure", "kicker": "08 · Do this", "title": "Transpl
        "Wounded root tips re-signal and branch" + _c("alaguero2021-woundauxin") + "; an intact coil keeps "
        "circling. Don&rsquo;t rip a healthy ball apart out of ritual."),
       ("Set the depth: crown at grade",
-       "Top of the ball level with, or 5&ndash;10 mm below, the new surface, covered so it "
+       "Top of the ball level with, or 5&ndash;10 mm (0.2&ndash;0.4 in) below, the new surface, covered so it "
        "can&rsquo;t wick dry, shallow enough that the stem isn&rsquo;t sitting in wet media. Cannabis "
        "tolerates modest stem burial and can root from buried stem like its garden cousins, but deep "
        "burial of soft green stem in a wet pot trades a maybe-benefit for a real rot risk. Leggy "
@@ -275,8 +280,10 @@ SECTIONS.append({"id": "procedure", "kicker": "08 · Do this", "title": "Transpl
        "profile is wetted and the media settles onto the ball" + _c("umd-planting-transplants") + ". This "
        "is a settling drink, not a flush. Section 10 covers the numbers."),
       ("Back off",
-       "Return the plant to slightly gentler conditions for 24&ndash;48 h, a touch less light, "
-       "easy VPD, no training, no defoliation. Then resume. Most transplants need nothing else.")]),
+       "Return the plant to slightly gentler conditions for 24&ndash;48 h. VPD (vapour pressure deficit) "
+       "is how thirsty the air is for water &mdash; a hot dry room pulls hard on every leaf surface, a "
+       "cooler, moister room pulls gently. Keep VPD mild while roots recover: a touch less light, "
+       "no training, no defoliation. Then resume. Most transplants need nothing else.")]),
     figure(_FIGS["depth"], 5,
       "Depth is a one-decision step: ball proud of the surface wicks dry and kills the top roots; ball "
       "at grade with a thin cover is right; a buried crown puts soft stem in permanently wet media and "
@@ -288,9 +295,11 @@ SECTIONS.append({"id": "media-transitions", "kicker": "09 · Media to media", "t
   "blocks": [
     p("Up-potting soil into soil is the easy case. Commercial cannabis mostly moves plants "
       "<em>between</em> media (rockwool plug into coco, plug into block, block onto slab) "
-      "and every one of those moves lives or dies at the <strong>interface</strong>. Three rules govern "
-      "it: the surfaces must <em>touch</em> (capillary flow breaks at an air gap), the destination must "
-      "be <em>wet enough to accept roots</em> on day one, and after that it should run slightly "
+      "and every one of those moves lives or dies at the <strong>interface</strong>. Water moves "
+      "through tiny pores by surface tension &mdash; this is <strong>capillary flow</strong>, and it "
+      "works like water wicking up a paper towel. Three rules govern it: the surfaces must "
+      "<em>touch</em> (capillary flow stops completely at an air gap), the destination must be "
+      "<em>wet enough to accept roots</em> on day one, and after that it should run slightly "
       "<em>drier than the ball</em>, so roots chase the water out into the new volume."),
     figure(_FIGS["mediamap"], 6,
       "The transition map. Green routes are standard practice; amber works if you manage the interface "
@@ -322,7 +331,7 @@ SECTIONS.append({"id": "media-transitions", "kicker": "09 · Media to media", "t
       "else in this paper still applies; nothing extra does."),
     callout("warn", "The island effect, the silent killer in drip rooms",
       p("After any cross-media move, the old ball and the new media are two different hydraulic systems "
-        "until roots bridge them. Drippers wet the <em>new</em> media; capillarity across the interface "
+        "until roots bridge them. Drippers wet the <em>new</em> media; capillary flow across the interface "
         "is weak; the ball becomes a dry island in a wet pot, and the plant wilts while your "
         "sensors read perfect. Hand-water directly over the ball for the first days, or place a dripper "
         "on the ball itself, until roots have visibly crossed. Assume the island until proven bridged.")),
@@ -384,14 +393,16 @@ SECTIONS.append({"id": "transplant-shock", "kicker": "11 · When it hurts", "tit
       "Shock is a water-supply failure wearing many masks. Break the cascade at the front (intact "
       "ball, real contact, gentle climate) and the rest never happens." + _c("grossnickle2005-roots") + _c("close2005-shock")),
     p("<strong>Ranked causes in an indoor room:</strong> ball damage from rough or dry handling; a dry "
-      "interface (the island effect); an osmotic cliff at watering-in; climate too aggressive for a "
-      "compromised root system (high VPD, high light); cold media, root growth slows sharply in "
-      "cold root zones, and a fresh transplant is nothing but root growth (keep media roughly "
-      "18&ndash;24 &deg;C, practitioner convention); and simple lateness, a root-bound plant "
-      "enters the move already compromised."),
+      "interface (the island effect); an osmotic cliff at watering-in (when the solution outside the "
+      "roots is more concentrated than the water inside them, roots lose water to the solution rather "
+      "than absorbing it &mdash; like a raisin in saltwater; this is osmotic stress); climate too "
+      "aggressive for a compromised root system (high VPD, high light); cold media, root growth slows "
+      "sharply in cold root zones, and a fresh transplant is nothing but root growth (keep media roughly "
+      "18&ndash;24 &deg;C (64&ndash;75 &deg;F), practitioner convention); and simple lateness, a "
+      "root-bound plant enters the move already compromised."),
     p("<strong>Prevention is mostly hardening logic.</strong> Outdoor growers spend 7&ndash;14 days "
-      "acclimating transplants (graduated exposure, reduced watering frequency) which "
-      "thickens cuticles and banks carbohydrate reserves that fund root regrowth after the move" + _c("sdsu-hardening") +
+      "acclimating transplants (graduated exposure to new conditions, reduced watering frequency) "
+      "which thickens cuticles and banks carbohydrate reserves that fund root regrowth after the move" + _c("sdsu-hardening") +
       ". Indoors, moving within one room, you inherit that benefit for free; recreate it whenever "
       "environments differ across the move: step light and VPD gently for the first 48 h in the new "
       "position, exactly as you would moving clones to the veg room."),
@@ -418,7 +429,7 @@ SECTIONS.append({"id": "failure-modes", "kicker": "12 · Failure modes", "title"
       card("Ball shatter", p("Dry ball pulled out by the stem; the fine root tips that do the actual "
         "drinking tear off. The plant looks fine for a day, then collapses. <em>Fix:</em> water "
         "12&ndash;24 h before, de-pot inverted, handle the ball" + _c("uga-b1144-transplants") + "."), tag="Handling"),
-      card("The island effect", p("Drippers wet the new media, capillarity fails at the interface, and "
+      card("The island effect", p("Drippers wet the new media, capillary flow fails at the interface, and "
         "the old ball dries out invisibly. Plant wilts in a &lsquo;wet&rsquo; pot. <em>Fix:</em> "
         "hand-water over the ball until roots bridge."), tag="Interface"),
       card("Osmotic cliff", p("Hot pre-charged media, a strong first feed, or plain water in inert "
@@ -426,7 +437,7 @@ SECTIONS.append({"id": "failure-modes", "kicker": "12 · Failure modes", "title"
         "first drink at the EC the plant already knows" + _c("grodan-growguide-v2") + "."), tag="Chemistry"),
       card("Buried crown", p("Soft green stem set below grade in wet media rots at the collar, "
         "the plant tips over at the media line weeks later. <em>Fix:</em> ball at grade, "
-        "5&ndash;10 mm cover max, collar zone kept on the dry side."), tag="Depth"),
+        "5&ndash;10 mm (0.2&ndash;0.4 in) cover max, collar zone kept on the dry side."), tag="Depth"),
       card("Root-bound denial", p("The move that happened three weeks after the signs. The coil goes "
         "into the new pot as a coil and stays one. <em>Fix:</em> move on signals; tease or score a "
         "circled mat so it re-signals and branches" + _c("alaguero2021-woundauxin") + _c("rqs-rootbound") + "."), tag="Timing"),
@@ -477,7 +488,7 @@ SECTIONS.append({"id": "troubleshooting", "kicker": "14 · Triage", "title": "Tr
       ["Wilts fast <em>and</em> pot stays wet", "Root-bound ball never broke out", "Slide-out check; tease/score the mat if coiled; small targeted shots meanwhile"],
       ["Lower leaves yellow in week one", "Underfed, plain-water water-in or weak media charge", "Feed at the plant&rsquo;s known EC; check runoff EC to confirm"],
       ["Leaf tips burn days after the move", "Osmotic cliff, media pre-charge or first drink too hot", "Irrigate at reduced EC to pull the root zone down gradually"],
-      ["No new growth 7+ d, no droop either", "Cold root zone, or a still-open air gap", "Media to 18&ndash;24 &deg;C; water to settle contact; check pot isn&rsquo;t sitting on cold floor"],
+      ["No new growth 7+ d, no droop either", "Cold root zone, or a still-open air gap", "Media to 18&ndash;24 &deg;C (64&ndash;75 &deg;F); water to settle contact; check pot isn&rsquo;t sitting on cold floor"],
       ["Stem soft or brown at the media line", "Buried crown / wet collar", "Pull media back to expose the collar, dry the surface, increase airflow; often terminal, cull if it rings the stem"],
       ["Media stays wet 5+ days", "Overpotted", "Stop watering; tiny shots at the ball only; warmth and airflow; patience"],
     ], cls="compact", caption="Give each fix a day before layering the next. Most post-transplant problems are one cause, not three."),
@@ -500,7 +511,7 @@ SECTIONS.append({"id": "mental-model", "kicker": "15 · Take this with you", "ti
     kv([("Step ratio", "2&ndash;4&times; volume per up-pot"),
         ("Last up-pot", "7&ndash;14 d before flip"),
         ("First drink", "Known feed EC, or up to ~0.3 below it"),
-        ("Depth", "Ball at grade; 5&ndash;10 mm cover"),
+        ("Depth", "Ball at grade; 5&ndash;10 mm (0.2&ndash;0.4 in) cover"),
         ("Clean recovery", "New top growth within 3&ndash;5 d"),
         ("Autoflower rule", "Direct to final, or moved by ~day 15")]),
     p("Upstream of this paper: raising the plants you&rsquo;ll move, in <a href='cloning.html'>cloning</a> "

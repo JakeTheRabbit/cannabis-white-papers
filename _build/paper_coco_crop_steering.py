@@ -7,9 +7,10 @@ import figs_lib as L
 SLUG = "coco-crop-steering"
 TITLE = "Precision coco cultivation: crop steering in coir"
 EYEBROW = "Beginner · Coco & crop steering"
-SUB = ("Coco coir lets you talk to your plants through water. This paper shows you what the root "
-       "zone is telling you, and how a daily rhythm of wetting and drying steers a plant toward "
-       "leaves or toward flower, explained from zero.")
+SUB = ("Coco coir dries and wets predictably, which makes it the easiest substrate to steer. "
+       "This paper explains what a root-zone sensor reads, how a daily wet-and-dry cycle works, "
+       "and how to use dryback to push a plant toward leaves or toward flower. "
+       "No prior root-zone experience needed.")
 META = [("droplet", "Beginner"), ("image", "5 diagrams"),
         ("quote", "Evidence-linked · 10 sources"), ("clock", "~16 min read")]
 RELATED = ["root-zone-teros12", "grow-room-systems", "tissue-culture"]
@@ -86,7 +87,9 @@ SECTIONS.append({"id": "reading", "kicker": "04 · The signals", "title": "Readi
       "<strong>EC</strong> (how salty). Together they tell you what the plant is doing and what to "
       "do next."),
     p("Here is the trick beginners miss: <strong>as the substrate dries, the salt left behind "
-      "gets more concentrated, so EC rises</strong>. The water leaves and the fertiliser does not. A "
+      "gets more concentrated, so EC rises</strong>. The water leaves and the fertiliser does not. "
+      "Think of a glass of seawater left on a sunny bench—as the water evaporates, the same "
+      "salt is left in less water, so it tastes saltier even though nothing was added. A "
       "sensor estimates the &lsquo;pore-water EC&rsquo; the roots actually feel from the bulk "
       "reading, the moisture and the temperature" + _c("hilhorst2000-ec") + ". That is why EC "
       "readings get unreliable once VWC falls into single digits."),
@@ -103,15 +106,16 @@ SECTIONS.append({"id": "reading", "kicker": "04 · The signals", "title": "Readi
           "<strong>EC drifting down</strong> over days means the plant is eating salt faster than you feed, so raise feed EC."], "tight")),
   ]})
 
-SECTIONS.append({"id": "dryback", "kicker": "05 · The engine", "title": "Dryback: the steering mechanism",
+SECTIONS.append({"id": "dryback", "kicker": "05 · The dryback", "title": "Dryback: your main steering lever",
   "blocks": [
     callout("evidence", "Grain of salt",
       "<p><strong>Borderline:</strong> Caplan-style single late droughts are <em>related</em> to generative drybacks "
       "but not the same experiment as multi-week daily sawteeth. Use dryback as a gentle bias; never wilt. "
       "Your probe-native % is not a universal media law.</p>"),
     p("A <strong>dryback</strong> is letting the root zone dry by a chosen amount before you "
-      "water again. It is the most powerful lever you have, because a mild, controlled water deficit "
-      "changes how the plant grows."),
+      "water again. Think of a kitchen sponge: you decide how much to let it dry before running it "
+      "under the tap again—barely damp versus nearly stiff are different choices, and the plant "
+      "responds to each differently. A mild, controlled water deficit changes how the plant grows."),
     p("When the root zone dries a little, the plant makes a stress hormone called "
       "<strong>abscisic acid (ABA)</strong>, which shifts it away from leafy growth and toward "
       "flowering and resin production" + _c("welling2025-aba") + ". Done deliberately at the right time, "
@@ -149,7 +153,7 @@ SECTIONS.append({"id": "phases", "kicker": "06 · The daily rhythm", "title": "D
     ], caption="The P0–P3 framework. The numbers you choose for each phase are your steering recipe."),
   ]})
 
-SECTIONS.append({"id": "steering", "kicker": "07 · The steering wheel", "title": "Vegetative and generative steering",
+SECTIONS.append({"id": "steering", "kicker": "07 · Steering levers", "title": "Vegetative and generative steering",
   "blocks": [
     p("&lsquo;Generative&rsquo; means flowers, density and resin. &lsquo;Vegetative&rsquo; means "
       "leaves, stems and size. You bias the plant with a handful of levers that all work by changing "
@@ -160,18 +164,27 @@ SECTIONS.append({"id": "steering", "kicker": "07 · The steering wheel", "title"
       ["Shots", "Fewer, smaller, later start", "Earlier, more frequent, bigger"],
       ["Day/night temp", "Cooler nights, wider day-night gap", "Warmer, flatter temps"],
       ["VPD / humidity", "Drier air (higher VPD)", "More humid air (lower VPD)"],
-    ], caption="Most levers act through transpiration, how fast the plant pulls water. Use one or two at a time, not all at once."),
+    ], caption="Most levers work through <strong>transpiration</strong>—the process by which a plant pulls water up from its roots and releases it through the leaf surface, similar to how skin releases sweat. The faster a plant transpires, the more it drinks. Use one or two levers at a time, not all at once."),
+    p("Raising feed EC makes the root-zone solution more concentrated than the water inside the "
+      "plant. The plant has to push harder to pull water in across that gap—this is "
+      "<strong>osmotic stress</strong>. A modest EC increase tightens generative growth; push it "
+      "too high and growth shuts down."),
     p("Temperature is on that list because the gap between day and night temperature controls stretch. "
       "A warm day with a cool night keeps plants compact. A warm night makes them stretch" + _c("moe1995-dif") +
-      ". Air dryness (VPD) sets how fast the plant transpires, up to a point, then stomata "
-      "close and everything slows" + _c("grossiord2020-vpd") + "."),
+      ". The dryness of the air around the leaves controls how fast the plant transpires. Think of a "
+      "hot dry wind on your skin after a swim—the wind does not add moisture, it draws it out "
+      "faster. <strong>Vapour pressure deficit (VPD)</strong> is the technical name for this, "
+      "measured in kPa: the gap between how much water vapour the air could hold at that temperature "
+      "and how much it actually holds. Higher VPD means more demanding air. Above a certain point "
+      "the leaf pores close to limit water loss, and transpiration slows even though the air is "
+      "still dry" + _c("grossiord2020-vpd") + "."),
     callout("danger", "Change one thing at a time",
       p("Every lever interacts. If you yank the dryback, raise EC, drop humidity and cool the night "
         "all at once, you will not know what helped or hurt, and you may tip a steer into real "
         "stress. Move one dial, watch for a few days, then adjust.")),
   ]})
 
-SECTIONS.append({"id": "week", "kicker": "08 · The arc", "title": "Flowering steering by week",
+SECTIONS.append({"id": "week", "kicker": "08 · Week by week", "title": "Flowering steering by week",
   "blocks": [
     p("Flowering indoors usually runs about 8–10 weeks once you flip the lights to a 12-hour "
       "night" + _c("moher2023-photoperiod") + ". The steering changes across that arc:"),
@@ -202,6 +215,7 @@ SECTIONS.append({"id": "expect", "kicker": "10 · Straight talk", "title": "Expe
       ol(["<strong>There is no universal recipe.</strong> The right VWC, EC and dryback numbers depend on your strain, pot size, climate and light. Start from the ranges here and tune to <em>your</em> plants.",
           "<strong>Steering is a bias, not a switch.</strong> You are nudging odds over days, not flipping a plant overnight.",
           "<strong>The root zone is only one lever.</strong> Light, temperature, humidity and airflow all push the same plant. Read the <a href='grow-room-systems.html'>systems guide</a> next."])),
-    p("Get a sensor on the root zone, learn to read one normal day, then change one thing at a time. "
-      "That discipline, not a magic number, is what makes coco repeatable."),
+    p("Get a sensor on the root zone, learn what one normal day looks like on your setup, then "
+      "change one thing at a time. That method—sensor first, baseline second, one change at "
+      "a time—is what makes coco consistent across runs."),
   ]})

@@ -10,9 +10,10 @@ _FIGS = json.load(open(os.path.join(os.path.dirname(__file__), "figs_compliance.
 SLUG = "compliance-track-trace"
 TITLE = "Compliance, licensing and track-and-trace"
 EYEBROW = "Facility · Compliance"
-SUB = ("A licensed grow is a paperwork machine with a garden attached. This guide maps the spine: "
-       "what a licence actually is, how batches and lots connect every gram to its history, how "
-       "seed-to-sale tracking works, and how to keep records an auditor believes.")
+SUB = ("A licensed grow is a paperwork machine with a garden attached. After reading this, you will "
+       "be able to read your own licence critically, track a batch from mother plant to packaged "
+       "lot, run an inventory reconciliation and explain any variance, write records that hold up "
+       "under audit, and log a deviation without turning it into a crisis.")
 META = [("shield", "Compliance"), ("image", "9 diagrams"),
         ("quote", "Evidence-linked · 14 sources"), ("clock", "~24 min read")]
 RELATED = ["gmp-hash-lab", "daily-checks", "auckland-ipm-blueprint"]
@@ -175,7 +176,7 @@ SECTIONS.append({"id": "licence-anatomy", "kicker": "The licence", "title": "Lic
   ]})
 
 # ---------------------------------------------------------------- 5. regulator
-SECTIONS.append({"id": "regulator", "kicker": "The relationship", "title": "Regulatory inspections, notifications and variations",
+SECTIONS.append({"id": "regulator", "kicker": "Regulator relationship", "title": "Regulatory inspections, notifications and variations",
   "blocks": [
     p("The regulator is not a customer, not a mate, and not an enemy. The productive mental model "
       "is <strong>external quality assurance with statutory power</strong>: they exist to verify "
@@ -209,7 +210,7 @@ SECTIONS.append({"id": "regulator", "kicker": "The relationship", "title": "Regu
   ]})
 
 # ---------------------------------------------------------------- 6. batches
-SECTIONS.append({"id": "batches", "kicker": "Core concept", "title": "Batch and lot traceability",
+SECTIONS.append({"id": "batches", "kicker": "Batches and lots", "title": "Batch and lot traceability",
   "blocks": [
     lead("A batch is a promise of uniformity: a defined quantity of material that went through the "
          "same process at the same time, so one test result, one record, one decision can honestly "
@@ -248,7 +249,7 @@ SECTIONS.append({"id": "batches", "kicker": "Core concept", "title": "Batch and 
   ]})
 
 # ---------------------------------------------------------------- 7. track and trace
-SECTIONS.append({"id": "track-trace", "kicker": "Systems", "title": "Seed-to-sale tracking and reconciliation",
+SECTIONS.append({"id": "track-trace", "kicker": "Track and trace", "title": "Seed-to-sale tracking and reconciliation",
   "blocks": [
     p("Track-and-trace is perpetual inventory for a controlled substance. Three ingredients: "
       "<strong>identity</strong> (every plant and package carries a tag or UID), "
@@ -309,14 +310,14 @@ SECTIONS.append({"id": "reconciliation", "kicker": "The #1 finding", "title": "I
       "data and poor data quality in the tracking system as core weaknesses in detecting exactly "
       "that" + _c("or-sos-audit-2019") + "."),
     table(["Line", "Amount", "Where it comes from"], [
-      ["Opening stock (dried flower)", "12.40 kg", "Last verified count"],
-      ["+ In: new harvest dried", "9.60 kg", "Dry-room log, dated"],
-      ["&minus; Out: transfers to processor", "4.80 kg", "Manifests, signed both ends"],
-      ["&minus; Out: destroyed waste", "1.20 kg", "Destruction records, witnessed"],
-      ["&minus; Out: lab samples", "0.03 kg", "Sample log with lot IDs"],
-      ["<strong>= Expected on hand</strong>", "<strong>15.97 kg</strong>", "Arithmetic"],
-      ["Physical count", "15.71 kg", "This morning, two people"],
-      ["<strong>Variance</strong>", "<strong>&minus;0.26 kg (&minus;1.6%)</strong>",
+      ["Opening stock (dried flower)", "12.40 kg (27.3 lb)", "Last verified count"],
+      ["+ In: new harvest dried", "9.60 kg (21.2 lb)", "Dry-room log, dated"],
+      ["&minus; Out: transfers to processor", "4.80 kg (10.6 lb)", "Manifests, signed both ends"],
+      ["&minus; Out: destroyed waste", "1.20 kg (2.6 lb)", "Destruction records, witnessed"],
+      ["&minus; Out: lab samples", "0.03 kg (1.1 oz)", "Sample log with lot IDs"],
+      ["<strong>= Expected on hand</strong>", "<strong>15.97 kg (35.2 lb)</strong>", "Arithmetic"],
+      ["Physical count", "15.71 kg (34.6 lb)", "This morning, two people"],
+      ["<strong>Variance</strong>", "<strong>&minus;0.26 kg (9.2 oz), &minus;1.6%</strong>",
        "Investigate, explain, document, today"],
     ], cls="compact", caption="A worked reconciliation. The arithmetic is trivial; the discipline is doing it on a schedule and treating every variance as an incident with a written outcome. Figures illustrative."),
     p("The fix is cadence plus honesty. Small operations do well with a <strong>weekly cycle "
@@ -545,7 +546,7 @@ SECTIONS.append({"id": "recall", "kicker": "Readiness", "title": "Recall readine
   ]})
 
 # ---------------------------------------------------------------- 14. audit day
-SECTIONS.append({"id": "audit-day", "kicker": "The test", "title": "Audit-day walkthrough",
+SECTIONS.append({"id": "audit-day", "kicker": "Audit day", "title": "Audit-day walkthrough",
   "blocks": [
     p("Inspections vary (announced or not, desk or on-site, routine or triggered) but the shape "
       "of a survivable audit day is consistent. The work is 90% done before the knock on the "

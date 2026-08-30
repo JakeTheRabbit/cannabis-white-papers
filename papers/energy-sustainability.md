@@ -2,7 +2,7 @@
 slug: "energy-sustainability"
 title: "Energy, utilities and sustainability"
 eyebrow: "Facility · Energy"
-summary: "Where the kilowatt-hours actually go in an indoor grow (lighting, HVAC, dehumidification) and the cited playbook for spending fewer of them: efficacy, the double dividend, demand charges, water reuse, and the retrofit order that pays."
+summary: "Map where your electricity goes across lighting, HVAC, and dehumidification, then work through the cited retrofit order — efficacy, the double dividend, demand charges, water reuse — so you can identify which cuts pay fastest in your room and measure whether they did."
 track: "Facility & quality"
 read_time: "~18 min read"
 diagrams: "12 diagrams"
@@ -21,7 +21,7 @@ refs: [{"id": "mills2012-carbon", "n": 1, "cite": "Mills E (2012). The carbon fo
 
 _Facility · Energy · ~18 min read_
 
-> Where the kilowatt-hours actually go in an indoor grow (lighting, HVAC, dehumidification) and the cited playbook for spending fewer of them: efficacy, the double dividend, demand charges, water reuse, and the retrofit order that pays.
+> Map where your electricity goes across lighting, HVAC, and dehumidification, then work through the cited retrofit order — efficacy, the double dividend, demand charges, water reuse — so you can identify which cuts pay fastest in your room and measure whether they did.
 
 ## Purpose and scope
 
@@ -47,7 +47,7 @@ Energy talk collapses into a handful of units. Get these straight and every spec
 
 **Energy intensity metrics** — kWh per square metre (or square foot) of canopy per year compares facilities; kWh per gram (or its inverse, grams per kWh) compares production efficiency. The industry benchmarking platform tracks both[^rii-powerscore].
 
-**Sensible vs latent load** — Sensible heat changes air temperature; latent heat is the energy carried by water vapour. A grow room's latent load, everything the plants transpire. Is why dehumidification is its own major energy line.
+**Sensible vs latent load** — Air conditioning removes two completely different things at once. Sensible heat is what a thermometer measures: it changes air temperature. Latent heat is energy locked inside water vapour: the air carries it invisibly, and the temperature does not change until that moisture condenses. In a grow room, the latent load comes almost entirely from transpiration — the plants keep releasing vapour whether the room feels warm or cool. That is why dehumidification is its own separate energy line and not simply a byproduct of running the AC.
 
 **Time-of-use (TOU) tariff** — A price schedule where a kWh costs more at peak hours and less off-peak, as opposed to a flat rate. With lights running only half the day anyway, grows are unusually well placed to exploit it.
 
@@ -71,9 +71,9 @@ One more habit: convert everything to the same basis before comparing. US source
 
 ## Measured energy use by system
 
-Mills (2012) built the first transparent end-use model of a standard indoor production module and it is still the reference skeleton: lighting about 33% of energy, ventilation and dehumidification 27%, air conditioning 19%, with CO₂ injection, water handling, space heat and drying making up the rest[^mills2012-carbon][^zheng2021-review]. Power density in a flowering room runs near 200 W per square foot, the same order as a data centre[^remillard2017-aceee].
+Mills (2012) built the first transparent end-use model of a standard indoor production module and it is still the reference skeleton: lighting about 33% of energy, ventilation and dehumidification 27%, air conditioning 19%, with CO₂ injection, water handling, space heat and drying making up the rest[^mills2012-carbon][^zheng2021-review]. Power density in a flowering room runs near 2,150 W/m² (200 W/ft²), the same order as a data centre[^remillard2017-aceee].
 
-Real facilities scatter around that skeleton. The Northwest Power and Conservation Council surveyed licensed producers in Oregon and Washington and measured indoor operations at about 128 kWh per square foot of canopy per year (≈1,380 kWh/m²), roughly 100 of it lighting and 28 HVAC and pumping, against 12 for greenhouses and about 1 for outdoor[^nwpcc2018-cannabis]. Mild-climate rooms lean harder on lighting; hot, humid or freezing climates push the HVAC share up. The 2021 national life-cycle study modelled a facility in every US county and found climate control the largest greenhouse-gas contributor in all of them, driven partly by ventilation rates of 12–60 air changes per hour in surveyed grows, versus 0.35 for a house and a 15-ACH minimum for a hospital operating theatre[^summers2021-natsust].
+Real facilities scatter around that skeleton. The Northwest Power and Conservation Council surveyed licensed producers in Oregon and Washington and measured indoor operations at about 1,380 kWh/m²·yr (128 kWh/ft²·yr) of canopy — roughly 1,075 kWh/m² (100 kWh/ft²) lighting and 300 kWh/m² (28 kWh/ft²) HVAC and pumping — against 130 kWh/m² (12 kWh/ft²) for greenhouses and about 11 kWh/m² (1 kWh/ft²) for outdoor[^nwpcc2018-cannabis]. Mild-climate rooms lean harder on lighting; hot, humid or freezing climates push the HVAC share up. The 2021 national life-cycle study modelled a facility in every US county and found climate control the largest greenhouse-gas contributor in all of them, driven partly by ventilation rates of 12–60 air changes per hour in surveyed grows, versus 0.35 for a house and a 15-ACH minimum for a hospital operating theatre[^summers2021-natsust].
 
 > **Diagram.** The production-environment spread in one utility survey: indoor rooms used about ten times the electricity of greenhouses per unit of canopy, and about a hundred times outdoor[^nwpcc2018-cannabis]. Nothing else in this paper moves the needle like the decision this chart describes.
 
@@ -85,15 +85,15 @@ Real facilities scatter around that skeleton. The Northwest Power and Conservati
 
 How much electricity does a gram of flower take? The studies disagree, usefully. The spread tells you how much of the number is physics and how much is choices.
 
-> **Diagram.** Published electricity intensities for indoor production: the 2021 national model spans roughly 1,700–5,300 kWh/kg depending on location[^summers2021-natsust], the trade literature's rule of thumb is ~2,000 kWh per pound (≈4,400 kWh/kg)[^remillard2017-aceee], and Mills' 2012 module works out near 6,074 kWh/kg[^mills2012-carbon].
+> **Diagram.** Published electricity intensities for indoor production: the 2021 national model spans roughly 1,700–5,300 kWh/kg depending on location[^summers2021-natsust], the trade literature's rule of thumb is ≈4,400 kWh/kg (~2,000 kWh/lb)[^remillard2017-aceee], and Mills' 2012 module works out near 6,074 kWh/kg[^mills2012-carbon].
 
 | Source | What it measured | Headline number |
 | --- | --- | --- |
-| Mills 2012 (Energy Policy)[^mills2012-carbon] | Model of a standard indoor module, US average practice | ≈6,074 kWh/kg; ~13,000 kWh per year per 4'×4'×8' module |
+| Mills 2012 (Energy Policy)[^mills2012-carbon] | Model of a standard indoor module, US average practice | ≈6,074 kWh/kg; ~13,000 kWh per year per 1.2 m × 1.2 m × 2.4 m (4'×4'×8') module |
 | Summers et al. 2021 (Nature Sustainability)[^summers2021-natsust] | Modelled facility in every US county, cradle-to-gate | Electricity ≈1,700–5,300 kWh/kg by location; GHG 2,283–5,184 kg CO₂e/kg |
-| ACEEE industry review 2017[^remillard2017-aceee] | Trade + utility programme data | ~2,000 kWh/lb (≈4,400 kWh/kg); ~200 W/ft² power density |
-| NW Power & Conservation Council[^nwpcc2018-cannabis] | Survey of licensed OR/WA producers | Indoor 128 vs greenhouse 12 vs outdoor 1 kWh/ft²·yr |
-| Cannabis PowerScore (RII)[^rii-powerscore] | Self-reported facility benchmarking dataset | Tracks kWh/ft² and g/kWh; most facilities can save ≥30% |
+| ACEEE industry review 2017[^remillard2017-aceee] | Trade + utility programme data | ≈4,400 kWh/kg (~2,000 kWh/lb); ~2,150 W/m² (200 W/ft²) power density |
+| NW Power & Conservation Council[^nwpcc2018-cannabis] | Survey of licensed OR/WA producers | Indoor ≈1,380 vs greenhouse ≈130 vs outdoor ≈11 kWh/m²·yr (128, 12, 1 kWh/ft²·yr) |
+| Cannabis PowerScore (RII)[^rii-powerscore] | Self-reported facility benchmarking dataset | Tracks kWh/m² (kWh/ft²) and g/kWh; most facilities can save ≥30% |
 
 *The benchmark landscape. Read the 'what it measured' column before quoting any of the numbers.*
 
@@ -149,7 +149,7 @@ After lighting, the climate plant is where the remaining kilowatt-hours live[^mi
 
 > **TIP — Deadbands are free money**
 >
-> Every controller has a deadband, the gap between 'start cooling' and 'start heating'. Rooms tuned to fight for ±0.3 °C burn energy purely on nervous equipment. Widen deadbands to what the plants actually notice (±1 °C is generous), make sure heating and cooling setpoints can never overlap, and stop the AC and dehu fighting each other, reheat wars between two controllers are a classic silent kWh leak.
+> Every controller has a deadband, the gap between 'start cooling' and 'start heating'. Rooms tuned to fight for ±0.3 °C (±0.5 °F) burn energy purely on nervous equipment. Widen deadbands to what the plants actually notice (±1 °C / ±1.8 °F is generous), make sure heating and cooling setpoints can never overlap, and stop the AC and dehu fighting each other — reheat wars between two controllers are a classic silent kWh leak.
 
 ## Demand charges, energy use and photoperiod
 
@@ -177,9 +177,9 @@ This is the cheapest retrofit in the whole paper: it is a scheduling change. Flo
 
 ## Water-system energy use
 
-Indoor cannabis is thirsty in a specific, recoverable way. Reported irrigation demand runs around 9–11 litres per plant per day for mature indoor plants in peak season, and about 22.7 L/day for outdoor plants at the height of summer[^zheng2021-review], though per-plant numbers vary so much with pot size, plant size and stage that the benchmarking bodies deliberately measure water per unit of canopy instead[^rii-powerscore]. In drain-to-waste systems another 10–30% is pushed through deliberately as runoff to control salts (see the irrigation papers for why).
+Indoor cannabis is thirsty in a specific, recoverable way. Reported irrigation demand runs around 9–11 L/plant/day (2.4–2.9 gal/plant/day) for mature indoor plants in peak season, and about 22.7 L/day (6.0 gal/day) for outdoor plants at the height of summer[^zheng2021-review], though per-plant numbers vary so much with pot size, plant size and stage that the benchmarking bodies deliberately measure water per unit of canopy instead[^rii-powerscore]. In drain-to-waste systems another 10–30% is pushed through deliberately as runoff to control salts (see the irrigation papers for why).
 
-Here is the part beginners miss: in a sealed room, **almost every litre you irrigate ends up in the air**, because the plant transpires the overwhelming majority of what it drinks. Your dehumidifier and AC coils then condense it back to liquid, a large flower-room dehumidifier can yield around 270 litres a day, roughly 1,900 litres a week, of near-distilled condensate[^cbt-condensate]. That is water you already paid to pump, treat, and then remove from the air at real electrical cost. Sending it down the drain is paying full price for a product and binning it at the door.
+Here is the part beginners miss: in a sealed room, **almost every litre you irrigate ends up in the air**, because the plant transpires the overwhelming majority of what it drinks. Your dehumidifier and AC coils then condense it back to liquid, a large flower-room dehumidifier can yield around 270 L/day (71 gal/day), roughly 1,900 L/week (502 gal/week), of near-distilled condensate[^cbt-condensate]. That is water you already paid to pump, treat, and then remove from the air at real electrical cost. Sending it down the drain is paying full price for a product and binning it at the door.
 
 > **Diagram.** The sealed-room water loop. Irrigation leaves mostly as transpiration, condenses on the dehu and AC coils, and can be treated and returned. Condensate is near-distilled but picks up metals from coils and biofilm from drain pans, so it is filtered, sterilised and re-mineralised before reuse[^cbt-condensate].
 

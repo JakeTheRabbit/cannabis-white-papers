@@ -96,10 +96,10 @@ Fungus gnat larvae weaken plants and wound roots, and the damage they cause inte
 
 You cannot control what you do not measure, and early detection is the single biggest lever you have. Run a fixed weekly scouting walk on the same day, inspecting leaf undersides, growing tips, flowers and the root zone, and step up to twice weekly as rooms warm up.
 
-Hang yellow sticky cards at canopy height for thrips, whitefly and fungus-gnat adults at a mapped density (example: ~1 card / 100 m² or ~1,000 sq ft) as a starting point, with more cards giving a better signal. Place fungus-gnat cards low, near the medium surface, where the adults fly. Record the count on each card every week so you track the trend, not just the snapshot.
+Hang yellow sticky cards at canopy height for thrips, whitefly and fungus-gnat adults at a mapped density of about one card per 100 m² (~1,076 ft²) as a starting point, with more cards giving a better signal. Place fungus-gnat cards low, near the medium surface, where the adults fly. Record the count on each card every week so you track the trend, not just the snapshot.
 
 - Scout weekly on a fixed day, spot-check twice weekly when temperatures and pest development rise
-- Yellow sticky cards: minimum ~1 per 1,000 sq ft, low at the medium for fungus gnats, canopy height for thrips/whitefly
+- Yellow sticky cards: minimum ~1 per 93 m² (1,000 ft²), low at the medium for fungus gnats, canopy height for thrips/whitefly
 - Log card counts each week, a rising trend (not a single number) is the alarm
 - 30x loupe for spider mites, 60-100x scope for russet/broad mites, inspect undersides, tips, flowers AND roots
 - Action thresholds are facility-specific, e.g. one grower tolerates 10-15 thrips/card/week, another with virus history tolerates under 5

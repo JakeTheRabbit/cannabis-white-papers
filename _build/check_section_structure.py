@@ -35,6 +35,7 @@ ACRONYMS = {
     "DLI", "PAR", "LED", "HPS", "CMH", "PPE", "IPM", "ORP", "PPM", "THC",
     "THCA", "COA", "ICP-MS", "HLVD", "HSWA", "NZ", "P0", "P1", "P2", "P3",
     "VWC", "MQ", "FIM", "LEDS", "A", "B", "W", "I-V",
+    "HPLC", "GC", "UPLC", "LC-MS", "GC-MS",
 }
 PROPER_NAME_EXCEPTIONS = {
     (

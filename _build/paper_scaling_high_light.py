@@ -7,9 +7,9 @@ import figs_lib as L
 SLUG = "scaling-high-light"
 TITLE = "Scaling light to the limiting factor"
 EYEBROW = "Advanced · Scaling to high light"
-SUB = ("Light sets the demand. CO₂, water, airflow, feed and heat-removal have to supply it. "
-       "Your yield ceiling is whichever one tops out first, so size every system to the "
-       "light, find the wall, and dial the light down to meet it.")
+SUB = ("Light sets the demand; CO₂, water, airflow, feed, and heat-removal have to supply it. "
+       "This paper shows you how to calculate which supply system runs out first, how to read "
+       "that number as your real light ceiling, and what to upgrade if you want to go higher.")
 META = [("gauge", "Advanced"), ("image", "1 diagram · 5 tables"),
         ("quote", "Evidence-linked · 4 sources"), ("clock", "~16 min read")]
 RELATED = ["grow-room-systems", "co2-enrichment", "coco-crop-steering"]
@@ -26,7 +26,7 @@ def _fig_ceiling():
         "Each system's PPFD ceiling. The lowest one wins",
         [("CO&#8322;", 1500), ("Irrigation", 1200), ("Cooling", 1140), ("Dehu", 1050)],
         unit="",
-        note="Case A: 50 m&sup2; room, 6 tons cooling, 410 pints dehu, 300 L/day feed, CO&#8322; to 1500 ppm.",
+        note="Case A: 50 m&sup2; room, 21 kW (6 ton) cooling, 194 L/day (410 pints) dehu, 300 L/day feed, CO&#8322; to 1500 ppm.",
         target=1050, maxv=1600)
 
 SECTIONS = []
@@ -76,13 +76,24 @@ SECTIONS.append({"id": "terms", "kicker": "02 · The vocabulary", "title": "Defi
             _c("chandra2008-photo") + "."),
     defterm("Limiting factor", "The single input in shortest supply relative to demand. It, and only "
             "it, sets the growth rate. Every plan in this paper is a hunt for this one thing."),
-    defterm("Sensible vs latent load", "Two kinds of heat your climate gear fights. <strong>Sensible"
-            "</strong> is dry heat off the fixtures, the air-conditioner's job. <strong>Latent"
-            "</strong> is heat locked in the water vapour the plants transpire, the "
-            "dehumidifier's job. Light drives both."),
-    defterm("Mass flow", "Nutrients ride into the roots dissolved in the transpiration stream. Faster "
-            "transpiration pulls more water, and more feed, through the plant, which is "
-            "why <a href='airflow-design.html'>airflow</a>, feed EC and light are all bolted together."),
+    defterm("Sensible vs latent load", "Your climate gear fights two kinds of heat at once. Picture a "
+            "hot, humid summer day: the heat radiating off the pavement is sensible heat — dry warmth "
+            "you can measure with a thermometer. The clammy, heavy feeling is latent heat, energy "
+            "locked inside water vapour that does not register on a thermometer until the moisture "
+            "condenses. <strong>Sensible heat</strong> comes off the fixtures as dry warmth; that is "
+            "the air-conditioner's job. <strong>Latent heat</strong> leaves the room inside the water "
+            "vapour the plants transpire; that is the dehumidifier's job. More light means more of "
+            "both — the two bills grow together."),
+    defterm("Mass flow", "Plants do not pump water upward the way a heart pumps blood. Water evaporates "
+            "out of tiny pores on each leaf (the stomata), and that evaporation pulls a continuous "
+            "thread of water up from the roots — the same way sucking on one end of a straw pulls "
+            "liquid from the other end. The technical name for this movement is the "
+            "<strong>transpiration stream</strong>. Nutrients dissolve into that stream at the root "
+            "zone and ride it to the leaf. This is <strong>mass flow</strong>: nutrient delivery "
+            "scales with how fast the plant transpires. Brighter light drives faster evaporation, "
+            "which pulls more water, which carries more nutrient per day. That is why "
+            "<a href='airflow-design.html'>airflow</a>, feed EC and irrigation volume all have to "
+            "rise together with light."),
   ]})
 
 SECTIONS.append({"id": "ladder", "kicker": "03 · The core reference", "title": "Light-scaling sequence",
@@ -111,11 +122,11 @@ SECTIONS.append({"id": "ladder", "kicker": "03 · The core reference", "title": 
     table(
       ["Light (PPFD)", "Transpiration (water out)", "Irrigation (water in)", "Feed EC", "Light heat", "Sensible cooling", "Dehumidification"],
       [
-        ["600",  "2.2 L/m&sup2;/d", "3.0 L/m&sup2;/d", "2.0&ndash;2.4", "222 W/m&sup2;", "0.6 ton /10 m&sup2;", "4.7 pt/m&sup2;/d"],
-        ["800",  "3.0 L/m&sup2;/d", "4.0 L/m&sup2;/d", "2.4&ndash;2.8", "296 W/m&sup2;", "0.8 ton /10 m&sup2;", "6.3 pt/m&sup2;/d"],
-        ["1000", "3.7 L/m&sup2;/d", "4.9 L/m&sup2;/d", "2.8&ndash;3.2", "370 W/m&sup2;", "1.1 ton /10 m&sup2;", "7.8 pt/m&sup2;/d"],
-        ["1200", "4.4 L/m&sup2;/d", "5.9 L/m&sup2;/d", "3.2&ndash;3.6", "444 W/m&sup2;", "1.3 ton /10 m&sup2;", "9.4 pt/m&sup2;/d"],
-        ["1500", "5.6 L/m&sup2;/d", "7.4 L/m&sup2;/d", "2.4&ndash;3.2 (advanced: up to ~3.6)", "556 W/m&sup2;", "1.6 ton /10 m&sup2;", "11.7 pt/m&sup2;/d"],
+        ["600",  "2.2 L/m&sup2;/d", "3.0 L/m&sup2;/d", "2.0&ndash;2.4", "222 W/m&sup2;", "2.1 kW /10 m&sup2; (0.6 ton)", "2.2 L/m&sup2;/d (4.7 pt)"],
+        ["800",  "3.0 L/m&sup2;/d", "4.0 L/m&sup2;/d", "2.4&ndash;2.8", "296 W/m&sup2;", "2.8 kW /10 m&sup2; (0.8 ton)", "3.0 L/m&sup2;/d (6.3 pt)"],
+        ["1000", "3.7 L/m&sup2;/d", "4.9 L/m&sup2;/d", "2.8&ndash;3.2", "370 W/m&sup2;", "3.9 kW /10 m&sup2; (1.1 ton)", "3.7 L/m&sup2;/d (7.8 pt)"],
+        ["1200", "4.4 L/m&sup2;/d", "5.9 L/m&sup2;/d", "3.2&ndash;3.6", "444 W/m&sup2;", "4.6 kW /10 m&sup2; (1.3 ton)", "4.4 L/m&sup2;/d (9.4 pt)"],
+        ["1500", "5.6 L/m&sup2;/d", "7.4 L/m&sup2;/d", "2.4&ndash;3.2 (advanced: up to ~3.6)", "556 W/m&sup2;", "5.6 kW /10 m&sup2; (1.6 ton)", "5.6 L/m&sup2;/d (11.7 pt)"],
       ],
       caption="Table 2 &middot; Water, feed &amp; heat-removal by light level (per m&sup2; of canopy, ~25% runoff, LED @ 2.7 &micro;mol/J)",
       foot="Rules used: transpiration &asymp; PPFD &times; 0.0037 L/m&sup2;/d; irrigation = transpiration &divide; 0.75; "
@@ -138,21 +149,21 @@ SECTIONS.append({"id": "room", "kicker": "04 · Worked example", "title": "Light
     table(
       ["Light (PPFD)", "Fixture load", "Sensible cooling", "Air-handler airflow", "Dehumidification", "Irrigation", "CO&#8322; to hold"],
       [
-        ["600",  "11.1 kW", "3.1 tons", "~1,250 CFM", "235 pt/day (111 L)", "148 L/day", "ambient"],
-        ["800",  "14.8 kW", "4.2 tons", "~1,680 CFM", "313 pt/day (148 L)", "197 L/day", "~700 ppm"],
-        ["1000", "18.5 kW", "5.3 tons", "~2,120 CFM", "391 pt/day (185 L)", "247 L/day", "~1000 ppm"],
-        ["1200", "22.2 kW", "6.3 tons", "~2,520 CFM", "469 pt/day (222 L)", "296 L/day", "~1200 ppm"],
-        ["1500", "27.8 kW", "7.9 tons", "~3,160 CFM", "587 pt/day (278 L)", "370 L/day", "~1400 ppm"],
+        ["600",  "11.1 kW", "10.9 kW (3.1 ton)", "~2,100 m&sup3;/h (1,250 CFM)", "111 L/day (235 pt)", "148 L/day", "ambient"],
+        ["800",  "14.8 kW", "14.8 kW (4.2 ton)", "~2,850 m&sup3;/h (1,680 CFM)", "148 L/day (313 pt)", "197 L/day", "~700 ppm"],
+        ["1000", "18.5 kW", "18.6 kW (5.3 ton)", "~3,600 m&sup3;/h (2,120 CFM)", "185 L/day (391 pt)", "247 L/day", "~1000 ppm"],
+        ["1200", "22.2 kW", "22.2 kW (6.3 ton)", "~4,280 m&sup3;/h (2,520 CFM)", "222 L/day (469 pt)", "296 L/day", "~1200 ppm"],
+        ["1500", "27.8 kW", "27.8 kW (7.9 ton)", "~5,370 m&sup3;/h (3,160 CFM)", "278 L/day (587 pt)", "370 L/day", "~1400 ppm"],
       ],
       caption="Table 3 &middot; What a 50 m&sup2; canopy demands at each light level",
       foot="Sensible cooling covers the fixtures only, add the dehumidifier's reject heat and pumps in a "
-           "sealed room. Air-handler airflow at ~400 CFM/ton is <em>separate</em> from the in-canopy fans that keep "
+           "sealed room. Air-handler airflow at ~680 m&sup3;/h per cooling ton (400 CFM/ton; 1 cooling ton = 3.5 kW) is <em>separate</em> from the in-canopy fans that keep "
            "0.5&ndash;1.0 m/s moving through the leaves. First CO&#8322; charge of a sealed 150 m&sup3; room to 1000 ppm "
            "is only ~90 L of gas; daily burn depends mostly on how well the room seals."),
     p("Notice the last two columns between 1000 and 1500 &micro;mol. The fixtures rise 50%, but "
-      "dehumidification jumps from 391 to 587 pints a day, two grow dehumidifiers to three, "
-      "and cooling goes from about five tons to eight. <strong>The photons are the cheap part.</strong> "
-      "The tonnage and the pints are where the money and the failures live, and they are almost always "
+      "dehumidification jumps from 185 L/day to 278 L/day (391 to 587 pints), two grow dehumidifiers to three, "
+      "and cooling goes from about 18.6 kW to 27.8 kW (5.3 to 7.9 tons). <strong>The photons are the cheap part.</strong> "
+      "The cooling load and the water removal are where the money and the failures live, and they are almost always "
       "what caps a real room before the lights do."),
   ]})
 
@@ -180,11 +191,16 @@ SECTIONS.append({"id": "ec", "kicker": "05 · The root zone", "title": "EC manag
            "and <a href='nutrient-deficiencies.html'>Nutrient deficiencies</a>. Raise EC as a lever <em>after</em> "
            "irrigation volume is right, never instead of it."),
     p("There is a second reason EC and light move together: EC is also a "
-      "<a href='one-steering-law.html'>steering</a> lever. A higher root-zone EC raises osmotic pressure "
-      "and gently reins in water uptake, pushing the plant generative, useful in flower. So at high "
-      "light you raise EC for two jobs at once: to feed the faster growth, and to hold generative balance "
-      "against all that extra irrigation. The trap is raising EC to steer while forgetting volume has to "
-      "rise too; starve the volume and the salts simply concentrate and burn."),
+      "<a href='one-steering-law.html'>steering</a> lever. When you raise the salt concentration in the "
+      "solution surrounding the roots, you make it harder for the roots to pull water in — a higher "
+      "salt concentration outside the root resists inward flow the same way rubbing salt onto a "
+      "cucumber slice draws the moisture out rather than letting it flow in. That resistance is "
+      "<strong>osmotic pressure</strong>. A higher root-zone EC raises osmotic pressure and gently "
+      "throttles water uptake, slowing vegetative growth and pushing the plant toward reproductive "
+      "mode — useful in flower. So at high light you raise EC for two jobs at once: to feed the "
+      "faster growth, and to hold generative balance against all that extra irrigation. The trap is "
+      "raising EC to steer while forgetting volume has to rise too; starve the volume and the salts "
+      "simply concentrate and burn."),
   ]})
 
 SECTIONS.append({"id": "find", "kicker": "06 · The method", "title": "Identifying the limiting factor",
@@ -197,8 +213,8 @@ SECTIONS.append({"id": "find", "kicker": "06 · The method", "title": "Identifyi
       ["System", "What you have", "Its PPFD ceiling"],
       [
         ["<strong>CO&#8322;</strong>", "Setpoint plus measured crop response", "No fixed PPFD ceiling from setpoint alone; ambient CO&#8322; can support yield above 800 &micro;mol, while enrichment may improve marginal efficiency at high PPFD"],
-        ["<strong>Cooling</strong>", "Installed sensible tons", "PPFD &le; 9,500 &times; tons &divide; m&sup2;"],
-        ["<strong>Dehumidification</strong>", "Rated pints/day", "PPFD &le; 128 &times; pints/day &divide; m&sup2;"],
+        ["<strong>Cooling</strong>", "Installed sensible kW", "PPFD &le; 2,700 &times; kW &divide; m&sup2; (or 9,500 &times; ton &divide; m&sup2;)"],
+        ["<strong>Dehumidification</strong>", "Rated L/day", "PPFD &le; 270 &times; L/day &divide; m&sup2; (or 128 &times; pints/day &divide; m&sup2;)"],
         ["<strong>Irrigation</strong>", "Max deliverable L/day", "PPFD &le; 200 &times; L/day &divide; m&sup2;"],
         ["<strong>Feed / EC</strong>", "Highest EC you can run", "Match the EC to its rung in Table 4"],
         ["<strong>Airflow</strong>", "Canopy air movement", "A <em>gate</em>, not a dial, see below"],
@@ -207,11 +223,16 @@ SECTIONS.append({"id": "find", "kicker": "06 · The method", "title": "Identifyi
       foot="All at LED 2.7 &micro;mol/J; scale the cooling constant down for less efficient fixtures. Airflow gives no "
            "clean number because it is a prerequisite: if you can't hold 0.3&ndash;1.0 m/s <em>through</em> the whole "
            "canopy, gas exchange stalls and every other ceiling drops to roughly 900&ndash;1000 &micro;mol."),
-    p("Airflow is the odd one out on purpose. You can have 1500 ppm of CO&#8322; in the room and still "
-      "starve the leaf if the <a href='airflow-design.html'>boundary layer</a>, the film of still "
-      "air on every leaf surface. Never gets stripped away. Dead air inside a dense canopy is a "
-      "CO&#8322; ceiling you can't see on the room sensor. Treat airflow as a pass/fail gate you clear "
-      "<em>before</em> reading any other ceiling."),
+    p("Airflow is the odd one out on purpose. Every leaf is coated in a thin, still film of air — "
+      "no matter how much CO&#8322; is circulating in the room, CO&#8322; can only reach the leaf's "
+      "pores by diffusing through that film. Think of it like the still water layer right against the "
+      "riverbed even when the current above is fast: the layer barely moves, and things have to diffuse "
+      "across it slowly. The technical name is the <strong>boundary layer</strong>. Strip it thin with "
+      "airflow and CO&#8322; moves freely into the stomata; let it sit thick and the plant sees close "
+      "to ambient CO&#8322; even in a 1500-ppm room. You can have 1500 ppm of CO&#8322; in the room "
+      "and still starve the leaf if the <a href='airflow-design.html'>boundary layer</a> never gets "
+      "stripped away. Dead air inside a dense canopy is a CO&#8322; ceiling you can't see on the room "
+      "sensor. Treat airflow as a pass/fail gate you clear <em>before</em> reading any other ceiling."),
     p("Run the six numbers, take the minimum, and you have found the wall. The diagram makes it concrete "
       "for a real room."),
     figure(_fig_ceiling(), 1,
@@ -225,14 +246,15 @@ SECTIONS.append({"id": "cases", "kicker": "07 · Case studies", "title": "Limiti
   "blocks": [
     p("The same method, four common rooms. Each has plenty of everything except one thing, and "
       "that one thing is the yield. The fix is never &lsquo;more light.&rsquo;"),
-    callout("note", "Case A &middot; The dehumidifier is the wall " + _tag("w", "most common"),
-      p("<strong>The room:</strong> 50 m&sup2;, 6 tons of cooling, CO&#8322; to 1500 ppm, good fans, two "
-        "205-pint dehumidifiers (410 pints/day). <strong>The math:</strong> cooling ceiling 9,500&times;6&divide;50 "
-        "= <strong>1140</strong>; dehu ceiling 128&times;410&divide;50 = <strong>1050</strong>; CO&#8322; ceiling "
+    callout("note", "Case A · The dehumidifier is the wall " + _tag("w", "most common"),
+      p("<strong>The room:</strong> 50 m&sup2;, 21 kW (6 ton) of cooling, CO&#8322; to 1500 ppm, good fans, "
+        "two 97 L/day dehumidifiers (410 pints/day total, 194 L/day). <strong>The math:</strong> "
+        "cooling ceiling 2,700&times;21.1&divide;50 &asymp; <strong>1140</strong>; dehu ceiling "
+        "270&times;194&divide;50 &asymp; <strong>1050</strong>; CO&#8322; ceiling "
         "<strong>1500</strong>. <strong>The wall:</strong> dehumidification, at ~1050 &micro;mol. <strong>The fix:"
         "</strong> run the lights at 1050, <em>or</em> add a third dehumidifier to unlock the 1140 the cooling "
         "already allows. Then cooling becomes the next wall.")),
-    callout("note", "Case B &middot; The ambient-air ceiling " + _tag("g", "cheap to fix"),
+    callout("note", "Case B · The ambient-air ceiling " + _tag("g", "cheap to fix"),
       p("<strong>The room:</strong> big cooling and dehu, but <em>no</em> CO&#8322; supplementation, "
         "ambient 420 ppm. <strong>The evidence:</strong> leaf efficiency falls as PPFD climbs" +
         _c("chandra2008-photo") + ", yet Rodriguez-Morrison et al. reported linear canopy yield through 1,800 &micro;mol "
@@ -241,7 +263,7 @@ SECTIONS.append({"id": "cases", "kicker": "07 · Case studies", "title": "Limiti
         "temperature, bleaching, DLI and yield per kWh. Dial light down when the crop is damaged or the "
         "marginal yield no longer pays for power and climate control. Add CO&#8322; only after confirming "
         "that the room can carry the added heat, water and safety load.")),
-    callout("note", "Case C &middot; The stagnant canopy " + _tag("w", "hidden"),
+    callout("note", "Case C · The stagnant canopy " + _tag("w", "hidden"),
       p("<strong>The room:</strong> CO&#8322; to 1200, strong cooling and dehu, but a thick canopy with "
         "dead, laminar air in the lower half. <strong>The math:</strong> no clean number; the boundary layer "
         "isn't stripped, so CO&#8322; can't reach the stomata inside the canopy. Effective ceiling collapses to "
@@ -249,7 +271,7 @@ SECTIONS.append({"id": "cases", "kicker": "07 · Case studies", "title": "Limiti
         "airflow gate. <strong>The tell:</strong> lush outer buds, larfy damp interior. <strong>The fix:</strong> "
         "<a href='defoliation-training.html'>defoliate</a> and add under-canopy air <em>before</em> touching the "
         "lights or the CO&#8322;.")),
-    callout("note", "Case D &middot; The root zone can't keep up " + _tag("w", "self-inflicted"),
+    callout("note", "Case D · The root zone can't keep up " + _tag("w", "self-inflicted"),
       p("<strong>The room:</strong> climate and gas all support 1300, but irrigation is a couple of short shots "
         "and feed EC is stuck at 2.4. <strong>The math:</strong> the canopy wants 4.5+&nbsp;L/m&sup2;/day and 3.4 "
         "EC; it's getting ~3&nbsp;L and 2.4. Water ceiling 200&times;(deliverable L)&divide;m&sup2; lands near "
@@ -277,7 +299,7 @@ SECTIONS.append({"id": "dial", "kicker": "08 · The decision", "title": "Setting
         "<a href='mould-risk.html'>bud-rot</a> territory. You pay for the extra electricity <em>and</em> lose "
         "quality. The dial-down is the rare free lunch.")),
     p("There is also an economic ceiling below the biological one. Yield keeps climbing toward "
-      "1500&ndash;1800 &micro;mol" + _c("rm2021-light") + ", but the tons and pints needed to support the top "
+      "1500&ndash;1800 &micro;mol" + _c("rm2021-light") + ", but the cooling load and water removal needed to support the top "
       "rungs climb faster than the yield does. The last 300 &micro;mol might cost a third dehumidifier and a "
       "bigger AC to buy a single-digit-percent bump. Find your <em>economic</em> wall, where the next "
       "100 &micro;mol stops paying for its own climate gear. And it often sits a rung below what the "

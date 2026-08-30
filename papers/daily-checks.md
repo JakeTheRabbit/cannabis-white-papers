@@ -1,8 +1,8 @@
 ---
 slug: "daily-checks"
-title: "Daily checks: the self-completing facility round"
+title: "Build a daily facility check that mostly fills itself in"
 eyebrow: "Operations · Daily checks"
-summary: "The best daily check is the one that mostly fills itself in. Let Home Assistant confirm everything it can measure, leave the human only the physical walk-around, make the rest one tap, and the check gets done every day, honestly, with an audit trail that holds up."
+summary: "This paper shows you how to design a daily facility check where sensors confirm everything measurable automatically and the human round stays short. By the end you will have a working Home Assistant structure, a five-list pause-point schedule, and a system that produces an honest audit trail without extra data entry."
 track: "Facility & quality"
 read_time: "~16 min read"
 diagrams: "7 diagrams"
@@ -17,11 +17,11 @@ attribution: "The Cannabis White Papers"
 refs: [{"id": "gawande-checklist-manifesto", "n": 1, "cite": "Gawande A (2009). The Checklist Manifesto: How to Get Things Right. Metropolitan Books. (read-do vs do-confirm, pause points, 5-9 killer items.)", "url": "https://atulgawande.com/book/the-checklist-manifesto/", "peer": false}, {"id": "fogg-behavior-model", "n": 2, "cite": "Fogg BJ. The Fogg Behavior Model: B = MAP (behaviour occurs when Motivation, Ability and a Prompt converge). Stanford Behavior Design Lab.", "url": "https://behaviormodel.org/", "peer": false}, {"id": "gollwitzer-implementation-intentions", "n": 3, "cite": "Gollwitzer PM, Sheeran P (2006). Implementation intentions and goal achievement: a meta-analysis of effects and processes. Advances in Experimental Social Psychology 38:69-119 (medium-to-large effect, d=0.65).", "url": "https://doi.org/10.1016/S0065-2601(06)38002-1", "peer": true}, {"id": "checklist-compliance-illusion", "n": 4, "cite": "Observational study of surgical-checklist use: high recorded compliance did not guarantee the items were actually performed (records showed 100% adherence; observers found 4 of 13 items done). PMC4484042.", "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4484042/", "peer": true}, {"id": "haynes-surgical-checklist-2009", "n": 5, "cite": "Haynes AB, Weiser TG, Berry WR, et al. (2009). A surgical safety checklist to reduce morbidity and mortality in a global population. New England Journal of Medicine 360(5):491-499.", "url": "https://www.nejm.org/doi/full/10.1056/NEJMsa0810119", "peer": true}, {"id": "ha-todo-integration", "n": 6, "cite": "Home Assistant: To-do list (todo) and Local to-do (local_todo) integrations, todo entity and todo.update_item action used to auto-complete checklist items.", "url": "https://www.home-assistant.io/integrations/todo/", "peer": false}, {"id": "ha-template-alert-statistics", "n": 7, "cite": "Home Assistant: Template (binary_sensor), Alert, Statistics/Recorder, Tag (NFC) and Schedule integrations used to define 'in range', escalate, log the audit trail and prove presence.", "url": "https://www.home-assistant.io/integrations/template/", "peer": false}, {"id": "aroya-rootzone-steering", "n": 8, "cite": "AROYA. Crop-steering and drip-and-drain root-zone monitoring (substrate VWC, EC, pH, dryback, runoff) as the daily root-zone measurement.", "url": "https://aroya.io/", "peer": false}, {"id": "eu-gmp-annex1", "n": 9, "cite": "EU GMP Annex 1 / EMA environmental-monitoring guidance: define alert and action limits, trend routine monitoring data, require corrective action on excursions.", "url": "https://health.ec.europa.eu/medicinal-products/eudralex/eudralex-volume-4_en", "peer": false}, {"id": "who-gacp-2003", "n": 10, "cite": "World Health Organization (2003). WHO guidelines on good agricultural and collection practices (GACP) for medicinal plants.", "url": "https://www.who.int/publications/i/item/9241546271", "peer": false}, {"id": "globalgap-cpcc", "n": 11, "cite": "GLOBALG.A.P. Integrated Farm Assurance, Crops / Fruit & Vegetables control points and compliance criteria (hygiene competence, maintained irrigation equipment, record retention).", "url": "https://www.globalgap.org/", "peer": false}, {"id": "haccp-prerequisite-ssop", "n": 12, "cite": "HACCP prerequisite programmes / Sanitation Standard Operating Procedures: daily sanitation checklists, hygiene checks and pest-control logs (what, how, how-often, who-verifies).", "url": "https://www.fda.gov/food/hazard-analysis-critical-control-point-haccp/haccp-principles-application-guidelines", "peer": false}, {"id": "digital-checklist-adherence", "n": 13, "cite": "Industry analyses of digital vs paper inspection checklists: higher completion rates, faster rounds and fewer documentation errors, driven by lower friction and enforced completeness.", "url": "https://www.fiixsoftware.com/cmms/mobile-cmms/", "peer": false}]
 ---
 
-# Daily checks: the self-completing facility round
+# Build a daily facility check that mostly fills itself in
 
 _Operations · Daily checks · ~16 min read_
 
-> The best daily check is the one that mostly fills itself in. Let Home Assistant confirm everything it can measure, leave the human only the physical walk-around, make the rest one tap, and the check gets done every day, honestly, with an audit trail that holds up.
+> This paper shows you how to design a daily facility check where sensors confirm everything measurable automatically and the human round stays short. By the end you will have a working Home Assistant structure, a five-list pause-point schedule, and a system that produces an honest audit trail without extra data entry.
 
 ## Purpose and scope
 
@@ -55,7 +55,7 @@ A famous surgical study found records showing **100% checklist compliance** whil
 
 ## Check design and completion reliability
 
-Adherence is a design problem, not a character problem. Decades of checklist and behaviour research point at the same handful of levers.
+Reliable adherence comes from design. Decades of checklist and behaviour research point at the same handful of levers.
 
 > **Diagram.** The Fogg behaviour model: a behaviour happens only when motivation, ability and a prompt line up at once[^fogg-behavior-model]. Motivation swings day to day, so the durable lever is **ability**: make the check easy and fast, do not rely on staff being keen.
 
@@ -114,7 +114,7 @@ Most of a daily check is data the building already knows. Let Home Assistant con
 >
 > Build `binary_sensor.environment_ok` = temp, RH, VPD and CO2 all in their stage bands. An automation watches it; once it has held true across the lights-on window, it calls `todo.update_item` to complete 'Environment in range' on today's list. The grower opens the list and that line is already green, with the numbers in the history for the record.
 
-## Daily-check user interface
+## Design the check interface for fast logging
 
 For the items a person must do, design for the lowest possible interaction. The happy path should be nearly empty; effort appears only where there is a problem.
 

@@ -7,12 +7,14 @@ from figs import GL, GXL, AMBL, REDL, BLUL
 import figs_rockwool as R
 
 SLUG = "rockwool-crop-steering"
-TITLE = "Crop steering in rockwool: drybacks, saturation and the breaking point"
+TITLE = "Crop steering in rockwool: water content, drybacks, and the recovery floor"
 EYEBROW = "Feed · Rockwool steering"
-SUB = ("Rockwool is the most controllable substrate there is, and the least forgiving. This is the "
-       "guide to what water content really means, how to read and calculate dryback, how dry a block "
-       "can get before it is gone, and how to hold the right saturation from clone to chop without "
-       "ever hand-flushing or topping up a cube.")
+SUB = ("Rockwool holds no nutrients of its own and has almost no buffer — what you feed is what "
+       "the plant gets, within the same hour. That makes it the most precise substrate to steer "
+       "and the fastest to show a mistake. This guide explains what a water-content percentage "
+       "means in practice, how to calculate and read a dryback, the water level below which a "
+       "block will not rewet from the dripper, and how to keep the slab in the right zone from "
+       "clone to harvest without ever picking up a hose.")
 META = [("droplet", "Feed & steering"), ("image", "7 diagrams"),
         ("quote", "Evidence-linked + Grodan/Netafim/Athena"), ("clock", "~18 min read")]
 RELATED = ["coco-crop-steering", "root-zone-teros12", "f2-crop-steering", "irrigation-manual"]
@@ -89,9 +91,12 @@ SECTIONS.append({"id": "anatomy", "kicker": "How it works", "title": "Water dist
       "the smaller gaps, while the larger gaps stay full of air. Water content is simply how much of that "
       "space is water versus air at any moment."),
     figure(R.fig_cube_anatomy(), 1,
-      "Water held as a film on the fibres is your WC%. The air between fibres is root oxygen. Because the "
-      "fibre carries almost no electrical charge (its cation-exchange capacity is near zero), dissolved "
-      "salts stay in the water and nothing is held back from the plant" + _c("grodan-irrigation-medicinal") + "."),
+      "Water held as a film on the fibres is your WC%. The air between fibres is root oxygen. Soil "
+      "particles carry an electrical charge that grabs and holds dissolved nutrients the way a magnet "
+      "holds iron filings — binding them and releasing them slowly. Rockwool fibres carry almost none "
+      "of that charge. That property is called cation-exchange capacity (CEC). Near-zero CEC in "
+      "rockwool means dissolved salts stay in the water and are fully available to the "
+      "plant" + _c("grodan-irrigation-medicinal") + "."),
     p("Two consequences fall straight out of this. First, when water leaves the block the salt does not, "
       "so the EC of the water left behind climbs as the block dries. Second, because the medium buffers "
       "nothing, the EC and water content you set are the EC and water content the roots get, which is why "
@@ -119,12 +124,13 @@ SECTIONS.append({"id": "water-content", "kicker": "The number", "title": "Interp
 _curve = [(0, 70), (1, 66), (2, 62), (3, 59), (4, 56), (5, 57), (6, 65),
           (7, 73), (8, 79), (9, 77), (10, 78), (11, 76), (12, 71)]
 _curve_x = ["off", "", "", "", "pre-dawn low", "on · P0", "P1", "", "FC", "P2", "", "P3", "off"]
-SECTIONS.append({"id": "dryback", "kicker": "The main lever", "title": "Dryback calculation and management",
+SECTIONS.append({"id": "dryback", "kicker": "Daily dryback", "title": "Dryback calculation and management",
   "blocks": [
-    p("A dryback is the block losing water between its daily high and its next low. You create the high by "
-      "irrigating to field capacity; the plant and evaporation create the low. The <em>size</em> of that "
-      "swing and <em>when</em> you let it happen is the single biggest lever you have over how the plant "
-      "grows."),
+    p("A dryback is the block losing water between its daily high and its next low. Think of a wet sponge "
+      "left on the bench: it starts fully soaked, then air and the plant draw water out through the day. "
+      "The amount it loses — from its soaked peak to its driest point before the next watering — is the "
+      "dryback. The <em>size</em> of that swing and <em>when</em> you let it happen is the single biggest "
+      "lever you have over how the plant grows."),
     figure(L.line("A day in the life of a slab", _curve, _curve_x, ylab="water content %",
             ymin=0, ymax=100,
             bands=[(55, 92, GL, "working band"), (0, 30, REDL, "non-recoverable")],
@@ -156,16 +162,19 @@ SECTIONS.append({"id": "dryout", "kicker": "The physics", "title": "Block dry-ou
       "does four different things in sequence as it goes too far."),
     figure(R.fig_dryout(), 4,
       "Stages 1-2 are the healthy dryback you want: water leaves, air and oxygen enter. Stage 3 is too "
-      "far: with less water but the same salt, the EC inside the block climbs and the plant feels osmotic "
-      "stress" + _c("hydrus-soilless-substrate-dynamics") + ". Stage 4 is past the floor: a dry core forms and water "
-      "channels around it."),
-    p("The middle stage is the one that catches people out. Because rockwool holds no salt of its own, the "
-      "salt that was dissolved in the water stays put while the water disappears. A block drying from 75% "
-      "to 45% WC keeps only about three-fifths of its water (45 &divide; 75), so the salt left behind "
-      "concentrates by the inverse, roughly two-thirds higher, because EC rises as 1 divided by the "
-      "fraction of water remaining" + _c("hydrus-soilless-substrate-dynamics") + ". A 3.0 EC feed can climb past 5.0 "
-      "EC in the root zone by late afternoon. That is why big drybacks must be paired with enough volume and "
-      "runoff to keep the salt in check, covered below."),
+      "far: with less water but the same salt, the EC inside the block rises. When EC rises high enough, "
+      "the concentration outside the root cell is greater than inside, and water is pulled out of the "
+      "root instead of into it — the way salting a cucumber pulls moisture through the skin in the wrong "
+      "direction. That reversal is osmotic stress" + _c("hydrus-soilless-substrate-dynamics") + ". Stage 4 is past "
+      "the floor: a dry core forms and water channels around it."),
+    p("The middle stage is the one that catches people out. Because rockwool holds no salt of its own, "
+      "the salt that was dissolved in the water stays put while the water disappears. Think of a pot of "
+      "stock left to reduce on the stove: as the liquid goes down, the flavour concentrates. A block "
+      "drying from 75% to 45% WC keeps only about three-fifths of its water (45 &divide; 75), so the "
+      "salt left behind concentrates by the inverse, roughly two-thirds higher, because EC rises as 1 "
+      "divided by the fraction of water remaining" + _c("hydrus-soilless-substrate-dynamics") + ". A 3.0 EC feed "
+      "can climb past 5.0 EC in the root zone by late afternoon. That is why big drybacks must be paired "
+      "with enough volume and runoff to keep the salt in check, covered below."),
     callout("warn", "Dryback stress is partly salt stress",
       p("When you push a generative dryback, you are not only making the plant work for water, you are "
         "also concentrating its food. Watch substrate EC, not just water content. If EC climbs faster than "
@@ -173,15 +182,17 @@ SECTIONS.append({"id": "dryout", "kicker": "The physics", "title": "Block dry-ou
   ]})
 
 # 7 -----------------------------------------------------------------
-SECTIONS.append({"id": "breaking-point", "kicker": "The cliff", "title": "Critical dry-out threshold",
+SECTIONS.append({"id": "breaking-point", "kicker": "Recovery floor", "title": "Critical dry-out threshold",
   "blocks": [
     p("There is a water content below which a rockwool block will not rewet from the dripper no matter how "
       "long you run it. Nothing else here matters as much, because it is invisible "
       "until it has already happened."),
     figure(R.fig_rewet(), 5,
       "A block still in the working band rewets evenly: water spreads through the moist fibre. A block "
-      "taken too dry develops a dry core that the fibre can no longer pull water into. New water finds the "
-      "few open channels, runs straight down them and exits as runoff while the core stays bone "
+      "taken too dry develops a dry core that the fibre can no longer pull water into. Think of pouring "
+      "water onto very dry cracked soil — it runs in rivulets straight to the drain while the earth "
+      "between the cracks stays dry. The same thing happens inside a dried rockwool block: new water "
+      "finds the few open channels, runs straight down them and exits as runoff while the core stays bone "
       "dry" + _c("owen-norden-preferential-flow-2024") + "."),
     p("Below roughly <strong>25-30% WC</strong> the dry fibre stops wicking and preferential flow takes "
       "over" + _c("owen-norden-preferential-flow-2024") + _c("hydrus-soilless-substrate-dynamics") + ". The drip rate that kept a "
@@ -232,7 +243,7 @@ SECTIONS.append({"id": "minimum-feed", "kicker": "How much", "title": "Minimum i
   ]})
 
 # 9 -----------------------------------------------------------------
-SECTIONS.append({"id": "steering", "kicker": "The lever in use", "title": "Vegetative and generative steering in rockwool",
+SECTIONS.append({"id": "steering", "kicker": "Steering in practice", "title": "Vegetative and generative steering in rockwool",
   "blocks": [
     p("You steer the plant by choosing where the block sits in the band, how big the daily dryback is, and "
       "when you let it happen. Drier and bigger and earlier is generative; wetter and smaller and later is "

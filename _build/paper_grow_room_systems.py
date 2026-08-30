@@ -5,11 +5,11 @@ from components import (p, lead, h, ul, ol, callout, defterm, table, figure,
 import figs_lib as L
 
 SLUG = "grow-room-systems"
-TITLE = "The cannabis grow room: a systems guide"
+TITLE = "Cannabis grow room: a systems guide"
 EYEBROW = "Beginner · Grow-room systems"
 SUB = ("A grow room is one connected system, not a list of gadgets. Light, heat, humidity, air and "
-       "water all pull on each other. Learn to see the whole machine, so a fix in one place doesn't "
-       "break another.")
+       "water all pull on each other. This paper shows you those connections so you can set systems "
+       "up in the right order and pre-empt problems before they chain.")
 META = [("building", "Beginner"), ("image", "4 diagrams"),
         ("quote", "Evidence-linked · 10 sources"), ("clock", "~18 min read")]
 RELATED = ["coco-crop-steering", "airflow-design", "mould-risk"]
@@ -24,7 +24,7 @@ SECTIONS = []
 
 SECTIONS.append({"id": "start", "kicker": "01 · Read this first", "title": "Purpose and scope",
   "blocks": [
-    lead("Those four things are one problem, not four. Beginners buy a light, a fan, a humidifier and "
+    lead("Light, heat, humidity, and water are one problem, not four separate jobs. Beginners buy a light, a fan, a humidifier and "
          "a nutrient bottle and treat each as a separate job. Turn the light up and the room gets "
          "hotter, the plants drink more, the air gets more humid, and your dehumidifier works harder. "
          "Everything is connected."),
@@ -32,16 +32,22 @@ SECTIONS.append({"id": "start", "kicker": "01 · Read this first", "title": "Pur
       "chasing one problem into the next. No prior knowledge needed."),
   ]})
 
-SECTIONS.append({"id": "terms", "kicker": "02 · The vocabulary", "title": "Definitions",
+SECTIONS.append({"id": "terms", "kicker": "02 · Vocabulary", "title": "Definitions",
   "blocks": [
     defterm("PPFD", "How bright the usable light hitting the canopy is, measured in µmol/m²/s. "
             "Think &lsquo;brightness right now.&rsquo;"),
     defterm("DLI (daily light integral)", "Brightness × hours the light is on = the total light the "
             "plant gets in a day (mol/m²/day). This is the number that really drives growth" + _c("faust2018-dli") + "."),
-    defterm("Transpiration", "The plant pulling water up from the roots and breathing it out through "
-            "tiny leaf pores (stomata). It is how the plant stays cool and moves nutrients."),
-    defterm("VPD (vapour pressure deficit)", "How &lsquo;thirsty&rsquo; the air is. A single number "
-            "from temperature and humidity that sets how fast the plant transpires."),
+    defterm("Transpiration", "The plant pulls water up from the roots and releases it as vapour through "
+            "tiny leaf pores called stomata. Think of it like sweating: the body moves water to the "
+            "skin's surface and lets it evaporate to stay cool; the plant does exactly the same, and "
+            "that upward pull also carries dissolved nutrients from root to leaf. Transpiration is how "
+            "the plant regulates its temperature and feeds itself."),
+    defterm("VPD (vapour pressure deficit)", "A measure of how hard the air is pulling water out of the "
+            "plant — determined by both temperature and humidity together, not humidity alone. Think of "
+            "the air as a sponge: dry, warm air is a nearly empty sponge and pulls hard; cool, humid "
+            "air is already full and pulls gently. VPD is a single number that captures this pull and "
+            "predicts how fast the plant transpires."),
     defterm("CO2", "Carbon dioxide, the raw material plants turn into sugar with light. More CO2 can "
             "raise growth if light is high enough."),
     defterm("Stomata", "Microscopic adjustable pores on leaves. They open to take in CO2 and let "
@@ -50,7 +56,7 @@ SECTIONS.append({"id": "terms", "kicker": "02 · The vocabulary", "title": "Defi
             "salt behave at the root" + _c("malik2025-media") + "."),
   ]})
 
-SECTIONS.append({"id": "one-system", "kicker": "03 · The big idea", "title": "Interactions between grow-room systems",
+SECTIONS.append({"id": "one-system", "kicker": "03 · How the parts connect", "title": "Interactions between grow-room systems",
   "blocks": [
     p("One chain runs your room. Push the first link and every link after it moves:"),
     figure(L.flow("Push the light, and everything downstream moves",
@@ -61,18 +67,18 @@ SECTIONS.append({"id": "one-system", "kicker": "03 · The big idea", "title": "I
             note="More light is more yield, but only if the rest of the chain can keep up."), 1,
       "The coupling chain. This is why &lsquo;just add more light&rsquo; fails if your climate and "
       "airflow can't carry the extra water the plants now transpire." + _c("collado2025-light")),
-    callout("key", "The one rule that prevents most mistakes",
+    callout("key", "One rule that prevents most mistakes",
       p("Raise one input, then ask &lsquo;what must move with it?&rsquo; More light &rarr; more "
         "transpiration &rarr; more humidity &rarr; more dehumidification and more water and feed. "
         "Inputs travel in convoys, not alone.")),
   ]})
 
-SECTIONS.append({"id": "light", "kicker": "04 · The biggest lever", "title": "Lighting demand",
+SECTIONS.append({"id": "light", "kicker": "04 · Light: the main lever", "title": "Lighting demand",
   "blocks": [
     p("Light is the upstream lever: it sets how much of everything else the plant wants. In "
       "cannabis, flower yield climbs roughly <strong>linearly with light</strong> all the way up to "
       "very high intensities (~1800 µmol/m²/s in one study, about a 4.5× yield increase)" + _c("rm2021-light") +
-      ". Bright works, as long as you can pay the bills downstream."),
+      ". Bright works, as long as the rest of the room can handle the heat, humidity and water use that comes with it."),
     figure(L.bars("More light, more flower (roughly linear)",
             [("400", 30), ("800", 55), ("1200", 78), ("1600", 96)], unit="",
             note="PPFD (µmol/m²/s) vs relative flower yield. Yield keeps rising where a single leaf would have saturated.",
@@ -86,9 +92,9 @@ SECTIONS.append({"id": "light", "kicker": "04 · The biggest lever", "title": "L
         "beyond that point" + _c("rm2021-light") + ". Don't set room light by leaf-level numbers.")),
   ]})
 
-SECTIONS.append({"id": "climate", "kicker": "05 · The air", "title": "Climate: temperature, humidity and VPD",
+SECTIONS.append({"id": "climate", "kicker": "05 · Climate: temperature, humidity, VPD", "title": "Climate: temperature, humidity and VPD",
   "blocks": [
-    p("Temperature and humidity are not two separate dials. Together they make "
+    p("Temperature and humidity act together. Their combined effect is "
       "<strong>VPD</strong>, which controls how fast the plant transpires. There is a workable "
       "middle band. Too low and everything slows. Too high and the plant shuts its stomata to save "
       "water, stalling CO2 uptake and growth" + _c("inoue2021-vpd") + "."),
@@ -117,7 +123,7 @@ SECTIONS.append({"id": "air", "kicker": "06 · Movement", "title": "Airflow in t
         "that without air movement your light, climate and CO2 settings don't reach the leaf evenly.")),
   ]})
 
-SECTIONS.append({"id": "rootzone", "kicker": "07 · The supply", "title": "Root-zone supply",
+SECTIONS.append({"id": "rootzone", "kicker": "07 · Root zone and water supply", "title": "Root-zone supply",
   "blocks": [
     p("Everything upstream creates <em>thirst</em>, and the root zone has to satisfy it. The brighter "
       "and drier the room, the more the plant transpires, and the more water and nutrient it needs at "
@@ -129,7 +135,7 @@ SECTIONS.append({"id": "rootzone", "kicker": "07 · The supply", "title": "Root-
       "fixed timer."),
   ]})
 
-SECTIONS.append({"id": "order", "kicker": "08 · The method", "title": "System setup sequence",
+SECTIONS.append({"id": "order", "kicker": "08 · Setup sequence", "title": "System setup sequence",
   "blocks": [
     p("Inputs are coupled, so the order you set them in matters. Work top-down:"),
     steps([
@@ -141,7 +147,7 @@ SECTIONS.append({"id": "order", "kicker": "08 · The method", "title": "System s
     ]),
   ]})
 
-SECTIONS.append({"id": "disease", "kicker": "09 · The hidden cost", "title": "Disease risk in integrated systems",
+SECTIONS.append({"id": "disease", "kicker": "09 · Disease risk", "title": "Disease risk in integrated systems",
   "blocks": [
     p("The same warm, humid, densely-planted room that grows big plants also grows mould. Bud rot "
       "(<em>Botrytis</em>) takes off above ~70% humidity at moderate temperatures, and a thick canopy "
@@ -166,9 +172,9 @@ SECTIONS.append({"id": "trouble", "kicker": "10 · When it goes wrong", "title":
 
 SECTIONS.append({"id": "expect", "kicker": "11 · Straight talk", "title": "Expected results and limitations",
   "blocks": [
-    callout("key", "The mindset that separates good growers from frustrated ones",
+    callout("key", "Three habits that keep the system balanced",
       ul(["Think in <strong>convoys</strong>: change one input and pre-empt what must move with it.",
-          "<strong>Match, don't max.</strong> The best room is not the one with the biggest light. It is the one whose parts are balanced for the light it has" + _c("collado2025-light") + ".",
+          "<strong>Match, don't max.</strong> A well-balanced room at moderate light outperforms a bright room whose climate can't keep up" + _c("collado2025-light") + ".",
           "Substrate and strain change the right answer. Treat published numbers as starting points, not law."])),
     p("Read the <a href='coco-crop-steering.html'>crop steering</a>, "
       "<a href='airflow-design.html'>airflow</a> and <a href='mould-risk.html'>mould</a> papers next. "

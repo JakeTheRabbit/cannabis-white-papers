@@ -61,7 +61,7 @@ The layers are linked but not interchangeable. The THC:CBD _ratio_ is close to h
 
 *The three major chemotypes and the simple allele pairs behind them. The region of the genome carrying the THCA/CBDA synthase genes is messy and rearranged, which is part of why cannabis genetics stayed murky for so long.[^laverty-2019-genome-map]*
 
-> **NOTE — Genotype proposes, environment disposes**
+> **NOTE — One genotype, two environments, two phenotypes**
 >
 > A clone in two rooms is one genotype and two phenotypes. When a cut ‘performs differently’ at a mate's place, the genetics did not change. The environment did. Keep this straight and half of all genetics arguments dissolve.
 
@@ -99,7 +99,7 @@ Maize breeders solved this a century ago with inbred parent lines and true F1 hy
 
 > **Diagram.** The kind of spread one pack can hide. The pattern, not the exact numbers, is the point: siblings share parents, not outcomes. This spread is also the entire reason pheno hunting works, no variation, nothing to select.
 
-> **NOTE — Variation is the raw material, not the flaw**
+> **NOTE — Variation is what makes selection possible**
 >
 > Breeders and hunters _want_ segregation. It is where new keepers come from. The problem is only being surprised by it: plan for a spread, and the spread works for you.
 
@@ -126,7 +126,7 @@ Seed catalogues throw around F1, IBL and ‘stable’ loosely. Here is the vocab
 
 *Generation labels decoded. The letter tells you the process; it promises nothing about quality.*
 
-Inbreeding is a trade. Each generation of selfing or sibling crossing roughly halves the remaining heterozygosity, which stabilises traits. But cannabis is an outcrosser, and hammering it inbred can cost vigour (inbreeding depression). The long-term prize is the maize model: two inbred parents crossed to make true F1 seed that is both uniform _and_ vigorous. A handful of seed companies are now working exactly that way; most of the market is not there yet.
+Inbreeding is a trade. Each generation of selfing or sibling crossing roughly halves the remaining heterozygosity, which stabilises traits. But cannabis is an outcrosser: repeated close-crossing allows harmful recessive alleles to pair up and get expressed, sapping the plant's health and productivity. That cost is called **inbreeding depression**. The long-term prize is the maize model: two inbred parents crossed to make true F1 seed that is both uniform _and_ vigorous. A handful of seed companies are now working exactly that way; most of the market is not there yet.
 
 > **TIP — Questions that sort real breeders from labels**
 >
@@ -145,7 +145,7 @@ Every seed on the market is one of a few constructions, and the construction tel
 
 #### How feminised seed is made. And why it is not ‘weaker’
 
-Feminised seed comes from pollinating a female with pollen from another _female_ that has been chemically persuaded to grow male flowers. The tool is **silver thiosulfate (STS)**: silver ions block the plant's ethylene signalling, and with ethylene action suppressed, a genetically female plant develops viable male flowers.[^ram-sett-1982-sts] In practice a dilute STS solution is sprayed on a mother a few times around the flip, and she produces pollen a few weeks later.[^lubell-brand-2018-sts] Because that pollen comes from a plant with two X chromosomes, every seed it makes is XX, female. Properly made feminised seed runs at or near 100% female in published trials.[^flajsman-2021-feminized-seed-production][^monthony-2021-feminized-sts-comparison]
+Feminised seed comes from pollinating a female with pollen from another _female_ that has been chemically persuaded to grow male flowers. Cannabis plants use a hormone called ethylene as a signal that keeps them in female mode — think of it as a thermostat set to keep the plant female. Block that signal and male flowers develop, even on a plant that is genetically female. **Silver thiosulfate (STS)** does the blocking: silver ions bind to the plant's ethylene receptors and silence the signal.[^ram-sett-1982-sts] In practice a dilute STS solution is sprayed on a mother a few times around the flip, and she produces pollen a few weeks later.[^lubell-brand-2018-sts] Because that pollen comes from a plant with two X chromosomes, every seed it makes is XX, female. Properly made feminised seed runs at or near 100% female in published trials.[^flajsman-2021-feminized-seed-production][^monthony-2021-feminized-sts-comparison]
 
 The ‘fem seeds are weak / hermie-prone’ folklore confuses the method with the parents. STS changes hormone signalling on the mother for a few weeks; it does not mutate the DNA that goes into the seed. Where feminised seed earns a bad reputation is _parent choice_: seed made by stressing plants until they self-pollinate (rodelization) actively selects for the tendency to throw male flowers under stress, and that tendency is heritable.[^punja-holmes-2020-hermaphroditism] Ask how the seed was made. STS reversal of a stable, tested mother is the standard; stress-derived seed is the lottery.
 
@@ -339,13 +339,13 @@ A breeding male, or an unnoticed hermaphrodite, shares air with the hunt. Seeded
 
 ## Phenotype hunting: selection, validation and preservation
 
-> **KEY — Carry these three objects**
+> **KEY — Three principles for the hunt**
 >
 > - **The lottery.** Seeds are tickets. Heterozygous parents guarantee the draw is random, names on the packet do not change the odds, and the number of tickets, not enthusiasm, sets your chance of a real keeper.
 > - **The rubric.** Selection only means anything against criteria written before you met the plants, applied to plants grown under the same conditions, and verified in a second round. Everything else is picking a favourite.
 > - **The vault.** The moment a cut earns the name keeper it becomes the most valuable thing you own: two mothers, rolling backups, disease screening and a tissue-culture archive are what ‘keeping’ actually means.
 
-From here, the practical neighbours: [seeds and germination](seeds-germination.html) for getting the tickets sprouted, [cloning](cloning.html) for taking and rooting the cuts the hunt depends on, and [tissue culture](tissue-culture.html) for the archive that makes a keeper permanent. The genetics do not care what the packet said, pop enough seeds, score them honestly, verify the winner, and protect it like it matters. It does.
+From here, the practical neighbours: [seeds and germination](seeds-germination.html) for getting the tickets sprouted, [cloning](cloning.html) for taking and rooting the cuts the hunt depends on, and [tissue culture](tissue-culture.html) for the archive that makes a keeper permanent. The genetics do not care what the packet said: pop enough seeds, score them honestly, verify the winner, and protect the cut with the same discipline you brought to finding it.
 
 ## References
 

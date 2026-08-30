@@ -8,8 +8,10 @@ import figs_extra as FX
 SLUG = "tissue-culture"
 TITLE = "Cleaning up cannabis genetics with tissue culture"
 EYEBROW = "Beginner · Tissue culture"
-SUB = ("Tissue culture grows a clean, vigorous, genetically identical mother from a speck of "
-       "tissue off a tired or diseased plant. Explained from absolute zero.")
+SUB = ("Tissue culture regrows an entire plant from a microscopic piece of its growing tip, "
+       "eliminating diseases that ordinary cleaning cannot reach. After reading this guide you will "
+       "be able to run the full workflow yourself, from conditioning the donor plant through to "
+       "holding a verified disease-free mother ready to take cuttings from.")
 META = [("spark", "Beginner"), ("image", "18 step photos"),
         ("quote", "Evidence-linked · 11 sources"), ("clock", "~22 min read")]
 RELATED = ["mould-risk", "grow-room-systems", "gmp-hash-lab"]
@@ -81,12 +83,14 @@ SECTIONS.append({
   "blocks": [
     p("Tissue culture rests on one fact about plants that animals do not share. Almost every cell "
       "holds the full instructions to rebuild the whole plant."),
-    callout("key", "Totipotency: the property that makes all of this work",
-      p("Many plant cells can, under the right conditions, carry the complete instructions to rebuild the whole "
-        "plant. Give a tiny scrap of the right tissue the right food and the right hormones and it "
-        "grows roots, shoots and leaves: a complete new plant. This ability is called "
-        "<strong>totipotency</strong>. You are not growing a &lsquo;sample&rsquo;, you are growing a "
-        "whole new copy.")),
+    callout("key", "Totipotency: why a tiny piece can grow a whole plant",
+      p("Think of it like this: every cell in the plant holds a complete sealed copy of the building "
+        "instructions. Most cells spend their whole life using only one page of those instructions — a "
+        "root cell reads root instructions, a leaf cell reads leaf instructions. Give a tiny piece of "
+        "the right tissue the right food and the right signals, and that sealed copy opens: the cell "
+        "reads the whole thing from page one and rebuilds the entire plant from scratch. This ability "
+        "is called <strong>totipotency</strong>. You are not growing a &lsquo;sample&rsquo;; you are "
+        "growing a whole new copy.")),
     p("Here is the vocabulary you need. Get the gist rather than memorising it. Each term comes "
       "back in context later."),
     table(["Term", "What it actually means"], [
@@ -127,14 +131,14 @@ SECTIONS.append({
       "A clean plant versus a &lsquo;dudded&rsquo; one carrying Hop Latent Viroid. The infection is "
       "often symptomless early on, which is exactly why it spreads through a clone line "
       "undetected until production has quietly collapsed."),
-    h(3, "Why HpLVd is such a big deal"),
+    h(3, "HpLVd: spread, cost and impact"),
     grid([
       card("It's everywhere", "Industry and research surveys have reported very high facility infection rates in California (~90% in one large testing programme) and frequent positives in Canadian retail flower (~40% in one study), treat as warning signals, not permanent global prevalence. If you've cloned for years, assume you may have it." + R["hlvd_mgmt2025"], tag="Prevalence"),
       card("It's expensive", "In severe dud outbreaks, infected plants can lose <strong>up to about half their cannabinoids</strong>, plus terpenes, trichomes and yield. Industry losses run into tens of millions of dollars a year.", tag="Impact"),
       card("It's stealthy", "It can sit <strong>symptomless</strong> for a long time and is &lsquo;latent&rsquo; by name. By the time plants visibly dud, the whole room is usually infected.", tag="Latent"),
       card("It spreads easily", "It survives on tools, hands, pots and benches, rides in sap for ~a week and in dried tissue for ~a month. The 2025 North American transmission study reported seed transmission as high as 100%; the rate varies by seed lot and study design, so test every lot." + R["hlvd_mgmt2025"], tag="Seed risk"),
     ], cols=2),
-    callout("warn", "Why you can't just spray it away",
+    callout("warn", "Sprays cannot cure a viroid infection",
       p("No spray cures a viroid-infected plant. It lives <em>inside</em> the plant's "
         "cells and plumbing. The only reliable way to get rid of it is to grow a brand-new plant "
         "from a piece of tissue the viroid hasn't reached yet. That is precisely what "
@@ -146,7 +150,7 @@ SECTIONS.append({
 
 # ---- 4. Big picture -----------------------------------------------------
 SECTIONS.append({
-  "id": "overview", "kicker": "04: The map", "title": "Tissue culture workflow",
+  "id": "overview", "kicker": "04: Workflow overview", "title": "Tissue culture workflow",
   "blocks": [
     p("Every plant tissue culture workflow follows the same five classic stages, whether for "
       "orchids, bananas or cannabis. They were first laid out by a scientist named Murashige. "
@@ -162,7 +166,7 @@ SECTIONS.append({
       "The full step-by-step pipeline used in this guide, with rough durations. The purple step "
       "(meristem cleanup) and the blue step (indexing / disease testing) are what turn ordinary "
       "cloning into genetic clean-up. Durations overlap in practice."),
-    h(3, "How long does the whole thing take?"),
+    h(3, "Realistic timelines"),
     p("Longer than you'd hope, and that's worth knowing up front. There are two honest answers, "
       "depending on what you mean by &lsquo;done&rsquo;."),
     figure(F.fig_timeline(), 4,
@@ -178,10 +182,8 @@ SECTIONS.append({
 
 # ---- 5. The science of clean -------------------------------------------
 SECTIONS.append({
-  "id": "science", "kicker": "05: The clever bit", "title": "Meristem culture for pathogen elimination",
+  "id": "science", "kicker": "05: How the meristem stays clean", "title": "Meristem culture for pathogen elimination",
   "blocks": [
-    p("This is the single most important concept in the whole guide. Once it clicks, everything "
-      "about &lsquo;cleaning genetics&rsquo; makes sense."),
     p("Viroids and viruses move around a plant through its <strong>vascular system</strong>: "
       "the internal plumbing (phloem) that carries sap. They spread cell-to-cell from there. But at "
       "the very tip of every growing shoot sits the <strong>meristem</strong>, a dome of furiously "
@@ -189,7 +191,7 @@ SECTIONS.append({
     figure(F.fig_meristem(), 5,
       "Inside a shoot tip. The viroid travels up the red vascular tissue but cannot reach the green "
       "meristem dome: there's no plumbing there yet, and the dome's cells divide faster than "
-      "the viroid can spread. Excise just that 0.2&ndash;0.5&nbsp;mm dome and you usually leave "
+      "the viroid can spread. Excise just that 0.2&ndash;0.5&nbsp;mm (0.008&ndash;0.020&nbsp;in) dome and you usually leave "
       "the disease behind."),
     callout("key", "Two reasons the dome stays clean",
       ol([
@@ -288,7 +290,7 @@ SECTIONS.append({
       ("Clean the zone", "Wipe the box/hood interior and the bench with 70% alcohol. Let it flash off. Turn off fans/AC if using a still-air box."),
       ("Glove and spray", "Fresh nitrile gloves, then spray your gloved hands with 70% alcohol. Re-spray often, every time you touch anything outside the sterile field."),
       ("Only what you need", "Bring in only the jars, tools and explants for this session. Clutter is contamination."),
-      ("Sterilise tools before EVERY cut", "Dip the scalpel and forceps in alcohol then pass through a flame, OR use a glass-bead steriliser (~250&nbsp;&deg;C, ~20&nbsp;seconds). Then <strong>let them cool</strong>: touching tissue with a hot tool cooks it."),
+      ("Sterilise tools before EVERY cut", "Dip the scalpel and forceps in alcohol then pass through a flame, OR use a glass-bead steriliser (~250&nbsp;&deg;C / 482&nbsp;&deg;F, ~20&nbsp;seconds). Then <strong>let them cool</strong>: touching tissue with a hot tool cooks it."),
       ("Work fast, lids off briefly", "Open a jar only at the moment you use it; close it the instant you're done. Never leave a vessel gaping."),
       ("Hands never cross open jars", "Reaching over an open vessel showers it with skin flakes and spores. Approach from the side, always."),
     ]),
@@ -305,7 +307,7 @@ SECTIONS.append({
 
 # ---- 8. Media -----------------------------------------------------------
 SECTIONS.append({
-  "id": "media", "kicker": "08: The food", "title": "Making and sterilising the medium",
+  "id": "media", "kicker": "08: Preparing the medium", "title": "Making and sterilising the medium",
   "blocks": [
     p("The medium is the jelly your plant lives on. At its simplest it is mineral salts (plant "
       "food), sugar (energy, because a sealed jar is too dim for the plant to feed itself), vitamins, "
@@ -349,7 +351,7 @@ SECTIONS.append({
     p("Raw medium is microbe heaven, so it must be heat-sterilised before use. The home tool is a "
       "<strong>pressure cooker</strong>; the lab tool is an <strong>autoclave</strong> (the Athena "
       "kit includes a small one). Both do the same job: hold the jars at "
-      "<strong>121&nbsp;&deg;C / 15&nbsp;psi for ~20 minutes</strong>."),
+      "<strong>121&nbsp;&deg;C (250&nbsp;&deg;F) / 15&nbsp;psi for ~20 minutes</strong>."),
     grid([
       card("DIY: pressure cooker", "Jars loosely capped, ~20 min at 15 psi. Let it cool and depressurise on its own before opening, with the steam still gently venting, so it doesn't suck room air (and spores) back in.", tag="$"),
       card("Athena: sachet + autoclave", "Empty one SHOOTS or ROOTS sachet into the vessel, add RO water to the line (125 mL or 750 mL), shake to dissolve, run the one-touch autoclave, then pour under the hood.", tag="Kit"),
@@ -372,7 +374,7 @@ SECTIONS.append({
         "anything from it."),
       ul([
         "Keep it <strong>vegetative, never flowering</strong>: long days, 18 h light / 6 h dark.",
-        "Aim for <strong>24&ndash;30&nbsp;&deg;C</strong> and a moderate <strong>55&ndash;60% humidity</strong>.",
+        "Aim for <strong>24&ndash;30&nbsp;&deg;C (75&ndash;86&nbsp;&deg;F)</strong> and a moderate <strong>55&ndash;60% humidity</strong>.",
         "Feed a vegetative nutrient mix and keep it pushing <strong>soft, fast new growth</strong>. That young tissue gives far better, cleaner explants than old woody stems.",
         "Scout and treat <strong>pests and disease</strong> first. Only work from a plant that looks genuinely healthy.",
       ], "tight"),
@@ -394,7 +396,7 @@ SECTIONS.append({
       "tissue itself. This is the dirtiest, most failure-prone step, so go slowly and follow the "
       "sequence exactly."),
     h(3, "Cut the explant"),
-    p("For your <em>first</em> attempts, use a <strong>nodal segment</strong>: a piece of stem ~1 cm "
+    p("For your <em>first</em> attempts, use a <strong>nodal segment</strong>: a piece of stem ~1 cm (0.4 in) "
       "long containing one bud. It's the most forgiving explant and lets you learn sterile technique "
       "before attempting the fiddly meristem dissection (section 12). Strip off large leaves to "
       "reduce the surface area carrying microbes."),
@@ -435,7 +437,7 @@ SECTIONS.append({
       "to watch like a hawk for contamination and to keep the tissue from browning to death."),
     stagecard("I", "Establish a clean, growing culture", "2&ndash;4 weeks", "".join([
       ul([
-        "Put the plated vessels in the culture room at <strong>~25&nbsp;&deg;C</strong>, "
+        "Put the plated vessels in the culture room at <strong>~25&nbsp;&deg;C (77&nbsp;&deg;F)</strong>, "
         "<strong>16 h light / 8 h dark</strong>, gentle light.",
         "<strong>Watch for 7&ndash;14 days.</strong> Bin any vessel showing fungal fuzz, cloudy medium or slimy ooze immediately. One bad jar can seed the shelf.",
         "Expect the bud to swell and push new growth (&lsquo;bud break&rsquo;) in roughly <strong>2&ndash;3 weeks</strong>.",
@@ -447,7 +449,7 @@ SECTIONS.append({
         "the medium around it) brown, sometimes fatally. Fight it with <strong>activated charcoal in "
         "the medium</strong> (~1 g/L), an antioxidant dip, and moving the explant to fresh medium "
         "early and often in the first couple of weeks.")),
-    callout("note", "Why losses are high here, and that's OK",
+    callout("note", "High initiation losses are normal",
       p("Initiation is where recalcitrant cannabis sheds the most cultures. Published labs report "
         "anywhere from ~55% of explants surviving to 90&ndash;95% loss across varieties. Start more "
         "explants than you think you need, and don't be discouraged by a thin survival rate on run one.")),
@@ -455,20 +457,20 @@ SECTIONS.append({
 
 # ---- 12. Meristem cleanup ----------------------------------------------
 SECTIONS.append({
-  "id": "cleanup", "kicker": "12: The cleanup", "title": "Meristem dissection for genetic cleanup",
+  "id": "cleanup", "kicker": "12: Meristem dissection", "title": "Meristem dissection for genetic cleanup",
   "blocks": [
     p("Everything so far also describes ordinary cloning. <strong>This</strong> is the step that "
-      "removes the disease. Instead of a 1 cm node, you excise only the tiny meristem dome from "
+      "removes the disease. Instead of a 1 cm (0.4 in) node, you excise only the tiny meristem dome from "
       "section 5, the part the viroid hasn't reached, and grow your new plant from that."),
     stagecard("M", "Excise the clean meristem dome", "4&ndash;8 weeks to recover", "".join([
       steps([
         ("Sterilise a shoot tip", "Surface-sterilise an actively growing shoot tip exactly as in section 10."),
         ("Go under the scope", "Under a stereo (dissecting) microscope, in the flow hood, use fine sterile needles/forceps to peel away the wrapping baby leaves until the glassy, translucent meristem dome is exposed."),
-        ("Cut the dome", "Excise just the dome plus 1&ndash;2 leaf primordia, a piece only <strong>0.2&ndash;0.5 mm</strong> across. Place it on initiation medium."),
+        ("Cut the dome", "Excise just the dome plus 1&ndash;2 leaf primordia, a piece only <strong>0.2&ndash;0.5 mm (0.008&ndash;0.020 in)</strong> across. Place it on initiation medium."),
         ("Be patient", "Meristems are slow and fragile. Expect ~10 weeks (sometimes up to ~24) to recover into a viable shoot, much slower than a node."),
       ]),
     ])),
-    h(3, "How well does it actually work?"),
+    h(3, "HpLVd clearance rates by strain"),
     p("Here is where honesty matters most. Meristem culture <em>can</em> clear HpLVd, but how "
       "often it succeeds depends enormously on the strain. In one 13-cultivar study using meristem "
       "culture plus mild heat treatment, the disease was fully eradicated in only <strong>5 of 13</strong> "
@@ -480,7 +482,7 @@ SECTIONS.append({
       "here is unrelated to the Athena Ag kit.)"),
     callout("note", "Optional adjuncts: thermotherapy and cryotherapy",
       ul([
-        "<strong>Thermotherapy</strong>, holding the mother or culture warm (~30&ndash;36&nbsp;&deg;C) for a couple of weeks, lowers viroid levels so you can excise a slightly larger, more survivable meristem that's still clean. On its own it's unreliable (levels rebound; heat can even create mutant viroids), so it's used <em>with</em> meristem excision, not instead.",
+        "<strong>Thermotherapy</strong>, holding the mother or culture warm (~30&ndash;36&nbsp;&deg;C / 86&ndash;97&nbsp;&deg;F) for a couple of weeks, lowers viroid levels so you can excise a slightly larger, more survivable meristem that's still clean. On its own it's unreliable (levels rebound; heat can even create mutant viroids), so it's used <em>with</em> meristem excision, not instead.",
         "<strong>Cryotherapy</strong> (briefly freezing shoot tips in liquid nitrogen so only the tiny clean cells survive) is a powerful research method but has no standard, proven cannabis protocol yet. File under &lsquo;advanced/future&rsquo;.",
       ], "tight")),
     callout("warn", "The Athena kit can clean, but it cannot prove",
@@ -491,7 +493,7 @@ SECTIONS.append({
 
 # ---- 13. Indexing -------------------------------------------------------
 SECTIONS.append({
-  "id": "indexing", "kicker": "13: The proof", "title": "Indexing: verifying pathogen-free stock",
+  "id": "indexing", "kicker": "13: Disease testing", "title": "Indexing: verifying pathogen-free stock",
   "blocks": [
     p("A meristem plant that <em>looks</em> healthy is not a clean plant until a lab test says so. "
       "&lsquo;Indexing&rsquo; is that test. Skip it and you can spend six months building a "
@@ -503,7 +505,7 @@ SECTIONS.append({
     defterm("RT-LAMP",
       "A newer, cheaper test that runs at a single temperature (no expensive thermocycler), making "
       "in-house or field testing practical. Slightly less established than qPCR but increasingly used."),
-    callout("key", "How to index properly: timing is everything",
+    callout("key", "Indexing: when and what to test",
       ul([
         "HpLVd spreads through a new plant unevenly and slowly. It reaches <strong>roots in ~2&ndash;3 weeks</strong> and <strong>foliage in ~4&ndash;6 weeks</strong> after infection.",
         "So <strong>test more than once, on more than one tissue.</strong> Roots are the most reliable early indicator; sample older and newer leaves too.",
@@ -528,7 +530,7 @@ SECTIONS.append({
         ("Base medium", "Full-strength MS (DKW optional)"),
         ("Hormone", "0 &ndash; ~0.5 &micro;M meta-topolin (often best hormone-free)"),
         ("Sugar / gel / pH", "30 g/L sucrose &middot; 6&ndash;9.5 g/L agar &middot; pH 5.7&ndash;5.8"),
-        ("Environment", "25 &plusmn; 2 &deg;C &middot; 16 h light &middot; ~100&ndash;120 &micro;mol/m&sup2;/s"),
+        ("Environment", "25 &plusmn; 2 &deg;C (77 &plusmn; 4 &deg;F) &middot; 16 h light &middot; ~100&ndash;120 &micro;mol/m&sup2;/s"),
         ("Subculture every", "~4 weeks"),
         ("Realistic rate", "~1&ndash;6 new shoots per shoot per cycle (genotype-dependent)"),
       ]),
@@ -540,6 +542,11 @@ SECTIONS.append({
         "Start low or zero, and only add hormone if you genuinely need a higher rate. (With the "
         "Athena SHOOTS sachet the hormones are pre-set and you can't change them.)")),
     h(3, "Hyperhydricity: the disorder that ruins multiplication"),
+    p("In a sealed jar at near-100% humidity, the tissue has no reason to build the protective "
+      "structures that let a plant survive in open air. Think of it like a sponge left in still "
+      "water: permanently saturated, never forced to drain, never developing any structure that "
+      "would let it hold its shape when pulled out. When you move that tissue into normal air, it "
+      "cannot manage its own water loss. This disorder is called <strong>hyperhydricity</strong>."),
     defterm("Hyperhydricity (a.k.a. vitrification)",
       "Shoots that turn glassy, translucent, water-soaked and brittle. They look swollen and wet. "
       "Their leaves don't form a proper waxy skin or working pores, so they root badly and usually "
@@ -638,7 +645,7 @@ SECTIONS.append({
 
 # ---- 17. Re-establish mother -------------------------------------------
 SECTIONS.append({
-  "id": "mother", "kicker": "17: The payoff", "title": "Re-establishing the clean mother",
+  "id": "mother", "kicker": "17: The clean mother plant", "title": "Re-establishing the clean mother",
   "blocks": [
     p("You've arrived. The hardened plantlet, ideally one you've had lab-tested clean, "
       "is now grown on into a full <strong>mother (stock) plant</strong>, and from her you take normal "
@@ -667,7 +674,7 @@ SECTIONS.append({
         "gel: an &lsquo;artificial seed&rsquo; you can store and ship. Proven at commercial "
         "scale in cannabis: encapsulated &lsquo;Slurricane&rsquo; buds showed 100% regrowth after "
         "150 days of storage. Good for short-to-medium-term keeping and posting genetics."), tag="Storage"),
-      card("Cryopreservation", p("Freezing tiny shoot tips in liquid nitrogen (&minus;196&nbsp;&deg;C) "
+      card("Cryopreservation", p("Freezing tiny shoot tips in liquid nitrogen (&minus;196&nbsp;&deg;C / &minus;321&nbsp;&deg;F) "
         "for indefinite storage. It's the gold standard for long-term germplasm banking, and it "
         "neatly &lsquo;resets the clock&rsquo; on the subculture mutations from section 14. Real "
         "but advanced; cannabis protocols recover ~55&ndash;63% of tips." + R["karger2019_cryo"]), tag="Long-term"),
@@ -708,15 +715,15 @@ SECTIONS.append({
 SECTIONS.append({
   "id": "reality", "kicker": "20: Straight talk", "title": "Expected results and limitations",
   "blocks": [
-    p("So you can decide with eyes open."),
-    h(3, "What success rates to actually expect"),
+    p("Use these benchmarks to set realistic expectations before you start."),
+    h(3, "Success rates: published best-case vs beginner first run"),
     table(["Stage", "Best-case lab", "Realistic beginner first runs"], [
       ["Initiation survival", "up to ~55% usable", "often much lower; 90&ndash;95% loss is reported and normal"],
       ["Rooting", "95&ndash;100%", "lower, improving with practice"],
       ["Acclimatisation survival", "90&ndash;100%", "lower on first attempts"],
       ["HpLVd clearance (per strain)", "0&ndash;100% (avg ~40%)", "strongly strain-dependent; clean &amp; test several"],
     ], caption="Published figures are best-case. Your first batch will underperform them. That's the learning curve, not failure."),
-    h(3, "What it costs"),
+    h(3, "Cost overview"),
     table(["Path", "Up-front", "Ongoing"], [
       ["DIY starter (still-air box + pressure cooker)", "~$200&ndash;$550", "media powder, bleach, agar, gel; cheap"],
       ["Serious home lab", "under ~$1,000", "consumables + optional flow hood later"],

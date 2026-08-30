@@ -2,7 +2,7 @@
 slug: "flowering-stages"
 title: "The flower cycle, week by week"
 eyebrow: "Beginner · Flower"
-summary: "A beginner's guide to the cannabis flowering stage: the flip to 12/12, the stretch, bud set, bulking, ripening, and reading the plant to know exactly when to cut."
+summary: "This paper maps the eight to ten weeks from light flip to harvest. You will be able to read the plant stage by stage, set the right climate and feed for each phase, and use trichomes rather than the calendar to decide when to cut."
 track: "Flowering"
 read_time: "~12 min read"
 diagrams: "9 diagrams"
@@ -21,7 +21,7 @@ refs: [{"id": "ahrens-2023-photoperiod-optimum", "n": 1, "cite": "Ahrens A, Llew
 
 _Beginner · Flower · ~12 min read_
 
-> A beginner's guide to the cannabis flowering stage: the flip to 12/12, the stretch, bud set, bulking, ripening, and reading the plant to know exactly when to cut.
+> This paper maps the eight to ten weeks from light flip to harvest. You will be able to read the plant stage by stage, set the right climate and feed for each phase, and use trichomes rather than the calendar to decide when to cut.
 
 ## Purpose and scope
 
@@ -45,17 +45,17 @@ This page uses a handful of grower words repeatedly. Learn these six and the res
 
 **Pistils** — The fine white hairs that emerge from bud sites. They start white and darken to orange or brown as the plant ripens.
 
-**Trichomes** — The tiny mushroom-shaped resin glands that coat the buds. Under magnification they go clear, then milky, then amber. They hold most of the THC and aroma and are the real harvest signal.
+**Trichomes** — The tiny mushroom-shaped resin glands that cover the buds and nearby leaves. Their colour change tracks chemical maturity like a traffic light: clear means the compounds are still building, milky (cloudy) means peak accumulation, and amber means degradation has started. Under a 60× loupe or pocket microscope they are easy to read. They hold the bulk of the THC, CBD and terpenes and are the true harvest signal — pistil colour is a rough first hint, but trichomes are the real clock.
 
 **Calyx, bud and cola** — A calyx is one teardrop floral pod. Many calyxes stacking together form a bud, and a large bud cluster on a main stem is a cola.
 
-**EC and VPD** — EC (electrical conductivity) measures how strong your nutrient water is. VPD (vapor pressure deficit) is a single number combining temperature and humidity that tells you how comfortably the plant breathes and drinks.
+**EC and VPD** — EC (electrical conductivity) measures how concentrated your nutrient solution is — the strength of the water, not the volume. Picture a cup of salt water: more dissolved minerals means a higher EC number. A drip EC between roughly 1.8 and 2.8 mS·cm¹ covers most of flowering; below that range plants starve, above it they burn. VPD (vapour pressure deficit) is the air’s pull on the moisture inside the plant’s leaves. Think of a wrung-out towel versus a soaking-wet one: dry, warm air is the wrung-out towel — it pulls hard (high VPD), so the plant opens its stomata wide and drinks fast; cool, humid air is the wet towel — it barely pulls (low VPD). VPD combines temperature and humidity into one number in kPa so you can tune how hard the plant has to work to stay hydrated. Cannabis flowers best between roughly 1.0 and 1.4 kPa depending on stage.
 
 **Defoliation and lollipopping** — Removing leaves to open up airflow and light (defoliation), and stripping the lower third of the plant so energy goes to the top buds (lollipopping).
 
 > **Diagram.** The same flower, named at different scales. Pistils and trichomes are the two signals you watch to time the harvest.
 
-## Photoperiod change and floral initiation
+## What the 12/12 flip does to the plant
 
 Photoperiod cannabis measures the length of the dark period to decide whether it is spring (grow) or autumn (reproduce). When you give it 12 hours of uninterrupted darkness, it reads that as the days shortening and switches into flower production.[^spitzer-rimon-2019-florogenesis]
 
@@ -73,16 +73,16 @@ Twelve hours is the safe default, though research finds slightly longer nights c
 
 For the first 2 to 3 weeks after the flip the plant stretches, often nearly doubling in height as it builds the frame to hang buds on, while white pistils appear at the nodes.[^hesami-2023-morphological-lifecycle]
 
-Around weeks 3 to 4 the stretch stops and those pistil sites organise into real budlets as calyxes begin stacking. This is the most sensitive window: every bud's final position is being set, so heavy leaf removal here costs you yield. In weeks 1 to 2 plants can gain 50 to 100% in height, so keep PPFD around 800 to 900 umol/m2/s and feed at a moderate EC (drip EC around 2.0 to 2.6) as growth is fast.[^llewellyn-2022-light-intensity-yield]
+Around weeks 3 to 4 the stretch stops and those pistil sites organise into real budlets as calyxes begin stacking. This is the most sensitive window: every bud's final position is being set, so heavy leaf removal here costs you yield. In weeks 1 to 2 plants can gain 50 to 100% in height, so keep PPFD around 800–900 μmol·m²·s¹ and feed at a moderate EC (drip EC around 2.0 to 2.6) as growth is fast.[^llewellyn-2022-light-intensity-yield]
 
 > **Diagram.** The stretch is steep through weeks 1 to 3, then flat. Flip at half to two-thirds of your target height to leave room for it.[^hesami-2023-morphological-lifecycle]
 
-| Week | Phase | PPFD (umol/m2/s) | Day / night temp | RH | VPD (kPa) | Drip EC | Action |
+| Week | Phase | PPFD (µmol·m⁻²·s⁻¹) | Day / night temp | RH | VPD (kPa) | Drip EC | Action |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| 1 | Stretch | 800-850 | 26-28 C / 22-24 C | 65-70% | 0.9-1.0 | 2.0-2.2 | Lollipop, light defoliation |
-| 2 | Stretch | 850-900 | 26-28 C / 22-24 C | 62-68% | 1.0-1.1 | 2.2-2.4 | Main defoliation |
-| 3 | Bud set | 900 | 26-28 C / 21-23 C | 60-65% | 1.0-1.1 | 2.4-2.6 | Last light defoliation, then stop |
-| 4 | Bud set | 900 | 26-28 C / 21-23 C | 58-62% | 1.1-1.2 | 2.4-2.6 | Hold steady, no more leaf removal |
+| 1 | Stretch | 800–850 | 26–28 °C (79–82 °F) / 22–24 °C (72–75 °F) | 65–70% | 0.9–1.0 | 2.0–2.2 | Lollipop, light defoliation |
+| 2 | Stretch | 850–900 | 26–28 °C (79–82 °F) / 22–24 °C (72–75 °F) | 62–68% | 1.0–1.1 | 2.2–2.4 | Main defoliation |
+| 3 | Bud set | 900 | 26–28 °C (79–82 °F) / 21–23 °C (70–73 °F) | 60–65% | 1.0–1.1 | 2.4–2.6 | Last light defoliation, then stop |
+| 4 | Bud set | 900 | 26–28 °C (79–82 °F) / 21–23 °C (70–73 °F) | 58–62% | 1.1–1.2 | 2.4–2.6 | Hold steady, no more leaf removal |
 
 *Weeks 1 to 4 targets. Run early flower slightly warm and humid, then ease humidity down as buds set.[^eichhorn-bilodeau-2019-photobiology]*
 
@@ -94,15 +94,15 @@ Around weeks 3 to 4 the stretch stops and those pistil sites organise into real 
 
 Weeks 5 to 7 are peak bulking: buds swell fastest, frost (trichomes) builds, and aroma intensifies, so this is when light, feed and CO2 pay off most.[^livingston-2020-trichome-maturation]
 
-From roughly week 7 onward the plant ripens: pistils darken from white to orange, trichomes shift clear to milky, and lower fan leaves yellow as the plant pulls stored nutrients into the buds. You push hardest during bulking, then ease off and lower humidity into ripening to protect the harvest. During bulking, push PPFD to about 900 to 1100 umol/m2/s (1200 to 1500 with CO2 enrichment at 1000 to 1200 ppm) and raise feed to peak EC.[^llewellyn-2022-light-intensity-yield]
+From roughly week 7 onward the plant ripens: pistils darken from white to orange, trichomes shift clear to milky, and lower fan leaves yellow as the plant pulls stored nutrients into the buds. You push hardest during bulking, then ease off and lower humidity into ripening to protect the harvest. During bulking, push PPFD to about 900–1100 μmol·m²·s¹ (1200–1500 with CO2 enrichment at 1000–1200 ppm) and raise feed to peak EC.[^llewellyn-2022-light-intensity-yield]
 
-Bulking climate runs around 26 to 28 C day, with RH down to about 55 to 62% to limit mould risk as buds densify, and VPD around 1.1 to 1.3 kPa. In ripening (week 8 and on), drop RH to 40 to 50%, keep temps moderate in the low-to-mid 20s C, and many growers lower or flush nutrients in the last 1 to 2 weeks. Yellowing lower leaves late in flower is normal nutrient remobilisation, not always a deficiency to chase.
+Bulking climate runs around 26–28 °C (79–82 °F) during the day, with RH down to about 55 to 62% to limit mould risk as buds densify, and VPD around 1.1 to 1.3 kPa. In ripening (week 8 and on), drop RH to 40 to 50%, keep day temps in the low-to-mid 20s °C (68–77 °F), and many growers lower or ease nutrients in the last 1 to 2 weeks. Yellowing lower leaves late in flower is normal nutrient remobilisation, not always a deficiency to chase.
 
 > **Diagram.** Most of the weight goes on weeks 5 to 7. That is where light, feed and CO2 earn their keep.[^livingston-2020-trichome-maturation]
 
 > **Diagram.** Humidity steps down stage by stage as buds get denser. The dense late canopy is where high humidity does the most damage.[^mahmoud-2023-botrytis-budrot]
 
-## Harvest-readiness assessment
+## Reading trichomes to find the cut date
 
 > **EVIDENCE — Evidence limits**
 >
@@ -112,7 +112,7 @@ Pistils are a rough early signal but they lie. Trichomes are the true clock, and
 
 Harvest when most trichomes have turned from clear to milky or cloudy, with a small fraction going amber. The 80 to 90% milky and 5 to 15% amber split is a grower convention, not a validated effect target. Clear, milky and amber ratios alone do not reliably predict an energetic or heavy experience. If the intended chemical profile matters, compare harvest samples by cannabinoid and terpene analysis.[^livingston-2020-trichome-maturation]
 
-Wait until pistils are mostly darkened and curled in (roughly 70% or more), then switch to checking trichomes for the real call. Use 60x or higher magnification on actual bud, not sugar leaves, and check several spots, since maturity varies across the plant. Do not harvest on the calendar alone: a week 9 strain can need week 10 depending on conditions and phenotype.
+Wait until pistils are mostly darkened and curled in (roughly 70% or more), then switch to checking trichomes for the real call. Use 60× or higher magnification on actual bud, not sugar leaves, and check several spots, since maturity varies across the plant. Do not harvest on the calendar alone: a week 9 strain can need week 10 depending on conditions and phenotype.
 
 > **Diagram.** Clear trichomes fade out as milky takes over and a little amber appears. Cut inside the window as a maturity cue; later cuts often feel heavier, genotype still dominates.[^livingston-2020-trichome-maturation]
 
@@ -120,11 +120,11 @@ Wait until pistils are mostly darkened and curled in (roughly 70% or more), then
 | --- | --- | --- | --- |
 | Pistils | Still mostly white, sticking out | Too early | Thin, harsh, low potency |
 | Trichomes | Mostly clear | Too early | Underdeveloped |
-| Trichomes | 80-90% milky, 5% amber | Peak window (early) | Common early-cut target |
-| Trichomes | Milky with 10-15% amber | Peak window (late) | Balanced |
+| Trichomes | 80–90% milky, 5% amber | Peak window (early) | Common early-cut target |
+| Trichomes | Milky with 10–15% amber | Peak window (late) | Balanced |
 | Trichomes | 30%+ amber, leaves yellow | Over-ripe | Often denser/heavier feel; genotype still dominates |
 
-*Read trichomes on bud at 60x or more. Pistil colour is only a first hint.[^livingston-2020-trichome-maturation]*
+*Read trichomes on bud at 60× or more. Pistil colour is only a first hint.[^livingston-2020-trichome-maturation]*
 
 ## Troubleshooting
 
@@ -134,7 +134,7 @@ Most first-grow failures in flower come from a few repeatable errors: light leak
 | --- | --- |
 | Light leaks in the dark period | Tape over LED indicators and seal door gaps. Bright or repeated night interruptions can stall flowering; genetics and multi-stress drive most herms |
 | Over-defoliating or doing it late | Stop heavy leaf removal after week 3. Leaves are the plant's sugar factory during bulking |
-| Humidity too high in late flower | Pull RH down to 40-50% from week 7. Dense buds plus 60%+ RH invites bud rot (botrytis) |
+| Humidity too high in late flower | Pull RH down to 40–50% from week 7. Dense buds plus 60%+ RH invites bud rot (botrytis) |
 | Nutrient burn | Drop feed EC and give enough water volume per feed. Burnt tips mean the feed is too strong |
 | Harvesting too early or by calendar | Let the trichomes decide. A few extra days to proper maturity beats hitting an exact week |
 
@@ -150,10 +150,10 @@ A typical photoperiod indoor grow runs about 8 to 10 weeks of flower on top of v
 
 | Week | Phase | What the plant is doing | PPFD | Day/night | RH / VPD | Action |
 | --- | --- | --- | --- | --- | --- | --- |
-| 1-2 | Stretch | Doubling in height, first pistils | 800-900 | 27 C / 23 C | 65% / 1.0 | Lollipop, defoliate |
-| 3-4 | Bud set | Stretch ends, budlets form | 900 | 27 C / 22 C | 60% / 1.1 | Stop defoliating |
-| 5-7 | Bulking | Buds swell fastest, frost builds | 1000-1100 | 27 C / 22 C | 58% / 1.2 | Peak feed, push light |
-| 8-10 | Ripening | Pistils darken, trichomes go milky | 900 | 24 C / 20 C | 45% / 1.2 | Lower RH, ease EC, read trichomes |
+| 1–2 | Stretch | Doubling in height, first pistils | 800–900 | 27 °C (81 °F) / 23 °C (73 °F) | 65% / 1.0 kPa | Lollipop, defoliate |
+| 3–4 | Bud set | Stretch ends, budlets form | 900 | 27 °C (81 °F) / 22 °C (72 °F) | 60% / 1.1 kPa | Stop defoliating |
+| 5–7 | Bulking | Buds swell fastest, frost builds | 1000–1100 | 27 °C (81 °F) / 22 °C (72 °F) | 58% / 1.2 kPa | Peak feed, push light |
+| 8–10 | Ripening | Pistils darken, trichomes go milky | 900 | 24 °C (75 °F) / 20 °C (68 °F) | 45% / 1.2 kPa | Lower RH, ease EC, read trichomes |
 
 *A week-by-week map, not a rulebook. Let the trichomes have the final word.*
 

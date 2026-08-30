@@ -5,11 +5,12 @@ from components import (p, lead, h, ul, ol, callout, defterm, table, figure,
 import figs_lib as L
 
 SLUG = "nutrient-mixing-athena"
-TITLE = "Mixing an Athena Pro Line stock tank (metric)"
+TITLE = "Dissolve Athena Pro Line powder into a 50 L stock tank"
 EYEBROW = "Feed · Nutrient mixing"
-SUB = ("Dissolve a full 25 lb bag of Athena Pro Line into a 50 L stock tank to make a "
-       "concentrate you dose into your feed later. Covers the chemistry of getting ~227 g/L "
-       "of salt fully into solution, and why each part needs its own tank.")
+SUB = ("Dissolve a full 11.34 kg (25 lb) bag of Athena Pro Line into a 50 L tank to make a "
+       "stock concentrate you dose into feed water. Covers why temperature and agitation matter "
+       "at 227 g/L, why Part A and Part B need separate tanks, and how to calculate the "
+       "millilitres-per-litre dose for your feed.")
 META = [("beaker", "Feed & mixing"), ("image", "6 diagrams"),
         ("quote", "Evidence-linked · 6 sources"), ("clock", "~11 min read")]
 RELATED = ["coco-crop-steering", "irrigation-manual", "root-zone-teros12"]
@@ -26,22 +27,22 @@ SECTIONS = []
 # 1 -----------------------------------------------------------------
 SECTIONS.append({"id": "intro", "kicker": "Start here", "title": "Purpose and scope",
   "blocks": [
-    lead("This guide covers one job: dissolving a <strong>full 25 lb bag</strong> of "
+    lead("This paper covers one job: dissolving a <strong>full 11.34 kg (25 lb) bag</strong> of "
          "Athena Pro Line into a <strong>50 L tank</strong> to make a concentrated "
-         "<strong>stock solution</strong>. You don't feed plants with this. It's far too "
-         "strong. You make it once, then dose small amounts into your watering tank to make "
+         "<strong>stock solution</strong>. You don't feed plants with this directly. It's far too "
+         "strong. Make it once, then dose small measured amounts into your watering tank to build "
          "the actual feed."),
     p("A stock tank turns an awkward powder into an easy liquid. Weighing powder every time you mix "
       "feed is slow and inconsistent. Dissolve the whole bag once, then pump "
       "or pour a measured number of millilitres per litre into your feed water. Same recipe, every "
       "time, in seconds."),
     callout("key", "The one-sentence version",
-      p("A full 25 lb (11.34 kg) bag into 50 L makes a stock at about <strong>227 grams per "
-        "litre</strong>, a heavy concentrate. Your whole job is to get every gram truly "
+      p("A full 11.34 kg (25 lb) bag into 50 L makes a stock at about <strong>227 grams per "
+        "litre</strong>&mdash;a heavy concentrate. Your job is to get every gram truly "
         "dissolved, keep the two parts in <em>separate</em> tanks, and know how many millilitres to "
         "dose downstream.")),
     callout("note", "Your kit",
-      p("Written for exactly what you have: a full 25 lb bag, a 50 L tank, jugs of hot water, and a "
+      p("Written for exactly what you have: a full 11.34 kg (25 lb) bag, a 50 L tank, jugs of hot water, and a "
         "paint-mixer paddle on a drill. The paddle is not optional at this concentration. "
         "You cannot hand-stir 11 kg of salt into solution.")),
   ]})
@@ -69,11 +70,11 @@ SECTIONS.append({"id": "terms", "kicker": "Vocabulary", "title": "Definitions",
   ]})
 
 # 3 -----------------------------------------------------------------
-SECTIONS.append({"id": "cardinal-rule", "kicker": "The one rule", "title": "Separate part A and part B stock solutions",
+SECTIONS.append({"id": "cardinal-rule", "kicker": "The one rule", "title": "Keep part A and part B in separate tanks",
   "blocks": [
     p("Part A and Part B each get their own stock tank, and the two concentrates must never touch. "
-      "<strong>This is the rule that saves your crop and your pump.</strong> One 25 lb "
-      "bag of Pro Core → one 50 L tank. One 25 lb bag of Pro Grow/Bloom → a different 50 L tank."),
+      "<strong>This is the rule that saves your crop and your pump.</strong> One 11.34 kg (25 lb) "
+      "bag of Pro Core → one 50 L tank. One 11.34 kg (25 lb) bag of Pro Grow/Bloom → a different 50 L tank."),
     p("The reason is chemistry. Part A is loaded with <strong>calcium</strong>. Part B carries "
       "<strong>sulfates and phosphates</strong>. In a dilute feed that's fine, but if you pour the "
       "two <em>concentrates</em> together the calcium instantly grabs the sulfate and phosphate and "
@@ -94,7 +95,7 @@ SECTIONS.append({"id": "cardinal-rule", "kicker": "The one rule", "title": "Sepa
   ]})
 
 # 4 -----------------------------------------------------------------
-SECTIONS.append({"id": "chemistry", "kicker": "The why", "title": "Solubility and mixing conditions",
+SECTIONS.append({"id": "chemistry", "kicker": "The why", "title": "Getting 227 g/L fully into solution",
   "blocks": [
     p("227 grams of salt per litre is a lot, roughly six to seven times saltier than "
       "seawater. Getting it fully into solution isn't automatic. Two bits of physics work against "
@@ -115,9 +116,9 @@ SECTIONS.append({"id": "chemistry", "kicker": "The why", "title": "Solubility an
       "Solubility rises with temperature, so hot water both holds more and offsets the cooling the "
       "dissolving salt causes" + _c("libretexts-temperature-solubility") + "."),
     callout("warn", "Hot, not boiling",
-      p("Use hot tap water (about 40-50&nbsp;&deg;C), not boiling. Boiling water can damage some "
-        "compounds and is a scald hazard with a spinning paddle. Warm is enough to win the "
-        "solubility fight.")),
+      p("Use hot tap water &mdash; about 40&ndash;50&nbsp;&deg;C (104&ndash;122&nbsp;&deg;F) &mdash; not boiling. "
+        "Boiling water can damage some compounds and is a scald hazard with a spinning paddle. "
+        "Warm is enough to win the solubility fight.")),
   ]})
 
 # 5 -----------------------------------------------------------------
@@ -126,7 +127,7 @@ SECTIONS.append({"id": "method", "kicker": "The method", "title": "Stock-tank mi
     p("Do this once per part: once for the Pro Core bag (Tank A), once for the Pro "
       "Grow/Bloom bag (Tank B). Same steps each time."),
     steps([
-      ("Start with hot water, ~40 L", "Fill the 50 L tank to about 40 L with hot water (about 40-50&nbsp;&deg;C). Leave headroom. 11 kg of powder takes up real volume and you still need room to mix without slopping."),
+      ("Start with hot water, ~40 L", "Fill the 50 L tank to about 40 L with hot water &mdash; about 40&ndash;50&nbsp;&deg;C (104&ndash;122&nbsp;&deg;F). Leave headroom. 11 kg of powder takes up real volume and you still need room to mix without slopping."),
       ("Start the paddle before adding powder", "Get the paint-mixer turning a vortex first. You want the salt landing in moving water, not piling on a still bottom."),
       ("Add the bag gradually", "Pour the powder in slowly, a steady stream, not the whole bag at once. Dumping it causes clumps that trap dry powder inside (a 'fish-eye') that never dissolves."),
       ("Mix until perfectly clear", "Keep mixing until there is zero grit and the solution is clear (it may be tinted). At this concentration this can take several minutes of active mixing, not seconds."),
@@ -145,7 +146,7 @@ SECTIONS.append({"id": "method", "kicker": "The method", "title": "Stock-tank mi
 # 6 -----------------------------------------------------------------
 SECTIONS.append({"id": "numbers", "kicker": "The numbers", "title": "Stock concentration and dosing",
   "blocks": [
-    p("A full 25 lb bag is <strong>11.34 kg</strong>. In 50 L that gives a stock of:"),
+    p("A full bag weighs <strong>11.34 kg</strong> (25 lb). In 50 L that gives a stock of:"),
     figure(L.bars("Stock concentration from a full bag in 50 L",
             [("Per litre", 227), ("Per 100 mL", 23)], unit=" g",
             note="11.34 kg / 50 L = 226.8 g/L. That's your concentrate strength.", maxv=260), 4,
@@ -182,9 +183,11 @@ SECTIONS.append({"id": "targets", "kicker": "Downstream", "title": "Stage-specif
       "Feed weak early, build through veg and flower, taper late" + _c("saloner-bernstein-response-surface-nutrition") +
       ". These are starting bands, not law. Substrate and strain shift them."),
     callout("danger", "Over-feeding is its own stress",
-      p("Cranking EC does not mean more growth. Too much salt in the root zone pulls water "
-        "back out of the roots (osmotic stress) and burns the plant" + _c("yep-nacl-cannabis-stress") +
-        ". When in doubt, feed slightly weaker.")),
+      p("Cranking EC does not mean more growth. Picture rubbing coarse salt into a cucumber: "
+        "the salt draws moisture out through the skin and the cucumber shrivels. Excessive salt "
+        "in the root zone works the same way&mdash;it pulls water out of roots rather than letting "
+        "the plant take water in. That reversal is called osmotic stress" + _c("yep-nacl-cannabis-stress") +
+        ". Roots show it as wilt even in a wet slab. When in doubt, feed slightly weaker.")),
   ]})
 
 # 8 -----------------------------------------------------------------

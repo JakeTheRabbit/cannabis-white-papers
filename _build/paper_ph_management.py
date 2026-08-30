@@ -7,9 +7,9 @@ import figs_lib as L
 SLUG = "ph-management"
 TITLE = "pH: what it is and how to hold it"
 EYEBROW = "Feed · pH"
-SUB = ("A beginner's guide to root-zone pH: why one number decides which nutrients your plant can "
-       "actually eat, what to aim for in coco, hydro and soil, and how to measure, adjust and hold "
-       "it without chasing ghosts.")
+SUB = ("Root-zone pH controls which nutrients your plant can absorb. This paper explains how the "
+       "0-14 scale works, why each substrate has a different target range, and how to measure, "
+       "adjust, and hold pH steadily feed by feed.")
 META = [("flask", "Feed"), ("image", "8 diagrams"),
         ("quote", "Evidence-linked · 6 sources"), ("clock", "~14 min read")]
 RELATED = ["nutrient-deficiencies", "water-quality", "nutrient-mixing-athena"]
@@ -34,9 +34,8 @@ SECTIONS.append({"id": "what-this-is", "kicker": "Start here",
          "higher is alkaline. For a grower it is the single setting that decides whether the "
          "nutrients you already paid for can actually enter the roots. Get it wrong and a fully fed "
          "plant can still starve."),
-    p("This guide assumes you know nothing about chemistry and builds up from the scale itself to a "
-      "daily routine you can run. Pure water sits at 7. Lemon juice is around 2 (strongly acidic). "
-      "Baking soda solution is around 8.5 (mildly alkaline)."),
+    p("Pure water sits at 7. Lemon juice is around 2 (strongly acidic). Baking soda solution "
+      "is around 8.5 (mildly alkaline)."),
     p("One thing trips people up: the scale is logarithmic, so each whole number is a tenfold change "
       "in acidity. pH 5 is ten times more acidic than pH 6, and a hundred times more acidic than "
       "pH 7." + _c("unl-passel-soil-ph-definition") + " That is why a reading that looks &lsquo;close "
@@ -55,8 +54,6 @@ SECTIONS.append({"id": "what-this-is", "kicker": "Start here",
 
 SECTIONS.append({"id": "key-terms", "kicker": "Vocabulary", "title": "Definitions",
   "blocks": [
-    p("These words come back through the rest of the guide. Read them once and the troubleshooting "
-      "section will read cleanly."),
     defterm("pH", "How acidic or alkaline the water around the roots is, on a 0-14 scale."),
     defterm("Root zone", "The wet substrate immediately around the roots, where uptake actually "
             "happens."),
@@ -66,10 +63,12 @@ SECTIONS.append({"id": "key-terms", "kicker": "Vocabulary", "title": "Definition
             "separate dial from pH. <a href='nutrient-mixing-athena.html'>Mixing guide &rarr;</a>"),
     defterm("Substrate / medium", "What the roots grow in: coco coir, rockwool or water in hydro, "
             "or soil."),
-    defterm("Buffering", "A medium or water's resistance to pH change. High buffering is stubborn, "
-            "low buffering swings fast."),
-    defterm("Alkalinity", "The water's built-in acid-absorbing capacity, mostly bicarbonates. Not "
-            "the same thing as a high pH reading."),
+    defterm("Buffering", "A medium or water's resistance to pH change — like a thermostat with a "
+            "wide deadband, the medium absorbs small shifts before the reading moves. Soil is highly "
+            "buffered; coco and hydro have almost none, so pH responds immediately to each feed."),
+    defterm("Alkalinity", "The water's built-in acid-absorbing capacity, mostly bicarbonates. "
+            "Alkalinity and pH measure different things: a water can have a moderate pH and very "
+            "high alkalinity, and it will resist acid dosing even when the initial reading looks fine."),
     defterm("Runoff", "The solution that drains out the bottom of the pot after watering."),
   ]})
 
@@ -77,8 +76,11 @@ SECTIONS.append({"id": "why-ph-controls-availability", "kicker": "The core idea"
   "title": "pH, nutrient availability and lockout",
   "blocks": [
     p("Each nutrient stays dissolved, and therefore absorbable, only across a certain pH band. "
-      "Outside that band it binds into forms the roots cannot take up. That is lockout: the plant is "
-      "surrounded by food it cannot eat because the root-zone chemistry drifted out of the window."),
+      "Outside that band it reacts with other ions and converts into chemical forms the roots cannot "
+      "take up — the same way a supplement tablet that never dissolves in your stomach passes through "
+      "without helping: the nutrient is present, but in the wrong form for absorption. That failure "
+      "mode is called lockout. The plant is surrounded by food it cannot use because the root-zone "
+      "chemistry drifted outside the window."),
     p("Push pH too high, above about 6.5 in inert media like coco or hydro, and the micronutrients "
       "drop out of solution first: iron, manganese, zinc and boron." + _c("veazie-2025-substrate-ph-micronutrient-cannabis") +
       " Drop it too low, below about 5.5, and calcium, magnesium and phosphorus availability can fall while iron and manganese can push toward toxicity "
@@ -143,7 +145,7 @@ SECTIONS.append({"id": "measuring-calibrating", "kicker": "The tool",
         "shift the number, so read at room temperature and wait for it to hold steady.")),
   ]})
 
-SECTIONS.append({"id": "adjusting-and-water", "kicker": "Making the number",
+SECTIONS.append({"id": "adjusting-and-water", "kicker": "Mixing and adjusting",
   "title": "pH adjustment and source-water effects",
   "blocks": [
     p("Mix your nutrients first, then adjust pH last. Adding nutrients shifts pH on its own, so if "
@@ -155,11 +157,13 @@ SECTIONS.append({"id": "adjusting-and-water", "kicker": "Making the number",
       ("Stir and wait", "Mix it in and give it a moment to react."),
       ("Re-measure", "Read again. Repeat in small steps, never dump and chase."),
     ]),
-    p("Common pH downs include phosphoric, nitric, sulfuric, or organic acids; common pH ups include KOH or potassium carbonate. Each adds nutrients, account for them." + _c("saloner-bernstein-2022-nitrogen-source-cannabis") +
-      " Your starting water matters more than beginners expect. Alkalinity is the water's built-in "
-      "acid-absorbing capacity, mostly bicarbonates, reported as ppm CaCO3, and it is distinct from a "
-      "high pH reading." + _c("umass-water-quality-ph-alkalinity") + " High-alkalinity water fights "
-      "your acid and creeps the pH back up after you set it."),
+    p("Common pH downs include phosphoric, nitric, sulfuric, or organic acids; common pH ups include KOH or potassium carbonate. Each adds nutrients, so account for them." + _c("saloner-bernstein-2022-nitrogen-source-cannabis") +
+      " Your source water matters more than most beginners expect. Tap water carries a built-in "
+      "reserve of dissolved bicarbonates that absorb acid before the pH reading moves — like antacid "
+      "neutralising stomach acid without any change on a pH strip until the antacid is used up. "
+      "That reserve is called alkalinity, reported in ppm CaCO3." + _c("umass-water-quality-ph-alkalinity") + " "
+      "High-alkalinity water will drift back up after you set pH, because the remaining bicarbonates "
+      "keep reacting with the acid you added."),
     figure(L.bars("Same pH, very different effort to move it",
             [("Low alkalinity (soft)", 3), ("Example small-container range", 8), ("High alkalinity (hard)", 22)],
             unit=" drops", note="The suitable alkalinity range changes with container volume, media, crop and fertiliser.",
@@ -229,10 +233,9 @@ SECTIONS.append({"id": "expectations", "kicker": "Reality check", "title": "Expe
       ul(["A band like 5.8-6.2 is the target, not one exact number.",
           "Drift between feeds is expected; coco and hydro need per-feed checks, soil is slower.",
           "Pens are consumables: calibrate monthly, replace probes over time.",
-          "Consistency over weeks beats chasing perfection on any single reading."], "tight")),
-    p("Hold the inflow steadily in range over weeks and most &lsquo;mystery&rsquo; deficiencies "
-      "never appear. When a symptom does show, read the "
-      "<a href='nutrient-deficiencies.html'>nutrient deficiencies</a> guide and check pH before you "
-      "change the feed, and sort your source water with the "
-      "<a href='water-quality.html'>water quality</a> guide first."),
+          "Log every feed: the pattern over weeks tells you more than any single reading."], "tight")),
+    p("When a deficiency symptom appears, read the "
+      "<a href='nutrient-deficiencies.html'>nutrient deficiencies</a> guide and confirm pH before "
+      "adjusting the feed formula. If source-water alkalinity is the problem, the "
+      "<a href='water-quality.html'>water quality</a> guide covers how to treat it."),
   ]})

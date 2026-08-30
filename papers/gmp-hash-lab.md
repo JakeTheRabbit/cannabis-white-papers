@@ -1,8 +1,8 @@
 ---
 slug: "gmp-hash-lab"
-title: "GMP hash manufacturing: facility flow and quality control"
+title: "GMP hash lab: zones, flows, and batch release"
 eyebrow: "Facility · GMP"
-summary: "How to design a clean, compliant hash and extract factory from scratch: what GMP means, how rooms and people and product move, and how a batch earns its way to market."
+summary: "This paper covers GMP requirements for a hash facility: how to zone rooms by cleanliness grade, how product and people move through those zones, and what it takes to pass seven test families and three release gates to reach a signed batch Certificate of Analysis."
 track: "Harvest, dry, trim & cure"
 read_time: "~18 min read"
 diagrams: "13 diagrams"
@@ -17,15 +17,15 @@ attribution: "The Cannabis White Papers"
 refs: [{"id": "ecfr-21cfr211", "n": 1, "cite": "U.S. Food and Drug Administration. 21 CFR Part 211, Current Good Manufacturing Practice for Finished Pharmaceuticals (esp. 211.22 Responsibilities of quality control unit; 211.165 Testing and release for distribution; 211.192 Production record review). Code of Federal Regulations, Title 21.", "url": "https://www.ecfr.gov/current/title-21/chapter-I/subchapter-C/part-211", "peer": false}, {"id": "ich-q3c-r9-ema", "n": 2, "cite": "International Council for Harmonisation. ICH Q3C(R9) Guideline for Residual Solvents (Step 5), reproduced by European Medicines Agency, 2024. EMA/CHMP/ICH/82260/2006.", "url": "https://www.ema.europa.eu/en/documents/scientific-guideline/ich-q3c-r9-guideline-impurities-guideline-residual-solvents-step-5_en.pdf", "peer": false}, {"id": "ehp-cannabis-contaminants-2019", "n": 3, "cite": "Seltenrich N. Cannabis Contaminants: Regulating Solvents, Microbes, and Metals in Legal Weed. Environmental Health Perspectives. 2019;127(8):082001. doi:10.1289/EHP5785.", "url": "https://ehp.niehs.nih.gov/doi/10.1289/EHP5785", "peer": true}, {"id": "en1822-h14-hepa", "n": 4, "cite": "Camfil. EN 1822 and ISO 29463 HEPA filter factory test (EN 1822-1:2019 filter classes; H14 minimum efficiency 99.995% at the Most Penetrating Particle Size, MPPS).", "url": "https://www.camfil.com/en/insights/standard-and-regulations/en-1822-and-iso-29463-hepa-filter-factory-test", "peer": false}, {"id": "sciencedirect-cleanroom-personnel-emissions-2024", "n": 5, "cite": "Meng H, Shiue A, Wang C, Leggett G. Particle and bacterial colony emissions from garments and humans in pharmaceutical cleanrooms. Journal of Building Engineering, 2024;96:110...; ScienceDirect S2352710224023970.", "url": "https://www.sciencedirect.com/science/article/abs/pii/S2352710224023970", "peer": true}, {"id": "pmc-capa-ich-q10-2024", "n": 6, "cite": "Enhancing Pharmaceutical Product Quality With a Comprehensive Corrective and Preventive Actions (CAPA) Framework: From Reactive to Proactive. Cureus, 2024. PMC11490658.", "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11490658/", "peer": true}, {"id": "fda-process-validation-2011", "n": 7, "cite": "U.S. Food and Drug Administration, CDER/CBER/CVM. Guidance for Industry, Process Validation: General Principles and Practices. January 2011 (Revision 1).", "url": "https://www.fda.gov/files/drugs/published/Process-Validation--General-Principles-and-Practices.pdf", "peer": false}, {"id": "ispe-cleanroom-design-iso14644-16", "n": 8, "cite": "Pharmaceutical Engineering (ISPE). Pharmaceutical Cleanroom Design & ISO 14644-16, Sep/Oct 2021, air-change-rate optimization for classified cleanrooms.", "url": "https://ispe.org/pharmaceutical-engineering/september-october-2021/pharmaceutical-cleanroom-design-iso-14644-16", "peer": false}, {"id": "luca2020-pesticide-partition-hemp-extract", "n": 9, "cite": "Luca SV, Roehrer S, Kleigrewe K, Minceva M (2020). Approach for simultaneous cannabidiol isolation and pesticide removal from hemp extracts with liquid-liquid chromatography. Industrial Crops and Products 155:112726. doi:10.1016/j.indcrop.2020.112726.", "url": "https://doi.org/10.1016/j.indcrop.2020.112726", "peer": true}]
 ---
 
-# GMP hash manufacturing: facility flow and quality control
+# GMP hash lab: zones, flows, and batch release
 
 _Facility · GMP · ~18 min read_
 
-> How to design a clean, compliant hash and extract factory from scratch: what GMP means, how rooms and people and product move, and how a batch earns its way to market.
+> This paper covers GMP requirements for a hash facility: how to zone rooms by cleanliness grade, how product and people move through those zones, and what it takes to pass seven test families and three release gates to reach a signed batch Certificate of Analysis.
 
 ## Purpose and scope
 
-GMP stands for **Good Manufacturing Practice**: a written, audited system that proves a product is exactly what its label says and that nothing harmful rode along. A GMP hash lab turns cannabis biomass into purified resin concentrates (bubble hash, rosin, live resin, distillate) under tight contamination control.
+GMP stands for **Good Manufacturing Practice**: a written, audited system that proves a product is exactly what its label says and that nothing harmful was introduced during production. A GMP hash lab turns cannabis biomass into purified resin concentrates (bubble hash, rosin, live resin, distillate) under tight contamination control.
 
 Extraction can concentrate, reduce or redistribute contaminants according to the analyte, process and mass yield[^luca2020-pesticide-partition-hemp-extract]. A passing flower result does not establish that the finished concentrate complies. Test incoming material and the finished batch, then use paired results to calculate process-specific transfer. Material moves forward only when the release data prove that it is safe and correctly labelled.
 
@@ -50,7 +50,7 @@ Two rule-sets do most of the governing. **EU-GMP Annex 1** sets the cleanroom cl
 
 ## Definitions
 
-A handful of terms do the heavy lifting before any diagram makes sense. You don't need to memorise them: each comes back in context.
+These terms recur throughout the paper. Each one is explained in full when it first appears in context.
 
 **Cleanroom grade** — A letter (CNC, D, C, B, A) describing how clean a room's air is, mapped to ISO 14644 particle classes. Grade C = ISO 7, Grade A = ISO 5.
 
@@ -95,7 +95,7 @@ The flow rule is simple and absolute: **product moves inward toward purity; peop
 
 ## Pressure cascade, HVAC, and gowning
 
-Air is the main way contamination travels, so the building runs a **positive-pressure cascade**: clean rooms are held at higher pressure than dirtier ones, so air always blows _outward_ from clean to dirty. Open a door and clean air rushes out. It can never suck dirty air toward the product.
+Air is the main way contamination moves in a cleanroom. Think of a balloon with a slow leak: air escapes toward lower pressure, never the reverse. A **positive-pressure cascade** uses the same principle: clean rooms are held at higher pressure than adjacent dirtier spaces, so air always flows _outward_ from clean to dirty. Open a door and clean air rushes out. Dirty air cannot be drawn back toward the product.
 
 Pressures step up shell by shell. EU-GMP Annex 1 recommends roughly a 10–15 Pa difference between adjacent classified zones[^ispe-cleanroom-design-iso14644-16], giving a ladder like 0 Pa (CNC), +15 (D), +30 (C), +45 (B), +60 (A). The solvent room is the one exception: it runs **negative**, around -15 Pa, so flammable vapour is contained and pulled toward the LEL exhaust rather than pushed into the building.
 
@@ -123,7 +123,7 @@ People are the single largest source of particles and microbes in a cleanroom[^s
 
 Two routes leave the weigh-in. **Solventless** separates the trichome heads (the resin glands) mechanically. **Solvent extraction** dissolves the resin and then recovers it. They share a goal but carry very different hazards.
 
-The solventless route agitates fresh-frozen biomass in ice water, sieves the resin through a stack of screens (220 down to 25 micron), freeze-dries it, and presses it to rosin. Its four **critical control points** are wash temperature (≤4 °C), water quality (RO, <10 CFU/mL), water activity (Aw ≤0.55), and press temperature (≤90 °C). Keeping water activity at or below about 0.55–0.65 starves microbes and fungi before they can grow[^ehp-cannabis-contaminants-2019].
+The solventless route agitates fresh-frozen biomass in ice water, sieves the resin through a stack of screens (220 down to 25 micron), freeze-dries it, and presses it to rosin. Its four **critical control points** are wash temperature (≤4 °C (39 °F)), water quality (RO, <10 CFU/mL), water activity (Aw ≤0.55), and press temperature (≤90 °C (194 °F)). Keeping water activity at or below about 0.55–0.65 starves microbes and fungi before they can grow[^ehp-cannabis-contaminants-2019].
 
 > **Diagram.** The solventless flow from fresh-frozen biomass through agitation, sieving, freeze-drying and pressing, with the four critical control points called out.
 

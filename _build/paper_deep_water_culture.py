@@ -11,10 +11,11 @@ GPT = "gpt-image-1"
 SLUG = "deep-water-culture"
 TITLE = "Deep water culture, from first principles"
 EYEBROW = "Water culture · Root-zone oxygen"
-SUB = ("Roots hanging in nutrient water have no substrate to hide behind. This paper builds the "
-       "system from the physics up: how much oxygen the water can actually hold, why more bubbling "
-       "makes iron uptake worse, what an ORP probe is really measuring, and how a commercial RDWC "
-       "programme is put together.")
+SUB = ("After reading this paper you will understand why solution temperature is the master control "
+       "for every other parameter in water culture, how to set aeration rate so it adds oxygen "
+       "without stripping the chemical boundary layer roots build for themselves, and what an ORP "
+       "probe is actually measuring — and what it is not. The worked example is cannabis in an "
+       "RDWC system, but the dissolved-oxygen physics and the iron chemistry apply to any crop.")
 META = [("droplet", "Water culture"), ("image", "17 diagrams · 10 photos"),
         ("quote", "Evidence-linked · 40 sources"), ("clock", "~38 min read")]
 RELATED = ["substrates-overview", "water-quality", "ph-management",
@@ -117,8 +118,12 @@ SECTIONS.append({"id": "intro", "kicker": "Start here", "title": "Purpose and sc
 # 2 ------------------------------------------------------------- oxygen budget
 SECTIONS.append({"id": "oxygen-budget", "kicker": "Physics", "title": "Oxygen solubility in nutrient solution",
   "blocks": [
-    p("Start with the constraint nobody can negotiate. Oxygen is barely soluble in water. At 20 &deg;C "
-      "under normal air at sea level, water holds about <strong>9.1 mg/L</strong> of dissolved "
+    p("Start with the constraint nobody can negotiate. Oxygen is barely soluble in water. Think of "
+      "dissolved oxygen the way you think of carbonation in a cold drink: gas held in the liquid "
+      "only up to a ceiling set by temperature and pressure, released when you warm or agitate it. "
+      "Dissolved oxygen is that same idea — invisible, held in solution, and present in far smaller "
+      "amounts than the air around the tank. The higher the temperature, the lower that ceiling. "
+      "At 20 &deg;C (68 &deg;F) under normal air at sea level, water holds about <strong>9.1 mg/L</strong> of dissolved "
       "oxygen at equilibrium" + _c("dwc-benson-krause-1984") + ". Air itself, by comparison, is "
       "about 280 mg/L of oxygen. Water at saturation carries roughly one-thirtieth of the oxygen "
       "that the same volume of air carries. That is the number a submerged root has to live on."),
@@ -132,10 +137,10 @@ SECTIONS.append({"id": "oxygen-budget", "kicker": "Physics", "title": "Oxygen so
             ["10 C", "14 C", "18 C", "20 C", "22 C", "25 C", "28 C", "30 C"],
             ylab="mg/L", ymin=6, ymax=12,
             note="Fresh water, 1 atm, in equilibrium with air. Standard solubility tables."), 3,
-      "Warming the reservoir from 18 to 28 &deg;C removes about 17% of the oxygen the water can hold, "
+      "Warming the reservoir from 18 to 28 &deg;C (64&ndash;82 &deg;F) removes about 17% of the oxygen the water can hold, "
       "before a single root has breathed any of it." + _c("dwc-benson-krause-1984")),
     callout("key", "Warming a reservoir is doubly bad",
-      p("Solubility falls roughly 1.7% per &deg;C near 20 &deg;C. Over the same 10 &deg;C, biological "
+      p("Solubility falls roughly 1.7% per &deg;C near 20 &deg;C (68 &deg;F). Over the same 10 &deg;C span, biological "
         "oxygen demand roughly <em>doubles</em>, root and microbial respiration follow a "
         "Q<sub>10</sub> near 2. Supply down about a sixth, demand up about double: the ratio of "
         "available oxygen to oxygen demanded falls by roughly a factor of two and a half. This is why "
@@ -147,12 +152,12 @@ SECTIONS.append({"id": "oxygen-budget", "kicker": "Physics", "title": "Oxygen so
       "the key to understanding the reading."),
     grid([
       card("Relative to air: yes, supersaturated",
-           p("At 22 &deg;C air-saturated water holds about 8.7 mg/L. A reading of 20 mg/L is about "
+           p("At 22 &deg;C (72 &deg;F) air-saturated water holds about 8.7 mg/L. A reading of 20 mg/L is about "
              "<strong>2.3&times; air saturation</strong>. If you switched the gas off and left the "
              "water open to the room, it would slowly out-gas back toward 8.7."), tag="2.3&times;"),
       card("Relative to your gas: not saturated at all",
            p("A pressure-swing concentrator delivers roughly 90&ndash;95% oxygen. Henry's law scales "
-             "with partial pressure, so at 22 &deg;C that gas could push water to roughly "
+             "with partial pressure, so at 22 &deg;C (72 &deg;F) that gas could push water to roughly "
              "<strong>38 mg/L</strong> at equilibrium. Your 20 mg/L is about half of that. While the "
              "gas is flowing, nothing is straining to escape."), tag="~52%"),
     ], cols=2),
@@ -231,7 +236,7 @@ SECTIONS.append({"id": "how-much", "kicker": "Targets", "title": "Plant oxygen d
   ]})
 
 # 4 --------------------------------------------------------- the aeration paradox
-SECTIONS.append({"id": "aeration-paradox", "kicker": "The counter-intuitive part", "title": "Aeration limits and dissolved oxygen",
+SECTIONS.append({"id": "aeration-paradox", "kicker": "Aeration rate has a ceiling", "title": "Aeration limits and dissolved oxygen",
   "blocks": [
     lead("This is the section most likely to change how you run your system. Aeration delivers "
          "oxygen, which is good. Aeration also delivers <em>agitation</em>, which is not. Past a "
@@ -241,10 +246,12 @@ SECTIONS.append({"id": "aeration-paradox", "kicker": "The counter-intuitive part
       "iron uptake and induced chlorosis in sunflower and corn. The same nutrient solution at the "
       "same pH in a peat-based medium produced ample iron and chlorophyll. Tomato was largely "
       "unaffected; species differ" + _c("dwc-langenfeld-2025-agitation-iron") + "."),
-    callout("key", "The mechanism: you are stripping the rhizosphere",
+    callout("key", "Aeration strips the chemical layer roots build to feed themselves",
       p("A root does not simply absorb whatever is in the bulk solution. It builds a thin unstirred "
         "boundary layer around itself and chemically engineers it, pumping out protons to "
-        "acidify it, exuding reductants and chelators to make iron available. That microenvironment "
+        "acidify it, exuding reductants and chelators to make iron available. Think of it as the "
+        "seasoning a cook keeps right at the prep station: specific, calibrated, and useless the "
+        "moment someone blasts a fan across the bench. That microenvironment "
         "is <em>the plant's own nutrient-acquisition machinery</em>. Bubbling stirs it away. Turning "
         "the aeration up does not just add oxygen; it demolishes the boundary layer the root built "
         "to feed itself." + _c("dwc-langenfeld-2025-agitation-iron"))),
@@ -266,19 +273,19 @@ SECTIONS.append({"id": "aeration-paradox", "kicker": "The counter-intuitive part
       card("From the research",
            p("A zero-discharge hydroponic management system holds DO near saturation with "
              "<strong>gentle aeration at about 100 mL&#183;min<sup>-1</sup> per litre</strong> of "
-             "solution, in a bed at least 20 cm deep. Ample depth stabilises concentrations and "
+             "solution, in a bed at least 20 cm (8 in) deep. Ample depth stabilises concentrations and "
              "reduces root density; gentle aeration improves uniformity without destroying the "
              "rhizosphere." + _c("dwc-langenfeld-2024-zero-discharge")), tag="100 mL/min/L"),
       card("From the manufacturer",
-           p("A commercial RDWC procedure specifies <strong>one 5 &times; 5 cm medium round air "
-             "stone per 30 L bucket</strong>, positioned at the bottom, about 2.5 cm from the wall, "
+           p("A commercial RDWC procedure specifies <strong>one 5 &times; 5 cm (2 &times; 2 in) medium round air "
+             "stone per 30 L (7.9 gal) bucket</strong>, positioned at the bottom, about 2.5 cm (1 in) from the wall, "
              "and explicitly <em>never</em> directly under the net pot, because &lsquo;too "
              "much turbidity can cause severe damage to new roots&rsquo;." + _c("dwc-athena-rdwc-2024")),
            tag="1 stone / 30 L"),
     ], cols=2),
     callout("note", "Check the arithmetic yourself",
-      p("A 30 L bucket at 100 mL&#183;min<sup>-1</sup>&#183;L<sup>-1</sup> wants about 3 L/min of "
-        "air. Reckoned on the operating volume of roughly 19 L rather than the nominal bucket size, "
+      p("A 30 L (7.9 gal) bucket at 100 mL&#183;min<sup>-1</sup>&#183;L<sup>-1</sup> wants about 3 L/min of "
+        "air. Reckoned on the operating volume of roughly 19 L (5.0 gal) rather than the nominal bucket size, "
         "it wants about 1.9 L/min. A single medium round air stone at typical manifold pressure "
         "flows somewhere in the 2&ndash;4 L/min range. The peer-reviewed number and the commercial "
         "spec land on the same hardware. A researcher measuring iron chlorosis and a commercial "
@@ -314,11 +321,15 @@ SECTIONS.append({"id": "aeration-paradox", "kicker": "The counter-intuitive part
   ]})
 
 # 5 -------------------------------------------------------------------- ORP
-SECTIONS.append({"id": "orp", "kicker": "The misread number", "title": "Interpreting ORP readings",
+SECTIONS.append({"id": "orp", "kicker": "What ORP actually measures", "title": "Interpreting ORP readings",
   "blocks": [
-    lead("Oxidation-reduction potential is the most commonly misinterpreted measurement in water "
-         "culture. It is worth getting right, because the correct interpretation changes the "
-         "action you take."),
+    lead("Oxidation-reduction potential — ORP — is the most commonly misinterpreted measurement in water "
+         "culture. Before the technical definition: think of it the way a piece of polished silver "
+         "cutlery behaves in different water. In clean, oxygen-rich water it stays bright; in water "
+         "full of sulphides and rotting organics it tarnishes. ORP is the probe that reads that same "
+         "chemical condition without needing the silver. A platinum electrode in the reservoir outputs "
+         "the balance between oxidising and reducing species as a voltage in millivolts. It is worth "
+         "getting right, because the correct interpretation changes the action you take."),
     defterm("ORP / redox potential",
       "The electrical potential, in millivolts, of an inert platinum electrode immersed in the "
       "solution, measured against a reference electrode. It reflects the balance of oxidising and "
@@ -397,7 +408,7 @@ SECTIONS.append({"id": "orp", "kicker": "The misread number", "title": "Interpre
       "is what growers actually observe." + _c("dwc-suslow-2004-orp") + _c("dwc-stefansson-2005-redox")),
     p("The second surprise is that <strong>ORP is meaningless without the pH beside it</strong>. Most "
       "environmentally relevant redox couples consume protons as they accept electrons. The Nernst "
-      "equation makes the consequence exact: at 25 &deg;C the potential shifts by about "
+      "equation makes the consequence exact: at 25 &deg;C (77 &deg;F) the potential shifts by about "
       "<strong>59 mV per pH unit</strong>, falling as pH rises."),
     callout("note", "A worked example from a real grower thread",
       p("A grower reported pH moving from 6.0 to 5.8 across a day while ORP went from 476 to 482 mV. "
@@ -532,7 +543,7 @@ SECTIONS.append({"id": "iron", "kicker": "Chemistry", "title": "Iron chelation a
   ]})
 
 # 7 ---------------------------------------------------------------- organics
-SECTIONS.append({"id": "organics", "kicker": "The live-reservoir argument", "title": "Organic inputs in recirculating reservoirs",
+SECTIONS.append({"id": "organics", "kicker": "Organics and oxygen headroom", "title": "Organic inputs in recirculating reservoirs",
   "blocks": [
     p("Ask whether to run kelp, fulvic acid or microbial inoculants in DWC and you will get two "
       "confident, opposite answers. Both camps are describing real experience. The disagreement is "
@@ -658,13 +669,13 @@ SECTIONS.append({"id": "pathology", "kicker": "Failure mode", "title": "Root rot
   ]})
 
 # 9 --------------------------------------------------------------- temperature
-SECTIONS.append({"id": "temperature", "kicker": "The master dial", "title": "Solution temperature",
+SECTIONS.append({"id": "temperature", "kicker": "Temperature first", "title": "Solution temperature",
   "blocks": [
     p("If you take one operational lever away from this paper, take this one. Reservoir temperature "
       "simultaneously sets oxygen supply, oxygen demand, pathogen growth rate and pH stability. "
       "Nothing else you can adjust touches that many variables at once."),
     p("The experimental case is clean. Cooling a recirculating hydroponic solution across four "
-      "setpoints from 33 &deg;C down to 22 &deg;C raised dissolved oxygen in both the feed and the "
+      "setpoints from 33 &deg;C (91 &deg;F) down to 22 &deg;C (72 &deg;F) raised dissolved oxygen in both the feed and the "
       "drain, raised measured <em>oxygen consumption by the roots</em>, and improved every growth, "
       "yield and quality attribute measured, across three cropping seasons over two years" +
       _c("dwc-alrawahy-2019-rzt") + ". Note the second result: cooler roots did not respire less, "
@@ -685,18 +696,18 @@ SECTIONS.append({"id": "temperature", "kicker": "The master dial", "title": "Sol
       "supply side has to rise with it, and the cheapest way to raise dissolved oxygen is to "
       "lower the temperature." + _c("dwc-athena-rdwc-2024")),
     table(["Boundary", "Value", "Why it exists"], [
-      ["Do not transplant clones below", "18.9 &deg;C",
+      ["Do not transplant clones below", "18.9 &deg;C (66 &deg;F)",
        "Cold shock on a root system with no established mass; pH also swings with temperature"],
-      ["Uptake begins to fall below", "16.7 &deg;C",
+      ["Uptake begins to fall below", "16.7 &deg;C (62 &deg;F)",
        "Cold roots take up nutrients more slowly, the floor on the useful range"],
-      ["Deliberate cold finish", "13.9 &deg;C for the last ~10 days",
+      ["Deliberate cold finish", "13.9 &deg;C (57 &deg;F) for the last ~10 days",
        "Accepts reduced uptake in exchange for colour expression, when uptake no longer matters"],
-      ["Pathogen comfort zone", "above ~22&ndash;24 &deg;C",
+      ["Pathogen comfort zone", "above ~22&ndash;24 &deg;C (72&ndash;75 &deg;F)",
        "Warm water is where low DO and fast <em>Pythium</em> growth meet"],
     ], cls="compact", caption="Temperature boundaries from a commercial RDWC procedure, with the "
       "reasoning behind each." + _c("dwc-athena-rdwc-2024")),
     callout("tip", "Chiller or no chiller",
-      p("In any room warmer than about 24 &deg;C with lights on, an uninsulated reservoir will "
+      p("In any room warmer than about 24 &deg;C (75 &deg;F) with lights on, an uninsulated reservoir will "
         "equilibrate somewhere unhelpful. Insulate first. It is free and it flattens the "
         "diurnal swing. Then chill if you still cannot hold the band. Note the interaction with "
         "aeration: a blower drawing hot room air is also a heater, which is one more reason the air "
@@ -776,18 +787,18 @@ SECTIONS.append({"id": "build", "kicker": "Build", "title": "DWC system sizing a
       "system has none by default."),
     defterm("Operating volume",
       "The working solution volume with the level sitting just below the planting deck. In a "
-      "published commercial spec, roughly 40 L in a 49 L module and roughly 19 L in a 30 L module" +
+      "published commercial spec, roughly 40 L (10.6 gal) in a 49 L (12.9 gal) module and roughly 19 L (5.0 gal) in a 30 L (7.9 gal) module" +
       _c("dwc-athena-rdwc-2024") + "."),
     defterm("Change-out volume",
       "Operating volume minus the liquid that stays behind when the system drains to the top of the "
-      "bulkhead. Worth calculating once: in a published 32-site example, 1325 L operating volume "
-      "leaves 375 L behind, so a &lsquo;full&rsquo; change-out actually replaces 946 L, about "
+      "bulkhead. Worth calculating once: in a published 32-site example, 1325 L (350 gal) operating volume "
+      "leaves 375 L (99 gal) behind, so a &lsquo;full&rsquo; change-out actually replaces 946 L (250 gal), about "
       "<strong>71%</strong> of the water" + _c("dwc-athena-rdwc-2024") + ". A full change-out is not "
       "a reset to zero, and it matters when you are trying to correct an accumulated imbalance."),
     steps([
       ("Size the volume generously",
        "More water is more thermal mass, more chemical buffer and more time to notice a problem. "
-       "Depth also matters independently: at least 20 cm of solution stabilises concentrations and "
+       "Depth also matters independently: at least 20 cm (8 in) of solution stabilises concentrations and "
        "improves uniformity" + _c("dwc-langenfeld-2024-zero-discharge") + "."),
       ("Put every control in a plant-free bucket",
        "Probes, heater or chiller, top-off float, circulation pump and dosing all belong in the "
@@ -795,11 +806,11 @@ SECTIONS.append({"id": "build", "kicker": "Build", "title": "DWC system sizing a
        "should ever meet a root."),
       ("Size aeration to the window, not to the maximum",
        "Around 100 mL&#183;min<sup>-1</sup> per litre" + _c("dwc-langenfeld-2024-zero-discharge") +
-       ", or one medium air stone per 30 L bucket" + _c("dwc-athena-rdwc-2024") + ". Published "
+       ", or one medium air stone per 30 L (7.9 gal) bucket" + _c("dwc-athena-rdwc-2024") + ". Published "
        "manifold pressures run about 6.5 kPa in veg and 7.0&ndash;7.5 kPa in flower on a water-column "
        "gauge. Resist the urge to over-provision."),
       ("Place stones deliberately",
-       "Bottom of the bucket, offset roughly 2.5 cm from the wall, never directly under the net pot. "
+       "Bottom of the bucket, offset roughly 2.5 cm (1 in) from the wall, never directly under the net pot. "
        "Check every stone bubbles uniformly at fill. A clogged stone is a silent, "
        "single-plant hypoxia event."),
       ("Keep air pumps and blowers out of the room",

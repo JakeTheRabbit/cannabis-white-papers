@@ -16,11 +16,11 @@ def fig(key, cap):
     return figure(_FIGS[key], _N[0], cap)
 
 SLUG = "one-steering-law"
-TITLE = "The one steering law: coco, rockwool, soil & water"
+TITLE = "One steering law: coco, rockwool, soil and water"
 EYEBROW = "Flowering · Crop steering"
-SUB = ("Coco, rockwool, soil and plain water are not four separate skills. They are one way of "
-       "steering a plant with water, running on four different sponges. Learn the steering once, with "
-       "pictures and no jargon, and you can grow in any of them, because the sponge only changes the numbers.")
+SUB = ("Coco, rockwool, soil and plain water share one way of steering a plant with water, running on "
+       "four different sponges. Learn the steering once, with pictures and no jargon, and you can grow "
+       "in any of them, because the sponge only changes the numbers.")
 META = [("droplet", "Flowering"), ("image", "31 diagrams"),
         ("quote", "Evidence-linked · 9 sources"), ("clock", "~22 min read")]
 RELATED = ["coco-crop-steering", "rockwool-crop-steering", "substrates-overview",
@@ -40,7 +40,7 @@ SECTIONS.append({"id": "the-promise", "kicker": "Start here", "title": "Purpose 
     callout("evidence", "Grain of salt",
       "<p><strong>Borderline:</strong> Do not import high-intensity rockwool substrate EC (mid-3s to 6) into beginner "
       "coco recipes. DWC disease risk rises with heat and low dissolved oxygen. There is no universal "
-      "&lsquo;above 23 &deg;C = dead tomorrow&rsquo; clock.</p>"),
+      "&lsquo;above 23 &deg;C (73 &deg;F) = dead tomorrow&rsquo; clock.</p>"),
 
     lead("A cannabis plant can pour its energy into <strong>leaves</strong>, a bigger, bushier green "
          "plant, or into <strong>flower</strong>: the sticky buds you actually harvest. "
@@ -108,7 +108,7 @@ SECTIONS.append({"id": "plain-words", "kicker": "Plain-words glossary", "title":
   ]})
 
 # ---------------------------------------------------------------- 1 sponge
-SECTIONS.append({"id": "everything-is-a-sponge", "kicker": "The one spine image", "title": "Substrate water storage",
+SECTIONS.append({"id": "everything-is-a-sponge", "kicker": "One spine image", "title": "Substrate water storage",
   "blocks": [
     callout("tip", "Think of it like a kitchen sponge",
       p("Hold a kitchen sponge under the tap until it&rsquo;s full, then let it drip. Every way of growing "
@@ -144,7 +144,7 @@ SECTIONS.append({"id": "everything-is-a-sponge", "kicker": "The one spine image"
   ]})
 
 # ---------------------------------------------------------------- 2 wheel & engine
-SECTIONS.append({"id": "wheel-and-engine", "kicker": "The wheel and the engine", "title": "Water availability and dryback",
+SECTIONS.append({"id": "wheel-and-engine", "kicker": "Wheel and engine", "title": "Water availability and dryback",
   "blocks": [
     callout("tip", "Think of it like wringing a sponge",
       p("Water isn&rsquo;t just food. It&rsquo;s the steering wheel. Picture the plant gripping the "
@@ -193,7 +193,7 @@ SECTIONS.append({"id": "wheel-and-engine", "kicker": "The wheel and the engine",
   ]})
 
 # ---------------------------------------------------------------- 3 second dial
-SECTIONS.append({"id": "the-second-dial", "kicker": "The second dial", "title": "Feed strength and root-zone EC",
+SECTIONS.append({"id": "the-second-dial", "kicker": "Second dial", "title": "Feed strength and root-zone EC",
   "blocks": [
     callout("tip", "Think of it like squash on a windowsill",
       p("Make a glass of squash, then leave it on a sunny windowsill. As the water evaporates, the drink gets "
@@ -228,7 +228,7 @@ SECTIONS.append({"id": "the-second-dial", "kicker": "The second dial", "title": 
   ]})
 
 # ---------------------------------------------------------------- 4 the cliff
-SECTIONS.append({"id": "the-cliff", "kicker": "The two limits", "title": "Field capacity and dryback limits",
+SECTIONS.append({"id": "the-cliff", "kicker": "Two limits", "title": "Field capacity and dryback limits",
   "blocks": [
     callout("tip", "Think of it like a lift in a building",
       p("The top floor is &lsquo;full&rsquo;, fill past it and water just spills out the bottom. The "
@@ -256,7 +256,7 @@ SECTIONS.append({"id": "the-cliff", "kicker": "The two limits", "title": "Field 
         "real feed strength at the roots."),
     callout("note", "Real numbers (rockwool example. Yours will differ)",
       ul(["Rockwool danger line ~<strong>25&ndash;30%</strong> how-full &middot; working band ~55&ndash;92%",
-          "A healthy daily range often sits ~30&ndash;70% how-full &middot; sponge temperature 20&ndash;26&deg;C",
+          "A healthy daily range often sits ~30&ndash;70% how-full &middot; sponge temperature 20&ndash;26&deg;C (68&ndash;79&deg;F)",
           "Daily drip-out at &lsquo;full&rsquo; ~10&ndash;20% &middot; learn your &lsquo;full&rsquo; mark from "
           "about 5 real, agreeing waterings"])),
     callout("key", "In one sentence",
@@ -265,7 +265,7 @@ SECTIONS.append({"id": "the-cliff", "kicker": "The two limits", "title": "Field 
   ]})
 
 # ---------------------------------------------------------------- 5 four beats
-SECTIONS.append({"id": "one-day-four-beats", "kicker": "The daily rhythm", "title": "Daily irrigation phases",
+SECTIONS.append({"id": "one-day-four-beats", "kicker": "Daily rhythm", "title": "Daily irrigation phases",
   "blocks": [
     callout("tip", "Think of it like breathing on a schedule",
       p("A small morning exhale (dry down a little), a big drink (fill up in sips), steady breathing all day "
@@ -303,7 +303,7 @@ SECTIONS.append({"id": "one-day-four-beats", "kicker": "The daily rhythm", "titl
   ]})
 
 # ---------------------------------------------------------------- 6 gearbox
-SECTIONS.append({"id": "sponge-is-the-gearbox", "kicker": "The keystone", "title": "Substrate moisture as the control variable",
+SECTIONS.append({"id": "sponge-is-the-gearbox", "kicker": "Keystone", "title": "Substrate moisture as the control variable",
   "blocks": [
     callout("tip", "Think of it like a gearbox",
       p("You already know how to drive. A gearbox sits between your foot and the wheels, same pedal, "
@@ -326,8 +326,8 @@ SECTIONS.append({"id": "sponge-is-the-gearbox", "kicker": "The keystone", "title
     table(["What it does", "Coco", "Rockwool", "Living soil", "Plain water (tank)"], [
       ["Air when soaked", "~22%, keeps the most air, very hard to overwater", "~10%, drowns easily, holds the most water", "airier than rockwool (peat ~18&ndash;25%)", "roots hang in water; air from an air pump"],
       ["Forgiveness (cushions a bad feed)", "a lot, a built-in shock absorber", "almost none. What you set is what the plant gets", "self-fixing, life &amp; minerals steady it in minutes", "none. The tank is the only buffer"],
-      ["Danger line / main failure", "fades gently; feed reading unreliable when nearly dry; steals cal-mag if not pre-charged", "sharp cliff ~25&ndash;30%; water tunnels below it; felt the same hour", "forgiving; no sharp cliff; overwatering hides then compounds", "no dryness cliff but a heat one: root rot above ~23&deg;C within a day"],
-      ["Prep / starting pH", "pre-soak in cal-mag 8&ndash;24 h; feed pH 5.8&ndash;6.2", "starts near pH 8, condition to ~5.5; run 5.5&ndash;6.0; reusable ~3 yrs", "settles its own pH ~5.2&ndash;6.5; usually don&rsquo;t pH the input", "hold pH 5.5&ndash;6.0, tank 18&ndash;20&deg;C, air pump always on"],
+      ["Danger line / main failure", "fades gently; feed reading unreliable when nearly dry; steals cal-mag if not pre-charged", "sharp cliff ~25&ndash;30%; water tunnels below it; felt the same hour", "forgiving; no sharp cliff; overwatering hides then compounds", "no dryness cliff but a heat one: root rot above ~23&deg;C (73&deg;F) within a day"],
+      ["Prep / starting pH", "pre-soak in cal-mag 8&ndash;24 h; feed pH 5.8&ndash;6.2", "starts near pH 8, condition to ~5.5; run 5.5&ndash;6.0; reusable ~3 yrs", "settles its own pH ~5.2&ndash;6.5; usually don&rsquo;t pH the input", "hold pH 5.5&ndash;6.0, tank 18&ndash;20&deg;C (64&ndash;68&deg;F), air pump always on"],
       ["Good for a beginner?", "<strong>yes</strong>, just charge it before planting", "precise but unforgiving; earn your way to it", "<strong>yes</strong>, top of the forgiveness ladder", "no, expert only"],
     ], caption="Same fields, different numbers. Picking a sponge isn&rsquo;t learning new steering. It&rsquo;s choosing your failure mode" + _c("malik2025-media") + "."),
     p("Notice the trade hidden in that table: <strong>the more control a sponge gives you, the less it "

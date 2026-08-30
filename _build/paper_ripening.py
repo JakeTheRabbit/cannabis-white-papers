@@ -7,11 +7,12 @@ import figs_lib as L
 _FIGS = json.load(open(os.path.join(os.path.dirname(__file__), "figs_ripening.json"), encoding="utf-8"))
 
 SLUG = "ripening-harvest-timing"
-TITLE = "Ripening, flush and the harvest call"
+TITLE = "Ripening, flush, and harvest timing"
 EYEBROW = "Flowering · Finish"
-SUB = ("The last two weeks and the call to chop: how buds actually ripen, how to read trichomes "
-       "with a loupe properly, harvest windows by product goal, what the evidence really says "
-       "about flushing, and how to keep botrytis from eating the reward while you wait.")
+SUB = ("By the end of this paper you will know how cannabis buds ripen in the final two weeks, "
+       "how to read trichomes accurately with a loupe, which harvest window matches your product "
+       "goal, what the evidence actually shows about flushing, and how to keep botrytis from "
+       "destroying a crop you spent eighteen weeks building.")
 META = [("spark", "Flowering"), ("image", "10 diagrams"),
         ("quote", "Evidence-linked · 14 sources"), ("clock", "~17 min read")]
 RELATED = ["flowering-stages", "harvest-dry-trim-cure", "mould-risk"]
@@ -142,8 +143,10 @@ SECTIONS.append({"id": "how-buds-ripen", "kicker": "04 · The biology", "title":
       "and genotype sets the pace, judge the population, not a single gland." + _c("punja-2023-trichome-maturation")),
     p("<strong>Cannabinoids build to a peak, then the resin ages.</strong> Weekly tracking through "
       "flowering shows THC and CBD accumulating toward a cultivar-specific peak late in the cycle" + _c("aizpurua-2016-cannabinoid-evolution") +
-      ". Past the peak, THC slowly oxidises toward CBN. The degradation pathway is well "
-      "documented in stored cannabis, where the CBN:THC ratio is literally used to age samples" + _c("ross-elsohly-1997-cbn-age") +
+      ". Past the peak, THC does not disappear—it slowly converts into CBN, a related cannabinoid "
+      "with different properties. Think of a cut apple turning brown: the same material, chemically "
+      "changed by exposure, and the change only runs one way. That chemical conversion is called "
+      "oxidation. The pathway is documented in stored cannabis, where the CBN:THC ratio is used to age samples" + _c("ross-elsohly-1997-cbn-age") +
       ". Amber heads are that process starting on the plant. Be careful with the folklore extension: "
       "&lsquo;amber = couch-lock&rsquo; treats CBN as a sedative switch, and the human evidence for "
       "that is thin. Amber tells you the resin is past peak; it does not promise a specific effect."),
@@ -153,8 +156,10 @@ SECTIONS.append({"id": "how-buds-ripen", "kicker": "04 · The biology", "title":
       "them entirely. Pistils tell you when to start scoping. They never make the call."),
     p("<strong>Calyxes swell and the plant fades.</strong> In the last weeks bracts fatten "
       "noticeably, buds look suddenly denser, while fan leaves yellow from the bottom "
-      "up. The fade is nutrient remobilisation: senescing leaves export their mobile nutrients "
-      "(nitrogen above all) to the developing flower, a process documented across crop species" + _c("maillard-2015-leaf-nutrient-remobilization") +
+      "up. The fade is nutrient remobilisation—think of how your body pulls blood away from cold "
+      "fingers to protect the core: the plant does the same thing, withdrawing mobile nutrients "
+      "from ageing leaves and routing them to the flower. Senescing leaves export those nutrients "
+      "(nitrogen above all) into the developing flower, a process documented across crop species" + _c("maillard-2015-leaf-nutrient-remobilization") +
       ". A gentle fade in week 8 is the plant finishing on schedule, not a deficiency to fix. A "
       "hard, crispy fade in week 6 is a problem, see troubleshooting."),
     callout("note", "Why colour tracks ripeness at all",
@@ -240,7 +245,7 @@ SECTIONS.append({"id": "product-windows", "kicker": "06 · Product goal", "title
   ]})
 
 # ---------------------------------------------------------------- 07 flush debate
-SECTIONS.append({"id": "flush-debate", "kicker": "07 · The flush debate", "title": "Flushing: evidence and limitations",
+SECTIONS.append({"id": "flush-debate", "kicker": "07 · The flush debate", "title": "Flushing and what testing found",
   "blocks": [
     p("The tradition: feed plain water for the last 7&ndash;14 days so the plant &lsquo;uses up&rsquo; "
       "stored nutrients, giving smoother smoke, better flavour and white ash. It is one of the most "
@@ -248,7 +253,7 @@ SECTIONS.append({"id": "flush-debate", "kicker": "07 · The flush debate", "titl
       "evidence, so here is what happens when someone actually tests it."),
     p("<strong>The Rx Green Technologies trial.</strong> The most-cited direct test: Cherry Diesel "
       "flushed for 0, 7, 10 or 14 days before harvest, then measured. No significant differences in "
-      "yield (average 97.3 g/plant), THC (average 21.9%) or terpenes across any flush duration. "
+      "yield (average 97.3 g (3.4 oz) per plant), THC (average 21.9%) or terpenes across any flush duration. "
       "Flower mineral content did not drop the way the theory requires, nitrogen ran only "
       "~6.7% lower after 14 days, and iron and zinc were actually <em>higher</em> in flushed flower. "
       "A blind consumer panel could not pick the flushed samples, and trended toward preferring the "
@@ -268,9 +273,9 @@ SECTIONS.append({"id": "flush-debate", "kicker": "07 · The flush debate", "titl
       "same way, and no controlled study showing the opposite has surfaced."),
     p("<strong>Why the theory was always shaky.</strong> Flushing the root zone rinses the "
       "substrate, not the flower. Minerals already in bud tissue got there through the plant, and "
-      "water around the roots does not pull them back out. What actually moves nutrients out of "
-      "leaves late in the cycle is senescence-driven remobilisation, the plant's own "
-      "salvage program" + _c("maillard-2015-leaf-nutrient-remobilization") + ". Which runs "
+      "water around the roots does not pull them back out. What actually draws nutrients out of "
+      "leaves late in the cycle is the plant's own natural ageing process—leaf senescence "
+      "redirecting mobile nutrients into the flower" + _c("maillard-2015-leaf-nutrient-remobilization") + ". Which runs "
       "with or without a flush. What a long flush <em>does</em> do is crash substrate EC and force "
       "the plant onto reserves early, which can accelerate the fade and, pushed hard, trade away "
       "late bulking that trials show is real weight" + _c("massuela-2022-pruning-cbd-yield") + "."),
@@ -299,14 +304,16 @@ SECTIONS.append({"id": "late-environment", "kicker": "08 · The room", "title": 
       "nice-to-have practitioner practice. The humidity discipline is survival. Get the priority "
       "right: RH ceiling first, everything else after."),
     p("<strong>Temperature: common practice, thin evidence.</strong> Most experienced growers ease "
-      "day temperature down a couple of degrees (roughly 26 to 23&deg;C) and let nights run cooler "
-      "(21 to 18&deg;C) over the final two weeks. The claimed benefits (preserved terpenes, "
-      "tighter buds, purple expression) are mostly untested in controlled cannabis work: "
-      "cool nights do trigger purpling in anthocyanin-capable genotypes, but the potency and "
-      "terpene-preservation claims remain unverified. The move is low-risk and defensible; just "
-      "know one real side-effect: cooler air holds less water, so the same moisture load reads as "
-      "<em>higher</em> RH. Every degree you drop makes the humidity job harder, and your "
-      "dehumidification has to make up the difference."),
+      "day temperature down a couple of degrees—roughly 26 to 23 &deg;C (79 to 73 &deg;F)—and let "
+      "nights run cooler—21 to 18 &deg;C (70 to 64 &deg;F)—over the final two weeks. The claimed "
+      "benefits (preserved terpenes, tighter buds, purple expression) are mostly untested in "
+      "controlled cannabis work: cool nights do trigger purpling in anthocyanin-capable genotypes, "
+      "but the potency and terpene-preservation claims remain unverified. The move is low-risk and "
+      "defensible; just know one real side-effect. Air works like a sponge: warm air can hold more "
+      "water vapour, cool air less. Drop the temperature and the same moisture in the room now fills "
+      "a larger share of the air's capacity—so relative humidity goes up without a single drop of "
+      "water being added. Every degree you drop makes the humidity job harder, and your "
+      "dehumidification has to keep pace."),
     figure(_FIGS["lateflower_ramp"], 9,
       "A typical last-fortnight ramp: day and night temps taper (practice, not proof) while RH "
       "steps down under a hard ceiling (non-negotiable). Cooling the room raises RH at the same "
@@ -380,7 +387,7 @@ SECTIONS.append({"id": "day-of-chop", "kicker": "10 · Chop day", "title": "Harv
       "Everything below is decided <em>before</em> the first cut."),
     steps([
       ("Verify the dry space the day before",
-       "Dry room running and stable at roughly 15-16 C and ~60% RH (the classic 60/60), dark, "
+       "Dry room running and stable at roughly 15–16 &deg;C (59–61 &deg;F) and ~60% RH (the classic 60/60), dark, "
        "gentle indirect airflow, cleaned and sanitised. Never cut a plant before the place it dries "
        "is proven, a crop waiting in bins while you fix a dehumidifier is a crop composting."),
       ("Final rot scout, then quarantine",
@@ -495,7 +502,7 @@ SECTIONS.append({"id": "mental-model", "kicker": "13 · The mental model", "titl
       ("Hash call", "Cloudy max, minimal amber"),
       ("Flower call", "Cloudy-dominant, 5-15% amber"),
       ("RH band / ceiling", "45-55% target, 58% absolute ceiling"),
-      ("Dry space ready", "15-16 C / ~60% RH, running before the first cut"),
+      ("Dry space ready", "15–16 &deg;C (59–61 &deg;F) / ~60% RH, running before the first cut"),
     ]),
     p("From here the crop stops being grown and starts being preserved: "
       "<a href='harvest-dry-trim-cure.html'>harvest, dry, trim and cure</a> covers the next "

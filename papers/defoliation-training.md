@@ -2,7 +2,7 @@
 slug: "defoliation-training"
 title: "Defoliation and plant training for maximum yield"
 eyebrow: "Canopy · Training"
-summary: "A beginner's guide to topping, low-stress training, trellising, lollipopping and defoliation: what each one does, when to do it, and how to avoid overdoing it."
+summary: "Topping, low-stress training, trellising, lollipopping and defoliation each reshape the plant in a specific way. This paper explains what each technique does, when in the grow cycle to use it, and how to tell when you have gone too far."
 track: "Vegetative growth"
 read_time: "~12 min read"
 diagrams: "12 diagrams"
@@ -21,7 +21,7 @@ refs: [{"id": "sikora-2019-apical-bud-hemp", "n": 1, "cite": "Sikora V, Berenji 
 
 _Canopy · Training · ~12 min read_
 
-> A beginner's guide to topping, low-stress training, trellising, lollipopping and defoliation: what each one does, when to do it, and how to avoid overdoing it.
+> Topping, low-stress training, trellising, lollipopping and defoliation each reshape the plant in a specific way. This paper explains what each technique does, when in the grow cycle to use it, and how to tell when you have gone too far.
 
 ## Purpose and scope
 
@@ -78,7 +78,7 @@ The **sources-and-sinks** framework explains the trade-off. A well-lit leaf is a
 
 > **Diagram.** Well-lit fan leaves feed the flowers. Shaded interior leaves become a drain. Opening the canopy turns them back into producers and drops humidity around the buds.[^massuela-2022-pruning-cbd-yield]
 
-Better airflow through an open canopy lowers the humidity that pools around dense buds, which directly reduces bud-rot risk. Aim to keep **VPD** (vapour pressure deficit, a combined measure of how ‘thirsty’ the air is) between about 0.8 and 1.2 kPa. Stagnant, humid air inside a closed canopy is exactly the condition that lets grey mould take hold in a thick cola[^mahmoud-2023-budrot-botrytis].
+Better airflow through an open canopy lowers the humidity that pools around dense buds, which directly reduces bud-rot risk. The air can only absorb a certain amount of moisture; when it is already close to full, it stops pulling humidity away from plant surfaces and leaves it sitting around the buds. Think of a dry sponge versus a wet one: the dry sponge soaks up water fast, the saturated one can barely take any more. **VPD** (vapour pressure deficit) measures exactly how much absorbing capacity the air still has. Aim to keep VPD between 0.8 and 1.2 kPa. Stagnant, humid air inside a closed canopy is exactly the condition that lets grey mould take hold in a thick cola[^mahmoud-2023-budrot-botrytis].
 
 > **KEY — Why the work pays off**
 >
@@ -115,13 +115,13 @@ In commercial veg, the first topping is typically done around **day 5–7** of v
 
 A **trellis** is horizontal netting stretched over the table that the plants grow up through. It does two jobs: early on it holds a spread canopy in place, and later it stops heavy buds from snapping their branches. Spreading the branches so light reaches the whole table is what makes the high mid-bloom PPFD actually translate into yield[^anthony-2020-training-light-interception].
 
-A common workflow sets all three trellis layers on **day 1 of flower**, with the first net placed 1–2 inches below the top of the canopy. Around day 5–7 the plants have grown through that first net and the team **spreads** the branches: pulling them out from the central stalk and tucking them into open squares so light reaches the middle and the whole table fills out evenly.
+A common workflow sets all three trellis layers on **day 1 of flower**, with the first net placed 2.5–5 cm (1–2 in) below the top of the canopy. Around day 5–7 the plants have grown through that first net and the team **spreads** the branches: pulling them out from the central stalk and tucking them into open squares so light reaches the middle and the whole table fills out evenly.
 
 > **Diagram.** Side view of a flower table with three stacked nets. The lowest spreads the canopy; the upper two support the weight of bulking flowers.[^anthony-2020-training-light-interception]
 
 > **Diagram.** Top-down, spreading pulls branches off the central stalk into the empty trellis squares so the table fills evenly and the interior is no longer shaded.
 
-- All trellis levels are set on flower day 1; the first net sits 1–2 inches below the canopy top.
+- All trellis levels are set on flower day 1; the first net sits 2.5–5 cm (1–2 in) below the canopy top.
 - Plants grow through the first net by about day 5 and are spread out from the central stalk.
 - Spreading opens the center to light and airflow and reduces how many fan leaves you later remove.
 - Net count scales with height: short plants need about 2 layers, tall genetics need 3.
@@ -136,7 +136,7 @@ Here is a clear flower-room timeline you can follow as a default and adjust to y
 
 > **Diagram.** The default flower timeline, day 1 to week 7. The aggressive structural work happens early; the only late task is an optional, strain-by-strain final defan.
 
-1. **Day 1: Trellis** — Set all trellis levels. Place the first net 1–2 inches below the top of the canopy.
+1. **Day 1: Trellis** — Set all trellis levels. Place the first net 2.5–5 cm (1–2 in) below the top of the canopy.
 2. **Day 5–14: Spread** — Once plants grow through the first net, pull branches off the central stalk into the open squares to fill the table evenly.
 3. **Day 7–10: Phase 1 lollipop** — Strip the small branches, nodes and leaves from the lower half/third. Keep at least the top 3 nodes on each main branch.
 4. **Day 21–28: Phase 2 defan** — Remove the lower fan leaves across every plant for light penetration and airflow.
@@ -150,9 +150,9 @@ Here is a clear flower-room timeline you can follow as a default and adjust to y
 | Day 21–28 | Phase 2 defanning | Light and airflow to the lower and inner buds |
 | Day 42–49 | Phase 3 defanning (optional) | Final touch-up only if that strain needs it |
 
-*A default flower-room timeline. The lollipop zone is roughly the bottom 10–18 inches (the lower third), where growth would otherwise make small, underdeveloped larf.*
+*A default flower-room timeline. The lollipop zone is roughly the bottom 25–45 cm (10–18 in), the lower third, where growth would otherwise make small, underdeveloped larf.*
 
-> **Diagram.** Lollipopping removes the lower ~10–18 inches (the bottom third) and keeps at least the top 3 nodes on each main branch, so the plant spends energy on flower that will actually finish.
+> **Diagram.** Lollipopping removes the lower ~25–45 cm (10–18 in), the bottom third, and keeps at least the top 3 nodes on each main branch, so the plant spends energy on flower that will actually finish.
 
 > **WARN — Lollipop early, not late**
 >
@@ -166,14 +166,14 @@ The single biggest mistake is **removing too many fan leaves**. Fan leaves are �
 
 The second trap is **overcrowding**. Plants packed too close trigger a **shade-avoidance response**: sensing neighbours' shade, they waste energy stretching weak inner branches toward light instead of building flower[^wang-2020-shade-avoidance]. Proper spacing means far less defoliation is needed, because the canopy was never a jungle to begin with.
 
-A common starting point is about 2.3 sqft per plant, with a typical working range of 1.8–3.0 sqft. Denser planting can raise total yield per area but reduces uniformity, so there is a real trade-off rather than a single ‘correct’ number[^danziger-2022-planting-density].
+A common starting point is about 0.21 m² (2.3 ft²) per plant, with a typical working range of 0.17–0.28 m² (1.8–3.0 ft²). Denser planting can raise total yield per area but reduces uniformity, so there is a real trade-off rather than a single ‘correct’ number[^danziger-2022-planting-density].
 
-> **Diagram.** Spacing zones: too dense triggers shade avoidance[^wang-2020-shade-avoidance], the 1.8–3.0 sqft band is the usual working range, and correct spacing means far less plant work overall.[^danziger-2022-planting-density]
+> **Diagram.** Spacing zones: too dense triggers shade avoidance[^wang-2020-shade-avoidance], the 0.17–0.28 m² (1.8–3.0 ft²) band is the usual working range, and correct spacing means far less plant work overall.[^danziger-2022-planting-density]
 
 | Mistake | What goes wrong | Do this instead |
 | --- | --- | --- |
 | Over-defoliating | Removes the leaves feeding the buds; yield and potency drop | Leave as many fan-leaf sources as possible; open just enough |
-| Overcrowding | Shade-avoidance: weak, stretchy inner growth | Space ~2.3 sqft/plant (1.8–3.0 range) |
+| Overcrowding | Shade-avoidance: weak, stretchy inner growth | Space ~0.21 m² (2.3 ft²)/plant; range 0.17–0.28 m² |
 | Topping in flower | Wounds the plant when it should be bulking | Do all topping in veg |
 | Heavy defan late in bloom | Stress with no time to recover | Match aggressive work to early flower |
 | Musty smell, dying inner leaves | Canopy too closed; bud-rot risk rising | Improve airflow first, not strip every leaf |

@@ -7,8 +7,9 @@ import figs_lib as L
 SLUG = "smart-watering-vrwe"
 TITLE = "The smart watering brain (VRWE), in plain English"
 EYEBROW = "Precision · Smart watering"
-SUB = ("A grow room can water plants on its own by combining several sensor signals "
-       "instead of trusting one moisture probe that might be lying.")
+SUB = ("This paper explains how VRWE combines multiple signals to estimate root-zone water "
+       "more reliably than a single probe. You will understand why the brain sometimes waits "
+       "instead of watering, and be able to read its confidence output and know whether to trust it.")
 META = [("gauge", "Precision"), ("image", "9 diagrams"),
         ("quote", "Evidence-linked · 5 sources"), ("clock", "~9 min read")]
 RELATED = ["root-zone-teros12", "signal-and-noise", "closed-loop"]
@@ -62,8 +63,11 @@ SECTIONS.append({"id": "key-terms", "kicker": "Vocabulary", "title": "Definition
             "fed the plant."),
     defterm("Full pot (DUL, drained upper limit)", "The most water the pot can hold once it has "
             "finished dripping. Past this point, extra water just runs off."),
-    defterm("Channeling", "Water sneaking straight down one path and missing the roots. It "
-            "goes in the top and out the bottom without doing any good."),
+    defterm("Channeling", "Water sneaking straight down one path and missing the roots — "
+            "like water running down the gap between a pot and its liner instead of soaking "
+            "through the substrate: every drop finds that easy path and exits the bottom while "
+            "the root zone beside it stays dry. It goes in the top and out the bottom without "
+            "doing any good."),
     defterm("Confidence", "The brain&rsquo;s self-rated trust in its own current guess. High "
             "confidence allows bolder action. Low confidence forces caution."),
     table(["Term", "Plain-English meaning"], [
@@ -75,14 +79,20 @@ SECTIONS.append({"id": "key-terms", "kicker": "Vocabulary", "title": "Definition
     ], cls="compact", caption="The five words that carry the whole idea."),
   ]})
 
-SECTIONS.append({"id": "why-fuse", "kicker": "Core idea 1", "title": "Signal fusion for root-zone water estimation",
+SECTIONS.append({"id": "why-fuse", "kicker": "Core idea 1", "title": "Combining sensors to outvote one lying reading",
   "blocks": [
     p("VRWE keeps a <strong>checkbook for water</strong> instead of believing one probe. Money IN "
       "is the water the drippers squirted, known precisely because drippers are calibrated, so "
       "you know exactly how much you put in. Money OUT is what the plant drank plus what "
       "drained away. The running balance is the water really in the pot."),
-    p("The plant&rsquo;s drinking, its <strong>transpiration</strong>, can be estimated from heat "
-      "and light, because a plant pulls water faster when it is warmer and brighter" +
+    p("A plant continuously pulls water up through its roots and releases it as invisible vapor "
+      "through tiny pores in the leaves — the warmer and brighter the room, the faster this happens. "
+      "Think of it like sweating: your body loses more water when it is hot and active, and you can "
+      "estimate roughly how much just from the temperature and how hard you are working. A plant "
+      "follows the same logic. This process is called <strong>transpiration</strong>: the movement "
+      "of water from roots through stems and out through leaf pores as vapor. "
+      "Because temperature and light are measurable, the brain can estimate how fast the plant is "
+      "drinking from those readings alone" +
       _c("koehler-transpiration-vpd-2023") + ". So even without trusting the sensor, the brain has a "
       "good independent guess of OUT. The sensor becomes one statement to check "
       "against the balance, not the sole source of truth."),

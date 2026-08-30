@@ -2,7 +2,7 @@
 slug: "airflow-design"
 title: "Airflow design for indoor cultivation"
 eyebrow: "Beginner · Airflow design"
-summary: "Every leaf sits inside a film of still air that limits how fast it can breathe. Airflow strips that film away. Done right it feeds the plant and dries the room. Done wrong it scorches leaves or breeds rot."
+summary: "Every leaf sits inside a film of still air that slows gas exchange. Airflow strips that film away. By the end you will know how much air to move, which fans deliver it, and how to place them so every leaf gets a gentle breeze."
 track: "Environment & climate"
 read_time: "~26 min read"
 diagrams: "8 diagrams · 8 photos"
@@ -21,11 +21,11 @@ refs: [{"id": "schuepp1993-bl", "n": 1, "cite": "Schuepp PH (1993). Tansley Revi
 
 _Beginner · Airflow design · ~26 min read_
 
-> Every leaf sits inside a film of still air that limits how fast it can breathe. Airflow strips that film away. Done right it feeds the plant and dries the room. Done wrong it scorches leaves or breeds rot.
+> Every leaf sits inside a film of still air that slows gas exchange. Airflow strips that film away. By the end you will know how much air to move, which fans deliver it, and how to place them so every leaf gets a gentle breeze.
 
 ## Purpose and scope
 
-Airflow is plumbing for gases, and it is as important as light and feed. Without moving air, even a perfect light and a perfect feed cannot reach the leaf properly. A still, humid canopy is exactly where bud rot begins.
+Airflow is the plumbing that keeps gases moving at the leaf. This paper explains how it works, how much you need, which fans deliver it, and where to place them so every part of the canopy gets a gentle breeze — including the buried inner leaves where bud rot starts.
 
 This guide explains, from zero, what air movement does at the leaf, how much you want, which fans actually make that air, how to rank them, and where to hang them.
 
@@ -37,19 +37,19 @@ This guide explains, from zero, what air movement does at the leaf, how much you
 
 **Laminar vs turbulent** — Laminar = smooth, layered airflow (like a calm jet). Turbulent = messy, mixing airflow. For leaves, messy is better.
 
-**Transpiration** — The plant drinking water at the roots and releasing it as vapour from the leaves. Airflow speeds it up by clearing the humid film.
+**Transpiration** — Think of a damp towel drying in sunlight: the drier and warmer the air, the faster the water leaves, and moving air speeds it up by carrying humid air away. A plant works the same way. Transpiration is the process of water absorbed at the roots being released as vapour through pores on the leaves. Airflow keeps it moving by clearing the humid film that would otherwise slow it down.
 
 **Air exchange** — Swapping room air with fresh air (intake/exhaust). Different from recirculation, which only stirs the air already in the room.
 
 **HAF / VAF** — The two main hanging fan types. **HAF** = horizontal airflow: hangs above the crop and blows sideways to drive a room-wide loop. **VAF** = vertical airflow: hangs above the crop and blows straight down through it.
 
-**CFM and FPM** — Two different things people confuse. **CFM** (cubic feet per minute) is the _volume_ a fan shifts, which is what it is sold on. **FPM** (feet per minute) is the _speed_ air arrives at a leaf, which is what the plant feels. 200 FPM ≈ 1 m/s.
+**CFM and FPM** — Two different things people confuse. **CFM** (cubic feet per minute) is the _volume_ a fan shifts, which is what it is sold on. **FPM** (feet per minute) is the _speed_ air arrives at a leaf, which is what the plant feels. ~1 m/s (≈ 200 FPM).
 
-**Throw and entrainment** — **Throw** is how far a fan's jet stays useful. **Entrainment** is the jet dragging still room air along with it, which is why a modest hanging fan can stir far more air than it actually pushes through its own blades. It is the whole reason HAF loops work.
+**Throw and entrainment** — **Throw** is how far a fan's jet stays useful before it slows to room speed. **Entrainment** is harder to see: it is the jet dragging still room air along with it, the way a speedboat's wake pulls water into motion well to the sides of the hull. That dragging effect is why a modest hanging fan can stir far more air than it actually pushes through its own blades. It is the whole reason HAF loops work.
 
 ## Leaf boundary layers
 
-Air right against a leaf barely moves. It forms a stagnant film called the **boundary layer**. CO2 going in, and water vapour and heat coming out, all have to crawl across that film by slow diffusion. The thicker it is, the more it slows the leaf[^schuepp1993-bl].
+Air right against a leaf barely moves. Think of the still layer of warmth you feel radiating from your arm in a cool room: the air right against your skin barely stirs, no matter how much the rest of the room is moving. Clear it with a fan and you feel the cold immediately. A leaf works the same way. It sits inside a thin film of still, humid air that barely exchanges with the room around it. That film is called the **boundary layer**. CO2 going in, and water vapour and heat coming out, all have to crawl across that film by slow diffusion. The thicker it is, the more it slows the leaf[^schuepp1993-bl].
 
 > **Diagram.** Still air insulates the leaf and slows every exchange. Moving air thins the boundary layer so CO2 gets in faster and water and heat get out faster[^dupont2025-wind].
 
@@ -114,21 +114,21 @@ Aiming one big fan straight down a row is tempting. Don't. A smooth, laminar jet
 
 Everything above is leaf physiology. Does it actually move yield in a real flower room? A controlled trial by Pipp Horticulture with Dr. Allison Justice and the Cannabis Research Coalition tested exactly that: three identical flower rooms with VPD, temperature and humidity held constant, changing only the airflow[^pipp2026-airflow].
 
-The rooms ran at different delivered air speeds, measured in feet per minute (FPM), the standard unit for room airflow. They compared near-still air against roughly 100, 200 and 400 FPM (about 0.5, 1.0 and 2.0 m/s). One clean result fell out:
+The rooms ran at different delivered air speeds. The trial reports these in feet per minute (FPM), a common unit in commercial horticulture; roughly 0.5, 1.0 and 2.0 m/s (about 100, 200 and 400 FPM) were the levels compared. One clean result fell out:
 
-> **Diagram.** The response was a **threshold, not a gentle slope**: below ~200 FPM little changed; above it, yield, plant shape and uniformity improved together[^pipp2026-airflow].
+> **Diagram.** The response was a **threshold, not a gentle slope**: below ~1.0 m/s (~200 FPM) little changed; above it, yield, plant shape and uniformity improved together[^pipp2026-airflow].
 
-That looks like it fights the leaf-level plateau in Figure 2, but it does not. Figure 2 is the speed at a single _leaf_; FPM here is what the whole room _delivers_. Air slows as it pushes into the canopy, so a room has to move well over 1 m/s at the fans before the buried lower and interior leaves feel the gentle breeze Figure 3 asks for. Roughly 200 FPM delivered is about what it takes to land _every_ leaf in the sweet spot, not just the ones on the outside.
+That looks like it fights the leaf-level plateau in Figure 2, but it does not. Figure 2 is the speed at a single _leaf_; FPM here is what the whole room _delivers_. Air slows as it pushes into the canopy, so a room has to move well over 1 m/s at the fans before the buried lower and interior leaves feel the gentle breeze Figure 3 asks for. Roughly 1.0 m/s (~200 FPM) delivered is about what it takes to land _every_ leaf in the sweet spot, not just the ones on the outside.
 
 Above that threshold, the higher-airflow rooms showed three things:
 
 - **More sellable flower.** Stems carried less biomass and more of the plant's energy went into bud. Trim ran about 42% in the still-air plants and was significantly lower with good airflow, so less of the harvest ended up as larf[^pipp2026-airflow].
 - **Less stress.** Still-air plants had redder stems and more anthocyanin, a visible stress marker; the well-aired plants looked more uniform and less stressed.
-- **Taller, not weaker.** Higher-airflow plants finished roughly 6 inches taller than the still-air controls, with most vertical growth done by the end of week three, while still putting _less_ into stem. Here the extra height is relief from still-air stress, not the mechanical dwarfing you would get under a harder, direct wind (see section 06).
+- **Taller, not weaker.** Higher-airflow plants finished roughly 15 cm (6 in) taller than the still-air controls, with most vertical growth done by the end of week three, while still putting _less_ into stem. Here the extra height is relief from still-air stress, not the mechanical dwarfing you would get under a harder, direct wind (see section 06).
 
 > **KEY — Uniformity is the real lesson**
 >
-> Even in a tightly engineered room, the crew saw a positional bias: the first 1–2 feet of each row behaved differently from the rest. Their takeaway is the one to keep, **“if airflow isn’t uniform, neither is your crop.”** That is the dead-zone problem from section 07, now measured. Making sure no leaf is left in still air beats chasing a high average fan speed.
+> Even in a tightly engineered room, the crew saw a positional bias: the first 30–60 cm (1–2 ft) of each row behaved differently from the rest. Their takeaway is the one to keep, **“if airflow isn’t uniform, neither is your crop.”** That is the dead-zone problem from section 07, now measured. Making sure no leaf is left in still air beats chasing a high average fan speed.
 
 > **NOTE — How solid is this?**
 >
@@ -144,7 +144,7 @@ What each one looks likeGrok ImagineHAF fanVAF fanOscillating fanClip fanDrum / 
 
 **HAF, horizontal airflow fan**
 
-A hanging basket fan, typically a 300–500 mm (12–20 inch) blade on a small 1/10–1/15 hp motor, hung above head height and aimed sideways down the room[^bartok-haf]. Several of them together drive one slow **racetrack loop**: air runs down one side of the room and back the other. Its jet drags surrounding still air along with it (entrainment), so a modest fan stirs a large volume.
+A hanging basket fan, typically a 300–500 mm (12–20 in) blade on a small 1/10–1/15 hp motor, hung above head height and aimed sideways down the room[^bartok-haf]. Several of them together drive one slow **racetrack loop**: air runs down one side of the room and back the other. Its jet drags surrounding still air along with it (entrainment), so a modest fan stirs a large volume.
 
 **Where:** above the canopy, a quarter of the room width in from the wall. **The catch:** its air runs _over_ the top of the crop. In a dense canopy it never reaches the middle.
 
@@ -164,7 +164,7 @@ The classic grow-room fan: a head on a bracket that sweeps an arc. Cheap, everyw
 
 A miniature oscillating fan on a clamp, gripping a tent pole or frame. Moves roughly one plant's worth of air.
 
-**Where:** tents and single-plant setups only. **The catch:** nothing about it scales. If you are running more than about 2 m² of canopy, clip fans are a false economy: you end up with six of them doing the job of one proper hanging fan, at higher total wattage and worse uniformity.
+**Where:** tents and single-plant setups only. **The catch:** nothing about it scales. If you are running more than about 2 m² (22 ft²) of canopy, clip fans are a false economy: you end up with six of them doing the job of one proper hanging fan, at higher total wattage and worse uniformity.
 
 **Drum / pedestal floor fan**
 
@@ -208,7 +208,7 @@ Recirculation · vertical rackingIn-rack airflow systems (vertical farms)If you 
 
 ## Selecting fans for canopy airflow
 
-A ranking is only honest if you say what it is ranking _for_. This one scores **crop-relevant airflow bought per dollar installed, in a sealed, single-tier indoor flower room** of roughly 20–200 m² of canopy. Change the room and the order changes; the callout below says how.
+A ranking is only honest if you say what it is ranking _for_. This one scores **crop-relevant airflow bought per dollar installed, in a sealed, single-tier indoor flower room** of roughly 20–200 m² (215–2,150 ft²) of canopy. Change the room and the order changes; the callout below says how.
 
 > **Diagram.** The backbone is cheap and the glamour is not. The two lowest-ranked fans are the two most first-time growers actually buy.
 
@@ -217,7 +217,7 @@ A ranking is only honest if you say what it is ranking _for_. This one scores **
 | 1 | **HAF fan** | A room-wide loop, running 24/7 on very few watts | Over the top only | **Build the room on these.** Cheapest uniformity you can buy[^bartok-haf] |
 | 2 | **Under-canopy fan** | Kills the wettest, stillest zone in the room | Bottom of the plant | **Best value add-on.** Targets exactly where bud rot starts |
 | 3 | **VAF fan** | Air driven down into the middle of the plant | Full depth. The only one that gets there | **Buy once density rises.** Peer-reviewed for interior-leaf calcium[^goto1992-tipburn][^moosavi2025-vaf] |
-| 4 | Oscillating wall fan | Cheap, varied, turbulent air | Over and around, in bursts | Fine as the backbone below ~20 m². Falls behind above it |
+| 4 | Oscillating wall fan | Cheap, varied, turbulent air | Over and around, in bursts | Fine as the backbone below ~20 m² (215 ft²). Falls behind above it |
 | 5 | Air sock off the AHU | Even delivery of _conditioned_ air, no draughts | Along the row, gentle | Excellent, but it is capex plus design work[^perfduct2025] |
 | 6 | HVLS / destratification | Breaks the hot layer under the ceiling | Bulk mixing only | Only pays in tall rooms. Wasted under a low ceiling |
 | 7 | Drum / pedestal fan | Raw thrust into one spot | A gale on-axis, nothing off it | Spot-fix only. Leading cause of wind-burn |
@@ -262,20 +262,20 @@ The greenhouse industry has been sizing horizontal airflow for decades and the r
 
 | What | Rule of thumb | Where it comes from |
 | --- | --- | --- |
-| Total circulation capacity | **2 CFM per ft² of floor** (≈ 36.6 m³/h per m²). A 30 × 100 ft house needs ~6,000 CFM total. | Bartok & Grubinger, UConn/UVM Extension[^bartok-haf] |
+| Total circulation capacity | **~36.6 m³/h per m² of floor** (≈ 2 CFM/ft²). A 9 × 30 m (30 × 100 ft) house needs roughly 10,000 m³/h (~6,000 CFM) total. | Bartok & Grubinger, UConn/UVM Extension[^bartok-haf] |
 | First fan position | 3–4.5 m (10–15 ft) in from the end wall, to catch air coming round the corner. | UConn IPM[^uconn-haf] |
 | Fan spacing | 12–15 m (40–50 ft) apart along the loop. Scale down proportionally in a small room. | Bartok & Grubinger[^bartok-haf] |
 | Horizontal position | About ¼ of the room width in from the side wall (or centre of the bay). | UConn IPM[^uconn-haf] |
 | Mounting height | Above head height; ~2.1–2.4 m (7–8 ft) for floor crops. Clear of baskets and light racks. | Bartok & Grubinger[^bartok-haf] |
 | Individual fan size | 300–500 mm (12–20 in) blade, 1/10–1/15 hp. Many small beats few large. | Bartok & Grubinger[^bartok-haf] |
-| Greenhouse velocity target | 50–100 FPM (0.25–0.5 m/s) of general room movement. | UConn IPM[^uconn-haf] |
-| Cannabis flower-room target | ~200 FPM (≈1.0 m/s) _delivered_, to land every leaf in the sweet spot. | Pipp / Justice trial[^pipp2026-airflow] |
+| Greenhouse velocity target | 0.25–0.5 m/s (50–100 FPM) of general room movement. | UConn IPM[^uconn-haf] |
+| Cannabis flower-room target | ~1.0 m/s (≈200 FPM) _delivered_, to land every leaf in the sweet spot. | Pipp / Justice trial[^pipp2026-airflow] |
 | Run time | 24/7, except while exhaust fans run or vents are open. | Bartok & Grubinger[^bartok-haf] |
 | Air sock design | 6–10 mm holes, 30–70 mm spacing, ~30–40 Pa static to hold the tube round. | Perforated-duct CFD study[^perfduct2025] |
 
 > **NOTE — Why the two velocity targets disagree**
 >
-> The greenhouse standard (50–100 FPM) and the cannabis figure (~200 FPM) are not in conflict; they were set for different goals. The greenhouse number is aimed at temperature uniformity and stopping condensation on leaves overnight in a relatively open, lower-light crop[^uconn-haf]. The cannabis number comes from a dense, high-light flower canopy where the goal is driving air _into_ the plant[^pipp2026-airflow]. Denser canopy and brighter light both push the number up. Use the greenhouse rules for the layout and the cannabis number for the target.
+> The greenhouse standard (0.25–0.5 m/s, or 50–100 FPM) and the cannabis figure (~1.0 m/s, or ~200 FPM) are not in conflict; they were set for different goals. The greenhouse number is aimed at temperature uniformity and stopping condensation on leaves overnight in a relatively open, lower-light crop[^uconn-haf]. The cannabis number comes from a dense, high-light flower canopy where the goal is driving air _into_ the plant[^pipp2026-airflow]. Denser canopy and brighter light both push the number up. Use the greenhouse rules for the layout and the cannabis number for the target.
 
 One last number, and it is the one that saves the most money. Fan airflow rises in step with speed, but shaft power rises with the **cube** of speed[^amca-fanlaws]. Halving a fan's speed drops it to roughly one-eighth of the power. That has a direct design consequence:
 

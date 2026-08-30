@@ -10,7 +10,7 @@
   {
    "slug": "tissue-culture",
    "title": "Cleaning up cannabis genetics with tissue culture",
-   "summary": "Tissue culture grows a clean, vigorous, genetically identical mother from a speck of tissue off a tired or diseased plant. Explained from absolute zero.",
+   "summary": "Tissue culture regrows an entire plant from a microscopic piece of its growing tip, eliminating diseases that ordinary cleaning cannot reach. After reading this guide you will be able to run the full workflow yourself, from conditioning the donor plant through to holding a verified disease-free mother ready to take cuttings from.",
    "track": "Propagation",
    "read_time": "~22 min read",
    "diagrams": "",
@@ -47,7 +47,7 @@
   {
    "slug": "cannabis-tissue-culture-sop",
    "title": "Cannabis tissue culture SOP",
-   "summary": "Do these jobs in order. Each job has a diagram and a form. A star in brackets is a source, not extra reading you need before you start.",
+   "summary": "Work through these jobs in order and you will be able to set up a clean tissue culture line, multiply a cultivar disease-free, and hand a tested plantlet to your grow room. Each job has a diagram and a form. A number in brackets is a source—you do not need to open it to do the step.",
    "track": "Propagation",
    "read_time": "",
    "diagrams": "",
@@ -66,7 +66,7 @@
   {
    "slug": "coco-crop-steering",
    "title": "Precision coco cultivation: crop steering in coir",
-   "summary": "Coco coir lets you talk to your plants through water. This paper shows you what the root zone is telling you, and how a daily rhythm of wetting and drying steers a plant toward leaves or toward flower, explained from zero.",
+   "summary": "Coco coir dries and wets predictably, which makes it the easiest substrate to steer. This paper explains what a root-zone sensor reads, how a daily wet-and-dry cycle works, and how to use dryback to push a plant toward leaves or toward flower. No prior root-zone experience needed.",
    "track": "Flowering",
    "read_time": "~16 min read",
    "diagrams": "5 diagrams",
@@ -83,8 +83,8 @@
   },
   {
    "slug": "grow-room-systems",
-   "title": "The cannabis grow room: a systems guide",
-   "summary": "A grow room is one connected system, not a list of gadgets. Light, heat, humidity, air and water all pull on each other. Learn to see the whole machine, so a fix in one place doesn't break another.",
+   "title": "Cannabis grow room: a systems guide",
+   "summary": "A grow room is one connected system, not a list of gadgets. Light, heat, humidity, air and water all pull on each other. This paper shows you those connections so you can set systems up in the right order and pre-empt problems before they chain.",
    "track": "Environment & climate",
    "read_time": "~18 min read",
    "diagrams": "4 diagrams",
@@ -102,7 +102,7 @@
   {
    "slug": "airflow-design",
    "title": "Airflow design for indoor cultivation",
-   "summary": "Every leaf sits inside a film of still air that limits how fast it can breathe. Airflow strips that film away. Done right it feeds the plant and dries the room. Done wrong it scorches leaves or breeds rot.",
+   "summary": "Every leaf sits inside a film of still air that slows gas exchange. Airflow strips that film away. By the end you will know how much air to move, which fans deliver it, and how to place them so every leaf gets a gentle breeze.",
    "track": "Environment & climate",
    "read_time": "~26 min read",
    "diagrams": "8 diagrams · 8 photos",
@@ -120,7 +120,7 @@
   {
    "slug": "co2-enrichment",
    "title": "CO2 enrichment: feeding the plant carbon, safely",
-   "summary": "Carbon dioxide is the raw material a plant turns into sugar. Under strong light an indoor crop can use far more CO2 than the air provides, so adding it can lift yield by around a third. But CO2 only helps in the light, it is easy to waste, and at the wrong concentration it will erase the plants' returns or kill the people in the room. This is how it works, how much to add and when, and how to do it without hurting anyone.",
+   "summary": "Carbon dioxide is the raw material a plant turns into sugar. Under strong light an indoor crop can use far more CO2 than the air provides, and adding it can lift dry yield by around a third. CO2 only works during the light period, it is easy to waste in a vented room, and at the wrong concentration it can kill the people in the room. This paper explains the mechanism, the target band, how to seal a room so the CO2 stays in, and what safety limits and alarms to fit before anyone enters.",
    "track": "Environment & climate",
    "read_time": "~30 min read",
    "diagrams": "7 diagrams",
@@ -138,7 +138,7 @@
   {
    "slug": "scaling-high-light",
    "title": "Scaling light to the limiting factor",
-   "summary": "Light sets the demand. CO₂, water, airflow, feed and heat-removal have to supply it. Your yield ceiling is whichever one tops out first, so size every system to the light, find the wall, and dial the light down to meet it.",
+   "summary": "Light sets the demand; CO₂, water, airflow, feed, and heat-removal have to supply it. This paper shows you how to calculate which supply system runs out first, how to read that number as your real light ceiling, and what to upgrade if you want to go higher.",
    "track": "Environment & climate",
    "read_time": "~16 min read",
    "diagrams": "1 diagram · 5 tables",
@@ -174,7 +174,7 @@
   {
    "slug": "auckland-ipm-blueprint",
    "title": "Integrated pest management blueprint for indoor medicinal cannabis in Auckland",
-   "summary": "An exclusion-first, residue-aware operating system for clean stock, pest and disease identification, lawful control selection, crop-cycle monitoring, CAPA, batch hold and release.",
+   "summary": "A working system for keeping pests and diseases out of an indoor medicinal-cannabis facility: clean starting material, confident identification, control choices that are lawful in New Zealand, monitoring through the crop cycle, and a written trail from the first finding through corrective action to batch hold or release.",
    "track": "Plant health",
    "read_time": "~55 min read",
    "diagrams": "",
@@ -212,7 +212,7 @@
   {
    "slug": "lighting-fundamentals",
    "title": "Lighting: spectrum, PPFD and DLI",
-   "summary": "A from-zero guide to how grow light actually works: what to measure, what to aim for at each stage, and how to avoid cooking your plants.",
+   "summary": "A from-zero guide to how grow light works: what the key numbers mean, what to aim for at each stage, and how to spot problems before they cost you a crop.",
    "track": "Environment & climate",
    "read_time": "~14 min read",
    "diagrams": "9 diagrams",
@@ -247,8 +247,8 @@
   },
   {
    "slug": "water-quality",
-   "title": "Source water, RO and alkalinity",
-   "summary": "What is in your water before nutrients ever go in: tap vs RO vs well, starting EC, alkalinity and carbonates, chlorine and chloramine, hardness, and when reverse osmosis is actually worth the money.",
+   "title": "Testing and treating source water for cannabis",
+   "summary": "This paper explains what is dissolved in tap, well, and rainwater before you add any nutrients — EC, alkalinity, carbonates, chlorine, chloramine, and hardness. By the end you will know how to read a water report, decide whether reverse osmosis is worth the cost, and account for your source water in the nutrient recipe.",
    "track": "Water, substrate & feed",
    "read_time": "~14 min read",
    "diagrams": "",
@@ -266,7 +266,7 @@
   {
    "slug": "ph-management",
    "title": "pH: what it is and how to hold it",
-   "summary": "A beginner's guide to root-zone pH: why one number decides which nutrients your plant can actually eat, what to aim for in coco, hydro and soil, and how to measure, adjust and hold it without chasing ghosts.",
+   "summary": "Root-zone pH controls which nutrients your plant can absorb. This paper explains how the 0-14 scale works, why each substrate has a different target range, and how to measure, adjust, and hold pH steadily feed by feed.",
    "track": "Water, substrate & feed",
    "read_time": "~14 min read",
    "diagrams": "8 diagrams",
@@ -284,7 +284,7 @@
   {
    "slug": "nutrient-deficiencies",
    "title": "Nutrient deficiency and toxicity diagnosis",
-   "summary": "A beginner's visual guide to reading cannabis leaf symptoms: mobile vs immobile nutrients, deficiency vs toxicity vs pH lockout, and how to confirm and fix the real problem before you reach for fertiliser.",
+   "summary": "This paper teaches you to read cannabis leaf symptoms by position, colour and shape. You will be able to distinguish mobile from immobile nutrient deficiencies, separate a true deficiency from a toxicity or a pH lockout, and confirm a diagnosis with a pH and EC meter before changing your feed.",
    "track": "Water, substrate & feed",
    "read_time": "~14 min read",
    "diagrams": "",
@@ -302,7 +302,7 @@
   {
    "slug": "flowering-stages",
    "title": "The flower cycle, week by week",
-   "summary": "A beginner's guide to the cannabis flowering stage: the flip to 12/12, the stretch, bud set, bulking, ripening, and reading the plant to know exactly when to cut.",
+   "summary": "This paper maps the eight to ten weeks from light flip to harvest. You will be able to read the plant stage by stage, set the right climate and feed for each phase, and use trichomes rather than the calendar to decide when to cut.",
    "track": "Flowering",
    "read_time": "~12 min read",
    "diagrams": "9 diagrams",
@@ -338,8 +338,8 @@
   },
   {
    "slug": "root-zone-teros12",
-   "title": "Root-zone state estimation with the TEROS-12 sensor",
-   "summary": "A TEROS-12 capacitance probe measures three things in your pot. This guide explains what each number means, why the raw reading is not the truth, and how to turn it into safe irrigation decisions.",
+   "title": "What your TEROS-12 measures and how to steer irrigation on it",
+   "summary": "A TEROS-12 probe buried in your growing media reports three numbers: how much water is stored, how salty that water is, and the temperature. This guide explains what each number means, why the raw reading is not yet the truth, and how to convert it into irrigation decisions you can stake a crop on.",
    "track": "Precision & automation",
    "read_time": "~18 min read",
    "diagrams": "12 diagrams",
@@ -357,7 +357,7 @@
   {
    "slug": "smart-watering-vrwe",
    "title": "The smart watering brain (VRWE), in plain English",
-   "summary": "A grow room can water plants on its own by combining several sensor signals instead of trusting one moisture probe that might be lying.",
+   "summary": "This paper explains how VRWE combines multiple signals to estimate root-zone water more reliably than a single probe. You will understand why the brain sometimes waits instead of watering, and be able to read its confidence output and know whether to trust it.",
    "track": "Precision & automation",
    "read_time": "~9 min read",
    "diagrams": "9 diagrams",
@@ -374,8 +374,8 @@
   },
   {
    "slug": "signal-and-noise",
-   "title": "Signal and noise: precision cultivation",
-   "summary": "Tell a real change in your plants and root zone apart from random sensor wobble, and act only when it matters.",
+   "title": "Tell real plant changes from sensor noise",
+   "summary": "This paper teaches you to separate the real story in your sensor data from random jitter, so you know when to act and, just as important, when to walk away.",
    "track": "Precision & automation",
    "read_time": "~14 min read",
    "diagrams": "9 diagrams",
@@ -392,7 +392,7 @@
   },
   {
    "slug": "closed-loop",
-   "title": "The closed loop: levers, signal and plant state",
+   "title": "Closed-loop grow room: levers, signals and plant state",
    "summary": "Run a grow room as one self-correcting system. This beginner's guide covers the controls you pull, how to read what the plants are actually doing, and how to feed that back without the room chasing its own tail.",
    "track": "Precision & automation",
    "read_time": "~17 min read",
@@ -410,8 +410,8 @@
   },
   {
    "slug": "plant-state-dashboard",
-   "title": "From telemetry to intelligence: the plant-state dashboard",
-   "summary": "A grow-room screen should show what the plant is doing, not a wall of raw sensor numbers. Here is how to design one that does.",
+   "title": "Designing a plant-state dashboard for your grow room",
+   "summary": "A grow-room screen should show what the plant is doing, not a wall of raw sensor numbers. This paper shows how to design one that catches drift days before it becomes damage, names the cause, and prescribes the next action.",
    "track": "Precision & automation",
    "read_time": "~13 min read",
    "diagrams": "11 diagrams",
@@ -429,7 +429,7 @@
   {
    "slug": "f2-crop-steering",
    "title": "F2 crop steering: the daily operating manual",
-   "summary": "Run an autonomous crop-steering irrigation controller day to day. This is the plain-language starter guide: the P0–P3 cycle, moisture and salt targets, the controls you actually touch, the safety fail-safes, and what to do when something looks wrong.",
+   "summary": "By the end of this paper you can set up, calibrate, and run an autonomous irrigation controller for a veg grow room. It covers the P0–P3 daily cycle, moisture and salt targets, the controls you touch each day, the safety fail-safes built into the system, and how to diagnose what is wrong when something misbehaves.",
    "track": "Precision & automation",
    "read_time": "~18 min read",
    "diagrams": "12 diagrams",
@@ -464,7 +464,7 @@
   },
   {
    "slug": "cloning",
-   "title": "Cloning: cuttings that root every time",
+   "title": "How to root cannabis cuttings",
    "summary": "Take cannabis cuttings that root reliably. This walks a beginner from picking a mother plant to a transplant-ready clone in 14 days.",
    "track": "Propagation",
    "read_time": "~12 min read",
@@ -482,8 +482,8 @@
   },
   {
    "slug": "nutrient-mixing-athena",
-   "title": "Mixing an Athena Pro Line stock tank (metric)",
-   "summary": "Dissolve a full 25 lb bag of Athena Pro Line into a 50 L stock tank to make a concentrate you dose into your feed later. Covers the chemistry of getting ~227 g/L of salt fully into solution, and why each part needs its own tank.",
+   "title": "Dissolve Athena Pro Line powder into a 50 L stock tank",
+   "summary": "Dissolve a full 11.34 kg (25 lb) bag of Athena Pro Line into a 50 L tank to make a stock concentrate you dose into feed water. Covers why temperature and agitation matter at 227 g/L, why Part A and Part B need separate tanks, and how to calculate the millilitres-per-litre dose for your feed.",
    "track": "Water, substrate & feed",
    "read_time": "~11 min read",
    "diagrams": "6 diagrams",
@@ -500,8 +500,8 @@
   },
   {
    "slug": "light-acclimation",
-   "title": "Light acclimation: raise PPFD in steps so plants don't bleach",
-   "summary": "Light is a curve, not a switch. Raise PPFD in steps the plant can keep up with, and match CO2 to set how high you can go. Updated with the latest research (2024-2026) on high-light quality gains, far-red, and UV.",
+   "title": "Raise PPFD in steps so plants don't bleach",
+   "summary": "This paper teaches how plants adapt to rising light intensity, how to build a week-by-week PPFD schedule, how CO2 sets the ceiling you can safely reach, and how to read the early warning signs when things go wrong. Updated with the latest research (2024-2026) on high-light quality gains, far-red, and UV.",
    "track": "Vegetative growth",
    "read_time": "~11 min read",
    "diagrams": "10 diagrams",
@@ -519,7 +519,7 @@
   {
    "slug": "defoliation-training",
    "title": "Defoliation and plant training for maximum yield",
-   "summary": "A beginner's guide to topping, low-stress training, trellising, lollipopping and defoliation: what each one does, when to do it, and how to avoid overdoing it.",
+   "summary": "Topping, low-stress training, trellising, lollipopping and defoliation each reshape the plant in a specific way. This paper explains what each technique does, when in the grow cycle to use it, and how to tell when you have gone too far.",
    "track": "Vegetative growth",
    "read_time": "~12 min read",
    "diagrams": "12 diagrams",
@@ -555,7 +555,7 @@
   {
    "slug": "harvest-dry-trim-cure",
    "title": "Harvest, dry, trim and cure",
-   "summary": "A beginner's guide to the full post-harvest process: when to cut, how to dry, how to trim, and how to cure flower so it is safe from mould and keeps its smell, weight and quality.",
+   "summary": "This paper covers every post-harvest step from cut plant to sealed, finished flower: when to harvest, how to dry without losing terpenes or inviting mould, how to trim without damaging trichomes, and how to cure to a stable water activity. After reading, you will have target numbers at each step and a method you can repeat.",
    "track": "Harvest, dry, trim & cure",
    "read_time": "~14 min read",
    "diagrams": "",
@@ -572,8 +572,8 @@
   },
   {
    "slug": "gmp-hash-lab",
-   "title": "GMP hash manufacturing: facility flow and quality control",
-   "summary": "How to design a clean, compliant hash and extract factory from scratch: what GMP means, how rooms and people and product move, and how a batch earns its way to market.",
+   "title": "GMP hash lab: zones, flows, and batch release",
+   "summary": "This paper covers GMP requirements for a hash facility: how to zone rooms by cleanliness grade, how product and people move through those zones, and what it takes to pass seven test families and three release gates to reach a signed batch Certificate of Analysis.",
    "track": "Harvest, dry, trim & cure",
    "read_time": "~18 min read",
    "diagrams": "13 diagrams",
@@ -607,8 +607,8 @@
   },
   {
    "slug": "rockwool-crop-steering",
-   "title": "Crop steering in rockwool: drybacks, saturation and the breaking point",
-   "summary": "Rockwool is the most controllable substrate there is, and the least forgiving. This is the guide to what water content really means, how to read and calculate dryback, how dry a block can get before it is gone, and how to hold the right saturation from clone to chop without ever hand-flushing or topping up a cube.",
+   "title": "Crop steering in rockwool: water content, drybacks, and the recovery floor",
+   "summary": "Rockwool holds no nutrients of its own and has almost no buffer — what you feed is what the plant gets, within the same hour. That makes it the most precise substrate to steer and the fastest to show a mistake. This guide explains what a water-content percentage means in practice, how to calculate and read a dryback, the water level below which a block will not rewet from the dripper, and how to keep the slab in the right zone from clone to harvest without ever picking up a hose.",
    "track": "Flowering",
    "read_time": "~18 min read",
    "diagrams": "7 diagrams",
@@ -626,8 +626,8 @@
   },
   {
    "slug": "daily-checks",
-   "title": "Daily checks: the self-completing facility round",
-   "summary": "The best daily check is the one that mostly fills itself in. Let Home Assistant confirm everything it can measure, leave the human only the physical walk-around, make the rest one tap, and the check gets done every day, honestly, with an audit trail that holds up.",
+   "title": "Build a daily facility check that mostly fills itself in",
+   "summary": "This paper shows you how to design a daily facility check where sensors confirm everything measurable automatically and the human round stays short. By the end you will have a working Home Assistant structure, a five-list pause-point schedule, and a system that produces an honest audit trail without extra data entry.",
    "track": "Facility & quality",
    "read_time": "~16 min read",
    "diagrams": "7 diagrams",
@@ -645,7 +645,7 @@
   {
    "slug": "pppe",
    "title": "PPPE: plant and personal protective equipment",
-   "summary": "Coveralls, hairnets, gloves and shoe covers do two jobs at once: they keep the human safe, and they keep the human's particles, microbes and pests off the crop. People are the number-one contamination source in any clean space. This is the full rundown: how bad we are, the bare minimum, the room-by-room kit, and the procedures that actually work.",
+   "summary": "Coveralls, hairnets, gloves, and shoe covers do two jobs at once: they protect the worker from hazards, and they keep the worker's particles, microbes, and pests off the crop. People are the primary contamination source in any clean production space. This paper covers how much contamination a person actually sheds, the minimum PPE for each production area, the room-by-room kit, and the gowning and hand hygiene procedures that stop contamination from crossing the clean/dirty line.",
    "track": "Plant health",
    "read_time": "~17 min read",
    "diagrams": "9 diagrams",
@@ -663,8 +663,8 @@
   },
   {
    "slug": "one-steering-law",
-   "title": "The one steering law: coco, rockwool, soil & water",
-   "summary": "Coco, rockwool, soil and plain water are not four separate skills. They are one way of steering a plant with water, running on four different sponges. Learn the steering once, with pictures and no jargon, and you can grow in any of them, because the sponge only changes the numbers.",
+   "title": "One steering law: coco, rockwool, soil and water",
+   "summary": "Coco, rockwool, soil and plain water share one way of steering a plant with water, running on four different sponges. Learn the steering once, with pictures and no jargon, and you can grow in any of them, because the sponge only changes the numbers.",
    "track": "Flowering",
    "read_time": "~22 min read",
    "diagrams": "31 diagrams",
@@ -684,8 +684,8 @@
   },
   {
    "slug": "under-canopy-lighting",
-   "title": "Under-canopy lighting: photons at the floor",
-   "summary": "Under-canopy (SCL) and inter-canopy (ICL) lighting put photons where the overhead array can't reach. The research is consistent: at equal flux you upgrade grade and uniformity more than gross weight. This covers the light, spectrum, placement, training, and the thermal and airflow bill most guides skip.",
+   "title": "Under-canopy and inter-canopy lighting for indoor cannabis",
+   "summary": "Under-canopy (SCL) and inter-canopy (ICL) lighting deliver photons to the lower canopy where overhead fixtures cannot reach. Controlled trials show that at equal total light output, depth-placed light upgrades bud grade and uniformity more reliably than it raises total yield. This paper covers light dose, spectrum, placement, plant training, and the thermal and airflow costs most guides omit. After reading it you can design an SCL or ICL retrofit and size its climate consequences.",
    "track": "Environment & climate",
    "read_time": "~16 min read",
    "diagrams": "2 diagrams",
@@ -704,8 +704,8 @@
   },
   {
    "slug": "plant-biosignal-sensor",
-   "title": "DIY plant-biosignal sensor: read a plant's electrical signals",
-   "summary": "Commercial plant-biosignal sensors clip electrodes to a plant, amplify the tiny voltages it makes, and log the drift for education, not as a validated water/nutrient/stress meter. You can build the acquisition side from an M5Stack ESP32, an ECG front-end chip and ESPHome for about NZ$110, and stream it straight into Home Assistant.",
+   "title": "Build a plant-biosignal sensor with M5Stack and ESPHome",
+   "summary": "Plants produce tiny electrical signals — microvolts to a few millivolts — that shift when light turns on, water runs low, or the plant is stressed. This guide walks you through building the sensor that captures those signals: an M5Stack ESP32, an ECG front-end chip, and ESPHome for about NZ$110. You will log the raw trace into Home Assistant and learn to read the daily rhythm and stress events — not as a validated water or nutrient meter, but as a real-time window into plant electrical activity.",
    "track": "Precision & automation",
    "read_time": "~14 min read",
    "diagrams": "",
@@ -741,8 +741,8 @@
   },
   {
    "slug": "hash-rosin-pressing",
-   "title": "Hash rosin, pressed: a solventless systems guide",
-   "summary": "Rosin is mechanical, not chemical: heat, pressure, time and a micron screen acting on a material whose quality ceiling was already fixed upstream, at harvest, in the wash, in the dry. This guide maps the whole chain, trichome to dab.",
+   "title": "Hash rosin: heat, pressure, and a micron screen",
+   "summary": "Warm the resin, push it through a fine mesh bag, and collect what runs out — that is rosin, made with no solvents. Quality is fixed before the press: at harvest, in the wash, in the dry. This guide maps the whole chain from trichome to finished concentrate.",
    "track": "Harvest, dry, trim & cure",
    "read_time": "~22 min read",
    "diagrams": "8 diagrams",
@@ -758,8 +758,8 @@
   },
   {
    "slug": "ripening-harvest-timing",
-   "title": "Ripening, flush and the harvest call",
-   "summary": "The last two weeks and the call to chop: how buds actually ripen, how to read trichomes with a loupe properly, harvest windows by product goal, what the evidence really says about flushing, and how to keep botrytis from eating the reward while you wait.",
+   "title": "Ripening, flush, and harvest timing",
+   "summary": "By the end of this paper you will know how cannabis buds ripen in the final two weeks, how to read trichomes accurately with a loupe, which harvest window matches your product goal, what the evidence actually shows about flushing, and how to keep botrytis from destroying a crop you spent eighteen weeks building.",
    "track": "Flowering",
    "read_time": "~17 min read",
    "diagrams": "10 diagrams",
@@ -777,7 +777,7 @@
   {
    "slug": "transplanting",
    "title": "Transplanting: potting up without the stall",
-   "summary": "Every transplant is a controlled injury: done on time, into a prepared home, the plant never notices; done late or rough, it stalls for a week. When to up-pot, the container ladder, the mechanics, media-to-media moves, the first irrigation, and transplant shock from cause to recovery.",
+   "summary": "Every transplant is a controlled injury: done on time, into a prepared home, the plant never notices; done late or rough, it stalls for a week. This paper covers when to move, what container to use, the physical procedure, cross-media transitions, the first irrigation, and how to read and prevent transplant shock.",
    "track": "Propagation",
    "read_time": "~17 min read",
    "diagrams": "9 diagrams",
@@ -794,7 +794,7 @@
   {
    "slug": "veg-management",
    "title": "Vegetative management: build the frame, then flip",
-   "summary": "Veg is not the waiting room before the real grow. It is where plant count, pot size and canopy plan get converted into a number of days, and where almost every week-3-of-flower problem is either prevented or booked in.",
+   "summary": "This paper shows you how to calculate the right veg length for your room — from plant count, pot size and canopy area — and explains why almost every week-3 flower problem is either prevented or locked in during veg. By the end you will have the decision chain to set a flip day from a spec, not a guess.",
    "track": "Vegetative growth",
    "read_time": "~14 min read",
    "diagrams": "11 diagrams",
@@ -810,8 +810,8 @@
   },
   {
    "slug": "mother-plants",
-   "title": "Mother plants: stock management that never runs dry",
-   "summary": "How to keep cannabis mother plants healthy for the long haul, room setup, feeding, pruning architecture, viroid defence, testing rotation and succession. So every batch starts from a plant you can actually trust.",
+   "title": "Mother plants: environment, feeding, pruning and pathogen defence",
+   "summary": "This paper covers the environment, feeding schedule, pruning architecture, viroid defence, testing rotation and succession planning needed to run a cannabis mother-plant bank. After reading it you will be able to set up a mother room, design a cutting schedule, and defend your stock against hop latent viroid.",
    "track": "Propagation",
    "read_time": "~20 min read",
    "diagrams": "13 diagrams",
@@ -845,8 +845,8 @@
   },
   {
    "slug": "temp-humidity-vpd",
-   "title": "Temperature, humidity and VPD: the air the plant feels",
-   "summary": "VPD is the one climate number the plant actually feels. What it is, the equation in a form you can use, why leaf temperature (not air) sets the real number, stage bands you can defend, the night-time dew-point discipline that keeps mould out, and how to measure it all without lying to yourself.",
+   "title": "Temperature, humidity and VPD: stage targets, measurement and condensation control",
+   "summary": "VPD is the climate number that captures how hard the air pulls water from leaves. This paper covers what VPD is and how to calculate it, why leaf temperature sets the real deficit, stage-by-stage targets you can defend, the night dew-point discipline that keeps mould out, and how to place and read sensors accurately.",
    "track": "Environment & climate",
    "read_time": "~19 min read",
    "diagrams": "12 diagrams",
@@ -881,7 +881,7 @@
   {
    "slug": "unit-economics",
    "title": "Yield per watt and the cost of a gram",
-   "summary": "The three yield denominators (g/m² of canopy, g/W of light, g/kWh all-in) what each is actually for, what each hides, and a worked cost stack that turns a fictional 100 m² room into a cost per gram you can argue with. Every number cited or derived in front of you.",
+   "summary": "The three yield denominators (g/m² of canopy, g/W of light, g/kWh all-in) what each is actually for, what each hides, and a worked cost stack that turns a fictional 100 m² (1,076 ft²) room into a cost per gram you can argue with. Every number cited or derived in front of you.",
    "track": "Facility & quality",
    "read_time": "~22 min read",
    "diagrams": "11 diagrams",
@@ -899,7 +899,7 @@
   {
    "slug": "compliance-track-trace",
    "title": "Compliance, licensing and track-and-trace",
-   "summary": "A licensed grow is a paperwork machine with a garden attached. This guide maps the spine: what a licence actually is, how batches and lots connect every gram to its history, how seed-to-sale tracking works, and how to keep records an auditor believes.",
+   "summary": "A licensed grow is a paperwork machine with a garden attached. After reading this, you will be able to read your own licence critically, track a batch from mother plant to packaged lot, run an inventory reconciliation and explain any variance, write records that hold up under audit, and log a deviation without turning it into a crisis.",
    "track": "Facility & quality",
    "read_time": "~24 min read",
    "diagrams": "9 diagrams",
@@ -916,8 +916,8 @@
   },
   {
    "slug": "hvac-dehumidification",
-   "title": "HVAC and dehumidification: the machinery of climate",
-   "summary": "Every watt you put into a grow room comes back out as heat, and nearly every litre you irrigate comes back out as vapour. The climate plant is the return path for both. This is how to size it, choose it, run it, and survive the night it fails.",
+   "title": "HVAC and dehumidification for grow rooms",
+   "summary": "Every watt put into a grow room comes back out as heat, and nearly every litre irrigated comes back out as vapour. This paper shows you how to calculate both loads honestly, choose and size the right equipment, manage the humidity spike when the lights go off, and plan for the night something fails.",
    "track": "Environment & climate",
    "read_time": "~22 min read",
    "diagrams": "11 diagrams",
@@ -934,8 +934,8 @@
   },
   {
    "slug": "cannabinoids-terpenes",
-   "title": "Cannabinoids and terpenes: the chemistry that matters",
-   "summary": "Two families of molecules carry all the value in this industry. And both are built in the same microscopic gland, as acids, on one assembly line. This is the grower's field guide to that chemistry: where it is made, what each compound is and is not, how it degrades, and what you actually control.",
+   "title": "Cannabinoids and Terpenes",
+   "summary": "Two compound families—cannabinoids and terpenes—are made in the same microscopic gland, as acids, on one shared pathway. This paper covers where each is made, what each compound is and is not, how both decay after harvest, and which grow decisions actually move the numbers. After reading, you will be able to read any COA intelligently and know which levers are real and which are vendor claims.",
    "track": "Know the plant",
    "read_time": "~24 min read",
    "diagrams": "10 diagrams",
@@ -953,7 +953,7 @@
   {
    "slug": "energy-sustainability",
    "title": "Energy, utilities and sustainability",
-   "summary": "Where the kilowatt-hours actually go in an indoor grow (lighting, HVAC, dehumidification) and the cited playbook for spending fewer of them: efficacy, the double dividend, demand charges, water reuse, and the retrofit order that pays.",
+   "summary": "Map where your electricity goes across lighting, HVAC, and dehumidification, then work through the cited retrofit order — efficacy, the double dividend, demand charges, water reuse — so you can identify which cuts pay fastest in your room and measure whether they did.",
    "track": "Facility & quality",
    "read_time": "~18 min read",
    "diagrams": "12 diagrams",
@@ -971,7 +971,7 @@
   {
    "slug": "plant-biology",
    "title": "Cannabis plant biology and the life cycle",
-   "summary": "What kind of plant cannabis actually is, every part of it named, and the machinery underneath: the life cycle stage by stage, how the night triggers flowering, sex and hermaphroditism, photosynthesis, roots and hormones. The biology every other paper on this site leans on.",
+   "summary": "What kind of plant cannabis actually is, every part named, and the mechanisms underneath. The life cycle stage by stage, how night length triggers flowering, sex and hermaphroditism, photosynthesis, roots and hormones. After this paper you can name the structures you are managing, explain how the dark period works, and follow the mechanism references in every other paper on this site.",
    "track": "Know the plant",
    "read_time": "~26 min read",
    "diagrams": "12 diagrams",
@@ -989,7 +989,7 @@
   {
    "slug": "deep-water-culture",
    "title": "Deep water culture, from first principles",
-   "summary": "Roots hanging in nutrient water have no substrate to hide behind. This paper builds the system from the physics up: how much oxygen the water can actually hold, why more bubbling makes iron uptake worse, what an ORP probe is really measuring, and how a commercial RDWC programme is put together.",
+   "summary": "After reading this paper you will understand why solution temperature is the master control for every other parameter in water culture, how to set aeration rate so it adds oxygen without stripping the chemical boundary layer roots build for themselves, and what an ORP probe is actually measuring — and what it is not. The worked example is cannabis in an RDWC system, but the dissolved-oxygen physics and the iron chemistry apply to any crop.",
    "track": "Water, substrate & feed",
    "read_time": "~38 min read",
    "diagrams": "17 diagrams · 10 photos",

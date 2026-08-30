@@ -9,9 +9,11 @@ _FIGS = json.load(open(os.path.join(os.path.dirname(__file__), "figs_plant_biolo
 SLUG = "plant-biology"
 TITLE = "Cannabis plant biology and the life cycle"
 EYEBROW = "Reference · Biology"
-SUB = ("What kind of plant cannabis actually is, every part of it named, and the machinery underneath: "
-       "the life cycle stage by stage, how the night triggers flowering, sex and hermaphroditism, "
-       "photosynthesis, roots and hormones. The biology every other paper on this site leans on.")
+SUB = ("What kind of plant cannabis actually is, every part named, and the mechanisms underneath. "
+       "The life cycle stage by stage, how night length triggers flowering, sex and hermaphroditism, "
+       "photosynthesis, roots and hormones. After this paper you can name the structures you are "
+       "managing, explain how the dark period works, and follow the mechanism references in every "
+       "other paper on this site.")
 META = [("leaf", "Reference"), ("image", "12 diagrams"),
         ("quote", "Evidence-linked · 16 sources"), ("clock", "~26 min read")]
 RELATED = ["flowering-stages", "seeds-germination", "lighting-fundamentals"]
@@ -191,8 +193,11 @@ SECTIONS.append({"id": "anatomy-tour", "kicker": "04 · Anatomy I", "title": "Pl
       " Leaf arrangement is another tell: young plants place leaves in opposite pairs, and as the "
       "plant approaches flowering it shifts to alternate (staggered) placement, a visible sign the "
       "shoot has switched programs." + _c("spitzer-rimon-2019-florogenesis")),
-    p("The stem is the plumbing between the two halves of the plant: xylem hauls water and minerals "
-      "up from the roots (driven by transpiration from the leaves), and phloem moves sugar from the "
+    p("Leaves lose water constantly through tiny pores on their surface. That invisible loss creates "
+      "a pull all the way down to the roots — the same effect as a wet sponge releasing moisture "
+      "from one face while drawing it in from the other. That upward pulling force is called "
+      "transpiration. The stem is the plumbing that connects the two halves: xylem hauls water and "
+      "minerals up from the roots via that transpiration pull, and phloem moves sugar from the "
       "leaves to wherever it is being spent. Keep that two-pipe picture. It is the whole basis of "
       "the photosynthesis and source-sink story in section 12."),
     callout("note", "Seed plant vs clone, underground",
@@ -290,7 +295,7 @@ SECTIONS.append({"id": "trichomes", "kicker": "06 · Anatomy III", "title": "Tri
   ]})
 
 # ------------------------------------------------------------------ 07 life cycle
-SECTIONS.append({"id": "life-cycle", "kicker": "07 · The arc", "title": "Cannabis life cycle",
+SECTIONS.append({"id": "life-cycle", "kicker": "07 · Stage by stage", "title": "Cannabis life cycle",
   "blocks": [
     p("Cannabis is monocarpic: it flowers once, with everything it has, and then dies. Harvest is "
       "you interrupting its senescence at the profitable moment. The stages below are one "
@@ -338,13 +343,16 @@ SECTIONS.append({"id": "life-cycle", "kicker": "07 · The arc", "title": "Cannab
   ]})
 
 # ------------------------------------------------------------------ 08 photoperiodism
-SECTIONS.append({"id": "photoperiodism", "kicker": "08 · The trigger", "title": "Photoperiodism and flowering",
+SECTIONS.append({"id": "photoperiodism", "kicker": "08 · Flowering trigger", "title": "Photoperiodism and flowering",
   "blocks": [
-    p("How does a plant with no eyes measure the seasons? With a light-switchable pigment called "
-      "phytochrome. It exists in two interconvertible forms: Pr (inactive) flips to Pfr (active) "
-      "the instant red light (~660 nm) hits it, and Pfr flips back under far-red light (~730 nm), "
-      "or slowly, over hours, in darkness. Daylight is rich in red, so all day Pfr stays high: a "
-      "chemical flag reading 'the lights are on'." + _c("legris-2019-phytochrome-mechanisms")),
+    p("Cannabis measures the length of each dark period using a light-sensitive pigment. Think of "
+      "it as a slow-draining hourglass: red daylight fills the glass through the day, and darkness "
+      "drains it slowly overnight. Only after many unbroken hours of dark does the glass empty far "
+      "enough to release the flowering signal. That pigment is called phytochrome. It exists in "
+      "two interconvertible forms: Pr (inactive) flips to Pfr (active) the instant red light "
+      "(~660 nm) hits it, and Pfr flips back under far-red light (~730 nm) or slowly, over hours, "
+      "in darkness. Daylight is rich in red, so all day Pfr stays high: a chemical flag reading "
+      "'the lights are on'." + _c("legris-2019-phytochrome-mechanisms")),
     figure(_FIGS["phytochrome-toggle"], 7,
       "The toggle and the timer. Red light builds active Pfr instantly; darkness drains it slowly. "
       "A long unbroken night lets Pfr fall low enough, for long enough, that the flowering program "
@@ -491,15 +499,18 @@ SECTIONS.append({"id": "herms-feminised", "kicker": "11 · When sex bends", "tit
   ]})
 
 # ------------------------------------------------------------------ 12 photosynthesis
-SECTIONS.append({"id": "photosynthesis", "kicker": "12 · The engine", "title": "Photosynthesis: light, CO2 and temperature",
+SECTIONS.append({"id": "photosynthesis", "kicker": "12 · Photosynthesis", "title": "Photosynthesis: light, CO2 and temperature",
   "blocks": [
-    p("Photosynthesis in one breath: chloroplasts in the leaves use light energy to split water and "
-      "bolt CO2 from the air onto sugar molecules. Sugar is the plant's only income, every gram of "
-      "root, leaf and flower is bought with it. Light drives the reaction, CO2 is the raw material, "
-      "and temperature sets how fast the enzymatic machinery can run."),
+    p("Leaves do one thing that the rest of the plant depends on entirely: they turn light and air "
+      "into sugar. The process has a ceiling — more light helps up to a point, just as more heat "
+      "under a kitchen pan only speeds cooking until the chef can't keep up; add CO2 and you raise "
+      "that ceiling. This process is photosynthesis: chloroplasts in the leaves use light energy to "
+      "split water and bolt CO2 from the air onto sugar molecules. Sugar is the plant's only income "
+      "— every gram of root, leaf and flower is bought with it. Light drives the reaction, CO2 is "
+      "the raw material, and temperature sets how fast the enzymatic machinery can run."),
     p("Because all three feed one process, they limit each other. Classic gas-exchange work on "
       "cannabis leaves found photosynthesis climbing with light intensity up to roughly "
-      "1500 µmol/m²/s at around 30 °C, and rising further when CO2 was enriched toward 750 ppm, "
+      "1500 µmol/m²/s at around 30 °C (86 °F), and rising further when CO2 was enriched toward 750 ppm, "
       "raise one input and the next one becomes the ceiling." + _c("chandra-2008-photosynthetic-response") +
       " That is the entire logic of <a href='co2-enrichment.html'>CO2 enrichment</a>: high light "
       "plus enriched CO2 plus a warmer room move together, or not at all. (Leaf-level numbers from "
@@ -510,16 +521,18 @@ SECTIONS.append({"id": "photosynthesis", "kicker": "12 · The engine", "title": 
             [(0, 4), (1, 42), (2, 72), (3, 100), (4, 95)],
             ["0", "500", "1000", "1500", "2000"],
             ylab="relative photosynthesis %",
-            note="Leaf-level response shape near 30 °C at ambient CO2 (PPFD in µmol/m²/s). Past saturation, extra photons buy heat, not sugar.",
+            note="Leaf-level response shape near 30 °C (86 °F) at ambient CO2 (PPFD in µmol/m²/s). Past saturation, extra photons buy heat, not sugar.",
             ymax=110, ymin=0), 11,
       "Diminishing returns are built into the leaf. Each step of light buys less than the last, and "
       "past saturation you are just heating the room, unless CO2 and temperature rise to "
       "match." + _c("chandra-2008-photosynthetic-response")),
     p("Where the sugar goes is the other half of the story. Mature leaves are "
-      "<strong>sources</strong> (net sugar exporters); growing tips, roots and above all flowers "
-      "are <strong>sinks</strong> (net importers). The phloem allocates by demand, and demand has a "
-      "pecking order that changes with life stage: in veg, new leaves and roots win; after the "
-      "flip, the flowers become the dominant sink and everything else queues behind them."),
+      "<strong>sources</strong> (net sugar exporters) and everything else competes for their "
+      "output — think of it as a household where some members earn income and the rest spend it. "
+      "Growing tips, roots and above all flowers are <strong>sinks</strong> (net importers). The "
+      "phloem allocates by demand, and demand has a pecking order that changes with life stage: in "
+      "veg, new leaves and roots win; after the flip, the flowers become the dominant sink and "
+      "everything else queues behind them."),
     figure(L.flow("Source to sink: follow the sugar",
             [("Light + CO2", "leaf chloroplasts fix carbon"),
              ("Sugars made", "in mature source leaves"),
@@ -539,7 +552,7 @@ SECTIONS.append({"id": "photosynthesis", "kicker": "12 · The engine", "title": 
   ]})
 
 # ------------------------------------------------------------------ 13 roots
-SECTIONS.append({"id": "roots", "kicker": "13 · The hidden half", "title": "Root systems",
+SECTIONS.append({"id": "roots", "kicker": "13 · Root zone", "title": "Root systems",
   "blocks": [
     p("Half the organism is underground and invisible, and most beginner disasters happen there "
       "first. The architecture is simple: from seed, a taproot drives down and lateral roots branch "
@@ -572,7 +585,7 @@ SECTIONS.append({"id": "roots", "kicker": "13 · The hidden half", "title": "Roo
   ]})
 
 # ------------------------------------------------------------------ 14 hormones
-SECTIONS.append({"id": "hormones", "kicker": "14 · The levers", "title": "Plant hormones",
+SECTIONS.append({"id": "hormones", "kicker": "14 · Plant hormones", "title": "Plant hormones",
   "blocks": [
     p("Five hormone families explain most of what a cannabis plant does, and most of what growers "
       "do to it. Every training technique is hormone manipulation performed with scissors and "
@@ -675,7 +688,7 @@ SECTIONS.append({"id": "quick-reference", "kicker": "16 · Keep this", "title": 
       ["Source / sink", "Sugar exporter / sugar importer", "The economics behind defoliation and late yellowing"],
       ["Rhizosphere", "The living few millimetres around each root", "Where pH, microbes and uptake actually happen"],
     ], cls="compact", caption="The site's vocabulary in one place. Terms are defined in full in their sections above."),
-    callout("key", "The mental model to keep",
+    callout("key", "Mental model to keep",
       p("A cannabis plant is a sugar factory on a night clock. Veg builds the factory, leaves, "
         "roots, nodes. The long night flips the market, and flowers become the only customer. "
         "Hormones are the levers, trichomes are the product, roots are the half you manage by "

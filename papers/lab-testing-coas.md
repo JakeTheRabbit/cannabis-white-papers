@@ -41,9 +41,9 @@ Here is the single idea that makes every section of this paper make sense: **a C
 
 **ISO/IEC 17025** — The international standard for testing-lab competence. Accreditation to it is the baseline credential worth checking on any COA.
 
-> **KEY — The one big idea**
+> **KEY — One big idea**
 >
-> The certificate is a _photograph of one gram_, taken through one lab's lens. It can be a sharp, honest photograph, that is what good sampling and a good lab buy you, but it is never the landscape. Everything in this paper is about knowing how much landscape your photograph actually shows.
+> The certificate describes one sample — roughly one gram, through one lab's process, on one day. Good sampling and an accredited lab make that description accurate for the sample tested. It is still a description of one sample, not your crop. Everything in this paper is about knowing how faithfully that sample represents your batch.
 
 ## Laboratory testing overview
 
@@ -81,9 +81,9 @@ Each family of tests uses different physics, which is why one lab houses half a 
 
 *The main test families on a full-panel cannabis COA and the instruments behind them.*
 
-> **NOTE — Why turnaround varies**
+> **NOTE — Turnaround time varies by method**
 >
-> Culture-based microbiology is the slow lane, colonies need days to grow. qPCR collapses that to hours, which is one reason labs and regulators have been migrating to it, with trade-offs covered in the microbial section below.
+> Culture-based microbiology is the slow lane: colonies need days to grow. qPCR collapses that to hours, which is one reason labs and regulators have been migrating to it, with trade-offs covered in the microbial section below.
 
 ## How to read a certificate of analysis
 
@@ -106,7 +106,7 @@ Below is a mock certificate from a fictional lab, _Example Analytical Ltd_, laid
 
 ## Total THC: calculation and chemistry
 
-The living plant barely makes any THC. It makes **THCA**, tetrahydrocannabinolic acid, the same molecule wearing a carboxyl group (–COOH). THCA is not intoxicating; heat converts it to THC by **decarboxylation**: the carboxyl group breaks off and leaves as CO₂ gas[^wang2016-decarb]. A lighter, a vape, an oven. That is where most of the THC in your life is actually created.
+The living plant barely makes any THC. It makes **THCA**, tetrahydrocannabinolic acid — THC with an extra chemical group (–COOH) attached that makes it non-intoxicating and about 13% heavier. Think of baking soda releasing bubbles in a hot pan: heat forces a gas out of the molecule and leaves a chemically different compound behind. THCA does exactly that — heat strips the extra group off as CO₂ gas, a reaction called **decarboxylation**[^wang2016-decarb]. A lighter, a vape, an oven. That is where most of the THC in your life is actually created.
 
 > **Diagram.** Mass balance of decarboxylation. THCA (358.5 g/mol) loses CO₂ (44.0 g/mol) and becomes THC (314.5 g/mol). The ratio 314.5 ÷ 358.5 = 0.877 is why a gram of THCA can only ever yield 0.877 g of THC, 12.3% of the acid's mass was never THC to begin with.
 
@@ -116,19 +116,19 @@ That is the whole mystery of the 0.877 factor: **it is a molecular-weight ratio,
 >
 > This is the ‘total potential THC’ convention used by regulators and analytics datasets alike[^zoorob2021-bunching][^jikomes2018-labs]. Read it as a _ceiling_: it assumes every single THCA molecule survives conversion. Real-world heating never achieves that, some THCA and THC are destroyed or lost before they reach anyone.
 
-How fast does the conversion actually run? In controlled kinetics work, THCA in an open reaction vessel fully converted in about 30 minutes at 110 °C, about 9 minutes at 130 °C and about 6 minutes at 145 °C, and, heated in the dark under vacuum, produced no significant CBN (the oxidation by-product)[^wang2016-decarb]. In air, with light and higher temperatures, losses grow, which is exactly why the formula's assumption of perfect conversion makes it a maximum, not a prediction.
+How fast does the conversion actually run? In controlled kinetics work, THCA in an open reaction vessel fully converted in about 30 minutes at 110 °C (230 °F), about 9 minutes at 130 °C (266 °F) and about 6 minutes at 145 °C (293 °F), and, heated in the dark under vacuum, produced no significant CBN (the oxidation by-product)[^wang2016-decarb]. In air, with light and higher temperatures, losses grow, which is exactly why the formula's assumption of perfect conversion makes it a maximum, not a prediction.
 
 > **Diagram.** Decarboxylation kinetics. The acid disappears exponentially with time; hotter is faster but also riskier for THC itself and brutal on terpenes[^wang2016-decarb].
 
 Slow decarboxylation also happens at room temperature, during curing and storage, THCA quietly ticks over to THC, and THC slowly oxidises onward to CBN. This is why an old COA and a fresh one on the same batch can honestly disagree: the material itself moved.
 
-> **NOTE — And the same factor family applies to CBD**
+> **NOTE — CBD uses the same factor family**
 >
 > CBDA → CBD uses its own molecular-weight ratio (also 0.877, since the acids and neutrals differ by the same CO₂ group): total CBD = CBD + 0.877 × CBDA. Any ‘total’ cannabinoid on a COA should be exactly this arithmetic, recompute it when it matters.
 
-## How analytical method affects results
+## HPLC versus GC for potency testing
 
-Two chromatography families dominate potency testing, and they do not see the same molecules. **HPLC** (high-performance liquid chromatography) pushes the extract through a column in liquid at near-room temperature, so THCA and THC arrive at the detector as separate peaks. **GC** (gas chromatography) must vaporise the sample in an injector inlet at roughly 250–300 °C, and at that temperature THCA decarboxylates on the spot. The acid never reaches the detector as itself[^lazarjani2020-methods].
+Two chromatography families dominate potency testing, and they do not see the same molecules. **HPLC** (high-performance liquid chromatography) pushes the extract through a column in liquid at near-room temperature. Different molecules travel through the column at different speeds — like pigments separating on wet paper, where some colours travel further than others — so THCA and THC arrive at the detector as separate, distinct peaks. **GC** (gas chromatography) must vaporise the sample in an injector inlet at roughly 250–300 °C (482–572 °F). At that temperature THCA decarboxylates on the spot, so the acid never reaches the detector as itself[^lazarjani2020-methods].
 
 > **Diagram.** The two analysis paths. HPLC runs cool and reports THCA and THC separately, so total THC is computed with the 0.877 factor. GC destroys the acid in the hot inlet: it reports a single ‘THC’ number that silently includes converted THCA. And the conversion is not even complete[^dussy2005-thca].
 
@@ -136,7 +136,7 @@ The nasty detail is that the in-inlet conversion is _incomplete and variable_. C
 
 |  | HPLC-DAD | GC-FID / GC-MS |
 | --- | --- | --- |
-| Operating temperature | ≈25–40 °C column | ≈250–300 °C inlet, hot column |
+| Operating temperature | ≈25–40 °C (77–104 °F) column | ≈250–300 °C (482–572 °F) inlet, hot column |
 | Sees THCA and THC separately? | Yes, two peaks | No, acid decarboxylates in the inlet |
 | Total THC comes from | arithmetic: THC + 0.877 × THCA | one merged peak (conversion incomplete[^dussy2005-thca]) |
 | Derivatisation needed for acids | No | Yes, or the acids are lost[^lazarjani2020-methods] |
@@ -144,7 +144,7 @@ The nasty detail is that the in-inlet conversion is _incomplete and variable_. C
 
 *The two chromatography families. Neither is wrong. But their numbers are not directly comparable.*
 
-> **WARN — A flower COA with no THCA row is telling you something**
+> **WARN — A flower COA without a THCA row**
 >
 > Either the lab ran GC (fine, but the total is a floor, not an exact number), or the report is hiding detail. Both are reasons to ask for the method reference, which any accredited lab lists on the certificate.
 
@@ -171,7 +171,7 @@ The basis is the real trap. Flower is roughly 10–13% water when properly dried
 
 ## Sampling and result representativeness
 
-Everything the instrument will ever see is decided before the courier arrives. A batch might be 12 kg; the composite sample a few tens of grams; the analytical portion that actually gets extracted, **half a gram to a gram**. That gram speaks for everything. Which is why pharmacopoeial guidance treats sampling procedure as a quality attribute in its own right, not paperwork[^sarma2020-usp].
+Everything the instrument will ever see is decided before the courier arrives. A batch might be 12 kg (26.5 lb); the composite sample a few tens of grams; the analytical portion that actually gets extracted, roughly **0.5–1 g (0.02–0.04 oz)**. That gram speaks for everything. Which is why pharmacopoeial guidance treats sampling procedure as a quality attribute in its own right, not paperwork[^sarma2020-usp].
 
 > **Diagram.** The sampling funnel. Increments pulled from multiple containers and positions are combined into a composite, homogenised, and subsampled down to the analytical portion. Every arrow is a place the number can drift away from the batch truth.
 
@@ -195,15 +195,15 @@ Microbial testing asks two kinds of question. _How much is growing on this?_, an
 
 **CFU (colony-forming unit)** — One viable organism (or clump) that grows into a countable colony on a culture plate. Plate results are CFU per gram.
 
-**qPCR** — Quantitative polymerase chain reaction, counts copies of target DNA instead of growing anything. Fast (hours) and species-specific, but DNA outlives the organism that carried it.
+**qPCR** — Quantitative polymerase chain reaction: the method copies a target DNA sequence millions of times until there are enough to detect and count. Think of it as a photocopier for DNA — it amplifies the target sequence whether the organism that carried it is alive or dead. Fast (hours) and species-specific, but that dead-DNA blindspot matters after kill steps.
 
 | Test | What it counts | Common limit style | Notes |
 | --- | --- | --- | --- |
 | TAMC | aerobic bacteria (CFU/g) | order of 10⁵ CFU/g; varies by jurisdiction[^jameson2022-stateregs] | general bioburden indicator |
 | TYM / TYMC | yeasts + moulds (CFU/g) | order of 10⁴ CFU/g; the contested one | flower hosts a natural surface flora |
 | Bile-tolerant Gram-negatives | gut-associated bacteria | order of 10³ CFU/g | hygiene indicator |
-| Specified pathogens | Salmonella, shiga-toxin E. coli | absent in 1 g | hard pass/fail |
-| Aspergillus (pathogenic spp.) | A. fumigatus, flavus, niger, terreus | not detected in 1 g | usually enrichment + qPCR |
+| Specified pathogens | Salmonella, shiga-toxin E. coli | absent in 1 g (0.035 oz) | hard pass/fail |
+| Aspergillus (pathogenic spp.) | A. fumigatus, flavus, niger, terreus | not detected in 1 g (0.035 oz) | usually enrichment + qPCR |
 
 *The microbial panel. Numeric limits differ across jurisdictions, the shapes of the tests do not[^jameson2022-stateregs].*
 
@@ -219,9 +219,9 @@ Plates and qPCR genuinely disagree, and metagenomic sequencing has shown why: cu
 
 *Why the same batch can pass one microbial method and fail the other. Always read the method line.*
 
-> **DANGER — Why Aspergillus is presence/absence, not a count**
+> **DANGER — Aspergillus limits use presence/absence, not a count**
 >
-> Inhaled _Aspergillus_ can cause invasive aspergillosis in immunocompromised people, exactly the population medicinal cannabis serves. A count-based limit makes no sense for an organism where the acceptable inhaled dose for a transplant patient is effectively zero; hence ‘not detected in 1 g’.
+> Inhaled _Aspergillus_ can cause invasive aspergillosis in immunocompromised people, exactly the population medicinal cannabis serves. A count-based limit makes no sense for an organism where the acceptable inhaled dose for a transplant patient is effectively zero; hence the specification of ‘not detected in 1 g (0.035 oz)’.
 
 ## Heavy-metal testing by ICP-MS
 
@@ -272,7 +272,7 @@ Why does a _solventless_ hash or rosin still carry a solvent test? Three honest 
 
 ## Water activity and moisture content
 
-Two water numbers appear on flower COAs and they answer different questions. **Moisture content** (%) is _how much_ water is in the sample, mass of water over total mass. **Water activity** (aw, scale 0–1) is _how available_ that water is to microbes, the equilibrium relative humidity the sample generates in a sealed space. Mould does not care how much water you have; it cares whether it can get at it. That makes aw the microbially meaningful number, and it is why pharmacopoeial thinking on stored cannabis centres on a water-activity specification of ≤0.65[^sarma2020-usp].
+Two water numbers appear on flower COAs and they answer different questions. **Moisture content** (%) is _how much_ water is in the sample — mass of water divided by total mass. **Water activity** (aw, scale 0–1) is _how freely available_ that water is to microbes. Think of a sponge held tightly in a fist versus one sitting in a bowl: both can hold the same amount of water by weight, but the fist-held sponge has most of its water bound and hard to release. Water activity measures that availability — formally, the equilibrium relative humidity the sample generates in a sealed space. Mould does not care how much water you have; it cares whether it can get at it. That makes aw the microbially meaningful number, and it is why pharmacopoeial thinking on stored cannabis centres on a water-activity specification of ≤0.65[^sarma2020-usp].
 
 > **Diagram.** The water-activity scale for stored flower. The 0.65 upper bound is the line most specifications draw[^sarma2020-usp]; the lower bound is about product quality, not safety.
 
@@ -354,9 +354,9 @@ Always 2–3 points above everyone else in town. That consistency is a business 
 
 Reissued certificates happen; reissues that only ever move THC upward with no explanation are a pattern worth walking away from.
 
-> **KEY — The mental model to keep**
+> **KEY — One mental model to keep**
 >
-> One certificate = one photograph of one gram, through one lab's lens, on one day. Photographs are useful. Just never confuse a photograph with the landscape, and be suspicious of anyone whose photographs are always sunnier than everyone else's.
+> One certificate = one measurement: one sample, one lab, one day. The measurement is useful within those limits. Be suspicious of any lab whose numbers are consistently the highest in town — that pattern is a business model, not chemistry.
 
 ## Testing for release in NZ and Australia
 

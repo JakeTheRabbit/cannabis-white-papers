@@ -2,7 +2,7 @@
 slug: "plant-biology"
 title: "Cannabis plant biology and the life cycle"
 eyebrow: "Reference · Biology"
-summary: "What kind of plant cannabis actually is, every part of it named, and the machinery underneath: the life cycle stage by stage, how the night triggers flowering, sex and hermaphroditism, photosynthesis, roots and hormones. The biology every other paper on this site leans on."
+summary: "What kind of plant cannabis actually is, every part named, and the mechanisms underneath. The life cycle stage by stage, how night length triggers flowering, sex and hermaphroditism, photosynthesis, roots and hormones. After this paper you can name the structures you are managing, explain how the dark period works, and follow the mechanism references in every other paper on this site."
 track: "Know the plant"
 read_time: "~26 min read"
 diagrams: "12 diagrams"
@@ -21,7 +21,7 @@ refs: [{"id": "small-2015-cannabis-taxonomy", "n": 1, "cite": "Small, E. (2015).
 
 _Reference · Biology · ~26 min read_
 
-> What kind of plant cannabis actually is, every part of it named, and the machinery underneath: the life cycle stage by stage, how the night triggers flowering, sex and hermaphroditism, photosynthesis, roots and hormones. The biology every other paper on this site leans on.
+> What kind of plant cannabis actually is, every part named, and the mechanisms underneath. The life cycle stage by stage, how night length triggers flowering, sex and hermaphroditism, photosynthesis, roots and hormones. After this paper you can name the structures you are managing, explain how the dark period works, and follow the mechanism references in every other paper on this site.
 
 ## Purpose and scope
 
@@ -108,7 +108,7 @@ The meristems are the plant's growth budget. The apical meristem normally domina
 
 Leaves keep score of maturity. Seedling leaves start with a single leaflet, then three, then five, up to seven or more per fan leaf as the plant hits its stride.[^hesami-2023-morphological-lifecycle] Leaf arrangement is another tell: young plants place leaves in opposite pairs, and as the plant approaches flowering it shifts to alternate (staggered) placement, a visible sign the shoot has switched programs.[^spitzer-rimon-2019-florogenesis]
 
-The stem is the plumbing between the two halves of the plant: xylem hauls water and minerals up from the roots (driven by transpiration from the leaves), and phloem moves sugar from the leaves to wherever it is being spent. Keep that two-pipe picture. It is the whole basis of the photosynthesis and source-sink story in section 12.
+Leaves lose water constantly through tiny pores on their surface. That invisible loss creates a pull all the way down to the roots — the same effect as a wet sponge releasing moisture from one face while drawing it in from the other. That upward pulling force is called transpiration. The stem is the plumbing that connects the two halves: xylem hauls water and minerals up from the roots via that transpiration pull, and phloem moves sugar from the leaves to wherever it is being spent. Keep that two-pipe picture. It is the whole basis of the photosynthesis and source-sink story in section 12.
 
 > **NOTE — Seed plant vs clone, underground**
 >
@@ -179,7 +179,7 @@ Autoflowering cultivars compress this map and ignore the light schedule entirely
 
 ## Photoperiodism and flowering
 
-How does a plant with no eyes measure the seasons? With a light-switchable pigment called phytochrome. It exists in two interconvertible forms: Pr (inactive) flips to Pfr (active) the instant red light (~660 nm) hits it, and Pfr flips back under far-red light (~730 nm), or slowly, over hours, in darkness. Daylight is rich in red, so all day Pfr stays high: a chemical flag reading 'the lights are on'.[^legris-2019-phytochrome-mechanisms]
+Cannabis measures the length of each dark period using a light-sensitive pigment. Think of it as a slow-draining hourglass: red daylight fills the glass through the day, and darkness drains it slowly overnight. Only after many unbroken hours of dark does the glass empty far enough to release the flowering signal. That pigment is called phytochrome. It exists in two interconvertible forms: Pr (inactive) flips to Pfr (active) the instant red light (~660 nm) hits it, and Pfr flips back under far-red light (~730 nm) or slowly, over hours, in darkness. Daylight is rich in red, so all day Pfr stays high: a chemical flag reading 'the lights are on'.[^legris-2019-phytochrome-mechanisms]
 
 > **Diagram.** The toggle and the timer. Red light builds active Pfr instantly; darkness drains it slowly. A long unbroken night lets Pfr fall low enough, for long enough, that the flowering program runs, and one brief flash of light resets the whole countdown.[^legris-2019-phytochrome-mechanisms]
 
@@ -248,13 +248,13 @@ Commercial feminised seed uses the same loophole deliberately, with chemistry in
 
 ## Photosynthesis: light, CO2 and temperature
 
-Photosynthesis in one breath: chloroplasts in the leaves use light energy to split water and bolt CO2 from the air onto sugar molecules. Sugar is the plant's only income, every gram of root, leaf and flower is bought with it. Light drives the reaction, CO2 is the raw material, and temperature sets how fast the enzymatic machinery can run.
+Leaves do one thing that the rest of the plant depends on entirely: they turn light and air into sugar. The process has a ceiling — more light helps up to a point, just as more heat under a kitchen pan only speeds cooking until the chef can't keep up; add CO2 and you raise that ceiling. This process is photosynthesis: chloroplasts in the leaves use light energy to split water and bolt CO2 from the air onto sugar molecules. Sugar is the plant's only income — every gram of root, leaf and flower is bought with it. Light drives the reaction, CO2 is the raw material, and temperature sets how fast the enzymatic machinery can run.
 
-Because all three feed one process, they limit each other. Classic gas-exchange work on cannabis leaves found photosynthesis climbing with light intensity up to roughly 1500 µmol/m²/s at around 30 °C, and rising further when CO2 was enriched toward 750 ppm, raise one input and the next one becomes the ceiling.[^chandra-2008-photosynthetic-response] That is the entire logic of [CO2 enrichment](co2-enrichment.html): high light plus enriched CO2 plus a warmer room move together, or not at all. (Leaf-level numbers from one variety are a shape, not a setpoint, whole canopies, cultivars and VPD shift the curve, which is the territory of [the grow room as one system](grow-room-systems.html).)
+Because all three feed one process, they limit each other. Classic gas-exchange work on cannabis leaves found photosynthesis climbing with light intensity up to roughly 1500 µmol/m²/s at around 30 °C (86 °F), and rising further when CO2 was enriched toward 750 ppm, raise one input and the next one becomes the ceiling.[^chandra-2008-photosynthetic-response] That is the entire logic of [CO2 enrichment](co2-enrichment.html): high light plus enriched CO2 plus a warmer room move together, or not at all. (Leaf-level numbers from one variety are a shape, not a setpoint, whole canopies, cultivars and VPD shift the curve, which is the territory of [the grow room as one system](grow-room-systems.html).)
 
 > **Diagram.** Diminishing returns are built into the leaf. Each step of light buys less than the last, and past saturation you are just heating the room, unless CO2 and temperature rise to match.[^chandra-2008-photosynthetic-response]
 
-Where the sugar goes is the other half of the story. Mature leaves are **sources** (net sugar exporters); growing tips, roots and above all flowers are **sinks** (net importers). The phloem allocates by demand, and demand has a pecking order that changes with life stage: in veg, new leaves and roots win; after the flip, the flowers become the dominant sink and everything else queues behind them.
+Where the sugar goes is the other half of the story. Mature leaves are **sources** (net sugar exporters) and everything else competes for their output — think of it as a household where some members earn income and the rest spend it. Growing tips, roots and above all flowers are **sinks** (net importers). The phloem allocates by demand, and demand has a pecking order that changes with life stage: in veg, new leaves and roots win; after the flip, the flowers become the dominant sink and everything else queues behind them.
 
 > **Diagram.** The economy under the canopy. Late-flower yellowing of fan leaves is this system working: the plant strips its own solar panels for parts and ships the nitrogen to the buds.
 
@@ -350,7 +350,7 @@ The working vocabulary of this site, one line each. Bookmark this section, every
 
 *The site's vocabulary in one place. Terms are defined in full in their sections above.*
 
-> **KEY — The mental model to keep**
+> **KEY — Mental model to keep**
 >
 > A cannabis plant is a sugar factory on a night clock. Veg builds the factory, leaves, roots, nodes. The long night flips the market, and flowers become the only customer. Hormones are the levers, trichomes are the product, roots are the half you manage by instruments, and every rule in every other paper traces back to one of those facts.
 

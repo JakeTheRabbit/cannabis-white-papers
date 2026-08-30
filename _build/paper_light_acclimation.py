@@ -5,11 +5,12 @@ from components import (p, lead, h, ul, ol, callout, defterm, table, figure,
 import figs_lib as L
 
 SLUG = "light-acclimation"
-TITLE = "Light acclimation: raise PPFD in steps so plants don't bleach"
+TITLE = "Raise PPFD in steps so plants don't bleach"
 EYEBROW = "Beginner · Light"
-SUB = ("Light is a curve, not a switch. Raise PPFD in steps the plant can keep up with, "
-       "and match CO2 to set how high you can go. Updated with the latest research (2024-2026) "
-       "on high-light quality gains, far-red, and UV.")
+SUB = ("This paper teaches how plants adapt to rising light intensity, how to build a "
+       "week-by-week PPFD schedule, how CO2 sets the ceiling you can safely reach, and how "
+       "to read the early warning signs when things go wrong. Updated with the latest research "
+       "(2024-2026) on high-light quality gains, far-red, and UV.")
 META = [("sun", "Beginner"), ("image", "10 diagrams"),
         ("quote", "Evidence-linked · 12 sources"), ("clock", "~11 min read")]
 RELATED = ["coco-crop-steering", "signal-and-noise", "plant-state-dashboard"]
@@ -36,11 +37,11 @@ SECTIONS.append({"id": "intro", "kicker": "Start here", "title": "Purpose and sc
     lead("Two beginner mistakes cause most light damage in a grow room: blasting weak, "
          "freshly-rooted clones with full-power light, and the opposite, under-lighting "
          "flowering plants out of fear of burning them" + _c("rodriguez-morrison-2021-cannabis-light-intensity-yield") + "."),
-    p("Both have the same fix. Light intensity is not an on/off control. It is "
-      "something the plant <em>adapts to</em> over weeks. As light rises gradually, the plant "
-      "physically rebuilds its light-harvesting machinery to keep pace. Push the intensity up too "
-      "fast, or push it too high without enough CO2, and the excess energy stops growing the plant "
-      "and starts damaging it: pale, bleached tips and stalled growth."),
+    p("Both have the same fix. Light intensity is something the plant <em>adapts to</em> "
+      "over weeks. Given time at each level, it physically rebuilds its light-harvesting "
+      "machinery to keep pace. Push the intensity up too fast, or push it too high without "
+      "enough CO2, and the excess energy stops growing the plant and starts damaging it: "
+      "pale, bleached tips and stalled growth."),
     p("The light a plant can take ranges enormously across a full cycle: roughly 80 "
       "&micro;mol/m&sup2;/s for a tender clone up to around 1500 &micro;mol/m&sup2;/s for a "
       "mature, CO2-supplemented flowering canopy" + _c("llewellyn-2022-cannabis-yield-proportional-light-uv") +
@@ -72,11 +73,16 @@ SECTIONS.append({"id": "key-terms", "kicker": "Plain-language glossary", "title"
             "are on. It is the day's total &lsquo;dose.&rsquo;"),
     defterm("Photoperiod", "The daily light/dark schedule. 18/6 (18 hours on) is typical for "
             "vegetative growth; switching to 12/12 triggers flowering."),
-    defterm("Photoinhibition / bleaching", "Damage that happens when the leaf captures more light "
-            "energy than it can use. The surplus energy creates reactive oxygen species that attack "
-            "the leaf, leaving pale or white tips."),
-    defterm("Acclimation", "The multi-week process where a plant builds more chloroplasts, thicker "
-            "protective leaf surfaces, and protective enzymes so it can safely handle higher light."),
+    defterm("Photoinhibition / bleaching", "Damage from absorbing more light energy than the leaf "
+            "can process. Like sunburn &mdash; where UV intensity outpaces your skin&rsquo;s repair "
+            "rate and oxidises the cells &mdash; surplus light drives a damaging chemical reaction "
+            "inside the leaf. The molecules produced, called <strong>reactive oxygen species</strong> "
+            "(ROS), attack the leaf tissue, leaving pale or white tips on the uppermost leaves."),
+    defterm("Acclimation", "The multi-week process where a plant physically rebuilds its "
+            "light-handling machinery &mdash; adding chloroplasts, thickening leaf surfaces, and "
+            "building protective enzymes &mdash; so each new level of light has capacity ready for "
+            "it. Like gradually increasing a training load: the body adapts to each step before "
+            "the next one comes."),
     figure(L.flow("PPFD is intensity now; DLI is the day's total",
             [("PPFD", "brightness at the leaf, right now"),
              ("hours on", "how long the lights run"),
@@ -86,18 +92,18 @@ SECTIONS.append({"id": "key-terms", "kicker": "Plain-language glossary", "title"
       "photoperiod changes DLI even when PPFD stays the same."),
   ]})
 
-SECTIONS.append({"id": "how-acclimation-works", "kicker": "The why", "title": "Plant acclimation to increased PPFD",
+SECTIONS.append({"id": "how-acclimation-works", "kicker": "How the plant adapts to more light", "title": "Plant acclimation to increased PPFD",
   "blocks": [
     p("The plant invests in hardware to match rising light. Week over week it builds "
       "more chloroplasts (the tiny green factories that catch light), thicker protective leaf "
       "surfaces, and a higher density of the enzymes that turn captured energy into sugar" +
       _c("sun-shade-leaf-thickness-chloroplast-acclimation") + ". Each new increment of light then "
       "has machinery ready and waiting to use it."),
-    p("A plant built only for moderate light cannot absorb a sudden flood of "
-      "photons. The light-harvesting side keeps catching energy, but there is nowhere for it to "
-      "go. The surplus is converted into <strong>reactive oxygen species</strong>, unstable "
-      "molecules that damage the leaf from the inside" + _c("takahashi-murata-2008-environmental-stress-photoinhibition") +
-      ". In effect the leaf attacks itself: you see bleached tips and growth grinds to a halt" +
+    p("A plant built for moderate light cannot process a sudden flood of photons. "
+      "The light-harvesting side keeps capturing energy, but there is nowhere for it to go. "
+      "That surplus drives ROS production faster than the leaf's protective enzymes can "
+      "neutralise them" + _c("takahashi-murata-2008-environmental-stress-photoinhibition") +
+      ". You see bleached tips; growth grinds to a halt" +
       _c("pospisil-2016-ros-photosystem-ii-light-temperature") + "."),
     p("This is the whole case for incremental ramping. Add light in small steps the plant can keep "
       "pace with, and capacity scales alongside intensity, so every photon becomes sugar instead of "
@@ -116,16 +122,20 @@ SECTIONS.append({"id": "how-acclimation-works", "kicker": "The why", "title": "P
       "A plant flooded before it has acclimated converts much of the light into damage rather than "
       "sugar. A ramped plant captures nearly all of it." + _c("takahashi-murata-2008-environmental-stress-photoinhibition")),
     callout("warn", "Bleaching is self-inflicted damage",
-      p("Pale, white-tipped upper leaves are not &lsquo;light hunger&rsquo;. They are the leaf "
-        "burning itself with energy it can't use. The cure is less light or more capacity, never more "
-        "light.")),
+      p("Pale, white-tipped upper leaves mean the leaf is producing reactive oxygen species faster "
+        "than it can neutralise them &mdash; it damages its own tissue with the surplus. "
+        "Back the PPFD down or give the plant more acclimation time; adding more light deepens "
+        "the damage.")),
   ]})
 
-SECTIONS.append({"id": "co2-partnership", "kicker": "The why, part two", "title": "Light and CO2 coordination",
+SECTIONS.append({"id": "co2-partnership", "kicker": "Why CO2 sets your light ceiling", "title": "Light and CO2 coordination",
   "blocks": [
-    p("Photosynthesis has two halves. The <strong>light reactions</strong> capture energy from "
-      "photons. The <strong>Calvin cycle</strong> then uses CO2 from the air to turn that captured "
-      "energy into sugar. Both halves have to scale together" +
+    p("Inside every green cell, the plant runs a process that converts light energy and CO2 "
+      "into sugar &mdash; the raw material for all growth. This process, "
+      "<strong>photosynthesis</strong>, works in two connected stages. "
+      "The <strong>light reactions</strong> capture energy from incoming photons. "
+      "The <strong>Calvin cycle</strong> then uses CO2 from the air to turn that captured "
+      "energy into sugar. Both stages have to scale together" +
       _c("chandra-2008-cannabis-photosynthesis-ppfd-co2-temperature") + "."),
     p("Raise light but leave CO2 low and you trip the same trap as ramping too fast. The light "
       "reactions keep capturing "
@@ -215,7 +225,7 @@ SECTIONS.append({"id": "how-high", "kicker": "Setting your ceiling", "title": "S
         "honest ceiling you can fuel before chasing a higher one.")),
   ]})
 
-SECTIONS.append({"id": "hanging-and-dimming", "kicker": "Doing it physically", "title": "Fixture height and dimming",
+SECTIONS.append({"id": "hanging-and-dimming", "kicker": "Adjusting height and output", "title": "Fixture height and dimming",
   "blocks": [
     p("Two levers set canopy PPFD: the fixture's <strong>dimmer</strong> and its "
       "<strong>hanging height</strong> above the plants. Both change how much light lands on the "
@@ -238,8 +248,8 @@ SECTIONS.append({"id": "hanging-and-dimming", "kicker": "Doing it physically", "
       "Set intensity with the dimmer, height for spread and heat, and always confirm the canopy "
       "number rather than guessing."),
     callout("tip", "The canopy moves",
-      p("A plant that stretched 15 cm toward the light this week is getting noticeably more PPFD even "
-        "though you touched nothing. Re-measure after every growth spurt.")),
+      p("A plant that stretched 15 cm (6 in) toward the light this week is getting noticeably "
+        "more PPFD even though you touched nothing. Re-measure after every growth spurt.")),
   ]})
 
 SECTIONS.append({"id": "troubleshooting", "kicker": "Reading the plant", "title": "Troubleshooting",
@@ -284,7 +294,7 @@ SECTIONS.append({"id": "latest-research", "kicker": "Latest research · 2024-202
             note="From a 2024 trial; gains came from both more inflorescence mass and higher concentrations."), 10,
       "More light, properly fuelled, lifts concentration as well as weight. It is a quality lever, "
       "not only a yield one." + _c("saetang2024-high-light-metabolites")),
-    p("<strong>Far-red is a dosed scalpel, with a trade-off.</strong> End-of-day far-red can shorten the "
+    p("<strong>Far-red can boost cannabinoid yield in some cultivars but dilute potency in others.</strong> End-of-day far-red can shorten the "
       "photoperiod (12 to 10 hours, around 5.5% energy saving) and lift cannabinoid yield in <em>some</em> "
       "cultivars, one strain showed roughly a 70% jump in total cannabinoid yield" +
       _c("farred2025-scirep") + ". But pushing far-red across the whole spectrum (a lower red-to-far-red "
@@ -308,13 +318,14 @@ SECTIONS.append({"id": "latest-research", "kicker": "Latest research · 2024-202
 
 SECTIONS.append({"id": "expectations", "kicker": "Realistic expectations", "title": "Expected results and limitations",
   "blocks": [
-    p("Light is the schedule, not the whole system. Every PPFD target in this guide assumes the rest "
-      "of the environment is in range: leaf temperature around 26&ndash;28&deg;C, VPD of "
+    p("Light intensity is one input among several. Every PPFD target in this guide assumes "
+      "the rest of the environment is in range: leaf temperature around "
+      "26&ndash;28&deg;C (79&ndash;82&deg;F), VPD of "
       "1.2&ndash;1.5 kPa, adequate root-zone capacity, and a strain that can handle the load" +
       _c("chandra-2008-cannabis-photosynthesis-ppfd-co2-temperature") + ". Push light and CO2 without "
       "those and you get heated, stressed plants, not bigger yields."),
     table(["Required for all tiers", "Target"], [
-      ["Leaf temperature", "~26&ndash;28&deg;C"],
+      ["Leaf temperature", "~26&ndash;28&deg;C (79&ndash;82&deg;F)"],
       ["VPD (air dryness)", "1.2&ndash;1.5 kPa"],
       ["Root-zone capacity", "Adequate water + oxygen for the demand"],
       ["Strain", "Capable of the intended light load"],

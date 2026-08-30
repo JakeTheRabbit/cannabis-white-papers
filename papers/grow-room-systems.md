@@ -1,8 +1,8 @@
 ---
 slug: "grow-room-systems"
-title: "The cannabis grow room: a systems guide"
+title: "Cannabis grow room: a systems guide"
 eyebrow: "Beginner · Grow-room systems"
-summary: "A grow room is one connected system, not a list of gadgets. Light, heat, humidity, air and water all pull on each other. Learn to see the whole machine, so a fix in one place doesn't break another."
+summary: "A grow room is one connected system, not a list of gadgets. Light, heat, humidity, air and water all pull on each other. This paper shows you those connections so you can set systems up in the right order and pre-empt problems before they chain."
 track: "Environment & climate"
 read_time: "~18 min read"
 diagrams: "4 diagrams"
@@ -17,15 +17,15 @@ attribution: "The Cannabis White Papers"
 refs: [{"id": "rm2021-light", "n": 1, "cite": "Rodriguez-Morrison V, Llewellyn D, Zheng Y (2021). Cannabis yield, potency, and leaf photosynthesis respond differently to increasing light levels in an indoor environment. Front. Plant Sci. 12:646020.", "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8144505/", "peer": true}, {"id": "faust2018-dli", "n": 2, "cite": "Faust JE, Logan J (2018). Daily light integral: a research review and high-resolution maps of the United States. HortScience 53(9):1250-1257.", "url": "https://doi.org/10.21273/HORTSCI13144-18", "peer": true}, {"id": "collado2025-light", "n": 3, "cite": "Collado CE, Hernandez R (2025). Vegetative and reproductive stage lighting interactions on flower yield, water-use efficiency, terpenes and cannabinoids of Cannabis sativa. Scientific Reports 15:s41598-025-27437-4.", "url": "https://www.nature.com/articles/s41598-025-27437-4", "peer": true}, {"id": "chandra2008-photo", "n": 4, "cite": "Chandra S, Lata H, Khan IA, ElSohly MA (2008). Photosynthetic response of Cannabis sativa L. to variations in photosynthetic photon flux densities, temperature and CO2 conditions. Physiol. Mol. Biol. Plants 14(4):299-306.", "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3550641/", "peer": true}, {"id": "inoue2021-vpd", "n": 5, "cite": "Inoue T, et al. (2021). Minimizing VPD fluctuations maintains higher stomatal conductance and photosynthesis, improving plant growth in lettuce. Front. Plant Sci. 12:646144.", "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8049605/", "peer": true}, {"id": "schymanski2016-wind", "n": 6, "cite": "Schymanski SJ, Or D (2016). Wind increases leaf water use efficiency. Plant, Cell & Environment 39(7):1448-1459.", "url": "https://onlinelibrary.wiley.com/doi/10.1111/pce.12700", "peer": true}, {"id": "malik2025-media", "n": 7, "cite": "Malik M, Tlustoš P (2025). Soilless growing media for cannabis cultivation. Agriculture 15(18):1955.", "url": "https://www.mdpi.com/2077-0472/15/18/1955", "peer": true}, {"id": "caplan2019-drought", "n": 8, "cite": "Caplan D, Dixon M, Zheng Y (2019). Increasing inflorescence dry weight and cannabinoid content in medical cannabis using controlled drought stress. HortScience 54(5):964-969.", "url": "https://doi.org/10.21273/HORTSCI13510-18", "peer": true}, {"id": "punja2019-pathogens", "n": 9, "cite": "Punja ZK, Collyer D, Scott C, Lung S, Holmes J, Sutton D (2019). Pathogens and molds affecting production and quality of Cannabis sativa L. Front. Plant Sci. 10:1120.", "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6811654/", "peer": true}, {"id": "punja-budrot-cjb", "n": 10, "cite": "Mahmoud M, BenRejeb I, Punja ZK, Buirs L, Jabaji S (2023). Understanding bud rot development, caused by Botrytis cinerea, on cannabis grown under greenhouse conditions. Botany / Can. J. Bot. 101(8).", "url": "https://doi.org/10.1139/cjb-2022-0139", "peer": true}]
 ---
 
-# The cannabis grow room: a systems guide
+# Cannabis grow room: a systems guide
 
 _Beginner · Grow-room systems · ~18 min read_
 
-> A grow room is one connected system, not a list of gadgets. Light, heat, humidity, air and water all pull on each other. Learn to see the whole machine, so a fix in one place doesn't break another.
+> A grow room is one connected system, not a list of gadgets. Light, heat, humidity, air and water all pull on each other. This paper shows you those connections so you can set systems up in the right order and pre-empt problems before they chain.
 
 ## Purpose and scope
 
-Those four things are one problem, not four. Beginners buy a light, a fan, a humidifier and a nutrient bottle and treat each as a separate job. Turn the light up and the room gets hotter, the plants drink more, the air gets more humid, and your dehumidifier works harder. Everything is connected.
+Light, heat, humidity, and water are one problem, not four separate jobs. Beginners buy a light, a fan, a humidifier and a nutrient bottle and treat each as a separate job. Turn the light up and the room gets hotter, the plants drink more, the air gets more humid, and your dehumidifier works harder. Everything is connected.
 
 This guide shows you those connections, so you set things up in the right order instead of chasing one problem into the next. No prior knowledge needed.
 
@@ -35,9 +35,9 @@ This guide shows you those connections, so you set things up in the right order 
 
 **DLI (daily light integral)** — Brightness × hours the light is on = the total light the plant gets in a day (mol/m²/day). This is the number that really drives growth[^faust2018-dli].
 
-**Transpiration** — The plant pulling water up from the roots and breathing it out through tiny leaf pores (stomata). It is how the plant stays cool and moves nutrients.
+**Transpiration** — The plant pulls water up from the roots and releases it as vapour through tiny leaf pores called stomata. Think of it like sweating: the body moves water to the skin's surface and lets it evaporate to stay cool; the plant does exactly the same, and that upward pull also carries dissolved nutrients from root to leaf. Transpiration is how the plant regulates its temperature and feeds itself.
 
-**VPD (vapour pressure deficit)** — How ‘thirsty’ the air is. A single number from temperature and humidity that sets how fast the plant transpires.
+**VPD (vapour pressure deficit)** — A measure of how hard the air is pulling water out of the plant — determined by both temperature and humidity together, not humidity alone. Think of the air as a sponge: dry, warm air is a nearly empty sponge and pulls hard; cool, humid air is already full and pulls gently. VPD is a single number that captures this pull and predicts how fast the plant transpires.
 
 **CO2** — Carbon dioxide, the raw material plants turn into sugar with light. More CO2 can raise growth if light is high enough.
 
@@ -51,13 +51,13 @@ One chain runs your room. Push the first link and every link after it moves:
 
 > **Diagram.** The coupling chain. This is why ‘just add more light’ fails if your climate and airflow can't carry the extra water the plants now transpire.[^collado2025-light]
 
-> **KEY — The one rule that prevents most mistakes**
+> **KEY — One rule that prevents most mistakes**
 >
 > Raise one input, then ask ‘what must move with it?’ More light → more transpiration → more humidity → more dehumidification and more water and feed. Inputs travel in convoys, not alone.
 
 ## Lighting demand
 
-Light is the upstream lever: it sets how much of everything else the plant wants. In cannabis, flower yield climbs roughly **linearly with light** all the way up to very high intensities (~1800 µmol/m²/s in one study, about a 4.5× yield increase)[^rm2021-light]. Bright works, as long as you can pay the bills downstream.
+Light is the upstream lever: it sets how much of everything else the plant wants. In cannabis, flower yield climbs roughly **linearly with light** all the way up to very high intensities (~1800 µmol/m²/s in one study, about a 4.5× yield increase)[^rm2021-light]. Bright works, as long as the rest of the room can handle the heat, humidity and water use that comes with it.
 
 > **Diagram.** Whole-plant yield rises far past where a single leaf stops responding. The canopy keeps using light the top leaves can't[^rm2021-light]. Returns do taper, and very high light needs matching CO2, climate and water.
 
@@ -67,7 +67,7 @@ Light is the upstream lever: it sets how much of everything else the plant wants
 
 ## Climate: temperature, humidity and VPD
 
-Temperature and humidity are not two separate dials. Together they make **VPD**, which controls how fast the plant transpires. There is a workable middle band. Too low and everything slows. Too high and the plant shuts its stomata to save water, stalling CO2 uptake and growth[^inoue2021-vpd].
+Temperature and humidity act together. Their combined effect is **VPD**, which controls how fast the plant transpires. There is a workable middle band. Too low and everything slows. Too high and the plant shuts its stomata to save water, stalling CO2 uptake and growth[^inoue2021-vpd].
 
 > **Diagram.** A practical mid-band is around 0.8–1.2 kPa (cultivar-dependent; late flower often ~1.2–1.5). Drier air can push generative, but past ~1.5 kPa the plant closes up and stops working[^inoue2021-vpd].
 
@@ -117,10 +117,10 @@ The same warm, humid, densely-planted room that grows big plants also grows moul
 
 ## Expected results and limitations
 
-> **KEY — The mindset that separates good growers from frustrated ones**
+> **KEY — Three habits that keep the system balanced**
 >
 > - Think in **convoys**: change one input and pre-empt what must move with it.
-> - **Match, don't max.** The best room is not the one with the biggest light. It is the one whose parts are balanced for the light it has[^collado2025-light].
+> - **Match, don't max.** A well-balanced room at moderate light outperforms a bright room whose climate can't keep up[^collado2025-light].
 > - Substrate and strain change the right answer. Treat published numbers as starting points, not law.
 
 Read the [crop steering](coco-crop-steering.html), [airflow](airflow-design.html) and [mould](mould-risk.html) papers next. They are the subsystems of this one machine.

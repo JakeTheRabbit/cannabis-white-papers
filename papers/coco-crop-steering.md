@@ -2,7 +2,7 @@
 slug: "coco-crop-steering"
 title: "Precision coco cultivation: crop steering in coir"
 eyebrow: "Beginner · Coco & crop steering"
-summary: "Coco coir lets you talk to your plants through water. This paper shows you what the root zone is telling you, and how a daily rhythm of wetting and drying steers a plant toward leaves or toward flower, explained from zero."
+summary: "Coco coir dries and wets predictably, which makes it the easiest substrate to steer. This paper explains what a root-zone sensor reads, how a daily wet-and-dry cycle works, and how to use dryback to push a plant toward leaves or toward flower. No prior root-zone experience needed."
 track: "Flowering"
 read_time: "~16 min read"
 diagrams: "5 diagrams"
@@ -21,7 +21,7 @@ refs: [{"id": "abad2005-coir", "n": 1, "cite": "Abad M, Noguera P, Puchades R, M
 
 _Beginner · Coco & crop steering · ~16 min read_
 
-> Coco coir lets you talk to your plants through water. This paper shows you what the root zone is telling you, and how a daily rhythm of wetting and drying steers a plant toward leaves or toward flower, explained from zero.
+> Coco coir dries and wets predictably, which makes it the easiest substrate to steer. This paper explains what a root-zone sensor reads, how a daily wet-and-dry cycle works, and how to use dryback to push a plant toward leaves or toward flower. No prior root-zone experience needed.
 
 ## Purpose and scope
 
@@ -69,7 +69,7 @@ Coco also carries a mild electrical charge on its fibres that grabs and releases
 
 A root-zone sensor reports two living numbers: **VWC** (how wet) and **EC** (how salty). Together they tell you what the plant is doing and what to do next.
 
-Here is the trick beginners miss: **as the substrate dries, the salt left behind gets more concentrated, so EC rises**. The water leaves and the fertiliser does not. A sensor estimates the ‘pore-water EC’ the roots actually feel from the bulk reading, the moisture and the temperature[^hilhorst2000-ec]. That is why EC readings get unreliable once VWC falls into single digits.
+Here is the trick beginners miss: **as the substrate dries, the salt left behind gets more concentrated, so EC rises**. The water leaves and the fertiliser does not. Think of a glass of seawater left on a sunny bench—as the water evaporates, the same salt is left in less water, so it tastes saltier even though nothing was added. A sensor estimates the ‘pore-water EC’ the roots actually feel from the bulk reading, the moisture and the temperature[^hilhorst2000-ec]. That is why EC readings get unreliable once VWC falls into single digits.
 
 > **Diagram.** A healthy daily curve: a controlled fall (the dryback) followed by a refill to field capacity. The size and timing of that fall is your steering lever.
 
@@ -79,13 +79,13 @@ Here is the trick beginners miss: **as the substrate dries, the salt left behind
 > - **EC drifting up** as VWC falls is normal. A big jump means the root zone is getting too salty, so water it.
 > - **EC drifting down** over days means the plant is eating salt faster than you feed, so raise feed EC.
 
-## Dryback: the steering mechanism
+## Dryback: your main steering lever
 
 > **EVIDENCE — Grain of salt**
 >
 > **Borderline:** Caplan-style single late droughts are _related_ to generative drybacks but not the same experiment as multi-week daily sawteeth. Use dryback as a gentle bias; never wilt. Your probe-native % is not a universal media law.
 
-A **dryback** is letting the root zone dry by a chosen amount before you water again. It is the most powerful lever you have, because a mild, controlled water deficit changes how the plant grows.
+A **dryback** is letting the root zone dry by a chosen amount before you water again. Think of a kitchen sponge: you decide how much to let it dry before running it under the tap again—barely damp versus nearly stiff are different choices, and the plant responds to each differently. A mild, controlled water deficit changes how the plant grows.
 
 When the root zone dries a little, the plant makes a stress hormone called **abscisic acid (ABA)**, which shifts it away from leafy growth and toward flowering and resin production[^welling2025-aba]. Done deliberately at the right time, controlled water-deficit has been shown to _raise_ cannabinoid content without costing yield[^caplan2019-drought].
 
@@ -124,9 +124,11 @@ Growers split the lights-on day into four phases. You do not need fancy gear to 
 | Day/night temp | Cooler nights, wider day-night gap | Warmer, flatter temps |
 | VPD / humidity | Drier air (higher VPD) | More humid air (lower VPD) |
 
-*Most levers act through transpiration, how fast the plant pulls water. Use one or two at a time, not all at once.*
+*Most levers work through **transpiration**—the process by which a plant pulls water up from its roots and releases it through the leaf surface, similar to how skin releases sweat. The faster a plant transpires, the more it drinks. Use one or two levers at a time, not all at once.*
 
-Temperature is on that list because the gap between day and night temperature controls stretch. A warm day with a cool night keeps plants compact. A warm night makes them stretch[^moe1995-dif]. Air dryness (VPD) sets how fast the plant transpires, up to a point, then stomata close and everything slows[^grossiord2020-vpd].
+Raising feed EC makes the root-zone solution more concentrated than the water inside the plant. The plant has to push harder to pull water in across that gap—this is **osmotic stress**. A modest EC increase tightens generative growth; push it too high and growth shuts down.
+
+Temperature is on that list because the gap between day and night temperature controls stretch. A warm day with a cool night keeps plants compact. A warm night makes them stretch[^moe1995-dif]. The dryness of the air around the leaves controls how fast the plant transpires. Think of a hot dry wind on your skin after a swim—the wind does not add moisture, it draws it out faster. **Vapour pressure deficit (VPD)** is the technical name for this, measured in kPa: the gap between how much water vapour the air could hold at that temperature and how much it actually holds. Higher VPD means more demanding air. Above a certain point the leaf pores close to limit water loss, and transpiration slows even though the air is still dry[^grossiord2020-vpd].
 
 > **DANGER — Change one thing at a time**
 >
@@ -161,7 +163,7 @@ Flowering indoors usually runs about 8–10 weeks once you flip the lights to a 
 > 2. **Steering is a bias, not a switch.** You are nudging odds over days, not flipping a plant overnight.
 > 3. **The root zone is only one lever.** Light, temperature, humidity and airflow all push the same plant. Read the [systems guide](grow-room-systems.html) next.
 
-Get a sensor on the root zone, learn to read one normal day, then change one thing at a time. That discipline, not a magic number, is what makes coco repeatable.
+Get a sensor on the root zone, learn what one normal day looks like on your setup, then change one thing at a time. That method—sensor first, baseline second, one change at a time—is what makes coco consistent across runs.
 
 ## References
 

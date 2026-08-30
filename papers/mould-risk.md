@@ -35,11 +35,11 @@ There is also a health stake. Cannabis users have been found to get fungal infec
 
 **Powdery mildew (PM)** — A white, flour-like fungus that coats leaf surfaces. Different fungus, different look, also serious.
 
-**Relative humidity (RH)** — How much water vapour the air holds versus the most it could hold, as a percentage. High RH is mould's best friend.
+**Relative humidity (RH)** — The air can hold only so much water vapour before it reaches its limit and moisture begins condensing on cold surfaces — like a sponge that drips once full. RH measures how close the air is to that limit, expressed as a percentage: 100% means saturated, 50% means halfway there. Keep flowering rooms between 45–65% RH; above 70%, bud rot risk rises sharply.
 
 **Leaf wetness / free moisture** — Actual liquid water on the plant (condensation, spray). Many mould spores need it to germinate.
 
-**Water activity** — How much ‘free’ water is available in dried flower for microbes to use. Keep it low in storage and mould can't grow.
+**Water activity** — Even dried flower contains moisture, but not all of it is available to mould — some is bound into sugars, salts, and cell walls, the way dye is locked into fabric: present, but not free to move. Water activity (Aw) measures only the free fraction, on a scale of 0 to 1. Below roughly 0.65, most moulds cannot grow. Cure and store flower below that threshold and storage mould becomes very unlikely.
 
 **Mycotoxin** — A poison made by some moulds (e.g. _Aspergillus_). It can remain in the flower even after the mould itself is gone[^gwinn2023-mycotoxin].
 
@@ -53,13 +53,13 @@ Starts deep in a dense cola, often at a stem or where a leaf meets the bud. You'
 
 White, dusty patches on the tops of leaves that wipe off like flour, then return. Loves moderate temps and stagnant, humid air. Coats leaves and chokes photosynthesis[^scott2021-pm].
 
-> **NOTE — They're not the only ones**
+> **NOTE — Other indoor mould species**
 >
 > Indoor cannabis also hosts _Penicillium_, _Cladosporium_, _Fusarium_ and _Aspergillus_[^punja2019-pathogens]. Botrytis and PM are the two you'll meet first and most.
 
 ## Conditions that promote mould
 
-Mould isn't bad luck. It is a recipe. Bud rot takes off when humidity climbs above about **70%** at moderate temperatures (~17–24 °C), especially when there's free moisture and still air[^punja2025-budrot-epi]. Deny the recipe and you deny the mould.
+Bud rot does not strike at random. It needs a specific set of conditions: humidity above about **70%**, moderate temperatures (~17–24 °C (63–75 °F)), free moisture on plant surfaces, and still air[^punja2025-budrot-epi]. Remove any one of those and you deny the mould.
 
 > **Diagram.** Risk rises steeply past ~70% RH[^punja2025-budrot-epi]. The trap: your room sensor can read 60% while the inside of a fat cola sits much higher.
 
@@ -67,7 +67,7 @@ Mould isn't bad luck. It is a recipe. Bud rot takes off when humidity climbs abo
 
 > **DANGER — The dense-canopy trap**
 >
-> A thick, undefoliated canopy traps warm, humid, still air inside itself, a private climate far wetter than your room reading[^punja-budrot-cjb]. Packing plants tight for yield directly raises rot risk. Spacing and defoliation are mould control, not just tidiness.
+> A thick, undefoliated canopy traps warm, humid, still air inside itself, a private climate far wetter than your room reading[^punja-budrot-cjb]. Packing plants tight for yield directly raises rot risk. Defoliation and plant spacing are effective mould control — they change canopy airflow and humidity directly.
 
 ## Daily mould prevention
 
@@ -99,14 +99,14 @@ Spend five minutes a day in late flower with a bright light, looking _into_ the 
 
 > **WARN — Don't try to ‘treat’ rotted flower into safety**
 >
-> Once a bud has rotted, it's waste, not something to dry and smoke. Drying lowers microbe levels but won't undo rot or remove mycotoxins[^sun2025-drying]. Prevention is the only real cure.
+> Once a bud has rotted, it is waste. Drying lowers microbe levels but will not undo rot or remove mycotoxins[^sun2025-drying]. There is no remediation step that makes it safe to use.
 
 ## Mould prevention during drying and storage
 
 Mould can still strike clean flower during a sloppy dry or in storage. The defence is to drive down available water:
 
 - **Dry in controlled conditions:** cool and moderate, with airflow. Drying itself cuts yeast-and-mould counts substantially[^sun2025-drying].
-- **Cure and store dry.** Aim for a stable, low water activity. Curing around ~18 °C and ~50–55% RH is a defensible target[^alubeed2022-postharvest].
+- **Cure and store dry.** Aim for a stable, low water activity. Curing around ~18 °C (64 °F) and ~50–55% RH is a defensible target[^alubeed2022-postharvest].
 - **Glass beats plastic.** Sealed glass jars outperform bags for keeping microbes down and cannabinoids stable[^sun2025-drying].
 
 ## Limitations of visual mould assessment
@@ -133,8 +133,8 @@ Flower can carry dangerous fungi while looking, smelling and even _testing_ clea
 >
 > 1. Mould is a **recipe (humidity + still air + density + moisture)**. Remove an ingredient and you remove the risk.
 > 2. It hides **inside** buds. By the time it's visible, spores are already spreading. Scout daily in late flower.
-> 3. **Prevention is the only cure.** You cannot make rotted or mycotoxic flower safe after the fact[^sun2025-drying].
-> 4. **Clean looks and passing tests aren't proof** of safety[^mckernan2016-micro].
+> 3. **You cannot make rotted or mycotoxic flower safe after the fact.** There is no treatment step that removes mycotoxins or reverses rot[^sun2025-drying].
+> 4. **Cannabis can carry dangerous contamination while looking, smelling, and testing clean**[^mckernan2016-micro].
 
 Mould risk is downstream of your climate and airflow. Read the [systems guide](grow-room-systems.html) and [airflow](airflow-design.html) papers to fix the causes, not just the symptoms.
 

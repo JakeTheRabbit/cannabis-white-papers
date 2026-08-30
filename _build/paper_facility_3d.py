@@ -29,7 +29,7 @@ SECTIONS.append({"id": "intro", "kicker": "Start here",
   "title": "Purpose and scope",
   "blocks": [
     callout("NOTE", "Jurisdiction", JURISDICTION_NOTE),
-    
+
     lead("A grow facility is a building full of rooms, equipment, airflow paths and security "
          "cameras. The usual way to plan one, a flat top-down architect's drawing, can only "
          "really be read by experts. A <strong>3D model</strong> is the same plan rebuilt on "
@@ -39,7 +39,7 @@ SECTIONS.append({"id": "intro", "kicker": "Start here",
       "of rooms and their dimensions, and let code draw the building from that data. Re-planning "
       "the facility for the next harvest then becomes nothing more than editing some numbers. The "
       "worked example throughout this paper is a real two-storey licensed cultivation facility "
-      "measuring 14.8 by 16.7 metres."),
+      "measuring 14.8 by 16.7 m (48.6 by 54.8 ft)."),
     ul(["A 3D model makes spatial relationships visible: airflow paths, camera sightlines, bench "
         "density, and where the ducts and drains run.",
         "It is built with Three.js, a free web library, so the whole thing is one HTML file that "
@@ -92,13 +92,13 @@ SECTIONS.append({"id": "model-the-data", "kicker": "Core idea 1",
       "kinds of record to capture almost any grow building."),
     p("Each <strong>room</strong> is stored as a rectangle, <code>[x, y, width, depth]</code> "
       "in metres. Each <strong>wall</strong> is a centre-line with openings positioned by how far "
-      "along the run they sit, and a single global wall thickness (0.15 m) avoids a whole class of "
-      "typos. Everything uses one unit equals one metre, so the millimetre numbers on the "
+      "along the run they sit, and a single global wall thickness of 0.15 m (5.9 in) avoids a whole "
+      "class of typos. Everything uses one unit equals one metre, so the millimetre numbers on the "
       "architect's plan (4800, 9200) are divided by 1000 once, at data-entry time, and never "
       "thought about again."),
     callout("key", "The four record types",
       ul(["<strong>Rooms</strong>: an interior footprint rectangle in metres.",
-          "<strong>Walls</strong>: a centre-line with openings (doors, the 4.6 m roller "
+          "<strong>Walls</strong>: a centre-line with openings (doors, the 4.6 m (15.1 ft) roller "
           "door, pass-throughs) placed by distance along the run.",
           "<strong>Equipment</strong>: benches, dehumidifiers, AC heads, CO&#8322; tanks.",
           "<strong>Devices</strong>: cameras, sirens, safes, network and power racks."], "tight")),
@@ -133,11 +133,11 @@ SECTIONS.append({"id": "shell-and-storeys", "kicker": "Core idea 2",
       "drops through. Each <strong>wall run</strong> is split by its openings into solid segments, "
       "with a lintel (a short beam) filling the gap above each door."),
     p("<strong>Stairs</strong> are a loop of step-shaped boxes. The reference building climbs "
-      "3.25 m over a 4.5 m run as 16 steps of 203 mm each. Drawing the stair this way doubles as a "
-      "buildability check: if the steps don't fit the space at a sensible riser height, you find out "
-      "now, on screen, not on site. Standard building codes cap a stair riser at about 178 mm "
-      "(7 inches) with a tread of at least 279 mm (11 inches), so a 203 mm riser flags as steep and "
-      "tells you to lengthen the run." + _c("ibc-2024-1011-5-2-stairs")),
+      "3.25 m (10.7 ft) over a 4.5 m (14.8 ft) run as 16 steps of 203 mm (8 in) each. Drawing "
+      "the stair this way doubles as a buildability check: if the steps don't fit the space at a "
+      "sensible riser height, you find out now, on screen, not on site. Standard building codes "
+      "cap a stair riser at about 178 mm (7 in) with a tread of at least 279 mm (11 in), so a "
+      "203 mm (8 in) riser flags as steep and tells you to lengthen the run." + _c("ibc-2024-1011-5-2-stairs")),
     ul(["Floor slabs are extruded shapes that can carry holes for stairwells and service voids.",
         "A wall is a centre-line plus openings; openings split it into segments with lintels above. "
         "No complex geometry needed.",
@@ -147,17 +147,17 @@ SECTIONS.append({"id": "shell-and-storeys", "kicker": "Core idea 2",
         "image files."]),
     figure(grid([
         card("Segment", "Solid wall from the corner to the first opening.", "solid"),
-        card("Opening", "A door, head height 2.05 m, placed &lsquo;at&rsquo; its distance along the run.", "door"),
+        card("Opening", "A door, head height 2.05 m (6.7 ft), placed &lsquo;at&rsquo; its distance along the run.", "door"),
         card("Lintel", "A short box filling the wall above the opening.", "above"),
         card("Segment", "Solid wall continues to the next corner.", "solid"),
       ], cols=4), 4,
       "One wall run, read left to right. The opening's &lsquo;at&rsquo; value is simply how far "
       "along the wall it starts."),
     table(["Check", "Value", "Verdict"], [
-      ["Total rise", "3.25 m", "fixed by the two floor heights"],
-      ["Horizontal run", "4.5 m", "the space allotted on the plan"],
-      ["Risers", "16 &times; 203 mm", "steep, over the 178 mm code max"],
-      ["Treads", "281 mm", "comfortable, above the 279 mm min"],
+      ["Total rise", "3.25 m (10.7 ft)", "fixed by the two floor heights"],
+      ["Horizontal run", "4.5 m (14.8 ft)", "the space allotted on the plan"],
+      ["Risers", "16 &times; 203 mm (8 in)", "steep, over the 178 mm code max"],
+      ["Treads", "281 mm (11.1 in)", "comfortable, above the 279 mm min"],
       ["Fit", "Fits the 4.5 m run", "OK, but lengthen run to ease the riser"],
     ], cls="compact",
       caption="A stair sanity-check the model performs for free. The 203 mm riser is buildable but "
@@ -169,20 +169,25 @@ SECTIONS.append({"id": "fit-out-airflow", "kicker": "Core idea 3",
   "blocks": [
     p("<strong>Fit-out</strong> turns a generic building into a grow facility, and every "
       "piece is built from simple shapes. No modelling software required. The reference "
-      "flower rooms use 1.2 by 7.6 m rolling benches, three per room, giving 27.4 m&#178; of canopy "
-      "in a 44 m&#178; room: about 62% of the floor, a number the model shows at a glance."),
+      "flower rooms use 1.2 by 7.6 m (3.9 by 24.9 ft) rolling benches, three per room, giving "
+      "27.4 m&#178; (295 ft&#178;) of canopy in a 44 m&#178; (474 ft&#178;) room: about 62% of "
+      "the floor, a number the model shows at a glance."),
     p("Plants are the highest-count object, 210 of them here, so they are "
       "&lsquo;instanced&rsquo;, meaning drawn in one batch rather than one at a time. That single "
       "trick is the biggest performance lever in the whole model. The climate gear (dehumidifiers, "
-      "carbon filter/fan units hung at 2.45 m, mini-split AC heads, CO&#8322; cylinders) each get a "
-      "tiny builder, sized straight from the datasheet."),
-    p("Moving air thins the still &lsquo;boundary layer&rsquo; of humid air "
-      "that clings to each leaf, which is what lets the leaf actually exchange water vapour and "
-      "CO&#8322; with the room" + _c("kitaya-2003-air-current-gas-exchange") + ". The plan's target of "
-      "3500 m&#179;/h of horizontal airflow per flower room is drawn as toggleable arrows that an "
-      "HVAC contractor reads instantly. Modest, even air movement across the canopy keeps that "
-      "boundary-layer conductance high and uniform. Too little leaves dead spots, too much can "
-      "close stomata" + _c("kimura-2020-leaf-boundary-layer") + "."),
+      "carbon filter/fan units hung at 2.45 m (8.0 ft), mini-split AC heads, CO&#8322; cylinders) "
+      "each get a tiny builder, sized straight from the datasheet."),
+    p("Each leaf releases water vapour and absorbs CO&#8322; continuously. In still air, the "
+      "layer of air right at the leaf surface quickly becomes saturated with moisture and depleted "
+      "of CO&#8322; &mdash; like the warm, humid air that settles around your face when you stand "
+      "very still: even in a cool room that thin film cuts off further exchange with the air around "
+      "it. This is the leaf boundary layer: a shallow, stationary pocket of air already altered by "
+      "the leaf&rsquo;s own transpiration." + _c("kitaya-2003-air-current-gas-exchange") + " "
+      "Moving air strips that film away and replaces it with fresh room air, restoring the gradient "
+      "that drives gas exchange. The plan&rsquo;s target of 3500 m&#179;/h of horizontal airflow "
+      "per flower room is drawn as toggleable arrows that an HVAC contractor reads instantly. "
+      "Modest, even air movement across the canopy keeps boundary-layer conductance high and "
+      "uniform. Too little leaves dead spots; too much can close stomata." + _c("kimura-2020-leaf-boundary-layer")),
     figure(L.bars("Canopy vs floor area, one flower room",
             [("Canopy (3 benches)", 27.4), ("Total floor", 44.0)], unit=" m²",
             note="Three 1.2 × 7.6 m benches give about 62% canopy coverage of the room floor.",
@@ -197,17 +202,17 @@ SECTIONS.append({"id": "fit-out-airflow", "kicker": "Core idea 3",
       "Airflow shown as a top-down loop. Drawing it makes the air path visible to contractors and "
       "inspectors, and reveals where benches would stall the flow." + _c("kitaya-2003-air-current-gas-exchange")),
     table(["Item", "Built from", "Count"], [
-      ["Rolling bench", "Box + leg rails, 1.2 &times; 7.6 m", "9 (3 per flower room)"],
+      ["Rolling bench", "Box + leg rails, 1.2 &times; 7.6 m (3.9 &times; 24.9 ft)", "9 (3 per flower room)"],
       ["Dehumidifier", "Box + grille face", "7"],
-      ["Carbon filter / fan", "Cylinder + duct, hung at 2.45 m", "10"],
+      ["Carbon filter / fan", "Cylinder + duct, hung at 2.45 m (8.0 ft)", "10"],
       ["AC head (mini-split)", "Flattened box above doors", "8"],
       ["CO&#8322; cylinder", "Capped cylinder, floor-standing", "6"],
     ], cls="compact",
       caption="The equipment schedule. Each item is a small reusable builder, and placing them in 3D "
               "reveals clashes early: a filter over an aisle, an AC head fouling a door."),
     callout("tip", "Clashes you only see in 3D",
-      p("A flat plan hides height. In 3D you immediately catch a carbon filter hung at 2.45 m over a "
-        "walkway, an AC head sitting above a door swing, or a dehumidifier that lands on a bench. "
+      p("A flat plan hides height. In 3D you immediately catch a carbon filter hung at 2.45 m (8.0 ft) "
+        "over a walkway, an AC head sitting above a door swing, or a dehumidifier that lands on a bench. "
         "Pair this with the <a href='airflow-design.html'>airflow design</a> paper to size the "
         "fans before you place them.")),
   ]})
@@ -233,8 +238,8 @@ SECTIONS.append({"id": "security-layer", "kicker": "Core idea 4",
         "Sirens, safes, the vault and the network/power racks are all modelled, because cable runs "
         "and UPS placement are part of the security story.",
         "One checkbox shows or hides the whole security layer: audit mode versus tour mode.",
-        "The roof PTZ camera's 70&deg;, 12 m cone is checked against the upper open-plan office for "
-        "intrusion coverage."]),
+        "The roof PTZ camera's 70&deg;, 12 m (39 ft) cone is checked against the upper open-plan "
+        "office for intrusion coverage."]),
     figure(L.zones("Camera coverage across one flower room", 0, 100,
             [(4, 40, L.GL, "cam 1 cone"),
              (34, 70, L.GL, "cam 2 cone"),
@@ -293,7 +298,7 @@ SECTIONS.append({"id": "pitfalls", "kicker": "Avoid these",
       ["Pure-white walls blow out", "Under ACES tone mapping, white clips. Use a warm off-white (0xe8e6e0) at high roughness."],
       ["Shadow camera too big", "An oversized shadow camera makes mushy shadows. Size it to the building, not the world."],
       ["Picking against the whole scene", "Users accidentally select walls. Raycast a curated &lsquo;pickables&rsquo; list instead."],
-      ["Forgetting wall thickness as a global", "Set thickness once (0.15 m) and reuse it. This removes a whole class of typos."],
+      ["Forgetting wall thickness as a global", "Set thickness once (0.15 m / 5.9 in) and reuse it. This removes a whole class of typos."],
     ], cls="compact",
       caption="Six common pitfalls and the recommended fix for each. The first one is the only one "
               "that costs you weeks. The rest cost minutes."),

@@ -7,9 +7,10 @@ import figs_lib as L
 SLUG = "f2-crop-steering"
 TITLE = "F2 crop steering: the daily operating manual"
 EYEBROW = "Precision · Crop steering"
-SUB = ("Run an autonomous crop-steering irrigation controller day to day. This is the plain-language "
-       "starter guide: the P0&ndash;P3 cycle, moisture and salt targets, the controls you actually "
-       "touch, the safety fail-safes, and what to do when something looks wrong.")
+SUB = ("By the end of this paper you can set up, calibrate, and run an autonomous irrigation "
+       "controller for a veg grow room. It covers the P0&ndash;P3 daily cycle, moisture and "
+       "salt targets, the controls you touch each day, the safety fail-safes built into the "
+       "system, and how to diagnose what is wrong when something misbehaves.")
 META = [("gauge", "Precision"), ("image", "12 diagrams"),
         ("doc", "Operational guide"), ("clock", "~18 min read")]
 RELATED = ["coco-crop-steering", "root-zone-teros12", "smart-watering-vrwe"]
@@ -31,12 +32,14 @@ SECTIONS.append({"id": "what-this-is", "kicker": "Start here",
     lead("F2 is an <strong>autonomous irrigation controller</strong> for a veg grow room. It is software "
          "that reads moisture and salt probes in the root zone and decides, on its own, when to fire "
          "a watering shot through a pump and valves. You set the targets. It does the watering."),
-    p("<strong>Crop steering</strong> means pushing the plant toward one of two kinds of growth by "
-      "controlling exactly how and when it waters. <em>Vegetative</em> steering (bulking) keeps the "
-      "medium wet with many small waterings and only a small drying-out. <em>Generative</em> steering "
-      "(the flower or stress push) uses a bigger drying-out, a saltier root zone, and fewer, larger "
-      "waterings. Even a mild, deliberate water deficit applied at the right time shifts a cannabis "
-      "plant generatively without losing yield." + _c("caplan-drought-2019")),
+    p("<strong>Crop steering</strong> is the practice of choosing exactly how wet and how salty to keep "
+      "the root zone in order to shift which kind of growth the plant prioritises. In the wild, a plant "
+      "reads a drought as a signal that time is short and pivots toward reproduction&mdash;this system "
+      "delivers that signal deliberately, at a controlled dose and moment. <em>Vegetative</em> steering "
+      "(bulking) keeps the medium wet with many small waterings and a small drying-out. "
+      "<em>Generative</em> steering (the flower or stress push) uses a bigger drying-out, a saltier root "
+      "zone, and fewer, larger waterings. Even a mild, deliberate water deficit applied at the right time "
+      "shifts a cannabis plant generatively without losing yield." + _c("caplan-drought-2019")),
     p("The system runs in two cooperating layers. A <strong>Home Assistant integration</strong> gives "
       "you every on-screen control and reading. An <strong>AppDaemon engine</strong> "
       "(<code>master_crop_steering_app.py</code>) is the decision-making brain that fires the shots. "
@@ -64,12 +67,19 @@ SECTIONS.append({"id": "what-this-is", "kicker": "Start here",
 SECTIONS.append({"id": "key-terms", "kicker": "Vocabulary", "title": "Definitions",
   "blocks": [
     p("Three measurements run the whole system. Learn these first. Everything else builds on them."),
-    defterm("VWC (volumetric water content)", "How wet the growing medium is, shown as a percent. "
-            "60% VWC means water fills 60% of the medium's volume."),
-    defterm("EC (electrical conductivity)", "How salty or strong the root zone, or the feed water, is, "
-            "in mS/cm. Higher EC means a stronger, saltier solution."),
-    defterm("Dryback", "The percent the medium dries down from its post-watering peak as the plant "
-            "drinks. The single most important steering lever."),
+    defterm("VWC (volumetric water content)", "The medium holds water the way a sponge does&mdash;some "
+            "of the space filled with liquid, the rest with air. VWC tells you how much of that space is "
+            "water right now, expressed as a percentage. 60% VWC means water fills 60% of the medium's "
+            "volume. This is the number all irrigation decisions start from."),
+    defterm("EC (electrical conductivity)", "Salt dissolved in water makes it harder for plant roots to "
+            "pull that water in&mdash;much as drinking salt water leaves you thirstier despite the liquid. "
+            "EC measures how much dissolved salt is in the solution, in mS/cm, by testing how well "
+            "electricity passes through it. Higher EC means a stronger, saltier solution; lower means weaker."),
+    defterm("Dryback", "After each watering the medium slowly dries as the plant drinks. Think of it as "
+            "the tidal cycle of the root zone: the high mark is right after a shot fires, the low mark is "
+            "just before the next one. Dryback is the distance between those marks, shown as a percentage "
+            "of the peak. A bigger gap pushes the plant toward generative growth; a smaller one keeps it "
+            "building vegetatively. This gap is the primary steering dial."),
     defterm("Shot", "One timed burst of water, sized as a percent of the medium's volume. The duration "
             "in seconds comes from substrate volume, dripper flow rate and shot size."),
     defterm("Field capacity", "The saturated peak VWC right after irrigation drains. The medium's "
@@ -86,7 +96,8 @@ SECTIONS.append({"id": "key-terms", "kicker": "Vocabulary", "title": "Definition
       "The three living numbers behind every decision: how wet, how far it dries, and how salty."),
   ]})
 
-SECTIONS.append({"id": "p0-p3-cycle", "kicker": "The core loop", "title": "The P0&ndash;P3 daily cycle",
+SECTIONS.append({"id": "p0-p3-cycle", "kicker": "Daily cycle",
+  "title": "The P0&ndash;P3 daily cycle",
   "blocks": [
     p("Each row moves through four phases across the lights-on day, driven by the light schedule "
       "(defaults: lights on 10:00, off 22:00). The rhythm is always the same. Dry a little, refill, "
@@ -160,7 +171,7 @@ SECTIONS.append({"id": "controls-and-targets", "kicker": "What you touch",
       ["ON", "OFF", "<strong>Watch mode</strong>: armed but observe-only, manual shots only"],
       ["OFF", "either", "Fully disarmed. Every shot blocked at the gate"],
     ], cls="compact", caption="The two levels of &lsquo;off&rsquo;. Use ON/OFF together for watch mode while you calibrate."),
-    callout("tip", "Watch mode is your friend",
+    callout("tip", "Use watch mode before going autonomous",
       p("Run <strong>System enabled ON, Auto irrigation OFF</strong> while you confirm your numbers. "
         "The engine is armed and computing decisions but will not fire on its own. You can fire manual "
         "test shots and watch how the room responds before granting full autonomy.")),
@@ -319,9 +330,9 @@ SECTIONS.append({"id": "expectations", "kicker": "Reality check", "title": "Expe
           "read suspiciously low. Verify probe calibration before trusting EC steering.",
           "<strong>Fail-safes guard hardware, but they trust the sensors.</strong> A bad probe or float "
           "can still cause a wrong decision well inside the &lsquo;safe&rsquo; envelope."], "tight")),
-    p("Treat F2 like a sharp tool, not an oracle. Watching is a discipline worth keeping. Tracking "
-      "your numbers over time the way a process-control chart does lets you tell a real signal from "
-      "ordinary noise before you act on it." + _c("mohammed-spc-2024") + " For the cultivation theory "
+    p("Treat F2 like a precise tool, not an oracle. Tracking your numbers over time the way a "
+      "process-control chart does lets you separate a real signal from ordinary variation before acting "
+      "on it." + _c("mohammed-spc-2024") + " For the cultivation theory "
       "behind the dryback and EC levers, read the "
       "<a href='coco-crop-steering.html'>coco crop steering</a> paper. To understand the probes the "
       "whole system trusts, read <a href='root-zone-teros12.html'>root-zone sensing</a> next."),

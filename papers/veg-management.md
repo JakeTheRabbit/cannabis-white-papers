@@ -2,7 +2,7 @@
 slug: "veg-management"
 title: "Vegetative management: build the frame, then flip"
 eyebrow: "Veg · Timing"
-summary: "Veg is not the waiting room before the real grow. It is where plant count, pot size and canopy plan get converted into a number of days, and where almost every week-3-of-flower problem is either prevented or booked in."
+summary: "This paper shows you how to calculate the right veg length for your room — from plant count, pot size and canopy area — and explains why almost every week-3 flower problem is either prevented or locked in during veg. By the end you will have the decision chain to set a flip day from a spec, not a guess."
 track: "Vegetative growth"
 read_time: "~14 min read"
 diagrams: "11 diagrams"
@@ -21,7 +21,7 @@ refs: [{"id": "dang-2022-photoperiod-switch-meta", "n": 1, "cite": "Dang M, Arac
 
 _Veg · Timing · ~14 min read_
 
-> Veg is not the waiting room before the real grow. It is where plant count, pot size and canopy plan get converted into a number of days, and where almost every week-3-of-flower problem is either prevented or booked in.
+> This paper shows you how to calculate the right veg length for your room — from plant count, pot size and canopy area — and explains why almost every week-3 flower problem is either prevented or locked in during veg. By the end you will have the decision chain to set a flip day from a spec, not a guess.
 
 ## Purpose and scope
 
@@ -63,7 +63,7 @@ Flowering doesn't create structure. Buds form at nodes and branch tips that alre
 
 > **Diagram.** Per-plant yield climbs roughly linearly with veg length in the tested range, bigger frame, more to carry[^schober-2024-veg-duration-density]. The catch: per-plant is not the same metric as per-room.
 
-Here is the twist that makes veg length a real decision instead of 'more is better': **the room doesn't pay you per plant, it pays you per square metre.** A full canopy of many small plants and a full canopy of a few big plants intercept roughly the same light. In trial data, packing plants tighter cuts yield per plant while yield per area holds or climbs[^danziger-2022-planting-density], and across studies plant density is a poor predictor of yield per m²[^backer-2019-yield-gap]. Meta-analysis of photoperiod-switch timing points the same way: at fixed area, short veg periods maximise floral output per unit time, because the canopy refills faster with more, smaller frames[^dang-2022-photoperiod-switch-meta].
+Here is the twist that makes veg length a real decision instead of 'more is better': **the room doesn't pay you per plant, it pays you per square metre (sq ft).** A full canopy of many small plants and a full canopy of a few big plants intercept roughly the same light. In trial data, packing plants tighter cuts yield per plant while yield per area holds or climbs[^danziger-2022-planting-density], and across studies plant density is a poor predictor of yield per m² (ft²)[^backer-2019-yield-gap]. Meta-analysis of photoperiod-switch timing points the same way: at fixed area, short veg periods maximise floral output per unit time, because the canopy refills faster with more, smaller frames[^dang-2022-photoperiod-switch-meta].
 
 So veg length is not a lever you push for yield. It is the variable that _balances the equation_: however many plants you run, each must build a frame that fills its share of the canopy, no more, no less. Few plants, big shares, long veg. Many plants, small shares, short veg. Same canopy either way; what changes is turns per year, plant count overhead, and risk (more on that in the economics section).
 
@@ -76,8 +76,8 @@ So veg length is not a lever you push for yield. It is the variable that _balanc
 Work the chain in this order. Days come out the far end. They are never the input.
 
 1. **Fix the plant count** — Licence condition, tag budget, risk appetite or plan, whatever binds first. This is usually the least negotiable number in the room.
-2. **Measure the canopy** — Bench or tray area you intend to fill wall-to-wall, in m². Divide by plant count: that is each plant's share. The frame it must build.
-3. **Match the pot to the frame** — A root zone can only carry so much plant. Small shares run in 4-6 L; half-metre shares want 10-30 L; full-metre trees want 30 L+ or beds (next section for why).
+2. **Measure the canopy** — Bench or tray area you intend to fill wall-to-wall, in m² (ft²). Divide by plant count: that is each plant's share. The frame it must build.
+3. **Match the pot to the frame** — A root zone can only carry so much plant. Small shares run in 4–6 L (1.1–1.6 gal); half-square-metre shares want 10–30 L (2.6–7.9 gal); full-square-metre trees want 30 L+ (7.9 gal+) or beds (next section for why).
 4. **Pick the training that makes the shape** — Untopped single colas for small shares; one topping round plus tie-downs for standard shares; staged topping rounds for trees. See [defoliation & training](defoliation-training.html).
 5. **Veg until the gate, then flip** — Flip when the canopy is ~80-90% filled, level, and at or below your maximum flip height (stretch section), a state, not a date. The days this takes _is_ your veg duration; write it down for next run.
 
@@ -95,7 +95,7 @@ One nuance from the meta-analysis worth knowing: floral _biomass_ favoured short
 
 ## Pot size and vegetative duration
 
-Roots are the half of the frame you can't see, and they cap everything. A meta-analysis of 65 container studies found that, on average, **doubling root-zone volume increased plant biomass by ~43%**, and that cramped roots throttle growth mainly by cutting photosynthesis per unit leaf area, not just by limiting water[^poorter-2012-pot-size]. A root-bound plant is a solar array running at part load: it looks leafy, it just quietly stops producing.
+Roots are the half of the frame you can't see, and they cap everything. Each leaf works like a kitchen in reverse: instead of burning fuel to produce heat, it uses captured light to manufacture sugar. That process is called photosynthesis, and it is what powers every gram of new tissue the plant adds. When the root zone runs out of room, that manufacturing line is the first thing to slow — the leaf still looks green but it processes less. A meta-analysis of 65 container studies found that, on average, **doubling root-zone volume increased plant biomass by ~43%**, and that cramped roots throttle growth mainly by cutting photosynthesis per unit leaf area, not just by limiting water[^poorter-2012-pot-size]. A root-bound plant is like a thermostat stuck at a lower setting: from the outside the plant looks fine, but the growth rate has been quietly throttled.
 
 > **Diagram.** Container volume is a growth ceiling, and small pots hit it fast, mostly through reduced photosynthesis, which no fertiliser fixes[^poorter-2012-pot-size].
 
@@ -118,9 +118,9 @@ The practical consequence: **every pot size buys a limited veg window** before t
 
 The most common veg sin isn't vegging too short. It's flipping too tall. After the flip, most cultivars surge vertically for 1-3 weeks, with the stretch largely finished around day 21 of flower[^ilgm-stretch-guide]. How much they stretch is strongly cultivar-dependent: compact indica-leaning plants might add ~50%, typical hybrids roughly double, and stretchy sativa-leaning cultivars can double or more[^gwe-flowering-stretch][^ilgm-stretch-guide]. Final height ≈ flip height × 1.5-2 for most plants you'll run. And you must budget for it before you flip, because you cannot un-stretch a plant into a fixed ceiling.
 
-The arithmetic is three lines. Take the room height, subtract the fixture, its hang gap and the clearance the canopy needs below it (commonly ~60-90 cm all-in for LED, more for HPS), subtract pot-plus-bench height (~30 cm). What's left is **usable plant height H**. Divide H by your cultivar's stretch multiplier: that is your **maximum flip height**. Unknown cultivar? Assume ×2 — the industry default of 'flip at half your available height'[^gwe-flowering-stretch].
+The arithmetic is three lines. Take the room height, subtract the fixture, its hang gap and the clearance the canopy needs below it (commonly ~60–90 cm (24–35 in) all-in for LED, more for HPS), subtract pot-plus-bench height (~30 cm (12 in)). What's left is **usable plant height H**. Divide H by your cultivar's stretch multiplier: that is your **maximum flip height**. Unknown cultivar? Assume ×2 — the industry default of 'flip at half your available height'[^gwe-flowering-stretch].
 
-> **Diagram.** Work backwards: ceiling minus fixture stack minus bench gives usable height H; H divided by the stretch multiplier gives max flip height. The same 45 cm flip is safe at ×1.5-2.0 and in the fixture at ×2.5.
+> **Diagram.** Work backwards: ceiling minus fixture stack minus bench gives usable height H; H divided by the stretch multiplier gives max flip height. The same 45 cm (18 in) flip is safe at ×1.5-2.0 and in the fixture at ×2.5.
 
 | Cultivar type | Typical multiplier | Max flip height (H = 100 cm) |
 | --- | --- | --- |
@@ -172,7 +172,7 @@ Uniformity is also a commercial property, not just an agronomic one: denser, les
 
 ## Vegetative climate targets
 
-Veg wants a slightly warmer, wetter, gentler room than flower: the plant is all leaf, shallow-rooted early on, and building tissue rather than ripening it. The table gives working bands; the two figures below unpack the ones people argue about.
+Veg wants a slightly warmer, wetter, gentler room than flower: the plant is all leaf, shallow-rooted early on, and building tissue rather than ripening it. The table gives working bands; the two figures below unpack the ones people argue about. One row — VPD — needs a brief introduction before you hit the numbers. At any given temperature, air can hold only so much water vapour. The gap between what the air actually holds and its maximum is how hungry that air is for moisture right now. Picture a wet sponge left on a warm counter: on a dry day it dries in an hour; on a humid day it stays damp for hours. The plant leaf is the sponge. Vapour-pressure deficit (VPD, measured in kPa) is that gap — the bigger the number, the harder the air pulls on the leaf. The target steps from around 0.8 kPa early in veg up to 1.0–1.3 kPa as the plant matures; the table below carries the full context.
 
 | Parameter | Early veg (fresh transplant) | Late veg (pre-flip) | Basis |
 | --- | --- | --- | --- |
@@ -219,13 +219,13 @@ Two rules of thumb do most of the work. **Colour before calendar:** a veg plant 
 
 The fastest way to lose a week of veg is to drown a fresh transplant. A just-potted plant has a small root ball in a large, wet volume: keep that volume saturated and the roots have no reason to explore and no oxygen to do it with. Manufacturer stone-wool guidance for veg is small, frequent shots, on the order of ~3% of substrate volume, with a modest 5-15% runoff fraction, while avoiding hard drybacks (below roughly 25-30% water content in blocks) that stall young roots[^grodan-growguide-steering]. The rhythm is: wet enough to live, dry enough that roots keep chasing the water down and out.
 
-By flip day the root zone, not the calendar, is the report card. Three checks: roots visible at the container walls and drain holes (or slab face); a _predictable_ overnight dryback, the pot measurably lighter or the sensor showing a repeatable morning dip; and irrigation demand trending up day over day. That established, exploring root system is what funds the stretch, when water and nutrient demand roughly doubles in three weeks. Flip before it exists and the stretch stalls; flip long after and you're root-bound (section above).
+By flip day the root zone, not the calendar, is the report card. Overnight dryback is the drop in substrate moisture between your last irrigation shot and first light the next morning — roots keep pulling water through the dark hours, so the pot gets measurably lighter by dawn. Think of a sponge left after washing dishes: it keeps releasing water long after you put it down. When that overnight dip repeats reliably, two or three nights running, the roots are established and actively exploring. Three checks confirm they are ready: roots visible at the container walls and drain holes (or slab face); a _predictable_ overnight dryback, the sensor showing the same morning dip each day; and irrigation demand trending up day over day. That established, exploring root system is what funds the stretch, when water and nutrient demand roughly doubles in three weeks. Flip before it exists and the stretch stalls; flip long after and you're root-bound (section above).
 
-> **Diagram.** An indicative 18-day clone-to-flip block for a topped plant in 10-11 L: root-in, top, recover, level, then a gate. SOG compresses the same shape to ~7-10 days; trees stretch it to 5-8 weeks. The gate decides the flip, the calendar just forecasts it.
+> **Diagram.** An indicative 18-day clone-to-flip block for a topped plant in 10–11 L (2.6–2.9 gal): root-in, top, recover, level, then a gate. SOG compresses the same shape to ~7–10 days; trees stretch it to 5–8 weeks. The gate decides the flip, the calendar just forecasts it.
 
 1. **Roots at the walls** — White roots at the pot walls/drain holes or wrapping the block face; daily water demand trending up.
 2. **Height under the line** — Tallest top at or below max flip height (usable height ÷ stretch multiplier).
-3. **Canopy level and full** — Tops within ~10 cm of each other; ~80-90% of each plant's canopy share filled; net on.
+3. **Canopy level and full** — Tops within ~10 cm (4 in) of each other; ~80-90% of each plant's canopy share filled; net on.
 4. **Cuts recovered** — Last topping ≥10-14 days ago; leaders even; no fresh major wounds going into stretch[^rqs-topping-guide].
 5. **Fed and green** — No active deficiency; feed at late-veg EC; plant an even mid-green with N reserves for the stretch.
 
@@ -241,7 +241,7 @@ Flower length is written in the genetics, call it 56-63 days and largely untouch
 
 **Where plant count is capped, veg length is the lever you have left.** If a licence condition, agreement or your own risk model limits how many plants you may run, yield per plant becomes the metric that matters, and per-plant yield scales with veg length and frame size[^schober-2024-veg-duration-density]. Fewer, bigger plants also carry real operational discounts: fewer tags and records per gram in a track-and-trace regime, fewer transplants, fewer IPM scouting units, and lower plant-to-plant variability risk than a dense canopy[^danziger-2022-planting-density]. The inverse holds where count is free and time is the constraint: short veg, high density, more turns[^dang-2022-photoperiod-switch-meta].
 
-**Veg length also has to fit your veg room.** At steady state, a flower room flipping a new cohort every N weeks needs the veg area to hold each cohort for the full veg length. The longer the veg, the more cohorts stack up on the veg benches at once, long-veg strategies quietly demand a bigger veg room, more veg light, and more weeks of exposure to a veg-room pest outbreak. Cheap per m², but not free.
+**Veg length also has to fit your veg room.** At steady state, a flower room flipping a new cohort every N weeks needs the veg area to hold each cohort for the full veg length. The longer the veg, the more cohorts stack up on the veg benches at once — long-veg strategies quietly demand a bigger veg room, more veg light, and more weeks of exposure to a veg-room pest outbreak. Cheap per m² (ft²), but not free.
 
 - **Flower block:** 56-63 days, fixed by genetics, not negotiable
 - **Veg ~10 days:** ≈5 turns/yr · most plants and tags · least per-plant risk exposure

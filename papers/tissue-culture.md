@@ -2,7 +2,7 @@
 slug: "tissue-culture"
 title: "Cleaning up cannabis genetics with tissue culture"
 eyebrow: "Beginner · Tissue culture"
-summary: "Tissue culture grows a clean, vigorous, genetically identical mother from a speck of tissue off a tired or diseased plant. Explained from absolute zero."
+summary: "Tissue culture regrows an entire plant from a microscopic piece of its growing tip, eliminating diseases that ordinary cleaning cannot reach. After reading this guide you will be able to run the full workflow yourself, from conditioning the donor plant through to holding a verified disease-free mother ready to take cuttings from."
 track: "Propagation"
 read_time: "~22 min read"
 diagrams: ""
@@ -21,7 +21,7 @@ refs: [{"id": "hlvd_threat2023", "n": 1, "cite": "Atallah OO et al. (2023). Hop 
 
 _Beginner · Tissue culture · ~22 min read_
 
-> Tissue culture grows a clean, vigorous, genetically identical mother from a speck of tissue off a tired or diseased plant. Explained from absolute zero.
+> Tissue culture regrows an entire plant from a microscopic piece of its growing tip, eliminating diseases that ordinary cleaning cannot reach. After reading this guide you will be able to run the full workflow yourself, from conditioning the donor plant through to holding a verified disease-free mother ready to take cuttings from.
 
 ## Purpose and scope
 
@@ -55,9 +55,9 @@ Jump to section 19 (Troubleshooting) and section 20, the honest reality check on
 
 Tissue culture rests on one fact about plants that animals do not share. Almost every cell holds the full instructions to rebuild the whole plant.
 
-> **KEY — Totipotency: the property that makes all of this work**
+> **KEY — Totipotency: why a tiny piece can grow a whole plant**
 >
-> Many plant cells can, under the right conditions, carry the complete instructions to rebuild the whole plant. Give a tiny scrap of the right tissue the right food and the right hormones and it grows roots, shoots and leaves: a complete new plant. This ability is called **totipotency**. You are not growing a ‘sample’, you are growing a whole new copy.
+> Think of it like this: every cell in the plant holds a complete sealed copy of the building instructions. Most cells spend their whole life using only one page of those instructions — a root cell reads root instructions, a leaf cell reads leaf instructions. Give a tiny piece of the right tissue the right food and the right signals, and that sealed copy opens: the cell reads the whole thing from page one and rebuilds the entire plant from scratch. This ability is called **totipotency**. You are not growing a ‘sample’; you are growing a whole new copy.
 
 Here is the vocabulary you need. Get the gist rather than memorising it. Each term comes back in context later.
 
@@ -89,7 +89,7 @@ Take cuttings from the same mother for years and two things creep in: invisible 
 
 > **Diagram.** A clean plant versus a ‘dudded’ one carrying Hop Latent Viroid. The infection is often symptomless early on, which is exactly why it spreads through a clone line undetected until production has quietly collapsed.
 
-#### Why HpLVd is such a big deal
+#### HpLVd: spread, cost and impact
 
 **It's everywhere**
 
@@ -109,7 +109,7 @@ for a long time and is ‘latent’ by name. By the time plants visibly dud, the
 
 It survives on tools, hands, pots and benches, rides in sap for ~a week and in dried tissue for ~a month. The 2025 North American transmission study reported seed transmission as high as 100%; the rate varies by seed lot and study design, so test every lot.[^hlvd_mgmt2025]
 
-> **WARN — Why you can't just spray it away**
+> **WARN — Sprays cannot cure a viroid infection**
 >
 > No spray cures a viroid-infected plant. It lives _inside_ the plant's cells and plumbing. The only reliable way to get rid of it is to grow a brand-new plant from a piece of tissue the viroid hasn't reached yet. That is precisely what meristem tissue culture does, and it is the heart of this guide.
 
@@ -127,7 +127,7 @@ This guide breaks those five stages into the practical steps you'll actually per
 
 > **Diagram.** The full step-by-step pipeline used in this guide, with rough durations. The purple step (meristem cleanup) and the blue step (indexing / disease testing) are what turn ordinary cloning into genetic clean-up. Durations overlap in practice.
 
-#### How long does the whole thing take?
+#### Realistic timelines
 
 Longer than you'd hope, and that's worth knowing up front. There are two honest answers, depending on what you mean by ‘done’.
 
@@ -140,11 +140,9 @@ Longer than you'd hope, and that's worth knowing up front. There are two honest 
 
 ## Meristem culture for pathogen elimination
 
-This is the single most important concept in the whole guide. Once it clicks, everything about ‘cleaning genetics’ makes sense.
-
 Viroids and viruses move around a plant through its **vascular system**: the internal plumbing (phloem) that carries sap. They spread cell-to-cell from there. But at the very tip of every growing shoot sits the **meristem**, a dome of furiously dividing baby cells that is _so new the plumbing hasn't been built into it yet_.
 
-> **Diagram.** Inside a shoot tip. The viroid travels up the red vascular tissue but cannot reach the green meristem dome: there's no plumbing there yet, and the dome's cells divide faster than the viroid can spread. Excise just that 0.2–0.5 mm dome and you usually leave the disease behind.
+> **Diagram.** Inside a shoot tip. The viroid travels up the red vascular tissue but cannot reach the green meristem dome: there's no plumbing there yet, and the dome's cells divide faster than the viroid can spread. Excise just that 0.2–0.5 mm (0.008–0.020 in) dome and you usually leave the disease behind.
 
 > **KEY — Two reasons the dome stays clean**
 >
@@ -219,7 +217,7 @@ Learn this one thing well above all others. Ninety percent of beginner failures 
 1. **Clean the zone** — Wipe the box/hood interior and the bench with 70% alcohol. Let it flash off. Turn off fans/AC if using a still-air box.
 2. **Glove and spray** — Fresh nitrile gloves, then spray your gloved hands with 70% alcohol. Re-spray often, every time you touch anything outside the sterile field.
 3. **Only what you need** — Bring in only the jars, tools and explants for this session. Clutter is contamination.
-4. **Sterilise tools before EVERY cut** — Dip the scalpel and forceps in alcohol then pass through a flame, OR use a glass-bead steriliser (~250 °C, ~20 seconds). Then **let them cool**: touching tissue with a hot tool cooks it.
+4. **Sterilise tools before EVERY cut** — Dip the scalpel and forceps in alcohol then pass through a flame, OR use a glass-bead steriliser (~250 °C / 482 °F, ~20 seconds). Then **let them cool**: touching tissue with a hot tool cooks it.
 5. **Work fast, lids off briefly** — Open a jar only at the moment you use it; close it the instant you're done. Never leave a vessel gaping.
 6. **Hands never cross open jars** — Reaching over an open vessel showers it with skin flakes and spores. Approach from the side, always.
 
@@ -275,7 +273,7 @@ Buy a kit and the hormones are already blended in, so you can skip this. Mix you
 
 #### Sterilising the medium
 
-Raw medium is microbe heaven, so it must be heat-sterilised before use. The home tool is a **pressure cooker**; the lab tool is an **autoclave** (the Athena kit includes a small one). Both do the same job: hold the jars at **121 °C / 15 psi for ~20 minutes**.
+Raw medium is microbe heaven, so it must be heat-sterilised before use. The home tool is a **pressure cooker**; the lab tool is an **autoclave** (the Athena kit includes a small one). Both do the same job: hold the jars at **121 °C (250 °F) / 15 psi for ~20 minutes**.
 
 **DIY: pressure cooker**
 
@@ -293,7 +291,7 @@ Empty one SHOOTS or ROOTS sachet into the vessel, add RO water to the line (125 
 
 Garbage in, garbage out. The health of your donor plant is the single biggest predictor of whether your cultures stay clean. A stressed, dusty, pest-ridden mother will defeat even perfect technique, because some microbes ride _inside_ the tissue where bleach can't reach (the endophytes from section 7).
 
-0Condition a clean, vigorous donor1–2 weeksPick your best, true-to-type plant and get it into peak vegetative health before you cut anything from it.Keep it **vegetative, never flowering**: long days, 18 h light / 6 h dark.Aim for **24–30 °C** and a moderate **55–60% humidity**.Feed a vegetative nutrient mix and keep it pushing **soft, fast new growth**. That young tissue gives far better, cleaner explants than old woody stems.Scout and treat **pests and disease** first. Only work from a plant that looks genuinely healthy.
+0Condition a clean, vigorous donor1–2 weeksPick your best, true-to-type plant and get it into peak vegetative health before you cut anything from it.Keep it **vegetative, never flowering**: long days, 18 h light / 6 h dark.Aim for **24–30 °C (75–86 °F)** and a moderate **55–60% humidity**.Feed a vegetative nutrient mix and keep it pushing **soft, fast new growth**. That young tissue gives far better, cleaner explants than old woody stems.Scout and treat **pests and disease** first. Only work from a plant that looks genuinely healthy.
 
 > **TIP — The pre-cut conditioning trick**
 >
@@ -307,7 +305,7 @@ Now the hands-on work begins. You'll cut a small piece from the conditioned moth
 
 #### Cut the explant
 
-For your _first_ attempts, use a **nodal segment**: a piece of stem ~1 cm long containing one bud. It's the most forgiving explant and lets you learn sterile technique before attempting the fiddly meristem dissection (section 12). Strip off large leaves to reduce the surface area carrying microbes.
+For your _first_ attempts, use a **nodal segment**: a piece of stem ~1 cm (0.4 in) long containing one bud. It's the most forgiving explant and lets you learn sterile technique before attempting the fiddly meristem dissection (section 12). Strip off large leaves to reduce the surface area carrying microbes.
 
 #### Surface-sterilise it
 
@@ -338,23 +336,23 @@ The standard, best-supported beginner protocol is a two-punch: a quick alcohol d
 
 ‘Initiation’ (also called establishment) is the period after you've placed the sterile explant on its medium, while it settles in and starts to grow. Your jobs here are to watch like a hawk for contamination and to keep the tissue from browning to death.
 
-IEstablish a clean, growing culture2–4 weeksPut the plated vessels in the culture room at **~25 °C**, **16 h light / 8 h dark**, gentle light.**Watch for 7–14 days.** Bin any vessel showing fungal fuzz, cloudy medium or slimy ooze immediately. One bad jar can seed the shelf.Expect the bud to swell and push new growth (‘bud break’) in roughly **2–3 weeks**.Survivors that are clean and growing graduate to the multiplication stage.
+IEstablish a clean, growing culture2–4 weeksPut the plated vessels in the culture room at **~25 °C (77 °F)**, **16 h light / 8 h dark**, gentle light.**Watch for 7–14 days.** Bin any vessel showing fungal fuzz, cloudy medium or slimy ooze immediately. One bad jar can seed the shelf.Expect the bud to swell and push new growth (‘bud break’) in roughly **2–3 weeks**.Survivors that are clean and growing graduate to the multiplication stage.
 
 > **WARN — Browning: the other way explants die**
 >
 > Cut cannabis leaks **phenolic** compounds that oxidise and turn the tissue (and the medium around it) brown, sometimes fatally. Fight it with **activated charcoal in the medium** (~1 g/L), an antioxidant dip, and moving the explant to fresh medium early and often in the first couple of weeks.
 
-> **NOTE — Why losses are high here, and that's OK**
+> **NOTE — High initiation losses are normal**
 >
 > Initiation is where recalcitrant cannabis sheds the most cultures. Published labs report anywhere from ~55% of explants surviving to 90–95% loss across varieties. Start more explants than you think you need, and don't be discouraged by a thin survival rate on run one.
 
 ## Meristem dissection for genetic cleanup
 
-Everything so far also describes ordinary cloning. **This** is the step that removes the disease. Instead of a 1 cm node, you excise only the tiny meristem dome from section 5, the part the viroid hasn't reached, and grow your new plant from that.
+Everything so far also describes ordinary cloning. **This** is the step that removes the disease. Instead of a 1 cm (0.4 in) node, you excise only the tiny meristem dome from section 5, the part the viroid hasn't reached, and grow your new plant from that.
 
-MExcise the clean meristem dome4–8 weeks to recover1Sterilise a shoot tipSurface-sterilise an actively growing shoot tip exactly as in section 10.2Go under the scopeUnder a stereo (dissecting) microscope, in the flow hood, use fine sterile needles/forceps to peel away the wrapping baby leaves until the glassy, translucent meristem dome is exposed.3Cut the domeExcise just the dome plus 1–2 leaf primordia, a piece only **0.2–0.5 mm** across. Place it on initiation medium.4Be patientMeristems are slow and fragile. Expect ~10 weeks (sometimes up to ~24) to recover into a viable shoot, much slower than a node.
+MExcise the clean meristem dome4–8 weeks to recover1Sterilise a shoot tipSurface-sterilise an actively growing shoot tip exactly as in section 10.2Go under the scopeUnder a stereo (dissecting) microscope, in the flow hood, use fine sterile needles/forceps to peel away the wrapping baby leaves until the glassy, translucent meristem dome is exposed.3Cut the domeExcise just the dome plus 1–2 leaf primordia, a piece only **0.2–0.5 mm (0.008–0.020 in)** across. Place it on initiation medium.4Be patientMeristems are slow and fragile. Expect ~10 weeks (sometimes up to ~24) to recover into a viable shoot, much slower than a node.
 
-#### How well does it actually work?
+#### HpLVd clearance rates by strain
 
 Here is where honesty matters most. Meristem culture _can_ clear HpLVd, but how often it succeeds depends enormously on the strain. In one 13-cultivar study using meristem culture plus mild heat treatment, the disease was fully eradicated in only **5 of 13** cultivars.[^hlvd_thermo2024]
 
@@ -362,7 +360,7 @@ Here is where honesty matters most. Meristem culture _can_ clear HpLVd, but how 
 
 > **NOTE — Optional adjuncts: thermotherapy and cryotherapy**
 >
-> - **Thermotherapy**, holding the mother or culture warm (~30–36 °C) for a couple of weeks, lowers viroid levels so you can excise a slightly larger, more survivable meristem that's still clean. On its own it's unreliable (levels rebound; heat can even create mutant viroids), so it's used _with_ meristem excision, not instead.
+> - **Thermotherapy**, holding the mother or culture warm (~30–36 °C / 86–97 °F) for a couple of weeks, lowers viroid levels so you can excise a slightly larger, more survivable meristem that's still clean. On its own it's unreliable (levels rebound; heat can even create mutant viroids), so it's used _with_ meristem excision, not instead.
 > - **Cryotherapy** (briefly freezing shoot tips in liquid nitrogen so only the tiny clean cells survive) is a powerful research method but has no standard, proven cannabis protocol yet. File under ‘advanced/future’.
 
 > **WARN — The Athena kit can clean, but it cannot prove**
@@ -377,7 +375,7 @@ A meristem plant that _looks_ healthy is not a clean plant until a lab test says
 
 **RT-LAMP** — A newer, cheaper test that runs at a single temperature (no expensive thermocycler), making in-house or field testing practical. Slightly less established than qPCR but increasingly used.
 
-> **KEY — How to index properly: timing is everything**
+> **KEY — Indexing: when and what to test**
 >
 > - HpLVd spreads through a new plant unevenly and slowly. It reaches **roots in ~2–3 weeks** and **foliage in ~4–6 weeks** after infection.
 > - So **test more than once, on more than one tissue.** Roots are the most reliable early indicator; sample older and newer leaves too.
@@ -391,13 +389,15 @@ A meristem plant that _looks_ healthy is not a clean plant until a lab test says
 
 Once you have a clean, established shoot, multiplication turns one into many. You move it onto a cytokinin (shoot-pushing) medium; it produces several shoots; you cut those apart and move them onto fresh medium; repeat. Each round is a **subculture**, roughly every 4 weeks.
 
-IIMultiply shoots, cycle by cycle4–8 weeks (1–2 cycles)Base mediumFull-strength MS (DKW optional)Hormone0 – ~0.5 µM meta-topolin (often best hormone-free)Sugar / gel / pH30 g/L sucrose · 6–9.5 g/L agar · pH 5.7–5.8Environment25 ± 2 °C · 16 h light · ~100–120 µmol/m²/sSubculture every~4 weeksRealistic rate~1–6 new shoots per shoot per cycle (genotype-dependent)
+IIMultiply shoots, cycle by cycle4–8 weeks (1–2 cycles)Base mediumFull-strength MS (DKW optional)Hormone0 – ~0.5 µM meta-topolin (often best hormone-free)Sugar / gel / pH30 g/L sucrose · 6–9.5 g/L agar · pH 5.7–5.8Environment25 ± 2 °C (77 ± 4 °F) · 16 h light · ~100–120 µmol/m²/sSubculture every~4 weeksRealistic rate~1–6 new shoots per shoot per cycle (genotype-dependent)
 
 > **NOTE — Counter-intuitive but well-supported: try hormone-free**
 >
 > You'd expect more cytokinin to mean more shoots. In cannabis, several studies found the **most** shoots, and the healthiest ones, on hormone-free medium, with added cytokinin actually reducing shoot count and causing glassy, deformed growth. Start low or zero, and only add hormone if you genuinely need a higher rate. (With the Athena SHOOTS sachet the hormones are pre-set and you can't change them.)
 
 #### Hyperhydricity: the disorder that ruins multiplication
+
+In a sealed jar at near-100% humidity, the tissue has no reason to build the protective structures that let a plant survive in open air. Think of it like a sponge left in still water: permanently saturated, never forced to drain, never developing any structure that would let it hold its shape when pulled out. When you move that tissue into normal air, it cannot manage its own water loss. This disorder is called **hyperhydricity**.
 
 **Hyperhydricity (a.k.a. vitrification)** — Shoots that turn glassy, translucent, water-soaked and brittle. They look swollen and wet. Their leaves don't form a proper waxy skin or working pores, so they root badly and usually **die when you try to move them to soil**. It is the #1 chronic problem of cannabis multiplication.
 
@@ -479,7 +479,7 @@ A shoot tip or bud encapsulated in a soft bead of calcium alginate gel: an ‘ar
 
 **Cryopreservation**
 
-Freezing tiny shoot tips in liquid nitrogen (−196 °C) for indefinite storage. It's the gold standard for long-term germplasm banking, and it neatly ‘resets the clock’ on the subculture mutations from section 14. Real but advanced; cannabis protocols recover ~55–63% of tips.[^karger2019_cryo]
+Freezing tiny shoot tips in liquid nitrogen (−196 °C / −321 °F) for indefinite storage. It's the gold standard for long-term germplasm banking, and it neatly ‘resets the clock’ on the subculture mutations from section 14. Real but advanced; cannabis protocols recover ~55–63% of tips.[^karger2019_cryo]
 
 > **NOTE — Where the industry is**
 >
@@ -508,9 +508,9 @@ Nearly every beginner problem is on this list. Match the symptom, apply the fix,
 
 ## Expected results and limitations
 
-So you can decide with eyes open.
+Use these benchmarks to set realistic expectations before you start.
 
-#### What success rates to actually expect
+#### Success rates: published best-case vs beginner first run
 
 | Stage | Best-case lab | Realistic beginner first runs |
 | --- | --- | --- |
@@ -521,7 +521,7 @@ So you can decide with eyes open.
 
 *Published figures are best-case. Your first batch will underperform them. That's the learning curve, not failure.*
 
-#### What it costs
+#### Cost overview
 
 | Path | Up-front | Ongoing |
 | --- | --- | --- |

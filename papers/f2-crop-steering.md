@@ -2,7 +2,7 @@
 slug: "f2-crop-steering"
 title: "F2 crop steering: the daily operating manual"
 eyebrow: "Precision · Crop steering"
-summary: "Run an autonomous crop-steering irrigation controller day to day. This is the plain-language starter guide: the P0–P3 cycle, moisture and salt targets, the controls you actually touch, the safety fail-safes, and what to do when something looks wrong."
+summary: "By the end of this paper you can set up, calibrate, and run an autonomous irrigation controller for a veg grow room. It covers the P0–P3 daily cycle, moisture and salt targets, the controls you touch each day, the safety fail-safes built into the system, and how to diagnose what is wrong when something misbehaves."
 track: "Precision & automation"
 read_time: "~18 min read"
 diagrams: "12 diagrams"
@@ -21,7 +21,7 @@ refs: [{"id": "caplan-drought-2019", "n": 1, "cite": "Caplan, D., Dixon, M., & Z
 
 _Precision · Crop steering · ~18 min read_
 
-> Run an autonomous crop-steering irrigation controller day to day. This is the plain-language starter guide: the P0–P3 cycle, moisture and salt targets, the controls you actually touch, the safety fail-safes, and what to do when something looks wrong.
+> By the end of this paper you can set up, calibrate, and run an autonomous irrigation controller for a veg grow room. It covers the P0–P3 daily cycle, moisture and salt targets, the controls you touch each day, the safety fail-safes built into the system, and how to diagnose what is wrong when something misbehaves.
 
 ## Purpose and scope
 
@@ -31,7 +31,7 @@ _Precision · Crop steering · ~18 min read_
 
 F2 is an **autonomous irrigation controller** for a veg grow room. It is software that reads moisture and salt probes in the root zone and decides, on its own, when to fire a watering shot through a pump and valves. You set the targets. It does the watering.
 
-**Crop steering** means pushing the plant toward one of two kinds of growth by controlling exactly how and when it waters. _Vegetative_ steering (bulking) keeps the medium wet with many small waterings and only a small drying-out. _Generative_ steering (the flower or stress push) uses a bigger drying-out, a saltier root zone, and fewer, larger waterings. Even a mild, deliberate water deficit applied at the right time shifts a cannabis plant generatively without losing yield.[^caplan-drought-2019]
+**Crop steering** is the practice of choosing exactly how wet and how salty to keep the root zone in order to shift which kind of growth the plant prioritises. In the wild, a plant reads a drought as a signal that time is short and pivots toward reproduction—this system delivers that signal deliberately, at a controlled dose and moment. _Vegetative_ steering (bulking) keeps the medium wet with many small waterings and a small drying-out. _Generative_ steering (the flower or stress push) uses a bigger drying-out, a saltier root zone, and fewer, larger waterings. Even a mild, deliberate water deficit applied at the right time shifts a cannabis plant generatively without losing yield.[^caplan-drought-2019]
 
 The system runs in two cooperating layers. A **Home Assistant integration** gives you every on-screen control and reading. An **AppDaemon engine** (`master_crop_steering_app.py`) is the decision-making brain that fires the shots. The room is wired as **3 rows (zones)**, each with its own moisture and salt probe and its own valve, all fed from one shared tank, one pump, and one main line.
 
@@ -48,11 +48,11 @@ The system runs in two cooperating layers. A **Home Assistant integration** give
 
 Three measurements run the whole system. Learn these first. Everything else builds on them.
 
-**VWC (volumetric water content)** — How wet the growing medium is, shown as a percent. 60% VWC means water fills 60% of the medium's volume.
+**VWC (volumetric water content)** — The medium holds water the way a sponge does—some of the space filled with liquid, the rest with air. VWC tells you how much of that space is water right now, expressed as a percentage. 60% VWC means water fills 60% of the medium's volume. This is the number all irrigation decisions start from.
 
-**EC (electrical conductivity)** — How salty or strong the root zone, or the feed water, is, in mS/cm. Higher EC means a stronger, saltier solution.
+**EC (electrical conductivity)** — Salt dissolved in water makes it harder for plant roots to pull that water in—much as drinking salt water leaves you thirstier despite the liquid. EC measures how much dissolved salt is in the solution, in mS/cm, by testing how well electricity passes through it. Higher EC means a stronger, saltier solution; lower means weaker.
 
-**Dryback** — The percent the medium dries down from its post-watering peak as the plant drinks. The single most important steering lever.
+**Dryback** — After each watering the medium slowly dries as the plant drinks. Think of it as the tidal cycle of the root zone: the high mark is right after a shot fires, the low mark is just before the next one. Dryback is the distance between those marks, shown as a percentage of the peak. A bigger gap pushes the plant toward generative growth; a smaller one keeps it building vegetatively. This gap is the primary steering dial.
 
 **Shot** — One timed burst of water, sized as a percent of the medium's volume. The duration in seconds comes from substrate volume, dripper flow rate and shot size.
 
@@ -108,7 +108,7 @@ The targets that steer growth are the per-phase VWC numbers (`p1_target_vwc`, `p
 
 *The two levels of ‘off’. Use ON/OFF together for watch mode while you calibrate.*
 
-> **TIP — Watch mode is your friend**
+> **TIP — Use watch mode before going autonomous**
 >
 > Run **System enabled ON, Auto irrigation OFF** while you confirm your numbers. The engine is armed and computing decisions but will not fire on its own. You can fire manual test shots and watch how the room responds before granting full autonomy.
 
@@ -224,7 +224,7 @@ The system has layered fail-safes: the pH/EC source-water gate, a tank dry-run g
 > - **Some sensors can mislead.** Dryback-percentage may be unpopulated and EC can read suspiciously low. Verify probe calibration before trusting EC steering.
 > - **Fail-safes guard hardware, but they trust the sensors.** A bad probe or float can still cause a wrong decision well inside the ‘safe’ envelope.
 
-Treat F2 like a sharp tool, not an oracle. Watching is a discipline worth keeping. Tracking your numbers over time the way a process-control chart does lets you tell a real signal from ordinary noise before you act on it.[^mohammed-spc-2024] For the cultivation theory behind the dryback and EC levers, read the [coco crop steering](coco-crop-steering.html) paper. To understand the probes the whole system trusts, read [root-zone sensing](root-zone-teros12.html) next.
+Treat F2 like a precise tool, not an oracle. Tracking your numbers over time the way a process-control chart does lets you separate a real signal from ordinary variation before acting on it.[^mohammed-spc-2024] For the cultivation theory behind the dryback and EC levers, read the [coco crop steering](coco-crop-steering.html) paper. To understand the probes the whole system trusts, read [root-zone sensing](root-zone-teros12.html) next.
 
 ## References
 

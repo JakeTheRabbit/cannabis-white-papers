@@ -5,10 +5,10 @@ from components import (p, lead, h, ul, ol, callout, defterm, table, figure,
 import figs_lib as L
 
 SLUG = "signal-and-noise"
-TITLE = "Signal and noise: precision cultivation"
+TITLE = "Tell real plant changes from sensor noise"
 EYEBROW = "Precision · Signal & noise"
-SUB = ("Tell a real change in your plants and root zone apart from random sensor wobble, "
-       "and act only when it matters.")
+SUB = ("This paper teaches you to separate the real story in your sensor data from random jitter, "
+       "so you know when to act and, just as important, when to walk away.")
 META = [("gauge", "Precision"), ("image", "9 diagrams"),
         ("quote", "Evidence-linked · 9 sources"), ("clock", "~14 min read")]
 RELATED = ["root-zone-teros12", "smart-watering-vrwe", "closed-loop"]
@@ -30,11 +30,9 @@ SECTIONS.append({"id": "what-this-is", "kicker": "Start here",
     lead("Every sensor reading in your grow room is two things added together: the real story "
          "(the <strong>signal</strong>) and meaningless jitter (the <strong>noise</strong>). Your "
          "whole job is seeing the first through the second."),
-    p("The hard part of growing has moved from collecting data to reading it. Sensors are cheap and "
-      "dashboards are pretty, yet most decisions still run on gut feel. Collecting <em>data</em> used "
-      "to be the work. Now the work is separating the meaningful pattern from the meaningless wobble. "
-      "This paper teaches you to hear what your plants are telling you above the static, and, just as "
-      "important, when to do nothing."),
+    p("Sensors are cheap and dashboards are easy, but most decisions still run on gut feel. "
+      "The work now is separating the meaningful pattern from the random wobble. "
+      "This paper gives you a method for that, and, just as important, for knowing when to do nothing."),
     p("A single flower room can generate hundreds of thousands of datapoints a week" + _c("greenhouse-uniformity-crop-growth") +
       ", so a method for safely ignoring most of them is not optional. More data is not more insight. "
       "A firehose of low-quality data is harder to act on than a trickle of good data."),
@@ -45,16 +43,16 @@ SECTIONS.append({"id": "what-this-is", "kicker": "Start here",
       "One smooth trend (a normal dry-down) lives under a jagged line of sensor jitter. Same numbers, "
       "two completely different stories. Only one of them is worth acting on."),
     callout("key", "The one-line reframe",
-      p("You don't have a data problem. You have a <strong>signal-to-noise problem</strong>. Most "
-        "grow-room &lsquo;alerts&rsquo;, are often noise until tuned: transients "
-        "that fix themselves before any action would have mattered.")),
+      p("A <strong>signal-to-noise problem</strong> &mdash; too much jitter drowning the real story "
+        "&mdash; is the root cause of most grow-room alert fatigue. Most alerts, before tuning, are "
+        "transients that fix themselves before any action would have mattered.")),
   ]})
 
 SECTIONS.append({"id": "key-terms", "kicker": "Plain-language dictionary",
   "title": "Definitions",
   "blocks": [
-    p("The vocabulary comes from radio engineering, manufacturing and statistics, so the words can "
-      "sound intimidating. They are not. <strong>Signal-to-noise ratio (SNR)</strong> is how loud the "
+    p("The vocabulary here comes from radio engineering, manufacturing and statistics. "
+      "<strong>Signal-to-noise ratio (SNR)</strong> is how loud the "
       "thing you care about is compared to everything else competing for your "
       "attention" + _c("snr-engineering-origin") + ". A high-SNR room is calm and decisive. A low-SNR "
       "room is anxious and reactive."),
@@ -116,14 +114,17 @@ SECTIONS.append({"id": "where-noise-comes-from", "kicker": "Core idea 1",
 SECTIONS.append({"id": "averaging-and-sampling", "kicker": "Core idea 2",
   "title": "Sampling and averaging",
   "blocks": [
-    p("The most powerful, most ignored noise filter in horticulture is <strong>replication</strong>. "
-      "Ask one plant how the room is doing and you get a rumour. Average twelve plants across the bench "
-      "and the individual quirks cancel, leaving only the shared room signal. The maths is friendly: "
-      "the error of an average shrinks with the square root of how many readings you combine" + _c("replication-reduces-variance") +
-      ". Four probes roughly halve the noise, nine cut it to a third."),
+    p("The most powerful, most ignored noise filter is to average more sensors instead of trusting one. "
+      "Think of asking a single person on the street whether it is raining &mdash; one answer is a "
+      "rumour. Ask twenty people spread across the block and the outlier gets outvoted. In your room, "
+      "averaging twelve plants across the bench lets each plant&rsquo;s individual quirks cancel out, "
+      "leaving only the shared room story. The technical word for this is <strong>replication</strong>, "
+      "and the maths is friendly: the error of an average shrinks with the square root of how many "
+      "readings you combine" + _c("replication-reduces-variance") + ". Four probes roughly halve the noise, nine cut it to a third."),
     p("How often you measure matters just as much. Sample too slowly and a fast pattern folds into a "
-      "slow one that was never there. Engineers call this <strong>aliasing</strong>: the "
-      "wagon-wheel-spinning-backwards effect from old films. The rule of thumb, from the "
+      "slow one that was never there &mdash; like a wagon wheel in an old film that appears to spin "
+      "backwards while the cart moves forward. That fake trend was invented by the gap between samples. "
+      "Engineers call this <strong>aliasing</strong>. The rule of thumb, from the "
       "Nyquist&ndash;Shannon sampling theorem, is to sample at least twice as fast as the fastest "
       "pattern you need to see" + _c("nyquist-shannon-sampling") + ". To catch a 30-minute irrigation "
       "response, log every 10&ndash;15 minutes."),
@@ -181,7 +182,7 @@ SECTIONS.append({"id": "control-limits-spc", "kicker": "Core idea 3",
   ]})
 
 SECTIONS.append({"id": "playbook", "kicker": "Do this Monday",
-  "title": "Operating procedure",
+  "title": "Eight steps to reduce noise this week",
   "blocks": [
     p("None of the highest-return moves needs new capital. Most need only discipline, "
       "tackled top-down. Here is the order to do it in."),
@@ -228,9 +229,10 @@ SECTIONS.append({"id": "pitfalls", "kicker": "Watch out",
       "real fast event, a pump failure or an EC spike from a clogged dripper, at exactly "
       "the moment you needed to see it. The opposite mistake is reacting to every twitch, which "
       "destabilises the very room you were trying to steady" + _c("deming-funnel-tampering") + "."),
-    p("A specific systems failure is <strong>hunting</strong>. A feedback loop fed noisy data, or "
-      "tuned too tight, over-corrects one way. The noisy measurement says it overshot, so it slams "
-      "back the other way, and the room oscillates instead of settling. The fingerprint is a regular "
+    p("A feedback loop fed noisy data, or tuned too tight, starts to over-correct back and forth rather "
+      "than settling. Think of a thermostat set too sensitive: it fires the heater the moment it reads "
+      "one degree low, overshoots, then fires the cooler, undershoots, and the room swings "
+      "continuously. Engineers call this <strong>hunting</strong>. The fingerprint is a regular "
       "saw-tooth in temperature, RH or VWC that <em>isn't</em> driven by day/night. If your HVAC or "
       "fertigation seems to &lsquo;fight itself&rsquo;, suspect a noisy sensor or a too-tight "
       "dead-band before you suspect broken equipment."),
@@ -269,8 +271,8 @@ SECTIONS.append({"id": "realistic-expectations", "kicker": "What to expect",
       "success is often <strong>uniformity</strong>, measured as the batch coefficient of "
       "variation, not peak yield. Reducing the spatial and temporal fluctuation of your "
       "environment (a lower coefficient of variation) has been shown to improve crop growth and "
-      "quality" + _c("greenhouse-uniformity-crop-growth") + ". A batch where every plant yields 95g "
-      "sells better than one averaging 110g with a 40g spread."),
+      "quality" + _c("greenhouse-uniformity-crop-growth") + ". A batch where every plant yields "
+      "95 g (3.4 oz) sells better than one averaging 110 g (3.9 oz) with a 40 g (1.4 oz) spread."),
     table(["Signal-rich KPIs: track these", "Vanity metrics: ignore these"], [
       ["Grams per kWh", "Instantaneous single-sensor temperature"],
       ["Dryback trend", "Total datapoints logged"],
@@ -279,8 +281,9 @@ SECTIONS.append({"id": "realistic-expectations", "kicker": "What to expect",
       ["Batch coefficient of variation", "Number of dashboards"],
     ], cls="compact", caption="Coefficient of variation literally measures the noise in your crop. Consistency beats peak performance commercially."),
     callout("key", "The honest summary",
-      p("You're chasing a higher signal-to-noise ratio, not a perfect room. Aim for one rung up the "
-        "ladder, smooth before you steer, and earn the right to do nothing when a number wobbles.")),
+      p("The goal is a higher signal-to-noise ratio, not a perfect room. One rung up the ladder is "
+        "the right target. Smooth before you steer, and let a number that stays inside its control "
+        "limits wobble without reacting.")),
     p("Next: see how a clean, filtered signal actually drives irrigation in "
       "<a href='smart-watering-vrwe.html'>smart watering by VWC &amp; EC</a>, and how that closes the "
       "loop without hunting in <a href='closed-loop.html'>closed-loop control</a>."),

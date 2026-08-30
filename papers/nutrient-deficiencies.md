@@ -2,7 +2,7 @@
 slug: "nutrient-deficiencies"
 title: "Nutrient deficiency and toxicity diagnosis"
 eyebrow: "Plant health · Diagnosis"
-summary: "A beginner's visual guide to reading cannabis leaf symptoms: mobile vs immobile nutrients, deficiency vs toxicity vs pH lockout, and how to confirm and fix the real problem before you reach for fertiliser."
+summary: "This paper teaches you to read cannabis leaf symptoms by position, colour and shape. You will be able to distinguish mobile from immobile nutrient deficiencies, separate a true deficiency from a toxicity or a pH lockout, and confirm a diagnosis with a pH and EC meter before changing your feed."
 track: "Water, substrate & feed"
 read_time: "~14 min read"
 diagrams: ""
@@ -21,7 +21,7 @@ refs: [{"id": "cockson-2019-nutrient-disorders-cannabis", "n": 1, "cite": "Cocks
 
 _Plant health · Diagnosis · ~14 min read_
 
-> A beginner's visual guide to reading cannabis leaf symptoms: mobile vs immobile nutrients, deficiency vs toxicity vs pH lockout, and how to confirm and fix the real problem before you reach for fertiliser.
+> This paper teaches you to read cannabis leaf symptoms by position, colour and shape. You will be able to distinguish mobile from immobile nutrient deficiencies, separate a true deficiency from a toxicity or a pH lockout, and confirm a diagnosis with a pH and EC meter before changing your feed.
 
 ## Purpose and scope
 
@@ -73,7 +73,7 @@ Before diagnosing anything you need a handful of words that growers use constant
 
 ## Leaf position and nutrient mobility
 
-When a plant runs short of a mobile nutrient, it cannibalises its oldest leaves to feed new growth, so damage appears at the bottom first and climbs upward. When it runs short of an immobile nutrient, it cannot move existing stores, so the newest top growth starves while old leaves stay fine.[^maillard-2015-leaf-nutrient-remobilization]
+When a plant runs short of a mobile nutrient, it strips that element from its oldest leaves and sends it to the growing tip — the way a body breaks down muscle to keep vital organs going when food is scarce. Damage from a mobile-nutrient shortage appears at the bottom first and climbs upward. Immobile nutrients are built into cell walls once placed and cannot be retrieved, so a shortage of an immobile element hits the newest top growth first while old leaves stay fine.[^maillard-2015-leaf-nutrient-remobilization]
 
 This single rule lets you cut the list of suspects roughly in half before you even look at colour.
 
@@ -89,7 +89,7 @@ This single rule lets you cut the list of suspects roughly in half before you ev
 
 ## Deficiency, toxicity and pH lockout
 
-The biggest beginner trap is seeing yellow leaves, assuming hungry, and adding more fertiliser, which makes a toxicity or lockout dramatically worse. A toxicity shows as dark green clawed leaves and burnt tips, the opposite of a hunger symptom. A pH lockout means the nutrient is sitting right there in the pot but the roots physically cannot take it up because the water is too acidic or too alkaline.
+The biggest beginner trap is seeing yellow leaves, assuming hungry, and adding more fertiliser, which makes a toxicity or lockout dramatically worse. A toxicity shows as dark green clawed leaves and burnt tips, the opposite of pale fading leaves. A pH lockout means the nutrient is dissolved right there in the water but roots cannot take it in — like trying to absorb food when your stomach acid is the wrong strength, the uptake mechanism stops regardless of what is present. Only correcting pH restores absorption.
 
 - **Deficiency:** progressive fading and yellowing, smaller new growth, leaves eventually drop. The plant looks like it is starving and getting paler.
 - **Toxicity (overfeeding):** leaves go dark green and glossy, tips burn brown and curl, and severe nitrogen excess bends leaf tips into a downward hook called the claw.[^saloner-2020-cannabis-nitrogen-supply]
@@ -182,7 +182,7 @@ Most deficiencies beginners post about are actually pH lockout, overwatering or 
 
 *The five impostors. Each one looks like hunger and each one is made worse by feeding.*
 
-Antagonism is the subtle one: too much of one nutrient blocks another. Excess potassium suppresses calcium and magnesium uptake, so a cal-mag deficiency can actually be a potassium excess, which is exactly why over-supplementing single elements backfires.[^fageria-2001-nutrient-interactions-antagonism]
+Antagonism is the subtle one: too much of one element blocks another at the root's uptake sites — like a sponge so saturated with one liquid it cannot take in a second. Excess potassium suppresses calcium and magnesium uptake, so a cal-mag deficiency can actually be a potassium excess, which is exactly why over-supplementing single elements backfires.[^fageria-2001-nutrient-interactions-antagonism]
 
 > **Diagram.** Overwatering and light stress mimic nutrient disorders, so a true single-nutrient deficiency is the last conclusion, not the first.[^fageria-2001-nutrient-interactions-antagonism]
 
@@ -195,7 +195,7 @@ Diagnosis gives you a confident shortlist, not lab certainty. Visual symptoms ov
 - A single clean pH and EC routine prevents the large majority of nutrient problems. Chasing individual-element cures is a sign the underlying routine needs fixing.
 - For high-value or commercial crops, confirm ambiguous cases with leaf-tissue or substrate analysis rather than eyeballing.
 
-> **Diagram.** The cheap habit on the left prevents most of the expensive work on the right. Prevention beats diagnosis every time.
+> **Diagram.** The cheap habit on the left prevents most of the expensive work on the right. A stable pH and EC routine costs far less effort than recovering from a disorder.
 
 > **KEY — Prevention beats diagnosis**
 >

@@ -5,10 +5,11 @@ from components import (p, lead, h, ul, ol, callout, defterm, table, figure,
 import figs_lib as L
 
 SLUG = "gmp-hash-lab"
-TITLE = "GMP hash manufacturing: facility flow and quality control"
+TITLE = "GMP hash lab: zones, flows, and batch release"
 EYEBROW = "Facility · GMP"
-SUB = ("How to design a clean, compliant hash and extract factory from scratch: what GMP "
-       "means, how rooms and people and product move, and how a batch earns its way to market.")
+SUB = ("This paper covers GMP requirements for a hash facility: how to zone rooms by cleanliness "
+       "grade, how product and people move through those zones, and what it takes to pass seven test "
+       "families and three release gates to reach a signed batch Certificate of Analysis.")
 META = [("building", "Facility"), ("image", "13 diagrams"),
         ("quote", "Evidence-linked · 9 sources"), ("clock", "~18 min read")]
 RELATED = ["mould-risk", "facility-3d"]
@@ -25,8 +26,8 @@ SECTIONS = []
 SECTIONS.append({"id": "what-this-is", "kicker": "Start here", "title": "Purpose and scope",
   "blocks": [
     lead("GMP stands for <strong>Good Manufacturing Practice</strong>: a written, audited "
-         "system that proves a product is exactly what its label says and that nothing harmful rode "
-         "along. A GMP hash lab turns cannabis biomass into purified resin concentrates (bubble hash, "
+         "system that proves a product is exactly what its label says and that nothing harmful was "
+         "introduced during production. A GMP hash lab turns cannabis biomass into purified resin concentrates (bubble hash, "
          "rosin, live resin, distillate) under tight contamination control."),
     p("Extraction can concentrate, reduce or redistribute contaminants according to the analyte, process "
       "and mass yield" + _c("luca2020-pesticide-partition-hemp-extract") + ". A passing flower result does not establish "
@@ -62,8 +63,7 @@ SECTIONS.append({"id": "what-this-is", "kicker": "Start here", "title": "Purpose
 
 SECTIONS.append({"id": "key-terms", "kicker": "Vocabulary", "title": "Definitions",
   "blocks": [
-    p("A handful of terms do the heavy lifting before any diagram makes sense. You don't need to memorise them: "
-      "each comes back in context."),
+    p("These terms recur throughout the paper. Each one is explained in full when it first appears in context."),
     defterm("Cleanroom grade", "A letter (CNC, D, C, B, A) describing how clean a room's air is, "
             "mapped to ISO 14644 particle classes. Grade C = ISO 7, Grade A = ISO 5."),
     defterm("Batch / lot", "One defined production run with a single lot ID. Everything that happens "
@@ -128,10 +128,11 @@ SECTIONS.append({"id": "zoning", "kicker": "Core concept", "title": "Zoning and 
 
 SECTIONS.append({"id": "pressure-and-people", "kicker": "Core concept", "title": "Pressure cascade, HVAC, and gowning",
   "blocks": [
-    p("Air is the main way contamination travels, so the building runs a <strong>positive-pressure "
-      "cascade</strong>: clean rooms are held at higher pressure than dirtier ones, so air always "
-      "blows <em>outward</em> from clean to dirty. Open a door and clean air rushes out. It can "
-      "never suck dirty air toward the product."),
+    p("Air is the main way contamination moves in a cleanroom. Think of a balloon with a slow leak: "
+      "air escapes toward lower pressure, never the reverse. A <strong>positive-pressure "
+      "cascade</strong> uses the same principle: clean rooms are held at higher pressure than "
+      "adjacent dirtier spaces, so air always flows <em>outward</em> from clean to dirty. "
+      "Open a door and clean air rushes out. Dirty air cannot be drawn back toward the product."),
     p("Pressures step up shell by shell. EU-GMP Annex 1 recommends roughly a 10&ndash;15&nbsp;Pa "
       "difference between adjacent classified zones" + _c("ispe-cleanroom-design-iso14644-16") + ", giving "
       "a ladder like 0&nbsp;Pa (CNC), +15 (D), +30 (C), +45 (B), +60 (A). The solvent room is the one "
@@ -176,9 +177,9 @@ SECTIONS.append({"id": "process-flows", "kicker": "Core concept", "title": "Hash
       "recovers it. They share a goal but carry very different hazards."),
     p("The solventless route agitates fresh-frozen biomass in ice water, sieves the resin through a "
       "stack of screens (220 down to 25 micron), freeze-dries it, and presses it to rosin. Its four "
-      "<strong>critical control points</strong> are wash temperature (&le;4&nbsp;&deg;C), water "
+      "<strong>critical control points</strong> are wash temperature (&le;4&nbsp;&deg;C (39&nbsp;&deg;F)), water "
       "quality (RO, &lt;10&nbsp;CFU/mL), water activity (Aw&nbsp;&le;0.55), and press temperature "
-      "(&le;90&nbsp;&deg;C). Keeping water activity at or below about 0.55&ndash;0.65 starves microbes "
+      "(&le;90&nbsp;&deg;C (194&nbsp;&deg;F)). Keeping water activity at or below about 0.55&ndash;0.65 starves microbes "
       "and fungi before they can grow" + _c("ehp-cannabis-contaminants-2019") + "."),
     figure(L.flow("Solventless route with critical control points",
             [("Fresh-frozen", "weigh-in biomass"), ("Agitate &le;4&deg;C", "CCP: wash temp"),

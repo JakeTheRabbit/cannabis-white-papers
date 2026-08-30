@@ -8,10 +8,11 @@ SLUG = "co2-enrichment"
 TITLE = "CO2 enrichment: feeding the plant carbon, safely"
 EYEBROW = "Environment & climate · CO2"
 SUB = ("Carbon dioxide is the raw material a plant turns into sugar. Under strong light an indoor crop "
-       "can use far more CO2 than the air provides, so adding it can lift yield by around a third. But CO2 "
-       "only helps in the light, it is easy to waste, and at the wrong concentration it will erase the "
-       "plants' returns or kill the people in the room. This is how it works, how much to add and when, "
-       "and how to do it without hurting anyone.")
+       "can use far more CO2 than the air provides, and adding it can lift dry yield by around a third. "
+       "CO2 only works during the light period, it is easy to waste in a vented room, and at the wrong "
+       "concentration it can kill the people in the room. This paper explains the mechanism, the target "
+       "band, how to seal a room so the CO2 stays in, and what safety limits and alarms to fit before "
+       "anyone enters.")
 META = [("spark", "Core concept to safe setup"), ("image", "7 diagrams"),
         ("quote", "Evidence-linked + safety standards · 38 sources"), ("clock", "~30 min read")]
 RELATED = ["grow-room-systems", "airflow-design", "harvest-dry-trim-cure"]
@@ -84,13 +85,15 @@ SECTIONS.append({"id": "terms", "kicker": "02 · The vocabulary", "title": "Defi
   ]})
 
 # ---------------------------------------------------------------- 03
-SECTIONS.append({"id": "how", "kicker": "03 · The mechanism", "title": "CO2 assimilation and flower growth",
+SECTIONS.append({"id": "how", "kicker": "03 · The mechanism", "title": "Leaf photosynthesis and why CO2 level matters",
   "blocks": [
-    p("Inside a lit leaf, an enzyme called Rubisco grabs CO2 out of the air and fixes it into sugar. The "
-      "trouble is Rubisco is sloppy: it also grabs oxygen by mistake, and when it does it kicks off "
-      "<strong>photorespiration</strong>, a reaction that burns energy and throws carbon away. The more "
-      "CO2 there is relative to oxygen, the more often Rubisco does its real job instead of the wasteful "
-      "one" + _c("tolbert1995-compensation") + "."),
+    p("Inside a lit leaf, an enzyme called Rubisco grabs CO2 out of the air and fixes it into sugar. "
+      "The trouble is Rubisco is not perfectly selective: it also accepts oxygen, and when oxygen wins "
+      "the grab it kicks off <strong>photorespiration</strong>&mdash;a reaction that burns energy and "
+      "throws carbon away without making anything useful. Think of Rubisco like a lock that fits the "
+      "right key (CO2) perfectly but will also accept oxygen as a loose copy: flood the barrel with the "
+      "right key and the wrong one rarely gets a turn. The more CO2 there is relative to oxygen, the "
+      "less often photorespiration runs" + _c("tolbert1995-compensation") + "."),
     p("Today's air, at ~420 ppm CO2" + _c("noaa2024-co2") + ", is not enough to keep Rubisco busy. A C3 "
       "plant like cannabis is <strong>CO2-limited</strong>: raise the CO2 and photosynthesis climbs. In "
       "the one classic cannabis gas-exchange study, lifting CO2 from 350 to 750 ppm raised leaf net "
@@ -123,7 +126,9 @@ SECTIONS.append({"id": "daynight", "kicker": "04 · Day and night", "title": "Ph
       "and night, in every living cell" + _c("amthor2024-respiration") + ". During the light period the "
       "big inward pull of photosynthesis swamps the small outward push of respiration, so the canopy is a "
       "net CO2 <em>sink</em>. When the lights go off, photosynthesis stops dead and only respiration is "
-      "left, so the same canopy flips to a net CO2 <em>source</em>."),
+      "left, so the same canopy flips to a net CO2 <em>source</em>. Think of the room during the light "
+      "period as a drain pulling CO2 down fast, with a small tap feeding a little back from respiration; "
+      "in the dark the drain closes and only the tap runs&mdash;far slower than the daytime draw."),
     figure(L.line("Day and night: the plant breathes both ways",
             [("", 2), ("", 2), ("", 2), ("", -17), ("", -21), ("", -20), ("", -20), ("", -20),
              ("", -19), ("", 3), ("", 2), ("", 2), ("", 2)],
@@ -133,8 +138,8 @@ SECTIONS.append({"id": "daynight", "kicker": "04 · Day and night", "title": "Ph
       "The canopy's net CO2 flux over a day. In the light it pulls CO2 in hard; in the dark it gives a "
       "little back. The deep daytime trough dwarfs the shallow night-time bump, and that gap is the whole "
       "point of the next section."),
-    p("Respiration also speeds up when it is warm, roughly doubling for every 10&nbsp;&deg;C rise (a Q10 "
-      "of about 2)" + _c("atkin2003-q10") + ", and in soil or coco there is extra CO2 from microbes and "
+    p("Respiration also speeds up when it is warm, roughly doubling for every 10&nbsp;&deg;C (18&nbsp;&deg;F) "
+      "rise in temperature (a Q10 of about 2)" + _c("atkin2003-q10") + ", and in soil or coco there is extra CO2 from microbes and "
       "roots in the root zone. But none of that changes the headline: <strong>the plant only takes CO2 in "
       "while the lights are on.</strong> That single fact is why you inject in the light and never in the "
       "dark."),
@@ -165,7 +170,7 @@ SECTIONS.append({"id": "massbalance", "kicker": "05 · The mass balance", "title
       "Room CO2 in a sealed, unenriched flower room. The lights-on crash is deep and fast; the overnight "
       "recovery is slow and modest. Enrichment exists to fill that daytime hole" + _c("ahdb-co2") + "."),
     callout("note", "The numbers, for a mid-size room",
-      ul(["<strong>Lights-on drawdown.</strong> A ~45&nbsp;m&sup2; canopy pulling 15&ndash;25 &micro;mol "
+      ul(["<strong>Lights-on drawdown.</strong> A ~45&nbsp;m&sup2; (484&nbsp;ft&sup2;) canopy pulling 15&ndash;25 &micro;mol "
           "CO2 m&sup2;/s strips a sealed ~160&nbsp;m&sup3; room at roughly <strong>350&ndash;600 ppm per "
           "hour</strong> at first, taking 420 down to ~200 ppm in 20&ndash;40 minutes, then slowing as "
           "CO2 runs low.",
@@ -225,7 +230,7 @@ SECTIONS.append({"id": "delivery", "kicker": "07 · Getting it in", "title": "De
     callout("key", "The dosing formula",
       p("To raise a sealed room, work in milligrams: <strong>mass of CO2 (mg) = room volume (m&sup3;) "
         "&times; rise wanted (ppm) &times; 1.8</strong>. The 1.8 is the mass of CO2 in a cubic metre per "
-        "ppm at room temperature (CO2 is 1.799&nbsp;g/L at 25&nbsp;&deg;C, so 1 ppm = 1.8&nbsp;mg/m&sup3;)" + _c("niosh-co2") +
+        "ppm at room temperature (CO2 is 1.799&nbsp;g/L at 25&nbsp;&deg;C (77&nbsp;&deg;F), so 1 ppm = 1.8&nbsp;mg/m&sup3;)" + _c("niosh-co2") +
         ". <em>Worked example:</em> a 30&nbsp;m&sup3; room from 420 to 1,200 ppm (a 780 ppm rise) needs "
         "30 &times; 780 &times; 1.8 = 42,120&nbsp;mg &asymp; <strong>42&nbsp;g</strong> of CO2, about "
         "23&nbsp;litres of gas. That is only the one-time charge, a room that leaks needs continuous "
@@ -321,9 +326,11 @@ SECTIONS.append({"id": "purge", "kicker": "09 · Fresh air", "title": "Fresh-air
         "and substrate question, not an air-exchange one. The one thing that genuinely lowers a room's "
         "oxygen and raises its CO2 is <em>people</em> working in it.")),
     p("Ethylene is the sharpest reason to exchange air, but stale air is also carrying:"),
-    ul(["<strong>Humidity.</strong> Plants return most of their irrigation water to the air as "
-        "vapour" + _c("hpac-latent") + ". That latent load is removed by a dehumidifier, not a filter, and "
-        "it keeps coming after lights-off when transpiration outruns the dehumidifier.",
+    ul(["<strong>Humidity.</strong> A plant is like a slow water pump: roots pull moisture up through the "
+        "stems, and it exits as vapour through tiny pores (stomata) on each leaf. This movement is called "
+        "<strong>transpiration</strong>, and it accounts for most of the water you irrigate" + _c("hpac-latent") +
+        ". That vapour is removed by a dehumidifier, not by any filter, and it keeps coming after "
+        "lights-off when transpiration outruns the dehumidifier.",
         "<strong>Heat.</strong> Removed by the air conditioner, not the carbon can.",
         "<strong>The plants' own terpenes</strong> and other VOCs, which carbon catches for a while, then "
         "passes straight through once it saturates.",
@@ -360,9 +367,9 @@ SECTIONS.append({"id": "climate", "kicker": "10 · The knock-on effects", "title
       "want to move with it:"),
     table(["Lever", "What elevated CO2 does", "What to do about it"], [
       ["Temperature", "Shifts the plant's ideal temperature up a few degrees" + _c("lv2022-topt"),
-       "Run warmer, ~28&ndash;30&nbsp;&deg;C instead of ~25&nbsp;&deg;C, <em>if</em> light supports it. Cannabis photosynthesis peaks near 30&nbsp;&deg;C" + _c("chandra2008-photo")],
-      ["Stomata &amp; water", "Partly closes the leaf pores: ~42% less stomatal conductance, ~29% less transpiration per leaf" + _c("chandra2008-photo"),
-        "Per-leaf loss falls; total crop water use may fall, hold or rise with leaf area, PPFD, temperature and VPD. Measure it"],
+       "Run warmer, ~28&ndash;30&nbsp;&deg;C (82&ndash;86&nbsp;&deg;F) instead of ~25&nbsp;&deg;C (77&nbsp;&deg;F), <em>if</em> light supports it. Cannabis photosynthesis peaks near 30&nbsp;&deg;C (86&nbsp;&deg;F)" + _c("chandra2008-photo")],
+      ["Stomata &amp; water", "Partly closes the stomata (the leaf's gas-exchange pores), cutting stomatal conductance (how freely vapour moves through them) by ~42% and leaf transpiration by ~29% per leaf" + _c("chandra2008-photo"),
+        "Per-leaf loss falls; total crop water use may fall, hold or rise with leaf area, PPFD, temperature and VPD (the air's demand for moisture&mdash;higher temperature and lower humidity, the harder it pulls water from the leaf). Measure it"],
       ["Light", "Nothing, unless light is already high" + _c("rm2021-light"),
        "Only enrich rooms running strong light. Otherwise CO2 is wasted"],
       ["Feed", "Less transpiration can let salts concentrate at the root",
@@ -386,7 +393,7 @@ SECTIONS.append({"id": "drying", "kicker": "11 · The hidden hazard", "title": "
       "photosynthesis to soak any of it back up" + _c("kader2002-respiration") + "."),
     p("Cut leaf and flower is a fast-respiring tissue, in the same postharvest class as leafy greens and "
       "cut herbs, and warmth speeds it up (that Q10-of-2 again)" + _c("kader2002-respiration") + ". A drying "
-      "room held at 15&ndash;18&nbsp;&deg;C with the air barely moving is a near-perfect CO2 trap. Sealed, "
+      "room held at 15&ndash;18&nbsp;&deg;C (59&ndash;64&nbsp;&deg;F) with the air barely moving is a near-perfect CO2 trap. Sealed, "
       "planted greenhouses already climb to 600&ndash;1,000+ ppm overnight from living plants" + _c("ahdb-co2") +
       "; a room packed with cut biomass and almost no ventilation can go substantially higher, into the "
       "thousands of ppm and, in the worst unventilated cases, potentially toward percent-level "
@@ -434,10 +441,10 @@ SECTIONS.append({"id": "safety", "kicker": "12 · The part that can kill you", "
       ["70,000&ndash;100,000 ppm (7&ndash;10%)", "Unconsciousness within minutes", "Cannot self-rescue" + _c("permentier2017-co2poison")],
       ["&gt;300,000 ppm (&gt;30%)", "Loss of consciousness in seconds", "Fatal-scene cases 14&ndash;26% CO2" + _c("permentier2017-co2poison")],
     ], cls="compact", caption="The CO2 effect ladder. Note the jump: the enrichment band is safe, but the levels a leak can reach in a sealed room are not."),
-    callout("danger", "CO2 is a poison, not just a smothering gas",
-      p("It is tempting to think CO2 just crowds out oxygen. It does that, but it is also directly toxic: "
-        "above ~5% it acidifies the blood, and forensic reviews conclude the cause of death in CO2 "
-        "incidents is the poisoning itself, not the lack of oxygen" + _c("permentier2017-co2poison") + ". "
+    callout("danger", "Above 5%, CO2 directly poisons the blood",
+      p("CO2 above ~5% is a direct poison: it acidifies the blood, and forensic reviews conclude that the "
+        "cause of death in CO2 incidents is this toxicity, which acts before oxygen depletion becomes "
+        "critical" + _c("permentier2017-co2poison") + ". "
         "That is why it drops people so fast they can't open a door, and why rescuers who rush in without "
         "protection are so often the second victims. A sealed, high-CO2 room is a confined space. Ventilate "
         "and test the air before entry, every time.")),
@@ -462,7 +469,7 @@ SECTIONS.append({"id": "monitoring", "kicker": "13 · Measuring and alarming", "
         ". <strong>Disable ABC and calibrate manually</strong> against fresh air or a reference gas on a "
         "schedule.")),
     p("<strong>Two sensors, two jobs.</strong> Put a control sensor at canopy height to run the setpoint, "
-      "and a separate <em>life-safety</em> sensor low on the wall (~30&nbsp;cm off the floor) because CO2 "
+      "and a separate <em>life-safety</em> sensor low on the wall (~30&nbsp;cm (12&nbsp;in) off the floor) because CO2 "
       "settles. For larger systems the International Fire Code (Section 5307) makes this mandatory: any "
       "installation over 100&nbsp;lb of CO2 needs gas detection that alarms at 5,000&nbsp;ppm, alarms hard "
       "at 30,000&nbsp;ppm, and automatically shuts off the CO2 and starts ventilation" + _c("ifc5307") + ". "

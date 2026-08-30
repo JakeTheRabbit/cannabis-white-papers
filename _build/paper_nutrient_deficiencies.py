@@ -7,9 +7,10 @@ import figs_lib as L
 SLUG = "nutrient-deficiencies"
 TITLE = "Nutrient deficiency and toxicity diagnosis"
 EYEBROW = "Plant health · Diagnosis"
-SUB = ("A beginner's visual guide to reading cannabis leaf symptoms: mobile vs immobile nutrients, "
-       "deficiency vs toxicity vs pH lockout, and how to confirm and fix the real problem before you "
-       "reach for fertiliser.")
+SUB = ("This paper teaches you to read cannabis leaf symptoms by position, colour and shape. "
+       "You will be able to distinguish mobile from immobile nutrient deficiencies, separate a true "
+       "deficiency from a toxicity or a pH lockout, and confirm a diagnosis with a pH and EC meter "
+       "before changing your feed.")
 META = [("leaf", "Plant health"), ("image", "12 figures"),
         ("quote", "Evidence-linked · 7 sources"), ("clock", "~14 min read")]
 RELATED = ["ph-management", "nutrient-mixing-athena", "water-quality"]
@@ -86,10 +87,12 @@ SECTIONS.append({"id": "key-terms", "kicker": "Vocabulary", "title": "Definition
 
 SECTIONS.append({"id": "mobility-why-position", "kicker": "Core concept 1", "title": "Leaf position and nutrient mobility",
   "blocks": [
-    p("When a plant runs short of a mobile nutrient, it cannibalises its oldest leaves to feed new "
-      "growth, so damage appears at the bottom first and climbs upward. When it runs short of an "
-      "immobile nutrient, it cannot move existing stores, so the newest top growth starves while old "
-      "leaves stay fine." + _c("maillard-2015-leaf-nutrient-remobilization")),
+    p("When a plant runs short of a mobile nutrient, it strips that element from its oldest leaves "
+      "and sends it to the growing tip — the way a body breaks down muscle to keep vital organs going "
+      "when food is scarce. Damage from a mobile-nutrient shortage appears at the bottom first and "
+      "climbs upward. Immobile nutrients are built into cell walls once placed and cannot be retrieved, "
+      "so a shortage of an immobile element hits the newest top growth first while old leaves stay "
+      "fine." + _c("maillard-2015-leaf-nutrient-remobilization")),
     p("This single rule lets you cut the list of suspects roughly in half before you even look at colour."),
     ul([
       "<strong>Bottom or old leaves yellowing and dying upward</strong> points to a mobile nutrient: nitrogen, phosphorus, potassium or magnesium.",
@@ -113,9 +116,10 @@ SECTIONS.append({"id": "deficiency-vs-toxicity-vs-lockout", "kicker": "Core conc
   "blocks": [
     p("The biggest beginner trap is seeing yellow leaves, assuming hungry, and adding more "
       "fertiliser, which makes a toxicity or lockout dramatically worse. A toxicity shows as dark "
-      "green clawed leaves and burnt tips, the opposite of a hunger symptom. A pH lockout means the "
-      "nutrient is sitting right there in the pot but the roots physically cannot take it up because "
-      "the water is too acidic or too alkaline."),
+      "green clawed leaves and burnt tips, the opposite of pale fading leaves. A pH lockout means the "
+      "nutrient is dissolved right there in the water but roots cannot take it in — like trying to "
+      "absorb food when your stomach acid is the wrong strength, the uptake mechanism stops regardless "
+      "of what is present. Only correcting pH restores absorption."),
     ul([
       "<strong>Deficiency:</strong> progressive fading and yellowing, smaller new growth, leaves eventually drop. The plant looks like it is starving and getting paler.",
       "<strong>Toxicity (overfeeding):</strong> leaves go dark green and glossy, tips burn brown and curl, and severe nitrogen excess bends leaf tips into a downward hook called the claw." + _c("saloner-2020-cannabis-nitrogen-supply"),
@@ -232,7 +236,8 @@ SECTIONS.append({"id": "pitfalls", "kicker": "Troubleshooting", "title": "Troubl
       ["pH lockout", "Iron or cal-mag deficiency", "Deficiency look despite correct feed", "Input and runoff pH"],
       ["Nutrient antagonism", "Cal-mag deficiency", "Followed an over-dose of one element", "Whether you over-supplemented K"],
     ], cls="compact", caption="The five impostors. Each one looks like hunger and each one is made worse by feeding."),
-    p("Antagonism is the subtle one: too much of one nutrient blocks another. Excess potassium "
+    p("Antagonism is the subtle one: too much of one element blocks another at the root's uptake "
+      "sites — like a sponge so saturated with one liquid it cannot take in a second. Excess potassium "
       "suppresses calcium and magnesium uptake, so a cal-mag deficiency can actually be a potassium "
       "excess, which is exactly why over-supplementing single elements backfires." + _c("fageria-2001-nutrient-interactions-antagonism")),
     figure(L.flow("Rule-out order before declaring a deficiency",
@@ -261,8 +266,7 @@ SECTIONS.append({"id": "realistic-expectations", "kicker": "Reality check", "tit
     figure(L.bars("Effort: prevention vs cure",
             [("Stable pH / EC routine", 25), ("Diagnose & recover a disorder", 80), ("Lost yield from damage", 60)],
             unit="", note="A small recurring routine costs far less than reacting to disorders.", maxv=100), 10,
-      "The cheap habit on the left prevents most of the expensive work on the right. Prevention beats "
-      "diagnosis every time."),
+      "The cheap habit on the left prevents most of the expensive work on the right. A stable pH and EC routine costs far less effort than recovering from a disorder."),
     callout("key", "Prevention beats diagnosis",
       p("The visual method is a fast first pass, not the final word. Most problems never appear if pH "
         "and feed strength stay stable, so build the routine first and treat diagnosis as a backstop.")),

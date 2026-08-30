@@ -12,8 +12,10 @@ SLUG = "cannabis-tissue-culture-sop"
 TITLE = "Cannabis tissue culture SOP"
 TITLE_MAX_PX = 42
 EYEBROW = "Standard operating procedure · forms included"
-SUB = ("Do these jobs in order. Each job has a diagram and a form. "
-       "A star in brackets is a source, not extra reading you need before you start.")
+SUB = ("Work through these jobs in order and you will be able to set up a clean tissue culture line, "
+       "multiply a cultivar disease-free, and hand a tested plantlet to your grow room. "
+       "Each job has a diagram and a form. "
+       "A number in brackets is a source—you do not need to open it to do the step.")
 
 META = [
     ("list", "12 jobs"),
@@ -149,12 +151,12 @@ SECTIONS.append({
             "Is there a separate pre-filter? What is the replacement HEPA size and price?",
             "What face velocity at the work opening, in m/s?",
             "Voltage and plug: I need 220–240 V (change this if you are on 110 V).",
-            "Work opening width in mm? I need at least 400 mm.",
+            "Work opening width in mm? I need at least 400 mm (16 in).",
             "Photos of the filter gasket and the fan nameplate before shipping.",
         ]),
         h(3, "What to pay"),
         ul([
-            "Desktop / mini metal hood, H13/H14, 400–700 mm wide: often <strong>USD 260–700</strong> plus freight.",
+            "Desktop / mini metal hood, H13/H14, 400–700 mm (16–28 in) wide: often <strong>USD 260–700</strong> plus freight.",
             "Full clean bench (BIOBASE class): often <strong>USD 800–2,000</strong> plus crate freight.",
             "A used Athena-style portable hood from the second-hand market can cost more than a new Chinese bench. Compare the filter spec, not the logo.",
         ]),
@@ -164,12 +166,12 @@ SECTIONS.append({
         figure(S.fig_hood_setup(), 6, "Unbox. Place. Match voltage. Run empty 30 minutes. Check the air stream with a tissue. Wipe steel only. Log F-12."),
         steps([
             ("Inspect", "HEPA frame not crushed. Plastic still on the filter face. No rattle in the fan."),
-            ("Place", "Level, solid bench. 30 cm of free air behind or below the intake, depending on the model. Do not push it into a curtain."),
+            ("Place", "Level, solid bench. 30 cm (12 in) of free air behind or below the intake, depending on the model. Do not push it into a curtain."),
             ("Power", "Read the plate. 220–240 V units die on 110 V. Use a surge-protected board."),
             ("First run", "Empty hood. Fan on 30 minutes. Listen. Smell for burning."),
             ("Flow check", "Hold a thin tissue strip in the work opening. It should lean steadily toward you (horizontal hood). If it flaps, flaps back, or hangs dead, message the seller before first use."),
             ("Wipe", "70% alcohol on painted steel and the work tray. Never spray liquid into the HEPA face."),
-            ("Optional smoke", "A stick of incense 20 cm in front of the filter. Smoke should leave in one sheet, no swirls back onto the bench."),
+            ("Optional smoke", "A stick of incense 20 cm (8 in) in front of the filter. Smoke should leave in one sheet, no swirls back onto the bench."),
             ("Log", "Fill F-12. If the tissue hangs dead, do not plate plants."),
         ]),
         form("F-12", "Hood check",
@@ -207,7 +209,7 @@ SECTIONS.append({
     "title": "Mix medium, autoclave, hold 7 days",
     "blocks": [
         lead("One litre. Full-strength MS for start and multiply. Half-strength MS if you are rooting in gel."),
-        figure(S.fig_media_steps(), 8, "Water. Salts. Sugar. pH. Agar. Pour. 121 °C / 15 psi / 20 min. Hold 7 days."),
+        figure(S.fig_media_steps(), 8, "Water. Salts. Sugar. pH. Agar. Pour. 121 °C (250 °F) / 103 kPa (15 psi) / 20 min. Hold 7 days."),
         table(
             ["Ingredient", "1 litre", "Notes"],
             [["RO or distilled water", "start 800 mL, top to 1 L", "Not tap"],
@@ -232,7 +234,7 @@ SECTIONS.append({
             ("Weigh", "Write every mass on F-03 before you pour."),
             ("pH", "5.6–5.8 before agar. Dilute acid down. Dilute base up."),
             ("Agar + heat", "Dissolve. Pour jars one-third full. Lids loose."),
-            ("Autoclave", "Stovetop canner that holds 15 psi, or an autoclave. 121 °C, 15 psi, 20 minutes. Instant Pots do not count. Jars on a rack, not drowned."),
+            ("Autoclave", "Stovetop canner that holds 103 kPa (15 psi), or an autoclave. 121 °C (250 °F), 103 kPa (15 psi), 20 minutes. Instant Pots do not count. Jars on a rack, not drowned."),
             ("Cool", "Tighten lids when cool enough to handle. Label lot number on every jar."),
             ("Hold", "Shelf 7 days. Any cloud or fuzz: bin the whole lot. Do not plate into it."),
         ]),
@@ -252,11 +254,11 @@ SECTIONS.append({
     "kicker": "Job 3",
     "title": "Explant preparation and surface sterilisation",
     "blocks": [
-        lead("First runs: a stem piece with one bud, 10–15 mm. Not a meristem."),
+        lead("First runs: a stem piece with one bud, 10–15 mm (0.4–0.6 in). Not a meristem."),
         figure(S.fig_bleach_steps(), 9, "Cut. Soap. 70% alcohol 30–60 s. Bleach 20–30 min. Rinse three times. Trim the burned ends in the hood."),
         steps([
             ("Mother", "Vegetative. Scouted. Young if you can. One cultivar."),
-            ("Cut", "Morning. 10–15 mm. Strip large leaves. Keep wet."),
+            ("Cut", "Morning. 10–15 mm (0.4–0.6 in). Strip large leaves. Keep wet."),
             ("Soap wash", "Tap water + a drop of dish soap or Tween-20. 10–20 min."),
             ("70% alcohol", "30–60 seconds. Drain."),
             ("Bleach", f"Holmes: 10% household bleach (about 0.625% NaOCl) + 0.1% Tween-20, 20 min, stir.{_c("holmes2021")} Das: 1% NaOCl for 30 min.{_c("das2024")} Do not go to 60 min."),
@@ -279,12 +281,12 @@ SECTIONS.append({
         figure(S.fig_plate_steps(), 10, "Open one jar in the air stream. Stand the piece. Lid on. Label. Shelf. Scout day 7."),
         figure(F.fig_lab(), 11, "Open jars only in the centre of the hood. Tools on the left. Waste on the left front."),
         steps([
-            ("Air stream", "Work 10–20 cm in front of the filter, not at the very edge."),
+            ("Air stream", "Work 10–20 cm (4–8 in) in front of the filter, not at the very edge."),
             ("One lid", "Face down to the side. Never above the jar."),
             ("Plant", "Cut base in the gel. Bud above."),
             ("Lid", "On at once. Do not talk over the jar."),
             ("Label", "Cultivar, date, explant type, lot number from F-03."),
-            ("Shelf", "24–26 °C. 16–18 h light. About 70–100 µmol m⁻² s⁻¹. Do not open to look."),
+            ("Shelf", "24–26 °C (75–79 °F). 16–18 h light. About 70–100 µmol m⁻² s⁻¹. Do not open to look."),
         ]),
         form("F-04", "Initiation / plate",
              ["Lot no.", "Cultivar", "Explant", "n plated", "Medium lot", "Date", "Day-7 clean n", "Day-21 clean n", "Sign"],
@@ -332,7 +334,7 @@ SECTIONS.append({
               model="Grok Imagine · illustration"),
         steps([
             ("Source", "A day-21 clean jar. One cultivar."),
-            ("Cut", "15–25 mm shoot tip or a node with a visible bud."),
+            ("Cut", "15–25 mm (0.6–1.0 in) shoot tip or a node with a visible bud."),
             ("New jar", f"Same medium or the no-hormone + calcium mix.{_c("das2024")}"),
             ("Density", "Home: 1–3 per jar. Licensed: what your F-07 rate allows."),
             ("Clock", f"3–4 weeks. Restart the line from a tested mother by about five recuts.{_c("torkamaneh2024")}"),
@@ -348,7 +350,7 @@ SECTIONS.append({
     "kicker": "Job 7",
     "title": "Meristem dissection after process validation",
     "blocks": [
-        lead("Microscope. 0.2–0.4 mm. Then a lab test. This job does not make a plant “clean” by itself."),
+        lead("Microscope. 0.2–0.4 mm (0.008–0.016 in). Then a lab test. This job does not make a plant &ldquo;clean&rdquo; by itself."),
         figure(FP.fig_meristem_setup(), 14, "Same five zones as the hood layout. Microscope in the middle."),
         figure(FP.fig_meristem_tools(), 15, "Microscope, fine forceps, #11 scalpel, black dish, beads, 70% alcohol."),
         figure(FP.fig_meristem_hands(), 16, "Left holds. Right cuts."),
@@ -367,12 +369,12 @@ SECTIONS.append({
               alt="Meristem dome",
               model="Grok Imagine · illustration"),
         steps([
-            ("New flush", "10–15 mm vegetative tip. Strip large leaves before the hood."),
-            ("Sterile tools", "Beads ~250 °C, 20 s, then cool."),
+            ("New flush", "10–15 mm (0.4–0.6 in) vegetative tip. Strip large leaves before the hood."),
+            ("Sterile tools", "Beads ~250 °C (~480 °F), 20 s, then cool."),
             ("Dish", "One drop sterile water. 10–20× then 30–40×."),
             ("Peel", "Outer leaves off. Stop at two tiny leaves."),
             ("Bleach that tip", "Shorter bleach than a woody node. Rinse."),
-            ("One nick", f"0.2–0.4 mm.{_c("hlvd_mgmt2025")} Onto Holmes-type start medium.{_c("holmes2021")}"),
+            ("One nick", f"0.2–0.4 mm (0.008–0.016 in).{_c("hlvd_mgmt2025")} Onto Holmes-type start medium.{_c("holmes2021")}"),
             ("Wait", "4–8 weeks. Then F-10. Expect about 41% negative at six months, not 100%."),
         ]),
         form("F-06", "Meristem cut",
@@ -386,7 +388,10 @@ SECTIONS.append({
     "kicker": "Job 8",
     "title": "Rooting and acclimatisation",
     "blocks": [
-        lead("A shoot with no roots is not a plant. After roots, lower humidity in steps."),
+        lead("A shoot with no roots is not a plant. "
+             "Inside a culture jar the air is nearly 100% humid, so the plant never developed the ability to close its stomata or build a waxy leaf surface—it had no reason to conserve water. "
+             "Move it straight to open air and it wilts within hours, like a person stepping out of a steam room into cold dry air: the problem is the speed of the transition, not the destination. "
+             "Lower the humidity in stages instead. This is acclimatisation."),
         photo(f"{IMG}/08-rooted-plantlet.jpg",
               "White roots in clear gel. No brown ring.",
               alt="Rooted plantlet",
@@ -397,10 +402,10 @@ SECTIONS.append({
               model="Grok Imagine · illustration"),
         figure(F.fig_acclim(), 19, "Do not put a jar plant onto a dry bench."),
         steps([
-            ("Pick", "2–4 cm shoot. Not glassy. Not brown."),
+            ("Pick", "2–4 cm (0.8–1.6 in) shoot. Not glassy. Not brown."),
             ("Root", f"Option A: 5 µM IBA in gel, 2–4 weeks.{_c("holmes2021")} Option B: dip the base in 15 mM IBA for 2–4 min, then a sterile plug.{_c("ioannidis2022")} Option C: rockwool, ordinary fertiliser, vented jar, no sugar.{_c("kodym2019")}"),
             ("Plug", "Rockwool or coco soaked in mild veg nutrient, pH about 5.8."),
-            ("Dome", "Mist the walls. 16 h light. Gentle. 24 °C."),
+            ("Dome", "Mist the walls. 16 h light. Gentle. 24 °C (75 °F)."),
             ("Vents", "Day 7 half. Day 9 full. Day 14 lid off."),
             ("Pot", "Treat as a new clone. No 12-hour days for several weeks."),
         ]),

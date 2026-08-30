@@ -1,6 +1,6 @@
 ---
 slug: "closed-loop"
-title: "The closed loop: levers, signal and plant state"
+title: "Closed-loop grow room: levers, signals and plant state"
 eyebrow: "Precision · Closed loop"
 summary: "Run a grow room as one self-correcting system. This beginner's guide covers the controls you pull, how to read what the plants are actually doing, and how to feed that back without the room chasing its own tail."
 track: "Precision & automation"
@@ -17,7 +17,7 @@ attribution: "The Cannabis White Papers"
 refs: [{"id": "mohammed-spc-2024", "n": 1, "cite": "Mohammed MA. Statistical Process Control. Cambridge University Press (Elements of Improving Quality and Safety in Healthcare); 2024.", "url": "https://doi.org/10.1017/9781009326834", "peer": true}, {"id": "isa-18-2-alarm-mgmt", "n": 2, "cite": "International Society of Automation. ANSI/ISA-18.2-2016, Management of Alarm Systems for the Process Industries. ISA; 2016.", "url": "https://www.isa.org/standards-and-publications/isa-standards/isa-18-series-of-standards", "peer": false}, {"id": "moon-rootzone-ec-2018", "n": 3, "cite": "Moon T, Ahn TI, Son JE. Forecasting Root-Zone Electrical Conductivity of Nutrient Solutions in Closed-Loop Soilless Cultures via a Recurrent Neural Network Using Environmental and Cultivation Information. Frontiers in Plant Science. 2018;9:859.", "url": "https://doi.org/10.3389/fpls.2018.00859", "peer": true}, {"id": "huber-dli-co2-2021", "n": 4, "cite": "Huber BM, Louws FJ, Hernandez R. Impact of Different Daily Light Integrals and Carbon Dioxide Concentrations on the Growth, Morphology, and Production Efficiency of Tomato Seedlings. Frontiers in Plant Science. 2021;12:615853.", "url": "https://doi.org/10.3389/fpls.2021.615853", "peer": true}, {"id": "kim-co2-temp-light-msu", "n": 5, "cite": "Runkle E, Kim WS. Interactions of light, CO2, and temperature on photosynthesis. Michigan State University Extension, Floriculture & Greenhouse Crop Production; 2017.", "url": "https://www.canr.msu.edu/resources/interactions-light-co2-and-temperature", "peer": false}, {"id": "szerement-dielectric-2019", "n": 6, "cite": "Szerement J, Woszczyk A, Szyplowska A, Kafarski M, Lewandowski A, Wilczek A, Skierucha W. A Seven-Rod Dielectric Sensor for Determination of Soil Moisture in Well-Defined Sample Volumes. Sensors (Basel). 2019;19(7):1646.", "url": "https://doi.org/10.3390/s19071646", "peer": true}, {"id": "tdr-fdr-soil-review-2024", "n": 7, "cite": "Advancements in dielectric soil moisture sensor calibration: A comprehensive review of methods and techniques. Computers and Electronics in Agriculture. 2024;218:108663.", "url": "https://doi.org/10.1016/j.compag.2024.108663", "peer": true}, {"id": "choi-ec-transpiration-2015", "n": 8, "cite": "Choi KY, et al. Changes in electrical conductivity and moisture content of substrate and their subsequent effects on transpiration rate, water use efficiency, and plant growth in the soilless culture of paprika (Capsicum annuum L.). Horticulture, Environment, and Biotechnology. 2015;56(2):209-217.", "url": "https://doi.org/10.1007/s13580-015-0154-6", "peer": true}, {"id": "saure-tipburn-calcium-2001", "n": 9, "cite": "Saure MC. Calcium localization and tipburn development in lettuce leaves during early enlargement. Journal of the American Society for Horticultural Science. 2001 / related work on localized calcium deficiency and tipburn.", "url": "https://pubmed.ncbi.nlm.nih.gov/11543566/", "peer": true}]
 ---
 
-# The closed loop: levers, signal and plant state
+# Closed-loop grow room: levers, signals and plant state
 
 _Precision · Closed loop · ~17 min read_
 
@@ -31,11 +31,11 @@ _Precision · Closed loop · ~17 min read_
 
 A grow room is a **loop**, not a panel of independent dials you set and forget. You change a control, the room and plants respond, sensors measure that response, you work out what it means, and that tells you what to change next. Around and around, every minute of every day.
 
-A **closed loop** means the output feeds back to the input: what the plant tells you decides your next move, and then you watch what that move actually did. This guide teaches the whole circle as one thing, with three jobs sitting on it: getting the action right (_cause_), getting the measurement honest (_perception_), and getting the meaning out (_cognition_).
+A **closed loop** works the way a thermostat does: the room gets too warm, the sensor reads it, the AC turns on, and when the temperature settles back the AC stops. The output feeds back to control the input—round and round. In a grow room the same logic governs everything: what the plant tells you decides your next move, and then you watch what that move actually did. This guide teaches the whole circle as one thing, with three jobs sitting on it: getting the action right (_cause_), getting the measurement honest (_perception_), and getting the meaning out (_cognition_).
 
 **You never move just one thing.** Every control pushes on four linked balances at once: heat, water vapour, CO2 and the salt in the root zone. The finished version of this loop is a room that senses its own state, knows what its actions will do, and corrects its own drift before that drift becomes damage.
 
-> **Diagram.** Read it as a circle. The room works like a nervous system: muscles (the levers), nerves (the sensors) and a mind (the inference that decides what it all means).
+> **Diagram.** Read it as a circle. Each step leads to the next; the last arrow, from Prescribe back to Act, is the one that makes it a closed loop.
 
 > **KEY — What 'closed' buys you**
 >
@@ -49,11 +49,11 @@ This field is loaded with jargon, so here is every term you need before the real
 
 **Signal vs noise** — Signal is what the plant and room are truly doing. Noise is sensor jitter, biological scatter and one-off spikes that mean nothing. Every reading is signal + noise added together.
 
-**Setpoint vs target** — A setpoint is the literal number a machine chases (e.g. cool to 24°C). A target is the outcome you actually want (e.g. keep the plant transpiring healthily). They are not the same thing.
+**Setpoint vs target** — A setpoint is the literal number a machine chases (e.g. cool to 24 °C (75 °F)). A target is the outcome you actually want (e.g. keep the plant transpiring healthily). They are not the same thing.
 
-**VPD (vapour pressure deficit)** — How ‘thirsty’ the air is. It drives how fast plants lose water. Measured in kilopascals (kPa).
+**VPD (vapour pressure deficit)** — The air always has room for more water vapour—more room when it is warmer and drier. Think of clothes drying faster on a hot breezy day than a cold damp one: the air has a bigger gap to fill, so it pulls moisture harder from wet leaf surfaces. VPD measures that gap in kilopascals (kPa). Higher VPD means plants lose water faster and the root zone dries back sooner; too high and plants close their stomata to conserve water.
 
-**EC, VWC, dryback** — EC (electrical conductivity) = how salty the feed or root zone is. VWC = how wet the growing medium is. Dryback = how much the medium dries between waterings.
+**EC, VWC, dryback** — EC (electrical conductivity) = how salty the feed or root zone is. As the medium dries between shots, water is taken up but dissolved salts stay behind, so EC climbs cycle by cycle—like soup getting saltier as it reduces on the stove. VWC = how wet the growing medium is. Dryback = how much the medium dries between waterings; think of it as how much of a sponge wrings out before the next shot.
 
 **Plant state** — The plant's actual condition (stressed, steering generative, on-track), inferred from many signals together rather than read off one gauge.
 
@@ -80,7 +80,7 @@ Everything you can do sorts into four **balances** you are always disturbing: en
 >
 > Cooling that creates humidity, dehumidification that overheats the room, CO2 fighting the exhaust: nothing broke. The levers were just set as if they were independent. The fix is order of operations: set biological demand first (stage, light, CO2), then size climate capacity to match, then set the root-zone strategy to that.
 
-## Sensor and plant-state interpretation
+## Reading sensors and inferring plant state
 
 You have to _see_ the room's response without being fooled, then turn it into meaning. Every measurement is signal plus noise, and in practice **many raw alerts are noise** that must be rejected before they ever reach a decision[^isa-18-2-alarm-mgmt].
 
@@ -102,7 +102,7 @@ Then **aggregate, don't trust one reading**: believe n-of-12, not n-of-1. A clea
 
 ## Closed-loop diagnosis and corrective action
 
-The three jobs become one machine here. Watch a single ordinary problem, slow **salt creep** in the root zone, travel the whole loop.
+The three jobs become one machine here. Watch a single ordinary problem travel the whole loop: **salt creep**, where dissolved salts gradually build up in the root zone because each dryback cycle removes water but leaves salt behind.
 
 1. **Cause sets the conditions** — A long dryback plus a flat feed concentrates salt a little more each cycle. The slowest balance is loading.
 2. **Perception refuses to overreact** — It ignores any single EC spike, but flags a sustained four-day rising run past the control limit as a true signal.

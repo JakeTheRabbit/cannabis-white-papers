@@ -55,11 +55,11 @@ SECTIONS.append({"id": "start-here", "kicker": "Start here", "title": "Purpose a
             "the LOD&rsquo;, never zero."),
     defterm("ISO/IEC 17025", "The international standard for testing-lab competence. Accreditation to it is "
             "the baseline credential worth checking on any COA."),
-    callout("key", "The one big idea",
-      p("The certificate is a <em>photograph of one gram</em>, taken through one lab's lens. It can be a "
-        "sharp, honest photograph, that is what good sampling and a good lab buy you, but it is never the "
-        "landscape. Everything in this paper is about knowing how much landscape your photograph actually "
-        "shows.")),
+    callout("key", "One big idea",
+      p("The certificate describes one sample — roughly one gram, through one lab's process, on one day. "
+        "Good sampling and an accredited lab make that description accurate for the sample tested. It is "
+        "still a description of one sample, not your crop. Everything in this paper is about knowing how "
+        "faithfully that sample represents your batch.")),
   ]})
 
 # ---------------------------------------------------------------- 2. core answer
@@ -117,8 +117,8 @@ SECTIONS.append({"id": "pipeline", "kicker": "The map", "title": "Laboratory tes
       ["Residual solvents", "butane, ethanol, acetone…", "headspace GC", "1–3 days"],
       ["Moisture / water activity", "water content; water availability", "loss-on-drying balance; a<sub>w</sub> meter", "same day"],
     ], cls="compact", caption="The main test families on a full-panel cannabis COA and the instruments behind them."),
-    callout("note", "Why turnaround varies",
-      p("Culture-based microbiology is the slow lane, colonies need days to grow. qPCR collapses that to "
+    callout("note", "Turnaround time varies by method",
+      p("Culture-based microbiology is the slow lane: colonies need days to grow. qPCR collapses that to "
         "hours, which is one reason labs and regulators have been migrating to it, with trade-offs covered in "
         "the microbial section below.")),
   ]})
@@ -163,9 +163,11 @@ SECTIONS.append({"id": "read-a-coa", "kicker": "Line by line", "title": "How to 
 # ---------------------------------------------------------------- 5. potency math
 SECTIONS.append({"id": "potency-math", "kicker": "The 0.877 factor", "title": "Total THC: calculation and chemistry",
   "blocks": [
-    p("The living plant barely makes any THC. It makes <strong>THCA</strong>, tetrahydrocannabinolic acid, "
-      "the same molecule wearing a carboxyl group (–COOH). THCA is not intoxicating; heat converts it to THC "
-      "by <strong>decarboxylation</strong>: the carboxyl group breaks off and leaves as CO₂ gas" +
+    p("The living plant barely makes any THC. It makes <strong>THCA</strong>, tetrahydrocannabinolic acid — "
+      "THC with an extra chemical group (–COOH) attached that makes it non-intoxicating and about 13% heavier. "
+      "Think of baking soda releasing bubbles in a hot pan: heat forces a gas out of the molecule and leaves a "
+      "chemically different compound behind. THCA does exactly that — heat strips the extra group off as CO₂ "
+      "gas, a reaction called <strong>decarboxylation</strong>" +
       _c("wang2016-decarb") + ". A lighter, a vape, an oven. That is where most of the THC in your life is "
       "actually created."),
     figure(_FIGS["totalthc"], 3,
@@ -181,36 +183,37 @@ SECTIONS.append({"id": "potency-math", "kicker": "The 0.877 factor", "title": "T
         "assumes every single THCA molecule survives conversion. Real-world heating never achieves that, "
         "some THCA and THC are destroyed or lost before they reach anyone.")),
     p("How fast does the conversion actually run? In controlled kinetics work, THCA in an open reaction "
-      "vessel fully converted in about 30 minutes at 110 °C, about 9 minutes at 130 °C and about 6 minutes "
-      "at 145 °C, and, heated in the dark under vacuum, produced no significant CBN (the oxidation "
-      "by-product)" + _c("wang2016-decarb") + ". In air, with light and higher temperatures, losses grow, "
-      "which is exactly why the formula's assumption of perfect conversion makes it a maximum, not a "
-      "prediction."),
+      "vessel fully converted in about 30 minutes at 110 °C (230 °F), about 9 minutes at 130 °C (266 °F) "
+      "and about 6 minutes at 145 °C (293 °F), and, heated in the dark under vacuum, produced no significant "
+      "CBN (the oxidation by-product)" + _c("wang2016-decarb") + ". In air, with light and higher "
+      "temperatures, losses grow, which is exactly why the formula's assumption of perfect conversion makes "
+      "it a maximum, not a prediction."),
     figure(L.line("THCA disappearing at 110 °C",
         [("", 100), ("", 52), ("", 27), ("", 14), ("", 7), ("", 4), ("", 2)],
         ["0", "5", "10", "15", "20", "25", "30 min"],
         ylab="% THCA remaining", ymax=100,
-        note="First-order decay consistent with Wang et al. (2016): complete conversion in ~30 min at 110 °C, ~9 min at 130 °C, ~6 min at 145 °C. Curve is schematic."), 4,
+        note="First-order decay consistent with Wang et al. (2016): complete conversion in ~30 min at 110 °C (230 °F), ~9 min at 130 °C (266 °F), ~6 min at 145 °C (293 °F). Curve is schematic."), 4,
       "Decarboxylation kinetics. The acid disappears exponentially with time; hotter is faster but also "
       "riskier for THC itself and brutal on terpenes" + _c("wang2016-decarb") + "."),
     p("Slow decarboxylation also happens at room temperature, during curing and storage, THCA quietly ticks "
       "over to THC, and THC slowly oxidises onward to CBN. This is why an old COA and a fresh one on the same "
       "batch can honestly disagree: the material itself moved."),
-    callout("note", "And the same factor family applies to CBD",
+    callout("note", "CBD uses the same factor family",
       p("CBDA → CBD uses its own molecular-weight ratio (also 0.877, since the acids and neutrals differ by "
         "the same CO₂ group): total CBD = CBD + 0.877 × CBDA. Any &lsquo;total&rsquo; cannabinoid on a COA "
         "should be exactly this arithmetic, recompute it when it matters.")),
   ]})
 
 # ---------------------------------------------------------------- 6. methods
-SECTIONS.append({"id": "methods", "kicker": "HPLC vs GC", "title": "How analytical method affects results",
+SECTIONS.append({"id": "methods", "kicker": "HPLC vs GC", "title": "HPLC versus GC for potency testing",
   "blocks": [
     p("Two chromatography families dominate potency testing, and they do not see the same molecules. "
       "<strong>HPLC</strong> (high-performance liquid chromatography) pushes the extract through a column in "
-      "liquid at near-room temperature, so THCA and THC arrive at the detector as separate peaks. "
-      "<strong>GC</strong> (gas chromatography) must vaporise the sample in an injector inlet at roughly "
-      "250–300 °C, and at that temperature THCA decarboxylates on the spot. The acid never reaches the "
-      "detector as itself" + _c("lazarjani2020-methods") + "."),
+      "liquid at near-room temperature. Different molecules travel through the column at different speeds — "
+      "like pigments separating on wet paper, where some colours travel further than others — so THCA and "
+      "THC arrive at the detector as separate, distinct peaks. <strong>GC</strong> (gas chromatography) must "
+      "vaporise the sample in an injector inlet at roughly 250–300 °C (482–572 °F). At that temperature THCA "
+      "decarboxylates on the spot, so the acid never reaches the detector as itself" + _c("lazarjani2020-methods") + "."),
     figure(_FIGS["hplcgc"], 5,
       "The two analysis paths. HPLC runs cool and reports THCA and THC separately, so total THC is computed "
       "with the 0.877 factor. GC destroys the acid in the hot inlet: it reports a single &lsquo;THC&rsquo; "
@@ -223,13 +226,13 @@ SECTIONS.append({"id": "methods", "kicker": "HPLC vs GC", "title": "How analytic
       "value" + _c("dussy2005-thca") + ". On GC, acids are invisible unless the lab derivatises them first (a "
       "chemical cap that survives the heat)" + _c("lazarjani2020-methods") + "."),
     table(["", "HPLC-DAD", "GC-FID / GC-MS"], [
-      ["Operating temperature", "≈25–40 °C column", "≈250–300 °C inlet, hot column"],
+      ["Operating temperature", "≈25–40 °C (77–104 °F) column", "≈250–300 °C (482–572 °F) inlet, hot column"],
       ["Sees THCA and THC separately?", "Yes, two peaks", "No, acid decarboxylates in the inlet"],
       ["Total THC comes from", "arithmetic: THC + 0.877 × THCA", "one merged peak (conversion incomplete" + _c("dussy2005-thca") + ")"],
       ["Derivatisation needed for acids", "No", "Yes, or the acids are lost" + _c("lazarjani2020-methods")],
       ["Typical role today", "potency (industry standard)", "terpenes, residual solvents; potency in some jurisdictions"],
     ], cls="compact", caption="The two chromatography families. Neither is wrong. But their numbers are not directly comparable."),
-    callout("warn", "A flower COA with no THCA row is telling you something",
+    callout("warn", "A flower COA without a THCA row",
       p("Either the lab ran GC (fine, but the total is a floor, not an exact number), or the report is "
         "hiding detail. Both are reasons to ask for the method reference, which any accredited lab lists on "
         "the certificate.")),
@@ -265,11 +268,11 @@ SECTIONS.append({"id": "units-basis", "kicker": "Units and water", "title": "Uni
 # ---------------------------------------------------------------- 8. sampling
 SECTIONS.append({"id": "sampling", "kicker": "Sampling theory", "title": "Sampling and result representativeness",
   "blocks": [
-    p("Everything the instrument will ever see is decided before the courier arrives. A batch might be 12 kg; "
-      "the composite sample a few tens of grams; the analytical portion that actually gets extracted, "
-      "<strong>half a gram to a gram</strong>. That gram speaks for everything. Which is why pharmacopoeial "
-      "guidance treats sampling procedure as a quality attribute in its own right, not paperwork" +
-      _c("sarma2020-usp") + "."),
+    p("Everything the instrument will ever see is decided before the courier arrives. A batch might be 12 kg "
+      "(26.5 lb); the composite sample a few tens of grams; the analytical portion that actually gets "
+      "extracted, roughly <strong>0.5–1 g (0.02–0.04 oz)</strong>. That gram speaks for everything. Which "
+      "is why pharmacopoeial guidance treats sampling procedure as a quality attribute in its own right, not "
+      "paperwork" + _c("sarma2020-usp") + "."),
     figure(_FIGS["sampling"], 7,
       "The sampling funnel. Increments pulled from multiple containers and positions are combined into a "
       "composite, homogenised, and subsampled down to the analytical portion. Every arrow is a place the "
@@ -309,14 +312,16 @@ SECTIONS.append({"id": "microbial", "kicker": "Microbiology", "title": "Microbia
       "pathogenic <em>E. coli</em>, and in inhaled products the four pathogenic <em>Aspergillus</em> species."),
     defterm("CFU (colony-forming unit)", "One viable organism (or clump) that grows into a countable colony "
             "on a culture plate. Plate results are CFU per gram."),
-    defterm("qPCR", "Quantitative polymerase chain reaction, counts copies of target DNA instead of growing "
-            "anything. Fast (hours) and species-specific, but DNA outlives the organism that carried it."),
+    defterm("qPCR", "Quantitative polymerase chain reaction: the method copies a target DNA sequence millions "
+            "of times until there are enough to detect and count. Think of it as a photocopier for DNA — it "
+            "amplifies the target sequence whether the organism that carried it is alive or dead. Fast (hours) "
+            "and species-specific, but that dead-DNA blindspot matters after kill steps."),
     table(["Test", "What it counts", "Common limit style", "Notes"], [
       ["TAMC", "aerobic bacteria (CFU/g)", "order of 10⁵ CFU/g; varies by jurisdiction" + _c("jameson2022-stateregs"), "general bioburden indicator"],
       ["TYM / TYMC", "yeasts + moulds (CFU/g)", "order of 10⁴ CFU/g; the contested one", "flower hosts a natural surface flora"],
       ["Bile-tolerant Gram-negatives", "gut-associated bacteria", "order of 10³ CFU/g", "hygiene indicator"],
-      ["Specified pathogens", "Salmonella, shiga-toxin E. coli", "absent in 1 g", "hard pass/fail"],
-      ["Aspergillus (pathogenic spp.)", "A. fumigatus, flavus, niger, terreus", "not detected in 1 g", "usually enrichment + qPCR"],
+      ["Specified pathogens", "Salmonella, shiga-toxin E. coli", "absent in 1 g (0.035 oz)", "hard pass/fail"],
+      ["Aspergillus (pathogenic spp.)", "A. fumigatus, flavus, niger, terreus", "not detected in 1 g (0.035 oz)", "usually enrichment + qPCR"],
     ], cls="compact", caption="The microbial panel. Numeric limits differ across jurisdictions, the shapes of the tests do not" + _c("jameson2022-stateregs") + "."),
     p("Plates and qPCR genuinely disagree, and metagenomic sequencing has shown why: culture media select. "
       "When researchers sequenced what actually grew in standard culture-based yeast-and-mould tests of "
@@ -331,11 +336,11 @@ SECTIONS.append({"id": "microbial", "kicker": "Microbiology", "title": "Microbia
       ["Species identification", "poor without follow-up work", "built into the primers"],
       ["Characteristic failure", "wrong organisms grow; targets don't" + _c("mckernan2016-tym"), "dead-DNA false fails; primer mismatch"],
     ], cls="compact", caption="Why the same batch can pass one microbial method and fail the other. Always read the method line."),
-    callout("danger", "Why Aspergillus is presence/absence, not a count",
+    callout("danger", "Aspergillus limits use presence/absence, not a count",
       p("Inhaled <em>Aspergillus</em> can cause invasive aspergillosis in immunocompromised people, exactly "
         "the population medicinal cannabis serves. A count-based limit makes no sense for an organism where "
-        "the acceptable inhaled dose for a transplant patient is effectively zero; hence &lsquo;not detected "
-        "in 1 g&rsquo;.")),
+        "the acceptable inhaled dose for a transplant patient is effectively zero; hence the specification "
+        "of &lsquo;not detected in 1 g (0.035 oz)&rsquo;.")),
   ]})
 
 # ---------------------------------------------------------------- 10. metals
@@ -419,12 +424,15 @@ SECTIONS.append({"id": "solvents-myco", "kicker": "Solvents · mycotoxins", "tit
 SECTIONS.append({"id": "water-activity", "kicker": "Water in two numbers", "title": "Water activity and moisture content",
   "blocks": [
     p("Two water numbers appear on flower COAs and they answer different questions. <strong>Moisture "
-      "content</strong> (%) is <em>how much</em> water is in the sample, mass of water over total mass. "
-      "<strong>Water activity</strong> (a<sub>w</sub>, scale 0–1) is <em>how available</em> that water is to "
-      "microbes, the equilibrium relative humidity the sample generates in a sealed space. Mould does not "
-      "care how much water you have; it cares whether it can get at it. That makes a<sub>w</sub> the "
-      "microbially meaningful number, and it is why pharmacopoeial thinking on stored cannabis centres on a "
-      "water-activity specification of ≤0.65" + _c("sarma2020-usp") + "."),
+      "content</strong> (%) is <em>how much</em> water is in the sample — mass of water divided by total "
+      "mass. <strong>Water activity</strong> (a<sub>w</sub>, scale 0–1) is <em>how freely available</em> "
+      "that water is to microbes. Think of a sponge held tightly in a fist versus one sitting in a bowl: "
+      "both can hold the same amount of water by weight, but the fist-held sponge has most of its water "
+      "bound and hard to release. Water activity measures that availability — formally, the equilibrium "
+      "relative humidity the sample generates in a sealed space. Mould does not care how much water you "
+      "have; it cares whether it can get at it. That makes a<sub>w</sub> the microbially meaningful number, "
+      "and it is why pharmacopoeial thinking on stored cannabis centres on a water-activity specification "
+      "of ≤0.65" + _c("sarma2020-usp") + "."),
     figure(L.zones("Water activity: where mould can and cannot operate", 0.30, 0.90,
         [(0.30, 0.55, L.AMBL, "over-dry: brittle, harsh"),
          (0.55, 0.65, L.GL, "target window"),
@@ -542,10 +550,10 @@ SECTIONS.append({"id": "single-number", "kicker": "Interpretation", "title": "In
       card("Amended reports, rising numbers", p("Reissued certificates happen; reissues that only ever move "
            "THC upward with no explanation are a pattern worth walking away from."), tag="paper trail"),
     ], cols=3),
-    callout("key", "The mental model to keep",
-      p("One certificate = one photograph of one gram, through one lab's lens, on one day. Photographs are "
-        "useful. Just never confuse a photograph with the landscape, and be suspicious of anyone whose "
-        "photographs are always sunnier than everyone else's.")),
+    callout("key", "One mental model to keep",
+      p("One certificate = one measurement: one sample, one lab, one day. The measurement is useful within "
+        "those limits. Be suspicious of any lab whose numbers are consistently the highest in town — that "
+        "pattern is a business model, not chemistry.")),
   ]})
 
 # ---------------------------------------------------------------- 16. NZ/AU

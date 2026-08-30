@@ -1,8 +1,8 @@
 ---
 slug: "mother-plants"
-title: "Mother plants: stock management that never runs dry"
+title: "Mother plants: environment, feeding, pruning and pathogen defence"
 eyebrow: "Propagation · Stock"
-summary: "How to keep cannabis mother plants healthy for the long haul, room setup, feeding, pruning architecture, viroid defence, testing rotation and succession. So every batch starts from a plant you can actually trust."
+summary: "This paper covers the environment, feeding schedule, pruning architecture, viroid defence, testing rotation and succession planning needed to run a cannabis mother-plant bank. After reading it you will be able to set up a mother room, design a cutting schedule, and defend your stock against hop latent viroid."
 track: "Propagation"
 read_time: "~20 min read"
 diagrams: "13 diagrams"
@@ -17,11 +17,11 @@ attribution: "The Cannabis White Papers"
 refs: [{"id": "mp-ahrens-2023-photoperiod", "n": 1, "cite": "Ahrens A, Llewellyn D, Zheng Y (2023). Is twelve hours really the optimum photoperiod for promoting flowering in indoor-grown cultivars of Cannabis sativa? Plants 12(14):2605. (Flower initiation occurred in all tested cultivars at photoperiods up to 14 h, and in some at 15 h; 18 h was the vegetative baseline.)", "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10386198/", "peer": true}, {"id": "mp-saloner-2020-nitrogen", "n": 2, "cite": "Saloner A, Bernstein N (2020). Response of medical cannabis (Cannabis sativa L.) to nitrogen supply under long photoperiod. Frontiers in Plant Science 11:572293. (160 mg/L N was optimal for vegetative growth; 30 mg/L was severely deficient and 320 mg/L depressed growth.)", "url": "https://www.frontiersin.org/journals/plant-science/articles/10.3389/fpls.2020.572293/full", "peer": true}, {"id": "mp-tumi-hlvd-testing", "n": 3, "cite": "TUMI Genomics. When should you test for HLVd? Early clone screening is best. (Recommends testing mother plants every 4-6 weeks, sampling root tissue as the most reliable material, and sampling multiple points per plant.) Industry technical guidance.", "url": "https://www.tumigenomics.com/blog/when-should-you-test-for-hlvd/", "peer": false}, {"id": "mp-moher-2022-veg-light", "n": 4, "cite": "Moher M, Llewellyn D, Jones M, Zheng Y (2022). Light intensity can be used to modify the growth and morphological characteristics of cannabis during the vegetative stage of indoor production. Industrial Crops and Products 183. (Canopy PPFD of 135-1430 µmol tested; internode length and leaf size decreased as intensity rose.)", "url": "https://www.sciencedirect.com/science/article/abs/pii/S0926669022003922", "peer": true}, {"id": "mp-druege-2004-stockplant-n", "n": 5, "cite": "Druege U, Zerche S, Kadner R (2004). Nitrogen- and storage-affected carbohydrate partitioning in high-light-adapted Pelargonium cuttings in relation to survival and adventitious root formation under low light. Annals of Botany 94(6):831-842. (Stock-plant nitrogen affects rooting, but carbohydrate status of the cutting is the dominant factor.)", "url": "https://academic.oup.com/aob/article/94/6/831/264506", "peer": true}, {"id": "mp-caplan-2018-cuttings", "n": 6, "cite": "Caplan D, Stemeroff J, Dixon M, Zheng Y (2018). Vegetative propagation of cannabis by stem cuttings: effects of leaf number, cutting position, rooting hormone, and leaf tip removal. Canadian Journal of Plant Science 98(5):1126-1132. (Three fully expanded leaves and no leaf-tip removal rooted best; apical vs basal position made little difference.)", "url": "https://doi.org/10.1139/cjps-2018-0038", "peer": true}, {"id": "mp-adamek-2022-mosaicism", "n": 7, "cite": "Adamek K, Jones AMP, Torkamaneh D (2022). Accumulation of somatic mutations leads to genetic mosaicism in cannabis. The Plant Genome 15(1):e20169. (Deep whole-genome sequencing of one plant sampled top, middle and bottom found intra-plant genetic mosaicism.)", "url": "https://doi.org/10.1002/tpg2.20169", "peer": true}, {"id": "mp-adamek-2024-subcultures", "n": 8, "cite": "Adamek K, Jones AMP, Torkamaneh D (2024). Somatic mutation accumulations in micropropagated cannabis are proportional to the number of subcultures. Plants 13(14):1910. (Across 70 clones, mutation load tracked the number of propagation cycles, r > 0.92, not chronological age.)", "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11279941/", "peer": true}, {"id": "mp-punja-2025-hplvd-mgmt", "n": 9, "cite": "Punja ZK, et al. (2025). Transmission, spread, longevity and management of hop latent viroid, a widespread and destructive pathogen affecting cannabis plants in North America. Plants 14(5):830. (Sap infectious ~7 days and dried tissue ~4 weeks at room temperature; root-to-root and nutrient-solution spread; roots positive 2-3 weeks after stem inoculation, foliage 4-6 weeks; meristem culture cleanup averaged ~41%, range 0-100% by genotype.)", "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11902214/", "peer": true}, {"id": "mp-warren-2019-hplvd-ca", "n": 10, "cite": "Warren JG, Mercado J, Grace D (2019). Occurrence of hop latent viroid causing disease in Cannabis sativa in California. Plant Disease 103(10). (First report linking HpLVd to 'dudding' disease in commercial cannabis.)", "url": "https://doi.org/10.1094/PDIS-03-19-0530-PDN", "peer": true}, {"id": "mp-adkar-2023-hidden-threat", "n": 11, "cite": "Adkar-Purushothama CR, Sano T, Perreault J-P (2023). Hop latent viroid: a hidden threat to the cannabis industry. Viruses 15(3):681. (2021 survey of ~200,000 tissue tests found ~90% of California facilities positive with ~30% of plants affected; reported losses of 50-70% THC in dudded plants; most infected plants asymptomatic.)", "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10053334/", "peer": true}, {"id": "mp-medgen-hlvd", "n": 12, "cite": "Medicinal Genomics. Hop latent viroid in cannabis (application note). (Recommends testing mothers before taking cuttings, ~6 weeks for systemic distribution after infection, 10% bleach tool sanitation; cites ~US$4B annual loss estimate and ~40% HLVd-positive flower in Canadian dispensaries.) Industry technical guidance.", "url": "https://medicinalgenomics.com/applications/hop-latent-viroid-in-cannabis/", "peer": false}, {"id": "mp-monthony-2021-tc", "n": 13, "cite": "Monthony AS, Page SR, Hesami M, Jones AMP (2021). The past, present and future of Cannabis sativa tissue culture. Plants 10(1):185. (Micropropagation as a route to disease- and virus-free clonal plants and long-term germplasm storage; notes culture decline during multiplication.)", "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7835777/", "peer": true}, {"id": "mp-kurtz-2022-retip", "n": 14, "cite": "Kurtz LE, Borbas LN, Brand MH, Lubell-Brand JD (2022). Ex vitro rooting of Cannabis sativa microcuttings and their performance compared to retip and stem cuttings. HortScience 57(12):1576-1579. (Retip cuttings taken from rooted cuttings rooted at 76-81% without hormone and finished comparably, with unchanged cannabinoid content.)", "url": "https://journals.ashs.org/hortsci/view/journals/hortsci/57/12/article-p1576.xml", "peer": true}]
 ---
 
-# Mother plants: stock management that never runs dry
+# Mother plants: environment, feeding, pruning and pathogen defence
 
 _Propagation · Stock · ~20 min read_
 
-> How to keep cannabis mother plants healthy for the long haul, room setup, feeding, pruning architecture, viroid defence, testing rotation and succession. So every batch starts from a plant you can actually trust.
+> This paper covers the environment, feeding schedule, pruning architecture, viroid defence, testing rotation and succession planning needed to run a cannabis mother-plant bank. After reading it you will be able to set up a mother room, design a cutting schedule, and defend your stock against hop latent viroid.
 
 ## Purpose and scope
 
@@ -59,7 +59,7 @@ Mother-room talk borrows from horticulture, virology and factory scheduling. The
 
 ## Mother-plant programme overview
 
-If you only read one section, read this one. Everything after it is the why and the how.
+The table below covers every practice that matters for a reliable mother bank. Sections 04–16 carry the evidence and detail behind each row.
 
 - **Photoperiod:** 18 h light / 6 h dark, protected like a fire alarm. Some cultivars initiate flowers at up to 14–15 h[^mp-ahrens-2023-photoperiod], so 18 h is your safety margin.
 - **Light:** Moderate: ~300–500 µmol·m⁻²·s⁻¹ PPFD. Enough for steady regrowth, not so much that shoots turn short and squat.
@@ -93,9 +93,9 @@ The 18/6 vs 24/0 debate: both keep photoperiod cultivars vegetative. Continuous 
 
 > **Diagram.** Moderate light is a choice, not a compromise. A mother is farmed for cuttable regrowth, and 300–500 µmol keeps shoots long enough to cut and thick enough to root.
 
-Why moderate light and not flower-room intensity? Vegetative cannabis will happily use far more, growth kept responding across a 135–1430 µmol trial range, but light also reshapes the plant: internode length and leaf size shrink steadily as intensity rises[^mp-moher-2022-veg-light]. Run a mother at 900+ µmol and the regrowth comes back short, tight and squat. Compact is great for a production plant, and miserable to cut 8–15 cm shoots from. Run her under ~150 µmol and shoots come thin, stretched and weak, with the low carbohydrate reserves that root poorly. 300–500 µmol is the working band where regrowth is fast _and_ shaped like cuttings.
+Why moderate light and not flower-room intensity? Vegetative cannabis will happily use far more, growth kept responding across a 135–1430 µmol trial range, but light also reshapes the plant: internode length and leaf size shrink steadily as intensity rises[^mp-moher-2022-veg-light]. Run a mother at 900+ µmol and the regrowth comes back short, tight and squat. Compact is great for a production plant, and miserable to cut 8–15 cm (3–6 in) shoots from. Run her under ~150 µmol and shoots come thin, stretched and weak, with the low carbohydrate reserves that root poorly. 300–500 µmol is the working band where regrowth is fast _and_ shaped like cuttings.
 
-Climate: nothing exotic. Around 22–26 °C days, roughly 55–70% relative humidity, gentle continuous air movement (practitioner convention). The mother room should be the most boring room in the facility. Every stress event shows up two weeks later as a batch of cuttings that roots at 60% instead of 90, and you will struggle to connect the two.
+Climate: nothing exotic. Around 22–26 °C (72–79 °F) during lights-on, roughly 55–70% relative humidity, gentle continuous air movement (practitioner convention). The mother room should be the most boring room in the facility. Every stress event shows up two weeks later as a batch of cuttings that roots at 60% instead of 90, and you will struggle to connect the two.
 
 ## Mother-plant nutrition
 
@@ -125,7 +125,7 @@ The nitrogen number has actual research behind it: in a five-level dose trial on
 
 Cutting count is mostly architecture, not vigour. A mother left to grow naturally makes one dominant leader and a handful of weak laterals, a Christmas tree, and a terrible factory. The fix is the same trick hedge-layers and fruit growers use: remove the leader early, force the plant wide, and keep it flat.
 
-The mechanism is **apical dominance**, the top shoot chemically suppresses the shoots below it. Cut the top off (**topping**) and the suppression lifts: the side shoots below the cut all push at once. Do this once to the young plant, then once to each of the released side branches, and you have converted one growing point into eight to twelve. Those become the **permanent frame**; everything above them is crop.
+The top shoot produces a hormone that flows down through the stem and keeps every side shoot below it from activating. Think of a thermostat: one sensor holds multiple heating zones off; the moment it is removed, all zones are free to fire. This is **apical dominance**: the top bud holds back every node below it. Cut the top off (**topping**) and the hormone level drops: every side shoot below the cut pushes at once. Do this once to the young plant, then once to each of the released side branches, and you have converted one growing point into eight to twelve. Those become the **permanent frame**; everything above them is crop.
 
 1. **Establish (weeks 0–2)** — Start from your best _tested_ clone, the mother inherits everything, good and bad. Transplant, let her root out and settle.
 2. **First top (week 2–3)** — Top above the 4th–5th node. The plant answers with 4–6 strong side shoots.
@@ -143,7 +143,7 @@ Cut with the finished cutting in mind. The propagation research says a cannabis 
 
 > **NOTE — How many cuttings per mother?**
 >
-> There is no good published number. It depends on cultivar, pot size and frame. Practitioner ballparks: a compact mother in a 10–15 L pot gives roughly 15–30 cuttings per pass; a large production mother in 30–50 L can give 50–100+. Treat these as planning starting points and measure your own plants, your records beat anyone's ballpark within two months.
+> There is no good published number. It depends on cultivar, pot size and frame. Practitioner ballparks: a compact mother in a 10–15 L (2.6–4.0 gal) pot gives roughly 15–30 cuttings per pass; a large production mother in 30–50 L (7.9–13.2 gal) can give 50–100+. Treat these as planning starting points and measure your own plants, your records beat anyone's ballpark within two months.
 
 ## Scheduling mothers against production demand
 
@@ -172,7 +172,7 @@ Stagger the harvests. Split the bank into A and B cohorts and alternate passes s
 
 Grower folklore says a mother 'degrades' and should be replaced every 6–12 months. Plenty of operators, meanwhile, hold the same mother for five-plus years and swear she is identical. Both camps are pointing at something real. They are just pointing at different mechanisms.
 
-**Somatic mutation is real.** Plants do not separate their reproductive cells the way animals do. Every cell that divides can pass a copying error to everything grown from it. Deep whole-genome sequencing of a single cannabis plant found measurable **genetic mosaicism** within one individual: the top, middle and bottom of the same plant were not genetically identical[^mp-adamek-2022-mosaicism]. The study was motivated by exactly the folklore above, growers reporting clonal lines that lose vigour and potency over time[^mp-adamek-2022-mosaicism].
+**Somatic mutation is real.** Every time a cell divides, the DNA is copied, and copying can introduce small errors. Think of a photocopy of a photocopy: each generation can carry forward a flaw the original did not have. Unlike animals, plants do not separate their reproductive cells from the rest of the body, so a mutation in a growing tip ends up in every cutting taken from it. Deep whole-genome sequencing of a single cannabis plant found measurable **genetic mosaicism** within one individual: the top, middle and bottom of the same plant were not genetically identical[^mp-adamek-2022-mosaicism]. The study was motivated by exactly the folklore above, growers reporting clonal lines that lose vigour and potency over time[^mp-adamek-2022-mosaicism].
 
 But the follow-up work reframed the whole debate: across 70 micropropagated clones, mutation load tracked **the number of propagation cycles**, almost perfectly linearly (r > 0.92), and _not_ chronological age[^mp-adamek-2024-subcultures]. Clones of the same calendar age carried very different mutation loads depending on how many times they had been re-propagated. Every cut-and-regrow round is a burst of cell division, and cell division is where copying errors happen.
 
@@ -285,7 +285,7 @@ A proud, dark, overfed mother whose cuttings flop in the dome and rot. Rooting r
 
 **The slow strangle**
 
-Eighteen months in a 12 L pot. Vigour fades so gradually nobody sees it, and it gets blamed on 'age'. **Counter:** repot or root-prune on schedule; track cuttings-per-week so decline shows up as a number.
+Eighteen months in a 12 L (3.2 gal) pot. Vigour fades so gradually nobody sees it, and it gets blamed on 'age'. **Counter:** repot or root-prune on schedule; track cuttings-per-week so decline shows up as a number.
 
 **The chain with no anchor**
 

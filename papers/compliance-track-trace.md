@@ -2,7 +2,7 @@
 slug: "compliance-track-trace"
 title: "Compliance, licensing and track-and-trace"
 eyebrow: "Facility · Compliance"
-summary: "A licensed grow is a paperwork machine with a garden attached. This guide maps the spine: what a licence actually is, how batches and lots connect every gram to its history, how seed-to-sale tracking works, and how to keep records an auditor believes."
+summary: "A licensed grow is a paperwork machine with a garden attached. After reading this, you will be able to read your own licence critically, track a batch from mother plant to packaged lot, run an inventory reconciliation and explain any variance, write records that hold up under audit, and log a deviation without turning it into a crisis."
 track: "Facility & quality"
 read_time: "~24 min read"
 diagrams: "9 diagrams"
@@ -21,7 +21,7 @@ refs: [{"id": "eu-gmp-vol4", "n": 1, "cite": "European Commission. EudraLex Volu
 
 _Facility · Compliance · ~24 min read_
 
-> A licensed grow is a paperwork machine with a garden attached. This guide maps the spine: what a licence actually is, how batches and lots connect every gram to its history, how seed-to-sale tracking works, and how to keep records an auditor believes.
+> A licensed grow is a paperwork machine with a garden attached. After reading this, you will be able to read your own licence critically, track a batch from mother plant to packaged lot, run an inventory reconciliation and explain any variance, write records that hold up under audit, and log a deviation without turning it into a crisis.
 
 ## Purpose and scope
 
@@ -163,14 +163,14 @@ Drift has boring causes: moisture loss nobody logged as the flower cured; trim s
 
 | Line | Amount | Where it comes from |
 | --- | --- | --- |
-| Opening stock (dried flower) | 12.40 kg | Last verified count |
-| + In: new harvest dried | 9.60 kg | Dry-room log, dated |
-| − Out: transfers to processor | 4.80 kg | Manifests, signed both ends |
-| − Out: destroyed waste | 1.20 kg | Destruction records, witnessed |
-| − Out: lab samples | 0.03 kg | Sample log with lot IDs |
-| **= Expected on hand** | **15.97 kg** | Arithmetic |
-| Physical count | 15.71 kg | This morning, two people |
-| **Variance** | **−0.26 kg (−1.6%)** | Investigate, explain, document, today |
+| Opening stock (dried flower) | 12.40 kg (27.3 lb) | Last verified count |
+| + In: new harvest dried | 9.60 kg (21.2 lb) | Dry-room log, dated |
+| − Out: transfers to processor | 4.80 kg (10.6 lb) | Manifests, signed both ends |
+| − Out: destroyed waste | 1.20 kg (2.6 lb) | Destruction records, witnessed |
+| − Out: lab samples | 0.03 kg (1.1 oz) | Sample log with lot IDs |
+| **= Expected on hand** | **15.97 kg (35.2 lb)** | Arithmetic |
+| Physical count | 15.71 kg (34.6 lb) | This morning, two people |
+| **Variance** | **−0.26 kg (9.2 oz), −1.6%** | Investigate, explain, document, today |
 
 *A worked reconciliation. The arithmetic is trivial; the discipline is doing it on a schedule and treating every variance as an incident with a written outcome. Figures illustrative.*
 

@@ -1,8 +1,8 @@
 ---
 slug: "plant-state-dashboard"
-title: "From telemetry to intelligence: the plant-state dashboard"
+title: "Designing a plant-state dashboard for your grow room"
 eyebrow: "Precision · Dashboards"
-summary: "A grow-room screen should show what the plant is doing, not a wall of raw sensor numbers. Here is how to design one that does."
+summary: "A grow-room screen should show what the plant is doing, not a wall of raw sensor numbers. This paper shows how to design one that catches drift days before it becomes damage, names the cause, and prescribes the next action."
 track: "Precision & automation"
 read_time: "~13 min read"
 diagrams: "11 diagrams"
@@ -17,11 +17,11 @@ attribution: "The Cannabis White Papers"
 refs: [{"id": "spc-signal-noise-ed", "n": 1, "cite": "Pimentel L, Barrueto F Jr. Statistical process control: separating signal from noise in emergency department operations. Journal of Emergency Medicine. 2015;48(5):628-638. doi:10.1016/j.jemermed.2014.12.019.", "url": "https://doi.org/10.1016/j.jemermed.2014.12.019", "peer": true}, {"id": "preattentive-dataviz", "n": 2, "cite": "Fusco R, Granata V, Setola SV, et al. Visual Perception and Pre-Attentive Attributes in Oncological Data Visualisation. Bioengineering. 2025;12(7):782. doi:10.3390/bioengineering12070782.", "url": "https://doi.org/10.3390/bioengineering12070782", "peer": true}, {"id": "vpd-plant-response", "n": 3, "cite": "Grossiord C, Buckley TN, Cernusak LA, Novick KA, Poulter B, Siegwolf RTW, Sperry JS, McDowell NG. Plant responses to rising vapor pressure deficit (Tansley review). New Phytologist. 2020;226(6):1550-1566. doi:10.1111/nph.16485.", "url": "https://doi.org/10.1111/nph.16485", "peer": true}, {"id": "capacitive-soil-moisture", "n": 4, "cite": "Briciu-Burghina C, Zhou J, Ali MI, Regan F. Demonstrating the Potential of a Low-Cost Soil Moisture Sensor Network. Sensors. 2022;22(3):987. doi:10.3390/s22030987.", "url": "https://doi.org/10.3390/s22030987", "peer": true}, {"id": "alarm-mgmt-isa182", "n": 5, "cite": "Engineering Equipment and Materials Users' Association (EEMUA). EEMUA Publication 191: Alarm Systems - A Guide to Design, Management and Procurement; and ANSI/ISA-18.2, Management of Alarm Systems for the Process Industries. (Industry standards; alarm-flood threshold ~10 alarms/10 min, <=3-4 priorities, <=5% high-priority.)", "url": "https://www.exida.com/articles/ALARM-MANAGEMENT-AND-ISA-18-A-JOURNEY-NOT-A-DESTINATION.pdf", "peer": false}]
 ---
 
-# From telemetry to intelligence: the plant-state dashboard
+# Designing a plant-state dashboard for your grow room
 
 _Precision · Dashboards · ~13 min read_
 
-> A grow-room screen should show what the plant is doing, not a wall of raw sensor numbers. Here is how to design one that does.
+> A grow-room screen should show what the plant is doing, not a wall of raw sensor numbers. This paper shows how to design one that catches drift days before it becomes damage, names the cause, and prescribes the next action.
 
 ## Purpose and scope
 
@@ -154,7 +154,7 @@ The only zone that interrupts. Prescriptive and time-bound. Expands to its evide
 
 The old dashboard, demoted. Fused signals, baselines, raw graphs, for drill-down and the post-mortem.
 
-Colour and layout do real work here. A calm dashboard leans on pre-attentive cues, a single status colour, position, one bold line, that the eye reads before conscious attention engages, so the ‘all clear’ state is grasped at a glance[^preattentive-dataviz].
+Colour and layout do real work here. Before you consciously focus on any text, your eye has already picked up the status colour, the position on screen, and the one bold line. Data designers call this pre-attentive processing[^preattentive-dataviz]: visual properties the eye registers automatically, before focused attention engages, so the ‘all clear’ state is grasped in a glance, not assembled from five panels.
 
 > **KEY — A sample advisory, in full**
 >
@@ -162,7 +162,7 @@ Colour and layout do real work here. A calm dashboard leans on pre-attentive cue
 
 ## Implementation path
 
-This is not a boil-the-ocean rebuild. Each stage ships value and earns the next, and most of the payoff lands by Stage 3, long before any closed-loop control.
+This does not require a complete rebuild. Each stage delivers value and earns the next, and most of the payoff lands by Stage 3, long before any closed-loop control.
 
 > **Diagram.** Six rungs from telemetry to closed-loop. Stage 2, baseline and go quiet, is the single biggest step, because it ends alarm fatigue in one move.
 

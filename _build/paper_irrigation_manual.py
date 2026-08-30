@@ -66,7 +66,10 @@ SECTIONS.append({"id": "key-terms", "kicker": "Vocabulary", "title": "Definition
     defterm("EC (electrical conductivity)", "How much dissolved fertiliser salt is in the water "
             "around the roots, measured in mS/cm. It is a proxy for feed strength."),
     defterm("Dryback", "A deliberate, controlled drying-out of the media between waterings, measured "
-            "as a drop in VWC. The main steering lever."),
+            "as a drop in VWC. Think of a sponge: always kept fully saturated, roots have no reason "
+            "to extend; let it dry to a set point then refill, and the plant responds by deepening "
+            "roots and, in flower, putting more energy into reproduction. The size of the dryback "
+            "is the main steering lever."),
     defterm("Shot", "A single timed burst of irrigation. The system replaces one big daily soak with "
             "several small, sized shots."),
     defterm("Field capacity", "The wettest the media can get before water just drains away. The "
@@ -75,8 +78,12 @@ SECTIONS.append({"id": "key-terms", "kicker": "Vocabulary", "title": "Definition
             "<a href='glossary.html#gl-substrate'>Glossary &rarr;</a>"),
     defterm("Solenoid valve", "An electrically operated valve. The relay board switches it on or off "
             "to start and stop water flow to a table."),
-    defterm("VPD &amp; crop steering", "VPD (vapour pressure deficit) is how &lsquo;thirsty&rsquo; "
-            "the air is. Crop steering is biasing the plant vegetative or generative using irrigation, "
+    defterm("VPD &amp; crop steering", "Air that is warmer and drier pulls moisture from leaf surfaces "
+            "more strongly — like how sweat evaporates faster on a hot dry day than a humid one. "
+            "VPD (vapour pressure deficit) measures that pull: the gap between the moisture the air "
+            "currently holds and the most it could hold at that temperature. Higher VPD means the "
+            "plant is losing water faster and must be supplied faster. "
+            "Crop steering is biasing the plant vegetative or generative using irrigation, "
             "climate and light. <a href='glossary.html'>Glossary &rarr;</a>"),
     figure(grid([
         card("Vegetative", "Leafy growth and size. Smaller drybacks, held wetter overall, moderate EC.", "Steer"),
@@ -88,7 +95,7 @@ SECTIONS.append({"id": "key-terms", "kicker": "Vocabulary", "title": "Definition
       "and what runoff is telling you."),
   ]})
 
-SECTIONS.append({"id": "hardware", "kicker": "The physical kit", "title": "Irrigation system hardware",
+SECTIONS.append({"id": "hardware", "kicker": "Physical kit", "title": "Irrigation system hardware",
   "blocks": [
     p("The brain of the valve control is a <strong>KC868 E16S relay board</strong> connected over "
       "Ethernet and running ESPHome firmware. It physically switches every valve: the 6 tables "
@@ -122,7 +129,7 @@ SECTIONS.append({"id": "hardware", "kicker": "The physical kit", "title": "Irrig
       "because it keys off mainline pressure, not a software command."),
   ]})
 
-SECTIONS.append({"id": "phases", "kicker": "The core idea", "title": "P0–P3 irrigation phases",
+SECTIONS.append({"id": "phases", "kicker": "Core concept", "title": "P0–P3 irrigation phases",
   "blocks": [
     p("Crop steering splits each lights-on day into four phases that control how the plant uses water "
       "and nutrients. A <strong>controlled dryback</strong>, letting the media dry by a set amount "
@@ -220,7 +227,7 @@ SECTIONS.append({"id": "commissioning", "kicker": "Step by step",
       ["Window end", "18:00 (2 h before lights-off)"],
       ["Interval", "60 minutes"],
       ["Shot duration", "60 seconds"],
-      ["Day / night temp", "26 °C day / 22 °C night"],
+      ["Day / night temp", "26 °C (79 °F) day / 22 °C (72 °F) night"],
       ["Humidity (RH)", "60%"],
       ["CO2 target", "1200 ppm"],
     ], cls="compact", caption="Safe starting setpoints. These are intentionally cautious; tighten "
@@ -232,11 +239,11 @@ SECTIONS.append({"id": "daily-operation", "kicker": "Living with it",
   "blocks": [
     p("Daily checks are quick. On the Command Center, all 6 tables should read VWC between 30 and 70%, "
       "EC in your target range (typically 2 to 6 mS/cm by stage), and substrate temperatures 20 to "
-      "26 °C, with every safety indicator green."),
+      "26 °C (68 to 79 °F), with every safety indicator green."),
     p("On the Trends tab the VWC graph should show a <strong>sawtooth</strong>: a gradual drop, then a "
       "sharp rise after each irrigation. A flat or only-falling line means watering is not actually "
       "happening. That is your first warning sign, before any error message appears."),
-    ul(["Healthy daily readings: VWC 30&ndash;70%, EC ~2&ndash;6 mS/cm, substrate temp 20&ndash;26 °C, safety all green",
+    ul(["Healthy daily readings: VWC 30&ndash;70%, EC ~2&ndash;6 mS/cm, substrate temp 20&ndash;26 °C (68&ndash;79 °F), safety all green",
         "A non-sawtooth VWC trace is your earliest signal that something is wrong",
         "Enable or skip tables via the <strong>Enabled</strong> toggle in Zone Control",
         "Emergency stop: toggle Maintenance Mode on (closes all valves) or call the emergency-stop script"]),
@@ -277,7 +284,7 @@ SECTIONS.append({"id": "troubleshooting", "kicker": "When it breaks", "title": "
       ["VWC / EC Unavailable", "ESPHome device offline or template entity stale",
        "Confirm device online, reload template entities, then suspect a lost probe connection"],
       ["Shots show 0.0 s", "Substrate volume or dripper flow not set; known prefix bug",
-       "Set substrate volume (10 L) and dripper flow (2 L/hr); check for crop_steering_ prefix bug"],
+       "Set substrate volume (10 L / 2.6 gal) and dripper flow (2 L/hr / 0.5 gal/hr); check for crop_steering_ prefix bug"],
       ["Stuck-open valve", "Relay latched or watchdog not firing",
        "Maintenance mode first, turn the valve off via service, then cut power to the relay board"],
       ["Entity not found", "Integration looking for crop_steering_ prefixed entities",
@@ -285,8 +292,8 @@ SECTIONS.append({"id": "troubleshooting", "kicker": "When it breaks", "title": "
     ], cls="compact", caption="The five common failures. The 0.0-second-shot and entity-not-found "
       "rows often share the same root cause (a missing or mis-prefixed input)."),
     table(["Parameter", "Meaning", "Default", "How to measure"], [
-      ["Substrate volume", "Litres of media per pot", "10 L", "Pot volume × fill fraction"],
-      ["Dripper flow rate", "Water delivered per dripper per hour", "2 L/hr", "Stamped on the dripper / catch test"],
+      ["Substrate volume", "Litres of media per pot", "10 L (2.6 gal)", "Pot volume × fill fraction"],
+      ["Dripper flow rate", "Water delivered per dripper per hour", "2 L/hr (0.5 gal/hr)", "Stamped on the dripper / catch test"],
       ["Drippers per plant", "How many emitters feed one plant", "1&ndash;2", "Count physically"],
       ["Field capacity", "Wettest VWC before runoff", "70%", "Saturate, drain, read the sensor"],
     ], cls="compact", caption="The tuning parameters. Shot duration is computed from these, so a wrong "

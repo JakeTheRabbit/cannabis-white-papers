@@ -5,7 +5,7 @@ from components import (p, lead, h, ul, ol, callout, defterm, table, figure,
 import figs_lib as L
 
 SLUG = "cloning"
-TITLE = "Cloning: cuttings that root every time"
+TITLE = "How to root cannabis cuttings"
 EYEBROW = "Propagation · Cloning"
 SUB = ("Take cannabis cuttings that root reliably. This walks a beginner from picking a "
        "mother plant to a transplant-ready clone in 14 days.")
@@ -48,7 +48,7 @@ SECTIONS.append({"id": "intro", "kicker": "01 · Start here", "title": "Purpose 
 
 SECTIONS.append({"id": "key-terms", "kicker": "02 · The vocabulary", "title": "Definitions",
   "blocks": [
-    p("Most beginner mistakes come from not knowing what a term means. These six come up constantly."),
+    p("These six terms come up throughout this guide. Know them before reading on."),
     defterm("Node", "The point on a stem where leaves and side-shoots attach. New roots and new "
             "growth both come from nodes, so your cut and your rooting both depend on them."),
     defterm("Mother plant", "A plant kept permanently in vegetative (leafy) growth, never "
@@ -64,15 +64,15 @@ SECTIONS.append({"id": "key-terms", "kicker": "02 · The vocabulary", "title": "
     figure(L.flow("Anatomy of a prepared cutting",
             [("Node", "where roots will form"), ("Internode", "bare stem between nodes"),
              ("45° basal cut", "fresh, just below a node"), ("Lower leaves removed", "to reduce water loss"),
-             ("Fan tips trimmed", "to ~50–70%"), ("Stem in cube", "1.5–2.5 cm deep")]), 2,
+             ("Fan tips trimmed", "to ~50–70%"), ("Stem in cube", "1.5–2.5 cm (0.6–1.0 in) deep")]), 2,
       "A cutting prepared for sticking: a clean angled cut below a node, lower leaves stripped, large "
       "fan-leaf tips trimmed back, and the stem set well into the cube."),
   ]})
 
-SECTIONS.append({"id": "mother-and-cut", "kicker": "03 · The how & why", "title": "Selecting and cutting shoots",
+SECTIONS.append({"id": "mother-and-cut", "kicker": "03 · Selecting and cutting", "title": "Selecting and cutting shoots",
   "blocks": [
     p("A good clone starts with a good shoot. Pick upright shoots from the upper-to-mid canopy that are "
-      "at least 3 mm thick and 15 cm long. Thicker, well-lit shoots carry more stored energy and "
+      "at least 3 mm (0.1 in) thick and 15 cm (6 in) long. Thicker, well-lit shoots carry more stored energy and "
       "root faster than thin, shaded interior growth" + _c("esposito-2026-morphology-predictors") +
       ". Shoot thickness and leaf colour reliably predict how well a cutting will root" + _c("esposito-2026-morphology-predictors") + "."),
     p("Water the mother thoroughly the day before so cuttings are hydrated and turgid; wilted tissue "
@@ -81,7 +81,7 @@ SECTIONS.append({"id": "mother-and-cut", "kicker": "03 · The how & why", "title
       "solution so the cut end never sits in air."),
     callout("tip", "Why a 45° cut, and why no air",
       ul(["A <strong>45° cut</strong> exposes more surface area than a flat cut, so more cells can turn into roots.",
-          "If the cut end sits in air, the stem draws in an <strong>air embolism</strong>, an air bubble at the dried cut that stalls water uptake. Keep the end wet from the moment it is cut.",
+          "If the cut end dries out in air, a bubble enters the stem and blocks water from moving up—the same way a bubble trapped in a drinking straw stops the flow. This is called an <strong>air embolism</strong>. Keep the end wet from the moment it is cut.",
           "Sterilize the blade between mother plants so you don't carry disease from one to the next." + _c("punja-2023-fusarium-pythium-biocontrol")], "tight")),
     figure(L.bars("Where to take cuttings from on the mother",
             [("Upper-mid (best)", 92), ("Lower interior", 58), ("Soft tip growth", 70)], unit="% root",
@@ -91,22 +91,24 @@ SECTIONS.append({"id": "mother-and-cut", "kicker": "03 · The how & why", "title
       "growth lags well behind." + _c("esposito-2026-morphology-predictors")),
   ]})
 
-SECTIONS.append({"id": "hormone-and-cube", "kicker": "04 · The how & why", "title": "Rooting hormone and propagation cubes",
+SECTIONS.append({"id": "hormone-and-cube", "kicker": "04 · Hormone and cube", "title": "Rooting hormone and propagation cubes",
   "blocks": [
-    p("Cuttings have no roots yet, so a <strong>rooting hormone</strong> pushes the stem to "
-      "grow them. The active ingredient is usually <strong>IBA (indole-3-butyric acid)</strong>, "
-      "an auxin used in rooting products" + _c("landis-2022-iba-hemp-i3") +
-      ". Inside the stem the plant converts IBA into the active rooting auxin (IAA), which is what "
-      "triggers new roots" + _c("fattorini-2017-iba-to-iaa") + ". It sells as a gel or a liquid."),
+    p("Cuttings have no roots yet, so a <strong>rooting hormone</strong> is applied to push the stem to "
+      "grow them. A plant hormone is a chemical signal—like a thermostat telling a heater to run—that "
+      "tells cells what to do. The active ingredient in rooting products is usually "
+      "<strong>IBA (indole-3-butyric acid)</strong>, a member of a class of plant growth signals "
+      "called auxins" + _c("landis-2022-iba-hemp-i3") +
+      ". Inside the stem the plant converts IBA into its active form (IAA), which is the signal that "
+      "actually starts root growth" + _c("fattorini-2017-iba-to-iaa") + ". It sells as a gel or a liquid."),
     p("Make a fresh 45-degree cut right before sticking to expose new tissue, coat the bottom 1&ndash;2 cm "
-      "of stem in rooting gel, and insert it 1.5&ndash;2.5 cm into a pre-soaked cube. Firm it just enough "
+      "(0.4&ndash;0.8 in) of stem in rooting gel, and insert it 1.5&ndash;2.5 cm (0.6&ndash;1.0 in) into a pre-soaked cube. Firm it just enough "
       "that the cube lifts with the stem when you tug gently, the <em>lift test</em>, but "
       "don't crush the cube."),
     steps([
       ("Pre-soak the cube", "Soak rockwool or peat cubes in clone feed for at least 15 minutes. Let them drain freely. Do NOT squeeze them out, or you crush the air out of them."),
       ("Fresh cut", "Re-cut the stem at 45° just before sticking to open clean, un-embolised tissue."),
-      ("Apply hormone", "Gel: dip the cut end about 0.5 in (the lower 1–2 cm). Liquid/alcohol dip: soak the cut end about 30 seconds."),
-      ("Stick & lift-test", "Insert 1.5–2.5 cm deep. Tug gently: the cube should rise with the stem."),
+      ("Apply hormone", "Gel: dip the cut end about 1–2 cm (0.4–0.8 in) deep. Liquid/alcohol dip: soak the cut end for about 30 seconds."),
+      ("Stick & lift-test", "Insert 1.5–2.5 cm (0.6–1.0 in) deep. Tug gently: the cube should rise with the stem."),
     ]),
     callout("warn", "Under 30 seconds from cut to cube",
       p("Keep the time from the final cut to sticking under about 30 seconds. The longer a fresh cut "
@@ -120,15 +122,19 @@ SECTIONS.append({"id": "hormone-and-cube", "kicker": "04 · The how & why", "tit
       "pre-mixed to land in the productive range." + _c("landis-2022-iba-hemp-i3")),
   ]})
 
-SECTIONS.append({"id": "dome-environment", "kicker": "05 · The how & why", "title": "Dome, humidity, temperature and light",
+SECTIONS.append({"id": "dome-environment", "kicker": "05 · Environment", "title": "Dome, humidity, temperature and light",
   "blocks": [
     p("A cutting with no roots cannot pull water up the stem, so it survives on humidity until roots "
       "form. The dome traps moisture so water enters the leaves directly from the air while the stem "
       "grows roots."),
-    p("Keep the air around 24&ndash;26&deg;C and start with high humidity (85&ndash;95% RH) inside a "
+    p("Keep the air around 24&ndash;26&deg;C (75&ndash;79&deg;F) and start with high humidity (85&ndash;95% RH) inside a "
       "closed dome, then step it down as roots develop" + _c("kim-2025-light-temp-rh") + ". Put a heat mat "
-      "under the tray to keep the cube itself at 22&ndash;24&deg;C. Cube temperature sets rooting speed "
+      "under the tray to keep the cube itself at 22&ndash;24&deg;C (72&ndash;75&deg;F). Cube temperature sets rooting speed "
       "more than air temperature does" + _c("olympios-rootzone-temp") + "."),
+    p("VPD measures how hard the air is pulling on leaf surfaces—drier and warmer air pulls harder. "
+      "Think of it as how thirsty the air is for water: the higher the VPD, the faster a surface loses "
+      "moisture. Keep VPD low (0.3&ndash;0.5 kPa) while cuttings have no roots; raise it in steps as "
+      "roots grow and the clone can replace what it loses."),
     p("Keep light gentle, about 60&ndash;100 PPFD (a measure of light intensity reaching the "
       "plant) in the first days, rising toward 150&ndash;200 by hardening off" + _c("kim-2025-light-temp-rh") +
       ". Measure it <strong>with the dome in place</strong>, because the plastic cuts the light reaching "
@@ -145,7 +151,7 @@ SECTIONS.append({"id": "dome-environment", "kicker": "05 · The how & why", "tit
       ["Early rooting", "5–7", "80–85%", "0.5–0.7", "80–120"],
       ["Mid rooting", "8–10", "70–80%", "0.6–0.8", "100–150"],
       ["Hardening", "11–14", "65–75%", "0.8–1.0", "150–200"],
-    ], cls="compact", caption="Four-phase environment targets, all at 24–26°C air and a 22–24°C cube. VPD is a combined dryness measure; higher = drier air." + _c("kim-2025-light-temp-rh")),
+    ], cls="compact", caption="Four-phase environment targets, all at 24–26 °C (75–79 °F) air and a 22–24 °C (72–75 °F) cube. VPD is how hard the air pulls on leaf surfaces; higher kPa means drier air." + _c("kim-2025-light-temp-rh")),
     callout("note", "Air movement, not a fan in the face",
       p("Gentle air movement in the room is good, but never aim a fan directly at un-rooted clones. "
         "With no roots to replace lost water, a direct breeze dries them out and wilts them fast.")),
@@ -168,7 +174,7 @@ SECTIONS.append({"id": "timeline", "kicker": "06 · Do this", "title": "14-day c
       "the same signal."),
     p("Clone feed starts mild (~0.6&ndash;1.2 mS/cm, product-dependent) and rises only once roots "
       "appear; ~1.5 mS/cm can burn soft cuttings. Run it at pH 5.5&ndash;6.0 with the water at "
-      "20&ndash;22&deg;C. From day 7 start a daily <strong>burp</strong>, begin propping the vents open, "
+      "20&ndash;22&deg;C (68&ndash;72&deg;F). From day 7 start a daily <strong>burp</strong>, begin propping the vents open, "
       "and lift one edge cube to look for emerging white roots. On day 11 run the hardening-off test: "
       "lift the domes, wait 10 minutes, and if fewer than 5 clones per tray wilt, leave the dome off; if "
       "5 or more wilt, re-dome and retry tomorrow. Transplant at around day 14."),
@@ -184,7 +190,7 @@ SECTIONS.append({"id": "timeline", "kicker": "06 · Do this", "title": "14-day c
       ["5–7", "First water by weight; start opening vents", "Cube fading dark→light; 40–50% weight loss"],
       ["7+", "Daily burp; lift an edge cube", "First white roots emerging"],
       ["11", "Hardening-off test (dome off 10 min)", "<5 wilting per tray → dome stays off"],
-      ["14", "Transplant the keepers", "Roots ≥2–3 cm on multiple sides; cube holds together"],
+      ["14", "Transplant the keepers", "Roots ≥2–3 cm (0.8–1.2 in) on multiple sides; cube holds together"],
     ], cls="compact", caption="The day-by-day routine condensed. Transplant criteria are the key go/no-go at the end."),
   ]})
 
@@ -193,8 +199,8 @@ SECTIONS.append({"id": "troubleshooting", "kicker": "07 · When it goes wrong", 
     p("Most clone failures trace to a handful of causes, and they look distinct enough to diagnose at a "
       "glance."),
     table(["Symptom", "Likely cause", "What to do"], [
-      ["Severe wilting, days 1–2", "Dome RH too low / light too high / heat mat off", "RH ≥85%, drop PPFD, get the cube to 22–24°C"],
-      ["Mold or slimy cubes", "Standing water, poor hygiene, or too warm", "Empty standing water; gloves-only handling; keep cubes <26°C"],
+      ["Severe wilting, days 1–2", "Dome RH too low / light too high / heat mat off", "RH ≥85%, drop PPFD, get the cube to 22–24 °C (72–75 °F)"],
+      ["Mold or slimy cubes", "Standing water, poor hygiene, or too warm", "Empty standing water; gloves-only handling; keep cubes <26 °C (79 °F)"],
       ["Burnt / crispy leaf tips", "Feed EC or VPD too high (too dry)", "Drop EC 0.2–0.3, raise RH, slow the vent opening"],
       ["Yellowing before roots", "Mother was deficient, or feed EC too low", "Review mother nutrition; nudge EC up next run"],
       ["White fuzzy mold in dome", "Humidity too high with no air exchange", "Burp more often; never skip dome hygiene"],

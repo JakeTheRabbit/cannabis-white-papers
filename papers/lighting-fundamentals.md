@@ -2,7 +2,7 @@
 slug: "lighting-fundamentals"
 title: "Lighting: spectrum, PPFD and DLI"
 eyebrow: "Beginner · Light"
-summary: "A from-zero guide to how grow light actually works: what to measure, what to aim for at each stage, and how to avoid cooking your plants."
+summary: "A from-zero guide to how grow light works: what the key numbers mean, what to aim for at each stage, and how to spot problems before they cost you a crop."
 track: "Environment & climate"
 read_time: "~14 min read"
 diagrams: "9 diagrams"
@@ -21,13 +21,13 @@ refs: [{"id": "rodriguez-morrison-2021-light-levels-yield-photosynthesis", "n": 
 
 _Beginner · Light · ~14 min read_
 
-> A from-zero guide to how grow light actually works: what to measure, what to aim for at each stage, and how to avoid cooking your plants.
+> A from-zero guide to how grow light works: what the key numbers mean, what to aim for at each stage, and how to spot problems before they cost you a crop.
 
 ## Purpose and scope
 
-Light is not just ‘on or off.’ It is the raw fuel a plant turns into sugar, and the single biggest lever on yield and quality you control indoors. This paper assumes you know nothing: it defines every term, gives concrete numbers to aim for at each growth stage, and explains the one switch that makes a plant flower.
+Light is the raw fuel a plant converts into sugar — the single biggest variable you control indoors. This paper starts from first principles: it defines every term, gives concrete targets for each stage, and explains the schedule change that makes a plant flower.
 
-Plants eat light. Photosynthesis converts light energy plus CO2 and water into sugar, so more usable light, up to a limit, means more growth[^chandra-2008-photosynthetic-response-ppfd-co2-temp]. The three numbers that matter most are PPFD (how bright, right now), DLI (how much total light per day), and spectrum (the color mix). Every term is defined the first time it appears.
+The plant captures energy from light and uses it to build sugar from CO2 in the air and water from the roots — like a solar panel that makes its own fuel instead of storing electricity. This process is photosynthesis, and it is why more usable light means more growth, up to the point where CO2, water or temperature becomes the limiting factor[^chandra-2008-photosynthetic-response-ppfd-co2-temp]. The three numbers that matter most are PPFD (how bright, right now), DLI (how much total light per day), and spectrum (the color mix). Every term is defined the first time it appears.
 
 > **Diagram.** Light is the input, but it only pays off when CO2, water and nutrients keep pace.
 
@@ -53,7 +53,7 @@ Get the gist of these five terms and the rest of the paper falls into place. The
 
 > **Diagram.** PAR is the 400 to 700 nm band plants use. Lux meters weight toward green, so they are the wrong tool for plant light.[^eichhorn-bilodeau-2019-photobiology-cannabis-review]
 
-## Spectrum and plant responses
+## What each wavelength does to the plant
 
 Blue light, roughly 400 to 500 nm, keeps plants compact with tight internode spacing and is linked to denser growth and resin in flower[^magagnini-2018-light-spectrum-morphology-cannabinoids]. Red light, 600 to 700 nm, is the most photosynthetically efficient band and drives flowering and stretch[^westmoreland-2021-blue-fraction-efficacy-cannabis].
 
@@ -73,7 +73,7 @@ Blue light, roughly 400 to 500 nm, keeps plants compact with tight internode spa
 >
 > A quality full-spectrum white LED covers veg and flower. Intensity beats spectrum tuning, so spend your attention on PPFD and DLI before you chase color recipes.
 
-## Light intensity and daily light integral: targets by stage
+## PPFD and DLI targets at each growth stage
 
 Young tissue cannot process intense light, so targets climb as the plant matures. Clones and seedlings want about 100-250 PPFD (DLI roughly ~6-16 mol)[^rodriguez-morrison-2021-light-levels-yield-photosynthesis], early-to-late veg about 300-600 PPFD (DLI ~20-35 mol), and flower about 700-900 PPFD without added CO2 (DLI ~30-45 mol)[^llewellyn-2022-light-intensity-proportional-uv-no-effect].
 
@@ -93,11 +93,11 @@ Pushing past about 900 PPFD only pays off if you also raise CO2 to 1000-1200 ppm
 
 *Stage targets. 600 PPFD x 18h (~39 mol) is closer to ~900 PPFD x 12h than to 800 PPFD x 12h.*
 
-## Photoperiod and floral initiation
+## How day length triggers flowering
 
-Photoperiod-type cannabis stays vegetative under long days (commonly 18/6) and is forced to flower by switching to 12 hours light and 12 hours uninterrupted dark[^kusuma-2021-nir-leds-delay-flowering-phytochrome]. This is ‘the flip.’
+Photoperiod-type cannabis stays vegetative under long days (commonly 18/6) and is forced to flower by switching to 12 hours of light and 12 hours of uninterrupted dark[^kusuma-2021-nir-leds-delay-flowering-phytochrome]. This is ‘the flip.’
 
-The plant does not count light hours. It measures the length of the unbroken dark period using a pigment called phytochrome, which flips between an active form (Pfr) and an inactive form (Pr). Once nights are long enough it produces a flowering signal, florigen, in the leaves[^eichhorn-bilodeau-2019-photobiology-cannabis-review]. This is why light leaks matter so much: even a phone screen, an indicator LED, or a pinhole in a tent during lights-off can reset phytochrome and stall or revert flowering, cause re-vegging, or trigger hermaphrodites[^kusuma-2021-nir-leds-delay-flowering-phytochrome].
+The plant tracks darkness, not light hours — think of it as a sand timer that runs only while the lights are off. If anything resets it mid-run, even a brief flash of light, it starts from zero. The mechanism is a pigment in the leaves called phytochrome, a light-sensitive molecule that shifts between two forms depending on light exposure; the balance between those forms tells the plant how long the night has been. When the dark period is long enough, phytochrome triggers the production of florigen — a mobile hormone that carries the signal from the leaves to the growing tips to start producing buds[^eichhorn-bilodeau-2019-photobiology-cannabis-review]. A light leak resets phytochrome mid-cycle: even a phone screen, an indicator LED, or a pinhole in a tent during lights-off can stall or revert flowering, cause re-vegging, or trigger hermaphrodites[^kusuma-2021-nir-leds-delay-flowering-phytochrome].
 
 > **Diagram.** Phytochrome tracks the dark period. A light leak during lights-off resets the clock and stalls the flip.[^kusuma-2021-nir-leds-delay-flowering-phytochrome]
 
@@ -105,7 +105,7 @@ The plant does not count light hours. It measures the length of the unbroken dar
 >
 > Light leaks during the dark period are the number one beginner flowering failure: stalled bloom, re-veg, or hermaphrodites. Far-red and red are exactly what phytochrome senses. Seal pinholes, cover indicator LEDs, use light-proof ducting. If you can see in the dark, so can the plant.
 
-## LED, HPS and CMH fixtures: efficacy and selection
+## Choosing a fixture: LED, HPS or CMH
 
 Modern LED is the efficiency leader at roughly 2.7-3.0 umol/J for good fixtures (budget units 2.0-2.3), runs cooler, and lasts longer[^nelson-bugbee-2014-efficacy-led-vs-hps]. HPS (high-pressure sodium) sits around 1.7-1.9 umol/J and runs hot but is cheap to buy. CMH/LEC (ceramic metal halide) lands lower, around 1.3-1.9 umol/J, but has a pleasant broad spectrum.
 
@@ -121,9 +121,9 @@ Efficacy (umol/J) is the number to compare. A 3.0 umol/J LED makes about 60% mor
 
 *Compare on efficacy and total PPF plus a real PPFD map, never on lumens or 'equivalent watts.'*
 
-## Lighting setup by growth stage
+## Setting height and intensity at each stage
 
-Intensity falls with distance, but the inverse-square rule (a quarter of the light at twice the distance) is a point-source ideal that LED bars only approximate, so map PPFD with a meter rather than trusting the arithmetic. Height is your coarse intensity dial, the dimmer is the fine one. Hang about 24 in for seedlings and clones, ~18 in for veg, and ~12-16 in for flower, then fine-tune with the dimmer and a PAR meter.
+Intensity falls with distance, but the inverse-square rule (a quarter of the light at twice the distance) is a point-source ideal that LED bars only approximate, so map PPFD with a meter rather than trusting the arithmetic. Height is your coarse intensity dial, the dimmer is the fine one. Hang about 60 cm (24 in) for seedlings and clones, ~45 cm (18 in) for veg, and ~30-40 cm (12-16 in) for flower, then fine-tune with the dimmer and a PAR meter.
 
 Verify coverage by taking PPFD readings at nine points: four corners, four edge-midpoints, and the center. Aim for a min-to-average ratio above 0.75 so edge plants are not starved while the center bleaches. Hanging higher trades peak intensity for more even spread, so use a manufacturer PPFD map as your starting point and confirm with real readings at canopy height.
 
@@ -131,9 +131,9 @@ Verify coverage by taking PPFD readings at nine points: four corners, four edge-
 
 | Stage | Hang height | Target PPFD | Photoperiod |
 | --- | --- | --- | --- |
-| Clone / seedling | ~24 in | 100-300 | 18/6 |
-| Veg | ~18 in | 300-600 | 18/6 |
-| Flower | ~12-16 in | 700-900 | 12/12 |
+| Clone / seedling | ~60 cm (24 in) | 100-300 | 18/6 |
+| Veg | ~45 cm (18 in) | 300-600 | 18/6 |
+| Flower | ~30-40 cm (12-16 in) | 700-900 | 12/12 |
 
 *Starting heights. Always confirm against your fixture's PPFD map and a meter at canopy height.*
 
@@ -141,7 +141,7 @@ Verify coverage by taking PPFD readings at nine points: four corners, four edge-
 >
 > Pair this with the [light acclimation](light-acclimation.html) paper: raise the dimmer or lower the fixture over several days rather than jumping a fresh clone to full intensity.
 
-## Troubleshooting
+## Diagnosing common light problems
 
 Too much light shows as bleaching (white or yellow bud tips directly under the fixture), upward-cupping or ‘taco’ leaves, and faded color even when nutrients are fine. The fix is to dim or raise the light, not to feed more.
 

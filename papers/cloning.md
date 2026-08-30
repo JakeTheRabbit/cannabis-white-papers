@@ -1,6 +1,6 @@
 ---
 slug: "cloning"
-title: "Cloning: cuttings that root every time"
+title: "How to root cannabis cuttings"
 eyebrow: "Propagation · Cloning"
 summary: "Take cannabis cuttings that root reliably. This walks a beginner from picking a mother plant to a transplant-ready clone in 14 days."
 track: "Propagation"
@@ -17,7 +17,7 @@ attribution: "The Cannabis White Papers"
 refs: [{"id": "caplan-2018-stem-cuttings", "n": 1, "cite": "Caplan, D., Stemeroff, J., Dixon, M., & Zheng, Y. (2018). Vegetative propagation of cannabis by stem cuttings: effects of leaf number, cutting position, rooting hormone, and leaf tip removal. Canadian Journal of Plant Science, 98(5), 1126-1132.", "url": "https://doi.org/10.1139/cjps-2018-0038", "peer": true}, {"id": "esposito-2026-morphology-predictors", "n": 2, "cite": "Esposito, L.G.A., et al. (2026). Analysis of Marijuana (Cannabis sativa L.) Cuttings: Morphological and Colorimetric Traits as Predictors for Optimization of Vegetative Reproduction. Plants, 15(3), 440.", "url": "https://doi.org/10.3390/plants15030440", "peer": true}, {"id": "kim-2025-light-temp-rh", "n": 3, "cite": "Kim, B., Hahm, S., Lee, Y.J., Bok, G., & Park, J. (2025). Light, Temperature, and Relative Humidity Influence the Adventitious Rooting of Cannabis Stem Cuttings. Horticultural Science and Technology, 43(4), 480-493.", "url": "https://doi.org/10.7235/HORT.20250043", "peer": true}, {"id": "landis-2022-iba-hemp-i3", "n": 4, "cite": "Landis, H., et al. (2022). Impact of Indole-3-butyric Acid Concentration and Formulation and Propagation Environment on Rooting Success of 'I3' Hemp by Stem Cuttings. HortTechnology, 32(3), 321-330.", "url": "https://doi.org/10.21273/HORTTECH05016-21", "peer": true}, {"id": "fattorini-2017-iba-to-iaa", "n": 5, "cite": "Fattorini, L., Veloccia, A., Della Rovere, F., D'Angeli, S., Falasca, G., & Altamura, M.M. (2017). Indole-3-butyric acid promotes adventitious rooting in Arabidopsis thaliana thin cell layers by conversion into indole-3-acetic acid and stimulation of anthranilate synthase activity. BMC Plant Biology, 17, 121.", "url": "https://doi.org/10.1186/s12870-017-1071-x", "peer": true}, {"id": "olympios-rootzone-temp", "n": 6, "cite": "Lopez, R.G., & Runkle, E.S. (2008). Photosynthetic daily light integral during propagation influences rooting and growth of cuttings and subsequent development. HortScience, 43(7), 2052-2059.", "url": "https://doi.org/10.21273/HORTSCI.43.7.2052", "peer": true}, {"id": "punja-2023-fusarium-pythium-biocontrol", "n": 7, "cite": "Punja, Z.K., Tirajoh, A., Collyer, D., & Ni, L. (2023). Biological control of Fusarium oxysporum causing damping-off and Pythium myriotylum causing root and crown rot on cannabis (Cannabis sativa L.) plants. Canadian Journal of Plant Pathology, 45(3), 245-264.", "url": "https://doi.org/10.1080/07060661.2023.2172082", "peer": true}, {"id": "msu-moisture-propagation", "n": 8, "cite": "Lopez, R.G. & Currey, C.J. (Michigan State University Extension). Moisture management during vegetative cutting propagation. MSU Extension / Greenhouse floriculture.", "url": "https://www.canr.msu.edu/news/moisture_management_during_vegetative_cutting_propagation", "peer": false}, {"id": "liu-2023-shade-highlight-acclimation", "n": 9, "cite": "Liu, Y., et al. (2023). Photosynthetic Acclimation of Shade-Grown Soybean Seedlings to a High-Light Environment. Plants/Frontiers in Plant Science (shade-to-high-light photoinhibition study).", "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10305168/", "peer": true}]
 ---
 
-# Cloning: cuttings that root every time
+# How to root cannabis cuttings
 
 _Propagation · Cloning · ~12 min read_
 
@@ -39,7 +39,7 @@ Well-run propagation rooms often root clones at ~90 percent or better as an oper
 
 ## Definitions
 
-Most beginner mistakes come from not knowing what a term means. These six come up constantly.
+These six terms come up throughout this guide. Know them before reading on.
 
 **Node** — The point on a stem where leaves and side-shoots attach. New roots and new growth both come from nodes, so your cut and your rooting both depend on them.
 
@@ -57,28 +57,28 @@ Most beginner mistakes come from not knowing what a term means. These six come u
 
 ## Selecting and cutting shoots
 
-A good clone starts with a good shoot. Pick upright shoots from the upper-to-mid canopy that are at least 3 mm thick and 15 cm long. Thicker, well-lit shoots carry more stored energy and root faster than thin, shaded interior growth[^esposito-2026-morphology-predictors]. Shoot thickness and leaf colour reliably predict how well a cutting will root[^esposito-2026-morphology-predictors].
+A good clone starts with a good shoot. Pick upright shoots from the upper-to-mid canopy that are at least 3 mm (0.1 in) thick and 15 cm (6 in) long. Thicker, well-lit shoots carry more stored energy and root faster than thin, shaded interior growth[^esposito-2026-morphology-predictors]. Shoot thickness and leaf colour reliably predict how well a cutting will root[^esposito-2026-morphology-predictors].
 
 Water the mother thoroughly the day before so cuttings are hydrated and turgid; wilted tissue roots poorly. Take cuttings at the start of the light cycle with a sterile blade, making a clean 45-degree cut just below a node, and drop each cutting straight into a holding jug of dilute solution so the cut end never sits in air.
 
 > **TIP — Why a 45° cut, and why no air**
 >
 > - A **45° cut** exposes more surface area than a flat cut, so more cells can turn into roots.
-> - If the cut end sits in air, the stem draws in an **air embolism**, an air bubble at the dried cut that stalls water uptake. Keep the end wet from the moment it is cut.
+> - If the cut end dries out in air, a bubble enters the stem and blocks water from moving up—the same way a bubble trapped in a drinking straw stops the flow. This is called an **air embolism**. Keep the end wet from the moment it is cut.
 > - Sterilize the blade between mother plants so you don't carry disease from one to the next.[^punja-2023-fusarium-pythium-biocontrol]
 
 > **Diagram.** Upright shoots from the well-lit upper-to-mid canopy root most reliably. Weak shaded interior growth lags well behind.[^esposito-2026-morphology-predictors]
 
 ## Rooting hormone and propagation cubes
 
-Cuttings have no roots yet, so a **rooting hormone** pushes the stem to grow them. The active ingredient is usually **IBA (indole-3-butyric acid)**, an auxin used in rooting products[^landis-2022-iba-hemp-i3]. Inside the stem the plant converts IBA into the active rooting auxin (IAA), which is what triggers new roots[^fattorini-2017-iba-to-iaa]. It sells as a gel or a liquid.
+Cuttings have no roots yet, so a **rooting hormone** is applied to push the stem to grow them. A plant hormone is a chemical signal—like a thermostat telling a heater to run—that tells cells what to do. The active ingredient in rooting products is usually **IBA (indole-3-butyric acid)**, a member of a class of plant growth signals called auxins[^landis-2022-iba-hemp-i3]. Inside the stem the plant converts IBA into its active form (IAA), which is the signal that actually starts root growth[^fattorini-2017-iba-to-iaa]. It sells as a gel or a liquid.
 
-Make a fresh 45-degree cut right before sticking to expose new tissue, coat the bottom 1–2 cm of stem in rooting gel, and insert it 1.5–2.5 cm into a pre-soaked cube. Firm it just enough that the cube lifts with the stem when you tug gently, the _lift test_, but don't crush the cube.
+Make a fresh 45-degree cut right before sticking to expose new tissue, coat the bottom 1–2 cm (0.4–0.8 in) of stem in rooting gel, and insert it 1.5–2.5 cm (0.6–1.0 in) into a pre-soaked cube. Firm it just enough that the cube lifts with the stem when you tug gently, the _lift test_, but don't crush the cube.
 
 1. **Pre-soak the cube** — Soak rockwool or peat cubes in clone feed for at least 15 minutes. Let them drain freely. Do NOT squeeze them out, or you crush the air out of them.
 2. **Fresh cut** — Re-cut the stem at 45° just before sticking to open clean, un-embolised tissue.
-3. **Apply hormone** — Gel: dip the cut end about 0.5 in (the lower 1–2 cm). Liquid/alcohol dip: soak the cut end about 30 seconds.
-4. **Stick & lift-test** — Insert 1.5–2.5 cm deep. Tug gently: the cube should rise with the stem.
+3. **Apply hormone** — Gel: dip the cut end about 1–2 cm (0.4–0.8 in) deep. Liquid/alcohol dip: soak the cut end for about 30 seconds.
+4. **Stick & lift-test** — Insert 1.5–2.5 cm (0.6–1.0 in) deep. Tug gently: the cube should rise with the stem.
 
 > **WARN — Under 30 seconds from cut to cube**
 >
@@ -90,7 +90,9 @@ Make a fresh 45-degree cut right before sticking to expose new tissue, coat the 
 
 A cutting with no roots cannot pull water up the stem, so it survives on humidity until roots form. The dome traps moisture so water enters the leaves directly from the air while the stem grows roots.
 
-Keep the air around 24–26°C and start with high humidity (85–95% RH) inside a closed dome, then step it down as roots develop[^kim-2025-light-temp-rh]. Put a heat mat under the tray to keep the cube itself at 22–24°C. Cube temperature sets rooting speed more than air temperature does[^olympios-rootzone-temp].
+Keep the air around 24–26°C (75–79°F) and start with high humidity (85–95% RH) inside a closed dome, then step it down as roots develop[^kim-2025-light-temp-rh]. Put a heat mat under the tray to keep the cube itself at 22–24°C (72–75°F). Cube temperature sets rooting speed more than air temperature does[^olympios-rootzone-temp].
+
+VPD measures how hard the air is pulling on leaf surfaces—drier and warmer air pulls harder. Think of it as how thirsty the air is for water: the higher the VPD, the faster a surface loses moisture. Keep VPD low (0.3–0.5 kPa) while cuttings have no roots; raise it in steps as roots grow and the clone can replace what it loses.
 
 Keep light gentle, about 60–100 PPFD (a measure of light intensity reaching the plant) in the first days, rising toward 150–200 by hardening off[^kim-2025-light-temp-rh]. Measure it **with the dome in place**, because the plastic cuts the light reaching the cutting underneath.
 
@@ -103,7 +105,7 @@ Keep light gentle, about 60–100 PPFD (a measure of light intensity reaching th
 | Mid rooting | 8–10 | 70–80% | 0.6–0.8 | 100–150 |
 | Hardening | 11–14 | 65–75% | 0.8–1.0 | 150–200 |
 
-*Four-phase environment targets, all at 24–26°C air and a 22–24°C cube. VPD is a combined dryness measure; higher = drier air.[^kim-2025-light-temp-rh]*
+*Four-phase environment targets, all at 24–26 °C (75–79 °F) air and a 22–24 °C (72–75 °F) cube. VPD is how hard the air pulls on leaf surfaces; higher kPa means drier air.[^kim-2025-light-temp-rh]*
 
 > **NOTE — Air movement, not a fan in the face**
 >
@@ -117,7 +119,7 @@ Most of cloning is knowing when to leave the tray alone.
 
 **Days 1–4:** vents fully closed, do not touch. The trapped humidity makes the cutting close its leaf pores and focus on rooting. **Days 5–7:** the first watering usually comes due. Judge it by tray weight. Irrigate when the tray has dropped 40–50% below its Day 0 weight, and never let it fall below 30% loss, because a permanently soggy cube rots[^msu-moisture-propagation]. The cube fading from dark to light brown is the same signal.
 
-Clone feed starts mild (~0.6–1.2 mS/cm, product-dependent) and rises only once roots appear; ~1.5 mS/cm can burn soft cuttings. Run it at pH 5.5–6.0 with the water at 20–22°C. From day 7 start a daily **burp**, begin propping the vents open, and lift one edge cube to look for emerging white roots. On day 11 run the hardening-off test: lift the domes, wait 10 minutes, and if fewer than 5 clones per tray wilt, leave the dome off; if 5 or more wilt, re-dome and retry tomorrow. Transplant at around day 14.
+Clone feed starts mild (~0.6–1.2 mS/cm, product-dependent) and rises only once roots appear; ~1.5 mS/cm can burn soft cuttings. Run it at pH 5.5–6.0 with the water at 20–22°C (68–72°F). From day 7 start a daily **burp**, begin propping the vents open, and lift one edge cube to look for emerging white roots. On day 11 run the hardening-off test: lift the domes, wait 10 minutes, and if fewer than 5 clones per tray wilt, leave the dome off; if 5 or more wilt, re-dome and retry tomorrow. Transplant at around day 14.
 
 > **Diagram.** How far the dome vents are open by day. Closed at the start protects rootless cuttings; fully open by the end hardens them for room air.
 
@@ -127,7 +129,7 @@ Clone feed starts mild (~0.6–1.2 mS/cm, product-dependent) and rises only once
 | 5–7 | First water by weight; start opening vents | Cube fading dark→light; 40–50% weight loss |
 | 7+ | Daily burp; lift an edge cube | First white roots emerging |
 | 11 | Hardening-off test (dome off 10 min) | <5 wilting per tray → dome stays off |
-| 14 | Transplant the keepers | Roots ≥2–3 cm on multiple sides; cube holds together |
+| 14 | Transplant the keepers | Roots ≥2–3 cm (0.8–1.2 in) on multiple sides; cube holds together |
 
 *The day-by-day routine condensed. Transplant criteria are the key go/no-go at the end.*
 
@@ -137,8 +139,8 @@ Most clone failures trace to a handful of causes, and they look distinct enough 
 
 | Symptom | Likely cause | What to do |
 | --- | --- | --- |
-| Severe wilting, days 1–2 | Dome RH too low / light too high / heat mat off | RH ≥85%, drop PPFD, get the cube to 22–24°C |
-| Mold or slimy cubes | Standing water, poor hygiene, or too warm | Empty standing water; gloves-only handling; keep cubes <26°C |
+| Severe wilting, days 1–2 | Dome RH too low / light too high / heat mat off | RH ≥85%, drop PPFD, get the cube to 22–24 °C (72–75 °F) |
+| Mold or slimy cubes | Standing water, poor hygiene, or too warm | Empty standing water; gloves-only handling; keep cubes <26 °C (79 °F) |
 | Burnt / crispy leaf tips | Feed EC or VPD too high (too dry) | Drop EC 0.2–0.3, raise RH, slow the vent opening |
 | Yellowing before roots | Mother was deficient, or feed EC too low | Review mother nutrition; nudge EC up next run |
 | White fuzzy mold in dome | Humidity too high with no air exchange | Burp more often; never skip dome hygiene |

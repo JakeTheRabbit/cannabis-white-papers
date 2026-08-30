@@ -107,7 +107,7 @@ Autoflower seeds carry Cannabis ruderalis genetics that make the plant flower au
 | Sex outcome | ~50% male / 50% female | ~99% female | Feminised autos ~99% female; regular autos ~50/50 |
 | Flowering trigger | Switch to 12h light | Switch to 12h light | Automatic, by age |
 | Time to harvest | Longer | Longer | ~60-90 days from sprout |
-| Plant size | Large | Large | Small (~2-4 ft) |
+| Plant size | Large | Large | ~60–120 cm (2–4 ft) |
 | Yield potential | High | High | Lower per plant |
 | Beginner-friendly | No (must sex/cull) | Yes (simplest) | Yes (hands-off timing) |
 
@@ -131,36 +131,36 @@ The paper-towel method (seeds between damp paper towels, sandwiched between two 
 
 *All three supply water + warmth (darkness optional). They differ mainly in whether you can see progress.*
 
-> **Diagram.** Wet but wrung-out towels, seeds spaced out and covered, kept warm and dark, checked twice a day. Plant once the taproot is about 0.5-1.5 cm long.[^smith-2022-hemp-germination-temperature-limits]
+> **Diagram.** Wet but wrung-out towels, seeds spaced out and covered, kept warm and dark, checked twice a day. Plant once the taproot is about 0.5–1.5 cm (0.2–0.6 in) long.[^smith-2022-hemp-germination-temperature-limits]
 
 > **TIP — Direct-sow and pre-soak in brief**
 >
-> - **Direct-sow:** plant the seed straight into moist medium about 1-1.5 cm deep, taproot pointing down. No transplant shock, but you cannot see progress.
+> - **Direct-sow:** plant the seed straight into moist medium about 1–1.5 cm (0.4–0.6 in) deep, taproot pointing down. No transplant shock, but you cannot see progress.
 > - **Pre-soak:** soak seeds in room-temperature water for 12-24 hours to soften the coat. Useful for old or hard seeds, then move them to towel or medium.
 
 ## Germination conditions and timeline
 
 Seeds are sensitive to their environment. Three settings matter: temperature, moisture and light. Get all three in range and most viable seeds sprout on their own.
 
-Hold temperature at a steady 21-25C (70-77F). Cooler slows germination, and warmer or fluctuating temperatures cause outright failures.[^smith-2022-hemp-germination-temperature-limits] Keep the medium or towel damp like a wrung-out sponge, never waterlogged, and keep seeds damp and warm until they sprout (darkness optional).
+Hold temperature at a steady 21–25 °C (70–77 °F). Cooler slows germination, and warmer or fluctuating temperatures cause outright failures.[^smith-2022-hemp-germination-temperature-limits] Keep the medium or towel damp like a wrung-out sponge, never waterlogged, and keep seeds damp and warm until they sprout (darkness optional).
 
-> **Diagram.** Aim for the green band and keep it stable. Swings and heat above ~28C are a common cause of no-shows.[^smith-2022-hemp-germination-temperature-limits]
+> **Diagram.** Aim for the green band and keep it stable. Swings and heat above ~28 °C are a common cause of no-shows.[^smith-2022-hemp-germination-temperature-limits]
 
 > **Diagram.** Taproot usually shows in 24-72 hours (up to ~7 days for some seeds), cotyledons open within days, first true leaves appear around days 7-14, and you have an established seedling by about day 21.[^cockson-2025-hemp-seed-moisture-temperature]
 
 > **KEY — The three settings, in one place**
 >
-> - **Temperature:** steady 21-25C / 70-77F. Avoid swings and anything above ~28C.
+> - **Temperature:** steady 21–25 °C (70–77 °F). Avoid swings and anything above ~28 °C.
 > - **Moisture:** damp not soaked (wrung-out-sponge feel). Waterlogged seeds suffocate and rot.
 > - **Light:** darkness is optional while germinating. Once sprouted, give gentle light immediately so the stem does not stretch.
 
 ## Seedling care: the first two to three weeks
 
-The newborn seedling has a tiny root system, so it loses water faster than it can take it up. High humidity cuts evaporative demand until the roots expand: aim for 65-80% RH (a VPD of about 0.4-0.8 kPa), often using a humidity dome or a vented clear bag for the first 7-10 days.[^zhang-2021-vpd-stomatal-conductance-growth] VPD (vapour pressure deficit) is just a measure of how thirsty the air is. Lower means more humid.
+The newborn seedling loses water through its leaves faster than its tiny root system can replace it. Think of the air like a sponge: dry, warm air is a dry sponge — it pulls water from everything nearby, including the seedling's leaves. Humid air is nearly saturated and pulls much less. Vapour pressure deficit (VPD) measures that pulling force — the gap between how much water the air could hold and how much it actually holds, in kPa. Lower VPD means more humid air and a gentler pull on the leaves. Aim for 0.4–0.8 kPa (65–80 % RH) for the first two weeks.[^zhang-2021-vpd-stomatal-conductance-growth] A humidity dome or vented clear bag over the seedling holds this range easily for the first 7–10 days.
 
 Keep light gentle: roughly 100-200 PPFD in the first week, rising to 200-300 PPFD by week two (a DLI near 10-15), with LEDs kept well back to avoid stretch or burn.[^rodriguez-2021-cannabis-light-intensity-photosynthesis] PPFD is the amount of usable light hitting the plant right now. DLI is the total it receives over a day.
 
-Do not feed at first. The cotyledons supply the plant's food. Start a weak nutrient solution at about 25% strength (EC roughly 0.3-0.8 mS/cm) only once the first true leaves appear, around weeks 2-3. Water sparingly around the base and let the surface dry slightly between waterings so roots reach down to find moisture.
+Do not feed at first. The cotyledons supply the plant's food. Start a weak nutrient solution at about 25 % strength only once the first true leaves appear, around weeks 2–3. EC (electrical conductivity) measures how many nutrients are dissolved in the water — think of it like salt in water: too little and the plant starves, too much and it burns. Aim for EC roughly 0.3–0.8 mS/cm at this stage. Water sparingly around the base and let the surface dry slightly between waterings so roots reach down to find moisture.
 
 |  | Week 1 | Week 2 | Week 3 |
 | --- | --- | --- | --- |
@@ -189,7 +189,7 @@ The dominant cause is overwatering combined with too-high humidity and poor airf
 | Symptom | Most likely cause | What to do |
 | --- | --- | --- |
 | Stem rots and topples at soil line | Damping-off (overwet, humid, still air) | Remove the seedling, dry out, add airflow, lower humidity; prevention only |
-| Seed never sprouts | Old or immature seed, too cold, planted too deep, or dried out | Use fresh seed, hold 21-25C, plant 0.5-1.5 cm, keep damp |
+| Seed never sprouts | Old or immature seed, too cold, planted too deep, or dried out | Use fresh seed, hold 21–25 °C, plant 0.5–1.5 cm (0.2–0.6 in) deep, keep damp |
 | Tall, thin, leggy | Light too weak or too far away | Move light closer / brighter; bury extra stem at transplant |
 | Crispy or burnt leaf tips | Fed too early or too strong | Back off to plain water, then resume at ~25% strength |
 | Yellowing seedling | Overwatering or premature feeding | Let medium dry slightly, hold off nutrients until true leaves |

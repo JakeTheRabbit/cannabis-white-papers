@@ -48,7 +48,7 @@ These are the words this manual uses constantly. You don't need to memorise them
 
 **EC (electrical conductivity)** — How much dissolved fertiliser salt is in the water around the roots, measured in mS/cm. It is a proxy for feed strength.
 
-**Dryback** — A deliberate, controlled drying-out of the media between waterings, measured as a drop in VWC. The main steering lever.
+**Dryback** — A deliberate, controlled drying-out of the media between waterings, measured as a drop in VWC. Think of a sponge: always kept fully saturated, roots have no reason to extend; let it dry to a set point then refill, and the plant responds by deepening roots and, in flower, putting more energy into reproduction. The size of the dryback is the main steering lever.
 
 **Shot** — A single timed burst of irrigation. The system replaces one big daily soak with several small, sized shots.
 
@@ -58,7 +58,7 @@ These are the words this manual uses constantly. You don't need to memorise them
 
 **Solenoid valve** — An electrically operated valve. The relay board switches it on or off to start and stop water flow to a table.
 
-**VPD & crop steering** — VPD (vapour pressure deficit) is how ‘thirsty’ the air is. Crop steering is biasing the plant vegetative or generative using irrigation, climate and light. [Glossary →](glossary.html)
+**VPD & crop steering** — Air that is warmer and drier pulls moisture from leaf surfaces more strongly — like how sweat evaporates faster on a hot dry day than a humid one. VPD (vapour pressure deficit) measures that pull: the gap between the moisture the air currently holds and the most it could hold at that temperature. Higher VPD means the plant is losing water faster and must be supplied faster. Crop steering is biasing the plant vegetative or generative using irrigation, climate and light. [Glossary →](glossary.html)
 
 > **Diagram.** A quick reference for the three terms that trip up beginners most: the two steering directions and what runoff is telling you.
 
@@ -148,7 +148,7 @@ Bring the system up in order so each layer is proven before the next one is swit
 | Window end | 18:00 (2 h before lights-off) |
 | Interval | 60 minutes |
 | Shot duration | 60 seconds |
-| Day / night temp | 26 °C day / 22 °C night |
+| Day / night temp | 26 °C (79 °F) day / 22 °C (72 °F) night |
 | Humidity (RH) | 60% |
 | CO2 target | 1200 ppm |
 
@@ -156,11 +156,11 @@ Bring the system up in order so each layer is proven before the next one is swit
 
 ## Daily operation and dashboard
 
-Daily checks are quick. On the Command Center, all 6 tables should read VWC between 30 and 70%, EC in your target range (typically 2 to 6 mS/cm by stage), and substrate temperatures 20 to 26 °C, with every safety indicator green.
+Daily checks are quick. On the Command Center, all 6 tables should read VWC between 30 and 70%, EC in your target range (typically 2 to 6 mS/cm by stage), and substrate temperatures 20 to 26 °C (68 to 79 °F), with every safety indicator green.
 
 On the Trends tab the VWC graph should show a **sawtooth**: a gradual drop, then a sharp rise after each irrigation. A flat or only-falling line means watering is not actually happening. That is your first warning sign, before any error message appears.
 
-- Healthy daily readings: VWC 30–70%, EC ~2–6 mS/cm, substrate temp 20–26 °C, safety all green
+- Healthy daily readings: VWC 30–70%, EC ~2–6 mS/cm, substrate temp 20–26 °C (68–79 °F), safety all green
 - A non-sawtooth VWC trace is your earliest signal that something is wrong
 - Enable or skip tables via the **Enabled** toggle in Zone Control
 - Emergency stop: toggle Maintenance Mode on (closes all valves) or call the emergency-stop script
@@ -191,7 +191,7 @@ If irrigation will not run, confirm the system is on, maintenance mode is off, t
 | --- | --- | --- |
 | Irrigation won't run | System off, maintenance on, outside window, or no table enabled | Check system on, maintenance off, inside window, a table enabled, irrigation-allowed sensor on |
 | VWC / EC Unavailable | ESPHome device offline or template entity stale | Confirm device online, reload template entities, then suspect a lost probe connection |
-| Shots show 0.0 s | Substrate volume or dripper flow not set; known prefix bug | Set substrate volume (10 L) and dripper flow (2 L/hr); check for crop_steering_ prefix bug |
+| Shots show 0.0 s | Substrate volume or dripper flow not set; known prefix bug | Set substrate volume (10 L / 2.6 gal) and dripper flow (2 L/hr / 0.5 gal/hr); check for crop_steering_ prefix bug |
 | Stuck-open valve | Relay latched or watchdog not firing | Maintenance mode first, turn the valve off via service, then cut power to the relay board |
 | Entity not found | Integration looking for crop_steering_ prefixed entities | Verify entity IDs match; the known prefix bug can hide volume / flow-rate inputs |
 
@@ -199,8 +199,8 @@ If irrigation will not run, confirm the system is on, maintenance mode is off, t
 
 | Parameter | Meaning | Default | How to measure |
 | --- | --- | --- | --- |
-| Substrate volume | Litres of media per pot | 10 L | Pot volume × fill fraction |
-| Dripper flow rate | Water delivered per dripper per hour | 2 L/hr | Stamped on the dripper / catch test |
+| Substrate volume | Litres of media per pot | 10 L (2.6 gal) | Pot volume × fill fraction |
+| Dripper flow rate | Water delivered per dripper per hour | 2 L/hr (0.5 gal/hr) | Stamped on the dripper / catch test |
 | Drippers per plant | How many emitters feed one plant | 1–2 | Count physically |
 | Field capacity | Wettest VWC before runoff | 70% | Saturate, drain, read the sensor |
 

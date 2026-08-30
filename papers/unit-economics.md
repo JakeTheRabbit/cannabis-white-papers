@@ -2,7 +2,7 @@
 slug: "unit-economics"
 title: "Yield per watt and the cost of a gram"
 eyebrow: "Facility · Economics"
-summary: "The three yield denominators (g/m² of canopy, g/W of light, g/kWh all-in) what each is actually for, what each hides, and a worked cost stack that turns a fictional 100 m² room into a cost per gram you can argue with. Every number cited or derived in front of you."
+summary: "The three yield denominators (g/m² of canopy, g/W of light, g/kWh all-in) what each is actually for, what each hides, and a worked cost stack that turns a fictional 100 m² (1,076 ft²) room into a cost per gram you can argue with. Every number cited or derived in front of you."
 track: "Facility & quality"
 read_time: "~22 min read"
 diagrams: "11 diagrams"
@@ -21,7 +21,7 @@ refs: [{"id": "rii-powerscore", "n": 1, "cite": "Resource Innovation Institute. 
 
 _Facility · Economics · ~22 min read_
 
-> The three yield denominators (g/m² of canopy, g/W of light, g/kWh all-in) what each is actually for, what each hides, and a worked cost stack that turns a fictional 100 m² room into a cost per gram you can argue with. Every number cited or derived in front of you.
+> The three yield denominators (g/m² of canopy, g/W of light, g/kWh all-in) what each is actually for, what each hides, and a worked cost stack that turns a fictional 100 m² (1,076 ft²) room into a cost per gram you can argue with. Every number cited or derived in front of you.
 
 ## Purpose and scope
 
@@ -31,9 +31,9 @@ _Facility · Economics · ~22 min read_
 
 Most grow-room conversations are about plants. Whether the room survives is decided somewhere less romantic: a division. All the dollars you spent in a year, over all the grams you sold. If that number is below your selling price, you have a business. If it isn't, you have an expensive hobby with a licence attached, and no amount of terpene talk changes it.
 
-The trouble is that the industry's favourite yardsticks, grams per square metre, grams per watt, were built for other arguments. They are agronomy metrics and forum-bragging metrics, and they each quietly delete part of the bill. This paper walks through the three common denominators and what each is actually for, hedges the published benchmarks hard (because they deserve it), then builds a complete cost stack for a fictional 100 m² room with every step of the arithmetic shown. From there: labour (the cost line that sneaks up on almost everyone), cycles per year (the hidden multiplier), quality tiers, a sensitivity tornado, and break-even thinking.
+The trouble is that the industry's favourite yardsticks, grams per square metre, grams per watt, were built for other arguments. They are agronomy metrics and forum-bragging metrics, and they each quietly delete part of the bill. This paper walks through the three common denominators and what each is actually for, hedges the published benchmarks hard (because they deserve it), then builds a complete cost stack for a fictional 100 m² (1,076 ft²) room with every step of the arithmetic shown. From there: labour (the cost line that sneaks up on almost everyone), cycles per year (the hidden multiplier), quality tiers, a sensitivity tornado, and break-even thinking.
 
-Beginner-first, as always. If you can divide two numbers, you can follow all of it, the entire discipline of unit economics is choosing _which_ two numbers to divide.
+If you can divide two numbers, you can follow all of it, the entire discipline of unit economics is choosing _which_ two numbers to divide.
 
 ## Definitions
 
@@ -165,7 +165,7 @@ Cost per gram is built from a short, boring list. The skill isn't clever account
 >
 > Everything below is a **made-up room with stated assumptions**, chosen to be plausible and to divide cleanly. It is not any real facility's numbers and not a target. The point is the _method_: swap in your own values line by line and the arithmetic carries.
 
-- **Flowering canopy:** 100 m² (≈250 m² gross floor, 40% canopy ratio)
+- **Flowering canopy:** 100 m² (1,076 ft²) — ≈250 m² (2,691 ft²) gross floor — 40% canopy ratio
 - **Lighting:** LED, 2.6 µmol/J, 350 W per m² of canopy → 35 kW installed
 - **Photoperiod / flower:** 12 h · 56 days in flower
 - **Turn time:** 7 days (harvest-out, clean, reset, flip)
@@ -217,13 +217,13 @@ Now score the same room on every denominator from Section 04, so you can see wha
 
 Ask a new grower what indoor production costs and they'll talk about power. The fictional room's power bill is $0.23 a gram. Its people are $0.77 — the largest line by a factor of three, and the one most plans either omit or price at zero because ‘I'll do it myself’.
 
-Start with the honest division: $200,000 of payroll over 261 kg is **$766 per kg**. At a loaded $25/hour that's ≈31 hours of paid time per finished kilogram. Where does it go? Mostly one place: **hand trimming**. Industry throughput for a hand trimmer is roughly 1–3 lb (0.45–1.4 kg) of dried flower per 8-hour shift, at $15–20/hour or $100–200 per shift piece-rate[^triminator-industrial]. Run the division: that's ≈6–18 hours per kg for trim alone. Call it 10 — at $25/hour loaded, **$250 per kg, $0.25 per gram, just for trimming**. The scissors out-cost the electricity.
+Start with the honest division: $200,000 of payroll over 261 kg is **$766 per kg**. At a loaded $25/hour that's ≈31 hours of paid time per finished kilogram. Where does it go? Mostly one place: **hand trimming**. Industry throughput for a hand trimmer is roughly 0.45–1.4 kg (1–3 lb) of dried flower per 8-hour shift, at $15–20/hour or $100–200 per shift piece-rate[^triminator-industrial]. Run the division: that's ≈6–18 hours per kg for trim alone. Call it 10 — at $25/hour loaded, **$250 per kg, $0.25 per gram, just for trimming**. The scissors out-cost the electricity.
 
 > **Diagram.** An illustrative task-minute budget totalling ≈1,095 min (18 h) per kg. Hand-trim throughput bounds from industry practice[^triminator-industrial]; everything else is a placeholder for your own stopwatch.
 
 Notice the gap: tasks sum to ≈18 h/kg but payroll says ≈31. The missing 13 hours are real work that never touches a bud, mothers and veg care, meetings, cleaning, records, sick days, and plain idle time between tasks. That gap is **utilisation**, and it's why headcount models built from task lists always come in under the real payroll. Budget from payroll; use task minutes to find what to fix.
 
-- **Measure before you buy.** A trim machine at 20–40 lb/hour[^triminator-industrial] looks unanswerable next to 2 lb/shift, but weigh the grade impact on your product and your buyer before the capex (Sections 11 and 14).
+- **Measure before you buy.** A trim machine at 9–18 kg/h (20–40 lb/h)[^triminator-industrial] looks unanswerable next to 0.9 kg/shift (2 lb/shift), but weigh the grade impact on your product and your buyer before the capex (Sections 11 and 14).
 - **Smooth the spikes.** Harvest weeks need 3× the hands of week 3 of flower. Staggered rooms (Section 10) turn a hiring problem into a scheduling one.
 - **Price the founder.** If your own hours enter at $0, every bad room you'll ever build will look profitable on paper.
 
@@ -351,7 +351,7 @@ Symptoms first, causes second, same as diagnosing a sick plant, except the senso
 | Cost/g creeping up, nothing obviously changed | Turn time stretching or grade mix sliding, both invisible to per-cycle metrics | Plot flip-to-flip days and blended price for the last six cycles |
 | Great g/m², still no margin | Denominator theatre: slow cycles, heavy labour, or price tier below plan | Recompute $/g from twelve months of bank statement, not the harvest log |
 | Energy bill far above the model | Non-lighting loads (winter dehu, reheat) or lights-on hours drifting | Meter the lighting circuit separately; track kWh/kg against your own baseline, not folklore |
-| Trim backlog after every harvest | Throughput planned at folklore rates rather than measured ones | Time one shift: hand trim commonly runs 0.45–1.4 kg per 8 h[^triminator-industrial] |
+| Trim backlog after every harvest | Throughput planned at folklore rates rather than measured ones | Time one shift: hand trim commonly runs 0.45–1.4 kg (1–3 lb) per 8 h[^triminator-industrial] |
 | Wholesale cheque smaller than the spreadsheet | Quality discounts, moisture loss, failed or short batches | Reconcile invoiced $ vs modelled $ per batch; track shrink % as its own line |
 | Cash fine in summer, ugly in winter | Seasonal HVAC/dehu load and price seasonality stacking | Twelve-month rolling $/g, never judge the room on a single cycle |
 

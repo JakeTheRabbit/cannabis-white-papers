@@ -2,7 +2,7 @@
 slug: "cannabis-tissue-culture-sop"
 title: "Cannabis tissue culture SOP"
 eyebrow: "Standard operating procedure · forms included"
-summary: "Do these jobs in order. Each job has a diagram and a form. A star in brackets is a source, not extra reading you need before you start."
+summary: "Work through these jobs in order and you will be able to set up a clean tissue culture line, multiply a cultivar disease-free, and hand a tested plantlet to your grow room. Each job has a diagram and a form. A number in brackets is a source—you do not need to open it to do the step."
 track: "Propagation"
 read_time: ""
 diagrams: ""
@@ -21,7 +21,7 @@ refs: [{"id": "holmes2021", "n": 1, "cite": "Holmes JE et al. (2021). Variables 
 
 _Standard operating procedure · forms included · _
 
-> Do these jobs in order. Each job has a diagram and a form. A star in brackets is a source, not extra reading you need before you start.
+> Work through these jobs in order and you will be able to set up a clean tissue culture line, multiply a cultivar disease-free, and hand a tested plantlet to your grow room. Each job has a diagram and a form. A number in brackets is a source—you do not need to open it to do the step.
 
 ## Purpose and scope
 
@@ -126,12 +126,12 @@ Send this as one message. If they cannot answer, do not buy.
 - Is there a separate pre-filter? What is the replacement HEPA size and price?
 - What face velocity at the work opening, in m/s?
 - Voltage and plug: I need 220–240 V (change this if you are on 110 V).
-- Work opening width in mm? I need at least 400 mm.
+- Work opening width in mm? I need at least 400 mm (16 in).
 - Photos of the filter gasket and the fan nameplate before shipping.
 
 #### What to pay
 
-- Desktop / mini metal hood, H13/H14, 400–700 mm wide: often **USD 260–700** plus freight.
+- Desktop / mini metal hood, H13/H14, 400–700 mm (16–28 in) wide: often **USD 260–700** plus freight.
 - Full clean bench (BIOBASE class): often **USD 800–2,000** plus crate freight.
 - A used Athena-style portable hood from the second-hand market can cost more than a new Chinese bench. Compare the filter spec, not the logo.
 
@@ -144,12 +144,12 @@ Send this as one message. If they cannot answer, do not buy.
 > **Diagram.** Unbox. Place. Match voltage. Run empty 30 minutes. Check the air stream with a tissue. Wipe steel only. Log F-12.
 
 1. **Inspect** — HEPA frame not crushed. Plastic still on the filter face. No rattle in the fan.
-2. **Place** — Level, solid bench. 30 cm of free air behind or below the intake, depending on the model. Do not push it into a curtain.
+2. **Place** — Level, solid bench. 30 cm (12 in) of free air behind or below the intake, depending on the model. Do not push it into a curtain.
 3. **Power** — Read the plate. 220–240 V units die on 110 V. Use a surge-protected board.
 4. **First run** — Empty hood. Fan on 30 minutes. Listen. Smell for burning.
 5. **Flow check** — Hold a thin tissue strip in the work opening. It should lean steadily toward you (horizontal hood). If it flaps, flaps back, or hangs dead, message the seller before first use.
 6. **Wipe** — 70% alcohol on painted steel and the work tray. Never spray liquid into the HEPA face.
-7. **Optional smoke** — A stick of incense 20 cm in front of the filter. Smoke should leave in one sheet, no swirls back onto the bench.
+7. **Optional smoke** — A stick of incense 20 cm (8 in) in front of the filter. Smoke should leave in one sheet, no swirls back onto the bench.
 8. **Log** — Fill F-12. If the tissue hangs dead, do not plate plants.
 
 | Date | Hours run | Tissue-strip pass? | Noise / smell | Pre-filter cleaned? | Sign |
@@ -199,7 +199,7 @@ Do this every day you work, before any jar is opened.
 
 One litre. Full-strength MS for start and multiply. Half-strength MS if you are rooting in gel.
 
-> **Diagram.** Water. Salts. Sugar. pH. Agar. Pour. 121 °C / 15 psi / 20 min. Hold 7 days.
+> **Diagram.** Water. Salts. Sugar. pH. Agar. Pour. 121 °C (250 °F) / 103 kPa (15 psi) / 20 min. Hold 7 days.
 
 | Ingredient | 1 litre | Notes |
 | --- | --- | --- |
@@ -226,7 +226,7 @@ One litre. Full-strength MS for start and multiply. Half-strength MS if you are 
 1. **Weigh** — Write every mass on F-03 before you pour.
 2. **pH** — 5.6–5.8 before agar. Dilute acid down. Dilute base up.
 3. **Agar + heat** — Dissolve. Pour jars one-third full. Lids loose.
-4. **Autoclave** — Stovetop canner that holds 15 psi, or an autoclave. 121 °C, 15 psi, 20 minutes. Instant Pots do not count. Jars on a rack, not drowned.
+4. **Autoclave** — Stovetop canner that holds 103 kPa (15 psi), or an autoclave. 121 °C (250 °F), 103 kPa (15 psi), 20 minutes. Instant Pots do not count. Jars on a rack, not drowned.
 5. **Cool** — Tighten lids when cool enough to handle. Label lot number on every jar.
 6. **Hold** — Shelf 7 days. Any cloud or fuzz: bin the whole lot. Do not plate into it.
 
@@ -256,12 +256,12 @@ One litre. Full-strength MS for start and multiply. Half-strength MS if you are 
 
 ## Explant preparation and surface sterilisation
 
-First runs: a stem piece with one bud, 10–15 mm. Not a meristem.
+First runs: a stem piece with one bud, 10–15 mm (0.4–0.6 in). Not a meristem.
 
 > **Diagram.** Cut. Soap. 70% alcohol 30–60 s. Bleach 20–30 min. Rinse three times. Trim the burned ends in the hood.
 
 1. **Mother** — Vegetative. Scouted. Young if you can. One cultivar.
-2. **Cut** — Morning. 10–15 mm. Strip large leaves. Keep wet.
+2. **Cut** — Morning. 10–15 mm (0.4–0.6 in). Strip large leaves. Keep wet.
 3. **Soap wash** — Tap water + a drop of dish soap or Tween-20. 10–20 min.
 4. **70% alcohol** — 30–60 seconds. Drain.
 5. **Bleach** — Holmes: 10% household bleach (about 0.625% NaOCl) + 0.1% Tween-20, 20 min, stir.[^holmes2021] Das: 1% NaOCl for 30 min.[^das2024] Do not go to 60 min.
@@ -280,12 +280,12 @@ One piece, one jar, until you know your rate.
 
 > **Diagram.** Open jars only in the centre of the hood. Tools on the left. Waste on the left front.
 
-1. **Air stream** — Work 10–20 cm in front of the filter, not at the very edge.
+1. **Air stream** — Work 10–20 cm (4–8 in) in front of the filter, not at the very edge.
 2. **One lid** — Face down to the side. Never above the jar.
 3. **Plant** — Cut base in the gel. Bud above.
 4. **Lid** — On at once. Do not talk over the jar.
 5. **Label** — Cultivar, date, explant type, lot number from F-03.
-6. **Shelf** — 24–26 °C. 16–18 h light. About 70–100 µmol m⁻² s⁻¹. Do not open to look.
+6. **Shelf** — 24–26 °C (75–79 °F). 16–18 h light. About 70–100 µmol m⁻² s⁻¹. Do not open to look.
 
 | Lot no. | Cultivar | Explant | n plated | Medium lot | Date | Day-7 clean n | Day-21 clean n | Sign |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
@@ -346,7 +346,7 @@ Only from jars that were clean at day 21. New jar every time.
 *What you are copying: green divided leaves, clear amber gel, no cloud.Grok Imagine · illustration*
 
 1. **Source** — A day-21 clean jar. One cultivar.
-2. **Cut** — 15–25 mm shoot tip or a node with a visible bud.
+2. **Cut** — 15–25 mm (0.6–1.0 in) shoot tip or a node with a visible bud.
 3. **New jar** — Same medium or the no-hormone + calcium mix.[^das2024]
 4. **Density** — Home: 1–3 per jar. Licensed: what your F-07 rate allows.
 5. **Clock** — 3–4 weeks. Restart the line from a tested mother by about five recuts.[^torkamaneh2024]
@@ -366,7 +366,7 @@ Only from jars that were clean at day 21. New jar every time.
 
 ## Meristem dissection after process validation
 
-Microscope. 0.2–0.4 mm. Then a lab test. This job does not make a plant “clean” by itself.
+Microscope. 0.2–0.4 mm (0.008–0.016 in). Then a lab test. This job does not make a plant “clean” by itself.
 
 > **Diagram.** Same five zones as the hood layout. Microscope in the middle.
 
@@ -390,12 +390,12 @@ Microscope. 0.2–0.4 mm. Then a lab test. This job does not make a plant “cle
 
 *Dome plus two tiny leaves. Cut just below. That piece is 0.2–0.4 mm.Grok Imagine · illustration*
 
-1. **New flush** — 10–15 mm vegetative tip. Strip large leaves before the hood.
-2. **Sterile tools** — Beads ~250 °C, 20 s, then cool.
+1. **New flush** — 10–15 mm (0.4–0.6 in) vegetative tip. Strip large leaves before the hood.
+2. **Sterile tools** — Beads ~250 °C (~480 °F), 20 s, then cool.
 3. **Dish** — One drop sterile water. 10–20× then 30–40×.
 4. **Peel** — Outer leaves off. Stop at two tiny leaves.
 5. **Bleach that tip** — Shorter bleach than a woody node. Rinse.
-6. **One nick** — 0.2–0.4 mm.[^hlvd_mgmt2025] Onto Holmes-type start medium.[^holmes2021]
+6. **One nick** — 0.2–0.4 mm (0.008–0.016 in).[^hlvd_mgmt2025] Onto Holmes-type start medium.[^holmes2021]
 7. **Wait** — 4–8 weeks. Then F-10. Expect about 41% negative at six months, not 100%.
 
 | Date | Mother ID | n tips | n plated | Medium lot | n alive wk 8 | F-10 result | Sign |
@@ -411,7 +411,7 @@ Microscope. 0.2–0.4 mm. Then a lab test. This job does not make a plant “cle
 
 ## Rooting and acclimatisation
 
-A shoot with no roots is not a plant. After roots, lower humidity in steps.
+A shoot with no roots is not a plant. Inside a culture jar the air is nearly 100% humid, so the plant never developed the ability to close its stomata or build a waxy leaf surface—it had no reason to conserve water. Move it straight to open air and it wilts within hours, like a person stepping out of a steam room into cold dry air: the problem is the speed of the transition, not the destination. Lower the humidity in stages instead. This is acclimatisation.
 
 ![Rooted plantlet](assets/img/tc-playbook/08-rooted-plantlet.jpg)
 
@@ -423,10 +423,10 @@ A shoot with no roots is not a plant. After roots, lower humidity in steps.
 
 > **Diagram.** Do not put a jar plant onto a dry bench.
 
-1. **Pick** — 2–4 cm shoot. Not glassy. Not brown.
+1. **Pick** — 2–4 cm (0.8–1.6 in) shoot. Not glassy. Not brown.
 2. **Root** — Option A: 5 µM IBA in gel, 2–4 weeks.[^holmes2021] Option B: dip the base in 15 mM IBA for 2–4 min, then a sterile plug.[^ioannidis2022] Option C: rockwool, ordinary fertiliser, vented jar, no sugar.[^kodym2019]
 3. **Plug** — Rockwool or coco soaked in mild veg nutrient, pH about 5.8.
-4. **Dome** — Mist the walls. 16 h light. Gentle. 24 °C.
+4. **Dome** — Mist the walls. 16 h light. Gentle. 24 °C (75 °F).
 5. **Vents** — Day 7 half. Day 9 full. Day 14 lid off.
 6. **Pot** — Treat as a new clone. No 12-hour days for several weeks.
 

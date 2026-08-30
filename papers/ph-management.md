@@ -2,7 +2,7 @@
 slug: "ph-management"
 title: "pH: what it is and how to hold it"
 eyebrow: "Feed · pH"
-summary: "A beginner's guide to root-zone pH: why one number decides which nutrients your plant can actually eat, what to aim for in coco, hydro and soil, and how to measure, adjust and hold it without chasing ghosts."
+summary: "Root-zone pH controls which nutrients your plant can absorb. This paper explains how the 0-14 scale works, why each substrate has a different target range, and how to measure, adjust, and hold pH steadily feed by feed."
 track: "Water, substrate & feed"
 read_time: "~14 min read"
 diagrams: "8 diagrams"
@@ -21,13 +21,13 @@ refs: [{"id": "veazie-2025-substrate-ph-micronutrient-cannabis", "n": 1, "cite":
 
 _Feed · pH · ~14 min read_
 
-> A beginner's guide to root-zone pH: why one number decides which nutrients your plant can actually eat, what to aim for in coco, hydro and soil, and how to measure, adjust and hold it without chasing ghosts.
+> Root-zone pH controls which nutrients your plant can absorb. This paper explains how the 0-14 scale works, why each substrate has a different target range, and how to measure, adjust, and hold pH steadily feed by feed.
 
 ## Purpose and scope
 
 pH is a 0-14 scale for how acidic or alkaline a liquid is. 7 is neutral, lower is acidic, higher is alkaline. For a grower it is the single setting that decides whether the nutrients you already paid for can actually enter the roots. Get it wrong and a fully fed plant can still starve.
 
-This guide assumes you know nothing about chemistry and builds up from the scale itself to a daily routine you can run. Pure water sits at 7. Lemon juice is around 2 (strongly acidic). Baking soda solution is around 8.5 (mildly alkaline).
+Pure water sits at 7. Lemon juice is around 2 (strongly acidic). Baking soda solution is around 8.5 (mildly alkaline).
 
 One thing trips people up: the scale is logarithmic, so each whole number is a tenfold change in acidity. pH 5 is ten times more acidic than pH 6, and a hundred times more acidic than pH 7.[^unl-passel-soil-ph-definition] That is why a reading that looks ‘close enough’ can still be far outside the window your roots need.
 
@@ -39,8 +39,6 @@ One thing trips people up: the scale is logarithmic, so each whole number is a t
 
 ## Definitions
 
-These words come back through the rest of the guide. Read them once and the troubleshooting section will read cleanly.
-
 **pH** — How acidic or alkaline the water around the roots is, on a 0-14 scale.
 
 **Root zone** — The wet substrate immediately around the roots, where uptake actually happens.
@@ -51,15 +49,15 @@ These words come back through the rest of the guide. Read them once and the trou
 
 **Substrate / medium** — What the roots grow in: coco coir, rockwool or water in hydro, or soil.
 
-**Buffering** — A medium or water's resistance to pH change. High buffering is stubborn, low buffering swings fast.
+**Buffering** — A medium or water's resistance to pH change — like a thermostat with a wide deadband, the medium absorbs small shifts before the reading moves. Soil is highly buffered; coco and hydro have almost none, so pH responds immediately to each feed.
 
-**Alkalinity** — The water's built-in acid-absorbing capacity, mostly bicarbonates. Not the same thing as a high pH reading.
+**Alkalinity** — The water's built-in acid-absorbing capacity, mostly bicarbonates. Alkalinity and pH measure different things: a water can have a moderate pH and very high alkalinity, and it will resist acid dosing even when the initial reading looks fine.
 
 **Runoff** — The solution that drains out the bottom of the pot after watering.
 
 ## pH, nutrient availability and lockout
 
-Each nutrient stays dissolved, and therefore absorbable, only across a certain pH band. Outside that band it binds into forms the roots cannot take up. That is lockout: the plant is surrounded by food it cannot eat because the root-zone chemistry drifted out of the window.
+Each nutrient stays dissolved, and therefore absorbable, only across a certain pH band. Outside that band it reacts with other ions and converts into chemical forms the roots cannot take up — the same way a supplement tablet that never dissolves in your stomach passes through without helping: the nutrient is present, but in the wrong form for absorption. That failure mode is called lockout. The plant is surrounded by food it cannot use because the root-zone chemistry drifted outside the window.
 
 Push pH too high, above about 6.5 in inert media like coco or hydro, and the micronutrients drop out of solution first: iron, manganese, zinc and boron.[^veazie-2025-substrate-ph-micronutrient-cannabis] Drop it too low, below about 5.5, and calcium, magnesium and phosphorus availability can fall while iron and manganese can push toward toxicity instead.[^gillespie-kubota-2020-low-ph-basil-nutrient-uptake]
 
@@ -109,7 +107,7 @@ Mix your nutrients first, then adjust pH last. Adding nutrients shifts pH on its
 4. **Stir and wait** — Mix it in and give it a moment to react.
 5. **Re-measure** — Read again. Repeat in small steps, never dump and chase.
 
-Common pH downs include phosphoric, nitric, sulfuric, or organic acids; common pH ups include KOH or potassium carbonate. Each adds nutrients, account for them.[^saloner-bernstein-2022-nitrogen-source-cannabis] Your starting water matters more than beginners expect. Alkalinity is the water's built-in acid-absorbing capacity, mostly bicarbonates, reported as ppm CaCO3, and it is distinct from a high pH reading.[^umass-water-quality-ph-alkalinity] High-alkalinity water fights your acid and creeps the pH back up after you set it.
+Common pH downs include phosphoric, nitric, sulfuric, or organic acids; common pH ups include KOH or potassium carbonate. Each adds nutrients, so account for them.[^saloner-bernstein-2022-nitrogen-source-cannabis] Your source water matters more than most beginners expect. Tap water carries a built-in reserve of dissolved bicarbonates that absorb acid before the pH reading moves — like antacid neutralising stomach acid without any change on a pH strip until the antacid is used up. That reserve is called alkalinity, reported in ppm CaCO3.[^umass-water-quality-ph-alkalinity] High-alkalinity water will drift back up after you set pH, because the remaining bicarbonates keep reacting with the acid you added.
 
 > **Diagram.** Alkalinity, not the pH reading, sets how much acid it takes to move the water. Hard, high-alkalinity tap water resists adjustment and drifts back up.[^umass-water-quality-ph-alkalinity]
 
@@ -163,9 +161,9 @@ pH will drift between feeds, and that is normal, not a crisis. The goal is to ke
 > - A band like 5.8-6.2 is the target, not one exact number.
 > - Drift between feeds is expected; coco and hydro need per-feed checks, soil is slower.
 > - Pens are consumables: calibrate monthly, replace probes over time.
-> - Consistency over weeks beats chasing perfection on any single reading.
+> - Log every feed: the pattern over weeks tells you more than any single reading.
 
-Hold the inflow steadily in range over weeks and most ‘mystery’ deficiencies never appear. When a symptom does show, read the [nutrient deficiencies](nutrient-deficiencies.html) guide and check pH before you change the feed, and sort your source water with the [water quality](water-quality.html) guide first.
+When a deficiency symptom appears, read the [nutrient deficiencies](nutrient-deficiencies.html) guide and confirm pH before adjusting the feed formula. If source-water alkalinity is the problem, the [water quality](water-quality.html) guide covers how to treat it.
 
 ## References
 

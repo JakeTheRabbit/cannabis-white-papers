@@ -81,7 +81,7 @@ SECTIONS = [
     ], cls="compact", caption="The three major chemotypes and the simple allele pairs behind "
        "them. The region of the genome carrying the THCA/CBDA synthase genes is messy and "
        "rearranged, which is part of why cannabis genetics stayed murky for so long." + _c("laverty-2019-genome-map")),
-    callout("note", "Genotype proposes, environment disposes",
+    callout("note", "One genotype, two environments, two phenotypes",
       p("A clone in two rooms is one genotype and two phenotypes. When a cut &lsquo;performs "
         "differently&rsquo; at a mate's place, the genetics did not change. The environment did. "
         "Keep this straight and half of all genetics arguments dissolve.")),
@@ -154,7 +154,7 @@ SECTIONS = [
       "The kind of spread one pack can hide. The pattern, not the exact numbers, is the point: "
       "siblings share parents, not outcomes. This spread is also the entire reason pheno hunting "
       "works, no variation, nothing to select."),
-    callout("note", "Variation is the raw material, not the flaw",
+    callout("note", "Variation is what makes selection possible",
       p("Breeders and hunters <em>want</em> segregation. It is where new keepers come from. The "
         "problem is only being surprised by it: plan for a spread, and the spread works for you.")),
  ]},
@@ -187,8 +187,10 @@ SECTIONS = [
     ], cls="compact", caption="Generation labels decoded. The letter tells you the process; it "
        "promises nothing about quality."),
     p("Inbreeding is a trade. Each generation of selfing or sibling crossing roughly halves the "
-      "remaining heterozygosity, which stabilises traits. But cannabis is an outcrosser, and "
-      "hammering it inbred can cost vigour (inbreeding depression). The long-term prize is the "
+      "remaining heterozygosity, which stabilises traits. But cannabis is an outcrosser: "
+      "repeated close-crossing allows harmful recessive alleles to pair up and get expressed, "
+      "sapping the plant's health and productivity. That cost is called "
+      "<strong>inbreeding depression</strong>. The long-term prize is the "
       "maize model: two inbred parents crossed to make true F1 seed that is both uniform "
       "<em>and</em> vigorous. A handful of seed companies are now working exactly that way; most "
       "of the market is not there yet."),
@@ -214,10 +216,12 @@ SECTIONS = [
       "what breeding programmes need, because it is the only type that yields males."),
     h(3, "How feminised seed is made. And why it is not &lsquo;weaker&rsquo;"),
     p("Feminised seed comes from pollinating a female with pollen from another <em>female</em> "
-      "that has been chemically persuaded to grow male flowers. The tool is <strong>silver "
-      "thiosulfate (STS)</strong>: silver ions block the plant's ethylene signalling, and with "
-      "ethylene action suppressed, a genetically female plant develops viable male "
-      "flowers." + _c("ram-sett-1982-sts") + " In practice a dilute STS solution is sprayed on a "
+      "that has been chemically persuaded to grow male flowers. Cannabis plants use a hormone "
+      "called ethylene as a signal that keeps them in female mode — think of it as a thermostat "
+      "set to keep the plant female. Block that signal and male flowers develop, even on a plant "
+      "that is genetically female. <strong>Silver thiosulfate (STS)</strong> does the blocking: "
+      "silver ions bind to the plant's ethylene receptors and silence the "
+      "signal." + _c("ram-sett-1982-sts") + " In practice a dilute STS solution is sprayed on a "
       "mother a few times around the flip, and she produces pollen a few weeks "
       "later." + _c("lubell-brand-2018-sts") + " Because that pollen comes from a plant with two "
       "X chromosomes, every seed it makes is XX, female. Properly made feminised seed runs at "
@@ -579,7 +583,7 @@ SECTIONS = [
 # ------------------------------------------------------------------ 16 · mental model
 {"id": "mental-model", "kicker": "Take-away", "title": "Phenotype hunting: selection, validation and preservation",
  "blocks": [
-    callout("key", "Carry these three objects",
+    callout("key", "Three principles for the hunt",
       ul(["<strong>The lottery.</strong> Seeds are tickets. Heterozygous parents guarantee the draw is random, names on the packet do not change the odds, and the number of tickets, not enthusiasm, sets your chance of a real keeper.",
           "<strong>The rubric.</strong> Selection only means anything against criteria written before you met the plants, applied to plants grown under the same conditions, and verified in a second round. Everything else is picking a favourite.",
           "<strong>The vault.</strong> The moment a cut earns the name keeper it becomes the most valuable thing you own: two mothers, rolling backups, disease screening and a tissue-culture archive are what &lsquo;keeping&rsquo; actually means."], "tight")),
@@ -587,8 +591,9 @@ SECTIONS = [
       "germination</a> for getting the tickets sprouted, <a href='cloning.html'>cloning</a> for "
       "taking and rooting the cuts the hunt depends on, and "
       "<a href='tissue-culture.html'>tissue culture</a> for the archive that makes a keeper "
-      "permanent. The genetics do not care what the packet said, pop enough seeds, score them "
-      "honestly, verify the winner, and protect it like it matters. It does."),
+      "permanent. The genetics do not care what the packet said: pop enough seeds, score them "
+      "honestly, verify the winner, and protect the cut with the same discipline you brought "
+      "to finding it."),
  ]},
 
 ]

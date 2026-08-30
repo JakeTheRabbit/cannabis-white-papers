@@ -2,7 +2,7 @@
 slug: "pppe"
 title: "PPPE: plant and personal protective equipment"
 eyebrow: "Plant health · PPE & biosecurity"
-summary: "Coveralls, hairnets, gloves and shoe covers do two jobs at once: they keep the human safe, and they keep the human's particles, microbes and pests off the crop. People are the number-one contamination source in any clean space. This is the full rundown: how bad we are, the bare minimum, the room-by-room kit, and the procedures that actually work."
+summary: "Coveralls, hairnets, gloves, and shoe covers do two jobs at once: they protect the worker from hazards, and they keep the worker's particles, microbes, and pests off the crop. People are the primary contamination source in any clean production space. This paper covers how much contamination a person actually sheds, the minimum PPE for each production area, the room-by-room kit, and the gowning and hand hygiene procedures that stop contamination from crossing the clean/dirty line."
 track: "Plant health"
 read_time: "~17 min read"
 diagrams: "9 diagrams"
@@ -21,7 +21,7 @@ refs: [{"id": "cleanroom-humans-source", "n": 1, "cite": "Cleanroom contaminatio
 
 _Plant health · PPE & biosecurity · ~17 min read_
 
-> Coveralls, hairnets, gloves and shoe covers do two jobs at once: they keep the human safe, and they keep the human's particles, microbes and pests off the crop. People are the number-one contamination source in any clean space. This is the full rundown: how bad we are, the bare minimum, the room-by-room kit, and the procedures that actually work.
+> Coveralls, hairnets, gloves, and shoe covers do two jobs at once: they protect the worker from hazards, and they keep the worker's particles, microbes, and pests off the crop. People are the primary contamination source in any clean production space. This paper covers how much contamination a person actually sheds, the minimum PPE for each production area, the room-by-room kit, and the gowning and hand hygiene procedures that stop contamination from crossing the clean/dirty line.
 
 ## Purpose and scope
 
@@ -61,14 +61,14 @@ People are typically the dominant contamination source in any clean space (exact
 
 ## Personnel contamination risks
 
-It is worth sitting with the numbers, because they are the entire argument for gowning up.
+A person working in a cultivation room is the dominant contamination source in the space—generating particles, microbes, and pests continuously just by being present.
 
 > **Diagram.** People are the number-one contamination source in a clean space[^cleanroom-humans-source]. You shed roughly ten million skin flakes a day, about a tenth carrying live bacteria[^cdc-skin-squames], and an occupied room gains tens of millions of bacteria and millions of fungal spores per person per hour[^human-microbial-cloud].
 
 - **Movement is the multiplier.** A gowned person emits about 100,000 particles a minute standing still, a million walking, and up to five million working fast[^cleanroom-humans-source]. Slow, calm movement is itself a control.
 - **Your phone is a high-touch fomite.** Phones carry skin and environmental flora, and they ride to your face and back to your hands all day[^phone-fomite].
 - **Your shoes are a pest and spore taxi.** Soles carry live pathogens and fungal spores, and walking re-launches settled organisms into the air[^shoe-floor-contamination]. Mites and powdery mildew arrive on clothing and footwear.
-- **The toilet throws a plume.** A flush lofts aerosols to about 1.5 m within seconds, viable for minutes to hours; a closed lid cuts it sharply[^toilet-plume].
+- **The toilet throws a plume.** A flush lofts aerosols to about 1.5 m (4.9 ft) within seconds, viable for minutes to hours; a closed lid cuts it sharply[^toilet-plume].
 
 > **NOTE — Hands are the main bridge, and hygiene is not a cure**
 >
@@ -140,7 +140,7 @@ No phones, earbuds, jewellery, watches or makeup in production or clean areas. A
 
 #### The toilet
 
-Toilets must not open into production. A flush throws a viable bioaerosol over a metre in seconds[^toilet-plume], so anyone back from the restroom is a bridge until they have washed and re-gowned.
+Toilets must not open into production. A flush throws a viable bioaerosol over 1 m (3 ft) in seconds[^toilet-plume], so anyone back from the restroom is a bridge until they have washed and re-gowned.
 
 > **Diagram.** De-gown before the toilet, close the lid before flushing, wash, then wash and sanitise again on return and re-gown with fresh garments before re-entering[^toilet-plume].
 

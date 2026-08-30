@@ -1,8 +1,8 @@
 ---
 slug: "rockwool-crop-steering"
-title: "Crop steering in rockwool: drybacks, saturation and the breaking point"
+title: "Crop steering in rockwool: water content, drybacks, and the recovery floor"
 eyebrow: "Feed · Rockwool steering"
-summary: "Rockwool is the most controllable substrate there is, and the least forgiving. This is the guide to what water content really means, how to read and calculate dryback, how dry a block can get before it is gone, and how to hold the right saturation from clone to chop without ever hand-flushing or topping up a cube."
+summary: "Rockwool holds no nutrients of its own and has almost no buffer — what you feed is what the plant gets, within the same hour. That makes it the most precise substrate to steer and the fastest to show a mistake. This guide explains what a water-content percentage means in practice, how to calculate and read a dryback, the water level below which a block will not rewet from the dripper, and how to keep the slab in the right zone from clone to harvest without ever picking up a hose."
 track: "Flowering"
 read_time: "~18 min read"
 diagrams: "7 diagrams"
@@ -17,11 +17,11 @@ attribution: "The Cannabis White Papers"
 refs: [{"id": "grodan-irrigation-medicinal", "n": 1, "cite": "Grodan (ROCKWOOL Group). Grodan research reveals new insights into optimal irrigation strategy for large-scale production of medicinal crops. Whitepaper, with B. Nikaj; trials in partnership with Wageningen University & Research, 2020-2022.", "url": "https://www.grodan.com/", "peer": false}, {"id": "owen-norden-preferential-flow-2024", "n": 2, "cite": "Owen, J., & Norden, D. (Profile Products). Understanding drainage in horticultural growing media. Greenhouse Management.", "url": "https://www.greenhousemag.com/article/growing-media-defining-drainage-improve-substrate/", "peer": false}, {"id": "hydrus-soilless-substrate-dynamics", "n": 3, "cite": "International Society for Horticultural Science (ISHS). Utilizing the HYDRUS model as a tool for understanding soilless substrate water dynamics. Acta Horticulturae 1168.", "url": "https://www.ishs.org/ishs-article/1168_41", "peer": true}, {"id": "moon-rootzone-ec-2018", "n": 4, "cite": "Moon T, Ahn TI, Son JE. Forecasting Root-Zone Electrical Conductivity of Nutrient Solutions in Closed-Loop Soilless Cultures via a Recurrent Neural Network Using Environmental and Cultivation Information. Frontiers in Plant Science. 2018;9:859.", "url": "https://doi.org/10.3389/fpls.2018.00859", "peer": true}, {"id": "nemali-2006-set-point-irrigation", "n": 5, "cite": "Nemali, K. S. & van Iersel, M. W. (2006). An automated system for controlling drought stress and irrigation in potted plants. Scientia Horticulturae, 110(3), 292-297.", "url": "https://doi.org/10.1016/j.scienta.2006.07.009", "peer": true}, {"id": "tavan-2021-sensor-irrigation-soilless", "n": 6, "cite": "Tavan, M., Wee, B., Brodie, G., Fuentes, S., Pang, A., & Gupta, D. (2021). Optimizing Sensor-Based Irrigation Management in a Soilless Vertical Farm for Growing Microgreens. Frontiers in Sustainable Food Systems, 4, 622720.", "url": "https://doi.org/10.3389/fsufs.2020.622720", "peer": true}, {"id": "caplan2019-drought", "n": 7, "cite": "Caplan D, Dixon M, Zheng Y (2019). Increasing inflorescence dry weight and cannabinoid content in medical cannabis using controlled drought stress. HortScience 54(5):964-969.", "url": "https://doi.org/10.21273/HORTSCI13510-18", "peer": true}, {"id": "malik2025-media", "n": 8, "cite": "Malik M, Tlustoš P (2025). Soilless growing media for cannabis cultivation. Agriculture 15(18):1955.", "url": "https://www.mdpi.com/2077-0472/15/18/1955", "peer": true}, {"id": "netafim-irrigation-maintenance", "n": 9, "cite": "Netafim. Complete Irrigation Maintenance Guide (driplines, flushing, filtration and system upkeep).", "url": "https://www.netafim.com/", "peer": false}, {"id": "athena-spacing-irrigation", "n": 10, "cite": "Athena Agriculture. Plant Spacing & Irrigation (metric), document A01.001 (pot, rockwool and pressure-compensating dripper selection).", "url": "https://athenaag.com/", "peer": false}]
 ---
 
-# Crop steering in rockwool: drybacks, saturation and the breaking point
+# Crop steering in rockwool: water content, drybacks, and the recovery floor
 
 _Feed · Rockwool steering · ~18 min read_
 
-> Rockwool is the most controllable substrate there is, and the least forgiving. This is the guide to what water content really means, how to read and calculate dryback, how dry a block can get before it is gone, and how to hold the right saturation from clone to chop without ever hand-flushing or topping up a cube.
+> Rockwool holds no nutrients of its own and has almost no buffer — what you feed is what the plant gets, within the same hour. That makes it the most precise substrate to steer and the fastest to show a mistake. This guide explains what a water-content percentage means in practice, how to calculate and read a dryback, the water level below which a block will not rewet from the dripper, and how to keep the slab in the right zone from clone to harvest without ever picking up a hose.
 
 ## Purpose and scope
 
@@ -63,7 +63,7 @@ This guide is only about the water and salt in the block, the part most growers 
 
 A rockwool block is mostly air. Around 95% of its volume is space between the fibres; the fibre itself is a tiny fraction[^malik2025-media]. Water clings to the fibres as a film and fills the smaller gaps, while the larger gaps stay full of air. Water content is simply how much of that space is water versus air at any moment.
 
-> **Diagram.** Water held as a film on the fibres is your WC%. The air between fibres is root oxygen. Because the fibre carries almost no electrical charge (its cation-exchange capacity is near zero), dissolved salts stay in the water and nothing is held back from the plant[^grodan-irrigation-medicinal].
+> **Diagram.** Water held as a film on the fibres is your WC%. The air between fibres is root oxygen. Soil particles carry an electrical charge that grabs and holds dissolved nutrients the way a magnet holds iron filings — binding them and releasing them slowly. Rockwool fibres carry almost none of that charge. That property is called cation-exchange capacity (CEC). Near-zero CEC in rockwool means dissolved salts stay in the water and are fully available to the plant[^grodan-irrigation-medicinal].
 
 Two consequences fall straight out of this. First, when water leaves the block the salt does not, so the EC of the water left behind climbs as the block dries. Second, because the medium buffers nothing, the EC and water content you set are the EC and water content the roots get, which is why rockwool can be steered so precisely and why mistakes show up so fast.
 
@@ -81,7 +81,7 @@ Note where the headroom is. The block can sit happily anywhere from field capaci
 
 ## Dryback calculation and management
 
-A dryback is the block losing water between its daily high and its next low. You create the high by irrigating to field capacity; the plant and evaporation create the low. The _size_ of that swing and _when_ you let it happen is the single biggest lever you have over how the plant grows.
+A dryback is the block losing water between its daily high and its next low. Think of a wet sponge left on the bench: it starts fully soaked, then air and the plant draw water out through the day. The amount it loses — from its soaked peak to its driest point before the next watering — is the dryback. The _size_ of that swing and _when_ you let it happen is the single biggest lever you have over how the plant grows.
 
 > **Diagram.** One daily cycle. The trough never approaches the floor, the peak refreshes the block. The gap between peak and trough is the dryback.
 
@@ -106,9 +106,9 @@ A dryback is the block losing water between its daily high and its next low. You
 
 A dryback is good up to a point and dangerous past it. The same process, water leaving the block, does four different things in sequence as it goes too far.
 
-> **Diagram.** Stages 1-2 are the healthy dryback you want: water leaves, air and oxygen enter. Stage 3 is too far: with less water but the same salt, the EC inside the block climbs and the plant feels osmotic stress[^hydrus-soilless-substrate-dynamics]. Stage 4 is past the floor: a dry core forms and water channels around it.
+> **Diagram.** Stages 1-2 are the healthy dryback you want: water leaves, air and oxygen enter. Stage 3 is too far: with less water but the same salt, the EC inside the block rises. When EC rises high enough, the concentration outside the root cell is greater than inside, and water is pulled out of the root instead of into it — the way salting a cucumber pulls moisture through the skin in the wrong direction. That reversal is osmotic stress[^hydrus-soilless-substrate-dynamics]. Stage 4 is past the floor: a dry core forms and water channels around it.
 
-The middle stage is the one that catches people out. Because rockwool holds no salt of its own, the salt that was dissolved in the water stays put while the water disappears. A block drying from 75% to 45% WC keeps only about three-fifths of its water (45 ÷ 75), so the salt left behind concentrates by the inverse, roughly two-thirds higher, because EC rises as 1 divided by the fraction of water remaining[^hydrus-soilless-substrate-dynamics]. A 3.0 EC feed can climb past 5.0 EC in the root zone by late afternoon. That is why big drybacks must be paired with enough volume and runoff to keep the salt in check, covered below.
+The middle stage is the one that catches people out. Because rockwool holds no salt of its own, the salt that was dissolved in the water stays put while the water disappears. Think of a pot of stock left to reduce on the stove: as the liquid goes down, the flavour concentrates. A block drying from 75% to 45% WC keeps only about three-fifths of its water (45 ÷ 75), so the salt left behind concentrates by the inverse, roughly two-thirds higher, because EC rises as 1 divided by the fraction of water remaining[^hydrus-soilless-substrate-dynamics]. A 3.0 EC feed can climb past 5.0 EC in the root zone by late afternoon. That is why big drybacks must be paired with enough volume and runoff to keep the salt in check, covered below.
 
 > **WARN — Dryback stress is partly salt stress**
 >
@@ -118,7 +118,7 @@ The middle stage is the one that catches people out. Because rockwool holds no s
 
 There is a water content below which a rockwool block will not rewet from the dripper no matter how long you run it. Nothing else here matters as much, because it is invisible until it has already happened.
 
-> **Diagram.** A block still in the working band rewets evenly: water spreads through the moist fibre. A block taken too dry develops a dry core that the fibre can no longer pull water into. New water finds the few open channels, runs straight down them and exits as runoff while the core stays bone dry[^owen-norden-preferential-flow-2024].
+> **Diagram.** A block still in the working band rewets evenly: water spreads through the moist fibre. A block taken too dry develops a dry core that the fibre can no longer pull water into. Think of pouring water onto very dry cracked soil — it runs in rivulets straight to the drain while the earth between the cracks stays dry. The same thing happens inside a dried rockwool block: new water finds the few open channels, runs straight down them and exits as runoff while the core stays bone dry[^owen-norden-preferential-flow-2024].
 
 Below roughly **25-30% WC** the dry fibre stops wicking and preferential flow takes over[^owen-norden-preferential-flow-2024][^hydrus-soilless-substrate-dynamics]. The drip rate that kept a healthy block topped up cannot re-saturate a dry one, because the water never contacts the dry interior. Your runoff reads high and your sensor barely moves, the classic signature of a channeling block.
 

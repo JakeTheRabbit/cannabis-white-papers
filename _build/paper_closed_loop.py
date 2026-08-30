@@ -5,7 +5,7 @@ from components import (p, lead, h, ul, ol, callout, defterm, table, figure,
 import figs_lib as L
 
 SLUG = "closed-loop"
-TITLE = "The closed loop: levers, signal and plant state"
+TITLE = "Closed-loop grow room: levers, signals and plant state"
 EYEBROW = "Precision · Closed loop"
 SUB = ("Run a grow room as one self-correcting system. This beginner's guide covers the controls "
        "you pull, how to read what the plants are actually doing, and how to feed that back "
@@ -32,11 +32,13 @@ SECTIONS.append({"id": "what-this-is", "kicker": "Start here", "title": "Purpose
          "You change a control, the room and plants respond, sensors measure that response, you work "
          "out what it means, and that tells you what to change next. Around and around, every minute "
          "of every day."),
-    p("A <strong>closed loop</strong> means the output feeds back to the input: what the plant tells "
-      "you decides your next move, and then you watch what that move actually did. This guide teaches "
-      "the whole circle as one thing, with three jobs sitting on it: getting the action right "
-      "(<em>cause</em>), getting the measurement honest (<em>perception</em>), and getting the meaning "
-      "out (<em>cognition</em>)."),
+    p("A <strong>closed loop</strong> works the way a thermostat does: the room gets too warm, the "
+      "sensor reads it, the AC turns on, and when the temperature settles back the AC stops. The output "
+      "feeds back to control the input&mdash;round and round. In a grow room the same logic governs "
+      "everything: what the plant tells you decides your next move, and then you watch what that move "
+      "actually did. This guide teaches the whole circle as one thing, with three jobs sitting on it: "
+      "getting the action right (<em>cause</em>), getting the measurement honest (<em>perception</em>), "
+      "and getting the meaning out (<em>cognition</em>)."),
     p("<strong>You never move just one thing.</strong> Every control pushes on four linked balances at "
       "once: heat, water vapour, CO2 and the salt in the root zone. The finished version of this loop "
       "is a room that senses its own state, knows what its actions will do, and corrects its own drift "
@@ -46,8 +48,8 @@ SECTIONS.append({"id": "what-this-is", "kicker": "Start here", "title": "Purpose
              ("Sense", "measure + noise"), ("Filter", "signal vs noise"),
              ("Infer", "estimate plant state"), ("Prescribe", "action + setpoint -> back to act")],
             note="The last arrow, Prescribe back to Act, is the one that closes the loop."), 1,
-      "Read it as a circle. The room works like a nervous system: muscles (the levers), nerves "
-      "(the sensors) and a mind (the inference that decides what it all means)."),
+      "Read it as a circle. Each step leads to the next; the last arrow, from Prescribe back to Act, "
+      "is the one that makes it a closed loop."),
     callout("key", "What 'closed' buys you",
       p("A mature loop tells you whole-room health and whether to act quickly when the dashboard is well designed, and it "
         "stays quiet when nothing needs you. Silence is a feature, not a fault.")),
@@ -64,12 +66,19 @@ SECTIONS.append({"id": "key-terms", "kicker": "Plain-language dictionary", "titl
             "jitter, biological scatter and one-off spikes that mean nothing. Every reading is "
             "signal + noise added together."),
     defterm("Setpoint vs target", "A setpoint is the literal number a machine chases (e.g. cool to "
-            "24&deg;C). A target is the outcome you actually want (e.g. keep the plant transpiring "
-            "healthily). They are not the same thing."),
-    defterm("VPD (vapour pressure deficit)", "How &lsquo;thirsty&rsquo; the air is. It drives "
-            "how fast plants lose water. Measured in kilopascals (kPa)."),
+            "24 &deg;C (75 &deg;F)). A target is the outcome you actually want (e.g. keep the plant "
+            "transpiring healthily). They are not the same thing."),
+    defterm("VPD (vapour pressure deficit)", "The air always has room for more water vapour&mdash;more "
+            "room when it is warmer and drier. Think of clothes drying faster on a hot breezy day than "
+            "a cold damp one: the air has a bigger gap to fill, so it pulls moisture harder from wet "
+            "leaf surfaces. VPD measures that gap in kilopascals (kPa). Higher VPD means plants lose "
+            "water faster and the root zone dries back sooner; too high and plants close their stomata "
+            "to conserve water."),
     defterm("EC, VWC, dryback", "EC (electrical conductivity) = how salty the feed or root zone is. "
-            "VWC = how wet the growing medium is. Dryback = how much the medium dries between waterings."),
+            "As the medium dries between shots, water is taken up but dissolved salts stay behind, so "
+            "EC climbs cycle by cycle&mdash;like soup getting saltier as it reduces on the stove. "
+            "VWC = how wet the growing medium is. Dryback = how much the medium dries between "
+            "waterings; think of it as how much of a sponge wrings out before the next shot."),
     defterm("Plant state", "The plant's actual condition (stressed, steering generative, on-track), "
             "inferred from many signals together rather than read off one gauge."),
   ]})
@@ -114,7 +123,7 @@ SECTIONS.append({"id": "the-levers", "kicker": "Core content: the action half", 
         "capacity to match, then set the root-zone strategy to that.")),
   ]})
 
-SECTIONS.append({"id": "reading-plant-state", "kicker": "Core content: sensing and meaning", "title": "Sensor and plant-state interpretation",
+SECTIONS.append({"id": "reading-plant-state", "kicker": "Core content: sensing and meaning", "title": "Reading sensors and inferring plant state",
   "blocks": [
     p("You have to <em>see</em> the room's response without being fooled, then turn it into meaning. "
       "Every measurement is signal plus noise, and in practice <strong>many raw alerts are noise</strong> "
@@ -159,8 +168,9 @@ SECTIONS.append({"id": "reading-plant-state", "kicker": "Core content: sensing a
 
 SECTIONS.append({"id": "closing-the-loop", "kicker": "Core content: putting it together", "title": "Closed-loop diagnosis and corrective action",
   "blocks": [
-    p("The three jobs become one machine here. Watch a single ordinary problem, slow "
-      "<strong>salt creep</strong> in the root zone, travel the whole loop."),
+    p("The three jobs become one machine here. Watch a single ordinary problem travel the whole loop: "
+      "<strong>salt creep</strong>, where dissolved salts gradually build up in the root zone because "
+      "each dryback cycle removes water but leaves salt behind."),
     steps([
       ("Cause sets the conditions", "A long dryback plus a flat feed concentrates salt a little more each cycle. The slowest balance is loading."),
       ("Perception refuses to overreact", "It ignores any single EC spike, but flags a sustained four-day rising run past the control limit as a true signal."),

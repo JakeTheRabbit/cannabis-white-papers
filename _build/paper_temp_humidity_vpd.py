@@ -9,12 +9,12 @@ _FIGS = json.load(open(os.path.join(os.path.dirname(__file__), "figs_temp_humidi
                        encoding="utf-8"))
 
 SLUG = "temp-humidity-vpd"
-TITLE = "Temperature, humidity and VPD: the air the plant feels"
+TITLE = "Temperature, humidity and VPD: stage targets, measurement and condensation control"
 EYEBROW = "Environment · Climate"
-SUB = ("VPD is the one climate number the plant actually feels. What it is, the equation in a form "
-       "you can use, why leaf temperature (not air) sets the real number, stage bands you can "
-       "defend, the night-time dew-point discipline that keeps mould out, and how to measure it "
-       "all without lying to yourself.")
+SUB = ("VPD is the climate number that captures how hard the air pulls water from leaves. "
+       "This paper covers what VPD is and how to calculate it, why leaf temperature sets the real "
+       "deficit, stage-by-stage targets you can defend, the night dew-point discipline that keeps "
+       "mould out, and how to place and read sensors accurately.")
 META = [("wave", "Climate"), ("image", "12 diagrams"),
         ("quote", "Evidence-linked · 14 sources"), ("clock", "~19 min read")]
 RELATED = ["grow-room-systems", "mould-risk", "airflow-design"]
@@ -31,8 +31,8 @@ SECTIONS = []
 # ---------------------------------------------------------------- 01 start here
 SECTIONS.append({"id": "start-here", "kicker": "01 · Start here", "title": "Purpose and scope",
   "blocks": [
-    lead("Two rooms both read 55% humidity. One is at 20&nbsp;°C and the plants are coasting. The "
-         "other is at 28&nbsp;°C and the same cultivar is stalled, leaf edges curling, drinking hard. "
+    lead("Two rooms both read 55% humidity. One is at 20&nbsp;°C (68&nbsp;°F) and the plants are coasting. The "
+         "other is at 28&nbsp;°C (82&nbsp;°F) and the same cultivar is stalled, leaf edges curling, drinking hard. "
          "Same number on the controller, completely different rooms, because relative humidity "
          "is a percentage of a moving target, and the plant doesn&rsquo;t feel percentages. It feels "
          "the <strong>pull</strong>: how hard the air is trying to drag water out of its leaves."),
@@ -93,18 +93,18 @@ SECTIONS.append({"id": "what-vpd-is", "kicker": "03 · The core idea", "title": 
       "differently. Two rooms at the same VPD pull the same, whatever their RH says."),
     figure(_FIGS["es-curve"], 2,
       "The saturation curve from the FAO-56 Tetens formula" + _c("fao56-1998") + ". The ceiling "
-      "climbs about 6% per degree and doubles between 14 and 25&nbsp;°C. Which is why "
+      "climbs about 6% per degree and doubles between 14&nbsp;°C (57&nbsp;°F) and 25&nbsp;°C (77&nbsp;°F). Which is why "
       "temperature moves VPD harder than most humidity adjustments do."),
     p("The curve is the single most useful piece of physics in climate control, because everything "
       "annoying about grow-room humidity falls out of it: why the room spikes to 90% RH at "
       "lights-off (the ceiling dropped, the water stayed), why a heater &lsquo;dries&rsquo; the air "
       "without removing a gram of water, and why summer rooms drink so much harder at the same RH."),
     figure(L.bars("How much water saturated air can carry",
-        [("10 °C", 9.4), ("15 °C", 12.8), ("20 °C", 17.3), ("25 °C", 23.0), ("30 °C", 30.4)],
+        [("10 °C (50 °F)", 9.4), ("15 °C (59 °F)", 12.8), ("20 °C (68 °F)", 17.3), ("25 °C (77 °F)", 23.0), ("30 °C (86 °F)", 30.4)],
         unit=" g/m³",
         note="Grams of water per cubic metre of air at 100% RH, derived from the FAO-56 saturation values."), 3,
-      "The same ceiling expressed in grams. A 30&nbsp;°C room can carry nearly double the water of a "
-      "20&nbsp;°C room. Every degree of temperature is also a humidity decision" + _c("fao56-1998") + "."),
+      "The same ceiling expressed in grams. A 30&nbsp;°C (86&nbsp;°F) room can carry nearly double the water of a "
+      "20&nbsp;°C (68&nbsp;°F) room. Every degree of temperature is also a humidity decision" + _c("fao56-1998") + "."),
     callout("key", "The one-line mental model",
       p("RH is a percentage of a moving ceiling. VPD <em>is</em> the gap. The plant lives in the gap.")),
   ]})
@@ -121,7 +121,7 @@ SECTIONS.append({"id": "equation", "kicker": "04 · The maths", "title": "Calcul
         "<strong>VPD<sub>air</sub> = es(T<sub>air</sub>) &minus; ea = es(T<sub>air</sub>) &times; "
         "(1 &minus; RH/100)</strong>")),
     p("Worked once, slowly, with the numbers you&rsquo;ll see all through this paper:"),
-    kv([("Air temperature", "25.0 °C"),
+    kv([("Air temperature", "25.0 °C (77.0 °F)"),
         ("Relative humidity", "60%"),
         ("Ceiling es(25)", "0.6108 × e^(431.75 / 262.3) = 3.17 kPa"),
         ("Actual ea", "3.17 × 0.60 = 1.90 kPa"),
@@ -129,13 +129,13 @@ SECTIONS.append({"id": "equation", "kicker": "04 · The maths", "title": "Calcul
     p("If you&rsquo;d rather not raise e to anything before coffee, a lookup row of ceilings covers "
       "most rooms, multiply by (1 &minus; RH/100) and you&rsquo;re done:"),
     table(["Air temp", "es (kPa)", "VPD @ 50% RH", "VPD @ 60% RH", "VPD @ 70% RH"], [
-      ["18 °C", "2.06", "1.03", "0.83", "0.62"],
-      ["20 °C", "2.34", "1.17", "0.94", "0.70"],
-      ["22 °C", "2.64", "1.32", "1.06", "0.79"],
-      ["24 °C", "2.98", "1.49", "1.19", "0.90"],
-      ["26 °C", "3.36", "1.68", "1.34", "1.01"],
-      ["28 °C", "3.78", "1.89", "1.51", "1.13"],
-      ["30 °C", "4.25", "2.12", "1.70", "1.27"],
+      ["18 °C (64 °F)", "2.06", "1.03", "0.83", "0.62"],
+      ["20 °C (68 °F)", "2.34", "1.17", "0.94", "0.70"],
+      ["22 °C (72 °F)", "2.64", "1.32", "1.06", "0.79"],
+      ["24 °C (75 °F)", "2.98", "1.49", "1.19", "0.90"],
+      ["26 °C (79 °F)", "3.36", "1.68", "1.34", "1.01"],
+      ["28 °C (82 °F)", "3.78", "1.89", "1.51", "1.13"],
+      ["30 °C (86 °F)", "4.25", "2.12", "1.70", "1.27"],
     ], cls="compact", caption="Saturation vapour pressure and air-basis VPD, computed from the FAO-56 formula" + _c("fao56-1998") + ". Full precision kept to two decimals."),
     callout("tip", "Units, quickly",
       p("1 kPa = 10 mbar = 10 hPa. Some US charts use pounds per square inch or grains of moisture"
@@ -164,9 +164,9 @@ SECTIONS.append({"id": "leaf-vpd", "kicker": "05 · The real number", "title": "
       "Identical room readout, different plant reality. A couple of degrees of leaf offset moves the "
       "computed deficit by a full stage band" + _c("nelson2015-leaftemp") + "."),
     p("Run the worked example again with real leaf temperatures and watch the answer move. Air "
-      "25&nbsp;°C / 60% RH says 1.27 kPa, textbook flower climate. If the LED canopy sits at "
-      "23&nbsp;°C, the leaf feels es(23) &minus; 1.90 = <strong>0.91 kPa</strong>, veg "
-      "territory, a third wetter than the dashboard claims. Under HPS with the leaf at 26&nbsp;°C "
+      "25&nbsp;°C (77&nbsp;°F) / 60% RH says 1.27 kPa, textbook flower climate. If the LED canopy sits at "
+      "23&nbsp;°C (73&nbsp;°F), the leaf feels es(23) &minus; 1.90 = <strong>0.91 kPa</strong>, veg "
+      "territory, a third wetter than the dashboard claims. Under HPS with the leaf at 26&nbsp;°C (79&nbsp;°F) "
       "it feels <strong>1.46 kPa</strong>, top of the flower band. Same room. Three answers."),
     callout("warn", "The LED-room trap",
       p("Most rooms that converted HPS &rarr; LED kept their old temperature and humidity targets. "
@@ -196,13 +196,13 @@ SECTIONS.append({"id": "the-chart", "kicker": "06 · The lookup", "title": "Usin
       ("Measure where the plants live", "Air temperature and RH at canopy height, mid-room, not at the controller on the wall. Placement matters as much as the instrument (section 11)."),
       ("Get a leaf temperature", "IR thermometer or canopy sensor on a lit, upper leaf. No reading? Assume leaf ≈ air under HPS, 1–2 °C below air under LED" + _c("nelson2015-leaftemp") + "."),
       ("Read the cell", "Find your temperature row and RH column. That number, in kPa, is what your air is asking of the crop."),
-      ("Correct for the leaf", "Cooler leaf = real VPD lower than the cell; warmer leaf = higher. At 25 °C / 60%, a 2 °C-cool canopy turns 1.27 into 0.91 kPa, don't guess, use a leaf-offset calculator or a controller that takes leaf temperature" + _c("pulse-vpd-guide") + "."),
+      ("Correct for the leaf", "Cooler leaf = real VPD lower than the cell; warmer leaf = higher. At 25 °C (77 °F) / 60%, a 2 °C-cool canopy turns 1.27 into 0.91 kPa, don't guess, use a leaf-offset calculator or a controller that takes leaf temperature" + _c("pulse-vpd-guide") + "."),
       ("Move along one axis at a time", "Too dry? Slide left (raise RH) before you slide up the temperature column. One change, fifteen minutes, re-read."),
     ]),
-    callout("tip", "Two roads to the same number are not the same room",
-      p("27&nbsp;°C / 65% and 21&nbsp;°C / 45% both land near 1.3 kPa, but they are not "
+    callout("tip", "Same VPD number, two different climates",
+      p("27&nbsp;°C (81&nbsp;°F) / 65% and 21&nbsp;°C (70&nbsp;°F) / 45% both land near 1.3 kPa, but they are not "
         "interchangeable climates: temperature has its own biology on top of VPD. Cannabis "
-        "photosynthesis peaks around 25&ndash;30&nbsp;°C" + _c("chandra2008-photo") + ", "
+        "photosynthesis peaks around 25&ndash;30&nbsp;°C (77&ndash;86&nbsp;°F)" + _c("chandra2008-photo") + ", "
         "morphology and stretch respond to the day/night temperature difference" + _c("moe1995-dif") +
         ", and disease pressure rides on absolute humidity. Pick the temperature your stage and "
         "fixture want first; use humidity to dial the VPD around it.")),
@@ -232,15 +232,15 @@ SECTIONS.append({"id": "stage-targets", "kicker": "07 · The targets", "title": 
       "more plumbing, more tolerance for pull" + _c("pulse-vpd-guide") + _c("jin2019-cannabis-env") + "."),
     table(["Stage", "Leaf VPD band", "Why", "Example combo (air-basis)"], [
       ["Clones / fresh seedlings", "0.4–0.8 kPa", "Little or no root; the shoot must not out-transpire uptake",
-       "24 °C / 75–80% RH → ~0.6–0.7"],
+       "24 °C (75 °F) / 75–80% RH → ~0.6–0.7"],
       ["Early veg", "0.8–1.1 kPa", "Roots established; push gas exchange without stressing",
-       "25 °C / 65–70% RH → ~1.0"],
+       "25 °C (77 °F) / 65–70% RH → ~1.0"],
       ["Late veg", "0.9–1.2 kPa", "Full canopy, high light; keep flux strong and steady",
-       "26 °C / 62–68% RH → ~1.1–1.3"],
+       "26 °C (79 °F) / 62–68% RH → ~1.1–1.3"],
       ["Early–mid flower", "1.1–1.4 kPa", "Drive water and nutrient throughput through peak bulk",
-       "26 °C / 58–62% RH → ~1.3–1.4"],
+       "26 °C (79 °F) / 58–62% RH → ~1.3–1.4"],
       ["Late flower", "1.2–1.5 kPa", "Dense buds: the mould ceiling now outranks the VPD target",
-       "24 °C / 50–55% RH → ~1.4–1.5"],
+       "24 °C (75 °F) / 50–55% RH → ~1.4–1.5"],
     ], cls="compact",
       caption="Working convention" + _c("pulse-vpd-guide") + _c("jin2019-cannabis-env") + _c("corredor2025-rh") +
       ". Combos assume leaf ≈ air; in an LED room run the air warmer or the RH lower to land the same leaf VPD."),
@@ -254,15 +254,15 @@ SECTIONS.append({"id": "stage-targets", "kicker": "07 · The targets", "title": 
   ]})
 
 # ---------------------------------------------------------------- 08 transpiration
-SECTIONS.append({"id": "transpiration", "kicker": "08 · The engine", "title": "How VPD drives transpiration",
+SECTIONS.append({"id": "transpiration", "kicker": "08 · Transpiration and growth", "title": "How VPD drives transpiration",
   "blocks": [
-    p("VPD matters because transpiration is the crop&rsquo;s engine, and VPD is its throttle. Water "
-      "evaporates from cell walls inside the leaf and diffuses out of the stomata into the deficit. "
-      "That loss puts the whole water column under tension, pulling water, and everything "
-      "dissolved in it, from the root zone up through the plant. Calcium in particular only "
-      "travels with this stream, which is why chronically wet, low-VPD air shows up later as weak "
-      "tissue and tip burn in fast growth. Evaporation also carries heat away: transpiration is the "
-      "plant&rsquo;s own air-conditioner, the reason a healthy LED canopy reads cooler than the room" +
+    p("Transpiration moves water from the root zone to the air: water evaporates from cell walls "
+      "inside the leaf and diffuses out through the stomata into the drier room air. That loss puts "
+      "the whole water column under tension, pulling water—and everything dissolved in it—up from "
+      "the roots. VPD is the size of that deficit: a larger gap pulls harder. Calcium only travels "
+      "with this stream, which is why chronically low-VPD air shows up later as weak tissue and tip "
+      "burn in fast growth. Evaporation also carries heat away, keeping a healthy, transpiring "
+      "canopy cooler than the surrounding air" +
       _c("nelson2015-leaftemp") + "."),
     figure(_FIGS["stomata-three"], 7,
       "The valve and the gradient. Flux needs both a gap to diffuse into and an open pore, "
@@ -307,7 +307,7 @@ SECTIONS.append({"id": "day-night", "kicker": "09 · The clock", "title": "Day a
       ("Pre-empt lights-off", "Start dehumidification before the temperature falls, pulling water out of warm air is easier, and you enter the night below the danger line instead of chasing it."),
       ("Hold a night floor", "Convention: keep night VPD from collapsing much below ~0.7–1.0 kPa, and never let canopy RH camp above 70%. Plants still transpire at night, commonly 5–15% of daytime rates" + _c("caird2007-night") + ". So the air keeps loading even in the dark."),
     ]),
-    callout("note", "Night temperature is also a shape lever",
+    callout("note", "Night temperature also affects internode length",
       p("The day&ndash;night temperature difference (&lsquo;DIF&rsquo;) steers internode stretch in "
         "greenhouse crops, warmer days than nights stretch, flat or negative DIF compacts" +
         _c("moe1995-dif") + ". Keep the night drop modest (2&ndash;4&nbsp;°C) and you get "
@@ -316,7 +316,7 @@ SECTIONS.append({"id": "day-night", "kicker": "09 · The clock", "title": "Day a
   ]})
 
 # ---------------------------------------------------------------- 10 dew point
-SECTIONS.append({"id": "night-dew", "kicker": "10 · The mould lever", "title": "Dew point and nighttime condensation risk",
+SECTIONS.append({"id": "night-dew", "kicker": "10 · Condensation and mould risk", "title": "Dew point and nighttime condensation risk",
   "blocks": [
     p("RH tells you how full the air is. <strong>Dew point</strong> tells you where that fullness "
       "becomes free water: it is the temperature at which your actual vapour content saturates" +
@@ -332,11 +332,11 @@ SECTIONS.append({"id": "night-dew", "kicker": "10 · The mould lever", "title": 
       "closes the distance. From the vapour pressure: "
       "<strong>T<sub>d</sub> = 237.3 &times; ln(ea/0.6108) &divide; (17.27 &minus; ln(ea/0.6108))</strong>" +
       _c("fao56-1998") + ". Or read it from a table:"),
-    table(["Night air 24 °C at…", "50% RH", "55% RH", "60% RH", "65% RH", "70% RH"], [
-      ["Dew point", "12.9 °C", "14.4 °C", "15.8 °C", "17.0 °C", "18.2 °C"],
+    table(["Night air 24 °C (75 °F) at…", "50% RH", "55% RH", "60% RH", "65% RH", "70% RH"], [
+      ["Dew point", "12.9 °C (55.2 °F)", "14.4 °C (57.9 °F)", "15.8 °C (60.4 °F)", "17.0 °C (62.6 °F)", "18.2 °C (64.8 °F)"],
       ["What condenses", "Almost nothing indoors", "Cold exterior corners", "Uninsulated walls, steel", "Most unwarmed surfaces", "Everything cool, including buds"],
     ], cls="compact",
-      caption="Computed from the FAO-56 relations" + _c("fao56-1998") + ". At 24 °C / 70% RH a surface only needs to sit 6 °C below air temperature to run wet all night."),
+      caption="Computed from the FAO-56 relations" + _c("fao56-1998") + ". At 24 °C (75 °F) / 70% RH a surface only needs to sit 6 °C below air temperature to run wet all night."),
     figure(L.zones("Night RH at the canopy: the mould axis", 40, 90,
         [(40, 60, "var(--fig-green-l)", "comfortable"),
          (60, 70, "var(--fig-dryl)", "watch"),
@@ -431,10 +431,10 @@ SECTIONS.append({"id": "mistakes", "kicker": "13 · The classics", "title": "Com
   "blocks": [
     grid([
       card("Chasing VPD with temperature",
-        p("The chart shows hotter = higher VPD, so the room gets cranked to 30&nbsp;°C to hit 1.4 "
+        p("The chart shows hotter = higher VPD, so the room gets cranked to 30&nbsp;°C (86&nbsp;°F) to hit 1.4 "
           "kPa. Now the plants are past their photosynthetic optimum" + _c("chandra2008-photo") +
           ", root-zone and disease biology shifted, and the room drinks absurdly. VPD was in range; "
-          "everything else broke. Set temperature for the stage, steer VPD with moisture."),
+          "everything else broke. Set temperature for the stage, then steer VPD with humidity."),
         tag="Cooking the room"),
       card("Ignoring the leaf offset",
         p("Air-basis VPD under LED reads a comfortable 1.3 while the cool canopy feels 0.9" +
@@ -485,7 +485,7 @@ SECTIONS.append({"id": "troubleshooting", "kicker": "14 · Quick reference", "ti
        "Placement or radiation error, or drift",
        "Shield and aspirate, move out of beams and blasts, salt-test quarterly" + _c("tarara2007-shield")],
       ["VPD perfect on paper, plants limp anyway",
-       "It's not the air, supply side (roots, substrate, EC) or leaf temp assumption wrong",
+       "Supply-side problem (roots, substrate, EC) or leaf temp assumption wrong",
        "IR the canopy, weigh or probe the substrate, re-derive VPD from leaf temperature" + _c("nelson2015-leaftemp")],
     ], cls="compact"),
   ]})
@@ -493,7 +493,7 @@ SECTIONS.append({"id": "troubleshooting", "kicker": "14 · Quick reference", "ti
 # ---------------------------------------------------------------- 15 mental model
 SECTIONS.append({"id": "mental-model", "kicker": "15 · Straight talk", "title": "VPD control principles",
   "blocks": [
-    callout("key", "Five things, and you understand grow-room climate",
+    callout("key", "Five principles of grow-room climate control",
       ol([
         "<strong>The plant feels the gap, not the percentage.</strong> VPD = ceiling minus actual, "
         "in kPa. Same RH at two temperatures is two different climates" + _c("fao56-1998") + ".",
@@ -513,6 +513,5 @@ SECTIONS.append({"id": "mental-model", "kicker": "15 · Straight talk", "title":
     p("VPD is the demand side of the water equation; the <a href='grow-room-systems.html'>systems "
       "guide</a> covers the hardware that serves it, <a href='airflow-design.html'>airflow</a> "
       "delivers the set-point into the canopy, and <a href='mould-risk.html'>mould risk</a> is what "
-      "this discipline is ultimately protecting. Get the gap right, keep it steady, and most of "
-      "what growers call &lsquo;magic touch&rsquo; turns out to be psychrometrics."),
+      "this discipline protects against."),
   ]})

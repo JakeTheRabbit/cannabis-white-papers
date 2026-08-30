@@ -6,13 +6,14 @@ import figs_lib as L
 import figs_dailychecks as D
 
 SLUG = "daily-checks"
-TITLE = "Daily checks: the self-completing facility round"
+TITLE = "Build a daily facility check that mostly fills itself in"
 EYEBROW = "Operations · Daily checks"
-SUB = ("The best daily check is the one that mostly fills itself in. Let Home Assistant confirm "
-       "everything it can measure, leave the human only the physical walk-around, make the rest one "
-       "tap, and the check gets done every day, honestly, with an audit trail that holds up.")
+SUB = ("This paper shows you how to design a daily facility check where sensors confirm "
+       "everything measurable automatically and the human round stays short. By the end "
+       "you will have a working Home Assistant structure, a five-list pause-point schedule, "
+       "and a system that produces an honest audit trail without extra data entry.")
 META = [("dashboard", "Operations & SOPs"), ("image", "7 diagrams"),
-        ("quote", "Research-backed · 13 sources"), ("clock", "~16 min read")]
+        ("quote", "13 sources cited"), ("clock", "~16 min read")]
 RELATED = ["plant-state-dashboard", "closed-loop", "grow-room-systems"]
 REF_IDS = ["gawande-checklist-manifesto", "fogg-behavior-model", "gollwitzer-implementation-intentions",
            "checklist-compliance-illusion", "haynes-surgical-checklist-2009",
@@ -69,9 +70,9 @@ SECTIONS.append({"id": "terms", "kicker": "Vocabulary", "title": "Definitions",
   ]})
 
 # 3 -----------------------------------------------------------------
-SECTIONS.append({"id": "science", "kicker": "The science", "title": "Check design and completion reliability",
+SECTIONS.append({"id": "science", "kicker": "Research", "title": "Check design and completion reliability",
   "blocks": [
-    p("Adherence is a design problem, not a character problem. Decades of checklist and behaviour research "
+    p("Reliable adherence comes from design. Decades of checklist and behaviour research "
       "point at the same handful of levers."),
     figure(D.bmap(), 1,
       "The Fogg behaviour model: a behaviour happens only when motivation, ability and a prompt line up at "
@@ -98,7 +99,7 @@ SECTIONS.append({"id": "science", "kicker": "The science", "title": "Check desig
   ]})
 
 # 4 -----------------------------------------------------------------
-SECTIONS.append({"id": "content", "kicker": "The content", "title": "Daily check schedule and contents",
+SECTIONS.append({"id": "content", "kicker": "What to check", "title": "Daily check schedule and contents",
   "blocks": [
     p("Split the day into a few short pause-point lists, each tied to the moment it matters. Each line has a "
       "pre-set green / amber / red limit so the judgement is already made."),
@@ -121,7 +122,7 @@ SECTIONS.append({"id": "content", "kicker": "The content", "title": "Daily check
   ]})
 
 # 5 -----------------------------------------------------------------
-SECTIONS.append({"id": "autocomplete", "kicker": "The automation", "title": "Home Assistant check automation",
+SECTIONS.append({"id": "autocomplete", "kicker": "Automation setup", "title": "Home Assistant check automation",
   "blocks": [
     p("Most of a daily check is data the building already knows. Let Home Assistant confirm those items so the "
       "human never re-types what a sensor can prove."),
@@ -156,7 +157,7 @@ SECTIONS.append({"id": "autocomplete", "kicker": "The automation", "title": "Hom
   ]})
 
 # 6 -----------------------------------------------------------------
-SECTIONS.append({"id": "ui", "kicker": "The interface", "title": "Daily-check user interface",
+SECTIONS.append({"id": "ui", "kicker": "Interface design", "title": "Design the check interface for fast logging",
   "blocks": [
     p("For the items a person must do, design for the lowest possible interaction. The happy path should be "
       "nearly empty; effort appears only where there is a problem."),
@@ -205,7 +206,7 @@ SECTIONS.append({"id": "adherence", "kicker": "Make it stick", "title": "Adheren
   ]})
 
 # 8 -----------------------------------------------------------------
-SECTIONS.append({"id": "audit-build", "kicker": "Proof & build", "title": "Audit trail and implementation",
+SECTIONS.append({"id": "audit-build", "kicker": "Build steps", "title": "Audit trail and implementation",
   "blocks": [
     p("Because the data entry is near zero but the system stamps who, where, when and what on every action, "
       "you get the easiest-to-fill check and a defensible record from the same design."),

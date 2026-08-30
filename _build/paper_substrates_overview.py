@@ -57,13 +57,21 @@ SECTIONS.append({"id": "key-terms", "kicker": "Vocabulary", "title": "Definition
             "milliSiemens per centimetre (mS/cm). Higher EC is a stronger, saltier feed."),
     defterm("pH", "Acidity on a 0-14 scale. The cannabis root-zone sweet spot is about 5.5-6.5, "
             "tightening to 5.8-6.2 for precise soilless control." + _c("cockson-2019-cannabis-nutrient-disorders")),
-    defterm("CEC (cation exchange capacity)", "A medium's ability to grab and hold nutrient ions in "
-            "reserve, measured in meq/100g." + _c("abad-2002-coir-dust-peat-substitute") +
-            " High CEC means the medium buffers (cushions) your feeding mistakes."),
-    defterm("Buffering", "The medium absorbing your errors. A buffered medium forgives a bad mix. "
-            "An inert one passes it straight to the roots."),
-    defterm("Dryback", "How far a medium dries between waterings. It is the lever crop steering uses, "
-            "covered in the <a href='coco-crop-steering.html'>coco paper</a>."),
+    defterm("CEC (cation exchange capacity)", "Some growing media hold nutrient ions the way a sponge "
+            "holds water — grab them when the feed is strong, release them slowly when it is weak. "
+            "A medium's capacity to do this is its cation exchange capacity, measured in meq/100g." +
+            _c("abad-2002-coir-dust-peat-substitute") +
+            " High CEC means the medium buffers your feeding mistakes, but it also means raw coco "
+            "stockpiles ions selectively — see Buffering below."),
+    defterm("Buffering", "When you make a dosing mistake, a buffered medium absorbs some of the shock "
+            "before it reaches the roots — like a room with thick walls where a cold draught outside "
+            "barely registers inside. A buffered medium forgives a bad mix. An inert one, like "
+            "rockwool, passes every change straight to the roots."),
+    defterm("Dryback", "Letting the medium partly dry between waterings sends the plant a mild stress "
+            "signal that encourages roots to grow deeper — like briefly turning off a garden tap so "
+            "the plant reaches further. How far the medium dries between waterings is called dryback. "
+            "It is the main lever crop steering uses, covered in the "
+            "<a href='coco-crop-steering.html'>coco paper</a>."),
     figure(L.zones("One fixed pore space, split between water and air", 0, 100,
             [(0, 78, L.BLUL, "Water-holding"), (78, 100, L.GL, "Air")], unit="%",
             note="Saturate the medium and the slider shoves toward water, starving roots of oxygen."), 2,
@@ -105,11 +113,12 @@ SECTIONS.append({"id": "ec-buffering", "kicker": "Core concept 2", "title": "Nut
       "negligible and its pH is alkaline, around 8, so whatever you feed is exactly what the roots "
       "get" + _c("raviv-lieth-soilless-culture-afp") + ". That is precise, but unforgiving of a bad "
       "mix."),
-    p("Coco is the opposite. Its high CEC, roughly 40-100 meq/100g, buffers EC swings, but raw "
-      "coco's exchange sites come pre-loaded with potassium and sodium and will strip calcium and "
-      "magnesium out of your feed" + _c("abad-2002-coir-dust-peat-substitute") + ". That causes a "
-      "cal-mag deficiency unless the coco is buffered (pre-soaked in cal-mag) or bought "
-      "pre-buffered" + _c("cockson-2019-cannabis-nutrient-disorders") + "."),
+    p("Coco is the opposite. Its high CEC, roughly 40–100 meq/100g, buffers EC swings, but raw "
+      "coco's exchange sites come loaded with potassium and sodium: when feed water flows through, "
+      "those sites swap K and Na into the water and pull Ca and Mg out, removing the nutrients the "
+      "plant needs most before they reach the root" + _c("abad-2002-coir-dust-peat-substitute") +
+      ". That causes a cal-mag deficiency unless the coco is buffered (pre-soaked in cal-mag) or "
+      "bought pre-buffered" + _c("cockson-2019-cannabis-nutrient-disorders") + "."),
     p("Living soil is the most forgiving of all. Microbes, organic matter and minerals hold the "
       "root zone near pH 5.2-6.5 over hours to days when biology is healthy. Many organic growers still "
       "do not acidify routine waterings, but avoid extreme alkaline water and monitor if problems appear. In DWC there is no buffer at all: the reservoir is the "
@@ -179,7 +188,7 @@ SECTIONS.append({"id": "by-stage-setup", "kicker": "Do it", "title": "Setup and 
       ("Coco", "Rinse and pre-buffer: soak 8-24h in a cal-mag solution unless bought pre-buffered. Then feed every watering at pH 5.8-6.2 and low EC, watering little and often."),
       ("Rockwool", "Pre-soak the cubes or slabs at pH ~5.5 before transplanting, because dry rockwool sits near pH 8. After that, never let it go bone-dry."),
       ("Living soil", "Build or buy the bed, let it cycle a few weeks, then water-only. Leave pH alone unless symptoms appear."),
-      ("DWC", "Hold the reservoir at 18-20C (65-68F), dissolved oxygen at 7-9 mg/L, pH 5.5-6.0, and run the air pump 24/7."),
+      ("DWC", "Hold the reservoir at 18–20 °C (65–68 °F), dissolved oxygen at 7–9 mg/L, pH 5.5–6.0, and run the air pump 24/7."),
     ]),
     table(["Medium", "Prep step", "Feed / water routine", "pH target", "Do not skip"], [
       ["Coco", "Rinse + cal-mag buffer", "Feed every watering, low EC", "5.8-6.2", "The pre-buffer soak"],
@@ -189,10 +198,10 @@ SECTIONS.append({"id": "by-stage-setup", "kicker": "Do it", "title": "Setup and 
     ], cls="compact", caption="The single thing most beginners skip is the prep column. Each one is "
       "the difference between a smooth start and an early problem." + _c("cockson-2019-cannabis-nutrient-disorders")),
     figure(L.zones("DWC reservoir: the kill-zone made visible", 14, 28,
-            [(14, 18, L.AMBL, "cool"), (18, 20, L.GL, "target 18-20C"),
+            [(14, 18, L.AMBL, "cool"), (18, 20, L.GL, "target 18–20 °C"),
              (20, 23, L.AMBL, "less oxygen margin"), (23, 28, L.REDL, "warm-water risk")], unit="C",
-            note="Water temperature, dissolved oxygen, crop and pathogen species interact; 23C is not a universal disease threshold."), 7,
-      "Warmer water holds less dissolved oxygen, but Pythium risk has no universal 23C cliff. Set the "
+            note="Water temperature, dissolved oxygen, crop and pathogen species interact; 23 °C is not a universal disease threshold."), 7,
+      "Warmer water holds less dissolved oxygen, but Pythium risk has no universal 23 °C cliff. Set the "
       "operating band from the crop and system, then monitor temperature, dissolved oxygen and root health." +
       _c("le-pythium-hydroponic-epidemiology-review") + _c("frontiers-2026-do-pythium-strawberry-nft")),
   ]})

@@ -47,11 +47,11 @@ Two numbers describe how any medium behaves when wet. The rest are about nutrien
 
 **pH** — Acidity on a 0-14 scale. The cannabis root-zone sweet spot is about 5.5-6.5, tightening to 5.8-6.2 for precise soilless control.[^cockson-2019-cannabis-nutrient-disorders]
 
-**CEC (cation exchange capacity)** — A medium's ability to grab and hold nutrient ions in reserve, measured in meq/100g.[^abad-2002-coir-dust-peat-substitute] High CEC means the medium buffers (cushions) your feeding mistakes.
+**CEC (cation exchange capacity)** — Some growing media hold nutrient ions the way a sponge holds water — grab them when the feed is strong, release them slowly when it is weak. A medium's capacity to do this is its cation exchange capacity, measured in meq/100g.[^abad-2002-coir-dust-peat-substitute] High CEC means the medium buffers your feeding mistakes, but it also means raw coco stockpiles ions selectively — see Buffering below.
 
-**Buffering** — The medium absorbing your errors. A buffered medium forgives a bad mix. An inert one passes it straight to the roots.
+**Buffering** — When you make a dosing mistake, a buffered medium absorbs some of the shock before it reaches the roots — like a room with thick walls where a cold draught outside barely registers inside. A buffered medium forgives a bad mix. An inert one, like rockwool, passes every change straight to the roots.
 
-**Dryback** — How far a medium dries between waterings. It is the lever crop steering uses, covered in the [coco paper](coco-crop-steering.html).
+**Dryback** — Letting the medium partly dry between waterings sends the plant a mild stress signal that encourages roots to grow deeper — like briefly turning off a garden tap so the plant reaches further. How far the medium dries between waterings is called dryback. It is the main lever crop steering uses, covered in the [coco paper](coco-crop-steering.html).
 
 > **Diagram.** Total pore space is a fixed bar. Wetting the medium pushes the split toward water and squeezes out the air the roots need to breathe.
 
@@ -79,7 +79,7 @@ Rockwool is roughly 96% total porosity but only about 11% air-filled, with aroun
 
 An inert medium like rockwool holds almost no nutrients of its own. Its native EC is negligible and its pH is alkaline, around 8, so whatever you feed is exactly what the roots get[^raviv-lieth-soilless-culture-afp]. That is precise, but unforgiving of a bad mix.
 
-Coco is the opposite. Its high CEC, roughly 40-100 meq/100g, buffers EC swings, but raw coco's exchange sites come pre-loaded with potassium and sodium and will strip calcium and magnesium out of your feed[^abad-2002-coir-dust-peat-substitute]. That causes a cal-mag deficiency unless the coco is buffered (pre-soaked in cal-mag) or bought pre-buffered[^cockson-2019-cannabis-nutrient-disorders].
+Coco is the opposite. Its high CEC, roughly 40–100 meq/100g, buffers EC swings, but raw coco's exchange sites come loaded with potassium and sodium: when feed water flows through, those sites swap K and Na into the water and pull Ca and Mg out, removing the nutrients the plant needs most before they reach the root[^abad-2002-coir-dust-peat-substitute]. That causes a cal-mag deficiency unless the coco is buffered (pre-soaked in cal-mag) or bought pre-buffered[^cockson-2019-cannabis-nutrient-disorders].
 
 Living soil is the most forgiving of all. Microbes, organic matter and minerals hold the root zone near pH 5.2-6.5 over hours to days when biology is healthy. Many organic growers still do not acidify routine waterings, but avoid extreme alkaline water and monitor if problems appear. In DWC there is no buffer at all: the reservoir is the only thing standing between your plants and a mistake.
 
@@ -124,7 +124,7 @@ Every medium has one non-negotiable prep step. Get that right and the rest is ro
 1. **Coco** — Rinse and pre-buffer: soak 8-24h in a cal-mag solution unless bought pre-buffered. Then feed every watering at pH 5.8-6.2 and low EC, watering little and often.
 2. **Rockwool** — Pre-soak the cubes or slabs at pH ~5.5 before transplanting, because dry rockwool sits near pH 8. After that, never let it go bone-dry.
 3. **Living soil** — Build or buy the bed, let it cycle a few weeks, then water-only. Leave pH alone unless symptoms appear.
-4. **DWC** — Hold the reservoir at 18-20C (65-68F), dissolved oxygen at 7-9 mg/L, pH 5.5-6.0, and run the air pump 24/7.
+4. **DWC** — Hold the reservoir at 18–20 °C (65–68 °F), dissolved oxygen at 7–9 mg/L, pH 5.5–6.0, and run the air pump 24/7.
 
 | Medium | Prep step | Feed / water routine | pH target | Do not skip |
 | --- | --- | --- | --- | --- |
@@ -135,7 +135,7 @@ Every medium has one non-negotiable prep step. Get that right and the rest is ro
 
 *The single thing most beginners skip is the prep column. Each one is the difference between a smooth start and an early problem.[^cockson-2019-cannabis-nutrient-disorders]*
 
-> **Diagram.** Warmer water holds less dissolved oxygen, but Pythium risk has no universal 23C cliff. Set the operating band from the crop and system, then monitor temperature, dissolved oxygen and root health.[^le-pythium-hydroponic-epidemiology-review][^frontiers-2026-do-pythium-strawberry-nft]
+> **Diagram.** Warmer water holds less dissolved oxygen, but Pythium risk has no universal 23 °C cliff. Set the operating band from the crop and system, then monitor temperature, dissolved oxygen and root health.[^le-pythium-hydroponic-epidemiology-review][^frontiers-2026-do-pythium-strawberry-nft]
 
 ## Troubleshooting
 

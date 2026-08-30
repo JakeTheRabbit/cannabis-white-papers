@@ -8,12 +8,13 @@ import figs_lib as L
 _FIGS = json.load(open(os.path.join(os.path.dirname(__file__), "figs_cannabinoids_terpenes.json"), encoding="utf-8"))
 
 SLUG = "cannabinoids-terpenes"
-TITLE = "Cannabinoids and terpenes: the chemistry that matters"
+TITLE = "Cannabinoids and Terpenes"
 EYEBROW = "Reference · Chemistry"
-SUB = ("Two families of molecules carry all the value in this industry. And both are built in the same "
-       "microscopic gland, as acids, on one assembly line. This is the grower's field guide to that "
-       "chemistry: where it is made, what each compound is and is not, how it degrades, and what you "
-       "actually control.")
+SUB = ("Two compound families—cannabinoids and terpenes—are made in the same microscopic gland, "
+       "as acids, on one shared pathway. This paper covers where each is made, what each compound "
+       "is and is not, how both decay after harvest, and which grow decisions actually move the "
+       "numbers. After reading, you will be able to read any COA intelligently and know which "
+       "levers are real and which are vendor claims.")
 META = [("flask", "Reference"), ("image", "10 diagrams"),
         ("quote", "Evidence-linked · 18 sources"), ("clock", "~24 min read")]
 RELATED = ["lab-testing-coas", "hash-rosin-pressing", "harvest-dry-trim-cure"]
@@ -56,8 +57,11 @@ SECTIONS.append({"id": "start-here", "kicker": "Start here", "title": "Purpose a
             "people pay for potency or flavour, they are paying for resin."),
     defterm("THCA", "Tetrahydrocannabinolic acid, the form of THC the living plant actually makes. Not "
             "intoxicating until heat converts it (decarboxylation)."),
-    defterm("Decarboxylation", "The heat-driven step that snaps a CO&#8322; group off a cannabinoid acid "
-            "and switches the molecule to its active, neutral form. &lsquo;Decarb&rsquo; for short."),
+    defterm("Decarboxylation", "The heat-driven step that removes a carboxyl group (–COOH) from a "
+            "cannabinoid acid, releasing CO&#8322; as gas and leaving the active, neutral molecule. "
+            "Think of it like baking powder in dough: nothing changes at room temperature, but heat "
+            "triggers a one-way reaction and the CO&#8322; gas escapes—once gone, there is no reverse. "
+            "&lsquo;Decarb&rsquo; for short."),
     defterm("Chemotype", "A plant's genetically fixed cannabinoid ratio class: THC-dominant, balanced, "
             "CBD-dominant, CBG-dominant or cannabinoid-free. Set at germination; no grow tactic changes it."),
     defterm("COA", "Certificate of Analysis, the lab report listing cannabinoid and terpene content. The "
@@ -80,15 +84,18 @@ SECTIONS.append({"id": "core-answer", "kicker": "The short version", "title": "C
       "palette" + _c("demeijer2003-chemotype") + "; the grow decides <em>how much</em> gets made; and "
       "everything after harvest only subtracts."),
     p("The two families die differently, and that difference runs half this paper. <strong>Terpenes "
-      "evaporate</strong>, the light &lsquo;monoterpenes&rsquo; at room temperature, which is why hot fast "
-      "drying smells wonderful and costs you the product" + _c("eyal2023-terpenes") + ". "
-      "<strong>Cannabinoids oxidise</strong>, THC grinds slowly into CBN under oxygen, heat and time, and "
-      "light destroys it faster than anything else" + _c("fairbairn1976-stability") + ". Flavour is lost to "
-      "warm air; potency is lost to light, oxygen and years."),
+      "evaporate</strong>: think of the smell rising from a hot pan—the warmer the surface, the faster "
+      "molecules leave it. The light &lsquo;monoterpenes&rsquo; do this at room temperature, which is "
+      "why hot fast drying smells wonderful and costs you the product" + _c("eyal2023-terpenes") + ". "
+      "<strong>Cannabinoids oxidise</strong>: think of a cut apple browning in a bowl—oxygen converts "
+      "it slowly, no enzyme needed, and there is no reversing it. THC degrades toward CBN the same way, "
+      "and light accelerates it faster than anything else" + _c("fairbairn1976-stability") + ". Flavour "
+      "is lost to warm air; potency is lost to light, oxygen and years."),
     callout("key", "The one-sentence version",
-      p("Potency and flavour are built once, in the same gland, as fragile acids and volatile oils, the "
-        "grower's job is to pick genetics that can make them, keep the plant healthy enough to fill the "
-        "warehouse, and then get out of chemistry's way: cool, dark, gentle, sealed.")),
+      p("Potency and flavour are built once, in the same gland, as fragile acids and volatile oils. "
+        "The grower's job is to pick genetics that can make them, keep the plant healthy enough to fill "
+        "the trichomes, and protect the chemistry from the moment of harvest onward: cool, dark, "
+        "gentle, sealed.")),
   ]})
 
 # ---------------------------------------------------------------- 2 · where it's made
@@ -122,14 +129,14 @@ SECTIONS.append({"id": "where-made", "kicker": "The factory", "title": "Trichome
         "machinery instead of in the jar.",
         "<strong>The whole solventless industry is anatomy.</strong> Ice-water hash and dry sift are just "
         "ways of snapping cold, brittle heads off intact, collecting the warehouse without the building."]),
-    callout("tip", "Look at your frost with better eyes",
+    callout("tip", "What a loupe shows that a lab result cannot",
       p("A loupe tells you more than a lab turnaround: head density, head size, and how intact the heads "
         "are after handling. If your trim room's product looks sandblasted under 60×, the potency you "
         "grew is in the machine, not the bag.")),
   ]})
 
 # ---------------------------------------------------------------- 3 · biosynthesis
-SECTIONS.append({"id": "biosynthesis", "kicker": "The assembly line", "title": "Cannabinoid and terpene biosynthesis",
+SECTIONS.append({"id": "biosynthesis", "kicker": "The biosynthetic pathway", "title": "Cannabinoid and terpene biosynthesis",
   "blocks": [
     p("The pathway reads like a small factory diagram, and it is worth learning because chemotypes, CBG "
       "flower, THCV and half the COA make sense only downstream of it. The plant starts with "
@@ -179,10 +186,11 @@ SECTIONS.append({"id": "acids-decarb", "kicker": "Acid vs neutral", "title": "De
       "and Δ9-THC remains. The 0.877 factor on every COA is this mass loss, nothing more."),
     p("A lit joint or a vape coil decarbs in a fraction of a second. Everything else (ovens, extracts, "
       "edibles processing) runs on kinetics, and the kinetics have been measured properly. Heating "
-      "cannabis extract between 80 °C and 145 °C, Wang and colleagues found decarboxylation follows "
-      "clean <strong>first-order</strong> behaviour, with rate constants for THCA of 0.18, 0.66 and "
-      "1.83 × 10&#8315;&#179; s&#8315;&#185; at 80, 95 and 110 °C" + _c("wang2016-decarb") + ". Translated: "
-      "at 110 °C, half the remaining THCA converts roughly every six minutes."),
+      "cannabis extract between 80 °C (176 °F) and 145 °C (293 °F), Wang and colleagues found "
+      "decarboxylation follows clean <strong>first-order</strong> behaviour, with rate constants for "
+      "THCA of 0.18, 0.66 and 1.83 × 10&#8315;&#179; s&#8315;&#185; at 80 °C (176 °F), 95 °C (203 °F) "
+      "and 110 °C (230 °F)" + _c("wang2016-decarb") + ". Translated: at 110 °C (230 °F), half the "
+      "remaining THCA converts roughly every six minutes."),
     figure(L.line("THCA converting at 110 °C (first-order decay)",
         [("", 100), ("", 71.9), ("", 51.7), ("", 37.2), ("", 26.8), ("", 19.3),
          ("", 13.9), ("", 10.0), ("", 7.2), ("", 5.2), ("", 3.7)],
@@ -274,13 +282,15 @@ SECTIONS.append({"id": "cannabinoid-roster", "kicker": "The majors", "title": "M
 # ---------------------------------------------------------------- 6 · chemotypes
 SECTIONS.append({"id": "chemotypes", "kicker": "Genetics first", "title": "Chemotypes I–V and inherited ratios",
   "blocks": [
-    p("Cross a true THC plant with a true CBD plant and score the offspring, and cannabinoid ratio "
-      "behaves like a textbook Mendelian trait. The classic genetic work resolved it to a single locus, "
-      "<strong>B</strong>, with two codominant alleles: B<sub>T</sub> (functional THCA synthase) and "
-      "B<sub>D</sub> (functional CBDA synthase). Two copies of B<sub>T</sub> gives a THC-dominant plant "
-      "(chemotype I); two of B<sub>D</sub> gives CBD-dominant (chemotype III); one of each gives the "
-      "mixed, roughly 1:1 chemotype II, and F&#8322; crosses segregate 1:2:1, exactly as Mendel would "
-      "have it" + _c("demeijer2003-chemotype") + "."),
+    p("Cannabinoid ratio is determined by a single gene location—like blood type in humans, one locus "
+      "decides the outcome and you cannot change it after the seed. Cross a true THC plant with a true "
+      "CBD plant, score the offspring, and the cannabinoid ratio behaves exactly like a textbook "
+      "Mendelian trait: two possible alleles, predictable ratios in every generation. The classic "
+      "genetic work resolved it to a single locus, <strong>B</strong>, with two codominant alleles: "
+      "B<sub>T</sub> (functional THCA synthase) and B<sub>D</sub> (functional CBDA synthase). Two "
+      "copies of B<sub>T</sub> gives a THC-dominant plant (chemotype I); two of B<sub>D</sub> gives "
+      "CBD-dominant (chemotype III); one of each gives the mixed, roughly 1:1 chemotype II, and "
+      "F&#8322; crosses segregate 1:2:1, exactly as Mendel would have it" + _c("demeijer2003-chemotype") + "."),
     figure(_FIGS["chemotypes"], 6,
       "The five chemotypes. I–III are the B-locus story: which synthase alleles the plant carries"
       + _c("demeijer2003-chemotype") + ". Type IV accumulates CBGA because downstream conversion is "
@@ -296,14 +306,14 @@ SECTIONS.append({"id": "chemotypes", "kicker": "Genetics first", "title": "Chemo
       "How much total cannabinoid a plant makes is polygenic and environment-sensitive, canopy health, "
       "light, maturity at harvest. So breeding and seed choice set the split; the grow sets the size of "
       "the pie" + _c("demeijer2003-chemotype") + "."),
-    callout("tip", "Buying genetics with your eyes open",
+    callout("tip", "Verify chemotype before a cultivar earns bench space",
       p("Chemotype is testable from a young plant's leaf assay. You do not need to flower out a room to "
         "learn a &lsquo;CBD line&rsquo; is really chemotype II and will run hot on THC. For a medicinal "
         "market that buys certified ratios, verify chemotype before a cultivar earns bench space.")),
   ]})
 
 # ---------------------------------------------------------------- 7 · terpene classes
-SECTIONS.append({"id": "terpene-classes", "kicker": "The volatile half", "title": "Terpene classes and volatility",
+SECTIONS.append({"id": "terpene-classes", "kicker": "Terpene classes", "title": "Terpene classes and volatility",
   "blocks": [
     p("Terpenes are built from five-carbon isoprene units, and the count is the classification: "
       "<strong>monoterpenes</strong> (two units, C10 — myrcene, limonene, pinene, terpinolene, linalool) "
@@ -312,16 +322,20 @@ SECTIONS.append({"id": "terpene-classes", "kicker": "The volatile half", "title"
       "around 61 monoterpenes and 51 sesquiterpenes have been reported across the "
       "species" + _c("radwan2021-constituents") + ", and a dedicated family of terpene synthase genes "
       "sets which ones a cultivar leans on" + _c("booth2019-terpenes") + "."),
-    p("The class difference that matters operationally is <strong>volatility</strong>. Measured vapour "
-      "pressures at 20 °C put the monoterpenes around 1–4 Torr, α-pinene 3.57, β-pinene 2.18, myrcene "
-      "1.69, limonene 1.13 — while the sesquiterpenes sit roughly two orders of magnitude lower "
-      "(β-caryophyllene 0.021, α-humulene 0.010). The cannabinoids are barely on the same chart: CBD at "
+    p("The class difference that matters operationally is <strong>volatility</strong>—how readily a "
+      "compound escapes into the air. Think of cold water versus a steaming mug of coffee: the coffee's "
+      "aroma reaches you across the room because its molecules have enough energy to leave the liquid "
+      "surface. Monoterpenes behave like the hot coffee; sesquiterpenes hold on roughly one hundred "
+      "times harder; cannabinoids barely evaporate at all. Measured vapour pressures at 20 °C (68 °F) "
+      "confirm this: monoterpenes run 1–4 Torr (α-pinene 3.57, β-pinene 2.18, myrcene 1.69, limonene "
+      "1.13) while the sesquiterpenes sit two orders of magnitude lower (β-caryophyllene 0.021, "
+      "α-humulene 0.010). The cannabinoids are barely on the same chart: CBD at "
       "6.3 × 10&#8315;&#8310; and THC at 5.2 × 10&#8315;&#8311; Torr" + _c("eyal2023-terpenes") + "."),
     figure(_FIGS["volatility"], 7,
       "Seven orders of magnitude on one ladder. Monoterpenes evaporate at room temperature; "
       "sesquiterpenes hang on ~100× harder; cannabinoids effectively do not evaporate at all. Values "
-      "measured at 20 °C" + _c("eyal2023-terpenes") + ". The popular &lsquo;THC boils at 157 °C&rsquo; "
-      "charts are wrong, its true boiling point extrapolates past 400 °C" + _c("eyal2023-terpenes") + "."),
+      "measured at 20 °C (68 °F)" + _c("eyal2023-terpenes") + ". The popular &lsquo;THC boils at 157 °C (315 °F)&rsquo; "
+      "charts are wrong, its true boiling point extrapolates past 400 °C (752 °F)" + _c("eyal2023-terpenes") + "."),
     p("This single chart explains the drying room. Track the volatile oil of the same buds fresh and "
       "after air-drying and storage, and the monoterpene share collapses from about <strong>92% to 62%</strong> "
       "over three months while the sesquiterpene share climbs to fill the gap"
@@ -330,7 +344,7 @@ SECTIONS.append({"id": "terpene-classes", "kicker": "The volatile half", "title"
       "<em>proportions</em>, not its ingredient list" + _c("ross1996-volatileoil") + ": nothing new "
       "appears, the light fraction just walks away. Cold, slow, dark drying is not folklore; it is "
       "vapour-pressure management."),
-    callout("key", "Volatility is also why terpenes are the honesty test of a supply chain",
+    callout("key", "Flat aroma on a passing THC number means the terpenes have already left",
       p("Potency survives sloppy logistics; aroma does not. A sample can hold its THC number through a "
         "hot van and a month on a shelf while its monoterpenes quietly leave. When flower smells flat "
         "but assays fine, this ladder is what happened.")),
@@ -352,7 +366,7 @@ SECTIONS.append({"id": "terpene-roster", "kicker": "The big eight", "title": "Co
         "The &lsquo;couch-lock terpene&rsquo; story is folklore. What is demonstrated is aroma and "
         "abundance, not sedation."), tag="the default"),
       card("Limonene", p("Monoterpene. Citrus peel. Pairs with caryophyllene in one major market "
-        "cluster" + _c("smith2022-diversity") + ". Bright, volatile (1.13 Torr at 20 °C"
+        "cluster" + _c("smith2022-diversity") + ". Bright, volatile (1.13 Torr at 20 °C (68 °F)"
         + _c("eyal2023-terpenes") + "), a freshness indicator as much as a flavour."), tag="citrus"),
       card("α- / β-Pinene", p("Monoterpenes. Pine needle, resin. The most volatile of the majors "
         "(α-pinene 3.57 Torr" + _c("eyal2023-terpenes") + "), first out the door in a warm dry. Memory "
@@ -425,7 +439,7 @@ SECTIONS.append({"id": "entourage", "kicker": "Honesty section", "title": "Entou
   ]})
 
 # ---------------------------------------------------------------- 10 · degradation
-SECTIONS.append({"id": "degradation", "kicker": "The clock", "title": "Cannabinoid and terpene degradation",
+SECTIONS.append({"id": "degradation", "kicker": "Degradation rates", "title": "Cannabinoid and terpene degradation",
   "blocks": [
     p("Two decays run in parallel from the moment of harvest, and they have different physics. "
       "<strong>Terpenes evaporate</strong>, fastest when warm, monoterpenes first (previous sections). "
@@ -437,10 +451,10 @@ SECTIONS.append({"id": "degradation", "kicker": "The clock", "title": "Cannabino
       "CBN. Light is the odd driver out. It destroys THC fastest of all, but by routes that do not "
       "produce CBN" + _c("fairbairn1976-stability") + ". Storage losses shown from the four-year "
       "room-temperature study" + _c("ross1997-cbn-age") + "."),
-    p("The numbers are sobering. Flower stored at 20–22 °C in the dark lost on average <strong>16.6% of "
-      "its THC in the first year</strong>, 26.8% by year two, 34.5% by year three and 41.4% by year four"
-      ", and the CBN:THC ratio climbed so predictably that it is used forensically to estimate sample "
-      "age" + _c("ross1997-cbn-age") + "."),
+    p("The numbers are sobering. Flower stored at 20–22 °C (68–72 °F) in the dark lost on average "
+      "<strong>16.6% of its THC in the first year</strong>, 26.8% by year two, 34.5% by year three "
+      "and 41.4% by year four, and the CBN:THC ratio climbed so predictably that it is used "
+      "forensically to estimate sample age" + _c("ross1997-cbn-age") + "."),
     figure(L.bars("THC remaining in dark room-temperature storage",
         [("Harvest", 100), ("Year 1", 83), ("Year 2", 73), ("Year 3", 66), ("Year 4", 59)],
         unit="%",
@@ -450,7 +464,7 @@ SECTIONS.append({"id": "degradation", "kicker": "The clock", "title": "Cannabino
       "temperature). Warmth, light and air headspace all steepen this curve" + _c("ross1997-cbn-age") + "."),
     p("The classic stability work adds the ranking of enemies. Across two years of storage trials, "
       "<strong>exposure to light, not even direct sun, was the greatest single factor</strong> in "
-      "cannabinoid loss; temperature up to 20 °C was insignificant by comparison; and air oxidation "
+      "cannabinoid loss; temperature up to 20 °C (68 °F) was insignificant by comparison; and air oxidation "
       "caused significant losses of its own" + _c("fairbairn1976-stability") + ". The same work supplies "
       "the mechanism nuance in Figure 8: THC lost to light does <em>not</em> reappear as CBN, while THC "
       "lost to air in the dark does, so a high-CBN sample was stored warm and airy, not necessarily "
@@ -465,7 +479,7 @@ SECTIONS.append({"id": "degradation", "kicker": "The clock", "title": "Cannabino
         ("Oxygen", "the CBN route, full containers, minimal headspace, sealed" + _c("fairbairn1976-stability")),
         ("Surface area", "whole buds keep their own cuticle armour; grinding multiplies every loss"),
         ("Time", "the one you cannot switch off, sell fresh, date everything" + _c("ross1997-cbn-age"))]),
-    callout("warn", "The display jar is a slow incinerator",
+    callout("warn", "A clear display jar is the worst storage environment you can choose",
       p("A clear jar under retail lighting combines the top killer (light), warmth from the fixtures, "
         "and a headspace refreshed at every opening. It is the perfect machine for converting flower "
         "into CBN and flat aroma, keep display stock separate from sale stock.")),
@@ -537,7 +551,7 @@ SECTIONS.append({"id": "coa", "kicker": "The receipt", "title": "Cannabinoids an
   ]})
 
 # ---------------------------------------------------------------- 13 · failure modes
-SECTIONS.append({"id": "failure-modes", "kicker": "Where potency goes to die", "title": "Common causes of cannabinoid and terpene loss",
+SECTIONS.append({"id": "failure-modes", "kicker": "Where chemistry is lost", "title": "Common causes of cannabinoid and terpene loss",
   "blocks": [
     p("Every one of these is chemistry from earlier sections wearing work clothes. The COA tell is how "
       "you catch it after the fact; the fix is how you stop paying for it twice."),
@@ -600,14 +614,14 @@ SECTIONS.append({"id": "quick-reference", "kicker": "Look-up tables", "title": "
       ["Decarb mass factor", "0.877", "total THC = THC + 0.877 × THCA on every COA"],
       ["THCA half-life at 110 °C", "≈ 6.3 min", "and CBDA/CBGA take roughly double" + _c("wang2016-decarb")],
       ["Monoterpene share, fresh → stored", "≈ 92% → 62%", "three months of drying + storage" + _c("ross1996-volatileoil")],
-      ["THC loss, year one at 20–22 °C", "≈ 17%", "dark storage; light makes it worse" + _c("ross1997-cbn-age") + _c("fairbairn1976-stability")],
+      ["THC loss, year one at 20–22 °C (68–72 °F)", "≈ 17%", "dark storage; light makes it worse" + _c("ross1997-cbn-age") + _c("fairbairn1976-stability")],
       ["Caryophyllene CB2 Ki", "155 nM", "the one demonstrated terpene–receptor link" + _c("gertsch2008-caryophyllene")],
       ["Chemotype segregation", "1:2:1", "single locus, codominant alleles" + _c("demeijer2003-chemotype")],
     ], cls="compact", caption="Six numbers that carry most of this paper."),
   ]})
 
 # ---------------------------------------------------------------- 15 · mental model
-SECTIONS.append({"id": "mental-model", "kicker": "Take this with you", "title": "Cannabinoid and terpene control principles",
+SECTIONS.append({"id": "mental-model", "kicker": "The mental model", "title": "Cannabinoid and terpene control principles",
   "blocks": [
     figure(L.flow("From seed to certificate: where chemistry is decided",
         [("Genetics", "chemotype + terpene menu locked at seed"),
@@ -619,12 +633,12 @@ SECTIONS.append({"id": "mental-model", "kicker": "Take this with you", "title": 
         note="Production ends at harvest. Every stage after it is rate control on evaporation and oxidation."), 10,
       "The whole paper in one row. Left of harvest you can build chemistry; right of harvest you can "
       "only protect it."),
-    callout("key", "The mental model to keep",
+    callout("key", "One principle: build once, then slow the decay",
       p("<strong>The plant builds it once; everything afterwards is subtraction.</strong> Genetics write "
         "the menu, trichomes cook and store it as fragile acids and volatile oils, and from harvest "
         "onward you are managing two decay rates, evaporation for flavour, oxidation for potency. "
         "Nothing in a bottle adds chemistry back. Cool, dark, gentle, sealed, fresh: that is the entire "
-        "post-harvest playbook, and the COA will tell on you either way.")),
+        "post-harvest playbook, and the COA is the honest record of every choice above.")),
     p("Where to next in this series: <strong>lab testing &amp; COAs</strong> for how these numbers are "
       "actually measured (and mismeasured); <strong>harvest, dry, trim &amp; cure</strong> for the "
       "process that spends or saves the terpenes; and <strong>hash &amp; rosin pressing</strong> for "

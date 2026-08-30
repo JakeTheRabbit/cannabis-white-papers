@@ -1,8 +1,8 @@
 ---
 slug: "one-steering-law"
-title: "The one steering law: coco, rockwool, soil & water"
+title: "One steering law: coco, rockwool, soil and water"
 eyebrow: "Flowering · Crop steering"
-summary: "Coco, rockwool, soil and plain water are not four separate skills. They are one way of steering a plant with water, running on four different sponges. Learn the steering once, with pictures and no jargon, and you can grow in any of them, because the sponge only changes the numbers."
+summary: "Coco, rockwool, soil and plain water share one way of steering a plant with water, running on four different sponges. Learn the steering once, with pictures and no jargon, and you can grow in any of them, because the sponge only changes the numbers."
 track: "Flowering"
 read_time: "~22 min read"
 diagrams: "31 diagrams"
@@ -17,17 +17,17 @@ attribution: "The Cannabis White Papers"
 refs: [{"id": "caplan2019-drought", "n": 1, "cite": "Caplan D, Dixon M, Zheng Y (2019). Increasing inflorescence dry weight and cannabinoid content in medical cannabis using controlled drought stress. HortScience 54(5):964-969.", "url": "https://doi.org/10.21273/HORTSCI13510-18", "peer": true}, {"id": "welling2025-aba", "n": 2, "cite": "Welling MT, et al. (2025). Regulation of secondary metabolism in Cannabis sativa L. by abscisic acid and water deficit during early flower development. Plant Stress 17:100968.", "url": "https://doi.org/10.1016/j.stress.2025.100968", "peer": true}, {"id": "stack2024-drought", "n": 3, "cite": "Stack GM, Cala AR, Quade MA, et al. (2024). Severe drought significantly reduces floral hemp (Cannabis sativa L.) yield and cannabinoid content but moderate drought does not. Ind. Crops Prod. 209:117974.", "url": "https://doi.org/10.1016/j.indcrop.2024.117974", "peer": true}, {"id": "hilhorst2000-ec", "n": 4, "cite": "Hilhorst MA (2000). A pore water conductivity sensor. Soil Sci. Soc. Am. J. 64(6):1922-1925.", "url": "https://doi.org/10.2136/sssaj2000.6461922x", "peer": true}, {"id": "abad2005-coir", "n": 5, "cite": "Abad M, Noguera P, Puchades R, Maquieira A, Noguera V (2005). Physical properties of various coconut coir dusts compared to peat. HortScience 40(7):2138-2144.", "url": "https://doi.org/10.21273/HORTSCI.40.7.2138", "peer": true}, {"id": "noguera2003-cec", "n": 6, "cite": "Noguera P, Abad M, Puchades R, Maquieira A, Noguera V (2003). Influence of particle size on physical and chemical properties of coconut coir dust as container medium. Commun. Soil Sci. Plant Anal. 34(3-4):593-605.", "url": "https://doi.org/10.1081/CSS-120017842", "peer": true}, {"id": "malik2025-media", "n": 7, "cite": "Malik M, Tlustoš P (2025). Soilless growing media for cannabis cultivation. Agriculture 15(18):1955.", "url": "https://www.mdpi.com/2077-0472/15/18/1955", "peer": true}, {"id": "szerement-dielectric-2019", "n": 8, "cite": "Szerement J, Woszczyk A, Szyplowska A, Kafarski M, Lewandowski A, Wilczek A, Skierucha W. A Seven-Rod Dielectric Sensor for Determination of Soil Moisture in Well-Defined Sample Volumes. Sensors (Basel). 2019;19(7):1646.", "url": "https://doi.org/10.3390/s19071646", "peer": true}, {"id": "tdr-fdr-soil-review-2024", "n": 9, "cite": "Advancements in dielectric soil moisture sensor calibration: A comprehensive review of methods and techniques. Computers and Electronics in Agriculture. 2024;218:108663.", "url": "https://doi.org/10.1016/j.compag.2024.108663", "peer": true}]
 ---
 
-# The one steering law: coco, rockwool, soil & water
+# One steering law: coco, rockwool, soil and water
 
 _Flowering · Crop steering · ~22 min read_
 
-> Coco, rockwool, soil and plain water are not four separate skills. They are one way of steering a plant with water, running on four different sponges. Learn the steering once, with pictures and no jargon, and you can grow in any of them, because the sponge only changes the numbers.
+> Coco, rockwool, soil and plain water share one way of steering a plant with water, running on four different sponges. Learn the steering once, with pictures and no jargon, and you can grow in any of them, because the sponge only changes the numbers.
 
 ## Purpose and scope
 
 > **EVIDENCE — Grain of salt**
 >
-> **Borderline:** Do not import high-intensity rockwool substrate EC (mid-3s to 6) into beginner coco recipes. DWC disease risk rises with heat and low dissolved oxygen. There is no universal ‘above 23 °C = dead tomorrow’ clock.
+> **Borderline:** Do not import high-intensity rockwool substrate EC (mid-3s to 6) into beginner coco recipes. DWC disease risk rises with heat and low dissolved oxygen. There is no universal ‘above 23 °C (73 °F) = dead tomorrow’ clock.
 
 A cannabis plant can pour its energy into **leaves**, a bigger, bushier green plant, or into **flower**: the sticky buds you actually harvest. ‘Steering’ just means using water to nudge the plant toward one or the other.
 
@@ -227,7 +227,7 @@ One more friend: the small daily **drip-out** (growers call it runoff), about 10
 > **NOTE — Real numbers (rockwool example. Yours will differ)**
 >
 > - Rockwool danger line ~**25–30%** how-full · working band ~55–92%
-> - A healthy daily range often sits ~30–70% how-full · sponge temperature 20–26°C
+> - A healthy daily range often sits ~30–70% how-full · sponge temperature 20–26°C (68–79°F)
 > - Daily drip-out at ‘full’ ~10–20% · learn your ‘full’ mark from about 5 real, agreeing waterings
 
 > **KEY — In one sentence**
@@ -285,8 +285,8 @@ Every sponge fills in the **same form**, only the numbers differ. That’s the t
 | --- | --- | --- | --- | --- |
 | Air when soaked | ~22%, keeps the most air, very hard to overwater | ~10%, drowns easily, holds the most water | airier than rockwool (peat ~18–25%) | roots hang in water; air from an air pump |
 | Forgiveness (cushions a bad feed) | a lot, a built-in shock absorber | almost none. What you set is what the plant gets | self-fixing, life & minerals steady it in minutes | none. The tank is the only buffer |
-| Danger line / main failure | fades gently; feed reading unreliable when nearly dry; steals cal-mag if not pre-charged | sharp cliff ~25–30%; water tunnels below it; felt the same hour | forgiving; no sharp cliff; overwatering hides then compounds | no dryness cliff but a heat one: root rot above ~23°C within a day |
-| Prep / starting pH | pre-soak in cal-mag 8–24 h; feed pH 5.8–6.2 | starts near pH 8, condition to ~5.5; run 5.5–6.0; reusable ~3 yrs | settles its own pH ~5.2–6.5; usually don’t pH the input | hold pH 5.5–6.0, tank 18–20°C, air pump always on |
+| Danger line / main failure | fades gently; feed reading unreliable when nearly dry; steals cal-mag if not pre-charged | sharp cliff ~25–30%; water tunnels below it; felt the same hour | forgiving; no sharp cliff; overwatering hides then compounds | no dryness cliff but a heat one: root rot above ~23°C (73°F) within a day |
+| Prep / starting pH | pre-soak in cal-mag 8–24 h; feed pH 5.8–6.2 | starts near pH 8, condition to ~5.5; run 5.5–6.0; reusable ~3 yrs | settles its own pH ~5.2–6.5; usually don’t pH the input | hold pH 5.5–6.0, tank 18–20°C (64–68°F), air pump always on |
 | Good for a beginner? | **yes**, just charge it before planting | precise but unforgiving; earn your way to it | **yes**, top of the forgiveness ladder | no, expert only |
 
 *Same fields, different numbers. Picking a sponge isn’t learning new steering. It’s choosing your failure mode[^malik2025-media].*

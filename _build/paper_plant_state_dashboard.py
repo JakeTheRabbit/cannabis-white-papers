@@ -5,10 +5,11 @@ from components import (p, lead, h, ul, ol, callout, defterm, table, figure,
 import figs_lib as L
 
 SLUG = "plant-state-dashboard"
-TITLE = "From telemetry to intelligence: the plant-state dashboard"
+TITLE = "Designing a plant-state dashboard for your grow room"
 EYEBROW = "Precision · Dashboards"
 SUB = ("A grow-room screen should show what the plant is doing, not a wall of raw sensor "
-       "numbers. Here is how to design one that does.")
+       "numbers. This paper shows how to design one that catches drift days before it becomes "
+       "damage, names the cause, and prescribes the next action.")
 META = [("dashboard", "Precision"), ("image", "11 diagrams"),
         ("doc", "Operational guide"), ("clock", "~13 min read")]
 RELATED = ["signal-and-noise", "f2-crop-steering", "root-zone-teros12"]
@@ -221,9 +222,11 @@ SECTIONS.append({"id": "dashboard-surface", "kicker": "Core content", "title": "
       card("Zone 3: Advisories", "The only zone that interrupts. Prescriptive and time-bound. Expands to its evidence chain.", "rare by design"),
       card("Zone 4: Evidence / raw", "The old dashboard, demoted. Fused signals, baselines, raw graphs, for drill-down and the post-mortem.", "the basement"),
     ], cols=2),
-    p("Colour and layout do real work here. A calm dashboard leans on pre-attentive cues, a "
-      "single status colour, position, one bold line, that the eye reads before conscious "
-      "attention engages, so the &lsquo;all clear&rsquo; state is grasped at a glance" + _c("preattentive-dataviz") + "."),
+    p("Colour and layout do real work here. Before you consciously focus on any text, your eye has "
+      "already picked up the status colour, the position on screen, and the one bold line. "
+      "Data designers call this pre-attentive processing" + _c("preattentive-dataviz") + ": visual properties "
+      "the eye registers automatically, before focused attention engages, so the &lsquo;all clear&rsquo; state is "
+      "grasped in a glance, not assembled from five panels."),
     callout("key", "A sample advisory, in full",
       p("&lsquo;Reduce dryback target 3% in Room 3 (Day 24)&hellip; Tip burn likely soon (illustrative) if "
         "unaddressed. Confidence: high. <em>[Show evidence]</em>&rsquo;, and the evidence "
@@ -234,7 +237,7 @@ SECTIONS.append({"id": "dashboard-surface", "kicker": "Core content", "title": "
 
 SECTIONS.append({"id": "how-to", "kicker": "How to", "title": "Implementation path",
   "blocks": [
-    p("This is not a boil-the-ocean rebuild. Each stage ships value and earns the next, and most of "
+    p("This does not require a complete rebuild. Each stage delivers value and earns the next, and most of "
       "the payoff lands by Stage&nbsp;3, long before any closed-loop control."),
     figure(L.flow("The adoption ladder",
             [("0 Telemetry", "today's raw graphs"),

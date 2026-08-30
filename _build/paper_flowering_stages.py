@@ -7,8 +7,9 @@ import figs_lib as L
 SLUG = "flowering-stages"
 TITLE = "The flower cycle, week by week"
 EYEBROW = "Beginner · Flower"
-SUB = ("A beginner's guide to the cannabis flowering stage: the flip to 12/12, the stretch, "
-       "bud set, bulking, ripening, and reading the plant to know exactly when to cut.")
+SUB = ("This paper maps the eight to ten weeks from light flip to harvest. "
+       "You will be able to read the plant stage by stage, set the right climate and feed "
+       "for each phase, and use trichomes rather than the calendar to decide when to cut.")
 META = [("leaf", "Beginner"), ("image", "9 diagrams"),
         ("quote", "Evidence-linked · 8 sources"), ("clock", "~12 min read")]
 RELATED = ["coco-crop-steering", "defoliation-training", "harvest-dry-trim-cure"]
@@ -56,14 +57,26 @@ SECTIONS.append({"id": "key-terms", "kicker": "02 · Vocabulary", "title": "Defi
             "photoperiod plant into thinking winter is coming, which starts flowering."),
     defterm("Pistils", "The fine white hairs that emerge from bud sites. They start white and "
             "darken to orange or brown as the plant ripens."),
-    defterm("Trichomes", "The tiny mushroom-shaped resin glands that coat the buds. Under "
-            "magnification they go clear, then milky, then amber. They hold most of the THC and "
-            "aroma and are the real harvest signal."),
+    defterm("Trichomes", "The tiny mushroom-shaped resin glands that cover the buds and nearby leaves. "
+            "Their colour change tracks chemical maturity like a traffic light: clear means the "
+            "compounds are still building, milky (cloudy) means peak accumulation, and amber means "
+            "degradation has started. Under a 60&times; loupe or pocket microscope they are easy to "
+            "read. They hold the bulk of the THC, CBD and terpenes and are the true harvest signal — "
+            "pistil colour is a rough first hint, but trichomes are the real clock."),
     defterm("Calyx, bud and cola", "A calyx is one teardrop floral pod. Many calyxes stacking "
             "together form a bud, and a large bud cluster on a main stem is a cola."),
-    defterm("EC and VPD", "EC (electrical conductivity) measures how strong your nutrient water is. "
-            "VPD (vapor pressure deficit) is a single number combining temperature and humidity "
-            "that tells you how comfortably the plant breathes and drinks."),
+    defterm("EC and VPD", "EC (electrical conductivity) measures how concentrated your nutrient "
+            "solution is — the strength of the water, not the volume. Picture a cup of salt water: "
+            "more dissolved minerals means a higher EC number. A drip EC between roughly 1.8 and "
+            "2.8&nbsp;mS&middot;cm&sup1; covers most of flowering; below that range plants starve, "
+            "above it they burn. "
+            "VPD (vapour pressure deficit) is the air&rsquo;s pull on the moisture inside the "
+            "plant&rsquo;s leaves. Think of a wrung-out towel versus a soaking-wet one: dry, warm "
+            "air is the wrung-out towel — it pulls hard (high VPD), so the plant opens its stomata "
+            "wide and drinks fast; cool, humid air is the wet towel — it barely pulls (low VPD). "
+            "VPD combines temperature and humidity into one number in kPa so you can tune how hard "
+            "the plant has to work to stay hydrated. Cannabis flowers best between roughly 1.0 and "
+            "1.4&nbsp;kPa depending on stage."),
     defterm("Defoliation and lollipopping", "Removing leaves to open up airflow and light "
             "(defoliation), and stripping the lower third of the plant so energy goes to the top "
             "buds (lollipopping)."),
@@ -75,7 +88,7 @@ SECTIONS.append({"id": "key-terms", "kicker": "02 · Vocabulary", "title": "Defi
       "watch to time the harvest."),
   ]})
 
-SECTIONS.append({"id": "the-flip", "kicker": "03 · How it works", "title": "Photoperiod change and floral initiation",
+SECTIONS.append({"id": "the-flip", "kicker": "03 · How it works", "title": "What the 12/12 flip does to the plant",
   "blocks": [
     p("Photoperiod cannabis measures the length of the dark period to decide whether it is spring "
       "(grow) or autumn (reproduce). When you give it 12 hours of uninterrupted darkness, it reads "
@@ -108,7 +121,7 @@ SECTIONS.append({"id": "stretch-bud-set", "kicker": "04 · Weeks 1-4", "title": 
     p("Around weeks 3 to 4 the stretch stops and those pistil sites organise into real budlets as "
       "calyxes begin stacking. This is the most sensitive window: every bud's final position is "
       "being set, so heavy leaf removal here costs you yield. In weeks 1 to 2 plants can gain 50 to "
-      "100% in height, so keep PPFD around 800 to 900 umol/m2/s and feed at a moderate EC (drip EC "
+      "100% in height, so keep PPFD around 800–900&nbsp;&mu;mol&middot;m&sup2;&middot;s&sup1; and feed at a moderate EC (drip EC "
       "around 2.0 to 2.6) as growth is fast." + _c("llewellyn-2022-light-intensity-yield")),
     figure(L.line("Plant height through the flower cycle",
             [(0, 100), (1, 135), (2, 175), (3, 195), (4, 200), (5, 201),
@@ -118,11 +131,11 @@ SECTIONS.append({"id": "stretch-bud-set", "kicker": "04 · Weeks 1-4", "title": 
             note="Final height locks in around week 4. Almost all of the gain is the early stretch."), 4,
       "The stretch is steep through weeks 1 to 3, then flat. Flip at half to two-thirds of your "
       "target height to leave room for it." + _c("hesami-2023-morphological-lifecycle")),
-    table(["Week", "Phase", "PPFD (umol/m2/s)", "Day / night temp", "RH", "VPD (kPa)", "Drip EC", "Action"], [
-      ["1", "Stretch", "800-850", "26-28 C / 22-24 C", "65-70%", "0.9-1.0", "2.0-2.2", "Lollipop, light defoliation"],
-      ["2", "Stretch", "850-900", "26-28 C / 22-24 C", "62-68%", "1.0-1.1", "2.2-2.4", "Main defoliation"],
-      ["3", "Bud set", "900", "26-28 C / 21-23 C", "60-65%", "1.0-1.1", "2.4-2.6", "Last light defoliation, then stop"],
-      ["4", "Bud set", "900", "26-28 C / 21-23 C", "58-62%", "1.1-1.2", "2.4-2.6", "Hold steady, no more leaf removal"],
+    table(["Week", "Phase", "PPFD (µmol·m⁻²·s⁻¹)", "Day / night temp", "RH", "VPD (kPa)", "Drip EC", "Action"], [
+      ["1", "Stretch", "800–850", "26–28 °C (79–82 °F) / 22–24 °C (72–75 °F)", "65–70%", "0.9–1.0", "2.0–2.2", "Lollipop, light defoliation"],
+      ["2", "Stretch", "850–900", "26–28 °C (79–82 °F) / 22–24 °C (72–75 °F)", "62–68%", "1.0–1.1", "2.2–2.4", "Main defoliation"],
+      ["3", "Bud set", "900", "26–28 °C (79–82 °F) / 21–23 °C (70–73 °F)", "60–65%", "1.0–1.1", "2.4–2.6", "Last light defoliation, then stop"],
+      ["4", "Bud set", "900", "26–28 °C (79–82 °F) / 21–23 °C (70–73 °F)", "58–62%", "1.1–1.2", "2.4–2.6", "Hold steady, no more leaf removal"],
     ], cls="compact", caption="Weeks 1 to 4 targets. Run early flower slightly warm and humid, then ease humidity down as buds set." + _c("eichhorn-bilodeau-2019-photobiology")),
     callout("tip", "Defoliate early or not at all",
       p("Lollipop and do your main defoliation between roughly day 7 and the end of week 3, before "
@@ -137,11 +150,11 @@ SECTIONS.append({"id": "bulking-ripening", "kicker": "05 · Weeks 5-10", "title"
     p("From roughly week 7 onward the plant ripens: pistils darken from white to orange, trichomes "
       "shift clear to milky, and lower fan leaves yellow as the plant pulls stored nutrients into "
       "the buds. You push hardest during bulking, then ease off and lower humidity into ripening to "
-      "protect the harvest. During bulking, push PPFD to about 900 to 1100 umol/m2/s (1200 to 1500 "
-      "with CO2 enrichment at 1000 to 1200 ppm) and raise feed to peak EC." + _c("llewellyn-2022-light-intensity-yield")),
-    p("Bulking climate runs around 26 to 28 C day, with RH down to about 55 to 62% to limit mould "
-      "risk as buds densify, and VPD around 1.1 to 1.3 kPa. In ripening (week 8 and on), drop RH to "
-      "40 to 50%, keep temps moderate in the low-to-mid 20s C, and many growers lower or flush "
+      "protect the harvest. During bulking, push PPFD to about 900–1100&nbsp;&mu;mol&middot;m&sup2;&middot;s&sup1; (1200–1500 "
+      "with CO2 enrichment at 1000–1200&nbsp;ppm) and raise feed to peak EC." + _c("llewellyn-2022-light-intensity-yield")),
+    p("Bulking climate runs around 26–28&nbsp;°C (79–82&nbsp;°F) during the day, with RH down to about 55 to 62% to limit mould "
+      "risk as buds densify, and VPD around 1.1 to 1.3&nbsp;kPa. In ripening (week 8 and on), drop RH to "
+      "40 to 50%, keep day temps in the low-to-mid 20s&nbsp;°C (68–77&nbsp;°F), and many growers lower or ease "
       "nutrients in the last 1 to 2 weeks. Yellowing lower leaves late in flower is normal nutrient "
       "remobilisation, not always a deficiency to chase."),
     figure(L.bars("Relative bud mass gain per week",
@@ -150,15 +163,15 @@ SECTIONS.append({"id": "bulking-ripening", "kicker": "05 · Weeks 5-10", "title"
             unit="%", note="Peak swelling lands weeks 5 to 7, then tapers as the plant ripens.", maxv=110), 5,
       "Most of the weight goes on weeks 5 to 7. That is where light, feed and CO2 earn their keep." + _c("livingston-2020-trichome-maturation")),
     figure(L.zones("Target humidity falls across the cycle",
-            35, 75, [(0, 4, L.GL, "Early 55-65%"), (4, 7, L.AMBL, "Bulking 50-60%"),
-                     (7, 10, L.BLUL, "Ripening 40-50%")],
+            35, 75, [(0, 4, L.GL, "Early 55–65%"), (4, 7, L.AMBL, "Bulking 50–60%"),
+                     (7, 10, L.BLUL, "Ripening 40–50%")],
             unit="% RH",
             note="EC rises into bulking then eases in ripening. Humidity comes down the whole way to fend off rot."), 6,
       "Humidity steps down stage by stage as buds get denser. The dense late canopy is where high "
       "humidity does the most damage." + _c("mahmoud-2023-botrytis-budrot")),
   ]})
 
-SECTIONS.append({"id": "when-to-harvest", "kicker": "06 · The decision", "title": "Harvest-readiness assessment",
+SECTIONS.append({"id": "when-to-harvest", "kicker": "06 · The decision", "title": "Reading trichomes to find the cut date",
   "blocks": [
     callout("evidence", "Evidence limits",
       "<p>Trichome colour tracks maturation. Livingston measured trichome morphology and metabolite content; "
@@ -173,7 +186,7 @@ SECTIONS.append({"id": "when-to-harvest", "kicker": "06 · The decision", "title
       "or heavy experience. If the intended chemical profile matters, compare harvest samples by "
       "cannabinoid and terpene analysis." + _c("livingston-2020-trichome-maturation")),
     p("Wait until pistils are mostly darkened and curled in (roughly 70% or more), then switch to "
-      "checking trichomes for the real call. Use 60x or higher magnification on actual bud, not "
+      "checking trichomes for the real call. Use 60&times; or higher magnification on actual bud, not "
       "sugar leaves, and check several spots, since maturity varies across the plant. Do not harvest "
       "on the calendar alone: a week 9 strain can need week 10 depending on conditions and phenotype."),
     figure(L.line("Trichome colour over the ripening weeks",
@@ -186,10 +199,10 @@ SECTIONS.append({"id": "when-to-harvest", "kicker": "06 · The decision", "title
     table(["Signal", "What you see", "Readiness", "Effect if cut now"], [
       ["Pistils", "Still mostly white, sticking out", "Too early", "Thin, harsh, low potency"],
       ["Trichomes", "Mostly clear", "Too early", "Underdeveloped"],
-      ["Trichomes", "80-90% milky, 5% amber", "Peak window (early)", "Common early-cut target"],
-      ["Trichomes", "Milky with 10-15% amber", "Peak window (late)", "Balanced"],
+      ["Trichomes", "80–90% milky, 5% amber", "Peak window (early)", "Common early-cut target"],
+      ["Trichomes", "Milky with 10–15% amber", "Peak window (late)", "Balanced"],
       ["Trichomes", "30%+ amber, leaves yellow", "Over-ripe", "Often denser/heavier feel; genotype still dominates"],
-    ], cls="compact", caption="Read trichomes on bud at 60x or more. Pistil colour is only a first hint." + _c("livingston-2020-trichome-maturation")),
+    ], cls="compact", caption="Read trichomes on bud at 60&times; or more. Pistil colour is only a first hint." + _c("livingston-2020-trichome-maturation")),
   ]})
 
 SECTIONS.append({"id": "pitfalls", "kicker": "07 · Avoid these", "title": "Troubleshooting",
@@ -201,7 +214,7 @@ SECTIONS.append({"id": "pitfalls", "kicker": "07 · Avoid these", "title": "Trou
     table(["Pitfall", "The fix"], [
       ["Light leaks in the dark period", "Tape over LED indicators and seal door gaps. Bright or repeated night interruptions can stall flowering; genetics and multi-stress drive most herms"],
       ["Over-defoliating or doing it late", "Stop heavy leaf removal after week 3. Leaves are the plant's sugar factory during bulking"],
-      ["Humidity too high in late flower", "Pull RH down to 40-50% from week 7. Dense buds plus 60%+ RH invites bud rot (botrytis)"],
+      ["Humidity too high in late flower", "Pull RH down to 40–50% from week 7. Dense buds plus 60%+ RH invites bud rot (botrytis)"],
       ["Nutrient burn", "Drop feed EC and give enough water volume per feed. Burnt tips mean the feed is too strong"],
       ["Harvesting too early or by calendar", "Let the trichomes decide. A few extra days to proper maturity beats hitting an exact week"],
     ], cls="compact", caption="The five mistakes that sink most first grows, and the concrete fix for each." + _c("mahmoud-2023-botrytis-budrot")),
@@ -219,10 +232,10 @@ SECTIONS.append({"id": "expectations", "kicker": "08 · Reality check", "title":
       "close you get to them. Breeder-stated flowering times are estimates, and the actual finish "
       "varies with conditions by a week or more in either direction." + _c("hesami-2023-morphological-lifecycle")),
     table(["Week", "Phase", "What the plant is doing", "PPFD", "Day/night", "RH / VPD", "Action"], [
-      ["1-2", "Stretch", "Doubling in height, first pistils", "800-900", "27 C / 23 C", "65% / 1.0", "Lollipop, defoliate"],
-      ["3-4", "Bud set", "Stretch ends, budlets form", "900", "27 C / 22 C", "60% / 1.1", "Stop defoliating"],
-      ["5-7", "Bulking", "Buds swell fastest, frost builds", "1000-1100", "27 C / 22 C", "58% / 1.2", "Peak feed, push light"],
-      ["8-10", "Ripening", "Pistils darken, trichomes go milky", "900", "24 C / 20 C", "45% / 1.2", "Lower RH, ease EC, read trichomes"],
+      ["1–2", "Stretch", "Doubling in height, first pistils", "800–900", "27 °C (81 °F) / 23 °C (73 °F)", "65% / 1.0 kPa", "Lollipop, defoliate"],
+      ["3–4", "Bud set", "Stretch ends, budlets form", "900", "27 °C (81 °F) / 22 °C (72 °F)", "60% / 1.1 kPa", "Stop defoliating"],
+      ["5–7", "Bulking", "Buds swell fastest, frost builds", "1000–1100", "27 °C (81 °F) / 22 °C (72 °F)", "58% / 1.2 kPa", "Peak feed, push light"],
+      ["8–10", "Ripening", "Pistils darken, trichomes go milky", "900", "24 °C (75 °F) / 20 °C (68 °F)", "45% / 1.2 kPa", "Lower RH, ease EC, read trichomes"],
     ], cls="compact", caption="A week-by-week map, not a rulebook. Let the trichomes have the final word."),
     figure(L.flow("The flower cycle at a glance",
             [("Stretch", "wk 1-3"), ("Bud set", "wk 3-4"), ("Bulking", "wk 5-7"),

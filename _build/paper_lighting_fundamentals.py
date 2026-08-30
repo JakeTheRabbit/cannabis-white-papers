@@ -7,8 +7,8 @@ import figs_lib as L
 SLUG = "lighting-fundamentals"
 TITLE = "Lighting: spectrum, PPFD and DLI"
 EYEBROW = "Beginner · Light"
-SUB = ("A from-zero guide to how grow light actually works: what to measure, what to aim for "
-       "at each stage, and how to avoid cooking your plants.")
+SUB = ("A from-zero guide to how grow light works: what the key numbers mean, what to aim for "
+       "at each stage, and how to spot problems before they cost you a crop.")
 META = [("sun", "Beginner"), ("image", "9 diagrams"),
         ("quote", "Evidence-linked · 9 sources"), ("clock", "~14 min read")]
 RELATED = ["light-acclimation", "cloning", "flowering-stages"]
@@ -29,12 +29,14 @@ SECTIONS = []
 
 SECTIONS.append({"id": "intro", "kicker": "01 · Start here", "title": "Purpose and scope",
   "blocks": [
-    lead("Light is not just &lsquo;on or off.&rsquo; It is the raw fuel a plant turns into sugar, "
-         "and the single biggest lever on yield and quality you control indoors. This paper assumes "
-         "you know nothing: it defines every term, gives concrete numbers to aim for at each growth "
-         "stage, and explains the one switch that makes a plant flower."),
-    p("Plants eat light. Photosynthesis converts light energy plus CO2 and water into sugar, so more "
-      "usable light, up to a limit, means more growth" + _c("chandra-2008-photosynthetic-response-ppfd-co2-temp") +
+    lead("Light is the raw fuel a plant converts into sugar &mdash; the single biggest variable "
+         "you control indoors. This paper starts from first principles: it defines every term, "
+         "gives concrete targets for each stage, and explains the schedule change that makes a "
+         "plant flower."),
+    p("The plant captures energy from light and uses it to build sugar from CO2 in the air and "
+      "water from the roots &mdash; like a solar panel that makes its own fuel instead of storing "
+      "electricity. This process is photosynthesis, and it is why more usable light means more "
+      "growth, up to the point where CO2, water or temperature becomes the limiting factor" + _c("chandra-2008-photosynthetic-response-ppfd-co2-temp") +
       ". The three numbers that matter most are PPFD (how bright, right now), DLI (how much total "
       "light per day), and spectrum (the color mix). Every term is defined the first time it appears."),
     figure(L.flow("From light to growth",
@@ -78,7 +80,7 @@ SECTIONS.append({"id": "key-terms", "kicker": "02 · The vocabulary", "title": "
       "tool for plant light." + _c("eichhorn-bilodeau-2019-photobiology-cannabis-review")),
   ]})
 
-SECTIONS.append({"id": "spectrum", "kicker": "03 · Core concept 1", "title": "Spectrum and plant responses",
+SECTIONS.append({"id": "spectrum", "kicker": "03 · Core concept 1", "title": "What each wavelength does to the plant",
   "blocks": [
     p("Blue light, roughly 400 to 500 nm, keeps plants compact with tight internode spacing and is "
       "linked to denser growth and resin in flower" + _c("magagnini-2018-light-spectrum-morphology-cannabinoids") +
@@ -101,7 +103,7 @@ SECTIONS.append({"id": "spectrum", "kicker": "03 · Core concept 1", "title": "S
         "spend your attention on PPFD and DLI before you chase color recipes.")),
   ]})
 
-SECTIONS.append({"id": "intensity-dli", "kicker": "04 · Core concept 2", "title": "Light intensity and daily light integral: targets by stage",
+SECTIONS.append({"id": "intensity-dli", "kicker": "04 · Core concept 2", "title": "PPFD and DLI targets at each growth stage",
   "blocks": [
     p("Young tissue cannot process intense light, so targets climb as the plant matures. "
       "Clones and seedlings want about 100-250 PPFD (DLI roughly ~6-16 mol)" + _c("rodriguez-morrison-2021-light-levels-yield-photosynthesis") +
@@ -134,17 +136,21 @@ SECTIONS.append({"id": "intensity-dli", "kicker": "04 · Core concept 2", "title
     ], cls="compact", caption="Stage targets. 600 PPFD x 18h (~39 mol) is closer to ~900 PPFD x 12h than to 800 PPFD x 12h."),
   ]})
 
-SECTIONS.append({"id": "photoperiod-flip", "kicker": "05 · Core concept 3", "title": "Photoperiod and floral initiation",
+SECTIONS.append({"id": "photoperiod-flip", "kicker": "05 · Core concept 3", "title": "How day length triggers flowering",
   "blocks": [
     p("Photoperiod-type cannabis stays vegetative under long days (commonly 18/6) and is forced to "
-      "flower by switching to 12 hours light and 12 hours uninterrupted dark" + _c("kusuma-2021-nir-leds-delay-flowering-phytochrome") +
+      "flower by switching to 12 hours of light and 12 hours of uninterrupted dark" + _c("kusuma-2021-nir-leds-delay-flowering-phytochrome") +
       ". This is &lsquo;the flip.&rsquo;"),
-    p("The plant does not count light hours. It measures the length of the unbroken dark period using "
-      "a pigment called phytochrome, which flips between an active form (Pfr) and an inactive form "
-      "(Pr). Once nights are long enough it produces a flowering signal, florigen, in the leaves" + _c("eichhorn-bilodeau-2019-photobiology-cannabis-review") +
-      ". This is why light leaks matter so much: even a phone screen, an indicator LED, or a pinhole "
-      "in a tent during lights-off can reset phytochrome and stall or revert flowering, cause "
-      "re-vegging, or trigger hermaphrodites" + _c("kusuma-2021-nir-leds-delay-flowering-phytochrome") + "."),
+    p("The plant tracks darkness, not light hours &mdash; think of it as a sand timer that runs only "
+      "while the lights are off. If anything resets it mid-run, even a brief flash of light, it "
+      "starts from zero. The mechanism is a pigment in the leaves called phytochrome, a "
+      "light-sensitive molecule that shifts between two forms depending on light exposure; the balance "
+      "between those forms tells the plant how long the night has been. When the dark period is long "
+      "enough, phytochrome triggers the production of florigen &mdash; a mobile hormone that carries "
+      "the signal from the leaves to the growing tips to start producing buds" + _c("eichhorn-bilodeau-2019-photobiology-cannabis-review") +
+      ". A light leak resets phytochrome mid-cycle: even a phone screen, an indicator LED, or a "
+      "pinhole in a tent during lights-off can stall or revert flowering, cause re-vegging, or "
+      "trigger hermaphrodites" + _c("kusuma-2021-nir-leds-delay-flowering-phytochrome") + "."),
     figure(L.flow("How the dark period triggers flowering",
             [("Lights on", "Pr converts to active Pfr: 'it is day'"),
              ("Lights off", "Pfr slowly reverts to Pr"),
@@ -159,7 +165,7 @@ SECTIONS.append({"id": "photoperiod-flip", "kicker": "05 · Core concept 3", "ti
         "pinholes, cover indicator LEDs, use light-proof ducting. If you can see in the dark, so can the plant.")),
   ]})
 
-SECTIONS.append({"id": "fixtures", "kicker": "06 · The hardware", "title": "LED, HPS and CMH fixtures: efficacy and selection",
+SECTIONS.append({"id": "fixtures", "kicker": "06 · The hardware", "title": "Choosing a fixture: LED, HPS or CMH",
   "blocks": [
     p("Modern LED is the efficiency leader at roughly 2.7-3.0 umol/J for good fixtures (budget units "
       "2.0-2.3), runs cooler, and lasts longer" + _c("nelson-bugbee-2014-efficacy-led-vs-hps") +
@@ -183,14 +189,13 @@ SECTIONS.append({"id": "fixtures", "kicker": "06 · The hardware", "title": "LED
     ], cls="compact", caption="Compare on efficacy and total PPF plus a real PPFD map, never on lumens or 'equivalent watts.'"),
   ]})
 
-SECTIONS.append({"id": "setup-by-stage", "kicker": "07 · Do this", "title": "Lighting setup by growth stage",
+SECTIONS.append({"id": "setup-by-stage", "kicker": "07 · Do this", "title": "Setting height and intensity at each stage",
   "blocks": [
     p("Intensity falls with distance, but the inverse-square rule (a quarter of the light at twice the "
       "distance) is a point-source ideal that LED bars only approximate, so map PPFD with a meter rather "
       "than trusting the arithmetic. Height is your coarse intensity dial, the dimmer is the fine one. "
-      "Hang about 24 in "
-      "for seedlings and clones, ~18 in for veg, and ~12-16 in for flower, then fine-tune with the "
-      "dimmer and a PAR meter."),
+      "Hang about 60 cm (24 in) for seedlings and clones, ~45 cm (18 in) for veg, and ~30-40 cm "
+      "(12-16 in) for flower, then fine-tune with the dimmer and a PAR meter."),
     p("Verify coverage by taking PPFD readings at nine points: four corners, four edge-midpoints, and "
       "the center. Aim for a min-to-average ratio above 0.75 so edge plants are not starved while the "
       "center bleaches. Hanging higher trades peak intensity for more even spread, so use a "
@@ -202,16 +207,16 @@ SECTIONS.append({"id": "setup-by-stage", "kicker": "07 · Do this", "title": "Li
       "Sample of a 9-point grid. Compare the lowest reading to the average: a min-to-average ratio "
       "above 0.75 is acceptable uniformity."),
     table(["Stage", "Hang height", "Target PPFD", "Photoperiod"], [
-      ["Clone / seedling", "~24 in", "100-300", "18/6"],
-      ["Veg", "~18 in", "300-600", "18/6"],
-      ["Flower", "~12-16 in", "700-900", "12/12"],
+      ["Clone / seedling", "~60 cm (24 in)", "100-300", "18/6"],
+      ["Veg", "~45 cm (18 in)", "300-600", "18/6"],
+      ["Flower", "~30-40 cm (12-16 in)", "700-900", "12/12"],
     ], cls="compact", caption="Starting heights. Always confirm against your fixture's PPFD map and a meter at canopy height."),
     callout("tip", "Ramp, do not slam",
       p("Pair this with the <a href='light-acclimation.html'>light acclimation</a> paper: raise the "
         "dimmer or lower the fixture over several days rather than jumping a fresh clone to full intensity.")),
   ]})
 
-SECTIONS.append({"id": "pitfalls", "kicker": "08 · When it goes wrong", "title": "Troubleshooting",
+SECTIONS.append({"id": "pitfalls", "kicker": "08 · When it goes wrong", "title": "Diagnosing common light problems",
   "blocks": [
     p("Too much light shows as bleaching (white or yellow bud tips directly under the fixture), "
       "upward-cupping or &lsquo;taco&rsquo; leaves, and faded color even when nutrients are fine. The "

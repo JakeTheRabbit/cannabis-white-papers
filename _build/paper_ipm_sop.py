@@ -135,18 +135,18 @@ SECTIONS.append({"id": "biocontrol", "kicker": "Core practice 3", "title": "Biol
       "at every stage, and if they run out of prey they simply die off and fall away. The job is to match "
       "the predator to the pest and the conditions."),
     p("<em>Amblyseius swirskii</em> is a generalist that eats thrips larvae, whitefly, and broad mites "
-      "and works best at 77 to 86 &deg;F with humidity above 70 percent" + _c("elmoghazy-2024-swirskii-functional-response") +
+      "and works best at 25&ndash;30 &deg;C (77&ndash;86 &deg;F) with humidity above 70 percent" + _c("elmoghazy-2024-swirskii-functional-response") +
       ". <em>Phytoseiulus persimilis</em> is a spider-mite specialist that eats up to 5 adults or 20 "
       "eggs a day but needs cooler, humid conditions" + _c("koppert-persimilis-tech") + ". "
-      "<em>Neoseiulus californicus</em> is the tougher spider-mite option that stays active across 60 "
-      "to 90 &deg;F" + _c("mumtaz-2023-californicus-functional-response") + ". "
+      "<em>Neoseiulus californicus</em> is the tougher spider-mite option that stays active across "
+      "16&ndash;32 &deg;C (60&ndash;90 &deg;F)" + _c("mumtaz-2023-californicus-functional-response") + ". "
       "<em>Stratiolaelaps scimitus</em> is a soil-dwelling mite for fungus gnat larvae and thrips "
       "pupae, best deployed when pest pressure is still low" + _c("punja-2021-emerging-diseases-cannabis") + "."),
     figure(table(
       ["Predator", "Target pest", "Ideal temp", "Ideal humidity", "Type"],
-      [["<em>A. swirskii</em>", "Thrips larvae, whitefly, broad mites", "77&ndash;86 &deg;F", ">70%", "Generalist"],
-       ["<em>P. persimilis</em>", "Spider mites (fast knockdown)", "59&ndash;77 &deg;F", "High", "Specialist"],
-       ["<em>N. californicus</em>", "Spider mites (hot/dry rooms)", "60&ndash;90 &deg;F", "Low&ndash;mod", "Specialist"],
+      [["<em>A. swirskii</em>", "Thrips larvae, whitefly, broad mites", "25&ndash;30 &deg;C (77&ndash;86 &deg;F)", ">70%", "Generalist"],
+       ["<em>P. persimilis</em>", "Spider mites (fast knockdown)", "15&ndash;25 &deg;C (59&ndash;77 &deg;F)", "High", "Specialist"],
+       ["<em>N. californicus</em>", "Spider mites (hot/dry rooms)", "16&ndash;32 &deg;C (60&ndash;90 &deg;F)", "Low&ndash;mod", "Specialist"],
        ["<em>S. scimitus</em>", "Fungus gnat larvae, thrips pupae", "Room temp", "Moist media", "Soil specialist"]],
       cls="compact", caption="Match the predator to both the pest and the room. Deploy via hanging "
       "sachets or boxes so predators and carrier media stay out of the irrigation system."), 7, ""),
@@ -174,7 +174,7 @@ SECTIONS.append({"id": "spray-rotation", "kicker": "Core practice 4", "title": "
       "the product is registered for cannabis and the label permits the crop stage; never convert a rate into "
       "kitchen tablespoons" + _c("scott-punja-2021-powdery-mildew-management") + ". Rotate chemistries and "
       "tank-mix only combinations the labels allow, adding products in the label-specified order. Avoid high "
-      "light, high VPD and drought stress during application because stressed leaves are more prone to injury."),
+      "light, hot dry air, and drought stress during application because stressed leaves are more prone to injury."),
     figure(L.flow("Coverage order: media to leaf top",
             [("1 Media top", "soak the substrate surface"), ("2 Up the stalk", "trunk and lower stems"),
              ("3 Leaf undersides", "where pests hide"), ("4 Leaf tops", "finish the canopy")]), 9,

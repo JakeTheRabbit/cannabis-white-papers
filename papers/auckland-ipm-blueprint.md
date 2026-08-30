@@ -2,7 +2,7 @@
 slug: "auckland-ipm-blueprint"
 title: "Integrated pest management blueprint for indoor medicinal cannabis in Auckland"
 eyebrow: "Plant health · Auckland medicinal cannabis"
-summary: "An exclusion-first, residue-aware operating system for clean stock, pest and disease identification, lawful control selection, crop-cycle monitoring, CAPA, batch hold and release."
+summary: "A working system for keeping pests and diseases out of an indoor medicinal-cannabis facility: clean starting material, confident identification, control choices that are lawful in New Zealand, monitoring through the crop cycle, and a written trail from the first finding through corrective action to batch hold or release."
 track: "Plant health"
 read_time: "~55 min read"
 diagrams: ""
@@ -21,7 +21,7 @@ refs: [{"id": "moh-nz-pesticide-use-2024", "n": 1, "cite": "New Zealand Ministry
 
 _Plant health · Auckland medicinal cannabis · ~55 min read_
 
-> An exclusion-first, residue-aware operating system for clean stock, pest and disease identification, lawful control selection, crop-cycle monitoring, CAPA, batch hold and release.
+> A working system for keeping pests and diseases out of an indoor medicinal-cannabis facility: clean starting material, confident identification, control choices that are lawful in New Zealand, monitoring through the crop cycle, and a written trail from the first finding through corrective action to batch hold or release.
 
 ## Purpose and scope
 
@@ -52,10 +52,10 @@ IPM is a loop: prevent entry, monitor consistently, identify correctly, compare 
 
 | Layer | Purpose | Rule |
 | --- | --- | --- |
-| Cultural | Exclude, quarantine, sanitise, control movement, remove reservoirs, scout and record. | Build from this layer before moving upward |
-| Environmental | Remove the temperature, moisture, airflow and root-zone conditions that favour the problem. | Build from this layer before moving upward |
-| Biological | Establish the right predator, parasitoid, nematode or antagonist before pest pressure outruns it. | Build from this layer before moving upward |
-| Chemical / reduced-risk | Use only after the legal gate, targeted to the right life stage and followed by a defined recheck. | Build from this layer before moving upward |
+| Cultural | Keep the problem out, quarantine what arrives, clean surfaces and tools, control how people and plants move, remove the debris and weeds that shelter pests, and scout on a fixed route with a written record. | Build from this layer before moving upward |
+| Environmental | Take away the temperature, moisture, airflow and root-zone conditions that favour the problem. | Build from this layer before moving upward |
+| Biological | Establish the right predator, parasitoid, nematode or antagonist before pest pressure outruns it. A slow-cooked meal cannot be started at six and eaten at half past; predator numbers build on their own schedule too, so the release date is set by that build-up rather than by the day the problem became obvious. | Build from this layer before moving upward |
+| Chemical / reduced-risk | Use only after the legal gate is passed, aimed at the life stage that is actually vulnerable, and followed by a recheck on a date you set in advance. | Build from this layer before moving upward |
 
 *The control pyramid in operating form. Chemical and reduced-risk inputs sit last, not because they never work, but because they carry the narrowest legal and compatibility envelope.*
 
@@ -65,11 +65,11 @@ IPM is a loop: prevent entry, monitor consistently, identify correctly, compare 
 
 | Severity | Name | Definition | Default response |
 | --- | --- | --- | --- |
-| 0 | Not found | No confirmed organism or damage. Continue the planned monitoring frequency. | Monitor |
-| 1 | Trace | One confirmed individual, colony or lesion at one mapped site; no spread seen. | Escalate by the approved decision matrix |
-| 2 | Local | More than one finding in one zone, or a rising trap trend without room-wide spread. | Escalate by the approved decision matrix |
-| 3 | Established | Multiple zones, repeated life stages, increasing disease incidence or biological control losing ground. | Escalate by the approved decision matrix |
-| 4 | Systemic | Room-wide or linked-room spread, clean-stock involvement, crop-quality threat, or contaminated shared infrastructure. | Escalate by the approved decision matrix |
+| 0 | Not found | No confirmed organism and no damage. Keep to the planned monitoring frequency; nothing changes. | Monitor |
+| 1 | Trace | One confirmed individual, colony or lesion at one mapped point, with no sign of spread. | Escalate by the approved decision matrix |
+| 2 | Local | More than one finding within a single zone, or a trap count climbing over successive reads, without room-wide spread. | Escalate by the approved decision matrix |
+| 3 | Established | Several zones affected, more than one life stage recurring, disease incidence rising, or the biological programme losing ground. | Escalate by the approved decision matrix |
+| 4 | Systemic | Spread across the room or into linked rooms, clean stock involved, crop quality at risk, or shared infrastructure contaminated. | Escalate by the approved decision matrix |
 
 *A site severity scale. Incidence, trend and zero-tolerance overrides still apply.*
 
@@ -81,14 +81,14 @@ Regulation 18 restricts pesticide treatment of cannabis crops, while Regulation 
 
 Most agricultural compounds require ACVM registration; some product classes are exempt, but the exemption conditions and other laws still apply[^mpi-nz-acvm-exempt]. EPA approvals and controls must be confirmed, including the approval information in section 15 of the current New Zealand SDS[^epa-nz-hsno-approvals].
 
-1. **1. Intended end use** — If any lot may become inhaled flower, keep the inhalation-capable pathway open. Do not borrow the wider non-inhalation pathway by accident.
-2. **2. Medicinal-cannabis pathway** — Confirm the active or product fits Regulation 18 or another specifically accepted medicinal-cannabis route. A residue analyte appearing in Regulation 7 is not permission to use it.
-3. **3. ACVM authority** — Confirm the product is registered or falls within a documented exemption and all exemption conditions are met. Absence from a register is not proof of exemption.
-4. **4. HSNO approval** — Confirm an applicable EPA approval and its controls. Check section 15 of the current New Zealand SDS and verify it against the EPA database.
-5. **5. Worker controls** — Read the current label and SDS for PPE, application controls and REI. Indoor treated areas with an REI need signs and controlled access.
-6. **6. Analytical route** — Know which residues must be tested, the release limit, the laboratory accreditation scope, and whether the method LOQ is fit before the product enters the approved-input register.
-7. **7. Biological compatibility** — Check current side-effect data for every predator, parasitoid, nematode and microbial already in the room. A lawful spray can still erase the biological programme.
-8. **8. Environmental route** — Define how unused mix, rinse water, contaminated PPE and spills are contained and disposed. Nothing goes to stormwater; trade-waste discharge depends on the site's Watercare position.
+1. **1. Intended end use** — Decide first whether any part of this lot could end up as flower that a patient inhales. If it could, keep it on the inhalation-capable pathway from the beginning. The rules covering products that are not inhaled are wider, and it is easy to drift into them without noticing. They are not available to a lot that may be inhaled.
+2. **2. Medicinal-cannabis pathway** — Confirm that the active substance or product has a route specifically accepted for medicinal cannabis, such as Regulation 18. Regulation 7 covers residues a laboratory measures in the finished product. A substance appearing there as something to be measured is not permission to apply it to the crop.
+3. **3. ACVM authority** — Confirm the product is registered, or that a documented exemption covers it and every condition attached to that exemption is met. Not finding a product on a register tells you nothing either way; absence is not evidence of an exemption.
+4. **4. HSNO approval** — Confirm the substance holds an EPA approval, and read the controls attached to it. The safety data sheet (SDS) is the supplier's hazard document for a product; check section 15 of the current New Zealand version, then verify what it says against the EPA database rather than trusting the sheet on its own.
+5. **5. Worker controls** — Read the current label and safety data sheet for the personal protective equipment (PPE) required, the controls on how the product is applied, and the re-entry rules. A freshly painted room looks finished long before it is comfortable to sit in, and the wait is set by the paint rather than by how the walls look. A treated crop area works the same way, and that wait has a name: the restricted entry interval, or REI, is the period after an application when nobody may enter unless the specified PPE and conditions are in place. An indoor area under an REI needs signage and controlled access.
+6. **6. Analytical route** — Before a product joins the approved-input register, settle four things: which residues must be tested, the limit the batch has to meet to be released, whether the laboratory's accreditation actually covers that test, and whether the method can measure low enough. That last point is the limit of quantification, or LOQ: the lowest concentration a method can report with acceptable confidence. A method whose LOQ sits above the release limit cannot show that the batch passes.
+7. **7. Biological compatibility** — Check the current side-effect data for every beneficial organism already working in the room: predatory mites and insects, parasitoids, nematodes and microbial products. Side-effect data records how a product affects those organisms and how long the effect lasts. A spray can be entirely lawful and still wipe out a biological programme that took weeks to establish.
+8. **8. Environmental route** — Decide in advance where unused mix, rinse water, contaminated PPE and spills will go, and how each is contained. Nothing goes to stormwater. Whether anything may be discharged to the sewer as trade waste depends on the position Watercare holds for the site.
 
 > **WARN — Do not hard-code SKUs, rates, PHIs or REIs in a general paper**
 >
@@ -195,14 +195,14 @@ A biological programme succeeds when the right organism arrives alive, is releas
 
 | Control group | Typical role | Release-plan checks |
 | --- | --- | --- |
-| Canopy predatory mites | Phytoseiulus persimilis for spider-mite hotspots; Neoseiulus californicus or N. fallacis for broader spider-mite suppression; N. cucumeris or Amblyseius swirskii for thrips larvae and, where evidence fits, broad mites or whitefly eggs/young stages | Before naming any agent as deployable, verify current NZ organism status, supplier availability, target stage, climate, sachet/loose-release method, residues and establishment evidence |
-| Canopy predators | Orius species for thrips life stages and lacewing larvae for aphids or other exposed soft-bodied prey where host fit is supported | Verify current NZ status and supplier availability; release against the correct prey stage and check dispersal, cannibalism/prey availability, crop stage and incompatible residues |
-| Aphid parasitoids | Aphidius species selected for the confirmed aphid host; cannabis, green peach and potato aphids are not interchangeable targets | Verify current NZ status, supplier availability and host match; monitor mummies/parasitism, hyperparasitoids where relevant, residues and replacement action |
-| Whitefly parasitoids | Encarsia formosa or Eretmocerus species selected for the confirmed whitefly and nymphal stage | Verify current NZ status and supplier availability; confirm whitefly species, release timing, climate, parasitism evidence and residue compatibility |
-| Root-zone predators | Stratiolaelaps scimitus and, where lawful and available, Dalotia coriaria for fungus-gnat larvae, soil-stage thrips and other small media prey | Verify current NZ status and supplier availability; check media depth/moisture, prey, arrival viability, release distribution, residues and establishment |
-| Beneficial nematodes | Steinernema feltiae for susceptible fungus-gnat larvae and other supported soil stages | Verify lawful product/organism status and supplier availability; check live/dead morphology, cool storage, prompt use, agitation/oxygen, light, filters/nozzles and dip/drench/sprench fit |
-| Entomopathogenic microbes | Beauveria and other approved insect-pathogen strains against labelled susceptible aphid, thrips, whitefly or other stages | Verify exact strain/product and NZ pathway; manage storage/viability, contact and environmental requirements, non-target effects, worker controls, residues and recheck |
-| Plant-pathogen antagonists | Trichoderma, Bacillus or Streptomyces strains for preventive suppression of supported root or foliar pathogens, not revival of dead or vascularly colonised tissue | Verify exact strain/product, NZ status and supplier availability; separate from sanitisers, check reservoir/crop compatibility, storage, colonisation and outcome evidence |
+| Canopy predatory mites | Phytoseiulus persimilis for spider-mite hotspots; Neoseiulus californicus or N. fallacis for broader spider-mite suppression; N. cucumeris or Amblyseius swirskii for thrips larvae and, where the evidence supports it, broad mites or young whitefly stages | Before calling any of these deployable, confirm the organism's current New Zealand status, whether a supplier can actually deliver it, which pest stage it attacks, whether the room climate suits it, how it is released in sachets or loose, what residues are already present, and whether there is evidence it establishes |
+| Canopy predators | Orius species against thrips life stages, and lacewing larvae against aphids and other exposed soft-bodied prey where the host fit is supported | Confirm current New Zealand status and supplier availability, then release against the correct prey stage and check how far they disperse, whether there is enough prey to stop them eating each other, the crop stage, and residues that would kill them |
+| Aphid parasitoids | Aphidius species chosen for the confirmed aphid host; cannabis, green peach and potato aphids are not interchangeable targets | Confirm current New Zealand status, supplier availability and host match. Then monitor the mummies that show parasitism is happening, watch for wasps that attack the parasitoids themselves where that is relevant, and track residues and when a replacement release is due |
+| Whitefly parasitoids | Encarsia formosa or Eretmocerus species chosen for the confirmed whitefly species and nymph stage | Confirm current New Zealand status and supplier availability, then confirm the whitefly species, the release timing, the climate, the evidence of parasitism, and whether residues in the room are compatible |
+| Root-zone predators | Stratiolaelaps scimitus and, where lawful and available, Dalotia coriaria against fungus-gnat larvae, soil-dwelling thrips stages and other small prey in the media | Confirm current New Zealand status and supplier availability; check media depth and moisture, whether there is prey for them, whether they arrive alive, how evenly they are distributed at release, the residues present, and whether they establish |
+| Beneficial nematodes | Steinernema feltiae against susceptible fungus-gnat larvae and other supported stages in the media | Confirm the product and organism are lawful and available; check live and dead morphology on arrival, keep them cold, use them promptly, and check agitation and oxygen in the tank, light exposure, filter and nozzle sizes, and whether a dip, drench or sprench suits |
+| Entomopathogenic microbes | Beauveria and other approved insect-pathogenic strains against the aphid, thrips, whitefly or other stages named on the label | Confirm the exact strain and product and its New Zealand pathway, then manage storage and viability, the contact and environmental conditions it needs, effects on non-target organisms, worker controls, residues, and the recheck |
+| Plant-pathogen antagonists | Trichoderma, Bacillus or Streptomyces strains for preventive suppression of supported root or foliar pathogens, not for reviving dead tissue or a plant already colonised internally | Confirm the exact strain and product, its New Zealand status and supplier availability. Keep it away from sanitisers, check it suits the reservoir and the crop, and check storage, whether it colonises, and what evidence exists for the outcome you want |
 
 *Functional groups only. Verify current New Zealand organism status, supplier availability and product law before naming a deployable agent.*
 
@@ -244,13 +244,13 @@ Once a finding crosses threshold, select the fewest controls that cover the conf
 | Medicinal-cannabis legal basis | Yes |
 | ACVM registration or exemption evidence | Yes |
 | EPA approval / HSNO controls and current SDS revision | Yes |
-| Label use, crop/contact site and application method | Yes |
-| IRAC/FRAC group or physical/biological mode | Yes |
-| PPE, REI, signage, PHI/withholding and crop-stage restriction | Yes |
-| Analytical method, required limit and practical LOQ | Yes |
-| Compatibility with every beneficial in the room | Yes |
+| Label use, crop or contact site, and application method | Yes |
+| IRAC or FRAC group, or the physical or biological mode of action | Yes |
+| PPE, REI, signage, pre-harvest interval or withholding period, and crop-stage restriction | Yes |
+| Analytical method, required limit, and the LOQ achievable in practice | Yes |
+| Compatibility with every beneficial organism in the room | Yes |
 | Mixing, water quality, calibration and clean-out requirements | Yes |
-| Waste/rinse/spill route | Yes |
+| Waste, rinse and spill route | Yes |
 | Evidence grade, approver, last verification and review due date | Yes |
 
 *Do not release an input to stores until every applicable field is complete and approved.*
@@ -301,7 +301,7 @@ Cannabis disease literature supports distinct management for powdery mildew, Bot
 
 A diagnostic atlas without healthy controls trains people to see disease everywhere. Compare like with like: underside to underside, opened flower to opened flower, new meristem to new meristem, and roots at the same age and substrate.
 
-Key terms, in the facilityOpenAI image generationHealthy leaf undersideHealthy white rootsHealthy shoot meristemHealthy flower interiorFungus gnat vs winged root aphidHeat/light tacoing without mitesDried foliar residue, not mildewAbiotic root stress, not a diagnosis
+Key terms, in the facilityOpenAI image generationHealthy leaf undersideHealthy white rootsHealthy shoot tipHealthy flower interiorFungus gnat beside a winged root aphidLeaf curl from heat and light, no mites presentDried spray residue, not powdery mildewRoot stress with no pathogen, which is not yet a diagnosis
 
 | Confusion | Separating feature | Next step |
 | --- | --- | --- |
@@ -420,16 +420,16 @@ Facility address / Auckland zoneLicence and intended product linesControlled roo
 
 | Required field | Entry |
 | --- | --- |
-| Date/time, scout, room, zone, bench and fixed route point | FACILITY INPUT |
-| Plant/lot ID and growth stage | FACILITY INPUT |
-| Leaf top, underside, meristem, stem/crown, flower, media and roots checked | FACILITY INPUT |
-| Trap ID, colour, height, deploy/replace date and counts by organism | FACILITY INPUT |
+| Date and time, scout, room, zone, bench and fixed route point | FACILITY INPUT |
+| Plant or lot ID and growth stage | FACILITY INPUT |
+| Leaf top, leaf underside, shoot tip, stem and crown, flower, media and roots checked | FACILITY INPUT |
+| Trap ID, colour, height, deploy and replace date, and counts by organism | FACILITY INPUT |
 | Confirmed organism, life stage, incidence and severity 0-4 | FACILITY INPUT |
-| Beneficial organism and establishment evidence | FACILITY INPUT |
-| Environmental/root-zone anomaly and recent intervention | FACILITY INPUT |
+| Beneficial organism and the evidence it has established | FACILITY INPUT |
+| Environmental or root-zone anomaly, and any recent intervention | FACILITY INPUT |
 | Photo ID, specimen ID, chain of custody and lab result | FACILITY INPUT |
 | Threshold status, containment, owner and due date | FACILITY INPUT |
-| Recheck date, success criterion and close/CAPA decision | FACILITY INPUT |
+| Recheck date, success criterion, and close or CAPA decision | FACILITY INPUT |
 | Planned sites, completed sites and missed/inaccessible-site exception | FACILITY INPUT |
 
 *Use one row/set per mapped site or exception. Unknown organisms receive a specimen/photo reference, not a guessed name.*

@@ -2,7 +2,7 @@
 slug: "co2-enrichment"
 title: "CO2 enrichment: feeding the plant carbon, safely"
 eyebrow: "Environment & climate · CO2"
-summary: "Carbon dioxide is the raw material a plant turns into sugar. Under strong light an indoor crop can use far more CO2 than the air provides, so adding it can lift yield by around a third. But CO2 only helps in the light, it is easy to waste, and at the wrong concentration it will erase the plants' returns or kill the people in the room. This is how it works, how much to add and when, and how to do it without hurting anyone."
+summary: "Carbon dioxide is the raw material a plant turns into sugar. Under strong light an indoor crop can use far more CO2 than the air provides, and adding it can lift dry yield by around a third. CO2 only works during the light period, it is easy to waste in a vented room, and at the wrong concentration it can kill the people in the room. This paper explains the mechanism, the target band, how to seal a room so the CO2 stays in, and what safety limits and alarms to fit before anyone enters."
 track: "Environment & climate"
 read_time: "~30 min read"
 diagrams: "7 diagrams"
@@ -21,7 +21,7 @@ refs: [{"id": "chandra2008-photo", "n": 1, "cite": "Chandra S, Lata H, Khan IA, 
 
 _Environment & climate · CO2 · ~30 min read_
 
-> Carbon dioxide is the raw material a plant turns into sugar. Under strong light an indoor crop can use far more CO2 than the air provides, so adding it can lift yield by around a third. But CO2 only helps in the light, it is easy to waste, and at the wrong concentration it will erase the plants' returns or kill the people in the room. This is how it works, how much to add and when, and how to do it without hurting anyone.
+> Carbon dioxide is the raw material a plant turns into sugar. Under strong light an indoor crop can use far more CO2 than the air provides, and adding it can lift dry yield by around a third. CO2 only works during the light period, it is easy to waste in a vented room, and at the wrong concentration it can kill the people in the room. This paper explains the mechanism, the target band, how to seal a room so the CO2 stays in, and what safety limits and alarms to fit before anyone enters.
 
 ## Purpose and scope
 
@@ -59,9 +59,9 @@ Everything below builds on those five. If you only take one thing away: **enrich
 
 **TWA / STEL / IDLH** — Worker-safety limits: the 8-hour average you may breathe (TWA), the 15-minute short spike (STEL), and the level that is Immediately Dangerous to Life or Health (IDLH)[^niosh-co2].
 
-## CO2 assimilation and flower growth
+## Leaf photosynthesis and why CO2 level matters
 
-Inside a lit leaf, an enzyme called Rubisco grabs CO2 out of the air and fixes it into sugar. The trouble is Rubisco is sloppy: it also grabs oxygen by mistake, and when it does it kicks off **photorespiration**, a reaction that burns energy and throws carbon away. The more CO2 there is relative to oxygen, the more often Rubisco does its real job instead of the wasteful one[^tolbert1995-compensation].
+Inside a lit leaf, an enzyme called Rubisco grabs CO2 out of the air and fixes it into sugar. The trouble is Rubisco is not perfectly selective: it also accepts oxygen, and when oxygen wins the grab it kicks off **photorespiration**—a reaction that burns energy and throws carbon away without making anything useful. Think of Rubisco like a lock that fits the right key (CO2) perfectly but will also accept oxygen as a loose copy: flood the barrel with the right key and the wrong one rarely gets a turn. The more CO2 there is relative to oxygen, the less often photorespiration runs[^tolbert1995-compensation].
 
 Today's air, at ~420 ppm CO2[^noaa2024-co2], is not enough to keep Rubisco busy. A C3 plant like cannabis is **CO2-limited**: raise the CO2 and photosynthesis climbs. In the one classic cannabis gas-exchange study, lifting CO2 from 350 to 750 ppm raised leaf net photosynthesis by about **50%**[^chandra2008-photo], and a later study across four high-THC cultivars found gains of **38–48%** going from 390 to 700 ppm[^chandra2011-co2].
 
@@ -75,11 +75,11 @@ The climb does not go on forever. As CO2 rises, photosynthesis stops being limit
 
 ## Photosynthesis and respiration across the light cycle
 
-Here is the fact that trips up beginners. Photosynthesis, the CO2-_consuming_ reaction, only runs in the light. **Respiration**, the CO2-_releasing_ one, never stops, day and night, in every living cell[^amthor2024-respiration]. During the light period the big inward pull of photosynthesis swamps the small outward push of respiration, so the canopy is a net CO2 _sink_. When the lights go off, photosynthesis stops dead and only respiration is left, so the same canopy flips to a net CO2 _source_.
+Here is the fact that trips up beginners. Photosynthesis, the CO2-_consuming_ reaction, only runs in the light. **Respiration**, the CO2-_releasing_ one, never stops, day and night, in every living cell[^amthor2024-respiration]. During the light period the big inward pull of photosynthesis swamps the small outward push of respiration, so the canopy is a net CO2 _sink_. When the lights go off, photosynthesis stops dead and only respiration is left, so the same canopy flips to a net CO2 _source_. Think of the room during the light period as a drain pulling CO2 down fast, with a small tap feeding a little back from respiration; in the dark the drain closes and only the tap runs—far slower than the daytime draw.
 
 > **Diagram.** The canopy's net CO2 flux over a day. In the light it pulls CO2 in hard; in the dark it gives a little back. The deep daytime trough dwarfs the shallow night-time bump, and that gap is the whole point of the next section.
 
-Respiration also speeds up when it is warm, roughly doubling for every 10 °C rise (a Q10 of about 2)[^atkin2003-q10], and in soil or coco there is extra CO2 from microbes and roots in the root zone. But none of that changes the headline: **the plant only takes CO2 in while the lights are on.** That single fact is why you inject in the light and never in the dark.
+Respiration also speeds up when it is warm, roughly doubling for every 10 °C (18 °F) rise in temperature (a Q10 of about 2)[^atkin2003-q10], and in soil or coco there is extra CO2 from microbes and roots in the root zone. But none of that changes the headline: **the plant only takes CO2 in while the lights are on.** That single fact is why you inject in the light and never in the dark.
 
 ## Daytime CO2 uptake and nighttime release
 
@@ -91,7 +91,7 @@ You can see the asymmetry in a sealed room. With the lights on and no CO2 added,
 
 > **NOTE — The numbers, for a mid-size room**
 >
-> - **Lights-on drawdown.** A ~45 m² canopy pulling 15–25 µmol CO2 m²/s strips a sealed ~160 m³ room at roughly **350–600 ppm per hour** at first, taking 420 down to ~200 ppm in 20–40 minutes, then slowing as CO2 runs low.
+> - **Lights-on drawdown.** A ~45 m² (484 ft²) canopy pulling 15–25 µmol CO2 m²/s strips a sealed ~160 m³ room at roughly **350–600 ppm per hour** at first, taking 420 down to ~200 ppm in 20–40 minutes, then slowing as CO2 runs low.
 > - **Lights-off rise.** The same canopy respiring in the dark adds only about **25–70 ppm per hour**, a few hundred ppm over the whole night before leakage stops it.
 > - **The gap is the crop.** The daytime pull is many times the night-time push, because about half the fixed carbon stays in the plant instead of being breathed back out[^collalti2019-npp].
 
@@ -126,7 +126,7 @@ There are four common ways to put CO2 in a room, and for a sealed indoor cannabi
 
 > **KEY — The dosing formula**
 >
-> To raise a sealed room, work in milligrams: **mass of CO2 (mg) = room volume (m³) × rise wanted (ppm) × 1.8**. The 1.8 is the mass of CO2 in a cubic metre per ppm at room temperature (CO2 is 1.799 g/L at 25 °C, so 1 ppm = 1.8 mg/m³)[^niosh-co2]. _Worked example:_ a 30 m³ room from 420 to 1,200 ppm (a 780 ppm rise) needs 30 × 780 × 1.8 = 42,120 mg ≈ **42 g** of CO2, about 23 litres of gas. That is only the one-time charge, a room that leaks needs continuous top-up on top of it.
+> To raise a sealed room, work in milligrams: **mass of CO2 (mg) = room volume (m³) × rise wanted (ppm) × 1.8**. The 1.8 is the mass of CO2 in a cubic metre per ppm at room temperature (CO2 is 1.799 g/L at 25 °C (77 °F), so 1 ppm = 1.8 mg/m³)[^niosh-co2]. _Worked example:_ a 30 m³ room from 420 to 1,200 ppm (a 780 ppm rise) needs 30 × 780 × 1.8 = 42,120 mg ≈ **42 g** of CO2, about 23 litres of gas. That is only the one-time charge, a room that leaks needs continuous top-up on top of it.
 
 **Timing and distribution.** Inject only during the light period, typically starting about an hour after lights-on and stopping before lights-off[^wang2022-co2cue]. Drive it from an NDIR CO2 sensor at canopy height holding a setpoint, not a blind timer. Because CO2 is denser than air it sinks, so run the supply line above the canopy and use horizontal airflow (HAF) fans to mix it down and thin the still, CO2-starved layer that forms right at the leaf[^kitaya2004-airvel].
 
@@ -180,7 +180,7 @@ In a sealed space it builds up from the plants alone. NASA sealed a chamber of w
 
 Ethylene is the sharpest reason to exchange air, but stale air is also carrying:
 
-- **Humidity.** Plants return most of their irrigation water to the air as vapour[^hpac-latent]. That latent load is removed by a dehumidifier, not a filter, and it keeps coming after lights-off when transpiration outruns the dehumidifier.
+- **Humidity.** A plant is like a slow water pump: roots pull moisture up through the stems, and it exits as vapour through tiny pores (stomata) on each leaf. This movement is called **transpiration**, and it accounts for most of the water you irrigate[^hpac-latent]. That vapour is removed by a dehumidifier, not by any filter, and it keeps coming after lights-off when transpiration outruns the dehumidifier.
 - **Heat.** Removed by the air conditioner, not the carbon can.
 - **The plants' own terpenes** and other VOCs, which carbon catches for a while, then passes straight through once it saturates.
 - **Mould spores.** HEPA on the recirculation loop genuinely lowers the airborne spore count[^punja2019-pathogens], but it only cleans the air that reaches it. Deep in a fat canopy the humidity runs 15–25% higher than your room sensor reads[^zhang2020-canopy-rh], and that stagnant, humid pocket is where bud rot starts. Exchanging air, and moving it _through_ the canopy rather than just filtering the room average, is what lowers disease[^baptista2012-ventilation] (detail in the [mould](mould-risk.html) and [airflow](airflow-design.html) papers).
@@ -199,8 +199,8 @@ Raising CO2 does not act alone, it pulls on the rest of the room. This is the sa
 
 | Lever | What elevated CO2 does | What to do about it |
 | --- | --- | --- |
-| Temperature | Shifts the plant's ideal temperature up a few degrees[^lv2022-topt] | Run warmer, ~28–30 °C instead of ~25 °C, _if_ light supports it. Cannabis photosynthesis peaks near 30 °C[^chandra2008-photo] |
-| Stomata & water | Partly closes the leaf pores: ~42% less stomatal conductance, ~29% less transpiration per leaf[^chandra2008-photo] | Per-leaf loss falls; total crop water use may fall, hold or rise with leaf area, PPFD, temperature and VPD. Measure it |
+| Temperature | Shifts the plant's ideal temperature up a few degrees[^lv2022-topt] | Run warmer, ~28–30 °C (82–86 °F) instead of ~25 °C (77 °F), _if_ light supports it. Cannabis photosynthesis peaks near 30 °C (86 °F)[^chandra2008-photo] |
+| Stomata & water | Partly closes the stomata (the leaf's gas-exchange pores), cutting stomatal conductance (how freely vapour moves through them) by ~42% and leaf transpiration by ~29% per leaf[^chandra2008-photo] | Per-leaf loss falls; total crop water use may fall, hold or rise with leaf area, PPFD, temperature and VPD (the air's demand for moisture—higher temperature and lower humidity, the harder it pulls water from the leaf). Measure it |
 | Light | Nothing, unless light is already high[^rm2021-light] | Only enrich rooms running strong light. Otherwise CO2 is wasted |
 | Feed | Less transpiration can let salts concentrate at the root | Watch runoff EC and adjust feed strength |
 
@@ -214,7 +214,7 @@ Raising CO2 does not act alone, it pulls on the rest of the room. This is the sa
 
 A drying room is the dark side of everything above. You fill a sealed, dark, low-airflow room with tens or hundreds of kilos of freshly cut biomass, and that biomass keeps **respiring** for days after harvest, releasing CO2 the whole time, with no photosynthesis to soak any of it back up[^kader2002-respiration].
 
-Cut leaf and flower is a fast-respiring tissue, in the same postharvest class as leafy greens and cut herbs, and warmth speeds it up (that Q10-of-2 again)[^kader2002-respiration]. A drying room held at 15–18 °C with the air barely moving is a near-perfect CO2 trap. Sealed, planted greenhouses already climb to 600–1,000+ ppm overnight from living plants[^ahdb-co2]; a room packed with cut biomass and almost no ventilation can go substantially higher, into the thousands of ppm and, in the worst unventilated cases, potentially toward percent-level concentrations.
+Cut leaf and flower is a fast-respiring tissue, in the same postharvest class as leafy greens and cut herbs, and warmth speeds it up (that Q10-of-2 again)[^kader2002-respiration]. A drying room held at 15–18 °C (59–64 °F) with the air barely moving is a near-perfect CO2 trap. Sealed, planted greenhouses already climb to 600–1,000+ ppm overnight from living plants[^ahdb-co2]; a room packed with cut biomass and almost no ventilation can go substantially higher, into the thousands of ppm and, in the worst unventilated cases, potentially toward percent-level concentrations.
 
 > **DANGER — Treat an unventilated drying room as a confined space**
 >
@@ -246,9 +246,9 @@ Every major safety authority agrees on the headline number: the 8-hour average a
 
 *The CO2 effect ladder. Note the jump: the enrichment band is safe, but the levels a leak can reach in a sealed room are not.*
 
-> **DANGER — CO2 is a poison, not just a smothering gas**
+> **DANGER — Above 5%, CO2 directly poisons the blood**
 >
-> It is tempting to think CO2 just crowds out oxygen. It does that, but it is also directly toxic: above ~5% it acidifies the blood, and forensic reviews conclude the cause of death in CO2 incidents is the poisoning itself, not the lack of oxygen[^permentier2017-co2poison]. That is why it drops people so fast they can't open a door, and why rescuers who rush in without protection are so often the second victims. A sealed, high-CO2 room is a confined space. Ventilate and test the air before entry, every time.
+> CO2 above ~5% is a direct poison: it acidifies the blood, and forensic reviews conclude that the cause of death in CO2 incidents is this toxicity, which acts before oxygen depletion becomes critical[^permentier2017-co2poison]. That is why it drops people so fast they can't open a door, and why rescuers who rush in without protection are so often the second victims. A sealed, high-CO2 room is a confined space. Ventilate and test the air before entry, every time.
 
 ## CO2 sensors, alarms and MQ limitations
 
@@ -266,7 +266,7 @@ You cannot manage or survive CO2 you cannot measure, and the sensor market is fu
 >
 > NDIR sensors drift, so they self-calibrate by assuming the lowest CO2 they ever see is fresh 400 ppm air (Automatic Baseline Calibration). In a continuously enriched sealed room the sensor _never_ sees 400 ppm, so ABC slowly mis-calibrates it downward[^sensirion-scd]. **Disable ABC and calibrate manually** against fresh air or a reference gas on a schedule.
 
-**Two sensors, two jobs.** Put a control sensor at canopy height to run the setpoint, and a separate _life-safety_ sensor low on the wall (~30 cm off the floor) because CO2 settles. For larger systems the International Fire Code (Section 5307) makes this mandatory: any installation over 100 lb of CO2 needs gas detection that alarms at 5,000 ppm, alarms hard at 30,000 ppm, and automatically shuts off the CO2 and starts ventilation[^ifc5307]. Even below that threshold, an alarm plus an occupancy interlock is cheap insurance.
+**Two sensors, two jobs.** Put a control sensor at canopy height to run the setpoint, and a separate _life-safety_ sensor low on the wall (~30 cm (12 in) off the floor) because CO2 settles. For larger systems the International Fire Code (Section 5307) makes this mandatory: any installation over 100 lb of CO2 needs gas detection that alarms at 5,000 ppm, alarms hard at 30,000 ppm, and automatically shuts off the CO2 and starts ventilation[^ifc5307]. Even below that threshold, an alarm plus an occupancy interlock is cheap insurance.
 
 ## Expected results and limitations
 

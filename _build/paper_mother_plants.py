@@ -7,11 +7,12 @@ import figs_lib as L
 _FIGS = json.load(open(os.path.join(os.path.dirname(__file__), "figs_mother_plants.json"), encoding="utf-8"))
 
 SLUG = "mother-plants"
-TITLE = "Mother plants: stock management that never runs dry"
+TITLE = "Mother plants: environment, feeding, pruning and pathogen defence"
 EYEBROW = "Propagation · Stock"
-SUB = ("How to keep cannabis mother plants healthy for the long haul, room setup, feeding, pruning "
-       "architecture, viroid defence, testing rotation and succession. So every batch starts from a "
-       "plant you can actually trust.")
+SUB = ("This paper covers the environment, feeding schedule, pruning architecture, viroid defence, "
+       "testing rotation and succession planning needed to run a cannabis mother-plant bank. After "
+       "reading it you will be able to set up a mother room, design a cutting schedule, and defend "
+       "your stock against hop latent viroid.")
 META = [("seedling", "Propagation"), ("image", "13 diagrams"),
         ("quote", "Evidence-linked · 14 sources"), ("clock", "~20 min read")]
 RELATED = ["cloning", "tissue-culture"]
@@ -83,7 +84,7 @@ SECTIONS.append({"id": "vocab", "kicker": "02 · The vocabulary",
 SECTIONS.append({"id": "core-answer", "kicker": "03 · The short version",
   "title": "Mother-plant programme overview",
   "blocks": [
-    lead("If you only read one section, read this one. Everything after it is the why and the how."),
+    lead("The table below covers every practice that matters for a reliable mother bank. Sections 04–16 carry the evidence and detail behind each row."),
     kv([
       ("Photoperiod", "18 h light / 6 h dark, protected like a fire alarm. Some cultivars initiate flowers at up to 14–15 h" + _c("mp-ahrens-2023-photoperiod") + ", so 18 h is your safety margin."),
       ("Light", "Moderate: ~300–500 µmol·m⁻²·s⁻¹ PPFD. Enough for steady regrowth, not so much that shoots turn short and squat."),
@@ -141,10 +142,10 @@ SECTIONS.append({"id": "room-setup", "kicker": "04 · The how & why",
       ", growth kept responding across a 135–1430 µmol trial range, but light also reshapes the "
       "plant: internode length and leaf size shrink steadily as intensity rises" + _c("mp-moher-2022-veg-light") +
       ". Run a mother at 900+ µmol and the regrowth comes back short, tight and squat. Compact is "
-      "great for a production plant, and miserable to cut 8–15 cm shoots from. Run her under ~150 µmol "
+      "great for a production plant, and miserable to cut 8–15 cm (3–6 in) shoots from. Run her under ~150 µmol "
       "and shoots come thin, stretched and weak, with the low carbohydrate reserves that root poorly. "
       "300–500 µmol is the working band where regrowth is fast <em>and</em> shaped like cuttings."),
-    p("Climate: nothing exotic. Around 22–26 °C days, roughly 55–70% relative humidity, gentle "
+    p("Climate: nothing exotic. Around 22–26 °C (72–79 °F) during lights-on, roughly 55–70% relative humidity, gentle "
       "continuous air movement (practitioner convention). The mother room should be the most boring "
       "room in the facility. Every stress event shows up two weeks later as a batch of cuttings that "
       "roots at 60% instead of 90, and you will struggle to connect the two."),
@@ -199,11 +200,13 @@ SECTIONS.append({"id": "architecture", "kicker": "06 · Do this",
       "dominant leader and a handful of weak laterals, a Christmas tree, and a terrible factory. The "
       "fix is the same trick hedge-layers and fruit growers use: remove the leader early, force the "
       "plant wide, and keep it flat."),
-    p("The mechanism is <strong>apical dominance</strong>, the top shoot chemically suppresses the "
-      "shoots below it. Cut the top off (<strong>topping</strong>) and the suppression lifts: the side "
-      "shoots below the cut all push at once. Do this once to the young plant, then once to each of "
-      "the released side branches, and you have converted one growing point into eight to twelve. "
-      "Those become the <strong>permanent frame</strong>; everything above them is crop."),
+    p("The top shoot produces a hormone that flows down through the stem and keeps every side shoot "
+      "below it from activating. Think of a thermostat: one sensor holds multiple heating zones off; "
+      "the moment it is removed, all zones are free to fire. This is <strong>apical dominance</strong>: "
+      "the top bud holds back every node below it. Cut the top off (<strong>topping</strong>) and the "
+      "hormone level drops: every side shoot below the cut pushes at once. Do this once to the young "
+      "plant, then once to each of the released side branches, and you have converted one growing point "
+      "into eight to twelve. Those become the <strong>permanent frame</strong>; everything above them is crop."),
     steps([
       ("Establish (weeks 0–2)", "Start from your best <em>tested</em> clone, the mother inherits everything, good and bad. Transplant, let her root out and settle."),
       ("First top (week 2–3)", "Top above the 4th–5th node. The plant answers with 4–6 strong side shoots."),
@@ -235,8 +238,8 @@ SECTIONS.append({"id": "architecture", "kicker": "06 · Do this",
       "production calendar. A new mother is not a source of cuttings on day one."),
     callout("note", "How many cuttings per mother?",
       p("There is no good published number. It depends on cultivar, pot size and frame. Practitioner "
-        "ballparks: a compact mother in a 10–15 L pot gives roughly 15–30 cuttings per pass; a large "
-        "production mother in 30–50 L can give 50–100+. Treat these as planning starting points and "
+        "ballparks: a compact mother in a 10–15 L (2.6–4.0 gal) pot gives roughly 15–30 cuttings per pass; a large "
+        "production mother in 30–50 L (7.9–13.2 gal) can give 50–100+. Treat these as planning starting points and "
         "measure your own plants, your records beat anyone's ballpark within two months.")),
   ]})
 
@@ -281,9 +284,11 @@ SECTIONS.append({"id": "age-drift", "kicker": "08 · The debate",
     p("Grower folklore says a mother 'degrades' and should be replaced every 6–12 months. Plenty of "
       "operators, meanwhile, hold the same mother for five-plus years and swear she is identical. "
       "Both camps are pointing at something real. They are just pointing at different mechanisms."),
-    p("<strong>Somatic mutation is real.</strong> Plants do not separate their reproductive cells the "
-      "way animals do. Every cell that divides can pass a copying error to everything grown from it. "
-      "Deep whole-genome sequencing of a single cannabis plant found measurable <strong>genetic "
+    p("<strong>Somatic mutation is real.</strong> Every time a cell divides, the DNA is copied, and "
+      "copying can introduce small errors. Think of a photocopy of a photocopy: each generation can "
+      "carry forward a flaw the original did not have. Unlike animals, plants do not separate their "
+      "reproductive cells from the rest of the body, so a mutation in a growing tip ends up in every "
+      "cutting taken from it. Deep whole-genome sequencing of a single cannabis plant found measurable <strong>genetic "
       "mosaicism</strong> within one individual: the top, middle and bottom of the same plant were not "
       "genetically identical" + _c("mp-adamek-2022-mosaicism") + ". The study was motivated by exactly "
       "the folklore above, growers reporting clonal lines that lose vigour and potency over time" + _c("mp-adamek-2022-mosaicism") + "."),
@@ -524,7 +529,7 @@ SECTIONS.append({"id": "failure-modes", "kicker": "14 · When it goes wrong",
              "<strong>Counter:</strong> moderate N and EC, firm shoots, watch the strike rate."),
            tag="nutrition"),
       card("The slow strangle",
-           p("Eighteen months in a 12 L pot. Vigour fades so gradually nobody sees it, and it gets "
+           p("Eighteen months in a 12 L (3.2 gal) pot. Vigour fades so gradually nobody sees it, and it gets "
              "blamed on 'age'. <strong>Counter:</strong> repot or root-prune on schedule; track "
              "cuttings-per-week so decline shows up as a number."),
            tag="roots"),
@@ -559,7 +564,7 @@ SECTIONS.append({"id": "troubleshooting", "kicker": "15 · When it goes wrong",
   ]})
 
 # ---------------------------------------------------------------- 16 mental model
-SECTIONS.append({"id": "mental-model", "kicker": "16 · Take this with you",
+SECTIONS.append({"id": "mental-model", "kicker": "16 · Summary",
   "title": "Mother-stock continuity and recovery",
   "blocks": [
     p("Treat a mother plant exactly like a backup drive. Nobody trusts a backup because it looks fine "

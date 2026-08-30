@@ -73,7 +73,7 @@ Every technical term, in one place.
 | Activated charcoal | Black powder in the gel that binds brown leak compounds. It can also bind hormones. |
 | Agar / gellan / Phytagel | The setting agent. More agar = firmer gel = drier air in the jar = less glassy growth. |
 | Aseptic technique | Working so that stray microbes do not reach the sugar jelly. |
-| Autoclave | A machine that holds 121 °C steam at 15 psi. A pressure canner that holds 15 psi is the home version. |
+| Autoclave | A machine that holds 121 °C (250 °F) steam at 15 psi. A pressure canner that holds 15 psi is the home version. |
 | Auxin (IBA, NAA, IAA) | A hormone class that tells tissue to make roots. |
 | Callus | A lump of unspecialised cells. Common as a side-effect. Not a useful production method for cannabis in Holmes 2021. |
 | Cytokinin (mT, TDZ, BA) | A hormone class that tells tissue to make shoots. |
@@ -91,7 +91,7 @@ Every technical term, in one place.
 | Meristem | The dome of dividing cells at a shoot tip. No sap tubes yet. |
 | Meta-Topolin (mT) | A cytokinin that works for starting cannabis cultures. Too much of it makes glassy Stage II plants. |
 | Micropropagation | Using tissue culture to make many identical plants. |
-| MS salts | Murashige and Skoog, 1962. The default mineral mix. 4.4 g of powder per litre. |
+| MS salts | Murashige and Skoog, 1962. The default mineral mix. 4.4 g (0.16 oz) of powder per litre. |
 | Nodal segment | A stem piece with one bud. Easy. Often still contaminated inside. |
 | PGR | Plant growth regulator. A hormone you added on purpose. |
 | Phenolics / browning | Brown compounds that leak from a cut and stain the gel. |
@@ -140,7 +140,7 @@ A 2021 industry survey of about 200,000 tissue tests is the figure most people q
 - **Less space.** A rack of jars holds many plants. A mother room of the same plant count takes a whole room.
 - **Same plant every time.** Seed from cannabis is genetically mixed. A medicinal flower crop needs the same female chemotype every cycle. Tissue culture copies one plant.
 - **Health, not a new genotype.** Years of taking cuttings lets mutations and microbes build up.[^torkamaneh2024] Starting from a meristem gives you the same genetics with fewer hitch-hikers. It does not rewrite the DNA.
-- **Storage and shipping.** A jar, or a frozen shoot tip, is easier to move and back up than a 1.5 m mother plant.
+- **Storage and shipping.** A jar, or a frozen shoot tip, is easier to move and back up than a 1.5 m (5 ft) mother plant.
 
 > **NOTE — What “cleaning up genetics” does not mean**
 >
@@ -150,17 +150,17 @@ A 2021 industry survey of about 200,000 tissue tests is the figure most people q
 
 Viroids and viruses move in the sap tubes. The meristem is a dome of dividing cells at the very tip of a shoot. Those cells do not have sap tubes yet, and they divide faster than the pathogen can move forward. If you cut just that dome, you sometimes leave the disease behind.
 
-How often? Punja (2025) cut meristems 0.2–0.4 mm across from 91 infected plants of 8 cultivars. At six months, 40.7% tested negative for Hop latent viroid. The range by cultivar was 0% to 100%.[^hlvd_mgmt2025] A meristem cut is a filter. It is not a guarantee.
+How often? Punja (2025) cut meristems 0.2–0.4 mm (0.008–0.016 in) across from 91 infected plants of 8 cultivars. At six months, 40.7% tested negative for Hop latent viroid. The range by cultivar was 0% to 100%.[^hlvd_mgmt2025] A meristem cut is a filter. It is not a guarantee.
 
 ![Close-up of a cannabis meristem dome and leaf primordia](assets/img/tc-playbook/01-meristem-dome.jpg)
 
 *A cannabis shoot tip opened up. The pale dome in the centre is the meristem. The flaps around it are the first tiny leaves (leaf primordia). That dome is what you cut for disease removal.Grok Imagine · illustration*
 
-> **Diagram.** Shoot tip cut lengthways. Red lines are sap tubes. The dashed circle is the 0.2–0.5 mm meristem dome. There are no red lines inside that circle.
+> **Diagram.** Shoot tip cut lengthways. Red lines are sap tubes. The dashed circle is the 0.2–0.5 mm (0.008–0.020 in) meristem dome. There are no red lines inside that circle.
 
 > **Diagram.** A young cannabis stem cut across. Sap tubes sit in a ring around the soft centre (pith). Holmes (2021) found Penicillium growing in that pith. A stem piece with one bud includes this whole ring. A meristem dome does not.
 
-> **Diagram.** Three pieces you can cut. A stem piece with one bud is easy and keeps the disease. A shoot tip under 5 mm has fewer internal microbes. Only the meristem dome is a serious attempt to leave Hop latent viroid behind.
+> **Diagram.** Three pieces you can cut. A stem piece with one bud is easy and keeps the disease. A shoot tip under 5 mm (0.2 in) has fewer internal microbes. Only the meristem dome is a serious attempt to leave Hop latent viroid behind.
 
 ![Cannabis stem piece with one bud on sterile paper](assets/img/tc-playbook/04-nodal-explant.jpg)
 
@@ -170,14 +170,14 @@ How often? Punja (2025) cut meristems 0.2–0.4 mm across from 91 infected plant
 >
 > Meristem culture can produce a plant that tests negative for the viroid. It does not make a plant that cannot catch it again. And “negative” is only honest after a lab test (section 16).
 
-- **Meristem size used for cleanup:** 0.2–0.4 mm dome, two or fewer tiny leaves
+- **Meristem size used for cleanup:** 0.2–0.4 mm (0.008–0.016 in) dome, two or fewer tiny leaves
 - **Holmes method:** Leave two tiny leaves on the tip as a shield, then bleach, then plate
-- **Best first piece (Das 2024):** Shoot tip under 5 mm, less fungus than stem pieces, less glassy growth than a bare meristem
+- **Best first piece (Das 2024):** Shoot tip under 5 mm (0.2 in), less fungus than stem pieces, less glassy growth than a bare meristem
 - **How often stem pieces still contaminate:** About 50% in Holmes 2021 (range 10–80%), even after bleach. The microbes are inside the stem, not only on the skin.
 
 ## Home laboratory setup
 
-You need three things: a pocket of still clean air to work in, a way to heat jars to 121 °C, and a warm lit shelf. You do not need a white coat. You do not need a hospital cabinet.
+You need three things: a pocket of still clean air to work in, a way to heat jars to 121 °C (250 °F), and a warm lit shelf. You do not need a white coat. You do not need a hospital cabinet.
 
 ![Home still-air box and pressure cooker on a kitchen bench](assets/img/tc-playbook/05-home-lab-sab.jpg)
 
@@ -211,7 +211,7 @@ A fan pushes room air through a HEPA filter. The filter removes more than 99% of
 
 | Setting | Target | Why |
 | --- | --- | --- |
-| Temperature | 24–26 °C (21–27 °C still works) | Holmes used 25 ± 2 °C |
+| Temperature | 24–26 °C (75–79 °F) | Holmes used 25 ± 2 °C (77 ± 4 °F). 21–27 °C (70–81 °F) also works. |
 | Day length | 16–18 hours of light | Keeps plants vegetative. 12 hours of light will start flower. |
 | Light level | About 70–100 µmol m⁻² s⁻¹ at the jar | Holmes used 102. Kodym measured about 70 inside the vessel. |
 | pH of the medium | 5.6–5.8 before you add agar and before you heat it | Holmes set 6.6 so it landed near 5.8 after autoclaving. |
@@ -221,7 +221,7 @@ A fan pushes room air through a HEPA filter. The filter removes more than 99% of
 
 > **DANGER — Fire risk, and alcohol does not kill Hop latent viroid**
 >
-> If you dip tools in alcohol and pass them through a flame, keep the open alcohol far from the flame. A glass-bead steriliser at about 250 °C for about 20 seconds is safer inside a plastic box. Punja (2025): 70% ethanol does not destroy Hop latent viroid RNA. Household bleach at 5–10% of 8.25% sodium hypochlorite for 1–2 minutes does, as does 1000 ppm hypochlorous acid for 1 minute. An Instant Pot is not an autoclave.
+> If you dip tools in alcohol and pass them through a flame, keep the open alcohol far from the flame. A glass-bead steriliser at about 250 °C (482 °F) for about 20 seconds is safer inside a plastic box. Punja (2025): 70% ethanol does not destroy Hop latent viroid RNA. Household bleach at 5–10% of 8.25% sodium hypochlorite for 1–2 minutes does, as does 1000 ppm hypochlorous acid for 1 minute. An Instant Pot is not an autoclave.
 
 ## Licensed facility laboratory layout
 
@@ -270,7 +270,7 @@ Most first-run losses are contamination. Contamination is almost always a techni
 1. **Clean the work area** — Wipe the box or hood and the bench with 70% alcohol. Let it dry. If you use a still-air box, turn fans and air-conditioning off.
 2. **Gloves** — New nitrile gloves. Spray them with 70% alcohol. Spray again every time a hand leaves the work area.
 3. **Bring only what you need** — Jars, tools and plant pieces for this session. Extra objects collect dust.
-4. **Sterilise tools before every cut** — Alcohol then flame, or glass beads at about 250 °C for about 20 seconds. Then let the tool cool. A hot blade cooks the plant.
+4. **Sterilise tools before every cut** — Alcohol then flame, or glass beads at about 250 °C (482 °F) for about 20 seconds. Then let the tool cool. A hot blade cooks the plant.
 5. **Open lids only when you use the jar** — Come in from the side. Do not pass your hands over an open jar.
 6. **Wait seven days before you trust a jar** — A jar that looks clean on day 2 can still grow microbes in week 2. Internal microbes often appear then.
 
@@ -288,12 +288,12 @@ The jelly is mineral salts, sugar, vitamins, optional hormones, and agar. Set th
 
 | Ingredient | Amount per litre | What it does |
 | --- | --- | --- |
-| RO or distilled water | Start with about 800 mL, top up to 1 L | Tap minerals change the recipe |
-| MS basal salts | 4.4 g | The standard mineral mix |
-| Sucrose (table sugar) | 30 g | Energy |
-| myo-Inositol | 0.1 g | Standard extra |
-| Activated charcoal | 1 g (optional) | Binds brown compounds the cut leaks. Holmes used 1 g/L. |
-| Agar | 6–8 g. Use 9.5 g if shoots go glassy. | Sets the jelly. Firmer gel means less water in the leaves. |
+| RO or distilled water | Start with about 800 mL (27 fl oz), top up to 1 L (0.26 gal) | Tap minerals change the recipe |
+| MS basal salts | 4.4 g (0.16 oz) | The standard mineral mix |
+| Sucrose (table sugar) | 30 g (1.1 oz) | Energy |
+| myo-Inositol | 0.1 g (0.004 oz) | Standard extra |
+| Activated charcoal | 1 g (0.04 oz), optional | Binds brown compounds the cut leaks. Holmes used 1 g (0.04 oz)/L. |
+| Agar | 6–8 g (0.21–0.28 oz). Use 9.5 g (0.34 oz) if shoots go glassy. | Sets the jelly. Firmer gel means less water in the leaves. |
 | PPM (optional) | 0.5–2 mL | Slows some microbes. Not a substitute for sterile work. |
 | pH | 5.6–5.8 before agar and before heating | Holmes set 6.6 so it landed near 5.8 after heating. |
 
@@ -306,7 +306,7 @@ The jelly is mineral salts, sugar, vitamins, optional hormones, and agar. Set th
 | Starting the culture | TDZ + NAA | 1 µM + 0.5 µM | Lata 2009 / Holmes |
 | Starting the culture, gentler | meta-Topolin | 0.48 mg/L | Das 2024, from Lata 2016 |
 | Long-term multiplication | None | MS plus extra calcium | Das 2024 MM12 — less glassy growth |
-| Extra calcium | Calcium nitrate + calcium gluconate | 0.71 g/L + 1.35 g/L | Das 2024 |
+| Extra calcium | Calcium nitrate + calcium gluconate | 0.71 g (0.025 oz)/L + 1.35 g (0.048 oz)/L | Das 2024 |
 | Roots in the jar | IBA | 2.5–5 µM (about 0.5–1 mg/L) | Holmes: 5 µM worked better than 42 µM |
 | Roots, extra | Sodium metasilicate | 6 mg/L | Holmes: better leaves, 40% rooted |
 | Roots, extra | Silver nitrate | 40 µM with IBA | Holmes: more roots than IBA alone |
@@ -321,7 +321,7 @@ The jelly is mineral salts, sugar, vitamins, optional hormones, and agar. Set th
 1. **Dissolve salts and sugar** — In about 800 mL of RO or distilled water. Add vitamins, charcoal and PPM if you are using them.
 2. **Set pH** — 5.6–5.8 **before** you add agar. A drop of dilute acid lowers pH. A drop of dilute base raises it.
 3. **Add agar and heat until it dissolves** — Pour jars about one third full.
-4. **Heat-sterilise** — 121 °C at 15 psi for 20 minutes. In a pressure cooker: same numbers, jars on a rack, not sitting in a flood of water.
+4. **Heat-sterilise** — 121 °C (250 °F) at 15 psi for 20 minutes. In a pressure cooker: same numbers, jars on a rack, not sitting in a flood of water.
 5. **Cool** — You can cool the jars on a slant so the gel surface is easier to plant into. Leave new jars for 7 days. If they stay clear, use them.
 
 ## Explant surface sterilisation
@@ -333,7 +333,7 @@ Surface sterilising kills microbes on the outside of the plant. It cannot reach 
 #### Working method for stem pieces and shoot tips from a living mother
 
 1. **Prepare the mother plant (Stage 0)** — Keep it vegetative. Scout for pests. Prefer a young plant in a relatively clean substrate. Holmes found old plants in coco dirtier. A systemic fungicide (fluopyram, Luna) on one cultivar dropped contamination from 88% to 32%. That does not mean drench every plant. It means the mother plant’s health matters.
-2. **Cut in the morning** — Shoot tips or stem pieces 10–15 mm long. Strip large leaves. Keep the pieces wet and cool.
+2. **Cut in the morning** — Shoot tips or stem pieces 10–15 mm (0.4–0.6 in) long. Strip large leaves. Keep the pieces wet and cool.
 3. **Wash** — Running tap water plus a drop of dish soap or Tween-20, 10–20 minutes. Soap loosens the film microbes sit in.
 4. **70% ethanol** — 30–60 seconds. Longer damages cannabis.
 5. **Bleach** — Holmes: 10% household bleach (about 0.625% sodium hypochlorite) plus 0.1% Tween-20, 20 minutes, stirring. Das (2024): 1% sodium hypochlorite for 30 minutes gave 55% usable pieces. 10 minutes left 100% dirty. 60 minutes killed 100%.
@@ -363,7 +363,7 @@ Das (2024) got the best start on MS plus 0.48 mg/L meta-Topolin. Shoot tips unde
 
 1. **Plant the piece** — Stand it so the cut base is in the gel and the bud is above the gel. One piece per jar until you know your success rate.
 2. **Close and label** — Cultivar, date, medium, what you cut. Lid on at once.
-3. **Shelf** — 24–26 °C, 16–18 hours light, about 100 µmol. Do not open the jar every day to look.
+3. **Shelf** — 24–26 °C (75–79 °F), 16–18 hours light, about 100 µmol. Do not open the jar every day to look.
 4. **Throw out failures early** — Cloudy gel, fuzz, or a ferment smell: seal the jar in a bag and bin it. Do not open it in the clean hood.
 5. **Move the winners** — At 3–4 weeks, move clean growth onto fresh medium. Das found Stage I recipes went glassy after 2–3 moves. Switch to the Stage II recipe in section 12.
 
@@ -375,7 +375,7 @@ Das (2024) got the best start on MS plus 0.48 mg/L meta-Topolin. Shoot tips unde
 
 This is the cut that has the best chance of leaving Hop latent viroid behind. You need a stereo microscope. Do two months of stem-piece cultures first so your sterile technique is solid.
 
-> **Diagram.** The cleanup piece is 0.2–0.4 mm. That is much smaller than a rice grain. You cannot do this by eye.
+> **Diagram.** The cleanup piece is 0.2–0.4 mm (0.008–0.016 in). That is much smaller than a rice grain. You cannot do this by eye.
 
 #### Set up the bench first
 
@@ -409,22 +409,22 @@ This is the cut that has the best chance of leaving Hop latent viroid behind. Yo
 
 ![Peeled cannabis meristem dome with two leaf primordia](assets/img/tc-playbook/17-meristem-dome-cut.jpg)
 
-*What you are aiming for after the peel: a pale dome and two remaining tiny leaves, held at the base with forceps. Cut just below the dome. The piece that goes in the jar is 0.2–0.4 mm (Punja 2025).Grok Imagine · illustration*
+*What you are aiming for after the peel: a pale dome and two remaining tiny leaves, held at the base with forceps. Cut just below the dome. The piece that goes in the jar is 0.2–0.4 mm (0.008–0.016 in), per Punja (2025).Grok Imagine · illustration*
 
 > **Diagram.** What you can claim after this. “Tested, not detected” is accurate. “Virus-free” and “resistant” are not.
 
 #### Do it in this order
 
-1. **Start with new growth** — Take a 10–15 mm tip from a vegetative shoot in the morning. Strip the large leaves before you go to the hood. Prefer young flush growth. Heat treatments on the mother exist in the literature and vary from 0% to 94% clearance by cultivar. Do not copy a blog temperature.
-2. **Sterilise the tools** — Beads at about 250 °C for 20 seconds, then cool. Or alcohol then flame, then cool. A hot blade cooks the dome.
+1. **Start with new growth** — Take a 10–15 mm (0.4–0.6 in) tip from a vegetative shoot in the morning. Strip the large leaves before you go to the hood. Prefer young flush growth. Heat treatments on the mother exist in the literature and vary from 0% to 94% clearance by cultivar. Do not copy a blog temperature.
+2. **Sterilise the tools** — Beads at about 250 °C (482 °F) for 20 seconds, then cool. Or alcohol then flame, then cool. A hot blade cooks the dome.
 3. **Dish under the microscope** — One drop of sterile water on the black dish. One tip on the drop. Focus at 10–20× first, then go to 30–40×.
-4. **Left forceps, 3–5 mm down the stem** — Tip pointing up. Wrist on the bench. Do not pinch the dome.
+4. **Left forceps, 3–5 mm (0.1–0.2 in) down the stem** — Tip pointing up. Wrist on the bench. Do not pinch the dome.
 5. **Peel outer leaves with the #11 blade** — Blade almost flat. Slide under the leaf. Flick it away. Resterilise the blade after every few peels.
 6. **Stop at two tiny leaves** — Holmes left two primordial leaves on as a bleach shield. You should see a pale dome. If you still only see green, keep peeling.
 7. **Surface-sterilise that tiny tip** — Same bleach sequence as section 09, but shorter if the tissue is already pale. Then rinse in sterile water.
-8. **One nick under the dome** — 0.2–0.4 mm. One cut. Do not saw. Pick the piece up with forceps or a sterile needle.
-9. **Stand it on the gel** — Cut base in the gel. Lid on at once. Label: cultivar, date, meristem. Expect 4–8 weeks before it looks like a plant. Holmes used MS + 1 µM TDZ + 0.5 µM NAA + 1 g/L charcoal.
-10. **Then test it** — Section 16. One negative test on a 1 cm plantlet is a start. Test again after it has grown new leaves. Expect about 41% negative at six months, not 100%.
+8. **One nick under the dome** — 0.2–0.4 mm (0.008–0.016 in). One cut. Do not saw. Pick the piece up with forceps or a sterile needle.
+9. **Stand it on the gel** — Cut base in the gel. Lid on at once. Label: cultivar, date, meristem. Expect 4–8 weeks before it looks like a plant. Holmes used MS + 1 µM TDZ + 0.5 µM NAA + 1 g (0.04 oz)/L charcoal.
+10. **Then test it** — Section 16. One negative test on a 1 cm (0.4 in) plantlet is a start. Test again after it has grown new leaves. Expect about 41% negative at six months, not 100%.
 
 - **If the plant still tests positive:** You left sap tubes on. Next time peel further, or cut smaller.
 - **If the piece browns and dies:** It was too small, or the blade was hot, or bleach was too long. Cut a slightly larger tip, grow it, then recut.
@@ -444,11 +444,11 @@ The aim is more shoots from one clean culture. Cannabis often does better as one
 
 > **Diagram.** Move plants onto fresh medium every 3–4 weeks. Mutations increase with the number of moves (Torkamaneh 2024). Keep a backup from an early move.
 
-Das (2024) stopped adding meta-Topolin in Stage II because 0.5 mg/L increased glassy growth. The best medium in that study was MS with no hormone, extra calcium nitrate, extra calcium gluconate, and 9.5 g/L agar. Shoot tips beat stem pieces. Across eight cultivars the number of new usable pieces per plant ranged from 1 to 6.[^das2024]
+Das (2024) stopped adding meta-Topolin in Stage II because 0.5 mg/L increased glassy growth. The best medium in that study was MS with no hormone, extra calcium nitrate, extra calcium gluconate, and 9.5 g (0.34 oz)/L agar. Shoot tips beat stem pieces. Across eight cultivars the number of new usable pieces per plant ranged from 1 to 6.[^das2024]
 
 Lata (2016) used meta-Topolin to make many shoots at once. That works. It also produces glassy plants if you keep them on it for months. Use it to make numbers, then move the line onto the leaner medium.
 
-1. **Cut** — Take a 15–25 mm shoot tip, or a stem piece with a visible bud, from a clean Stage I plant.
+1. **Cut** — Take a 15–25 mm (0.6–1.0 in) shoot tip, or a stem piece with a visible bud, from a clean Stage I plant.
 2. **New jar** — Same medium or the leaner Stage II medium. Do not reuse an old jar.
 3. **How many per jar** — Home: 1–3. Facility: as many as your contamination rate allows.
 4. **Timing** — 3–4 weeks. If growth stops, check pH, charcoal (it can bind hormones), and whether this cultivar simply dislikes the medium.
@@ -478,14 +478,14 @@ A shoot with no roots is not a plant you can pot. Growing roots is a separate st
 
 You can take a shoot out of the jar and root it in a plug with rooting hormone, the same way you root a normal cutting. You do not have to grow the roots in the gel.[^kurtz2022]
 
-1. **Pick a shoot** — 2–4 cm tall. Not glassy. Not browning.
+1. **Pick a shoot** — 2–4 cm (0.8–1.6 in) tall. Not glassy. Not browning.
 2. **Choose a method** — Home: IBA in the gel, or an IBA dip into a sterile plug. Facility: dip into a plug, or the no-sugar vented-jar method.
 3. **Wait** — Roots in 2–4 weeks. If nothing by week 5, recut the base and use less IBA. More hormone is not always better.
 4. **Move it** — If roots are in gel, rinse the gel off in sterile water. If roots are in a sponge or cube, plant the sponge or cube.
 
 ## Stage IV: moving the plant out of the jar
 
-Inside the jar the air is saturated and the plant is eating sugar. The leaf surface is thin. If you put that plant straight onto a dry bench, the leaves collapse. You lower the humidity in steps.
+Inside the jar the air is nearly 100% humidity and the plant's leaf surfaces are built thin—they never needed a waxy coat. Move that plant straight to bench air and the leaves lose water faster than the roots can replace it, like stepping from a steam bath into cold air. Acclimatisation means lowering the humidity gradually, so the leaf has time to build a protective surface layer while it still has moisture to work with.
 
 ![Cannabis tissue-culture plants hardening under a humidity dome](assets/img/tc-playbook/11-acclimatization.jpg)
 
@@ -502,7 +502,7 @@ Inside the jar the air is saturated and the plant is eating sugar. The leaf surf
 *Table 7. Holmes 2021, about 20 plants per substrate. The three rates were not statistically different. Kodym’s no-sugar method: 100% survived in the glasshouse after a 5-day lid-off ramp.*
 
 1. **Soak the plug first** — Use a mild vegetative nutrient at about pH 5.8. Rockwool or coco. Not heavy potting soil.
-2. **Dome on** — Mist the walls of the dome, not the plant tops. 16 hours light, gentle intensity, 24 °C.
+2. **Dome on** — Mist the walls of the dome, not the plant tops. 16 hours light, gentle intensity, 24 °C (75 °F).
 3. **Open the vents** — Day 7: vents half open. Day 9: vents fully open. Day 14: lid off. Kodym: lids upside-down for 3 days, then off for 2 days in low light.
 4. **Then treat it like a new clone** — Do not switch it to 12 hours of light for several weeks.
 
@@ -560,7 +560,7 @@ qPCR (and RT-qPCR) is a lab test that looks for the viroid’s RNA. “Not detec
 
 *Table 9. What tissue culture can remove. “Tested, not detected” is the accurate phrase. “Virus-free” is not.*
 
-1. **Sample the right tissue** — A new fully expanded leaf, or the leaf stalk, from a plant that has grown since the meristem cut. A 5 mm meristem has too little tissue to test.
+1. **Sample the right tissue** — A new fully expanded leaf, or the leaf stalk, from a plant that has grown since the meristem cut. A 5 mm (0.2 in) meristem has too little tissue to test.
 2. **Use a lab that runs cannabis Hop latent viroid** — A plant-health lab or a cannabis diagnostic lab. Home strip tests are screens, not release tests.
 3. **Test again** — After 3–4 weeks in the nursery, and again before a mother goes into production. Uneven amounts of viroid in the plant cause false negatives.
 4. **Keep a backup sample** — Freeze tissue from every lot you pass. If a flower room later shows dudding, you can check whether the liner was already positive.
@@ -609,7 +609,7 @@ How many plants you ship is your contamination rate multiplied by hours at the h
 - Ioannidis (2022): 500–600 rooted plants per square metre of shelf, 3–4 week cycle, peat sponges.
 - Test production mothers every **3–6 weeks**. A meristem plant is not a lifetime certificate.
 - Once a line is clean, published cost fragments are about **USD 0.50–1 per liner**. First cleanup of a dirty cultivar is more like **USD 2,000–5,000**. Full lab build cost is site-specific. Do not use a blog “$50,000” as a quote.
-- Kodym kept stock plants in 1.5–2 L vented jars for at least 6 months of repeated tipping.
+- Kodym kept stock plants in 1.5–2 L (0.4–0.5 gal) vented jars for at least 6 months of repeated tipping.
 - Mutations increase with the number of recuts. Restart a production line by about **five cycles** from a tested backup. Keep a frozen or slow-growth backup (Uchendu 2019 droplet-vitrification).
 
 > **KEY — Mothers and tissue culture together**
@@ -623,7 +623,7 @@ How many plants you ship is your contamination rate multiplied by hours at the h
 | >50% of jars dirty by day 7 | Technique or a dirty mother | Slower hands. Younger plant. Smaller shoot tip or meristem. |
 | >50% dirty after day 14 | Microbes inside the stem | Meristem. Optional 4–12 hour 4–5% PPM soak. Change the mother’s substrate. |
 | Pieces brown in 48 hours | Browning plus bleach damage | Shorter bleach. Charcoal. Trim the ends. 48 hours in the dark. |
-| Glassy watery shoots | Too much cytokinin or too much water | No hormone in Stage II. 9.5 g/L agar. Vented lid. |
+| Glassy watery shoots | Too much cytokinin or too much water | No hormone in Stage II. 9.5 g (0.34 oz)/L agar. Vented lid. |
 | No shoots on a new cultivar | That cultivar does not like this medium | Try MS + 0.48 mg/L meta-Topolin, or Holmes’s TDZ+NAA mix. Then try DKW once. |
 | Shoots, no roots | Wrong auxin amount | 5 µM IBA, or a 15 mM dip for 2–4 minutes, or the no-sugar method. |
 | Roots, then dies under the dome | Humidity dropped too fast | Longer half-vent stage. Use rockwool, not a hydro cloner. |

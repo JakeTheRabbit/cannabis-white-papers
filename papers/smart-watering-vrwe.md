@@ -2,7 +2,7 @@
 slug: "smart-watering-vrwe"
 title: "The smart watering brain (VRWE), in plain English"
 eyebrow: "Precision · Smart watering"
-summary: "A grow room can water plants on its own by combining several sensor signals instead of trusting one moisture probe that might be lying."
+summary: "This paper explains how VRWE combines multiple signals to estimate root-zone water more reliably than a single probe. You will understand why the brain sometimes waits instead of watering, and be able to read its confidence output and know whether to trust it."
 track: "Precision & automation"
 read_time: "~9 min read"
 diagrams: "9 diagrams"
@@ -21,7 +21,7 @@ refs: [{"id": "szerement-seven-rod-2019", "n": 1, "cite": "Szerement, J., Woszcz
 
 _Precision · Smart watering · ~9 min read_
 
-> A grow room can water plants on its own by combining several sensor signals instead of trusting one moisture probe that might be lying.
+> This paper explains how VRWE combines multiple signals to estimate root-zone water more reliably than a single probe. You will understand why the brain sometimes waits instead of watering, and be able to read its confidence output and know whether to trust it.
 
 ## Purpose and scope
 
@@ -49,7 +49,7 @@ Five words carry the whole idea, so we define them up front. Don’t memorise th
 
 **Full pot (DUL, drained upper limit)** — The most water the pot can hold once it has finished dripping. Past this point, extra water just runs off.
 
-**Channeling** — Water sneaking straight down one path and missing the roots. It goes in the top and out the bottom without doing any good.
+**Channeling** — Water sneaking straight down one path and missing the roots — like water running down the gap between a pot and its liner instead of soaking through the substrate: every drop finds that easy path and exits the bottom while the root zone beside it stays dry. It goes in the top and out the bottom without doing any good.
 
 **Confidence** — The brain’s self-rated trust in its own current guess. High confidence allows bolder action. Low confidence forces caution.
 
@@ -63,11 +63,11 @@ Five words carry the whole idea, so we define them up front. Don’t memorise th
 
 *The five words that carry the whole idea.*
 
-## Signal fusion for root-zone water estimation
+## Combining sensors to outvote one lying reading
 
 VRWE keeps a **checkbook for water** instead of believing one probe. Money IN is the water the drippers squirted, known precisely because drippers are calibrated, so you know exactly how much you put in. Money OUT is what the plant drank plus what drained away. The running balance is the water really in the pot.
 
-The plant’s drinking, its **transpiration**, can be estimated from heat and light, because a plant pulls water faster when it is warmer and brighter[^koehler-transpiration-vpd-2023]. So even without trusting the sensor, the brain has a good independent guess of OUT. The sensor becomes one statement to check against the balance, not the sole source of truth.
+A plant continuously pulls water up through its roots and releases it as invisible vapor through tiny pores in the leaves — the warmer and brighter the room, the faster this happens. Think of it like sweating: your body loses more water when it is hot and active, and you can estimate roughly how much just from the temperature and how hard you are working. A plant follows the same logic. This process is called **transpiration**: the movement of water from roots through stems and out through leaf pores as vapor. Because temperature and light are measurable, the brain can estimate how fast the plant is drinking from those readings alone[^koehler-transpiration-vpd-2023]. So even without trusting the sensor, the brain has a good independent guess of OUT. The sensor becomes one statement to check against the balance, not the sole source of truth.
 
 > **Diagram.** The estimate is rebuilt every cycle like a running balance. The ending number is the brain’s best guess of real root-zone water, before it even looks at the sensor.
 

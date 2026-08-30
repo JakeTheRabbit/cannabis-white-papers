@@ -1,8 +1,8 @@
 ---
 slug: "plant-biosignal-sensor"
-title: "DIY plant-biosignal sensor: read a plant's electrical signals"
+title: "Build a plant-biosignal sensor with M5Stack and ESPHome"
 eyebrow: "Build · Precision & automation"
-summary: "Commercial plant-biosignal sensors clip electrodes to a plant, amplify the tiny voltages it makes, and log the drift for education, not as a validated water/nutrient/stress meter. You can build the acquisition side from an M5Stack ESP32, an ECG front-end chip and ESPHome for about NZ$110, and stream it straight into Home Assistant."
+summary: "Plants produce tiny electrical signals — microvolts to a few millivolts — that shift when light turns on, water runs low, or the plant is stressed. This guide walks you through building the sensor that captures those signals: an M5Stack ESP32, an ECG front-end chip, and ESPHome for about NZ$110. You will log the raw trace into Home Assistant and learn to read the daily rhythm and stress events — not as a validated water or nutrient meter, but as a real-time window into plant electrical activity."
 track: "Precision & automation"
 read_time: "~14 min read"
 diagrams: ""
@@ -17,17 +17,17 @@ attribution: "The Cannabis White Papers"
 refs: [{"id": "pb_mdpi_ad8232", "n": 1, "cite": "Marques JAL et al. (2023). From AD8232 to biopotentials sensors: open-source project and benchmark. Electronics (MDPI), 12(4):833.", "url": "https://www.mdpi.com/2079-9292/12/4/833", "peer": true}, {"id": "pb_arxiv_esp32", "n": 2, "cite": "AD8232 bioelectric signal processing with ESP32 (2025). arXiv:2505.18173.", "url": "https://arxiv.org/pdf/2505.18173", "peer": false}, {"id": "pb_pmc_plantsignals", "n": 3, "cite": "Plant bioelectrical signals for environmental and emotional state classification (2024). PMC. (AD8232 at 400 Hz; ~85% lamp on/off detection accuracy.)", "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC12649952/", "peer": true}, {"id": "pb_hackster_flora", "n": 4, "cite": "Verma A. Interacting with the Flora: an ESP32 + AD8232 + BH1750 + DS18B20 plant-signal rig. Hackster.io.", "url": "https://www.hackster.io/ankurverma608/interacting-with-the-flora-7ef65f", "peer": false}, {"id": "pb_vivent", "n": 5, "cite": "Vivent Biosignals, VITA1 plant-driven cultivation sensor (manufacturer documentation).", "url": "https://vivent-biosignals.com/plant-driven-cultivation/", "peer": false}, {"id": "pb_esphome_ads1115", "n": 6, "cite": "ESPHome, ADS1115 4-channel 16-bit A/D converter component (documentation).", "url": "https://esphome.io/components/sensor/ads1115/", "peer": false}]
 ---
 
-# DIY plant-biosignal sensor: read a plant's electrical signals
+# Build a plant-biosignal sensor with M5Stack and ESPHome
 
 _Build · Precision & automation · ~14 min read_
 
-> Commercial plant-biosignal sensors clip electrodes to a plant, amplify the tiny voltages it makes, and log the drift for education, not as a validated water/nutrient/stress meter. You can build the acquisition side from an M5Stack ESP32, an ECG front-end chip and ESPHome for about NZ$110, and stream it straight into Home Assistant.
+> Plants produce tiny electrical signals — microvolts to a few millivolts — that shift when light turns on, water runs low, or the plant is stressed. This guide walks you through building the sensor that captures those signals: an M5Stack ESP32, an ECG front-end chip, and ESPHome for about NZ$110. You will log the raw trace into Home Assistant and learn to read the daily rhythm and stress events — not as a validated water or nutrient meter, but as a real-time window into plant electrical activity.
 
 ## Purpose and scope
 
 Plants generate tiny electrical signals. Ions move across cell membranes when the plant responds to light, water, wounding or nutrient change, and that movement shows up as a sub-millivolt voltage you can read with electrodes on the stem[^pb_pmc_plantsignals]. Commercial units like the Vivent VITA1 do exactly this, then use trained models to infer water and stress state from how the signal drifts[^pb_vivent].
 
-Electrically, reading a plant is the same problem as reading a heartbeat: a small, noisy, high-impedance voltage you must amplify cleanly. That means the cheap, proven ECG front-end chip, the **AD8232**, works straight out of the box for plants[^pb_mdpi_ad8232]. Bolt it to an ESP32 and ESPHome and you have a logging plant-biosignal sensor for the price of a night out.
+Electrically, reading a plant is the same problem as reading a heartbeat: a small, noisy, high-impedance voltage you must amplify cleanly. That means the cheap, proven ECG front-end chip, the **AD8232**, works straight out of the box for plants[^pb_mdpi_ad8232]. Bolt it to an ESP32 and ESPHome and you have a logging plant-biosignal sensor for about NZ$110.
 
 > **NOTE — What this build is, and isn't**
 >
@@ -37,15 +37,15 @@ Electrically, reading a plant is the same problem as reading a heartbeat: a smal
 
 ## Definitions
 
-**Biopotential** — A voltage a living thing makes across its tissue. In plants it is microvolts to a few millivolts, riding on a slowly-drifting baseline.
+**Biopotential** — Every living cell maintains a charge difference across its membrane — like a tiny battery, with a positive side and a negative side. When ions move in response to light, water, or stress, that charge difference shifts, and you can measure the resulting voltage from outside the tissue. In plants it runs microvolts to a few millivolts, riding on a slowly-drifting baseline.
 
-**Variation potential** — The big, slow depolarisation that spreads after a wound or sharp stress. The clearest single event you will see on a DIY rig.
+**Variation potential** — When part of a plant is wounded or sharply stressed, the charge balance across cell membranes in that region shifts rapidly, and that shift spreads along the plant as an electrical wave. This is a variation potential — the big, slow deflection that shows up on your trace after a clear stress event, and the clearest single event you will see on a DIY rig.
 
-**Action potential** — A fast, self-propagating electrical spike. Real but sub-second, so it needs high-rate sampling to catch, unlike the slow trends.
+**Action potential** — A fast, self-propagating electrical spike — similar in concept to the nerve signals animals use, but slower and driven by different ion channels. Real in plants but sub-second, so it needs high-rate sampling to catch, unlike the slow trends this build is designed to log.
 
 **Electrode** — The metal contact that couples the plant's voltage into your circuit. Ag/AgCl with gel, or a stainless probe just under the skin.
 
-**Common-mode rejection** — An amplifier's ability to ignore noise that appears equally on both inputs (like mains hum) and keep only the difference. The whole reason to use an instrumentation front-end rather than a bare ADC.
+**Common-mode rejection** — Noise-cancelling headphones compare the sound on both sides of the earcup and subtract what they share, leaving only what differs. An instrumentation amplifier does the same electrically: it discards anything that appears equally on both inputs — mains hum, for example — and amplifies only the difference between them. This is the whole reason to use a front-end chip rather than a bare ADC.
 
 **ADC** — Analog-to-digital converter. Turns the amplifier's analog voltage into numbers a microcontroller can read. Here, a 16-bit ADS1115 over I2C.
 
@@ -57,7 +57,7 @@ Everything is one line from plant to dashboard. Two electrodes sense the stem, o
 
 > **KEY — Why not just wire electrodes to the ADC?**
 >
-> Plant signals are tiny and sit on a high-impedance source, so mains hum swamps them. The ADS1115 alone has no common-mode rejection and no reference drive. The AD8232 gives you the gain, the band-pass filter _and_ a driven soil-reference electrode that holds the reading steady[^pb_mdpi_ad8232]. It is the difference between a signal and a mess.
+> Plant signals are a few millivolts at most, and the plant cannot supply much current — any resistance in the measurement path drains the signal before it arrives. The ADS1115 alone has no common-mode rejection and no reference drive, so mains hum swamps the reading. The AD8232 gives you the gain, a band-pass filter that passes only the frequencies plant signals occupy, _and_ a driven soil-reference electrode that holds the reading steady[^pb_mdpi_ad8232]. It is the difference between a signal and a mess.
 
 ## Bill of materials
 
@@ -105,7 +105,7 @@ Everything downstream of the controller is one I2C bus, fanned out by the HUB. T
 
 ## Electrodes and placement
 
-This is where a DIY rig lives or dies. The AD8232 is happy; your **contact impedance** is the enemy. Two workable options[^pb_hackster_flora]:
+**Contact impedance** is the resistance between the electrode metal and the plant's tissue. Think of it like a loose headphone jack — a poor connection weakens the signal and lets noise in before it reaches the amplifier. The AD8232 handles everything downstream; your electrode contact quality is the one variable you control. Two workable options[^pb_hackster_flora]:
 
 **Ag/AgCl EEG cups**
 
@@ -113,12 +113,12 @@ Best signal quality. Fill the cup with conductive gel and tape it to the stem. N
 
 **Stainless probes / needles**
 
-Insert 2–3 mm just under the epidermis. More stable and closest to how commercial pin-contacts read ‘inside’ the plant, but it wounds the plant, so use one clean, sterilised insertion.
+Insert 2–3 mm (0.08–0.12 in) just under the epidermis. More stable and closest to how commercial pin-contacts read ‘inside’ the plant, but it wounds the plant, so use one clean, sterilised insertion.
 
-1. **Place the pair along the stem** — LA (sense +) on the upper stem near a node; RA (sense −) 5–15 cm lower on the same stem. This pair captures the travelling signal.
+1. **Place the pair along the stem** — LA (sense +) on the upper stem near a node; RA (sense −) 5–15 cm (2–6 in) lower on the same stem. This pair captures the travelling signal.
 2. **Reference into the soil** — RL (the driven reference) goes into the moist root-zone soil. It is what cancels common-mode hum, so don't skip it.
 3. **Gel and tape** — A dab of Ten20 under each surface contact, then micropore tape for light, steady pressure. A rising, noisy baseline is usually a drying electrode, not a sick plant.
-4. **Let it settle** — The baseline drifts for 10–30 minutes as the half-cell potentials equalise. Ignore that window.
+4. **Let it settle** — When metal contacts wet tissue, ions exchange at the surface and build a small voltage of their own — a **half-cell potential**, the same effect that makes a lemon and two different coins into a battery. Allow 10–30 minutes for this to stabilise. The initial drift is electrode chemistry settling, not plant activity.
 
 > **DANGER — Needle electrodes wound the plant**
 >

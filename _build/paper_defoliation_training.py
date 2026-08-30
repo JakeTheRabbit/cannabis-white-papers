@@ -7,8 +7,9 @@ import figs_lib as L
 SLUG = "defoliation-training"
 TITLE = "Defoliation and plant training for maximum yield"
 EYEBROW = "Canopy · Training"
-SUB = ("A beginner's guide to topping, low-stress training, trellising, lollipopping and "
-       "defoliation: what each one does, when to do it, and how to avoid overdoing it.")
+SUB = ("Topping, low-stress training, trellising, lollipopping and defoliation each reshape "
+       "the plant in a specific way. This paper explains what each technique does, when in the "
+       "grow cycle to use it, and how to tell when you have gone too far.")
 META = [("scissors", "Canopy"), ("image", "12 diagrams"),
         ("quote", "Evidence-linked · 8 sources"), ("clock", "~12 min read")]
 RELATED = ["airflow-design", "mould-risk", "harvest-dry-trim-cure"]
@@ -123,10 +124,14 @@ SECTIONS.append({"id": "training-light", "kicker": "The core idea",
       "canopy turns them back into producers and drops humidity around the buds." +
       _c("massuela-2022-pruning-cbd-yield")),
     p("Better airflow through an open canopy lowers the humidity that pools around dense buds, which "
-      "directly reduces bud-rot risk. Aim to keep <strong>VPD</strong> (vapour pressure deficit, a "
-      "combined measure of how &lsquo;thirsty&rsquo; the air is) between about 0.8 and 1.2 kPa. "
-      "Stagnant, humid air inside a closed canopy is exactly the condition that lets grey mould take "
-      "hold in a thick cola" + _c("mahmoud-2023-budrot-botrytis") + "."),
+      "directly reduces bud-rot risk. The air can only absorb a certain amount of moisture; when it "
+      "is already close to full, it stops pulling humidity away from plant surfaces and leaves it "
+      "sitting around the buds. Think of a dry sponge versus a wet one: the dry sponge soaks up "
+      "water fast, the saturated one can barely take any more. <strong>VPD</strong> (vapour pressure "
+      "deficit) measures exactly how much absorbing capacity the air still has. Aim to keep VPD "
+      "between 0.8 and 1.2 kPa. Stagnant, humid air inside a closed canopy is exactly the "
+      "condition that lets grey mould take hold in a thick cola" +
+      _c("mahmoud-2023-budrot-botrytis") + "."),
     callout("key", "Why the work pays off",
       ul(["Spreading the canopy flat lets many bud sites share the strongest light instead of one top.",
           "Opening the interior lets that high light reach lower and inner buds that would otherwise stay airy.",
@@ -190,7 +195,7 @@ SECTIONS.append({"id": "trellis-spread", "kicker": "The core idea",
       "table is what makes the high mid-bloom PPFD actually translate into yield" +
       _c("anthony-2020-training-light-interception") + "."),
     p("A common workflow sets all three trellis layers on <strong>day 1 of flower</strong>, with the "
-      "first net placed 1&ndash;2 inches below the top of the canopy. Around day 5&ndash;7 the plants "
+      "first net placed 2.5&ndash;5 cm (1&ndash;2 in) below the top of the canopy. Around day 5&ndash;7 the plants "
       "have grown through that first net and the team <strong>spreads</strong> the branches: "
       "pulling them out from the central stalk and tucking them into open squares so light reaches the "
       "middle and the whole table fills out evenly."),
@@ -208,7 +213,7 @@ SECTIONS.append({"id": "trellis-spread", "kicker": "The core idea",
             note="Spreading early opens the center and reduces how many leaves you later remove."), 8,
       "Top-down, spreading pulls branches off the central stalk into the empty trellis squares so the "
       "table fills evenly and the interior is no longer shaded."),
-    ul(["All trellis levels are set on flower day 1; the first net sits 1&ndash;2 inches below the canopy top.",
+    ul(["All trellis levels are set on flower day 1; the first net sits 2.5&ndash;5 cm (1&ndash;2 in) below the canopy top.",
         "Plants grow through the first net by about day 5 and are spread out from the central stalk.",
         "Spreading opens the center to light and airflow and reduces how many fan leaves you later remove.",
         "Net count scales with height: short plants need about 2 layers, tall genetics need 3."]),
@@ -233,7 +238,7 @@ SECTIONS.append({"id": "schedule", "kicker": "Do this",
       "The default flower timeline, day 1 to week 7. The aggressive structural work happens early; "
       "the only late task is an optional, strain-by-strain final defan."),
     steps([
-      ("Day 1: Trellis", "Set all trellis levels. Place the first net 1&ndash;2 inches below the top of the canopy."),
+      ("Day 1: Trellis", "Set all trellis levels. Place the first net 2.5&ndash;5 cm (1&ndash;2 in) below the top of the canopy."),
       ("Day 5&ndash;14: Spread", "Once plants grow through the first net, pull branches off the central stalk into the open squares to fill the table evenly."),
       ("Day 7&ndash;10: Phase 1 lollipop", "Strip the small branches, nodes and leaves from the lower half/third. Keep at least the top 3 nodes on each main branch."),
       ("Day 21&ndash;28: Phase 2 defan", "Remove the lower fan leaves across every plant for light penetration and airflow."),
@@ -246,15 +251,15 @@ SECTIONS.append({"id": "schedule", "kicker": "Do this",
       ["Day 21&ndash;28", "Phase 2 defanning", "Light and airflow to the lower and inner buds"],
       ["Day 42&ndash;49", "Phase 3 defanning (optional)", "Final touch-up only if that strain needs it"],
     ], cls="compact",
-    caption="A default flower-room timeline. The lollipop zone is roughly the bottom 10&ndash;18 "
-            "inches (the lower third), where growth would otherwise make small, underdeveloped larf."),
+    caption="A default flower-room timeline. The lollipop zone is roughly the bottom 25&ndash;45 cm "
+            "(10&ndash;18 in), the lower third, where growth would otherwise make small, underdeveloped larf."),
     figure(L.flow("The lollipop zone",
             [("Top: keep", "top 3 nodes per branch stay"),
              ("Middle: thin", "defan for light and air"),
              ("Bottom 10-18in: remove", "lower third stripped to a stick")],
             note="Clear the bottom third; keep the top 3 nodes on every main branch."), 10,
-      "Lollipopping removes the lower ~10&ndash;18 inches (the bottom third) and keeps at least the "
-      "top 3 nodes on each main branch, so the plant spends energy on flower that will actually finish."),
+      "Lollipopping removes the lower ~25&ndash;45 cm (10&ndash;18 in), the bottom third, and keeps "
+      "at least the top 3 nodes on each main branch, so the plant spends energy on flower that will actually finish."),
     callout("warn", "Lollipop early, not late",
       p("Phase 1 lollipopping belongs in the first week or two of flower, while the plant can still "
         "recover and redirect energy. Stripping the base hard late in bloom just wounds the plant "
@@ -282,8 +287,8 @@ SECTIONS.append({"id": "pitfalls", "kicker": "Avoid these",
       "stretching weak inner branches toward light instead of building flower" +
       _c("wang-2020-shade-avoidance") + ". Proper spacing means far less defoliation is needed, "
       "because the canopy was never a jungle to begin with."),
-    p("A common starting point is about 2.3 sqft per plant, with a typical working range of "
-      "1.8&ndash;3.0 sqft. Denser planting can raise total yield per area but reduces uniformity, so "
+    p("A common starting point is about 0.21 m² (2.3 ft²) per plant, with a typical working range of "
+      "0.17&ndash;0.28 m² (1.8&ndash;3.0 ft²). Denser planting can raise total yield per area but reduces uniformity, so "
       "there is a real trade-off rather than a single &lsquo;correct&rsquo; number" +
       _c("danziger-2022-planting-density") + "."),
     figure(L.zones("Plant spacing: density zones (sqft per plant)",
@@ -294,11 +299,11 @@ SECTIONS.append({"id": "pitfalls", "kicker": "Avoid these",
             unit=" sqft",
             note="Start around 2.3 sqft. Below ~1.8 sqft plants stretch and shade each other."), 12,
       "Spacing zones: too dense triggers shade avoidance" + _c("wang-2020-shade-avoidance") +
-      ", the 1.8&ndash;3.0 sqft band is the usual working range, and correct spacing means far less "
+      ", the 0.17&ndash;0.28 m² (1.8&ndash;3.0 ft²) band is the usual working range, and correct spacing means far less "
       "plant work overall." + _c("danziger-2022-planting-density")),
     table(["Mistake", "What goes wrong", "Do this instead"], [
       ["Over-defoliating", "Removes the leaves feeding the buds; yield and potency drop", "Leave as many fan-leaf sources as possible; open just enough"],
-      ["Overcrowding", "Shade-avoidance: weak, stretchy inner growth", "Space ~2.3 sqft/plant (1.8&ndash;3.0 range)"],
+      ["Overcrowding", "Shade-avoidance: weak, stretchy inner growth", "Space ~0.21 m² (2.3 ft²)/plant; range 0.17&ndash;0.28 m²"],
       ["Topping in flower", "Wounds the plant when it should be bulking", "Do all topping in veg"],
       ["Heavy defan late in bloom", "Stress with no time to recover", "Match aggressive work to early flower"],
       ["Musty smell, dying inner leaves", "Canopy too closed; bud-rot risk rising", "Improve airflow first, not strip every leaf"],

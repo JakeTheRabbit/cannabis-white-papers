@@ -1,8 +1,8 @@
 ---
 slug: "nutrient-mixing-athena"
-title: "Mixing an Athena Pro Line stock tank (metric)"
+title: "Dissolve Athena Pro Line powder into a 50 L stock tank"
 eyebrow: "Feed · Nutrient mixing"
-summary: "Dissolve a full 25 lb bag of Athena Pro Line into a 50 L stock tank to make a concentrate you dose into your feed later. Covers the chemistry of getting ~227 g/L of salt fully into solution, and why each part needs its own tank."
+summary: "Dissolve a full 11.34 kg (25 lb) bag of Athena Pro Line into a 50 L tank to make a stock concentrate you dose into feed water. Covers why temperature and agitation matter at 227 g/L, why Part A and Part B need separate tanks, and how to calculate the millilitres-per-litre dose for your feed."
 track: "Water, substrate & feed"
 read_time: "~11 min read"
 diagrams: "6 diagrams"
@@ -17,25 +17,25 @@ attribution: "The Cannabis White Papers"
 refs: [{"id": "purdue-fertilizer-compatibility", "n": 1, "cite": "Guan, W. (2017). Fertilizer Compatibility. Purdue University Vegetable Crops Hotline, Issue 643. Purdue Extension.", "url": "https://vegcropshotline.org/article/fertilizer-compatibility/", "peer": false}, {"id": "scienceinhydroponics-caso4", "n": 2, "cite": "Fernandez, D. (2020). Using Calcium Sulfate in Hydroponics. Science in Hydroponics.", "url": "https://scienceinhydroponics.com/2020/06/using-calcium-sulfate-in-hydroponics.html", "peer": false}, {"id": "libretexts-temperature-solubility", "n": 3, "cite": "LibreTexts Chemistry. Temperature Effects on Solubility (Physical & Theoretical Chemistry; Equilibria/Solubility module).", "url": "https://chem.libretexts.org/Bookshelves/Physical_and_Theoretical_Chemistry_Textbook_Maps/Supplemental_Modules_(Physical_and_Theoretical_Chemistry)/Equilibria/Solubilty/Temperature_Effects_on_Solubility", "peer": false}, {"id": "saloner-mineral-uptake-dynamics", "n": 4, "cite": "Saloner, A., & Bernstein, N. (2023). Dynamics of Mineral Uptake and Plant Function during Development of Drug-Type Medical Cannabis Plants. Agronomy, 13(12), 2865.", "url": "https://doi.org/10.3390/agronomy13122865", "peer": true}, {"id": "saloner-bernstein-response-surface-nutrition", "n": 5, "cite": "Saloner, A., & Bernstein, N. (2024). Mineral nutrition for Cannabis sativa in the vegetative stage using response surface analysis. Frontiers in Plant Science, 15, 1501484.", "url": "https://doi.org/10.3389/fpls.2024.1501484", "peer": true}, {"id": "powell-bauerle-uptake-massbalance", "n": 6, "cite": "Powell, K., & Bauerle, W. L. (2026). Predicting vegetative phase nutrient uptake in Cannabis sativa L. via transpiration-driven mass-balance. Frontiers in Plant Science, 16, 1753553.", "url": "https://doi.org/10.3389/fpls.2025.1753553", "peer": true}, {"id": "valdrighi-reservoir-water-quality", "n": 7, "cite": "Hultberg, M., et al. / van Os, E. (2004). Water quality assessment of different reservoir types in relation to nutrient solution use in hydroponics. Agricultural Water Management (Elsevier ScienceDirect).", "url": "https://www.sciencedirect.com/science/article/abs/pii/S0378377404001908", "peer": true}, {"id": "yep-nacl-cannabis-stress", "n": 8, "cite": "Yep, B., Gale, N. V., & Zheng, Y. (2020). Aquaponic and Hydroponic Solutions Modulate NaCl-Induced Stress in Drug-Type Cannabis sativa L. Frontiers in Plant Science, 11, 1169.", "url": "https://doi.org/10.3389/fpls.2020.01169", "peer": true}]
 ---
 
-# Mixing an Athena Pro Line stock tank (metric)
+# Dissolve Athena Pro Line powder into a 50 L stock tank
 
 _Feed · Nutrient mixing · ~11 min read_
 
-> Dissolve a full 25 lb bag of Athena Pro Line into a 50 L stock tank to make a concentrate you dose into your feed later. Covers the chemistry of getting ~227 g/L of salt fully into solution, and why each part needs its own tank.
+> Dissolve a full 11.34 kg (25 lb) bag of Athena Pro Line into a 50 L tank to make a stock concentrate you dose into feed water. Covers why temperature and agitation matter at 227 g/L, why Part A and Part B need separate tanks, and how to calculate the millilitres-per-litre dose for your feed.
 
 ## Purpose and scope
 
-This guide covers one job: dissolving a **full 25 lb bag** of Athena Pro Line into a **50 L tank** to make a concentrated **stock solution**. You don't feed plants with this. It's far too strong. You make it once, then dose small amounts into your watering tank to make the actual feed.
+This paper covers one job: dissolving a **full 11.34 kg (25 lb) bag** of Athena Pro Line into a **50 L tank** to make a concentrated **stock solution**. You don't feed plants with this directly. It's far too strong. Make it once, then dose small measured amounts into your watering tank to build the actual feed.
 
 A stock tank turns an awkward powder into an easy liquid. Weighing powder every time you mix feed is slow and inconsistent. Dissolve the whole bag once, then pump or pour a measured number of millilitres per litre into your feed water. Same recipe, every time, in seconds.
 
 > **KEY — The one-sentence version**
 >
-> A full 25 lb (11.34 kg) bag into 50 L makes a stock at about **227 grams per litre**, a heavy concentrate. Your whole job is to get every gram truly dissolved, keep the two parts in _separate_ tanks, and know how many millilitres to dose downstream.
+> A full 11.34 kg (25 lb) bag into 50 L makes a stock at about **227 grams per litre**—a heavy concentrate. Your job is to get every gram truly dissolved, keep the two parts in _separate_ tanks, and know how many millilitres to dose downstream.
 
 > **NOTE — Your kit**
 >
-> Written for exactly what you have: a full 25 lb bag, a 50 L tank, jugs of hot water, and a paint-mixer paddle on a drill. The paddle is not optional at this concentration. You cannot hand-stir 11 kg of salt into solution.
+> Written for exactly what you have: a full 11.34 kg (25 lb) bag, a 50 L tank, jugs of hot water, and a paint-mixer paddle on a drill. The paddle is not optional at this concentration. You cannot hand-stir 11 kg of salt into solution.
 
 ## Definitions
 
@@ -55,9 +55,9 @@ A stock tank turns an awkward powder into an easy liquid. Weighing powder every 
 
 **EC (electrical conductivity)** — A meter reading of total dissolved salt. This is how you check the strength of your finished feed.
 
-## Separate part A and part B stock solutions
+## Keep part A and part B in separate tanks
 
-Part A and Part B each get their own stock tank, and the two concentrates must never touch. **This is the rule that saves your crop and your pump.** One 25 lb bag of Pro Core → one 50 L tank. One 25 lb bag of Pro Grow/Bloom → a different 50 L tank.
+Part A and Part B each get their own stock tank, and the two concentrates must never touch. **This is the rule that saves your crop and your pump.** One 11.34 kg (25 lb) bag of Pro Core → one 50 L tank. One 11.34 kg (25 lb) bag of Pro Grow/Bloom → a different 50 L tank.
 
 The reason is chemistry. Part A is loaded with **calcium**. Part B carries **sulfates and phosphates**. In a dilute feed that's fine, but if you pour the two _concentrates_ together the calcium instantly grabs the sulfate and phosphate and drops out as solid gypsum and calcium phosphate[^purdue-fertilizer-compatibility]. You get a tank of useless sludge and a crop starved of the very nutrients you just added[^scienceinhydroponics-caso4].
 
@@ -69,7 +69,7 @@ The reason is chemistry. Part A is loaded with **calcium**. Part B carries **sul
 > - Never add the two concentrates to feed water at the same moment. Add A, stir, then add B, stir.
 > - Never reuse a dosing jug between A and B without rinsing.
 
-## Solubility and mixing conditions
+## Getting 227 g/L fully into solution
 
 227 grams of salt per litre is a lot, roughly six to seven times saltier than seawater. Getting it fully into solution isn't automatic. Two bits of physics work against you.
 
@@ -80,13 +80,13 @@ The reason is chemistry. Part A is loaded with **calcium**. Part B carries **sul
 
 > **WARN — Hot, not boiling**
 >
-> Use hot tap water (about 40-50 °C), not boiling. Boiling water can damage some compounds and is a scald hazard with a spinning paddle. Warm is enough to win the solubility fight.
+> Use hot tap water — about 40–50 °C (104–122 °F) — not boiling. Boiling water can damage some compounds and is a scald hazard with a spinning paddle. Warm is enough to win the solubility fight.
 
 ## Stock-tank mixing procedure
 
 Do this once per part: once for the Pro Core bag (Tank A), once for the Pro Grow/Bloom bag (Tank B). Same steps each time.
 
-1. **Start with hot water, ~40 L** — Fill the 50 L tank to about 40 L with hot water (about 40-50 °C). Leave headroom. 11 kg of powder takes up real volume and you still need room to mix without slopping.
+1. **Start with hot water, ~40 L** — Fill the 50 L tank to about 40 L with hot water — about 40–50 °C (104–122 °F). Leave headroom. 11 kg of powder takes up real volume and you still need room to mix without slopping.
 2. **Start the paddle before adding powder** — Get the paint-mixer turning a vortex first. You want the salt landing in moving water, not piling on a still bottom.
 3. **Add the bag gradually** — Pour the powder in slowly, a steady stream, not the whole bag at once. Dumping it causes clumps that trap dry powder inside (a 'fish-eye') that never dissolves.
 4. **Mix until perfectly clear** — Keep mixing until there is zero grit and the solution is clear (it may be tinted). At this concentration this can take several minutes of active mixing, not seconds.
@@ -98,7 +98,7 @@ Do this once per part: once for the Pro Core bag (Tank A), once for the Pro Grow
 
 ## Stock concentration and dosing
 
-A full 25 lb bag is **11.34 kg**. In 50 L that gives a stock of:
+A full bag weighs **11.34 kg** (25 lb). In 50 L that gives a stock of:
 
 > **Diagram.** 11.34 kg in 50 L = **226.8 g/L**. Knowing this one number lets you convert your bag's printed feed rate into a simple millilitres-per-litre dose.
 
@@ -129,7 +129,7 @@ The stock is only a delivery system. The plant cares about the _feed_ strength, 
 
 > **DANGER — Over-feeding is its own stress**
 >
-> Cranking EC does not mean more growth. Too much salt in the root zone pulls water back out of the roots (osmotic stress) and burns the plant[^yep-nacl-cannabis-stress]. When in doubt, feed slightly weaker.
+> Cranking EC does not mean more growth. Picture rubbing coarse salt into a cucumber: the salt draws moisture out through the skin and the cucumber shrivels. Excessive salt in the root zone works the same way—it pulls water out of roots rather than letting the plant take water in. That reversal is called osmotic stress[^yep-nacl-cannabis-stress]. Roots show it as wilt even in a wet slab. When in doubt, feed slightly weaker.
 
 ## Storage and troubleshooting
 
