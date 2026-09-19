@@ -5,6 +5,7 @@ from __future__ import annotations
 import html as _html
 import re
 from pathlib import Path
+from slab_visuals import CSS as VISUAL_CSS, FIGURES
 
 
 SLUG = "slab-irrigation-strategy"
@@ -16,8 +17,8 @@ SUB = (
 )
 META = [
     ("droplet", "Feed & steering"),
-    ("image", "18 anchored visual guides"),
-    ("quote", "17 cited sources"),
+    ("image", "16 technical figures"),
+    ("quote", "19 cited sources"),
     ("clock", "~30 min read"),
 ]
 RELATED = [
@@ -34,6 +35,11 @@ REF_IDS = []
 _PAYLOAD = (
     Path(__file__).with_name("data") / "slab_irrigation_content.html"
 ).read_text(encoding="utf-8")
+_PAYLOAD = _PAYLOAD.replace('<!-- slab-technical-styles -->', VISUAL_CSS)
+for _key, _figure in FIGURES.items():
+    _slot = f'<!-- slab-figure:{_key} -->'
+    assert _PAYLOAD.count(_slot) == 1, f'missing or duplicated figure slot: {_key}'
+    _PAYLOAD = _PAYLOAD.replace(_slot, _figure)
 _SECTION_RE = re.compile(
     r'<section class="sec" id="([^"]+)"><div class="sec-kicker">(.*?)</div>'
     r'<h2>(.*?)</h2>(.*?)</section>',
@@ -97,9 +103,10 @@ _refs_match = re.search(
 )
 assert len(SECTIONS) == 13, "expected 13 guide sections"
 assert _refs_match, "missing audited reference list"
-assert len(re.findall(r'<figure\b[^>]*class="[^"]*\bconcept-pair\b', _PAYLOAD)) == 18
-assert len(re.findall(r'\bdata-concept="[^"]+"', _PAYLOAD)) == 18
-assert len(re.findall(r'<li\b[^>]*\bid="ref-[^"]+"', _PAYLOAD)) == 17
+assert len(re.findall(r'<figure\b[^>]*class="[^"]*\bslab-plate\b', _PAYLOAD)) == 16
+assert len(re.findall(r'\bdata-concept="[^"]+"', _PAYLOAD)) == 16
+assert len(re.findall(r'<li\b[^>]*\bid="ref-[^"]+"', _PAYLOAD)) == 19
+assert '<img' not in _PAYLOAD
 assert "data:image" not in _PAYLOAD
 
 # The site renderer appends these audited, number-stable citations after the
