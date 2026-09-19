@@ -17,9 +17,9 @@ SUB = (
 )
 META = [
     ("droplet", "Feed & steering"),
-    ("image", "16 technical figures"),
+    ("image", "10 technical figures"),
     ("quote", "19 cited sources"),
-    ("clock", "~30 min read"),
+    ("clock", "~18 min read"),
 ]
 RELATED = [
     "rockwool-crop-steering",
@@ -103,8 +103,8 @@ _refs_match = re.search(
 )
 assert len(SECTIONS) == 13, "expected 13 guide sections"
 assert _refs_match, "missing audited reference list"
-assert len(re.findall(r'<figure\b[^>]*class="[^"]*\bslab-plate\b', _PAYLOAD)) == 16
-assert len(re.findall(r'\bdata-concept="[^"]+"', _PAYLOAD)) == 16
+assert len(re.findall(r'<figure\b[^>]*class="[^"]*\bslab-plate\b', _PAYLOAD)) == 10
+assert len(re.findall(r'\bdata-concept="[^"]+"', _PAYLOAD)) == 10
 assert len(re.findall(r'<li\b[^>]*\bid="ref-[^"]+"', _PAYLOAD)) == 19
 assert '<img' not in _PAYLOAD
 assert "data:image" not in _PAYLOAD

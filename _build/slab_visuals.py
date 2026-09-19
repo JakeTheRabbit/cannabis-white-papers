@@ -115,7 +115,7 @@ def figures():
     b+=text(36,365,'3 blocks sit on openings in the wrapper.',22)+text(36,398,'Root growth from block into slab into solid substrate.',22)
     b+=text(36,442,'Slab example: 1,000 × 150 × 75 mm = 11.25 L',21,AMBER)
     b+=text(36,475,'Block example: 150 mm wide; verify actual volume.',20,MUTED)
-    f['three-plant-slab']=plate('three-plant-slab','Three-block slab cross-section','Example dimensions',b,510,'Side section through a three-plant slab. Substrate remains continuous beneath every block; roots are conceptual. The slab dimensions give 11.25 L. The runtime example separately assumes a 3.6 L block: a literal 150 mm cube is 3.375 L, so use the actual product volume. Drain openings must follow the selected wrapper/product procedure. <a href="#ref-2">[2]</a>')
+    f['three-plant-slab']=plate('three-plant-slab','Three-block slab cross-section','Example dimensions',b,510,'Side section through a three-plant slab. Substrate remains continuous beneath every block; roots are conceptual. The slab dimensions give 11.25 L. A 150 mm cube is 3.375 L; the calculation uses a separately assumed 3.6 L product volume. Drain openings must follow the selected wrapper/product procedure. <a href="#ref-2">[2]</a>')
 
     b=text(36,36,'PLAN · 7.6 m × 1.2 m table',24,GREEN,weight=700)
     b+=rect(70,83,580,92,'#20362b','#82988b')
@@ -227,7 +227,7 @@ def figures():
     b+=text(36,429,'P3 starts after the last irrigation, before lights-off.',21)
     b+=text(36,462,'This guide ends P3 at lights-on; P0 then begins.',21)
     b+=text(36,503,'Blue ticks = irrigation events. Values are illustrative.',20,BLUE)
-    f['p0-p1-p2-p3-states']=plate('p0-p1-p2-p3-states','Daily irrigation phases','Illustrative VWC data',b,542,'A constructed 24-hour example with a 12-hour light period. P0 is lights-on to first irrigation; P1 refills; P2 maintains; P3 runs from the final event to the next lights-on. Total between-irrigation dryback spans P3 plus the following P0. The trace and event timing illustrate this convention only. Plot EC separately and identify the measurement method.')
+    f['p0-p1-p2-p3-states']=plate('p0-p1-p2-p3-states','Daily irrigation phases','Illustrative VWC data',b,542,'A constructed 24-hour example with a 12-hour light period. P0 is lights-on to first irrigation; P1 refills; P2 maintains; P3 runs from the final event to the next lights-on. Total between-irrigation dryback spans P3 plus the following P0. Values and timings are illustrative.')
 
     f['crop-stage-arc']=steps('crop-stage-arc','Crop development stages','Stage observations',[
         ('Established vegetative growth','Roots established; uptake is repeatable.'),
@@ -283,4 +283,7 @@ def figures():
     return f
 
 
-FIGURES=figures()
+FIGURES = {key: value for key, value in figures().items() if key not in {
+    'slab-preparation', 'crop-stage-arc', 'ec-correction-finish',
+    'climate-demand-response', 'troubleshooting-ladder', 'room-heat',
+}}
