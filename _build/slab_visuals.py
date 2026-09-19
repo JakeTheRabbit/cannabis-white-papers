@@ -119,27 +119,56 @@ def figures():
     b+=text(36,475,'Block example: 150 mm wide; verify actual volume.',20,MUTED)
     f['three-plant-slab']=plate('three-plant-slab','Three-block slab cross-section','Example dimensions',b,510,'Side section through a three-plant slab. Substrate remains continuous beneath every block; roots are conceptual. The slab dimensions give 11.25 L. A 150 mm cube is 3.375 L; the calculation uses a separately assumed 3.6 L product volume. Drain openings must follow the selected wrapper/product procedure. <a href="#ref-2">[2]</a>')
 
-    b=text(36,36,'PLAN · 7.6 m × 1.2 m table',24,GREEN,weight=700)
-    b+=rect(70,83,580,92,'#20362b','#82988b')
-    for row in range(2):
-        for s in range(7):
-            x=93+s*75; y=91+row*65
-            b+=rect(x,y,71,11,SLAB,AMBER)
-            for p in range(3): b+=circle(x+12+p*23,y+5.5,2.6,GREEN,GREEN)
-    b+=rect(94,122,525,14,'#304e43',GREEN,6)+circle(78,129,12,'#304e43',GREEN)
-    b+=arrow(62,129,112,129,GREEN)+line(619,122,619,136,GREEN,4)
-    b+=line(100,115,610,115,AMBER,3)+line(100,144,610,144,AMBER,3)
-    b+=text(36,220,'14 slabs × 3 plants = 42 plants per table',23)+text(36,252,'Seven 1 m slabs leave 0.3 m at each end.',21,MUTED)
-    b+=text(36,306,'CROSS-SECTION · vertical spacing schematic',21,GREEN)
-    b+=rect(90,336,540,44,'#274d38',GREEN,12)+text(360,365,'Continuous trained canopy',23,INK,'middle')
-    b+=line(85,493,635,493,MUTED,4)
-    for x in (120,535): b+=rect(x,459,65,33,SLAB,AMBER)+rect(x,406,65,53,SLAB,AMBER)
-    b+=circle(360,451,33,'#304e43',GREEN)+text(360,459,'air',18,INK,'middle')
-    for x in (260,460):
-        b+=line(x,493,x,433,MUTED,3)+rect(x-24,425,48,8,AMBER,AMBER)+arrow(x,420,x,388,AMBER)
-    b+=text(36,543,'Centre lane: air tube + supported light bars',22)
-    b+=text(36,578,'Clear below the canopy; foliage closes above it.',21,MUTED)
-    f['clear-centre-layout']=plate('clear-centre-layout','Table layout and canopy cross-section','Layout example',b,614,'Two outside root rows carry 14 slabs and 42 plants. Dots mark plants; gold bars mark upward-directed lights. The central perforated tube has a dedicated inlet fan and capped far end; outlet sizing requires airflow measurements. Cross-section heights and mounting are schematic. Canopy closure depends on cultivar, veg time and training. Three-row layouts carry 21 slabs / 63 plants; use them if the centre cannot close uniformly. Confirm clearances and airflow on the installation.')
+    def table_plan(top, crosswise=False):
+        out=rect(72,top,590,155,'#20362b','#82988b')
+        # Seven overhead-light bays, each with three slabs / nine plants.
+        for col in range(7):
+            x=100+col*76
+            out+=rect(x-3,top+4,76,147,'none','#71877b',extra='stroke-dasharray="4 5"')
+            for row in range(3):
+                y=top+14+row*57
+                out+=rect(x,y,70,12,SLAB,AMBER,extra='data-layout-slab="true"')
+                for dot in range(3):out+=circle(x+12+dot*23,y+6,2.6,GREEN,GREEN)
+        for y in (top+48,top+105):
+            out+=rect(94,y-10,541,20,'#304e43',GREEN,8)
+            out+=circle(79,y,12,'#304e43',GREEN)+arrow(61,y,109,y,GREEN)
+            out+=line(635,y-9,635,y+9,GREEN,3)
+            for x in range(130,620,40):out+=circle(x,y+7,1.5,GREEN,GREEN)
+            if not crosswise:out+=line(101,y,628,y,AMBER,5)
+        if crosswise:
+            for col in range(7):
+                x=135+col*76
+                out+=line(x,top+5,x,top+149,AMBER,5)
+        return out
+
+    b=text(36,36,'THREE ROWS · 7.6 m × 1.2 m table',24,GREEN,weight=700)
+    b+=text(36,73,'21 slabs × 3 plants = 63 plants per table',23)
+    b+=text(36,107,'7 overhead lights × 9 plants per light',22)
+    b+=text(36,152,'A · LEDs lengthwise above both air socks',22,AMBER)
+    b+=table_plan(175)
+    b+=text(36,365,'B · LEDs crosswise, evenly spaced along the table',22,AMBER)
+    b+=table_plan(390,True)
+    b+=text(36,578,'Each air sock has its own 200 mm inlet fan.',21)
+    b+=text(36,610,'Dashed bays = overhead lights; gold lines = under-canopy LEDs.',19,MUTED)
+    b+=text(36,659,'CROSS-SECTION · option A',22,GREEN)
+    b+=rect(84,684,566,40,'#274d38',GREEN,12)+text(367,711,'Continuous trained canopy',22,INK,'middle')
+    b+=line(80,853,654,853,MUTED,4)
+    for x in (114,334,554):
+        b+=rect(x,827,52,26,SLAB,AMBER)+rect(x,775,52,52,SLAB,AMBER)
+    for x in (249,469):
+        b+=circle(x,819,33,'#304e43',GREEN)+text(x,826,'air',18,INK,'middle')
+        b+=line(x-45,853,x-45,768,MUTED,2)+line(x+45,853,x+45,768,MUTED,2)
+        b+=rect(x-45,760,90,8,AMBER,AMBER)+arrow(x,754,x,731,AMBER)
+    b+=text(36,897,'Mount LEDs on supports above the socks.',21)
+    b+=text(36,930,'Keep the fabric clear of the fixtures and their mounts.',20,MUTED)
+    f['clear-centre-layout']=plate('clear-centre-layout','Three-row slab layout and LED options','Specified layout · mounting heights schematic',b,963,
+        'Each table has three rows of seven slabs: 63 plants under seven overhead lights, nine plants per light. '
+        'Two perforated air socks run between the rows, each connected to a dedicated 200 mm fan. '
+        'Option A uses two lengthwise LED runs above the socks. Option B uses crosswise bars evenly spaced along the table; '
+        'the seven bars shown illustrate spacing, not a specified fixture count. Both options direct light upward beneath the canopy. '
+        'Support fixtures independently of the sock fabric and check inflated sock clearance. '
+        'Seven 1 m slabs leave 300 mm at each end of the 7.6 m table. Dimensions and light bays describe the requested layout; '
+        'light coverage and airflow require measurements.')
 
     b=text(36,40,'SUPPLY, EMITTER AND DISTRIBUTOR',22,GREEN)
     b+=rect(55,85,610,26,'#334139',MUTED)+text(360,73,'Pressurised lateral',21,anchor='middle')
