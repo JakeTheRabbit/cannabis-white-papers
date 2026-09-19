@@ -4,6 +4,7 @@ All coordinates are drawing coordinates, not installation dimensions. Numeric
 examples are labelled calculations; none is a validated controller setpoint.
 """
 from html import escape
+from pathlib import Path
 import re
 
 INK = '#e7eee9'
@@ -20,11 +21,12 @@ CSS = '''<style id="slab-technical-styles">
 .slab-plate h3{margin:0;font-size:1.2rem}
 .slab-drawing{overflow-x:auto;background:#14201b;scrollbar-color:#6a8c7c #14201b}
 .slab-drawing svg{display:block;width:100%;min-width:0;height:auto;max-width:none}
+#visual-sensor-placement .slab-drawing svg{min-width:1000px}
 .slab-drawing:focus-visible{outline:3px solid #76dab0;outline-offset:-3px}
 .slab-plate figcaption{padding:16px 20px;font-size:.92rem;line-height:1.6}
 .slab-plate .slab-scroll{display:none}
 @media(max-width:650px){.slab-drawing svg{min-width:600px}.slab-plate .slab-scroll{display:block;margin:8px 0 0;font:400 .8rem/1.4 var(--sans);color:var(--mut)}}
-@media print{.slab-drawing svg{min-width:0}.slab-plate{break-inside:avoid}}
+@media print{.slab-drawing svg,#visual-sensor-placement .slab-drawing svg{min-width:0}.slab-plate{break-inside:avoid}}
 </style>'''
 
 
@@ -175,21 +177,25 @@ def figures():
     b+=text(36,452,'Retained water and outlet height change this profile.',21,AMBER)
     f['connected-water-column']=plate('connected-water-column','Block and slab water distribution','Qualitative cross-section',b,490,'Block and slab exchange water through their contact face. Under draining conditions the upper media can become drier while the slab remains wet; irrigation and uptake also affect the profile. The profile varies with irrigation and drainage conditions. Grodan describes retained water changing block drying in its staged-drainage method. <a href="#ref-3">[3]</a>')
 
-    b=text(36,40,'PLAN · record location relative to plants and outlets',21,GREEN)
-    b+=rect(65,85,590,110,SLAB,AMBER)
-    for x in (100,285,470): b+=rect(x,102,80,76,'#63583c',AMBER)+circle(x+40,140,8,GREEN,GREEN)
-    b+=rect(229,124,11,38,'#283e35',GREEN)
-    for y in (130,143,156):b+=line(240,y,274,y,INK,3)
-    b+=text(36,239,'One representative location shown; compare across slabs.',20)
-    b+=text(36,295,'SECTION · needles fully embedded in substrate',21,GREEN)
-    b+=rect(170,329,400,118,SLAB,AMBER)
-    b+=rect(147,354,23,66,'#283e35',GREEN)
-    for y in (363,387,411):b+=line(170,y,290,y,INK,4)
-    b+=rect(174,340,151,95,'none',GREEN,18,'stroke-dasharray="6 5"')
-    b+=text(359,365,'Local sensing region',20,GREEN)+text(359,396,'not the whole slab',20)
-    b+=text(36,493,'Record depth, orientation, model and calibration.',21)
-    b+=text(36,528,'Air gaps or exposed needles invalidate this depiction.',20,AMBER)
-    f['sensor-placement']=plate('sensor-placement','Substrate sensor placement','Placement schematic',b,566,'Three-needle probe symbol; dimensions and sensing outline are schematic. Place representative control probes in comparable rooted zones, recording depth and distance from drippers and drains. Use additional locations for diagnosis when appropriate. METER warns that air gaps bias VWC low; orientation changes the depth sampled. <a href="#ref-18">[18]</a>')
+    sensor_caption = ('MT22: insert through the long side beside the middle block, outside its footprint. '
+        'The 88 mm body runs along the slab; all three 53 mm rods enter across its width at one height. '
+        'Keep the housing flush and support the cable. The template proposes centreline heights of 37.5 mm '
+        'for a 75 mm slab and 50 mm for a 100 mm slab, measured from the substrate base. These are comparison '
+        'positions requiring local validation. '
+        '<a href="assets/slab-sensor/MT22-placement-template-A4-actual-size.pdf" target="_blank" rel="noopener">Download the two-page A4 template</a>. '
+        'Print at 100% / Actual size and verify both 100 mm scale bars. Transfer pin spacing from the actual sensor. '
+        '<a href="assets/slab-sensor/mt22-placement.svg" target="_blank" rel="noopener">Open full-size drawing</a> · '
+        '<a href="https://github.com/JakeTheRabbit/TDR-Sensor/blob/main/docs/PLACEMENT.md">TDR-Sensor placement notes</a> · '
+        '<a href="assets/slab-sensor/LICENSE">AGPL-3.0 license</a>.')
+    sensor_svg = (Path(__file__).parent / 'static/slab-sensor/mt22-placement.svg').read_text(encoding='utf-8')
+    sensor_svg = sensor_svg.replace('id="arrow"', 'id="mt22-arrow"').replace('url(#arrow)', 'url(#mt22-arrow)')
+    sensor_svg = sensor_svg.replace('id="wool"', 'id="mt22-wool"').replace('url(#wool)', 'url(#mt22-wool)')
+    sensor_svg = sensor_svg.replace('<svg ', '<svg role="img" aria-labelledby="mt22-title mt22-desc" ', 1)
+    sensor_svg = sensor_svg.replace('<defs>', '<title id="mt22-title">MT22 rockwool slab sensor placement</title>'
+        '<desc id="mt22-desc">Top, end and side views. Three rods enter horizontally through the long side of the slab, '
+        'beside the middle block. The long sensor body follows the slab length. Use the separate PDF for actual-size printing.</desc><defs>', 1)
+    shell = plate('sensor-placement', 'MT22 sensor placement and printable template', 'TDR-Sensor placement drawing', '', 1100, sensor_caption)
+    f['sensor-placement'] = re.sub(r'<svg.*?</svg>', lambda _: sensor_svg, shell, count=1, flags=re.S)
 
     f['slab-preparation']=steps('slab-preparation','Slab preparation','Preparation sequence',[
         ('Check support and drainage','Check the tray plane and planned drain route.'),
