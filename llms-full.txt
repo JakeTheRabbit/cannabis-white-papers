@@ -9425,13 +9425,35 @@ Check measurement method and water delivery before correcting high EC. Keep preh
 
 Light, temperature, humidity and air movement affect transpiration. After a climate or lighting change, compare the rate of VWC decline, irrigation volume and runoff with the previous conditions. Measure at the near, middle and far ends of the table. If one area dries faster, check local climate and emitter delivery before changing the whole zone.
 
+#### Plant clearance and early skirting
+
+For the under-canopy layout shown here, plants must be tall enough to keep retained foliage and branches clear of the bars and their mounts. Skirt or lollipop early: remove low growth that would contact fixtures, obstruct the air socks or crowd the space below the retained canopy. Keep productive foliage above the lights. Recheck clearance as branches spread and flowers gain weight; use the fixture manufacturer’s minimum crop clearance.
+
+Foliage pressed against fixtures or exposed at very short distance can suffer local heat or light injury. Crowded lower growth also obstructs airflow and inspection. If plants cannot clear the bars, delay their use or reposition them.
+
+#### Redistributing light between top and bottom
+
+Under-canopy lighting can be used to redistribute part of the lighting input from above to below. Reduce the top-light setting in steps while measuring illumination through the crop. Equal electrical watts maintain the same lighting power budget, but do not guarantee equal photon output or crop response: fixture efficacy, spectrum and interception differ.
+
+PPFD is measured at a surface and in a direction. A reading below the canopy cannot simply be subtracted from a reading above it. Map upper, middle and lower foliage with consistent sensor positions and orientations, and account for photoperiod. Cannabis studies of supplemental subcanopy lighting do not establish a universal one-for-one replacement for top light.[[20]](#ref-20)
+
+#### Heat and root-zone temperature
+
+Adding lighting power increases the heat that the room must remove. Reducing top-light watts by the same amount can keep total lighting power similar, while moving heat closer to the slabs. Air socks redistribute heat; cooling or exhaust must remove it. Keep fixtures off the slab wrappers and provide airflow around the bars without blocking their cooling surfaces.
+
+Log temperature inside representative rooted slabs, including positions closest to the bars and cooler comparison positions. Record lower-canopy air and leaf temperatures as well; a room sensor above the crop can miss a hot spot below it. Compare the full lights-on temperature trend before and after each lighting change, alongside VWC, EC and runoff.
+
+Excess root-zone heat increases root and microbial oxygen demand while warm water holds less dissolved oxygen. In rockwool, oxygen supply also depends on air-filled pores and drainage. Warm, persistently wet slabs can therefore leave roots oxygen-limited. Water and nutrient uptake can decline, causing wilting despite wet substrate, poor growth and loss of yield. Warm conditions can favour some Pythium species when the pathogen is present; heat alone does not create an infection.[[21]](#ref-21)
+
+If slab temperature exceeds the crop’s established limit, or plants show injury after the lighting change, dim or switch off the under-canopy bars and check cooling, clearance, airflow and drainage. Inspect roots and confirm recovery. Adding irrigation without checking the cause can worsen oxygen limitation in an already wet slab.
+
 ## Irrigation faults
 
 Irrigation symptoms, possible causes and checks.SymptomPossible causesFirst actionRunoff high, VWC barely risesChannelling, poor block-slab contact, or emitter placementInspect physically; slow the event or hand-rewet with balanced feed; do not increase volume blindlyRoot-zone EC climbs day over day outside the stage bandToo little leaching, too much dryback, feed mismatch, or excessive demandVerify at equal VWC, check feed EC and climate, then add P2/runoff with one recorded adjustmentRoot-zone EC falls below targetPeak/runoff too high for the steering phaseReduce P2 or peak slightly and observe one full dayP1 never reaches its targetTarget set above the peak VWC this slab can actually reach, blocked emitter, wrong flow assumption, or too few ramp eventsCatch-test, confirm the achievable peak VWC and the substrate volume, then adjust the modelFresh transplants stall while the slab stays wetInadequate block hydration, poor contact, delivery failure or impaired rootsInspect the block, roots, contact and caught outlet flow; do not use the slab sensor as the sole triggerDryback suddenly deepensMissed event or demand change from PPFD, VPD, CO2 or airflowCheck logs and climate first; compensate with P2 only after identifying the causeOne plant wilts while neighbours track normallySingle-emitter failure or local contact problemRestore flow and water that block manually with balanced feed if required
 
 ## Daily irrigation record
 
-Record values by irrigation zone and sampling position.RecordIncludeCrop and substrateCultivar, growth stage, block/slab product and dimensions, plants per slabWater deliveryCaught flow per plant, event duration, event count, first and last irrigationWater contentPeak and pre-irrigation VWC, dryback in percentage points, sensor positionDrainageApplied and drained volume from the same slab over the same interval; runoff percentageEC and pHFeed and runoff results; substrate EC method, VWC and sampling timeChanges and faultsMissed events, blocked outlets, manual watering, climate changes, corrective action and subsequent response
+Record values by irrigation zone and sampling position.RecordIncludeCrop and substrateCultivar, growth stage, block/slab product and dimensions, plants per slabWater deliveryCaught flow per plant, event duration, event count, first and last irrigationWater contentPeak and pre-irrigation VWC, dryback in percentage points, sensor positionDrainageApplied and drained volume from the same slab over the same interval; runoff percentageEC and pHFeed and runoff results; substrate EC method, VWC and sampling timeUnder-canopy lightingTop and lower fixture settings and watts, PPFD sampling position/orientation, slab temperature near bars and at comparison positions, leaf temperature and clearanceChanges and faultsMissed events, blocked outlets, manual watering, climate changes, corrective action and subsequent response
 
 ## References
 
@@ -9472,6 +9494,10 @@ Athena Agriculture. _Fade Procedure_. Replace Core with Fade for the final two w
 METER Group. TEROS 11/12 manual. Sensor installation, measurement volume and bulk-to-pore-water EC conversion. (manufacturer technical guidance) [Manufacturer documentation](https://publications.metergroup.com/Manuals/20587_TEROS11-12_Manual_Web.pdf)
 
 Netafim. NetBow product information. Consult the selected model and assembly instructions. (manufacturer technical guidance) [Manufacturer documentation](https://www.netafim.com/en/products-and-solutions/product-offering/drip-irrigation-products/netbow/)
+
+Subcanopy and Inter-Canopy Supplemental Light Enhances and Standardizes Yields in Medicinal Cannabis (Cannabis sativa L.). Plants 14(10):1469 (2025). [Research paper](https://doi.org/10.3390/plants14101469)
+
+Sutton JC et al. (2006). Etiology and epidemiology of Pythium root rot in hydroponic crops: current knowledge and perspectives. Summa Phytopathologica 32(4). Evidence from hydroponic crops; not a cannabis-specific temperature threshold. [Research review](https://doi.org/10.1590/S0100-54052006000400001)
 
 
 
