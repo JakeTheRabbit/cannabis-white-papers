@@ -158,8 +158,9 @@ def figures():
     for x in (249,469):
         b+=circle(x,819,33,'#304e43',GREEN)+text(x,826,'air',18,INK,'middle')
         b+=line(x-45,853,x-45,768,MUTED,2)+line(x+45,853,x+45,768,MUTED,2)
-        b+=rect(x-45,760,90,8,AMBER,AMBER)+arrow(x,754,x,731,AMBER)
-    b+=text(36,897,'Mount LEDs on supports above the socks.',21)
+        b+=line(x-45,768,x+45,768,MUTED,2)
+        b+=rect(x-7,760,14,6,AMBER,AMBER)+arrow(x,754,x,731,AMBER)
+    b+=text(36,897,'Narrow LED bars centred above each air sock.',21)
     b+=text(36,930,'Keep the fabric clear of the fixtures and their mounts.',20,MUTED)
     f['clear-centre-layout']=plate('clear-centre-layout','Three-row slab layout and LED options','Specified layout · mounting heights schematic',b,963,
         'Each table has three rows of seven slabs: 63 plants under seven overhead lights, nine plants per light. '
