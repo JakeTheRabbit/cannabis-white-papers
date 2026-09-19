@@ -9,11 +9,11 @@ from slab_visuals import CSS as VISUAL_CSS, FIGURES
 
 
 SLUG = "slab-irrigation-strategy"
-TITLE = "Slab irrigation, end to end"
-EYEBROW = "Feed · Slab steering"
+TITLE = "Rockwool Slab Irrigation"
+EYEBROW = "Water and substrate"
 SUB = (
-    "A measured slab-irrigation field guide: room layout, common dripper runtimes, "
-    "rooting-in, P0-P3 control, crop-stage steering, EC management and finish."
+    "Rockwool blocks and slabs: substrate volume, emitter flow, drainage, "
+    "root establishment, P0–P3 irrigation phases and root-zone EC."
 )
 META = [
     ("droplet", "Feed & steering"),

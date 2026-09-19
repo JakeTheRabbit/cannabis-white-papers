@@ -36,7 +36,7 @@ Licensed CC BY-NC 4.0 (https://creativecommons.org/licenses/by-nc/4.0/). Attribu
 - **The flower cycle, week by week** (`papers/flowering-stages.md`): The flip through to ripe
 - **Crop steering in rockwool: water content, drybacks, and the recovery floor** (`papers/rockwool-crop-steering.md`): Drybacks, saturation, the breaking point
 - **One steering law: coco, rockwool, soil and water** (`papers/one-steering-law.md`): Coco, rockwool, soil and water, one way to steer
-- **Slab irrigation, end to end** (`papers/slab-irrigation-strategy.md`): Blocks on slabs, rooting-in to chop
+- **Rockwool Slab Irrigation** (`papers/slab-irrigation-strategy.md`): Blocks on slabs, rooting-in to chop
 - **Ripening, flush, and harvest timing** (`papers/ripening-harvest-timing.md`): Trichome reads, flush truth, the harvest call
 
 ### Harvest, dry, trim & cure

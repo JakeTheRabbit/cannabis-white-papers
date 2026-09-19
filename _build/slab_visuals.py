@@ -101,21 +101,21 @@ def steps(key,title,kind,rows,caption):
 
 def figures():
     f={}
-    b=text(36,44,'One substrate · two readings',25,GREEN,weight=700)
+    b=text(36,44,'Example VWC readings',25,GREEN,weight=700)
     for x,val,label in [(55,70,'Peak'),(250,50,'Trough')]:
         b+=rect(x,85,110,165,'#23362c','#6e8c7b')+rect(x,250-val*2,110,val*2,'#355c6e',BLUE)
         b+=text(x+55,282,f'{label} {val}%',22,anchor='middle')
     b+=arrow(174,166,238,166)+text(421,124,'70 − 50 = 20',27,GREEN,weight=700)+text(421,157,'percentage points',21)
     b+=text(421,205,'20 ÷ 70 × 100',25,AMBER)+text(421,240,'≈ 28.6% relative',23,AMBER)
-    b+=text(36,338,'VWC is water volume / substrate volume.',22)+text(36,371,'The bars show readings, not a physical waterline.',20,MUTED)
-    f['dryback-terminology']=plate('dryback-terminology','Dryback: points and relative percent','Calculated example',b,402,'A fall from 70% to 50% VWC is 20 percentage points, or approximately 28.6% of the starting water content. These example readings are not crop targets; the peak is not automatically field capacity.')
+    b+=text(36,338,'VWC is water volume / substrate volume.',22)+text(36,371,'Bars represent measured VWC values.',20,MUTED)
+    f['dryback-terminology']=plate('dryback-terminology','Absolute and relative dryback','Calculated example',b,402,'A fall from 70% to 50% VWC is 20 percentage points, or approximately 28.6% of the starting water content. These values illustrate the calculation. Field capacity requires a separate drainage measurement.')
 
     b=text(36,40,'LONGITUDINAL SECTION · assumed geometry',21,GREEN)+assembly(125)
     b+=line(80,285,640,285)+line(80,276,80,294)+line(640,276,640,294)+text(360,318,'1,000 mm slab length',22,anchor='middle')
-    b+=text(36,365,'3 blocks sit on openings in the wrapper.',22)+text(36,398,'Roots cross the contact face into solid substrate.',22)
+    b+=text(36,365,'3 blocks sit on openings in the wrapper.',22)+text(36,398,'Root growth from block into slab into solid substrate.',22)
     b+=text(36,442,'Slab example: 1,000 × 150 × 75 mm = 11.25 L',21,AMBER)
     b+=text(36,475,'Block example: 150 mm wide; verify actual volume.',20,MUTED)
-    f['three-plant-slab']=plate('three-plant-slab','Three blocks share one slab','Geometry example · not an installation drawing',b,510,'Side section through a three-plant slab. Substrate remains continuous beneath every block; roots are conceptual. The slab dimensions give 11.25 L. The runtime example separately assumes a 3.6 L block: a literal 150 mm cube is 3.375 L, so use the actual product volume. Drain openings must follow the selected wrapper/product procedure. <a href="#ref-2">[2]</a>')
+    f['three-plant-slab']=plate('three-plant-slab','Three-block slab cross-section','Example dimensions',b,510,'Side section through a three-plant slab. Substrate remains continuous beneath every block; roots are conceptual. The slab dimensions give 11.25 L. The runtime example separately assumes a 3.6 L block: a literal 150 mm cube is 3.375 L, so use the actual product volume. Drain openings must follow the selected wrapper/product procedure. <a href="#ref-2">[2]</a>')
 
     b=text(36,36,'PLAN · 7.6 m × 1.2 m table',24,GREEN,weight=700)
     b+=rect(70,83,580,92,'#20362b','#82988b')
@@ -137,9 +137,9 @@ def figures():
         b+=line(x,493,x,433,MUTED,3)+rect(x-24,425,48,8,AMBER,AMBER)+arrow(x,420,x,388,AMBER)
     b+=text(36,543,'Centre lane: air tube + supported light bars',22)
     b+=text(36,578,'Clear below the canopy; foliage closes above it.',21,MUTED)
-    f['clear-centre-layout']=plate('clear-centre-layout','Equipment below a continuous canopy','Counted layout · schematic hardware',b,614,'Two outside root rows carry 14 slabs and 42 plants. Dots mark plants; gold bars mark upward-directed lights. The central perforated tube has a dedicated inlet fan and capped far end; outlet sizing is intentionally unspecified. Cross-section heights and mounting are schematic. Canopy closure depends on cultivar, veg time and training. Three-row layouts carry 21 slabs / 63 plants; use them if the centre cannot close uniformly. Confirm clearances and airflow on the installation.')
+    f['clear-centre-layout']=plate('clear-centre-layout','Table layout and canopy cross-section','Layout example',b,614,'Two outside root rows carry 14 slabs and 42 plants. Dots mark plants; gold bars mark upward-directed lights. The central perforated tube has a dedicated inlet fan and capped far end; outlet sizing requires airflow measurements. Cross-section heights and mounting are schematic. Canopy closure depends on cultivar, veg time and training. Three-row layouts carry 21 slabs / 63 plants; use them if the centre cannot close uniformly. Confirm clearances and airflow on the installation.')
 
-    b=text(36,40,'TRACE THE CONNECTED WATER PATH',22,GREEN)
+    b=text(36,40,'SUPPLY, EMITTER AND DISTRIBUTOR',22,GREEN)
     b+=rect(55,85,610,26,'#334139',MUTED)+text(360,73,'Pressurised lateral',21,anchor='middle')
     b+=line(145,111,145,142,BLUE,5)+rect(128,142,34,36,'#294d5d',BLUE,6)+text(195,165,'Pressure-compensating emitter',22)
     b+=line(145,178,145,230,BLUE,5)+line(145,230,325,230,BLUE,5)+line(325,230,325,270,BLUE,5)
@@ -149,7 +149,7 @@ def figures():
     for x in (212,296,380,465): b+=line(x,270,x,310,BLUE,3)+arrow(x,312,x,339,BLUE)
     b+=text(36,440,'Distributor symbol only: use a real ring or stakes.',21)
     b+=text(36,474,'Verify block fit, connections and caught total flow.',21,MUTED)
-    f['dripper-delivery-chain']=plate('dripper-delivery-chain','A complete delivery path','Functional schematic · no invented product rendering',b,512,'Supply passes through the emitter and microtube to a supported distributor at the block. Branches are symbols, not a NetBow construction drawing or a specified outlet count. Match the actual ring/stake model, operating pressure and block fit to its documentation; measure the combined output delivered to each plant. <a href="#ref-19">[19]</a>')
+    f['dripper-delivery-chain']=plate('dripper-delivery-chain','Drip irrigation components','Component schematic',b,512,'Supply passes through the emitter and microtube to a supported distributor at the block. The distributor is schematic; outlet count and dimensions depend on the product. Match the actual ring/stake model, operating pressure and block fit to its documentation; measure the combined output delivered to each plant. <a href="#ref-19">[19]</a>')
 
     b=text(36,40,'COLLECT FOR THE SAME MEASURED INTERVAL',22,GREEN)
     for x,label in [(125,'Near'),(345,'Middle'),(565,'Far')]:
@@ -161,7 +161,7 @@ def figures():
     b+=text(36,429,'7.35 L × 0.03 × 1,000 = 220.5 mL',24)
     b+=text(36,467,'220.5 ÷ (4,000 ÷ 3,600) ≈ 198 s = 3:18',23)
     b+=text(36,511,'4 L/h is an example measured total per plant.',20,MUTED)
-    f['shot-volume-runtime']=plate('shot-volume-runtime','Catch-test first, calculate runtime second','Measurement method + calculated example',b,546,'Use labelled graduated vessels or tared weighing cups at representative outlets across the active zone. Compare collections made over the same time at operating pressure. No measured uniformity result is asserted here. The runtime uses unrounded 220.5 mL and an assumed 7.35 L allocation; replace both allocation and flow with verified values.')
+    f['shot-volume-runtime']=plate('shot-volume-runtime','Emitter flow and irrigation duration','Measurement and calculation',b,546,'Use labelled graduated vessels or tared weighing cups at representative outlets across the active zone. Compare collections made over the same time at operating pressure. The vessels illustrate collection positions. The runtime uses unrounded 220.5 mL and an assumed 7.35 L allocation; replace both allocation and flow with verified values.')
 
     b='<defs><linearGradient id="slab-moisture-gradient" gradientUnits="userSpaceOnUse" x1="0" y1="95" x2="0" y2="290"><stop offset="0" stop-color="#766744"/><stop offset="1" stop-color="#376d87"/></linearGradient></defs>'
     b+=text(36,40,'SECTION · draining, hydraulically connected media',21,GREEN)
@@ -171,9 +171,9 @@ def figures():
     b+=arrow(440,182,440,246,BLUE)+text(473,167,'Redistribution',19,BLUE)
     b+=arrow(410,95,410,52,GREEN)+text(452,70,'Plant uptake',19,GREEN)
     b+=line(152,295,592,295,MUTED,2,'6 5')+arrow(555,281,615,281,BLUE)+text(485,330,'Drain boundary',20)
-    b+=text(36,372,'Colour = qualitative moisture overlay.',22)+text(36,406,'It is not a material layer or a measured waterline.',21,MUTED)
+    b+=text(36,372,'Colour = qualitative moisture overlay.',22)+text(36,406,'Colours represent relative water distribution.',21,MUTED)
     b+=text(36,452,'Retained water and outlet height change this profile.',21,AMBER)
-    f['connected-water-column']=plate('connected-water-column','Contact, redistribution and drainage','Conceptual section · conditional behaviour',b,490,'Block and slab exchange water through their contact face. Under draining conditions the upper media can become drier while the slab remains wet; irrigation and uptake also affect the profile. This is not a fixed gradient or guaranteed day-by-day outcome. Grodan describes retained water changing block drying in its staged-drainage method. <a href="#ref-3">[3]</a>')
+    f['connected-water-column']=plate('connected-water-column','Block and slab water distribution','Qualitative cross-section',b,490,'Block and slab exchange water through their contact face. Under draining conditions the upper media can become drier while the slab remains wet; irrigation and uptake also affect the profile. The profile varies with irrigation and drainage conditions. Grodan describes retained water changing block drying in its staged-drainage method. <a href="#ref-3">[3]</a>')
 
     b=text(36,40,'PLAN · record location relative to plants and outlets',21,GREEN)
     b+=rect(65,85,590,110,SLAB,AMBER)
@@ -189,15 +189,15 @@ def figures():
     b+=text(359,365,'Local sensing region',20,GREEN)+text(359,396,'not the whole slab',20)
     b+=text(36,493,'Record depth, orientation, model and calibration.',21)
     b+=text(36,528,'Air gaps or exposed needles invalidate this depiction.',20,AMBER)
-    f['sensor-placement']=plate('sensor-placement','A sensor measures its local substrate','Placement schematic · consult the selected sensor manual',b,566,'Three-needle probe symbol; dimensions and sensing outline are schematic. Place representative control probes in comparable rooted zones, recording depth and distance from drippers and drains. Use additional locations for diagnosis when appropriate. METER warns that air gaps bias VWC low; orientation changes the depth sampled. <a href="#ref-18">[18]</a>')
+    f['sensor-placement']=plate('sensor-placement','Substrate sensor placement','Placement schematic',b,566,'Three-needle probe symbol; dimensions and sensing outline are schematic. Place representative control probes in comparable rooted zones, recording depth and distance from drippers and drains. Use additional locations for diagnosis when appropriate. METER warns that air gaps bias VWC low; orientation changes the depth sampled. <a href="#ref-18">[18]</a>')
 
-    f['slab-preparation']=steps('slab-preparation','Prepare one repeatable starting condition','Select the manufacturer procedure before opening the wrapper',[
+    f['slab-preparation']=steps('slab-preparation','Slab preparation','Preparation sequence',[
         ('Check support and drainage','Check the tray plane and planned drain route.'),
         ('Saturate with the intended solution','Fill through the intended openings; record EC and pH.'),
         ('Hold for the specified soak','Use the selected slab manufacturer’s procedure.'),
         ('Make the specified drainage opening','Location and stage depend on the selected method.'),
         ('Seat the block on exposed fibre','No wrapper bridging; inspect the contact face.')],
-        'Charging happens with the saturation solution, not as an unexplained later step. Grodan’s staged method uses an initial opening above the seal and later definitive drainage; it is not the same as a generic set of bottom slits. Select and record one applicable procedure rather than combining their cut patterns. <a href="#ref-2">[2]</a> <a href="#ref-3">[3]</a>')
+        'Initial saturation supplies water and nutrients together. Grodan’s staged method uses an initial opening above the seal, followed by lower drainage openings. Select and record one applicable procedure rather than combining their cut patterns. <a href="#ref-2">[2]</a> <a href="#ref-3">[3]</a>')
 
     b=''
     for i,(label,depth) in enumerate([('Block rooted',76),('Interface crossed',121),('Slab colonising',158)]):
@@ -206,8 +206,8 @@ def figures():
         b+=plant(x+96,75)+roots(x+96,75,depth,15+i*12)
     b+=text(36,292,'Keep the same block–slab assembly throughout.',22)
     b+=text(36,328,'Inspect roots, block hydration and repeatable uptake.',21)
-    b+=text(36,365,'Progression is conceptual; no fixed day count.',20,MUTED)
-    f['rooting-in-progression']=plate('rooting-in-progression','Roots cross the contact face','Conceptual stages · plant-led assessment',b,403,'The same assembly is shown at three establishment stages. Roots are drawn within continuous substrate, with multiple roots appropriate to a clone-based example. Root inspection and observed uptake inform the transition; these panels do not prescribe a transplant irrigation schedule.')
+    b+=text(36,365,'Development rate depends on crop and conditions.',20,MUTED)
+    f['rooting-in-progression']=plate('rooting-in-progression','Root growth from block into slab','Illustrated root development',b,403,'The same assembly is shown at three establishment stages. Roots are drawn within continuous substrate, with multiple roots appropriate to a clone-based example. Root inspection and water uptake determine when the crop can move to its established irrigation programme.')
 
     # One reproducible synthetic daily example replaces three overlapping plots.
     events=[(2,6),(3,6),(4,6),(5,2),(7,2),(9,2)]
@@ -227,14 +227,14 @@ def figures():
     b+=text(36,429,'P3 starts after the last irrigation, before lights-off.',21)
     b+=text(36,462,'This guide ends P3 at lights-on; P0 then begins.',21)
     b+=text(36,503,'Blue ticks = irrigation events. Values are illustrative.',20,BLUE)
-    f['p0-p1-p2-p3-states']=plate('p0-p1-p2-p3-states','One day, explicit phase boundaries','Synthetic trace · not room history or controller targets',b,542,'A constructed 24-hour example with a 12-hour light period. P0 is lights-on to first irrigation; P1 refills; P2 maintains; P3 runs from the final event to the next lights-on. Total between-irrigation dryback spans P3 plus the following P0. The trace and event timing illustrate this convention only. EC requires its own measured trace and method; no universal inverse EC curve is asserted.')
+    f['p0-p1-p2-p3-states']=plate('p0-p1-p2-p3-states','Daily irrigation phases','Illustrative VWC data',b,542,'A constructed 24-hour example with a 12-hour light period. P0 is lights-on to first irrigation; P1 refills; P2 maintains; P3 runs from the final event to the next lights-on. Total between-irrigation dryback spans P3 plus the following P0. The trace and event timing illustrate this convention only. Plot EC separately and identify the measurement method.')
 
-    f['crop-stage-arc']=steps('crop-stage-arc','Observe development before changing stage','Decision guide · no universal calendar',[
+    f['crop-stage-arc']=steps('crop-stage-arc','Crop development stages','Stage observations',[
         ('Established vegetative growth','Roots established; uptake is repeatable.'),
         ('Flower setting','Observe early flower sites and ongoing stretch.'),
         ('Flower bulking','Stretch slows; track flower expansion.'),
         ('Maturity assessment','Use cultivar-specific flower observations and records.')],
-        'Stage labels describe observations. They do not prove that a particular irrigation bias will produce the pictured outcome. Yellow leaves alone do not establish harvest readiness. Apply the separately attributed programme only within validated room and cultivar limits. <a href="#ref-13">[13]</a> <a href="#ref-16">[16]</a>')
+        'Stage duration varies by cultivar and growing conditions. Assess maturity from flower observations and crop records. Irrigation ranges appear in the accompanying table. <a href="#ref-13">[13]</a> <a href="#ref-16">[16]</a>')
 
     b=text(36,38,'SIDE VIEW · complete shared-slab collection',21,GREEN)+assembly(118)
     # Supply connects to every block; drain follows a different coloured path.
@@ -250,36 +250,36 @@ def figures():
     b+=text(36,390,'All slab drains → tray → outlet → collector',21,AMBER)
     b+=text(36,476,'Runoff % = collected drain mL / applied mL × 100',22)
     b+=text(36,513,'Use the same slab and collection interval for both.',20,MUTED)
-    f['measurement-runoff-layout']=plate('measurement-runoff-layout','Measure the whole three-plant slab','Collection schematic · no measured result claimed',b,552,'Three blocks sit on one slab supported above a runoff tray. Gold shows the complete drain path to a graduated collector; blue shows feed tubing. Slit positions are schematic, not a cutting specification. Capture all relevant drainage without allowing the slab to sit in standing runoff. Dividing slab totals by three gives an average, not individual plant measurements. <a href="#ref-15">[15]</a>')
+    f['measurement-runoff-layout']=plate('measurement-runoff-layout','Slab runoff collection','Collection schematic',b,552,'Three blocks sit on one slab supported above a runoff tray. Gold shows the complete drain path to a graduated collector; blue shows feed tubing. Slit positions depend on the product and drainage procedure. Capture all relevant drainage without allowing the slab to sit in standing runoff. Dividing slab totals by three gives an average, not individual plant measurements. <a href="#ref-15">[15]</a>')
 
-    f['ec-correction-finish']=steps('ec-correction-finish','Separate EC correction from finishing','Measurement-led checks',[
+    f['ec-correction-finish']=steps('ec-correction-finish','EC measurements and nutrient changes','Measurement sequence',[
         ('Identify the EC measurement','Feed, runoff, bulk or estimated pore-water EC?'),
         ('Check comparability','Same method, comparable VWC, calibration and time.'),
-        ('Investigate before correcting','Verify delivery, drainage, feed and crop demand.'),
-        ('Make and verify one bounded change','Track the next response; stop at the defined endpoint.'),
-        ('Treat finishing as a separate procedure','Name the product protocol and crop-specific endpoint.')],
-        'EC is reported in mS/cm (numerically equal to dS/m); solution colour is not an EC measurement. A substrate sensor’s bulk EC and estimated pore-water EC are different quantities. The cited Athena finish is a product procedure, not a universal flushing requirement. <a href="#ref-18">[18]</a> <a href="#ref-17">[17]</a>')
+        ('Check irrigation and drainage','Verify delivery, drainage, feed and crop demand.'),
+        ('Record the adjustment and response','Measure VWC, EC and runoff after the change.'),
+        ('Record preharvest nutrient changes','Record products, concentrations and timing.')],
+        'EC is reported in mS/cm (numerically equal to dS/m); solution colour is not an EC measurement. A substrate sensor’s bulk EC and estimated pore-water EC are different quantities. Athena’s Fade procedure applies to its named nutrient products. <a href="#ref-18">[18]</a> <a href="#ref-17">[17]</a>')
 
-    f['climate-demand-response']=steps('climate-demand-response','Check demand across the table','Observation plan · no predicted airflow gain',[
+    f['climate-demand-response']=steps('climate-demand-response','Water uptake across the table','Measurement locations',[
         ('Measure at relevant locations','Canopy light, air conditions and plant response.'),
         ('Compare substrate response','Look at VWC slope, delivery and collected runoff.'),
         ('Check spatial differences','Repeat near, middle and far along the table.'),
         ('Respond to the observed change','Adjust within validated limits; confirm the result.')],
-        'Higher environmental demand does not guarantee higher uptake in a stressed plant. Use comparable observations before changing irrigation. For perforated air tubes, measure static pressure and air movement at repeatable positions; a second tube has no quantified benefit here without measurements or a specified model.')
+        'Higher environmental demand does not guarantee higher uptake in a stressed plant. Use comparable observations before changing irrigation. For perforated air tubes, measure static pressure and air movement at repeatable positions; a second tube has no quantified benefit in this example.')
 
-    f['troubleshooting-ladder']=steps('troubleshooting-ladder','Use a check that separates possible causes','Diagnostic sequence',[
+    f['troubleshooting-ladder']=steps('troubleshooting-ladder','Irrigation fault checks','Diagnostic sequence',[
         ('One plant wilts','Catch-test its outlet; inspect block contact and roots.'),
         ('High runoff with little wet-up','Inspect bypass flow, drainage and probe contact.'),
-        ('EC trends upward','Compare like-for-like EC; check feed and runoff.'),
+        ('EC trends upward','Compare the same EC method; check feed and runoff.'),
         ('Sensors disagree','Check location, calibration and actual delivery.'),
         ('Correct the identified fault','Verify recovery; log the action and response.')],
-        'These checks narrow possibilities rather than proving one cause from a symptom. Restore a failed outlet or address acute plant stress promptly. Observe a complete grow-day after elective steering changes when appropriate; do not wait a day to correct a verified failure.')
+        'A symptom can have several causes. Restore a failed outlet or address acute plant stress promptly. Observe a complete grow-day after elective steering changes when appropriate; do not wait a day to correct a verified failure.')
 
     b=text(36,43,'Electrical input → eventual room heat',25,GREEN,weight=700)
     b+=text(36,102,'BTU/h = watts × 3.412',30)+text(36,157,'800 W ≈ 2,730 BTU/h',30,AMBER)
     b+=text(36,215,'Boundary: electrical energy retained inside the room.',20)
     b+=text(36,255,'Circulation redistributes heat.',22)+text(36,290,'Cooling or exhaust removes it across that boundary.',21)
-    f['room-heat']=plate('room-heat','Account for the electrical load','Calculated conversion · explicit room boundary',b,331,'This conversion assumes the electrical input ultimately remains as heat within the room boundary. Account separately for remote drivers or energy leaving that boundary. No leaf-temperature reduction or local heat-index benefit is predicted from fan count.')
+    f['room-heat']=plate('room-heat','Electrical input and room heat','Calculated heat equivalent',b,331,'This conversion assumes the electrical input ultimately remains as heat within the room boundary. Account separately for remote drivers or energy leaving that boundary. Fan count alone does not quantify leaf-temperature change.')
     return f
 
 
