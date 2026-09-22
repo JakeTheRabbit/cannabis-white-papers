@@ -1,0 +1,26 @@
+name: Deploy to growlabs.nz/whitepapers
+
+# Mirrors what GitHub Pages used to do for this repo: every push to main redeploys the
+# site, now as the Cloudflare Worker in wrangler.jsonc. Needs a repo secret
+# CLOUDFLARE_API_TOKEN (Workers Scripts:Edit + Zone Workers Routes:Edit on growlabs.nz).
+# Without the secret the job skips instead of failing.
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check for Cloudflare token
+        id: token
+        run: echo "present=${{ secrets.CLOUDFLARE_API_TOKEN != '' }}" >> "$GITHUB_OUTPUT"
+      - uses: actions/checkout@v4
+        if: steps.token.outputs.present == 'true'
+      - uses: cloudflare/wrangler-action@v3
+        if: steps.token.outputs.present == 'true'
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          command: deploy

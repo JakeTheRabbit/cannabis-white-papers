@@ -19,11 +19,14 @@ npm install
 wrangler kv namespace create CORPUS
 
 # 2. load the corpus into KV (data/kv-bulk.json is produced by the exporter)
-wrangler kv bulk put data/kv-bulk.json --binding CORPUS --remote
+wrangler kv bulk put data/kv-bulk.json --binding CORPUS --remote -c wrangler.toml
 
 # 3. deploy
-wrangler deploy
+wrangler deploy -c wrangler.toml
 ```
+
+Always pass `-c wrangler.toml` here: wrangler searches parent directories for config and would
+otherwise pick up the site's `../wrangler.jsonc` (the growlabs.nz Worker, a different account).
 
 ## Use
 

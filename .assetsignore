@@ -1,0 +1,15 @@
+# Not part of the served site (wrangler uploads everything else under the repo root).
+.git
+.github
+.wrangler
+_build
+_deploy
+mcp
+node_modules
+.assetsignore
+.gitignore
+wrangler.jsonc
+package.json
+bun.lock
+README.md
+ROADMAP.md

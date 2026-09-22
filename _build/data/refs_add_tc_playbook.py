@@ -40,7 +40,7 @@ REFS_ADD = {
         "url": "https://doi.org/10.21273/HORTTECH04779-20", "peer": True},
     "cwp_tc_beginner": {
         "cite": "The Cannabis White Papers (2026). Cleaning up cannabis genetics with tissue culture (beginner paper).",
-        "url": "https://jaketherabbit.github.io/cannabis-white-papers/tissue-culture.html", "peer": False},
+        "url": "https://www.growlabs.nz/whitepapers/tissue-culture.html", "peer": False},
     "laf_buy": {
         "cite": "AliExpress / Alibaba laminar-flow listings. Confirm H13/H14 + pre-filter + 0.30–0.50 m/s before paying.",
         "url": "https://www.aliexpress.com/w/wholesale-laminar-flow-hoods.html", "peer": False},

@@ -3,6 +3,10 @@ __pycache__/
 .DS_Store
 Thumbs.db
 
+# wrangler (growlabs.nz deploy) scratch + any local install
+.wrangler/
+node_modules/
+
 # raw image-plan / QA intermediates (distilled into embed_map + assets_manifest)
 _build/_gen/imgplan_*.json
 _build/_gen/qa_list.json

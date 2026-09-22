@@ -5,81 +5,81 @@
 Licensed CC BY-NC 4.0 (https://creativecommons.org/licenses/by-nc/4.0/). Attribution: The Cannabis White Papers. Each paper has a clean markdown version under /papers/ with sources preserved as footnotes.
 
 ## Propagation
-- [Cleaning up cannabis genetics with tissue culture](https://jaketherabbit.github.io/cannabis-white-papers/papers/tissue-culture.md): Clean up genetics from a speck of tissue
-- [Cannabis tissue culture, start to finish](https://jaketherabbit.github.io/cannabis-white-papers/papers/cannabis-tissue-culture-playbook.md): Start-to-finish cannabis tissue culture
-- [Cannabis tissue culture SOP](https://jaketherabbit.github.io/cannabis-white-papers/papers/cannabis-tissue-culture-sop.md): Jobs, forms, and a cheap hood from China
-- [Seeds, germination and seedlings](https://jaketherabbit.github.io/cannabis-white-papers/papers/seeds-germination.md): Pop seeds and raise seedlings
-- [How to root cannabis cuttings](https://jaketherabbit.github.io/cannabis-white-papers/papers/cloning.md): Cuttings that root every time
-- [Transplanting: potting up without the stall](https://jaketherabbit.github.io/cannabis-white-papers/papers/transplanting.md): Pot up without stalling the plant
-- [Mother plants: environment, feeding, pruning and pathogen defence](https://jaketherabbit.github.io/cannabis-white-papers/papers/mother-plants.md): Stock plants, HpLVd control & succession
+- [Cleaning up cannabis genetics with tissue culture](https://www.growlabs.nz/whitepapers/papers/tissue-culture.md): Clean up genetics from a speck of tissue
+- [Cannabis tissue culture, start to finish](https://www.growlabs.nz/whitepapers/papers/cannabis-tissue-culture-playbook.md): Start-to-finish cannabis tissue culture
+- [Cannabis tissue culture SOP](https://www.growlabs.nz/whitepapers/papers/cannabis-tissue-culture-sop.md): Jobs, forms, and a cheap hood from China
+- [Seeds, germination and seedlings](https://www.growlabs.nz/whitepapers/papers/seeds-germination.md): Pop seeds and raise seedlings
+- [How to root cannabis cuttings](https://www.growlabs.nz/whitepapers/papers/cloning.md): Cuttings that root every time
+- [Transplanting: potting up without the stall](https://www.growlabs.nz/whitepapers/papers/transplanting.md): Pot up without stalling the plant
+- [Mother plants: environment, feeding, pruning and pathogen defence](https://www.growlabs.nz/whitepapers/papers/mother-plants.md): Stock plants, HpLVd control & succession
 
 ## Vegetative growth
-- [Raise PPFD in steps so plants don't bleach](https://jaketherabbit.github.io/cannabis-white-papers/papers/light-acclimation.md): Ramp light without bleaching
-- [Defoliation and plant training for maximum yield](https://jaketherabbit.github.io/cannabis-white-papers/papers/defoliation-training.md): Train the canopy for yield
-- [Vegetative management: build the frame, then flip](https://jaketherabbit.github.io/cannabis-white-papers/papers/veg-management.md): Size veg by count, pot and canopy, then flip
+- [Raise PPFD in steps so plants don't bleach](https://www.growlabs.nz/whitepapers/papers/light-acclimation.md): Ramp light without bleaching
+- [Defoliation and plant training for maximum yield](https://www.growlabs.nz/whitepapers/papers/defoliation-training.md): Train the canopy for yield
+- [Vegetative management: build the frame, then flip](https://www.growlabs.nz/whitepapers/papers/veg-management.md): Size veg by count, pot and canopy, then flip
 
 ## Flowering
-- [Precision coco cultivation: crop steering in coir](https://jaketherabbit.github.io/cannabis-white-papers/papers/coco-crop-steering.md): Steer the plant with water
-- [The flower cycle, week by week](https://jaketherabbit.github.io/cannabis-white-papers/papers/flowering-stages.md): The flip through to ripe
-- [Crop steering in rockwool: water content, drybacks, and the recovery floor](https://jaketherabbit.github.io/cannabis-white-papers/papers/rockwool-crop-steering.md): Drybacks, saturation, the breaking point
-- [One steering law: coco, rockwool, soil and water](https://jaketherabbit.github.io/cannabis-white-papers/papers/one-steering-law.md): Coco, rockwool, soil and water, one way to steer
-- [Rockwool Slab Irrigation](https://jaketherabbit.github.io/cannabis-white-papers/papers/slab-irrigation-strategy.md): Blocks on slabs, rooting-in to chop
-- [Ripening, flush, and harvest timing](https://jaketherabbit.github.io/cannabis-white-papers/papers/ripening-harvest-timing.md): Trichome reads, flush truth, the harvest call
+- [Precision coco cultivation: crop steering in coir](https://www.growlabs.nz/whitepapers/papers/coco-crop-steering.md): Steer the plant with water
+- [The flower cycle, week by week](https://www.growlabs.nz/whitepapers/papers/flowering-stages.md): The flip through to ripe
+- [Crop steering in rockwool: water content, drybacks, and the recovery floor](https://www.growlabs.nz/whitepapers/papers/rockwool-crop-steering.md): Drybacks, saturation, the breaking point
+- [One steering law: coco, rockwool, soil and water](https://www.growlabs.nz/whitepapers/papers/one-steering-law.md): Coco, rockwool, soil and water, one way to steer
+- [Rockwool Slab Irrigation](https://www.growlabs.nz/whitepapers/papers/slab-irrigation-strategy.md): Blocks on slabs, rooting-in to chop
+- [Ripening, flush, and harvest timing](https://www.growlabs.nz/whitepapers/papers/ripening-harvest-timing.md): Trichome reads, flush truth, the harvest call
 
 ## Harvest, dry, trim & cure
-- [Harvest, dry, trim and cure](https://jaketherabbit.github.io/cannabis-white-papers/papers/harvest-dry-trim-cure.md): The whole post-harvest run
-- [GMP hash lab: zones, flows, and batch release](https://jaketherabbit.github.io/cannabis-white-papers/papers/gmp-hash-lab.md): Turn flower into concentrate
-- [Hash rosin: heat, pressure, and a micron screen](https://jaketherabbit.github.io/cannabis-white-papers/papers/hash-rosin-pressing.md): Heat, pressure, time & the micron screen
-- [Lab testing, potency and the COA](https://jaketherabbit.github.io/cannabis-white-papers/papers/lab-testing-coas.md): Reading COAs: potency math, methods, limits
+- [Harvest, dry, trim and cure](https://www.growlabs.nz/whitepapers/papers/harvest-dry-trim-cure.md): The whole post-harvest run
+- [GMP hash lab: zones, flows, and batch release](https://www.growlabs.nz/whitepapers/papers/gmp-hash-lab.md): Turn flower into concentrate
+- [Hash rosin: heat, pressure, and a micron screen](https://www.growlabs.nz/whitepapers/papers/hash-rosin-pressing.md): Heat, pressure, time & the micron screen
+- [Lab testing, potency and the COA](https://www.growlabs.nz/whitepapers/papers/lab-testing-coas.md): Reading COAs: potency math, methods, limits
 
 ## Environment & climate
-- [Cannabis grow room: a systems guide](https://jaketherabbit.github.io/cannabis-white-papers/papers/grow-room-systems.md): The whole room as one system
-- [Airflow design for indoor cultivation](https://jaketherabbit.github.io/cannabis-white-papers/papers/airflow-design.md): Move air like the pros
-- [CO2 enrichment: feeding the plant carbon, safely](https://jaketherabbit.github.io/cannabis-white-papers/papers/co2-enrichment.md): Feed the plant carbon, safely
-- [Scaling light to the limiting factor](https://jaketherabbit.github.io/cannabis-white-papers/papers/scaling-high-light.md): Find the limiting factor, dial to it
-- [Lighting: spectrum, PPFD and DLI](https://jaketherabbit.github.io/cannabis-white-papers/papers/lighting-fundamentals.md): Spectrum, PPFD & DLI
-- [Under-canopy and inter-canopy lighting for indoor cannabis](https://jaketherabbit.github.io/cannabis-white-papers/papers/under-canopy-lighting.md): Photons at the floor: SCL & ICL
-- [Temperature, humidity and VPD: stage targets, measurement and condensation control](https://jaketherabbit.github.io/cannabis-white-papers/papers/temp-humidity-vpd.md): Leaf VPD, dew point and stage bands
-- [HVAC and dehumidification for grow rooms](https://jaketherabbit.github.io/cannabis-white-papers/papers/hvac-dehumidification.md): Sensible vs latent: sizing the climate plant
+- [Cannabis grow room: a systems guide](https://www.growlabs.nz/whitepapers/papers/grow-room-systems.md): The whole room as one system
+- [Airflow design for indoor cultivation](https://www.growlabs.nz/whitepapers/papers/airflow-design.md): Move air like the pros
+- [CO2 enrichment: feeding the plant carbon, safely](https://www.growlabs.nz/whitepapers/papers/co2-enrichment.md): Feed the plant carbon, safely
+- [Scaling light to the limiting factor](https://www.growlabs.nz/whitepapers/papers/scaling-high-light.md): Find the limiting factor, dial to it
+- [Lighting: spectrum, PPFD and DLI](https://www.growlabs.nz/whitepapers/papers/lighting-fundamentals.md): Spectrum, PPFD & DLI
+- [Under-canopy and inter-canopy lighting for indoor cannabis](https://www.growlabs.nz/whitepapers/papers/under-canopy-lighting.md): Photons at the floor: SCL & ICL
+- [Temperature, humidity and VPD: stage targets, measurement and condensation control](https://www.growlabs.nz/whitepapers/papers/temp-humidity-vpd.md): Leaf VPD, dew point and stage bands
+- [HVAC and dehumidification for grow rooms](https://www.growlabs.nz/whitepapers/papers/hvac-dehumidification.md): Sensible vs latent: sizing the climate plant
 
 ## Water, substrate & feed
-- [Substrates compared: coco, rockwool, soil, hydro](https://jaketherabbit.github.io/cannabis-white-papers/papers/substrates-overview.md): Coco, rockwool, soil, hydro
-- [Testing and treating source water for cannabis](https://jaketherabbit.github.io/cannabis-white-papers/papers/water-quality.md): Source water, RO & alkalinity
-- [pH: what it is and how to hold it](https://jaketherabbit.github.io/cannabis-white-papers/papers/ph-management.md): Hold pH, avoid lockout
-- [Nutrient deficiency and toxicity diagnosis](https://jaketherabbit.github.io/cannabis-white-papers/papers/nutrient-deficiencies.md): Read the leaves, fix the feed
-- [Dissolve Athena Pro Line powder into a 50 L stock tank](https://jaketherabbit.github.io/cannabis-white-papers/papers/nutrient-mixing-athena.md): Salts, in metric, done right
-- [Deep water culture, from first principles](https://jaketherabbit.github.io/cannabis-white-papers/papers/deep-water-culture.md): Oxygen, ORP & the reservoir
+- [Substrates compared: coco, rockwool, soil, hydro](https://www.growlabs.nz/whitepapers/papers/substrates-overview.md): Coco, rockwool, soil, hydro
+- [Testing and treating source water for cannabis](https://www.growlabs.nz/whitepapers/papers/water-quality.md): Source water, RO & alkalinity
+- [pH: what it is and how to hold it](https://www.growlabs.nz/whitepapers/papers/ph-management.md): Hold pH, avoid lockout
+- [Nutrient deficiency and toxicity diagnosis](https://www.growlabs.nz/whitepapers/papers/nutrient-deficiencies.md): Read the leaves, fix the feed
+- [Dissolve Athena Pro Line powder into a 50 L stock tank](https://www.growlabs.nz/whitepapers/papers/nutrient-mixing-athena.md): Salts, in metric, done right
+- [Deep water culture, from first principles](https://www.growlabs.nz/whitepapers/papers/deep-water-culture.md): Oxygen, ORP & the reservoir
 
 ## Plant health
-- [Mould risk: preventing and stopping bud rot](https://jaketherabbit.github.io/cannabis-white-papers/papers/mould-risk.md): Spot and stop bud rot
-- [Integrated pest management blueprint for indoor medicinal cannabis in Auckland](https://jaketherabbit.github.io/cannabis-white-papers/papers/auckland-ipm-blueprint.md): Clean stock, NZ law, atlas & CAPA
-- [Pest identification and control](https://jaketherabbit.github.io/cannabis-white-papers/papers/pest-id.md): Mites, thrips, gnats and more
-- [Integrated pest management: a working SOP](https://jaketherabbit.github.io/cannabis-white-papers/papers/ipm-sop.md): Scout, decide, act
-- [PPPE: plant and personal protective equipment](https://jaketherabbit.github.io/cannabis-white-papers/papers/pppe.md): Gowning, gloves, keeping humans clean
+- [Mould risk: preventing and stopping bud rot](https://www.growlabs.nz/whitepapers/papers/mould-risk.md): Spot and stop bud rot
+- [Integrated pest management blueprint for indoor medicinal cannabis in Auckland](https://www.growlabs.nz/whitepapers/papers/auckland-ipm-blueprint.md): Clean stock, NZ law, atlas & CAPA
+- [Pest identification and control](https://www.growlabs.nz/whitepapers/papers/pest-id.md): Mites, thrips, gnats and more
+- [Integrated pest management: a working SOP](https://www.growlabs.nz/whitepapers/papers/ipm-sop.md): Scout, decide, act
+- [PPPE: plant and personal protective equipment](https://www.growlabs.nz/whitepapers/papers/pppe.md): Gowning, gloves, keeping humans clean
 
 ## Precision & automation
-- [What your TEROS-12 measures and how to steer irrigation on it](https://jaketherabbit.github.io/cannabis-white-papers/papers/root-zone-teros12.md): What the sensor really sees
-- [The smart watering brain (VRWE), in plain English](https://jaketherabbit.github.io/cannabis-white-papers/papers/smart-watering-vrwe.md): The watering brain, plain English
-- [Tell real plant changes from sensor noise](https://jaketherabbit.github.io/cannabis-white-papers/papers/signal-and-noise.md): Real signal vs sensor noise
-- [Closed-loop grow room: levers, signals and plant state](https://jaketherabbit.github.io/cannabis-white-papers/papers/closed-loop.md): Levers, signal & plant state
-- [Designing a plant-state dashboard for your grow room](https://jaketherabbit.github.io/cannabis-white-papers/papers/plant-state-dashboard.md): From telemetry to intelligence
-- [F2 crop steering: the daily operating manual](https://jaketherabbit.github.io/cannabis-white-papers/papers/f2-crop-steering.md): The daily P0-P3 cycle
-- [Automated irrigation system manual](https://jaketherabbit.github.io/cannabis-white-papers/papers/irrigation-manual.md): Install and run the system
-- [Build a plant-biosignal sensor with M5Stack and ESPHome](https://jaketherabbit.github.io/cannabis-white-papers/papers/plant-biosignal-sensor.md): Read a plant's electrical signals for ~NZ$110
+- [What your TEROS-12 measures and how to steer irrigation on it](https://www.growlabs.nz/whitepapers/papers/root-zone-teros12.md): What the sensor really sees
+- [The smart watering brain (VRWE), in plain English](https://www.growlabs.nz/whitepapers/papers/smart-watering-vrwe.md): The watering brain, plain English
+- [Tell real plant changes from sensor noise](https://www.growlabs.nz/whitepapers/papers/signal-and-noise.md): Real signal vs sensor noise
+- [Closed-loop grow room: levers, signals and plant state](https://www.growlabs.nz/whitepapers/papers/closed-loop.md): Levers, signal & plant state
+- [Designing a plant-state dashboard for your grow room](https://www.growlabs.nz/whitepapers/papers/plant-state-dashboard.md): From telemetry to intelligence
+- [F2 crop steering: the daily operating manual](https://www.growlabs.nz/whitepapers/papers/f2-crop-steering.md): The daily P0-P3 cycle
+- [Automated irrigation system manual](https://www.growlabs.nz/whitepapers/papers/irrigation-manual.md): Install and run the system
+- [Build a plant-biosignal sensor with M5Stack and ESPHome](https://www.growlabs.nz/whitepapers/papers/plant-biosignal-sensor.md): Read a plant's electrical signals for ~NZ$110
 
 ## Facility & quality
-- [Designing a grow facility in 3D before you build it](https://jaketherabbit.github.io/cannabis-white-papers/papers/facility-3d.md): See the build before you build it
-- [Build a daily facility check that mostly fills itself in](https://jaketherabbit.github.io/cannabis-white-papers/papers/daily-checks.md): The self-completing facility round
-- [Yield per watt and the cost of a gram](https://jaketherabbit.github.io/cannabis-white-papers/papers/unit-economics.md): g/m², g/W, g/kWh and the true cost of a gram
-- [Compliance, licensing and track-and-trace](https://jaketherabbit.github.io/cannabis-white-papers/papers/compliance-track-trace.md): Licences, batch records and seed-to-sale
-- [Energy, utilities and sustainability](https://jaketherabbit.github.io/cannabis-white-papers/papers/energy-sustainability.md): Where the kWh go and how to spend fewer
+- [Designing a grow facility in 3D before you build it](https://www.growlabs.nz/whitepapers/papers/facility-3d.md): See the build before you build it
+- [Build a daily facility check that mostly fills itself in](https://www.growlabs.nz/whitepapers/papers/daily-checks.md): The self-completing facility round
+- [Yield per watt and the cost of a gram](https://www.growlabs.nz/whitepapers/papers/unit-economics.md): g/m², g/W, g/kWh and the true cost of a gram
+- [Compliance, licensing and track-and-trace](https://www.growlabs.nz/whitepapers/papers/compliance-track-trace.md): Licences, batch records and seed-to-sale
+- [Energy, utilities and sustainability](https://www.growlabs.nz/whitepapers/papers/energy-sustainability.md): Where the kWh go and how to spend fewer
 
 ## Know the plant
-- [Genetics, seeds and the pheno hunt](https://jaketherabbit.github.io/cannabis-white-papers/papers/genetics-phenohunting.md): Seed genetics, selection and the pheno hunt
-- [Cannabinoids and Terpenes](https://jaketherabbit.github.io/cannabis-white-papers/papers/cannabinoids-terpenes.md): Cannabinoids & terpenes, from gland to COA
-- [Cannabis plant biology and the life cycle](https://jaketherabbit.github.io/cannabis-white-papers/papers/plant-biology.md): Anatomy, life cycle, photoperiod, hormones
+- [Genetics, seeds and the pheno hunt](https://www.growlabs.nz/whitepapers/papers/genetics-phenohunting.md): Seed genetics, selection and the pheno hunt
+- [Cannabinoids and Terpenes](https://www.growlabs.nz/whitepapers/papers/cannabinoids-terpenes.md): Cannabinoids & terpenes, from gland to COA
+- [Cannabis plant biology and the life cycle](https://www.growlabs.nz/whitepapers/papers/plant-biology.md): Anatomy, life cycle, photoperiod, hormones
 
 ## Optional
-- [Full corpus (all papers)](https://jaketherabbit.github.io/cannabis-white-papers/llms-full.txt): every paper concatenated
-- [Manifest (JSON index)](https://jaketherabbit.github.io/cannabis-white-papers/manifest.json): machine-readable paper index
-- [Glossary (JSON)](https://jaketherabbit.github.io/cannabis-white-papers/glossary.json): 388 defined terms
+- [Full corpus (all papers)](https://www.growlabs.nz/whitepapers/llms-full.txt): every paper concatenated
+- [Manifest (JSON index)](https://www.growlabs.nz/whitepapers/manifest.json): machine-readable paper index
+- [Glossary (JSON)](https://www.growlabs.nz/whitepapers/glossary.json): 388 defined terms

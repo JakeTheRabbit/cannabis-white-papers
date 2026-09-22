@@ -18,7 +18,7 @@ sys.path.insert(0, os.path.dirname(__file__))
 import build  # reuses build.PAPERS, build.REFS, build.NAV, build.GL (no render on import)
 
 ROOT = build.ROOT
-BASE = "https://jaketherabbit.github.io/cannabis-white-papers"
+BASE = build.shell.SITE
 VERSION = "1.2"
 UPDATED = "2026-07-18"
 ATTRIBUTION = "The Cannabis White Papers"
@@ -304,6 +304,10 @@ def render_readme(manifest):
     L.append("```")
     L.append("cd _build && python build.py")
     L.append("```")
+    L.append("")
+    L.append(f"**Deploy:** the site lives at [{BASE}/]({BASE}/) as a Cloudflare Worker (`wrangler.jsonc`, "
+             "assets = this repo root). Pushing to `main` deploys via `.github/workflows/deploy-growlabs.yml`; "
+             "by hand: `bunx wrangler deploy`. The old GitHub Pages URL redirects here.")
     L.append("")
     L.append("**Add a paper:** create `_build/paper_<slug>.py` (`SLUG, TITLE, EYEBROW, SUB, META, "
              "SECTIONS, RELATED, REF_IDS`; `figure()` takes a raw inline `<svg>` string), register it in "

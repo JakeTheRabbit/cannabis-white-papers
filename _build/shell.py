@@ -6,6 +6,7 @@ import data.nav as NAV
 
 BRAND = "The Cannabis White Papers"
 ASSET_VER = "0"  # set by build.py to a content hash, busts browser cache on deploy
+SITE = "https://www.growlabs.nz/whitepapers"  # canonical home; github.io pages redirect here
 
 def _href(slug):
     return "index.html" if slug == "index" else f"{slug}.html"
@@ -77,6 +78,8 @@ def page(slug, title, body, desc="", rail_toc=None, wide=False, mobile_active=No
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>{esc(title)} &middot; {esc(BRAND)}</title>
 <meta name="description" content="{esc(desc)}">
+<link rel="canonical" href="{SITE}/{'' if slug == 'index' else esc(slug) + '.html'}">
+<script>if(location.hostname==='jaketherabbit.github.io'){{location.replace('{SITE}'+location.pathname.replace(/^\/cannabis-white-papers/,'')+location.search+location.hash)}}</script>
 <script>(function(){{try{{var t=localStorage.getItem('cwp-theme')||(window.matchMedia&&window.matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light');document.documentElement.setAttribute('data-theme',t);}}catch(e){{}}}})();</script>
 <link rel="stylesheet" href="assets/app.css?v={ASSET_VER}">
 </head><body data-slug="{esc(slug)}">
