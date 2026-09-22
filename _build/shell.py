@@ -6,7 +6,7 @@ import data.nav as NAV
 
 BRAND = "The Cannabis White Papers"
 ASSET_VER = "0"  # set by build.py to a content hash, busts browser cache on deploy
-SITE = "https://www.growlabs.nz/whitepapers"  # canonical home; github.io pages redirect here
+SITE = "https://www.growlabs.nz/wiki"  # canonical home; github.io pages redirect here
 
 def _href(slug):
     return "index.html" if slug == "index" else f"{slug}.html"

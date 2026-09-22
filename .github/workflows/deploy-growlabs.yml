@@ -1,4 +1,4 @@
-name: Deploy to growlabs.nz/whitepapers
+name: Deploy to growlabs.nz/wiki
 
 # Mirrors what GitHub Pages used to do for this repo: every push to main redeploys the
 # site, now as the Cloudflare Worker in wrangler.jsonc. Needs a repo secret

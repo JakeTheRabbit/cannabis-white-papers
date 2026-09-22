@@ -1,10 +1,10 @@
 {
-  // Cloudflare Worker that serves this static site at https://www.growlabs.nz/whitepapers/
+  // Cloudflare Worker that serves this static site at https://www.growlabs.nz/wiki/
   // (GrowLabs account). The growlabs.nz homepage is a separate Worker ("growlabs") on a
-  // Custom Domain; path routes like /whitepapers* run before it, so the two never collide.
+  // Custom Domain; path routes like /wiki* run before it, so the two never collide.
   //
   // Assets = the repo root (same files GitHub Pages serves), filtered by .assetsignore.
-  // _deploy/worker.js strips the /whitepapers prefix and redirects /wiki -> /whitepapers.
+  // _deploy/worker.js strips the /wiki prefix and redirects /whitepapers -> /wiki.
   //
   // Deploy:  bunx wrangler deploy        (after `cd _build && python build.py`)
   "name": "growlabs-whitepapers",
@@ -15,15 +15,15 @@
     "directory": ".",
     "binding": "ASSETS",
     // "none": the worker does its own index.html / .html resolution, so the assets layer
-    // never emits a redirect with the /whitepapers prefix stripped off.
+    // never emits a redirect with the /wiki prefix stripped off.
     "html_handling": "none",
     "not_found_handling": "none"
   },
   "routes": [
-    { "pattern": "www.growlabs.nz/whitepapers*", "zone_name": "growlabs.nz" },
-    { "pattern": "growlabs.nz/whitepapers*", "zone_name": "growlabs.nz" },
     { "pattern": "www.growlabs.nz/wiki*", "zone_name": "growlabs.nz" },
-    { "pattern": "growlabs.nz/wiki*", "zone_name": "growlabs.nz" }
+    { "pattern": "growlabs.nz/wiki*", "zone_name": "growlabs.nz" },
+    { "pattern": "www.growlabs.nz/whitepapers*", "zone_name": "growlabs.nz" },
+    { "pattern": "growlabs.nz/whitepapers*", "zone_name": "growlabs.nz" }
   ],
   "workers_dev": false,
   "observability": { "enabled": true }

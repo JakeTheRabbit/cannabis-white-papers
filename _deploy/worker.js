@@ -1,16 +1,18 @@
-// Serves the white-papers static site under /whitepapers on growlabs.nz.
+// Serves the white-papers static site under /wiki on growlabs.nz.
 // The assets binding holds the repo root, so every request has the prefix stripped
-// before lookup. /wiki is an alias that redirects to /whitepapers.
+// before lookup. /whitepapers is an alias that redirects to /wiki.
 
-const PREFIX = "/whitepapers";
+const PREFIX = "/wiki";
+const ALIAS = "/whitepapers";
 
 export default {
   async fetch(request, env) {
     const url = new URL(request.url);
     const path = url.pathname;
 
-    if (path === "/wiki" || path.startsWith("/wiki/")) {
-      return Response.redirect(`${url.origin}${PREFIX}${path.slice("/wiki".length)}${url.search}`, 301);
+    if (path === ALIAS || path.startsWith(`${ALIAS}/`)) {
+      const rest = path.slice(ALIAS.length) || "/";
+      return Response.redirect(`${url.origin}${PREFIX}${rest}${url.search}`, 301);
     }
     if (path === PREFIX) {
       return Response.redirect(`${url.origin}${PREFIX}/${url.search}`, 301);

@@ -1197,7 +1197,7 @@ Photographs are generated illustrations of the objects described. They are not m
 [^driver1984]: Driver JA, Kuniyuki AH (1984). In vitro propagation of Paradox walnut rootstock. HortScience 19:507–509. https://doi.org/10.21273/HORTSCI.19.4.507 (peer-reviewed)
 [^lubell2021]: Lubell-Brand JD, Kurtz LE, Brand MH (2021). An in vitro–ex vitro micropropagation system for hemp. HortTechnology 31:199–207. https://doi.org/10.21273/HORTTECH04779-20 (peer-reviewed)
 [^punja2019-pathogens]: Punja ZK, Collyer D, Scott C, Lung S, Holmes J, Sutton D (2019). Pathogens and molds affecting production and quality of Cannabis sativa L. Front. Plant Sci. 10:1120. https://pmc.ncbi.nlm.nih.gov/articles/PMC6811654/ (peer-reviewed)
-[^cwp_tc_beginner]: The Cannabis White Papers (2026). Cleaning up cannabis genetics with tissue culture (beginner paper). https://www.growlabs.nz/whitepapers/tissue-culture.html (industry/manufacturer source)
+[^cwp_tc_beginner]: The Cannabis White Papers (2026). Cleaning up cannabis genetics with tissue culture (beginner paper). https://www.growlabs.nz/wiki/tissue-culture.html (industry/manufacturer source)
 
 
 ---

@@ -4,7 +4,7 @@
  "updated": "2026-07-18",
  "license": "CC BY-NC 4.0",
  "license_url": "https://creativecommons.org/licenses/by-nc/4.0/",
- "base": "https://www.growlabs.nz/whitepapers",
+ "base": "https://www.growlabs.nz/wiki",
  "count": 55,
  "papers": [
   {
@@ -19,8 +19,8 @@
     "grow-room-systems",
     "gmp-hash-lab"
    ],
-   "url": "https://www.growlabs.nz/whitepapers/tissue-culture.html",
-   "md_url": "https://www.growlabs.nz/whitepapers/papers/tissue-culture.md",
+   "url": "https://www.growlabs.nz/wiki/tissue-culture.html",
+   "md_url": "https://www.growlabs.nz/wiki/papers/tissue-culture.md",
    "version": "1.2",
    "updated": "2026-07-18",
    "ref_count": 12
@@ -38,8 +38,8 @@
     "cloning",
     "mother-plants"
    ],
-   "url": "https://www.growlabs.nz/whitepapers/cannabis-tissue-culture-playbook.html",
-   "md_url": "https://www.growlabs.nz/whitepapers/papers/cannabis-tissue-culture-playbook.md",
+   "url": "https://www.growlabs.nz/wiki/cannabis-tissue-culture-playbook.html",
+   "md_url": "https://www.growlabs.nz/wiki/papers/cannabis-tissue-culture-playbook.md",
    "version": "1.2",
    "updated": "2026-07-18",
    "ref_count": 22
@@ -57,8 +57,8 @@
     "cloning",
     "mother-plants"
    ],
-   "url": "https://www.growlabs.nz/whitepapers/cannabis-tissue-culture-sop.html",
-   "md_url": "https://www.growlabs.nz/whitepapers/papers/cannabis-tissue-culture-sop.md",
+   "url": "https://www.growlabs.nz/wiki/cannabis-tissue-culture-sop.html",
+   "md_url": "https://www.growlabs.nz/wiki/papers/cannabis-tissue-culture-sop.md",
    "version": "1.2",
    "updated": "2026-07-18",
    "ref_count": 22
@@ -75,8 +75,8 @@
     "grow-room-systems",
     "tissue-culture"
    ],
-   "url": "https://www.growlabs.nz/whitepapers/coco-crop-steering.html",
-   "md_url": "https://www.growlabs.nz/whitepapers/papers/coco-crop-steering.md",
+   "url": "https://www.growlabs.nz/wiki/coco-crop-steering.html",
+   "md_url": "https://www.growlabs.nz/wiki/papers/coco-crop-steering.md",
    "version": "1.2",
    "updated": "2026-07-18",
    "ref_count": 10
@@ -93,8 +93,8 @@
     "airflow-design",
     "mould-risk"
    ],
-   "url": "https://www.growlabs.nz/whitepapers/grow-room-systems.html",
-   "md_url": "https://www.growlabs.nz/whitepapers/papers/grow-room-systems.md",
+   "url": "https://www.growlabs.nz/wiki/grow-room-systems.html",
+   "md_url": "https://www.growlabs.nz/wiki/papers/grow-room-systems.md",
    "version": "1.2",
    "updated": "2026-07-18",
    "ref_count": 10
@@ -111,8 +111,8 @@
     "mould-risk",
     "coco-crop-steering"
    ],
-   "url": "https://www.growlabs.nz/whitepapers/airflow-design.html",
-   "md_url": "https://www.growlabs.nz/whitepapers/papers/airflow-design.md",
+   "url": "https://www.growlabs.nz/wiki/airflow-design.html",
+   "md_url": "https://www.growlabs.nz/wiki/papers/airflow-design.md",
    "version": "1.2",
    "updated": "2026-07-18",
    "ref_count": 18
@@ -129,8 +129,8 @@
     "airflow-design",
     "harvest-dry-trim-cure"
    ],
-   "url": "https://www.growlabs.nz/whitepapers/co2-enrichment.html",
-   "md_url": "https://www.growlabs.nz/whitepapers/papers/co2-enrichment.md",
+   "url": "https://www.growlabs.nz/wiki/co2-enrichment.html",
+   "md_url": "https://www.growlabs.nz/wiki/papers/co2-enrichment.md",
    "version": "1.2",
    "updated": "2026-07-18",
    "ref_count": 38
@@ -147,8 +147,8 @@
     "co2-enrichment",
     "coco-crop-steering"
    ],
-   "url": "https://www.growlabs.nz/whitepapers/scaling-high-light.html",
-   "md_url": "https://www.growlabs.nz/whitepapers/papers/scaling-high-light.md",
+   "url": "https://www.growlabs.nz/wiki/scaling-high-light.html",
+   "md_url": "https://www.growlabs.nz/wiki/papers/scaling-high-light.md",
    "version": "1.2",
    "updated": "2026-07-18",
    "ref_count": 4
@@ -165,8 +165,8 @@
     "airflow-design",
     "tissue-culture"
    ],
-   "url": "https://www.growlabs.nz/whitepapers/mould-risk.html",
-   "md_url": "https://www.growlabs.nz/whitepapers/papers/mould-risk.md",
+   "url": "https://www.growlabs.nz/wiki/mould-risk.html",
+   "md_url": "https://www.growlabs.nz/wiki/papers/mould-risk.md",
    "version": "1.2",
    "updated": "2026-07-18",
    "ref_count": 10
@@ -185,8 +185,8 @@
     "pppe",
     "tissue-culture"
    ],
-   "url": "https://www.growlabs.nz/whitepapers/auckland-ipm-blueprint.html",
-   "md_url": "https://www.growlabs.nz/whitepapers/papers/auckland-ipm-blueprint.md",
+   "url": "https://www.growlabs.nz/wiki/auckland-ipm-blueprint.html",
+   "md_url": "https://www.growlabs.nz/wiki/papers/auckland-ipm-blueprint.md",
    "version": "1.2",
    "updated": "2026-07-18",
    "ref_count": 28
@@ -203,8 +203,8 @@
     "light-acclimation",
     "mould-risk"
    ],
-   "url": "https://www.growlabs.nz/whitepapers/seeds-germination.html",
-   "md_url": "https://www.growlabs.nz/whitepapers/papers/seeds-germination.md",
+   "url": "https://www.growlabs.nz/wiki/seeds-germination.html",
+   "md_url": "https://www.growlabs.nz/wiki/papers/seeds-germination.md",
    "version": "1.2",
    "updated": "2026-07-18",
    "ref_count": 11
@@ -221,8 +221,8 @@
     "cloning",
     "flowering-stages"
    ],
-   "url": "https://www.growlabs.nz/whitepapers/lighting-fundamentals.html",
-   "md_url": "https://www.growlabs.nz/whitepapers/papers/lighting-fundamentals.md",
+   "url": "https://www.growlabs.nz/wiki/lighting-fundamentals.html",
+   "md_url": "https://www.growlabs.nz/wiki/papers/lighting-fundamentals.md",
    "version": "1.2",
    "updated": "2026-07-18",
    "ref_count": 9
@@ -239,8 +239,8 @@
     "ph-management",
     "water-quality"
    ],
-   "url": "https://www.growlabs.nz/whitepapers/substrates-overview.html",
-   "md_url": "https://www.growlabs.nz/whitepapers/papers/substrates-overview.md",
+   "url": "https://www.growlabs.nz/wiki/substrates-overview.html",
+   "md_url": "https://www.growlabs.nz/wiki/papers/substrates-overview.md",
    "version": "1.2",
    "updated": "2026-07-18",
    "ref_count": 9
@@ -257,8 +257,8 @@
     "nutrient-mixing-athena",
     "irrigation-manual"
    ],
-   "url": "https://www.growlabs.nz/whitepapers/water-quality.html",
-   "md_url": "https://www.growlabs.nz/whitepapers/papers/water-quality.md",
+   "url": "https://www.growlabs.nz/wiki/water-quality.html",
+   "md_url": "https://www.growlabs.nz/wiki/papers/water-quality.md",
    "version": "1.2",
    "updated": "2026-07-18",
    "ref_count": 8
@@ -275,8 +275,8 @@
     "water-quality",
     "nutrient-mixing-athena"
    ],
-   "url": "https://www.growlabs.nz/whitepapers/ph-management.html",
-   "md_url": "https://www.growlabs.nz/whitepapers/papers/ph-management.md",
+   "url": "https://www.growlabs.nz/wiki/ph-management.html",
+   "md_url": "https://www.growlabs.nz/wiki/papers/ph-management.md",
    "version": "1.2",
    "updated": "2026-07-18",
    "ref_count": 8
@@ -293,8 +293,8 @@
     "nutrient-mixing-athena",
     "water-quality"
    ],
-   "url": "https://www.growlabs.nz/whitepapers/nutrient-deficiencies.html",
-   "md_url": "https://www.growlabs.nz/whitepapers/papers/nutrient-deficiencies.md",
+   "url": "https://www.growlabs.nz/wiki/nutrient-deficiencies.html",
+   "md_url": "https://www.growlabs.nz/wiki/papers/nutrient-deficiencies.md",
    "version": "1.2",
    "updated": "2026-07-18",
    "ref_count": 9
@@ -311,8 +311,8 @@
     "defoliation-training",
     "harvest-dry-trim-cure"
    ],
-   "url": "https://www.growlabs.nz/whitepapers/flowering-stages.html",
-   "md_url": "https://www.growlabs.nz/whitepapers/papers/flowering-stages.md",
+   "url": "https://www.growlabs.nz/wiki/flowering-stages.html",
+   "md_url": "https://www.growlabs.nz/wiki/papers/flowering-stages.md",
    "version": "1.2",
    "updated": "2026-07-18",
    "ref_count": 8
@@ -330,8 +330,8 @@
     "mould-risk",
     "cloning"
    ],
-   "url": "https://www.growlabs.nz/whitepapers/pest-id.html",
-   "md_url": "https://www.growlabs.nz/whitepapers/papers/pest-id.md",
+   "url": "https://www.growlabs.nz/wiki/pest-id.html",
+   "md_url": "https://www.growlabs.nz/wiki/papers/pest-id.md",
    "version": "1.2",
    "updated": "2026-07-18",
    "ref_count": 8
@@ -348,8 +348,8 @@
     "coco-crop-steering",
     "signal-and-noise"
    ],
-   "url": "https://www.growlabs.nz/whitepapers/root-zone-teros12.html",
-   "md_url": "https://www.growlabs.nz/whitepapers/papers/root-zone-teros12.md",
+   "url": "https://www.growlabs.nz/wiki/root-zone-teros12.html",
+   "md_url": "https://www.growlabs.nz/wiki/papers/root-zone-teros12.md",
    "version": "1.2",
    "updated": "2026-07-18",
    "ref_count": 8
@@ -366,8 +366,8 @@
     "signal-and-noise",
     "closed-loop"
    ],
-   "url": "https://www.growlabs.nz/whitepapers/smart-watering-vrwe.html",
-   "md_url": "https://www.growlabs.nz/whitepapers/papers/smart-watering-vrwe.md",
+   "url": "https://www.growlabs.nz/wiki/smart-watering-vrwe.html",
+   "md_url": "https://www.growlabs.nz/wiki/papers/smart-watering-vrwe.md",
    "version": "1.2",
    "updated": "2026-07-18",
    "ref_count": 5
@@ -384,8 +384,8 @@
     "smart-watering-vrwe",
     "closed-loop"
    ],
-   "url": "https://www.growlabs.nz/whitepapers/signal-and-noise.html",
-   "md_url": "https://www.growlabs.nz/whitepapers/papers/signal-and-noise.md",
+   "url": "https://www.growlabs.nz/wiki/signal-and-noise.html",
+   "md_url": "https://www.growlabs.nz/wiki/papers/signal-and-noise.md",
    "version": "1.2",
    "updated": "2026-07-18",
    "ref_count": 9
@@ -402,8 +402,8 @@
     "plant-state-dashboard",
     "f2-crop-steering"
    ],
-   "url": "https://www.growlabs.nz/whitepapers/closed-loop.html",
-   "md_url": "https://www.growlabs.nz/whitepapers/papers/closed-loop.md",
+   "url": "https://www.growlabs.nz/wiki/closed-loop.html",
+   "md_url": "https://www.growlabs.nz/wiki/papers/closed-loop.md",
    "version": "1.2",
    "updated": "2026-07-18",
    "ref_count": 9
@@ -420,8 +420,8 @@
     "f2-crop-steering",
     "root-zone-teros12"
    ],
-   "url": "https://www.growlabs.nz/whitepapers/plant-state-dashboard.html",
-   "md_url": "https://www.growlabs.nz/whitepapers/papers/plant-state-dashboard.md",
+   "url": "https://www.growlabs.nz/wiki/plant-state-dashboard.html",
+   "md_url": "https://www.growlabs.nz/wiki/papers/plant-state-dashboard.md",
    "version": "1.2",
    "updated": "2026-07-18",
    "ref_count": 5
@@ -438,8 +438,8 @@
     "root-zone-teros12",
     "smart-watering-vrwe"
    ],
-   "url": "https://www.growlabs.nz/whitepapers/f2-crop-steering.html",
-   "md_url": "https://www.growlabs.nz/whitepapers/papers/f2-crop-steering.md",
+   "url": "https://www.growlabs.nz/wiki/f2-crop-steering.html",
+   "md_url": "https://www.growlabs.nz/wiki/papers/f2-crop-steering.md",
    "version": "1.2",
    "updated": "2026-07-18",
    "ref_count": 5
@@ -456,8 +456,8 @@
     "root-zone-teros12",
     "smart-watering-vrwe"
    ],
-   "url": "https://www.growlabs.nz/whitepapers/irrigation-manual.html",
-   "md_url": "https://www.growlabs.nz/whitepapers/papers/irrigation-manual.md",
+   "url": "https://www.growlabs.nz/wiki/irrigation-manual.html",
+   "md_url": "https://www.growlabs.nz/wiki/papers/irrigation-manual.md",
    "version": "1.2",
    "updated": "2026-07-18",
    "ref_count": 4
@@ -474,8 +474,8 @@
     "ipm-sop",
     "tissue-culture"
    ],
-   "url": "https://www.growlabs.nz/whitepapers/cloning.html",
-   "md_url": "https://www.growlabs.nz/whitepapers/papers/cloning.md",
+   "url": "https://www.growlabs.nz/wiki/cloning.html",
+   "md_url": "https://www.growlabs.nz/wiki/papers/cloning.md",
    "version": "1.2",
    "updated": "2026-07-18",
    "ref_count": 9
@@ -492,8 +492,8 @@
     "irrigation-manual",
     "root-zone-teros12"
    ],
-   "url": "https://www.growlabs.nz/whitepapers/nutrient-mixing-athena.html",
-   "md_url": "https://www.growlabs.nz/whitepapers/papers/nutrient-mixing-athena.md",
+   "url": "https://www.growlabs.nz/wiki/nutrient-mixing-athena.html",
+   "md_url": "https://www.growlabs.nz/wiki/papers/nutrient-mixing-athena.md",
    "version": "1.2",
    "updated": "2026-07-18",
    "ref_count": 8
@@ -510,8 +510,8 @@
     "signal-and-noise",
     "plant-state-dashboard"
    ],
-   "url": "https://www.growlabs.nz/whitepapers/light-acclimation.html",
-   "md_url": "https://www.growlabs.nz/whitepapers/papers/light-acclimation.md",
+   "url": "https://www.growlabs.nz/wiki/light-acclimation.html",
+   "md_url": "https://www.growlabs.nz/wiki/papers/light-acclimation.md",
    "version": "1.2",
    "updated": "2026-07-18",
    "ref_count": 12
@@ -528,8 +528,8 @@
     "mould-risk",
     "harvest-dry-trim-cure"
    ],
-   "url": "https://www.growlabs.nz/whitepapers/defoliation-training.html",
-   "md_url": "https://www.growlabs.nz/whitepapers/papers/defoliation-training.md",
+   "url": "https://www.growlabs.nz/wiki/defoliation-training.html",
+   "md_url": "https://www.growlabs.nz/wiki/papers/defoliation-training.md",
    "version": "1.2",
    "updated": "2026-07-18",
    "ref_count": 8
@@ -546,8 +546,8 @@
     "airflow-design",
     "harvest-dry-trim-cure"
    ],
-   "url": "https://www.growlabs.nz/whitepapers/ipm-sop.html",
-   "md_url": "https://www.growlabs.nz/whitepapers/papers/ipm-sop.md",
+   "url": "https://www.growlabs.nz/wiki/ipm-sop.html",
+   "md_url": "https://www.growlabs.nz/wiki/papers/ipm-sop.md",
    "version": "1.2",
    "updated": "2026-07-18",
    "ref_count": 7
@@ -564,8 +564,8 @@
     "airflow-design",
     "nutrient-mixing-athena"
    ],
-   "url": "https://www.growlabs.nz/whitepapers/harvest-dry-trim-cure.html",
-   "md_url": "https://www.growlabs.nz/whitepapers/papers/harvest-dry-trim-cure.md",
+   "url": "https://www.growlabs.nz/wiki/harvest-dry-trim-cure.html",
+   "md_url": "https://www.growlabs.nz/wiki/papers/harvest-dry-trim-cure.md",
    "version": "1.2",
    "updated": "2026-07-18",
    "ref_count": 8
@@ -581,8 +581,8 @@
     "mould-risk",
     "facility-3d"
    ],
-   "url": "https://www.growlabs.nz/whitepapers/gmp-hash-lab.html",
-   "md_url": "https://www.growlabs.nz/whitepapers/papers/gmp-hash-lab.md",
+   "url": "https://www.growlabs.nz/wiki/gmp-hash-lab.html",
+   "md_url": "https://www.growlabs.nz/wiki/papers/gmp-hash-lab.md",
    "version": "1.2",
    "updated": "2026-07-18",
    "ref_count": 9
@@ -599,8 +599,8 @@
     "grow-room-systems",
     "f2-crop-steering"
    ],
-   "url": "https://www.growlabs.nz/whitepapers/facility-3d.html",
-   "md_url": "https://www.growlabs.nz/whitepapers/papers/facility-3d.md",
+   "url": "https://www.growlabs.nz/wiki/facility-3d.html",
+   "md_url": "https://www.growlabs.nz/wiki/papers/facility-3d.md",
    "version": "1.2",
    "updated": "2026-07-18",
    "ref_count": 5
@@ -618,8 +618,8 @@
     "f2-crop-steering",
     "irrigation-manual"
    ],
-   "url": "https://www.growlabs.nz/whitepapers/rockwool-crop-steering.html",
-   "md_url": "https://www.growlabs.nz/whitepapers/papers/rockwool-crop-steering.md",
+   "url": "https://www.growlabs.nz/wiki/rockwool-crop-steering.html",
+   "md_url": "https://www.growlabs.nz/wiki/papers/rockwool-crop-steering.md",
    "version": "1.2",
    "updated": "2026-07-18",
    "ref_count": 10
@@ -636,8 +636,8 @@
     "closed-loop",
     "grow-room-systems"
    ],
-   "url": "https://www.growlabs.nz/whitepapers/daily-checks.html",
-   "md_url": "https://www.growlabs.nz/whitepapers/papers/daily-checks.md",
+   "url": "https://www.growlabs.nz/wiki/daily-checks.html",
+   "md_url": "https://www.growlabs.nz/wiki/papers/daily-checks.md",
    "version": "1.2",
    "updated": "2026-07-18",
    "ref_count": 13
@@ -655,8 +655,8 @@
     "tissue-culture",
     "daily-checks"
    ],
-   "url": "https://www.growlabs.nz/whitepapers/pppe.html",
-   "md_url": "https://www.growlabs.nz/whitepapers/papers/pppe.md",
+   "url": "https://www.growlabs.nz/wiki/pppe.html",
+   "md_url": "https://www.growlabs.nz/wiki/papers/pppe.md",
    "version": "1.2",
    "updated": "2026-07-18",
    "ref_count": 15
@@ -676,8 +676,8 @@
     "smart-watering-vrwe",
     "f2-crop-steering"
    ],
-   "url": "https://www.growlabs.nz/whitepapers/one-steering-law.html",
-   "md_url": "https://www.growlabs.nz/whitepapers/papers/one-steering-law.md",
+   "url": "https://www.growlabs.nz/wiki/one-steering-law.html",
+   "md_url": "https://www.growlabs.nz/wiki/papers/one-steering-law.md",
    "version": "1.2",
    "updated": "2026-07-18",
    "ref_count": 9
@@ -696,8 +696,8 @@
     "defoliation-training",
     "mould-risk"
    ],
-   "url": "https://www.growlabs.nz/whitepapers/under-canopy-lighting.html",
-   "md_url": "https://www.growlabs.nz/whitepapers/papers/under-canopy-lighting.md",
+   "url": "https://www.growlabs.nz/wiki/under-canopy-lighting.html",
+   "md_url": "https://www.growlabs.nz/wiki/papers/under-canopy-lighting.md",
    "version": "1.2",
    "updated": "2026-07-18",
    "ref_count": 7
@@ -714,8 +714,8 @@
     "signal-and-noise",
     "closed-loop"
    ],
-   "url": "https://www.growlabs.nz/whitepapers/plant-biosignal-sensor.html",
-   "md_url": "https://www.growlabs.nz/whitepapers/papers/plant-biosignal-sensor.md",
+   "url": "https://www.growlabs.nz/wiki/plant-biosignal-sensor.html",
+   "md_url": "https://www.growlabs.nz/wiki/papers/plant-biosignal-sensor.md",
    "version": "1.2",
    "updated": "2026-07-18",
    "ref_count": 6
@@ -733,8 +733,8 @@
     "root-zone-teros12",
     "f2-crop-steering"
    ],
-   "url": "https://www.growlabs.nz/whitepapers/slab-irrigation-strategy.html",
-   "md_url": "https://www.growlabs.nz/whitepapers/papers/slab-irrigation-strategy.md",
+   "url": "https://www.growlabs.nz/wiki/slab-irrigation-strategy.html",
+   "md_url": "https://www.growlabs.nz/wiki/papers/slab-irrigation-strategy.md",
    "version": "1.2",
    "updated": "2026-07-18",
    "ref_count": 0
@@ -750,8 +750,8 @@
     "gmp-hash-lab",
     "harvest-dry-trim-cure"
    ],
-   "url": "https://www.growlabs.nz/whitepapers/hash-rosin-pressing.html",
-   "md_url": "https://www.growlabs.nz/whitepapers/papers/hash-rosin-pressing.md",
+   "url": "https://www.growlabs.nz/wiki/hash-rosin-pressing.html",
+   "md_url": "https://www.growlabs.nz/wiki/papers/hash-rosin-pressing.md",
    "version": "1.2",
    "updated": "2026-07-18",
    "ref_count": 16
@@ -768,8 +768,8 @@
     "harvest-dry-trim-cure",
     "mould-risk"
    ],
-   "url": "https://www.growlabs.nz/whitepapers/ripening-harvest-timing.html",
-   "md_url": "https://www.growlabs.nz/whitepapers/papers/ripening-harvest-timing.md",
+   "url": "https://www.growlabs.nz/wiki/ripening-harvest-timing.html",
+   "md_url": "https://www.growlabs.nz/wiki/papers/ripening-harvest-timing.md",
    "version": "1.2",
    "updated": "2026-07-18",
    "ref_count": 14
@@ -785,8 +785,8 @@
     "cloning",
     "seeds-germination"
    ],
-   "url": "https://www.growlabs.nz/whitepapers/transplanting.html",
-   "md_url": "https://www.growlabs.nz/whitepapers/papers/transplanting.md",
+   "url": "https://www.growlabs.nz/wiki/transplanting.html",
+   "md_url": "https://www.growlabs.nz/wiki/papers/transplanting.md",
    "version": "1.2",
    "updated": "2026-07-18",
    "ref_count": 13
@@ -802,8 +802,8 @@
     "defoliation-training",
     "light-acclimation"
    ],
-   "url": "https://www.growlabs.nz/whitepapers/veg-management.html",
-   "md_url": "https://www.growlabs.nz/whitepapers/papers/veg-management.md",
+   "url": "https://www.growlabs.nz/wiki/veg-management.html",
+   "md_url": "https://www.growlabs.nz/wiki/papers/veg-management.md",
    "version": "1.2",
    "updated": "2026-07-18",
    "ref_count": 14
@@ -819,8 +819,8 @@
     "cloning",
     "tissue-culture"
    ],
-   "url": "https://www.growlabs.nz/whitepapers/mother-plants.html",
-   "md_url": "https://www.growlabs.nz/whitepapers/papers/mother-plants.md",
+   "url": "https://www.growlabs.nz/wiki/mother-plants.html",
+   "md_url": "https://www.growlabs.nz/wiki/papers/mother-plants.md",
    "version": "1.2",
    "updated": "2026-07-18",
    "ref_count": 14
@@ -837,8 +837,8 @@
     "tissue-culture",
     "cloning"
    ],
-   "url": "https://www.growlabs.nz/whitepapers/genetics-phenohunting.html",
-   "md_url": "https://www.growlabs.nz/whitepapers/papers/genetics-phenohunting.md",
+   "url": "https://www.growlabs.nz/wiki/genetics-phenohunting.html",
+   "md_url": "https://www.growlabs.nz/wiki/papers/genetics-phenohunting.md",
    "version": "1.2",
    "updated": "2026-07-18",
    "ref_count": 14
@@ -855,8 +855,8 @@
     "mould-risk",
     "airflow-design"
    ],
-   "url": "https://www.growlabs.nz/whitepapers/temp-humidity-vpd.html",
-   "md_url": "https://www.growlabs.nz/whitepapers/papers/temp-humidity-vpd.md",
+   "url": "https://www.growlabs.nz/wiki/temp-humidity-vpd.html",
+   "md_url": "https://www.growlabs.nz/wiki/papers/temp-humidity-vpd.md",
    "version": "1.2",
    "updated": "2026-07-18",
    "ref_count": 14
@@ -872,8 +872,8 @@
     "gmp-hash-lab",
     "harvest-dry-trim-cure"
    ],
-   "url": "https://www.growlabs.nz/whitepapers/lab-testing-coas.html",
-   "md_url": "https://www.growlabs.nz/whitepapers/papers/lab-testing-coas.md",
+   "url": "https://www.growlabs.nz/wiki/lab-testing-coas.html",
+   "md_url": "https://www.growlabs.nz/wiki/papers/lab-testing-coas.md",
    "version": "1.2",
    "updated": "2026-07-18",
    "ref_count": 16
@@ -890,8 +890,8 @@
     "scaling-high-light",
     "lighting-fundamentals"
    ],
-   "url": "https://www.growlabs.nz/whitepapers/unit-economics.html",
-   "md_url": "https://www.growlabs.nz/whitepapers/papers/unit-economics.md",
+   "url": "https://www.growlabs.nz/wiki/unit-economics.html",
+   "md_url": "https://www.growlabs.nz/wiki/papers/unit-economics.md",
    "version": "1.2",
    "updated": "2026-07-18",
    "ref_count": 14
@@ -908,8 +908,8 @@
     "daily-checks",
     "auckland-ipm-blueprint"
    ],
-   "url": "https://www.growlabs.nz/whitepapers/compliance-track-trace.html",
-   "md_url": "https://www.growlabs.nz/whitepapers/papers/compliance-track-trace.md",
+   "url": "https://www.growlabs.nz/wiki/compliance-track-trace.html",
+   "md_url": "https://www.growlabs.nz/wiki/papers/compliance-track-trace.md",
    "version": "1.2",
    "updated": "2026-07-18",
    "ref_count": 14
@@ -926,8 +926,8 @@
     "temp-humidity-vpd",
     "airflow-design"
    ],
-   "url": "https://www.growlabs.nz/whitepapers/hvac-dehumidification.html",
-   "md_url": "https://www.growlabs.nz/whitepapers/papers/hvac-dehumidification.md",
+   "url": "https://www.growlabs.nz/wiki/hvac-dehumidification.html",
+   "md_url": "https://www.growlabs.nz/wiki/papers/hvac-dehumidification.md",
    "version": "1.2",
    "updated": "2026-07-18",
    "ref_count": 14
@@ -944,8 +944,8 @@
     "hash-rosin-pressing",
     "harvest-dry-trim-cure"
    ],
-   "url": "https://www.growlabs.nz/whitepapers/cannabinoids-terpenes.html",
-   "md_url": "https://www.growlabs.nz/whitepapers/papers/cannabinoids-terpenes.md",
+   "url": "https://www.growlabs.nz/wiki/cannabinoids-terpenes.html",
+   "md_url": "https://www.growlabs.nz/wiki/papers/cannabinoids-terpenes.md",
    "version": "1.2",
    "updated": "2026-07-18",
    "ref_count": 18
@@ -962,8 +962,8 @@
     "scaling-high-light",
     "grow-room-systems"
    ],
-   "url": "https://www.growlabs.nz/whitepapers/energy-sustainability.html",
-   "md_url": "https://www.growlabs.nz/whitepapers/papers/energy-sustainability.md",
+   "url": "https://www.growlabs.nz/wiki/energy-sustainability.html",
+   "md_url": "https://www.growlabs.nz/wiki/papers/energy-sustainability.md",
    "version": "1.2",
    "updated": "2026-07-18",
    "ref_count": 14
@@ -980,8 +980,8 @@
     "seeds-germination",
     "lighting-fundamentals"
    ],
-   "url": "https://www.growlabs.nz/whitepapers/plant-biology.html",
-   "md_url": "https://www.growlabs.nz/whitepapers/papers/plant-biology.md",
+   "url": "https://www.growlabs.nz/wiki/plant-biology.html",
+   "md_url": "https://www.growlabs.nz/wiki/papers/plant-biology.md",
    "version": "1.2",
    "updated": "2026-07-18",
    "ref_count": 16
@@ -1000,8 +1000,8 @@
     "nutrient-mixing-athena",
     "one-steering-law"
    ],
-   "url": "https://www.growlabs.nz/whitepapers/deep-water-culture.html",
-   "md_url": "https://www.growlabs.nz/whitepapers/papers/deep-water-culture.md",
+   "url": "https://www.growlabs.nz/wiki/deep-water-culture.html",
+   "md_url": "https://www.growlabs.nz/wiki/papers/deep-water-culture.md",
    "version": "1.2",
    "updated": "2026-07-18",
    "ref_count": 40
