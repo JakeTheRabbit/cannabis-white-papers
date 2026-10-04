@@ -1,0 +1,256 @@
+# Technical nouns, second batch (from a scan of the corpus).  Same rules as tn_core.txt.
+propagation
+growth
+culture
+production
+latent
+grade
+stock
+disease
+carbon
+dome
+transplant
+transplanting
+strength
+amber
+dehumidification
+uptake
+efficiency
+topping
+training
+troubleshooting
+testing
+species
+uv
+drought
+enrichment
+measurement
+fraction
+trap
+defoliation
+uniformity
+percentage
+hlvd
+treatment
+efficacy
+organism
+maturation
+aeration
+dew
+flux
+pesticide
+synthase
+blade
+sap
+morphology
+fertilizer
+gown
+kg
+pore
+lettuce
+biology
+powder
+maturity
+reheat
+pathway
+basal
+conductivity
+headroom
+glove
+circulation
+shade
+hydro
+metal
+laminar
+frequency
+swirskii
+infection
+stalk
+inflorescence
+autoclave
+kpa
+fault
+drip
+emission
+gland
+micropropagation
+acclimation
+plume
+ton
+umol
+ripeness
+biocontrol
+locus
+fiber
+charcoal
+spore
+vessel
+oz
+resistance
+texture
+regrowth
+setup
+documentation
+powdery mildew
+cinerea
+conversion
+initiation
+multiplication
+contaminant
+silver
+dioxide
+automation
+kw
+cm
+mm
+ml
+permittivity
+autoflower
+larva
+solventless
+ice
+indicator
+variance
+lifecycle
+shell
+dynamics
+tomato
+containment
+biofilm
+spider mite
+trait
+nameplate
+deviation
+intake
+horticulture
+recirculating
+forceps
+mutation
+gmp
+extraction
+agronomy
+plumbing
+jet
+axis
+russet
+fungal
+expression
+cabinet
+soap
+hepa
+module
+circuit
+microclimate
+viability
+fungi
+chromatography
+thermostat
+photoinhibition
+foliage
+conductance
+alkaline
+hair
+rhythm
+manufacturer
+supplier
+worker
+engine
+site
+waste
+field capacity
+water content
+root zone
+growth stage
+light cycle
+nutrient uptake
+relative humidity
+dissolved oxygen
+vegetative growth
+generative growth
+vegetative stage
+flowering stage
+mother plant
+humidity dome
+tissue culture
+culture medium
+rooting hormone
+growth regulator
+plant growth regulator
+air exchange
+air sock
+heat load
+heat exchanger
+vapor pressure deficit
+vapor pressure
+volumetric water content
+pore water
+crop steering
+crop load
+substrate volume
+slab volume
+irrigation event
+irrigation strategy
+irrigation phase
+dryback target
+drain rate
+shot size
+shot interval
+feed schedule
+feed ec
+runoff ec
+ph meter
+ec meter
+light intensity
+light spectrum
+canopy temperature
+leaf temperature
+air temperature
+relative air humidity
+dew point temperature
+
+stage
+size
+product
+facility
+reading
+tip
+gap
+trim
+medium
+load
+power
+stress
+spacing
+profile
+film
+setting
+drift
+trace
+regulation
+layer
+thickness
+length
+width
+height
+volume
+mass
+weight
+area
+flow
+flow rate
+stone
+wool
+rock
+stone wool
+cloning
+flowering
+ripening
+germination
+purpose and scope
+expected results and limitations
+results and limitations
+grow room
+grow-room
+grow rooms
+grow tent
+grow light

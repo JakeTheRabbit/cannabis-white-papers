@@ -1,0 +1,389 @@
+# Site glossary terms (term<TAB>home paper slug). Reuse these names; do not invent synonyms.
+3D model	facility-3d
+Acclimation	light-acclimation
+Acclimatisation (hardening)	tissue-culture
+Action limit	daily-checks
+Action threshold	ipm-sop
+Advisory / prescription	plant-state-dashboard
+Air embolism	cloning
+Air-filled porosity	substrates-overview
+Airlock / gowning cascade	gmp-hash-lab
+ALCOA+	compliance-track-trace
+Aliasing	signal-and-noise
+Alkalinity	ph-management
+Annex 11 / PI 041	compliance-track-trace
+Apical dominance	veg-management
+AppDaemon	f2-crop-steering
+AppDaemon engine	f2-crop-steering
+Aseptic technique	tissue-culture
+ASTM D8197	harvest-dry-trim-cure
+Auto-tick (self-completing check)	daily-checks
+Autoflower seed	seeds-germination
+Auxin	cloning
+Background drip baseline	smart-watering-vrwe
+Baseline / trajectory	signal-and-noise
+Batch / lot	compliance-track-trace
+Batch / Lot Record	compliance-track-trace
+Batch release	compliance-track-trace
+Bicarbonate (HCO3-)	ph-management
+Bioaerosol	pppe
+Biocontrol / beneficial	ipm-sop
+Biological control (biocontrol)	ipm-sop
+Bleaching	light-acclimation
+Blocked-dripper guard	f2-crop-steering
+Boundary layer	airflow-design
+Bti / Btk	ipm-sop
+Bucking	harvest-dry-trim-cure
+Bud rot (botrytis)	mould-risk
+Bud set	flowering-stages
+Buffer (buffering)	ph-management
+Buffer solution	ph-management
+Buffering	substrates-overview
+Buffering capacity	ph-management
+Build back	water-quality
+Bulk EC	root-zone-teros12
+Bulking	flowering-stages
+Burping	harvest-dry-trim-cure
+C1D1	gmp-hash-lab
+Cal-mag	substrates-overview
+Calibration	root-zone-teros12
+Calm dashboard	plant-state-dashboard
+CalMag	water-quality
+Calvin cycle	light-acclimation
+Calyx	flowering-stages
+Cannabis ruderalis	seeds-germination
+CAPA	compliance-track-trace
+CAPA (Corrective and Preventive Action)	compliance-track-trace
+Capacitance sensor	root-zone-teros12
+Carbonate / bicarbonate	water-quality
+CCP (Critical Control Point)	gmp-hash-lab
+CEC (cation exchange capacity)	substrates-overview
+Change Control	compliance-track-trace
+Channeling (preferential flow)	rockwool-crop-steering
+Chloramine	water-quality
+Chlorine	water-quality
+Chloroplast	plant-biology
+Chlorosis	nutrient-deficiencies
+Cleanroom grade	gmp-hash-lab
+Cleanroom grade (CNC, D, C, B, A)	gmp-hash-lab
+Clone	cloning
+Closed loop	closed-loop
+Closed loop (gated)	closed-loop
+Closed-loop control	closed-loop
+CO2 supplementation	co2-enrichment
+CoA (Certificate of Analysis)	lab-testing-coas
+Coco coir	coco-crop-steering
+Coefficient of variation (CV)	signal-and-noise
+Cola	flowering-stages
+Common cause vs special cause	signal-and-noise
+Common-cause variation	signal-and-noise
+Confidence	smart-watering-vrwe
+Control limits	signal-and-noise
+Control limits (SPC)	signal-and-noise
+Cotyledons	seeds-germination
+Coupled system	grow-room-systems
+Crop steering	coco-crop-steering
+Crop Steering AI (CS)	f2-crop-steering
+Cross-contamination	pppe
+Culling	cloning
+Curing	harvest-dry-trim-cure
+Cutting	cloning
+Cytokinin	tissue-culture
+Damping-off	seeds-germination
+Dead-band	signal-and-noise
+Defanning / Defoliation	defoliation-training
+Deficiency	nutrient-deficiencies
+Defoliation	defoliation-training
+Dehumidification load	hvac-dehumidification
+Deviation	compliance-track-trace
+Digital twin	facility-3d
+Dilution	nutrient-mixing-athena
+Dissolved oxygen (DO)	deep-water-culture
+DLI	lighting-fundamentals
+DLI (Daily Light Integral)	lighting-fundamentals
+Dome	cloning
+Draw call	facility-3d
+Drench	ipm-sop
+Drift	signal-and-noise
+Dry-to-wet ratio	harvest-dry-trim-cure
+Dryback	coco-crop-steering
+Dryback %	coco-crop-steering
+DUL (drained upper limit) / container capacity	root-zone-teros12
+DWC (deep water culture)	deep-water-culture
+EC	nutrient-mixing-athena
+EC (electrical conductivity)	root-zone-teros12
+EC ratio	f2-crop-steering
+Efficacy (umol/J)	lighting-fundamentals
+EM (Environmental Monitoring)	gmp-hash-lab
+Embryo	seeds-germination
+Endophyte	tissue-culture
+Entomopathogenic nematodes	ipm-sop
+ESPHome	plant-biosignal-sensor
+EWMA	signal-and-noise
+Exclusion	ipm-sop
+Explant	tissue-culture
+Extrude	facility-3d
+Fail-safe read	f2-crop-steering
+Fan leaves	harvest-dry-trim-cure
+Far-red	lighting-fundamentals
+Feedback	closed-loop
+Feminised seed	seeds-germination
+Field capacity	substrates-overview
+Field capacity / substrate EC	root-zone-teros12
+FIM	veg-management
+Fit-out	facility-3d
+Flip (12/12)	flowering-stages
+Floor plan	facility-3d
+Florigen	lighting-fundamentals
+Flush	ripening-harvest-timing
+Foliar spray	ipm-sop
+Fomite	pppe
+FOV cone	facility-3d
+Frass	pest-id
+Full pot (DUL, drained upper limit)	smart-watering-vrwe
+GACP	compliance-track-trace
+GACP (Good Agricultural and Collection Practice)	compliance-track-trace
+GDP (Good Documentation Practice)	compliance-track-trace
+Genealogy / traceability	compliance-track-trace
+Generalist vs specialist predator	ipm-sop
+Generative vs vegetative	coco-crop-steering
+Germination	seeds-germination
+Germination rate	seeds-germination
+glTF	facility-3d
+GMP (good manufacturing practice)	compliance-track-trace
+Gowning / de-gowning	pppe
+Grams per litre (g/L)	nutrient-mixing-athena
+Hardening off	cloning
+Hardness	water-quality
+Hermaphroditism (hermie)	flowering-stages
+Hierarchy of controls	pppe
+Hilhorst model	root-zone-teros12
+Home Assistant	irrigation-manual
+Honeydew	pest-id
+Hop Latent Viroid (HpLVd)	mother-plants
+Humidity dome	seeds-germination
+Hunting	signal-and-noise
+Hydroponics	substrates-overview
+Hyperhydricity (vitrification)	tissue-culture
+ICH Q9 / Q10	gmp-hash-lab
+Imbibition	seeds-germination
+Immobile nutrient	nutrient-deficiencies
+Implementation intention	daily-checks
+In vitro	tissue-culture
+Indexing	tissue-culture
+Inert medium	substrates-overview
+Inference layer	plant-state-dashboard
+Instancing	facility-3d
+Integrated Pest Management (IPM)	ipm-sop
+Internode	cloning
+Interveinal chlorosis	nutrient-deficiencies
+Inverse-square law	lighting-fundamentals
+IPM (Integrated Pest Management)	ipm-sop
+ISO 14644	gmp-hash-lab
+JSON / data file	facility-3d
+KCl storage solution	ph-management
+Kelvin (K) / color temperature	lighting-fundamentals
+Killer item	daily-checks
+Larf	defoliation-training
+Latent heat load	hvac-dehumidification
+Leading vs lagging indicator	plant-state-dashboard
+Learned envelope	closed-loop
+Lever (actuator)	closed-loop
+Life cycle / generation time	pest-id
+Light saturation	lighting-fundamentals
+Light stress / bleaching	scaling-high-light
+Limiting factor (Liebig's law of the minimum)	grow-room-systems
+Living soil (ROLS)	substrates-overview
+Lockout	ph-management
+Lollipopping	defoliation-training
+Loupe / scope	pest-id
+LST (Low-Stress Training)	defoliation-training
+MACO	gmp-hash-lab
+Macronutrient	nutrient-deficiencies
+Management Review	compliance-track-trace
+Manual override	f2-crop-steering
+Mass flow (nutrient uptake)	plant-biology
+Master Document Register (REG-QM-001)	compliance-track-trace
+Median filter	signal-and-noise
+Medium (media)	tissue-culture
+Meristem	tissue-culture
+Micronutrient	nutrient-deficiencies
+Micropropagation	tissue-culture
+Mineral salt	nutrient-mixing-athena
+Mobile nutrient	nutrient-deficiencies
+Moisture content	harvest-dry-trim-cure
+Mother plant	mother-plants
+Moving (rolling) average	signal-and-noise
+MQS (Minimum Quality Standard)	compliance-track-trace
+Named condition	plant-state-dashboard
+Necrosis	nutrient-deficiencies
+Node	tissue-culture
+Noise	signal-and-noise
+Nutrient (essential element)	nutrient-deficiencies
+Nutrient antagonism	nutrient-deficiencies
+Nutrient burn	nutrient-deficiencies
+Nutrient lockout	ph-management
+Nyquist rule	signal-and-noise
+OOS (Out Of Specification)	lab-testing-coas
+Opening	facility-3d
+Oscillation	closed-loop
+P0-P3 phases	f2-crop-steering
+PAR (Photosynthetically Active Radiation)	lighting-fundamentals
+Parasitoid wasp	ipm-sop
+Part A (Pro Core)	nutrient-mixing-athena
+Part B (Pro Grow / Pro Bloom)	nutrient-mixing-athena
+Pause point	daily-checks
+PCBU	pppe
+Peat	substrates-overview
+Pencil-whipping	daily-checks
+Permittivity (dielectric constant)	root-zone-teros12
+Permittivity (dielectric)	root-zone-teros12
+PGR (plant growth regulator)	tissue-culture
+pH	ph-management
+pH Down / pH Up	ph-management
+pH lockout	ph-management
+pH/EC gate	f2-crop-steering
+Phase (P0-P3)	f2-crop-steering
+Photoinhibition	light-acclimation
+Photoperiod	lighting-fundamentals
+Photoperiod plant	seeds-germination
+Phytochrome	lighting-fundamentals
+PIC/S PE009	compliance-track-trace
+Pistil	flowering-stages
+Plant state	plant-state-dashboard
+Pore-water EC	root-zone-teros12
+Post-harvest	harvest-dry-trim-cure
+PPE / PPPE	pppe
+PPF (Photosynthetic Photon Flux)	lighting-fundamentals
+PPFD	lighting-fundamentals
+PPFD (Photosynthetic Photon Flux Density)	lighting-fundamentals
+PPFD / DLI	lighting-fundamentals
+PPFD map / PAR map	lighting-fundamentals
+PPM (parts per million)	nutrient-mixing-athena
+PPM / TDS	water-quality
+Pre-buffering	substrates-overview
+Precipitate	nutrient-mixing-athena
+Pressure cascade	gmp-hash-lab
+Preventative vs curative	ipm-sop
+Probe drift	ph-management
+PTZ camera	facility-3d
+Pythium	deep-water-culture
+QA / QC (Quality Assurance / Quality Control)	compliance-track-trace
+QA / release	compliance-track-trace
+QMS / PQS (Quality Management System / Pharmaceutical Quality System)	compliance-track-trace
+QRM (Quality Risk Management)	compliance-track-trace
+Quality Manual	compliance-track-trace
+Quarantine	ipm-sop
+Quarantine / Released / Rejected	compliance-track-trace
+Raycasting / picking	facility-3d
+Reactive oxygen species	light-acclimation
+Read-do vs do-confirm	daily-checks
+Recovery floor	coco-crop-steering
+Register	compliance-track-trace
+Regular seed	seeds-germination
+REI (re-entry interval)	ipm-sop
+Relative humidity (RH)	temp-humidity-vpd
+Render	facility-3d
+Representativeness fault	root-zone-teros12
+Residual solvent	lab-testing-coas
+Resolution vs accuracy	root-zone-teros12
+Reverse osmosis (RO)	water-quality
+RH	temp-humidity-vpd
+Ripening	ripening-harvest-timing
+Rockwool (stonewool)	rockwool-crop-steering
+Rockwool cube	rockwool-crop-steering
+Root zone	root-zone-teros12
+Rooting hormone / IBA	cloning
+RP (Responsible Person)	compliance-track-trace
+Runoff	irrigation-manual
+Runoff / drain	irrigation-manual
+Sachet / release box	ipm-sop
+Safe headroom	root-zone-teros12
+Sampling cadence	signal-and-noise
+Scene	facility-3d
+Schema	facility-3d
+Scouting	ipm-sop
+SDI-12	root-zone-teros12
+Seed coat	seeds-germination
+Sensible heat load	hvac-dehumidification
+Sensor fusion	smart-watering-vrwe
+Setpoint	closed-loop
+Setpoint vs target	closed-loop
+Shade avoidance response	defoliation-training
+Shared-drain (sump) puzzle	smart-watering-vrwe
+Shot	f2-crop-steering
+Signal	signal-and-noise
+Signal vs noise	signal-and-noise
+Signal-to-noise ratio (SNR)	signal-and-noise
+Sodium (Na)	water-quality
+Solenoid valve	irrigation-manual
+SOP (standard operating procedure)	compliance-track-trace
+Source vs sink	defoliation-training
+Special-cause variation	signal-and-noise
+Specific yield (S)	root-zone-teros12
+Spectrum	lighting-fundamentals
+Spreading	defoliation-training
+Statistical process control (SPC)	signal-and-noise
+Stem-snap test	harvest-dry-trim-cure
+Sticky trap	ipm-sop
+Stippling	pest-id
+Stretch	flowering-stages
+Subculture	tissue-culture
+Substrate	substrates-overview
+Substrate (growing medium)	substrates-overview
+Substrate (medium)	substrates-overview
+Substrate EC	root-zone-teros12
+Substrate probe	root-zone-teros12
+Substrate-specific calibration	root-zone-teros12
+Sugar leaves	harvest-dry-trim-cure
+System enabled vs Auto irrigation	f2-crop-steering
+Tampering	signal-and-noise
+Tank mix	ipm-sop
+Taproot (radicle)	seeds-germination
+Target	closed-loop
+Telemetry	plant-state-dashboard
+Terpenes	cannabinoids-terpenes
+The claw	nutrient-deficiencies
+The flip	flowering-stages
+Three.js	facility-3d
+Tissue culture (TC)	tissue-culture
+Tone mapping	facility-3d
+Topping	veg-management
+Total porosity	substrates-overview
+Totipotency	tissue-culture
+Toxicity	nutrient-deficiencies
+Traceability	compliance-track-trace
+Transpiration	temp-humidity-vpd
+Transpiration proxy	plant-state-dashboard
+Transpiration stream	plant-biology
+Transplant	transplanting
+Trellis / SCROG	defoliation-training
+Trichome	ripening-harvest-timing
+Trichomes	ripening-harvest-timing
+True leaves	seeds-germination
+Two-part nutrient	nutrient-mixing-athena
+Two-point calibration	ph-management
+Uniformity (min-to-average ratio)	lighting-fundamentals
+UV-B	lighting-fundamentals
+V-model (DQ/IQ/OQ/PQ)	gmp-hash-lab
+Validation / Qualification	gmp-hash-lab
+Vegetative / Generative mode	f2-crop-steering
+Vegetative vs generative	coco-crop-steering
+Viable / viability	seeds-germination
+Viroid	mother-plants
+Volume of influence	root-zone-teros12
+Volumetric water content (VWC)	root-zone-teros12
+VPD	temp-humidity-vpd
+VPD (vapor pressure deficit)	temp-humidity-vpd
+VPD (vapour pressure deficit)	temp-humidity-vpd
+VRWE (Virtual Root-Zone Water Estimator)	smart-watering-vrwe
+VWC (volumetric water content)	root-zone-teros12
+Water activity (Aw)	mould-risk
+Water balance / bank account	smart-watering-vrwe
+Water content (WC%)	root-zone-teros12
+Water-holding capacity	substrates-overview
+Wet trim / dry trim	harvest-dry-trim-cure
+Wet weight	harvest-dry-trim-cure
+Withholding period	ipm-sop
+Zone / row	f2-crop-steering
+Zone / table	f2-crop-steering

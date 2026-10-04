@@ -18,3 +18,10 @@ skill/cannabis-white-papers/papers/
 skill/cannabis-white-papers/manifest.json
 skill/cannabis-white-papers/glossary.json
 skill/cannabis-white-papers/LICENSE
+
+# ASD-STE100 tooling: copyrighted reference + generated/working data stay local
+_build/ste100/ref/
+_build/ste100/work/
+_build/ste100/baseline/
+_build/ste100/data/ste_words.json
+_build/ste100/data/meanings.json

@@ -1,0 +1,25 @@
+# Technical verbs (ASD-STE100 Rule 1.12): verbs for a subject-field process that no approved verb
+# can express.  Base form only; -s, -ed and -d forms are accepted automatically.
+# Use an approved verb whenever one fits (apply, put, remove, make sure, measure, supply, increase ...).
+# Never use a technical noun as a verb (Rule 1.7): not "to water", "to feed", "to root", "to flower".
+irrigate
+saturate
+propagate
+transplant
+germinate
+harvest
+defoliate
+sterilize
+sanitize
+disinfect
+dehumidify
+humidify
+ventilate
+extract
+inject
+filter
+calibrate
+photosynthesize
+transpire
+ferment
+centrifuge

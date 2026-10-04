@@ -1,0 +1,1676 @@
+# -*- coding: utf-8 -*-
+"""ste_units.py - prose "units" for the ASD-STE100 rewrite of the paper modules.
+
+Agents must never edit Python.  This tool copies every human-readable string of a paper
+module (_build/paper_<name>.py) into a plain-text units file, and writes edited units back
+into the exact source span each one came from.
+
+COMMANDS   (module = stem such as paper_cloning -> _build/paper_cloning.py; relative paths
+            are relative to the repo root; default work dir = _build/ste100/work)
+
+  extract  <module> [--work DIR] [--force]
+      -> <work>/<module>/units.txt     one unit per prose slot          (agents edit this)
+         <work>/<module>/meta.json     spans, templates, placeholder map  (never edit)
+         <work>/<module>/original.py   snapshot of the module (kept once it exists)
+      Prints units by kind, the misc count and every slot skipped as unsupported.  Refuses
+      to overwrite a units.txt that already holds edits; --force re-snapshots the current
+      module file as original.py and regenerates units.txt (edits are discarded).
+  apply    <module> [--work DIR] [--dry-run] [--force]
+      Validates units.txt against meta.json (errors print as 'U0012: message', exit 2,
+      nothing written; warnings never block).  Rebuilds _build/<module>.py from original.py
+      plus every edited unit (idempotent: always starts from original.py), keeps the file
+      it replaces as last_applied.py, py_compiles it and imports it in a subprocess (puts
+      the previous file back if that fails).  --dry-run = validate + test-import a temp copy,
+      write nothing.  Refuses when the module file was changed outside this tool since
+      extract/apply (--force overrides).  That check ignores LF/CRLF (git core.autocrlf
+      rewrites endings on checkout) and apply keeps the file's current line-ending style.
+      An edited string is re-wrapped at ~104 columns if the original string was wrapped.
+  selftest <module> | --all
+      Losslessness proof: re-emits EVERY unit from its unchanged text into a temp copy,
+      runs original and copy in separate subprocesses and compares sha256(json.dumps of
+      TITLE, EYEBROW, SUB, META, SECTIONS [+ RELATED, REF_IDS, SLUG]).  Also checks that the
+      copy re-extracts to the same units.  Prints PASS / FAIL / UNSUPPORTED per module;
+      --all also writes <work>/extract_report.txt.  Never touches the real module.
+  status   <module> [--work DIR]     units, edited units, misc units, validation summary
+  report   [--work DIR]              (re)write <work>/extract_report.txt only
+
+UNITS FILE   (format shared with ste_lint through ste_common.read_units / write_units)
+  # ste-units v1 | module: paper_x | slug: <SLUG>
+  @@ U0002 | p | s:intro kind=key E1=L.name
+  Text exactly as it lands in the HTML ⟦c:some-ref⟧ and more text ⟦e1⟧.
+  - Edit only the text line, keep it on ONE line, never edit an '@@' line.
+  - ⟦c:rid⟧ = citation _c("rid").  ⟦e1⟧, ⟦e2⟧ = other code; its source is shown as E1=...
+    in the header (long sources shortened with ...).  Keep every placeholder exactly as
+    many times as in the original; moving it is fine.  ⟦nl⟧ = newline inside the string.
+  - Inline HTML (<strong>, <em>, <a href=...>, <br>) and entities (&deg;) stay as written.
+    Close every tag you open; p / lead units may be split with </p><p>.
+  - ctx '%-format': the string is a %-template, keep its %s / %d specifiers.
+  - kind misc = text found outside the prose helpers (figure labels, notes): optional.
+  kinds: title eyebrow sub meta kicker section.title p lead heading li callout.title
+         callout.body defterm.term defterm.body th cell caption foot step.title step.body
+         card.title card.body tag kv.key kv.val stage.title stage.dur stage.body chip label
+         misc            (photo alt text, photo_sequence titles/frames -> label)
+
+WHAT IS A SLOT
+  TITLE / EYEBROW / SUB, the META labels, "kicker" / "title" of every dict with a "blocks"
+  key, and the prose arguments of the components.py helpers (matched by name, also as
+  X.helper(...)), descending into list / tuple literals.  A module function that passes a
+  parameter straight into a helper prose argument (def fig(key, cap): figure(.., cap)) is
+  treated as a helper; LOCAL_WRAPPERS maps the ones that build HTML themselves.  A bare
+  module-level string constant used in a prose argument (JURISDICTION_NOTE) is extracted
+  with that argument's kind.  Any other string with >= 4 words that is not SVG / markup /
+  CSS / URL / path / regex becomes kind misc.  Never extracted: docstrings, dict keys,
+  "id" values, REF_IDS / RELATED / SLUG, callout kind, cls, figure svg / num, photo src /
+  model, stagecard num, print / raise / assert text, and anything inside functions named
+  _fig* / _g_* or holding SVG markup (counted as "uncaptured" in the report).
+  Every slot is re-emitted and re-parsed at extract time; a slot that does not round-trip
+  is skipped and reported, never half-handled.
+"""
+import argparse
+import ast
+import bisect
+import collections
+import dataclasses
+import datetime
+import hashlib
+import io
+import json
+import os
+import py_compile
+import re
+import shutil
+import subprocess
+import sys
+import tempfile
+import tokenize
+from concurrent.futures import ThreadPoolExecutor
+
+HERE = os.path.dirname(os.path.abspath(__file__))
+BUILD = os.path.dirname(HERE)
+REPO = os.path.dirname(BUILD)
+if HERE not in sys.path:
+    sys.path.insert(0, HERE)
+from ste_common import UNIT_HEADER, Unit, read_units, write_units  # noqa: E402
+
+FORMAT = "ste-units v1"
+DEFAULT_WORK = os.path.join(HERE, "work")
+PY = sys.executable
+WRAP_WIDTH = 104
+
+UNSUPPORTED = {
+    "paper_slab_irrigation": "prose lives in _build/data/slab_irrigation_content.html (parsed at import)",
+    "paper_auckland_ipm_blueprint": "prose lives in the _build/ipm_blueprint/ package",
+}
+
+# components.py helpers -> [(parameter, role)].  role: kind string = prose slot of that kind;
+# None = not prose (walked for misc strings only); "walk" = holds helper calls;
+# ("list", k) = list/tuple literal of k slots; ("rows", k) = list of lists of k slots;
+# ("pairs", k1, k2) = list of tuples, element 0 -> k1, element 1 -> k2 (None = not prose).
+HELPERS = {
+    "p": [("t", "p")],
+    "lead": [("t", "lead")],
+    "h": [("level", None), ("t", "heading"), ("_id", None)],
+    "ul": [("items", ("list", "li")), ("cls", None)],
+    "ol": [("items", ("list", "li")), ("cls", None)],
+    "callout": [("kind", None), ("title", "callout.title"), ("body", "callout.body")],
+    "defterm": [("term", "defterm.term"), ("body", "defterm.body")],
+    "table": [("headers", ("list", "th")), ("rows", ("rows", "cell")), ("cls", None),
+              ("caption", "caption"), ("foot", "foot")],
+    "figure": [("svg", None), ("num", None), ("caption", "caption")],
+    "diagram": [("svg", None), ("caption", "caption"), ("label", "label")],
+    "photo": [("src", None), ("caption", "caption"), ("alt", "label"), ("model", None)],
+    "photo_sequence": [("title", "label"), ("frames", ("pairs", "label", None)),
+                       ("caption", "caption"), ("model", None)],
+    "term_gallery": [("items", ("pairs", "label", None)), ("model", None)],
+    "stagecard": [("num", None), ("title", "stage.title"), ("dur", "stage.dur"), ("body", "stage.body")],
+    "grid": [("cards", "walk"), ("cols", None)],
+    "card": [("title", "card.title"), ("body", "card.body"), ("tag", "tag")],
+    "chip": [("t", "chip")],
+    "kv": [("pairs", ("pairs", "kv.key", "kv.val"))],
+    "steps": [("items", ("pairs", "step.title", "step.body"))],
+}
+
+# Module functions that build prose HTML themselves (not through a helper): param -> role.
+LOCAL_WRAPPERS = {
+    "paper_cannabis_tc_sop": {"form": {"title": "caption", "fields": ("list", "th"), "note": "foot"}},
+    "paper_scaling_high_light": {"_tag": {"txt": "tag"}},
+}
+
+MODULE_KINDS = {"TITLE": "title", "EYEBROW": "eyebrow", "SUB": "sub"}
+SKIP_NAMES = {"SLUG", "RELATED", "REF_IDS"}
+QUIET_CALLEES = {"_c", "open", "json.load", "os.path.join", "os.path.dirname", "REF_IDS.index",
+                 "print", "len", "range", "isinstance", "int", "str", "getattr"}
+
+LB, RB = "⟦", "⟧"
+NL_TOK, CR_TOK = LB + "nl" + RB, LB + "cr" + RB
+PH_RE = re.compile(LB + r"(?:c:[^" + LB + RB + r"\s]+|e\d+)" + RB)   # citation / expression
+ANY_TOK_RE = re.compile(LB + "[^" + LB + RB + "]*" + RB)             # incl. nl / cr
+SVG_MARKERS = ("<svg", "<path", "<text", "<rect", "<line", "<circle", "<g ", "<g>", "viewbox",
+               'style="', "style='", "<polygon", "<polyline", "<ellipse", "<marker", "<defs",
+               "<tspan", "<lineargradient", "stroke-width", "text-anchor")
+TAG_RE = re.compile(r"<(/?)([A-Za-z][A-Za-z0-9]*)\b[^<>]*?(/?)>")
+VOID_TAGS = {"br", "hr", "img", "wbr", "input", "meta", "link", "source", "col", "area", "base",
+             "embed", "param", "track"}
+PCT_RE = re.compile(r"%(?:\([^)]*\))?[#0 +\-]*(?:\*|\d+)?(?:\.(?:\*|\d+))?[hlL]?[diouxXeEfFgGcrsa%]")
+NUM_RE = re.compile(r"\d+(?:[.,]\d+)*")
+ENTITY_RE = re.compile(r"&#[xX]?[0-9a-fA-F]+;|&[A-Za-z][A-Za-z0-9]*;")
+ATOMS = (ast.Name, ast.Attribute, ast.Call, ast.Subscript, ast.Constant, ast.JoinedStr, ast.List,
+         ast.Tuple, ast.Dict, ast.Set, ast.ListComp, ast.SetComp, ast.DictComp, ast.GeneratorExp)
+
+
+class Unsupported(Exception):
+    pass
+
+
+# ============================================================================ small helpers
+def _enc(s):
+    return s.replace("\n", NL_TOK).replace("\r", CR_TOK)
+
+
+def _dec(s):
+    return s.replace(NL_TOK, "\n").replace(CR_TOK, "\r")
+
+
+def _sha(data):
+    return hashlib.sha256(data if isinstance(data, bytes) else data.encode("utf-8")).hexdigest()
+
+
+def _nsha(raw):
+    """sha256 ignoring LF/CRLF (git core.autocrlf flips working-tree endings on checkout)."""
+    return _sha(raw.replace(b"\r\n", b"\n"))
+
+
+def _same_newlines(text, like):
+    """Give `text` the newline style of the bytes `like` when that file is purely LF or CRLF."""
+    if not like:
+        return text
+    lf_only = text.replace("\r\n", "\n")
+    if b"\r\n" in like:
+        return text if b"\n" in like.replace(b"\r\n", b"") else lf_only.replace("\n", "\r\n")
+    return lf_only
+
+
+def _is_str_const(n):
+    return isinstance(n, ast.Constant) and isinstance(n.value, str)
+
+
+def _flatten_add(n):
+    if isinstance(n, ast.BinOp) and isinstance(n.op, ast.Add):
+        return _flatten_add(n.left) + _flatten_add(n.right)
+    return [n]
+
+
+def is_str_expr(n):
+    """Constant str, f-string, '+' chain holding a literal, or 'literal % x'."""
+    if _is_str_const(n) or isinstance(n, ast.JoinedStr):
+        return True
+    if isinstance(n, ast.BinOp) and isinstance(n.op, ast.Add):
+        return any(_is_str_const(o) or isinstance(o, ast.JoinedStr) for o in _flatten_add(n))
+    if isinstance(n, ast.BinOp) and isinstance(n.op, ast.Mod):
+        return _is_str_const(n.left)
+    return False
+
+
+def _callee(func):
+    if isinstance(func, ast.Name):
+        return func.id
+    if isinstance(func, ast.Attribute):
+        return func.attr
+    return None
+
+
+def _dotted(func):
+    if isinstance(func, ast.Name):
+        return func.id
+    if isinstance(func, ast.Attribute):
+        base = _dotted(func.value)
+        return (base or "") + "." + func.attr
+    return None
+
+
+def _cite_rid(n):
+    if (isinstance(n, ast.Call) and isinstance(n.func, ast.Name) and n.func.id == "_c"
+            and len(n.args) == 1 and not n.keywords and _is_str_const(n.args[0])
+            and re.fullmatch(r"[^\s" + LB + RB + "]+", n.args[0].value)):
+        return n.args[0].value
+    return None
+
+
+def _docstring_skip(body):
+    return 1 if body and isinstance(body[0], ast.Expr) and _is_str_const(body[0].value) else 0
+
+
+def _strip_markup(s):
+    s = ANY_TOK_RE.sub(" ", s)
+    s = TAG_RE.sub(" ", s)
+    return ENTITY_RE.sub(" ", s)
+
+
+def _words(s):
+    return [w for w in _strip_markup(s).split() if re.search(r"[A-Za-z]", w)]
+
+
+def _short(src, n=80):
+    s = " ".join(src.split())
+    return s if len(s) <= n else s[: n - 3] + "..."
+
+
+def _preview(s, n=90):
+    return _short(_enc(s), n)
+
+
+def misc_reject(lit):
+    """Why a non-helper string is NOT prose (None = keep as misc).  Conservative."""
+    low = lit.lower()
+    if any(m in low for m in SVG_MARKERS):
+        return "svg"
+    if "\n" in lit or "\r" in lit:
+        return "multiline"
+    if re.search(r"<[A-Za-z][^<>]*\b(?:class|id|src|style|width|height|data-[\w-]+)\s*=", lit) or \
+            re.search(r"<(?:div|section|figure|figcaption|img|table|tr|td|th|thead|tbody|header|"
+                      r"footer|style|script|pre|form|input|button|nav|main|html|body|head)\b", lit, re.I):
+        return "markup"
+    if re.search(r"\(\?[:=!<P]|\[\^|\\[dswbDSWB]|\.\*\??|\.\+\??", lit):
+        return "regex"
+    if len(re.findall(r"[\w-]+\s*:\s*[^;:]{1,40};", lit)) >= 2:
+        return "css"
+    if re.search(r"(?:https?|ftp)://", lit) and " " not in lit.strip():
+        return "url"
+    if len(_words(lit)) < 4:
+        return "short"
+    return None
+
+
+def _prose_like(lit, n=3):
+    return len(_words(lit)) >= n
+
+
+def _slug_like(s):
+    return bool(re.fullmatch(r"[a-z0-9_\-./#%:]*", s.strip()))
+
+
+def _count_pct(s):
+    """(argument-consuming specifiers, stray '%' signs) of a %-template."""
+    n, bad, i = 0, 0, s.find("%")
+    while i != -1:
+        m = PCT_RE.match(s, i)
+        if not m:
+            bad += 1
+            i = s.find("%", i + 1)
+            continue
+        if m.group(0)[-1] != "%":
+            n += 1
+        i = s.find("%", m.end())
+    return n, bad
+
+
+def tag_residue(s, kind):
+    """Unbalanced-tag signature of a text; compared original vs edited."""
+    s = ANY_TOK_RE.sub(" ", s)
+    if kind in ("p", "lead"):
+        s = re.sub(r"</p>\s*<p>", " ", s, flags=re.I)
+    stack, res = [], []
+    for m in TAG_RE.finditer(s):
+        close, name, selfc = m.group(1), m.group(2).lower(), m.group(3)
+        if name in VOID_TAGS or selfc:
+            continue
+        if not close:
+            stack.append(name)
+        elif stack and stack[-1] == name:
+            stack.pop()
+        elif name in stack:
+            while stack[-1] != name:
+                res.append("<%s> not closed" % stack.pop())
+            stack.pop()
+        else:
+            res.append("</%s> has no opening tag" % name)
+    res += ["<%s> not closed" % n for n in stack]
+    return res
+
+
+def _tag_counts(s):
+    return collections.Counter(m.group(2).lower() for m in TAG_RE.finditer(ANY_TOK_RE.sub(" ", s))
+                               if not m.group(1))
+
+
+def _numbers(s):
+    s = ENTITY_RE.sub(" ", TAG_RE.sub(" ", ANY_TOK_RE.sub(" ", s)))
+    return collections.Counter(NUM_RE.findall(s))
+
+
+def _counter_diff(a, b):
+    out = []
+    for k in sorted(set(a) | set(b)):
+        d = b[k] - a[k]
+        if d < 0:
+            out.extend(["-" + k] * -d)
+        elif d > 0:
+            out.extend(["+" + k] * d)
+    return " ".join(out)
+
+
+# ============================================================================ source text
+class Source:
+    """Original text (line endings preserved) + AST position -> character offset."""
+
+    def __init__(self, text):
+        self.text = text
+        self.starts = [0] + [m.end() for m in re.finditer(r"\r\n|\r|\n", text)]
+        self._lines = {}
+
+    def line(self, n):
+        if n not in self._lines:
+            a = self.starts[n - 1]
+            b = self.starts[n] if n < len(self.starts) else len(self.text)
+            self._lines[n] = self.text[a:b].rstrip("\r\n")
+        return self._lines[n]
+
+    def off(self, lineno, col):
+        ln = self.line(lineno)
+        if not ln.isascii():
+            col = len(ln.encode("utf-8")[:col].decode("utf-8"))
+        return self.starts[lineno - 1] + col
+
+    def span(self, node):
+        return self.off(node.lineno, node.col_offset), self.off(node.end_lineno, node.end_col_offset)
+
+    def col(self, off):
+        return off - self.starts[bisect.bisect_right(self.starts, off) - 1]
+
+
+def decode_source(raw):
+    bom = raw.startswith(b"\xef\xbb\xbf")
+    text = raw[3:].decode("utf-8") if bom else raw.decode("utf-8")
+    nl = "\r\n" if "\r\n" in text else "\n"
+    return text, bom, nl
+
+
+def encode_source(text, bom):
+    return (b"\xef\xbb\xbf" if bom else b"") + text.encode("utf-8")
+
+
+# ============================================================================ slots
+@dataclasses.dataclass
+class PH:
+    tok: str        # placeholder token as shown in the unit text
+    ptype: str      # "op" (+ operand) | "field" (f-string field, src = text inside {}) | "mod"
+    start: int      # span of src in the original text
+    end: int
+    src: str
+    paren: bool     # wrap in () when emitted as an operand
+
+
+@dataclasses.dataclass
+class Slot:
+    kind: str
+    ctx: str
+    start: int
+    end: int
+    line: int
+    text: str       # unit text (encoded, whitespace-stripped)
+    lead: str
+    trail: str
+    phs: list
+    mod: object     # PH or None
+    pct: int
+    wrap: bool
+    col0: int       # column where the slot starts
+    expr: str
+    indent: str = ""   # continuation-line indent used by the original (wrapped) slot
+    uid: str = ""
+    parent: str = None
+    has_comment: bool = False
+
+    def all_phs(self):
+        return self.phs + ([self.mod] if self.mod else [])
+
+    def to_meta(self):
+        d = dataclasses.asdict(self)
+        d["placeholders"] = d.pop("phs")
+        return d
+
+    @classmethod
+    def from_meta(cls, d):
+        d = dict(d)
+        d["phs"] = [PH(**p) for p in d.pop("placeholders")]
+        d["mod"] = PH(**d["mod"]) if d["mod"] else None
+        return cls(**d)
+
+
+def _needs_paren(node, where):
+    if isinstance(node, ATOMS):
+        return False
+    if where == "op" and isinstance(node, ast.BinOp) and isinstance(
+            node.op, (ast.Mult, ast.Div, ast.FloorDiv, ast.Mod, ast.MatMult, ast.Pow)):
+        return False
+    return True
+
+
+def parts_of(node, S):
+    """Split a string expression into [("lit", str) | ("ph", PH, node)] and an optional
+    %-operand PH.  Raises Unsupported for shapes the emitter cannot reproduce."""
+    if isinstance(node, ast.BinOp) and isinstance(node.op, ast.Mod):
+        if not _is_str_const(node.left):
+            raise Unsupported("%-format with a non-literal template")
+        a, b = S.span(node.right)
+        return [("lit", node.left.value)], PH(None, "mod", a, b, S.text[a:b], _needs_paren(node.right, "mod"))
+    parts = []
+    for op in _flatten_add(node):
+        if _is_str_const(op):
+            parts.append(("lit", op.value))
+        elif isinstance(op, ast.JoinedStr):
+            for v in op.values:
+                if _is_str_const(v):
+                    parts.append(("lit", v.value))
+                elif isinstance(v, ast.FormattedValue):
+                    a, b = S.span(v)
+                    if S.text[a:a + 1] != "{" or S.text[b - 1:b] != "}":
+                        raise Unsupported("f-string field position not recoverable")
+                    parts.append(("ph", PH(None, "field", a + 1, b - 1, S.text[a + 1:b - 1], False), v))
+                else:
+                    raise Unsupported("unexpected f-string part " + type(v).__name__)
+        else:
+            a, b = S.span(op)
+            parts.append(("ph", PH(None, "op", a, b, S.text[a:b], _needs_paren(op, "op")), op))
+    return parts, None
+
+
+def _parts_signature(parts, mod):
+    out = []
+    for p in parts:
+        out.append(p[1] if p[0] == "lit" else "\0%s\0%s\0" % (p[1].ptype, p[1].src))
+    return "".join(out), (mod.src if mod else None)
+
+
+# ============================================================================ emitter
+def _esc(s, q, is_f):
+    out = []
+    for ch in s:
+        o = ord(ch)
+        if ch == "\\":
+            out.append("\\\\")
+        elif ch == q:
+            out.append("\\" + q)
+        elif ch == "\n":
+            out.append("\\n")
+        elif ch == "\r":
+            out.append("\\r")
+        elif ch == "\t":
+            out.append("\\t")
+        elif is_f and ch in "{}":
+            out.append(ch * 2)
+        elif o < 0x20 or 0x7f <= o < 0xa0 or o in (0x2028, 0x2029, 0xfeff) or 0xd800 <= o < 0xe000:
+            out.append("\\x%02x" % o if o < 0x100 else "\\u%04x" % o)
+        else:
+            out.append(ch)
+    return "".join(out)
+
+
+def _seg_text(segs):
+    return "".join(s for k, s in segs if k == "text")
+
+
+def _quote_for(segs):
+    t = _seg_text(segs)
+    return "'" if t.count('"') > t.count("'") else '"'
+
+
+def _lit(segs, q):
+    is_f = any(k == "field" for k, _ in segs)
+    body = "".join(_esc(s, q, is_f) if k == "text" else "{" + s + "}" for k, s in segs)
+    return ("f" if is_f else "") + q + body + q
+
+
+def _split_piece(segs, q, first_room, room):
+    """Split one string piece at spaces into chunks whose literal fits the room."""
+    is_f = any(k == "field" for k, _ in segs)
+    toks = []
+    for k, s in segs:
+        if k == "field":
+            toks.append(("field", s))
+        else:
+            toks.extend(("text", w) for w in re.findall(r"\S+\s*|\s+", s))
+    chunks, cur, used, limit = [], [], 3, first_room
+    for t in toks:
+        tl = len(_esc(t[1], q, is_f)) if t[0] == "text" else len(t[1]) + 2
+        if cur and used + tl > limit:
+            chunks.append(cur)
+            cur, used, limit = [], 3, room
+        cur.append(t)
+        used += tl
+    if cur:
+        chunks.append(cur)
+    merged = []
+    for c in chunks:
+        segs2 = []
+        for k, s in c:
+            if k == "text" and segs2 and segs2[-1][0] == "text":
+                segs2[-1] = ("text", segs2[-1][1] + s)
+            else:
+                segs2.append((k, s))
+        merged.append(segs2)
+    return merged
+
+
+def _layout(pieces, col0, nl, wrap, indent, width=WRAP_WIDTH):
+    """pieces: ("str", segs) | ("op", code).  One line, or wrapped like the source style:
+    first line continues at col0, continuation lines start with `indent`."""
+    if not pieces:
+        return '""'
+    single = " + ".join(_lit(p[1], _quote_for(p[1])) if p[0] == "str" else p[1] for p in pieces)
+    if not wrap or (col0 + len(single) <= width and "\n" not in single):
+        return single
+    ind = len(indent)
+    out, col = [], col0
+    for i, p in enumerate(pieces):
+        lead = " + " if i else ""
+        if p[0] == "op":
+            code = p[1]
+            if i and "\n" not in code and col + len(lead) + len(code) > width:
+                out.append(" +" + nl + indent)
+                col, lead = ind, ""
+            out.append(lead + code)
+            col = (col + len(lead) + len(code)) if "\n" not in code else len(code.rsplit("\n", 1)[-1])
+            continue
+        q = _quote_for(p[1])
+        room = max(width - ind - 2, 24)
+        first = width - col - len(lead) - 2
+        if i and first < 24:
+            out.append(" +" + nl + indent)
+            col, lead, first = ind, "", room
+        for j, ch in enumerate(_split_piece(p[1], q, first, room)):
+            code = _lit(ch, q)
+            if j == 0:
+                out.append(lead + code)
+                col += len(lead) + len(code)
+            else:
+                out.append(nl + indent + code)
+                col = ind + len(code)
+    return "".join(out)
+
+
+def emit_code(slot, text, ph_srcs, mod_src, nl):
+    """Python source for a slot whose unit text is `text` (encoded, stripped)."""
+    value = _dec(slot.lead + text + slot.trail)
+    queues = collections.defaultdict(collections.deque)
+    for i, ph in enumerate(slot.phs):
+        queues[ph.tok].append(i)
+    pieces = []
+
+    def add(kind, s):
+        if kind == "text" and not s:
+            return
+        if pieces and pieces[-1][0] == "str":
+            pieces[-1][1].append((kind, s))
+        else:
+            pieces.append(("str", [(kind, s)]))
+
+    pos = 0
+    for m in PH_RE.finditer(value):
+        add("text", value[pos:m.start()])
+        pos = m.end()
+        i = queues[m.group(0)].popleft()
+        ph = slot.phs[i]
+        if ph.ptype == "field":
+            add("field", ph_srcs[i])
+        else:
+            pieces.append(("op", "(" + ph_srcs[i] + ")" if ph.paren else ph_srcs[i]))
+    add("text", value[pos:])
+    indent = slot.indent or " " * slot.col0
+    if slot.mod is not None:
+        fmt = pieces[0][1] if pieces else [("text", "")]
+        right = "(" + mod_src + ")" if slot.mod.paren else mod_src
+        return _layout([("str", fmt)], slot.col0, nl, slot.wrap, indent) + " % " + right
+    return _layout(pieces, slot.col0, nl, slot.wrap, indent)
+
+
+def patch_source(text, slots, new_texts, nl, force=False):
+    """Rebuild `text` with every changed slot re-emitted (nested slots rendered first)."""
+    order = sorted(slots, key=lambda s: (s.start, -s.end))
+    kids = {s.uid: [] for s in order}
+    top, stack = [], []
+    for s in order:
+        while stack and s.start >= stack[-1].end:
+            stack.pop()
+        if stack and s.end > stack[-1].end:
+            raise RuntimeError("%s overlaps %s" % (s.uid, stack[-1].uid))
+        (kids[stack[-1].uid] if stack else top).append(s)
+        stack.append(s)
+    changed = {s.uid for s in order if force or new_texts.get(s.uid, s.text) != s.text}
+
+    def rng(a, b, inner):
+        out, pos = [], a
+        for k in inner:
+            if a <= k.start and k.end <= b:
+                out.append(text[pos:k.start])
+                out.append(one(k))
+                pos = k.end
+        out.append(text[pos:b])
+        return "".join(out)
+
+    def one(s):
+        if s.uid not in changed:
+            return rng(s.start, s.end, kids[s.uid])
+        srcs = [rng(ph.start, ph.end, kids[s.uid]) for ph in s.phs]
+        mod_src = rng(s.mod.start, s.mod.end, kids[s.uid]) if s.mod else None
+        return emit_code(s, s.text if force else new_texts.get(s.uid, s.text), srcs, mod_src, nl)
+
+    return rng(0, len(text), top)
+
+
+# ============================================================================ extractor
+@dataclasses.dataclass(frozen=True)
+class Ctx:
+    label: str = None       # fixed ctx (TITLE, META ...)
+    section: str = None
+    ckind: str = None
+    fn: str = None
+    var: str = None
+    callee: str = None
+    in_field: bool = False
+    excluded: str = None
+
+    def w(self, **kw):
+        return dataclasses.replace(self, **kw)
+
+    def base(self):
+        if self.label:
+            s = self.label
+        elif self.section is not None:
+            s = "s:" + self.section
+        elif self.var:
+            s = "v:" + self.var
+        elif self.fn:
+            s = "fn:" + self.fn
+        else:
+            s = "top"
+        return s + (" kind=" + self.ckind if self.ckind else "")
+
+
+class Extractor:
+    def __init__(self, module, text):
+        self.module = module
+        self.S = Source(text)
+        self.tree = ast.parse(text, filename=module + ".py")
+        self.slots, self.skipped, self.uncaptured, self.short_labels = [], [], [], []
+        self.wrappers, self.wrapper_notes, self.local_defs = {}, [], set()
+        self.deferred, self.deferred_uses = {}, {}
+        self._seen = set()
+        self._offs, self._cum, self._comments = self._scan_tokens(text)
+
+    # ---------------------------------------------------------------- setup
+    def _scan_tokens(self, text):
+        offs, cum, comments, d = [], [], [], 0
+        try:
+            for tok in tokenize.generate_tokens(io.StringIO(text).readline):
+                if tok.type == tokenize.OP and tok.string in ("(", "[", "{", ")", "]", "}"):
+                    d += 1 if tok.string in "([{" else -1
+                    offs.append(self.S.starts[tok.start[0] - 1] + tok.start[1])
+                    cum.append(d)
+                elif tok.type == tokenize.COMMENT:
+                    comments.append(self.S.starts[tok.start[0] - 1] + tok.start[1])
+        except (tokenize.TokenError, SyntaxError):
+            return None, None, []
+        return offs, cum, comments
+
+    def _depth(self, off):
+        if self._offs is None:
+            return 0
+        i = bisect.bisect_left(self._offs, off)
+        return self._cum[i - 1] if i else 0
+
+    def run(self):
+        self._prepass()
+        self._walk_module()
+        self._finish_deferred()
+        self._number()
+        return self
+
+    def _prepass(self):
+        body = self.tree.body
+        self.local_defs = {n.name for n in body if isinstance(n, (ast.FunctionDef, ast.AsyncFunctionDef))}
+        overrides = LOCAL_WRAPPERS.get(self.module, {})
+        for fn in body:
+            if not isinstance(fn, ast.FunctionDef):
+                continue
+            params = [a.arg for a in fn.args.posonlyargs + fn.args.args + fn.args.kwonlyargs]
+            roles = dict(overrides.get(fn.name, {}))
+            if not roles:
+                for sub in ast.walk(fn):
+                    if not isinstance(sub, ast.Call):
+                        continue
+                    name = _callee(sub.func)
+                    if name not in HELPERS or name in self.local_defs:
+                        continue
+                    for param, role, arg in self._bind(sub, HELPERS[name]):
+                        if role is not None and role != "walk" and isinstance(arg, ast.Name) and arg.id in params:
+                            roles.setdefault(arg.id, role)
+            if roles:
+                self.wrappers[fn.name] = [(p, roles.get(p)) for p in params]
+                how = "hand-mapped" if fn.name in overrides else "inferred"
+                self.wrapper_notes.append("%s(%s) %s" % (fn.name, ", ".join(
+                    "%s=%s" % (p, r if isinstance(r, str) else "/".join(x for x in r if x))
+                    for p, r in self.wrappers[fn.name] if r), how))
+        counts = collections.Counter(t.id for st in body if isinstance(st, ast.Assign)
+                                     for t in st.targets if isinstance(t, ast.Name))
+        for st in body:
+            if (isinstance(st, ast.Assign) and len(st.targets) == 1 and isinstance(st.targets[0], ast.Name)
+                    and counts[st.targets[0].id] == 1 and is_str_expr(st.value)
+                    and st.targets[0].id not in SKIP_NAMES and st.targets[0].id not in MODULE_KINDS):
+                self.deferred[st.targets[0].id] = st.value
+
+    @staticmethod
+    def _bind(call, spec):
+        params = [p for p, _ in spec]
+        roles = dict(spec)
+        out = []
+        for i, a in enumerate(call.args):
+            if isinstance(a, ast.Starred) or i >= len(params):
+                out.append((None, None, a))
+            else:
+                out.append((params[i], roles[params[i]], a))
+        for k in call.keywords:
+            out.append((k.arg, roles.get(k.arg), k.value))
+        return out
+
+    # ---------------------------------------------------------------- walking
+    def _walk_module(self):
+        body = self.tree.body
+        for st in body[_docstring_skip(body):]:
+            if isinstance(st, ast.Assign) and len(st.targets) == 1 and isinstance(st.targets[0], ast.Name):
+                name = st.targets[0].id
+                if name in MODULE_KINDS:
+                    self.take_prose(st.value, MODULE_KINDS[name], Ctx(label=name))
+                    continue
+                if name == "META":
+                    self.take_pairs(st.value, None, "meta", Ctx(label="META"))
+                    continue
+                if name in SKIP_NAMES or name in self.deferred:
+                    continue
+                self.walk(st.value, Ctx(var=name))
+                continue
+            self.walk(st, Ctx())
+
+    def walk(self, node, ctx):
+        if node is None:
+            return
+        if isinstance(node, list):
+            for n in node:
+                self.walk(n, ctx)
+            return
+        if isinstance(node, ast.expr) and is_str_expr(node):
+            self.misc(node, ctx)
+            return
+        handler = getattr(self, "w_" + type(node).__name__, None)
+        if handler:
+            handler(node, ctx)
+            return
+        for child in ast.iter_child_nodes(node):
+            self.walk(child, ctx)
+
+    def w_FunctionDef(self, node, ctx):
+        reason = ctx.excluded
+        if not reason and (node.name.startswith("_fig") or node.name.startswith("_g_")):
+            reason = "inside %s()" % node.name
+        if not reason:
+            for sub in ast.walk(node):
+                vals = [sub.value] if _is_str_const(sub) else []
+                if any(m in v.lower() for v in vals for m in SVG_MARKERS):
+                    reason = "inside %s() (SVG/markup builder)" % node.name
+                    break
+        c = ctx.w(fn=node.name, var=None, excluded=reason)
+        self.walk(node.decorator_list, ctx)
+        self.walk(node.args, c)
+        for st in node.body[_docstring_skip(node.body):]:
+            self.walk(st, c)
+
+    w_AsyncFunctionDef = w_FunctionDef
+
+    def w_ClassDef(self, node, ctx):
+        for st in node.body[_docstring_skip(node.body):]:
+            self.walk(st, ctx.w(fn=node.name))
+
+    def w_Raise(self, node, ctx):
+        return
+
+    def w_Assert(self, node, ctx):
+        return
+
+    def w_Import(self, node, ctx):
+        return
+
+    w_ImportFrom = w_Import
+
+    def w_FormattedValue(self, node, ctx):
+        self.walk(node.value, ctx.w(in_field=True))
+
+    def w_Dict(self, node, ctx):
+        keys = [k.value if _is_str_const(k) else None for k in node.keys]
+        if "blocks" in keys:
+            sid = next((v.value for k, v in zip(keys, node.values) if k == "id" and _is_str_const(v)), "?")
+            c = ctx.w(section=sid, ckind=None, callee=None, label=None)
+            for k, v in zip(keys, node.values):
+                if k == "id":
+                    continue
+                if k == "kicker":
+                    self.take_prose(v, "kicker", c)
+                elif k == "title":
+                    self.take_prose(v, "section.title", c)
+                else:
+                    self.walk(v, c)
+            return
+        for k, kname, v in zip(node.keys, keys, node.values):
+            if k is not None and not isinstance(k, ast.Constant):
+                self.walk(k, ctx)
+            if kname != "id":
+                self.walk(v, ctx)
+
+    def w_Call(self, node, ctx):
+        name = _callee(node.func)
+        if name == "print" and isinstance(node.func, ast.Name):
+            return
+        spec = None
+        if not ctx.excluded:
+            if isinstance(node.func, ast.Name) and name in self.wrappers:
+                spec = self.wrappers[name]
+            elif name in HELPERS and name not in self.local_defs:
+                spec = HELPERS[name]
+        if spec is None:
+            self.walk(node.func, ctx)
+            c = ctx.w(callee=_dotted(node.func))
+            self.walk(node.args, c)
+            for k in node.keywords:
+                self.walk(k.value, c)
+            return
+        c = ctx.w(callee=None)
+        if name == "callout" and node.args and _is_str_const(node.args[0]):
+            c = c.w(ckind=node.args[0].value)
+        for _param, role, arg in self._bind(node, spec):
+            if role is None:
+                self.walk(arg, c.w(callee=name))
+            elif role == "walk":
+                self.walk(arg, c)
+            elif isinstance(role, str):
+                self.take_prose(arg, role, c)
+            elif role[0] == "list":
+                self.take_list(arg, role[1], c)
+            elif role[0] == "rows":
+                self.take_rows(arg, role[1], c)
+            elif role[0] == "pairs":
+                self.take_pairs(arg, role[1], role[2], c)
+
+    # ---------------------------------------------------------------- prose positions
+    def take_prose(self, node, kind, ctx):
+        if node is None:
+            return
+        if is_str_expr(node):
+            self.make_slot(node, kind, ctx)
+        elif isinstance(node, ast.IfExp):
+            self.walk(node.test, ctx)
+            self.take_prose(node.body, kind, ctx)
+            self.take_prose(node.orelse, kind, ctx)
+        elif isinstance(node, ast.BinOp) and isinstance(node.op, ast.Add):
+            for o in _flatten_add(node):
+                self.take_prose(o, kind, ctx)
+        elif isinstance(node, ast.Name) and node.id in self.deferred:
+            self.deferred_uses.setdefault(node.id, (kind, ctx))
+        else:
+            self.walk(node, ctx)
+
+    def take_list(self, node, kind, ctx):
+        if isinstance(node, (ast.List, ast.Tuple)):
+            for e in node.elts:
+                if isinstance(e, ast.Starred):
+                    self.walk(e, ctx)
+                else:
+                    self.take_prose(e, kind, ctx)
+        else:
+            self.walk(node, ctx)
+
+    def take_rows(self, node, kind, ctx):
+        if isinstance(node, (ast.List, ast.Tuple)):
+            for row in node.elts:
+                self.take_list(row, kind, ctx)
+        else:
+            self.walk(node, ctx)
+
+    def take_pairs(self, node, k1, k2, ctx):
+        if not isinstance(node, (ast.List, ast.Tuple)):
+            self.walk(node, ctx)
+            return
+        for e in node.elts:
+            if isinstance(e, (ast.Tuple, ast.List)) and len(e.elts) >= 2:
+                for j, x in enumerate(e.elts):
+                    role = k1 if j == 0 else (k2 if j == 1 else None)
+                    if role is None:
+                        self.walk(x, ctx)
+                    else:
+                        self.take_prose(x, role, ctx)
+            else:
+                self.walk(e, ctx)
+
+    # ---------------------------------------------------------------- slots
+    def _literal_preview(self, node):
+        if isinstance(node, ast.BinOp) and isinstance(node.op, ast.Mod):
+            return node.left.value
+        out = []
+        for op in _flatten_add(node):
+            if _is_str_const(op):
+                out.append(op.value)
+            elif isinstance(op, ast.JoinedStr):
+                out.extend(v.value if _is_str_const(v) else " " for v in op.values)
+            else:
+                out.append(" ")
+        return "".join(out)
+
+    def walk_subnodes(self, node, ctx):
+        if isinstance(node, ast.BinOp) and isinstance(node.op, ast.Mod) and _is_str_const(node.left):
+            self.walk(node.right, ctx)
+            return
+        for op in _flatten_add(node):
+            if _is_str_const(op):
+                continue
+            if isinstance(op, ast.JoinedStr):
+                for v in op.values:
+                    if isinstance(v, ast.FormattedValue):
+                        self.walk(v.value, ctx.w(in_field=True))
+            else:
+                self.walk(op, ctx)
+
+    def misc(self, node, ctx):
+        lit = self._literal_preview(node)
+        if ctx.excluded:
+            if _prose_like(lit):
+                self.uncaptured.append((node.lineno, ctx.excluded, _preview(_strip_markup(lit))))
+            self.walk_subnodes(node, ctx)
+            return
+        reason = misc_reject(lit)
+        if reason is None:
+            self.make_slot(node, "misc", ctx)
+            return
+        if reason in ("svg", "markup", "multiline") and _prose_like(lit):
+            self.uncaptured.append((node.lineno, reason + " string", _preview(_strip_markup(lit))))
+        elif (reason == "short" and ctx.callee and ctx.callee not in QUIET_CALLEES
+              and ctx.callee not in HELPERS and ctx.callee not in self.wrappers
+              and _words(lit) and not _slug_like(lit)):
+            self.short_labels.append((node.lineno, ctx.callee, _preview(lit, 50)))
+        self.walk_subnodes(node, ctx)
+
+    def make_slot(self, node, kind, ctx, extra=""):
+        if ctx.excluded:
+            self.misc(node, ctx)
+            return
+        S = self.S
+        start, end = S.span(node)
+        if (start, end) in self._seen:
+            return
+        self._seen.add((start, end))
+        base = ctx.base() + extra
+        if kind == "misc" and ctx.callee:
+            base += " in=" + ctx.callee
+        try:
+            slot = self._build(node, kind, base, ctx, start, end)
+        except Unsupported as e:
+            self.skipped.append((node.lineno, kind, str(e), _preview(self._literal_preview(node))))
+            slot = None
+        if slot is not None:
+            self.slots.append(slot)
+        self.walk_subnodes(node, ctx)
+
+    def _build(self, node, kind, base, ctx, start, end):
+        S = self.S
+        parts, mod = parts_of(node, S)
+        texts, phs, ecount, elabels = [], [], 0, []
+        for p in parts:
+            if p[0] == "lit":
+                if LB in p[1] or RB in p[1]:
+                    raise Unsupported("literal text contains %s or %s" % (LB, RB))
+                texts.append(p[1])
+                continue
+            ph, n = p[1], p[2]
+            rid = None
+            if ph.ptype == "op":
+                rid = _cite_rid(n)
+            elif n.conversion == -1 and n.format_spec is None:
+                rid = _cite_rid(n.value)
+            if rid:
+                ph.tok = "%sc:%s%s" % (LB, rid, RB)
+            else:
+                ecount += 1
+                ph.tok = "%se%d%s" % (LB, ecount, RB)
+                elabels.append(" E%d=%s" % (ecount, _short(ph.src)))
+            phs.append(ph)
+            texts.append(ph.tok)
+        encoded = _enc("".join(texts))
+        stripped = encoded.strip()
+        if not stripped:
+            return None
+        lead = encoded[:len(encoded) - len(encoded.lstrip())]
+        trail = encoded[len(encoded.rstrip()):]
+        pct = 0
+        if mod is not None:
+            pct, bad = _count_pct(_dec(stripped))
+            if bad:
+                raise Unsupported("%-template with a stray %")
+            mod.tok = LB + "mod" + RB          # kept in meta only, never shown in the text
+            base += " %-format"
+        expr = "mod" if mod else ("fstr" if any(p.ptype == "field" for p in phs) else
+                                  ("concat" if phs or isinstance(node, ast.BinOp) else "str"))
+        multiline = node.lineno != node.end_lineno
+        wrap = multiline and self._offs is not None and self._depth(start) > 0 and not ctx.in_field
+        holes = [(ph.start, ph.end) for ph in phs + ([mod] if mod else [])]
+        indent = ""
+        for ln in range(node.lineno + 1, node.end_lineno + 1) if wrap else ():
+            lt = S.line(ln)
+            ws = lt[:len(lt) - len(lt.lstrip())]
+            o = S.starts[ln - 1] + len(ws)
+            if lt.strip() and start < o < end and not any(a <= o < b for a, b in holes):
+                indent = ws
+                break
+        slot = Slot(kind=kind, ctx=base + "".join(elabels), start=start, end=end, line=node.lineno,
+                    text=stripped, lead=lead, trail=trail, phs=phs, mod=mod, pct=pct, wrap=wrap,
+                    col0=S.col(start), expr=expr, indent=indent)
+        slot.has_comment = any(start <= c < end and not any(a <= c < b for a, b in holes)
+                               for c in self._comments)
+        self._roundtrip(slot, parts, mod)
+        return slot
+
+    @staticmethod
+    def _roundtrip(slot, parts, mod):
+        """Re-emit the unchanged text, re-parse it, and demand identical parts."""
+        code = emit_code(slot, slot.text, [p.src for p in slot.phs], mod.src if mod else None, "\n")
+        wrapped = "(\n" + code + "\n)"
+        try:
+            node = ast.parse(wrapped, mode="eval").body
+        except SyntaxError as e:
+            raise Unsupported("re-emitted code does not parse (%s)" % e.msg)
+        parts2, mod2 = parts_of(node, Source(wrapped))
+        if _parts_signature(parts, mod) != _parts_signature(parts2, mod2):
+            raise Unsupported("re-emitted code does not round-trip")
+
+    def _finish_deferred(self):
+        for name, value in self.deferred.items():
+            use = self.deferred_uses.get(name)
+            if use:
+                self.make_slot(value, use[0], use[1].w(in_field=False, callee=None), extra=" v=" + name)
+            else:
+                self.walk(value, Ctx(var=name))
+
+    def _number(self):
+        self.slots.sort(key=lambda s: (s.start, -s.end))
+        stack = []
+        for i, s in enumerate(self.slots, 1):
+            s.uid = "U%04d" % i
+            while stack and s.start >= stack[-1].end:
+                stack.pop()
+            if stack:
+                p = stack[-1]
+                if s.end > p.end or not any(h.start <= s.start and s.end <= h.end for h in p.all_phs()):
+                    raise RuntimeError("%s: slot at line %d overlaps %s" % (self.module, s.line, p.uid))
+                s.parent = p.uid
+            stack.append(s)
+
+
+# ============================================================================ files / paths
+def module_stem(arg):
+    stem = os.path.splitext(os.path.basename(arg))[0]
+    if not stem.startswith("paper_"):
+        raise SystemExit("not a paper module: %s" % arg)
+    return stem
+
+
+def module_path(stem):
+    return os.path.join(BUILD, stem + ".py")
+
+
+def work_root(args):
+    w = getattr(args, "work", None) or DEFAULT_WORK
+    return w if os.path.isabs(w) else os.path.join(REPO, w)
+
+
+def all_modules():
+    return sorted(f[:-3] for f in os.listdir(BUILD) if f.startswith("paper_") and f.endswith(".py"))
+
+
+def _rel(path):
+    try:
+        return os.path.relpath(path, REPO).replace("\\", "/")
+    except ValueError:
+        return path
+
+
+def _module_slug(tree):
+    for st in tree.body:
+        if (isinstance(st, ast.Assign) and len(st.targets) == 1 and isinstance(st.targets[0], ast.Name)
+                and st.targets[0].id == "SLUG" and _is_str_const(st.value)):
+            return st.value.value
+    return "?"
+
+
+def units_header(stem, slug, slots):
+    misc = sum(s.kind == "misc" for s in slots)
+    return [
+        "# %s | module: %s | slug: %s" % (FORMAT, stem, slug),
+        "# source: _build/%s.py | units: %d | misc: %d | written by ste_units.py extract %s"
+        % (stem, len(slots), misc, datetime.date.today().isoformat()),
+        "# Edit ONLY the text line under each '@@' header and keep it on ONE line. Never edit '@@' lines.",
+        "# %sc:id%s = citation, %se1%s = code (EN=... in the header). Keep each one (moving is fine). %s = newline."
+        % (LB, RB, LB, RB, NL_TOK),
+        "# Keep inline HTML (<strong>, <em>, <a href=...>, <br>) and entities (&deg;) intact. misc units are optional.",
+        "",
+    ]
+
+
+def kind_counts(slots):
+    c = collections.Counter(s.kind for s in slots)
+    return " ".join("%s=%d" % kv for kv in sorted(c.items(), key=lambda kv: (-kv[1], kv[0])))
+
+
+# ============================================================================ subprocess runners
+RENDER_RUNNER = r'''
+import sys, os, json, hashlib, types
+build, name, src_path, out_path = sys.argv[1:5]
+sys.path.insert(0, build)
+with open(src_path, encoding="utf-8-sig") as fh:
+    code = fh.read()
+mod = types.ModuleType(name)
+mod.__file__ = os.path.join(build, name + ".py")
+sys.modules[name] = mod
+exec(compile(code, mod.__file__, "exec"), mod.__dict__)
+data = {k: getattr(mod, k) for k in ("TITLE", "EYEBROW", "SUB", "META", "SECTIONS")}
+for k in ("RELATED", "REF_IDS", "SLUG"):
+    if hasattr(mod, k):
+        data[k] = getattr(mod, k)
+blob = json.dumps(data, ensure_ascii=False, default=repr)
+if out_path != "-":
+    with open(out_path, "w", encoding="utf-8") as fh:
+        fh.write(blob)
+print(hashlib.sha256(blob.encode("utf-8")).hexdigest())
+'''
+
+IMPORT_RUNNER = r'''
+import sys, importlib
+sys.path.insert(0, sys.argv[1])
+m = importlib.import_module(sys.argv[2])
+assert isinstance(m.SECTIONS, list) and m.SECTIONS, "SECTIONS empty"
+print(len(m.SECTIONS))
+'''
+
+
+def _env():
+    env = dict(os.environ)
+    env.update(PYTHONHASHSEED="0", PYTHONIOENCODING="utf-8", PYTHONDONTWRITEBYTECODE="1")
+    return env
+
+
+def render(stem, src_path, out_path="-"):
+    r = subprocess.run([PY, "-B", "-c", RENDER_RUNNER, BUILD, stem, src_path, out_path], cwd=REPO,
+                       env=_env(), capture_output=True, text=True, encoding="utf-8", timeout=600)
+    if r.returncode != 0:
+        return None, (r.stderr.strip().splitlines() or ["exit %d" % r.returncode])[-1]
+    return r.stdout.strip().splitlines()[-1], None
+
+
+def import_check(stem):
+    r = subprocess.run([PY, "-B", "-c", IMPORT_RUNNER, BUILD, stem], cwd=REPO, env=_env(),
+                       capture_output=True, text=True, encoding="utf-8", timeout=600)
+    if r.returncode != 0:
+        return (r.stderr.strip().splitlines() or ["exit %d" % r.returncode])[-1]
+    return None
+
+
+def _first_difference(a_path, b_path):
+    try:
+        a = json.load(open(a_path, encoding="utf-8"))
+        b = json.load(open(b_path, encoding="utf-8"))
+    except (OSError, ValueError) as e:
+        return "cannot compare: %s" % e
+
+    def walk(x, y, path):
+        if type(x) is not type(y):
+            return path, repr(x)[:120], repr(y)[:120]
+        if isinstance(x, dict):
+            for k in sorted(set(x) | set(y), key=str):
+                if x.get(k) != y.get(k):
+                    return walk(x.get(k), y.get(k), path + "/" + str(k))
+        elif isinstance(x, list):
+            for i, (p, q) in enumerate(zip(x, y)):
+                if p != q:
+                    return walk(p, q, path + "/%d" % i)
+            if len(x) != len(y):
+                return path, "len %d" % len(x), "len %d" % len(y)
+        elif x != y:
+            i = next((i for i, (p, q) in enumerate(zip(x, y)) if p != q), min(len(x), len(y)))
+            return path, repr(x[max(0, i - 40):i + 60]), repr(y[max(0, i - 40):i + 60])
+        return None
+
+    d = walk(a, b, "")
+    return "no difference found" if d is None else "%s: original %s | patched %s" % d
+
+
+# ============================================================================ validation
+def _multiline_units(path):
+    bad, cur, n = set(), None, 0
+    with open(path, encoding="utf-8") as fh:
+        for line in fh:
+            line = line.rstrip("\n")
+            m = UNIT_HEADER.match(line)
+            if m:
+                cur, n = m.group("id"), 0
+            elif cur and line.strip():
+                n += 1
+                if n > 1:
+                    bad.add(cur)
+    return bad
+
+
+def validate(slots, units, multiline):
+    """-> (errors, warnings, {uid: new text})"""
+    errors, warnings, new = [], [], {}
+    by_id, meta_ids = {}, {s.uid for s in slots}
+    for u in units:
+        if u.id in by_id:
+            errors.append("%s: duplicate unit id in units file" % u.id)
+            continue
+        by_id[u.id] = u
+        if u.id not in meta_ids:
+            errors.append("%s: unknown unit id (not in meta.json)" % u.id)
+    for s in slots:
+        u = by_id.get(s.uid)
+        if u is None:
+            errors.append("%s: missing from units file" % s.uid)
+            continue
+        e0 = len(errors)
+        if u.kind != s.kind or u.ctx != s.ctx:
+            errors.append("%s: '@@' header was edited; it must stay '%s | %s'" % (s.uid, s.kind, s.ctx))
+        if s.uid in multiline:
+            errors.append("%s: text spans several lines; keep it on one line (newline = %s)" % (s.uid, NL_TOK))
+        t = u.text
+        if not t:
+            errors.append("%s: text is empty" % s.uid)
+        if t.count(LB) != t.count(RB) or len(ANY_TOK_RE.findall(t)) != t.count(LB):
+            errors.append("%s: broken placeholder bracket %s...%s" % (s.uid, LB, RB))
+        unknown = [x for x in ANY_TOK_RE.findall(t) if x not in (NL_TOK, CR_TOK) and not PH_RE.fullmatch(x)]
+        if unknown:
+            errors.append("%s: unknown placeholder %s" % (s.uid, " ".join(unknown)))
+        have = collections.Counter(PH_RE.findall(t))
+        want = collections.Counter(ph.tok for ph in s.phs)
+        if have != want:
+            errors.append("%s: placeholders changed (%s); each original placeholder must appear exactly "
+                          "as often as before" % (s.uid, _counter_diff(want, have)))
+        if s.mod is not None:
+            n, bad = _count_pct(_dec(t))
+            if n != s.pct or bad:
+                errors.append("%s: %%-template needs exactly %d %%-specifier(s) and no bare %% "
+                              "(found %d, %d stray; write %%%% for a literal %%)" % (s.uid, s.pct, n, bad))
+        r0, r1 = tag_residue(s.text, s.kind), tag_residue(t, s.kind)
+        if r0 != r1:
+            errors.append("%s: HTML tags unbalanced: %s" % (s.uid, "; ".join(r1) or "differs from original"))
+        if len(errors) > e0:
+            continue
+        if t != s.text:
+            new[s.uid] = t
+            if t.count(NL_TOK) != s.text.count(NL_TOK):
+                warnings.append("%s: warning: %s count changed" % (s.uid, NL_TOK))
+            if _tag_counts(s.text) != _tag_counts(t):
+                warnings.append("%s: warning: inline tags changed: %s"
+                                % (s.uid, _counter_diff(_tag_counts(s.text), _tag_counts(t))))
+            if _numbers(s.text) != _numbers(t):
+                warnings.append("%s: warning: numbers changed: %s"
+                                % (s.uid, _counter_diff(_numbers(s.text), _numbers(t))))
+    return errors, warnings, new
+
+
+# ============================================================================ work dir state
+class Work:
+    def __init__(self, args, stem):
+        self.stem = stem
+        self.dir = os.path.join(work_root(args), stem)
+        self.units = os.path.join(self.dir, "units.txt")
+        self.meta = os.path.join(self.dir, "meta.json")
+        self.original = os.path.join(self.dir, "original.py")
+        self.last = os.path.join(self.dir, "last_applied.py")
+        self.applied = os.path.join(self.dir, "applied.json")
+
+    def applied_sha(self):
+        """Newline-insensitive sha of the module as last written by apply."""
+        try:
+            return json.load(open(self.applied, encoding="utf-8"))["sha256_norm"]
+        except (OSError, ValueError, KeyError):
+            return None
+
+    def known(self):
+        """Newline-insensitive shas the module file may have without being 'changed outside'."""
+        return {_nsha(open(self.original, "rb").read()), self.applied_sha()} - {None}
+
+    def load(self):
+        if not (os.path.exists(self.meta) and os.path.exists(self.original)):
+            raise SystemExit("%s: no meta.json/original.py in %s; run extract first" % (self.stem, _rel(self.dir)))
+        meta = json.load(open(self.meta, encoding="utf-8"))
+        raw = open(self.original, "rb").read()
+        if _sha(raw) != meta["sha256_original"]:
+            raise SystemExit("%s: original.py does not match meta.json; re-run extract --force" % self.stem)
+        text, _bom, _nl = decode_source(raw)
+        return meta, text, [Slot.from_meta(u) for u in meta["units"]]
+
+
+def analyze(stem, text):
+    return Extractor(stem, text).run()
+
+
+# ============================================================================ commands
+def cmd_extract(args):
+    stem = module_stem(args.module)
+    if stem in UNSUPPORTED:
+        print("%s: unsupported (%s)" % (stem, UNSUPPORTED[stem]))
+        return 3
+    src_path = module_path(stem)
+    if not os.path.exists(src_path):
+        raise SystemExit("no such module: %s" % _rel(src_path))
+    w = Work(args, stem)
+    os.makedirs(w.dir, exist_ok=True)
+    cur_raw = open(src_path, "rb").read()
+    if args.force or not os.path.exists(w.original):
+        shutil.copyfile(src_path, w.original)
+        if os.path.exists(w.applied):
+            os.remove(w.applied)
+    raw = open(w.original, "rb").read()
+    if _nsha(cur_raw) not in w.known():
+        print("warning: _build/%s.py differs from original.py and from the last apply; units come from "
+              "original.py (extract --force re-snapshots the current file)" % stem)
+    text, bom, nl = decode_source(raw)
+    ex = analyze(stem, text)
+    if os.path.exists(w.units) and not args.force:
+        try:
+            _h, old = read_units(w.units)
+        except (OSError, UnicodeDecodeError):
+            old = None
+        fresh = {s.uid: s.text for s in ex.slots}
+        if old is None or {u.id for u in old} != set(fresh) or any(u.text != fresh[u.id] for u in old):
+            print("%s: units.txt already holds edits (or differs); not overwritten. Use --force to "
+                  "discard them." % _rel(w.units))
+            return 2
+    slug = _module_slug(ex.tree)
+    meta = {"format": FORMAT, "module": stem, "source": "_build/%s.py" % stem, "slug": slug,
+            "newline": nl, "bom": bom, "sha256_original": _sha(raw),
+            "extracted": datetime.datetime.now().isoformat(timespec="seconds"),
+            "units": [s.to_meta() for s in ex.slots]}
+    with open(w.meta, "w", encoding="utf-8", newline="\n") as fh:
+        json.dump(meta, fh, ensure_ascii=False, indent=1)
+    write_units(w.units, units_header(stem, slug, ex.slots),
+                [Unit(s.uid, s.kind, s.ctx, s.text) for s in ex.slots])
+    print_extract_summary(stem, ex, _rel(w.units))
+    return 0
+
+
+def print_extract_summary(stem, ex, where):
+    misc = sum(s.kind == "misc" for s in ex.slots)
+    print("%s: %d units -> %s" % (stem, len(ex.slots), where))
+    print("  by kind: %s" % kind_counts(ex.slots))
+    print("  misc units: %d" % misc)
+    if ex.wrapper_notes:
+        print("  local helper wrappers: %s" % "; ".join(ex.wrapper_notes))
+    print("  skipped as unsupported: %d" % len(ex.skipped))
+    for line, kind, reason, prev in ex.skipped:
+        print("    line %d %s: %s | %s" % (line, kind, reason, prev))
+    if ex.uncaptured:
+        print("  uncaptured prose-like strings (SVG/markup/excluded functions): %d (see extract_report.txt)"
+              % len(ex.uncaptured))
+    comments = [s for s in ex.slots if s.has_comment]
+    if comments:
+        print("  units with a comment inside the span (dropped if the unit is edited): %s"
+              % " ".join(s.uid for s in comments))
+
+
+def cmd_apply(args):
+    stem = module_stem(args.module)
+    w = Work(args, stem)
+    meta, text, slots = w.load()
+    if not os.path.exists(w.units):
+        raise SystemExit("%s: no units.txt" % _rel(w.units))
+    _header, units = read_units(w.units)
+    errors, warnings, new = validate(slots, units, _multiline_units(w.units))
+    for msg in warnings:
+        print(msg)
+    if errors:
+        for msg in errors:
+            print(msg, file=sys.stderr)
+        print("%s: %d error(s), %d warning(s); nothing written" % (stem, len(errors), len(warnings)),
+              file=sys.stderr)
+        return 2
+    nl = meta["newline"]
+    new_text = patch_source(text, slots, new, nl)
+    path = module_path(stem)
+    try:
+        compile(new_text, path, "exec")
+    except SyntaxError as e:
+        print("%s: patched source does not compile: %s (line %s); nothing written" % (stem, e.msg, e.lineno),
+              file=sys.stderr)
+        return 1
+    cur_raw = open(path, "rb").read() if os.path.exists(path) else b""
+    new_raw = encode_source(_same_newlines(new_text, cur_raw), meta["bom"])   # keep LF/CRLF as found
+    if _nsha(cur_raw) not in w.known() and not args.force:
+        print("%s: _build/%s.py was changed outside ste_units since extract/apply; refusing to overwrite "
+              "(apply --force, or extract --force to re-snapshot)" % (stem, stem), file=sys.stderr)
+        return 1
+    changed = sorted(new)
+    if args.dry_run:
+        with tempfile.TemporaryDirectory() as td:
+            tmp = os.path.join(td, stem + ".py")
+            open(tmp, "wb").write(new_raw)
+            digest, err = render(stem, tmp)
+        if err:
+            print("%s: dry run: patched module fails to load: %s" % (stem, err), file=sys.stderr)
+            return 1
+        print("%s: dry run OK: %d unit(s) changed, %d warning(s); nothing written" % (stem, len(changed), len(warnings)))
+        return 0
+    if new_raw == cur_raw:
+        print("%s: %d unit(s) differ from original; module already up to date" % (stem, len(changed)))
+        _write_applied(w, new_raw, changed)
+        return 0
+    open(w.last, "wb").write(cur_raw)
+    open(path, "wb").write(new_raw)
+    err = None
+    try:
+        with tempfile.TemporaryDirectory() as td:
+            py_compile.compile(path, cfile=os.path.join(td, stem + ".pyc"), doraise=True)
+    except py_compile.PyCompileError as e:
+        err = "py_compile: %s" % e.msg.strip().splitlines()[-1]
+    if err is None:
+        err = import_check(stem)
+    if err:
+        open(path, "wb").write(cur_raw)
+        print("%s: patched module failed (%s); previous file restored" % (stem, err), file=sys.stderr)
+        return 1
+    _write_applied(w, new_raw, changed)
+    print("%s: applied %d changed unit(s) -> _build/%s.py (previous copy: %s); %d warning(s)"
+          % (stem, len(changed), stem, _rel(w.last), len(warnings)))
+    return 0
+
+
+def _write_applied(w, raw, changed):
+    with open(w.applied, "w", encoding="utf-8", newline="\n") as fh:
+        json.dump({"sha256": _sha(raw), "sha256_norm": _nsha(raw),
+                   "applied": datetime.datetime.now().isoformat(timespec="seconds"), "changed": changed},
+                  fh, indent=1)
+
+
+def cmd_status(args):
+    stem = module_stem(args.module)
+    w = Work(args, stem)
+    meta, _text, slots = w.load()
+    if not os.path.exists(w.units):
+        raise SystemExit("%s: no units.txt; run extract" % _rel(w.units))
+    _header, units = read_units(w.units)
+    errors, warnings, new = validate(slots, units, _multiline_units(w.units))
+    cur = _nsha(open(module_path(stem), "rb").read())
+    state = ("original" if cur == _nsha(open(w.original, "rb").read()) else
+             "applied" if cur == w.applied_sha() else "changed outside ste_units")
+    print("%s: %d units, %d edited, %d misc; %d validation error(s), %d warning(s); module file: %s"
+          % (stem, len(slots), len(new), sum(s.kind == "misc" for s in slots), len(errors), len(warnings), state))
+    by_kind = collections.Counter(s.kind for s in slots if s.uid in new)
+    if by_kind:
+        print("  edited by kind: %s" % " ".join("%s=%d" % kv for kv in sorted(by_kind.items())))
+    for msg in errors[:20]:
+        print("  " + msg)
+    return 0
+
+
+def selftest_one(stem, tmpdir):
+    """-> (status, detail, extractor or None)"""
+    if stem in UNSUPPORTED:
+        return "UNSUPPORTED", UNSUPPORTED[stem], None
+    path = module_path(stem)
+    try:
+        raw = open(path, "rb").read()
+        text, bom, nl = decode_source(raw)
+        ex = analyze(stem, text)
+        patched = patch_source(text, ex.slots, {}, nl, force=True)
+        compile(patched, path, "exec")
+        again = analyze(stem, patched)
+    except Exception as e:  # noqa: BLE001 - report any tool failure as FAIL
+        return "FAIL", "tool error: %s: %s" % (type(e).__name__, e), None
+    a = [(s.kind, s.text) for s in ex.slots]
+    b = [(s.kind, s.text) for s in again.slots]
+    if a != b:
+        i = next((i for i, (x, y) in enumerate(zip(a, b)) if x != y), min(len(a), len(b)))
+        return "FAIL", "re-extract differs at unit %d: %r vs %r" % (
+            i + 1, a[i] if i < len(a) else None, b[i] if i < len(b) else None), ex
+    tmp = os.path.join(tmpdir, stem + ".py")
+    open(tmp, "wb").write(encode_source(patched, bom))
+    out_a, out_b = os.path.join(tmpdir, stem + ".orig.json"), os.path.join(tmpdir, stem + ".patched.json")
+    h1, e1 = render(stem, path, out_a)
+    h2, e2 = render(stem, tmp, out_b)
+    if e1:
+        return "FAIL", "original does not render: %s" % e1, ex
+    if e2:
+        return "FAIL", "patched copy does not render: %s" % e2, ex
+    if h1 != h2:
+        return "FAIL", "rendered output differs: %s" % _first_difference(out_a, out_b), ex
+    return "PASS", "sha256 %s..." % h1[:12], ex
+
+
+def cmd_selftest(args):
+    stems = all_modules() if args.all else [module_stem(args.module)]
+    with tempfile.TemporaryDirectory(prefix="ste_selftest_") as td:
+        with ThreadPoolExecutor(max_workers=min(8, os.cpu_count() or 2)) as pool:
+            results = list(zip(stems, pool.map(lambda s: selftest_one(s, td), stems)))
+    counts = collections.Counter()
+    for stem, (status, detail, ex) in results:
+        counts[status] += 1
+        n = "%5d units %4d misc" % (len(ex.slots), sum(s.kind == "misc" for s in ex.slots)) if ex else " " * 20
+        print("%-11s %-34s %s  %s" % (status, stem, n, detail))
+    print("selftest: %d PASS, %d FAIL, %d UNSUPPORTED (of %d)"
+          % (counts["PASS"], counts["FAIL"], counts["UNSUPPORTED"], len(results)))
+    if args.all:
+        path = write_report(args, [(stem, status, detail, ex) for stem, (status, detail, ex) in results])
+        print("report: %s" % _rel(path))
+    return 0 if counts["FAIL"] == 0 else 1
+
+
+def cmd_report(args):
+    rows = []
+    for stem in all_modules():
+        if stem in UNSUPPORTED:
+            rows.append((stem, "UNSUPPORTED", UNSUPPORTED[stem], None))
+            continue
+        text, _bom, _nl = decode_source(open(module_path(stem), "rb").read())
+        rows.append((stem, "-", "", analyze(stem, text)))
+    print("report: %s" % _rel(write_report(args, rows)))
+    return 0
+
+
+def write_report(args, rows):
+    root = work_root(args)
+    os.makedirs(root, exist_ok=True)
+    path = os.path.join(root, "extract_report.txt")
+    out = ["ste_units extract report - %s" % datetime.datetime.now().isoformat(timespec="seconds"),
+           "units = prose slots in units.txt; misc = strings outside the helpers (optional to rewrite);",
+           "skipped = slots that did not round-trip (left untouched); uncaptured = prose-like strings inside",
+           "SVG/markup builders or excluded functions (not editable through units); short = 1-3 word labels",
+           "passed to non-helper calls (figure generators etc.), not extracted by rule (e).", ""]
+    out.append("%-34s %-11s %6s %5s %7s %10s %6s  %s" % ("module", "selftest", "units", "misc", "skipped",
+                                                          "uncaptured", "short", "notes"))
+    tot = collections.Counter()
+    for stem, status, detail, ex in rows:
+        if ex is None:
+            out.append("%-34s %-11s %6s %5s %7s %10s %6s  %s" % (stem, status, "-", "-", "-", "-", "-", detail))
+            continue
+        misc = sum(s.kind == "misc" for s in ex.slots)
+        notes = []
+        if ex.wrapper_notes:
+            notes.append("wrappers: " + "; ".join(ex.wrapper_notes))
+        if any(s.has_comment for s in ex.slots):
+            notes.append("comment inside units " + " ".join(s.uid for s in ex.slots if s.has_comment))
+        if status == "FAIL":
+            notes.append(detail)
+        out.append("%-34s %-11s %6d %5d %7d %10d %6d  %s" % (stem, status, len(ex.slots), misc, len(ex.skipped),
+                                                             len(ex.uncaptured), len(ex.short_labels),
+                                                             " | ".join(notes)))
+        tot.update(units=len(ex.slots), misc=misc, skipped=len(ex.skipped), unc=len(ex.uncaptured),
+                   short=len(ex.short_labels))
+    out.append("%-34s %-11s %6d %5d %7d %10d %6d" % ("TOTAL", "", tot["units"], tot["misc"], tot["skipped"],
+                                                      tot["unc"], tot["short"]))
+    out.append("")
+    for stem, status, detail, ex in rows:
+        if ex is None:
+            continue
+        out.append("== %s  (%s)" % (stem, status))
+        out.append("   kinds: %s" % kind_counts(ex.slots))
+        for line, kind, reason, prev in ex.skipped:
+            out.append("   SKIPPED line %d %s: %s | %s" % (line, kind, reason, prev))
+        groups = collections.defaultdict(list)
+        for line, reason, prev in ex.uncaptured:
+            groups[reason].append((line, prev))
+        for reason, items in sorted(groups.items()):
+            out.append("   UNCAPTURED %d x %s" % (len(items), reason))
+            for line, prev in items[:12]:
+                out.append("      line %d: %s" % (line, prev))
+            if len(items) > 12:
+                out.append("      ... %d more" % (len(items) - 12))
+        if ex.short_labels:
+            callees = collections.Counter(c for _l, c, _p in ex.short_labels)
+            out.append("   SHORT LABELS %d (by call: %s) e.g. %s" % (
+                len(ex.short_labels), ", ".join("%s=%d" % kv for kv in callees.most_common()),
+                "; ".join(p for _l, _c, p in ex.short_labels[:6])))
+        out.append("")
+    with open(path, "w", encoding="utf-8", newline="\n") as fh:
+        fh.write("\n".join(out) + "\n")
+    return path
+
+
+def main(argv=None):
+    for stream in (sys.stdout, sys.stderr):
+        try:
+            stream.reconfigure(encoding="utf-8")
+        except (AttributeError, ValueError):
+            pass
+    ap = argparse.ArgumentParser(prog="ste_units.py", description="ASD-STE100 prose units: extract / apply / selftest")
+    sub = ap.add_subparsers(dest="cmd", required=True)
+    p = sub.add_parser("extract", help="write units.txt / meta.json / original.py")
+    p.add_argument("module")
+    p.add_argument("--work")
+    p.add_argument("--force", action="store_true")
+    p = sub.add_parser("apply", help="validate units.txt and patch the module")
+    p.add_argument("module")
+    p.add_argument("--work")
+    p.add_argument("--dry-run", action="store_true")
+    p.add_argument("--force", action="store_true")
+    p = sub.add_parser("selftest", help="prove extract+emit is lossless")
+    p.add_argument("module", nargs="?")
+    p.add_argument("--all", action="store_true")
+    p.add_argument("--work")
+    p = sub.add_parser("status", help="unit / edit counts")
+    p.add_argument("module")
+    p.add_argument("--work")
+    p = sub.add_parser("report", help="write extract_report.txt")
+    p.add_argument("--work")
+    args = ap.parse_args(argv)
+    if args.cmd == "selftest" and not args.all and not args.module:
+        ap.error("selftest needs a module or --all")
+    return {"extract": cmd_extract, "apply": cmd_apply, "selftest": cmd_selftest,
+            "status": cmd_status, "report": cmd_report}[args.cmd](args)
+
+
+if __name__ == "__main__":
+    sys.exit(main())

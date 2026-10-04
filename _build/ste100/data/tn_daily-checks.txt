@@ -1,0 +1,55 @@
+home assistant | name of the software product (named system)
+audit trail | quality-system record of who did which task, where and when
+pause point | glossary term of this paper: named time at which a checklist is done
+killer item | glossary term of this paper: critical checklist item
+do-confirm | glossary term of this paper: checklist type
+auto-tick | glossary term of this paper: check item that the system completes
+alert limit | quality-system term (first threshold of a reading)
+action limit | quality-system term (second threshold of a reading)
+corrective action | quality-system term (capa)
+pencil-whipping | glossary term of this paper: record of a check that was not done
+implementation intention | glossary term of this paper (behavior science)
+mid-day | name of a pause point (same name in the diagram)
+pre-dark | name of a pause point (same name in the diagram)
+alert | message from the system that shows a problem (home assistant alert)
+note | text entry in a record
+toggle | on/off control on the screen (home assistant input_boolean)
+template | home assistant template integration
+integration | home assistant software component
+long-term statistics | home assistant function name
+behavior | name of the science and of the fogg behavior model
+motivation | element of the fogg behavior model (science)
+ability | element of the fogg behavior model (science)
+prompt | element of the fogg behavior model (science)
+goal attainment | outcome measure of the cited meta-analysis (science)
+meta-analysis | statistics method (science)
+surgery | field of the cited study (medical science)
+death | outcome measure of the cited study (medical science)
+escalation | quality-system procedure: the alert goes to the next level
+owner | role: the person who has a check
+supervisor | role in the facility
+manager | role in the facility
+green | color of a status indicator (as amber)
+red | color of a status indicator (as amber)
+severity | measure of a pest problem in ipm inspection
+recipe | specification of the feed (nutrient recipe)
+vault | secure storage room
+refrigerator | equipment
+photo | image record
+lot | batch or lot (compliance term)
+validation | gmp term
+sanitation | facility hygiene practice (haccp)
+hygiene | facility hygiene practice (haccp)
+purpose | word of the mandated section title purpose and scope
+scope | word of the mandated section title purpose and scope
+d | symbol of the effect size (cohen d)
+binary | part of the home assistant identifier binary_sensor
+todo | part of the home assistant identifiers local_todo and todo.update_item
+update | part of the home assistant identifier todo.update_item
+boolean | part of the home assistant identifier input_boolean
+history | home assistant function and part of the identifier history_stats
+stats | part of the home assistant identifier history_stats
+utility | part of the home assistant identifier utility_meter
+ok | part of the home assistant identifier binary_sensor.environment_ok
+tag | nfc tag (equipment); also the home assistant entity name tag
+tap | touch on the screen or on an nfc tag (noun)
