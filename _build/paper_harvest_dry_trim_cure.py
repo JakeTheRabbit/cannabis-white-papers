@@ -5,14 +5,15 @@ from components import (p, lead, h, ul, ol, callout, defterm, table, figure,
 import figs_lib as L
 
 SLUG = "harvest-dry-trim-cure"
-TITLE = "Harvest, dry, trim and cure"
-EYEBROW = "Post-harvest · Process"
-SUB = ("This paper covers every post-harvest step from cut plant to sealed, finished flower: "
-       "when to harvest, how to dry without losing terpenes or inviting mould, how to trim "
-       "without damaging trichomes, and how to cure to a stable water activity. After reading, "
-       "you will have target numbers at each step and a method you can repeat.")
-META = [("scissors", "Post-harvest"), ("image", "9 figures"),
-        ("quote", "Evidence-linked · 4 sources"), ("clock", "~14 min read")]
+TITLE = "Harvest, drying, trimming and curing"
+EYEBROW = "Post-harvest · Procedure"
+SUB = ("This paper gives all the post-harvest steps, from the harvest of the plants to the sealed "
+       "flower. It shows when to harvest the plants, how to dry the flower and keep the terpenes in "
+       "it, and how to prevent mold. It also shows how to remove the leaves without damage to the "
+       "trichomes, and how to do the curing until the water activity is stable. After you read this "
+       "paper, you will know the target number for each step and a method that you can do again.")
+META = [("scissors", "Post-harvest"), ("image", "9 diagrams"),
+        ("quote", "4 sources"), ("clock", "~14 min to read")]
 RELATED = ["mould-risk", "airflow-design", "nutrient-mixing-athena"]
 REF_IDS = ["punja-2023-trichome-maturation", "birenboim-2024-cultivar-drying",
            "brikenstein-2024-trimming", "fairbairn-1976-light-stability",
@@ -26,244 +27,273 @@ SECTIONS = []
 
 SECTIONS.append({"id": "intro", "kicker": "Start here", "title": "Purpose and scope",
   "blocks": [
-    lead("Post-harvest is everything that happens after the plant is cut down: drying, trimming, "
-         "curing and storage. Weeks of careful growing can be ruined in a few days here. Dry too "
-         "fast or too dry and you lose smell and weight. Dry too slow or too wet and mould takes hold."),
-    p("Aim for a narrow safe zone: dry enough that mould cannot grow, but not so dry that the smell "
-      "and weight evaporate away. Done well, dialling in this stage recovers sellable mass you would lose to bone-dry flower. Vendor figures of ~5-10% "
-      "to final yield, because most growers are accidentally over-drying and "
-      "losing sellable weight." + _c("aroya-drying-water-activity-guide")),
-    figure(L.flow("The post-harvest pipeline, start to finish",
-            [("Harvest", "cut plants at maturity"), ("Hang dry", "60F / 60% RH, 10-14 days"),
-             ("Takedown", "section at 0.60-0.62 aw"), ("Trim", "remove leaf, save trichomes"),
-             ("Cure & burp", "settle to 0.58-0.60 aw"), ("Seal & store", "stop burping, finished")],
-            note="Each step has a target number. Drying aims for the room, curing aims for the flower."), 1,
-      "The five steps that turn a living plant into a finished, stable product. The numbers on each "
-      "box are what you steer toward, explained section by section below."),
+    lead("Post-harvest is all the steps that you do after you cut the plant: drying, trimming, "
+         "curing and storage. An error in these steps can cause damage to the results of many weeks "
+         "of careful cultivation. The damage can occur in a small number of days. If you dry the "
+         "flower too quickly or too much, the aroma and the weight decrease. If you dry the flower "
+         "too slowly, or the flower is too wet, mold starts."),
+    p("Keep the flower in a small safe zone. The flower must be sufficiently dry to prevent mold "
+      "growth, but it must not be too dry. If the flower is too dry, the aroma and the weight "
+      "decrease. A very dry flower has less mass for sale, but a correct control of this stage "
+      "keeps this mass. Most growers dry the flower too much when they do not want to. Thus "
+      "supplier figures show that the yield can increase by approximately 5 to 10%." +
+      _c("aroya-drying-water-activity-guide")),
+    figure(L.flow("The post-harvest steps, from start to end",
+            [("Harvest", "cut plants at maturity"), ("Hang-dry", "60F / 60% RH, 10-14 days"),
+             ("Takedown", "cut in sections at 0.60-0.62 aw"), ("Trim", "remove leaves, keep trichomes"),
+             ("Cure, burp", "aw becomes 0.58-0.60"), ("Seal and keep", "stop burping, completed")],
+            note="Each step has a target number. Drying has a room target. Curing has a flower target."), 1,
+      "In these five steps, the plant becomes a completed product that is stable. The figure shows "
+      "the target number for each step. The next sections give more information about each step."),
     callout("note", "Who this is for",
-      p("Anyone harvesting their first crop who wants results they can repeat. This guide assumes "
-        "zero prior knowledge and defines every term as it appears. It pairs with the "
-        "<a href='mould-risk.html'>mould-risk</a> and "
-        "<a href='airflow-design.html'>airflow-design</a> papers.")),
+      p("This paper is for you if you do your initial harvest and want results that you can get "
+        "again. It is not necessary to know the post-harvest procedure before you read this paper. "
+        "The paper gives a definition of each term where you first read the term. You can use this "
+        "paper with the <a href='mould-risk.html'>mold-risk</a> and <a "
+        "href='airflow-design.html'>airflow-design</a> papers.")),
   ]})
 
-SECTIONS.append({"id": "key-terms", "kicker": "Vocabulary", "title": "Definitions",
+SECTIONS.append({"id": "key-terms", "kicker": "The terms", "title": "Definitions",
   "blocks": [
-    p("Two ideas do most of the work here. Don't memorise them. Each one comes back "
-      "in context."),
-    defterm("Water activity (aw)", "How &lsquo;available&rsquo; the water in the flower is, on a 0 "
-            "to 1.00 scale. It is the single best predictor of whether mould will grow. When the "
-            "flower and the air around it reach balance, the air's relative humidity equals water "
-            "activity times 100." + _c("fda-water-activity-foods")),
-    defterm("Moisture content (%)", "The share of the flower's total weight that is water. This "
-            "tells you about yield, not safety. It is a different number from water activity."),
-    defterm("Relative humidity (RH)", "How much water vapour is in the air, from 0 to 100%. The "
-            "dry-room target is 60% RH."),
-    defterm("Trichomes", "The frosty resin glands on the flower that hold the THC, terpenes and "
-            "flavonoids. Protect these at every step. Handling knocks them off."),
-    defterm("Terpenes", "The aromatic oils that give each strain its smell and flavour. They "
-            "evaporate if the flower gets too dry."),
-    defterm("Burping", "Briefly opening a sealed container during curing to let humid air out and "
-            "fresh air in."),
-    figure(L.flow("Two numbers that sound alike but do different jobs",
-            [("Water activity", "0-1.00 scale · predicts MOULD · controls the process"),
-             ("Moisture content", "% of weight · predicts YIELD · measures the product")],
-            note="Water activity tells you when it is safe and done. Moisture content tells you how much you have."), 2,
-      "Water activity is the gauge you steer by. Moisture content is the gauge you report. Confusing "
-      "the two is the most common beginner mistake." + _c("aroya-drying-water-activity-guide")),
+    p("Two of these terms are the most important in this paper. It is not necessary to know the "
+      "terms at this time. Each term occurs again in the next sections."),
+    defterm("Water activity (aw)", "Water activity shows how available the water in the flower is, "
+            "on a scale of 0 to 1.00. It is the best indicator of mold growth. Water can move "
+            "between the flower and the air around it. When this movement stops, multiply the water "
+            "activity by 100 to get the relative humidity of the air." + _c("fda-water-activity-foods")),
+    defterm("Moisture content (%)", "The percentage of the total weight of the flower that is "
+            "water. It gives information about the yield, but not about the safety. It is a "
+            "different number from the water activity."),
+    defterm("Relative humidity (RH)", "The quantity of water vapor in the air, from 0 to 100%. The "
+            "target for the dry room is 60% RH."),
+    defterm("Trichomes", "The glands of resin on the flower. They contain the THC, the terpenes and "
+            "the flavonoids. Prevent damage to the trichomes in each step. If you touch the flower, "
+            "you can remove trichomes from it."),
+    defterm("Terpenes", "The oils that give each cultivar its aroma and flavor. They evaporate if "
+            "the flower becomes too dry."),
+    defterm("Burping", "A short opening of a sealed container during curing. The opening lets moist "
+            "air go out of the container and lets new air go into it."),
+    figure(L.flow("Two numbers about water that have different tasks",
+            [("Water activity", "0-1.00 scale · shows MOLD risk · controls the procedure"),
+             ("Moisture content", "% of weight · shows YIELD · measures the product")],
+            note="Water activity shows when the flower is safe and completed. Moisture content shows how much you have."), 2,
+      "Water activity is the number that you use to control the procedure. Moisture content is the "
+      "number that you give in a report. A frequent error of new growers is to use one number for "
+      "the task of the other number." + _c("aroya-drying-water-activity-guide")),
   ]})
 
-SECTIONS.append({"id": "harvest-timing", "kicker": "Step 1 of the science", "title": "Harvest timing",
+SECTIONS.append({"id": "harvest-timing", "kicker": "Step 1, the information", "title": "Harvest timing",
   "blocks": [
-    p("Harvest is cutting the plants down once they have finished flowering. Judge maturity by the "
-      "flower itself, not by a date on the calendar."),
-    p("The clearest signal is the trichomes. Under a loupe they shift from clear, to milky-cloudy, "
-      "to amber as the plant ripens, and that colour change tracks how mature the resin glands "
-      "are." + _c("punja-2023-trichome-maturation") + " A typical workflow runs plants on a set "
-      "flowering timeline with plant-work phases at days 7-10, 21-28 and 42-49, then cuts at the end."),
-    ul(["Harvest = cutting down all plants once flowering is complete",
-        "Cut one strain at a time, in the order on your strain list, so genetics never get mixed",
-        "Keep each plant's tracking tag attached as it is cut. This is how batches stay traceable",
-        "Collect loose buds that fall on the table (&lsquo;table nugs&rsquo;) per strain, label them, and dry them separately"]),
-    figure(L.line("Harvest is the end of a defined flowering cycle",
+    p("Harvest is the procedure in which you cut all the plants after they complete the flowering. "
+      "Examine the flower to find the maturity of the plants. Do not use the date on the calendar."),
+    p("The trichomes are the best signal of maturity. Examine the trichomes with a loupe. They are "
+      "first transparent, then cloudy, then amber when the maturity increases. The change of color "
+      "shows the maturity of the resin glands." + _c("punja-2023-trichome-maturation") +
+      " A usual procedure uses a set time for the flowering, with plant-work stages at days 7 to "
+      "10, 21 to 28 and 42 to 49. At the end, you cut the plants."),
+    ul(["Harvest is the procedure in which you cut all the plants after they complete the flowering.",
+        "Cut one cultivar at a time, in the sequence on your list of cultivars. Thus the cultivars do not mix.",
+        "Keep the tag of each plant attached when you cut the plant. The tag gives traceability of the batches.",
+        "Collect the loose buds that fall on the table. Put a label on the buds of each cultivar and dry them independently."]),
+    figure(L.line("Harvest is the end of a specified flowering cycle",
             [(0, 1), (1, 2), (2, 3), (3, 4), (4, 5)],
-            ["trellis d1", "lollipop d7-10", "defan d21-28", "final defan d42-49", "harvest"],
-            ylab="plant-work stage", note="Each milestone is a scheduled task. Harvest is the last one."), 3,
-      "Harvest is the planned end of a sequence of plant-work milestones "
-      "across the flowering room."),
-    callout("tip", "Let the plant decide",
-      p("If the calendar says cut but the trichomes are still mostly clear, wait. Read maturity "
-        "off the flower. The date is only a rough guide.")),
+            ["trellis d1", "lollipopping d7-10", "defanning d21-28", "last defanning d42-49", "harvest"],
+            ylab="plant-work stage", note="Each stage is a task with a set time. Harvest is the last task."), 3,
+      "Harvest is the end of a set sequence of plant-work stages in the flowering room."),
+    callout("tip", "Use the plant for the decision",
+      p("If the calendar shows that you must cut the plants, but most of the trichomes are "
+        "transparent, wait. Examine the flower to find the maturity. The date gives only an "
+        "approximate indication.")),
   ]})
 
-SECTIONS.append({"id": "harvest-method", "kicker": "Step 2, hands on", "title": "Harvest method and wet-plant weighing",
+SECTIONS.append({"id": "harvest-method", "kicker": "Step 2, the procedure", "title": "Harvest method and wet-plant weighing",
   "blocks": [
-    p("Cut plants whole and hang them to dry, rather than stripping the buds first. Cutters free each "
-      "plant from the lower two layers of trellis netting (the support grid the plant grew through), "
-      "leave the top layer on for support, then cut the main stalk at its base."),
-    p("Before anything is hung, weigh every bin to record the <strong>wet weight</strong>, the "
-      "starting weight. Compared against the final dry weight later, this gives the "
-      "dry-to-wet ratio for each genetic, which is around 10% of whole-plant wet weight (one example batch "
-      "came in at 10.46%). That tells you how much of the harvested mass is water."),
+    p("Cut each whole plant and hang it to dry. Do not remove the buds from the plant first. "
+      "Release each plant from the bottom two layers of the trellis net (the net that holds the "
+      "plant). Keep the top layer on the plant. The layer holds the plant. Then cut the primary "
+      "stalk at the bottom."),
+    p("Before you hang the plants, weigh each bin to record the <strong>wet weight</strong>. The "
+      "wet weight is the initial weight. After the drying, compare the wet weight with the last dry "
+      "weight. Thus you get the dry-to-wet ratio for each cultivar. The dry-to-wet ratio is "
+      "approximately 10% of the wet weight of the whole plant (one example batch gave 10.46%). It "
+      "shows how much of the mass of the harvested plants is water."),
     steps([
-      ("Free the plant", "Cut a circle through the bottom and middle trellis layers. Leave the top layer attached for support."),
-      ("Cut the stalk", "Sever the main stalk at its base so the whole plant comes away in one piece."),
-      ("Load the bin", "Place 7-10 whole plants per 208 L (55 gal) bin. Do not overfill or you bruise the flower."),
-      ("Weigh wet", "Tare the bin first, then weigh it to capture wet weight, the baseline for all yield tracking."),
+      ("Release the plant", "Cut around the plant through the bottom and middle layers of the trellis net. Keep the top layer attached to hold the plant."),
+      ("Cut the stalk", "Cut the primary stalk at the bottom. Then you can remove the plant in one piece."),
+      ("Fill the bin", "Put 7 to 10 whole plants in each bin of 208 L (55 gal). Do not put too many plants in the bin. Too many plants cause damage to the flower."),
+      ("Weigh the wet plants", "Set the scale to zero when the empty bin is on it. Then weigh the bin with the plants to record the wet weight. The wet weight is the baseline for all the yield records."),
     ]),
-    figure(L.bars("How much of a fresh plant is water",
+    figure(L.bars("Water in the plant when you cut it",
             [("Wet weight", 100), ("Dry weight", 10.46)], unit="%",
-            note="Example batch: dry weight was ~10.46% of wet weight. The rest left as water during drying."), 4,
-      "Roughly nine-tenths of a freshly cut plant's weight is water that must leave during drying. "
-      "Whole-plant hanging slows that loss and lets moisture move out of the stem evenly."),
+            note="Example batch: dry weight was approximately 10.46% of wet weight. The remaining weight was water."), 4,
+      "Approximately 90% of the weight of a plant when you cut it is water. The water must move out "
+      "of the plant during the drying. When you hang the whole plant, the water moves out more "
+      "slowly, and the moisture moves out of the stem at the same rate."),
   ]})
 
-SECTIONS.append({"id": "drying", "kicker": "The core science", "title": "Drying environment",
+SECTIONS.append({"id": "drying", "kicker": "The primary information", "title": "Drying environment",
   "blocks": [
-    p("Hold the dry room at 16 °C (60 °F) and 60% RH, with fans running and the lights off, in a room "
-      "that was deep-cleaned before any plant went in. At these setpoints whole plants are typically "
-      "ready in 10-14 days." + _c("aroya-drying-water-activity-guide")),
-    p("Going slow and cool protects the terpenes, which evaporate in heat and dry air, and it stops "
-      "the outside of the bud drying while the inside stays wet, the classic recipe for hidden "
-      "mould. Keep the light off because it degrades cannabinoids and terpenes over time." + _c("fairbairn-1976-light-stability") +
-      " Different cultivars even reward slightly different drying approaches, so the setpoints are a "
-      "strong default, not a law." + _c("birenboim-2024-cultivar-drying")),
-    ul(["Setpoints: 16 °C (60 °F), 60% RH, fans on, lights off, doors closed. Minimise foot traffic so the environment stays stable",
-        "Whole-plant drying takes about 10-14 days at these setpoints",
-        "If the room runs above 60% RH and dehumidification is undersized, exhaust fans can pull humidity down",
-        "Keep racks evenly spaced so air reaches every plant and buds dry uniformly. A deep clean precedes every load"]),
-    figure(L.line("Dry-room humidity should trend down toward takedown",
+    p("Keep the dry room at 16 °C (60 °F) and 60% RH, with the fans on and the lights off. Clean "
+      "the room fully before you put the plants in it. At these setpoints, the takedown of whole "
+      "plants is usually possible after 10 to 14 days." + _c("aroya-drying-water-activity-guide")),
+    p("Slow drying in a cool room keeps the terpenes. Terpenes evaporate in heat and in dry air. "
+      "Slow drying also prevents the condition where the outer part of the bud is dry and the inner "
+      "part stays wet. This condition is the usual cause of mold in the bud that you cannot "
+      "see.</p><p>Keep the light off, because light causes the degradation of cannabinoids and "
+      "terpenes with time." + _c("fairbairn-1976-light-stability") + " The best drying method can "
+      "have small differences for different cultivars. Thus the setpoints are a good start point, "
+      "but they are not correct for all cultivars." + _c("birenboim-2024-cultivar-drying")),
+    ul(["Setpoints: 16 °C (60 °F), 60% RH, fans on, lights off, doors closed. Keep the number of persons that go into the room as small as possible. Thus the environment stays stable.",
+        "The drying of whole plants is approximately 10 to 14 days at these setpoints.",
+        "If the RH in the room is more than 60% and the dehumidification is too small, exhaust fans can decrease the humidity.",
+        "Keep an equal space between the racks. Thus the air flows to each plant and the buds dry at the same rate. Clean the room fully before each load."]),
+    figure(L.line("The humidity in the dry room decreases until the takedown",
             [(0, 64), (1, 62), (2, 61), (3, 60), (4, 60), (5, 59)],
             ["day 0", "day 3", "day 5", "day 8", "day 11", "day 14"],
             ylab="room RH %", ymin=52, ymax=68,
-            bands=[(59, 61, L.GL, "target 60% RH"), (61, 68, L.REDL, "too humid: mould risk"), (52, 59, L.AMBL, "too dry: terpene loss")],
-            note="Hold the room in the green band. The curve drifts down as the load gives up water."), 5,
-      "The green band is the 60% RH target. Drift above it and you invite mould. Sit below it for long "
-      "and terpenes start to evaporate." + _c("aroya-drying-water-activity-guide")),
+            bands=[(59, 61, L.GL, "target 60% RH"), (61, 68, L.REDL, "high humidity: mold risk"), (52, 59, L.AMBL, "too dry: terpenes evaporate")],
+            note="Keep the room in the green zone. The curve decreases when the load dries."), 5,
+      "The green zone is the target of 60% RH. If the RH increases to a value more than the green "
+      "zone, the risk of mold increases. If the RH stays less than the green zone for a long time, "
+      "the terpenes start to evaporate." + _c("aroya-drying-water-activity-guide")),
   ]})
 
-SECTIONS.append({"id": "water-activity", "kicker": "The core science", "title": "Water activity",
+SECTIONS.append({"id": "water-activity", "kicker": "The primary information", "title": "Water activity",
   "blocks": [
-    p("After the hang-dry, the flower still contains some moisture—but not all moisture is equally dangerous. "
-      "Think of a squeezed sponge sitting in a closed drawer: the water trapped deep in the fibres is harmless; "
-      "the free surface water is what microbes actually feed on. Water activity (aw) measures how available that "
-      "remaining moisture is to microbes, on a 0 to 1.00 scale. Mould and yeast can grow at 0.70 aw and "
-      "above, pathogenic bacteria at 0.85, and risk rises sharply near that threshold; below ~0.55 aw, quality often suffers even as microbes slow. ASTM&rsquo;s 0.55&ndash;0.65 window is the practical target for dried flower." + _c("aqualab-microbial-water-activity") +
-      " That sets the ceiling. Quality sets the floor: below 0.55 aw the terpenes dry up and quality "
-      "falls off."),
-    p("Together that leaves a sweet spot of 0.55-0.65 aw, the exact range written into the "
-      "ASTM D8197 standard for dry cannabis flower." + _c("astm-d8197-water-activity") + " Start "
-      "sample testing around day 7-8, and take plants down when the batch averages 0.60-0.62 aw, "
-      "leaving a safety margin below the 0.65 mould line."),
-    figure(L.zones("The water-activity safe zone", 0.50, 0.90,
-            [(0.50, 0.55, L.AMBL, "too dry"), (0.55, 0.65, L.GL, "sweet spot 0.60-0.62 = take down"),
-             (0.70, 0.85, L.REDL, "mould & yeast"), (0.85, 0.90, L.RED, "bacteria")],
-            note="Take plants down inside the green band, around 0.60-0.62 aw, well clear of the 0.65 mould line."), 6,
-      "Below 0.55 aw you lose terpenes. Above 0.65 aw you risk mould. 0.60-0.62 aw is where you take "
-      "the batch down." + _c("astm-d8197-water-activity")),
-    figure(L.bars("Water activity thresholds for microbial growth",
-            [("No growth", 0.60), ("Mould & yeast", 0.70), ("Bacteria", 0.85)], unit=" aw",
+    p("After the hang-dry, some moisture stays in the flower. Some moisture is more dangerous than "
+      "other moisture. The plant material holds some of the water in its inner part, and this water "
+      "is not dangerous. The free water at the surface is the water that microbes use.</p><p>Water "
+      "activity (aw) shows how available the remaining moisture is to microbes, on a scale of 0 to "
+      "1.00. Mold and yeast can increase in number at 0.70 aw and higher. Bacteria that cause "
+      "disease can increase in number at 0.85 aw. The risk increases quickly near these thresholds. "
+      "If the aw is less than approximately 0.55, the quality frequently decreases, although the "
+      "growth of microbes becomes slower. The ASTM range of 0.55 to 0.65 is the target for dry "
+      "flower." + _c("aqualab-microbial-water-activity") + "</p><p>The growth of microbes gives the "
+      "maximum value of this range. Quality gives the minimum value. If the aw is less than 0.55, "
+      "the terpenes evaporate and the quality decreases."),
+    p("These two limits give a range of 0.55 to 0.65 aw. This range is the same as the range in the "
+      "ASTM D8197 standard for dry cannabis flower." + _c("astm-d8197-water-activity") +
+      " Start the testing of samples at approximately day 7 to 8. The takedown is the removal of "
+      "the plants from the racks. Do the takedown when the average aw of the batch is 0.60 to 0.62. "
+      "Thus there is headroom to the 0.65 mold limit."),
+    figure(L.zones("Safe zone of water activity", 0.50, 0.90,
+            [(0.50, 0.55, L.AMBL, "too dry"), (0.55, 0.65, L.GL, "takedown at 0.60-0.62"),
+             (0.70, 0.85, L.REDL, "mold and yeast"), (0.85, 0.90, L.RED, "bacteria")],
+            note="Do the takedown in the green zone, at approximately 0.60-0.62 aw, with headroom to the 0.65 mold limit."), 6,
+      "If the aw is less than 0.55, the terpenes evaporate. If the aw is more than 0.65, there is a "
+      "risk of mold. The takedown of the batch is at 0.60 to 0.62 aw." + _c("astm-d8197-water-activity")),
+    figure(L.bars("Water activity thresholds for microbe growth",
+            [("No growth", 0.60), ("Mold and yeast", 0.70), ("Bacteria", 0.85)], unit=" aw",
             target=0.62, maxv=0.95,
-            note="Take-down target (0.62 aw) sits below every growth threshold. That gap is your safety margin."), 7,
-      "Drop the batch below the 0.70 aw mould line, with the take-down target at 0.62 aw giving "
-      "headroom." + _c("aqualab-microbial-water-activity")),
-    callout("key", "Why water activity beats a cheap moisture meter",
-      ul(["Water activity is the better control number because it varies far less than cheap moisture readings.",
-          "In one example, measuring on water activity gave roughly 10x tighter yield precision (&plusmn;1% down to &plusmn;0.12%).",
-          "Denser flowers tend to finish at a slightly lower aw than fluffy ones. Use the meter as a guide, but also trust your nose."], "tight")),
+            note="The takedown target (0.62 aw) is less than each growth threshold. The difference is the headroom."), 7,
+      "Decrease the aw of the batch to a value less than the 0.70 aw mold limit. The takedown "
+      "target of 0.62 aw gives headroom." + _c("aqualab-microbial-water-activity")),
+    callout("key", "Water activity is better than a low-cost moisture meter",
+      ul(["Water activity is the better number for control, because it has much less variation than the readings of a low-cost moisture meter.",
+          "In one example, the measurement of water activity gave a yield precision that was approximately 10 times better (from &plusmn;1% to &plusmn;0.12%).",
+          "Flowers with a high density usually have a lower aw at the end of the drying than flowers with a low density. The difference is small. Use the meter as an indication, and also smell the flower."], "tight")),
   ]})
 
-SECTIONS.append({"id": "trimming", "kicker": "Step 3, hands on", "title": "Trimming and trichome protection",
+SECTIONS.append({"id": "trimming", "kicker": "Step 3, the procedure", "title": "Trimming and trichome protection",
   "blocks": [
-    p("Trimming removes leaf so the bud looks clean and presentable. There are two timings. "
-      "<strong>Wet trim</strong> means trimming right after cutting, before drying. <strong>Dry "
-      "trim</strong> means trimming after the hang-dry. Dry trimming slows the dry and is gentler "
-      "on the aromatic oils, which is why many operations choose it for better terpene "
-      "retention." + _c("brikenstein-2024-trimming")),
-    p("Never touch the flower itself. Handling knocks off the trichomes that "
-      "carry potency and smell, leaving buds looking shaved and dull. To dry-trim, take plants down, "
-      "cut them into 20–30 cm (8–12 in) sections, remove the large fan leaves by hand, then scissor off the "
-      "smaller sugar leaves, swapping scissors into 71% alcohol as resin builds up."),
-    ul(["<strong>Buck</strong> = cut the finished buds off the stem. Do this into a sealed bag so the flower does not over-dry in open air",
-        "Never touch the flower. Handling damages trichomes",
-        "Remove fan leaves (large, few trichomes) by hand, then scissor off sugar leaves",
-        "Clean scissors in 71% alcohol when resin builds up",
-        "After dry-trim, re-check aw, handling and leaf removal can change the reading, so do not assume the hang-dry number still holds"]),
-    table(["", "Wet trim", "Dry trim (this guide)"], [
-      ["When", "Right after cutting", "After the 10-14 day hang-dry"],
-      ["Drying speed", "Faster, harsher", "Slower, gentler"],
-      ["Leaf removal", "Easier (leaf is soft)", "Leaf is brittle, more care needed"],
-      ["Terpene retention", "Lower (more handling, faster dry)", "Higher, the reason it is chosen"],
-      ["Handling risk", "More", "Less"],
-    ], cls="compact", caption="Wet vs dry trim. This guide dry-trims for better terpene retention and a gentler dry." + _c("brikenstein-2024-trimming")),
+    p("Trimming removes the leaves from the bud, and thus the bud is clean. There are two times for "
+      "the trimming. <strong>Wet trim</strong> is the trimming immediately after you cut the "
+      "plants, before the drying. <strong>Dry trim</strong> is the trimming after the hang-dry. A "
+      "dry trim makes the drying slower, and it causes less damage to the oils that give the aroma. "
+      "Thus many facilities select a dry trim to keep more of the terpenes." +
+      _c("brikenstein-2024-trimming")),
+    p("Do not touch the flower. If you touch the flower, you remove the trichomes that contain the "
+      "potency and the aroma. Then the buds have a smooth, matt surface.</p><p>To do a dry trim, do "
+      "the takedown. Then cut the plants into sections of 20 to 30 cm (8 to 12 in). Remove the "
+      "large fan leaves with your hands. Then cut the smaller sugar leaves with scissors. When "
+      "resin collects on the scissors, clean them in 71% alcohol."),
+    ul(["<strong>Bucking</strong> is the procedure in which you cut the buds from the stem after the trimming. Do the bucking into a sealed bag. Thus the flower does not become too dry in open air.",
+        "Do not touch the flower. If you touch the flower, you cause damage to the trichomes.",
+        "Remove the fan leaves with your hands (large leaves with a small number of trichomes). Then cut the sugar leaves with scissors.",
+        "When resin collects on the scissors, clean the scissors in 71% alcohol.",
+        "After a dry trim, measure the aw again. If you touch the flower and remove the leaves, the reading can change. Thus do not think that the aw from the hang-dry is correct."]),
+    table(["", "Wet trim", "Dry trim (this paper)"], [
+      ["Time", "Directly after you cut the plants", "After the hang-dry of 10 to 14 days"],
+      ["Drying speed", "Faster, with more damage to the flower", "Slower, with less damage to the flower"],
+      ["Leaf removal", "Easier (the leaf is soft)", "The leaf breaks easily. You must be more careful."],
+      ["Terpenes that you keep", "Lower (you touch the flower more, and the drying is faster)", "Higher. Thus growers select a dry trim."],
+      ["Risk of damage when you touch the flower", "More", "Less"],
+    ], cls="compact", caption="Wet trim compared with dry trim. This paper uses a dry trim, because it keeps more terpenes and the drying causes less damage." + _c("brikenstein-2024-trimming")),
   ]})
 
-SECTIONS.append({"id": "curing", "kicker": "The core science", "title": "Curing and storage",
+SECTIONS.append({"id": "curing", "kicker": "The primary information", "title": "Curing and storage",
   "blocks": [
-    p("Curing lets the whole batch settle to one even water activity, and preserves terpenes that "
-      "would otherwise break down in storage. Hold flower in containers at 16–18 °C (60–65 °F) and "
-      "58-62% RH. Read a humidity sensor, and <strong>burp</strong> any bin reading above about "
-      "60% RH: lid off for 5-10 minutes, then rotate the barrel "
-      "and log the reading."),
-    p("Once the trimmed flower sits at 0.58-0.60 aw, it is finished: seal it and stop burping. "
-      "Further burping just evaporates terpenes (lost smell) and water (lost sellable weight). "
-      "Curing also keeps cannabinoids more stable by keeping the product cool and dark, the same "
-      "conditions that slow degradation during storage." + _c("fairbairn-1976-light-stability")),
-    figure(L.flow("The daily burp decision",
-            [("Read sensor", "check bin humidity"), ("Above 60% RH?", "yes -> burp 5-10 min"),
-             ("Rotate & log", "turn barrel, record date/RH/bin"), ("At 0.58-0.60 aw?", "yes -> seal, stop burping")],
-            note="Loop daily until the flower holds 0.58-0.60 aw, then seal and store."), 8,
-      "Burp while wet, rotate for even drying, log every time, and stop the moment the flower reaches "
-      "0.58-0.60 aw."),
-    callout("warn", "Over-burping costs you money",
-      p("Every burp past the finish line evaporates terpenes and water weight you could have sold. "
-        "When trimmed flower reaches 0.58-0.60 aw, seal it. Bags should be free of air but not "
-        "compressed, and not stacked, to protect bud structure.")),
+    p("Curing makes the water activity the same in all the flower of the batch. It also keeps the "
+      "terpenes. Without curing, there can be degradation of the terpenes in storage.</p><p>Keep "
+      "the flower in containers at 16 to 18 °C (60 to 65 °F) and 58 to 62% RH. Read the humidity "
+      "sensor. When the reading of a bin is more than approximately 60% RH, <strong>burp</strong> "
+      "the bin. Remove the lid for 5 to 10 minutes. Then turn the barrel. Record the reading."),
+    p("When the flower after the trimming is at 0.58-0.60 aw, you complete the curing. Seal the "
+      "flower. Stop the burping. More burping only makes the terpenes and the water evaporate. Thus "
+      "the aroma and the weight for sale decrease.</p><p>Curing also keeps the cannabinoids more "
+      "stable, because you keep the product at a low temperature and without light. These "
+      "conditions decrease the speed of the degradation during storage." +
+      _c("fairbairn-1976-light-stability")),
+    figure(L.flow("The burp decision each day",
+            [("Read sensor", "measure bin humidity"), ("More than 60% RH?", "if yes, burp 5-10 min"),
+             ("Turn, record", "turn barrel, record date/RH/bin"), ("At 0.58-0.60 aw?", "if yes, seal, stop burping")],
+            note="Do the steps each day until the aw is 0.58-0.60. Then seal and keep it."), 8,
+      "Burp the bin while the flower is wet. Turn the barrel to dry the flower at the same rate. "
+      "Record each burp. Stop when the flower is at 0.58-0.60 aw."),
+    callout("warn", "Too many burps decrease the weight for sale",
+      p("When the flower after the trimming is at 0.58-0.60 aw, seal it. Each burp after this point "
+        "makes the terpenes and the water evaporate. As a result, the aroma and the weight for sale "
+        "decrease. Remove the air from the bags, but do not compress the flower. Do not put bags on "
+        "top of other bags. Thus there is no damage to the structure of the buds.")),
   ]})
 
-SECTIONS.append({"id": "pitfalls", "kicker": "What goes wrong", "title": "Troubleshooting",
+SECTIONS.append({"id": "pitfalls", "kicker": "When there is a problem", "title": "Troubleshooting",
   "blocks": [
-    p("Most post-harvest failures are variations on going too fast, too dry, or too crowded. "
-      "Over-drying is the quiet killer. A cheap moisture meter with &plusmn;1% error can read "
-      "&lsquo;11% moisture&rsquo; while the flower is anywhere from 0.53 aw (ruined, too dry) to "
-      "0.66 aw (mould risk), so growers chasing a single number often dry too far and lose weight "
-      "and smell." + _c("astm-d8197-water-activity")),
-    figure(L.bars("What a single '11% moisture' reading actually hides",
-            [("Cheap meter low", 0.53), ("Cheap meter high", 0.66), ("aw reading low", 0.617), ("aw reading high", 0.623)],
+    p("Most post-harvest problems have one of three causes: the drying is too fast, the flower is "
+      "too dry, or the space is too full. Too much drying can cause damage that you do not see. A "
+      "low-cost moisture meter with an error of &plusmn;1% can show a reading of &lsquo;11% "
+      "moisture&rsquo;. At this reading, the aw of the flower can be from 0.53 aw (too dry, with "
+      "damage to the flower) to 0.66 aw (mold risk). Thus growers who use one number frequently dry "
+      "the flower too much, and the weight and the aroma decrease." + _c("astm-d8197-water-activity")),
+    figure(L.bars("One '11% moisture' reading does not show the aw",
+            [("Meter low", 0.53), ("Meter high", 0.66), ("aw reading low", 0.617), ("aw reading high", 0.623)],
             unit=" aw", maxv=0.80,
-            note="A +/-1% moisture meter spans 0.53 (too dry) to 0.66 (mould). A water-activity reading pins it to a 0.617-0.623 band."), 9,
-      "The same &lsquo;11% moisture&rsquo; number can mean anything from ruined-too-dry to "
-      "mould-risk. Water activity closes that gap to a fraction of a point." + _c("astm-d8197-water-activity")),
-    table(["Mistake", "What happens", "Fix"], [
-      ["Over-drying below 0.55 aw", "Terpenes evaporate, smell fades, water weight lost", "Take down at 0.60-0.62 aw, stop curing at 0.58-0.60 aw"],
-      ["Drying too hot / fast", "Outside dries while inside stays wet, trapping mould", "Hold 16 °C (60 °F) / 60% RH and let it take 10-14 days"],
-      ["Trusting a cheap moisture meter", "&plusmn;1% spans 0.53-0.66 aw, too dry to mouldy", "Use water-activity testing to decide done"],
-      ["Overfilling containers", "Crushed buds, trapped moisture", "Fill totes/barrels no more than ~2/3, curing barrels no more than half"],
-      ["Touching the flower / skipping the deep clean", "Knocked-off trichomes, contamination", "Handle by stem only, deep-clean before every load"],
-      ["Safe aw but still smells wet", "Inside not finished", "Let it dry more. Your senses are the final check"],
-    ], cls="compact", caption="The big six post-harvest mistakes and their fixes."),
+            note="A meter with +/-1% error gives an aw from 0.53 (too dry) to 0.66 (mold). A water activity reading gives only 0.617 to 0.623."), 9,
+      "The same reading of &lsquo;11% moisture&rsquo; can show a flower that is too dry and has "
+      "damage, or a flower with a risk of mold. Water activity makes this range very small." +
+      _c("astm-d8197-water-activity")),
+    table(["Error", "Result", "Correction"], [
+      ["Too much drying, to less than 0.55 aw", "The terpenes evaporate, the aroma decreases and the weight of water decreases", "Do the takedown at 0.60-0.62 aw. Stop the curing at 0.58-0.60 aw."],
+      ["Drying that is too hot or too fast", "The outer part becomes dry and the inner part stays wet. Mold can start in the inner part, and you cannot see it.", "Keep 16 °C (60 °F) and 60% RH. Let the plants dry for 10 to 14 days."],
+      ["You use only a low-cost moisture meter for the decision", "An error of &plusmn;1% gives 0.53-0.66 aw, from too dry to a risk of mold.", "Use a water activity test to find when you can complete the procedure."],
+      ["Containers that are too full", "The weight compresses the buds, and the moisture cannot move out of them.", "Fill totes and barrels to a maximum of approximately 2/3. Fill curing barrels to a maximum of half."],
+      ["You touch the flower, or you do not clean the room fully", "You remove trichomes from the flower, and there is contamination.", "Touch only the stem. Clean the room fully before each load."],
+      ["The aw is safe, but you smell that the flower is wet", "The inner part is not dry", "Let the flower dry more. Smell the flower and feel it for the last check."],
+    ], cls="compact", caption="The six primary post-harvest errors and their corrections."),
   ]})
 
-SECTIONS.append({"id": "expectations", "kicker": "Reality check", "title": "Expected results and limitations",
+SECTIONS.append({"id": "expectations", "kicker": "Typical results", "title": "Expected results and limitations",
   "blocks": [
-    p("Expect roughly 10-14 days of hang-drying plus several more days of curing before flower is "
-      "truly finished. The whole post-harvest stage is two-to-three weeks, not overnight, and there "
-      "is no rushing it."),
-    figure(L.line("The post-harvest finish line, day by day",
+    p("The hang-dry is approximately 10 to 14 days, and the curing is some more days. After the "
+      "curing, the flower is a completed product. All of the post-harvest stage is two to three "
+      "weeks. It is not fast, and you cannot make it faster."),
+    figure(L.line("The end of the post-harvest stage, day by day",
             [(0, 0.85), (1, 0.72), (2, 0.62), (3, 0.59), (4, 0.59)],
-            ["harvest d0", "test d7-8", "takedown d10-14", "trim & cure", "sealed"],
+            ["harvest d0", "test d7-8", "takedown d10-14", "trim, cure", "sealed"],
             ylab="aw", ymin=0.50, ymax=0.90,
             bands=[(0.55, 0.65, L.GL, "safe zone 0.55-0.65 aw")],
-            note="Testing starts ~day 7-8. Takedown ~day 10-14 at 0.60-0.62 aw. Cure settles to 0.58-0.60 aw, then seal."), 10,
-      "A realistic arc: water activity falls from harvest, enters the safe zone at takedown, and "
-      "settles in curing before the batch is sealed." + _c("astm-d8197-water-activity")),
-    callout("key", "Three rules",
-      ol(["<strong>It takes weeks, not days.</strong> Plan two-to-three weeks for the whole post-harvest stage and do not rush the dry.",
-          "<strong>Stop over-drying.</strong> Dialling in drying and curing recovers sellable weight you would otherwise lose. The ~5-10% figures vendors quote are illustrative." + _c("aroya-drying-water-activity-guide"),
-          "<strong>Genetics matter.</strong> Drying and curing are strain-dependent. Dense and fluffy flowers finish at slightly different aw points, so log every batch." + _c("birenboim-2024-cultivar-drying")])),
-    p("Record the aw, RH, dates and outcomes for every genetic so good results are repeatable. The "
-      "instrument is a guide, not a boss: inside the safe aw zone, trust smell and feel for the "
-      "final call. When you are ready, read the <a href='mould-risk.html'>mould-risk</a> guide for "
-      "what to do if a batch slips above the line, and the "
-      "<a href='nutrient-mixing-athena.html'>nutrient-mixing</a> guide for the feed side of quality."),
+            note="Testing starts near day 7-8. Takedown is near day 10-14, at 0.60-0.62 aw. Cure to 0.58-0.60 aw, then seal."), 10,
+      "A typical curve shows the water activity. It decreases from the harvest, moves into the safe "
+      "zone at the takedown, and becomes stable in the curing before you seal the batch." +
+      _c("astm-d8197-water-activity")),
+    callout("key", "Three primary items",
+      ol(["<strong>The post-harvest stage is weeks, not days.</strong> Use two to three weeks for the stage. Do not make the drying faster.",
+          "<strong>Do not dry the flower too much.</strong> If you control the drying and the curing correctly, you keep the weight for sale. The figures of approximately 5 to 10% from suppliers are only examples." + _c("aroya-drying-water-activity-guide"),
+          "<strong>The cultivar is important.</strong> The drying and the curing are different for each cultivar. Flowers with a high density and flowers with a low density have a different aw at the end. The difference is small. Thus record each batch." + _c("birenboim-2024-cultivar-drying")])),
+    p("Record the aw, the RH, the dates and the results for each cultivar. Thus you can get good "
+      "results again. The instrument gives an indication and does not make the decision. In the "
+      "safe aw zone, smell the flower and feel it to make the last decision. Read the <a "
+      "href='mould-risk.html'>mold-risk</a> paper for the procedure if the aw of a batch is more "
+      "than the mold limit. Read the <a href='nutrient-mixing-athena.html'>nutrient-mixing</a> "
+      "paper for the feed, which has an effect on the quality."),
   ]})

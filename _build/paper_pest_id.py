@@ -7,11 +7,12 @@ import figs_lib as L
 SLUG = "pest-id"
 TITLE = "Pest identification and control"
 EYEBROW = "Plant health · Pests"
-SUB = ("A beginner's field guide to the eight pests that hit cannabis hardest: how to spot each one, "
-       "understand its life cycle, monitor for it, and knock it down with biological controls and "
-       "targeted treatments. The companion to your IPM decision process.")
+SUB = ("This paper shows how to identify the eight pests that cause the most damage to cannabis, "
+       "and how to keep their numbers small. It gives the life cycle of each pest, how to monitor "
+       "it, and the biological controls and treatments that you can apply. Use it with the IPM "
+       "decision procedure.")
 META = [("leaf", "Plant health"), ("image", "8 figures"),
-        ("quote", "Evidence-linked · 8 sources"), ("clock", "~18 min read")]
+        ("quote", "8 sources"), ("clock", "~18 min to read")]
 RELATED = ["ipm-sop", "airflow-design", "mould-risk", "cloning"]
 REF_IDS = ["ahmed-2024-hemp-pests-florida-jipm", "pulkoski-burrack-2023-piercing-sucking-hemp",
            "cranshaw-2018-phorodon-cannabis-north-america", "cranshaw-wainwright-2020-rice-root-aphid-cannabis",
@@ -24,246 +25,275 @@ def _c(rid):
 SECTIONS = []
 
 # Fact-check jurisdiction banner
-JURISDICTION_NOTE = 'Jurisdiction note: named biocontrol agents and rates are planning examples only. Confirm legal status and supplier availability in your country (NZ readers: check HSNO/MPI before release).'
+JURISDICTION_NOTE = "The biocontrol agents and the rates in this paper are examples only. Make sure that the regulations in your area let you use each agent, and that a supplier has it. If you are in NZ, examine the regulations of HSNO and MPI before you release an agent."
 
 
 SECTIONS.append({"id": "intro", "kicker": "Start here", "title": "Purpose and scope",
   "blocks": [
     callout("NOTE", "Jurisdiction", JURISDICTION_NOTE),
     
-    lead("This is a plain-language field guide to identifying and controlling the eight pest groups "
-         "that most commonly attack cannabis: spider mites, russet and broad mites, thrips, fungus "
-         "gnats, aphids and root aphids, whitefly, and caterpillars. It tells you what each pest "
-         "looks like, how fast it breeds, how to monitor for it, and how to treat it with bugs "
-         "(biological controls) and sprays."),
-    p("It is the &lsquo;who&rsquo;s who&rsquo; companion to the IPM SOP, which is the separate "
-      "decision process that tells you <em>when</em> to act and which lever to pull. Read this guide "
-      "to recognise the enemy. Read the <a href='ipm-sop.html'>IPM SOP</a> to run the program."),
-    ul(["Covers 8 pest groups by name with tell-tale signs, life cycle, monitoring, biocontrol and treatment",
-        "Beginner-first: every technical term is defined the first time it appears",
-        "Pairs with the IPM SOP (the decision framework), this guide is the identification reference",
-        "Bias is toward prevention and early detection, because every pest below breeds faster than you can spray"]),
-    figure(table(["Pest", "Where it feeds", "Tell-tale sign", "Fastest cycle", "Primary biocontrol"], [
-      ["Spider mites", "Leaf underside", "Fine webbing + pale stippling (30x loupe)", "~3 days", "Phytoseiulus persimilis"],
-      ["Russet/broad mites", "Growing tips", "Cupped, glossy, twisted new growth (needs 60-100x)", "~1 week", "Amblyseius swirskii"],
-      ["Thrips", "Leaf surface", "Silvery streaks + black frass dots", "~1-2 weeks", "Amblyseius cucumeris"],
-      ["Fungus gnats", "Roots / wet media", "Dark flies over the medium, larvae in soil", "~2-3 weeks", "Steinernema feltiae"],
-      ["Aphids", "New growth", "Soft clusters, cast white skins, honeydew", "~1 week", "Aphidius parasitoid wasps"],
-      ["Root aphids", "Crown / roots", "Yellowing with no visible canopy pest", "~1-2 weeks", "Beneficial nematodes"],
-      ["Whitefly", "Leaf underside", "Clouds of white flies when disturbed", "~2-3 weeks", "Encarsia / Eretmocerus"],
-      ["Caterpillars", "Flowers / buds", "Frass + bore holes, triggers bud rot", "~2-3 weeks", "Bacillus thuringiensis (Btk)"],
+    lead("This paper is for a new grower. It shows how to identify the eight groups of pests that "
+         "most frequently cause damage to cannabis, and how to keep their numbers small. The groups "
+         "are: spider mites, russet and broad mites, thrips, fungus gnats, aphids and root aphids, "
+         "whitefly, and caterpillars.</p><p>For each pest, the paper shows how it looks, how "
+         "quickly its population increases, and how to monitor it. The paper also shows how to "
+         "apply a treatment to each pest, with biological controls (organisms) and with sprays."),
+    p("Use this paper with the IPM SOP. The IPM SOP is a different paper with the decision "
+      "procedure. It tells you <em>when</em> to apply a treatment and which treatment to use. Read "
+      "this paper to identify the pests. Read the <a href='ipm-sop.html'>IPM SOP</a> to operate the "
+      "program."),
+    ul(["The paper names 8 pest groups. For each group, it gives the signs, the life cycle, the monitoring, the biocontrol, and the treatment",
+        "The paper is for a new grower. Each term has a definition where the term first occurs",
+        "Use this paper with the IPM SOP (the decision procedure). This paper is the reference for identification",
+        "Prevention and detection at the start are the most important tasks, because each pest increases in number more quickly than you can spray"]),
+    figure(table(["Pest", "Where it eats", "Sign of the pest", "Fastest cycle", "Primary biocontrol"], [
+      ["Spider mites", "Bottom surface of the leaf", "Thin webbing and pale stippling (30x loupe)", "Approximately 3 days", "Phytoseiulus persimilis"],
+      ["Russet mites and broad mites", "Growing tips", "New growth that is cupped, glossy, and twisted (60-100x necessary)", "Approximately 1 week", "Amblyseius swirskii"],
+      ["Thrips", "Leaf surface", "Silver streaks and black frass dots", "Approximately 1-2 weeks", "Amblyseius cucumeris"],
+      ["Fungus gnats", "Roots / wet media", "Dark flies above the medium and larvae in the soil", "Approximately 2-3 weeks", "Steinernema feltiae"],
+      ["Aphids", "New growth", "Soft groups of aphids, white molted skins, and honeydew", "Approximately 1 week", "Aphidius parasitoid wasps"],
+      ["Root aphids", "Crown / roots", "Yellow leaves, and you see no pest in the canopy", "Approximately 1-2 weeks", "Beneficial nematodes"],
+      ["Whitefly", "Bottom surface of the leaf", "A large group of white flies in the air when you move the plant", "Approximately 2-3 weeks", "Encarsia / Eretmocerus"],
+      ["Caterpillars", "Flowers / buds", "Frass and holes. They cause bud rot.", "Approximately 2-3 weeks", "Bacillus thuringiensis (Btk)"],
     ], cls="compact",
-      caption="Pest at a glance. Cycle times are the fastest seen in warm rooms and shorten further as temperature rises." + _c("ahmed-2024-hemp-pests-florida-jipm")), 1,
-      "Eight pest groups, where to look, what to look for, and the first beneficial to reach for."),
+      caption="Short information on each pest. The cycle times are the fastest times in warm rooms. They become shorter when the temperature increases." + _c("ahmed-2024-hemp-pests-florida-jipm")), 1,
+      "The eight pest groups, where to look, the signs to look for, and the first biocontrol agent to use."),
   ]})
 
-SECTIONS.append({"id": "key-terms", "kicker": "Vocabulary", "title": "Definitions",
+SECTIONS.append({"id": "key-terms", "kicker": "Terms", "title": "Definitions",
   "blocks": [
-    p("A handful of words appear throughout this guide and the IPM SOP, so define them now. You do "
-      "not need to memorise them, each one comes back in context."),
-    defterm("IPM (Integrated Pest Management)", "A layered strategy that combines prevention, "
-            "monitoring, biological controls and targeted sprays instead of relying on calendar "
-            "spraying."),
-    defterm("Biocontrol / beneficial", "A living predator (e.g. a predatory mite), parasitoid wasp, "
-            "or microbe (fungus or bacterium) you release to eat or infect the pest."),
-    defterm("Preventative vs curative", "Preventative agents establish before pests arrive and hold "
-            "the line. Curative agents knock down an active outbreak that is already underway."),
-    defterm("Life cycle / generation time", "Egg to egg-laying adult. Warm dry rooms shorten this to "
-            "under a week for mites, which is why a small spot becomes a crop-wide problem fast."),
-    defterm("Loupe / scope", "A 30x hand loupe finds spider mites. Russet and broad mites (confirm at 60&ndash;100&times; before treating; symptoms overlap with heat tacoing and tip burn) are smaller "
-            "than a millimetre and need 60-100x magnification to see at all."),
-    defterm("Frass, honeydew, stippling", "Pest droppings, the sticky sugar excretion sap-suckers "
-            "leave behind, and the fine pale feeding speckles on a leaf, respectively."),
-    defterm("Action threshold", "The pest count at which you stop watching and start treating. It is "
-            "set per facility, not universal. See the IPM SOP."),
-    figure(L.line("Why early establishment wins",
+    p("This section gives the terms that occur many times in this paper and in the IPM SOP. It is "
+      "not necessary to know the terms at this time, because each term occurs again."),
+    defterm("IPM (Integrated Pest Management)", "A method with layers: prevention, monitoring, "
+            "biological controls, and sprays for one specified pest. IPM does not use a calendar to "
+            "apply sprays."),
+    defterm("Biocontrol / beneficial", "An organism that you release to eat or infect the pest. It "
+            "can be a predator (for example, a predatory mite), a parasitoid wasp, or a microbe (a "
+            "fungus or a bacterium)."),
+    defterm("Preventative and curative", "Preventative agents are in the room before the pests come. "
+            "They keep the pest population small. Curative agents decrease an outbreak that is in "
+            "progress."),
+    defterm("Life cycle / generation time", "The time from the egg to the adult that makes eggs. In "
+            "warm, dry rooms, this time is less than one week for mites. As a result, a small area "
+            "of mites becomes a problem in all the crop quickly."),
+    defterm("Loupe / scope", "A hand loupe with 30x magnification shows spider mites. Russet mites "
+            "and broad mites are smaller than one millimeter. 60-100x magnification is necessary to "
+            "see them. Before you apply a treatment, use 60&ndash;100&times; to make sure that you "
+            "identify the pest correctly. The symptoms are the same as the symptoms of heat stress "
+            "(leaf curl) and tipburn."),
+    defterm("Frass, honeydew, stippling", "Frass is the waste of the pest. Honeydew is a sticky "
+            "liquid with sugar that sap-suckers make as waste. Stippling is the group of thin, pale "
+            "marks that pests make on a leaf when they eat."),
+    defterm("Action threshold", "The number of pests at which you stop to monitor and start to "
+            "apply a treatment. Each facility sets the action threshold for the facility, and it is "
+            "not the same for all facilities. Refer to the IPM SOP."),
+    figure(L.line("Biocontrol at the start is best",
             [(0, 4), (1, 5), (2, 6), (3, 7), (4, 8), (5, 9)],
             ["wk 0", "wk 1", "wk 2", "wk 3", "wk 4", "wk 5"],
             ylab="pest count", ymax=80,
-            note="Preventative line (low, flat) vs a curative response that only starts after the population spikes.",
-            bands=[(0, 6, L.GL, "preventative held low")]), 2,
-      "A preventative beneficial established early keeps the population flat. Waiting until threshold "
-      "means treating a spike that is already well ahead of you." + _c("lopez-2023-amblyseius-swirskii-review-jipm")),
+            note="Preventative curve (low, flat) and a curative treatment that starts only after the population increases quickly.",
+            bands=[(0, 6, L.GL, "preventative kept low")]), 2,
+      "A preventative biocontrol agent in the room at the start keeps the population low and "
+      "stable. If you wait until the threshold, the population is large when you apply the "
+      "treatment, and it increases quickly." + _c("lopez-2023-amblyseius-swirskii-review-jipm")),
   ]})
 
-SECTIONS.append({"id": "sap-suckers", "kicker": "The core pests, part 1",
-  "title": "Leaf sap-feeding pests: spider mites, thrips, aphids and whiteflies",
+SECTIONS.append({"id": "sap-suckers", "kicker": "The primary pests, part 1",
+  "title": "Pests that remove sap from leaves: spider mites, thrips, aphids, and whiteflies",
   "blocks": [
-    p("These four feed on leaves and stems by piercing cells and sucking sap, so they share a look: "
-      "pale stippling, distortion and loss of vigour" + _c("pulkoski-burrack-2023-piercing-sucking-hemp") +
-      ". Telling them apart is about the secondary signs each one leaves."),
-    ul(["<strong>Spider mites:</strong> leaf-underside stippling plus fine webbing. Under hot, dry conditions egg-to-adult often finishes in about a week (sometimes under two weeks); females often lay on the order of ~100 eggs over life (exact times depend on temperature and host).",
-        "<strong>Thrips:</strong> silvery rasping streaks plus tiny black frass dots. They drop to the medium to pupate, so leaf sprays alone miss a whole life stage.",
-        "<strong>Aphids:</strong> soft-bodied clusters on new growth, cast white skins, honeydew that grows black sooty mould. They can give live birth, so buildup is explosive.",
-        "<strong>Whitefly:</strong> tiny white moth-like adults that flush up in a cloud when disturbed, with uniform yellowing and lower-canopy decline."]),
-    p("The aphid most associated with cannabis is its own species, the cannabis aphid "
-      "(<em>Phorodon cannabis</em>), now recognised as a pest in North America" + _c("cranshaw-2018-phorodon-cannabis-north-america") +
-      ". The shared driver across all four is environment: warm plus dry shortens every life cycle, "
-      "so climate control is the first lever, not the spray bottle."),
+    p("These four pests are sap-suckers. They make holes in the cells of leaves and stems, and they "
+      "remove sap. As a result, they cause the same damage: pale stippling, changes of shape, and "
+      "weak growth." + _c("pulkoski-burrack-2023-piercing-sucking-hemp") + " The secondary signs of "
+      "each pest are different. Use these signs to identify each pest."),
+    ul(["<strong>Spider mites:</strong> stippling on the bottom of the leaf and thin webbing. In hot, dry conditions, the time from egg to adult is frequently approximately one week (in some conditions, less than two weeks). A female frequently makes approximately 100 eggs in its life. The correct times change with the temperature and the host.",
+        "<strong>Thrips:</strong> silver streaks, and frass dots that are small and black. The thrips fall to the medium and become pupae there. Thus sprays on the leaves do not touch one full stage of their life.",
+        "<strong>Aphids:</strong> soft groups on new growth, white molted skins, and honeydew. Black sooty mold starts on the honeydew. Adult aphids can make new aphids, and not eggs. As a result, the population increases very quickly.",
+        "<strong>Whitefly:</strong> small white adults. Their shape is almost the same as the shape of a moth. When you move the plant, a large group of the adults moves into the air. The leaves become equally yellow, and the bottom of the canopy becomes weak."]),
+    p("The cannabis aphid (<em>Phorodon cannabis</em>) is the aphid that is most related to "
+      "cannabis. At this time, growers know it as a pest in North America." +
+      _c("cranshaw-2018-phorodon-cannabis-north-america") + " The same cause applies to all four "
+      "pests: the environment. Warm and dry conditions make each life cycle shorter. Thus the first "
+      "method is climate control, and not the spray."),
     figure(grid([
-      card("Spider mites", "Webbing + fine pale stipple on leaf undersides. Confirm with a 30x loupe."),
-      card("Thrips", "Silver streaks with black frass dots. Pupae hide in the growing medium."),
-      card("Aphids", "Curled new growth, clustered bodies, cast white skins and sticky honeydew."),
-      card("Whitefly", "Yellowing leaves and white flies that lift off the underside when disturbed."),
+      card("Spider mites", "Webbing and thin, pale stippling on the bottom of the leaves. Use a 30x loupe to identify the pest correctly."),
+      card("Thrips", "Silver streaks with black frass dots. The pupae are in the growing medium."),
+      card("Aphids", "New growth with leaf curl, groups of aphids, white molted skins, and sticky honeydew."),
+      card("Whitefly", "Yellow leaves, and white flies that move into the air from the bottom of the leaf when you move the plant."),
     ], cols=2), 3,
-      "Four sap-suckers, four damage signatures. The piercing-feeding habit is shared, the secondary "
-      "signs are how you tell them apart."),
-    figure(L.bars("Spider mite egg-to-adult cycle vs temperature",
+      "Four sap-suckers, four different signs of damage. All four pests eat with the same method. "
+      "Use the secondary signs to identify each pest."),
+    figure(L.bars("Spider mite cycle (egg to adult) and temperature",
             [("27C / 20% RH", 3), ("21C", 7), ("10C", 19)], unit=" days",
-            note="Heat and low humidity speed reproduction. A room run warm and dry breeds mites fastest.",
+            note="Heat and low humidity make mites increase more quickly. A warm, dry room has the fastest increase.",
             maxv=22), 4,
-      "The warmer and drier the room, the faster the spider mite cycle, from about 3 days in a hot dry "
-      "room to nearly 3 weeks in the cold." + _c("ahmed-2024-hemp-pests-florida-jipm")),
+      "When the room is hotter and drier, the spider mite cycle is faster. The cycle is "
+      "approximately 3 days in a hot, dry room and almost 3 weeks in a cold room." +
+      _c("ahmed-2024-hemp-pests-florida-jipm")),
   ]})
 
-SECTIONS.append({"id": "hidden-pests", "kicker": "The core pests, part 2",
-  "title": "Hidden pests: russet and broad mites, fungus gnats, root aphids and caterpillars",
+SECTIONS.append({"id": "hidden-pests", "kicker": "The primary pests, part 2",
+  "title": "Pests that you do not see: russet and broad mites, fungus gnats, root aphids, and caterpillars",
   "blocks": [
-    p("This group is dangerous because the damage shows before the pest does. Russet mites "
-      "(<em>Aculops cannabicola</em>, under 1 mm, needs 80-100x) and broad mites (needs ~60x) are "
-      "invisible to the naked eye and announce themselves through cupped, glossy or &lsquo;wet-looking&rsquo; "
-      "new growth, twisted tops and stunting. Those symptoms are often misread as nutrient or heat "
-      "stress" + _c("vanmaanen-2010-broad-mite-swirskii-biocontrol") + "."),
-    ul(["<strong>Russet/broad mites:</strong> cupped, glossy, twisted new growth. Sub-millimetre, need 60-100x. Easily mistaken for a nutrient problem.",
-        "<strong>Fungus gnats:</strong> larvae eat root hairs in wet media, adults are weak dark fliers over the medium. The larvae open the door to root-rot pathogens.",
-        "<strong>Root aphids:</strong> feed at the crown and roots, causing yellowing and stalled growth with no visible canopy pest. Check the root zone and pot base.",
-        "<strong>Caterpillars / budworms:</strong> frass and bore holes in flowers, a rapid trigger for bud rot. Scout at dusk when larvae feed."]),
-    p("Fungus gnat larvae weaken plants and wound roots, and the damage they cause interacts with "
-      "soil-borne disease, which is why a wet-media gnat problem so often turns into a root-rot "
-      "problem" + _c("cloyd-2015-fungus-gnat-ecology-management") + ". Cannabis is also a confirmed host "
-      "of the rice root aphid, which lives below ground and is missed entirely by canopy scouting" +
-      _c("cranshaw-wainwright-2020-rice-root-aphid-cannabis") + "."),
-    callout("warn", "Misdiagnosis is the trap",
-      p("Twisted, glossy tops look exactly like nutrient burn or heat stress. Confirm with a loupe or "
-        "scope and a root inspection <em>before</em> you change the feed. Feeding the plant harder will "
-        "not fix a mite.")),
-    figure(L.zones("Where each hidden pest lives on the plant", 0, 4, [
+    p("This group is dangerous because the damage shows before you see the pest. Russet mites "
+      "(<em>Aculops cannabicola</em>, less than 1 mm, 80-100x necessary) and broad mites "
+      "(approximately 60x necessary) are too small to see without magnification. They cause cupped, "
+      "glossy, or &lsquo;wet-looking&rsquo; new growth, twisted tops, and growth that stops. "
+      "Growers frequently think incorrectly that these symptoms show nutrient stress or heat stress." +
+      _c("vanmaanen-2010-broad-mite-swirskii-biocontrol")),
+    ul(["<strong>Russet mites and broad mites:</strong> New growth that is cupped, glossy, and twisted. The mites are smaller than one millimeter, and 60-100x magnification is necessary. Growers easily think that the problem is a nutrient problem.",
+        "<strong>Fungus gnats:</strong> The larvae eat root hairs in wet media. The adults are weak, dark flies above the medium. The larvae let root-rot pathogens go into the roots.",
+        "<strong>Root aphids:</strong> The aphids eat at the crown and at the roots. They cause yellow leaves and growth that stops, and you see no pest in the canopy. Examine the root zone and the bottom of the pot.",
+        "<strong>Caterpillars and budworms:</strong> frass and holes in the flowers. They cause bud rot quickly. Do the scouting at the end of the day, when the larvae eat."]),
+    p("Fungus gnat larvae make plants weaker and cause wounds on roots. The damage and the diseases "
+      "from the soil have an effect on each other. As a result, a gnat problem in wet media "
+      "frequently becomes a root-rot problem." + _c("cloyd-2015-fungus-gnat-ecology-management") +
+      " Tests show that cannabis is also a host of the rice root aphid. This aphid is below the "
+      "ground, and scouting of the canopy does not find it." +
+      _c("cranshaw-wainwright-2020-rice-root-aphid-cannabis")),
+    callout("warn", "Risk of an incorrect diagnosis",
+      p("<em>Before</em> you change the feed, use a loupe or scope and examine the roots. Twisted, "
+        "glossy tops look the same as the symptoms of nutrient burn or heat stress. More feed does "
+        "not remove mites.")),
+    figure(L.zones("The position of each pest on the plant", 0, 4, [
             (3, 4, L.GL, "Growing tips: russet + broad mites"),
-            (2, 3, L.GXL, "Mid-canopy: (sap-suckers above)"),
+            (2, 3, L.GXL, "Middle canopy: (sap-suckers above)"),
             (1, 2, L.AMBL, "Flowers / buds: caterpillars"),
             (0, 1, L.BLUL, "Root zone / crown: fungus gnats + root aphids"),
-          ], note="The hidden pests live where you do not normally look: the tips, inside buds, and below the medium."), 5,
-      "Map your inspection to where each pest actually lives. Glancing at the mid-canopy misses all "
-      "four of these."),
+          ], note="These pests are in positions where you do not usually look: in the tips, in the buds, and below the medium."), 5,
+      "Examine the plant in the position of each pest. If you look only at the middle of the "
+      "canopy, you do not find these four pests."),
   ]})
 
-SECTIONS.append({"id": "monitoring", "kicker": "Catch it early",
-  "title": "Pest monitoring and weekly scouting",
+SECTIONS.append({"id": "monitoring", "kicker": "Find the pests at the start",
+  "title": "Pest monitoring and scouting each week",
   "blocks": [
-    p("You cannot control what you do not measure, and early detection is the single biggest lever "
-      "you have. Run a fixed weekly scouting walk on the same day, inspecting leaf undersides, "
-      "growing tips, flowers and the root zone, and step up to twice weekly as rooms warm up."),
-    p("Hang yellow sticky cards at canopy height for thrips, whitefly and fungus-gnat adults at "
-      "a mapped density of about one card per 100 m&sup2; (~1,076 ft&sup2;) as a starting point, with more cards giving a better signal. "
-      "Place fungus-gnat cards low, near the medium surface, where the adults fly. Record the count "
-      "on each card every week so you track the trend, not just the snapshot."),
-    ul(["Scout weekly on a fixed day, spot-check twice weekly when temperatures and pest development rise",
-        "Yellow sticky cards: minimum ~1 per 93 m&sup2; (1,000 ft&sup2;), low at the medium for fungus gnats, canopy height for thrips/whitefly",
-        "Log card counts each week, a rising trend (not a single number) is the alarm",
-        "30x loupe for spider mites, 60-100x scope for russet/broad mites, inspect undersides, tips, flowers AND roots",
-        "Action thresholds are facility-specific, e.g. one grower tolerates 10-15 thrips/card/week, another with virus history tolerates under 5"]),
-    figure(L.line("Sticky-card trend: thrips per card",
+    p("You cannot keep the population of a pest small if you do not measure it. The most important "
+      "method that you have is to find the pests at the start. Do a scouting walk each week on the "
+      "same day. Examine the bottom of the leaves, the growing tips, the flowers, and the root "
+      "zone. When the rooms become hotter, increase this to two times each week."),
+    p("Hang yellow sticky cards at the height of the canopy for thrips, whitefly, and fungus gnat "
+      "adults. As a start point, use a density of approximately one card for each 100 m&sup2; "
+      "(approximately 1,076 ft&sup2;). More cards give a better signal. Put the cards for fungus "
+      "gnats low, near the surface of the medium, where the adults move in the air. Each week, "
+      "record the number on each card. Then you know the trend and not only one reading."),
+    ul(["Do the scouting each week on the same day. When the temperature and the speed of the life cycle increase, examine the plants two times each week",
+        "Yellow sticky cards: a minimum of approximately 1 for each 93 m&sup2; (1,000 ft&sup2;). Put the cards low at the medium for fungus gnats. Put the cards at the height of the canopy for thrips and whitefly",
+        "Record the number on each card each week. A trend that increases (not one number) is the alarm",
+        "Use a 30x loupe for spider mites and a 60-100x scope for russet mites and broad mites. Examine the bottom of the leaves, the tips, the flowers, and also the roots",
+        "Each facility sets the action threshold for the facility. For example, one grower accepts 10-15 thrips/card/week. A different grower, with viruses in the previous crops, accepts less than 5"]),
+    figure(L.line("Sticky-card trend: thrips/card",
             [(0, 2), (1, 3), (2, 4), (3, 7), (4, 11), (5, 16)],
             ["wk 1", "wk 2", "wk 3", "wk 4", "wk 5", "wk 6"],
             ylab="thrips / card", ymax=20,
-            note="The action threshold (10/card here) is crossed at week 5. The trend warned you a week earlier.",
-            bands=[(0, 10, L.GL, "below threshold: monitor")]), 6,
-      "Logging the count each week turns sticky cards into a trend line. The slope, not any single "
-      "reading, tells you when to trigger the IPM SOP."),
-    figure(L.flow("The weekly scouting routine",
-            [("Same day", "scout on a fixed weekly day"),
-             ("Inspect", "undersides, tips, flowers, roots"),
-             ("Log cards", "read and record every sticky card"),
-             ("Compare", "this week vs last week"),
-             ("Decide", "below threshold = monitor, above = IPM SOP")]), 7,
-      "A repeatable five-step walk. The point is consistency: same day, same plants, same cards, every week."),
+            note="At week 5, thrips are more than the action threshold (10/card here). The trend told you one week before.",
+            bands=[(0, 10, L.GL, "less than threshold: monitor")]), 6,
+      "When you record the number each week, the sticky cards give a trend curve. The slope of the "
+      "curve, and not one reading, shows when to start the IPM SOP."),
+    figure(L.flow("Scouting procedure each week",
+            [("Same day", "do the scouting each week"),
+             ("Examine", "leaf bottom, tips, flowers, roots"),
+             ("Cards", "read each card and record the number"),
+             ("Compare", "this week and last week"),
+             ("Select", "monitor if less than threshold. IPM SOP if more.")]), 7,
+      "A scouting walk with five steps that you can do again. Do the same each time: the same day, the same plants, and the same cards, each week."),
   ]})
 
-SECTIONS.append({"id": "controls", "kicker": "What to release and spray",
-  "title": "Biological controls and treatments by pest",
+SECTIONS.append({"id": "controls", "kicker": "Agents to release and sprays to apply",
+  "title": "Biological controls and treatments for each pest",
   "blocks": [
-    p("Match the tool to the pest, and to whether you are preventing or reacting. For spider mites "
-      "the specialist predator <em>Phytoseiulus persimilis</em> is the fast curative, but it wants "
-      "humidity above ~60% RH, while <em>Neoseiulus californicus</em> or <em>Amblyseius swirskii</em> "
-      "establish preventatively. Thrips are managed with <em>Amblyseius cucumeris</em> or swirskii at "
-      "about 100-300 mites per square metre, with control typically visible around 3 weeks" + _c("lopez-2023-amblyseius-swirskii-review-jipm") + "."),
-    p("Aphids respond to species-matched parasitoid wasps (<em>Aphidius colemani</em> for green peach "
-      "aphid, <em>Aphidius matricariae</em> for cannabis aphid) plus the insect-killing fungus "
-      "<em>Beauveria bassiana</em>. Whitefly are hit with <em>Encarsia</em> or <em>Eretmocerus</em> "
-      "wasps and swirskii. Fungus gnats are drenched in the medium with <em>Steinernema feltiae</em> "
-      "nematodes and the bacterium Bti every ~2 weeks. Caterpillars are killed with <em>Bacillus "
-      "thuringiensis kurstaki</em> (Btk), which only kills larvae that eat it. Several of these "
-      "biopesticides have been tested directly on cannabis pests" + _c("cloyd-2024-biopesticides-cannabis-oregon") + "."),
-    callout("warn", "Sulphur and flowering do not mix",
-      p("Russet and broad mites respond to predatory mites plus micronised sulphur, but never apply "
-        "sulphur during flowering. It risks residue, taint and phytotoxicity on the buds.")),
-    figure(table(["Pest", "Preventative", "Curative", "Microbial / spray", "Key constraint"], [
-      ["Spider mites", "N. californicus / swirskii", "P. persimilis", "Insecticidal soap, oils", "Persimilis needs >60% RH"],
-      ["Russet/broad mites", "A. swirskii", "Predatory mites", "Micronised sulphur", "No sulphur in flower"],
-      ["Thrips", "cucumeris / swirskii (100-300/m2)", "Soil predators for pupae", "Beauveria bassiana", "Hit canopy AND medium"],
-      ["Fungus gnats", "S. feltiae nematodes", "Bti drench (every ~2 wk)", "Bti / Gnatrol", "Treat the wet medium"],
-      ["Aphids", "Aphidius wasps", "Match wasp to species", "Beauveria bassiana", "colemani vs matricariae"],
-      ["Root aphids", "Beneficial nematodes", "Soil drench", "Beauveria bassiana", "Below-ground, drench roots"],
-      ["Whitefly", "Encarsia / Eretmocerus", "Add swirskii", "Insecticidal soap", "Persistent, stay ahead"],
-      ["Caterpillars", "Scout + Btk early", "Btk spray", "Bacillus thuringiensis (Btk)", "Larva must ingest it"],
+    p("Select the correct tool for each pest, and for preventative use or curative use. For spider "
+      "mites, the specialist predator <em>Phytoseiulus persimilis</em> is the fast curative agent. "
+      "But the humidity must be more than approximately 60% relative humidity (RH) for this "
+      "predator. You can use <em>Neoseiulus californicus</em> or <em>Amblyseius swirskii</em> as "
+      "preventative agents. For thrips, use <em>Amblyseius cucumeris</em> or swirskii at "
+      "approximately 100-300 mites for each square meter. You usually see the effect after "
+      "approximately 3 weeks." + _c("lopez-2023-amblyseius-swirskii-review-jipm")),
+    p("For aphids, use parasitoid wasps of the correct species (<em>Aphidius colemani</em> for "
+      "green peach aphid and <em>Aphidius matricariae</em> for cannabis aphid) and the fungus "
+      "<em>Beauveria bassiana</em>, which kills insects. For whitefly, use <em>Encarsia</em> wasps "
+      "or <em>Eretmocerus</em> wasps, and swirskii. For fungus gnats, apply a drench in the medium "
+      "with <em>Steinernema feltiae</em> nematodes and the bacterium Bti, approximately each 2 "
+      "weeks. For caterpillars, use <em>Bacillus thuringiensis kurstaki</em> (Btk). Btk kills only "
+      "larvae that eat it. Tests on cannabis pests include some of these biopesticides." +
+      _c("cloyd-2024-biopesticides-cannabis-oregon")),
+    callout("warn", "No sulfur in flowering",
+      p("Do not apply sulfur in flowering. It can cause residue, a bad aroma or flavor, and "
+        "phytotoxicity on the buds. Predatory mites and micronized sulfur decrease the number of "
+        "russet mites and broad mites.")),
+    figure(table(["Pest", "Preventative", "Curative", "Microbial / spray", "Important condition"], [
+      ["Spider mites", "N. californicus / swirskii", "P. persimilis", "Insecticidal soap, oils", "P. persimilis: more than 60% RH is necessary"],
+      ["Russet mites and broad mites", "A. swirskii", "Predatory mites", "Micronized sulfur", "No sulfur in flowering"],
+      ["Thrips", "cucumeris / swirskii (100-300/m2)", "Soil predators for pupae", "Beauveria bassiana", "Apply to the canopy and also to the medium"],
+      ["Fungus gnats", "S. feltiae nematodes", "Bti drench (each approximately 2 weeks)", "Bti / Gnatrol", "Apply the treatment to the wet medium"],
+      ["Aphids", "Aphidius wasps", "Use the wasp of the correct species", "Beauveria bassiana", "colemani and matricariae"],
+      ["Root aphids", "Beneficial nematodes", "Soil drench", "Beauveria bassiana", "The pest is below the ground. Apply a drench to the roots"],
+      ["Whitefly", "Encarsia / Eretmocerus", "Add swirskii", "Insecticidal soap", "The pest continues to occur. Start before the population increases."],
+      ["Caterpillars", "Scouting and Btk at the start", "Btk spray", "Bacillus thuringiensis (Btk)", "The larva must eat it"],
     ], cls="compact",
-      caption="Beneficial selection matrix. Release rates and constraints are starting points, tune to your facility and supplier."), 8,
-      "Pick the agent by pest and by whether you are preventing or reacting. Timing beats dose: "
-      "beneficials only out-breed pests if released before the pest gets a head start."),
+      caption="Table to select the biocontrol agent. The rates at which you release the agents, and the conditions, are start points. Adjust them for your facility and your supplier."), 8,
+      "Select the agent for the pest, and for preventative use or curative use. The time at which "
+      "you release the agents is more important than the dose. Biocontrol agents increase more "
+      "quickly than the pests only if you release them before the pests start."),
   ]})
 
-SECTIONS.append({"id": "pitfalls", "kicker": "Where growers go wrong",
+SECTIONS.append({"id": "pitfalls", "kicker": "Frequent errors of growers",
   "title": "Troubleshooting",
   "blocks": [
-    p("Most pest disasters are diagnosis and timing failures, not product failures. The classic "
-      "mistakes repeat across facilities, and all of them are avoidable with a scope and a calendar."),
-    table(["Symptom", "Likely cause", "Confirm / fix"], [
-      ["Twisted, glossy new growth", "Russet or broad mites (not nutrients)", "Confirm at 60-100x before changing the feed"],
-      ["Thrips/gnats rebound after spraying", "Soil-dwelling pupae/larvae untouched", "Treat the medium AND the canopy, not just leaves"],
-      ["Beneficials released, pest still wins", "Released too late onto an exploding population", "Establish preventatively, predators cannot catch up to a spike"],
-      ["Persimilis dies off, mites persist", "Room below ~60% RH, wrong for the agent", "Raise RH or pick a drier-tolerant predator"],
-      ["Residue / taint at harvest", "Sulphur or harsh oils used in flower", "Stop sulphur and harsh oils before bloom"],
-      ["New crop infested from day one", "Skipped clone/mother quarantine", "Isolate and inspect every incoming plant"],
+    p("Most large pest problems have their cause in incorrect diagnosis and an incorrect time of "
+      "treatment, and not in the products. The same errors occur in many facilities. A scope and a "
+      "calendar prevent all of them."),
+    table(["Symptom", "Usual cause", "Make sure and correct"], [
+      ["Twisted, glossy new growth", "Russet mites or broad mites (not nutrients)", "Make sure of the cause at 60-100x before you change the feed"],
+      ["Thrips or gnats increase again after you spray", "The spray does not touch the pupae or larvae in the soil", "Apply the treatment to the medium and also to the canopy, and not only to the leaves"],
+      ["You released biocontrol agents, but the pest population continues to increase", "You released the agents after the correct time, when the pest population increased very quickly", "Release the agents before the pests come (preventative). Predators cannot increase as quickly as the pest population."],
+      ["The population of P. persimilis decreases, and the pest mites stay", "The room has less than approximately 60% RH. This humidity is incorrect for the agent", "Increase the RH, or select a predator for drier air"],
+      ["Residue, or a bad aroma or flavor, at harvest", "You used sulfur or strong oils in flowering", "Stop the sulfur and the strong oils before bloom starts"],
+      ["The new crop has pests from the first day", "You did not do a quarantine of the clones and mother plants", "Isolate and examine each plant that comes into the facility"],
     ], cls="compact"),
-    callout("note", "When a treatment &lsquo;fails&rsquo;",
-      p("Re-confirm the pest ID, check you covered every life stage (soil included), and verify the "
-        "environment actually suited the agent. Most &lsquo;failed&rsquo; biocontrol is one of those three.")),
-    figure(L.flow("Symptom to confirmed cause to action",
-            [("Symptom", "twisted tips, yellowing, silver streaks"),
-             ("Suspect", "pest vs nutrient/heat?"),
-             ("Confirm", "loupe/scope + root check"),
-             ("Identify", "name the exact pest"),
-             ("Act", "trigger the IPM SOP, never spray blind")]), 9,
-      "Never treat on a guess. The confirmation step, between suspecting and acting, is where most "
-      "wasted sprays get prevented."),
+    callout("note", "If a treatment has no effect",
+      p("There are three possible causes. The identification of the pest is incorrect. The "
+        "treatment did not touch each stage of the life cycle (the stage in the soil also). The "
+        "environment is not correct for the agent. Most biocontrol that has no effect has one of "
+        "these three causes.")),
+    figure(L.flow("From symptom to cause to treatment",
+            [("Symptom", "twisted tips, yellow leaves, silver streaks"),
+             ("Think", "pest or nutrient/heat?"),
+             ("Examine", "loupe/scope and root check"),
+             ("Identify", "name the correct pest"),
+             ("Start", "the IPM SOP. Do not spray if not sure")]), 9,
+      "Do not apply a treatment if you are not sure of the cause. The step to make sure of the "
+      "cause is between the symptom and the treatment. This step prevents most sprays that are not "
+      "necessary."),
   ]})
 
-SECTIONS.append({"id": "expectations", "kicker": "What success looks like",
+SECTIONS.append({"id": "expectations", "kicker": "Good results",
   "title": "Expected results and limitations",
   "blocks": [
-    p("Eradication is rarely the goal. Durable suppression below the action threshold is. Expect "
-      "biological control to take time: thrips control is often visible only around 3 weeks after "
-      "release, and breaking a fungus-gnat cycle by trapping adults while killing larvae usually "
-      "takes 4-8 weeks" + _c("cloyd-2015-fungus-gnat-ecology-management") + "."),
-    p("The cheapest &lsquo;treatment&rsquo; is prevention. Quarantine and inspect every incoming "
-      "clone, keep mother plants clean (an infested mother makes every cutting infested), control "
-      "humidity and airflow, sanitise tools and rooms, and run the weekly scout without fail. A "
-      "facility that prevents and detects early spends far less on curatives and loses far less crop "
-      "than one that fights outbreaks reactively."),
-    callout("key", "What to actually expect",
-      ul(["The goal is suppression below threshold, not zero pests. Clean crops come from prevention, not heroic sprays.",
-          "Biologicals are slow but durable: thrips ~3 weeks to visible control, fungus-gnat cycle ~4-8 weeks to break.",
-          "Prevention stack: quarantine clones, keep mothers clean, control RH and airflow, sanitise, scout weekly.",
-          "An infested mother plant guarantees infested clones. The mother room is your most important inspection point."], "tight")),
-    figure(L.bars("Cost: prevention-led vs reactive program",
+    p("Usually, you do not remove all the pests. You keep the pest population less than the action "
+      "threshold, for a long time. Biological control is slow. You usually see the effect on thrips "
+      "approximately 3 weeks after you release the agents. To stop a cycle of fungus gnats, use "
+      "traps for the adults and kill the larvae. The time that is necessary is usually 4-8 weeks." +
+      _c("cloyd-2015-fungus-gnat-ecology-management")),
+    p("Prevention is the treatment with the lowest cost. Put each clone that comes into the "
+      "facility in quarantine and examine it. Keep the mother plants clean (a mother plant with "
+      "pests makes cuttings with pests). Control the humidity and the airflow. Sanitize the tools "
+      "and the rooms. Do the scouting each week, and do not stop.</p><p>A facility that prevents "
+      "pests and finds them at the start has much lower costs for curative agents and much less "
+      "crop loss. A facility that waits for outbreaks and then applies treatments has higher costs "
+      "and more crop loss."),
+    callout("key", "Usual results",
+      ul(["The correct result is a pest population less than the threshold, and not zero pests. Prevention gives clean crops, and sprays that you apply in an emergency do not.",
+          "Biological controls are slow, but they continue for a long time. For thrips, you see the effect after approximately 3 weeks. To stop a cycle of fungus gnats, approximately 4-8 weeks are necessary.",
+          "Prevention steps: put clones in quarantine, keep mother plants clean, control RH and airflow, sanitize, and do the scouting each week.",
+          "A mother plant with pests always gives clones with pests. The mother room is the most important point to examine."], "tight")),
+    figure(L.bars("Cost: preventative and reactive programs",
             [("Prevention: monitoring", 15), ("Prevention: biocontrol", 20),
              ("Reactive: curatives", 45), ("Reactive: crop loss", 60)], unit=" rel.",
-            note="Relative cost. A prevention-led program spends a little steadily, a reactive one pays in curatives and lost crop.",
+            note="Relative cost. Prevention has a small, stable cost. A reactive program has a high cost: curative agents and crop loss.",
             maxv=70), 10,
-      "Steady, modest prevention spend versus the much larger bill for curatives and crop loss when "
-      "you fight outbreaks reactively."),
-    p("Track your outcomes against the thresholds in the <a href='ipm-sop.html'>IPM SOP</a> so you "
-      "know whether the program is actually holding, and keep the room itself working for you with "
-      "good <a href='airflow-design.html'>airflow design</a> that denies pests the warm, still, humid "
-      "pockets they love."),
+      "The cost of prevention is stable and small. The cost of curative agents and crop loss is "
+      "much larger when you wait for outbreaks and then apply treatments."),
+    p("Compare your results with the thresholds in the <a href='ipm-sop.html'>IPM SOP</a>. Then you "
+      "know if the program works correctly. Use good <a href='airflow-design.html'>airflow "
+      "design</a>. It removes the warm areas with high humidity and no air movement where pests are."),
   ]})

@@ -7,14 +7,14 @@ import figs_lib as L
 _FIGS = json.load(open(os.path.join(os.path.dirname(__file__), "figs_mother_plants.json"), encoding="utf-8"))
 
 SLUG = "mother-plants"
-TITLE = "Mother plants: environment, feeding, pruning and pathogen defence"
+TITLE = "Mother plants: environment, feed, pruning and protection against pathogens"
 EYEBROW = "Propagation · Stock"
-SUB = ("This paper covers the environment, feeding schedule, pruning architecture, viroid defence, "
-       "testing rotation and succession planning needed to run a cannabis mother-plant bank. After "
-       "reading it you will be able to set up a mother room, design a cutting schedule, and defend "
-       "your stock against hop latent viroid.")
+SUB = ("This paper gives information about the environment, feed, pruning, protection against "
+       "viroid, tests and replacement of plants in a cannabis mother bank. After you read this "
+       "paper, you will know how to prepare a mother room and schedule the cuttings. You will also "
+       "know how to prevent an infection of your stock with hop latent viroid.")
 META = [("seedling", "Propagation"), ("image", "13 diagrams"),
-        ("quote", "Evidence-linked · 14 sources"), ("clock", "~20 min read")]
+        ("quote", "14 sources"), ("clock", "~20 min to read")]
 RELATED = ["cloning", "tissue-culture"]
 REF_IDS = ["mp-ahrens-2023-photoperiod", "mp-saloner-2020-nitrogen", "mp-tumi-hlvd-testing",
            "mp-moher-2022-veg-light", "mp-druege-2004-stockplant-n", "mp-caplan-2018-cuttings",
@@ -31,558 +31,683 @@ SECTIONS = []
 SECTIONS.append({"id": "start-here", "kicker": "01 · Start here",
   "title": "Purpose and scope",
   "blocks": [
-    lead("A <strong>mother plant</strong> is a plant you keep permanently in leafy growth and never "
-         "flower. Her only job is to supply <strong>cuttings</strong>, genetically identical copies, "
-         "on schedule. Every plant that ever reaches your flower room started as a piece of her."),
-    p("The formal horticulture word is <strong>stock plant</strong>; growers say mother. Either way, "
-      "the deal is the same: you hold one plant back from production and spend light, space and labour "
-      "on her, and in exchange every batch starts uniform, known and on time. She is the factory, and "
-      "the flower rooms are the shop that sells what the factory makes."),
-    p("That position, upstream of everything, is why mother management is worth doing properly. A "
-      "weak, sick or mislabeled mother doesn't cost you one plant. It costs you every cutting she "
-      "produces, and you usually find out weeks or months later, after the problem has been multiplied "
-      "across a whole room. Mother problems are the compound interest of growing: small, quiet, and "
-      "ruinous by the time they're visible."),
-    figure(L.flow("From mother bank to sale-able flower",
-            [("Mother bank", "tested, kept vegetative"), ("Cut", "a batch every 2–3 weeks"),
-             ("Root", "10–14 days"), ("Veg", "2–4 weeks"), ("Flower", "the room that pays")]), 1,
-      "The propagation engine. Everything downstream inherits whatever the mother carries, vigour, "
-      "genetics, and any pathogen she has quietly picked up."),
+    lead("A <strong>mother plant</strong> is a plant that you keep permanently in vegetative growth "
+         "(growth of leaves). The plant does not make flowers. The only task of the plant is to "
+         "supply <strong>cuttings</strong> at the correct times. A cutting is a copy of the mother "
+         "plant and has the same genetics. Each plant that goes into your flower room started as a "
+         "piece of a mother plant."),
+    p("The name in horticulture is <strong>stock plant</strong>. Growers use the name mother plant. "
+      "For a mother plant or a stock plant, you keep one plant out of production. You use light, "
+      "space and work for this plant. As a result, all the plants of a batch are the same. You know "
+      "the genetics of the plants, and the plants are available on time.</p><p>All the mother "
+      "plants of a facility are the <strong>mother bank</strong>."),
+    p("The mother plant is upstream of all other plants. Thus it is important to do the work with "
+      "mother plants correctly. If a mother plant is weak, has a disease or has an incorrect label, "
+      "the problem is not in one plant only. The problem is in each cutting that the mother plant "
+      "supplies.</p><p>Usually you find the problem after some weeks or months. At that time, the "
+      "problem is in all the plants of a room. A problem in a mother plant is small and has no "
+      "signs at first. When you can see the problem, the damage can be very large."),
+    figure(L.flow("From mother bank to flower crop",
+            [("Mother bank", "tests, vegetative"), ("Cut", "a batch each 2–3 weeks"),
+             ("Rooting", "10–14 days"), ("Vegetative", "2–4 weeks"), ("Flower", "the room for harvest")]), 1,
+      "The figure shows the propagation system. Each stage downstream gets the vigor and the "
+      "genetics of the mother plant. Each stage also gets each pathogen that the mother plant has, "
+      "with or without symptoms."),
     callout("note", "Who this is for",
-      p("Anyone keeping their first mother, through to operators running a stock room against a "
-        "production calendar. This paper is about the plant you cut <em>from</em>. The cutting "
-        "technique itself (blades, gel, domes, humidity) is covered in the "
-        "<a href='cloning.html'>cloning guide</a>; keeping the room clean is the "
-        "<a href='ipm-sop.html'>IPM hygiene</a> guide.")),
+      p("This paper is for growers who keep a first mother plant and for operators of a stock room "
+        "who schedule production. The paper is about the plant that you cut <em>from</em>. The <a "
+        "href='cloning.html'>cloning paper</a> gives information about the cutting method (blades, "
+        "gel, domes and humidity). The <a href='ipm-sop.html'>IPM hygiene</a> paper shows how to "
+        "keep the room clean.")),
   ]})
 
 # ---------------------------------------------------------------- 02 vocabulary
-SECTIONS.append({"id": "vocab", "kicker": "02 · The vocabulary",
+SECTIONS.append({"id": "vocab", "kicker": "02 · The terms",
   "title": "Definitions",
   "blocks": [
-    p("Mother-room talk borrows from horticulture, virology and factory scheduling. These eight terms "
-      "cover it; everything else is defined where it appears."),
-    defterm("Mother / stock plant", "A plant held permanently in vegetative (leafy) growth, never "
-            "flowered, kept purely as a source of cuttings. 'Mother' and 'stock plant' mean the same thing."),
-    defterm("Photoperiod", "The hours of light per day. Photoperiod-dependent cannabis flowers when "
-            "nights get long; mothers are kept on long days (18 h light) so they never switch."),
-    defterm("PPFD", "Photosynthetic photon flux density, how much usable light lands on the leaves, "
-            "in µmol·m⁻²·s⁻¹. Mothers run moderate PPFD, not flower-room intensity."),
-    defterm("Node", "The point on a stem where leaves and side-shoots attach. Cuts are made relative "
-            "to nodes, and every stub left with a node can regrow new shoots."),
-    defterm("EC", "Electrical conductivity of the feed water, in mS/cm, a proxy for total dissolved "
-            "nutrient strength. Mothers run moderate EC; high EC pushes soft, salty growth."),
-    defterm("Viroid", "The smallest known infectious agent: a bare loop of RNA with no protein coat, "
-            "a fraction the size of a virus. Hop latent viroid (HpLVd) is the one that matters in cannabis."),
-    defterm("Dudding", "The disease syndrome HpLVd causes: outwardly normal plants that finish small, "
-            "brittle and weak, with poor trichome set and badly reduced potency."),
-    defterm("Indexing", "Systematically testing stock plants for pathogens on a fixed rotation, so a "
-            "clean result is recent enough to mean something. Borrowed from certified clean-stock horticulture."),
+    p("The terms for a mother room are from horticulture, virology and production control. This "
+      "section gives the definitions of eight terms. The paper gives the definition of each other "
+      "term where the term first occurs."),
+    defterm("Mother plant / stock plant", 'A plant that you keep permanently in vegetative growth (growth '
+            'of leaves). The plant does not make flowers. You keep the plant only as a source of '
+            'cuttings. "Mother plant" and "stock plant" are two names for the same plant.'),
+    defterm("Photoperiod", "The number of hours of light in each day. Photoperiod cannabis starts "
+            "to make flowers when the nights become long. You keep mother plants on long days with "
+            "18 h of light. Thus the mother plants do not start to make flowers."),
+    defterm("PPFD", "Photosynthetic photon flux density. PPFD is the quantity of light that the "
+            "leaves receive and can use, in µmol·m⁻²·s⁻¹. Use a moderate PPFD for mother plants. Do "
+            "not use the PPFD of a flower room."),
+    defterm("Node", "The point on a stem where the leaves and the side shoots attach. You cut the "
+            "stem at a position in relation to a node. A stub is the part of the stem that stays on "
+            "the plant after you cut the stem. A stub that has a node can make new shoots."),
+    defterm("EC", "Electrical conductivity of the feed water, in mS/cm. EC is an indicator of the "
+            "total strength of the nutrients in the water. Use a moderate EC for mother plants. A "
+            "high EC causes soft growth that contains a large quantity of salt."),
+    defterm("Viroid", "The smallest known agent of infection. A viroid is a bare loop of RNA "
+            "without a protein coat. The size of a viroid is a fraction of the size of a virus. Hop "
+            "latent viroid (HpLVd) is the viroid that is important in cannabis."),
+    defterm("Dudding", "The disease that HpLVd causes. The plants show no symptoms at first. At "
+            "harvest, the plants are small and weak and they break easily. The plants have a low "
+            "density of trichomes and a much lower potency."),
+    defterm("Indexing", "A procedure in which you do tests on stock plants for pathogens at regular "
+            "intervals. A clean result is a result in which the test finds no pathogen. A positive "
+            "result is a result in which the test finds a pathogen. Thus each clean result shows "
+            "the condition of the plant at this time. The procedure is from the horticulture of "
+            "certified clean stock."),
   ]})
 
 # ---------------------------------------------------------------- 03 core answer
-SECTIONS.append({"id": "core-answer", "kicker": "03 · The short version",
-  "title": "Mother-plant programme overview",
+SECTIONS.append({"id": "core-answer", "kicker": "03 · The important items",
+  "title": "Mother-plant procedures in one table",
   "blocks": [
-    lead("The table below covers every practice that matters for a reliable mother bank. Sections 04–16 carry the evidence and detail behind each row."),
+    lead("The table below shows each procedure that is important for a mother bank with a constant supply of cuttings. Sections 04 to 16 give the data and more information for each row."),
     kv([
-      ("Photoperiod", "18 h light / 6 h dark, protected like a fire alarm. Some cultivars initiate flowers at up to 14–15 h" + _c("mp-ahrens-2023-photoperiod") + ", so 18 h is your safety margin."),
-      ("Light", "Moderate: ~300–500 µmol·m⁻²·s⁻¹ PPFD. Enough for steady regrowth, not so much that shoots turn short and squat."),
-      ("Feed", "Nitrogen-forward veg feed, ~160 mg/L N is the researched optimum" + _c("mp-saloner-2020-nitrogen") + "; EC moderate (~1.4–2.0 mS/cm as practitioner convention). Never push her lush."),
-      ("Shape", "Flat, wide, open-centre hedge: a permanent frame of 4–6 scaffolds, harvested for upright shoots every 2–3 weeks."),
-      ("Harvest rule", "Take at most about half the shoots per pass; cut above the first node so each stub regrows two."),
-      ("Testing", "HpLVd qPCR on every mother every 4–6 weeks, root tissue" + _c("mp-tumi-hlvd-testing") + ". New genetics quarantine + test twice before joining."),
-      ("Tools", "Fresh or sanitised blade per plant, every time. The blade is how mother rooms die."),
-      ("Replacement", "On evidence, a failed test or a sliding rooting %, never on the calendar alone. Always with an overlap, never cold-turkey."),
-      ("Backup", "Two copies of every cultivar you care about, ideally in different rooms or in tissue culture."),
+      ("Photoperiod", "18 h of light and 6 h of darkness. Make sure that the photoperiod is always correct. Some cultivars start to make flowers at photoperiods as long as 14 to 15 h" + _c("mp-ahrens-2023-photoperiod") + ". Thus an 18 h photoperiod is safe because it is longer than this limit."),
+      ("Light", "Moderate: approximately 300 to 500 µmol·m⁻²·s⁻¹ PPFD. This PPFD is sufficient for stable regrowth. A higher PPFD can make the shoots short and thick."),
+      ("Feed", "Use a feed for vegetative growth with a high nitrogen content. The optimum from a test is approximately 160 mg/L N" + _c("mp-saloner-2020-nitrogen") + ". Use a moderate EC of approximately 1.4 to 2.0 mS/cm (grower method). Do not cause soft growth."),
+      ("Shape", "A flat and wide canopy with an open middle. The permanent frame has 4 to 6 scaffolds (primary branches). Harvest the vertical shoots at an interval of 2 to 3 weeks."),
+      ("Harvest procedure", "Harvest a maximum of approximately half of the shoots each time. Cut above the first node. Then each stub makes two new shoots."),
+      ("Testing", "Do an HpLVd qPCR test on root tissue of each mother plant at an interval of 4 to 6 weeks" + _c("mp-tumi-hlvd-testing") + ". Put new genetics in quarantine. Before the new plants go into the mother bank, do two tests."),
+      ("Tools", "Use a new blade or a sanitized blade for each plant, each time. The blade is the primary method by which HpLVd moves from one plant to the next plant. HpLVd can cause the end of a mother room."),
+      ("Replacement", "Replace a mother plant because of data: a positive result of a test or a rooting rate that decreases. Do not replace a mother plant only because of its age. Always use an overlap of the replacement plant and the mother plant that you replace."),
+      ("Second copy", "Keep two copies of each cultivar that is important to you, if possible in different rooms or in tissue culture."),
     ]),
-    p("Five rules carry most of the value:"),
+    p("These five procedures are the most important:"),
     ol([
-      "<strong>Protect the photoperiod with margin.</strong> Flower initiation has been recorded at photoperiods up to 14 h, and in some cultivars 15 h" + _c("mp-ahrens-2023-photoperiod") + ". 18/6 exists to make timer faults and light leaks survivable.",
-      "<strong>Feed for shoots, not for show.</strong> A mother is farmed for firm, pencil-thick regrowth. The dark, droopy, overfed look produces cuttings that wilt and stall.",
-      "<strong>Build the frame once, then farm the regrowth.</strong> Architecture decides cutting count more than feed or light do.",
-      "<strong>Assume hop latent viroid is hunting you.</strong> Roughly 90% of surveyed California facilities carried it" + _c("mp-adkar-2023-hidden-threat") + ". Blade discipline plus a testing rotation is the entire defence.",
-      "<strong>Replace on data, with overlap.</strong> A candidate runs alongside the old mother and proves itself before anything gets culled.",
+      "<strong>Make the photoperiod longer than the photoperiod at which flowers start.</strong> Tests show that cultivars start to make flowers at photoperiods as long as 14 h, and some cultivars start at 15 h" + _c("mp-ahrens-2023-photoperiod") + ". The 18/6 photoperiod lets the mother plants stay in vegetative growth when there is a timer fault or a light leak.",
+      "<strong>Give feed for rigid shoots, not for large dark green leaves.</strong> The target is rigid regrowth with thick stems. A plant with too much feed has dark green leaves that hang from the stems. The cuttings of this plant show wilt and stop growth.",
+      "<strong>Make the frame one time, then harvest the regrowth.</strong> The shape of the plant has more effect on the number of cuttings than the feed or the light.",
+      "<strong>Think that hop latent viroid can infect your stock.</strong> In a report on California facilities, approximately 90% of the facilities had the viroid" + _c("mp-adkar-2023-hidden-threat") + ". Use a correct procedure for blades. Do tests at regular intervals. These two procedures are the complete protection.",
+      "<strong>Replace because of data, and use an overlap.</strong> Keep the replacement plant together with the mother plant that you replace. Do not discard the mother plant that you replace before the data show that the replacement plant is satisfactory.",
     ]),
-    callout("key", "The one-sentence job",
-      p("Keep a genetically known, pathogen-tested plant in permanent vegetative growth, and turn her "
-        "into a predictable weekly stream of cuttings without ever letting her tell you a lie.")),
+    callout("key", "The primary task",
+      p("Keep a plant with known genetics and a clean test result in permanent vegetative growth. "
+        "The plant must supply a constant quantity of cuttings each week. Make sure that you always "
+        "know the correct condition of the plant.")),
   ]})
 
 # ---------------------------------------------------------------- 04 the room
-SECTIONS.append({"id": "room-setup", "kicker": "04 · The how & why",
+SECTIONS.append({"id": "room-setup", "kicker": "04 · Method and data",
   "title": "Mother-room environment",
   "blocks": [
-    p("Photoperiod is the load-bearing wall. Photoperiod-dependent cannabis initiates flowering when "
-      "the dark period gets long enough, and the threshold is closer than most people think: in a "
-      "six-photoperiod trial, every cultivar tested initiated flowers at photoperiods up to 14 h of "
-      "light, and some began initiating at 15 h" + _c("mp-ahrens-2023-photoperiod") + ". An 18 h day "
-      "is not a magic number. It is a 3–4 hour safety margin over the worst-case switch point."),
-    p("A mother that starts flowering is a genuine mess: you lose weeks reverting her (re-vegging is "
-      "slow and the regrowth comes back twisted), and any cuttings taken while she is transitioning "
-      "root and grow erratically. Mother rooms rarely fail photoperiod on purpose. They fail by a "
-      "dead timer channel, a contactor stuck off, or light bleeding through a doorway from a flowering "
-      "room next door. Audit the dark period monthly: stand in the room, lights out, five minutes, and "
-      "fix any glow you can see."),
-    p("The 18/6 vs 24/0 debate: both keep photoperiod cultivars vegetative. Continuous light costs "
-      "about a third more in energy, and the practitioner arguments for giving a dark period, root "
-      "growth, recovery, are weakly evidenced in either direction, so treat them as preference, not "
-      "fact. 18/6 is the default because it works and costs less. One genuine caveat: "
-      "<strong>autoflowering genetics cannot be mothered at all</strong>. They flower on age, not "
-      "photoperiod, and no light schedule will stop them."),
-    figure(L.zones("Mother-room light target", 0, 800,
-            [(0, 150, L.REDL, "starved"), (150, 300, L.AMBL, "slow"),
-             (300, 500, L.GL, "target"), (500, 650, L.GXL, "diminishing"),
-             (650, 800, L.AMBL, "no gain here")],
+    p("The photoperiod is the most important control in a mother room. Photoperiod cannabis starts "
+      "to make flowers when the period of darkness is sufficiently long. The threshold photoperiod "
+      "is longer than most growers think.</p><p>In a test with six photoperiods, all the cultivars "
+      "started to make flowers at photoperiods as long as 14 h. Some cultivars started at 15 h" +
+      _c("mp-ahrens-2023-photoperiod") + ". The 18 h photoperiod has no special value. It is 3 to 4 "
+      "h longer than the longest photoperiod at which the plants start to make flowers."),
+    p("If a mother plant starts to make flowers, the result is a large problem. The change back to "
+      "vegetative growth is slow. It is a waste of some weeks. The regrowth has a twisted shape. "
+      "Cuttings that you cut while the plant changes to the flowering stage make roots irregularly "
+      "and increase in size irregularly.</p><p>Photoperiod faults in mother rooms are accidental. "
+      "There are three causes. A timer output does not operate. A contactor stays in the off "
+      "position. Light comes through a door from a flower room next to the mother room.</p><p>Do a "
+      "check of the period of darkness each month. Stay in the room for five minutes with the "
+      "lights off. Repair each light leak that you can see."),
+    p("Two photoperiods are in frequent use in mother rooms: 18/6 and 24/0 (continuous light). The "
+      "first number is the hours of light, and the second number is the hours of darkness. The two "
+      "photoperiods keep photoperiod cultivars in vegetative growth. Continuous light uses "
+      "approximately one third more energy.</p><p>Some growers think that a period of darkness is "
+      "good for root growth and for the condition of the plant after the harvest of cuttings. The "
+      "data are weak. They do not show that a period of darkness helps or does not help. Thus the "
+      "data do not show a fact, and you can select one of the two photoperiods. The 18/6 "
+      "photoperiod is the usual selection because it is sufficient and it uses less "
+      "energy.</p><p>There is one important limit: <strong>you cannot use autoflower genetics for "
+      "mother plants</strong>. Autoflower plants start to make flowers because of their age, not "
+      "because of the photoperiod. No photoperiod can stop this effect."),
+    figure(L.zones("Light target, mother room", 0, 800,
+            [(0, 150, L.REDL, "too low"), (150, 300, L.AMBL, "slow"),
+             (300, 500, L.GL, "target"), (500, 650, L.GXL, "small effect"),
+             (650, 800, L.AMBL, "no effect")],
             unit="",
-            note="Canopy PPFD in µmol·m⁻²·s⁻¹. Practitioner target; the trade-offs behind it are cited in the text."), 2,
-      "Moderate light is a choice, not a compromise. A mother is farmed for cuttable regrowth, and "
-      "300–500 µmol keeps shoots long enough to cut and thick enough to root."),
-    p("Why moderate light and not flower-room intensity? Vegetative cannabis will happily use far more"
-      ", growth kept responding across a 135–1430 µmol trial range, but light also reshapes the "
-      "plant: internode length and leaf size shrink steadily as intensity rises" + _c("mp-moher-2022-veg-light") +
-      ". Run a mother at 900+ µmol and the regrowth comes back short, tight and squat. Compact is "
-      "great for a production plant, and miserable to cut 8–15 cm (3–6 in) shoots from. Run her under ~150 µmol "
-      "and shoots come thin, stretched and weak, with the low carbohydrate reserves that root poorly. "
-      "300–500 µmol is the working band where regrowth is fast <em>and</em> shaped like cuttings."),
-    p("Climate: nothing exotic. Around 22–26 °C (72–79 °F) during lights-on, roughly 55–70% relative humidity, gentle "
-      "continuous air movement (practitioner convention). The mother room should be the most boring "
-      "room in the facility. Every stress event shows up two weeks later as a batch of cuttings that "
-      "roots at 60% instead of 90, and you will struggle to connect the two."),
+            note="Canopy PPFD in µmol·m⁻²·s⁻¹. Grower method. The paper gives references for this target."), 2,
+      "Moderate light is the correct selection for a mother plant. The target is regrowth that you "
+      "can cut. A PPFD of 300 to 500 µmol keeps the shoots sufficiently long to cut and "
+      "sufficiently thick to make roots."),
+    p("Use a moderate PPFD for a mother plant, not the PPFD of a flower room. Vegetative cannabis "
+      "can use much more light. In a test with PPFD values from 135 to 1430 µmol, the growth "
+      "continued to increase when the light increased. But light also changes the shape of the "
+      "plant. When the light intensity increases, the length of the internodes and the size of the "
+      "leaves decrease gradually" + _c("mp-moher-2022-veg-light") + ".</p><p>If you use more than "
+      "900 µmol for a mother plant, the regrowth is short and thick, and the internodes are short. "
+      "A plant with short internodes is good for production. But it is not easy to cut shoots of "
+      "8–15 cm (3–6 in) from this plant.</p><p>If you use less than approximately 150 µmol, the "
+      "shoots are thin and weak, and they have long internodes. These shoots have a low quantity of "
+      "carbohydrate and a low rooting rate. A PPFD of 300 to 500 µmol is the correct range. In this "
+      "range, the regrowth is fast <em>and</em> has the correct shape for cuttings."),
+    p("The climate in a mother room is usual. The values are grower methods. When the lights are "
+      "on, use approximately 22 to 26 °C (72 to 79 °F). Use approximately 55 to 70% relative "
+      "humidity. Use a small, continuous movement of the air.</p><p>The mother room must be the "
+      "most stable room in the facility. Stress in the mother room causes a batch of cuttings with "
+      "a rooting rate of 60% and not 90%. The effect occurs after two weeks. It is not easy to find "
+      "the connection between the stress and the rooting rate."),
   ]})
 
 # ---------------------------------------------------------------- 05 feeding
-SECTIONS.append({"id": "nutrition", "kicker": "05 · The how & why",
+SECTIONS.append({"id": "nutrition", "kicker": "05 · Method and data",
   "title": "Mother-plant nutrition",
   "blocks": [
-    p("Mother nutrition has a different goal from flower nutrition. You are not growing buds and you "
-      "are not even really growing a plant. You are farming <em>stems and growing tips</em>, "
-      "continuously, from the same root system, for months. That means a vegetative, nitrogen-forward "
-      "feed, held at moderate strength."),
-    p("The nitrogen number has actual research behind it: in a five-level dose trial on medical "
-      "cannabis under long days, <strong>160 mg/L N</strong> was the optimum for vegetative growth. At "
-      "30 mg/L plants were severely deficient, stunted and yellowing, and at 240–320 mg/L growth "
-      "went backwards, with smaller, dark-green plants showing classic over-supply" + _c("mp-saloner-2020-nitrogen") +
-      ". More nitrogen is not more shoots. There is a hill, and the top of it is lower than most feed "
-      "charts assume."),
-    p("<strong>What makes a cutting root is carbohydrate, not nitrogen.</strong> Classic stock-plant work found rooting is limited primarily by the "
-      "carbohydrate status of the cutting; nitrogen matters, but as the secondary factor" + _c("mp-druege-2004-stockplant-n") +
-      ". An overfed mother pushes soft, watery, dark shoots (big drooping leaves, hollow stems) that "
-      "look magnificent and then wilt flat in the dome and root late or never. Firm, pencil-thick, "
-      "slightly hungry-looking regrowth is the factory spec."),
-    figure(L.zones("Feed strength for mothers", 0.5, 3.0,
-            [(0.5, 1.0, L.AMBL, "hungry"), (1.0, 1.4, L.GXL, "light"),
-             (1.4, 2.0, L.GL, "target"), (2.0, 2.4, L.AMBL, "rich"),
+    p("The nutrition of a mother plant has a different target from the nutrition of a flower plant. "
+      "The target is not buds, and it is not a large plant. The target is <em>stems and growing "
+      "tips</em>. The plant makes them continuously from the same root system for months. Thus use "
+      "a feed for vegetative growth with a high nitrogen content and a moderate strength."),
+    p("A test gives data for the nitrogen value. The test used five doses of nitrogen on medical "
+      "cannabis with long days. The optimum for vegetative growth was <strong>160 mg/L N</strong>. "
+      "At 30 mg/L N, the plants had a large nitrogen deficiency, stayed small and became yellow. At "
+      "240 to 320 mg/L N, the growth decreased, and the plants were smaller and dark green. The "
+      "plants showed typical signs of too much nitrogen" + _c("mp-saloner-2020-nitrogen") +
+      ".</p><p>More nitrogen does not make more shoots. The growth is at a maximum at a nitrogen "
+      "value that is less than the value in most feed charts."),
+    p("<strong>The primary limit for the rooting of a cutting is carbohydrate, not "
+      "nitrogen.</strong> A test of stock plants showed that the quantity of carbohydrate in the "
+      "cutting is the primary limit for rooting. Nitrogen is a secondary limit" +
+      _c("mp-druege-2004-stockplant-n") + ".</p><p>A mother plant with too much feed makes soft "
+      "shoots that contain much water and are dark green. The leaves are large and hang from the "
+      "stems, and the stems have a hole in the middle. These cuttings show wilt in the dome and "
+      "make roots only after a long time, or do not make roots. The correct regrowth is rigid and "
+      "thick. The plant can show a small deficiency of feed."),
+    figure(L.zones("Feed strength, mother plants", 0.5, 3.0,
+            [(0.5, 1.0, L.AMBL, "low"), (1.0, 1.4, L.GXL, "weak"),
+             (1.4, 2.0, L.GL, "target"), (2.0, 2.4, L.AMBL, "high"),
              (2.4, 3.0, L.REDL, "soft growth")],
             unit="",
-            note="Feed EC in mS/cm, practitioner convention, product-dependent. The N optimum inside it is researched."), 3,
-      "Moderate EC keeps regrowth firm. Past ~2.4 mS/cm most mothers drift into the lush, soft growth "
-      "that roots badly, the plant looks better and the cuttings perform worse."),
-    table(["Parameter", "Working range", "Basis"], [
-      ["Nitrogen", "150–200 mg/L, centred on ~160", "Dose-response trial optimum" + _c("mp-saloner-2020-nitrogen")],
-      ["Feed EC", "1.4–2.0 mS/cm", "Practitioner convention; watch the plant, not the chart"],
-      ["pH", "5.8–6.2 (coco / rockwool)", "Practitioner convention"],
-      ["Irrigation", "Steady, small drybacks, no drought cycling", "Stress now = poor rooting in 2 weeks"],
-      ["Day before a cut", "Water well; no foliar sprays", "Turgid, dry-leaved shoots handle and root best"],
-    ], cls="compact", caption="Mother feed cheat-sheet. Only the nitrogen row carries a researched number; the rest is convention that works, stated as such."),
-    callout("tip", "Read the mother, not the bottle",
-      p("Your real feedback loop is the <strong>rooting percentage of her cuttings, batch over "
-        "batch</strong>. If strike rate drifts down over two or three batches and pests and viroid are "
-        "ruled out, audit the feed before you reach for anything exotic. The fix is usually "
-        "<em>less</em>: less N, less EC, firmer shoots.")),
+            note="Feed EC in mS/cm (grower method). The values change with the product. The N optimum is from a test."), 3,
+      "A moderate EC keeps the regrowth rigid. When the EC is more than approximately 2.4 mS/cm, "
+      "most mother plants change to soft growth. This growth has a low rooting rate. The plant can "
+      "look better, but the rooting rate of the cuttings is lower."),
+    table(["Item", "Range for use", "Source"], [
+      ["Nitrogen", "150–200 mg/L, with the middle at approximately 160", "Optimum from a test with different doses" + _c("mp-saloner-2020-nitrogen")],
+      ["Feed EC", "1.4–2.0 mS/cm", "Grower method. Monitor the plant, not the chart."],
+      ["pH", "5.8–6.2 (coco / rockwool)", "Grower method"],
+      ["Irrigation", "Stable, small drybacks. No cycles of drought.", "Stress at this time causes a low rooting rate after 2 weeks"],
+      ["The day before a harvest", "Apply sufficient water. Do not apply foliar sprays.", "Shoots that are full of water and have dry leaves are easy to use and have the highest rooting rate."],
+    ], cls="compact", caption="The table shows the feed of a mother plant. Only the nitrogen row has a value from a test. The other rows are grower methods."),
+    callout("tip", "Monitor the mother plant, not the chart",
+      p("The correct feedback for the mother plant is the <strong>rooting rate of its cuttings, "
+        "batch after batch</strong>. If the rooting rate decreases in two or three batches, and "
+        "pests and viroid are not the cause, examine the feed first. The correction is usually "
+        "<em>less</em>: less N, less EC, and more rigid shoots.")),
   ]})
 
 # ---------------------------------------------------------------- 06 architecture
 SECTIONS.append({"id": "architecture", "kicker": "06 · Do this",
-  "title": "Mother-plant architecture and regrowth",
+  "title": "Shape and regrowth of the mother plant",
   "blocks": [
-    p("Cutting count is mostly architecture, not vigour. A mother left to grow naturally makes one "
-      "dominant leader and a handful of weak laterals, a Christmas tree, and a terrible factory. The "
-      "fix is the same trick hedge-layers and fruit growers use: remove the leader early, force the "
-      "plant wide, and keep it flat."),
-    p("The top shoot produces a hormone that flows down through the stem and keeps every side shoot "
-      "below it from activating. Think of a thermostat: one sensor holds multiple heating zones off; "
-      "the moment it is removed, all zones are free to fire. This is <strong>apical dominance</strong>: "
-      "the top bud holds back every node below it. Cut the top off (<strong>topping</strong>) and the "
-      "hormone level drops: every side shoot below the cut pushes at once. Do this once to the young "
-      "plant, then once to each of the released side branches, and you have converted one growing point "
-      "into eight to twelve. Those become the <strong>permanent frame</strong>; everything above them is crop."),
+    p("The shape of the plant has more effect on the number of cuttings than the vigor of the "
+      "plant. A mother plant with no pruning makes one top shoot that is much larger than the side "
+      "shoots. It also makes a small number of weak side shoots. This shape gives a low number of "
+      "cuttings. Growers of fruit and hedge plants use the same method. They remove the top shoot "
+      "in the first weeks, make the plant wide, and keep the plant flat."),
+    p("The top shoot makes a hormone. The hormone flows down in the stem and prevents the growth of "
+      "each side shoot below it. This effect is <strong>apical dominance</strong>: the top bud "
+      "controls the growth of each node below it. When you cut the top of the shoot "
+      "(<strong>topping</strong>), the quantity of hormone decreases. Then each side shoot that is "
+      "below the top starts to increase in size at the same time.</p><p>Cut the top of the young "
+      "plant one time. Then cut the top of each side shoot that starts to increase in size one "
+      "time. As a result, you change one growing point into eight to twelve growing points. These "
+      "growing points become the <strong>permanent frame</strong>. All the shoots above the frame "
+      "are crop."),
     steps([
-      ("Establish (weeks 0–2)", "Start from your best <em>tested</em> clone, the mother inherits everything, good and bad. Transplant, let her root out and settle."),
-      ("First top (week 2–3)", "Top above the 4th–5th node. The plant answers with 4–6 strong side shoots."),
-      ("Build scaffolds (weeks 3–5)", "Select the best 4–6 laterals as permanent scaffolds; top each once so they fork. Remove the rest."),
-      ("Open the centre (ongoing)", "Strip weak, inward-facing shoots so light and air reach the middle. A shaded centre grows the thin, stringy shoots that root worst."),
-      ("First harvest (week 5–6)", "The tips you would prune anyway are your first cuttings. From here, the plant is in production."),
+      ("Start (weeks 0–2)", "Start with your best clone that has a <em>clean test result</em>. The mother plant has all the properties of the clone, good and bad. Transplant the clone. Give the clone time to make roots in the new substrate."),
+      ("First topping (week 2–3)", "Cut the top of the plant above node 4 or node 5. As a result, the plant makes 4 to 6 strong side shoots."),
+      ("Make the scaffolds (weeks 3–5)", "Select the best 4 to 6 side shoots as permanent scaffolds. Cut the top of each scaffold one time. Then each scaffold divides into two branches. Remove the other side shoots."),
+      ("Open the middle (continuous)", "Remove the weak shoots that point to the middle of the plant. Then the middle of the plant receives light and air. A middle that is in shade makes thin, long shoots, and these shoots have the lowest rooting rate."),
+      ("First harvest (week 5–6)", "The tips that you remove in the pruning are your first cuttings. After the first harvest, the plant is in production."),
     ]),
     figure(_FIGS["architecture"], 4,
-      "The production shape: a short trunk topped young, 4–6 permanent scaffolds, and a flat harvest "
-      "zone of upright shoots. The frame is built once and never cut into; the hedge above it is "
-      "harvested every two to three weeks."),
-    p("Harvest rules keep the factory running: cut each shoot <strong>above its first node</strong> so "
-      "the stub regrows two shoots (the hedge gets denser every pass); take at most about half the "
-      "canopy in one pass; and leave every scaffold with working leaves, a fully stripped branch "
-      "stalls instead of regrowing. Expect a 2–3 week regrowth cycle between full passes "
-      "(practitioner convention)."),
-    p("Cut with the finished cutting in mind. The propagation research says a cannabis cutting roots "
-      "best with <strong>three or more fully expanded leaves left intact</strong>, and that trimming "
-      "leaf tips, the classic nursery habit, dropped rooting success from 71% to 53%" + _c("mp-caplan-2018-cuttings") +
-      ". It also found position barely matters: cuttings from apical (top) and basal (lower) shoots "
-      "rooted about the same" + _c("mp-caplan-2018-cuttings") + ". So harvest the whole hedge, not "
-      "just the pretty tips, but grow shoots big enough to carry three real leaves."),
-    figure(L.line("Output of one mid-size mother after planting",
+      "The figure shows the shape of a plant in production. The plant has a short stem with a "
+      "topping at the young plant stage, 4 to 6 permanent scaffolds, and a flat harvest zone of "
+      "vertical shoots. You make the frame one time and you do not cut it. You harvest the shoots "
+      "above the frame at an interval of two to three weeks."),
+    p("Procedures for the harvest keep the supply of cuttings stable. Cut each shoot <strong>above "
+      "its first node</strong>. Then the stub makes two shoots, and the canopy has more shoots at "
+      "each harvest.</p><p>Harvest a maximum of approximately half of the canopy at one time. Keep "
+      "leaves on each scaffold. A scaffold with no leaves stops growth and does not make new "
+      "shoots. The regrowth cycle between full harvests is usually 2 to 3 weeks (grower method)."),
+    p("The shoot that you cut must be a good cutting. A test of propagation showed that a cannabis "
+      "cutting has the highest rooting rate with <strong>three or more fully expanded leaves on the "
+      "cutting</strong>. The same test showed that cutting the tips of the leaves, the usual method "
+      "in plant nurseries, decreased the rooting rate from 71% to 53%" + _c("mp-caplan-2018-cuttings") +
+      ".</p><p>The test also showed that the position of the shoot on the plant has almost no "
+      "effect. Cuttings from top shoots and cuttings from bottom shoots had approximately the same "
+      "rooting rate" + _c("mp-caplan-2018-cuttings") + ". Thus harvest the shoots of the canopy, "
+      "not only the tips. But let the shoots increase in size until they can have three leaves of "
+      "full size."),
+    figure(L.line("Output of one middle-size mother after transplant",
             [("w0", 0), ("w2", 0), ("w4", 6), ("w6", 14), ("w8", 22), ("w10", 28), ("w12", 32), ("w14", 34), ("w16", 35)],
             ["w0", "w2", "w4", "w6", "w8", "w10", "w12", "w14", "w16"],
             ylab="cuttings / week", ymax=40,
-            note="Indicative practitioner curve, cultivar- and size-dependent. The frame costs ~6 weeks before it pays."), 5,
-      "A mother spends her first six weeks becoming a factory. Plan the build phase into your "
-      "production calendar. A new mother is not a source of cuttings on day one."),
-    callout("note", "How many cuttings per mother?",
-      p("There is no good published number. It depends on cultivar, pot size and frame. Practitioner "
-        "ballparks: a compact mother in a 10–15 L (2.6–4.0 gal) pot gives roughly 15–30 cuttings per pass; a large "
-        "production mother in 30–50 L (7.9–13.2 gal) can give 50–100+. Treat these as planning starting points and "
-        "measure your own plants, your records beat anyone's ballpark within two months.")),
+            note="Approximate curve (grower method). The cultivar and size change it. The frame is complete in approximately 6 weeks."), 5,
+      "The first six weeks of a mother plant are for the frame. Include these weeks when you "
+      "schedule production. A new mother plant is not a source of cuttings on the first day."),
+    callout("note", "Number of cuttings for each mother plant",
+      p("No paper gives a good number for this. The number changes with the cultivar, the size of "
+        "the pot and the frame. Growers give these estimates: a small mother plant in a pot of "
+        "10–15 L (2.6–4.0 gal) gives approximately 15 to 30 cuttings in each harvest. A large "
+        "mother plant for production in a pot of 30–50 L (7.9–13.2 gal) can give 50 to 100 cuttings "
+        "or more.</p><p>We recommend that you use these estimates as first values and that you "
+        "measure your plants. After two months, your records are better than the estimates of other "
+        "growers.")),
   ]})
 
 # ---------------------------------------------------------------- 07 scheduling
 SECTIONS.append({"id": "scheduling", "kicker": "07 · Do this",
-  "title": "Scheduling mothers against production demand",
+  "title": "Number of mother plants for production",
   "blocks": [
-    p("Mother count is a supply-chain calculation, not a vibe. Work backwards from the flower room: "
-      "how many plants does each flip need, and when? Then inflate for losses. Not every cutting "
-      "roots, and not every rooted clone is worth vegging, so take 15–40% more cuttings than the "
-      "plant count you actually need, exactly as in the <a href='cloning.html'>cloning guide</a>."),
-    table(["Step", "Number", "Working"], [
-      ["Plants to flower", "100", "The target the room actually needs"],
-      ["Veg cull (~10%)", "keep 110", "Weak and slow clones get binned at transplant"],
-      ["Rooting rate (~85%)", "take ≥130", "110 ÷ 0.85 — a realistic strike rate, not a brochure one"],
-      ["Round up + buffer", "take 140", "Overage costs cents; a short flower room costs a cycle"],
-    ], cls="compact", caption="The demand math for a 100-plant flip. Adjust the two loss rates to your own measured numbers as soon as you have them."),
-    figure(L.bars("The demand math: 100 flowering plants",
-            [("Cut", 140), ("Rooted", 119), ("Into veg", 110), ("To flower", 100)], unit="",
-            note="140 cuttings at 85% rooting ≈ 119; cull to 110 in veg; 100 make the room, with spares.",
+    p("Calculate the number of mother plants. Start at the flower room. Find the number of plants "
+      "for each batch and the date when you must have each batch. Then increase the number for the "
+      "plants that you do not use.</p><p>Some cuttings do not make roots. Some clones with roots "
+      "are not good for the vegetative stage. Thus make 15% to 40% more cuttings than the number of "
+      "plants that you must have. The <a href='cloning.html'>cloning paper</a> gives the same value."),
+    table(["Step", "Number", "Information"], [
+      ["Plants for the flower room", "100", "The number that the room must have"],
+      ["Discard in the vegetative stage (approximately 10%)", "keep 110", "Discard the weak and slow clones at transplant"],
+      ["Rooting rate (approximately 85%)", "make a minimum of 130", "110 ÷ 0.85. The rooting rate is a correct value, not a value that a supplier gives."],
+      ["Increase and add a buffer", "make 140", "The cost of the cuttings that are more than the minimum is small. A flower room that is not full is a waste of one crop cycle."],
+    ], cls="compact", caption="The table shows how to calculate the number of cuttings for a batch of 100 plants for the flower room. Change the two percentages in the table to the values that you measure, when you have the values."),
+    figure(L.bars("Numbers for 100 flower-room plants",
+            [("Cut", 140), ("With roots", 119), ("Vegetative", 110), ("To flower", 100)], unit="",
+            note="140 cuttings at 85% rooting ≈ 119. Discard to 110. 100 fill the room, and more are available.",
             maxv=160), 6,
-      "Losses are normal and planned-for. The overage exists so that culling hard at every stage "
-      "still fills the flower room on schedule."),
-    p("Then divide by output: mothers needed = cuttings per flip ÷ yield per mother per pass. If "
-      "mid-size mothers give ~35 cuttings a pass and you need 140 per flip, that is four mothers, "
-      "so run <strong>five</strong>. The spare is not optional: it is what lets you retire, rest or "
-      "quarantine a plant without missing a flip."),
-    p("Stagger the harvests. Split the bank into A and B cohorts and alternate passes so no mother is "
-      "stripped hard twice in a row. This keeps every pass inside the take-half rule, and it gives "
-      "you a built-in diagnostic: if both cohorts' rooting slips together, suspect the room; if one "
-      "cohort slips alone, suspect those plants."),
-    callout("tip", "A cuttings calendar beats a headcount",
-      p("A smaller bank of well-run, well-tested mothers on a stagger out-produces a crowd of "
-        "neglected ones, and every extra plant is another thing to water, prune and test on "
-        "rotation" + _c("mp-tumi-hlvd-testing") + ". Size the bank to the calendar, not to comfort.")),
+      "It is usual that some plants do not continue at each stage. The numbers in the table include "
+      "these plants. The cuttings that are more than the minimum number let you discard many plants "
+      "at each stage. Then the flower room is full at the correct time."),
+    p("Then divide the number of cuttings for each batch by the output of one mother plant in each "
+      "harvest. For example, a middle-size mother plant gives approximately 35 cuttings in each "
+      "harvest, and you must have 140 cuttings for each batch. Thus the result is four mother "
+      "plants. Use <strong>five</strong> mother plants.</p><p>The fifth mother plant is necessary. "
+      "With this plant, you can remove a plant from production. You can keep a plant out of "
+      "production for a time. You can put a plant in quarantine. Then you have sufficient cuttings "
+      "for each batch."),
+    p("Do not harvest all the mother plants at the same time. Divide the mother bank into two "
+      "groups, A and B. Harvest group A, then group B, then group A again. Thus you do not harvest "
+      "most of the shoots of the same mother plant two times one after the other. Each harvest "
+      "stays in the limit of approximately half of the canopy.</p><p>The two groups also give you a "
+      "test of the cause of a problem. If the rooting rate of the two groups decreases at the same "
+      "time, it is possible that the room is the cause. If the rooting rate of only one group "
+      "decreases, it is possible that the plants of that group are the cause."),
+    callout("tip", "Cuttings at the correct times are better than many plants",
+      p("A small mother bank gives more cuttings than a large number of plants with no correct "
+        "procedure. The small mother bank has a correct procedure, tests at regular intervals and "
+        "harvests in two groups. Each plant that you add is more work for water, pruning and tests "
+        "at regular intervals" + _c("mp-tumi-hlvd-testing") + ". Select the size of the mother bank "
+        "because of the dates when the flower rooms must have plants. Do not select a larger size "
+        "only for safety.")),
   ]})
 
 # ---------------------------------------------------------------- 08 age & drift
-SECTIONS.append({"id": "age-drift", "kicker": "08 · The debate",
+SECTIONS.append({"id": "age-drift", "kicker": "08 · Two views",
   "title": "Mother-plant age and genetic stability",
   "blocks": [
-    p("Grower folklore says a mother 'degrades' and should be replaced every 6–12 months. Plenty of "
-      "operators, meanwhile, hold the same mother for five-plus years and swear she is identical. "
-      "Both camps are pointing at something real. They are just pointing at different mechanisms."),
-    p("<strong>Somatic mutation is real.</strong> Every time a cell divides, the DNA is copied, and "
-      "copying can introduce small errors. Think of a photocopy of a photocopy: each generation can "
-      "carry forward a flaw the original did not have. Unlike animals, plants do not separate their "
-      "reproductive cells from the rest of the body, so a mutation in a growing tip ends up in every "
-      "cutting taken from it. Deep whole-genome sequencing of a single cannabis plant found measurable <strong>genetic "
-      "mosaicism</strong> within one individual: the top, middle and bottom of the same plant were not "
-      "genetically identical" + _c("mp-adamek-2022-mosaicism") + ". The study was motivated by exactly "
-      "the folklore above, growers reporting clonal lines that lose vigour and potency over time" + _c("mp-adamek-2022-mosaicism") + "."),
-    p("But the follow-up work reframed the whole debate: across 70 micropropagated clones, mutation "
-      "load tracked <strong>the number of propagation cycles</strong>, almost perfectly linearly "
-      "(r &gt; 0.92), and <em>not</em> chronological age" + _c("mp-adamek-2024-subcultures") + ". "
-      "Clones of the same calendar age carried very different mutation loads depending on how many "
-      "times they had been re-propagated. Every cut-and-regrow round is a burst of cell division, and "
-      "cell division is where copying errors happen."),
-    figure(L.line("Mutation load rises with propagation cycles, not with age",
+    p("Some growers think that a mother plant becomes worse with time and that you must replace it "
+      "each 6 to 12 months. Many operators keep the same mother plant for five years or more. They "
+      "think that the plant is the same as at the start. The two groups see an effect that occurs. "
+      "But the mechanisms are different."),
+    p("<strong>Somatic mutation occurs.</strong> Each time that a cell divides, the cell copies the "
+      "DNA, and the copy can have small errors. Each new generation of copies can have an error "
+      "that the first plant did not have. In an animal, the reproductive cells stay apart from the "
+      "other cells. In a plant, the reproductive cells do not stay apart from the other cells. Thus "
+      "a mutation in a growing tip goes into each cutting that you cut from the tip.</p><p>A test "
+      "used deep whole-genome sequencing on one cannabis plant. The test measured <strong>genetic "
+      "mosaicism</strong> in the plant. The top, the middle and the bottom of the plant did not "
+      "have the same genetics" + _c("mp-adamek-2022-mosaicism") + ". Reports from growers show that "
+      "clonal lines have lower vigor and lower potency with time. These reports were the cause of "
+      "the test" + _c("mp-adamek-2022-mosaicism") + "."),
+    p("But the next test changed the view. The test used 70 clones from micropropagation. The "
+      "mutation load had an almost linear relation with <strong>the number of propagation "
+      "cycles</strong> (r &gt; 0.92). It did <em>not</em> have this relation with the age of the "
+      "clones" + _c("mp-adamek-2024-subcultures") + ". Clones of the same age had very different "
+      "mutation loads, because they had different numbers of propagation cycles. Each cycle of "
+      "cutting and regrowth includes many cell divisions, and the errors in the copies of the DNA "
+      "occur when the cells divide."),
+    figure(L.line("Mutation load increases with propagation cycles, not with age",
             [("0", 0), ("1", 1), ("2", 2), ("3", 3), ("4", 4), ("5", 5), ("6", 6)],
             ["0", "1", "2", "3", "4", "5", "6"],
-            ylab="relative mutation load", ymax=8,
-            note="Indicative shape. In micropropagated cannabis, variant count rose linearly with subculture number (r > 0.92)."), 7,
-      "The x-axis that matters is propagation cycles, not months on the bench. A mother sitting "
-      "quietly for two years accrues less mutational churn than a line re-cloned from a clone every "
-      "month." + _c("mp-adamek-2024-subcultures")),
-    p("What actually degrades long-held mothers, in practice, is usually not the genome: it is "
-      "accumulating pathogens (the next two sections), a root-bound pot, an exhausted woody frame, or "
-      "care that drifted. All of those are testable and fixable, and none of them is 'age'. Epigenetic "
-      "change, heritable gene-expression drift without sequence change, is also documented in clonal "
-      "cannabis populations, but its contribution to lost vigour is not yet settled; treat it as an "
-      "open question, not a scheduling rule."),
-    callout("key", "The verdict",
-      p("Keep a mother for as long as she (a) tests clean and (b) her cuttings' rooting rate and "
-        "downstream performance hold steady in your records. Replace on evidence, not anniversaries. "
-        "And when you do re-mother, start from low-generation, tested material, not from the far end "
-        "of a long clone-of-clone chain" + _c("mp-adamek-2024-subcultures") + ".")),
+            ylab="mutation load (ratio)", ymax=8,
+            note="Approximate shape. In micropropagation of cannabis, variants increased linearly with the subculture number (r > 0.92)."), 7,
+      "The horizontal axis shows the number of propagation cycles and not the number of months. A "
+      "mother plant that you keep for two years, with no new propagation cycle, has a smaller "
+      "number of mutations. A sequence of clones from clones, with one cycle each month, has a "
+      "larger number." + _c("mp-adamek-2024-subcultures")),
+    p("The genome is usually not the cause when a mother plant that you keep for a long time "
+      "becomes worse. The causes are usually pathogens that increase in number (refer to the next "
+      "two sections). Other causes are a pot that is full of roots, a woody frame that is weak, or "
+      "work procedures that change. You can do tests and corrections for each cause, and none of "
+      "the causes is age.</p><p>Reports also show epigenetic change in groups of cannabis clones. "
+      "Epigenetic change is a change in the expression of genes that goes to the next plants, with "
+      "no change in the sequence of the DNA. The data are not sufficient. They do not show that "
+      "this change causes lower vigor. Do not use epigenetic change to select the time of "
+      "replacement."),
+    callout("key", "The decision",
+      p("Keep a mother plant when two conditions are correct. (a) The tests show clean results. (b) "
+        "In your records, the rooting rate of its cuttings and the performance of the plants "
+        "downstream stay stable. Replace a mother plant because of data, not because of a date. "
+        "When you make a new mother plant, start with material that has a low generation number and "
+        "clean test results. Do not start with material from the far end of a long sequence of "
+        "clones from clones" + _c("mp-adamek-2024-subcultures") + ".")),
   ]})
 
 # ---------------------------------------------------------------- 09 pathogen amplifier
 SECTIONS.append({"id": "pathogen-risk", "kicker": "09 · The risk",
-  "title": "Pathogen amplification in mother rooms",
+  "title": "Multiplication of pathogens in mother rooms",
   "blocks": [
-    p("Whatever lives in the mother room ships to every room downstream, on schedule, with a courtesy "
-      "label on the tray. Spider mites, root aphids, fungus gnats, powdery mildew, root-rot organisms"
-      ". The mother room is the reservoir that re-seeds them all, which is why IPM effort concentrated "
-      "there pays off everywhere (see the <a href='ipm-sop.html'>IPM SOP</a>)."),
+    p("Each organism that is in the mother room goes to each room downstream with the cuttings, at "
+      "the correct time. The organisms are spider mites, root aphids, fungus gnats, powdery mildew "
+      "and root-rot organisms. The mother room is the source that supplies these pests to all other "
+      "rooms. Thus the work for IPM in the mother room has an effect in all other rooms (refer to "
+      "the <a href='ipm-sop.html'>IPM SOP</a>)."),
     ul([
-      "<strong>Blades and scissors</strong>, sap-to-sap contact, the number one route for the pathogen that matters most.",
-      "<strong>Hands and gloves</strong>, change gloves between plants on cut days, not between rooms.",
-      "<strong>Shared or recirculated irrigation</strong>. Pathogens have been detected moving plant-to-plant through nutrient solution and run-off" + _c("mp-punja-2025-hplvd-mgmt") + ". Mothers should never share a recirculating loop or a flood table.",
-      "<strong>Benches, trays and cans</strong>. Viroid RNA has been recovered from bench surfaces and watering cans in working facilities" + _c("mp-punja-2025-hplvd-mgmt") + ".",
-      "<strong>The cuttings themselves</strong>, the whole point of the room, and the perfect courier.",
+      "<strong>Blades and cutting tools.</strong> Sap goes from one plant to the next plant on the tool. For the most important pathogen, this movement is the primary method of infection.",
+      "<strong>Hands and gloves.</strong> On days when you cut, change the gloves between plants, not between rooms.",
+      "<strong>Irrigation with one supply for many plants, or with a recirculating loop.</strong> Tests found pathogens that moved from one plant to the next plant in the nutrient solution and in the runoff" + _c("mp-punja-2025-hplvd-mgmt") + ". Do not connect mother plants to a recirculating loop or a flood table.",
+      "<strong>Benches, trays and watering cans.</strong> Tests found viroid RNA on the surfaces of benches and on watering cans in facilities that were in operation" + _c("mp-punja-2025-hplvd-mgmt") + ".",
+      "<strong>The cuttings.</strong> The cuttings are the product of the room, and they move the pathogens to all other rooms.",
     ], "tight"),
-    p("Three habits close most of the routes: mothers get <strong>dedicated tools</strong> that never "
-      "visit other rooms; work runs <strong>cleanest-first</strong> (mothers before veg, veg before "
-      "flower, never backwards through a dirty room); and anything that touches sap gets sanitised or "
-      "swapped <strong>between plants</strong>, not between benches. Then there is the organism that "
-      "turned all of this from good practice into survival, next section."),
+    p("Three procedures prevent most of the movement of pathogens from one plant to the next plant. "
+      "Use <strong>dedicated tools</strong> for mother plants. Do not use these tools in other "
+      "rooms. Work in the sequence of the rooms <strong>from clean to dirty</strong>: mother "
+      "plants, then vegetative plants, then flower plants. Do not move in the opposite direction "
+      "through a dirty room. Sanitize or replace each item that touches sap <strong>between "
+      "plants</strong>, not between benches.</p><p>The next section gives information about the "
+      "organism that makes these procedures necessary."),
   ]})
 
 # ---------------------------------------------------------------- 10 HpLVd
-SECTIONS.append({"id": "hplvd", "kicker": "10 · The threat",
-  "title": "Hop latent viroid (HLVd) in mother stock",
+SECTIONS.append({"id": "hplvd", "kicker": "10 · The primary risk",
+  "title": "Hop latent viroid in mother stock",
   "blocks": [
-    p("<strong>Hop latent viroid (HpLVd)</strong> is a bare, circular strand of RNA about 256 "
-      "nucleotides long, no protein coat, no cell, a fraction the size of a virus" + _c("mp-punja-2025-hplvd-mgmt") +
-      ". It was first tied to failing cannabis crops in California in 2019, as the cause of what "
-      "growers had been calling <strong>dudding</strong>" + _c("mp-warren-2019-hplvd-ca") + ": plants "
-      "that look normal through veg, then finish small and brittle with poor trichome set and badly "
-      "reduced potency."),
-    p("The scale is why it leads this paper. A 2021 industry survey built on roughly 200,000 tissue "
-      "tests found about <strong>90% of California cannabis facilities</strong> carried HpLVd, with "
-      "around 30% of plants affected in contaminated sites" + _c("mp-adkar-2023-hidden-threat") + ". "
-      "Reported losses in dudded plants run to 50–70% of THC content" + _c("mp-adkar-2023-hidden-threat") +
-      ", industry estimates put the annual cost near US$4 billion" + _c("mp-medgen-hlvd") + ", and "
-      "sampling reported by researchers found roughly 40% of flower on Canadian dispensary shelves "
-      "testing positive" + _c("mp-medgen-hlvd") + ". This is not a rare disease; it is the default "
-      "state of untested stock."),
-    p("The word <em>latent</em> is the trap: <strong>most infected plants show nothing</strong>" + _c("mp-adkar-2023-hidden-threat") +
-      ". And a mother plant is the viroid's perfect host, long-lived (time to acquire it), cut "
-      "hundreds of times a year (sap exposure at every pass), and upstream of everything (every "
-      "cutting inherits it). The viroid has been detected in fully asymptomatic stock plants and in "
-      "the rooted cuttings taken from them" + _c("mp-punja-2025-hplvd-mgmt") + ". One quiet mother "
-      "means months of infected clones, invisibly."),
+    p("<strong>Hop latent viroid (HpLVd)</strong> is a bare, circular molecule of RNA with a length "
+      "of approximately 256 nucleotides. It has no protein coat and no cell. Its size is a fraction "
+      "of the size of a virus" + _c("mp-punja-2025-hplvd-mgmt") + ". In 2019, a test in California "
+      "first connected HpLVd with defective cannabis crops. Growers use the name "
+      "<strong>dudding</strong> for the problem that HpLVd causes" + _c("mp-warren-2019-hplvd-ca") +
+      ".</p><p>The plants have no symptoms in the vegetative stage. At harvest, the plants are "
+      "small and weak, and they break easily. The plants have a low density of trichomes and a much "
+      "lower potency."),
+    p("This paper gives much information about HpLVd because the problem is large. A report from "
+      "2021 uses data from approximately 200,000 tissue tests. The report shows that approximately "
+      "<strong>90% of the cannabis facilities in California</strong> had HpLVd. In the sites that "
+      "had HpLVd, approximately 30% of the plants had it" + _c("mp-adkar-2023-hidden-threat") +
+      ".</p><p>Reports show that plants with dudding can have a THC content that is 50% to 70% lower" +
+      _c("mp-adkar-2023-hidden-threat") + ". An estimate of the industry gives a cost of "
+      "approximately US$4 billion for each year" + _c("mp-medgen-hlvd") + ". A test of samples of "
+      "flower from dispensaries in Canada found a positive result in approximately 40% of the "
+      "samples" + _c("mp-medgen-hlvd") + ". This disease is frequent. It is the usual condition of "
+      "stock with no tests."),
+    p("The term <em>latent</em> shows the problem: <strong>most infected plants show no "
+      "symptoms</strong>" + _c("mp-adkar-2023-hidden-threat") + ". A mother plant is a very good "
+      "host for the viroid. The plant stays in the room for a long time, and thus the viroid has "
+      "much time to infect it. You cut the plant many times in each year, and thus the sap touches "
+      "a tool at each harvest. The plant is upstream of all other plants, and thus each cutting "
+      "gets the viroid.</p><p>Tests found the viroid in stock plants with no symptoms and in the "
+      "cuttings with roots from these plants" + _c("mp-punja-2025-hplvd-mgmt") +
+      ". One infected mother plant with no symptoms supplies infected clones for months, and you "
+      "cannot see the infection."),
     figure(_FIGS["hlvd_tools"], 8,
-      "The main route is mechanical: infectious sap carried on the blade from plant to plant. Sap "
-      "stays infectious on tools and surfaces for about 7 days, and in dried plant matter for up to 4 "
-      "weeks" + _c("mp-punja-2025-hplvd-mgmt") + ". A fresh or sanitised blade per plant converts an "
-      "outbreak into a single casualty."),
-    p("Transmission, measured: mechanical spread via sap and tools is primary" + _c("mp-adkar-2023-hidden-threat") + _c("mp-punja-2025-hplvd-mgmt") +
-      ", but the viroid also moved <strong>root-to-root between plants sharing hydroponic nutrient "
-      "solution within about two weeks</strong>, and was recovered from recirculated and run-off "
-      "solution, bench surfaces and watering cans" + _c("mp-punja-2025-hplvd-mgmt") + ". After "
-      "entering a cut stem it reached roots in 2–3 weeks but foliage only at 4–6 weeks" + _c("mp-punja-2025-hplvd-mgmt") +
-      ". Which is why a leaf test can pass a freshly infected plant, and why root sampling and "
-      "re-testing exist (next section)."),
-    figure(L.hbars("Reported worst-case impact of dudding",
+      "The primary method by which the viroid moves is mechanical: sap that can infect goes from "
+      "one plant to the next plant on the blade. Sap on tools and surfaces can infect other plants "
+      "for approximately 7 days. Sap in dried plant material can infect other plants for a maximum "
+      "of 4 weeks" + _c("mp-punja-2025-hplvd-mgmt") + ". A new or sanitized blade for each plant "
+      "keeps the infection in one plant."),
+    p("Tests measured how HpLVd moves from one plant to the next plant. The primary method is "
+      "mechanical: sap and tools move the viroid" + _c("mp-adkar-2023-hidden-threat") +
+      _c("mp-punja-2025-hplvd-mgmt") + ". But the viroid also moved <strong>from the roots of one "
+      "plant to the roots of the next plant</strong>. This occurred <strong>when the plants had the "
+      "same hydroponic nutrient solution, in a maximum of approximately two weeks</strong>. Tests "
+      "also found the viroid in recirculating solution, in runoff, on the surfaces of benches and "
+      "on watering cans" + _c("mp-punja-2025-hplvd-mgmt") + ".</p><p>When the viroid went into a "
+      "stem that a tool cut, it went to the roots in 2 to 3 weeks and to the leaves only after 4 to "
+      "6 weeks" + _c("mp-punja-2025-hplvd-mgmt") + ". Thus a test of a leaf can give a clean result "
+      "for a plant with a new infection. Thus you must use samples of roots and do the test again "
+      "(refer to the next section)."),
+    figure(L.hbars("Worst effect of dudding (reports)",
             [("THC content", 70), ("Cannabinoid production", 50), ("Terpene production", 50)],
-            unit="%", note="Upper ends of reported reduction ranges in infected, symptomatic plants vs clean."), 9,
-      "What an infected plant can cost by harvest. Reported reductions reach 50–70% of THC and up to "
-      "half of cannabinoid and terpene production, from a plant that looked fine at cutting time." + _c("mp-adkar-2023-hidden-threat")),
-    p("Tool protocol: the gold standard is a <strong>fresh single-use blade per mother</strong>. "
-      "Failing that, a 10% household-bleach dip between plants" + _c("mp-medgen-hlvd") + ", bleach "
-      "and hypochlorous acid degraded viroid RNA in sap in testing, where quats and most 'gentler' "
-      "sanitisers did not reliably" + _c("mp-punja-2025-hplvd-mgmt") + ". Two hard truths to go with "
-      "it: no disinfectant does anything for a plant already infected. Infected means cull" + _c("mp-punja-2025-hplvd-mgmt") +
-      ", and isopropyl alcohol alone is not proven against viroid RNA, so the flame-and-wipe habit "
-      "is comfort, not control."),
-    callout("warn", "Long days hide it; they don't stop it",
-      p("In trials, HpLVd spread through the plant <em>faster</em> once plants moved to a 12/12 "
-        "flowering photoperiod than under continuous light" + _c("mp-punja-2025-hplvd-mgmt") + ". A "
-        "mother on 18 h days can carry a low, slow, hard-to-detect infection that only shows its "
-        "teeth downstream in flower. 'My mothers look clean' and 'my mothers are clean' are different "
-        "sentences, only a test connects them.")),
+            unit="%", note="Highest values of ranges in reports, for plants with dudding compared with clean plants."), 9,
+      "The figure shows the effect of infection at harvest. Reports show that the THC content of an "
+      "infected plant can be lower by 50% to 70%. The production of cannabinoids and terpenes can "
+      "be lower by a maximum of half. The plant had no symptoms when it was a source of cuttings." +
+      _c("mp-adkar-2023-hidden-threat")),
+    p("The best procedure for tools is <strong>a new blade that you use one time for one mother "
+      "plant</strong>. If you cannot use a new blade for each plant, put the blade in 10% household "
+      "bleach between plants" + _c("mp-medgen-hlvd") + ". In tests, bleach and hypochlorous acid "
+      "broke the RNA of the viroid in sap. Quaternary ammonium compounds and most of the other "
+      "sanitizers, which are weaker, did not break the RNA each time" + _c("mp-punja-2025-hplvd-mgmt") +
+      ".</p><p>Two facts are important. No disinfectant helps a plant that has an infection. "
+      "Discard an infected plant" + _c("mp-punja-2025-hplvd-mgmt") + ". No test shows that "
+      "isopropyl alcohol breaks the RNA of the viroid when it is the only treatment. Thus a flame "
+      "and alcohol do not prevent infection with the viroid."),
+    callout("warn", "Long days show no symptoms and do not stop the viroid",
+      p("Do not think that a mother plant is clean because it looks clean. Only a test shows the "
+        "difference. In tests, HpLVd moved through the plant <em>more quickly</em> with a 12/12 "
+        "flowering photoperiod than with continuous light" + _c("mp-punja-2025-hplvd-mgmt") +
+        ". A mother plant with 18 h days can have a low, slow infection that is not easy to find. "
+        "The symptoms occur only in the downstream plants in the flowering stage.")),
   ]})
 
 # ---------------------------------------------------------------- 11 indexing
 SECTIONS.append({"id": "indexing", "kicker": "11 · Do this",
-  "title": "Testing rotation for mother-stock health",
+  "title": "Tests at regular intervals for mother stock",
   "blocks": [
-    p("<strong>Indexing</strong> is the clean-stock habit of testing every stock plant on a fixed "
-      "rotation, so that 'she tested clean' always has a date on it. In cannabis the workhorse assay "
-      "is RT-qPCR for HpLVd, run from a small tissue sample" + _c("mp-medgen-hlvd") + ", cheap "
-      "enough now that the rotation, not the test, is the discipline."),
-    p("The cadence that industry testing labs converge on: <strong>every mother, every 4–6 "
-      "weeks</strong>" + _c("mp-tumi-hlvd-testing") + ", and always <strong>before a big cutting "
-      "day</strong> rather than after it" + _c("mp-medgen-hlvd") + ". Sample <strong>root "
-      "tissue</strong> where possible, the viroid concentrates there earliest and most uniformly, "
-      "making roots the most reliable single sample" + _c("mp-tumi-hlvd-testing") + _c("mp-punja-2025-hplvd-mgmt") +
-      ", and take material from more than one point on the plant, because viroid distribution is "
-      "uneven and a single lucky sample can pass an infected plant" + _c("mp-tumi-hlvd-testing") + "."),
+    p("<strong>Indexing</strong> is the procedure of clean-stock horticulture in which you do a "
+      "test on each stock plant at regular intervals. Thus each clean result has a date. In "
+      "cannabis, the usual test for HpLVd is RT-qPCR, which uses a small sample of tissue" +
+      _c("mp-medgen-hlvd") + ". The cost of the test is low at this time. Thus the primary task is "
+      "the interval between the tests, not the test."),
+    p("Laboratories of the industry use this interval: do a test on <strong>each mother plant at an "
+      "interval of 4 to 6 weeks</strong>" + _c("mp-tumi-hlvd-testing") + ". Always do the test "
+      "<strong>before a large harvest of cuttings</strong>, not after the harvest" +
+      _c("mp-medgen-hlvd") + ".</p><p>If it is possible, use a sample of <strong>root "
+      "tissue</strong>. The viroid concentrates in the roots first and most equally. Thus roots are "
+      "the most accurate sample" + _c("mp-tumi-hlvd-testing") + _c("mp-punja-2025-hplvd-mgmt") +
+      ". Use material from more than one point on the plant. The concentration of the viroid is not "
+      "the same in all parts of the plant. Thus one sample can give a clean result for an infected "
+      "plant" + _c("mp-tumi-hlvd-testing") + "."),
     figure(_FIGS["testcal"], 10,
-      "A year of indexing on one strip: short-interval HpLVd qPCR on every mother, a quarterly "
-      "deep review of pests, hygiene and records, and a quarantine-plus-two-tests gate on anything "
-      "new" + _c("mp-tumi-hlvd-testing") + "."),
-    p("<strong>Intake is the front door, and it is where most banks get burned.</strong> New genetics "
-      " (a bought-in clone, a swap, a rescue) is the single most common way HpLVd enters a facility. "
-      "Quarantine everything: separate room (or at minimum a separated bench with its own tools), "
-      "test on arrival, hold 2–4 weeks, and test again before it touches the bank. The re-test is not "
-      "paranoia: systemic distribution takes around six weeks, so an early sample from a "
-      "just-infected plant can genuinely test clean" + _c("mp-medgen-hlvd") + "."),
-    figure(L.flow("Intake quarantine: nothing joins the bank untested",
-            [("Arrive", "log it, isolate it"), ("Quarantine", "own space + tools"),
-             ("Test 1", "qPCR on arrival"), ("Hold", "2–4 weeks"),
-             ("Test 2", "roots, pre-release"), ("Join bank", "two clean results")]), 11,
-      "The gate for incoming genetics. Two clean tests separated by a hold beats one clean test on "
-      "arrival, because a fresh infection can sit below detection for weeks" + _c("mp-medgen-hlvd") + "."),
-    p("Keep records like they are part of the plant: per-mother ID, test dates and results, cut "
-      "counts, and per-batch rooting %. The rooting trend is your free continuous assay, a mother "
-      "whose clones' strike rate slides ten points over three batches is telling you something the "
-      "last quarterly test hasn't caught yet."),
-    callout("warn", "The positive-result playbook",
-      p("Isolate the plant immediately. Re-test to confirm, fresh sample, roots. Trace every plant "
-        "the same tools touched since the last clean test and test those. Cull confirmed positives: "
-        "bag the plant <em>at the bench</em> and carry it out sealed, don't walk loose infected "
-        "material through the facility. Elite genetics can sometimes be rescued through meristem "
-        "tissue culture, averaging ~41% pathogen-free recovery, anywhere from 0–100% by genotype" + _c("mp-punja-2025-hplvd-mgmt") +
-        ". But that is a months-long lab job (see <a href='tissue-culture.html'>tissue culture</a>), "
-        "not a way to save production stock this cycle.")),
+      "The figure shows one year of indexing. Each mother plant has an HpLVd qPCR test at short "
+      "intervals. Each three months, there is a deep inspection of pests, hygiene and records. Each "
+      "new plant goes into quarantine and has two tests" + _c("mp-tumi-hlvd-testing") +
+      "."),
+    p("<strong>The entry of new plants is the primary risk for a mother bank.</strong> New genetics "
+      "(a clone from a supplier or from a different grower) is the most frequent source of HpLVd in "
+      "a facility.</p><p>Put each new plant in quarantine. Use a room that is apart from the mother "
+      "room. If you do not have this room, use a bench that is apart from the other benches. Use "
+      "tools only for this bench.</p><p>When the plant comes into the facility, do a test. Keep the "
+      "plant in quarantine for 2 to 4 weeks. Before the plant touches the mother bank, do a test "
+      "again.</p><p>The second test is necessary. The viroid goes to all parts of the plant only "
+      "after approximately six weeks. Thus a sample from a plant with a new infection can give a "
+      "clean result" + _c("mp-medgen-hlvd") + "."),
+    figure(L.flow("Quarantine: no plant goes into the bank without tests",
+            [("Entry", "record, keep apart"), ("Quarantine", "special area, tools"),
+             ("Test 1", "qPCR at entry"), ("Hold", "2–4 weeks"),
+             ("Test 2", "roots, before release"), ("Into bank", "two clean results")]), 11,
+      "The figure shows the procedure for new genetics. Two clean tests with a time in quarantine "
+      "between them are better than one clean test at entry. A new infection can stay at a "
+      "concentration that the test cannot find, for some weeks" + _c("mp-medgen-hlvd") +
+      "."),
+    p("Keep a record for each mother plant. The record has the ID, the dates and results of the "
+      "tests, the number of cuttings, and the rooting rate of each batch. The trend of the rooting "
+      "rate is a continuous test that has no cost. If the rooting rate of the clones from a mother "
+      "plant decreases by ten percentage points in three batches, there is a problem. The last test "
+      "does not show this problem at this time."),
+    callout("warn", "Procedure for a positive result",
+      p("Move the plant away from the other plants immediately. Do a test again to make sure that "
+        "the result is correct. Use a new sample of roots.</p><p>Find each plant that the same "
+        "tools touched after the last clean test. Do a test on each of these plants.</p><p>Discard "
+        "each plant that has a positive result in the two tests. Put the plant in a bag <em>at the "
+        "bench</em>. Seal the bag. Move the sealed bag out of the facility. Do not move infected "
+        "material in the facility with no bag.</p><p>In some conditions, meristem tissue culture "
+        "can make plants with no pathogen from important genetics. The average result is "
+        "approximately 41% of the plants with no pathogen. The result is from 0% to 100% for "
+        "different genotypes" + _c("mp-punja-2025-hplvd-mgmt") + ". But this procedure is work in "
+        "the laboratory for some months (refer to <a href='tissue-culture.html'>tissue "
+        "culture</a>). It is not a method to keep production stock in this cycle.")),
   ]})
 
 # ---------------------------------------------------------------- 12 replacement
 SECTIONS.append({"id": "replacement", "kicker": "12 · Do this",
-  "title": "Mother-plant replacement without production gaps",
+  "title": "Replacement of mother plants with a constant supply of cuttings",
   "blocks": [
-    p("Mothers are replaced for five reasons: a confirmed pathogen (immediate, no debate); a rooting "
-      "rate that trends down across three or more batches with other causes ruled out; a frame gone "
-      "woody and slow after many months of harvest; a root-bound pot that feeding can't compensate; "
-      "or simple space economics. Only the first one is urgent. Everything else earns a planned "
-      "succession. And succession has a shape."),
+    p("There are five causes for the replacement of a mother plant. The first cause is a pathogen "
+      "that two tests find. For this cause, replace the plant immediately. The second cause is a "
+      "rooting rate that decreases in three or more batches when you find no other cause.</p><p>The "
+      "third cause is a woody frame that is slow after many months of harvest. The fourth cause is "
+      "a pot full of roots that more feed cannot correct. The fifth cause is the cost of the space. "
+      "For each other cause, schedule the replacement. A replacement has a sequence of steps."),
     steps([
-      ("Select the donor", "Take the replacement cutting from the best scaffold of a mother that is testing clean, or from your lowest-generation tested backup. The candidate inherits everything."),
-      ("Build the candidate", "Root it and build the frame exactly as in section 06 — expect ~6 weeks before it produces meaningfully."),
-      ("Test twice during build", "qPCR at rooting and again before it enters service. A candidate is not a mother until it has two clean results."),
-      ("Overlap", "Run old and new side by side for at least one full cutting cycle. Compare rooting % of both cohorts head-to-head."),
-      ("Retire the old plant", "Cull, bag and remove; strip and sanitise her station (pot, tray, stakes, drippers) before anything else uses it."),
+      ("Select the source plant", "Cut the replacement cutting from the best scaffold of a mother plant that has clean results. You can also use your second copy that has the lowest generation number and clean results. The replacement plant gets all the properties of the source."),
+      ("Make the replacement plant", "Make roots on the cutting. Make the frame with the procedure of section 06. After approximately 6 weeks, the plant supplies a sufficient number of cuttings."),
+      ("Do two tests while you make the frame", "When the cutting has roots, do a qPCR test. Before the plant goes into production, do a qPCR test again. A replacement plant is not a mother plant until it has two clean results."),
+      ("Overlap", "Keep the mother plant that you replace and the replacement plant together for a minimum of one full cutting cycle. Compare the rooting rate of the cuttings of the two plants."),
+      ("Remove the mother plant that you replace", "Discard the plant. Put the plant in a bag. Remove the bag. Before you use the equipment of the plant (pot, tray, stakes and drippers) for a different plant, clean and sanitize it."),
     ]),
     figure(_FIGS["succession"], 12,
-      "Succession on a timeline: the candidate is built and tested while the incumbent still serves, "
-      "they overlap for a full cycle, and only then does the old mother retire. The backup copy "
-      "exists through the whole story."),
-    p("The overlap is the insurance policy, never cut over cold-turkey. If the candidate's cuttings "
-      "underperform, you still have the incumbent; if she matches, you cull with confidence. And keep "
-      "a <strong>second copy of every cultivar you care about</strong> at all times, a backup mother "
-      "in another room, or a culture in a tissue-culture bank" + _c("mp-monthony-2021-tc") + ". A "
-      "cultivar with one living copy is one fusarium pot or one positive test away from extinct."),
-    p("Two maintenance notes that extend service life: root-bound decline responds to repotting or "
-      "root-pruning on a schedule rather than waiting for symptoms (practitioner convention). And "
-      "<strong>re-mothering</strong>, starting a fresh mother from the old one's best shoot, resets "
-      "her architecture and her pot, but it does <em>not</em> reset her pathogens or her accumulated "
-      "mutations: whatever she carries, the new plant carries" + _c("mp-adamek-2024-subcultures") + ". "
-      "Test before you promote."),
+      "The figure shows the steps of a replacement in the sequence of time. You make the "
+      "replacement plant and do tests on it while the mother plant that you replace continues to "
+      "supply cuttings. The two plants have an overlap of a full cycle. Then you remove the mother "
+      "plant that you replace. The second copy is available during all the steps."),
+    p("The overlap is a protection. Do not replace a mother plant without an overlap. If the "
+      "cuttings of the replacement plant give worse results, you have the mother plant that you "
+      "replace. If the replacement plant gives the same results, you can discard the other "
+      "plant.</p><p>Always keep a <strong>second copy of each cultivar that is important to "
+      "you</strong>. Keep it as a second mother plant in a different room, or as a culture in a "
+      "tissue culture bank" + _c("mp-monthony-2021-tc") + ". A cultivar with only one copy has a "
+      "risk. One pot with fusarium or one positive result can cause the end of the cultivar."),
+    p("Two procedures extend the life of a mother plant. Put the plant in a new pot, or do a "
+      "pruning of the roots, at regular intervals. Do not wait for symptoms of a pot full of roots "
+      "(grower method).</p><p><strong>Re-mothering</strong> is the procedure in which you start a "
+      "new mother plant from the best shoot of a mother plant. Re-mothering gives a new shape and a "
+      "new pot. But it does <em>not</em> remove the pathogens or the mutations of the mother plant. "
+      "The new plant has all that the mother plant has" + _c("mp-adamek-2024-subcultures") +
+      ". Before the new plant goes into the bank, do a test."),
   ]})
 
 # ---------------------------------------------------------------- 13 clone-from-clone
 SECTIONS.append({"id": "clone-from-clone", "kicker": "13 · The alternative",
   "title": "Clone-from-clone propagation",
   "blocks": [
-    p("Some operations skip dedicated mothers entirely: each round, they take the next batch of "
-      "cuttings from production plants in early veg, just before those plants flip to flower. The "
-      "cuttings root while the donors finish. No mother room, no mother labour, a whole room's rent "
-      "back. It is a real system with a real cost structure, and a real failure mode."),
-    p("The honest evidence first: it works, mechanically. 'Retip' cuttings, cuttings taken from "
-      "recently rooted cuttings, rooted at 76–81% even without hormone, and the resulting plants "
-      "finished comparably to stem-cutting plants, with no change in cannabinoid content" + _c("mp-kurtz-2022-retip") +
-      ". A generation hop, by itself, does not wreck a crop."),
-    p("The problem is not any single hop. It is what the chain accumulates:"),
+    p("Some operations do not use dedicated mother plants. For each batch, they cut the cuttings "
+      "from production plants. These plants are young plants in the vegetative stage. The "
+      "operations cut the cuttings immediately before the plants change to the flowering stage. The "
+      "cuttings make roots while the source plants go to harvest.</p><p>There is no mother room and "
+      "no work for mother plants. The operation has one room more for other use. This system "
+      "operates, but it has costs and it has risks."),
+    p("The data show that the system operates. Retip cuttings are cuttings that growers cut from "
+      "cuttings with new roots. In a test, retip cuttings made roots at a rate of 76% to 81% with "
+      "no hormone. The plants gave approximately the same result as plants from stem cuttings, and "
+      "the cannabinoid content did not change" + _c("mp-kurtz-2022-retip") + ". One generation step "
+      "does not cause damage to a crop."),
+    p("The problem is not one generation step. The problem is the effect of a long sequence of steps:"),
     ul([
-      "<strong>The mutation ratchet.</strong> Mutation load rises with every propagation cycle" + _c("mp-adamek-2024-subcultures") + ". A mother bank holds every batch at generation 1; a year of clone-from-clone is 15–25 generations, every one a fresh roll of the dice, with no reference plant to check drift against.",
-      "<strong>The pathogen ratchet.</strong> With no long-lived plant, there is nothing to index. Your 'stock' is always two weeks from flowering, so there is no time for a quarantine-and-retest cycle, and an HpLVd hit anywhere in the chain propagates forward invisibly" + _c("mp-adkar-2023-hidden-threat") + ".",
-      "<strong>Selection drift.</strong> Whoever takes cuttings picks the biggest, fastest-looking donors. Over many generations that quietly selects for stretch and speed over quality (practitioner observation, unproven, but widely reported).",
-      "<strong>No way back.</strong> A mother bank can restart any batch from reference. A chain that goes bad (infected, drifted, or mislabeled) is simply gone, along with the cultivar.",
+      "<strong>More mutations.</strong> The mutation load increases with each propagation cycle" + _c("mp-adamek-2024-subcultures") + ". In a mother bank, each batch is at generation 1. In one year of clone-from-clone propagation, there are 15 to 25 generations. Each generation has a new risk of mutation. There is no reference plant to compare with the drift.",
+      "<strong>More pathogens.</strong> There is no plant that stays for a long time, and thus you cannot do indexing. Your stock is always two weeks from the flowering stage. Thus there is no time for quarantine and a second test. An HpLVd infection in one plant of the sequence goes to all the next generations, and you cannot see it" + _c("mp-adkar-2023-hidden-threat") + ".",
+      "<strong>Selection drift.</strong> The person who cuts the cuttings selects the largest source plants and the source plants with the fastest growth. In many generations, this selection is for stretch and speed and not for quality. Many growers give reports of this effect (grower method), but no test data show it.",
+      "<strong>No reference to start from.</strong> A mother bank can start each batch again from the reference plant. If a sequence of clones has an infection, has drift, or has an incorrect label, you cannot start it again. You cannot keep the cultivar.",
     ], "tight"),
     figure(_FIGS["lineage"], 13,
-      "Hub versus chain. Both produce cuttings; only one has a reference. In the hub, every batch is "
-      "generation 1 from a tested plant. In the chain, generation 5 carries whatever generations 1–4 "
-      "collected, and nothing was ever re-tested against a known-good original."),
-    p("The verdict: clone-from-clone is a legitimate <strong>bridge</strong>, during a build-out, "
-      "for short runs, for cultivars you plan to drop, provided every donor round gets tested. As "
-      "the <em>permanent</em> plan for genetics you care about, it is a slow-motion loss. The middle "
-      "path many operators land on: a tissue-culture bank or one modest, well-tested mother per "
-      "keeper cultivar as the anchor" + _c("mp-monthony-2021-tc") + ", plus clone-from-clone for "
-      "volume in between."),
+      "The figure shows a mother bank and a sequence of clones. The two systems make cuttings, but "
+      "only the mother bank has a reference plant. In the mother bank, each batch is generation 1 "
+      "from a plant with a clean test result. In the sequence of clones, generation 5 has all that "
+      "generations 1 to 4 have. No test compared the plants with an initial plant that you know is "
+      "good."),
+    p("The decision: clone-from-clone propagation is correct as a <strong>temporary "
+      "method</strong>. Use it while you increase the size of the facility, for short crops, or for "
+      "cultivars that you will stop. Do a test on each group of source plants. Do not use it as the "
+      "<em>permanent</em> method for genetics that are important to you. Permanent use of this "
+      "method causes damage slowly.</p><p>Many operators use two methods together. They use a "
+      "tissue culture bank, or one small mother plant with clean test results for each keeper "
+      "cultivar, as the reference" + _c("mp-monthony-2021-tc") + ". They also use clone-from-clone "
+      "propagation to supply the large number of plants in the time between."),
   ]})
 
 # ---------------------------------------------------------------- 14 failure modes
-SECTIONS.append({"id": "failure-modes", "kicker": "14 · When it goes wrong",
-  "title": "Mother-stock failure modes",
+SECTIONS.append({"id": "failure-modes", "kicker": "14 · When there is a problem",
+  "title": "Problems of mother stock",
   "blocks": [
-    p("Mother programmes rarely die loudly. They die in one of six quiet ways, most of them "
-      "preventable with the habits already covered."),
+    p("A mother bank usually stops production without a sign that you can see. There are six "
+      "causes. Procedures in this paper prevent most of them."),
     grid([
-      card("The silent ratchet",
-           p("One latent HpLVd mother plus shared snips. Every pass infects the next plant; nothing "
-             "looks wrong until a flower room duds months later. <strong>Counter:</strong> blade per "
-             "plant, root-sample qPCR every 4–6 weeks" + _c("mp-tumi-hlvd-testing") + "."),
+      card("Movement of HpLVd with no signs",
+           p("A mother plant has latent HpLVd, and you use the same tools on many plants. Each "
+             "harvest infects the next plant. No sign shows a problem until a flower room has "
+             "dudding after some months. <strong>Correction:</strong> Use a blade for each plant. "
+             "Do a qPCR test of a root sample at an interval of 4 to 6 weeks" +
+             _c("mp-tumi-hlvd-testing") + "."),
            tag="viroid"),
-      card("The single copy",
-           p("One mother per cultivar. One root-rot pot, one positive test, one dropped tray, and "
-             "the genetics are extinct. <strong>Counter:</strong> two copies, separate rooms, or a "
-             "tissue-culture backup" + _c("mp-monthony-2021-tc") + "."),
-           tag="continuity"),
-      card("The lush trap",
-           p("A proud, dark, overfed mother whose cuttings flop in the dome and rot. Rooting runs on "
-             "the cutting's carbohydrate, not its nitrogen" + _c("mp-druege-2004-stockplant-n") + ". "
-             "<strong>Counter:</strong> moderate N and EC, firm shoots, watch the strike rate."),
+      card("Only one copy",
+           p("There is one mother plant for each cultivar. One pot with root rot, one positive "
+             "result, or one tray that falls can cause the end of the genetics. "
+             "<strong>Correction:</strong> Keep two copies in different rooms, or keep a culture in "
+             "a tissue culture bank" + _c("mp-monthony-2021-tc") + "."),
+           tag="supply"),
+      card("The soft growth problem",
+           p("A mother plant has dark green leaves and too much feed. Its cuttings show wilt in the "
+             "dome and show rot. The rooting of a cutting uses the carbohydrate of the cutting, not "
+             "the nitrogen" + _c("mp-druege-2004-stockplant-n") + ". <strong>Correction:</strong> "
+             "Use a moderate N and EC. Make rigid shoots. Monitor the rooting rate."),
            tag="nutrition"),
-      card("The slow strangle",
-           p("Eighteen months in a 12 L (3.2 gal) pot. Vigour fades so gradually nobody sees it, and it gets "
-             "blamed on 'age'. <strong>Counter:</strong> repot or root-prune on schedule; track "
-             "cuttings-per-week so decline shows up as a number."),
+      card("The pot full of roots",
+           p("A mother plant stays for eighteen months in a pot of 12 L (3.2 gal). The vigor "
+             "decreases slowly, and no person sees the change. Growers think that the cause is age. "
+             "<strong>Correction:</strong> Put the plant in a new pot or do a pruning of the roots "
+             "at regular intervals. Record the number of cuttings for each week. Then you see the "
+             "change as a number."),
            tag="roots"),
-      card("The chain with no anchor",
-           p("A year of clone-from-clone with no tests and no reference. The cultivar 'isn't what it "
-             "used to be' and nobody can prove why, or get it back" + _c("mp-adamek-2024-subcultures") + ". "
-             "<strong>Counter:</strong> keep an anchor, mother or culture, for every keeper."),
+      card("Clones from clones with no reference",
+           p("A year of clone-from-clone propagation with no tests and no reference plant. The "
+             "cultivar is not the same as before, and no person can find the cause or get the same "
+             "cultivar again" + _c("mp-adamek-2024-subcultures") + ". <strong>Correction:</strong> "
+             "Keep a reference, a mother plant or a culture, for each keeper cultivar."),
            tag="drift"),
-      card("The calendar cull",
-           p("Replacing proven, clean, productive mothers every six months on folklore, while blade "
-             "hygiene, the thing that actually kills stock, goes unmanaged. <strong>Counter:</strong> "
-             "replace on evidence" + _c("mp-adamek-2024-subcultures") + "; spend the saved effort on testing."),
-           tag="process"),
+      card("Replacement because of a date",
+           p("A grower replaces mother plants that are clean and give good results each six months, "
+             "with no data. At the same time, the grower has no procedure for the hygiene of "
+             "blades. Blades are the primary cause of the end of stock. "
+             "<strong>Correction:</strong> Replace because of data" + _c("mp-adamek-2024-subcultures") +
+             ". Do tests with the work that you do not use for replacements."),
+           tag="procedure"),
     ], cols=2),
   ]})
 
 # ---------------------------------------------------------------- 15 troubleshooting
-SECTIONS.append({"id": "troubleshooting", "kicker": "15 · When it goes wrong",
+SECTIONS.append({"id": "troubleshooting", "kicker": "15 · When there is a problem",
   "title": "Troubleshooting",
   "blocks": [
-    p("Diagnose from the symptom, check the likely cause, act, and give it one batch cycle before "
-      "judging the fix. Most mother problems announce themselves through the cuttings first."),
-    table(["Symptom", "Likely cause", "What to do"], [
-      ["Rooting % slides batch over batch, mother looks fine", "Early HpLVd; or soft overfed growth; or root-bound decline", "Root-sample qPCR first" + _c("mp-tumi-hlvd-testing") + "; then audit EC/N down; then check the pot"],
-      ["Pistils or pre-flowers on a mother", "Photoperiod fault: dead timer, light leak, schedule under ~15 h", "Fix to a verified 18 h; dark-room audit; take no cuttings until regrowth is clean" + _c("mp-ahrens-2023-photoperiod")],
-      ["Cuttings soft, stretchy, wilt fast in the dome", "Feed too rich, light too low, lush growth, thin reserves", "Drop EC 0.2–0.4; raise PPFD toward 400–500; firm shoots return in 1–2 passes" + _c("mp-druege-2004-stockplant-n")],
-      ["Pale mother, thin shoots, slow regrowth", "Underfed N, or root-bound / root disease", "Lift N toward ~160 mg/L" + _c("mp-saloner-2020-nitrogen") + "; inspect the root ball while you're at it"],
-      ["Downstream flower rooms dudding; mothers test-negative on leaves", "Latent HpLVd sitting below leaf detection", "Re-test from roots, multiple points per plant" + _c("mp-tumi-hlvd-testing") + _c("mp-punja-2025-hplvd-mgmt") + "; treat leaf-negative as unproven"],
-      ["Pests reappearing in every clone batch", "The mother room is the reservoir", "Treat and monitor mothers first; inspect before every cutting pass, see the <a href='ipm-sop.html'>IPM SOP</a>"],
-      ["A mother dies or tests positive and she was the only copy", "No backup existed", "Salvage via meristem culture if the genetics justify months of lab work" + _c("mp-punja-2025-hplvd-mgmt") + "; then fix the system: two copies, always"],
-    ], cls="compact", caption="The recurring theme: the cuttings are the assay. A mother's problems show up in her clones' numbers before they show up on her leaves."),
+    p("Start with the symptom. Examine the possible cause. Then do the correction. Wait one batch "
+      "cycle before you make a decision about the correction. In most conditions, the cuttings show "
+      "a problem of the mother plant first."),
+    table(["Symptom", "Possible cause", "Correction"], [
+      ["The rooting rate decreases batch after batch, and the mother plant has no symptoms", "A new HpLVd infection, soft growth because of too much feed, or a pot full of roots", "First, do a qPCR test of a root sample" + _c("mp-tumi-hlvd-testing") + ". Then examine the feed. Decrease the EC and the N. Then do a check of the pot."],
+      ["Pistils or the first flowers on a mother plant", "Photoperiod fault: a timer that does not operate, a light leak, or a photoperiod of less than approximately 15 h", "Make sure that the photoperiod is 18 h. Do a check of the darkness in the room. Do not cut cuttings until the new growth has no flower structures" + _c("mp-ahrens-2023-photoperiod")],
+      ["The cuttings are soft and long and show wilt quickly in the dome", "The feed is too high, the light is too low, the growth is soft, and the quantity of carbohydrate is low", "Decrease the EC by 0.2 to 0.4. Increase the PPFD to a value of 400–500. After 1 to 2 harvests, the shoots are rigid again." + _c("mp-druege-2004-stockplant-n")],
+      ["The leaves of the mother plant are light green, the shoots are thin, and the regrowth is slow", "Not sufficient N, a pot full of roots, or root disease", "Increase the N to approximately 160 mg/L" + _c("mp-saloner-2020-nitrogen") + ". Examine the roots at the same time."],
+      ["The downstream flower rooms have dudding, and the tests of leaves of the mother plants give clean results", "Latent HpLVd at a concentration that a test of leaves cannot find", "Do the test again with roots, with samples from more than one point on each plant" + _c("mp-tumi-hlvd-testing") + _c("mp-punja-2025-hplvd-mgmt") + ". A clean result from a leaf does not show that the plant has no HpLVd."],
+      ["Pests come again in each batch of clones", "The mother room is the source of the pests", "Apply a treatment to the mother plants first. Monitor the mother plants. Before each harvest of cuttings, do an inspection. Refer to the <a href='ipm-sop.html'>IPM SOP</a>."],
+      ["The only copy of a mother plant is a dead plant, or the only copy has a positive result", "There was no second copy", "If the genetics are very important, use meristem culture. Meristem culture is work in the laboratory for some months" + _c("mp-punja-2025-hplvd-mgmt") + ". Then correct the system: always keep two copies."],
+    ], cls="compact", caption="The cuttings are a test of the mother plant. A problem of a mother plant shows in the numbers of its clones before it shows on its leaves."),
   ]})
 
 # ---------------------------------------------------------------- 16 mental model
-SECTIONS.append({"id": "mental-model", "kicker": "16 · Summary",
-  "title": "Mother-stock continuity and recovery",
+SECTIONS.append({"id": "mental-model", "kicker": "16 · The primary items",
+  "title": "Constant supply of mother stock and a new start",
   "blocks": [
-    p("Treat a mother plant exactly like a backup drive. Nobody trusts a backup because it looks fine "
-      "on the shelf. You trust it because you test restores. The mother-room translation: the "
-      "<strong>restore test</strong> is her cuttings' rooting rate, batch over batch. The "
-      "<strong>integrity check</strong> is the qPCR rotation. The <strong>off-site copy</strong> is "
-      "the second mother or the tissue-culture bank. The <strong>retention policy</strong> is "
-      "evidence-based replacement with overlap. Run those four and the factory never runs dry."),
-    callout("key", "If you remember five things",
+    p("Do not think that a mother plant is correct because it looks good. Use tests to make sure of "
+      "its condition. Use four checks.</p><p>The first check is the <strong>rooting rate</strong> "
+      "of the cuttings, batch after batch. It shows if the mother plant operates correctly. The "
+      "second check is the <strong>qPCR test</strong> at regular intervals. It shows if the plant "
+      "has HpLVd.</p><p>The third check is the <strong>second copy</strong>: a second mother plant "
+      "or a tissue culture bank. The fourth check is <strong>replacement because of data, with an "
+      "overlap</strong>. With these four checks, the supply of cuttings does not stop."),
+    callout("key", "The five primary items",
       ol([
-        "<strong>18/6 is a safety margin, not a magic number.</strong> Initiation has been recorded up to 14–15 h" + _c("mp-ahrens-2023-photoperiod") + ", protect the timer and hunt light leaks.",
-        "<strong>Moderate everything.</strong> ~300–500 µmol, ~160 mg/L N" + _c("mp-saloner-2020-nitrogen") + ", moderate EC. The best-looking mother is rarely the best-performing one.",
-        "<strong>Architecture is output.</strong> Top young, build 4–6 scaffolds, harvest half the hedge above the first node, every 2–3 weeks.",
-        "<strong>The blade is the vector; the test is the defence.</strong> Fresh blade per plant, root-sample qPCR every 4–6 weeks" + _c("mp-tumi-hlvd-testing") + ", quarantine and test everything new twice" + _c("mp-medgen-hlvd") + ".",
-        "<strong>Cycles age a line; calendars don't.</strong> Mutation load follows propagation cycles" + _c("mp-adamek-2024-subcultures") + ", keep clean proven mothers, replace on evidence, and never run without a second copy.",
+        "<strong>The 18/6 photoperiod is a safety interval, not a special number.</strong> Tests show initiation of flowers at photoperiods as long as 14 to 15 h" + _c("mp-ahrens-2023-photoperiod") + ". Make sure that the timer operates. Find each light leak.",
+        "<strong>Use moderate values for all controls.</strong> Use approximately 300 to 500 µmol, approximately 160 mg/L N" + _c("mp-saloner-2020-nitrogen") + ", and a moderate EC. A mother plant that looks very good is frequently not the mother plant with the best results.",
+        "<strong>The shape of the plant gives the output.</strong> Cut the top of the young plant. Make 4 to 6 scaffolds. Harvest approximately half of the canopy above the first node at an interval of 2 to 3 weeks.",
+        "<strong>The blade moves the viroid from one plant to the next plant, and the test is the protection.</strong> Use a new blade for each plant. Do a qPCR test of a root sample at an interval of 4 to 6 weeks" + _c("mp-tumi-hlvd-testing") + ". Put each new plant in quarantine. Do two tests" + _c("mp-medgen-hlvd") + ".",
+        "<strong>The number of propagation cycles changes the genetics of a sequence of clones, but time does not.</strong> The mutation load increases with the propagation cycles" + _c("mp-adamek-2024-subcultures") + ". Keep mother plants that have clean results and good records. Replace because of data. Always keep a second copy.",
       ])),
-    p("From here: the <a href='cloning.html'>cloning guide</a> covers turning each harvested shoot "
-      "into a rooted plant, and the <a href='tissue-culture.html'>tissue culture</a> paper covers the "
-      "lab-side version of everything in this one, clean-stock banking, meristem rescue and "
-      "long-term storage" + _c("mp-monthony-2021-tc") + "."),
+    p("The <a href='cloning.html'>cloning paper</a> shows how to change each shoot that you harvest "
+      "into a plant with roots. The <a href='tissue-culture.html'>tissue culture</a> paper shows "
+      "how to do the same work in the laboratory. It gives information about a bank of clean stock, "
+      "meristem rescue, and storage for a long time" + _c("mp-monthony-2021-tc") +
+      "."),
   ]})

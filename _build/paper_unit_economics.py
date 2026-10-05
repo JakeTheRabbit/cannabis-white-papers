@@ -8,13 +8,15 @@ import figs_lib as L
 _FIGS = json.load(open(os.path.join(os.path.dirname(__file__), "figs_unit_economics.json"), encoding="utf-8"))
 
 SLUG = "unit-economics"
-TITLE = "Yield per watt and the cost of a gram"
+TITLE = "Yield for each watt and the cost of a gram"
 EYEBROW = "Facility · Economics"
-SUB = ("The three yield denominators (g/m² of canopy, g/W of light, g/kWh all-in) what each is "
-       "actually for, what each hides, and a worked cost stack that turns a fictional 100 m² (1,076 ft²) room "
-       "into a cost per gram you can argue with. Every number cited or derived in front of you.")
+SUB = ("This paper shows three yield denominators: g/m² of canopy, g/W of light, and g/kWh all-in. "
+       "It shows the function of each denominator and the information that it does not show. The "
+       "paper calculates the cost for each gram of an example room of 100 m² (1,076 ft²), and you "
+       "can examine each step. The paper gives a reference for each number, or shows how to "
+       "calculate it.")
 META = [("gauge", "Economics"), ("image", "11 diagrams"),
-        ("quote", "Evidence-linked · 14 sources"), ("clock", "~22 min read")]
+        ("quote", "14 sources"), ("clock", "~22 min to read")]
 RELATED = ["energy-sustainability", "scaling-high-light", "lighting-fundamentals"]
 REF_IDS = ["rii-powerscore", "nfd-energy-compare", "toonen2006-yield", "potter2012-gpw",
            "backer2019-yieldgap", "llewellyn2022-light", "westmoreland2021-blue", "rm2021-light",
@@ -35,557 +37,672 @@ SECTIONS = []
 # ---------------------------------------------------------------- 01 start here
 SECTIONS.append({"id": "start-here", "kicker": "01 · Read this first", "title": "Purpose and scope",
   "blocks": [
-    callout("warn", "Education, not financial advice",
-      p("This paper teaches the <strong>arithmetic</strong> of growing economics: how to build a cost "
-        "per gram from stated assumptions, which published benchmarks exist, and how far to trust them. "
-        "It is not investment, business or tax advice. The worked example is a <strong>fictional</strong> "
-        "facility. Prices, wages, power tariffs and regulation differ wildly by market, rebuild every "
-        "table with your own numbers, and take real decisions to your own accountant.")),
-    lead("Most grow-room conversations are about plants. Whether the room survives is decided somewhere "
-         "less romantic: a division. All the dollars you spent in a year, over all the grams you sold. "
-         "If that number is below your selling price, you have a business. If it isn't, you have an "
-         "expensive hobby with a licence attached, and no amount of terpene talk changes it."),
-    p("The trouble is that the industry's favourite yardsticks, grams per square metre, grams per watt"
-      ", were built for other arguments. They are agronomy metrics and forum-bragging metrics, and they "
-      "each quietly delete part of the bill. This paper walks through the three common denominators and "
-      "what each is actually for, hedges the published benchmarks hard (because they deserve it), then "
-      "builds a complete cost stack for a fictional 100 m² (1,076 ft²) room with every step of the arithmetic shown. "
-      "From there: labour (the cost line that sneaks up on almost everyone), cycles per year (the hidden "
-      "multiplier), quality tiers, a sensitivity tornado, and break-even thinking."),
-    p("If you can divide two numbers, you can follow all of it, the entire "
-      "discipline of unit economics is choosing <em>which</em> two numbers to divide."),
+    callout("warn", "Information, not financial advice",
+      p("This paper shows the <strong>arithmetic</strong> of the economics of cultivation. It shows "
+        "how to calculate the cost for each gram from given values. It also shows the benchmarks "
+        "from the literature and their limits. This paper is not investment advice, business "
+        "advice, or tax advice. The <strong>example room</strong> in this paper is a model. No "
+        "facility has this room.</p><p>Calculate each table again with the numbers of your room. "
+        "The prices, the wages, the price of electricity, and the regulation are very different in "
+        "each market. Before you make a decision for your business, speak to an accountant.")),
+    lead("Most persons speak about plants when they speak about grow rooms. But the result of one "
+         "division shows if the room can continue to operate. The division is: all the dollars that "
+         "you pay in one year, divided by all the grams that you sell in that year. If the result "
+         "is less than the price that you get for one gram, you have a business. If it is not, you "
+         "have a license but no business. Your room has a loss, and no information about terpenes "
+         "changes the result."),
+    p("The problem is that the usual metrics, g/m² and g/W, are for other tasks. They are metrics "
+      "for agronomy, and growers use them to compare results with other growers. Each one ignores a "
+      "part of the cost. This paper shows the three usual denominators and the function of each "
+      "denominator. It also shows the benchmarks from the literature with their limits, because the "
+      "limits are large.</p><p>Then the paper calculates the full list of costs for an example room "
+      "of 100 m² (1,076 ft²) and shows each step of the arithmetic. After this, the paper shows "
+      "labor (almost all growers think that this cost is smaller than it is), cycles each year (a "
+      "number that multiplies the production and that is not easy to see), grades of quality, a "
+      "tornado chart of the sensitivity, and the break-even."),
+    p("If you can divide two numbers, you can do all the steps in this paper. Unit economics is the "
+      "selection of the <em>correct</em> two numbers to divide."),
   ]})
 
 # ---------------------------------------------------------------- 02 vocabulary
-SECTIONS.append({"id": "vocabulary", "kicker": "02 · The vocabulary", "title": "Definitions",
+SECTIONS.append({"id": "vocabulary", "kicker": "02 · The terms", "title": "Definitions",
   "blocks": [
-    p("Nine terms carry the rest of the paper. Most economic arguments between growers are two people "
-      "using the same word for different fractions."),
-    defterm("Denominator", "The bottom of a fraction, the thing you divide <em>by</em>. ‘Yield’ "
-            "only means something once you say yield <em>per what</em>: per m², per watt, per kWh, per "
-            "year, per dollar. Change the denominator and the same harvest tells a different story."),
-    defterm("Canopy area vs floor area", "Canopy is the m² actually under flowering plants. Floor (or "
-            "gross) area includes aisles, veg, dry room, lobby, plant-room. A facility with 100 m² of "
-            "canopy might occupy 250 m² of floor. Rent is paid on floor; g/m² is quoted on canopy, mix "
-            "them up and your model flatters itself by 2–3×."),
-    defterm("Installed watts", "The nameplate draw of the fixtures over the canopy, the W in g/W. It says "
-            "nothing about how many hours they run or what the HVAC burns keeping up with them."),
-    defterm("kWh", "A kilowatt-hour: 1 kW drawn for 1 hour. The unit your power bill is written in, which "
-            "is exactly why g/kWh is the energy metric that survives contact with accounting."),
-    defterm("Opex vs capex", "Opex is what you burn every month: power, wages, media, rent. Capex is what "
-            "you buy once and use for years: fixtures, HVAC, benches, controls. Capex sneaks back into "
-            "cost per gram as depreciation."),
-    defterm("Depreciation", "Spreading a one-off purchase over its useful life. A $300,000 fit-out used "
-            "over 7 years is ≈$43,000 a year of cost even though no invoice arrives. Ignoring it is the "
-            "classic way to ‘profit’ your way into being unable to replace anything."),
-    defterm("Flip-to-flip (turn time)", "Days from putting one crop into flower to putting the <em>next</em> "
-            "crop into flower, flowering days plus harvest-out, clean, and reset. This, not flowering "
-            "time, sets your cycles per year."),
-    defterm("Blended price", "The average price actually received across your whole harvest, A-buds, "
-            "B-buds, smalls, trim, weighted by how much of each you sold. Plans quote the A-grade price; "
-            "banks receive the blended one."),
-    defterm("Break-even", "The point where revenue equals cost: the yield, price or cycle count at which "
-            "profit is exactly zero. Everything in this paper is ultimately about which side of it you're on."),
+    p("Nine terms are necessary for the remaining sections. When two growers calculate the "
+      "economics of a room and get different results, they frequently use the same term for "
+      "different fractions."),
+    defterm("Denominator", "The denominator is the bottom number of a fraction. It is the number "
+            "that you divide <em>by</em>. You must give the denominator with each yield value. "
+            "Examples: yield <em>for each</em> m², for each watt, for each kWh, for each year, or "
+            "for each dollar. When you change the denominator, the same harvest gives a different "
+            "result."),
+    defterm("Canopy area and floor area", "Canopy area is the area in m² that has flowering plants. "
+            "Floor area (or total area) includes the aisles, the vegetative room, the drying room, "
+            "the entrance, and the room for equipment. A facility with 100 m² of canopy can have "
+            "250 m² of floor. You pay rent for the floor area, but the value in g/m² is for the "
+            "canopy area. If you use the incorrect area for a value, your model shows a result that "
+            "is 2 to 3 times better than the correct result."),
+    defterm("Installed watts", "Installed watts are the nameplate power of the fixtures above the "
+            "canopy. They are the W in g/W. The value does not show how many hours the fixtures "
+            "operate, or how much energy the HVAC uses because of them."),
+    defterm("kWh", "A kilowatt-hour is the energy that a device of 1 kW uses in 1 hour. The "
+            "electricity bill gives the energy in this unit. Thus g/kWh is the energy metric that "
+            "agrees with the bill."),
+    defterm("OPEX and CAPEX", "OPEX is the cost of operation that you pay each month: electricity, "
+            "wages, media, and rent. CAPEX is the cost of items that you get one time and use for "
+            "many years: fixtures, HVAC, benches, and controls. CAPEX also becomes part of the cost "
+            "for each gram, as depreciation."),
+    defterm("Depreciation", "Depreciation is the cost of one purchase divided by the number of "
+            "years in which you use the item. A $300,000 fit-out that you use for 7 years has a "
+            "cost of approximately $43,000 each year. You do not get an invoice for this cost. If "
+            "you ignore depreciation, you can show a profit, but you cannot replace the equipment."),
+    defterm("Cycle length", "The cycle length is the number of days from the start of "
+            "flowering of one crop to the start of flowering of the <em>next</em> crop. It is the "
+            "days of flowering plus the turn time. The turn time is the days to harvest, to clean, "
+            "and to prepare the room. The cycle length, and not the days of flowering, sets the "
+            "cycles each year."),
+    defterm("Blended price", "The blended price is the average price that you get for all your "
+            "harvest: grade A flower, grade B flower, small buds, and trim. The average uses each "
+            "price in proportion to the quantity that you sell at that price. An estimate "
+            "frequently uses the price of grade A, but your revenue is at the blended price."),
+    defterm("Break-even", "Break-even is the condition when the revenue is equal to the cost. In "
+            "this condition, the profit is zero. You can calculate the break-even as a yield, as a "
+            "price, or as a number of cycles. All of this paper helps you to know on which side of "
+            "the break-even your room is."),
   ]})
 
 # ---------------------------------------------------------------- 03 core answer
-SECTIONS.append({"id": "core-answer", "kicker": "03 · The core answer", "title": "Cost-per-gram summary",
+SECTIONS.append({"id": "core-answer", "kicker": "03 · The primary result", "title": "Summary of the cost for each gram",
   "blocks": [
-    callout("key", "Cost per gram is the only score that pays rent",
-      ul(["<strong>Cost per gram = every dollar for the year ÷ every gram sold that year.</strong> Not "
-          "per cycle, not per room, not ‘once we're dialled in’. The bank statement, over the scale.",
-          "That one fraction hides three dials: <strong>grams per cycle</strong> (agronomy), "
-          "<strong>cycles per year</strong> (operations), and <strong>dollars per year</strong> (everything "
-          "else). Every improvement you will ever make is one of the three.",
-          "g/m², g/W and g/kWh are <strong>partial views</strong>, useful for diagnosis, dangerous as "
-          "scoreboards, because each one deletes a cost the others see.",
-          "Published benchmarks span roughly <strong>6× in g/W and far more in g/m²</strong> depending on "
-          "conditions, quote ranges with context or don't quote them at all.",
-          "Labour and turn time move the answer more than the gear you're being sold. Run the sensitivity "
-          "before the credit card."])),
+    callout("key", "Only the cost for each gram shows if the business can pay the rent",
+      ul(["<strong>The cost for each gram = all the dollars for the year ÷ all the grams that you "
+          "sell in that year.</strong> Do not use the cost for each cycle or the cost for each "
+          "room. Do not use a cost that you get only when the room operates correctly. The bank "
+          "statement gives the dollars. The scale gives the grams.",
+          "This one fraction has three quantities that you can change: <strong>grams for each "
+          "cycle</strong> (agronomy), <strong>cycles each year</strong> (operation of the "
+          "facility), and <strong>dollars each year</strong> (all the costs of the year). Each "
+          "change that makes the business better is a change to one of these three quantities.",
+          "g/m², g/W, and g/kWh are <strong>metrics for one part</strong> of the business. They "
+          "help you to find problems. If you use them as the primary metric of the business, they "
+          "cause errors, because each one ignores a cost that the other metrics include.",
+          "The range of the benchmarks from the literature is approximately <strong>6 times in g/W "
+          "and much larger in g/m²</strong>, because the conditions are different. Give a range "
+          "with its conditions, or do not give it.",
+          "Labor and turn time change the result more than the equipment that a supplier sells to "
+          "you. Calculate the sensitivity before you pay for equipment."])),
   ]})
 
 # ---------------------------------------------------------------- 04 three denominators
-SECTIONS.append({"id": "three-denominators", "kicker": "04 · The three denominators", "title": "g/m², g/W and g/kWh: selecting the right metric",
+SECTIONS.append({"id": "three-denominators", "kicker": "04 · The three denominators", "title": "g/m², g/W, and g/kWh: how to select the correct metric",
   "blocks": [
-    p("All three metrics divide the same harvest by a different resource, and each answers a different "
-      "question. The mistake is not using them. It's using one of them as the scoreboard and forgetting "
-      "what it can't see."),
-    fig("denoms", "Same room, same harvest, three ‘efficiency’ numbers. Each lens counts one "
-        "resource and quietly drops the rest. None of them is the bill."),
-    p("<strong>g/m² of canopy</strong> is the agronomist's number. It compares crops, cultivars and "
-      "steering decisions on the same floor plan, and it's the number most research reports. It contains "
-      "no time, a nine-week cycle and a twelve-week cycle can post the same g/m² while one produces 30% "
-      "more per year, and no power, no labour, no grade mix."),
-    p("<strong>g/W of installed light</strong> is a relic of the lamp-shopping era, and Section 06 gives "
-      "it a full autopsy. It usefully asks ‘how much crop per unit of lighting hardware’, but "
-      "the denominator is nameplate watts: it ignores how long the lamps run, everything the HVAC burns, "
-      "and, fatally, which fixture generation produced the watts."),
-    p("<strong>g/kWh all-in</strong> (or its reciprocal, kWh per kg) divides by every kilowatt-hour "
-      "through the meter, lights, HVAC, dehumidification, pumps, the lot. It is the one denominator "
-      "that reconciles against a document someone actually sends you: the power bill. It's also the "
-      "industry's formal benchmarking metric, Resource Innovation Institute's PowerScore scores "
-      "facilities on exactly two numbers, kWh per unit of flowering canopy and grams per kWh, across "
-      "350+ producers" + _c("rii-powerscore") + ". The spread is enormous: indoor production uses on the "
-      "order of 18× the energy per gram of outdoor" + _c("nfd-energy-compare") + ", which is why an "
-      "indoor room lives or dies on this metric while a greenhouse barely thinks about it."),
-    table(["Metric", "Good for", "Blind to", "Verdict"], [
-      ["g/m² per cycle", "Comparing crops, cultivars, steering on one floor plan", "Time, power, labour, grade", "Agronomy tool, never a business score"],
-      ["g/W installed", "Sizing fixtures; forum bragging", "Hours run, HVAC, fixture era, time", "Aging badly, see Section 06"],
-      ["g/kWh all-in", "Energy productivity; matches the power bill", "Labour, rent, capex, testing", "Best single resource metric, still not the bill"],
-      ["$ per gram", "The actual decision", "Nothing, if built honestly", "The scoreboard"],
-    ], caption="Four ways to divide a harvest. The first three are diagnostics; only the fourth pays rent."),
-    callout("tip", "The canopy trap",
-      p("Whenever anyone quotes a per-m² number, yours included, ask <em>which m²</em>. Canopy, room "
-        "floor, or whole building? A 450 g/m² canopy figure becomes ≈180 g/m² of building the moment you "
-        "include aisles, veg and dry space at a typical 40% canopy-to-floor ratio. Both are true; only "
-        "one of them divides into the rent.")),
+    p("The three metrics divide the same harvest by three different quantities, and each metric "
+      "gives you different information. The error is not that you use the metrics. The error is "
+      "that you use one metric as the primary metric of the business and ignore the information "
+      "that the metric does not show."),
+    fig("denoms", "The same room and the same harvest give three ‘efficiency’ numbers. Each number "
+        "uses one input and ignores the other costs. No one of the three numbers is the total cost."),
+    p("<strong>g/m² of canopy</strong> is the number for agronomy. It compares crops, cultivars, "
+      "and steering decisions for the same floor area, and most investigations give this number. It "
+      "does not include time. Cycles of nine weeks and of twelve weeks can give the same g/m², but "
+      "the shorter cycle gives 30% more each year. It also does not include power, labor, or the "
+      "quantities of the grades."),
+    p("<strong>g/W of installed light</strong> is a metric from the time when growers used it to "
+      "compare lamps. Section 06 examines this metric in full. It shows the quantity of crop for "
+      "each unit of lighting equipment. But the denominator is the nameplate watts. The metric "
+      "ignores the hours in which the lamps operate and all the energy that the HVAC uses. Most "
+      "important, it ignores the fixture generation that gives the watts."),
+    p("<strong>g/kWh all-in</strong> (or its reciprocal, kWh for each kg) divides by all the "
+      "kilowatt-hours that go through the meter: lights, HVAC, dehumidification, pumps, and all "
+      "other loads. It is the one denominator that agrees with the electricity bill that you get "
+      "from the supplier. It is also the primary metric for benchmarks of facilities. The "
+      "PowerScore of the Resource Innovation Institute examines a facility with only two numbers. "
+      "The numbers are kWh for each unit of flowering canopy and grams for each kWh. The PowerScore "
+      "includes more than 350 growers" + _c("rii-powerscore") + ".</p><p>The difference is very "
+      "large: indoor production uses approximately 18 times the energy for each gram that outdoor "
+      "production uses" + _c("nfd-energy-compare") + ". Thus this metric is very important for an "
+      "indoor room. It is less important for a greenhouse."),
+    table(["Metric", "Good for", "Does not include", "Summary"], [
+      ["g/m² for each cycle", "To compare crops, cultivars, and steering for the same floor area", "Time, power, labor, grade", "A tool for agronomy. It is not a metric for the business."],
+      ["g/W installed", "To select the size of fixtures, and to compare results with other growers", "Hours of operation, HVAC, fixture generation, time", "Less correct each year. Refer to Section 06."],
+      ["g/kWh all-in", "The grams for each unit of energy. It agrees with the electricity bill.", "Labor, rent, CAPEX, testing", "The best metric for one quantity. It is not the total cost."],
+      ["$ for each gram", "To make the decision about the business", "None, if you include all the costs", "The primary metric of the business"],
+    ], caption="Four methods to divide a harvest. The first three help you to find problems. Only the fourth shows if the business can pay the rent."),
+    callout("tip", "The error with canopy area",
+      p("Each time that a person gives a value for each m², make sure that you know the "
+        "<em>area</em> that the value is for. Do the same when you give the value. The area can be "
+        "the canopy, the floor of the room, or all the building. A value of 450 g/m² for the canopy "
+        "becomes approximately 180 g/m² for the building. The area of the building includes the "
+        "aisles, the vegetative room, and the drying room, and the usual ratio of canopy to floor "
+        "is 40%. The two values are correct, but only the value for the building agrees with the "
+        "area for which you pay rent.")),
   ]})
 
 # ---------------------------------------------------------------- 05 benchmarks
-SECTIONS.append({"id": "benchmarks", "kicker": "05 · Benchmarks", "title": "Published yield benchmarks and their limits",
+SECTIONS.append({"id": "benchmarks", "kicker": "05 · Benchmarks", "title": "Yield benchmarks from the literature and their limits",
   "blocks": [
-    lead("Published cannabis yield figures are a minefield of mixed conditions, mixed denominators and "
-         "outright projection. Before you benchmark against anything, look at what the honest sources "
-         "actually report, and how far apart they are."),
-    fig("spread", "Published ranges as reported. Top: g/m² per cycle" + _c("toonen2006-yield") +
-        _c("llewellyn2022-light") + _c("westmoreland2021-blue") + _c("backer2019-yieldgap") +
-        ". Bottom: g per installed W" + _c("toonen2006-yield") + _c("potter2012-gpw") +
-        _c("backer2019-yieldgap") + ". Conditions differ wildly between rows. That is the lesson."),
-    p("<strong>The forensic baseline.</strong> The most honest large-sample g/m² figure in the "
-      "literature is also the oldest: Dutch police weighed confiscated illicit grows, and the model "
-      "for the median room, 15 plants/m² under 510 W/m² of HPS, came out at <strong>33.7 g per plant, "
-      "505 g/m²</strong>" + _c("toonen2006-yield") + ". Note the division: 505 g/m² over 510 W/m² is "
-      "0.99 g/W. That single study is almost certainly where ‘a gram per watt’ folklore comes "
-      "from, a median, from HPS rooms, twenty years ago."),
-    p("<strong>The controlled trials.</strong> Potter &amp; Duncombe grew under 270, 400 and 600 W/m² of "
-      "HPS and measured <strong>0.9–1.6 g/W</strong>, with the best gram-per-watt result at the "
-      "<em>lowest</em> wattage" + _c("potter2012-gpw") + ". More light grew more grams but fewer grams "
-      "per watt: diminishing returns per unit of power, measured. Modern LED work shows the same shape "
-      "from the other side, dry flower yield kept climbing roughly linearly with light intensity up to "
-      "≈1,800 µmol·m⁻²·s⁻¹ with no plateau" + _c("rm2021-light") + ", and a follow-up at 600–1,000 "
-      "µmol found each extra 100 µmol worth ≈4.6 g/plant (≈51 g/m² at ~10 plants/m²), for yields of "
-      "roughly <strong>276–447 g/m²</strong> across that range" + _c("llewellyn2022-light") + ". "
-      "Bugbee's group, growing high-light hemp for cannabinoids, reported <strong>500–750 g/m²</strong> "
-      "across three trials" + _c("westmoreland2021-blue") + "."),
-    p("<strong>The meta-analysis, and why you hedge.</strong> Backer et al. pooled the literature and "
-      "found reported efficiencies of <strong>0.31–1.97 g/W</strong>, a 6× spread, and "
-      "scaled-up yield projections running from 3.4 to <strong>3,590 g/m²</strong>, a thousand-fold "
-      "range driven by extrapolating small-plot numbers to areas nobody actually grew" +
-      _c("backer2019-yieldgap") + ". They also found that raising installed W/m² <em>reduced</em> yield "
-      "per watt, and that longer flowering periods raised yield per m². Both of which are denominator "
-      "stories, not plant stories."),
-    table(["Source", "Conditions", "Reported", "Read it as"], [
-      ["Toonen 2006" + _c("toonen2006-yield"), "Median illicit NL room, HPS, 15 plants/m²", "505 g/m² · ≈0.99 g/W", "The origin of the folklore"],
-      ["Potter &amp; Duncombe 2012" + _c("potter2012-gpw"), "HPS at 270/400/600 W/m²", "0.9–1.6 g/W, best at lowest W", "Diminishing returns per watt"],
-      ["Rodriguez-Morrison 2021" + _c("rm2021-light"), "Indoor, up to ≈1,800 µmol", "Yield ≈linear with light, no plateau", "Light buys grams, at a power price"],
-      ["Llewellyn 2022" + _c("llewellyn2022-light"), "LED, 600–1,000 µmol, ~10 plants/m²", "≈276–447 g/m²; +51 g/m² per 100 µmol", "A defensible research band"],
-      ["Westmoreland 2021" + _c("westmoreland2021-blue"), "High light, three trials", "500–750 g/m²", "The high end, under research care"],
-      ["Backer 2019 meta" + _c("backer2019-yieldgap"), "Pooled literature", "0.31–1.97 g/W; projections to 3,590 g/m²", "Why you never quote one number"],
-      ["Commercial folklore", "Uncited, everywhere", "‘300–600 g/m² per cycle’", "Plausible band, zero provenance, treat as anecdote"],
-    ], caption="The honest benchmark table: every row true under its own conditions, no two rows comparable without caveats."),
-    callout("evidence", "Why the spread is that wide",
-      p("Plant density, cultivar, light level, pot size, flowering length, and, above all, <em>what "
-        "counted as yield</em> (whole flower? trimmed A-bud? paper projection?) all differ between "
-        "studies. None of that makes the studies wrong. It makes single-number benchmarks wrong. When "
-        "someone quotes ‘you should be getting X’, the only professional response is: "
-        "<em>under what conditions, measured how?</em>")),
+    lead("The values for the yield of cannabis in the literature have different conditions and "
+         "different denominators. Some values are projections and not measurements. Before you "
+         "compare your room with a benchmark, examine the sources and the size of the differences."),
+    fig("spread", "Ranges from the literature as the sources give them. Top: g/m² for each cycle" +
+        _c("toonen2006-yield") + _c("llewellyn2022-light") + _c("westmoreland2021-blue") +
+        _c("backer2019-yieldgap") + ". Bottom: g for each installed W" + _c("toonen2006-yield") +
+        _c("potter2012-gpw") + _c("backer2019-yieldgap") + ". The conditions are very different in "
+        "each row. Thus you cannot compare the rows."),
+    p("<strong>The baseline from police data.</strong> The best large-sample value for g/m² in the "
+      "literature is also the first value in time. Police in the Netherlands weighed the plants "
+      "from illegal grow rooms that they found. The model for the median room has 15 plants/m² at "
+      "510 W/m² of HPS, and it gives <strong>33.7 g for each plant and 505 g/m²</strong>" +
+      _c("toonen2006-yield") + ".</p><p>The division of 505 g/m² by 510 W/m² is 0.99 g/W. It is "
+      "very possible that this one investigation is the source of the value ‘one gram for each "
+      "watt’ that growers frequently give. The investigation is twenty years before this paper, and "
+      "it gives a median value for HPS rooms."),
+    p("<strong>The tests with careful conditions.</strong> In the tests of Potter and Duncombe, the "
+      "HPS lamps operated at 270, 400, and 600 W/m². The tests measured <strong>0.9–1.6 "
+      "g/W</strong>, and the best result in g/W was at the <em>lowest</em> power" + _c("potter2012-gpw") +
+      ". More light gave more grams, but the value in g/W was lower. The tests measured how the "
+      "grams for each unit of power become smaller when the power increases.</p><p>Tests with new "
+      "LED fixtures show the same result from the other side. The yield of dry flower continued to "
+      "increase almost in proportion to the light intensity, to a maximum of approximately 1,800 "
+      "µmol·m⁻²·s⁻¹. There was no plateau" + _c("rm2021-light") + ". A second test at 600–1,000 "
+      "µmol found that each 100 µmol more gives approximately 4.6 g for each plant (approximately "
+      "51 g/m² at approximately 10 plants/m²). The yields in this range are approximately "
+      "<strong>276–447 g/m²</strong>" + _c("llewellyn2022-light") + ". The group of Bugbee did "
+      "three tests with hemp at high light for cannabinoids and measured <strong>500–750 "
+      "g/m²</strong> in the three tests" + _c("westmoreland2021-blue") + "."),
+    p("<strong>The meta-analysis, and the limits of the data.</strong> Backer and the other authors "
+      "put together the data from the literature. They found efficiencies in the reports of "
+      "<strong>0.31–1.97 g/W</strong>, which is a range of 6 times. They also found projections of "
+      "yield for large areas from 3.4 to <strong>3,590 g/m²</strong>, which is a range of "
+      "approximately a thousand times. The cause is that the projections use numbers from small "
+      "test areas for large areas that did not have a crop" + _c("backer2019-yieldgap") +
+      ".</p><p>They also found that the yield for each watt <em>decreased</em> when the installed "
+      "W/m² increased. They found that the yield for each m² increased when the time of flowering "
+      "was longer. In the two results, the cause is the denominator and not the plant."),
+    table(["Source", "Conditions", "Value", "How to read the value"], [
+      ["Toonen 2006" + _c("toonen2006-yield"), "Median illegal room in NL, HPS, 15 plants/m²", "505 g/m² · approximately 0.99 g/W", "The source of the value ‘one gram for each watt’"],
+      ["Potter and Duncombe 2012" + _c("potter2012-gpw"), "HPS at 270/400/600 W/m²", "0.9–1.6 g/W. The best value is at the lowest power.", "The grams for each watt become smaller when the power increases"],
+      ["Rodriguez-Morrison 2021" + _c("rm2021-light"), "Indoor, to a maximum of approximately 1,800 µmol", "The yield is almost in proportion to the light. There is no plateau.", "More light gives more grams, with a cost in power"],
+      ["Llewellyn 2022" + _c("llewellyn2022-light"), "LED, 600–1,000 µmol, approximately 10 plants/m²", "Approximately 276–447 g/m². 51 g/m² more for each 100 µmol", "A range that agrees with the data"],
+      ["Westmoreland 2021" + _c("westmoreland2021-blue"), "High light, three tests", "500–750 g/m²", "The high end of the range, in tests with careful procedures"],
+      ["Backer 2019 meta-analysis" + _c("backer2019-yieldgap"), "Data from the literature put together", "0.31–1.97 g/W. Projections to 3,590 g/m².", "Do not give a benchmark as one number"],
+      ["Values that growers give", "No reference. Many persons give the value.", "‘300–600 g/m² for each cycle’", "A possible range with no source. Do not use it as data."],
+    ], caption="The benchmark table: each row is correct for its conditions, and you cannot compare two rows if you ignore the limits."),
+    callout("evidence", "The cause of the large differences",
+      p("These conditions are different in the investigations: the plant density, the cultivar, the "
+        "light intensity, the pot size, and the length of flowering. Most important, the item that "
+        "the investigations use for <em>yield</em> is different. The yield can be the weight of all "
+        "the flower, the weight of grade A flower after trimming, or a projection on paper. These "
+        "differences do not make the investigations incorrect. They make a benchmark with one "
+        "number incorrect. When a person gives a benchmark, make sure that you know <em>the "
+        "conditions and the method of measurement</em>.")),
   ]})
 
 # ---------------------------------------------------------------- 06 g/W autopsy
-SECTIONS.append({"id": "gram-per-watt", "kicker": "06 · g/W as a dated metric", "title": "Grams per watt as a legacy lighting metric",
+SECTIONS.append({"id": "gram-per-watt", "kicker": "06 · g/W: a metric for one fixture generation", "title": "Grams for each watt: a lighting metric from the time of HPS",
   "blocks": [
-    lead("‘A gram a watt’ was a useful rule of thumb when every serious room ran the same "
-         "lamp. Under LED it has quietly become a measure of <em>when you bought your fixtures</em>, "
-         "because the denominator changed underneath the metric."),
-    p("A fixture converts watts into photons, and the exchange rate is called <strong>efficacy</strong>, "
-      "in µmol of photons per joule. Double-ended HPS, the lamp the folklore was built on, delivers "
-      "about 1.72 µmol/J. The best LED fixtures measured in 2020 hit ≈3.0 µmol/J (blue/red) and 2.78 "
-      "(white/red), against practical ceilings around 3.4–4.1" + _c("kusuma2020-efficacy") + ". "
-      "In 2014 the best LEDs managed 1.7 — HPS parity. In one fixture generation, the photons bought "
-      "per watt roughly <strong>doubled</strong>."),
-    fig(L.bars("Fixture efficacy, the exchange rate from watts to photons",
-        [("HPS (DE)", 1.72), ("Best LED 2014", 1.7), ("Best LED 2020", 3.0), ("White+red ceiling", 3.4)],
-        unit="", note="µmol of photons per joule, measured fixtures. Blue+red practical ceiling ≈4.1 µmol/J.",
+    lead("The value ‘one gram for each watt’ was a good approximate value when all the rooms used "
+         "the same lamp. With LED, the metric shows <em>when you got your fixtures</em>, because a "
+         "watt in the denominator gives more photons than it gave with HPS."),
+    p("The <strong>efficacy</strong> of a fixture is the quantity of photons that the fixture gives "
+      "for each joule of energy. The unit is µmol of photons for each joule. Double-ended HPS, the "
+      "lamp type for the value ‘one gram for each watt’, gives approximately 1.72 µmol/J.</p><p>In "
+      "2020, the best LED fixtures that growers measured gave approximately 3.0 µmol/J (blue/red) "
+      "and 2.78 (white/red). The practical limits are approximately 3.4–4.1" + _c("kusuma2020-efficacy") +
+      ". In 2014, the best LEDs gave 1.7, which is equal to HPS. In one fixture generation, the "
+      "photons for each watt increased to approximately <strong>two times</strong> the previous "
+      "value."),
+    fig(L.bars("Fixture efficacy: photons for each joule",
+        [("HPS (DE)", 1.72), ("Best LED 2014", 1.7), ("Best LED 2020", 3.0), ("White+red limit", 3.4)],
+        unit="", note="µmol of photons for each joule, in measured fixtures. Blue+red practical limit ≈4.1 µmol/J.",
         maxv=4.0),
-        "Measured fixture efficacy" + _c("kusuma2020-efficacy") + ". The same watt now buys nearly "
-        "twice the photons it did under HPS, so every g/W figure carries a hidden date stamp."),
-    p("Now watch what that does to g/W with <em>zero</em> agronomy. Take the same fictional crop, "
-      "450 g/m² at 900 µmol·m⁻²·s⁻¹. Delivering 900 µmol with 1.72 µmol/J HPS takes 900 ÷ 1.72 ≈ "
-      "523 W/m²; with a 2.8 µmol/J LED it takes 900 ÷ 2.8 ≈ 321 W/m². Same photons, same plants, same "
-      "grams. The HPS grower reports 450 ÷ 523 = <strong>0.86 g/W</strong>; the LED grower reports "
-      "450 ÷ 321 = <strong>1.40 g/W</strong>, and neither of them grew better than the other."),
+        "Measured fixture efficacy" + _c("kusuma2020-efficacy") + ". Each watt gives almost two "
+        "times the photons that it gave with HPS. Thus each g/W value has a date, but the value "
+        "does not show the date."),
+    p("Examine the effect on g/W when there is <em>no</em> change in agronomy. Use the same example "
+      "crop, 450 g/m² at 900 µmol·m⁻²·s⁻¹. HPS at 1.72 µmol/J supplies 900 µmol with 900 ÷ 1.72 = "
+      "approximately 523 W/m². An LED at 2.8 µmol/J supplies the same photons with 900 ÷ 2.8 = "
+      "approximately 321 W/m².</p><p>The photons, the plants, and the grams are the same. The HPS "
+      "grower calculates 450 ÷ 523 = <strong>0.86 g/W</strong>. The LED grower calculates 450 ÷ 321 "
+      "= <strong>1.40 g/W</strong>. The agronomy of the two growers is the same."),
     fig(L.hbars("Same crop, same photons, only the fixture changed",
-        [("HPS rig", 0.86), ("LED rig", 1.4)], unit=" g/W",
-        note="Fictional 450 g/m² crop at 900 µmol. HPS at 1.72 µmol/J needs 523 W/m²; a 2.8 µmol/J LED needs 321."),
-        "The g/W ‘improvement’ is the fixture's, not the grower's. Compare g/W within one "
-        "fixture generation or not at all."),
-    p("The efficacy shift also rewrites the buying decision. In Bugbee's lighting trials the white+red "
-      "LED yielded 4.6% <em>less</em> per m² than HPS, and produced <strong>27% more per dollar of "
-      "electricity</strong>" + _c("westmoreland2021-blue") + ". Judged on g/m², the LED loses. Judged "
-      "on the metric that pays bills, it wins comfortably. Same data, different denominator, opposite "
-      "decision. Which is the entire argument of this paper in one experiment."),
-    callout("key", "What to do with g/W now",
-      ul(["Use it to <strong>sanity-check a design</strong> against same-era rooms, an LED room "
-          "claiming 0.6 g/W or 2.5 g/W deserves questions.",
-          "Never compare across fixture generations, and never let a vendor do it for you.",
-          "For decisions, translate to <strong>g/kWh all-in</strong> (add hours run and HVAC) and then "
-          "to <strong>$ per gram</strong>. Watts don't appear on invoices; kilowatt-hours do."])),
+        [("HPS lamp", 0.86), ("LED lamp", 1.4)], unit=" g/W",
+        note="Example crop of 450 g/m² at 900 µmol. HPS at 1.72 µmol/J uses 523 W/m². An LED at 2.8 µmol/J uses 321."),
+        "The ‘improvement’ in g/W is the effect of the fixture and not of the grower. Compare g/W "
+        "only in one fixture generation."),
+    p("The change in efficacy also changes the decision about the purchase of fixtures. In the "
+      "lighting tests of Bugbee, the white+red LED gave 4.6% <em>less</em> yield for each m² than "
+      "HPS. It gave <strong>27% more yield for each dollar of electricity</strong>" +
+      _c("westmoreland2021-blue") + ".</p><p>If you use g/m², the LED is worse. If you use the "
+      "yield for each dollar of electricity, which is a cost metric, the LED is better. The data "
+      "are the same, but the denominator is different and the decision is opposite. This one test "
+      "shows the primary result of this paper."),
+    callout("key", "How to use g/W at this time",
+      ul(["Use it to <strong>do a check of the lighting of a room</strong>. Compare the room with "
+          "rooms that have the same fixture generation. If a person tells you that an LED room has "
+          "0.6 g/W or 2.5 g/W, examine the data.",
+          "Do not compare g/W in different fixture generations. Do not let a supplier do it for you.",
+          "For decisions, calculate <strong>g/kWh all-in</strong> (add the hours of operation and "
+          "the HVAC), and then <strong>$ for each gram</strong>. Invoices show kilowatt-hours and "
+          "do not show watts."])),
   ]})
 
 # ---------------------------------------------------------------- 07 cost stack
-SECTIONS.append({"id": "cost-stack", "kicker": "07 · The cost stack", "title": "Cost components per gram",
+SECTIONS.append({"id": "cost-stack", "kicker": "07 · The list of costs", "title": "Cost items for each gram",
   "blocks": [
-    p("Cost per gram is built from a short, boring list. The skill isn't clever accounting. It's "
-      "refusing to leave lines out. Eight lines cover a small indoor facility:"),
-    ul(["<strong>Labour</strong>, wages plus the on-costs (leave, insurance, tax) for everyone who "
-        "touches the crop, <em>including you at a market rate</em>.",
-        "<strong>Energy</strong>, lights, HVAC, dehumidification, pumps, controls. All of it, off the "
-        "bill, not off the fixture nameplate. For context on how dominant this line is indoors: US "
-        "indoor production was estimated at 1% of national electricity a decade ago" + _c("mills2012-carbon") +
-        ", and modelled emissions run 2,283–5,184 kg CO₂e per kg of flower depending on climate" +
+    p("The cost for each gram uses a short list of items. The method is easy, but you must include "
+      "all the items. Eight items are sufficient for a small indoor facility:"),
+    ul(["<strong>Labor</strong>: the wages plus the other costs that you pay with the wages (paid "
+        "leave, insurance, and tax). The item includes all personnel who touch the crop, <em>also "
+        "you, at a market rate</em>.",
+        "<strong>Energy</strong>: lights, HVAC, dehumidification, pumps, and controls. Include all "
+        "of the energy. Use the value on the electricity bill and not the value on the fixture "
+        "nameplate. Two numbers show how large this item is for indoor production. An estimate for "
+        "the US shows that indoor production used 1% of all the electricity of the US approximately "
+        "ten years before this paper" + _c("mills2012-carbon") + ". The emissions that models give "
+        "are 2,283–5,184 kg CO₂e for each kg of flower, and they change with the climate" +
         _c("summers2021-ghg") + ".",
-        "<strong>Media + nutrients</strong>, substrate, salts, CO₂, IPM consumables.",
-        "<strong>Rent</strong>, on gross floor area, not canopy.",
-        "<strong>Depreciation</strong>, the fit-out and gear, spread over useful life.",
-        "<strong>Testing + compliance</strong>, lab panels per batch plus licences, QA time, records. "
-        "California data put mandatory testing alone at ≈$136 per pound (≈$0.30/g) once sampling and "
-        "failure rates are counted" + _c("valdes2020-testing") + ", a real line, not a rounding error.",
-        "<strong>Packaging + consumables</strong>, bags, totes, labels, gloves.",
-        "<strong>Other overhead</strong>, insurance, security, admin, repairs, software."]),
-    fig(L.flow("Building a cost per gram, the method",
-        [("Count the dollars", "Twelve months of bank statement, all eight lines, no exceptions"),
-         ("Count the grams", "Grams actually sold in the same twelve months, not harvested, sold"),
-         ("Divide", "Dollars over grams. That's the number. Resist adjusting it"),
-         ("Rank the lines", "Sort the stack largest first. The order is your to-do list"),
-         ("Attack the top", "A 10% cut to line one beats a 50% cut to line eight")],
-        note="Annual numbers, always, per-cycle snapshots hide turn time and seasonality."),
-        "The whole method. Everything after this section is just practice runs of these five steps."),
-    callout("note", "Why annual, not per-cycle",
-      p("A per-cycle cost ignores the days the room earned nothing, turn time, a failed batch, the "
-        "month the dehumidifier died. Twelve months of dollars over twelve months of grams captures all "
-        "of it automatically. It's also the only version your accountant, your bank and your licence "
-        "renewal will recognise.")),
+        "<strong>Media + nutrients</strong>: substrate, salts, CO₂, and consumables for IPM.",
+        "<strong>Rent</strong>: for the total floor area and not for the canopy area.",
+        "<strong>Depreciation</strong>: the fit-out and the equipment, divided by the number of years in which you use them.",
+        "<strong>Testing + compliance</strong>: the panels of laboratory tests for each batch, plus "
+        "the licenses, the QA time, and the records. Data from California show a cost of "
+        "approximately $136 for each pound (approximately $0.30/g) for the mandatory testing only. "
+        "This cost includes the sampling and the failure rates" + _c("valdes2020-testing") +
+        ". This item is large and you cannot ignore it.",
+        "<strong>Packaging + consumables</strong>: bags, totes, labels, and gloves.",
+        "<strong>Other overhead</strong>: insurance, security, administration, repairs, and software."]),
+    fig(L.flow("How to calculate the cost for each gram",
+        [("Count the dollars", "Bank statements for twelve months, with all eight cost items"),
+         ("Count the grams", "Grams that you sell in the same twelve months, not grams that you harvest"),
+         ("Divide", "Dollars divided by grams is the result. Do not change the result"),
+         ("Compare items", "Put the largest item first. This sequence is your list of tasks"),
+         ("Change item one", "10% less in item one is better than 50% less in item eight")],
+        note="Use numbers for one year. One cycle does not show turn time or seasonality."),
+        "The full method. All the sections after this section are examples of these five steps."),
+    callout("note", "Use one year, not one cycle",
+      p("The cost of one cycle does not include the days when the room has no revenue. Examples are "
+        "the turn time, a failure of a batch, and the month when the dehumidifier stopped. The "
+        "dollars of twelve months divided by the grams of twelve months include these days "
+        "automatically. It is also the only method that your accountant and your bank accept, and "
+        "it is necessary for the renewal of your license.")),
   ]})
 
 # ---------------------------------------------------------------- 08 worked example
-SECTIONS.append({"id": "worked-example", "kicker": "08 · The worked example", "title": "Worked example: a fictional 100 m² room",
+SECTIONS.append({"id": "worked-example", "kicker": "08 · The example room", "title": "The example room of 100 m²: all the steps",
   "blocks": [
-    callout("warn", "Fictional facility, assumptions, not survey data",
-      p("Everything below is a <strong>made-up room with stated assumptions</strong>, chosen to be "
-        "plausible and to divide cleanly. It is not any real facility's numbers and not a target. The "
-        "point is the <em>method</em>: swap in your own values line by line and the arithmetic carries.")),
-    kv([("Flowering canopy", "100 m² (1,076 ft²) — ≈250 m² (2,691 ft²) gross floor — 40% canopy ratio"),
-        ("Lighting", "LED, 2.6 µmol/J, 350 W per m² of canopy → 35 kW installed"),
-        ("Photoperiod / flower", "12 h · 56 days in flower"),
-        ("Turn time", "7 days (harvest-out, clean, reset, flip)"),
-        ("Yield assumption", "450 g/m² per cycle, mid-band, see Section 05"),
-        ("Electricity price", "$0.20 per kWh (generic dollars throughout)"),
-        ("Non-lighting energy", "All-in electricity = 2.2 × lighting kWh (HVAC, dehu, fans, veg, dry)"),
-        ("Staffing", "4.0 FTE all-in at $50,000 loaded each"),
-        ("Fit-out capex", "$300,000, straight-line over 7 years")]),
+    callout("warn", "Example facility: given values, not data from facilities",
+      p("The example in this section is a <strong>model room with given values</strong>. We "
+        "selected the values because they are possible and because they divide easily. They are not "
+        "the numbers of a facility in operation, and they are not a target. The primary information "
+        "is the <em>method</em>. Use the values of your room. The same arithmetic gives your result.")),
+    kv([("Flowering canopy", "100 m² (1,076 ft²). Total floor area approximately 250 m² (2,691 ft²). Canopy ratio 40%."),
+        ("Lighting", "LED, 2.6 µmol/J, 350 W for each m² of canopy, 35 kW installed"),
+        ("Photoperiod and flowering stage", "12 h · 56 days in the flowering stage"),
+        ("Turn time", "7 days (harvest, clean, prepare the room, and start the next flowering)"),
+        ("Yield value", "450 g/m² for each cycle, in the middle of the ranges. Refer to Section 05."),
+        ("Electricity price", "$0.20 for each kWh (the dollars in this paper are not the dollars of a specified market)"),
+        ("Energy for the other loads", "All-in electricity = 2.2 × lighting kWh (HVAC, dehumidification, fans, vegetative room, drying room)"),
+        ("Personnel", "4.0 FTE (full-time equivalent). $50,000 for each FTE, with all the other costs for personnel"),
+        ("Fit-out CAPEX", "$300,000, with equal depreciation each year for 7 years")]),
     steps([
-      ("Fix the canopy and the light",
-       "100 m² × 350 W/m² = <strong>35,000 W = 35 kW</strong> installed. Sanity-check the intensity: "
-       "350 W/m² × 2.6 µmol/J = <strong>910 µmol·m⁻²·s⁻¹</strong>, a normal LED flower target."),
-      ("Grams per cycle",
-       "450 g/m² × 100 m² = <strong>45,000 g per cycle</strong>."),
-      ("Cycles per year",
-       "56 flower days + 7 turn days = 63 days flip-to-flip. 365 ÷ 63 = <strong>5.8 cycles per year</strong>."),
-      ("Grams per year",
-       "45,000 g × 5.8 = <strong>261,000 g = 261 kg per year</strong>."),
+      ("Calculate the installed power",
+       "100 m² × 350 W/m² = <strong>35,000 W = 35 kW</strong> installed. Do a check of the light "
+       "intensity: 350 W/m² × 2.6 µmol/J = <strong>910 µmol·m⁻²·s⁻¹</strong>. This light intensity "
+       "is a usual target for LED in flowering."),
+      ("Grams for each cycle",
+       "450 g/m² × 100 m² = <strong>45,000 g for each cycle</strong>."),
+      ("Cycles each year",
+       "56 days of flowering + 7 days of turn time = 63 days of cycle length. 365 ÷ 63 = <strong>5.8 cycles each year</strong>."),
+      ("Grams each year",
+       "45,000 g × 5.8 = <strong>261,000 g = 261 kg each year</strong>."),
       ("Lighting energy",
-       "35 kW × 12 h × 56 days = <strong>23,520 kWh per cycle</strong> of lighting."),
+       "35 kW × 12 h × 56 days = <strong>23,520 kWh for each cycle</strong> of lighting."),
       ("All-in energy",
-       "23,520 × 2.2 = <strong>51,744 kWh per cycle</strong> → × 5.8 ≈ <strong>300,000 kWh per year</strong>. "
-       "Cross-check: 300,000 ÷ 261 kg ≈ 1,150 kWh per kg, efficient-end for indoor; plenty of real "
-       "rooms run 2–4× this" + _c("nfd-energy-compare") + "."),
-      ("Price the energy",
-       "300,000 kWh × $0.20 = <strong>$60,000 per year</strong>."),
-      ("Add the rest of the stack",
-       "Labour $200,000 · rent $60,000 · testing + compliance $46,000 · depreciation $43,000 "
+       "23,520 × 2.2 = <strong>51,744 kWh for each cycle</strong>. With 5.8 cycles, the result is "
+       "approximately <strong>300,000 kWh each year</strong>. Do a check: 300,000 ÷ 261 kg = "
+       "approximately 1,150 kWh for each kg. This value is low for indoor production. Many rooms "
+       "operate at 2 to 4 times this value" + _c("nfd-energy-compare") + "."),
+      ("Calculate the cost of energy",
+       "300,000 kWh × $0.20 = <strong>$60,000 each year</strong>."),
+      ("Add the other cost items",
+       "Labor $200,000 · rent $60,000 · testing + compliance $46,000 · depreciation $43,000 "
        "($300,000 ÷ 7) · other overhead $40,000 · media + nutrients $26,000 · packaging $20,000. "
-       "With energy: <strong>$495,000 per year</strong>."),
+       "With energy: <strong>$495,000 each year</strong>."),
       ("Divide",
-       "$495,000 ÷ 261,000 g = <strong>$1.90 per finished gram</strong>. That is the room's real "
-       "scoreboard, everything else in this paper is a way of moving it."),
+       "$495,000 ÷ 261,000 g = <strong>$1.90 for each gram of product</strong>. The cost for each "
+       "gram is the primary metric of the room. All the other parts of this paper are methods to "
+       "change it."),
     ]),
-    fig("coststack", "The fictional room's year, stacked. Labour is 40% of every gram, more than "
-        "double the power bill that gets all the attention."),
-    table(["Line", "Annual $", "$ per gram", "Share", "Behind the number"], [
-      ["Labour", "$200,000", "$0.77", "40%", "4.0 FTE all-in at $50k loaded, grow, trim, lead"],
-      ["Rent", "$60,000", "$0.23", "12%", "250 m² gross × $240/m²/yr; canopy is 40% of floor"],
-      ["Energy", "$60,000", "$0.23", "12%", "300,000 kWh × $0.20; lighting × 2.2 all-in"],
-      ["Testing + compliance", "$46,000", "$0.18", "9%", "52 five-kg batches × $500 + $20k licences/QA" + _c("valdes2020-testing")],
+    fig("coststack", "The costs of the example room for one year, one above the other. Labor is 40% "
+        "of the cost of each gram, more than two times the electricity cost. Most growers think "
+        "that the electricity cost is the primary cost."),
+    table(["Item", "$ each year", "$ for each gram", "Percentage", "How to calculate the number"], [
+      ["Labor", "$200,000", "$0.77", "40%", "4.0 FTE at $50k for each FTE, with all the other costs. The personnel are growers, trimmers, and supervisors."],
+      ["Rent", "$60,000", "$0.23", "12%", "250 m² of total floor area × $240 for each m² each year. The canopy is 40% of the floor area."],
+      ["Energy", "$60,000", "$0.23", "12%", "300,000 kWh × $0.20. All-in energy = lighting energy × 2.2."],
+      ["Testing + compliance", "$46,000", "$0.18", "9%", "52 five-kg batches × $500 + $20k for licenses and QA" + _c("valdes2020-testing")],
       ["Depreciation", "$43,000", "$0.16", "9%", "$300k fit-out ÷ 7 years"],
-      ["Other overhead", "$40,000", "$0.15", "8%", "Insurance, security, admin, repairs"],
-      ["Media + nutrients", "$26,000", "$0.10", "5%", "≈$45 per m² per cycle, substrate, salts, CO₂, IPM"],
+      ["Other overhead", "$40,000", "$0.15", "8%", "Insurance, security, administration, repairs"],
+      ["Media + nutrients", "$26,000", "$0.10", "5%", "Approximately $45 for each m² for each cycle: substrate, salts, CO₂, and IPM"],
       ["Packaging", "$20,000", "$0.08", "4%", "Bags, totes, labels, consumables"],
-      ["<strong>Total</strong>", "<strong>$495,000</strong>", "<strong>$1.90</strong>", "100%", "The only number the bank sees"],
-    ], caption="The full stack. Rounded cents sum exactly: 77+23+23+18+16+15+10+8 = 190."),
-    p("Now score the same room on every denominator from Section 04, so you can see what each lens "
-      "would have told you:"),
-    table(["Metric", "Value", "Derivation", "Comment"], [
-      ["g/m² per cycle", "450", "assumed", "Mid-band against Section 05's ranges"],
-      ["g/m² per year", "2,610", "450 × 5.8", "The number per-cycle bragging hides"],
-      ["g/W installed", "1.29", "45,000 ÷ 35,000", "Top-third of the published 0.31–1.97 range" + _c("backer2019-yieldgap") + ", because LED, not because talent"],
-      ["g/kWh all-in", "0.87", "45,000 ÷ 51,744", "= 1,150 kWh per kg"],
-      ["Cost per gram", "$1.90", "495,000 ÷ 261,000", "The scoreboard"],
-    ], caption="One room, five numbers, all simultaneously true. Only the last one decides anything."),
+      ["<strong>Total</strong>", "<strong>$495,000</strong>", "<strong>$1.90</strong>", "100%", "The only number that the bank examines"],
+    ], caption="The full list of costs. The values in cents are approximate, but the total is accurate: 77+23+23+18+16+15+10+8 = 190."),
+    p("Use each denominator from Section 04 for the same room. The table shows the information that "
+      "each denominator gives:"),
+    table(["Metric", "Value", "How to calculate it", "Information"], [
+      ["g/m² for each cycle", "450", "given value", "In the middle of the ranges in Section 05"],
+      ["g/m² each year", "2,610", "450 × 5.8", "The number that a metric for one cycle does not show"],
+      ["g/W installed", "1.29", "45,000 ÷ 35,000", "In the top third of the range of 0.31–1.97 from the literature" + _c("backer2019-yieldgap") + ". The cause is the LED fixtures and not a better grower."],
+      ["g/kWh all-in", "0.87", "45,000 ÷ 51,744", "= 1,150 kWh for each kg"],
+      ["Cost for each gram", "$1.90", "495,000 ÷ 261,000", "The primary metric"],
+    ], caption="One room gives five numbers, and all five are correct at the same time. Only the last number helps you to make a decision."),
   ]})
 
 # ---------------------------------------------------------------- 09 labour
-SECTIONS.append({"id": "labour", "kicker": "09 · Labour costs in detail", "title": "Labour costs",
+SECTIONS.append({"id": "labour", "kicker": "09 · The cost of labor", "title": "Labor costs",
   "blocks": [
-    lead("Ask a new grower what indoor production costs and they'll talk about power. The fictional "
-         "room's power bill is $0.23 a gram. Its people are $0.77 — the largest line by a factor of "
-         "three, and the one most plans either omit or price at zero because ‘I'll do it myself’."),
-    p("Start with the honest division: $200,000 of payroll over 261 kg is <strong>$766 per kg</strong>. "
-      "At a loaded $25/hour that's ≈31 hours of paid time per finished kilogram. Where does it go? "
-      "Mostly one place: <strong>hand trimming</strong>. Industry throughput for a hand trimmer is "
-      "roughly 0.45–1.4 kg (1–3 lb) of dried flower per 8-hour shift, at $15–20/hour or "
-      "$100–200 per shift piece-rate" + _c("triminator-industrial") + ". Run the division: that's "
-      "≈6–18 hours per kg for trim alone. Call it 10 — at $25/hour loaded, <strong>$250 per kg, "
-      "$0.25 per gram, just for trimming</strong>. The scissors out-cost the electricity."),
-    fig(L.hbars("Where the minutes go, illustrative task budget per finished kg",
-        [("Hand trim", 600), ("Defoliation share", 120), ("Harvest + buck", 90),
-         ("Daily plant care", 90), ("Irrigation + checks", 60), ("Pack + QA", 60),
-         ("Clean + reset share", 45), ("Dry-room handling", 30)],
+    lead("When you speak to a new grower about the cost of indoor production, the grower speaks "
+         "about electricity. In the example room, the electricity bill is $0.23 for each gram. The "
+         "cost of labor is $0.77 for each gram. It is the largest item, and it is three times "
+         "larger than the next item. Many estimates do not include labor, or they give it a value "
+         "of zero, because the grower thinks ‘I will do the work myself’."),
+    p("Start with the division: $200,000 of payroll divided by 261 kg is <strong>$766 for each "
+      "kg</strong>. At a cost of $25/hour with all the other costs, the result is approximately 31 "
+      "hours of work for each kg of product. Most of these hours are for one task: <strong>hand "
+      "trimming</strong>. The usual rate of a hand trimmer is approximately 0.45–1.4 kg (1–3 lb) of "
+      "dried flower in an 8-hour shift.</p><p>The wage is $15–20/hour, or $100–200 for each shift "
+      "as a piece rate" + _c("triminator-industrial") + ". Divide the hours of the shift by the "
+      "rate: the result is approximately 6–18 hours for each kg for trimming only. Use 10 hours. At "
+      "$25/hour with all the other costs, the cost is <strong>$250 for each kg, or $0.25 for each "
+      "gram, for trimming only</strong>. The cost of trimming is more than the cost of electricity."),
+    fig(L.hbars("Task minutes for each kg of product, example values",
+        [("Hand trim", 600), ("Defoliation part", 120), ("Harvest, bucking", 90),
+         ("Plant work each day", 90), ("Irrigation + checks", 60), ("Packaging + QA", 60),
+         ("Clean + prepare part", 45), ("Drying room work", 30)],
         unit=" min",
-        note="Planning placeholders, not measurements, hand trim alone spans ≈360–1,080 min/kg across crews. Time your own."),
-        "An illustrative task-minute budget totalling ≈1,095 min (18 h) per kg. Hand-trim throughput "
-        "bounds from industry practice" + _c("triminator-industrial") + "; everything else is a "
-        "placeholder for your own stopwatch."),
-    p("Notice the gap: tasks sum to ≈18 h/kg but payroll says ≈31. The missing 13 hours are real work "
-      "that never touches a bud, mothers and veg care, meetings, cleaning, records, sick days, and "
-      "plain idle time between tasks. That gap is <strong>utilisation</strong>, and it's why headcount "
-      "models built from task lists always come in under the real payroll. Budget from payroll; use "
-      "task minutes to find what to fix."),
-    ul(["<strong>Measure before you buy.</strong> A trim machine at 9–18 kg/h (20–40 lb/h)" + _c("triminator-industrial") +
-        " looks unanswerable next to 0.9 kg/shift (2 lb/shift), but weigh the grade impact on your product and your "
-        "buyer before the capex (Sections 11 and 14).",
-        "<strong>Smooth the spikes.</strong> Harvest weeks need 3× the hands of week 3 of flower. "
-        "Staggered rooms (Section 10) turn a hiring problem into a scheduling one.",
-        "<strong>Price the founder.</strong> If your own hours enter at $0, every bad room you'll ever "
-        "build will look profitable on paper."]),
+        note="Example values, not measurements. Hand trim only: ≈360–1,080 min/kg in different groups. Measure your times."),
+        "An example of task minutes for each kg, with a total of approximately 1,095 min (18 h). "
+        "The limits for the rate of hand trimming are from the usual rates that growers give" +
+        _c("triminator-industrial") + ". For all the other values, use your measurements."),
+    p("The sum of the tasks is approximately 18 h/kg, but the payroll gives approximately 31 h/kg. "
+      "The 13 missing hours are for work that does not touch a bud. Examples are the work with "
+      "mother plants and vegetative plants, meetings, cleaning, records, sick leave, and time "
+      "between tasks with no work. The difference is the <strong>utilization</strong>. Thus a model "
+      "that calculates the number of personnel from a list of tasks always gives a labor cost that "
+      "is less than the payroll. Calculate the labor cost from the payroll, and use the task "
+      "minutes to find the items that you must change."),
+    ul(["<strong>Measure before the purchase.</strong> A trim machine with a rate of 9–18 kg/h "
+        "(20–40 lb/h)" + _c("triminator-industrial") + " is much faster than 0.9 kg for each shift "
+        "(2 lb for each shift). Before you pay for the machine, examine the grade of the product "
+        "that it makes. Then examine if your buyer accepts this grade (Sections 11 and 14).",
+        "<strong>Make the peaks of work smaller.</strong> In the weeks of harvest, you must have 3 "
+        "times the personnel of week 3 of flowering. If the rooms start flowering at different "
+        "times (Section 10), the problem of the number of personnel becomes a problem of the times "
+        "of the tasks.",
+        "<strong>Include the cost of your hours.</strong> If the cost of your hours is $0, each "
+        "room that has a loss shows a profit in the model."]),
   ]})
 
 # ---------------------------------------------------------------- 10 cycles per year
-SECTIONS.append({"id": "cycles", "kicker": "10 · Cycles per year", "title": "Annual crop cycles",
+SECTIONS.append({"id": "cycles", "kicker": "10 · Cycles each year", "title": "Crop cycles each year",
   "blocks": [
-    lead("Everything you produce in a year is grams-per-cycle × cycles-per-year. The industry obsesses "
-         "over the first term and lets the second one rot. Turn time, the days between harvesting one "
-         "crop and flipping the next, multiplies <em>everything</em>."),
-    fig("cycles", "The fictional room at two turn speeds. 365 ÷ 63 = 5.8 cycles; 365 ÷ 77 = 4.7. Same "
-        "agronomy, same per-cycle yield, the slow room ships 47,700 g less a year."),
-    p("The arithmetic is brutal because it's a division that compounds. At a 7-day turn the room runs "
-      "5.8 cycles and ships 261,000 g. Let the turn drift to 21 days, a slow clean here, a late clone "
-      "batch there, a week waiting on a parts order, and it's 4.7 cycles and 213,300 g. <strong>Two "
-      "extra weeks per turn costs 47,700 g a year</strong>: at a $2.20 blended price, over $100,000 of "
-      "revenue, for zero saved cost. No nutrient program on earth moves the needle like that."),
-    p("Backer's meta-analysis found longer <em>flowering</em> raised yield per m²" + _c("backer2019-yieldgap") +
-      ", and that's exactly the trade to price properly: an extra week of flower must earn more grams "
-      "than the same week would earn as a fresh cycle. At 45,000 g per cycle, a 63-day flip earns "
-      "≈714 g per calendar day; a 70-day flip has to yield ≈50,000 g per cycle, 11% more, just to "
-      "tie. Run that division before you extend ripening, not after."),
+    lead("All that you make in one year is the grams for each cycle × the cycles each year. Growers "
+         "monitor the first term and ignore the second term. The turn time is the number of days "
+         "from the harvest of one crop to the start of flowering of the next crop. The turn time "
+         "changes the cycles each year, and thus it changes <em>all</em> the grams that you make in "
+         "one year."),
+    fig("cycles", "The example room with two turn times. 365 ÷ 63 = 5.8 cycles, and 365 ÷ 77 = 4.7 "
+        "cycles. The agronomy and the yield for each cycle are the same, but the slow room sells "
+        "47,700 g less each year."),
+    p("The effect of the turn time is large because it multiplies the grams of each cycle. With a "
+      "turn time of 7 days, the room operates 5.8 cycles each year and sells 261,000 g. If the turn "
+      "time becomes 21 days, the room operates 4.7 cycles and sells 213,300 g. Causes can be a slow "
+      "cleaning, clones that are not available, or a part that you get one week after the correct "
+      "date.</p><p><strong>Two more weeks in each turn time give 47,700 g less each year.</strong> "
+      "At a blended price of $2.20, the revenue is more than $100,000 less, and the cost does not "
+      "decrease. No feed schedule has an effect of this size."),
+    p("In the meta-analysis of Backer, a longer time of <em>flowering</em> increased the yield for "
+      "each m²" + _c("backer2019-yieldgap") + ". You must calculate the effect of a longer "
+      "flowering time correctly. One more week of flowering must give more grams than the same week "
+      "gives in a new cycle. At 45,000 g for each cycle, a cycle length of 63 days gives "
+      "approximately 714 g for each day. A cycle length of 70 days must give approximately 50,000 g "
+      "for each cycle, which is 11% more, to give the same result. Do this division before you make "
+      "the ripening longer, and not after the change."),
     steps([
-      ("Define flip-to-flip", "Flower-in to flower-in, in days, on the whiteboard. If it isn't "
-       "measured it will drift, nobody notices a turn stretching one day per cycle."),
-      ("Pre-stage the turn", "Repair list closed, room consumables staged, clean crew booked, "
-       "<em>before</em> harvest morning. The turn is a pit stop, not a project."),
-      ("Keep veg ahead of flower", "The most common turn-killer is clones that aren't ready. Veg "
-       "capacity must run one full flip ahead of the flower room's calendar."),
-      ("Stagger if you can", "Four small rooms flipping in rotation give the same annual cycles as one "
-       "big room, but level the trim labour and turn a crop failure into a 25% event instead of 100%."),
+      ("Write the cycle length", "Write the cycle length in days on the whiteboard. If you do not "
+       "measure it, it can become longer. No person knows that the turn time becomes one day longer "
+       "in each cycle."),
+      ("Prepare before the harvest", "<em>Before</em> the day of the harvest, complete the repair list. Put "
+       "the consumables for the room in position. Make sure that the personnel for cleaning are "
+       "available. Do the work of the turn time in a short time. It is not a long task."),
+      ("Prepare the vegetative plants first", "The most frequent cause of a long turn time is clones that are "
+       "not available. The vegetative room must operate one full cycle before the dates of the "
+       "flowering room."),
+      ("Start the rooms at different times", "Four small rooms that start flowering one after the other give the "
+       "same cycles each year as one large room. They make the trim labor equal in all weeks. A "
+       "failure of one crop is 25% of the production and not 100%."),
     ]),
-    callout("key", "The multiplier mindset",
-      p("Grams per cycle is agronomy. Cycles per year is discipline. The second is cheaper to improve, "
-        "invisible on every per-cycle metric, and shows up whole in the annual division. When cost per "
-        "gram drifts and nothing agronomic changed, check the calendar first.")),
+    callout("key", "Cycles each year multiply the grams",
+      p("Grams for each cycle is agronomy. Cycles each year is about the operation of the facility. "
+        "The second value is easier to make better, and it has a lower cost. A metric for one cycle "
+        "does not show the second value, but the division for one year shows all of its effect. The "
+        "cost for each gram can change when there is no change in the agronomy. Then do a check of "
+        "the cycle length first.")),
   ]})
 
 # ---------------------------------------------------------------- 11 quality vs volume
-SECTIONS.append({"id": "quality-vs-volume", "kicker": "11 · Price tiers", "title": "Quality premiums and yield volume",
+SECTIONS.append({"id": "quality-vs-volume", "kicker": "11 · Price groups", "title": "Higher prices for quality and the quantity of yield",
   "blocks": [
-    p("Cost per gram is half the story; the cheque depends on the price per gram, and price is tiered. "
-      "US spot-market averages in early 2024 ran ≈$1,378/lb for indoor flower (≈$3.04/g), $725/lb "
-      "greenhouse (≈$1.60/g) and $418/lb outdoor (≈$0.92/g)" + _c("cannabisbenchmarks-q1-2024") + " — "
-      "a 3× spread on production method alone, before grade tiers <em>within</em> each method split "
-      "further into A-flower, B/smalls and trim, each with its own price."),
-    fig(L.zones("Wholesale price tiers, one market's averages, for shape not gospel",
+    p("The cost for each gram is only half of the information. Your revenue changes when the price "
+      "for each gram changes, and the price is different in each group. In the US spot market at "
+      "the start of 2024, the average price for indoor flower was approximately $1,378/lb "
+      "($3.04/g). The prices for greenhouse flower and outdoor flower were approximately $725/lb "
+      "($1.60/g) and $418/lb ($0.92/g)" + _c("cannabisbenchmarks-q1-2024") + ". The difference of "
+      "the prices for the methods of production is 3 times, before you include the grades. "
+      "<em>In</em> each method, the prices are different again for each grade: grade A flower, "
+      "grade B flower, small buds, and trim."),
+    fig(L.zones("Wholesale price groups: averages of one market, only as an example",
         0, 3.6,
         [(0.7, 1.1, L.AMBL, "outdoor ≈$0.92"), (1.3, 1.9, L.GXL, "greenhouse ≈$1.60"),
          (2.4, 3.5, L.GL, "indoor ≈$3.04")],
         unit=" $/g",
-        note="US 2024 spot averages (≈$418 / $725 / $1,378 per lb). Your market will differ. The tier structure is the lesson."),
-        "Price tiers by production method, US 2024 spot data" + _c("cannabisbenchmarks-q1-2024") +
-        ". An indoor cost structure only makes sense if you reliably clear indoor-tier prices."),
-    p("This is why <strong>blended price</strong>, not headline price, belongs in the model, and why "
-      "chasing top-shelf changes the whole equation rather than one line of it. Compare two strategies "
-      "for the fictional room, which sits near break-even at a $1.90 blended price:"),
-    table(["", "Path A, volume", "Path B, grade-first"], [
-      ["Annual output", "261 kg", "248 kg (−5%: lower density, slower trim)"],
-      ["Grade mix", "60% A / 40% B", "85% A / 15% B"],
-      ["Tier prices", "$2.40 A · $1.15 B", "$2.40 A · $1.15 B"],
+        note="US spot market 2024 (≈$418 / $725 / $1,378/lb). Your market is different. Use the structure, not the values."),
+        "Price groups for each method of production, data of the US spot market 2024" +
+        _c("cannabisbenchmarks-q1-2024") + ". A cost structure for indoor production is possible "
+        "only if you always get prices in the indoor group."),
+    p("Thus the model must use the <strong>blended price</strong> and not the price of the best "
+      "grade. A decision to sell only the best grade changes all the model and not only one item. "
+      "Compare two alternatives for the example room, which is almost at the break-even at a "
+      "blended price of $1.90:"),
+    table(["", "Alternative A: quantity", "Alternative B: grade-first"], [
+      ["Production each year", "261 kg", "248 kg (−5%: lower density, slower trimming)"],
+      ["Quantity of each grade", "60% A / 40% B", "85% A / 15% B"],
+      ["Prices of the grades", "$2.40 A · $1.15 B", "$2.40 A · $1.15 B"],
       ["Blended price", "0.6×2.40 + 0.4×1.15 = <strong>$1.90</strong>", "0.85×2.40 + 0.15×1.15 = <strong>$2.21</strong>"],
       ["Revenue", "261,000 × 1.90 = $495,900", "248,000 × 2.21 = $548,700"],
-      ["Cost", "$495,000", "$505,000 (+$10k trim & handling)"],
-      ["<strong>Profit</strong>", "<strong>≈ $900</strong>", "<strong>≈ $43,700</strong>"],
-    ], caption="Fictional arithmetic, stated assumptions. Five percent less weight, forty grand more profit, near break-even, grade mix is a bigger dial than gross yield."),
-    callout("warn", "The premium has to be real",
-      p("Path B only works if the channel genuinely pays the A-tier price for your extra grade, a "
-        "promise worth getting in writing before you rebuild the room around it. Chasing top-shelf "
-        "raises trim hours, lowers plant density, and often stretches the cycle; if the market then "
-        "pays you B-tier money anyway, you've built Path B's cost base with Path A's revenue. "
-        "Quality-tier discounts, not yield, are where most ‘profitable’ models die.")),
+      ["Cost", "$495,000", "$505,000 (+$10k for trimming and the work with the product)"],
+      ["<strong>Profit</strong>", "<strong>approximately $900</strong>", "<strong>approximately $43,700</strong>"],
+    ], caption="Example arithmetic with given values. The weight is five percent less, but the profit is forty thousand dollars more. The room is almost at the break-even. The quantities of the grades have a larger effect than the total yield."),
+    callout("warn", "Make sure that you get the higher price",
+      p("Get a written contract with your buyer before you change the room. Alternative B is "
+        "correct only if the buyer pays the price of grade A for the larger quantity. If you try to "
+        "get the best grade, the trimming hours increase and the plant density decreases. The cycle "
+        "is frequently longer.</p><p>The market can pay only the price of grade B. Then you have "
+        "the cost of Alternative B and the revenue of Alternative A. In most models with a profit, "
+        "the error is in the lower prices for quality and not in the yield.")),
   ]})
 
 # ---------------------------------------------------------------- 12 sensitivity
-SECTIONS.append({"id": "sensitivity", "kicker": "12 · Sensitivity", "title": "Cost-per-gram sensitivity",
+SECTIONS.append({"id": "sensitivity", "kicker": "12 · Sensitivity", "title": "Sensitivity of the cost for each gram",
   "blocks": [
-    p("Before spending a dollar to improve the room, ask the model which dial is worth touching. The "
-      "method: take the fictional baseline ($1.90/g), move <strong>one input at a time</strong> across "
-      "a plausible swing, hold everything else, and recompute. Plot the results widest-first and you "
-      "get a tornado:"),
-    fig("tornado", "Sensitivity of cost per gram in the fictional room. Yield per cycle, labour and "
-        "turn time dominate; the inputs people love optimising (power price, capex, nutrients) trail "
-        "the field."),
-    table(["Input moved", "Swing tested", "Cost/g range", "Span"], [
-      ["Yield per cycle", "450 → 540 / 360 g/m²", "$1.58 – $2.37", "$0.79"],
-      ["Labour bill", "±25%", "$1.70 – $2.09", "$0.38"],
-      ["Cycle length", "63 → 58 / 70 days", "$1.77 – $2.08", "$0.32"],
-      ["Electricity price", "$0.20 → 0.10 / 0.30 per kWh", "$1.78 – $2.01", "$0.23"],
-      ["Fit-out capex", "±50%", "$1.81 – $1.98", "$0.17"],
-      ["Media + nutrients", "±30%", "$1.87 – $1.93", "$0.06"],
-    ], caption="Each row: one input moved alone, rest held at baseline. Energy re-scales with cycle count in the cycle-length row."),
-    p("Read the order, because it's the whole strategy. A 20% yield move swings cost per gram four times "
-      "further than halving-or-adding-half to the <em>entire</em> nutrient budget. The two biggest bars"
-      ", yield and labour, are grower skill and process design. The bars vendors talk about most ("
-      "power price, capex, bottles) are the small ones. And note what the swing sizes hide: a 20% "
-      "yield swing is one bad pest cycle or one steering mistake, while a 50% power-price swing "
-      "requires renegotiating with a utility. The big bars are also the <em>easy</em> ones to move, in "
-      "both directions."),
-    callout("tip", "Run your own tornado",
-      p("Rebuild the baseline with your numbers, then move each line ±20% and rank the spans. It takes "
-        "twenty minutes in a spreadsheet and it will re-order your capex wishlist, usually by moving "
-        "the trim process and the turn calendar above every piece of hardware on it.")),
+    p("Before you pay for a change, use the model to find the input with the largest effect. Start "
+      "with the baseline of the example room ($1.90/g). Change <strong>one input at a time</strong> "
+      "in a possible range. Keep all the other inputs the same, and calculate again. Show the "
+      "results in a chart with the widest range at the top. This chart is a tornado chart:"),
+    fig("tornado", "Sensitivity of the cost for each gram in the example room. The yield for each "
+        "cycle, labor, and cycle length have the largest effects. The inputs that most growers try "
+        "to make better (price of electricity, CAPEX, nutrients) have the smallest effects."),
+    table(["Input changed", "Range of change", "Cost/g range", "Difference"], [
+      ["Yield for each cycle", "450 g/m² to 540 g/m² or to 360 g/m²", "$1.58–$2.37", "$0.79"],
+      ["Labor cost", "±25%", "$1.70–$2.09", "$0.38"],
+      ["Cycle length", "63 days to 58 days or to 70 days", "$1.77–$2.08", "$0.32"],
+      ["Electricity price", "From $0.20 to 0.10 or to 0.30 for each kWh", "$1.78–$2.01", "$0.23"],
+      ["Fit-out CAPEX", "±50%", "$1.81–$1.98", "$0.17"],
+      ["Media + nutrients", "±30%", "$1.87–$1.93", "$0.06"],
+    ], caption="Each row: one input changed, and all the other inputs at the baseline. In the row for cycle length, the energy changes with the number of cycles."),
+    p("The sequence of the bars is the primary information. Compare a change of 20% in the yield "
+      "with a change of half (less or more) in <em>all</em> the cost of nutrients. The yield has an "
+      "effect that is four times larger. The two largest bars, yield and labor, show the "
+      "performance of the grower and the quality of the procedures in the room. The bars that "
+      "suppliers speak about most (price of electricity, CAPEX, bottles) are the small "
+      "bars.</p><p>The sizes of the changes are also important. A change of 20% in the yield can "
+      "occur because of one cycle with a pest problem or one error in steering. A change of 50% in "
+      "the price of electricity occurs only if you make a new contract with the electricity "
+      "supplier. The large bars are also the <em>easy</em> bars to change, in the two directions."),
+    callout("tip", "Make a tornado chart for your room",
+      p("Calculate the baseline again with your numbers. Increase and decrease each item 20%. Write "
+        "the differences in a list, from the largest to the smallest. You can do this work in "
+        "twenty minutes in a spreadsheet. The result frequently changes the sequence of your list "
+        "of CAPEX items. The trimming procedure and the turn time are before all the equipment in "
+        "the sequence.")),
   ]})
 
 # ---------------------------------------------------------------- 13 break-even
-SECTIONS.append({"id": "break-even", "kicker": "13 · Break-even", "title": "Break-even analysis",
+SECTIONS.append({"id": "break-even", "kicker": "13 · Break-even", "title": "How to calculate the break-even",
   "blocks": [
-    p("Break-even is the yield, price or cycle count where profit crosses zero, and knowing where it "
-      "sits turns vague anxiety into specific targets. Three divisions, same fictional room:"),
+    p("Break-even is the yield, the price, or the number of cycles at which the profit becomes "
+      "zero. When you know the break-even, you have targets with numbers. There are three divisions "
+      "for the example room:"),
     ul(["<strong>Break-even price</strong> at 450 g/m² and 5.8 cycles: $495,000 ÷ 261,000 g = "
-        "<strong>$1.90/g blended</strong>. Below that cheque, every gram ships at a loss.",
-        "<strong>Break-even yield</strong> at a $2.20 blended price: $495,000 ÷ $2.20 = 225,000 g → "
-        "÷ (100 m² × 5.8) = <strong>≈388 g/m² per cycle</strong>. That's the floor under a bad run.",
-        "<strong>Break-even cycles</strong> at $2.20 and 450 g/m²: 225,000 ÷ 45,000 = 5.0 cycles → "
-        "flip-to-flip must stay under 365 ÷ 5.0 = <strong>73 days</strong>. The calendar has a red line."]),
-    fig(L.line("Cost per gram vs yield, annual spend held flat",
+        "<strong>$1.90/g blended price</strong>. If the price is less than this value, you have a "
+        "loss for each gram that you sell.",
+        "<strong>Break-even yield</strong> at a blended price of $2.20: $495,000 ÷ $2.20 = 225,000 "
+        "g, then ÷ (100 m² × 5.8) = approximately <strong>388 g/m² for each cycle</strong>. This "
+        "yield is the minimum. A lower yield gives a loss.",
+        "<strong>Break-even cycles</strong> at $2.20 and 450 g/m²: 225,000 ÷ 45,000 = 5.0 cycles. "
+        "Thus the cycle length must be less than 365 ÷ 5.0 = <strong>73 days</strong>. The cycle "
+        "length has a maximum value."]),
+    fig(L.line("Cost for each gram and yield, same cost each year",
         [("300", 2.84), ("350", 2.44), ("400", 2.13), ("450", 1.9), ("500", 1.71), ("550", 1.55), ("600", 1.42)],
         ["300", "350", "400", "450", "500", "550", "600"],
-        ylab="$ per gram", ymax=4, ymin=0,
-        note="Fictional room: $495k spend fixed, yield the only mover. Band: an illustrative $1.50–2.50 wholesale range.",
-        bands=[(1.5, 2.5, L.GXL, "illustrative wholesale band")]),
-        "The break-even picture: where your cost curve crosses your price band. At 300 g/m² this room "
-        "loses money at any realistic price; at 600 g/m² it survives a price collapse. Fixed costs are "
-        "why yield problems are existential rather than proportional."),
-    table(["Blended price", "Annual revenue (261 kg)", "Profit"], [
+        ylab="$/g", ymax=4, ymin=0,
+        note="Example room: $495k cost each year, only the yield changes. Example wholesale range: $1.50–2.50.",
+        bands=[(1.5, 2.5, L.GXL, "example wholesale range")]),
+        "The break-even chart shows where your cost curve goes into your price range. At 300 g/m², "
+        "this room has a loss at all possible prices. At 600 g/m², the room has a profit also when "
+        "the price becomes very low. The costs are the same for all yields, and thus a problem with "
+        "the yield can stop the business. It does not only decrease the profit in proportion."),
+    table(["Blended price", "Revenue each year (261 kg)", "Profit"], [
       ["$2.60", "$678,600", "+$183,600"],
       ["$2.20", "$574,200", "+$79,200"],
-      ["$1.90", "$495,900", "≈ $0 — break-even"],
+      ["$1.90", "$495,900", "approximately $0 (break-even)"],
       ["$1.60", "$417,600", "−$77,400"],
-    ], caption="Fictional room at fixed output. A ±$0.30 move in blended price swings profit by ≈$78k, price tier discipline (Section 11) is worth as much as agronomy."),
-    p("Two habits make break-even thinking useful rather than depressing. First, compute it "
-      "<em>per constraint</em> (a price floor, a yield floor, a calendar ceiling) so every team "
-      "member owns a number they can actually influence. Second, recompute after every change: costs "
-      "creep, prices sag, and last year's comfortable margin can become this year's break-even without "
-      "a single dramatic event. Falling wholesale prices have been the norm in maturing markets" +
-      _c("cannabisbenchmarks-q1-2024") + ", build the model expecting the band to move down, not up."),
+    ], caption="Example room with the same production. A change of ±$0.30 in the blended price gives a change of approximately $78k in the profit. Thus a good price group (Section 11) is as important as agronomy."),
+    p("Use two methods to make the break-even a good tool. First, calculate it <em>for each "
+      "limit</em> (a minimum price, a minimum yield, a maximum cycle length). Thus each person has "
+      "a number that the person can change.</p><p>Second, calculate it again after each change. "
+      "Costs increase slowly, prices decrease slowly, and a large profit of last year can become "
+      "the break-even of this year without one large change. In mature markets, wholesale prices "
+      "usually decrease" + _c("cannabisbenchmarks-q1-2024") + ". In the model, use a price range "
+      "that decreases and does not increase."),
   ]})
 
 # ---------------------------------------------------------------- 14 mistakes
-SECTIONS.append({"id": "mistakes", "kicker": "14 · Failure modes", "title": "Common unit-economics mistakes",
+SECTIONS.append({"id": "mistakes", "kicker": "14 · Causes of failure", "title": "Frequent errors in unit economics",
   "blocks": [
-    p("Every one of these is survivable once and fatal as a habit. All of them are denominators or "
-      "missing lines. None of them is agronomy."),
+    p("A business can continue after one of these errors, but not if the error occurs many times. "
+      "All of them are errors of denominators or missing cost items. None of them is an error of "
+      "agronomy."),
     grid([
-      card("Counting yield, not turn time",
-        p("g/m² per cycle up 5%, cycles per year down 10%, the room got ‘better’ and produced "
-          "less. Score g/m² <strong>per year</strong> and put flip-to-flip days on the wall."), "denominator"),
-      card("The free-labour illusion",
-        p("Founder hours priced at $0 make any room look profitable. Price yourself at market rate; if "
-          "the model dies, the business was you subsidising it with unpaid shifts."), "missing line"),
-      card("Capex worship",
-        p("$80,000 of automation to save $6,000 a year is a 13-year payback on gear with a 7-year life. "
-          "Payback maths before invoices, and remember the tornado: capex was the small bar."), "payback"),
-      card("Planning at A-grade, selling at blended",
-        p("The plan quotes top-tier price on 100% of output. Reality ships 30–50% as B/smalls at "
-          "half the tier. Model the blended price or be surprised every single quarter."), "price"),
-      card("Cross-era g/W bragging",
-        p("Comparing your LED g/W to an HPS grower's is comparing fixture efficacy" + _c("kusuma2020-efficacy") +
-          ", not growing. Within one era it's a sanity check; across eras it's astrology."), "metric"),
-      card("Forgetting shrink and failed batches",
-        p("Moisture loss, failed tests, remediation, short-shipped orders. California's modelled testing "
-          "failure rate alone was ≈4%" + _c("valdes2020-testing") + ". Grams sold, not grams harvested, "
-          "belong in the denominator."), "missing line"),
+      card("Yield without the turn time",
+        p("If g/m² for each cycle increases 5% and the cycles each year decrease 10%, the room is "
+          "‘better’ but makes less. Use g/m² <strong>for each year</strong> and write the cycle "
+          "length in days on the wall."), "denominator"),
+      card("Labor with a cost of zero",
+        p("If your hours have a cost of $0, each room shows a profit. Give your hours a cost at the "
+          "market rate. If the model then shows a loss, the business is possible only because you "
+          "do shifts without a wage."), "missing item"),
+      card("CAPEX is too important",
+        p("Automation with a cost of $80,000 makes the cost of the room $6,000 less each year. The "
+          "payback is 13 years, but the equipment operates for only 7 years. Calculate the payback "
+          "before you get the invoices. In the tornado chart, CAPEX is a small bar."), "payback"),
+      card("Model with the price of grade A, revenue at the blended price",
+        p("The model uses the price of the best grade for 100% of the production. In operation, "
+          "30–50% of the production is grade B flower and small buds, at half of the price. Use the "
+          "blended price in the model. If you do not, the revenue in each period of three months is "
+          "less than the model shows."), "price"),
+      card("g/W in different fixture generations",
+        p("If you compare your LED g/W with the g/W of an HPS grower, you compare the efficacy of "
+          "the fixtures" + _c("kusuma2020-efficacy") + " and not the agronomy. In one fixture "
+          "generation, the g/W is a check of the values. In different fixture generations, the g/W "
+          "gives no information."), "metric"),
+      card("Loss of weight and batch failures",
+        p("The losses are: loss of moisture, failures of tests, remediation, and sales with less "
+          "weight than the contract. The model for California gives a failure rate in tests of "
+          "approximately 4%" + _c("valdes2020-testing") + ", and this rate is only one of the "
+          "losses. Use the grams that you sell, and not the grams that you harvest, in the "
+          "denominator."), "missing item"),
     ], cols=2),
   ]})
 
 # ---------------------------------------------------------------- 15 troubleshooting
 SECTIONS.append({"id": "troubleshooting", "kicker": "15 · Troubleshooting", "title": "Troubleshooting",
   "blocks": [
-    p("Symptoms first, causes second, same as diagnosing a sick plant, except the sensor is the bank "
-      "statement and the lag is a full quarter."),
-    table(["Symptom", "Likely cause", "Check first"], [
-      ["Cost/g creeping up, nothing obviously changed",
-       "Turn time stretching or grade mix sliding, both invisible to per-cycle metrics",
-       "Plot flip-to-flip days and blended price for the last six cycles"],
-      ["Great g/m², still no margin",
-       "Denominator theatre: slow cycles, heavy labour, or price tier below plan",
-       "Recompute $/g from twelve months of bank statement, not the harvest log"],
-      ["Energy bill far above the model",
-       "Non-lighting loads (winter dehu, reheat) or lights-on hours drifting",
-       "Meter the lighting circuit separately; track kWh/kg against your own baseline, not folklore"],
-      ["Trim backlog after every harvest",
-       "Throughput planned at folklore rates rather than measured ones",
-       "Time one shift: hand trim commonly runs 0.45–1.4 kg (1–3 lb) per 8 h" + _c("triminator-industrial")],
-      ["Wholesale cheque smaller than the spreadsheet",
-       "Quality discounts, moisture loss, failed or short batches",
-       "Reconcile invoiced $ vs modelled $ per batch; track shrink % as its own line"],
-      ["Cash fine in summer, ugly in winter",
-       "Seasonal HVAC/dehu load and price seasonality stacking",
-       "Twelve-month rolling $/g, never judge the room on a single cycle"],
-    ], caption="The common thread: the fix is almost always measurement cadence, not a purchase."),
+    p("Find the symptoms first and then the causes. Do the same for a plant with a disease. But the "
+      "bank statement is the sensor, and the time to get a reading is three months."),
+    table(["Symptom", "Possible cause", "First check"], [
+      ["Cost/g increases slowly, and you know of no change",
+       "The turn time becomes longer, or the quantity of lower grades increases. Metrics for one cycle do not show these two changes.",
+       "Make a chart of the cycle length in days and the blended price for the last six cycles"],
+      ["Good g/m², but no profit",
+       "The denominator is good, but the cycles are slow, the labor cost is large, or the price group is less than the model",
+       "Calculate $/g again from the bank statements of twelve months, and not from the harvest record"],
+      ["The electricity bill is much more than the model",
+       "Loads other than the lights (dehumidification in winter, reheat) or a change in the hours with lights on",
+       "Put one meter on the lighting circuit and one meter on all the other circuits. Record kWh/kg and compare it with your baseline and not with the values from other growers."],
+      ["After each harvest, you do not complete the trimming",
+       "The model uses usual rates and not measured rates",
+       "Measure the time of one shift. The usual rate of hand trimming is 0.45–1.4 kg (1–3 lb) in 8 h" + _c("triminator-industrial")],
+      ["The wholesale revenue is less than the spreadsheet",
+       "Lower prices for quality, loss of moisture, batches with a failure or with less weight",
+       "Compare the $ in the invoices with the $ in the model for each batch. Record the loss of weight in % as one item."],
+      ["Cash flow is good in summer and low in winter",
+       "The HVAC and dehumidification loads and the seasonality of prices occur at the same time",
+       "Calculate $/g for the last twelve months, and do not examine the room with one cycle only"],
+    ], caption="In almost all the rows, the correction is to measure more frequently. It is not a purchase."),
   ]})
 
 # ---------------------------------------------------------------- 16 mental model
-SECTIONS.append({"id": "mental-model", "kicker": "16 · Control variables", "title": "Unit-economics control variables",
+SECTIONS.append({"id": "mental-model", "kicker": "16 · Values to change", "title": "Values that you can change in unit economics",
   "blocks": [
-    callout("key", "The one-paragraph version",
-      p("Upstairs there is one number: <strong>dollars per finished gram, per year</strong>. Downstairs "
-        "there are three dials: <strong>grams per cycle</strong> (agronomy), <strong>cycles per "
-        "year</strong> (discipline), <strong>dollars per year</strong> (every line, honestly counted, "
-        "labour first). Every metric in this paper is a window onto one dial; every improvement you "
-        "will ever make turns one of the three. The plants are the product. The division is the "
-        "business.")),
-    p("What to actually do this week, in order:"),
-    ol(["Build your own cost stack from the last twelve months of real spending, all eight lines, "
-        "founder hours priced at market rate.",
-        "Divide by grams <em>sold</em> in the same twelve months. Write the $/g answer somewhere "
-        "prominent and slightly uncomfortable.",
-        "Put flip-to-flip days on the whiteboard and start the streak.",
-        "Time one full trim shift and one full harvest day, your two biggest labour blocks, before "
-        "considering any machine.",
-        "Run the tornado with your numbers and re-rank your wishlist by span, not by excitement.",
-        "Recompute quarterly. Costs creep, prices sag, and the model is only honest while it's fresh."]),
-    p("And keep the humility the benchmarks force on you: the published record spans 0.31–1.97 g/W" +
-      _c("backer2019-yieldgap") + " and hundreds of g/m² between honest studies" + _c("llewellyn2022-light") +
-      _c("westmoreland2021-blue") + ". Nobody else's number, including the fictional room's $1.90 — is "
-      "your number. The method is portable; the answers never are."),
-    callout("note", "Scope reminder",
-      p("Education, not financial advice: this paper shows arithmetic on cited public figures and a "
-        "fictional example. Licensing, tax, market access and prices are jurisdiction-specific, get "
-        "local professional advice before betting money on any of it.")),
+    callout("key", "Short summary",
+      p("There is one primary number: <strong>dollars for each gram of product, for one "
+        "year</strong>. This number has three quantities that you can change: <strong>grams for "
+        "each cycle</strong> (agronomy), <strong>cycles each year</strong> (operation of the "
+        "facility), and <strong>dollars each year</strong> (all the cost items, counted correctly, "
+        "labor first). Each metric in this paper shows one of these quantities, and each change "
+        "that makes the business better changes one of the three. The plants are the product. The "
+        "division is the business.")),
+    p("Do these tasks this week, in this sequence:"),
+    ol(["Make a list of your costs for the last twelve months. Include all eight items and the cost "
+        "of your hours at the market rate.",
+        "Divide by the grams that you <em>sell</em> in the same twelve months. Write the $/g result "
+        "in a position where all personnel can see it.",
+        "Write the cycle length in days on the whiteboard. Then record it for each cycle.",
+        "Measure the time of one full trim shift and of one full harvest day. These two tasks are "
+        "your largest labor items. Do these two measurements before you make a decision about a "
+        "machine.",
+        "Make the tornado chart with your numbers. Change the sequence of your CAPEX list to the sequence of the differences in the chart.",
+        "Calculate again after each period of three months. Costs increase slowly, prices decrease slowly, and the model is correct only when its numbers are new."]),
+    p("The benchmarks show that you must be careful with numbers from other growers. The literature "
+      "has a range of 0.31–1.97 g/W" + _c("backer2019-yieldgap") + " and a difference of more than "
+      "two hundred g/m² in the results of correct investigations" + _c("llewellyn2022-light") +
+      _c("westmoreland2021-blue") + ". The number of a different person, also the $1.90 of the "
+      "example room, is not your number. You can use the method in all rooms, but the results are "
+      "different in each room."),
+    callout("note", "Limits of this paper",
+      p("Information, not financial advice: this paper shows arithmetic with numbers that have "
+        "references and an example room. The regulation of licenses and tax, the access to markets, "
+        "and the prices are different in each jurisdiction. Get local professional advice before "
+        "you use this information for a business decision.")),
   ]})

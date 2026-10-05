@@ -8,14 +8,15 @@ import figs_lib as L
 _FIGS = json.load(open(os.path.join(os.path.dirname(__file__), "figs_lab_testing.json"), encoding="utf-8"))
 
 SLUG = "lab-testing-coas"
-TITLE = "Lab testing, potency and the COA"
+TITLE = "Laboratory testing, potency and the COA"
 EYEBROW = "Harvest · Quality"
-SUB = ("A certificate of analysis is a measurement of one small sample, not a property of your crop. "
-       "This guide reads a COA line by line, checks the potency maths (the 0.877 factor and the chemistry "
-       "behind it), explains every test family from qPCR to ICP-MS, and is honest about the part the "
-       "industry keeps getting caught at: inflated numbers.")
+SUB = ("A certificate of analysis (COA) is a measurement of one small sample and is not a property "
+       "of your crop. This paper shows how to read a COA row by row and how to calculate the total "
+       "THC again. It gives the chemistry behind the 0.877 factor. It tells you about each type of "
+       "test, from qPCR to ICP-MS. It also gives the facts about numbers that are too high. Tests "
+       "find this problem frequently in cannabis markets.")
 META = [("flask", "Quality"), ("image", "10 diagrams"),
-        ("quote", "Evidence-linked · 16 sources"), ("clock", "~24 min read")]
+        ("quote", "16 sources"), ("clock", "~24 min to read")]
 RELATED = ["gmp-hash-lab", "harvest-dry-trim-cure"]
 REF_IDS = ["schwabe2023-inflated", "zoorob2021-bunching", "jikomes2018-labs", "wang2016-decarb",
            "dussy2005-thca", "lazarjani2020-methods", "sarma2020-usp", "nist-cannaqap2",
@@ -30,561 +31,697 @@ SECTIONS = []
 # ---------------------------------------------------------------- 1. start here
 SECTIONS.append({"id": "start-here", "kicker": "Start here", "title": "Purpose and scope",
   "blocks": [
-    lead("Every batch you sell (and in a medicinal system, every batch you release) ends its life as a "
-         "one-page document from a testing laboratory: the <strong>certificate of analysis</strong>, or "
-         "<strong>COA</strong>. It says what is in the flower (cannabinoids, terpenes) and what must not be "
-         "(mould, heavy metals, pesticides, mycotoxins). Buyers mostly read one number on it, "
-         "<strong>total THC</strong>, and that number moves the price. Which is exactly why it is the most "
-         "gamed number in the industry, with peer-reviewed studies documenting systematic inflation on retail "
-         "labels" + _c("schwabe2023-inflated") + _c("zoorob2021-bunching") + "."),
-    p("Here is the single idea that makes every section of this paper make sense: <strong>a COA is not a "
-      "property of your crop.</strong> It is a measurement, of one small sample, pulled one way, prepared one "
-      "way, run on one instrument, by one lab, on one day. Change any of those and the number changes, with no "
-      "fraud involved. Most of the grief in cannabis testing (&lsquo;same weed, different number&rsquo;, lab "
-      "shopping, inflated labels) comes from people forgetting, or exploiting, that distinction."),
-    defterm("COA (certificate of analysis)", "The lab's formal report of what it measured in a specific "
-            "sample: identity, potency, contaminants, methods, and a release signature."),
-    defterm("Analyte", "Any single thing the lab measures, THCA, lead, a pesticide, a mould count. A COA is "
-            "a list of analytes with results."),
-    defterm("Matrix", "What the sample physically is, dried flower, oil, an edible. The matrix changes how "
-            "the lab must extract and measure, and how hard the job is."),
-    defterm("Batch / lot", "The defined quantity of product one COA claims to speak for. The whole game is "
-            "how honestly a few grams of sample represent it."),
-    defterm("LOD / LOQ", "Limit of detection / limit of quantitation, the smallest amount the method can "
-            "reliably see / reliably put a number on. &lsquo;ND&rsquo; (not detected) only means &lsquo;below "
-            "the LOD&rsquo;, never zero."),
-    defterm("ISO/IEC 17025", "The international standard for testing-lab competence. Accreditation to it is "
-            "the baseline credential worth checking on any COA."),
-    callout("key", "One big idea",
-      p("The certificate describes one sample — roughly one gram, through one lab's process, on one day. "
-        "Good sampling and an accredited lab make that description accurate for the sample tested. It is "
-        "still a description of one sample, not your crop. Everything in this paper is about knowing how "
-        "faithfully that sample represents your batch.")),
+    lead("For each batch that you supply to a buyer, a testing laboratory gives a "
+         "<strong>certificate of analysis</strong> (<strong>COA</strong>). In a system for "
+         "medicinal cannabis, the laboratory also gives a COA for each batch that you release. The "
+         "COA is a document of one page. It shows the materials that the flower contains "
+         "(cannabinoids and terpenes) and the materials that the flower must not contain (mold, "
+         "heavy metals, pesticides, and mycotoxins).</p><p>Most buyers read only one number on the "
+         "COA. This number is <strong>total THC</strong>, and it changes the price. Thus some "
+         "persons try to get a higher value for this number more frequently than for other numbers. "
+         "Tests with peer review show a systematic error. The values on labels in the retail market "
+         "are too high" + _c("schwabe2023-inflated") + _c("zoorob2021-bunching") +
+         "."),
+    p("One fact is important for all sections of this paper. <strong>A COA is not a property of "
+      "your crop.</strong> A COA is the measurement of one small sample. A person collected the "
+      "sample with one method. The laboratory prepared it with one method and measured it with one "
+      "instrument on one day.</p><p>If one of these items changes, the number changes. Fraud is not "
+      "necessary for this change. This fact is the cause of many problems in cannabis testing. Some "
+      "persons do not know it, and some persons use it to get a higher price. Examples are the same "
+      "product with a different number and labels with numbers that are too high. One more example "
+      "is the selection of a laboratory for its high numbers."),
+    defterm("COA (certificate of analysis)", "The report of a laboratory on the measurements of one "
+            "sample. The report gives the ID of the sample, the potency, the contaminants, the "
+            "methods, and a signature that releases the batch."),
+    defterm("Analyte", "One item that the laboratory measures. For example, THCA, lead, a "
+            "pesticide, and the quantity of mold are analytes. A COA is a list of analytes with "
+            "results."),
+    defterm("Matrix", "The type of material in the sample. For example, dried flower, oil, and an "
+            "edible product are three types of matrix. The matrix changes the method that the "
+            "laboratory must use to extract and measure the analyte. It also changes how easy the "
+            "task is."),
+    defterm("Batch / lot", "The specified quantity of product that one COA gives information about. "
+            "The sample is only a small number of grams. The primary problem is how accurately the "
+            "sample shows the properties of the batch."),
+    defterm("LOD / LOQ", "The limit of detection (LOD) is the minimum quantity that the method can "
+            "find with a sure result. The limit of quantitation (LOQ) is the minimum quantity for "
+            "which the method gives an accurate number. &lsquo;ND&rsquo; (&lsquo;not "
+            "detected&rsquo;) shows that the quantity is less than the LOD. It does not show that "
+            "the quantity is zero."),
+    defterm("ISO/IEC 17025", "The standard for the correct operation of testing laboratories. We "
+            "recommend that you examine each COA for an accreditation to this standard."),
+    callout("key", "One primary fact",
+      p("The COA gives information for one sample. The sample is approximately one gram. One "
+        "laboratory measured it with one procedure on one day. Correct sampling and a laboratory "
+        "with accreditation make this information accurate for the sample that the laboratory "
+        "measured. But the information is for one sample and not for your crop. All the sections of "
+        "this paper help you to know how accurately that sample shows the properties of your batch.")),
   ]})
 
 # ---------------------------------------------------------------- 2. core answer
-SECTIONS.append({"id": "core-answer", "kicker": "The short version", "title": "Laboratory testing overview",
+SECTIONS.append({"id": "core-answer", "kicker": "The primary items", "title": "Primary items of laboratory testing",
   "blocks": [
-    p("To read a COA in sixty seconds, check eight things in order:"),
-    ol(["<strong>Who tested it</strong>, a named lab with a checkable accreditation (ISO/IEC 17025 or, in "
-        "medicinal frameworks, GMP certification)" + _c("nz-mcs-mqs") + ".",
-        "<strong>What was tested</strong>, sample ID, batch, matrix, sample mass, and crucially <em>who "
-        "pulled the sample</em>. &lsquo;Client-submitted&rsquo; means the lab never saw your batch.",
-        "<strong>The basis</strong>, dry-weight or as-received, and the moisture content. This alone moves "
-        "potency ~10–15%.",
-        "<strong>The potency table</strong>, acids (THCA) and neutrals (THC) on separate rows means an HPLC "
-        "method. Then do the maths: total THC = Δ9-THC + 0.877 × THCA. It should reconcile exactly.",
-        "<strong>Units</strong>, % w/w and mg/g say the same thing (1% = 10 mg/g); don't let a unit switch "
-        "fool you.",
-        "<strong>Each contaminant family</strong> (microbial, metals, pesticides, mycotoxins, solvents) is "
-        "its own test with its own method and pass/fail. Potency says nothing about safety.",
-        "<strong>The footnotes</strong>, LOQs, ND definitions, method references. No LOQ column means "
-        "&lsquo;ND&rsquo; is uninterpretable.",
-        "<strong>The release</strong>, a named, dated QA signature. In GMP systems this is where a COA "
-        "becomes a release decision instead of a marketing asset" + _c("tga-tgo93") + "."]),
-    p("And the honesty part, up front: the peer-reviewed record shows reported retail potency in several "
-      "legal markets is systematically inflated, 70% of tested Colorado flower samples ran more than 15% "
-      "below label in one study" + _c("schwabe2023-inflated") + ", 70% of a three-state audit fell outside "
-      "±20% of label" + _c("geweda2024-audit") + ", and product frequencies &lsquo;bunch&rsquo; suspiciously "
-      "just above the 20%-THC price threshold" + _c("zoorob2021-bunching") + ". When a single number sets the "
-      "price, someone will lean on it. The defence is knowing how the number is made. Which is the rest of "
-      "this paper."),
+    p("To read a COA in sixty seconds, examine these eight items in this sequence:"),
+    ol(["<strong>The laboratory.</strong> Make sure that the COA gives the name of the laboratory "
+        "and an accreditation that you can examine (ISO/IEC 17025 or, in systems for medicinal "
+        "cannabis, a GMP certificate)" + _c("nz-mcs-mqs") + ".",
+        "<strong>The sample.</strong> Find the sample ID, the batch, the matrix, and the sample "
+        "mass. Most important, find <em>the person who collected the sample</em>. "
+        "&lsquo;Client-submitted&rsquo; shows that the laboratory did not see your batch.",
+        "<strong>The basis.</strong> Find the basis (dry-weight or as-received) and the moisture "
+        "content. The basis changes the potency by approximately 10 to 15%.",
+        "<strong>The potency table.</strong> A row for the acids (THCA) and a row for the neutral "
+        "cannabinoids (THC) show an HPLC method. Then calculate the total THC: total THC = Δ9-THC + "
+        "0.877 × THCA. The result must agree with the total on the COA.",
+        "<strong>The units.</strong> The units % w/w and mg/g measure the same quantity (1% = 10 "
+        "mg/g). Do not let a change of unit cause an error.",
+        "<strong>Each type of contaminant</strong> (microbes, metals, pesticides, mycotoxins, and "
+        "solvents) has a different test and a different method. The result of each test is "
+        "satisfactory or unsatisfactory. The potency does not give information about safety.",
+        "<strong>The footnotes.</strong> Find the LOQs, the definition of &lsquo;ND&rsquo;, and the "
+        "references to the methods. If the COA has no LOQ column, you do not know the limit for the "
+        "result &lsquo;ND&rsquo;.",
+        "<strong>The signature.</strong> Find a signature with a name and a date from a person in "
+        "QA. In GMP systems, this signature makes the COA a decision to release the batch and not a "
+        "tool for marketing" + _c("tga-tgo93") + "."]),
+    p("This paper also gives the facts about numbers that are too high. Tests with peer review show "
+      "that the potency values on labels in some legal markets have a systematic error. In one "
+      "test, the measured value of 70% of the Colorado flower samples was more than 15% less than "
+      "the label value" + _c("schwabe2023-inflated") + ". In an audit of three states, the measured "
+      "value of 70% of the samples was not in the range of ±20% of the label value" +
+      _c("geweda2024-audit") + ". The number of products with a value that is a small quantity more "
+      "than the price threshold of 20% THC is too high" + _c("zoorob2021-bunching") +
+      ".</p><p>When one number sets the price, some persons will try to change it. Your protection "
+      "is to know how the laboratory makes the number. The remaining sections of this paper give "
+      "this information."),
   ]})
 
 # ---------------------------------------------------------------- 3. pipeline
-SECTIONS.append({"id": "pipeline", "kicker": "The map", "title": "Laboratory testing workflow",
+SECTIONS.append({"id": "pipeline", "kicker": "From sample to COA", "title": "Laboratory testing procedure",
   "blocks": [
-    p("Between &lsquo;cut a sample&rsquo; and &lsquo;PDF lands in your inbox&rsquo; sits a pipeline, and "
-      "every stage of it shapes the final numbers. The instrument is the glamorous part; the sampling and the "
-      "prep are where the number is really decided."),
+    p("The COA is the last item of a sequence of steps that starts when a person collects the "
+      "sample. Each step changes the numbers on the COA. The sampling and the sample preparation "
+      "change the numbers more than the instrument does."),
     figure(L.flow("From batch to certificate",
-        [("Sample", "increments across the whole batch"),
-         ("Accession", "logged; chain of custody starts"),
-         ("Prep", "grind, extract, dilute, per test"),
+        [("Sample", "samples from all parts of the batch"),
+         ("Intake", "Record. Chain of custody starts"),
+         ("Prepare", "grind, extract, dilute for tests"),
          ("Instruments", "HPLC, ICP-MS, qPCR, GC"),
-         ("QA + COA", "review, sign, release")],
-        note="Each test family gets its own subsample and its own preparation. The potency gram is not the microbial gram."), 1,
-      "The testing pipeline. The batch is only ever represented by the sample taken at step 1 — "
-      "everything downstream measures that sample, not your room."),
-    p("Each family of tests uses different physics, which is why one lab houses half a dozen instruments:"),
-    table(["Test family", "What it looks for", "Typical instrument", "Typical timeframe"], [
+         ("QA + COA", "signature to release")],
+        note="Each test has a different part of the sample and a different sample preparation. The gram for potency is not the gram for microbes."), 1,
+      "The testing procedure. The sample from step 1 is the only item that shows the batch. All "
+      "subsequent steps measure that sample and not your room."),
+    p("Each type of test uses different physics. Thus a laboratory has approximately six instruments:"),
+    table(["Type of test", "Analytes", "Typical instrument", "Typical time"], [
       ["Potency (cannabinoids)", "THCA, Δ9-THC, CBDA, CBD, CBGA, minor cannabinoids", "HPLC-DAD (liquid chromatography)", "1–3 days"],
-      ["Terpenes", "aroma volatiles (myrcene, limonene…)", "GC-MS / GC-FID (gas chromatography)", "1–3 days"],
-      ["Microbial", "TAMC, TYM, pathogens, Aspergillus", "Culture plates (CFU) or qPCR (DNA)", "plates 3–7 days; qPCR hours"],
+      ["Terpenes", "volatile compounds of the aroma (for example myrcene and limonene)", "GC-MS / GC-FID (gas chromatography)", "1–3 days"],
+      ["Microbes", "TAMC, TYM, pathogens, Aspergillus", "Culture plates (CFU) or qPCR (DNA)", "3 to 7 days for plates and hours for qPCR"],
       ["Heavy metals", "arsenic, cadmium, lead, mercury", "ICP-MS after acid digestion", "1–3 days"],
-      ["Pesticides", "panels of dozens of residues", "LC-MS/MS + GC-MS/MS", "2–5 days"],
+      ["Pesticides", "panels of many pesticide residues", "LC-MS/MS + GC-MS/MS", "2–5 days"],
       ["Mycotoxins", "aflatoxins B1/B2/G1/G2, ochratoxin A", "LC-MS/MS", "2–5 days"],
-      ["Residual solvents", "butane, ethanol, acetone…", "headspace GC", "1–3 days"],
-      ["Moisture / water activity", "water content; water availability", "loss-on-drying balance; a<sub>w</sub> meter", "same day"],
-    ], cls="compact", caption="The main test families on a full-panel cannabis COA and the instruments behind them."),
-    callout("note", "Turnaround time varies by method",
-      p("Culture-based microbiology is the slow lane: colonies need days to grow. qPCR collapses that to "
-        "hours, which is one reason labs and regulators have been migrating to it, with trade-offs covered in "
-        "the microbial section below.")),
+      ["Residual solvents", "for example butane, ethanol, and acetone", "headspace GC", "1–3 days"],
+      ["Moisture / water activity", "water content and how available the water is", "loss-on-drying balance and a<sub>w</sub> meter", "same day"],
+    ], cls="compact", caption="The table shows the primary types of test on a COA for cannabis with all the panels, and the instruments for these tests."),
+    callout("note", "Turnaround time changes with the method",
+      p("Tests with culture are slow. Some days are necessary for colonies to increase in size. "
+        "qPCR decreases this time to a number of hours. The short time is one cause of the change "
+        "to qPCR in laboratories and authorities. The section on microbes below compares the two "
+        "methods.")),
   ]})
 
 # ---------------------------------------------------------------- 4. read a COA
-SECTIONS.append({"id": "read-a-coa", "kicker": "Line by line", "title": "How to read a certificate of analysis",
+SECTIONS.append({"id": "read-a-coa", "kicker": "Row by row", "title": "How to read a certificate of analysis",
   "blocks": [
-    p("Below is a mock certificate from a fictional lab, <em>Example Analytical Ltd</em>, laid out the way "
-      "most real ones are. The eight callouts are the eight places your eyes should go, in order."),
+    p("This section has an example COA. It is from a laboratory with the example name <em>Example "
+      "Analytical Ltd</em>. The COAs of most laboratories have the same blocks in the same "
+      "sequence. The COA has eight areas with numbers. Examine the areas in the sequence of the "
+      "numbers."),
     figure(_FIGS["mockcoa"], 2,
-      "A mock COA with the eight blocks annotated. Every real certificate is a variation on this layout: "
-      "identity, sample metadata, potency table, contaminant panels, and a release signature."),
+      "An example COA with the eight blocks identified. Each COA from a laboratory is a variation "
+      "of this sequence of blocks. The blocks are the name of the laboratory, the sample "
+      "information, the potency table, the contaminant panels, and a signature that releases the "
+      "batch."),
     steps([
-      ("Lab identity and accreditation", "A real lab puts its name, address and accreditation number where "
-       "you can check them against the accreditation body's public register. A PDF with a logo and no "
-       "accreditation number is just a nicely typeset claim."),
-      ("Report ID and version", "One report, one version. Amended reports (&lsquo;v2&rsquo;) happen "
-       "legitimately, but an amendment that only ever moves THC upward deserves questions."),
-      ("Sample metadata", "Sample ID, batch/lot, matrix, mass received, dates. And who did the sampling. "
-       "&lsquo;Client-submitted&rsquo; means the number describes whatever was in the bag you sent, which is "
-       "a very different claim from a lab-sampled batch result."),
-      ("Basis and moisture", "As-received or dry-weight, with the measured moisture. Without this line, two "
-       "COAs cannot be compared at all, see the basis section below."),
-      ("The potency table", "THCA and Δ9-THC on separate rows (an HPLC signature), minor cannabinoids, a "
-       "starred total. Verify: total THC = Δ9-THC + 0.877 × THCA. On the mock: 0.92 + 0.877 × 24.20 = "
-       "22.14%. It reconciles. If it doesn't, ask why before you trust anything else on the page."),
-      ("Footnotes and LOQs", "ND means &lsquo;not detected above the limit shown&rsquo;, never zero. The "
-       "LOQ column is what makes ND mean something. Its absence is a reporting failure."),
-      ("Contaminant panels", "Each family (microbial, metals, pesticides, mycotoxins, solvents) is a "
-       "separate test on a separate subsample. A stellar THC number and a failed Aspergillus test live "
-       "happily on the same certificate."),
-      ("Release signature and the small print", "A named QA person, dated. Then the ISO-language honesty "
-       "clause: <em>results relate only to the sample as received</em>. That sentence is the legal truth of "
-       "everything above it."),
+      ("Name and accreditation of the laboratory", "A COA from a laboratory with accreditation gives the "
+       "name, the address, and the accreditation number of the laboratory. Compare these data with "
+       "the public register of the authority that gave the accreditation. A PDF with a logo and no "
+       "accreditation number is only a claim."),
+      ("Report ID and version", "A report has one version. A laboratory can make a new version "
+       "(&lsquo;v2&rsquo;) of a report for a correct cause. But if each new version only increases "
+       "the THC value, tell the laboratory to give the cause."),
+      ("Sample information", "This block gives the sample ID, the batch or lot, and the matrix. It "
+       "also gives the mass that the laboratory received and the dates. It shows the person who "
+       "collected the sample. &lsquo;Client-submitted&rsquo; shows that the number is for the "
+       "material in the bag that you sent. This result is very different from the result for a "
+       "batch with a sample that the laboratory collected."),
+      ("Basis and moisture", "This block gives the basis (as-received or dry-weight) and the "
+       "measured moisture. Without this row, you cannot compare two COAs. The section on the basis "
+       "below gives more information."),
+      ("The potency table", "This block has a row for THCA and a row for Δ9-THC (the two rows show "
+       "an HPLC method). It also has the minor cannabinoids and a total with an asterisk (*). "
+       "Calculate the total THC: total THC = Δ9-THC + 0.877 × THCA. In the example, 0.92 + 0.877 × "
+       "24.20 = 22.14%. This result agrees with the total on the COA. If the values are not the "
+       "same, find the cause before you accept other data on the page."),
+      ("Footnotes and LOQs", "&lsquo;ND&rsquo; shows that the laboratory did not find the analyte "
+       "in a quantity more than the limit in the report. It does not show zero. The LOQ column "
+       "gives this limit, and thus you can use the result &lsquo;ND&rsquo;. If the report has no "
+       "LOQ column, the report is defective."),
+      ("Contaminant panels", "Each type (microbes, metals, pesticides, mycotoxins, and solvents) is "
+       "a different test on a different part of the sample. A COA can show a very high THC number "
+       "and an unsatisfactory result for Aspergillus."),
+      ("Signature for release and the last clause", "A person from QA gives a name and a date. Then "
+       "there is an ISO clause that limits the results: <em>&lsquo;Results relate only to the "
+       "sample as received&rsquo;</em>. This clause shows the limit of all the data above it."),
     ]),
-    callout("tip", "Verify the certificate itself",
-      p("Accredited labs will confirm a report number if you ring them, and many print a QR code or portal "
-        "link for verification. Fake and altered COAs circulate in every market. A two-minute check beats "
-        "arguing with a buyer later.")),
+    callout("tip", "Examine the COA as a document",
+      p("If you speak to a laboratory with accreditation, the laboratory can tell you if a report "
+        "number is correct. Many laboratories give a QR code or a link that you can use to examine "
+        "the report. In all markets, some COAs are not from the laboratory that the COA shows, and "
+        "a person changed some COAs. A check of two minutes can prevent a problem with a buyer "
+        "after you supply the batch.")),
   ]})
 
 # ---------------------------------------------------------------- 5. potency math
-SECTIONS.append({"id": "potency-math", "kicker": "The 0.877 factor", "title": "Total THC: calculation and chemistry",
+SECTIONS.append({"id": "potency-math", "kicker": "The 0.877 factor", "title": "Total THC: how to calculate it, and the chemistry",
   "blocks": [
-    p("The living plant barely makes any THC. It makes <strong>THCA</strong>, tetrahydrocannabinolic acid — "
-      "THC with an extra chemical group (–COOH) attached that makes it non-intoxicating and about 13% heavier. "
-      "Think of baking soda releasing bubbles in a hot pan: heat forces a gas out of the molecule and leaves a "
-      "chemically different compound behind. THCA does exactly that — heat strips the extra group off as CO₂ "
-      "gas, a reaction called <strong>decarboxylation</strong>" +
-      _c("wang2016-decarb") + ". A lighter, a vape, an oven. That is where most of the THC in your life is "
-      "actually created."),
+    p("The plant makes almost no THC. It makes <strong>THCA</strong> (tetrahydrocannabinolic acid). "
+      "THCA is THC with an attached chemical group (–COOH). This group makes THCA a "
+      "non-intoxicating cannabinoid. THCA is also approximately 13% heavier than THC.</p><p>Heat "
+      "removes this group as CO₂ gas. This reaction is <strong>decarboxylation</strong>" +
+      _c("wang2016-decarb") + ". After the reaction, the compound is chemically different. The heat "
+      "of a flame, a vaporizer, or an oven causes this reaction. Thus this reaction makes most of "
+      "the THC that a person uses."),
     figure(_FIGS["totalthc"], 3,
-      "Mass balance of decarboxylation. THCA (358.5 g/mol) loses CO₂ (44.0 g/mol) and becomes THC "
-      "(314.5 g/mol). The ratio 314.5 ÷ 358.5 = 0.877 is why a gram of THCA can only ever yield 0.877 g of "
-      "THC, 12.3% of the acid's mass was never THC to begin with."),
-    p("That is the whole mystery of the 0.877 factor: <strong>it is a molecular-weight ratio, not a "
-      "correction fudge</strong>. THC weighs 314.5 g/mol; THCA weighs 358.5 g/mol; 314.5 ÷ 358.5 = 0.877. So "
-      "the standard label formula is:"),
+      "The mass balance of decarboxylation. THCA (358.5 g/mol) releases CO₂ (44.0 g/mol) and "
+      "becomes THC (314.5 g/mol). The ratio 314.5 ÷ 358.5 = 0.877 shows that one gram of THCA can "
+      "make a maximum of 0.877 g of THC. 12.3% of the mass of the acid is not THC."),
+    p("<strong>The 0.877 factor is a ratio of molecular weights. It is not a correction.</strong> "
+      "THC has a molecular weight of 314.5 g/mol, and THCA has a molecular weight of 358.5 g/mol. "
+      "The ratio is 314.5 ÷ 358.5 = 0.877. Thus the standard formula for labels is:"),
     callout("key", "Total THC = Δ9-THC + (0.877 × THCA)",
-      p("This is the &lsquo;total potential THC&rsquo; convention used by regulators and analytics datasets "
-        "alike" + _c("zoorob2021-bunching") + _c("jikomes2018-labs") + ". Read it as a <em>ceiling</em>: it "
-        "assumes every single THCA molecule survives conversion. Real-world heating never achieves that, "
-        "some THCA and THC are destroyed or lost before they reach anyone.")),
-    p("How fast does the conversion actually run? In controlled kinetics work, THCA in an open reaction "
-      "vessel fully converted in about 30 minutes at 110 °C (230 °F), about 9 minutes at 130 °C (266 °F) "
-      "and about 6 minutes at 145 °C (293 °F), and, heated in the dark under vacuum, produced no significant "
-      "CBN (the oxidation by-product)" + _c("wang2016-decarb") + ". In air, with light and higher "
-      "temperatures, losses grow, which is exactly why the formula's assumption of perfect conversion makes "
-      "it a maximum, not a prediction."),
-    figure(L.line("THCA disappearing at 110 °C",
+      p("Authorities and laboratories use this method to calculate the &lsquo;total potential "
+        "THC&rsquo;" + _c("zoorob2021-bunching") + _c("jikomes2018-labs") + ". The result is a "
+        "<em>maximum</em>. The method is correct only if all the THCA molecules change to THC. But "
+        "the heat does not change all the THCA. The quantities of THCA and THC decrease before a "
+        "person uses them.")),
+    p("A test with controlled conditions measured the speed of the conversion. In an open reaction "
+      "vessel, all the THCA changed to THC in approximately 30 minutes at 110 °C (230 °F). The time "
+      "was approximately 9 minutes at 130 °C (266 °F) and approximately 6 minutes at 145 °C (293 "
+      "°F). When the test applied heat without light and in a vacuum, no important quantity of CBN "
+      "(a product of oxidation) occurred" + _c("wang2016-decarb") + ".</p><p>In air, with light, "
+      "and at higher temperatures, the quantities of THCA and THC decrease more. The formula is "
+      "correct only if all the THCA changes to THC. Thus the formula gives a maximum and not an "
+      "estimate of the result."),
+    figure(L.line("THCA decreases at 110 °C",
         [("", 100), ("", 52), ("", 27), ("", 14), ("", 7), ("", 4), ("", 2)],
         ["0", "5", "10", "15", "20", "25", "30 min"],
         ylab="% THCA remaining", ymax=100,
-        note="First-order decay consistent with Wang et al. (2016): complete conversion in ~30 min at 110 °C (230 °F), ~9 min at 130 °C (266 °F), ~6 min at 145 °C (293 °F). Curve is schematic."), 4,
-      "Decarboxylation kinetics. The acid disappears exponentially with time; hotter is faster but also "
-      "riskier for THC itself and brutal on terpenes" + _c("wang2016-decarb") + "."),
-    p("Slow decarboxylation also happens at room temperature, during curing and storage, THCA quietly ticks "
-      "over to THC, and THC slowly oxidises onward to CBN. This is why an old COA and a fresh one on the same "
-      "batch can honestly disagree: the material itself moved."),
-    callout("note", "CBD uses the same factor family",
-      p("CBDA → CBD uses its own molecular-weight ratio (also 0.877, since the acids and neutrals differ by "
-        "the same CO₂ group): total CBD = CBD + 0.877 × CBDA. Any &lsquo;total&rsquo; cannabinoid on a COA "
-        "should be exactly this arithmetic, recompute it when it matters.")),
+        note="First-order decay agrees with the test of Wang (2016): all THCA changes in approximately 30 min at 110 °C (230 °F), 9 min at 130 °C (266 °F), 6 min at 145 °C (293 °F). The curve is only an example."), 4,
+      "The speed of decarboxylation. The quantity of the acid shows exponential decay with time. At "
+      "a higher temperature, the reaction is faster. But the risk to the THC is also higher, and "
+      "the damage to the terpenes is large" + _c("wang2016-decarb") + "."),
+    p("Decarboxylation also occurs slowly at room temperature, for example during curing and in "
+      "storage. Some THCA changes to THC, and some THC changes slowly to CBN with oxidation. Thus a "
+      "previous COA and a new COA for the same batch can show different numbers, and the two "
+      "numbers can be correct. The material changed."),
+    callout("note", "The factor for CBD is the same",
+      p("The change from CBDA to CBD uses a ratio of molecular weights (also 0.877, because the "
+        "acid has one CO₂ group more than the neutral cannabinoid). The formula is: total CBD = CBD "
+        "+ 0.877 × CBDA. The total of each cannabinoid on a COA must agree with this formula. It is "
+        "easy to calculate the total again when the result is important.")),
   ]})
 
 # ---------------------------------------------------------------- 6. methods
-SECTIONS.append({"id": "methods", "kicker": "HPLC vs GC", "title": "HPLC versus GC for potency testing",
+SECTIONS.append({"id": "methods", "kicker": "HPLC and GC", "title": "HPLC and GC for potency testing",
   "blocks": [
-    p("Two chromatography families dominate potency testing, and they do not see the same molecules. "
-      "<strong>HPLC</strong> (high-performance liquid chromatography) pushes the extract through a column in "
-      "liquid at near-room temperature. Different molecules travel through the column at different speeds — "
-      "like pigments separating on wet paper, where some colours travel further than others — so THCA and "
-      "THC arrive at the detector as separate, distinct peaks. <strong>GC</strong> (gas chromatography) must "
-      "vaporise the sample in an injector inlet at roughly 250–300 °C (482–572 °F). At that temperature THCA "
-      "decarboxylates on the spot, so the acid never reaches the detector as itself" + _c("lazarjani2020-methods") + "."),
+    p("Two types of chromatography are the primary methods for potency testing. They do not measure "
+      "the same molecules. <strong>HPLC</strong> (high-performance liquid chromatography) moves the "
+      "extract through a column in a liquid at a temperature near room temperature. Different "
+      "molecules move through the column at different speeds. Thus THCA and THC go to the detector "
+      "at different times. They make two different peaks.</p><p><strong>GC</strong> (gas "
+      "chromatography) must change the sample to a gas in the hot inlet at approximately 250 to 300 "
+      "°C (482 to 572 °F). At this temperature, THCA decarboxylates immediately. The acid does not "
+      "go to the detector as THCA" + _c("lazarjani2020-methods") + "."),
     figure(_FIGS["hplcgc"], 5,
-      "The two analysis paths. HPLC runs cool and reports THCA and THC separately, so total THC is computed "
-      "with the 0.877 factor. GC destroys the acid in the hot inlet: it reports a single &lsquo;THC&rsquo; "
-      "number that silently includes converted THCA. And the conversion is not even complete" +
+      "The two methods of measurement. HPLC operates at a low temperature and gives two values, one "
+      "for THCA and one for THC. Thus you calculate the total THC with the 0.877 factor. GC breaks "
+      "the acid in the hot inlet. It gives one &lsquo;THC&rsquo; number. This number includes the "
+      "THCA that changed to THC, but the number does not show this. Only a part of the THCA changes" +
       _c("dussy2005-thca") + "."),
-    p("The nasty detail is that the in-inlet conversion is <em>incomplete and variable</em>. Classic forensic "
-      "work isolating pure THCA found decarboxylation under GC conditions converted only around 70% of the "
-      "acid, and concluded that the only exact route to total THC is to measure THCA and THC separately and "
-      "add them arithmetically. Any post-decarboxylation measurement gives a minimum, not the true "
-      "value" + _c("dussy2005-thca") + ". On GC, acids are invisible unless the lab derivatises them first (a "
-      "chemical cap that survives the heat)" + _c("lazarjani2020-methods") + "."),
+    p("Only a part of the THCA changes to THC in the inlet, and this part is <em>not constant</em>. "
+      "A test with THCA without other compounds found that decarboxylation in GC conditions changed "
+      "only approximately 70% of the acid. The test also showed that the only accurate method is to "
+      "measure THCA and THC as two values and to add the two values. A measurement after "
+      "decarboxylation gives a minimum and not the correct value" + _c("dussy2005-thca") +
+      ".</p><p>With GC, the laboratory cannot find the acids, unless it first does derivatization "
+      "of the acids. Derivatization adds a chemical group to the acid. This group stays on the "
+      "molecule at high temperature" + _c("lazarjani2020-methods") + "."),
     table(["", "HPLC-DAD", "GC-FID / GC-MS"], [
-      ["Operating temperature", "≈25–40 °C (77–104 °F) column", "≈250–300 °C (482–572 °F) inlet, hot column"],
-      ["Sees THCA and THC separately?", "Yes, two peaks", "No, acid decarboxylates in the inlet"],
-      ["Total THC comes from", "arithmetic: THC + 0.877 × THCA", "one merged peak (conversion incomplete" + _c("dussy2005-thca") + ")"],
-      ["Derivatisation needed for acids", "No", "Yes, or the acids are lost" + _c("lazarjani2020-methods")],
-      ["Typical role today", "potency (industry standard)", "terpenes, residual solvents; potency in some jurisdictions"],
-    ], cls="compact", caption="The two chromatography families. Neither is wrong. But their numbers are not directly comparable."),
+      ["Temperature of operation", "approximately 25 to 40 °C (77 to 104 °F) in the column", "approximately 250 to 300 °C (482 to 572 °F) in the inlet, and a hot column"],
+      ["Different values for THCA and THC", "Yes, two peaks", "No, the acid decarboxylates in the inlet"],
+      ["Total THC", "calculated value: THC + 0.877 × THCA", "one peak for THCA and THC (only a part of the THCA changes" + _c("dussy2005-thca") + ")"],
+      ["Derivatization of the acids is necessary", "No", "Yes. Without it, the acids break" + _c("lazarjani2020-methods")],
+      ["Typical use at this time", "potency (the usual method)", "terpenes and residual solvents, and potency in some legal markets"],
+    ], cls="compact", caption="The two types of chromatography. Each type is correct, but the numbers are not the same and you cannot compare them directly."),
     callout("warn", "A flower COA without a THCA row",
-      p("Either the lab ran GC (fine, but the total is a floor, not an exact number), or the report is "
-        "hiding detail. Both are reasons to ask for the method reference, which any accredited lab lists on "
-        "the certificate.")),
+      p("If a flower COA has no THCA row, tell the laboratory to give the method reference. The "
+        "cause can be a GC method, and then the total is a minimum and not an accurate number. The "
+        "cause can also be a report that does not show all the data. Each laboratory with "
+        "accreditation shows the method reference on the COA.")),
   ]})
 
 # ---------------------------------------------------------------- 7. units & basis
 SECTIONS.append({"id": "units-basis", "kicker": "Units and water", "title": "Units and moisture basis",
   "blocks": [
-    p("Units first, because this one is mercifully simple: <strong>% w/w and mg/g are the same number, one "
-      "decimal place apart.</strong> 1% w/w = 10 mg/g. Flower COAs usually report %, oils and edibles often "
-      "report mg/g or mg per unit. 22.14% = 221.4 mg/g. No trap here beyond unfamiliarity."),
-    p("The basis is the real trap. Flower is roughly 10–13% water when properly dried. A potency percentage "
-      "can be computed against the total mass including that water (<strong>as-received</strong> / "
-      "&lsquo;as-is&rsquo;), or against the solids alone (<strong>dry-weight</strong>). Same flower, same "
-      "chemistry, two different numbers:"),
+    p("The units are easy. <strong>The number in mg/g is the number in % w/w with the decimal point "
+      "moved by one position to the right.</strong> 1% w/w = 10 mg/g. For example, 22.14% = 221.4 "
+      "mg/g.</p><p>Flower COAs usually give the result in %. COAs for oils and edible products "
+      "frequently give the result in mg/g or in mg for each unit. The only problem is that you do "
+      "not know the units."),
+    p("The basis is the primary problem. Flower contains approximately 10 to 13% water after "
+      "correct drying. The laboratory can calculate a potency percentage for the total mass with "
+      "this water (<strong>as-received</strong> or &lsquo;as-is&rsquo;). The laboratory can also "
+      "calculate it for the solids only (<strong>dry-weight</strong>). The flower and the chemistry "
+      "are the same, but the two numbers are different:"),
     figure(_FIGS["basis"], 6,
-      "The moisture basis. On an as-received basis this flower reads 20.0% total THC; strip the 12% of "
-      "water out of the denominator and the identical flower reads 22.7% dry-weight. Neither number is "
-      "wrong. They are answers to two different questions."),
-    table(["Moisture content", "As-received reading", "Dry-weight equivalent"], [
+      "The moisture basis. On an as-received basis, this flower has a result of 20.0% total THC. If "
+      "you remove the 12% of water from the denominator, the same flower has a result of 22.7% on a "
+      "dry-weight basis. The two numbers are correct. Each number is for a different basis."),
+    table(["Moisture content", "As-received reading", "Dry-weight value"], [
       ["8%", "20.0%", "21.7%"],
       ["10%", "20.0%", "22.2%"],
       ["12%", "20.0%", "22.7%"],
       ["15%", "20.0%", "23.5%"],
-    ], cls="compact", caption="Dry-weight % = as-received % ÷ (1 − moisture fraction). The wetter the sample, the bigger the gap."),
-    callout("warn", "Never compare across bases",
-      p("Your 22% dry-weight COA against a competitor's 20% as-received COA compares two "
-        "different denominators. Check the basis line first, convert, then compare. Interlaboratory studies "
-        "show labs vary meaningfully even on the moisture measurement itself" + _c("nist-cannaqap2") + ", so "
-        "small cross-COA gaps are noise.")),
+    ], cls="compact", caption="Dry-weight % = as-received % ÷ (1 − moisture fraction). When the sample has more water, the difference is larger."),
+    callout("warn", "Do not compare a dry-weight value with an as-received value",
+      p("Examine the basis row on each COA before you compare two values. If the two COAs do not "
+        "have the same basis, change one value to the other basis. Then compare the values. A "
+        "dry-weight value of 22% and an as-received value of 20% from a different grower have "
+        "different denominators. Tests with many laboratories show that laboratories give values "
+        "with important differences, also for the moisture measurement" + _c("nist-cannaqap2") +
+        ". Thus a small difference of the numbers on two COAs is noise.")),
   ]})
 
 # ---------------------------------------------------------------- 8. sampling
-SECTIONS.append({"id": "sampling", "kicker": "Sampling theory", "title": "Sampling and result representativeness",
+SECTIONS.append({"id": "sampling", "kicker": "Sampling", "title": "Sampling and the accuracy of the result for the batch",
   "blocks": [
-    p("Everything the instrument will ever see is decided before the courier arrives. A batch might be 12 kg "
-      "(26.5 lb); the composite sample a few tens of grams; the analytical portion that actually gets "
-      "extracted, roughly <strong>0.5–1 g (0.02–0.04 oz)</strong>. That gram speaks for everything. Which "
-      "is why pharmacopoeial guidance treats sampling procedure as a quality attribute in its own right, not "
-      "paperwork" + _c("sarma2020-usp") + "."),
+    p("The instrument can measure only the sample that the sampling procedure gives. A person does "
+      "the sampling before the sample goes to the laboratory.</p><p>A batch can be 12 kg (26.5 lb). "
+      "The composite sample is some tens of grams. The part that the laboratory extracts is "
+      "approximately <strong>0.5 to 1 g (0.02 to 0.04 oz)</strong>. This one gram must show the "
+      "batch. Thus the guidance of the pharmacopoeia identifies the sampling procedure as a quality "
+      "attribute and not only as records" + _c("sarma2020-usp") + "."),
     figure(_FIGS["sampling"], 7,
-      "The sampling funnel. Increments pulled from multiple containers and positions are combined into a "
-      "composite, homogenised, and subsampled down to the analytical portion. Every arrow is a place the "
-      "number can drift away from the batch truth."),
-    p("Cannabis makes this harder than most matrices because the analyte lives in the trichomes, and "
-      "trichomes are not evenly distributed: top colas that grew in strong light run richer than shaded "
-      "lower buds, small buds shed resin in handling, and ground material stratifies as kief settles. A "
-      "sample built from the prettiest top nugs is not a batch sample. It is a brochure."),
+      "The sampling steps. A person collects small samples from different containers and positions "
+      "and puts them in one composite sample. The laboratory mixes the composite sample and gets a "
+      "smaller part for the test. At each step, the number can become different from the correct "
+      "value for the batch."),
+    p("Sampling of cannabis is not easy because the analytes are in the trichomes. The quantity of "
+      "trichomes is not the same in all parts of the plant. Top colas with more light have a higher "
+      "potency than buds at the bottom in the shade. Resin falls from small buds when a person "
+      "touches them. In ground material, the kief falls to the bottom.</p><p>A sample from only the "
+      "best top buds is not a batch sample. It shows only the best part of the batch."),
     steps([
-      ("Define the batch first", "One cultivar, one room, one harvest, one process. If it isn't homogeneous "
-       "by construction, no sampling plan can rescue it."),
-      ("Pull increments, not a grab", "Multiple increments from different containers, positions and depths, "
-       "including the unglamorous middle and bottom. More, smaller increments beat one big scoop."),
-      ("Composite and record", "Combine increments, record who pulled what, from where, when. This is the "
-       "start of chain of custody."),
-      ("Homogenise before splitting", "Grind and mix before any subsample is taken, for potency, the lab "
-       "does this again on its portion."),
-      ("Keep a retained twin", "Split a duplicate sample and store it. When a number looks wrong, the "
-       "retained sample is your only honest recourse."),
+      ("Set the limits of the batch first", "A batch has one cultivar, one room, one harvest, and one "
+       "procedure. If the batch is not the same in all parts, no sampling procedure can correct "
+       "this."),
+      ("Collect many small samples and not a grab sample", "Collect many small samples from different containers, "
+       "positions, and depths. Collect also from the middle and from the bottom. Many small samples "
+       "are better than one large quantity from one position."),
+      ("Make a composite sample and record", "Make a composite sample from the small samples. Record the person "
+       "who collected each small sample, the position, and the time. This step starts the chain of "
+       "custody."),
+      ("Mix before you divide the sample", "Grind the sample. Then mix the sample. Do these steps before "
+       "you remove a part of it. For potency, the laboratory grinds and mixes the part again."),
+      ("Keep a second sample", "Divide the sample into two parts. Keep one part in storage. If you "
+       "think that a number is incorrect, this part is the only sample that you can measure again."),
     ]),
-    callout("warn", "Cherry-picking is self-deception with a paper trail",
-      p("Sending top-cola-only samples inflates the certificate, your customer's expectations, and your own "
-        "process data all at once. The batch will eventually be smoked by someone who bought the number. "
-        "Sample like you'll be audited, in medicinal frameworks, you will be.")),
-    p("Even perfect sampling leaves honest variance: duplicate composites from one batch, run by one lab, "
-      "routinely land a point or so of THC apart. Treat differences of one to two percentage points as the "
-      "noise floor of the whole exercise, not as information."),
+    callout("warn", "Do not select only the best buds",
+      p("Do not send samples from only the top colas. These samples make the numbers on the COA and "
+        "in your production data too high. They also make the buyer think that the batch has a "
+        "higher quality.</p><p>A person will smoke the batch at some time. This person accepted the "
+        "number. An audit can examine your sampling. Collect each sample for this audit. In systems "
+        "for medicinal cannabis, an audit will examine your sampling.")),
+    p("Correct sampling also gives a variance that is not zero. When one laboratory measures two "
+      "composite samples from one batch, the THC values frequently have a difference of "
+      "approximately one percentage point. A difference of one to two percentage points is noise. "
+      "It is not information."),
   ]})
 
 # ---------------------------------------------------------------- 9. microbial
-SECTIONS.append({"id": "microbial", "kicker": "Microbiology", "title": "Microbial testing methods",
+SECTIONS.append({"id": "microbial", "kicker": "Microbes", "title": "Test methods for microbes",
   "blocks": [
-    p("Microbial testing asks two kinds of question. <em>How much is growing on this?</em>, answered by "
-      "counts: total aerobic microbial count (<strong>TAMC</strong>), total yeast and mould "
-      "(<strong>TYM</strong> / TYMC), bile-tolerant Gram-negatives. And <em>is anything dangerous "
-      "present?</em>, answered by presence/absence tests for specified organisms: <em>Salmonella</em>, "
-      "pathogenic <em>E. coli</em>, and in inhaled products the four pathogenic <em>Aspergillus</em> species."),
-    defterm("CFU (colony-forming unit)", "One viable organism (or clump) that grows into a countable colony "
-            "on a culture plate. Plate results are CFU per gram."),
-    defterm("qPCR", "Quantitative polymerase chain reaction: the method copies a target DNA sequence millions "
-            "of times until there are enough to detect and count. Think of it as a photocopier for DNA — it "
-            "amplifies the target sequence whether the organism that carried it is alive or dead. Fast (hours) "
-            "and species-specific, but that dead-DNA blindspot matters after kill steps."),
-    table(["Test", "What it counts", "Common limit style", "Notes"], [
-      ["TAMC", "aerobic bacteria (CFU/g)", "order of 10⁵ CFU/g; varies by jurisdiction" + _c("jameson2022-stateregs"), "general bioburden indicator"],
-      ["TYM / TYMC", "yeasts + moulds (CFU/g)", "order of 10⁴ CFU/g; the contested one", "flower hosts a natural surface flora"],
-      ["Bile-tolerant Gram-negatives", "gut-associated bacteria", "order of 10³ CFU/g", "hygiene indicator"],
-      ["Specified pathogens", "Salmonella, shiga-toxin E. coli", "absent in 1 g (0.035 oz)", "hard pass/fail"],
-      ["Aspergillus (pathogenic spp.)", "A. fumigatus, flavus, niger, terreus", "not detected in 1 g (0.035 oz)", "usually enrichment + qPCR"],
-    ], cls="compact", caption="The microbial panel. Numeric limits differ across jurisdictions, the shapes of the tests do not" + _c("jameson2022-stateregs") + "."),
-    p("Plates and qPCR genuinely disagree, and metagenomic sequencing has shown why: culture media select. "
-      "When researchers sequenced what actually grew in standard culture-based yeast-and-mould tests of "
-      "cannabis, the plates were growing organisms including bacteria, while toxigenic fungi present on the "
-      "flower were under-represented, and organisms of real clinical concern could be missed "
-      "entirely" + _c("mckernan2016-tym") + ". Meanwhile qPCR happily counts DNA from dead cells, so a "
-      "batch remediated with heat or irradiation can fail qPCR while passing plates."),
-    table(["", "Culture plating", "qPCR"], [
-      ["Measures", "what grows on that medium, at that temperature", "copies of target DNA"],
+    p("A test for microbes measures two types of item. The first type is <em>the number of "
+      "microbes</em> on the sample. Counts measure this number. The counts are "
+      "<strong>TAMC</strong> (total aerobic microbial count), <strong>TYM</strong> or TYMC (total "
+      "yeast and mold count), and the count of bile-tolerant Gram-negative bacteria.</p><p>The "
+      "second type is <em>a dangerous microbe</em> on the sample. A test with a yes or no result "
+      "measures this type for specified organisms. The organisms are <em>Salmonella</em>, <em>E. "
+      "coli</em> that are pathogens, and the four <em>Aspergillus</em> species that are pathogens "
+      "in products for inhalation."),
+    defterm("CFU (colony-forming unit)", "One viable organism, or one group of viable organisms, "
+            "that makes a colony on a culture plate. You can count the colony. The plate results "
+            "are in CFU for each gram."),
+    defterm("qPCR", "Quantitative polymerase chain reaction. The method makes a very large number "
+            "of copies of a target DNA sequence, until the quantity is sufficient to find and "
+            "count. The method makes copies of the target sequence also when a kill step killed the "
+            "organism. The method is fast (hours) and it finds only the target species. But the DNA "
+            "from killed organisms is a problem after kill steps."),
+    table(["Test", "Counted item", "Usual type of limit", "Information"], [
+      ["TAMC", "aerobic bacteria (CFU/g)", "approximately 10⁵ CFU/g. The value is different in different legal markets" + _c("jameson2022-stateregs"), "indicator of bioburden"],
+      ["TYM / TYMC", "yeast and mold (CFU/g)", "approximately 10⁴ CFU/g. Persons do not agree about this limit", "Flower usually has microbes on the surface"],
+      ["Bile-tolerant Gram-negative bacteria", "bacteria from the gut", "approximately 10³ CFU/g", "indicator of hygiene"],
+      ["Specified pathogens", "Salmonella, shiga-toxin E. coli", "not found in 1 g (0.035 oz)", "The result is only satisfactory or unsatisfactory"],
+      ["Aspergillus (species that are pathogens)", "A. fumigatus, flavus, niger, terreus", "not found in 1 g (0.035 oz)", "usually enrichment + qPCR"],
+    ], cls="compact", caption="The panel for microbes. The limits are different in different legal markets, but the types of test are the same" + _c("jameson2022-stateregs") + "."),
+    p("Plates and qPCR can give different results for the same sample. A test with metagenomic "
+      "sequencing showed that the culture medium selects the organisms. The test sequenced the "
+      "organisms that became colonies in standard culture tests for yeast and mold of cannabis. The "
+      "colonies on the plates included bacteria. The plates did not show a sufficient quantity of "
+      "the fungi that make toxins and that were on the flower. In some tests, the plates can find "
+      "none of the organisms that are dangerous for patients" + _c("mckernan2016-tym") +
+      ".</p><p>qPCR also counts DNA from killed cells. Thus a batch that had a remediation with "
+      "heat or irradiation can have an unsatisfactory result with qPCR and a satisfactory result "
+      "with plates."),
+    table(["", "Culture plates", "qPCR"], [
+      ["Item measured", "organisms that become colonies on that medium at that temperature", "copies of target DNA"],
       ["Time", "3–7 days", "hours"],
-      ["Counts dead organisms?", "no", "yes, DNA persists after kill steps"],
-      ["Species identification", "poor without follow-up work", "built into the primers"],
-      ["Characteristic failure", "wrong organisms grow; targets don't" + _c("mckernan2016-tym"), "dead-DNA false fails; primer mismatch"],
-    ], cls="compact", caption="Why the same batch can pass one microbial method and fail the other. Always read the method line."),
-    callout("danger", "Aspergillus limits use presence/absence, not a count",
-      p("Inhaled <em>Aspergillus</em> can cause invasive aspergillosis in immunocompromised people, exactly "
-        "the population medicinal cannabis serves. A count-based limit makes no sense for an organism where "
-        "the acceptable inhaled dose for a transplant patient is effectively zero; hence the specification "
-        "of &lsquo;not detected in 1 g (0.035 oz)&rsquo;.")),
+      ["Counts killed organisms", "no", "yes, the DNA stays after kill steps"],
+      ["Species identification", "not easy without more tests", "The primers identify the species"],
+      ["Typical problem", "The target organisms do not become colonies, and other organisms become colonies" + _c("mckernan2016-tym"), "unsatisfactory results that are incorrect because of DNA from killed organisms, and a primer that does not agree with the target"],
+    ], cls="compact", caption="The same batch can have a satisfactory result with one method and an unsatisfactory result with the other method. Always read the method row."),
+    callout("danger", "The limit for Aspergillus is found or not found, and not a number of organisms",
+      p("<em>Aspergillus</em> in a product for inhalation can cause invasive aspergillosis in "
+        "patients with a weak immune system. These patients are the persons that use medicinal "
+        "cannabis. For a patient with a transplant, a satisfactory dose of <em>Aspergillus</em> by "
+        "inhalation is almost zero. Thus a limit with a number of organisms is not correct for this "
+        "organism. The specification is: no organism in 1 g (0.035 oz).")),
   ]})
 
 # ---------------------------------------------------------------- 10. metals
 SECTIONS.append({"id": "metals", "kicker": "Heavy metals", "title": "Heavy-metal testing by ICP-MS",
   "blocks": [
-    p("Cannabis is an enthusiastic accumulator of metals. The same trait that gets hemp planted for soil "
-      "remediation pulls cadmium and lead out of your substrate, fertiliser and water and stores them in "
-      "tissue. The panel nearly everywhere centres on the <strong>big four</strong>: arsenic, cadmium, lead "
-      "and mercury, with some frameworks screening a wider element list" + _c("nist-cannaqap2") + "."),
-    table(["Metal", "Typical routes into flower", "Why it's on the panel"], [
-      ["Arsenic (As)", "bore water, some rock-derived amendments", "carcinogen"],
-      ["Cadmium (Cd)", "phosphate fertilisers, contaminated substrate", "readily taken up by the plant; accumulates in kidneys"],
-      ["Lead (Pb)", "dust and soil contact, old solder/pipework, contaminated inputs", "neurotoxin, no safe exposure level"],
-      ["Mercury (Hg)", "rare, water or industrial contamination", "neurotoxin"],
-    ], cls="compact", caption="The big four. Limits vary by jurisdiction and are stricter for inhaled products than oral ones" + _c("jameson2022-stateregs") + "."),
-    p("The instrument is <strong>ICP-MS</strong>, inductively coupled plasma mass spectrometry. The lab "
-      "digests the sample in hot acid until nothing but dissolved elements remain, sprays that solution into "
-      "an argon plasma running at thousands of degrees, and counts the resulting ions by mass. It is "
-      "absurdly sensitive, parts-per-billion, which is why metals results carry LOQs that look like "
-      "0.01 µg/g."),
-    callout("tip", "Your inputs are your metals programme",
-      p("Flower fails metals because something upstream carried them in. Collect certificates for every "
-        "fertiliser and substrate lot, test source water, and a metals fail becomes a lookup instead of a "
-        "mystery. Inhalation limits are tight enough that one contaminated input lot can sink a batch.")),
+    p("Cannabis has a high uptake of metals. Growers use hemp for the remediation of soil because "
+      "of the same trait. The trait also causes the uptake of cadmium and lead from your substrate, "
+      "fertilizer, and water. The plant keeps them in the tissue.</p><p>The panel for metals nearly "
+      "always has <strong>four metals</strong>: arsenic, cadmium, lead, and mercury. Some systems "
+      "use a test for a larger list of elements" + _c("nist-cannaqap2") + "."),
+    table(["Metal", "Typical sources in the flower", "Risk"], [
+      ["Arsenic (As)", "groundwater, some amendments from rock", "carcinogen"],
+      ["Cadmium (Cd)", "phosphate fertilizers, substrate with contamination", "The plant absorbs it easily. It collects in the kidneys."],
+      ["Lead (Pb)", "dust, contact with soil, solder and pipes that are not new, materials with contamination", "neurotoxin. No value of exposure is safe"],
+      ["Mercury (Hg)", "not frequent. Water contamination or industrial contamination", "neurotoxin"],
+    ], cls="compact", caption="The four metals. The limits are different in different legal markets. The limits are lower for products for inhalation than for oral products" + _c("jameson2022-stateregs") + "."),
+    p("The instrument is <strong>ICP-MS</strong> (inductively coupled plasma mass spectrometry). "
+      "The laboratory mixes the sample with hot acid until only elements in solution stay. Then the "
+      "laboratory puts a spray of the solution into an argon plasma.</p><p>The temperature of the "
+      "plasma is thousands of degrees. The instrument finds the ions of each element from their "
+      "mass and counts them. The instrument is very sensitive, in the range of ppb. Thus the LOQs "
+      "for metals are, for example, 0.01 µg/g."),
+    callout("tip", "Control your materials to control metals",
+      p("Flower has an unsatisfactory result for metals because a material supplied the metals. "
+        "Collect the COAs for each lot of fertilizer and substrate. Do a test of the source water. "
+        "Then you can find the cause of an unsatisfactory result for metals in your records. The "
+        "limits for inhalation are very low. Thus one lot of a material with contamination can "
+        "cause an unsatisfactory result for the batch.")),
   ]})
 
 # ---------------------------------------------------------------- 11. pesticides
 SECTIONS.append({"id": "pesticides", "kicker": "Pesticides", "title": "Pesticide panels and their limits",
   "blocks": [
-    p("A pesticide test is a <em>panel</em>: a defined list of compounds, each measured against an action "
-      "limit. Pass means &lsquo;nothing on <em>this list</em> was found above <em>these limits</em>&rsquo;, "
-      "it does not mean pesticide-free, and it says nothing about compounds the panel doesn't include. That "
-      "distinction matters because panels differ absurdly between jurisdictions: a survey of US state rules "
-      "found 551 distinct pesticides regulated somewhere, with action limits for the same compound spanning "
-      "up to four orders of magnitude between states" + _c("jameson2022-stateregs") + "."),
-    ul(["<strong>Two instruments are needed for coverage.</strong> LC-MS/MS catches most modern residues; "
-        "GC-MS/MS catches the volatile and halogenated ones. A lab quoting a big panel runs both.",
-        "<strong>Inhalation changes the toxicology.</strong> Residues that are tolerated on lettuce can "
-        "pyrolyse into nastier chemistry when smoked. Some fungicides are reported to release hydrogen "
-        "cyanide on combustion, which is why cannabis limits are often far tighter than food limits.",
-        "<strong>History justifies the paranoia.</strong> Pre-regulation Californian concentrate screening "
-        "found pesticides in roughly one-third of samples" + _c("raber2015-dabs") + ".",
-        "<strong>Drift and carryover count.</strong> You can fail a panel without ever spraying, neighbouring "
-        "agriculture, contaminated secondhand equipment, or a dirty trim room can deposit residues."]),
+    p("A test for pesticides is a <em>panel</em>. A panel is a specified list of compounds, and the "
+      "laboratory compares each compound with an action limit. A satisfactory result shows that the "
+      "laboratory found no compound <em>on this list</em> in a quantity more than <em>these "
+      "limits</em>. It does not show that the product has no pesticide. It gives no information "
+      "about compounds that are not on the panel.</p><p>The panels are very different in different "
+      "legal markets. A survey of the regulations in the states of the US found 551 different "
+      "pesticides with a limit in some state. The action limits for the same compound change by a "
+      "maximum of four orders of magnitude from one state to a different state" +
+      _c("jameson2022-stateregs") + "."),
+    ul(["<strong>A full panel uses two instruments.</strong> LC-MS/MS finds most residues of new "
+        "pesticides. GC-MS/MS finds the volatile compounds and the halogenated compounds. A "
+        "laboratory with a large panel uses the two instruments.",
+        "<strong>Inhalation changes the toxicology.</strong> Residues in a quantity that is "
+        "satisfactory on lettuce can break and make more dangerous compounds when a person smokes "
+        "them. Reports show that some fungicides release hydrogen cyanide when they burn. Thus the "
+        "limits for cannabis are frequently much lower than the limits for food.",
+        "<strong>Previous results show the risk.</strong> Before regulation, tests of concentrates "
+        "in California found pesticides in approximately one-third of the samples" +
+        _c("raber2015-dabs") + ".",
+        "<strong>Drift and carryover are important.</strong> You can have an unsatisfactory result "
+        "for a panel when you do not apply pesticide. Agriculture near your facility, used "
+        "equipment with contamination, or a trim room that is not clean can put residues on the "
+        "flower."]),
     callout("note", "Reading a pesticide section",
-      p("Look for: the panel size (how many analytes), the action limits and their source, the LOQ per "
-        "analyte, and the method (LC-MS/MS, GC-MS/MS or both). A one-line &lsquo;Pesticides: PASS&rsquo; "
-        "with none of that attached is a vibe, not a result.")),
+      p("A pesticide section has these items: the panel size (the number of analytes), the action "
+        "limits and their source, the LOQ for each analyte, and the method (LC-MS/MS, GC-MS/MS, or "
+        "the two). A row with only &lsquo;Pesticides: PASS&rsquo; and none of this information is "
+        "not a result.")),
   ]})
 
 # ---------------------------------------------------------------- 12. solvents & mycotoxins
-SECTIONS.append({"id": "solvents-myco", "kicker": "Solvents · mycotoxins", "title": "Residual-solvent and mycotoxin testing",
+SECTIONS.append({"id": "solvents-myco", "kicker": "Solvents · mycotoxins", "title": "Tests for residual solvents and mycotoxins",
   "blocks": [
-    p("<strong>Residual solvents</strong> apply to extracts: whatever chemistry pulled the resin out, "
-      "butane, propane, ethanol, CO₂ with ethanol polish. Traces can remain, and headspace GC measures them "
-      "in the finished product. Limits are set per solvent, loosely following pharmaceutical solvent classes: "
-      "near-zero tolerance for the genuinely toxic ones (benzene, toluene, never used deliberately, but "
-      "present as impurities in cheap gas), workaday limits for the common process solvents."),
-    p("Why does a <em>solventless</em> hash or rosin still carry a solvent test? Three honest reasons. The "
-      "product category triggers the test in most rule sets regardless of process; the test is the only way "
-      "to <em>verify</em> the solventless claim rather than take it on faith; and contamination doesn't need "
-      "an extraction step, cleaning agents, fuels and off-gassing in storage can introduce volatiles. A "
-      "clean solvent panel on rosin is cheap proof your marketing is true. Early concentrate surveys found "
-      "residual solvents in around 30% of samples, so buyers learned to ask" + _c("raber2015-dabs") + "."),
-    p("<strong>Mycotoxins</strong> are the chemical ghosts of mould: aflatoxins B1, B2, G1, G2 (from "
-      "<em>Aspergillus flavus</em> and relatives) and ochratoxin A, measured by LC-MS/MS at parts-per-billion "
-      "limits" + _c("jameson2022-stateregs") + ". Two facts make them their own line on the COA rather than a "
-      "footnote to the microbial section:"),
-    ul(["<strong>They outlive the mould.</strong> Kill steps (heat, irradiation, ozone) can crash a TYM "
-        "count while leaving the toxins fully intact. A batch can pass microbiology and still fail "
-        "mycotoxins, and remediated product is exactly where to expect that pattern.",
-        "<strong>They are potent at absurdly low doses.</strong> Aflatoxin B1 is among the strongest natural "
-        "carcinogens known, hence limits in the µg/kg (ppb) range in medicinal frameworks" + _c("tga-tgo93") + "."]),
-    callout("warn", "Remediation is not exoneration",
-      p("Irradiated or heat-treated flower that now passes plate counts still carries whatever toxins the "
-        "mould made first, and its dead DNA may still fail qPCR. If a batch needed remediation, the "
-        "mycotoxin line is the one to read hardest.")),
+    p("<strong>Residual solvents</strong> are in extracts. A solvent removes the resin from the "
+      "plant. The solvent can be butane, propane, ethanol, or CO₂ and, in a last step, ethanol. A "
+      "small quantity of the solvent can stay in the extract, and headspace GC measures it in the "
+      "product.</p><p>The limits are different for each solvent. They agree approximately with the "
+      "types of solvent for pharmaceutical products. The limit is almost zero for solvents with a "
+      "very high toxicity (benzene and toluene). Producers do not add them, but they can occur as "
+      "impurities in gas with a low price. The limits are higher for the usual solvents of the "
+      "procedure."),
+    p("A test for solvents is also necessary for a <em>solventless</em> hash or rosin. There are "
+      "three causes. First, in most legal markets the type of the product causes the test, for all "
+      "procedures. Second, the test is the only method to <em>make sure</em> that the solventless "
+      "claim is correct, and not to accept it without a test. Third, contamination can occur "
+      "without an extraction step. Cleaning agents, fuels, and gases from materials in storage can "
+      "supply volatile compounds.</p><p>A satisfactory result for the solvent panel on rosin shows, "
+      "at a low cost, that your marketing claim is correct. First tests of concentrates found "
+      "residual solvents in approximately 30% of the samples. Thus buyers started to examine this "
+      "result" + _c("raber2015-dabs") + "."),
+    p("<strong>Mycotoxins</strong> are chemical compounds with toxicity that mold makes. They are "
+      "the aflatoxins B1, B2, G1, and G2 (from <em>Aspergillus flavus</em> and related species) and "
+      "ochratoxin A. LC-MS/MS measures them at limits in the range of ppb" + _c("jameson2022-stateregs") +
+      ". Two facts make mycotoxins a different row on the COA and not a footnote to the section on "
+      "microbes:"),
+    ul(["<strong>The toxins stay after a kill step.</strong> Kill steps (heat, irradiation, and "
+        "ozone) can decrease the TYM count a lot, but the toxins do not change. A batch can have a "
+        "satisfactory result for microbes and an unsatisfactory result for mycotoxins. This occurs "
+        "frequently in a product after remediation.",
+        "<strong>They are very dangerous at very low doses.</strong> Aflatoxin B1 is one of the "
+        "strongest natural carcinogens that persons know. Thus the limits are in the range of µg/kg "
+        "(ppb) in systems for medicinal cannabis" + _c("tga-tgo93") + "."]),
+    callout("warn", "Remediation does not remove mycotoxins",
+      p("If a batch had a remediation, examine the mycotoxin row most carefully. Flower after "
+        "irradiation or heat treatment can have a satisfactory result for plate counts. But the "
+        "flower continues to have the toxins that the mold made. Its DNA from killed organisms can "
+        "also give an unsatisfactory result with qPCR.")),
   ]})
 
 # ---------------------------------------------------------------- 13. water activity
 SECTIONS.append({"id": "water-activity", "kicker": "Water in two numbers", "title": "Water activity and moisture content",
   "blocks": [
-    p("Two water numbers appear on flower COAs and they answer different questions. <strong>Moisture "
-      "content</strong> (%) is <em>how much</em> water is in the sample — mass of water divided by total "
-      "mass. <strong>Water activity</strong> (a<sub>w</sub>, scale 0–1) is <em>how freely available</em> "
-      "that water is to microbes. Think of a sponge held tightly in a fist versus one sitting in a bowl: "
-      "both can hold the same amount of water by weight, but the fist-held sponge has most of its water "
-      "bound and hard to release. Water activity measures that availability — formally, the equilibrium "
-      "relative humidity the sample generates in a sealed space. Mould does not care how much water you "
-      "have; it cares whether it can get at it. That makes a<sub>w</sub> the microbially meaningful number, "
-      "and it is why pharmacopoeial thinking on stored cannabis centres on a water-activity specification "
-      "of ≤0.65" + _c("sarma2020-usp") + "."),
-    figure(L.zones("Water activity: where mould can and cannot operate", 0.30, 0.90,
-        [(0.30, 0.55, L.AMBL, "over-dry: brittle, harsh"),
-         (0.55, 0.65, L.GL, "target window"),
-         (0.65, 0.70, L.AMBL, "caution"),
-         (0.70, 0.90, L.REDL, "mould can grow")],
+    p("A flower COA gives two numbers for water. The two numbers give different information. "
+      "<strong>Moisture content</strong> (%) is <em>the quantity</em> of water in the sample. It is "
+      "the mass of the water divided by the total mass. <strong>Water activity</strong> "
+      "(a<sub>w</sub>, scale 0 to 1) is <em>how available</em> that water is to "
+      "microbes.</p><p>Water activity is the equilibrium relative humidity that the sample makes in "
+      "a closed space. Two samples can have the same mass of water, but a different water activity. "
+      "When the sample holds the water tightly, the water is not available to microbes. Mold can "
+      "increase only with available water, and not only with a large quantity of water. Thus "
+      "a<sub>w</sub> is the important number for microbes. The pharmacopoeia for cannabis in "
+      "storage has a specification of a maximum of 0.65 for water activity" + _c("sarma2020-usp") +
+      "."),
+    figure(L.zones("Water activity: where mold can and cannot increase", 0.30, 0.90,
+        [(0.30, 0.55, L.AMBL, "too dry: breaks easily"),
+         (0.55, 0.65, L.GL, "target range"),
+         (0.65, 0.70, L.AMBL, "risk"),
+         (0.70, 0.90, L.REDL, "mold increases")],
         unit=" aw",
-        note="Below 0.55 the flower suffers (brittle trichomes, harsh smoke); 0.55-0.65 is the widely used spec window; above ~0.65 xerotolerant moulds wake up."), 8,
-      "The water-activity scale for stored flower. The 0.65 upper bound is the line most specifications "
-      "draw" + _c("sarma2020-usp") + "; the lower bound is about product quality, not safety."),
+        note="Less than 0.55: lower quality (trichomes break, smoke irritation). 0.55 to 0.65: usual specification. More than approximately 0.65: xerotolerant molds increase."), 8,
+      "The scale of water activity for flower in storage. The maximum of 0.65 is the limit that "
+      "most specifications use" + _c("sarma2020-usp") + ". The lower value is about the quality of "
+      "the product and not about safety."),
     table(["", "Moisture content", "Water activity (a<sub>w</sub>)"], [
-      ["What it measures", "how much water (% of mass)", "how available the water is (0–1)"],
-      ["Instrument", "loss-on-drying balance", "chilled-mirror / capacitive a<sub>w</sub> meter"],
-      ["Microbial relevance", "indirect, depends on how water is bound", "direct. Growth thresholds are a<sub>w</sub> thresholds"],
-      ["Typical spec for flower", "≈10–13%", "0.55–0.65"],
-    ], cls="compact", caption="Same water, two questions. A batch can sit at a normal moisture % and still have unsafe water activity, and vice versa, the sorption curve differs by cultivar and trim."),
-    p("Operationally: dry and cure to a water-activity target, and let moisture content be whatever it is. "
-      "The paired numbers on the COA also sanity-check each other, a<sub>w</sub> 0.75 with 11% moisture "
-      "claims a strange sample; question it."),
+      ["Item measured", "the quantity of water (% of mass)", "how available the water is (0 to 1)"],
+      ["Instrument", "loss-on-drying balance", "a<sub>w</sub> meter with a chilled mirror or a capacitance sensor"],
+      ["Effect on microbes", "The relation to microbes changes with how tightly the sample holds the water", "The thresholds for growth are a<sub>w</sub> thresholds"],
+      ["Typical specification for flower", "approximately 10 to 13%", "0.55–0.65"],
+    ], cls="compact", caption="The same water, two numbers. A batch can have a usual moisture content and a water activity that is not safe. The opposite is also possible. The sorption curve is different for different cultivars and trims."),
+    p("In operation, dry the flower. Then do the curing until the water activity agrees with the "
+      "target. Accept the moisture content that the drying gives. The two numbers on the COA also "
+      "let you make sure that they agree. For example, a<sub>w</sub> 0.75 with 11% moisture is not "
+      "usual for a sample. Find the cause of this result."),
   ]})
 
 # ---------------------------------------------------------------- 14. inflation
-SECTIONS.append({"id": "inflation", "kicker": "Honesty section", "title": "COA inflation: evidence and warning signs",
+SECTIONS.append({"id": "inflation", "kicker": "The problem", "title": "COA values that are too high: data and warning signs",
   "blocks": [
-    p("If a single number sets the price, the number comes under pressure. That is the "
-      "documented, peer-reviewed history of legal cannabis markets, and any grower choosing a lab should "
-      "know it cold."),
-    figure(L.hbars("How often measured THC missed the label",
+    p("When one number sets the price, there is pressure on the number. Tests with peer review "
+      "record this problem in legal markets for cannabis. Each grower that selects a laboratory "
+      "must know this fully."),
+    figure(L.hbars("THC that does not agree with the label",
         [("2023 flower (CO)", 70), ("2024 flower (3 states)", 70),
          ("2025 flower (CO)", 43), ("2025 concentrates (CO)", 4)],
         unit="%",
-        note="Share of retail products whose measured total THC missed the labelled value: >15% below label (2023); outside +/-20% (2024); outside +/-15% (2025)."), 9,
-      "Label accuracy in peer-reviewed retail studies: 70% of Colorado flower samples ran more than 15% "
-      "below label" + _c("schwabe2023-inflated") + "; 70% of a 107-sample, three-state audit fell outside "
-      "±20% of label" + _c("geweda2024-audit") + "; and in 2025, 43% of flower but only 4% of concentrates "
-      "missed a ±15% window" + _c("giordano2025-accuracy") + ". Flower, where sampling is easiest to game, "
-      "is where the accuracy problem lives."),
-    p("The mechanism is visible in state datasets. Reported potency for chemotype-I flower across "
-      "Washington's six largest labs differed <em>systematically</em>: median total THC ranged from 17.7% at "
-      "the lowest-reporting lab to 23.2% at the highest, a 5.5-percentage-point spread on comparable "
-      "product that persisted after controlling for strain and producer" + _c("jikomes2018-labs") + ". And "
-      "reported values &lsquo;bunch&rsquo; just above the magic 20% price threshold: the frequency of "
-      "products jumps discontinuously above 20% (a 43% spike in Nevada, 17% in Washington) with the "
-      "bunching concentrated at specific labs (two later-suspended labs showed a 47% spike; the state's "
-      "largest lab, 1%)" + _c("zoorob2021-bunching") + ". Biology does not know where 20% is. Pricing "
-      "does."),
-    figure(L.bars("The 20% cliff: products bunch just above the price line",
-        [("just below 20%", 100), ("just above (WA)", 117), ("just above (NV)", 143), ("suspended labs", 147)],
+        note="Fraction of products with THC that is not the label value: more than 15% less than the label (2023), not in the range of ±20% (2024), not in the range of ±15% (2025)."), 9,
+      "The accuracy of labels in tests with peer review in the retail market. In one test, the "
+      "measured value of 70% of the Colorado flower samples was more than 15% less than the label" +
+      _c("schwabe2023-inflated") + ". In an audit of 107 samples in three states, 70% of the values "
+      "were not in the range of ±20% of the label value" + _c("geweda2024-audit") +
+      ". In 2025, 43% of the flower samples but only 4% of the concentrates were not in the range "
+      "of ±15%" + _c("giordano2025-accuracy") + ". The accuracy problem is in flower, because with "
+      "flower a person can change the result most easily with the sampling."),
+    p("The data of states show the cause. The potency values for chemotype-I flower from the six "
+      "largest laboratories in Washington show a <em>systematic</em> difference. The median total "
+      "THC was 17.7% at the laboratory with the lowest values and 23.2% at the laboratory with the "
+      "highest values. This difference of 5.5 percentage points stayed when the cultivar and the "
+      "producer were the same" + _c("jikomes2018-labs") + ".</p><p>Values a small quantity more "
+      "than the price threshold of 20% are also too frequent in the reports. At 20%, the frequency "
+      "of products increases suddenly, by 43% in Nevada and by 17% in Washington. At some "
+      "laboratories, the frequency increases more. At the two laboratories that the authority "
+      "suspended subsequently, the frequency increases by 47%. At the largest laboratory of the "
+      "state, the frequency increases by 1%" + _c("zoorob2021-bunching") + ". The value of 20% is a "
+      "price threshold and has no cause in biology."),
+    figure(L.bars("The 20% threshold: the frequency of products increases suddenly",
+        [("less than 20%", 100), ("more than 20% (WA)", 117), ("more than 20% (NV)", 143), ("suspended labs", 147)],
         unit="",
-        note="Relative frequency of flower products reported in the bin just above 20% THC vs just below (below = 100). The jump has no biological cause.",
+        note="Relative frequency of flower products in the bin more than 20% THC compared with the bin less than 20% (= 100). The cause is not biology.",
         maxv=160), 10,
-      "The reporting discontinuity at 20% THC" + _c("zoorob2021-bunching") + ". A smooth biological "
-      "distribution should cross 20% smoothly; the observed spike, largest at labs later suspended, is the "
-      "statistical fingerprint of inflation."),
-    p("<strong>Lab shopping</strong> is the market dynamic that produces this. Split one batch across three "
-      "labs, keep the highest number, and give that lab your business. Labs know it. The lab that reports "
-      "honestly loses accounts to the lab that reports generously, a race to the bottom wearing a lab coat. "
-      "Inflation methods range from soft (flower-only calibration bias, generous rounding, tolerant "
-      "sampling) to plainly fraudulent: in 2024 Oregon's regulator charged seven of the state's eleven "
-      "accredited labs over inflated THC results, including allegations that staff at three labs spiked "
-      "customer samples with kief before analysis" + _c("hs2024-oregon") + ". Licence actions and "
-      "competitor lawsuits over inflated potency and passed-but-contaminated product have followed in "
-      "California and Massachusetts."),
-    callout("evidence", "Variance vs fraud, tell them apart",
-      p("Honest inter-lab variance is real even among competent labs, interlaboratory programmes exist "
-        "precisely because cannabis measurement comparability is hard" + _c("nist-cannaqap2") + ", but "
-        "honest variance is <em>symmetric</em>. It scatters around the truth. Inflation is "
-        "<em>directional</em>: always the good news. If a lab's numbers are consistently the best in town, "
-        "that is not luck; that is a product they are selling.")),
-    p("What an operator does with this: pick a lab for its accreditation scope and method transparency, not "
-      "its averages; split-sample occasionally against a second lab and expect ~1–2 points of honest "
-      "scatter; keep retained samples; and treat any account manager who <em>promises</em> numbers as a "
-      "walking licence risk. In GMP-style medicinal systems the incentive flips, the lab serves batch "
-      "release, not marketing. Which is a large part of why those numbers are steadier" + _c("tga-tgo93") +
+      "The values in the reports change at 20% THC" + _c("zoorob2021-bunching") +
+      ". In biology, a distribution of values has no sudden change at 20%. The frequency of "
+      "products increases most at laboratories that the authority suspended subsequently. These "
+      "data are a sign that the values are too high."),
+    p("<strong>Selection of a laboratory for its high numbers</strong> causes this problem. A "
+      "grower divides one batch into three parts and sends the parts to three laboratories. The "
+      "grower keeps the highest number. Then the grower gives the work to that laboratory. The "
+      "laboratories know this. A laboratory that gives correct values gets less work than a "
+      "laboratory that gives high values.</p><p>The methods to make the values too high range from "
+      "small changes (a calibration bias for flower only, a rounding to a higher value, and "
+      "sampling with a large tolerance) to fraud. In 2024, seven of the eleven laboratories with "
+      "accreditation in Oregon had an enforcement action from the authority of the state. The cause "
+      "was THC results that were too high. The enforcement action included the claim that personnel "
+      "at three laboratories added kief to samples from clients before the test" + _c("hs2024-oregon") +
+      ". Enforcement actions about licenses and lawsuits by other laboratories followed in "
+      "California and Massachusetts. The causes were potency values that were too high and products "
+      "with contamination that had a satisfactory result."),
+    callout("evidence", "Variance and fraud: the difference",
+      p("The results of different laboratories have a usual variance, also for good laboratories. "
+        "Many laboratories measure the same sample in special tests, because it is not easy to "
+        "compare cannabis measurements" + _c("nist-cannaqap2") + ". But usual variance gives values "
+        "<em>higher and lower</em> than the correct value.</p><p>Values that are too high are "
+        "<em>higher only</em>. They always give a better result. If the numbers of a laboratory are "
+        "always the best in the area, the cause is not random. The high numbers are a product that "
+        "the laboratory supplies.")),
+    p("We recommend that a grower does these steps. Select a laboratory because its accreditation "
+      "includes your type of test and its COA shows the method.</p><p>Do not select a laboratory "
+      "because of its averages. At intervals, divide a sample into two parts. Send the parts to two "
+      "laboratories. The usual variation is approximately 1 to 2 percentage points. Keep samples in "
+      "storage. A person at a laboratory who <em>tells you the numbers before the test</em> is a "
+      "risk for your license.</p><p>In systems for medicinal cannabis with GMP, the incentive is "
+      "the opposite. The laboratory gives data for the decision to release the batch and not for "
+      "marketing. Thus the numbers are more stable in these systems" + _c("tga-tgo93") +
       _c("nz-mcs-mqs") + "."),
   ]})
 
 # ---------------------------------------------------------------- 15. one number
-SECTIONS.append({"id": "single-number", "kicker": "Interpretation", "title": "Interpretation limits of a single result",
+SECTIONS.append({"id": "single-number", "kicker": "Use of results", "title": "Limits of one result",
   "blocks": [
-    p("A COA is genuinely useful, inside its limits. What a single certificate <em>can</em> tell you: the "
-      "potency class of the sampled material (a 15% batch and a 25% batch are truly different things); the "
-      "pass/fail status of that sample against that panel; and, over many batches from your own room with "
-      "consistent sampling, a trend worth steering by. What it <em>cannot</em> tell you:"),
-    ul(["<strong>Your whole room's number.</strong> The certificate describes the sample. The batch inherits "
-        "it only as far as your sampling was honest.",
-        "<strong>Differences of a point or two.</strong> Sampling scatter plus inter-lab spread swamp them, "
-        "the documented systematic spread between labs alone was 5.5 points" + _c("jikomes2018-labs") + ".",
-        "<strong>Quality, effect or experience.</strong> THC% correlates weakly with what a product is like "
-        "to consume; terpenes, minor cannabinoids, cure and freshness carry most of it. Chasing the number "
-        "off the certificate is chasing the wrong thing.",
-        "<strong>Next batch.</strong> A COA is a record, not a forecast. Genetics × environment × process "
-        "will move the next one."]),
-    h(3, "When the number looks weird"),
-    table(["Symptom", "Most likely explanations", "What to check"], [
-      ["THC jumped 3–4 points on the same cultivar", "sampling drift (top colas), basis change, different lab or method", "who sampled; basis + moisture lines; lab and method IDs on both COAs"],
-      ["Total THC ≠ THC + 0.877 × THCA", "typo, different total convention, GC-derived total", "recalculate; ask the lab which formula and method they used"],
-      ["Flower reporting 35%+ total THC", "biologically implausible for nearly all cultivars, enriched sample or inflation", "split-sample retest at an independent lab; check for kief enrichment"],
-      ["TYM failed, retest passed", "different method (plate vs qPCR), different subsample, or remediation in between", "method lines on both COAs; whether the batch was treated between tests"],
-      ["Metals failure from nowhere", "new fertiliser or substrate lot, water change, equipment contamination", "input CoAs and lot numbers; source-water test"],
-      ["Moisture reads 6% but flower feels normal", "sample dried in transit or sat before analysis", "water activity at pack-out; days between sampling and testing"],
-      ["CBD appears in a THC cultivar", "mislabelled genetics, or peak misassignment at the lab", "verify the cultivar; ask the lab to confirm peak identity"],
-    ], cls="compact", caption="Triage table: read the metadata before doubting the chemistry, most anomalies live in sampling, basis or method, not in the instrument."),
-    h(3, "COA red flags"),
+    p("A COA gives information that you can use in its limits. One COA <em>can</em> show three "
+      "items. The first item is the potency group of the sample (a batch with 15% and a batch with "
+      "25% are very different).</p><p>The second item is the result of the sample for the panel "
+      "(satisfactory or unsatisfactory). The third item is a trend that you can use to control your "
+      "crop. For this trend, many batches from your room are necessary, with the same sampling "
+      "procedure each time. One COA <em>cannot</em> show these items:"),
+    ul(["<strong>The number for your room.</strong> The COA gives information about the sample. The "
+        "batch has the same number only if your sampling is accurate.",
+        "<strong>Differences of one or two percentage points.</strong> The variation of the "
+        "sampling and the variation of the results from different laboratories are larger than "
+        "these differences. In a test, the systematic difference from one laboratory to a different "
+        "laboratory was 5.5 percentage points, with no other cause" + _c("jikomes2018-labs") +
+        ".",
+        "<strong>Quality or effect.</strong> The THC percentage has a weak correlation with the "
+        "effect of a product when a person uses it. Terpenes, minor cannabinoids, curing, and "
+        "freshness cause most of the effect. A high number on the COA is not the correct target.",
+        "<strong>The next batch.</strong> A COA is a record of one batch. It does not show the "
+        "result for the next batch. The genetics, the environment, and the procedure will change "
+        "the next batch."]),
+    h(3, "When the number is not usual"),
+    table(["Sign", "Possible causes", "Items to examine"], [
+      ["THC increased by 3 to 4 percentage points for the same cultivar", "A drift in the sampling (top colas), a change of the basis, a different laboratory, or a different method", "The person who collected the sample. The basis and moisture rows. The laboratory and method IDs on the two COAs."],
+      ["Total THC ≠ THC + 0.877 × THCA", "An error in the report, a different formula for the total, or a total from GC", "Calculate again. Tell the laboratory to give the formula and the method that it used."],
+      ["Flower with a total THC of 35% or more", "More than the range of values that nearly all cultivars can make. A sample with kief enrichment, or values that are too high", "Divide a sample. Measure it again at an external laboratory. Examine the sample for kief enrichment."],
+      ["An unsatisfactory TYM result, then a satisfactory result in a second test", "A different method (plate or qPCR), a different part of the sample, or a remediation between the tests", "The method rows on the two COAs. If the batch had a treatment between the tests."],
+      ["An unsatisfactory result for metals with no cause that you know", "A new lot of fertilizer or substrate, a change of the water, contamination of the equipment", "The COAs and lot numbers of the fertilizer and the substrate. A test of the source water."],
+      ["The moisture content is 6%, but the flower is usual when you touch it", "The sample became dry when it went to the laboratory, or it stayed for some time before the test", "The water activity at packaging. The number of days between sampling and testing."],
+      ["CBD is in a THC cultivar", "Genetics with an incorrect label, or an incorrect identification of the peak at the laboratory", "Make sure that the cultivar is correct. Tell the laboratory to make sure that the identification of the peak is correct."],
+    ], cls="compact", caption="This table helps you to find the cause. Read the information about the sample before you think that the chemistry is incorrect. Most unusual numbers are from the sampling, the basis, or the method, and not from the instrument."),
+    h(3, "Signs of a problem with a COA"),
     grid([
-      card("No accreditation number", p("Anyone can typeset a PDF. If the lab and its accreditation can't be "
-           "verified in a public register, the document is a claim, not a certificate."), tag="identity"),
-      card("No LOQ column", p("&lsquo;ND&rsquo; without a limit is uninterpretable, not detected above "
-           "<em>what</em>? Serious labs always print it."), tag="reporting"),
-      card("Only &lsquo;THC&rsquo;, no THCA row", p("Either a GC method (total is a floor, not exact) or "
-           "lazy reporting. Both mean: ask for the method reference."), tag="method"),
-      card("Client-submitted, sold as batch-wide", p("The lab measured a bag someone filled. Treating that "
-           "as a batch result is the oldest trick in the book."), tag="sampling"),
-      card("The local hero lab", p("Always 2–3 points above everyone else in town. That consistency is a "
-           "business model, not chemistry" + _c("zoorob2021-bunching") + "."), tag="incentives"),
-      card("Amended reports, rising numbers", p("Reissued certificates happen; reissues that only ever move "
-           "THC upward with no explanation are a pattern worth walking away from."), tag="paper trail"),
+      card("No accreditation number", p("A PDF is easy to make. If the public register does not "
+           "show the laboratory and its accreditation, the document is a claim and not a "
+           "certificate."), tag="identification"),
+      card("No LOQ column", p("&lsquo;ND&rsquo; without a limit gives no information that you can "
+           "use. You do not know the <em>limit</em> for the result. A good laboratory always shows "
+           "the limit."), tag="report"),
+      card("Only &lsquo;THC&rsquo;, no THCA row", p("The cause is a GC method (the total is a "
+           "minimum and not accurate) or a report with data that is not sufficient. In the two "
+           "causes, tell the laboratory to give the method reference."), tag="method"),
+      card("&lsquo;Client-submitted&rsquo; used as a batch result", p("The laboratory measured a bag that a person "
+           "filled. To use this measurement as a batch result is a frequent method of fraud."), tag="sampling"),
+      card("The laboratory with the best numbers in the area", p("The laboratory always gives numbers that are 2 to 3 percentage "
+           "points higher than all other laboratories in the area. Thus the high numbers are a "
+           "product that the laboratory supplies and not a result of chemistry" +
+           _c("zoorob2021-bunching") + "."), tag="incentives"),
+      card("New report versions with higher numbers", p("A laboratory can make a new version of a COA. If "
+           "each new version of a COA only increases the THC value without a cause, do not use the "
+           "laboratory."), tag="records"),
     ], cols=3),
-    callout("key", "One mental model to keep",
-      p("One certificate = one measurement: one sample, one lab, one day. The measurement is useful within "
-        "those limits. Be suspicious of any lab whose numbers are consistently the highest in town — that "
-        "pattern is a business model, not chemistry.")),
+    callout("key", "The primary fact",
+      p("One COA is one measurement: one sample, one laboratory, and one day. The measurement gives "
+        "information in these limits. Do not accept a laboratory with numbers that are always the "
+        "highest in the area. The high numbers are a product that the laboratory supplies and not "
+        "chemistry.")),
   ]})
 
 # ---------------------------------------------------------------- 16. NZ/AU
-SECTIONS.append({"id": "nz-au", "kicker": "Medicinal context", "title": "Testing for release in NZ and Australia",
+SECTIONS.append({"id": "nz-au", "kicker": "Medicinal cannabis", "title": "Testing for release in NZ and Australia",
   "blocks": [
-    p("In the Australasian medicinal systems the COA plays a structurally different role from a retail "
-      "label. In Australia, unapproved medicinal cannabis products must conform to <strong>TGO 93</strong> "
-      "(Therapeutic Goods (Standard for Medicinal Cannabis) Order 2017): assayed cannabinoid content must "
-      "sit within 90.0–110.0% of the label claim, contaminant limits (including aflatoxins and pesticide "
-      "residues) apply, and the regulator can pull and test product at any time" + _c("tga-tgo93") + ". In "
-      "New Zealand, products must meet the <strong>minimum quality standard</strong> under the Misuse of "
-      "Drugs (Medicinal Cannabis) Regulations 2019, with critical tests performed by GMP-certified "
-      "facilities and ISO/IEC 17025 accreditation recognised for the rest" + _c("nz-mcs-mqs") + "."),
-    p("The operative concept is <strong>release testing</strong>: a batch is tested against a registered "
-      "specification, a qualified person reviews the full data set, and the batch is formally released, or "
-      "not. The COA becomes one input to a documented decision, made by someone whose signature carries "
-      "liability. Contrast that with a retail market where the COA's main job is to make the jar look good "
-      "on a menu, and the potency-inflation record earlier in this paper stops being surprising: same "
-      "document, opposite incentive structure."),
-    ul(["A 90–110% label-claim window means a batch can <em>fail for being too strong</em>. The target is "
-        "accuracy, not magnitude" + _c("tga-tgo93") + ".",
-        "Stability data and shelf-life claims ride on the same analytics. The release COA is re-verified "
-        "over time, which quietly disciplines the initial numbers.",
-        "Testing under GMP means validated methods, qualified instruments and audit trails, the lab's "
-        "answer to &lsquo;how do you know?&rsquo; is a documented system, not a shrug."]),
-    callout("note", "Scope note, not legal advice",
-      p("This section sketches the shape of the frameworks, not their current detail. Standards, schedules "
-        "and guidance move; anyone operating under TGO 93 or the NZ scheme should work from the regulator's "
-        "current documents" + _c("tga-tgo93") + _c("nz-mcs-mqs") + " and their own quality agreements, not "
-        "from a white paper.")),
-    p("For growers elsewhere, the takeaway is portable: the closer your own testing practice is to "
-      "release-style discipline, fixed sampling SOP, one accredited lab, retained samples, trend charts, "
-      "numbers nobody is paid to like. The more your COAs are worth, to you and to anyone auditing you."),
+    p("In the systems of Australia and New Zealand for medicinal cannabis, the COA has a different "
+      "function from a COA in the retail market. In Australia, a medicinal cannabis product without "
+      "approval must agree with <strong>TGO 93</strong> (Therapeutic Goods (Standard for Medicinal "
+      "Cannabis) Order 2017). The measured quantity of cannabinoids must be in the range of 90.0 to "
+      "110.0% of the label claim. The limits for contaminants (for example aflatoxins and pesticide "
+      "residues) apply. The authority can collect product and do a test on it at all times" +
+      _c("tga-tgo93") + ".</p><p>In New Zealand, products must agree with the <strong>minimum "
+      "quality standard</strong> in the Misuse of Drugs (Medicinal Cannabis) Regulations 2019. "
+      "Facilities with a GMP certificate must do the critical tests. For the other tests, the "
+      "authority accepts accreditation to ISO/IEC 17025" + _c("nz-mcs-mqs") + "."),
+    p("The primary procedure is <strong>release testing</strong>. The laboratory does a test of the "
+      "batch and compares the results with a registered specification. A qualified person examines "
+      "all the data. Then this person releases the batch or does not release it. The COA is one "
+      "source of data for a decision that is in a document. This person makes the decision, gives a "
+      "signature, and has liability for it.</p><p>In the retail market, the COA has a primary task: "
+      "marketing. Thus the record of values that are too high, in a previous section, is a result "
+      "of the different incentive. The document is the same, but the incentive is the opposite."),
+    ul(["A range of 90 to 110% of the label claim shows that a batch can be <em>unsatisfactory "
+        "because the potency is too high</em>. The target is accuracy and not a high value" +
+        _c("tga-tgo93") + ".",
+        "The data on stability and the claims on shelf life use the same measurements. Subsequent "
+        "measurements examine again the COA that releases the batch. Thus the first numbers must be "
+        "accurate.",
+        "Testing in GMP uses methods with validation, instruments with qualification, and audit "
+        "trails. The laboratory shows the basis of each result in a system of documents. It does "
+        "not give a result without data."]),
+    callout("note", "This section is not legal advice",
+      p("This section gives only the primary items of the systems and not the current data. The "
+        "standards, the schedules, and the guidance change. For a person that operates with TGO 93 "
+        "or the NZ system, the current documents of the authority are the source" + _c("tga-tgo93") +
+        _c("nz-mcs-mqs") + ". The quality agreements of that person are also a source. A white "
+        "paper is not a source.")),
+    p("The primary fact is the same for growers in other legal markets. Use a testing procedure "
+      "with the properties of release testing. The procedure has an SOP for sampling that does not "
+      "change, and one laboratory with accreditation. It has samples that you keep, trend charts, "
+      "and numbers with no incentive for a high value. When your procedure agrees more with release "
+      "testing, your COAs have a higher value for you and for each auditor."),
   ]})

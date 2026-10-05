@@ -7,11 +7,11 @@ import figs_lib as L
 SLUG = "closed-loop"
 TITLE = "Closed-loop grow room: levers, signals and plant state"
 EYEBROW = "Precision · Closed loop"
-SUB = ("Run a grow room as one self-correcting system. This beginner's guide covers the controls "
-       "you pull, how to read what the plants are actually doing, and how to feed that back "
-       "without the room chasing its own tail.")
+SUB = ("Operate a grow room as one system that corrects its errors. This basic paper shows the "
+       "levers that you change and how to read the condition of the plants. It also shows how to "
+       "send this information back to the levers without oscillation.")
 META = [("gauge", "Precision"), ("image", "9 diagrams"),
-        ("quote", "Evidence-linked · 9 sources"), ("clock", "~17 min read")]
+        ("quote", "9 sources"), ("clock", "~17 min to read")]
 RELATED = ["signal-and-noise", "plant-state-dashboard", "f2-crop-steering"]
 REF_IDS = ["mohammed-spc-2024", "isa-18-2-alarm-mgmt", "moon-rootzone-ec-2018",
            "huber-dli-co2-2021", "kim-co2-temp-light-msu", "szerement-dielectric-2019",
@@ -24,256 +24,306 @@ SECTIONS = []
 
 SECTIONS.append({"id": "what-this-is", "kicker": "Start here", "title": "Purpose and scope",
   "blocks": [
-    callout("evidence", "Grain of salt",
-      "<p><strong>Provisional:</strong> Lead-time examples (tip burn in N days, whole-room health in seconds) are "
-      "worked UX scenarios, not multi-site cannabis trials. Trust coupled thinking; treat prediction copy as "
-      "illustrative until you measure your own false-positive rate.</p>"),
-    lead("A grow room is a <strong>loop</strong>, not a panel of independent dials you set and forget. "
-         "You change a control, the room and plants respond, sensors measure that response, you work "
-         "out what it means, and that tells you what to change next. Around and around, every minute "
-         "of every day."),
-    p("A <strong>closed loop</strong> works the way a thermostat does: the room gets too warm, the "
-      "sensor reads it, the AC turns on, and when the temperature settles back the AC stops. The output "
-      "feeds back to control the input&mdash;round and round. In a grow room the same logic governs "
-      "everything: what the plant tells you decides your next move, and then you watch what that move "
-      "actually did. This guide teaches the whole circle as one thing, with three jobs sitting on it: "
-      "getting the action right (<em>cause</em>), getting the measurement honest (<em>perception</em>), "
-      "and getting the meaning out (<em>cognition</em>)."),
-    p("<strong>You never move just one thing.</strong> Every control pushes on four linked balances at "
-      "once: heat, water vapour, CO2 and the salt in the root zone. The finished version of this loop "
-      "is a room that senses its own state, knows what its actions will do, and corrects its own drift "
-      "before that drift becomes damage."),
+    callout("evidence", "Weak",
+      "<p><strong>Limit of the data:</strong> The examples of lead time (tip burn in N days, the "
+      "condition of the room in seconds) are examples for the dashboard. They are not results of "
+      "tests at many cannabis sites. Use the method of the coupled system. Use the predictions as "
+      "examples only, until you measure the rate of false positives in your facility.</p>"),
+    lead("A grow room is a <strong>loop</strong>. It is not a panel of controls with no connection "
+         "to each other. You do not set the controls one time and then ignore them. You change a "
+         "control, and the room and the plants change as a result. The sensors measure the change, "
+         "and you examine the data. Thus you know the next change to make, and the cycle continues "
+         "each minute of each day."),
+    p("A thermostat is an example of a <strong>closed loop</strong>. When the room becomes too "
+      "warm, the sensor measures the temperature and the air conditioner (AC) starts. When the "
+      "temperature is correct again, the AC stops. The output of the system goes back to control "
+      "the input of the system, and the cycle starts again.</p><p>In a grow room, all the controls "
+      "operate with the same method. The plant shows you the next change to make. Then you monitor "
+      "the effect of the change.</p><p>This paper shows the full cycle as one system. The cycle has "
+      "three tasks. The task of <em>cause</em> is to make the lever change correct. The task of "
+      "<em>perception</em> is to make the measurement accurate. The task of <em>cognition</em> is "
+      "to find the information in the data."),
+    p("<strong>A change has an effect on more than one part of the room.</strong> Each change of a "
+      "lever changes four connected balances at the same time: heat, water vapor, CO2 and the salt "
+      "in the root zone. A full loop is a room that senses its condition and knows the effect of "
+      "each change. It corrects its drift before the drift causes damage."),
     figure(L.flow("The closed loop, six steps",
-            [("Act", "pull a lever"), ("Room responds", "coupled cascade"),
-             ("Sense", "measure + noise"), ("Filter", "signal vs noise"),
-             ("Infer", "estimate plant state"), ("Prescribe", "action + setpoint -> back to act")],
-            note="The last arrow, Prescribe back to Act, is the one that closes the loop."), 1,
-      "Read it as a circle. Each step leads to the next; the last arrow, from Prescribe back to Act, "
-      "is the one that makes it a closed loop."),
-    callout("key", "What 'closed' buys you",
-      p("A mature loop tells you whole-room health and whether to act quickly when the dashboard is well designed, and it "
-        "stays quiet when nothing needs you. Silence is a feature, not a fault.")),
+            [("Change", "change a lever"), ("Room changes", "coupled effects"),
+             ("Sense", "measure + noise"), ("Filter", "signal or noise"),
+             ("Inference", "estimate of plant state"), ("Prescription", "lever + setpoint, back to Change")],
+            note="The last arrow, from Prescription to Change, closes the loop."), 1,
+      "Read the diagram as a cycle. Each step goes to the next step. The last arrow, from "
+      "Prescription back to Change, closes the loop."),
+    callout("key", "The value of a closed loop",
+      p("When the dashboard is good, a full loop tells you the condition of the room. It also tells "
+        "you if you must change a lever quickly. When no change is necessary, the loop gives no "
+        "alarms. This operation is correct. It is not a fault.")),
   ]})
 
-SECTIONS.append({"id": "key-terms", "kicker": "Plain-language dictionary", "title": "Definitions",
+SECTIONS.append({"id": "key-terms", "kicker": "List of terms with easy definitions", "title": "Definitions",
   "blocks": [
-    p("This field is loaded with jargon, so here is every term you need before the real content. Most "
-      "are everyday ideas with intimidating names. Don't memorise them. Each one comes back in "
-      "context."),
-    defterm("Lever (actuator)", "A control you can move: light brightness, cooling setpoint, "
-            "irrigation, CO2 dosing. Around eleven main lever families run a room."),
-    defterm("Signal vs noise", "Signal is what the plant and room are truly doing. Noise is sensor "
-            "jitter, biological scatter and one-off spikes that mean nothing. Every reading is "
-            "signal + noise added together."),
-    defterm("Setpoint vs target", "A setpoint is the literal number a machine chases (e.g. cool to "
-            "24 &deg;C (75 &deg;F)). A target is the outcome you actually want (e.g. keep the plant "
-            "transpiring healthily). They are not the same thing."),
-    defterm("VPD (vapour pressure deficit)", "The air always has room for more water vapour&mdash;more "
-            "room when it is warmer and drier. Think of clothes drying faster on a hot breezy day than "
-            "a cold damp one: the air has a bigger gap to fill, so it pulls moisture harder from wet "
-            "leaf surfaces. VPD measures that gap in kilopascals (kPa). Higher VPD means plants lose "
-            "water faster and the root zone dries back sooner; too high and plants close their stomata "
-            "to conserve water."),
-    defterm("EC, VWC, dryback", "EC (electrical conductivity) = how salty the feed or root zone is. "
-            "As the medium dries between shots, water is taken up but dissolved salts stay behind, so "
-            "EC climbs cycle by cycle&mdash;like soup getting saltier as it reduces on the stove. "
-            "VWC = how wet the growing medium is. Dryback = how much the medium dries between "
-            "waterings; think of it as how much of a sponge wrings out before the next shot."),
-    defterm("Plant state", "The plant's actual condition (stressed, steering generative, on-track), "
-            "inferred from many signals together rather than read off one gauge."),
+    p("Many terms in this paper are new. This section gives a definition of each term that is "
+      "necessary before the primary content. Most of the terms are easy, but their names are not "
+      "easy. It is not necessary to know all the terms at this time. Each term occurs again in the "
+      "paper."),
+    defterm("Lever (actuator)", "A control that you can change: the light intensity, the cooling "
+            "setpoint, irrigation and CO2 supplementation. Approximately eleven primary groups of "
+            "levers control a room."),
+    defterm("Signal and noise", "Signal is the information about the condition of the plant and the "
+            "room. Noise is jitter of the sensor, scatter in the biology, and spikes that occur one "
+            "time and give no information. Each reading is the sum of signal and noise."),
+    defterm("Setpoint and target", "A setpoint is a number in a controller. The controller tries to "
+            "make the measurement agree with this number. For example, the controller decreases the "
+            "air temperature to 24 &deg;C (75 &deg;F). A target is the result that you want. For "
+            "example, the plant transpires at a correct rate. A setpoint and a target are not the "
+            "same."),
+    defterm("VPD (vapor pressure deficit)", "The air can always absorb more water vapor. This "
+            "quantity is the gap, and it is larger when the air is hotter and drier. VPD is the "
+            "measurement of the gap, in kilopascals (kPa). When the gap is larger, the air removes "
+            "water from wet leaf surfaces at a higher rate. When the VPD is higher, water goes from "
+            "the plants to the air more quickly and the root zone dries more quickly. If the VPD is "
+            "too high, the plants close their stomata to keep water."),
+    defterm("EC, VWC, dryback", "EC (electrical conductivity) is a measurement of the dissolved "
+            "salt in the feed or in the root zone. When the substrate dries between shots, the "
+            "plant absorbs water but the dissolved salts stay in the substrate. Thus the EC "
+            "increases in each cycle. VWC (volumetric water content) is the quantity of water in "
+            "the substrate. Dryback is the quantity by which the water content of the substrate "
+            "decreases between two irrigation events."),
+    defterm("Plant state", "The condition of the plant, for example stress, generative steering or "
+            "on-track. You calculate the plant state from many signals together. You do not read it "
+            "from one sensor."),
   ]})
 
-SECTIONS.append({"id": "the-levers", "kicker": "Core content: the action half", "title": "Control levers and coupled effects",
+SECTIONS.append({"id": "the-levers", "kicker": "Primary content: the lever half", "title": "Control levers and coupled effects",
   "blocks": [
-    p("The room is one <strong>coupled</strong> system, not a set of independent knobs. Turn up the "
-      "light and you have not just added light: you have added heat, made the plants drink and sweat "
-      "faster (raising humidity), increased CO2 demand, and sped up how fast the root zone dries and "
-      "concentrates salt" + _c("huber-dli-co2-2021") + ". Light is at once a heat source, a "
-      "transpiration driver, a CO2-demand creator and an HVAC load" + _c("kim-co2-temp-light-msu") + "."),
-    p("Everything you can do sorts into four <strong>balances</strong> you are always disturbing: "
-      "energy (heat), moisture (water vapour), carbon (CO2) and salt (root-zone EC), with around "
-      "eleven primary lever families acting across them" + _c("kim-co2-temp-light-msu") +
-      ". The right question before any change is not &lsquo;what does this lever do?&rsquo; but "
-      "&lsquo;which balance am I disturbing, and can the rest of the room absorb it?&rsquo;"),
+    p("The room is one <strong>coupled system</strong>. It is not a set of controls with no "
+      "connection to each other. When you increase the light intensity, you add more than "
+      "light.</p><p>You also add heat. The plants absorb and transpire water at higher rates, and "
+      "the humidity increases. The plants use more CO2. The root zone dries more quickly, and the "
+      "concentration of the salt in it increases more quickly" + _c("huber-dli-co2-2021") +
+      ". Light is a source of heat, a cause of transpiration, a cause of CO2 uptake and a load on "
+      "the HVAC at the same time" + _c("kim-co2-temp-light-msu") + "."),
+    p("Each change that you make has an effect on one or more of four <strong>balances</strong>: "
+      "energy (heat), moisture (water vapor), carbon (CO2) and salt (root-zone EC). Approximately "
+      "eleven primary groups of levers have an effect on these balances" + _c("kim-co2-temp-light-msu") +
+      ". Before a change, do not examine only the function of the lever. Find the balance on which "
+      "the change has an effect. Make sure that all the other parts of the room can absorb the "
+      "change."),
     figure(L.flow("One lever, four balances",
-            [("Raise light / PPFD", "one move"), ("Energy", "leaf temp up, AC runtime up"),
-             ("Moisture", "transpiration up, RH up, dehumid load up"),
-             ("Carbon", "CO2 demand up"), ("Salt / root zone", "faster dryback, substrate EC up"),
-             ("Verdict", "capacity exceeded? = failure mode")],
-            note="A single lever fans out into all four balances at once."), 2,
-      "One move, four consequences. Lowering the cooling setpoint is the same story: it changes "
-      "humidity, VPD, dryback rate and condensation risk together" + _c("choi-ec-transpiration-2015") + "."),
-    figure(L.bars("How long a coupled disturbance takes to settle",
+            [("More light / PPFD", "one change"), ("Energy", "hotter leaves, longer AC time"),
+             ("Moisture", "transpiration, RH, dehumidifier load increases"),
+             ("Carbon", "more CO2 uptake"), ("Salt / root zone", "faster dryback, higher EC"),
+             ("Result", "load more than capacity: failure mode")],
+            note="One lever changes all four balances at the same time."), 2,
+      "One change has four effects. If you decrease the cooling setpoint, the humidity, the VPD, "
+      "the dryback rate and the condensation risk also change together" +
+      _c("choi-ec-transpiration-2015") + "."),
+    figure(L.bars("Time for each balance to become stable after a change",
             [("Energy (heat)", 8), ("Moisture (RH)", 18), ("Carbon (CO2)", 6), ("Salt (root zone)", 240)],
             unit=" min",
-            note="Salt in the root zone settles far slower than air balances. It builds over cycles.",
+            note="Salt becomes stable much more slowly than the air balances. It increases in each cycle.",
             maxv=280), 3,
-      "The four balances respond on very different timescales, which is why a single lever change can "
-      "look fine for hours and still be quietly loading the slowest balance" + _c("moon-rootzone-ec-2018") + "."),
-    table(["Balance", "What adds to it", "What removes it", "The lever you reach for"], [
-      ["<strong>Energy</strong> (heat)", "Lights, equipment, sun load", "AC, ventilation", "Light level, cooling setpoint, airflow"],
-      ["<strong>Moisture</strong> (vapour)", "Transpiration, irrigation", "Dehumidifier, exhaust", "Dehumid setpoint, VPD target, shot size"],
-      ["<strong>Carbon</strong> (CO2)", "Dosing", "Plant uptake, exhaust", "CO2 setpoint, exhaust timing"],
-      ["<strong>Salt</strong> (root zone)", "Feed EC, dryback", "Plant uptake, runoff", "Shot size/frequency, dryback target, feed EC, runoff %"],
-    ], caption="The four balances and the levers that move each. Every classic failure is a coupling failure, not a broken part."),
-    callout("warn", "Classic failures are coordination failures",
-      p("Cooling that creates humidity, dehumidification that overheats the room, CO2 fighting the "
-        "exhaust: nothing broke. The levers were just set as if they were independent. The fix is "
-        "order of operations: set biological demand first (stage, light, CO2), then size climate "
-        "capacity to match, then set the root-zone strategy to that.")),
+      "The four balances become stable in very different times. As a result, the data can show no "
+      "problem for some hours after a change to one lever. In this time, the change can add load to "
+      "the slowest balance, with no sign that you can see" + _c("moon-rootzone-ec-2018") +
+      "."),
+    table(["Balance", "Inputs", "Outputs", "The levers to change"], [
+      ["<strong>Energy</strong> (heat)", "Lights, equipment, sun load", "AC, air exchange", "Light intensity, cooling setpoint, airflow"],
+      ["<strong>Moisture</strong> (vapor)", "Transpiration, irrigation", "Dehumidifier, exhaust", "Dehumidifier setpoint, VPD target, shot size"],
+      ["<strong>Carbon</strong> (CO2)", "CO2 supplementation", "Plant uptake, exhaust", "CO2 setpoint, times of exhaust"],
+      ["<strong>Salt</strong> (root zone)", "Feed EC, dryback", "Plant uptake, runoff", "Shot size and frequency, dryback target, feed EC, runoff %"],
+    ], caption="The four balances and the levers that change each balance. The usual failures are failures of coupling. No part is defective."),
+    callout("warn", "Usual failures occur when you do not set the levers together",
+      p("Set the levers in the correct sequence. First, select the growth stage, the light "
+        "intensity and the CO2 setpoint. These change the quantity of water and CO2 that the plants "
+        "use. Then make the capacity of the climate system agree with this quantity. Then set the "
+        "irrigation strategy for the root zone to agree with the climate.</p><p>The usual failures "
+        "occur when you set each lever and do not think about the other levers. Cooling can "
+        "increase the humidity. A dehumidifier can add heat to the room. The exhaust can remove the "
+        "CO2 that you add. In each of these examples, no part is defective.")),
   ]})
 
-SECTIONS.append({"id": "reading-plant-state", "kicker": "Core content: sensing and meaning", "title": "Reading sensors and inferring plant state",
+SECTIONS.append({"id": "reading-plant-state", "kicker": "Primary content: sensors and information", "title": "Sensor readings and the inference of plant state",
   "blocks": [
-    p("You have to <em>see</em> the room's response without being fooled, then turn it into meaning. "
-      "Every measurement is signal plus noise, and in practice <strong>many raw alerts are noise</strong> "
-      "that must be rejected before they ever reach a decision" + _c("isa-18-2-alarm-mgmt") + "."),
-    p("Reading plant state is the leap from &lsquo;VWC fell 12% overnight&rsquo; (a number) to "
-      "&lsquo;the plant is steering generative as intended, no action needed&rsquo; or &lsquo;reduce "
-      "dryback 3% tonight or expect tip burn in about 48 hours&rsquo; (a decision). The goal is to "
-      "infer the plant, not just display the room."),
-    p("Three signal habits, in order, get you there:"),
-    ul(["<strong>Sample at the right speed</strong> for the biology: fast enough to catch a "
-        "30-minute irrigation response, slow enough not to log useless jitter.",
-        "<strong>Filter out scatter</strong> with rolling or median averages before you look.",
-        "<strong>Judge with control limits</strong>, lines drawn from the process's own "
-        "history, conventionally the mean and roughly &plusmn;3 standard deviations (sigma)" + _c("mohammed-spc-2024") + "."]),
-    figure(L.line("Signal vs noise on one reading",
+    p("You must <em>measure</em> the changes in the room, and noise must not cause incorrect data. "
+      "Then you must find the information in the data. Each measurement is signal plus noise. "
+      "Usually, <strong>many alarms from raw data are noise</strong>. Remove this noise before you "
+      "use an alarm for a decision" + _c("isa-18-2-alarm-mgmt") + "."),
+    p("To read the plant state, go from a number to a decision. A number is &lsquo;The VWC "
+      "decreased by 12% during the night&rsquo;. A decision is &lsquo;The plant is in the "
+      "generative steering that you want, and no change is necessary&rsquo; or &lsquo;Decrease the "
+      "dryback by 3% during the next night, or tip burn is possible in approximately 48 "
+      "hours&rsquo;. The task is to find the plant state. It is not only to show the data of the "
+      "room."),
+    p("To get the plant state, do these three steps in this sequence:"),
+    ul(["<strong>Set the correct speed of sampling</strong> for the biology. Make the speed "
+        "sufficient to measure the change that an irrigation event causes in 30 minutes. Do not "
+        "make the speed high, because you cannot use the jitter that you record.",
+        "<strong>Remove the scatter</strong> with a rolling average or a median filter before you examine the data.",
+        "<strong>Compare the data with control limits.</strong> The control limits are values on "
+        "the chart that you calculate from the recorded data of the room. Usually the values are "
+        "the mean and approximately &plusmn;3 standard deviations (sigma)" + _c("mohammed-spc-2024") +
+        "."]),
+    figure(L.line("Signal and noise in one reading",
             [(0, 50), (1, 49), (2, 52), (3, 48), (4, 51), (5, 50), (6, 53), (7, 49)],
             ["t0", "t1", "t2", "t3", "t4", "t5", "t6", "t7"], ylab="reading",
-            note="The smooth trend is the story; the jitter around it is noise to be filtered out."), 4,
-      "A raw sensor reading wobbles every sample. The trend is what the room is doing; the jitter is "
-      "not. Acting on the jitter is acting on events that never happened."),
-    figure(L.line("Control chart: when a wiggle earns a response",
+            note="The smooth trend is the signal. The jitter around the trend is noise that you must remove."), 4,
+      "Raw data from a sensor change by a small quantity in each sample. The trend shows the "
+      "changes in the room. The jitter does not show the changes in the room. If you change a lever "
+      "because of jitter, you change it for a change in the room that did not occur."),
+    figure(L.line("Control chart: when a small change is important",
             [(0, 50), (1, 51), (2, 49), (3, 50), (4, 52), (5, 48), (6, 51), (7, 49), (8, 50), (9, 52), (10, 49), (11, 78)],
-            ["", "", "", "", "", "", "", "", "", "", "", "flag"], ylab="value",
-            note="Eleven points jitter harmlessly; the twelfth crosses the limit and is flagged 'special cause'.",
+            ["", "", "", "", "", "", "", "", "", "", "", "mark"], ylab="value",
+            note="Eleven points show jitter only. Point 12 is more than the limit: special-cause variation.",
             ymax=90), 5,
-      "Inside the band = the room being a room, do nothing. A point past the limit, or a non-random "
-      "run, is a special cause to investigate. Distinguishing common-cause from special-cause "
-      "variation is the whole basis of statistical process control" + _c("mohammed-spc-2024") + "."),
-    p("Then <strong>aggregate, don't trust one reading</strong>: believe n-of-12, not n-of-1. A clean, "
-      "classified signal is the only acceptable input to inference. Inference then fuses several "
-      "cleaned signals into named conditions, each with a confidence level and an evidence chain, judged "
-      "against a <em>learned envelope</em> rather than a fixed line. 1.4 kPa VPD is fine in late "
-      "flower but punishing in early veg."),
+      "A point between the control limits is common-cause variation, and you do not change a lever. "
+      "A point that is more than a limit is special-cause variation. A group of points that are not "
+      "random is also special-cause variation. Find the cause of each special-cause variation. "
+      "Statistical process control is a method that finds the difference between common-cause "
+      "variation and special-cause variation" + _c("mohammed-spc-2024") + "."),
+    p("Then <strong>use many readings, because one reading is not sufficient</strong>. Use a group "
+      "of 12 readings (n-of-12), not one reading (n-of-1). The only correct input to the inference "
+      "is a clean signal with a classification.</p><p>The inference uses sensor fusion on some "
+      "clean signals to make named conditions. Each named condition has a value of confidence and "
+      "an evidence chain. The inference compares the signals with a <em>learned envelope</em> and "
+      "not with a constant limit. A VPD of 1.4 kPa is correct at the end of flowering, but it "
+      "causes stress at the start of vegetative growth."),
     figure(L.zones("The four-zone calm dashboard", 0, 4,
-            [(0, 1, L.GL, "Zone 1: plant truth"), (1, 2, L.AMBL, "Zone 2: watchlist"),
-             (2, 3, L.REDL, "Zone 3: advisory"), (3, 4, L.BLUL, "Zone 4: raw graphs")],
-            note="Zone 1 carries ~90% of the value; the raw graph wall is demoted to the basement."), 6,
-      "A calm dashboard leads with one green plant-truth headline (&lsquo;Flower Day 24, on-track, no "
-      "action needed&rsquo;). Yellow is drifting precursors, orange is the only interrupt, and the raw "
-      "graphs sit last."),
+            [(0, 1, L.GL, "Zone 1: plant state"), (1, 2, L.AMBL, "Zone 2: list to monitor"),
+             (2, 3, L.REDL, "Zone 3: advisory"), (3, 4, L.BLUL, "Zone 4: raw data")],
+            note="Zone 1 has approximately 90% of the value. The graphs of raw data are at the end."), 6,
+      "A calm dashboard starts with one green label for the plant state (&lsquo;Flower Day 24, "
+      "on-track, no change is necessary&rsquo;). Yellow shows the precursors that drift. Orange is "
+      "the only color that tells you to do a task. The graphs of raw data are last."),
   ]})
 
-SECTIONS.append({"id": "closing-the-loop", "kicker": "Core content: putting it together", "title": "Closed-loop diagnosis and corrective action",
+SECTIONS.append({"id": "closing-the-loop", "kicker": "Primary content: all the parts together", "title": "Closed-loop diagnosis and corrective action",
   "blocks": [
-    p("The three jobs become one machine here. Watch a single ordinary problem travel the whole loop: "
-      "<strong>salt creep</strong>, where dissolved salts gradually build up in the root zone because "
-      "each dryback cycle removes water but leaves salt behind."),
+    p("In this section, the three tasks operate as one system. Follow one usual problem through the "
+      "full loop. The problem is <strong>salt creep</strong>. In salt creep, the dissolved salts "
+      "slowly increase in the root zone, because each dryback cycle removes water but the salt "
+      "stays."),
     steps([
-      ("Cause sets the conditions", "A long dryback plus a flat feed concentrates salt a little more each cycle. The slowest balance is loading."),
-      ("Perception refuses to overreact", "It ignores any single EC spike, but flags a sustained four-day rising run past the control limit as a true signal."),
-      ("Cognition gives it meaning", "It fuses that run with feed and dryback data into a named precursor, 'salt accumulation, tip-burn precursor', with confidence and evidence."),
-      ("Prescribe and act", "It pulls the dryback lever back, closing the loop about four days before tip burn would appear, and the salt balance starts recovering."),
+      ("Cause makes the conditions", "A long dryback and a constant feed increase the salt concentration by a small quantity in each cycle. Thus the load on the slowest balance increases."),
+      ("Perception ignores noise", "Perception ignores one EC spike. But perception identifies a signal when the EC increases for four days and is more than the control limit."),
+      ("Cognition finds the information in the signal", "Cognition uses sensor fusion on this trend, the feed data and the dryback data. The result is a precursor with a name: &lsquo;salt accumulation, tip-burn precursor&rsquo;. The precursor has a value of confidence and an evidence chain."),
+      ("Prescription and change", "The loop sets the dryback lever to a smaller dryback. This change closes the loop approximately four days before you can see tip burn. The salt balance then starts to become correct again."),
     ]),
-    figure(L.flow("Salt creep through the whole loop",
-            [("Cause", "dryback long, feed flat, salt concentrates"),
-             ("Perception", "single spike ignored, 4-day run past limit = signal"),
-             ("Cognition", "fuse EC + feed + dryback -> tip-burn precursor"),
-             ("Prescribe -> act", "ease dryback, loop back, correct the same lever")],
-            note="The same dryback lever that caused it is the lever the loop pulls to fix it."), 7,
-      "Closed-loop correction catches root-zone salt accumulation roughly four days before visible tip "
-      "burn would show" + _c("saure-tipburn-calcium-2001") + ", because the EC the roots feel rises "
-      "as the medium dries, well before leaves react" + _c("choi-ec-transpiration-2015") + "."),
-    callout("note", "No single job catches it alone",
-      ul(["A <strong>lever-only</strong> grower never measures it.",
-          "A <strong>signal-only</strong> grower sees a number move but not what it means.",
-          "A <strong>dashboard-only</strong> grower, without the causal map, prescribes the wrong lever.",
-          "Only the whole loop has the emergent property of <strong>self-correction</strong>: sensing its own mistakes and undoing them."], "tight")),
-    p("Bridge metrics let the three jobs talk to each other. Dryback %, VPD and VPD-hours, pore-water "
-      "EC and recovery slope are each computed once on a consistent definition and read by every part. "
-      "Always <strong>prescribe with a number and show your work</strong>: name the action, the "
-      "setpoint, the deadline and the expected outcome, expandable to the full evidence on demand. "
-      "Never be a black box."),
-    table(["Failure", "Cause / coupling at fault", "Signal discipline that catches it", "Inference & prescription"], [
-      ["Silent salt creep", "Long dryback + flat feed", "4-day run past EC limit", "Tip-burn precursor → ease dryback"],
-      ["Irrigation didn't land", "Clog / pump / line fault", "Expected VWC step absent", "Failed shot → re-fire, alert"],
-      ["Stealth morning stress", "VPD spike at lights-on", "VPD-hours over envelope", "Morning stress → ramp climate gently"],
-      ["Dehumidifier dying slowly", "Falling removal capacity", "RH drift trend, not spike", "Capacity fade → service before failure"],
-      ["The blind sensor", "Flatlined / noisy probe", "Variance collapse or jitter = special cause", "Bad probe → quarantine, don't trust"],
-    ], cls="compact", caption="Five failures, one fusion. A flatlined, drifting or noisy probe is itself a detectable special-cause signal" + _c("szerement-dielectric-2019") + "."),
+    figure(L.flow("Salt creep in the full loop",
+            [("Cause", "long dryback, constant feed, salt increases"),
+             ("Perception", "one spike: noise. EC 4 days more than limit: signal"),
+             ("Cognition", "fusion of EC, feed, dryback: tip-burn precursor"),
+             ("Prescription and change", "decrease dryback. The loop uses the same lever.")],
+            note="The dryback lever caused the problem, and the loop uses the same lever to correct it."), 7,
+      "The EC at the roots increases when the substrate dries, long before the leaves show a change" +
+      _c("choi-ec-transpiration-2015") + ". Thus closed-loop correction finds salt accumulation in "
+      "the root zone approximately four days before you can see tip burn" +
+      _c("saure-tipburn-calcium-2001") + "."),
+    callout("note", "No task finds it without the other tasks",
+      ul(["A <strong>lever-only</strong> grower does not measure it.",
+          "A <strong>signal-only</strong> grower monitors a number that changes, but does not know the plant state.",
+          "A <strong>dashboard-only</strong> grower, with no model of cause and effect, gives a prescription for the incorrect lever.",
+          "Only the full loop has <strong>self-correction</strong>. No part has it without the other parts. The loop senses its errors and corrects them."], "tight")),
+    p("Bridge metrics let the three tasks send data to each other. The bridge metrics are dryback "
+      "%, VPD, VPD-hours, pore-water EC and recovery slope. The system calculates each metric one "
+      "time, with one definition. Each part of the loop reads the same value.</p><p>Always "
+      "<strong>give a prescription with a number and show how you calculated it</strong>. Give the "
+      "lever change, the setpoint, the time limit and the result that the change will cause. The "
+      "person who reads the prescription can open the full evidence chain when necessary. Do not "
+      "make a black box."),
+    table(["Failure", "Cause or coupling", "Signal method that finds it", "Inference and prescription"], [
+      ["Salt creep that you cannot see", "Long dryback and constant feed", "EC more than the limit for 4 days", "Tip-burn precursor → decrease the dryback"],
+      ["The irrigation water does not go to the substrate", "Blockage, pump fault or tubing fault", "The VWC does not increase after the shot", "Shot with no effect → apply the shot again, give an alarm"],
+      ["Morning stress that you cannot see", "VPD spike at lights-on", "VPD-hours more than the learned envelope", "Morning stress → change the climate slowly"],
+      ["Slow failure of the dehumidifier", "The capacity to remove water decreases", "Drift trend of the RH, not a spike", "Capacity fade → do maintenance before the failure"],
+      ["A sensor that does not measure the room", "A probe with a constant signal or with noise", "Very low variance, or jitter: special-cause variation", "Defective probe → put it in quarantine, do not use its data"],
+    ], cls="compact", caption="Five failures and one method: sensor fusion. A probe with a constant signal, with drift or with noise is also a special-cause signal that you can find" + _c("szerement-dielectric-2019") + "."),
   ]})
 
-SECTIONS.append({"id": "how-to", "kicker": "Do this first", "title": "Closed-loop control implementation",
+SECTIONS.append({"id": "how-to", "kicker": "Do this first", "title": "Procedure for closed-loop control",
   "blocks": [
-    p("You build the loop one rung at a time, and you do not earn the next rung until the previous one "
-      "is genuinely running. Almost none of this needs new capital. Most of it is discipline."),
+    p("Make the loop one stage at a time. Do not start the next stage until the previous stage "
+      "operates correctly. For almost all of this, it is not necessary to get new equipment. Most "
+      "of it is a method."),
     steps([
-      ("Arc I: get your actions coupling-aware", "Before any change, name which of the four balances it moves and in which direction. Treat every failure as a capacity or coordination problem, not one bad lever."),
-      ("Arc II: get your signals honest", "Stop watching live numbers (they invite over-reaction). Set a sampling cadence per channel, put a rolling average on every decision chart, and compute control limits from your own history."),
-      ("Arc III: get your decisions inferred", "Judge against an envelope per cultivar/stage/photoperiod. Fuse before you flag, because no signal stands alone. Make every advisory prescribe a number and show its evidence, and go quiet by default."),
-      ("Close the loop last, and gently", "Gate the first automated write-back to a low-risk, reversible move, for example a 3-point dryback nudge behind a confirm. Keep expensive or irreversible actions human-approved."),
+      ("Part I: know the coupled effects of each change", "Before each change, identify the balances on which the change has an effect, and the direction of each effect. Think that each failure is a problem of capacity, or a problem of levers that you do not set together. It is not the fault of one lever."),
+      ("Part II: make your signals accurate", "Do not monitor each new reading, because it can cause you to change levers too much. Set a sampling cadence for each sensor. Put a rolling average on each chart that you use for decisions. Calculate the control limits from your recorded data."),
+      ("Part III: make decisions with inference", "Compare the data with a learned envelope for each cultivar, each growth stage and each photoperiod. Use sensor fusion before you give an alarm, because one signal is not sufficient. Make each advisory give a number and show its evidence chain. Make the system give no alarm when there is no problem."),
+      ("Close the loop last, and carefully", "At the start, let the system make only automatic changes with low risk. Make sure that you can change the lever back. For example, the system changes the dryback by 3 points after a person gives approval. A person must give approval for each change that has a high cost or that you cannot change back."),
     ]),
-    callout("tip", "Discipline before capital",
-      p("The most valuable upgrades on this list cost nothing but habit: a sampling cadence, a rolling "
-        "average and a control limit are free. Buy hardware only once the discipline is in place to "
-        "use it.")),
+    callout("tip", "Method before equipment",
+      p("The changes with the most value in this procedure have no cost: a sampling cadence, a "
+        "rolling average and a control limit. Each of them is only a new method. Get equipment only "
+        "after the method operates.")),
   ]})
 
-SECTIONS.append({"id": "pitfalls", "kicker": "What goes wrong", "title": "Troubleshooting",
+SECTIONS.append({"id": "pitfalls", "kicker": "Causes of failure", "title": "Troubleshooting",
   "blocks": [
-    p("Two failure modes ruin a loop: <strong>chasing noise</strong> and <strong>oscillation</strong>. "
-      "Feed a controller noise, meaning single spikes, jitter and ghost trends, and it acts on events "
-      "that never happened, actively destabilising the room. A loop fed noise doesn't help, it amplifies. "
-      "Oscillation comes from reacting too fast, too hard, or to readings still inside normal variation, "
-      "so the room swings back and forth instead of settling" + _c("mohammed-spc-2024") + "."),
-    figure(L.line("Noise-driven oscillation vs calm correction",
+    p("Two failure modes make a loop defective: <strong>use of noise as a signal</strong> and "
+      "<strong>oscillation</strong>. If you give noise (spikes, jitter and incorrect trends) to a "
+      "controller, the controller changes levers for changes in the room that did not occur. The "
+      "noise makes the room not stable. A loop that receives noise does not help. It makes the "
+      "problem larger.</p><p>Oscillation occurs when you change a lever too quickly or too much, or "
+      "for readings that are in the usual variation. As a result, the values in the room increase "
+      "and decrease, and do not become stable" + _c("mohammed-spc-2024") + "."),
+    figure(L.line("Oscillation from noise and one correction",
             [(0, 50), (1, 64), (2, 38), (3, 66), (4, 36), (5, 62), (6, 40), (7, 58), (8, 44), (9, 50)],
             ["", "", "", "", "", "", "", "", "", ""], ylab="setpoint",
-            note="Chasing every jitter makes the setpoint swing wildly; one disciplined correction would hold it flat.",
+            note="A change for each jitter causes large changes of the setpoint. One correction can keep the setpoint constant.",
             ymax=80), 8,
-      "Reacting to each wiggle drives the room into a swing it can never settle out of. A filtered loop "
-      "makes one decisive correction only when the signal truly crosses a limit."),
-    callout("danger", "The one-sentence test before reacting",
-      p("Has the reading moved beyond its learned envelope (<em>meaning</em>), for longer than one "
-        "reading with sensors in agreement (<em>signal</em>), and do you know which lever answers it "
-        "without disturbing another balance (<em>cause</em>)? If it fails any of the three, it's "
-        "noise. Do nothing.")),
-    ul(["<strong>Aliasing</strong>: sampling too slowly invents phantom trends, and over-sampling logs "
-        "jitter you can't act on and tempts you to tamper. Match cadence to the biology" + _c("tdr-fdr-soil-review-2024") + ".",
-        "<strong>The Stage-2 trap</strong>: reacting to live numbers is more stressful than flying "
-        "blind. It's a wall of noise to panic at.",
-        "<strong>Walk the loop, not the wiggle</strong>: smooth enough to act calmly, but never so "
-        "smooth you go blind to a real fast event. Keep raw data one click away."]),
+      "If you change a lever for each small change, oscillation starts in the room, and the room "
+      "cannot become stable. A loop with a filter makes one correction, and only when the signal is "
+      "more than a limit."),
+    callout("danger", "Test before you change a lever",
+      p("Change a lever only if all three of these conditions occur. First, the reading is not in "
+        "its learned envelope (<em>cognition</em>). Second, this condition continues for more than "
+        "one reading, and the sensors agree (<em>perception</em>). Third, you know a lever that "
+        "corrects the reading without a change to a different balance (<em>cause</em>). If one "
+        "condition does not occur, the reading is noise. Do not change a lever.")),
+    ul(["<strong>Aliasing</strong>: if the sampling is too slow, you see incorrect trends. If the "
+        "sampling is too frequent, you record jitter that you cannot use, and the jitter can cause "
+        "tampering. Make the sampling cadence agree with the biology" + _c("tdr-fdr-soil-review-2024") +
+        ".",
+        "<strong>The Stage-2 trap</strong>: each new reading causes more stress for you than no "
+        "data. The readings are a large quantity of noise, and they can cause you to make incorrect "
+        "changes quickly.",
+        "<strong>Follow the loop, not the small change</strong>: make the data sufficiently smooth "
+        "to change levers with confidence. Do not make the data very smooth, because then you "
+        "cannot see a fast change that is not noise. Keep the raw data available in one step."]),
   ]})
 
-SECTIONS.append({"id": "expectations", "kicker": "What to actually expect", "title": "Expected results and limitations",
+SECTIONS.append({"id": "expectations", "kicker": "The results that you will get", "title": "Expected results and limitations",
   "blocks": [
-    callout("key", "The end state is quieter, not flashier",
-      p("A working loop means you look at the dashboard less, are surprised less, and harvest more "
-        "consistently. Silence is the product: a blank screen means nothing needs you. The "
-        "advisory-first stage, where the loop tells you what to do but you still pull the lever, "
-        "is a stable, valuable place to stop indefinitely. Full autonomy is opt-in, gated, "
-        "and never obligatory.")),
-    figure(L.flow("The five-rung maturity ladder",
-            [("1 Blind", "gut & eyeball"), ("2 Logged", "data, no method, react to spikes"),
-             ("3 Filtered", "sampling + filter + limits (Perception lit)"),
-             ("4 Inferred", "fuse to plant state, prescribe (Cognition lit)"),
-             ("5 Looped", "gated write-back, predictive (Cause closes back)")],
-            note="Rising capability. You don't earn a rung until the one below it genuinely runs."), 9,
-      "The single highest-return move is getting from rung 2 to rung 3: stop reacting to live numbers, "
-      "start reacting to filtered trends past control limits. It costs nothing but habit and is the "
-      "precondition for everything above it."),
-    ul(["<strong>You don't have to automate to win.</strong> Intelligence reaches the screen long "
-        "before autonomous actuation, and stopping there is a fine, stable outcome.",
-        "<strong>Numbers are starting points, not gospel.</strong> Reference setpoints are "
-        "commercial-cultivation starting points to calibrate against your own facility's history. The "
-        "method is universal; the setpoints are yours.",
-        "<strong>Prove it small.</strong> Pick one room and one failure pattern, run it in shadow-mode "
-        "for one cycle, and prove the lead time on a single advisory before you scale."]),
-    p("Get your actions coupling-aware, your signals honest, and your decisions inferred. Then, and "
-      "only then, consider closing the loop. To go deeper on the perception half, read the "
-      "<a href='signal-and-noise.html'>signal and noise</a> paper. For the cognition half and how it "
-      "reaches you, read the <a href='plant-state-dashboard.html'>plant-state dashboard</a> guide."),
+    callout("key", "The result is a smaller number of alarms, not more displays",
+      p("When the loop operates correctly, you examine the dashboard at longer intervals. You have "
+        "a smaller number of problems that occur without a sign, and the harvests have less "
+        "variation. A screen with no alarms is the product, because it shows that no task is "
+        "necessary. In the advisory-first stage, the loop gives you a prescription, but you change "
+        "the lever. You can stay in this stage for the time that you want, because it is stable and "
+        "it has value. Full automatic operation is optional and has approval steps.")),
+    figure(L.flow("The five stages of maturity",
+            [("1 No data", "by eye only"), ("2 Recorded", "data, no method, if spike, change"),
+             ("3 Filtered", "sampling, filter, limits (Perception on)"),
+             ("4 Inference", "plant state, prescription (Cognition on)"),
+             ("5 Closed loop", "automatic changes, with predictions (Cause closes loop)")],
+            note="Each stage adds function. Do not start a stage until the previous stage operates."), 9,
+      "The one change that gives the most value is the change from Stage 2 to Stage 3. Do not "
+      "change levers for each new reading. Change levers for filtered trends that are more than the "
+      "control limits. The only cost of this change is a new method, and you must do the change "
+      "before all the higher stages."),
+    ul(["<strong>Automation is not necessary to get good results.</strong> The advisory is on the "
+        "screen a long time before the system changes a lever without a person. If you stop at this "
+        "point, the result is good and stable.",
+        "<strong>The numbers are only a start point.</strong> The reference setpoints are values "
+        "from commercial cultivation. Use them as a start point, and calibrate them with the "
+        "recorded data of your facility. The method is correct for all facilities. You must find "
+        "the setpoints for your facility.",
+        "<strong>Start with a small test.</strong> Select one room and one type of failure. Operate "
+        "the loop in shadow mode for one cycle. Measure the lead time of one advisory before you "
+        "use the loop in more rooms."]),
+    p("First, know the coupled effects of your changes, make your signals accurate, and make your "
+      "decisions with inference. Then, and only then, think about how to close the loop. For more "
+      "information about the perception half, read the <a href='signal-and-noise.html'>signal and "
+      "noise</a> paper. For information about the cognition half and how it gives the results to "
+      "you, read the <a href='plant-state-dashboard.html'>plant-state dashboard</a> paper."),
   ]})

@@ -9,13 +9,13 @@ _FIGS = json.load(open(os.path.join(os.path.dirname(__file__), "figs_hvac.json")
 
 SLUG = "hvac-dehumidification"
 TITLE = "HVAC and dehumidification for grow rooms"
-EYEBROW = "Environment · Plant"
-SUB = ("Every watt put into a grow room comes back out as heat, and nearly every litre irrigated "
-       "comes back out as vapour. This paper shows you how to calculate both loads honestly, "
-       "choose and size the right equipment, manage the humidity spike when the lights go off, "
-       "and plan for the night something fails.")
-META = [("wind", "Climate plant"), ("image", "11 diagrams"),
-        ("quote", "Evidence-linked · 14 sources"), ("clock", "~22 min read")]
+EYEBROW = "Environment · Climate system"
+SUB = ("Each watt that you put into a grow room becomes heat, and almost all the water that you "
+       "apply becomes vapor. This paper shows how to calculate the two loads correctly and how to "
+       "select equipment of the correct size. It shows how to control the humidity spike when the "
+       "lights stop. It also shows how to prepare for a night when a unit does not operate.")
+META = [("wind", "Climate system"), ("image", "11 diagrams"),
+        ("quote", "14 sources"), ("clock", "~22 min to read")]
 RELATED = ["grow-room-systems", "temp-humidity-vpd", "airflow-design"]
 REF_IDS = ["rii-hvac-bpg", "desertaire-an25-load", "streit2023-hvacd", "hpac-latent",
            "grossiord2020-vpd", "hydrobuilder-ac-sizing", "streit2023-water",
@@ -30,599 +30,696 @@ SECTIONS = []
 # ---------------------------------------------------------------- 01 start here
 SECTIONS.append({"id": "start", "kicker": "01 · Read this first", "title": "Purpose and scope",
   "blocks": [
-    lead("A grow room is a machine that turns electricity into light, light into plant, and water "
-         "into vapour. The lights are the half everyone budgets for. The climate plant, "
-         "cooling, heating, dehumidification, is the half that hauls the heat and the water "
-         "back out, every hour of every day, and it typically eats 30&ndash;60% of an indoor "
-         "facility&rsquo;s energy bill" + _c("rii-hvac-bpg") + "."),
-    p("When it&rsquo;s sized right you barely think about it. When it&rsquo;s guessed, a "
-      "mini-split off a BTU chart and a dehumidifier that looked big in the shop. You find "
-      "out in week 6 of flower, at 2 a.m., when the room is cold, saturated, and growing "
-      "<em>Botrytis</em> instead of flower."),
-    p("This paper is written for someone speccing their first serious room or sanity-checking a "
-      "mechanical quote. No refrigeration background assumed. By the end you should be able to do "
-      "your own load arithmetic, read a dehumidifier spec sheet with suspicion, and explain exactly "
-      "why the humidity pins to 85% the moment the lights go out."),
-    callout("key", "The two conservation laws that do all the work",
-      p("<strong>1. Every watt in becomes heat.</strong> Lights, fans, pumps and dehumidifiers: "
-        "in a sealed insulated room, all of it ends up as heat the cooling has to remove. "
-        "<strong>2. Every litre in must leave.</strong> As runoff down the drain, a little as plant "
-        "tissue, and the rest as vapour your equipment must condense back to liquid. Sizing a "
-        "climate system is just doing this accounting honestly.")),
+    lead("A grow room is a system that changes electricity into light, light into plant growth, and "
+         "water into vapor. Each grower calculates the energy cost of the lights. The lights are "
+         "one half of the system. The climate system (cooling, heating and dehumidification) is the "
+         "other half. It removes the heat and the water from the room, each hour of each day. It "
+         "typically uses 30 to 60% of the energy cost of an indoor facility" + _c("rii-hvac-bpg") +
+         "."),
+    p("When the system has the correct size, you do not think about it. If you do not calculate the "
+      "size, the result is a problem. For example, you select a mini-split from a BTU chart and a "
+      "dehumidifier that looks large. You find the problem in week 6 of flowering, at 2 a.m. The "
+      "room is cold and saturated, and <em>Botrytis</em> causes damage to the flowers."),
+    p("This paper is for a person who selects the equipment for a first large room. It is also for "
+      "a person who examines a quotation for mechanical equipment, to make sure that it is correct. "
+      "It is not necessary to know about refrigeration. After you read this paper, you can "
+      "calculate the loads for your room. You can examine the data sheet of a dehumidifier and make "
+      "sure that its rating is correct for your conditions. You can also give the cause of the "
+      "humidity of 85% when the lights go off."),
+    callout("key", "The two conservation laws",
+      p("<strong>1. Each watt that goes in becomes heat.</strong> In a sealed room with insulation, "
+        "all of the electrical power of lights, fans, pumps and dehumidifiers becomes heat. The "
+        "cooling system must remove this heat.</p><p><strong>2. Each liter of water that goes in "
+        "must go away from the room.</strong> Some of the water flows out as runoff through the "
+        "drain. A small quantity stays in the plant tissue. The remaining water becomes vapor, and "
+        "your equipment must condense this vapor to liquid again. To select the size of a climate "
+        "system, you only count these watts and liters correctly.")),
   ]})
 
 # ---------------------------------------------------------------- 02 vocabulary
-SECTIONS.append({"id": "terms", "kicker": "02 · The vocabulary", "title": "Definitions",
+SECTIONS.append({"id": "terms", "kicker": "02 · The terms", "title": "Definitions",
   "blocks": [
-    defterm("Sensible heat", "Heat that changes air <em>temperature</em>, the kind a thermometer "
-            "sees. Lights are almost entirely a sensible load."),
-    defterm("Latent heat", "Heat hidden in water vapour, invisible to a thermometer. Think of "
-            "a 26 &deg;C (79 &deg;F) day before a thunderstorm versus a dry 26 &deg;C (79 &deg;F) "
-            "day: the thermometer reads the same, but the humid air is packed with extra energy "
-            "locked in the vapour. Evaporating 1 L of water absorbs about 0.68 kWh; that energy "
-            "sits invisibly in the air until a cold coil condenses the vapour back to liquid and "
-            "releases the heat again. Latent load = moisture load."),
-    defterm("BTU and ton", "Imperial heat units the HVAC trade still quotes. 1 kW = 3,412 BTU/h. "
-            "1 &ldquo;ton&rdquo; of cooling = 12,000 BTU/h &asymp; 3.5 kW. A &ldquo;5-ton unit&rdquo; "
-            "moves ~17.6 kW of heat."),
-    defterm("Pint (dehumidifier rating)", "US dehumidifier capacity unit: pints of water removed per "
-            "day. 1 US pint = 0.473 L, so a &ldquo;500-pint&rdquo; unit removes ~237 L/day, at "
-            "its rating conditions, not necessarily at yours."),
-    defterm("Relative humidity (RH)", "How full the air is of vapour, as a % of what it could hold "
-            "at its current temperature. Capacity roughly halves for every ~10 &deg;C (18 &deg;F) drop, "
-            "which is the entire lights-off story in one sentence."),
-    defterm("Dew point", "The temperature at which air becomes saturated and water condenses on any "
-            "surface at or below it. Unlike RH, dew point tracks the actual grams of water in the "
-            "air, which makes it the better control target."),
-    defterm("VPD", "Vapour pressure deficit, the drying power of the air, combining "
-            "temperature and RH. It drives transpiration rate, which means it drives your latent "
-            "load. Covered fully in the <a href='temp-humidity-vpd.html'>temperature, humidity and "
-            "VPD paper</a>."),
-    defterm("COP", "Coefficient of performance: kW of heat moved per kW of electricity used. Modern "
-            "compressors run COP 3&ndash;4; electric resistance heaters are stuck at 1.0. This one "
-            "number explains most HVAC efficiency arguments."),
+    defterm("Sensible heat", "Heat that changes the <em>temperature</em> of the air. A thermometer "
+            "shows the change. Almost all of the heat from the lights is sensible heat."),
+    defterm("Latent heat", "Heat that is in water vapor and that a thermometer cannot show. A day "
+            "of 26 &deg;C (79 &deg;F) before a thunderstorm, with high humidity, and a dry day of "
+            "26 &deg;C (79 &deg;F) give the same thermometer value. But the air with high humidity "
+            "contains more energy in the vapor. When 1 L of water evaporates, it absorbs "
+            "approximately 0.68 kWh. This energy stays in the air until a cold coil condenses the "
+            "vapor to liquid and releases the heat again. The latent heat load is the moisture load."),
+    defterm("BTU and ton", "Imperial units of heat. HVAC suppliers continue to use them. 1 kW = "
+            "3,412 BTU/h. 1 &ldquo;ton&rdquo; of cooling = 12,000 BTU/h = approximately 3.5 kW. A "
+            "&ldquo;5-ton unit&rdquo; moves approximately 17.6 kW of heat."),
+    defterm("Pint (dehumidifier rating)", "A US unit for the capacity of a dehumidifier. It is the "
+            "quantity of water in pints that the dehumidifier removes each day. 1 US pint = 0.473 "
+            "L. Thus a &ldquo;500-pint&rdquo; unit removes approximately 237 L/day at its rating "
+            "conditions. At your conditions, the unit can remove a different quantity."),
+    defterm("Relative humidity (RH)", "The quantity of vapor in the air, as a percentage of the "
+            "maximum quantity that the air can hold at its temperature. When the air temperature "
+            "decreases by approximately 10 &deg;C (18 &deg;F), the capacity of the air becomes "
+            "approximately half. This one fact is a primary cause of the humidity spike at "
+            "lights-off."),
+    defterm("Dew point", "The temperature at which the air becomes saturated. At this temperature, "
+            "water condenses on each surface that has a temperature equal to or less than the dew "
+            "point. The dew point shows the quantity of water in the air, in grams. RH does not "
+            "show this quantity. Thus the dew point is the better control target."),
+    defterm("VPD", "Vapor pressure deficit. It is the drying power of the air, and you calculate it "
+            "from the temperature and the RH. VPD changes the rate of transpiration, and thus it "
+            "changes the latent heat load. The <a href='temp-humidity-vpd.html'>temperature, "
+            "humidity and VPD paper</a> gives all the information about VPD."),
+    defterm("COP", "Coefficient of performance. It is the quantity of heat in kW that the unit "
+            "moves for each kW of electricity that it uses. A new compressor has a COP of 3 to 4. "
+            "An electric resistance heater has a COP of 1.0, and this value cannot change. Most "
+            "persons use this one number when they compare the efficiency of HVAC equipment."),
   ]})
 
 # ---------------------------------------------------------------- 03 core answer
-SECTIONS.append({"id": "two-loads", "kicker": "03 · The core idea", "title": "Sensible and latent loads",
+SECTIONS.append({"id": "two-loads", "kicker": "03 · The two loads", "title": "Sensible heat load and latent heat load",
   "blocks": [
-    p("A comfort air conditioner in an office does one job: remove dry heat. A grow room asks for "
-      "two: remove heat <em>and</em> remove water. Engineers split these as the <strong>sensible "
-      "load</strong> (temperature) and the <strong>latent load</strong> (moisture), and grow rooms "
-      "are unusual because the latent side rivals or exceeds the sensible side for much of the "
-      "cycle, a ratio almost no comfort-cooling equipment is built for"
-      + _c("desertaire-an25-load") + _c("hpac-latent") + "."),
+    p("An air conditioner (AC) for comfort cooling in an office does one task: it removes dry heat. "
+      "A grow room has two tasks: remove heat <em>and</em> remove water. Engineers divide the heat "
+      "load into the <strong>sensible heat load</strong> (temperature) and the <strong>latent heat "
+      "load</strong> (moisture). In a grow room, for much of the cycle, the latent heat load is as "
+      "large as the sensible heat load, or larger. This ratio is not usual. Almost no equipment for "
+      "comfort cooling has the correct capacity for it" + _c("desertaire-an25-load") + _c("hpac-latent") +
+      "."),
     figure(_FIGS["split"], 1,
-      "The two exits. Lights drive the sensible channel; the crop&rsquo;s transpiration drives the "
-      "latent channel. Different loads, different equipment, different failure modes."),
-    p("<strong>Where the sensible load comes from:</strong> the lights, overwhelmingly. In an "
-      "insulated, sealed room, essentially every watt of electrical input becomes heat that the "
-      "cooling plant must remove, and lighting is the single largest share"
-      + _c("desertaire-an25-load") + _c("streit2023-hvacd") + ". Dehumidifiers, fan motors, pumps "
-      "and people add the rest."),
-    p("<strong>Where the latent load comes from:</strong> the plants. A cannabis leaf is covered "
-      "in tiny pores called stomata. When they open in the light, the plant draws water up from "
-      "the roots and releases it as vapour into the air &mdash; the same way your skin releases "
-      "sweat to cool you down. The plant isn&rsquo;t wasting water; evaporation cools the leaf "
-      "and pulls more water (and dissolved nutrients) upward from the root zone. "
-      "Transpiration is this continuous, light-driven release of water vapour through the stomata. "
-      "Transpiration <em>is</em> the latent load: of the water delivered to the root zone, roughly "
-      "95%+ passes up through the plant and out the stomata as vapour, Desert Aire&rsquo;s "
-      "engineering note puts it near 99% of water taken up by the roots" + _c("desertaire-an25-load") +
-      ", and facility engineers design on 80&ndash;95% of total irrigation returning to the air"
-      + _c("streit2023-water") + ". Your crop is not decoration sitting inside the climate "
-      "system. Your crop <em>is</em> the humidifier, running at hundreds of litres a day, powered "
-      "by your lights and throttled by VPD" + _c("grossiord2020-vpd") + "."),
-    callout("note", "The twist: plants convert sensible into latent",
-      p("Evaporating water absorbs heat. A transpiring canopy is a giant evaporative cooler. "
-        "So the air temperature rises <em>less</em> than the lights&rsquo; wattage suggests, and "
-        "beginners conclude the heat &ldquo;wasn&rsquo;t that bad&rdquo;. It didn&rsquo;t leave. "
-        "It moved into the vapour, and you pay it back with interest at the coil that condenses "
-        "that vapour out. Total heat rejected always equals total watts in; the plants only decide "
-        "how it&rsquo;s split between the two channels.")),
+      "The two exits for the heat. The lights cause the sensible heat load, and the transpiration "
+      "of the crop causes the latent heat load. The two loads have different equipment and "
+      "different faults."),
+    p("<strong>The source of the sensible heat load:</strong> almost all of it is from the lights. "
+      "In a sealed room with insulation, almost all of the electrical power becomes heat that the "
+      "cooling system must remove. Lighting is the largest part of this heat" +
+      _c("desertaire-an25-load") + _c("streit2023-hvacd") + ". Dehumidifiers, fan motors, pumps and "
+      "persons add the remaining heat."),
+    p("<strong>The source of the latent heat load:</strong> the plants. A cannabis leaf has many "
+      "small pores in its surface. These pores are the stomata. When the stomata are open in the "
+      "light, the plant moves water up from the roots and releases it into the air as vapor. The "
+      "water that the plant releases is not waste. Evaporation decreases the temperature of the "
+      "leaf and moves more water (and dissolved nutrients) up from the root zone.</p><p>In "
+      "transpiration, the plant continuously releases water vapor through the stomata, and the "
+      "light causes it. Transpiration <em>is</em> the latent heat load. The plant moves "
+      "approximately 95% or more of the water that you supply to the root zone out of the stomata "
+      "as vapor. The engineering note of Desert Aire gives a value near 99% of the water that the "
+      "roots absorb" + _c("desertaire-an25-load") + ". Facility engineers calculate with 80 to 95% "
+      "of the total irrigation water that goes into the air again" + _c("streit2023-water") +
+      ".</p><p>Your crop is part of the climate system. Your crop <em>is</em> the humidifier. It "
+      "releases many liters of water each day. Your lights supply the energy, and the VPD controls "
+      "the rate" + _c("grossiord2020-vpd") + "."),
+    callout("note", "Plants change sensible heat into latent heat",
+      p("When water evaporates, it absorbs heat. A canopy that transpires is a very large "
+        "evaporative cooler. Thus the air temperature increases <em>less</em> than the watts of the "
+        "lights show.</p><p>A new grower can think that the heat is not a large problem. But the "
+        "heat does not go away from the room. It moves into the vapor. The coil that condenses this "
+        "vapor must remove the heat again. The total heat that you remove is always equal to the "
+        "total watts that go in. The plants change only how much of the heat is sensible heat and "
+        "how much is latent heat.")),
   ]})
 
 # ---------------------------------------------------------------- 04 the loads
-SECTIONS.append({"id": "loads", "kicker": "04 · The loads", "title": "Calculating room heat loads",
+SECTIONS.append({"id": "loads", "kicker": "04 · The loads", "title": "Calculate the heat loads of the room",
   "blocks": [
-    p("Everything from here on uses one worked room so the numbers stay honest: <strong>40 m&sup2; "
-      "of flowering canopy</strong> (~430 sq ft), 10 &times; 700 W LED fixtures, sealed and "
-      "CO&#8322;-enriched, insulated internal walls, two 800 W dehumidifiers, ~500 W of "
-      "circulation fans and pumps, two crew working in it. Swap in your own numbers, the "
-      "method is the point."),
-    figure(L.hbars("Where the day's sensible heat comes from (example 40 m² room)",
+    p("All the examples from here use one room. Thus the numbers agree with each other. The room "
+      "has <strong>40 m&sup2; of flowering canopy</strong> (approximately 430 square feet), 10 "
+      "&times; 700 W LED fixtures, two 800 W dehumidifiers, and approximately 500 W of circulation "
+      "fans and pumps.</p><p>The room is sealed and has CO&#8322; enrichment, and the internal "
+      "walls have insulation. Two persons are in the room. Replace these numbers with the numbers "
+      "of your room. The method is the same."),
+    figure(L.hbars("Sources of the sensible heat in a day (example 40 m² room)",
             [("Lights (10 × 700 W LED)", 7.0), ("Dehumidifiers (2 × 800 W)", 1.6),
-             ("Fans + pumps", 0.5), ("People (2 crew)", 0.2)], unit=" kW",
-            note="Sealed, insulated room. Every electrical watt inside ends up as heat the cooling plant must remove."), 2,
-      "9.3 kW of connected sensible load. Note the second bar: your dehumidifiers are heaters"
-      ", nearly 100% of their draw lands in the room as heat, plus the latent heat of every "
-      "litre they condense" + _c("hydrobuilder-ac-sizing") + "."),
-    table(["Load", "Type", "In the example room", "Notes"], [
-      ["Grow lights", "Sensible", "7.0 kW", "The dominant load; scales with installed W" + _c("streit2023-hvacd")],
-      ["Dehumidifiers", "Sensible", "1.6 kW draw + condensing heat", "Run mostly at night. They are the night heater"],
-      ["Fans, pumps, controls", "Sensible", "~0.5 kW", "Small individually, never zero"],
-      ["People", "Sensible + latent", "~0.1 kW each", "&asymp;400 BTU/h per person" + _c("hydrobuilder-ac-sizing")],
-      ["Envelope (walls, roof)", "Sensible", "&asymp;0 (insulated internal room)", "Real for containers, sheds, top floors, do not assume zero there"],
-      ["Transpiration", "Latent", "~175 L/day (next section)", "The latent load, full stop" + _c("desertaire-an25-load")],
-      ["Media + wet surfaces", "Latent", "Small share", "Evaporation from slab faces, trays, wet floors" + _c("desertaire-an25-load")],
-      ["Ventilation air", "Both", "&asymp;0 (sealed room)", "In vented rooms, humid outside air is a real latent load"],
-    ], cls="compact", caption="The load inventory. Sensible scales with kilowatts installed; latent scales with litres irrigated."),
-    callout("warn", "CO₂ burners are a double load",
-      p("A propane or natural-gas CO&#8322; burner adds heat <em>and</em> water, combustion "
-        "produces roughly 1.5 kg of water vapour per kg of propane burned, straight into your "
-        "latent load. Bottled or bulk CO&#8322; adds neither. If you run burners, both sides of "
-        "your load calc grow.")),
+             ("Fans + pumps", 0.5), ("Persons (2)", 0.2)], unit=" kW",
+            note="Sealed room with insulation. Each electrical watt becomes heat that the cooling system must remove."), 2,
+      "The connected sensible heat load is 9.3 kW. Examine the second bar: your dehumidifiers are "
+      "heaters. Almost 100% of their electrical power becomes heat in the room, and they also "
+      "release the latent heat of each liter that they condense" + _c("hydrobuilder-ac-sizing") +
+      "."),
+    table(["Load", "Type", "In the example room", "Information"], [
+      ["Grow lights", "Sensible heat", "7.0 kW", "The largest load. It increases when the installed power in W increases" + _c("streit2023-hvacd") + "."],
+      ["Dehumidifiers", "Sensible heat", "1.6 kW of electrical power + heat of condensation", "The dehumidifiers operate mostly at night. They are the heater at night."],
+      ["Fans, pumps, controls", "Sensible heat", "approximately 0.5 kW", "Each item is small, but the total is not zero."],
+      ["Persons", "Sensible heat and latent heat", "approximately 0.1 kW for each person", "approximately 400 BTU/h for each person" + _c("hydrobuilder-ac-sizing")],
+      ["Envelope (walls and roof)", "Sensible heat", "approximately 0 (internal room with insulation)", "The load is not zero in containers, sheds and top floors. Do not use zero for these."],
+      ["Transpiration", "Latent heat", "approximately 175 L/day (next section)", "Transpiration is the latent heat load" + _c("desertaire-an25-load") + "."],
+      ["Media and wet surfaces", "Latent heat", "Small part", "Water evaporates from the faces of slabs, from trays and from wet floors" + _c("desertaire-an25-load") + "."],
+      ["External air", "Sensible heat and latent heat", "approximately 0 (sealed room)", "In rooms with vents, external air with high humidity adds a latent heat load."],
+    ], cls="compact", caption="The list of loads. When you install more kilowatts, the sensible heat load increases. When you apply more liters of water, the latent heat load increases."),
+    callout("warn", "CO₂ burners add two loads",
+      p("A CO&#8322; burner that uses propane or natural gas adds heat <em>and</em> water. "
+        "Combustion makes approximately 1.5 kg of water vapor for each kg of propane that burns. "
+        "This vapor goes directly into the latent heat load. CO&#8322; from bottles or from a tank "
+        "does not add heat or water. When you use burners, the sensible heat load is larger and the "
+        "latent heat load is larger.")),
   ]})
 
 # ---------------------------------------------------------------- 05 water balance
 SECTIONS.append({"id": "water-balance", "kicker": "05 · The water balance", "title": "Water balance and dehumidification load",
   "blocks": [
-    p("Here is the single most useful sizing fact in this paper: <strong>your dehumidification "
-      "requirement is written by your irrigation schedule</strong>. Not by room volume, not by "
-      "plant count charts, by litres per day. Water that goes in and doesn&rsquo;t leave "
-      "down the drain leaves through the air" + _c("quest-perfect-dehu") + _c("streit2023-water") + "."),
+    p("The most important fact for the size of the equipment is that <strong>the dehumidification "
+      "load is the result of your irrigation schedule</strong>. The volume of the room and the "
+      "number of plants do not give this load. The liters of water for each day give it. Water that "
+      "goes in and does not flow out through the drain goes into the air" + _c("quest-perfect-dehu") +
+      _c("streit2023-water") + "."),
     figure(_FIGS["waterbal"], 3,
-      "The water balance for the example room. 240 L irrigated, 60 L captured as runoff, ~5 L "
-      "retained in tissue, leaving ~175 L/day that the climate plant must condense back to "
-      "liquid. Water in &asymp; water out" + _c("quest-perfect-dehu") + "."),
+      "The balance of water for the example room. You apply 240 L of water. The drain collects 60 L "
+      "as runoff. The tissue keeps approximately 5 L. The remaining approximately 175 L/day goes "
+      "into the air, and the climate system must condense it to liquid again. Water in and water "
+      "out are approximately equal" + _c("quest-perfect-dehu") + "."),
     steps([
-      ("Count the water in", "40 m&sup2; of canopy &times; 6 L/m&sup2;/day at mid-flower = "
-       "<strong>240 L/day</strong>. Your irrigation controller already knows this number exactly."),
-      ("Subtract collected runoff", "25% runoff captured to drain = 60 L that never touches the "
-       "air. 240 &minus; 60 = <strong>180 L/day stays in the room</strong>. (Runoff left standing "
-       "in trays evaporates, then it&rsquo;s latent load again. Drain it.)"),
-      ("Subtract what the plant keeps", "Plant tissue holds only a few percent of uptake, "
-       "call it 5 L/day. The rest transpires" + _c("desertaire-an25-load") + ". "
-       "<strong>&asymp;175 L/day becomes vapour.</strong>"),
-      ("Convert for spec sheets", "175 L &divide; 0.473 = <strong>&asymp;370 US pints/day</strong>. "
-       "Quest&rsquo;s shortcut (gallons fed minus drained, times 8) lands on the "
-       "same answer" + _c("quest-perfect-dehu") + "."),
+      ("Count the water that goes in", "40 m&sup2; of canopy &times; 6 L/m&sup2;/day at the middle of "
+       "flowering = <strong>240 L/day</strong>. The irrigation controller records this number."),
+      ("Subtract the runoff that you collect", "25% runoff to the drain = 60 L. This water does not touch the "
+       "air. 240 &minus; 60 = <strong>180 L/day stays in the room</strong>. (Runoff that stays in "
+       "trays evaporates and becomes latent heat load again. Drain the runoff.)"),
+      ("Subtract the water that the plant keeps", "Plant tissue holds only a small percentage of the water "
+       "that the plant absorbs. Use 5 L/day. The remaining water transpires" +
+       _c("desertaire-an25-load") + ". <strong>Approximately 175 L/day becomes vapor.</strong>"),
+      ("Change to pints for the data sheet", "175 L &divide; 0.473 = <strong>approximately 370 US "
+       "pints/day</strong>. The easy method of Quest (gallons that you apply minus gallons of "
+       "runoff, times 8) gives the same result" + _c("quest-perfect-dehu") + "."),
     ]),
-    figure(L.line("Example irrigation across a flower cycle - the latent load follows it",
+    figure(L.line("Example irrigation in a flowering cycle. The latent heat load changes with it.",
             [("w1", 2.5), ("w2", 3.0), ("w3", 4.0), ("w4", 5.0), ("w5", 6.0), ("w6", 6.0),
              ("w7", 5.5), ("w8", 5.0), ("w9", 4.0)],
             ["wk 1", "wk 2", "wk 3", "wk 4", "wk 5", "wk 6", "wk 7", "wk 8", "wk 9"],
-            ylab="L per m² per day", ymin=0, ymax=7,
-            note="Example drip schedule. Dehumidification duty tracks this curve week by week: peak latent load lands mid-to-late flower."), 4,
-      "The latent load is not constant. It ramps with the crop, peaking exactly when the canopy is "
-      "densest and mould risk is highest. Size for the peak week, not the average."),
-    callout("tip", "The free load calculation",
-      p("You do not need to model transpiration. You already meter it. Litres in (controller "
-        "log) minus litres of runoff (measure it for one representative day) is your daily latent "
-        "load, per room, per crop stage. It is better data than any consultant&rsquo;s estimate, "
-        "and it&rsquo;s free. Log it every cycle; it also tells you when the crop is drinking "
-        "abnormally, which is a plant-health signal, not just an HVAC one.")),
+            ylab="L/m²/day", ymin=0, ymax=7,
+            note="Example drip schedule. The dehumidification load changes with it. The peak is in the middle and last weeks of flowering."), 4,
+      "The latent heat load is not constant. It increases with the crop. It has its peak when the "
+      "canopy has the highest density and the risk of mold is highest. Select the capacity for the "
+      "week of the peak load, not for the average load."),
+    callout("tip", "Calculate the load from the data of your room",
+      p("It is not necessary to make a model of the transpiration, because you measure it. The "
+        "liters of water that go in (from the log of the controller) minus the liters of runoff "
+        "(measure the runoff for one typical day) are the latent heat load for one day. Do this for "
+        "each room and for each crop stage. These data are better than the estimate of a "
+        "consultant, and you have them.</p><p>Record the load in each cycle. The record also shows "
+        "when the crop uses a different quantity of water than usual. A different quantity of water "
+        "is a signal of plant health, and not only a signal for the HVAC system.")),
   ]})
 
 # ---------------------------------------------------------------- 06 folklore vs load calc
-SECTIONS.append({"id": "rules-of-thumb", "kicker": "06 · Sizing the cooling", "title": "Cooling-load calculation",
+SECTIONS.append({"id": "rules-of-thumb", "kicker": "06 · The size of the cooling system", "title": "Calculate the cooling load",
   "blocks": [
-    p("Every forum will tell you &ldquo;3,000&ndash;4,000 BTU per 1,000 W of light&rdquo;. "
-      "Here&rsquo;s the secret: that isn&rsquo;t horticultural wisdom, it&rsquo;s a unit "
-      "conversion. 1 W of electricity makes 3.412 BTU/h of heat, always, by physics"
-      + _c("hydrobuilder-ac-sizing") + ". The folklore is roughly right about the lights and "
-      "silent about everything else. Which is how rooms end up 20&ndash;30% short."),
-    figure(L.bars("What the folklore counts vs what the room makes",
-            [("3 BTU/W folklore", 6.2), ("4 BTU/W folklore", 8.2),
+    p("Each forum tells you &ldquo;3,000 to 4,000 BTU for each 1,000 W of light&rdquo;. This number "
+      "is not from horticulture. It is a change of units: 1 W of electricity always makes 3.412 "
+      "BTU/h of heat, because of physics" + _c("hydrobuilder-ac-sizing") + ". The forum number is "
+      "approximately correct for the lights, but it does not include the other equipment. As a "
+      "result, rooms have a cooling capacity that is 20 to 30% less than the correct capacity."),
+    figure(L.bars("Forum numbers compared with the heat of the room",
+            [("3 BTU/W (forum)", 6.2), ("4 BTU/W (forum)", 8.2),
              ("all equipment", 9.3), ("+25% margin", 11.6)], unit=" kW", maxv=13,
-            note="10 × 700 W LED example room. 1 kW of electricity = 3,412 BTU/h of heat. The folklore only ever counted the lights."), 5,
-      "The folklore band (left two bars) covers the lights and nothing else. The dehumidifiers, "
-      "fans and people are real heat; the margin is what keeps you from running at 100% duty on a "
-      "35 &deg;C (95 &deg;F) day."),
+            note="10 × 700 W LED example room. 1 kW of electricity = 3,412 BTU/h of heat. The forum numbers count only the lights."), 5,
+      "The forum numbers (the two bars on the left) include only the lights. The dehumidifiers, the "
+      "fans and the persons also make heat. The margin prevents operation at 100% of the capacity "
+      "on a day of 35 &deg;C (95 &deg;F)."),
     steps([
-      ("List every watt in the room", "Lights 7,000 W. Dehumidifiers 1,600 W. Fans and pumps "
-       "500 W. Two crew &asymp;240 W" + _c("hydrobuilder-ac-sizing") + ". Envelope gain: ~0 here, "
-       "real if your room has a hot roof or sun-struck wall."),
-      ("Sum it", "7,000 + 1,600 + 500 + 240 &asymp; <strong>9.3 kW of sensible load</strong>."),
-      ("Convert to trade units", "9.3 kW &times; 3,412 = &asymp;31,700 BTU/h = &asymp;2.6 tons of "
-       "cooling."),
-      ("Add margin, not hope", "20&ndash;25% covers hot ambients, dirty coils and derate with age"
-       + _c("hydrobuilder-ac-sizing") + ": spec &asymp;<strong>11.6 kW (&asymp;40,000 BTU/h, "
-       "&asymp;3.3 tons)</strong>."),
-      ("Split it across units", "Two smaller units beat one big one: staged capacity for light "
-       "loads, and a failure loses half your cooling, not all of it (Section 12)."),
+      ("List each watt in the room", "Lights 7,000 W. Dehumidifiers 1,600 W. Fans and pumps 500 W. "
+       "Two persons approximately 240 W" + _c("hydrobuilder-ac-sizing") + ". Heat from the "
+       "envelope: approximately 0 here. It is not zero if your room has a hot roof or a wall in the "
+       "sun."),
+      ("Add the values", "7,000 + 1,600 + 500 + 240 = approximately <strong>9.3 kW of sensible heat load</strong>."),
+      ("Change to BTU/h and tons", "9.3 kW &times; 3,412 = approximately 31,700 BTU/h = approximately "
+       "2.6 tons of cooling."),
+      ("Add a margin", "A margin of 20 to 25% is for high external temperatures, dirty "
+       "coils and capacity that becomes smaller with time" + _c("hydrobuilder-ac-sizing") +
+       ". Select approximately <strong>11.6 kW (approximately 40,000 BTU/h, approximately 3.3 "
+       "tons)</strong>."),
+      ("Divide the capacity between units", "Two smaller units are better than one large unit. They give "
+       "capacity in stages for small loads. If one unit stops, half of the cooling continues to "
+       "operate (Section 12)."),
     ]),
-    callout("warn", "Where rule-of-thumb sizing breaks down",
-      ul(["<strong>Rooms that exhaust air through the lights or to outside</strong>, part of "
-          "the heat never enters the room, so folklore oversizes. (This is where the old "
-          "&ldquo;3 BTU/W for vented HPS&rdquo; number came from.)",
-          "<strong>Non-insulated spaces</strong>, containers, garages, top floors under hot "
-          "roofs. Envelope load can add kilowatts the folklore never saw.",
-          "<strong>Forgetting the dehumidifiers</strong>. They add their draw <em>and</em> "
-          "return the latent heat of every condensed litre as sensible heat. An AC sized without "
-          "them fights the dehus all afternoon.",
-          "<strong>Treating cooling capacity as latent capacity</strong>, a nameplate kW of "
-          "cooling is sensible + latent combined; how much of it does moisture work depends on coil "
-          "temperature and airflow. The next section sizes moisture properly."])),
+    callout("warn", "When the forum numbers are not correct",
+      ul(["<strong>Rooms in which air flows through the lights and out to the external "
+          "air.</strong> Some of the heat does not go into the room. As a result, the forum numbers "
+          "give a capacity that is too large. (This condition is the source of the number &ldquo;3 "
+          "BTU/W for vented HPS&rdquo;.)",
+          "<strong>Spaces without insulation:</strong> containers, garages and top floors below hot "
+          "roofs. The envelope load can add kilowatts that the forum numbers do not include.",
+          "<strong>The load does not include the dehumidifiers.</strong> The dehumidifiers add "
+          "their electrical power <em>and</em> they release the latent heat of each condensed liter "
+          "as sensible heat. If the AC size does not include this heat, the AC can be too small in "
+          "the afternoon.",
+          "<strong>The cooling capacity is not the capacity for latent heat.</strong> A nameplate "
+          "kW of cooling (the kW that the manufacturer gives) is the capacity for sensible heat and "
+          "for latent heat together. The part that removes moisture changes if the coil temperature "
+          "or the airflow changes. The next section shows how to calculate the capacity for "
+          "moisture correctly."])),
   ]})
 
 # ---------------------------------------------------------------- 07 dehu sizing
-SECTIONS.append({"id": "dehu-sizing", "kicker": "07 · Sizing the dehumidification", "title": "Dehumidifier sizing",
+SECTIONS.append({"id": "dehu-sizing", "kicker": "07 · The size of the dehumidifiers", "title": "Calculate the dehumidifier capacity",
   "blocks": [
-    p("Dehumidifier sizing is the water balance from Section 05 plus two corrections everyone "
-      "skips: <strong>when</strong> the moisture arrives, and <strong>what the machine actually "
-      "removes at your conditions</strong> rather than at the rating point on the box."),
+    p("To calculate the dehumidifier capacity, start with the water balance from Section 05. Then "
+      "make two corrections that most persons do not make. The first correction is for the "
+      "<strong>time</strong> at which the moisture goes into the air. The second correction is for "
+      "the <strong>quantity of moisture that the unit removes at your conditions</strong>, and not "
+      "at the rating conditions of the unit."),
     steps([
-      ("Start from the vapour load", "Example room: &asymp;175 L/day &asymp; 370 pints/day total."),
-      ("Split day from night", "Transpiration doesn&rsquo;t stop in the dark, stomata close "
-       "partially, media keeps evaporating. Assume 70/30: day 122 L over 12 h (&asymp;10 L/h), "
-       "<strong>night 53 L over 12 h (&asymp;4.4 L/h)</strong>. Check the split against your own "
-       "condensate volumes and correct it. It varies with cultivar and night climate."),
-      ("Day duty", "With lights on, the AC coils condense a share of the moisture while cooling; "
-       "dehumidifiers top up. This is the easy shift."),
-      ("Night duty, the sizing case", "With lights off there is no sensible load, the AC "
-       "stops, and its incidental moisture removal stops with it" + _c("desertaire-an25-load") +
-       ". <strong>The dehumidifiers alone must carry 4.4 L/h.</strong> That is 105 L/day of "
-       "removal <em>rate</em>."),
-      ("Derate the nameplate", "Ratings are quoted warm, commonly 26.7 &deg;C (80 &deg;F) / 60% RH, "
-       "and refrigerant units remove less as the room cools"
-       + _c("sylvane-desiccant") + ". If the manufacturer&rsquo;s curve shows ~&#8532; of "
-       "nameplate at your 19 &deg;C (66 &deg;F) night, you need &asymp;160 L/day of nameplate <em>running</em> "
-       "to hold the night: e.g. two 80 L/day units flat out."),
-      ("Then apply N+1", "Two units exactly covering the night means one failure ends the crop. "
-       "Fit three 80s (or two 120s) so any single unit can die on a Saturday night without "
-       "drama (Section 12)."),
+      ("Start with the dehumidification load", "Example room: approximately 175 L/day = approximately 370 pints/day in total."),
+      ("Divide the day and the night", "Transpiration does not stop when the lights are off. The stomata "
+       "close in part, and water continues to evaporate from the media. Use a ratio of 70/30 for "
+       "the day and the night. The day has 122 L in 12 h (approximately 10 L/h), and <strong>the "
+       "night has 53 L in 12 h (approximately 4.4 L/h)</strong>. Compare the ratio with the "
+       "condensate volumes of your room and correct it. The ratio changes with the cultivar and the "
+       "night climate."),
+      ("The day load", "When the lights are on, the AC coils condense some of the moisture during the "
+       "cooling. The dehumidifiers remove the remaining moisture. This period is easy."),
+      ("Use the night load for the size", "When the lights are off, there is no sensible heat load, and "
+       "the AC stops. The moisture that the AC removes during the cooling also stops" +
+       _c("desertaire-an25-load") + ". <strong>Only the dehumidifiers remove moisture, and they "
+       "must remove 4.4 L/h.</strong> This <em>rate</em> of removal is equal to 105 L/day."),
+      ("Correct the nameplate capacity", "Manufacturers give the ratings at a warm temperature, usually 26.7 "
+       "&deg;C (80 &deg;F) and 60% RH. Refrigerant units remove less water when the room becomes "
+       "colder" + _c("sylvane-desiccant") + ". The curve from the manufacturer can show "
+       "approximately &#8532; of the nameplate capacity at a night temperature of 19 &deg;C (66 "
+       "&deg;F). Then approximately 160 L/day of nameplate capacity must be in <em>operation</em> "
+       "to hold the night conditions. For example, use two 80 L/day units at maximum capacity."),
+      ("Then apply N+1", "If two units supply only the night capacity, a failure of one unit causes "
+       "crop loss. Install three units of 80 L/day (or two units of 120 L/day). Then one unit can "
+       "stop on a Saturday night without a problem (Section 12)."),
     ]),
-    table(["Canopy", "Water in (6 L/m²/day)", "Vapour to remove", "In pints"], [
-      ["10 m² (tent-to-small room)", "60 L/day", "&asymp;44 L/day", "&asymp;92 ppd"],
-      ["20 m²", "120 L/day", "&asymp;87 L/day", "&asymp;185 ppd"],
-      ["40 m² (example room)", "240 L/day", "&asymp;175 L/day", "&asymp;370 ppd"],
-      ["80 m²", "480 L/day", "&asymp;349 L/day", "&asymp;738 ppd"],
-    ], cls="compact", caption="Pure arithmetic at 6 L/m²/day irrigation, 25% collected runoff, ~97% of retained water transpired. "
-       "Scale linearly for your own schedule; then derate nameplates to your night temperature and add N+1."),
-    p("Per fixture, the example works out to 17.5 L (&asymp;37 pints) per light per day, a "
-      "handy pub-quote number, but notice it&rsquo;s downstream of the irrigation schedule, not a "
-      "property of the light. Quest&rsquo;s field guidance of 0.5&ndash;2 pints per square foot of "
-      "canopy per day brackets the same range" + _c("quest-dehu101") + ", our room computes "
-      "to ~0.86 pints/sq ft. When a rule of thumb and your arithmetic agree, you can trust the "
-      "arithmetic; when they disagree, trust the arithmetic anyway."),
-    callout("note", "Sealed vs vented changes the answer",
-      p("Everything above assumes a sealed, recirculating room, the norm for CO&#8322;-"
-        "enriched flower. A vented room exhausts moist air instead of condensing it, so dehu "
-        "requirements drop but you inherit the outdoor climate: in a humid summer (Auckland in "
-        "February, most of Queensland) intake air can <em>add</em> latent load rather than remove "
-        "it. Vented sizing starts from your local psychrometrics, not from this table.")),
+    table(["Canopy", "Water in (6 L/m²/day)", "Vapor to remove", "In pints"], [
+      ["10 m² (tent or small room)", "60 L/day", "approximately 44 L/day", "approximately 92 pints/day"],
+      ["20 m²", "120 L/day", "approximately 87 L/day", "approximately 185 pints/day"],
+      ["40 m² (example room)", "240 L/day", "approximately 175 L/day", "approximately 370 pints/day"],
+      ["80 m²", "480 L/day", "approximately 349 L/day", "approximately 738 pints/day"],
+    ], cls="compact", caption="These values come from arithmetic only. They use irrigation of 6 "
+       "L/m²/day and 25% collected runoff. Approximately 97% of the water that stays in the room "
+       "becomes vapor. For the irrigation schedule of your room, multiply the values by the ratio "
+       "of your irrigation to this irrigation. Then correct the nameplate capacity for your night "
+       "temperature and add N+1."),
+    p("For each fixture, the example gives 17.5 L (approximately 37 pints) for each light each day. "
+      "This number is easy to use, but it comes from the irrigation schedule and it is not a "
+      "property of the light. The field guidance of Quest is 0.5 to 2 pints for each square foot of "
+      "canopy each day" + _c("quest-dehu101") + ". The example room is in this range, with "
+      "approximately 0.86 pints for each square foot. If an approximate number and your arithmetic "
+      "agree, you can accept the arithmetic. If they do not agree, use the arithmetic."),
+    callout("note", "The result is different for a sealed room and for a room with vents",
+      p("The values above are for a sealed room with recirculating air. A sealed room with "
+        "CO&#8322; enrichment is the usual room for flowering. A room with vents sends the moist "
+        "air out and does not condense it.</p><p>Thus the necessary dehumidifier capacity is less, "
+        "but the external climate has an effect on the room. In a summer with high humidity "
+        "(Auckland in February, most of Queensland), the air that goes into the room can "
+        "<em>add</em> latent heat load and not remove it. The capacity for a room with vents starts "
+        "from the psychrometric data for your location, and not from this table.")),
   ]})
 
 # ---------------------------------------------------------------- 08 equipment classes
-SECTIONS.append({"id": "equipment", "kicker": "08 · The hardware", "title": "HVAC equipment classes",
+SECTIONS.append({"id": "equipment", "kicker": "08 · The equipment", "title": "Types of HVAC equipment",
   "blocks": [
-    p("Four families of cooling, plus the dehumidifiers that bolt onto all of them. Engineering "
-      "firms describe the same ladder: packaged DX with standalone dehus at entry level, DX with "
-      "hot-gas reheat in the middle, chilled water at scale" + _c("streit2023-hvacd") + "."),
+    p("There are four types of cooling equipment. You add dehumidifiers to all of them. Engineers "
+      "divide the equipment into the same types. At the lowest capital cost, the system is a "
+      "packaged unit with direct-expansion (DX) cooling and room dehumidifiers. In the middle, the "
+      "system is a DX unit with hot-gas reheat. For a large facility, the system uses chilled water" +
+      _c("streit2023-hvacd") + "."),
     figure(_FIGS["equipment"], 6,
-      "The four classes. Capex rises left to right and top to bottom; so does control quality and "
-      "the ease of building in redundancy" + _c("streit2023-hvacd") + "."),
+      "The four types. The capital cost increases from left to right and from top to bottom. The "
+      "quality of control increases in the same direction, and it is easier to add spare equipment" +
+      _c("streit2023-hvacd") + "."),
     grid([
-      card("Mini-split / multi-split",
-        p("Refrigerant line to a wall or ceiling head. Cheap, available everywhere, installed in a "
-          "day. Cooling-biased: latent removal is incidental, control is a &plusmn;1&ndash;2 &deg;C "
-          "(&plusmn;2&ndash;4 &deg;F) wall thermostat, and there&rsquo;s no reheat, so it overcools while dehumidifying. "
-          "Right answer for veg rooms, dry rooms and small flower rooms <em>with</em> standalone "
-          "dehus doing the moisture work."), tag="entry"),
-      card("Packaged / rooftop unit (RTU)",
-        p("One factory cabinet outside the envelope, ducted supply and return. Direct-expansion "
-          "(DX) cooling, real airflow, service access without entering the grow. The workhorse "
-          "tier for single rooms and small facilities, still pair it with dehumidifiers, "
-          "and prefer staged or inverter compressors over single-stage" + _c("streit2023-hvacd") + "."), tag="workhorse"),
-      card("Chilled water + fan coils",
-        p("A central chiller makes cold water; insulated loops feed fan-coil units in each room. "
-          "Scales across many rooms, concentrates redundancy at the plant (two chillers backing "
-          "the whole facility), and with heating-water or reheat coils gives genuine independent "
-          "temperature and humidity control" + _c("streit2023-hvacd") + ". Needs real mechanical "
-          "design. This is an engineered system, not a purchase."), tag="scale"),
-      card("Integrated grow unit (HVACD)",
-        p("Purpose-built cabinets that cool, dehumidify and reheat in one sequenced box, sized "
-          "from your load calc and controlled on dew point. Built precisely for the lights-off "
-          "problem. Premium capex; strongest case in tightly controlled flower and drying rooms "
-          "where climate misses cost real money" + _c("rii-hvac-bpg") + "."), tag="precision"),
+      card("Mini-split or multi-split",
+        p("A refrigerant line goes to a unit on the wall or on the ceiling. The capital cost is "
+          "low, you can get the unit in all areas, and you can install it in one day. The unit is "
+          "for cooling, and it removes moisture only as a secondary effect. The control is a wall "
+          "thermostat with a tolerance of &plusmn;1 to 2 &deg;C (&plusmn;2 to 4 &deg;F), and there "
+          "is no reheat. Thus the unit decreases the temperature too much when it removes moisture. "
+          "It is correct for rooms for vegetative growth, for drying rooms and for small flowering "
+          "rooms <em>with</em> room dehumidifiers that remove the moisture."), tag="low cost"),
+      card("Packaged unit or rooftop unit (RTU)",
+        p("One cabinet from the manufacturer is external to the envelope. It has ducts for supply "
+          "air and return air. It has direct-expansion (DX) cooling and a high airflow. You can do "
+          "the maintenance from an external area.</p><p>This type is standard for one room and for "
+          "small facilities. Use dehumidifiers with it also. We recommend compressors with stages "
+          "or inverter compressors, and not single-stage compressors" + _c("streit2023-hvacd") +
+          "."), tag="standard"),
+      card("Chilled water and fan coils",
+        p("A central chiller makes cold water. Pipe loops with insulation supply the water to fan "
+          "coil units in each room. The system can supply many rooms, and the spare capacity is at "
+          "the chillers (two chillers supply cooling to all of the facility). With hot-water coils "
+          "or reheat coils, it can control the temperature and the humidity independently" +
+          _c("streit2023-hvacd") + ". It must have a mechanical design. Engineers make this system "
+          "for each facility, and you cannot select it from a list of units."), tag="scale"),
+      card("Integrated unit for grow rooms (HVACD)",
+        p("These cabinets are for grow rooms. One cabinet does the cooling, the dehumidification "
+          "and the reheat in one controlled sequence. The size comes from the loads that you "
+          "calculate, and the control uses the dew point. The manufacturer makes the cabinet for "
+          "the problem at lights-off. The capital cost is high. This unit is best for flowering "
+          "rooms and drying rooms with accurate control, where a climate error has a large cost" +
+          _c("rii-hvac-bpg") + "."), tag="precision"),
     ], cols=2),
-    p("<strong>Standalone vs ducted dehumidifiers.</strong> Standalone (hang-above-canopy or "
-      "floor) units are cheap, movable and simple, but they dump their heat and noise in "
-      "the room and their condensate wants managing. Ducted/inline units sit outside the canopy, "
-      "plumb their drains properly, and share the air-handling path, at higher install cost. "
-      "Either way: <strong>plumb the drain</strong>. A bucket is a humidifier with extra steps."),
+    p("<strong>Room dehumidifiers and ducted dehumidifiers.</strong> Room dehumidifiers (above the "
+      "canopy or on the floor) have a low capital cost, you can move them, and they are easy to "
+      "use. But they release their heat and their noise into the room, and you must remove the "
+      "condensate.</p><p>Ducted dehumidifiers are external to the canopy, have drains with correct "
+      "pipes, and use the same ducts as the HVAC system. Their installation cost is higher. In the "
+      "two types, <strong>connect the drain to a pipe</strong>. Water in a bucket evaporates into "
+      "the room again."),
     table(["", "Refrigerant dehumidifier", "Desiccant dehumidifier"], [
-      ["How it works", "Pulls air over a cold coil; vapour condenses; drains as liquid", "Adsorbs vapour into a desiccant wheel; regenerated with a heater"],
-      ["Sweet spot", "Warm rooms, 18&ndash;30 &deg;C (64&ndash;86 &deg;F), i.e. flower rooms", "Cool rooms, keeps full capacity where coils frost" + _c("sylvane-desiccant")],
-      ["Cold behaviour", "Capacity falls as the room cools; coils can ice below ~15 &deg;C (59 &deg;F)", "Unbothered by cold; works to near-freezing" + _c("sylvane-desiccant")],
-      ["Heat added to room", "Compressor draw + latent heat of condensed water", "More, regeneration heat lands in the airstream (+3&ndash;5 &deg;C (+5&ndash;9 &deg;F) typical)" + _c("sylvane-desiccant")],
-      ["Typical grow use", "Flower and veg rooms, the default", "Cold drying/curing rooms (16&ndash;18 &deg;C / 61&ndash;64 &deg;F), winter spaces"],
-    ], cls="compact", caption="Refrigerant for the grow, desiccant for the cold dry room is the usual split."),
+      ["How it operates", "The air flows along a cold coil. The vapor condenses to liquid and goes to the drain.", "A desiccant wheel adsorbs the vapor. A heater removes the vapor from the desiccant wheel again."],
+      ["Best conditions", "Warm rooms of 18 to 30 &deg;C (64 to 86 &deg;F). These rooms are the rooms for flowering.", "Cool rooms, where ice occurs on coils. The desiccant dehumidifier keeps its full capacity there" + _c("sylvane-desiccant") + "."],
+      ["Operation in cold rooms", "The capacity decreases when the room becomes colder. Ice can occur on the coils at less than approximately 15 &deg;C (59 &deg;F).", "Cold does not change its operation. It operates at temperatures near the freezing point" + _c("sylvane-desiccant") + "."],
+      ["Heat that the unit adds to the room", "Electrical power of the compressor + latent heat of the condensed water", "More heat. The heater that dries the desiccant wheel puts heat into the airflow, typically +3 to 5 &deg;C or +5 to 9 &deg;F" + _c("sylvane-desiccant") + "."],
+      ["Typical use in grow rooms", "The usual selection for rooms for flowering and for vegetative growth.", "Cold drying rooms and curing rooms (16 to 18 &deg;C / 61 to 64 &deg;F), and spaces in winter"],
+    ], cls="compact", caption="The usual selection is a refrigerant dehumidifier for the grow room and a desiccant dehumidifier for the cold drying room."),
   ]})
 
 # ---------------------------------------------------------------- 09 lights-off
-SECTIONS.append({"id": "lights-off", "kicker": "09 · The hard part", "title": "Lights-off humidity spike",
+SECTIONS.append({"id": "lights-off", "kicker": "09 · The primary problem", "title": "Lights-off humidity spike",
   "blocks": [
-    p("Watch any grow room&rsquo;s trend graph and you&rsquo;ll see the same signature: the moment "
-      "the lights cut, RH leaps 15&ndash;25 points in under an hour. Three things happen at once, "
-      "and every one of them pushes the same direction:"),
+    p("In the trend graph of a grow room, you see the same change each time. In less than one hour "
+      "after the lights go off, the RH increases by 15 to 25 percentage points. Three effects occur "
+      "at the same time, and each one increases the RH:"),
     ol([
-      "<strong>The sensible load vanishes.</strong> 7 kW of light heat disappears in one second. "
-      "The AC, which was condensing moisture as a side effect of cooling, ramps to "
-      "zero and takes its moisture removal with it" + _c("desertaire-an25-load") + _c("quest-dehu101") + ".",
-      "<strong>The air cools, so RH rises with no new water at all.</strong> Air&rsquo;s capacity "
-      "to hold vapour roughly halves per 10 &deg;C (18 &deg;F) drop. Cool the example room&rsquo;s "
-      "26 &deg;C (79 &deg;F) / 55% air to 19 &deg;C (66 &deg;F) and it sits at &asymp;84% RH, "
-      "same grams of water, smaller container. (Quest&rsquo;s version of the same arithmetic: "
-      "24 &deg;C (75 &deg;F) at 57% becomes &asymp;80% at 18 &deg;C (64 &deg;F)" + _c("quest-dehu101") + ".)",
-      "<strong>The crop keeps transpiring.</strong> Slower in the dark, but far from zero, and wet "
-      "media keeps evaporating all night. In the example room that&rsquo;s still &asymp;4.4 L of "
-      "new vapour every hour.",
+      "<strong>The sensible heat load stops.</strong> The 7 kW of heat from the lights becomes zero "
+      "in one second. The AC condenses moisture as a side effect of the cooling. This removal of "
+      "moisture stops when the AC stops" + _c("desertaire-an25-load") + _c("quest-dehu101") +
+      ".",
+      "<strong>The air becomes colder, and the RH increases with no new water.</strong> When the "
+      "temperature decreases by approximately 10 &deg;C (18 &deg;F), the capacity of the air for "
+      "vapor becomes approximately half. When the air of the example room changes from 26 &deg;C "
+      "(79 &deg;F) and 55% RH to 19 &deg;C (66 &deg;F), the RH is approximately 84%. The quantity "
+      "of water in grams is the same, but the air can hold less. The arithmetic of Quest gives the "
+      "same result: 57% RH at 24 &deg;C (75 &deg;F) becomes approximately 80% RH at 18 &deg;C (64 "
+      "&deg;F)" + _c("quest-dehu101") + ".",
+      "<strong>The crop continues to transpire.</strong> The rate is lower when the lights are off, "
+      "but it is not near zero. Water also continues to evaporate from wet media all night. In the "
+      "example room, the new vapor is approximately 4.4 L each hour.",
     ]),
     figure(_FIGS["lightsoff"], 7,
-      "The lights-off signature. Temperature falls, RH spikes toward the mould window, and the "
-      "gap between the spike and your night target is exactly the dehumidification capacity you "
-      "did, or didn&rsquo;t, install."),
-    figure(L.zones("Flowering-room humidity, and where the trouble starts", 30, 80,
-            [(30, 40, L.AMBL, "too dry"), (40, 60, L.GL, "flowering band"),
-             (60, 70, L.AMBL, "watch zone"), (70, 80, L.REDL, "mould territory")], unit="% RH",
-            note="Room sensor values. The canopy interior runs wetter than any wall-mounted sensor, so the margin is thinner than it looks."), 8,
-      "Late flower wants the low half of the band. Every hour spent above ~70% at night is time in "
-      "<em>Botrytis</em>&rsquo; preferred climate" + _c("punja-budrot-cjb") + "."),
-    p("<strong>Why this window matters so much:</strong> bud rot (<em>Botrytis cinerea</em>) "
-      "thrives in cool, near-saturated, still air, and dense late-flower colas hold exactly that "
-      "microclimate internally" + _c("punja-budrot-cjb") + ". The room hits its highest RH at its "
-      "lowest temperature, dew forms on whatever surface sits below the dew point (at 26 &deg;C (79 &deg;F) / "
-      "55%, that&rsquo;s any surface under ~16 &deg;C (61 &deg;F), duct skins, exterior walls, cold "
-      "glass), and the crop is at its most vulnerable stage. The night latent capacity you sized "
-      "in Section 07 is not a comfort feature. It is mould control."),
-    callout("tip", "Pre-dry the room and ramp the lights down slowly",
-      ul(["<strong>Pre-dry the room:</strong> run dehumidifiers hard for the final hour of "
-          "lights-on so the room enters the night at the bottom of its RH band, with headroom.",
-          "<strong>Ramp, don&rsquo;t step:</strong> if your controller supports it, stage the "
-          "lights down over 15&ndash;30 minutes so the AC and dehus track the transition instead "
-          "of getting ambushed by it.",
-          "<strong>Use the dehu heat:</strong> a dehumidifier returns ~0.68 kWh per litre plus its "
-          "own draw as heat, in the example room that&rsquo;s ~4.6 kW through the night, "
-          "usually most of what&rsquo;s needed to hold 19 &deg;C. Free night heating, already "
-          "paid for.",
-          "<strong>Alarm on rate-of-rise:</strong> RH climbing faster than your modelled spike "
-          "means a dehu has dropped out. You want that text at 22:10, not the smell at 07:00."])),
-    callout("danger", "Droplets on surfaces at lights-off: act the same night",
-      p("If you ever see droplets on walls, ducts or fixtures at lights-off, you are past "
-        "warnings: liquid water in a <em>Botrytis</em> room. That night: raise the night "
-        "temperature setpoint a degree (warmer air holds the same water at lower RH), run every "
-        "dehu you own, and open the canopy with airflow. Then fix the capacity shortfall before "
-        "the next dark period, not before the next crop.")),
+      "The change at lights-off. The temperature decreases, and the RH increases in the direction "
+      "of the mold range. The dehumidification capacity that you installed, or did not install, "
+      "causes the difference between the RH at the spike and your night target."),
+    figure(L.zones("Humidity in a flowering room, and the start of problems", 30, 80,
+            [(30, 40, L.AMBL, "too dry"), (40, 60, L.GL, "flowering range"),
+             (60, 70, L.AMBL, "near limit"), (70, 80, L.REDL, "mold zone")], unit="% RH",
+            note="Room sensor values. The canopy air is wetter than at a wall sensor. Thus the margin is smaller than the sensor shows."), 8,
+      "In the last weeks of flowering, the RH must be in the lower half of the range. Each hour "
+      "with an RH of more than approximately 70% at night is an hour in the climate that is best "
+      "for <em>Botrytis</em>" + _c("punja-budrot-cjb") + "."),
+    p("<strong>This period is very important.</strong> Bud rot (<em>Botrytis cinerea</em>) occurs "
+      "in cool air that is almost saturated and does not move. Colas with high density in the last "
+      "weeks of flowering contain this microclimate in their inner area" + _c("punja-budrot-cjb") +
+      ". The room has its highest RH at its lowest temperature. The crop is at the stage with the "
+      "highest risk.</p><p>Dew occurs on each surface that is colder than the dew point. At 26 "
+      "&deg;C (79 &deg;F) and 55% RH, dew occurs on each surface that is colder than approximately "
+      "16 &deg;C (61 &deg;F). Examples are the surfaces of ducts, external walls and cold glass. "
+      "The capacity for the latent heat load at night, which you calculate in Section 07, is not "
+      "for comfort. It is for mold control."),
+    callout("tip", "Dry the air before lights-off, and decrease the light slowly",
+      ul(["<strong>Dry the room before lights-off:</strong> operate the dehumidifiers at maximum "
+          "capacity in the last hour of lights-on. Thus the room goes into the night at the lower "
+          "end of its RH range, with headroom.",
+          "<strong>Decrease the light in a ramp, and not in one step.</strong> If your controller "
+          "can do this, decrease the lights in stages in 15 to 30 minutes. Thus the AC and the "
+          "dehumidifiers have time to adjust to the change.",
+          "<strong>Use the heat of the dehumidifiers.</strong> A dehumidifier releases "
+          "approximately 0.68 kWh as heat for each liter of water, plus its electrical power. In "
+          "the example room, the heat is approximately 4.6 kW during the night. It is usually most "
+          "of the heat that is necessary to hold 19 &deg;C. This night heating has no cost, because "
+          "the dehumidifiers must operate at night.",
+          "<strong>Set an alarm for the rate at which the RH increases.</strong> If the RH "
+          "increases faster than the spike that you calculated, a dehumidifier is not in operation. "
+          "It is better to get the alarm at 22:10 than to find mold at 07:00."])),
+    callout("danger", "Drops of water on surfaces at lights-off: do the steps that night",
+      p("If you see drops of water on walls, ducts or fixtures at lights-off, the room has liquid "
+        "water. Liquid water is very bad for the crop, because of the risk of "
+        "<em>Botrytis</em>.</p><p>Do these steps that night. Increase the night temperature "
+        "setpoint by one degree (air at a higher temperature holds the same water at a lower RH). "
+        "Operate each dehumidifier that you have. Open the canopy with airflow.</p><p>Then increase "
+        "the capacity before the next period with the lights off. Do not wait for the next crop.")),
   ]})
 
 # ---------------------------------------------------------------- 10 airflow integration
-SECTIONS.append({"id": "airflow", "kicker": "10 · Air distribution", "title": "HVAC supply, return and circulation",
+SECTIONS.append({"id": "airflow", "kicker": "10 · Airflow in the room", "title": "HVAC supply air, return air and circulation",
   "blocks": [
-    p("The climate plant conditions air; the room still has to <em>distribute</em> it. Two "
-      "systems, two jobs: the air handling loop delivers conditioned air and drags moist warm air "
-      "back to the coils, sealed grow rooms typically turn the room&rsquo;s air over "
-      "20&ndash;40 times per hour, recirculating ~100% of it to keep CO&#8322; and keep outside "
-      "contaminants out" + _c("streit2023-hvacd") + ", while circulation fans stir the "
-      "canopy so no leaf sits in its own humid boundary layer (that story is the "
-      "<a href='airflow-design.html'>airflow design paper</a>)."),
+    p("The climate system supplies conditioned air, and the air must go to <em>all</em> parts of "
+      "the room. There are two systems with two tasks. The air handling loop supplies conditioned "
+      "air and moves the warm, moist air to the coils again. A sealed grow room typically moves a "
+      "volume of air equal to the room volume 20 to 40 times each hour. The air is approximately "
+      "100% recirculating air, to keep the CO&#8322; in the room and to keep external contaminants "
+      "out" + _c("streit2023-hvacd") + ". Circulation fans move the air in the canopy, and thus no "
+      "leaf stays in a boundary layer of high humidity (the <a href='airflow-design.html'>airflow "
+      "design paper</a> gives information about this)."),
     figure(_FIGS["crosssection"], 9,
-      "Supply high on one side, return low on the other, so conditioned air is forced through the "
-      "canopy zone rather than over it. Circulation fans handle the last metre; the dehumidifier "
-      "drains to a plumbed line, not a bucket."),
+      "The supply air is at the top on one side, and the return air is at the bottom on the other "
+      "side. Thus the conditioned air flows through the canopy zone and not above it. Circulation "
+      "fans move the air for the last meter. The dehumidifier drains into a pipe and not into a "
+      "bucket."),
     ul([
-      "<strong>Supply high, return low.</strong> Dry supply air is less dense paths matter less "
-      "than geometry: pushing supply across the ceiling and pulling return at floor level forces "
-      "air through the canopy, where the load actually is.",
-      "<strong>Don&rsquo;t short-circuit the air path.</strong> A supply diffuser blowing straight "
-      "into a nearby return conditions the duct, not the room. Sensors near that path read "
-      "beautifully while the far corner rots.",
-      "<strong>Place dehumidifiers deliberately.</strong> Discharge aimed along a wall or aisle, "
-      "not blasting one bench of plants with hot dry air; intake sitting in the moist zone, not "
-      "in its own dry plume, a unit re-breathing its own discharge reads a dry room and "
-      "idles while the canopy stays wet.",
-      "<strong>Watch compressor short-cycling.</strong> A grossly oversized single-stage AC "
-      "satisfies the thermostat in minutes and shuts down before the coil ever gets cold and wet "
-      "enough to condense much. You get temperature control and no dehumidification, plus "
-      "compressor wear. Staged or inverter capacity, plus minimum-run timers, is the fix.",
+      "<strong>Put the supply air at the top and the return air at the bottom.</strong> Dry supply "
+      "air has a lower density. The air paths are less important than the geometry. Supply the air "
+      "across the ceiling and remove the return air at floor level. Thus the air flows through the "
+      "canopy, where the load is.",
+      "<strong>Do not let the supply air go directly to the return air.</strong> If a supply "
+      "diffuser sends air directly into a return air inlet near the diffuser, the conditioned air "
+      "stays in the duct system. It does not go into the room. Sensors near that airflow show good "
+      "values, but there is rot in the far corner.",
+      "<strong>Select the position of the dehumidifiers carefully.</strong> Point the discharge air "
+      "along a wall or an aisle. Do not point the hot, dry air at one bench of plants. Put the "
+      "intake in the moist zone, and not in the dry plume of the unit. If the intake receives the "
+      "discharge air of the same unit, its sensor measures dry air and the unit does not operate. "
+      "The canopy stays wet.",
+      "<strong>Monitor the compressor for short cycling.</strong> Short cycling occurs when a "
+      "single-stage AC is much too large. The room temperature becomes equal to the thermostat "
+      "setpoint in minutes, and the AC stops. The coil does not become cold and wet for a "
+      "sufficient time to condense much water. You get temperature control, but no "
+      "dehumidification, and the compressor has more damage from operation. Capacity in stages or "
+      "an inverter, with timers for a minimum operation time, corrects this problem.",
     ]),
   ]})
 
 # ---------------------------------------------------------------- 11 condensate
-SECTIONS.append({"id": "condensate", "kicker": "11 · The water coming back", "title": "Condensate management and reuse",
+SECTIONS.append({"id": "condensate", "kicker": "11 · The water from the air", "title": "Condensate drains, measurement and reuse",
   "blocks": [
-    p("Everything the coils and dehumidifiers condense has to go somewhere, in the example "
-      "room, ~175 L/day of it. That flow is a maintenance liability, a free instrument, and a "
-      "potential water resource, in that order."),
+    p("The water that the coils and the dehumidifiers condense must go away from the equipment. In "
+      "the example room, the quantity is approximately 175 L/day. This flow is, in this sequence, a "
+      "maintenance problem, a no-cost instrument and a possible source of water."),
     ul([
-      "<strong>A maintenance liability:</strong> every unit needs a trapped, sloped drain or a "
-      "reliable condensate pump with a float cut-out. Pans and trays grow biofilm and drip on "
-      "canopy; blocked drains shut units down (good ones) or overflow into ceilings (the rest). "
-      "Tray and drain cleaning is an IPM task, not optional housekeeping.",
-      "<strong>A free instrument:</strong> metered condensate is your measured latent load. "
-      "Falling condensate at constant irrigation means either runoff went up or removal capacity "
-      "went down, both worth knowing by breakfast.",
-      "<strong>A resource:</strong> most of the irrigation water you paid for comes back as "
-      "near-distilled condensate, and it can be captured and reused" + _c("streit2023-water") + ".",
+      "<strong>A maintenance problem:</strong> each unit must have a drain with a trap and a slope, "
+      "or a good condensate pump with a float switch. Biofilm occurs in pans and trays, and the "
+      "water falls on the canopy. A blocked drain stops a good unit, but in other units the water "
+      "flows into the ceiling. Maintenance of the trays and the drains is a task in integrated pest "
+      "management (IPM), and it is necessary.",
+      "<strong>A no-cost instrument:</strong> when you measure the condensate, you measure the "
+      "latent heat load. If the condensate decreases and the irrigation is constant, the runoff is "
+      "larger or the removal capacity is smaller. Find the cause by the next morning.",
+      "<strong>A source of water:</strong> most of the irrigation water that you apply becomes "
+      "condensate again, and this condensate is almost distilled water. You can collect it and use "
+      "it again" + _c("streit2023-water") + ".",
     ]),
-    figure(L.flow("Condensate reuse, done properly",
-            [("Collect", "Coil + dehu trays to one tank"),
-             ("Filter", "Sediment + carbon for organics"),
-             ("Disinfect", "UV or AOP - tray water is not sterile"),
-             ("Polish", "RO or blend to target EC"),
-             ("Reuse", "Back into irrigation makeup")],
-            note="Treat condensate as raw water, not as RO permeate - it has been across coils, trays and drain lines."), 10,
-      "The reuse path. Condensate is low-EC with pH typically 5.5&ndash;6.5, but it can carry "
-      "VOCs, metals picked up from coils (copper, zinc, lead) and microbial load from wet trays"
-      ", treat before it touches the crop" + _c("ncia-condensate") + "."),
-    callout("note", "Compliance angle",
-      p("Under GACP-style quality systems and most medicinal licensing regimes, irrigation water "
-        "quality must be controlled and documented. If condensate re-enters the crop, its "
-        "treatment train and test results belong in your water SOP alongside the source water"
-        ", decide and document <em>before</em> the auditor asks" + _c("ncia-condensate") + ".")),
+    figure(L.flow("Correct reuse of condensate",
+            [("Collect", "From coil and trays to one tank"),
+             ("Filter", "Sediment filter and carbon filter"),
+             ("Disinfect", "UV or AOP. Tray water contains microbes."),
+             ("Adjust", "RO or mix to target EC"),
+             ("Reuse", "Add to irrigation supply")],
+            note="Apply the treatment for raw water to condensate, not for RO permeate. It touches coils, trays and drain pipes."), 10,
+      "The reuse steps. Condensate has a low EC and a typical pH of 5.5 to 6.5. But it can contain "
+      "VOCs, metals from the coils (copper, zinc and lead), and microbes from wet trays. Apply a "
+      "treatment to it before it touches the crop" + _c("ncia-condensate") + "."),
+    callout("note", "Compliance",
+      p("In a GACP quality system, and in most medical license systems, you must control the "
+        "quality of the irrigation water and record it. If condensate goes into the crop water "
+        "again, your water SOP must include its treatment steps and its test results, as for the "
+        "source water. The decision about condensate in the crop water, and its record, are "
+        "necessary <em>before</em> an audit" + _c("ncia-condensate") + ".")),
   ]})
 
 # ---------------------------------------------------------------- 12 redundancy
-SECTIONS.append({"id": "redundancy", "kicker": "12 · When it breaks", "title": "Redundancy planning",
+SECTIONS.append({"id": "redundancy", "kicker": "12 · When equipment stops", "title": "Redundancy for failures",
   "blocks": [
-    p("Run the failure before it runs you. Example room, week 6, 23:00: two 80 L/day units are "
-      "carrying the night at &asymp;⅔ nameplate. One trips on a failed capacitor. Do the "
-      "arithmetic: the room&rsquo;s ~150 m&sup3; of air at 19 &deg;C (66 &deg;F) / 60% RH can only absorb "
-      "about <strong>one more litre of water</strong> before saturation. And the crop is "
-      "adding &asymp;4.4 L every hour. The surviving unit removes barely half of that. RH is "
-      "against the ceiling within the hour, condensation starts on the coldest surfaces, and "
-      "nothing else in the room can help because the AC has no sensible load to run against. "
-      "This is not a slow drift you catch at the morning walk-through. It runs away in minutes."),
-    p("<strong>N+1</strong> is the fix, and it&rsquo;s exactly what it sounds like: N units cover "
-      "the design load; you install one more, so any single failure leaves the room fully served. "
-      "Apply it in order of what kills the crop fastest:"),
+    p("Calculate the effect of a failure before it occurs. Example room, week 6, 23:00: two units "
+      "of 80 L/day hold the night at approximately ⅔ of the nameplate capacity. One unit stops "
+      "because of a defective capacitor. Do the arithmetic: the air in the room is approximately "
+      "150 m&sup3; at 19 &deg;C (66 &deg;F) and 60% RH. This air can absorb only approximately "
+      "<strong>one more liter of water</strong> before saturation.</p><p>The crop adds "
+      "approximately 4.4 L each hour. The remaining unit removes approximately half of this "
+      "quantity. In less than one hour, the RH is at its maximum, and condensation starts on the "
+      "coldest surfaces. No other equipment in the room can help, because the AC has no sensible "
+      "heat load and does not operate.</p><p>The change is not slow, and you do not find it when "
+      "you walk through the room in the morning. The RH increases in minutes."),
+    p("<strong>N+1</strong> redundancy is the correct method. N units supply the calculated load, "
+      "and you install one more unit. Thus, if one unit stops, the remaining units give the full "
+      "capacity. Apply it in the sequence of the failures that cause the fastest crop loss:"),
     ol([
-      "<strong>Night dehumidification first.</strong> No fallback exists, when a dehu dies "
-      "at night, nothing else removes water. Three 80s where two carry the load.",
-      "<strong>Cooling second.</strong> Day cooling failure has a fallback: shed the load. "
-      "Interlock the lights so a cooling fault dims them to 50% or kills them. You can "
-      "afford a lost day of photosynthesis; you cannot afford 40 &deg;C over a full photoperiod. "
-      "Two smaller ACs also beat one big one here.",
-      "<strong>Controls and alarms last but not least</strong>, the redundancy you "
-      "don&rsquo;t know has failed doesn&rsquo;t exist. Alarms must reach a human who can act, "
-      "and must survive the same power event that caused the fault.",
+      "<strong>Night dehumidification first.</strong> There is no alternative. When a dehumidifier "
+      "stops at night, no other equipment removes water. Use three units of 80 L/day where two "
+      "units supply the load.",
+      "<strong>Cooling second.</strong> For a cooling failure in the day, there is an alternative: "
+      "decrease the load. Connect the lights to the cooling with an interlock. When a cooling fault "
+      "occurs, the interlock decreases the light to 50% or stops the lights. You can accept one day "
+      "with no photosynthesis, but you cannot accept 40 &deg;C for a full photoperiod. Two smaller "
+      "ACs are also better than one large AC for this.",
+      "<strong>Controls and alarms last.</strong> A spare unit that is defective, and that you do "
+      "not know about, gives no protection. Alarms must go to a person who can correct the problem. "
+      "The alarms must continue to operate during the same power failure that caused the fault.",
     ]),
     grid([
-      card("Night dehu dies", p("RH runs away in minutes (arithmetic above). <strong>Detect:</strong> "
-        "RH rate-of-rise alarm. <strong>Survive:</strong> N+1 capacity, auto-restart after trip, a "
-        "spare capacitor on the shelf."), tag="worst case"),
-      card("Day AC dies", p("9 kW keeps arriving with nowhere to go; a sealed room climbs degrees "
-        "per hour. <strong>Detect:</strong> temp alarm + current sensor on the unit. "
-        "<strong>Survive:</strong> lights interlock sheds the load automatically; second unit "
-        "carries a de-rated day."), tag="has a fallback"),
-      card("Condensate drain blocks", p("Water where it shouldn&rsquo;t be; float switch stops the "
-        "unit. Which quietly becomes a capacity failure. <strong>Detect:</strong> unit-"
-        "stopped alarm, weekly tray inspection. <strong>Survive:</strong> plumbed drains, floats "
-        "tested monthly, trays on the cleaning roster."), tag="sneaky"),
-      card("Coil ices up", p("Starved airflow (dirty filter), low charge, or a too-cold room. Unit "
-        "runs, removes nothing, then dumps meltwater. <strong>Detect:</strong> runtime with no "
-        "condensate flow. <strong>Survive:</strong> filter schedule, defrost-capable units, "
-        "desiccant in genuinely cold spaces" + _c("sylvane-desiccant") + "."), tag="slow burn"),
-      card("Sensor drifts or lies", p("The controller faithfully chases fiction; the room follows. "
-        "<strong>Detect:</strong> monthly cross-check against a decent handheld at canopy height. "
-        "<strong>Survive:</strong> two sensors per room and control on the worse reading."), tag="quiet killer"),
-      card("Power blip", p("Everything stops; what restarts? Compressors need delay timers, some "
-        "dehus wake in standby. A room can look powered and be doing nothing. "
-        "<strong>Detect:</strong> post-outage checklist, alarms on a UPS. <strong>Survive:</strong> "
-        "test the black-start on purpose, once, before summer does it for you."), tag="test it"),
+      card("Night dehumidifier stops", p("The RH increases in minutes (arithmetic above). <strong>How you "
+        "find it:</strong> an alarm for the rate at which the RH increases. "
+        "<strong>Protection:</strong> N+1 capacity, automatic start after the unit stops, and a "
+        "spare capacitor in storage."), tag="worst condition"),
+      card("Day AC stops", p("The 9 kW of heat continues to come into the room, and it has no exit. "
+        "In a sealed room, the temperature increases by some degrees each hour. <strong>How you "
+        "find it:</strong> a temperature alarm and a current sensor on the unit. "
+        "<strong>Protection:</strong> the lights interlock decreases the load automatically, and "
+        "the second unit supplies the cooling for a day with a lower load."), tag="has an alternative"),
+      card("Condensate drain is blocked", p("Water is in a position where it must not be, and the float "
+        "switch stops the unit. The result is a failure of capacity with no signal. <strong>How you "
+        "find it:</strong> an alarm for a stopped unit, and an inspection of the trays each week. "
+        "<strong>Protection:</strong> drains with pipes, a test of the float switches each month, "
+        "and the trays in the maintenance schedule."), tag="no signal"),
+      card("Ice on the coil", p("The causes are not sufficient airflow (dirty filter), low refrigerant "
+        "charge, or a room that is too cold. The unit operates but removes no water. Then the ice "
+        "melts, and the water falls from the unit. <strong>How you find it:</strong> operation time "
+        "with no condensate flow. <strong>Protection:</strong> a filter schedule, units that can "
+        "defrost, and a desiccant dehumidifier in spaces that are very cold" + _c("sylvane-desiccant") +
+        "."), tag="slow problem"),
+      card("Sensor gives incorrect values", p("The controller uses the incorrect value, and the room "
+        "changes to the incorrect condition. <strong>How you find it:</strong> a check each month "
+        "with a good handheld meter at canopy height. <strong>Protection:</strong> two sensors in "
+        "each room, and control with the worse reading."), tag="dangerous, no signal"),
+      card("Short power failure", p("All the equipment stops. It is necessary to know which equipment starts "
+        "again. A compressor must have a timer for the interval before it starts again, and some "
+        "dehumidifiers go to standby mode and do not operate. A room can look as if it has power, "
+        "but the equipment does not operate.</p><p><strong>How you find it:</strong> a checklist "
+        "after a power failure, and alarms with power from an uninterruptible power supply (UPS). "
+        "<strong>Protection:</strong> do a test of the start after a power failure. Do the test one "
+        "time, at a time that you select, and before a power failure in the summer."), tag="make a test"),
     ], cols=2),
-    callout("key", "Break it on purpose",
-      p("Once per cycle, in early veg when stakes are low: kill each climate unit for an hour and "
-        "watch the trends. You&rsquo;ll learn your real runway (minutes? hours?), whether the "
-        "alarms fire, and whether the auto-restarts work. Cheap insurance, and the only way to "
-        "know your N+1 is real rather than nameplate.")),
+    callout("key", "Stop the equipment at a time that you select",
+      p("Do this test one time in each cycle, at the start of vegetative growth, when the risk is "
+        "low. Stop each climate unit for one hour and monitor the trends. You will know how much "
+        "time you have before the problem becomes dangerous (minutes or hours). You will also know "
+        "if the alarms operate and if the units start again automatically. This test has a low "
+        "cost. It is the only method to make sure that your N+1 is correct and not only a nameplate "
+        "value.")),
   ]})
 
 # ---------------------------------------------------------------- 13 controls
-SECTIONS.append({"id": "controls", "kicker": "13 · Controls", "title": "HVAC staging and deadbands",
+SECTIONS.append({"id": "controls", "kicker": "13 · Controls", "title": "Stages and deadbands of the HVAC controls",
   "blocks": [
-    p("A grow room runs heating, cooling and dehumidification within metres of each other, and "
-      "two of the three make the third&rsquo;s job worse: cooling raises RH; dehumidifying adds "
-      "heat. Un-coordinated, they fight, the AC overcools, RH climbs, the dehu heats, the "
-      "AC returns, around and around, burning power and cycling compressors. The cure is "
-      "sequencing, not bigger hardware."),
-    figure(L.flow("The control loop, staged",
-            [("Sense", "Aspirated T + RH probe at canopy height"),
-             ("Compare", "Against day or night setpoint and deadband"),
-             ("Stage", "Cool, then dehu, then heat - one leads"),
-             ("Hold", "Minimum run + rest timers stop short-cycling"),
-             ("Log", "Trend everything - the graph is the tuning tool")],
-            note="One writer per variable: a single controller owns each decision, or your AC and dehu will fight each other all night."), 11,
-      "The loop every decent controller implements. The deadband, the tolerance around the "
-      "setpoint where nothing switches. Is what gives each machine room to finish its job "
-      "before the next one starts."),
+    p("In a grow room, the heating, the cooling and the dehumidification operate near each other. "
+      "Two of the three make the task of the third worse: cooling increases the RH, and "
+      "dehumidification adds heat. If there is no control sequence, the units decrease the result "
+      "of each other. The AC decreases the temperature too much, the RH increases, the dehumidifier "
+      "adds heat, and the AC starts again. This cycle uses much electrical power and causes the "
+      "compressors to start and stop many times. The correct method is a control sequence, and not "
+      "larger equipment."),
+    figure(L.flow("The control loop in stages",
+            [("Read", "T + RH aspirated probe at canopy height"),
+             ("Compare", "With the day or night setpoint and deadband"),
+             ("Stage", "Cooling, dehumidification, then heating"),
+             ("Hold", "Minimum on/off timers stop short cycling"),
+             ("Log", "Record all values. Use the graph to adjust.")],
+            note="One controller for each control variable. If not, each unit decreases the result of the other unit all night."), 11,
+      "The loop that each good controller uses. The deadband is the tolerance around the setpoint, "
+      "where no equipment starts or stops. The deadband gives each unit time to complete its task "
+      "before the next unit starts."),
     ul([
-      "<strong>Deadbands:</strong> control to a band, not a knife-edge. Day 26 &deg;C (79 &deg;F) &plusmn;0.5 &deg;C, "
-      "RH 55&ndash;60% is a structure (yours will differ, setpoints belong to the crop, "
-      "see the <a href='temp-humidity-vpd.html'>VPD paper</a>; cannabis photosynthesis runs "
-      "happily around 25&ndash;30 &deg;C (77&ndash;86 &deg;F)" + _c("chandra2008-photo") + "). Tight bands feel "
-      "professional and mostly buy you equipment cycling.",
-      "<strong>Sequencing:</strong> heat and cool must never run together (lockout between them); "
-      "dehumidification may run alongside either, but its reheat should come from the machine"
-      ", hot-gas reheat, not from the heaters fighting the AC" + _c("streit2023-hvacd") + ".",
-      "<strong>Day/night setpoints with ramps:</strong> separate targets for lights-on and "
-      "lights-off, connected by 15&ndash;30 minute ramps so the transition is driven, not endured "
-      "(Section 09).",
-      "<strong>Control moisture on dew point where you can:</strong> %RH swings with every "
-      "temperature wobble even when the water content hasn&rsquo;t changed; dew point tracks the "
-      "actual grams. At the day/night transition, dew-point control is dramatically calmer.",
-      "<strong>Sensor placement is a control decision:</strong> an aspirated or well-shielded "
-      "sensor at canopy height, out of any supply jet or dehu plume. The controller can only be "
-      "as honest as its sensor (Section 12&rsquo;s quiet killer).",
+      "<strong>Deadbands:</strong> control to a band and not to one value. For example, the "
+      "setpoint in the day is 26 &deg;C (79 &deg;F) &plusmn;0.5 &deg;C, and the RH is 55 to 60%. "
+      "Your values are different, because the crop gives the setpoints (read the <a "
+      "href='temp-humidity-vpd.html'>VPD paper</a>). The photosynthesis of cannabis operates "
+      "correctly at approximately 25 to 30 &deg;C (77 to 86 &deg;F)" + _c("chandra2008-photo") +
+      ". A small band can show good control, but it mostly causes frequent starts and stops of the "
+      "equipment.",
+      "<strong>Sequence:</strong> the heating and the cooling must not operate at the same time "
+      "(use a lockout between them). The dehumidification can operate with the heating or with the "
+      "cooling. We recommend that the reheat comes from the unit, for example hot-gas reheat, and "
+      "not from heaters that decrease the result of the AC" + _c("streit2023-hvacd") +
+      ".",
+      "<strong>Setpoints for the day and for the night, with ramps.</strong> Use different targets "
+      "for lights-on and for lights-off. Connect them with ramps of 15 to 30 minutes. Thus you "
+      "control the change (Section 09).",
+      "<strong>Control the moisture with the dew point when you can.</strong> The %RH changes with "
+      "each small change of temperature, also when the water content is the same. The dew point "
+      "shows the quantity of water in grams. At the change between day and night, control with the "
+      "dew point is much more stable.",
+      "<strong>The position of the sensor is a control decision.</strong> Use an aspirated sensor, "
+      "or a sensor with a good shield, at canopy height. Put it away from a jet of supply air and "
+      "from the plume of a dehumidifier. The controller can be only as accurate as its sensor "
+      "(Section 12, sensor with incorrect values).",
     ]),
   ]})
 
 # ---------------------------------------------------------------- 14 efficiency
-SECTIONS.append({"id": "efficiency", "kicker": "14 · The power bill", "title": "HVAC efficiency, reheat and heat recovery",
+SECTIONS.append({"id": "efficiency", "kicker": "14 · The energy cost", "title": "HVAC efficiency, reheat and heat recovery",
   "blocks": [
-    p("Climate is where the money goes. Energy runs 30&ndash;60% of indoor operating expense"
-      + _c("rii-hvac-bpg") + ", and life-cycle analysis of US indoor production found "
-      "environmental control the dominant driver of both energy use and emissions, "
-      "2,300&ndash;5,200 kg CO&#8322;e per kg of dried flower depending on location"
-      + _c("summers2021-ghg") + ". Every design choice in this section moves that number."),
+    p("The climate system is a large part of the energy cost. Energy is 30 to 60% of the operating "
+      "cost of an indoor facility" + _c("rii-hvac-bpg") + ". A life-cycle analysis of indoor "
+      "production in the US found that environmental control is the primary cause of energy use and "
+      "of emissions. The emissions are 2,300 to 5,200 kg CO&#8322;e for each kg of dried flower, "
+      "and the value changes with the location" + _c("summers2021-ghg") + ". Each selection of "
+      "equipment in this section changes that number."),
     kv([
       ("1 kW of electricity", "3,412 BTU/h of heat, always"),
-      ("1 ton of cooling", "12,000 BTU/h &asymp; 3.52 kW"),
+      ("1 ton of cooling", "12,000 BTU/h = approximately 3.52 kW"),
       ("1 US pint", "0.473 L"),
-      ("Condensing 1 L of vapour", "&asymp;0.68 kWh of latent heat released at the coil"),
-      ("Resistance heater", "COP 1.0 &mdash; the most expensive heat you can buy"),
-      ("Modern compressor", "COP 3&ndash;4 &mdash; moves 3&ndash;4 kW of heat per kW consumed"),
+      ("Condensation of 1 L of vapor", "approximately 0.68 kWh of latent heat that the coil releases"),
+      ("Resistance heater", "COP 1.0. This type of heat has the highest cost."),
+      ("New compressor", "COP 3 to 4. It moves 3 to 4 kW of heat for each kW that it uses."),
     ]),
     ul([
-      "<strong>Hot-gas reheat is the flagship move.</strong> Dehumidification means cooling air "
-      "below its dew point, then warming it back so you don&rsquo;t overcool the room. Electric "
-      "reheat pays full price (COP 1) for heat you just paid to remove. Hot-gas reheat recycles "
-      "the compressor&rsquo;s own rejected heat to do the rewarming, near-free reheat, "
-      "standard on mid-tier DX and integrated units" + _c("streit2023-hvacd") + ".",
-      "<strong>Right-size rather than oversize.</strong> Oversized single-stage equipment "
-      "short-cycles: worse dehumidification, worse efficiency, shorter compressor life. Margin "
-      "belongs in <em>staged</em> capacity (two circuits, inverter drive), not in one heroic unit.",
-      "<strong>LEDs shift the ratio, not the rules.</strong> At equal PPFD, LEDs draw fewer watts, "
-      "so the sensible load drops, but the crop transpires much the same, so the latent "
-      "load doesn&rsquo;t. LED rooms are latent-dominated rooms: expect the dehumidifier spec, "
-      "and the winter heating question, to matter <em>more</em>, not less.",
-      "<strong>Reuse heat you already own.</strong> Dehu heat holds the night temperature "
-      "(Section 09); condenser heat can pre-warm dry rooms or water. Rejecting heat outside all "
-      "winter while running COP-1 heaters inside is a bill you chose.",
-      "<strong>Maintenance is an efficiency program:</strong> dirty filters and fouled coils "
-      "quietly tax capacity and COP for months before anything actually fails. Filters monthly; "
-      "coils each cycle.",
+      "<strong>Hot-gas reheat is the best method.</strong> For dehumidification, the unit decreases "
+      "the air temperature to less than its dew point. Then the unit increases the air temperature "
+      "again, and thus the room does not become too cold. Electric reheat uses new electrical power "
+      "(COP 1) for heat that you removed. Hot-gas reheat uses the heat that the compressor releases "
+      "for the reheat. The cost of this reheat is almost zero, and it is standard on DX units of "
+      "medium cost and on integrated units" + _c("streit2023-hvacd") + ".",
+      "<strong>Select the correct size, and do not select a size that is too large.</strong> A "
+      "single-stage unit that is too large has short cycling. The result is worse dehumidification, "
+      "lower efficiency and a shorter life of the compressor. Put the margin in capacity in "
+      "<em>stages</em> (two circuits or an inverter) and not in one very large unit.",
+      "<strong>LEDs change the ratio, but not the physics.</strong> At the same PPFD, LEDs use less "
+      "electrical power, and thus the sensible heat load decreases. But the crop transpires almost "
+      "the same quantity of water, and thus the latent heat load does not decrease. In LED rooms, "
+      "the latent heat load is the primary load. As a result, the dehumidifier capacity and the "
+      "heating in winter are <em>more</em> important, and not less important.",
+      "<strong>Use again the heat of your equipment.</strong> The heat from the dehumidifiers holds "
+      "the night temperature (Section 09). Heat from the condenser can increase the temperature of "
+      "drying rooms or of water. You can send heat to the external air in winter and operate COP-1 "
+      "heaters in the room at the same time. Then the high energy cost is your selection.",
+      "<strong>Maintenance increases efficiency.</strong> Dirty filters and dirty coils decrease "
+      "the capacity and the COP for months, with no alarm, before a unit stops. Clean or replace "
+      "the filters each month. Clean the coils in each cycle.",
     ]),
   ]})
 
 # ---------------------------------------------------------------- 15 troubleshooting
-SECTIONS.append({"id": "trouble", "kicker": "15 · When it goes wrong", "title": "Troubleshooting",
+SECTIONS.append({"id": "trouble", "kicker": "15 · When there is a problem", "title": "Troubleshooting",
   "blocks": [
-    table(["Symptom", "Likely cause", "First moves"], [
-      ["RH pins 80%+ every lights-off", "Night latent load exceeds real (derated) dehu capacity; AC idle at night", "Measure water-in minus runoff vs installed capacity at night temp (Sections 05&ndash;07); pre-dry the last hour; add nameplate"],
-      ["Room creeps hot all afternoon, AC never stops", "Undersized vs full equipment load, dirty coil/filter, or low refrigerant", "Redo the watt count (Section 06); wash coils, change filters; then call the fridgie"],
-      ["AC cycles fast; temp fine, RH never falls", "Oversized single-stage unit short-cycling. Coil never stays cold long enough to condense", "Minimum-run timers; staged/inverter capacity; let dehus own the moisture"],
-      ["Room cold <em>and</em> humid (clammy)", "Cooling running without reheat, classic mini-split-as-dehumidifier", "Raise cooling setpoint; add dehu with reheat (or hot-gas reheat unit); heat and dehumidify separately"],
-      ["Condensation on ducts/walls at night", "Surfaces below the air's dew point", "More night dehu capacity; raise night temp a touch; insulate cold surfaces; verify with an IR thermometer"],
-      ["Dehu runs constantly, tank barely fills", "Room colder than rating point, iced coil, or unit re-breathing its own dry plume", "Check coil for frost and filter for dust; read the capacity curve at your temp; reposition; desiccant if the space is genuinely cold"],
-      ["Musty smell, stains below units", "Blocked condensate pans/traps, biofilm in trays", "Clean and disinfect trays; flush drains; float switch working? add to weekly roster"],
-      ["One corner always wetter, mould starts there", "Air-distribution dead zone", "Fix supply/return geometry (Section 10); add circulation; thin the canopy; verify with a handheld meter"],
-      ["Sensors read fine but buds still rot", "Wall sensor lying about the canopy microclimate", "Measure inside the canopy at cola height; control on dew point; more through-canopy airflow" + _c("punja-budrot-cjb")],
-    ], cls="compact", caption="Work top to bottom: measure before replacing hardware. Most &lsquo;broken HVAC&rsquo; is an honest machine obeying a wrong assumption."),
+    table(["Symptom", "Possible cause", "First steps"], [
+      ["The RH is 80% or more at each lights-off", "The latent heat load at night is more than the corrected dehumidifier capacity. The AC does not operate at night.", "Measure the water that goes in minus the runoff. Compare it with the installed capacity at the night temperature (Sections 05 to 07). Dry the air in the last hour of lights-on. Add nameplate capacity."],
+      ["The temperature of the room increases slowly in the afternoon, and the AC does not stop", "The AC is too small for the full equipment load, the coil or the filter is dirty, or the refrigerant is low", "Count the watts again (Section 06). Clean the coils. Replace the filters. Then get a refrigeration technician."],
+      ["The AC starts and stops frequently. The temperature is correct, but the RH does not decrease.", "A single-stage unit that is too large has short cycling. The coil does not stay cold for a sufficient time to condense water.", "Use timers for a minimum operation time. Use capacity in stages or an inverter. Let the dehumidifiers remove the moisture."],
+      ["The room is cold <em>and</em> has high humidity", "The cooling operates without reheat, and the problem is frequent when a mini-split is the dehumidifier.", "Increase the cooling setpoint. Add a dehumidifier with reheat (or a unit with hot-gas reheat). Use different equipment for the heating and for the dehumidification."],
+      ["Condensation on ducts and walls at night", "The surfaces are colder than the dew point of the air", "Add dehumidifier capacity for the night. Increase the night temperature by a small value. Install insulation on cold surfaces. Measure the result with an IR thermometer."],
+      ["The dehumidifier operates all the time, but the tank fills very slowly", "The room is colder than the rating conditions, the coil has ice, or the intake receives the dry plume of the same unit", "Examine the coil for ice and the filter for dust. Read the capacity curve for your temperature. Change the position of the unit. Use a desiccant dehumidifier if the space is very cold."],
+      ["Smell of mold, and stains below the units", "Blocked condensate pans or traps, and biofilm in trays", "Clean the trays. Disinfect the trays. Flush the drains. Make sure that the float switch operates. Add the trays to the maintenance schedule for each week."],
+      ["One corner is always wetter, and mold starts there", "Dead zone in the airflow", "Correct the geometry of the supply air and the return air (Section 10). Add circulation. Decrease the density of the canopy. Measure the result with a handheld meter."],
+      ["The sensors show correct values, but rot occurs on the buds", "The sensor on the wall does not show the microclimate of the canopy", "Measure in the canopy at the height of the colas. Control with the dew point. Add airflow through the canopy" + _c("punja-budrot-cjb") + "."],
+    ], cls="compact", caption="Start at the top of the table and continue to the bottom. Measure before you replace equipment. Most &lsquo;broken HVAC&rsquo; equipment operates correctly, but the information that it uses is incorrect."),
   ]})
 
 # ---------------------------------------------------------------- 16 mental model
 SECTIONS.append({"id": "remember", "kicker": "16 · Keep this", "title": "Heat and moisture balance",
   "blocks": [
-    callout("key", "The mental model",
-      p("A grow room is an accounting problem wearing a plant costume. <strong>Follow the "
-        "watt:</strong> every kilowatt of equipment becomes a kilowatt of heat; count them and "
-        "you have the sensible load. <strong>Follow the litre:</strong> every litre irrigated, "
-        "minus drain, becomes vapour; count them and you have the latent load. The climate plant "
-        "is just the return path for both, and it must work at 02:00 in the dark as well as at "
-        "14:00 under full light.")),
+    callout("key", "The primary model",
+      p("<strong>Count the watts.</strong> Each kilowatt of equipment becomes a kilowatt of heat, "
+        "and the total is the sensible heat load. <strong>Then count the liters.</strong> Each "
+        "liter that you apply, minus the drain, becomes vapor, and the total is the latent heat "
+        "load. The climate system removes the two loads. It must operate at 02:00 with the lights "
+        "off and at 14:00 with the lights on.")),
     ol([
-      "Count watts &rarr; sensible load. Folklore counts only the lights; you count everything (Section 06).",
-      "Count litres &rarr; latent load. Water in minus runoff, converted to pints for the spec sheet (Sections 05, 07).",
-      "Night is the design case: no sensible load, no AC help, transpiration continuing. Size dehumidification for lights-off at <em>your</em> night temperature, derated from nameplate.",
-      "N+1 the night dehumidification; interlock the lights to the cooling. Then break each unit on purpose once, and watch what happens.",
-      "Control moisture (dew point) with deadbands and sequencing so the machines cooperate; ramp the day/night transition.",
-      "Meter irrigation, runoff and condensate, the free, continuous load calculation that also tells you when the crop changes.",
+      "Count the watts to get the sensible heat load. The forum numbers count only the lights, but you count all the equipment (Section 06).",
+      "Count the liters to get the latent heat load. Use the water that goes in minus the runoff, and change it to pints for the data sheet (Sections 05 and 07).",
+      "Use the night load for the size. At night there is no sensible heat load, the AC does not help, and transpiration continues. Calculate the dehumidifier capacity for lights-off at <em>your</em> night temperature, and correct the nameplate capacity.",
+      "Use N+1 for the night dehumidification. Connect the lights to the cooling with an interlock. Then stop each unit one time, at a time that you select, and monitor the result.",
+      "Control the moisture (dew point) with deadbands and a control sequence. Thus the units operate together. Use a ramp for the change between day and night.",
+      "Measure the irrigation, the runoff and the condensate. These measurements give the load continuously at no cost, and they also show when the crop changes.",
     ]),
-    p("The climate plant is one subsystem of the room. Read it alongside the "
-      "<a href='grow-room-systems.html'>grow-room systems guide</a>, the "
-      "<a href='temp-humidity-vpd.html'>temperature, humidity and VPD paper</a> for what the "
-      "setpoints should actually be, and the <a href='airflow-design.html'>airflow design "
-      "paper</a> for the last metre of air movement."),
+    p("The climate system is one part of the grow room. Read this paper with the <a "
+      "href='grow-room-systems.html'>grow room systems paper</a>. For the correct setpoints, read "
+      "the <a href='temp-humidity-vpd.html'>temperature, humidity and VPD paper</a>. For the last "
+      "meter of air movement, read the <a href='airflow-design.html'>airflow design paper</a>."),
   ]})

@@ -8,12 +8,12 @@ from figs import (G, GD, GL, GXL, INK, INK2, MUT, LINE, AMB, AMBL, RED, BLU, BLU
 
 SLUG = "airflow-design"
 TITLE = "Airflow design for indoor cultivation"
-EYEBROW = "Beginner · Airflow design"
-SUB = ("Every leaf sits inside a film of still air that slows gas exchange. "
-       "Airflow strips that film away. By the end you will know how much air to move, "
-       "which fans deliver it, and how to place them so every leaf gets a gentle breeze.")
-META = [("wind", "Beginner"), ("image", "8 diagrams · 8 photos"),
-        ("quote", "Evidence-linked · 18 sources"), ("clock", "~26 min read")]
+EYEBROW = "Basic · Airflow design"
+SUB = ("Each leaf has a layer of still air that decreases the rate of gas exchange. Airflow removes "
+       "this layer. After you read this paper, you will know how much air to move and which fans "
+       "supply the air. You will also know where to put the fans, to give each leaf a light airflow.")
+META = [("wind", "Basic"), ("image", "8 diagrams · 8 photos"),
+        ("quote", "18 sources"), ("clock", "~26 min to read")]
 RELATED = ["grow-room-systems", "mould-risk", "coco-crop-steering"]
 REF_IDS = ["schuepp1993-bl", "dupont2025-wind", "kitaya2004-airvel", "tjosvold2018-air",
            "rm2021-light", "kitaya2010-circ", "gilliham2011-ca", "chehab2009-thigmo",
@@ -26,26 +26,26 @@ def _c(rid):
 
 def _fig_boundary():
     W, H = 720, 300
-    p = [f'<svg viewBox="0 0 {W} {H}" width="{W}" height="{H}" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Leaf boundary layer">']
+    p = [f'<svg viewBox="0 0 {W} {H}" width="{W}" height="{H}" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="The boundary layer of still air on a leaf">']
     p.append(f'<rect width="{W}" height="{H}" fill="{PAPER}"/>')
-    p.append(f'<text x="24" y="30" fill="{INK}" font-size="15" font-weight="700" style="{FS}">The boundary layer: a film of still, humid air on every leaf</text>')
+    p.append(f'<text x="24" y="30" fill="{INK}" font-size="15" font-weight="700" style="{FS}">The boundary layer: a layer of still air with high humidity on each leaf</text>')
     # leaf
     lx, ly = 150, 170
     p.append(f'<ellipse cx="{lx+120}" cy="{ly}" rx="150" ry="20" fill="{GL}" stroke="{G}" stroke-width="2"/>')
     p.append(f'<text x="{lx+120}" y="{ly+5}" text-anchor="middle" fill="{GD}" font-size="12" font-weight="700" style="{FS}">leaf surface</text>')
     # boundary layer (still air), shaded band hugging the leaf
     p.append(f'<path d="M{lx-25},{ly-10} q145,-34 290,0 q-145,30 -290,0 Z" fill="{BLUL}" opacity=".8"/>')
-    p.append(f'<text x="{lx+120}" y="{ly-22}" text-anchor="middle" fill="{BLU}" font-size="11.5" style="{FS}">still-air film (boundary layer)</text>')
+    p.append(f'<text x="{lx+120}" y="{ly-22}" text-anchor="middle" fill="{BLU}" font-size="11.5" style="{FS}">layer of still air (boundary layer)</text>')
     # CO2 struggling across (left, thick film)
     p.append(f'<text x="60" y="120" fill="{AMB}" font-size="12" font-weight="700" style="{FS}">CO&#8322;</text>')
     p.append(f'<path d="M70,128 q10,20 12,34" fill="none" stroke="{AMB}" stroke-width="2" stroke-dasharray="3 3" marker-end="url(#a1)"/>')
-    p.append(f'<text x="40" y="150" fill="{MUT}" font-size="10.5" style="{FS}">thick film =</text>')
-    p.append(f'<text x="40" y="164" fill="{MUT}" font-size="10.5" style="{FS}">slow breathing</text>')
+    p.append(f'<text x="40" y="150" fill="{MUT}" font-size="10.5" style="{FS}">thick layer = slow</text>')
+    p.append(f'<text x="40" y="164" fill="{MUT}" font-size="10.5" style="{FS}">gas exchange</text>')
     # moving air (right) thinning the film
     for yy in (96, 112, 128):
         p.append(f'<path d="M470,{yy} q120,0 200,2" fill="none" stroke="{G}" stroke-width="2.4" marker-end="url(#a2)"/>')
-    p.append(f'<text x="560" y="80" text-anchor="middle" fill="{GD}" font-size="12" font-weight="700" style="{FS}">moving air thins it</text>')
-    p.append(f'<text x="560" y="250" text-anchor="middle" fill="{INK2}" font-size="11.5" style="{FS}">&rarr; CO&#8322; in, water + heat out, faster</text>')
+    p.append(f'<text x="560" y="80" text-anchor="middle" fill="{GD}" font-size="12" font-weight="700" style="{FS}">moving air makes it thinner</text>')
+    p.append(f'<text x="560" y="250" text-anchor="middle" fill="{INK2}" font-size="11.5" style="{FS}">&rarr; CO&#8322; into the leaf, water and heat out, more quickly</text>')
     p.append(f'<defs><marker id="a1" markerWidth="7" markerHeight="7" refX="5" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 Z" fill="{AMB}"/></marker>'
              f'<marker id="a2" markerWidth="7" markerHeight="7" refX="5" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 Z" fill="{G}"/></marker></defs>')
     p.append('</svg>')
@@ -139,7 +139,7 @@ def _g_sock(cx, cy):
         hx = cx - 24 + k * 11
         o.append(f'<circle cx="{hx}" cy="{cy+1}" r="2.2" fill="{INK2}"/>')
         o.append(f'<path d="M{hx},{cy+8} v18" stroke="{G}" stroke-width="2.1" fill="none" marker-end="url(#fga)"/>')
-    o.append(f'<text x="{cx-1}" y="{cy-30}" text-anchor="middle" fill="{MUT}" font-size="9.5" style="{FS}">even, low-speed delivery</text>')
+    o.append(f'<text x="{cx-1}" y="{cy-30}" text-anchor="middle" fill="{MUT}" font-size="9.5" style="{FS}">equal, low-speed supply</text>')
     return "".join(o)
 
 def _g_duct(cx, cy):
@@ -150,28 +150,28 @@ def _g_duct(cx, cy):
          f'<circle cx="{cx-7}" cy="{cy}" r="4" fill="{INK2}"/>',
          f'<rect x="{cx+10}" y="{cy-14}" width="26" height="28" rx="3" fill="none" stroke="{MUT}" stroke-width="2"/>',
          f'<path d="M{cx-46},{cy} h{80}" stroke="{BLU}" stroke-width="3.2" fill="none" marker-end="url(#fgb)"/>',
-         f'<text x="{cx-6}" y="{cy+34}" text-anchor="middle" fill="{MUT}" font-size="9.5" style="{FS}">room air &rarr; outside</text>']
+         f'<text x="{cx-6}" y="{cy+34}" text-anchor="middle" fill="{MUT}" font-size="9.5" style="{FS}">room air &rarr; outdoors</text>']
     return "".join(o)
 
 def _fig_fan_gallery():
     """Eight fan types, drawn side-on with the shape of air each one makes."""
     W, H = 760, 500
     cells = [
-        (_g_haf,   "HAF fan",         "Hangs high, blows sideways.",  "Drives the whole-room loop."),
+        (_g_haf,   "HAF fan",         "Hangs high, blows to the side.",  "Makes a loop of air in the room."),
         (_g_vaf,   "VAF fan",         "Blows straight down,",         "through the canopy."),
-        (_g_osc,   "Oscillating fan", "Sweeps an arc. Cheap, but",    "each leaf gets a turn."),
-        (_g_clip,  "Clip fan",        "Tent scale only. About",       "one plant's worth of air."),
-        (_g_drum,  "Drum / floor fan","Hard narrow jet. A spot-fix,", "and a wind-burn risk."),
-        (_g_under, "Under-canopy fan","Low and flat. Clears the",     "wet zone at pot level."),
-        (_g_sock,  "Air sock",        "Many small holes give even,",  "draught-free delivery."),
-        (_g_duct,  "Inline duct fan", "Exchange, not circulation.",   "Pulls air out of the room."),
+        (_g_osc,   "Oscillating fan", "Oscillates. Low cost, but",    "each leaf gets air part of the time."),
+        (_g_clip,  "Clip fan",        "Only for a tent. It moves the",       "air for approximately one plant."),
+        (_g_drum,  "Drum / floor fan","Fast jet with a small width.", "For one area only. Wind damage risk."),
+        (_g_under, "Under-canopy fan","Low and flat. It supplies air",     "to the wet zone at pot level."),
+        (_g_sock,  "Air sock",        "Many small holes give an equal",  "air supply, no strong jet."),
+        (_g_duct,  "Inline duct fan", "Air exchange, not circulation.",   "Pulls air out of the room."),
     ]
-    p = [f'<svg viewBox="0 0 {W} {H}" width="{W}" height="{H}" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="The eight fan types used in indoor growing and the shape of air each one makes">',
+    p = [f'<svg viewBox="0 0 {W} {H}" width="{W}" height="{H}" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="The eight types of fan for an indoor grow room, and the shape of the air that each type makes">',
          f'<rect width="{W}" height="{H}" fill="{PAPER}"/>',
          f'<defs><marker id="fga" markerWidth="7" markerHeight="7" refX="5.5" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 Z" fill="{G}"/></marker>'
          f'<marker id="fgb" markerWidth="7" markerHeight="7" refX="5.5" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 Z" fill="{BLU}"/></marker></defs>',
-         f'<text x="20" y="26" fill="{INK}" font-size="15" font-weight="700" style="{FS}">The eight fans, and the shape of air each one makes</text>',
-         f'<text x="20" y="45" fill="{MUT}" font-size="11.5" style="{FS}">Green = the air it moves. Not interchangeable: the shape decides which leaves get served.</text>']
+         f'<text x="20" y="26" fill="{INK}" font-size="15" font-weight="700" style="{FS}">The eight types of fan, and the shape of air that each type makes</text>',
+         f'<text x="20" y="45" fill="{MUT}" font-size="11.5" style="{FS}">Green is the air that the fan moves. The fans are not the same. The shape of the air controls which leaves get air.</text>']
     cw = (W - 24) / 4
     for i, (glyph, name, r1, r2) in enumerate(cells):
         col, row = i % 4, i // 4
@@ -194,7 +194,7 @@ def _fan_photos():
     cells = "".join(
         f"<figure class='tgal-item'><img src='assets/img/airflow-fan-{k}.jpg' alt='{t} in situ' "
         f"loading='lazy'><figcaption>{t}</figcaption></figure>" for t, k in shots)
-    return ("<div class='tgal-wrap'><div class='kicker'>What each one looks like"
+    return ("<div class='tgal-wrap'><div class='kicker'>A photo of each type "
             "<span class='fcredit'>Grok Imagine</span></div>"
             f"<div class='tgal'>{cells}</div></div>")
 
@@ -203,11 +203,11 @@ def _fig_haf_loop():
     W, H = 760, 416
     x0, x1, y0, y1 = 44, 716, 98, 346
     mid = (y0 + y1) / 2
-    p = [f'<svg viewBox="0 0 {W} {H}" width="{W}" height="{H}" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Plan view of a horizontal airflow racetrack loop">',
+    p = [f'<svg viewBox="0 0 {W} {H}" width="{W}" height="{H}" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="A diagram from above of the horizontal airflow in one loop. The air goes along one side and back along the other side.">',
          f'<rect width="{W}" height="{H}" fill="{PAPER}"/>',
          f'<defs><marker id="hla" markerWidth="8" markerHeight="8" refX="6" refY="3.2" orient="auto"><path d="M0,0 L7,3.2 L0,6.4 Z" fill="{G}"/></marker></defs>',
-         f'<text x="20" y="26" fill="{INK}" font-size="15" font-weight="700" style="{FS}">HAF layout, seen from above: one loop, not a row of blowers</text>',
-         f'<text x="20" y="45" fill="{MUT}" font-size="11.5" style="{FS}">Air runs down one side and back the other. Every fan feeds the fan in front of it.</text>',
+         f'<text x="20" y="26" fill="{INK}" font-size="15" font-weight="700" style="{FS}">Positions of the HAF fans from above: one loop and not a row</text>',
+         f'<text x="20" y="45" fill="{MUT}" font-size="11.5" style="{FS}">Air goes along one side and back along the other side. Each fan gives air to the next fan.</text>',
          f'<rect x="{x0}" y="{y0}" width="{x1-x0}" height="{y1-y0}" rx="6" fill="{PANEL2}" stroke="{INK2}" stroke-width="2"/>',
          f'<line x1="{x0}" y1="{mid}" x2="{x1}" y2="{mid}" stroke="{LINE}" stroke-width="1" stroke-dasharray="5 5"/>']
     # canopy blocks
@@ -236,8 +236,8 @@ def _fig_haf_loop():
     p.append(f'<text x="{(x0+150)/2}" y="{y0-16}" text-anchor="middle" fill="{AMB}" font-size="10.5" font-weight="700" style="{FS}">3&ndash;4.5 m from the wall</text>')
     p.append(f'<line x1="150" y1="{y0-10}" x2="350" y2="{y0-10}" stroke="{AMB}" stroke-width="1.4" stroke-dasharray="4 3"/>')
     p.append(f'<text x="250" y="{y0-16}" text-anchor="middle" fill="{AMB}" font-size="10.5" font-weight="700" style="{FS}">12&ndash;15 m apart</text>')
-    p.append(f'<text x="{x0+8}" y="{y1+22}" fill="{MUT}" font-size="10.5" style="{FS}">Fans sit about a quarter of the room width in from the wall, above head height, and run 24/7.</text>')
-    p.append(f'<text x="{x0+8}" y="{y1+38}" fill="{MUT}" font-size="10.5" style="{FS}">Small rooms use the same shape at metres, not tens of metres: one loop, no fan blowing into another’s face.</text>')
+    p.append(f'<text x="{x0+8}" y="{y1+22}" fill="{MUT}" font-size="10.5" style="{FS}">Fans are approximately a quarter of the room width from the wall, above head height, and operate 24/7.</text>')
+    p.append(f'<text x="{x0+8}" y="{y1+38}" fill="{MUT}" font-size="10.5" style="{FS}">In a small room, use the same shape with a smaller distance between the fans: one loop, and do not point two fans at each other.</text>')
     p.append('</svg>')
     return "".join(p)
 
@@ -245,11 +245,11 @@ def _fig_zones():
     """Section view: the three vertical zones and which fan type serves each."""
     W, H = 760, 424
     fl, ce = 344, 62
-    p = [f'<svg viewBox="0 0 {W} {H}" width="{W}" height="{H}" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Section through a grow room showing the three airflow zones">',
+    p = [f'<svg viewBox="0 0 {W} {H}" width="{W}" height="{H}" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="A vertical section of a grow room that shows the three zones of airflow">',
          f'<rect width="{W}" height="{H}" fill="{PAPER}"/>',
          f'<defs><marker id="zna" markerWidth="7" markerHeight="7" refX="5.5" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 Z" fill="{G}"/></marker></defs>',
-         f'<text x="20" y="26" fill="{INK}" font-size="15" font-weight="700" style="{FS}">Three heights, three jobs: cut the room sideways and the gaps show up</text>',
-         f'<text x="20" y="45" fill="{MUT}" font-size="11.5" style="{FS}">Most rooms buy only the top zone, then wonder why rot starts at the bottom.</text>',
+         f'<text x="20" y="26" fill="{INK}" font-size="15" font-weight="700" style="{FS}">Three heights, three tasks: a vertical section of the room shows the gaps</text>',
+         f'<text x="20" y="45" fill="{MUT}" font-size="11.5" style="{FS}">Most rooms have fans for only the top zone. Thus rot starts at the bottom.</text>',
          f'<line x1="30" y1="{fl}" x2="600" y2="{fl}" stroke="{INK2}" stroke-width="2.5"/>',
          f'<line x1="30" y1="{ce}" x2="600" y2="{ce}" stroke="{INK2}" stroke-width="2.5"/>']
     # lights
@@ -278,16 +278,16 @@ def _fig_zones():
     for dy in (-22, -13, -5):
         p.append(f'<path d="M92,{fl+dy} H480" stroke="{G}" stroke-width="2.3" fill="none" marker-end="url(#zna)"/>')
     # zone labels
-    bands = [(96, 176, "ABOVE THE CANOPY", "Mix, and break heat layers", "HAF, HVLS, air sock", GL),
-             (180, 268, "THROUGH THE CANOPY", "The hard part. Rot risk.", "VAF, in-rack, defoliation", AMBL),
-             (272, fl, "BELOW THE CANOPY", "Wettest, stillest air", "Under-canopy fans", BLUL)]
+    bands = [(96, 176, "ABOVE THE CANOPY", "Mix air, remove heat layers", "HAF, HVLS, air sock", GL),
+             (180, 268, "THROUGH THE CANOPY", "The problem zone. Rot risk.", "VAF, in-rack, defoliation", AMBL),
+             (272, fl, "BELOW THE CANOPY", "Most water, still air", "Under-canopy fans", BLUL)]
     for (ty, by, lab, why, kit, col) in bands:
         p.append(f'<rect x="612" y="{ty}" width="132" height="{by-ty}" rx="7" fill="{col}" opacity=".55" stroke="{LINE}"/>')
         p.append(f'<text x="678" y="{ty+21}" text-anchor="middle" fill="{INK}" font-size="10.4" font-weight="700" style="{FS}">{lab}</text>')
         p.append(f'<text x="678" y="{ty+38}" text-anchor="middle" fill="{INK2}" font-size="9.4" style="{FS}">{why}</text>')
         p.append(f'<text x="678" y="{by-12}" text-anchor="middle" fill="{GD}" font-size="9.4" font-weight="700" style="{FS}">{kit}</text>')
-    p.append(f'<text x="30" y="{fl+28}" fill="{MUT}" font-size="10.5" style="{FS}">Walk the room at three heights: over the tops, hand pushed into the middle of a plant, and down at pot level.</text>')
-    p.append(f'<text x="30" y="{fl+44}" fill="{MUT}" font-size="10.5" style="{FS}">Whichever height fails the flutter test is the fan you are missing.</text>')
+    p.append(f'<text x="30" y="{fl+28}" fill="{MUT}" font-size="10.5" style="{FS}">Walk the room. Do the leaf movement test at three heights: above the tops, in the middle of a plant (put a hand in it), and at pot level.</text>')
+    p.append(f'<text x="30" y="{fl+44}" fill="{MUT}" font-size="10.5" style="{FS}">If the leaves do not move at one height, you do not have the fan for that height.</text>')
     p.append('</svg>')
     return "".join(p)
 
@@ -295,476 +295,543 @@ SECTIONS = []
 
 SECTIONS.append({"id": "start", "kicker": "01 · Read this first", "title": "Purpose and scope",
   "blocks": [
-    lead("Airflow is the plumbing that keeps gases moving at the leaf. This paper explains how it "
-         "works, how much you need, which fans deliver it, and where to place them so every part "
-         "of the canopy gets a gentle breeze — including the buried inner leaves where bud rot starts."),
-    p("This guide explains, from zero, what air movement does at the leaf, how much you want, "
-      "which fans actually make that air, how to rank them, and where to hang them."),
+    lead("Airflow keeps the gases at the leaf in movement. This paper shows the effect of airflow, "
+         "how much airflow is necessary, which fans supply it, and where to put the fans. Thus each "
+         "part of the canopy has a light airflow. The parts include the inner leaves in the middle "
+         "of the canopy, where bud rot starts."),
+    p("This paper starts with the basic facts. It shows the effect of air movement at the leaf and "
+      "how much airflow you want. It also shows which fans make this airflow, how to compare the "
+      "fans, and where to hang them."),
   ]})
 
-SECTIONS.append({"id": "terms", "kicker": "02 · The vocabulary", "title": "Definitions",
+SECTIONS.append({"id": "terms", "kicker": "02 · The terms", "title": "Definitions",
   "blocks": [
-    defterm("Boundary layer", "The thin film of still air that clings to every leaf surface. Gases "
-            "have to diffuse across it slowly, so it is the bottleneck airflow attacks."),
-    defterm("Air velocity", "How fast air is moving at the canopy, in metres per second (m/s). This "
-            "is what matters, not how big your fan is."),
-    defterm("Laminar vs turbulent", "Laminar = smooth, layered airflow (like a calm jet). Turbulent "
-            "= messy, mixing airflow. For leaves, messy is better."),
-    defterm("Transpiration", "Think of a damp towel drying in sunlight: the drier and warmer the air, "
-            "the faster the water leaves, and moving air speeds it up by carrying humid air away. "
-            "A plant works the same way. Transpiration is the process of water absorbed at the roots "
-            "being released as vapour through pores on the leaves. Airflow keeps it moving by clearing "
-            "the humid film that would otherwise slow it down."),
-    defterm("Air exchange", "Swapping room air with fresh air (intake/exhaust). Different from "
-            "recirculation, which only stirs the air already in the room."),
-    defterm("HAF / VAF", "The two main hanging fan types. <strong>HAF</strong> = horizontal airflow: "
-            "hangs above the crop and blows sideways to drive a room-wide loop. <strong>VAF</strong> "
-            "= vertical airflow: hangs above the crop and blows straight down through it."),
-    defterm("CFM and FPM", "Two different things people confuse. <strong>CFM</strong> (cubic feet per "
-            "minute) is the <em>volume</em> a fan shifts, which is what it is sold on. "
-            "<strong>FPM</strong> (feet per minute) is the <em>speed</em> air arrives at a leaf, which "
-            "is what the plant feels. ~1 m/s (&asymp;&nbsp;200 FPM)."),
-    defterm("Throw and entrainment", "<strong>Throw</strong> is how far a fan's jet stays useful "
-            "before it slows to room speed. <strong>Entrainment</strong> is harder to see: it is the "
-            "jet dragging still room air along with it, the way a speedboat's wake pulls water into "
-            "motion well to the sides of the hull. That dragging effect is why a modest hanging fan can "
-            "stir far more air than it actually pushes through its own blades. It is the whole reason "
-            "HAF loops work."),
+    defterm("Boundary layer", "The thin layer of still air on the surface of each leaf. Gases must "
+            "go across this layer by diffusion, and diffusion is slow. Thus the layer decreases the "
+            "rate of gas exchange. Airflow makes the layer thinner."),
+    defterm("Air velocity", "The speed of the air at the canopy, in meters for each second (m/s). "
+            "The air velocity is the value that is important for the plant. The size of the fan is "
+            "not important."),
+    defterm("Laminar and turbulent airflow", "Laminar airflow is smooth airflow that moves in layers (for "
+            "example, a stable jet of air). Turbulent airflow is airflow in which the air changes "
+            "direction frequently and mixes. Turbulent airflow is better for leaves."),
+    defterm("Transpiration", "In transpiration, the plant absorbs water at the roots and releases "
+            "the water as vapor through pores on the leaves. When the air is drier and the air "
+            "temperature is higher, the water leaves the plant more quickly. Moving air makes "
+            "transpiration faster because it removes the moist air near the leaf. If a layer of "
+            "moist air stays on the leaf, the rate of transpiration decreases. Airflow removes this "
+            "layer."),
+    defterm("Air exchange", "The replacement of the room air with external air (intake and "
+            "exhaust). Air exchange is different from recirculation. Recirculation only mixes the "
+            "air that is in the room."),
+    defterm("HAF / VAF", "The two primary types of fan that hang. A <strong>HAF</strong> "
+            "(horizontal airflow) fan hangs above the crop and blows air to the side. Thus it makes "
+            "a loop of air around the room. A <strong>VAF</strong> (vertical airflow) fan hangs "
+            "above the crop and blows air straight down through the crop."),
+    defterm("CFM and FPM", "CFM and FPM are two different values. Some persons think that they are "
+            "the same. <strong>CFM</strong> (cubic feet for each minute) is the <em>volume</em> of "
+            "air that a fan moves, and the supplier of the fan gives this value. "
+            "<strong>FPM</strong> (feet for each minute) is the <em>speed</em> of the air at a "
+            "leaf, and this speed is important for the plant. 1 m/s is approximately 200 FPM."),
+    defterm("Throw and entrainment", "<strong>Throw</strong> is the distance from the fan to the "
+            "point where the jet has the same speed as the air in the room. "
+            "<strong>Entrainment</strong> is not easy to see. In entrainment, the jet pulls the "
+            "still air of the room along with it. Thus a small fan can move much more air than its "
+            "blades push. HAF loops operate because of entrainment."),
   ]})
 
-SECTIONS.append({"id": "boundary", "kicker": "03 · The core idea", "title": "Leaf boundary layers",
+SECTIONS.append({"id": "boundary", "kicker": "03 · The primary effect", "title": "Leaf boundary layers",
   "blocks": [
-    p("Air right against a leaf barely moves. Think of the still layer of warmth you feel "
-      "radiating from your arm in a cool room: the air right against your skin barely stirs, no "
-      "matter how much the rest of the room is moving. Clear it with a fan and you feel the cold "
-      "immediately. A leaf works the same way. It sits inside a thin film of still, humid air that "
-      "barely exchanges with the room around it. That film is called the "
-      "<strong>boundary layer</strong>. CO2 going in, and water vapour and heat coming out, all have "
-      "to crawl across that film by slow diffusion. The thicker it is, the more it slows the "
-      "leaf" + _c("schuepp1993-bl") + "."),
+    p("The air on the surface of a leaf almost does not move. Thus a thin layer of still air with "
+      "high humidity stays on the leaf. The air in this layer almost does not mix with the air in "
+      "the room. This layer is the <strong>boundary layer</strong>.</p><p>CO2 must go into the "
+      "leaf, and water vapor and heat must go out of the leaf. They must go across the boundary "
+      "layer by diffusion, which is slow. When the boundary layer is thicker, they move more slowly" +
+      _c("schuepp1993-bl") + "."),
     figure(_fig_boundary(), 1,
-      "Still air insulates the leaf and slows every exchange. Moving air thins the boundary layer so "
-      "CO2 gets in faster and water and heat get out faster" + _c("dupont2025-wind") + "."),
-    p("Moving air thins that film. Even small breezes make a real difference: gentle wind "
-      "(under ~0.2 m/s added) has been shown to lift daytime photosynthesis by 10–20%" + _c("dupont2025-wind") +
-      ". This is the reason fans belong in a grow room."),
+      "Still air decreases the rate of movement of gases and heat into and out of the leaf. Moving "
+      "air makes the boundary layer thinner. Thus CO2 moves into the leaf more quickly, and water "
+      "and heat move out of the leaf more quickly" + _c("dupont2025-wind") + "."),
+    p("Moving air makes the boundary layer thinner. A small airflow has an important effect. Tests "
+      "show that an added air velocity of less than approximately 0.2 m/s increases the "
+      "photosynthesis in the day by 10 to 20%" + _c("dupont2025-wind") + ". Thus fans are necessary "
+      "in a grow room."),
   ]})
 
 SECTIONS.append({"id": "how-much", "kicker": "04 · The target", "title": "Airflow targets",
   "blocks": [
-    p("More airflow helps, but with sharply diminishing returns. Photosynthesis climbs "
-      "steeply as you go from dead-still up to a gentle breeze, then flattens out. Most of the "
-      "benefit is won by the time leaves are gently fluttering" + _c("kitaya2004-airvel") + "."),
-    figure(L.line("Airflow vs leaf gas exchange: steep early, flat later",
+    p("More airflow helps, but the effect becomes much smaller each time that the airflow "
+      "increases. When the airflow increases from still air to a light airflow, photosynthesis "
+      "increases quickly. After this, the curve is flat. Most of the effect occurs when the leaves "
+      "move a small distance" + _c("kitaya2004-airvel") + "."),
+    figure(L.line("Leaf gas exchange when airflow increases: fast, then flat",
             [(0, 12), (1, 48), (2, 74), (3, 86), (4, 91), (5, 93)],
-            ["still", "0.2", "0.4", "0.6", "0.8", "1.0+"],
+            ["still air", "0.2", "0.4", "0.6", "0.8", "1.0+"],
             ylab="relative gas exchange", ymin=0, ymax=100,
-            note="Air velocity at the leaf (m/s). The big wins come early. Past a gentle breeze you gain little."), 2,
-      "Gas exchange rises fast then plateaus" + _c("kitaya2004-airvel") + ". The practical target is a "
-      "<strong>gentle, constant breeze</strong>. Leaves should flutter slightly, not thrash."),
+            note="Air velocity at the leaf (m/s). The effect is large at low velocity and small after a light airflow."), 2,
+      "Gas exchange increases quickly and then becomes flat" + _c("kitaya2004-airvel") +
+      ". The target is a <strong>light, constant airflow</strong>. At this target, the leaves move "
+      "a small distance. They do not shake."),
     figure(L.zones("Air-velocity target at the canopy", 0, 2.0,
-            [(0, 0.2, AMBL, "too still: rot risk"), (0.3, 1.0, GL, "sweet spot"),
-             (1.3, 2.0, AMBL, "too windy: wind-burn")], unit=" m/s",
-            note="Aim for roughly 0.3–1.0 m/s moving through the canopy. A flutter, not a gale."), 3,
-      "Below ~0.2 m/s, humid pockets and disease creep in. Above ~1.2 m/s you risk wind-stress and "
-      "drying the plants out. Aim for the middle." + _c("tjosvold2018-air")),
+            [(0, 0.2, AMBL, "too slow: rot risk"), (0.3, 1.0, GL, "target"),
+             (1.3, 2.0, AMBL, "too fast: wind damage")], unit=" m/s",
+            note="Target: approximately 0.3 to 1.0 m/s in the canopy. The leaves move a small distance."), 3,
+      "When the air velocity is less than approximately 0.2 m/s, disease can start in areas with "
+      "still air and high humidity. When the velocity is more than approximately 1.2 m/s, there is "
+      "a risk of wind damage, and the plants can become dry. Select a velocity in the middle of "
+      "this range." + _c("tjosvold2018-air")),
   ]})
 
-SECTIONS.append({"id": "match-light", "kicker": "05 · The link", "title": "Matching airflow to light intensity",
+SECTIONS.append({"id": "match-light", "kicker": "05 · The connection", "title": "Airflow and light intensity",
   "blocks": [
-    p("The brighter the room, the more the leaf needs air. High light drives high photosynthesis and "
-      "high transpiration, and both depend on the boundary layer staying thin. Cannabis yield keeps "
-      "rising with light to very high levels" + _c("rm2021-light") + ", but only if airflow and "
-      "climate scale with it. A bright room with weak airflow wastes the light."),
-    callout("key", "Airflow moves with the rest of the room",
-      p("Light, CO2, temperature, humidity and airflow work together (see the "
-        "<a href='grow-room-systems.html'>systems guide</a>). Turning up the light without turning up "
-        "the air leaves hot leaves sitting in their own humid film" + _c("chandra2008-photo") + ".")),
+    p("When the light is brighter, the leaf must have more air. High light intensity causes a high "
+      "rate of photosynthesis and a high rate of transpiration. These two rates are high only if "
+      "the boundary layer is thin. The yield of cannabis continues to increase when the light "
+      "increases, to very high values" + _c("rm2021-light") + ". But this occurs only if the "
+      "airflow and the climate control also increase. A bright room that has weak airflow cannot "
+      "use all the light."),
+    callout("key", "Airflow must agree with the other conditions in the room",
+      p("Light, CO2, temperature, humidity and airflow have an effect on each other (refer to the "
+        "<a href='grow-room-systems.html'>systems guide</a>). If you increase the light and do not "
+        "increase the airflow, the leaves become hot and stay in the boundary layer of moist air" +
+        _c("chandra2008-photo") + ".")),
   ]})
 
-SECTIONS.append({"id": "transpiration", "kicker": "06 · The trade-off", "title": "Airflow, transpiration and nutrient demand",
+SECTIONS.append({"id": "transpiration", "kicker": "06 · The effects", "title": "Airflow, transpiration and nutrient uptake",
   "blocks": [
-    p("Thinning the boundary layer feeds CO2 in and pulls water out faster. More "
-      "airflow means more transpiration, which means the plant needs more water and nutrient at the "
-      "roots. There are two beginner gotchas here:"),
+    p("When the boundary layer is thinner, CO2 moves into the leaf more quickly and water moves out "
+      "of the leaf more quickly. More airflow causes more transpiration. Thus the plant must have "
+      "more water and more nutrient at the roots. Two effects are important:"),
     ul([
-      "<strong>Calcium tip-burn.</strong> Calcium rides into the leaf on the transpiration stream, "
-      "so uptake tracks water flow" + _c("gilliham2011-ca") + ". Crank the airflow and under-feed, "
-      "and you get calcium-deficiency tip-burn even with plenty in the tank. Fix: feed to "
-      "match the airflow, not the other way round.",
-      "<strong>Sturdier plants (a good thing).</strong> Air movement is a mechanical signal. Plants "
-      "that feel a breeze grow shorter, thicker, stronger stems, an effect called "
-      "thigmomorphogenesis" + _c("chehab2009-thigmo") + ". A well-aired plant holds heavy colas without "
-      "staking.",
+      "<strong>Calcium tipburn:</strong> Calcium moves into the leaf in the transpiration stream. "
+      "Thus the uptake of calcium changes with the flow of water" + _c("gilliham2011-ca") +
+      ". If the airflow is very high and the feed is too low, calcium deficiency causes tipburn. "
+      "Tipburn occurs also when the tank contains a large quantity of calcium. To correct this, "
+      "make the feed agree with the airflow. Do not make the airflow agree with the feed.",
+      "<strong>Stronger plants (a good effect).</strong> Air movement is a mechanical signal. When "
+      "a plant has a light airflow, it makes stems that are shorter, thicker and stronger. This "
+      "effect is thigmomorphogenesis" + _c("chehab2009-thigmo") + ". A plant that has good airflow "
+      "can hold heavy colas without stakes.",
     ]),
-    callout("note", "The other half of the calcium story",
-      p("Tip-burn cuts both ways, and the direction depends on <em>where</em> the still air is. Too "
-        "much airflow with too little feed starves the leaf of calcium. But so does a dead-still "
-        "pocket <em>buried inside</em> a dense canopy, because the leaves in there cannot transpire "
-        "at all, so no calcium arrives. In lettuce, this is the classic result: blowing air directly "
-        "into the inner leaves raises their calcium and largely stops tip-burn" + _c("goto1992-tipburn") +
-        ". That is the single best argument for the top-down fans in section 10.")),
+    callout("note", "A second cause of tipburn",
+      p("Tipburn has two opposite causes. The first cause is airflow that is too high with feed "
+        "that is too low. The result is a calcium deficiency in the leaf. The second cause is a "
+        "dead zone <em>in</em> a dense canopy, where the air does not move. The leaves in the dead "
+        "zone cannot transpire. As a result, no calcium moves to these leaves.</p><p>In lettuce, "
+        "the result is this: when you blow air directly into the inner leaves, the calcium in the "
+        "leaves increases. The tipburn almost stops" + _c("goto1992-tipburn") +
+        ". The top-down fans in section 10 are important because of this result.")),
   ]})
 
-SECTIONS.append({"id": "build", "kicker": "07 · The layout", "title": "Airflow system functions and equipment",
+SECTIONS.append({"id": "build", "kicker": "07 · The system", "title": "Airflow system functions and equipment",
   "blocks": [
-    p("&ldquo;Add a fan&rdquo; hides three separate jobs. Buying the wrong one for the job you "
-      "actually have is the most common airflow mistake in a first room:"),
+    p("The instruction &ldquo;Add a fan&rdquo; includes three different tasks. In a first room, the "
+      "most frequent airflow problem is a fan that is incorrect for the task that you have:"),
     grid([
-      card("Recirculation (mixing)", p("Move the air that is already in the room so every leaf gets a "
-        "gentle breeze and no humid dead-zones form. This is the boundary-layer job" +
-        _c("kitaya2010-circ") + ", and it is what most of this paper is about."), tag="Inside the room"),
-      card("Exchange (in / out)", p("Swap stale, humid, CO2-depleted room air for fresh air, or push "
-        "it through a carbon filter. Inline duct fans and wall exhausts. This removes water; it does "
-        "almost nothing for the leaf."), tag="Room ↔ outside"),
-      card("Conditioning (heat / cool / dry)", p("An air conditioner, dehumidifier or air-handling "
-        "unit changes the air's temperature and moisture. It has to <em>deliver</em> that treated air "
-        "somewhere, which is a distribution problem of its own."), tag="Changing the air"),
+      card("Recirculation (to mix the air)", p("Move the air that is in the room. Thus each leaf has a "
+        "light airflow and no dead zones occur. A dead zone is an area where the air does not move "
+        "and the humidity is high. This task is for the boundary layer" + _c("kitaya2010-circ") +
+        ". Most of this paper is about this task."), tag="In the room"),
+      card("Air exchange (in and out)", p("Replace the room air with external air. The room air has high "
+        "humidity and a low CO2 concentration. You can also push the room air through a carbon "
+        "filter. Inline duct fans and wall exhaust fans do this task. Air exchange removes water "
+        "from the room, but it has almost no effect on the leaf."), tag="Room and external air"),
+      card("Conditioning (heating, cooling, drying)", p("An air conditioner, a dehumidifier or an air "
+        "handling unit (AHU) changes the temperature and the moisture of the air. The unit must "
+        "supply this conditioned air to the correct positions in the room. This supply of the air "
+        "to all positions is a different problem."), tag="Change of the air"),
     ], cols=3),
-    callout("warn", "Mind the dead zones",
-      p("Air takes the easy path and skips corners, the lower canopy, and the inside of dense "
-        "plants. Those still, humid pockets are where bud rot starts. Place fans to push air "
-        "<em>through</em> the canopy, not just over the top of it, and defoliate enough to let air in.")),
+    callout("warn", "Prevent dead zones",
+      p("Put the fans where they push air <em>through</em> the canopy, not only along its top. "
+        "Defoliate the plants until air can go into the canopy. Air goes where the resistance is "
+        "low. It does not go into corners, the bottom of the canopy or the inner part of a dense "
+        "canopy. Bud rot starts in these dead zones, where the air does not move and the humidity "
+        "is high.")),
   ]})
 
-SECTIONS.append({"id": "messy", "kicker": "08 · A subtlety", "title": "Turbulent airflow and canopy mixing",
+SECTIONS.append({"id": "messy", "kicker": "08 · The type of airflow", "title": "Turbulent airflow and canopy mixing",
   "blocks": [
-    p("Aiming one big fan straight down a row is tempting. Don't. A smooth, laminar jet builds its "
-      "own thick boundary layer on whatever it hits, and leaves everything off-axis still. "
-      "<strong>Turbulent, mixing air</strong>, from many fans at varied angles with oscillation, "
-      "constantly disturbs the film on every leaf from every direction, which is exactly what thins "
-      "it best" + _c("schuepp1993-bl") + _c("dupont2025-wind") + "."),
-    callout("tip", "The flutter test",
-      p("Walk the room. Every leaf, top to bottom and inside the plants, should be gently moving. "
-        "Still leaves anywhere = a pocket you need to reach. A leaf that is flapping hard = back that "
-        "fan off.")),
+    p("Do not point one large fan straight along a row. A jet of laminar airflow makes a thick "
+      "boundary layer on each surface that it touches. The air that is not on the axis of the jet "
+      "does not move. <strong>Turbulent airflow</strong> comes from many fans that point in "
+      "different directions, with oscillation. It changes the boundary layer on each leaf from all "
+      "directions at all times. Turbulent airflow makes the boundary layer thinner more than other "
+      "types of airflow" + _c("schuepp1993-bl") + _c("dupont2025-wind") + "."),
+    callout("tip", "The leaf movement test",
+      p("Walk through the room. Examine each leaf, from the top to the bottom and in the plants. "
+        "Each leaf must move a small distance. A leaf that does not move is in a dead zone. Supply "
+        "air to this area. If a leaf shakes strongly, decrease the speed of that fan.")),
   ]})
 
-SECTIONS.append({"id": "evidence", "kicker": "09 · Field evidence", "title": "Evidence from controlled room trials",
+SECTIONS.append({"id": "evidence", "kicker": "09 · Test data", "title": "Data from tests in controlled rooms",
   "blocks": [
-    p("Everything above is leaf physiology. Does it actually move yield in a real flower room? A "
-      "controlled trial by Pipp Horticulture with Dr. Allison Justice and the Cannabis Research "
-      "Coalition tested exactly that: three identical flower rooms with VPD, temperature and humidity "
-      "held constant, changing only the airflow" + _c("pipp2026-airflow") + "."),
-    p("The rooms ran at different delivered air speeds. The trial reports these in feet per minute "
-      "(FPM), a common unit in commercial horticulture; roughly 0.5, 1.0 and 2.0 m/s (about 100, "
-      "200 and 400 FPM) were the levels compared. One clean result fell out:"),
-    figure(L.zones("What the trial found, by delivered airflow", 0, 420,
-            [(0, 200, AMBL, "muted: little measurable change"),
-             (200, 420, GL, "clear, consistent gains")], unit=" FPM",
-            note="Below ~200 FPM (≈1.0 m/s) airflow barely moved the crop. Above it, differences were clear and repeatable."), 4,
-      "The response was a <strong>threshold, not a gentle slope</strong>: below ~1.0 m/s (~200 FPM) little changed; "
-      "above it, yield, plant shape and uniformity improved together" + _c("pipp2026-airflow") + "."),
-    p("That looks like it fights the leaf-level plateau in Figure 2, but it does not. Figure 2 is the "
-      "speed at a single <em>leaf</em>; FPM here is what the whole room <em>delivers</em>. Air slows as it "
-      "pushes into the canopy, so a room has to move well over 1 m/s at the fans before the buried lower "
-      "and interior leaves feel the gentle breeze Figure 3 asks for. Roughly 1.0 m/s (~200 FPM) "
-      "delivered is about what it takes to land <em>every</em> leaf in the sweet spot, not just the ones on the outside."),
-    p("Above that threshold, the higher-airflow rooms showed three things:"),
+    p("The sections above are about the physiology of the leaf. This section shows if airflow "
+      "changes the yield in a flower room. Pipp Horticulture, with Dr. Allison Justice and the "
+      "Cannabis Research Coalition, did a controlled test in three flower rooms that were the same. "
+      "The VPD, the temperature and the humidity were constant in all the rooms. Only the airflow "
+      "was different" + _c("pipp2026-airflow") + "."),
+    p("The three rooms had different supplied air speeds. The test gives these values in feet for "
+      "each minute (FPM), a frequent unit in commercial horticulture. The values that the test "
+      "compared were approximately 0.5, 1.0 and 2.0 m/s (approximately 100, 200 and 400 FPM). The "
+      "test gave one clear result:"),
+    figure(L.zones("Test result for each supplied air speed", 0, 420,
+            [(0, 200, AMBL, "very small change"),
+             (200, 420, GL, "clear, better results")], unit=" FPM",
+            note="Less than approximately 200 FPM (1.0 m/s): almost no change in the crop. More than this: clear differences each time."), 4,
+      "The effect was a <strong>threshold and not a continuous change</strong>. When the speed was "
+      "less than approximately 1.0 m/s (approximately 200 FPM), the crop almost did not change. "
+      "When the speed was more than this, the yield, the plant shape and the uniformity became "
+      "better together" + _c("pipp2026-airflow") + "."),
+    p("It is possible to think that this result does not agree with the flat curve at the leaf in "
+      "Figure 2. But the two agree. Figure 2 gives the air velocity at one <em>leaf</em>. The FPM "
+      "here is the air speed that the room <em>supplies</em> in total.</p><p>The speed of the air "
+      "decreases when the air goes into the canopy. Thus the room must supply an air speed of much "
+      "more than 1 m/s at the fans. This air speed gives the bottom leaves and the inner leaves the "
+      "light airflow in Figure 3. A supplied air speed of approximately 1.0 m/s (approximately 200 "
+      "FPM) is approximately the value that gives <em>each</em> leaf an air velocity in the target "
+      "range. It gives this velocity not only to the leaves on the external side of the canopy."),
+    p("The rooms with an airflow more than this threshold showed three effects:"),
     ul([
-      "<strong>More sellable flower.</strong> Stems carried less biomass and more of the plant's energy "
-      "went into bud. Trim ran about 42% in the still-air plants and was significantly lower with good "
-      "airflow, so less of the harvest ended up as larf" + _c("pipp2026-airflow") + ".",
-      "<strong>Less stress.</strong> Still-air plants had redder stems and more anthocyanin, a visible "
-      "stress marker; the well-aired plants looked more uniform and less stressed.",
-      "<strong>Taller, not weaker.</strong> Higher-airflow plants finished roughly 15 cm (6 in) taller than "
-      "the still-air controls, with most vertical growth done by the end of week three, while still "
-      "putting <em>less</em> into stem. Here the extra height is relief from still-air stress, not the "
-      "mechanical dwarfing you would get under a harder, direct wind (see section 06).",
+      "<strong>More flower and less larf.</strong> The stems had less biomass, and the plant used "
+      "more of its energy for the bud. The trim was approximately 42% in the plants with still air, "
+      "and it was much lower with good airflow. Thus less of the harvest became larf" +
+      _c("pipp2026-airflow") + ".",
+      "<strong>Less stress.</strong> The plants with still air had stems with more red color and "
+      "more anthocyanin. Anthocyanin is a sign of stress that you can see. The plants with good "
+      "airflow had a higher uniformity and less stress.",
+      "<strong>More height, not weaker plants.</strong> At the end, plants with higher airflow had "
+      "a height approximately 15 cm (6 in) more than the control plants with still air. Most of the "
+      "vertical growth occurred before the end of week three, and the plants put <em>less</em> into "
+      "the stem. This difference of height is an effect of less stress from still air. A stronger "
+      "airflow that goes straight at the plants has a mechanical effect: it makes the plants "
+      "shorter (refer to section 06).",
     ]),
-    callout("key", "Uniformity is the real lesson",
-      p("Even in a tightly engineered room, the crew saw a positional bias: the first 30–60 cm (1–2 ft) of each "
-        "row behaved differently from the rest. Their takeaway is the one to keep, "
-        "<strong>&ldquo;if airflow isn&rsquo;t uniform, neither is your crop.&rdquo;</strong> That is the "
-        "dead-zone problem from section 07, now measured. Making sure no leaf is left in still air beats "
-        "chasing a high average fan speed.")),
-    callout("note", "How solid is this?",
-      p("Treat it as strong early field evidence, not settled science: the results so far are one "
-        "replicate, with a second run underway to firm up the statistics" + _c("pipp2026-airflow") +
-        ". The direction lines up cleanly with the leaf physiology in the rest of this paper.")),
+    callout("key", "The primary result: uniformity",
+      p("The personnel who did the test controlled the room very accurately, but they found a "
+        "difference of position. The first 30 to 60 cm (1 to 2 ft) of each row was different from "
+        "the remaining part of the row. Their important result is this: <strong>&ldquo;if airflow "
+        "is not uniform, neither is your crop.&rdquo;</strong> The dead zone problem from section "
+        "07 is the same problem, and the test measured it. It is more important to make sure that "
+        "no leaf stays in still air than to get a high fan speed on average.")),
+    callout("note", "The strength of this result",
+      p("Think of this result as strong first data from a flower room. At this time, the result is "
+        "not sure. The data are from one replicate. A second test is in progress, to make the "
+        "statistics stronger" + _c("pipp2026-airflow") + ". The direction of the result agrees with "
+        "the physiology of the leaf in the other sections of this paper.")),
   ]})
 
-SECTIONS.append({"id": "fan-types", "kicker": "10 · The hardware", "title": "Fan types",
+SECTIONS.append({"id": "fan-types", "kicker": "10 · The equipment", "title": "Fan types",
   "blocks": [
-    lead("Fans are not interchangeable. Each type makes a different <em>shape</em> of air, and the "
-         "shape decides which leaves get served. Pick by the shape you need, not by the price tag "
-         "or the CFM on the box."),
+    lead("Fans are not the same. Each type makes a different <em>shape</em> of airflow, and the "
+         "shape controls which leaves get air. Select a fan for the shape of airflow that you want. "
+         "Do not select a fan for its cost or for its CFM value."),
     _fan_photos(),
     figure(_fig_fan_gallery(), 5,
-      "The eight types you will actually meet, drawn side-on with the air each one makes. The first six "
-      "are recirculation kit; the air sock is a delivery method; the inline duct fan is exchange, not "
-      "circulation at all."),
+      "The eight types of fan in a grow room, shown from the side with the air that each type "
+      "makes. The first six are equipment for recirculation. The air sock is a method to supply "
+      "air. The inline duct fan is for air exchange and not for circulation."),
     grid([
       card("HAF, horizontal airflow fan",
-        p("A hanging basket fan, typically a 300&ndash;500&nbsp;mm (12&ndash;20&nbsp;in) blade on a "
-          "small 1/10&ndash;1/15&nbsp;hp motor, hung above head height and aimed sideways down the "
-          "room" + _c("bartok-haf") + ". Several of them together drive one slow <strong>racetrack "
-          "loop</strong>: air runs down one side of the room and back the other. Its jet drags "
-          "surrounding still air along with it (entrainment), so a modest fan stirs a large volume."
-          "<br><br><strong>Where:</strong> above the canopy, a quarter of the room width in from the "
-          "wall. <strong>The catch:</strong> its air runs <em>over</em> the top of the crop. In a dense "
-          "canopy it never reaches the middle."), tag="Recirculation · the backbone"),
+        p("A HAF fan is a basket fan that hangs above head height and points to the side along the "
+          "room. Typically, the blade is 300 to 500&nbsp;mm (12 to 20&nbsp;in) and the motor is "
+          "small (1/10 to 1/15&nbsp;hp)" + _c("bartok-haf") + ". Some HAF fans together make one "
+          "slow <strong>racetrack loop</strong>: the air goes along one side of the room and back "
+          "along the other side. The jet of each fan pulls the still air around it along with it "
+          "(entrainment). Thus a small fan moves a large volume of "
+          "air.</p><p><strong>Where:</strong> above the canopy, at a quarter of the room width from "
+          "the wall. <strong>The problem:</strong> the air of the fan goes <em>along</em> the top "
+          "of the crop. In a dense canopy, it does not go to the middle."), tag="Recirculation · primary fan"),
       card("VAF, vertical airflow fan",
-        p("Hangs above the canopy and blows <strong>straight down through it</strong>, usually with a "
-          "flared diffuser on top so it draws air from a wide area and delivers a broad column rather "
-          "than a narrow jet. This is the one type that reliably reaches leaves buried inside a plant."
-          "<br><br><strong>Where:</strong> over the canopy on a grid, spacing set so the down-columns "
-          "overlap. <strong>The catch:</strong> more expensive per unit, and it casts shade, so mind "
-          "where you hang it relative to the lights."), tag="Recirculation · canopy penetration"),
-      card("Oscillating wall or pole fan",
-        p("The classic grow-room fan: a head on a bracket that sweeps an arc. Cheap, everywhere, and "
-          "genuinely good in a small room, because the sweep gives you the varied, turbulent air "
-          "section 08 asks for."
-          "<br><br><strong>Where:</strong> wall or pole mounted, aimed to <em>mix</em> the room, never "
-          "pointed straight at plants. <strong>The catch:</strong> it time-shares. Each leaf only gets "
-          "air for part of each sweep, so at scale you need a lot of them to hold a constant breeze."),
-        tag="Recirculation · small-room default"),
+        p("A VAF fan hangs above the canopy and blows air <strong>straight down through the "
+          "canopy</strong>. Usually, it has a wide diffuser on top. Thus it gets air from a large "
+          "area and supplies a wide flow of air, and not a jet with a small width. The VAF fan is "
+          "the only type of fan that always supplies air to the leaves in the inner part of a "
+          "plant.</p><p><strong>Where:</strong> above the canopy in a grid. Put the fans at a "
+          "distance that gives an overlap of their flows of air. <strong>The problem:</strong> each "
+          "fan has a higher cost and makes shade. Put the fan in a position where its shade is not "
+          "on the crop."), tag="Recirculation · into the canopy"),
+      card("Oscillating fan (wall or pole)",
+        p("The oscillating fan is the usual fan for a grow room: a head on a bracket that "
+          "oscillates. It has a low cost and it is easy to find. It is good in a small room, "
+          "because the head oscillates and thus gives the turbulent airflow that section 08 "
+          "recommends.</p><p><strong>Where:</strong> on a wall or a pole, pointed to <em>mix</em> "
+          "the air in the room. Do not point it straight at the plants. <strong>The "
+          "problem:</strong> its air goes to one part of the room at a time. Each leaf gets air for "
+          "only a part of each movement of the head. Thus a large number of fans is necessary to "
+          "keep a constant airflow in a large room."),
+        tag="Recirculation · usual fan for a small room"),
       card("Clip fan",
-        p("A miniature oscillating fan on a clamp, gripping a tent pole or frame. Moves roughly one "
-          "plant's worth of air."
-          "<br><br><strong>Where:</strong> tents and single-plant setups only. <strong>The catch:</strong> "
-          "nothing about it scales. If you are running more than about 2&nbsp;m&sup2; (22&nbsp;ft&sup2;) of canopy, clip "
-          "fans are a false economy: you end up with six of them doing the job of one proper hanging "
-          "fan, at higher total wattage and worse uniformity."), tag="Recirculation · tent scale"),
+        p("A clip fan is a very small oscillating fan on a clamp. The clamp attaches to the pole or "
+          "the frame of a tent. The fan moves approximately the quantity of air for one "
+          "plant.</p><p><strong>Where:</strong> in tents and in setups for one plant only. "
+          "<strong>The problem:</strong> a clip fan does not operate correctly in a larger canopy. "
+          "When the canopy is more than approximately 2&nbsp;m&sup2; (22&nbsp;ft&sup2;), clip fans "
+          "are not a good selection. You get six clip fans that do the task of one hung fan, with a "
+          "higher total power and a worse uniformity."), tag="Recirculation · size of a tent"),
       card("Drum / pedestal floor fan",
-        p("A large, powerful head on a stand. Very high thrust, a narrow jet, and a lot of noise. "
-          "This is a blunt instrument."
-          "<br><br><strong>Where:</strong> temporarily, to break a specific dead corner or dry a room "
-          "down fast after a spill. <strong>The catch:</strong> it is the single most common cause of "
-          "wind-burn. Plants directly in front get a gale and everything off-axis gets nothing. Do not "
-          "build a room's airflow on these."), tag="Recirculation · spot-fix only"),
+        p("A drum or pedestal floor fan has a large head with high power on a stand. The jet has a "
+          "small width, the speed of the air is very high, and the fan makes much "
+          "noise.</p><p><strong>Where:</strong> for a short time only, to remove a dead zone in a "
+          "corner or to dry a room quickly after water spills. <strong>The problem:</strong> it is "
+          "the most frequent cause of wind damage. The plants on the axis of the fan get a very "
+          "strong airflow, and the plants that are not on the axis get no airflow. Do not use these "
+          "fans as the primary source of the airflow in a room."), tag="Recirculation · for one point only"),
       card("Under-canopy fan",
-        p("A low, flat, wide fan that sits at pot level and blows across the floor and up into the "
-          "bottom of the plants. The zone it serves is the wettest and stillest in the room: cool air "
-          "sinks, pots and floors evaporate into it, and no overhead fan reaches it."
-          "<br><br><strong>Where:</strong> at floor or bench level, blowing along the rows. "
-          "<strong>The catch:</strong> almost none, which is why it is such good value. Just keep it "
-          "out of the way of irrigation lines and keep the intake clear of leaf litter."),
+        p("An under-canopy fan is a flat, wide fan at the level of the pots. It blows air across "
+          "the floor and up into the bottom of the plants. The zone below the canopy has the most "
+          "water and the minimum air movement in the room. Cool air moves down, the pots and the "
+          "floors release water vapor into this zone, and no fan above the canopy supplies air to "
+          "it.</p><p><strong>Where:</strong> at the level of the floor or the bench. Point the fan "
+          "along the rows. <strong>The problem:</strong> there is almost none, and thus this fan "
+          "gives a very good result for its cost. Keep the fan away from irrigation pipes. Make "
+          "sure that the intake is clear of leaves on the floor."),
         tag="Recirculation · the wet zone"),
-      card("Air sock / perforated poly tube",
-        p("A long fabric or polythene tube, fed by a fan or an air handler, that leaks air through "
-          "hundreds of small holes along its whole length. Because the holes are small and numerous, "
-          "delivery is remarkably even and there is no single blast anywhere. Research design targets "
-          "sit around 6&ndash;10&nbsp;mm holes at 30&ndash;70&nbsp;mm spacing, with the fan holding "
-          "roughly 30&ndash;40&nbsp;Pa of static pressure so the tube stays inflated and round" +
-          _c("perfduct2025") + "."
-          "<br><br><strong>Where:</strong> running the length of a row, over or under the bench. It is "
-          "the standard way to deliver <em>conditioned</em> air from an AC or dehumidifier without "
-          "creating a draught in one corner and a dead zone in the other. <strong>The catch:</strong> "
-          "you have to design it (tube diameter, hole size, hole spacing) and it needs a fan that can "
-          "actually make the pressure."), tag="Delivery · conditioned air"),
+      card("Air sock (tube with holes)",
+        p("An air sock is a long tube of fabric or plastic. A fan or an air handler supplies air to "
+          "the tube. The air flows out through many small holes along the full length of the tube. "
+          "Because the holes are small and many, the air supply along the tube is very equal, with "
+          "no strong jet at one point. An investigation of this system gives approximate target "
+          "values: holes of 6 to 10&nbsp;mm with a spacing of 30 to 70&nbsp;mm. The fan keeps a "
+          "static pressure of approximately 30 to 40&nbsp;Pa, and thus the tube stays inflated and "
+          "circular" + _c("perfduct2025") + ".</p><p><strong>Where:</strong> along the length of a "
+          "row, above or below the bench. An air sock is the standard method to supply "
+          "<em>conditioned</em> air from an air conditioner or a dehumidifier. It prevents a strong "
+          "flow of air in one corner and a dead zone in the other corner. <strong>The "
+          "problem:</strong> you must calculate the tube diameter, the hole size and the hole "
+          "spacing, and the fan must make the necessary pressure."), tag="Supply · conditioned air"),
       card("Inline duct fan",
-        p("A fan inside a length of ducting. This is an <strong>exchange</strong> device, not a "
-          "circulation device: it pulls air out of the room, usually through a carbon filter, and dumps "
-          "it outside. It is what controls humidity and refreshes CO2 in a vented room."
-          "<br><br><strong>Where:</strong> ducted to a high point in the room (hot, humid air rises), "
-          "with a passive or active intake low down. <strong>The catch:</strong> people count it as "
-          "their airflow. It is not. A room with a big extractor and no circulation fans still has a "
-          "still, humid canopy."), tag="Exchange · not circulation"),
+        p("An inline duct fan is a fan in a duct. It is a device for <strong>air exchange</strong> "
+          "and not a device for circulation. It pulls air out of the room, usually through a carbon "
+          "filter, and sends the air outdoors. It controls the humidity and gives new CO2 to a room "
+          "with vents.</p><p><strong>Where:</strong> on a duct to the top of the room (hot air with "
+          "high humidity moves up). Put an intake at the bottom of the room (with or without a "
+          "fan). <strong>The problem:</strong> some persons think that this fan makes the airflow "
+          "for the canopy, but it does not. A room that has a large inline duct fan and no "
+          "recirculation fans has a canopy with still air and high humidity."), tag="Air exchange · not circulation"),
     ], cols=2),
-    p("Three more you will meet in bigger rooms, listed here so you can place them correctly rather "
-      "than mistake them for canopy airflow:"),
+    p("Three more types of fan are for larger rooms. Use them for the correct task and not for "
+      "canopy airflow:"),
     grid([
       card("HVLS / destratification fan",
-        p("A large, very slow ceiling fan. Its job is to break the warm layer that collects near the "
-          "ceiling under lights and push it back down. Useful in tall rooms; pointless under a 2.4&nbsp;m "
-          "ceiling."), tag="Recirculation · tall rooms"),
+        p("An HVLS fan is a large ceiling fan with a very low speed. In a room with lights, a layer "
+          "of warm air collects near the ceiling. The task of the fan is to break this layer and to "
+          "push the air down again. It operates correctly in rooms with a large ceiling height. It "
+          "has no effect in a room with a ceiling height of 2.4&nbsp;m."), tag="Recirculation · rooms with a large ceiling height"),
       card("Wall / shutter exhaust fan",
-        p("Bulk air exchange for greenhouses and large rooms, with gravity or motorised shutters. Same "
-          "class as the inline duct fan, just much bigger. Sealed rooms usually do not have one."),
-        tag="Exchange · bulk"),
+        p("This fan does air exchange for large volumes of air in greenhouses and large rooms. The "
+          "shutters open by gravity or with a motor. It is the same type as the inline duct fan, "
+          "but it is much larger. A sealed room usually does not have this fan."),
+        tag="Air exchange · large volume"),
       card("AHU / HVAC supply",
-        p("The air-handling unit that actually heats, cools and dries. It sets your VPD. It still needs "
-          "a distribution method, typically ducting into socks, to get that treated air "
-          "evenly across a canopy."), tag="Conditioning"),
+        p("The AHU is the unit that does the heating, the cooling and the drying of the air. It "
+          "controls the VPD. It must also have a method to supply this conditioned air equally "
+          "across a canopy. Typically, this method is a duct that connects to air socks."), tag="Conditioning"),
     ], cols=3),
     card("In-rack airflow systems (vertical farms)",
-      p("If you grow on multi-tier racking, none of the above works on its own: each tier is a low, "
-        "enclosed slot that overhead fans physically cannot reach. Purpose-built systems mount a "
-        "ducted fan bar into the racking itself and push air along or down through every tier" +
-        _c("vas-inrack") + ". On racking it is the only thing that works, and "
-        "it is the setup the Pipp trial in section 09 was built to test."), tag="Recirculation · vertical racking"),
+      p("If the plants are on racks with many tiers, no other fan type operates correctly. Each "
+        "tier is a closed space with a small height, and fans that hang above the racks cannot "
+        "supply air to it. In-rack systems have a fan bar with ducts, and you install the fan bar "
+        "in the rack. The fan bar pushes air along each tier or down through each tier" +
+        _c("vas-inrack") + ". On racks, an in-rack system is the only system that operates "
+        "correctly. The Pipp test in section 09 was a test of this setup."), tag="Recirculation · vertical racks"),
   ]})
 
-SECTIONS.append({"id": "ranking", "kicker": "11 · The ranking", "title": "Selecting fans for canopy airflow",
+SECTIONS.append({"id": "ranking", "kicker": "11 · The selection", "title": "Selecting fans for canopy airflow",
   "blocks": [
-    p("A ranking is only honest if you say what it is ranking <em>for</em>. This one scores "
-      "<strong>crop-relevant airflow bought per dollar installed, in a sealed, single-tier indoor "
-      "flower room</strong> of roughly 20&ndash;200&nbsp;m&sup2; (215&ndash;2,150&nbsp;ft&sup2;) of canopy. Change the room and the "
-      "order changes; the callout below says how."),
-    figure(L.hbars("Value per dollar: sealed single-tier indoor flower room",
-            [("HAF fan (hanging)", 95), ("Under-canopy fan", 84), ("VAF fan (top-down)", 80),
-             ("Oscillating wall fan", 68), ("Air sock off the AHU", 62),
+    p("A ranking is correct only for one condition, and you must give this condition. This ranking "
+      "is for <strong>the airflow that is important for the crop, for each dollar of installed "
+      "cost</strong>. The room is <strong>a sealed indoor flower room with one tier</strong>, with "
+      "a canopy of approximately 20 to 200&nbsp;m&sup2; (215 to 2,150&nbsp;ft&sup2;). When the room "
+      "is different, the sequence of the fans is different. The points after the table show how."),
+    figure(L.hbars("Airflow for each dollar: sealed indoor flower room, one tier",
+            [("HAF fan (hung)", 95), ("Under-canopy fan", 84), ("VAF fan (top-down)", 80),
+             ("Oscillating fan", 68), ("Air sock from the AHU", 62),
              ("HVLS / destratification", 44), ("Drum / pedestal fan", 30), ("Clip fan", 22)],
-            note="Relative score, not a measurement. Judged on airflow delivered to leaves per dollar and per watt."), 6,
-      "The backbone is cheap and the glamour is not. The two lowest-ranked fans are the two "
-      "most first-time growers actually buy."),
-    table(["#", "Fan type", "What it buys you", "Reach into the canopy", "Verdict"], [
-      ["1", "<strong>HAF fan</strong>", "A room-wide loop, running 24/7 on very few watts",
-       "Over the top only", "<strong>Build the room on these.</strong> Cheapest uniformity you can buy" + _c("bartok-haf")],
-      ["2", "<strong>Under-canopy fan</strong>", "Kills the wettest, stillest zone in the room",
-       "Bottom of the plant", "<strong>Best value add-on.</strong> Targets exactly where bud rot starts"],
-      ["3", "<strong>VAF fan</strong>", "Air driven down into the middle of the plant",
-       "Full depth. The only one that gets there", "<strong>Buy once density rises.</strong> Peer-reviewed for interior-leaf calcium" + _c("goto1992-tipburn") + _c("moosavi2025-vaf")],
-      ["4", "Oscillating wall fan", "Cheap, varied, turbulent air", "Over and around, in bursts",
-       "Fine as the backbone below ~20&nbsp;m&sup2; (215&nbsp;ft&sup2;). Falls behind above it"],
-      ["5", "Air sock off the AHU", "Even delivery of <em>conditioned</em> air, no draughts",
-       "Along the row, gentle", "Excellent, but it is capex plus design work" + _c("perfduct2025")],
-      ["6", "HVLS / destratification", "Breaks the hot layer under the ceiling", "Bulk mixing only",
-       "Only pays in tall rooms. Wasted under a low ceiling"],
-      ["7", "Drum / pedestal fan", "Raw thrust into one spot", "A gale on-axis, nothing off it",
-       "Spot-fix only. Leading cause of wind-burn"],
-      ["8", "Clip fan", "One plant's worth of air", "One plant",
-       "Tents only. Six of these lose to one hanging fan"],
+            note="Values to compare the fans, not measurements. They are for airflow to the leaves for each dollar and each watt."), 6,
+      "The primary fans of the room have a low cost. The two fans at the bottom of the ranking are "
+      "the two fans that most new growers get."),
+    table(["#", "Fan type", "Effect of the fan", "Depth in the canopy", "Selection"], [
+      ["1", "<strong>HAF fan</strong>", "A loop of air around the room. It operates 24/7 with very low power.",
+       "Only along the top", "<strong>Make these fans the primary fans of the room.</strong> The minimum cost for uniformity" + _c("bartok-haf")],
+      ["2", "<strong>Under-canopy fan</strong>", "Removes the zone with the most water and the minimum air movement in the room",
+       "Bottom of the plant", "<strong>The best fan to add, for the cost.</strong> It is for the area where bud rot starts"],
+      ["3", "<strong>VAF fan</strong>", "Air that moves down into the middle of the plant",
+       "The full depth. The VAF fan is the only fan that supplies air at this depth.", "<strong>Install these fans when the canopy density increases.</strong> Peer-reviewed papers show the effect on the calcium in the inner leaves" + _c("goto1992-tipburn") + _c("moosavi2025-vaf")],
+      ["4", "Oscillating fan", "Low cost. Turbulent airflow that changes direction.", "Along the canopy and around it, for short times",
+       "It is good as the primary fan for a canopy of less than approximately 20&nbsp;m&sup2; (215&nbsp;ft&sup2;). For a larger canopy, other fans are better."],
+      ["5", "Air sock from the AHU", "Equal supply of <em>conditioned</em> air, with no strong flow of air at one point",
+       "Along the row, with a light airflow", "Very good, but it has a capital cost, and you must calculate the sizes of the system" + _c("perfduct2025")],
+      ["6", "HVLS / destratification", "Breaks the layer of hot air near the ceiling", "It mixes only the large volume of air.",
+       "It operates correctly in rooms with a large ceiling height. It has no effect when the ceiling height is small."],
+      ["7", "Drum / pedestal fan", "Air with a very high speed at one point", "A very strong airflow on the axis and no airflow in the other areas",
+       "Use only to correct one area. The most frequent cause of wind damage."],
+      ["8", "Clip fan", "The air for one plant", "One plant",
+       "Use only in tents. Six clip fans give a worse result than one hung fan."],
     ], cls="compact",
-      foot="Ranked on value per dollar for a sealed, single-tier indoor flower room. Exchange kit "
-           "(inline duct and wall fans) is deliberately absent: it is mandatory, but it does a "
-           "different job and cannot be traded against a circulation fan."),
-    callout("key", "When the ranking flips",
+      foot="The ranking is for the airflow for each dollar in a sealed indoor flower room with one "
+           "tier. The ranking does not include equipment for air exchange (inline duct fans and "
+           "wall fans). This equipment is necessary, but it does a different task, and you cannot "
+           "use it as a recirculation fan."),
+    callout("key", "When the ranking changes",
       ul([
-        "<strong>Vertical racking:</strong> in-rack systems move to #1 outright and HAF drops off the "
-        "list. Overhead fans cannot physically reach inside a tier" + _c("vas-inrack") + ".",
-        "<strong>Dense, un-defoliated canopies:</strong> VAF overtakes HAF. Top-down airflow is "
-        "measurably better than horizontal for getting air, and therefore calcium, into inner "
-        "leaves" + _c("goto1992-tipburn") + _c("ahmed2020-multifan") + ". In greenhouse lettuce, vertical "
-        "fans cut tip-burn ratings from 5.0 to under 0.1 and burnt leaves from 39% to under 7%" +
-        _c("moosavi2025-vaf") + ".",
-        "<strong>Tents and single-plant grows:</strong> the whole table collapses to a clip fan or two "
-        "plus the extractor, and that is genuinely the right answer at that scale.",
-        "<strong>Greenhouses:</strong> HAF stays #1 and the air sock rises, because you are also "
-        "distributing heat" + _c("uconn-haf") + ".",
+        "<strong>Vertical racks:</strong> in-rack systems become #1, and HAF fans are not in the "
+        "list. Fans that hang above the racks cannot supply air to the inner part of a tier" +
+        _c("vas-inrack") + ".",
+        "<strong>Dense canopy with no defoliation:</strong> VAF fans have a higher position than "
+        "HAF fans in the ranking. Measurements show that top-down airflow is better than horizontal "
+        "airflow to move air, and thus calcium, into the inner leaves" + _c("goto1992-tipburn") +
+        _c("ahmed2020-multifan") + ". In greenhouse lettuce, vertical fans decreased the tipburn "
+        "rating from 5.0 to less than 0.1. They also decreased the percentage of burned leaves from "
+        "39% to less than 7%" + _c("moosavi2025-vaf") + ".",
+        "<strong>Tents and setups for one plant:</strong> all the table changes to one or two clip "
+        "fans and the inline duct fan. This selection is correct at this size.",
+        "<strong>Greenhouses:</strong> HAF fans stay #1, and the air sock gets a higher position, "
+        "because you also move heat in the greenhouse" + _c("uconn-haf") + ".",
       ], "tight")),
-    callout("warn", "The mistake the ranking is really about",
-      p("Almost every underperforming room has the same shape of problem: <strong>plenty of total "
-        "CFM, badly distributed</strong>. Two drum fans in the corners produce an impressive number on "
-        "paper and a still, humid middle. Six small hanging fans on a loop produce a smaller number "
-        "and a room where every leaf moves. Buy the pattern, not the peak.")),
+    callout("warn", "The problem that the ranking prevents",
+      p("Select the airflow pattern and not the peak value. Almost all rooms with low performance "
+        "have the same problem. <strong>The total CFM is large, but the airflow is not the same in "
+        "all areas.</strong> Two drum fans in the corners give a high CFM value on paper. The "
+        "middle of the room has still air and high humidity. Six small hung fans in a loop give a "
+        "lower CFM value, but each leaf moves.")),
   ]})
 
-SECTIONS.append({"id": "placement", "kicker": "12 · Placement", "title": "Fan placement",
+SECTIONS.append({"id": "placement", "kicker": "12 · The position", "title": "Fan position",
   "blocks": [
-    p("Fan placement is a pattern problem, not a coverage problem. You are not trying to hit every "
-      "plant with a jet; you are trying to set the whole volume of air in the room turning slowly and "
-      "consistently, then punch that moving air down into the canopy."),
+    p("The position of the fans is a problem of airflow pattern and not a problem of area. Do not "
+      "try to put a jet of air on each plant. Make all the air in the room move slowly and "
+      "constantly in a loop. Then push this moving air down into the canopy."),
     figure(_fig_haf_loop(), 7,
-      "The horizontal loop, from above. Fans do not each cover a patch. They hand air to each other "
-      "around a circuit. First fan roughly 3&ndash;4.5&nbsp;m (10&ndash;15&nbsp;ft) off the end wall, then "
-      "12&ndash;15&nbsp;m (40&ndash;50&nbsp;ft) apart, about a quarter of the room width in from the "
-      "side" + _c("bartok-haf") + _c("uconn-haf") + "."),
-    p("Then cut the room the other way. Most rooms buy airflow for the top of the canopy only, and "
-      "that is exactly why rot starts at the bottom and in the middle:"),
+      "The horizontal loop from above. The fans do not each supply air to one area only. The fans "
+      "give air to each other around a circuit. The first fan is approximately 3 to 4.5&nbsp;m (10 "
+      "to 15&nbsp;ft) from the end wall. The other fans are 12 to 15&nbsp;m (40 to 50&nbsp;ft) "
+      "apart, and approximately a quarter of the room width from the side wall" + _c("bartok-haf") +
+      _c("uconn-haf") + "."),
+    p("Then examine the room in a vertical section. In most rooms, the airflow is only at the top "
+      "of the canopy. This condition causes rot to start at the bottom and in the middle:"),
     figure(_fig_zones(), 8,
-      "The same room in section. Three heights, three different jobs, three different fans. If you only "
-      "own HAF fans you own the top band, and the two bands where disease actually starts are unserved."),
+      "The same room in a vertical section. There are three heights, three different tasks, and "
+      "three different fans. If the room has only HAF fans, the airflow is in the top zone only. "
+      "The two zones in which disease starts have no airflow."),
     steps([
-      ("Set the loop first",
-       "Pick a direction and commit. Hang HAF fans so that air runs down one side of the room and "
-       "back the other, each fan feeding the next. Never point two fans at each other. You will "
-       "cancel the loop and create a dead spot exactly where they meet" + _c("bartok-haf") + "."),
-      ("Get the height right",
-       "Above head height, roughly 2.1&ndash;2.4&nbsp;m (7&ndash;8&nbsp;ft) off the floor for a "
-       "floor-grown crop, so the jet clears the canopy rather than ploughing into it" + _c("uconn-haf") +
-       ". Where there are hanging baskets or a light rack in the way, go a clear distance above or "
-       "below, not level with them."),
-      ("Punch down into the canopy",
-       "Add top-down fans over the crop on a grid, spaced so their down-columns overlap. This is the "
-       "step almost everyone skips, and it is the one that reaches the interior leaves" +
-       _c("goto1992-tipburn") + "."),
-      ("Serve the floor",
-       "Put low fans at pot level blowing along the rows. Cold, wet air pools down there and no "
-       "overhead fan will move it."),
-      ("Aim to mix, never to blast",
-       "Angle fans slightly off-parallel and let oscillation vary the direction. You want a room full "
-       "of slow, turbulent, mixing air, not a set of jets" + _c("schuepp1993-bl") + "."),
-      ("Walk it and correct",
-       "Run the flutter test at all three heights: over the tops, hand pushed into the middle of a "
-       "plant, and down at pot level. Whichever height fails is the fan you are missing. A cheap "
-       "anemometer, or a length of flagging tape taped to a cane, turns this from a guess into a "
-       "reading."),
+      ("Make the loop first",
+       "Select one direction. Do not change it. Hang the HAF fans to make the air go along one side "
+       "and back along the other side. Each fan gives air to the next fan. Do not point two fans at "
+       "each other. The loop stops, and a dead zone occurs where the two jets touch" + _c("bartok-haf") +
+       "."),
+      ("Set the correct height",
+       "Hang the fans above head height, approximately 2.1 to 2.4&nbsp;m (7 to 8&nbsp;ft) from the "
+       "floor for a crop at floor level. Thus the jet goes above the canopy and does not push into "
+       "the canopy" + _c("uconn-haf") + ". If hung baskets or a rack for lights are at this height, "
+       "hang the fans above them or below them. Do not hang the fans at the same height."),
+      ("Push air down into the canopy",
+       "Install top-down fans above the crop in a grid. Put the fans at a distance that gives an "
+       "overlap of their flows of air. Almost all persons do not do this step, but it supplies air "
+       "to the inner leaves" + _c("goto1992-tipburn") + "."),
+      ("Supply air to the floor",
+       "Put fans at the level of the pots. Point the fans along the rows. Cold air with high "
+       "humidity collects at this level, and no fan above the canopy moves it."),
+      ("Mix the air, with no strong jets",
+       "Point each fan in a direction with a small difference from the next fan. Let the "
+       "oscillation change the direction. The room must have slow, turbulent airflow that mixes the "
+       "air, and not a set of jets" + _c("schuepp1993-bl") + "."),
+      ("Walk through the room and correct",
+       "Do the leaf movement test at three heights. The heights are above the tops, in the middle "
+       "of a plant and at the level of the pots. In the middle of a plant, put your hand into the "
+       "plant. If the leaves do not move at one height, you do not have the fan for that height. A "
+       "strip of tape on a stake, or a low-cost anemometer, gives a reading and not an estimate."),
     ]),
-    callout("tip", "Run them all the time",
-      p("Circulation fans should run <strong>24 hours a day</strong>, lights on and lights off. The "
-        "extension guidance is to run them continuously except when exhaust fans are running or vents "
-        "are open, because that is when the room is being flushed anyway" + _c("bartok-haf") + ". "
-        "Lights-off is when leaf temperature drops toward dew point and condensation forms, "
-        "precisely when you least want still air" + _c("uconn-haf") + ".")),
+    callout("tip", "Operate the fans at all times",
+      p("Operate the circulation fans for <strong>24 hours each day</strong>, when the lights are "
+        "on and when the lights are off. The extension service recommends that the fans operate "
+        "continuously. The fans can be off when the exhaust fans operate or the vents are open, "
+        "because the room has air exchange at these times" + _c("bartok-haf") +
+        ". When the lights are off, the leaf temperature decreases and becomes almost the same as "
+        "the dew point, and condensation starts. At this time, you must not have still air" +
+        _c("uconn-haf") + ".")),
   ]})
 
 SECTIONS.append({"id": "sizing", "kicker": "13 · The numbers", "title": "Sizing the system",
   "blocks": [
-    p("The greenhouse industry has been sizing horizontal airflow for decades and the rules of thumb "
-      "transfer well to an indoor room. Start here, then measure and adjust:"),
-    table(["What", "Rule of thumb", "Where it comes from"], [
+    p("For many years, the greenhouse industry calculated the size of horizontal airflow. Its "
+      "approximate values are also correct for an indoor room. Start with these values. Then "
+      "measure the airflow. Adjust the fans:"),
+    table(["Item", "Approximate value", "Source"], [
       ["Total circulation capacity",
-       "<strong>~36.6 m&sup3;/h per m&sup2; of floor</strong> (&asymp; 2 CFM/ft&sup2;). A 9&nbsp;&times;&nbsp;30&nbsp;m (30&nbsp;&times;&nbsp;100&nbsp;ft) house needs roughly 10,000 m&sup3;/h (~6,000 CFM) total.",
-       "Bartok &amp; Grubinger, UConn/UVM Extension" + _c("bartok-haf")],
-      ["First fan position", "3&ndash;4.5&nbsp;m (10&ndash;15&nbsp;ft) in from the end wall, to catch air coming round the corner.",
+       "<strong>Approximately 36.6 m&sup3;/h for each m&sup2; of floor</strong> (approximately 2 CFM/ft&sup2;). A greenhouse of 9&nbsp;&times;&nbsp;30&nbsp;m (30&nbsp;&times;&nbsp;100&nbsp;ft) must have a total of approximately 10,000 m&sup3;/h (approximately 6,000 CFM).",
+       "Bartok and Grubinger, UConn/UVM Extension" + _c("bartok-haf")],
+      ["First fan position", "3 to 4.5&nbsp;m (10 to 15&nbsp;ft) from the end wall, to get the air that turns at the corner.",
        "UConn IPM" + _c("uconn-haf")],
-      ["Fan spacing", "12&ndash;15&nbsp;m (40&ndash;50&nbsp;ft) apart along the loop. Scale down proportionally in a small room.",
-       "Bartok &amp; Grubinger" + _c("bartok-haf")],
-      ["Horizontal position", "About &frac14; of the room width in from the side wall (or centre of the bay).",
+      ["Fan spacing", "12 to 15&nbsp;m (40 to 50&nbsp;ft) apart along the loop. In a small room, decrease the distance in the same ratio.",
+       "Bartok and Grubinger" + _c("bartok-haf")],
+      ["Horizontal position", "Approximately &frac14; of the room width from the side wall (or the middle of the bay).",
        "UConn IPM" + _c("uconn-haf")],
-      ["Mounting height", "Above head height; ~2.1&ndash;2.4&nbsp;m (7&ndash;8&nbsp;ft) for floor crops. Clear of baskets and light racks.",
-       "Bartok &amp; Grubinger" + _c("bartok-haf")],
-      ["Individual fan size", "300&ndash;500&nbsp;mm (12&ndash;20&nbsp;in) blade, 1/10&ndash;1/15&nbsp;hp. Many small beats few large.",
-       "Bartok &amp; Grubinger" + _c("bartok-haf")],
-      ["Greenhouse velocity target", "0.25&ndash;0.5 m/s (50&ndash;100 FPM) of general room movement.",
+      ["Installation height", "Above head height. Approximately 2.1 to 2.4&nbsp;m (7 to 8&nbsp;ft) for crops at floor level. Keep a distance from baskets and racks for lights.",
+       "Bartok and Grubinger" + _c("bartok-haf")],
+      ["Size of each fan", "Blade of 300 to 500&nbsp;mm (12 to 20&nbsp;in), motor of 1/10 to 1/15&nbsp;hp. A large number of small fans is better than a small number of large fans.",
+       "Bartok and Grubinger" + _c("bartok-haf")],
+      ["Greenhouse velocity target", "0.25 to 0.5 m/s (50 to 100 FPM) for the general movement of air in the room.",
        "UConn IPM" + _c("uconn-haf")],
-      ["Cannabis flower-room target", "~1.0 m/s (&asymp;200 FPM) <em>delivered</em>, to land every leaf in the sweet spot.",
-       "Pipp / Justice trial" + _c("pipp2026-airflow")],
-      ["Run time", "24/7, except while exhaust fans run or vents are open.",
-       "Bartok &amp; Grubinger" + _c("bartok-haf")],
-      ["Air sock design", "6&ndash;10&nbsp;mm holes, 30&ndash;70&nbsp;mm spacing, ~30&ndash;40&nbsp;Pa static to hold the tube round.",
-       "Perforated-duct CFD study" + _c("perfduct2025")],
+      ["Cannabis flower-room target", "Approximately 1.0 m/s (approximately 200 FPM) that the room <em>supplies</em>, to give each leaf an air velocity in the target range.",
+       "Pipp / Justice test" + _c("pipp2026-airflow")],
+      ["Operation time", "24/7, but not while the exhaust fans operate or the vents are open.",
+       "Bartok and Grubinger" + _c("bartok-haf")],
+      ["Air sock specification", "Holes of 6 to 10&nbsp;mm with a spacing of 30 to 70&nbsp;mm. A static pressure of approximately 30 to 40&nbsp;Pa keeps the tube circular.",
+       "Investigation of a duct with holes (CFD)" + _c("perfduct2025")],
     ], cls="compact"),
-    callout("note", "Why the two velocity targets disagree",
-      p("The greenhouse standard (0.25&ndash;0.5 m/s, or 50&ndash;100 FPM) and the cannabis figure "
-        "(~1.0 m/s, or ~200 FPM) are not in conflict; they were set for different goals. The "
-        "greenhouse number is aimed at temperature uniformity and stopping condensation on leaves "
-        "overnight in a relatively open, lower-light crop" + _c("uconn-haf") + ". The cannabis number "
-        "comes from a dense, high-light flower canopy where the goal is driving air <em>into</em> "
-        "the plant" + _c("pipp2026-airflow") + ". Denser canopy and brighter light both push the "
-        "number up. Use the greenhouse rules for the layout and the cannabis number for the target.")),
-    p("One last number, and it is the one that saves the most money. Fan airflow rises in step with "
-      "speed, but shaft power rises with the <strong>cube</strong> of speed" + _c("amca-fanlaws") + ". "
-      "Halving a fan's speed drops it to roughly one-eighth of the power. That has a direct design "
-      "consequence:"),
-    callout("key", "More fans, slower, always wins",
-      p("Two fans at full speed and eight fans at half speed can move similar air, but the eight fans "
-        "draw around a quarter of the power <em>and</em> give far better coverage, because the air "
-        "arrives from more directions with fewer dead spots. This is why speed-controllable EC-motor "
-        "fans are worth the premium over fixed-speed AC fans: an AC fan is effectively on or off, so "
-        "to reduce airflow you have to switch fans off, which punches holes in your coverage exactly "
-        "where the fan you killed used to be.")),
+    callout("note", "The two velocity targets are different",
+      p("The greenhouse value (0.25 to 0.5 m/s, or 50 to 100 FPM) and the value for cannabis "
+        "(approximately 1.0 m/s, or approximately 200 FPM) are correct for different tasks. The "
+        "greenhouse value is for temperature uniformity and to stop condensation on the leaves "
+        "during the night. The crop has a more open canopy and less light" + _c("uconn-haf") +
+        ". The value for cannabis is from a flower canopy with a high density and high light. In "
+        "this canopy, the task is to push air <em>into</em> the plant" + _c("pipp2026-airflow") +
+        ".</p><p>A higher canopy density increases the value, and a higher light intensity also "
+        "increases the value. Use the greenhouse values for the position of the fans and the value "
+        "for cannabis for the target.")),
+    p("The last number is the number that decreases the cost the most. The airflow of a fan "
+      "increases in the same ratio as the speed, but the shaft power increases with the "
+      "<strong>cube</strong> of the speed" + _c("amca-fanlaws") + ". When the speed of a fan "
+      "becomes half, the power becomes approximately one eighth. This fact has an effect on the "
+      "selection of fans:"),
+    callout("key", "More fans at a lower speed is always better",
+      p("Two fans at full speed and eight fans at half speed can move almost the same quantity of "
+        "air. But the eight fans use approximately a quarter of the power <em>and</em> give a much "
+        "better airflow in all areas. The air comes from more directions, and there is a smaller "
+        "number of dead zones.</p><p>Fans with an EC motor have a speed control. They have a higher "
+        "cost than fans with an AC motor that has one speed, but the higher cost gives a better "
+        "result. A fan with an AC motor is usually on or off. To decrease the airflow, you must set "
+        "some fans to off. The result is areas without airflow at the positions of the fans that "
+        "you stopped.")),
   ]})
 
-SECTIONS.append({"id": "trouble", "kicker": "14 · When it goes wrong", "title": "Troubleshooting",
+SECTIONS.append({"id": "trouble", "kicker": "14 · When there is a problem", "title": "Troubleshooting",
   "blocks": [
-    table(["Symptom", "Likely cause", "What to do"], [
-      ["Bud rot starting deep in colas", "Dead-zone: air not reaching the canopy interior", "Add top-down (VAF) airflow, defoliate, lower RH"],
-      ["Tops flutter, middle and bottom dead still", "All your airflow is above the canopy (HAF only)", "Add VAF over the crop and under-canopy fans at pot level"],
-      ["Rot and mildew starting at the bottom", "The floor zone is the wettest, stillest air in the room", "Under-canopy fans blowing along the rows"],
-      ["Leaf-tip burn despite full tank", "Airflow outran nutrient delivery (calcium)", "Raise feed/EC to match transpiration"],
-      ["Tip-burn only on new inner growth", "Inner leaves too still to transpire, so no calcium arrives", "Get air into the canopy interior, not just over it"],
-      ["Leaves clawing / wind-burnt edges", "Air velocity too high / fan pointed at plants", "Reduce speed, aim fans to mix, not blast"],
-      ["One end of a row always behaves differently", "Broken loop: fans spaced too far apart or facing each other", "Re-set the racetrack; never point two fans head-on"],
-      ["Big fans, loud room, still stratified", "Too few fans running flat out", "More fans at lower speed. Power rises with the cube of speed"],
-      ["Tall, weak, floppy stems", "Too little air movement: no mechanical signal", "Add gentle constant breeze across the canopy"],
-      ["Room humidity stuck high", "Recirculation OK but not enough air exchange", "Increase intake/exhaust / dehumidification"],
-      ["Cold or dry patch under the AC outlet", "Conditioned air dumped in one spot instead of distributed", "Duct it into an air sock along the row"],
+    table(["Symptom", "Possible cause", "To correct it"], [
+      ["Bud rot starts in the inner part of the colas", "Dead zone: the air does not go to the inner part of the canopy", "Add top-down (VAF) airflow. Defoliate the plants. Decrease the RH."],
+      ["The tops of the plants move, but the middle and the bottom do not move", "All the airflow is above the canopy (HAF fans only)", "Add VAF fans above the crop. Add under-canopy fans at the level of the pots."],
+      ["Rot and mildew start at the bottom of the plants", "The zone at the floor has the most water and the minimum air movement in the room", "Install under-canopy fans that blow along the rows."],
+      ["Leaf tipburn, but the tank is full", "The airflow is too high for the supply of nutrient (calcium)", "Increase the feed EC to agree with the transpiration"],
+      ["Tipburn only on new growth in the inner part", "The inner leaves are in still air and cannot transpire. As a result, no calcium moves to them.", "Make air go into the inner part of the canopy and not only along the top"],
+      ["Leaves with the claw, or edges with wind damage", "The air velocity is too high, or a fan points at the plants", "Decrease the speed. Point the fans to mix the air and not to make strong jets."],
+      ["One end of a row is always different", "The loop does not operate: the fans are too far apart or they point at each other", "Set the racetrack loop again. Do not point two fans at each other."],
+      ["Large fans and much noise, but the air continues to be in layers", "The number of fans is too small, and they operate at full speed", "Use more fans at a lower speed. The power increases with the cube of the speed."],
+      ["Plants with a large height and weak stems that bend", "Air movement is too low, and thus there is no mechanical signal", "Add a light, constant airflow across the canopy"],
+      ["The humidity of the room stays high", "Recirculation is correct, but air exchange is not sufficient", "Increase the intake and the exhaust. Increase the dehumidification."],
+      ["A cold or dry area below the outlet of the air conditioner", "The conditioned air goes to one point only", "Send the air through a duct to an air sock along the row"],
     ], cls="compact"),
   ]})
 
-SECTIONS.append({"id": "expect", "kicker": "15 · Straight talk", "title": "Expected results and limitations",
+SECTIONS.append({"id": "expect", "kicker": "15 · The limits", "title": "Expected results and limitations",
   "blocks": [
-    callout("key", "What to remember",
-      ol(["Airflow's job is to <strong>thin the boundary layer</strong> on every leaf.",
-          "Aim for a <strong>gentle, turbulent breeze (~0.3–1.0 m/s)</strong> everywhere, including inside the plants.",
-          "Buy the <strong>pattern, not the peak</strong>: many small fans on a loop beat two big ones in the corners.",
-          "Serve <strong>all three heights</strong>, above, through and below the canopy. Only the first is easy.",
-          "More air = more thirst: <strong>feed and humidity must keep up</strong>" + _c("gilliham2011-ca") + ".",
-          "Most benefit comes early. You do not need a wind tunnel" + _c("kitaya2004-airvel") + "."])),
-    p("Airflow is one subsystem of the room. Read it alongside the "
-      "<a href='grow-room-systems.html'>systems guide</a> and the "
-      "<a href='mould-risk.html'>mould risk</a> paper."),
+    callout("key", "The primary points",
+      ol(["The task of airflow is to <strong>make the boundary layer thinner</strong> on each leaf.",
+          "Make a <strong>light, turbulent airflow (approximately 0.3 to 1.0 m/s)</strong> in all areas, and also in the inner part of the plants.",
+          "Select the <strong>airflow pattern and not the peak value</strong>. Many small fans in a loop are better than two large fans in the corners.",
+          "Supply air at <strong>all three heights</strong>: above, through and below the canopy. Only the first height is easy.",
+          "More airflow causes more use of water: <strong>the feed and the humidity control must increase also</strong>" + _c("gilliham2011-ca") + ".",
+          "Most of the effect occurs at low air velocity. A very high air velocity is not necessary" + _c("kitaya2004-airvel") + "."])),
+    p("Airflow is one part of the system of the room. Read this paper with the <a "
+      "href='grow-room-systems.html'>systems guide</a> and the <a href='mould-risk.html'>mold "
+      "risk</a> paper."),
   ]})

@@ -5,13 +5,13 @@ from components import (p, lead, h, ul, ol, callout, defterm, table, figure,
 import figs_lib as L
 
 SLUG = "plant-state-dashboard"
-TITLE = "Designing a plant-state dashboard for your grow room"
+TITLE = "Design of a plant-state dashboard for your grow room"
 EYEBROW = "Precision · Dashboards"
-SUB = ("A grow-room screen should show what the plant is doing, not a wall of raw sensor "
-       "numbers. This paper shows how to design one that catches drift days before it becomes "
-       "damage, names the cause, and prescribes the next action.")
+SUB = ("We recommend that a grow-room screen shows the state of the plant, and not many numbers "
+       "from the sensors. This paper shows how to make a screen that finds drift some days before "
+       "it becomes damage, shows the cause and gives the next step.")
 META = [("dashboard", "Precision"), ("image", "11 diagrams"),
-        ("doc", "Operational guide"), ("clock", "~13 min read")]
+        ("doc", "Operation guide"), ("clock", "~13 min to read")]
 RELATED = ["signal-and-noise", "f2-crop-steering", "root-zone-teros12"]
 REF_IDS = ["spc-signal-noise-ed", "preattentive-dataviz", "vpd-plant-response",
            "capacitive-soil-moisture", "alarm-mgmt-isa182"]
@@ -23,292 +23,318 @@ SECTIONS = []
 
 SECTIONS.append({"id": "intro", "kicker": "Start here", "title": "Purpose and scope",
   "blocks": [
-    callout("evidence", "Grain of salt",
-      "<p><strong>Provisional:</strong> On-screen advisories (e.g. tip-burn risk timelines) are product-design "
-      "examples for operator UX, not a validated prognostic model.</p>"),
-    lead("A modern grow room is wired with sensors measuring air temperature, humidity, VPD, "
-         "CO&#8322;, light, substrate moisture, EC, root-zone temperature, pH and power draw, "
-         "second by second. The dashboards built to show all of this are walls of "
-         "live numbers and graphs. They tell you <em>what</em> is happening. They never tell you what it "
-         "<em>means</em>, what is about to happen, or what to do about it."),
-    p("This paper makes the case for a different design centre, which we will call <strong>Plant-State "
-      "Intelligence</strong>: a screen that reasons about the plant instead of just displaying the "
-      "room. The target is a &lsquo;calm dashboard&rsquo;: one that stays quiet most of the time "
-      "and speaks only when it has something worth saying. A telemetry-dump dashboard forces the "
-      "human to be the integrator, synthesising fifteen graphs into a judgement in real time, often "
-      "while tired. A plant-state dashboard does that synthesis for you."),
-    callout("note", "What this paper is, and isn't",
-      ul(["This is an <strong>operational and product-design guide</strong>, not a horticulture-science paper. Lead-time examples are illustrative UX, not validated predictions. Most claims here are design opinions backed by worked examples.",
-          "The aim is a screen that <strong>infers</strong> the plant's state, <strong>predicts</strong> trouble days early, and <strong>prescribes</strong> the next step with its evidence and confidence attached.",
-          "The one-line thesis: <em>a cockpit full of gauges is not a co-pilot.</em>"], "tight")),
-    figure(L.flow("Where the thinking happens",
-            [("Sensors", "raw streams off the room"),
-             ("Wall of graphs", "15 live charts, no synthesis"),
-             ("Tired human", "must integrate it all, in real time")],
-            note="The conventional path: the human is the integrator."), 1,
-      "The telemetry-dump path (above) leaves all the reasoning to the human. Plant-State "
-      "Intelligence moves that step into the software: sensors &rarr; fusion and inference &rarr; "
-      "one plain-language judgement."),
+    callout("evidence", "Weak",
+      "<p><strong>Temporary:</strong> The advisories on the screen (for example, the time before a "
+      "tipburn risk) are examples of product design for operators. They are not a model for "
+      "prediction that has validation.</p>"),
+    lead("A grow room has sensors for many values: the air temperature, the humidity, the VPD, the "
+         "CO&#8322; and the light. The sensors also measure the moisture of the substrate, the EC, "
+         "the root-zone temperature, the pH and the electrical power that the equipment uses. The "
+         "sensors measure these values each second. The dashboards that show all of this have many "
+         "numbers and graphs. They tell you the <em>values</em> that occur. They do not tell you "
+         "the <em>effect</em> on the plant, the conditions that will occur next, or the task to do."),
+    p("This paper shows a different method for the design of a dashboard. The name of this method "
+      "is <strong>Plant-State Intelligence</strong>. The method gives a screen that calculates an "
+      "estimate of the state of the plant, and does not only show the values for the room. The "
+      "target is a &lsquo;calm dashboard&rsquo;: a dashboard that gives an advisory only when there "
+      "is something important. Thus it has no signal for most of the time.</p><p>A telemetry-dump "
+      "dashboard makes the person put the information of fifteen graphs together and make a "
+      "decision, frequently after a long day of work. A plant-state dashboard does this for you."),
+    callout("note", "Information about this paper",
+      ul(["This paper is a <strong>guide for operations and product design</strong>. It is not a paper on horticulture. The examples of lead time show a design for operators. They are predictions that have no validation. We recommend most of the designs in this paper. Examples show these designs.",
+          "The target is a screen with <strong>inference</strong> of the state of the plant, <strong>prediction</strong> of problems and <strong>prescription</strong> of the next step. The screen gives the prediction some days before the problems occur, with its evidence and confidence.",
+          "The paper starts from this: <em>a screen full of gauges is not a second person that helps you.</em>"], "tight")),
+    figure(L.flow("Where you make the decision",
+            [("Sensors", "data from the room"),
+             ("Many graphs", "15 graphs, no sensor fusion"),
+             ("Person", "must put all the data together fast")],
+            note="The usual method: the person puts the data together."), 1,
+      "The telemetry-dump method (above) leaves all the work of the decision to the person. "
+      "Plant-State Intelligence moves this work to the system: sensors &rarr; sensor fusion and "
+      "inference &rarr; one decision that is easy to read."),
   ]})
 
-SECTIONS.append({"id": "key-terms", "kicker": "Vocabulary", "title": "Definitions",
+SECTIONS.append({"id": "key-terms", "kicker": "The terms", "title": "Definitions",
   "blocks": [
-    p("Here are the words before the argument. Don't memorise them. Each one comes back in context."),
-    defterm("Telemetry", "The raw measurements streamed off your sensors, second by second: "
-            "temperature, humidity, moisture and the rest, before anything is done with them."),
-    defterm("VPD (vapour pressure deficit)", "How &lsquo;thirsty&rsquo; the air is for moisture, "
-            "which drives how fast a plant transpires. 1.4&ndash;1.6&nbsp;kPa is fine in late flower "
-            "but punishing in early veg. The same number means different things at different "
-            "stages."),
-    defterm("Crop steering", "Deliberately pushing a plant <strong>vegetative</strong> (leafy "
-            "growth) or <strong>generative</strong> (flower and resin) by controlling irrigation and "
-            "dryback."),
-    defterm("Inference", "Estimating something you cannot measure directly, like plant stress, "
-            "by combining several things you can measure."),
-    defterm("Sensor fusion", "Combining several signals over time into one conclusion. "
-            "&lsquo;Leaf temp up&rsquo; alone is noise. &lsquo;Leaf temp up <em>and</em> "
-            "transpiration flat <em>and</em> dryback unusually deep&rsquo; is a diagnosis."),
-    defterm("Dryback", "How much the substrate dries between irrigations. <em>Dryback depth</em> and "
-            "<em>dryback rate</em> are derived crop-steering metrics that matter more than any raw "
-            "moisture number."),
-    defterm("Leading vs lagging indicator", "A leading indicator is a precursor that warns early. A "
-            "lagging indicator is a symptom that confirms damage already happened."),
-    defterm("Baseline / trajectory", "The expected envelope for this cultivar, at this stage and "
-            "point in the photoperiod, learned from your own past runs."),
-    defterm("PPFD / DLI", "PPFD is instantaneous light intensity. DLI is the total daily light "
-            "delivered. EC is the salt concentration in the feed or root-zone pore water."),
+    p("These terms come before the other sections. It is not necessary that you know the terms at this time. Each term occurs again in the paper."),
+    defterm("Telemetry", "The measurements that your sensors send each second: temperature, "
+            "humidity, moisture and other values. The data are as they come from the sensors, "
+            "before you use them."),
+    defterm("VPD (vapor pressure deficit)", "The quantity of water vapor that you must add to the "
+            "air to saturate it. This quantity changes the rate of transpiration of a plant. A VPD "
+            "of 1.4&ndash;1.6&nbsp;kPa is correct in the last stage of flowering. In the first "
+            "stage of vegetative growth, it causes stress. The same number has a different effect "
+            "at each stage."),
+    defterm("Crop steering", "The control of irrigation and dryback to make a plant "
+            "<strong>vegetative</strong> (growth of leaves) or <strong>generative</strong> (flower "
+            "and resin)."),
+    defterm("Inference", "An estimate of a value that you cannot measure directly, for example "
+            "plant stress. You calculate the estimate from some values that you can measure."),
+    defterm("Sensor fusion", "Some signals that you put together in a period of time to give one "
+            "result. The signal &lsquo;leaf temperature is higher&rsquo; is only noise. The signals "
+            "&lsquo;leaf temperature is higher <em>and</em> transpiration is flat <em>and</em> "
+            "dryback is deeper than usual&rsquo; together are a diagnosis."),
+    defterm("Dryback", "The quantity by which the substrate dries between two irrigations. Two "
+            "values for crop steering are the <em>dryback depth</em> and the <em>dryback rate</em>. "
+            "You calculate them from the sensor data. They are more important than a moisture "
+            "number from a sensor."),
+    defterm("Leading indicator and lagging indicator", "A leading indicator is a precursor that gives a signal "
+            "before damage occurs. A lagging indicator is a symptom that shows damage that occurred "
+            "before."),
+    defterm("Baseline and trajectory", "The usual range of values for this cultivar, at this stage "
+            "and at this time in the photoperiod. The range comes from the data of your previous "
+            "cycles."),
+    defterm("PPFD / DLI", "PPFD (photosynthetic photon flux density) is the light intensity at one "
+            "time. DLI (daily light integral) is the total light that the plants receive each day. "
+            "EC is the concentration of salt in the feed or in the pore water of the root zone."),
   ]})
 
-SECTIONS.append({"id": "sensor-problem", "kicker": "The problem", "title": "Limitations of sensor-only dashboards",
+SECTIONS.append({"id": "sensor-problem", "kicker": "The problem", "title": "Limits of dashboards with only sensor data",
   "blocks": [
-    p("The conventional dashboard rests on one implicit theory: &lsquo;expose every measurement and a skilled "
-      "grower will know what to do.&rsquo; That fails in seven predictable ways. Every sensor "
-      "measures the plant's <strong>surroundings</strong>, air, root zone, light, and "
-      "none measures vigour, stress or transpiration directly. That leaves an inference gap the human "
-      "must cross unaided. Capacitive moisture probes, for instance, report water content in the "
-      "substrate, never the plant's own water status" + _c("capacitive-soil-moisture") + "."),
-    p("It is also reactive. By the time a line crosses a threshold, salt accumulation or a stalled "
-      "dryback has been accruing for hours or days. Its static high/low alarms &lsquo;cry "
-      "wolf&rsquo;: they fire on transient blips like a door opening or a lights-on spike, so "
-      "growers learn to ignore them. Alarm-management standards from process industries put the "
-      "alarm-flood threshold at roughly ten alarms per ten minutes and cap high-priority alarms at "
-      "about five percent. A grow-room dashboard that buzzes constantly has already lost the "
-      "operator's trust" + _c("alarm-mgmt-isa182") + "."),
-    figure(L.flow("Seven ways the sensor dashboard fails",
+    p("The usual dashboard uses one assumption that no person states: &lsquo;show each measurement, "
+      "and a good grower will know the task to do.&rsquo; This assumption causes seven frequent "
+      "problems. Each sensor measures the <strong>environment</strong> of the plant (air, root "
+      "zone, light). No sensor measures vigor, stress or transpiration directly. Thus the person "
+      "must make the inference without aid. For example, capacitive moisture probes give the water "
+      "content in the substrate, and not the water condition of the plant" +
+      _c("capacitive-soil-moisture") + "."),
+    p("The usual dashboard also shows a problem after it occurs. When a value is more than a "
+      "threshold, the accumulation of salt, or a dryback that stops, started hours or days before. "
+      "The alarms have constant high limits and low limits, and they give false alarms. They start "
+      "for short changes, for example when a door opens or when the lights come on. Thus growers "
+      "start to ignore the alarms.</p><p>The alarm management standards of the process industry set "
+      "the threshold of an alarm flood at approximately ten alarms in ten minutes. They set a "
+      "maximum of approximately five percent for the most important alarms. The operator does not "
+      "have trust in a grow-room dashboard that gives alarms continuously" + _c("alarm-mgmt-isa182") +
+      "."),
+    figure(L.flow("Seven problems of the sensor dashboard",
             [("1 Shows the room", "not the plant"),
-             ("2 Reactive", "graph looks bad after stress"),
-             ("3 No memory", "no context or history"),
-             ("4 Cries wolf", "static alarms, fatigue"),
-             ("5 One signal at a time", "no cross-channel view"),
-             ("6 Cognitive load", "as if it were a feature"),
-             ("7 Stops at symptoms", "never names the cause")],
-            note="The summary indictment: we built instruments and called them intelligence."), 2,
-      "The seven failure modes of a telemetry-dump dashboard. Each is a place where the human is left "
-      "doing work the software could do."),
-    figure(L.line("The lag between cause and symptom",
+             ("2 Slow", "shows stress after it occurs"),
+             ("3 No record", "no baseline or reference"),
+             ("4 False alarm", "constant limits, fatigue"),
+             ("5 One signal at a time", "no view of other signals"),
+             ("6 Too much work", "the work is a &lsquo;feature&rsquo;"),
+             ("7 Only symptoms", "does not show the cause")],
+            note="The result: we made instruments and gave them the name &lsquo;intelligence&rsquo;."), 2,
+      "The seven problems of a telemetry-dump dashboard. In each problem, the person does a task "
+      "that the system can do."),
+    figure(L.line("The interval from cause to symptom",
             [(0, 2.6), (1, 2.9), (2, 3.3), (3, 3.8), (4, 4.4)],
             ["Day 22", "Day 23", "Day 24", "Day 25", "Day 26"],
             ylab="Pore-water EC", ymin=2, ymax=5,
-            note="EC creeps up for four days. Tip burn only appears on Day 26."), 3,
-      "Pore-water EC creeps up for four days while the grower notices nothing, until tip burn "
-      "appears on Day 26. A single-channel chart shows the cause the whole time, but nobody is "
-      "watching that one line at that moment. That is the lag a plant-state system is built to "
-      "close" + _c("spc-signal-noise-ed") + "."),
-    callout("warn", "Single-channel widgets hide the truth",
-      p("The real story about plant health lives in cross-signal, multivariate patterns: "
-        "moisture, EC, VPD and transpiration moving together. A wall of single-channel gauges "
-        "structurally cannot express that pattern, no matter how many you add.")),
+            note="EC increases slowly for four days. Tipburn occurs only on Day 26."), 3,
+      "The pore-water EC increases slowly for four days, and the grower does not find a problem, "
+      "until tipburn occurs on Day 26. A graph of one signal shows the cause at all times, but no "
+      "person monitors that one graph at that time. A plant-state system decreases this interval" +
+      _c("spc-signal-noise-ed") + "."),
+    callout("warn", "Gauges for one signal do not show the condition of the plant",
+      p("Do not use only gauges for one signal. The information on the condition of the plant is in "
+        "many signals together: moisture, EC, VPD and transpiration change together. Gauges for one "
+        "signal cannot show these changes, also if you add many gauges.")),
   ]})
 
-SECTIONS.append({"id": "six-inversions", "kicker": "The shift", "title": "Plant-state dashboard design principles",
+SECTIONS.append({"id": "six-inversions", "kicker": "The change", "title": "Six changes in the design of a plant-state dashboard",
   "blocks": [
-    p("Plant-State Intelligence inverts six assumptions baked into the sensor "
-      "dashboard. None of these throws the raw data away. It just moves to the "
-      "&lsquo;basement,&rsquo; still available on drill-down for the expert and the post-mortem."),
-    table(["Axis", "From: gauge cluster", "To: calm dashboard"], [
-      ["<strong>Object</strong>", "Instrumentation: show the environment", "Inference: estimate the plant's state"],
-      ["<strong>Reference</strong>", "Fixed thresholds", "Learned baselines per cultivar &times; stage &times; photoperiod phase"],
-      ["<strong>Breadth</strong>", "One signal per widget", "Multi-input fusion across signals"],
-      ["<strong>Timing</strong>", "Lagging symptoms", "Leading precursors"],
-      ["<strong>Output</strong>", "Alert: &lsquo;a number moved&rsquo;", "Prescription: action, deadline, consequence"],
-      ["<strong>Posture</strong>", "Always-on wall of graphs", "Exception-based, quiet by default"],
-    ], caption="The six inversions. The hardest shift is the last one: silence becomes the default state."),
-    callout("key", "The plant should win the fight for attention",
-      p("An always-on wall of graphs competes with the plant for the grower's attention, and "
-        "the plant should win. That is why a prescription replaces a bare alert. It names the action, "
-        "the deadline, and the consequence of ignoring it. And it is why silence, not a full screen, is "
-        "the healthy resting state.")),
+    p("Plant-State Intelligence changes six assumptions of the sensor dashboard to the opposite. No "
+      "change removes the sensor data. The data move to a lower position on the screen. You can "
+      "continue to use the data when you want to examine a problem, also after the problem occurs."),
+    table(["Axis", "From: group of gauges", "To: calm dashboard"], [
+      ["<strong>Object</strong>", "Instruments: the dashboard shows the environment", "Inference: the dashboard calculates an estimate of the state of the plant"],
+      ["<strong>Reference</strong>", "Thresholds that do not change", "Baselines from your data, for each cultivar, stage and photoperiod phase"],
+      ["<strong>Inputs</strong>", "One signal for each gauge", "Sensor fusion of many signals"],
+      ["<strong>Time</strong>", "Lagging indicators (symptoms)", "Leading indicators (precursors)"],
+      ["<strong>Output</strong>", "Alarm: &lsquo;a number changed&rsquo;", "Prescription: task, time limit and result"],
+      ["<strong>Mode</strong>", "Many graphs, always on", "A signal only for unusual values. The standard state has no signal."],
+    ], caption="The six changes to the opposite. It is not easy to make the last change: the standard state has no signal."),
+    callout("key", "The grower must monitor the plant, and not the screen",
+      p("A screen that always shows many graphs causes the grower to monitor the screen and not the "
+        "plant. The grower must monitor the plant first. Thus a prescription replaces an alarm that "
+        "only tells you that a number changed. A prescription gives the task, the time limit and "
+        "the result if you ignore it. Thus a screen with no signal, and not a full screen, is the "
+        "standard state when there is no problem.")),
   ]})
 
-SECTIONS.append({"id": "plant-state-model", "kicker": "Core content", "title": "Plant-state inference model",
+SECTIONS.append({"id": "plant-state-model", "kicker": "Primary content", "title": "Plant-state inference model",
   "blocks": [
-    p("The pipeline estimates four (really five) interacting states. <strong>Environmental "
-      "state</strong>, temperature, RH, VPD, CO&#8322;, light, is reframed as integrals "
-      "and rates: VPD-hours accumulated today, DLI to date, not instants. Plant response to "
-      "VPD is non-linear and cumulative rather than tied to any single reading" + _c("vpd-plant-response") +
-      ", so the accumulated quantity is the meaningful one. <strong>Substrate state</strong> adds "
-      "derived crop-steering metrics: dryback depth and rate, field-capacity recovery, and "
-      "shot-to-shot moisture response."),
-    p("The <strong>plant physiological state</strong> is not measured but "
-      "<strong>estimated</strong>, by fusing the others into a transpiration proxy, a stress index, "
-      "a vigour/stacking trajectory and a steering-response readout. <strong>Operational/equipment "
-      "state</strong> and an optional <strong>vision state</strong> (canopy cameras) round it out. "
-      "Sensor health itself is treated as a first-class signal, so the system knows when "
-      "it is blind."),
-    figure(L.flow("From measured states to the inferred plant state",
-            [("Environmental", "VPD-hours, DLI, CO₂"),
-             ("Substrate", "dryback depth & rate, recovery"),
-             ("Equipment + Vision", "pump/valve health, canopy"),
-             ("Plant state (inferred)", "transpiration, stress, vigour, steering response")],
-            note="Outer measured layers feed inward into the one inferred state at the centre."), 4,
-      "Environmental, substrate and equipment/vision states feed inward into the inferred plant "
-      "physiological state. That centre is what the grower actually cares about, and the only thing "
-      "no sensor reports."),
-    table(["Raw value", "Derived, meaningful form"], [
-      ["WC = 42%", "Dryback depth 8%, slower than this cultivar's baseline"],
-      ["VPD = 1.5 kPa right now", "VPD-hours 18% above the in-range envelope for the day"],
-      ["EC = 5.1 mS/cm", "Pore-water EC rising 4 days straight, tip-burn risk"],
-      ["Leaf temp +0.6&deg;C", "Transpiration flat despite higher VPD: stomata closing"],
-    ], cls="compact", caption="The same number, raw vs derived. The right column is what a plant-state dashboard shows. The left is in the basement."),
+    p("The pipeline calculates estimates of four states that have an effect on each other. If you "
+      "include the vision state, there are five states. The system shows the <strong>environment "
+      "state</strong> (temperature, relative humidity, VPD, CO&#8322; and light) as totals in a "
+      "period of time and as rates, and not as values at one time. Examples are the VPD-hours since "
+      "the start of this day and the DLI to this time.</p><p>The effect of VPD on a plant does not "
+      "change at a constant rate. The effect increases with time and does not come from one reading" +
+      _c("vpd-plant-response") + ". Thus the total is the important quantity. The <strong>substrate "
+      "state</strong> adds calculated values for crop steering. These calculated values are dryback "
+      "depth, dryback rate, recovery to field capacity, and the change of the moisture after each "
+      "shot."),
+    p("No sensor measures the <strong>plant state</strong>. The system calculates an "
+      "<strong>estimate</strong> of it with sensor fusion of the other states. The estimate has a "
+      "transpiration proxy, a stress index, a vigor and stacking trajectory, and an output for the "
+      "steering effect. The <strong>operation and equipment state</strong> and an optional "
+      "<strong>vision state</strong> (canopy cameras) complete the model. The system uses the "
+      "condition of the sensors as an important signal. Thus the system knows when the sensors give "
+      "no correct data."),
+    figure(L.flow("From the measured states to the plant state estimate",
+            [("Environment", "VPD-hours, DLI, CO₂"),
+             ("Substrate", "dryback depth + rate, recovery"),
+             ("Equipment, vision", "pump and valve state, canopy"),
+             ("Plant state (estimate)", "transpiration, stress, vigor, effect of steering")],
+            note="The outer measured layers go to the plant state estimate in the middle."), 4,
+      "The environment, substrate, equipment and vision states go to the plant state estimate. This "
+      "estimate is the state that is important to the grower, and no sensor gives it."),
+    table(["Value from the sensor", "Calculated value"], [
+      ["WC = 42%", "Dryback depth 8%, slower than the baseline for this cultivar"],
+      ["VPD = 1.5 kPa at this time", "VPD-hours 18% more than the baseline range for the day"],
+      ["EC = 5.1 mS/cm", "Pore-water EC increased on 4 days in sequence: risk of tipburn"],
+      ["Leaf temperature +0.6&deg;C", "Transpiration does not change, but the VPD is higher: the stomata close"],
+    ], cls="compact", caption="The same number as a sensor value and as a calculated value. The values on the right are the information that a plant-state dashboard shows. The values on the left are at a lower position on the screen."),
     callout("tip", "The output is a short list of named conditions",
-      p("This layer does not emit fifteen numbers. It emits a short list of <strong>named "
-        "conditions</strong>: &lsquo;dryback stalling,&rsquo; &lsquo;salt accumulating,&rsquo; "
-        "&lsquo;over-transpiring,&rsquo; each with a confidence and an evidence chain. "
-        "Cameras already on site for security become a horticultural input: canopy colour and "
-        "uniformity, lights-on wilt, height and stacking over days, early discoloration.")),
+      p("This layer does not send fifteen numbers. It sends a short list of <strong>named "
+        "conditions</strong>: &lsquo;a dryback that stops&rsquo;, &lsquo;salt accumulation&rsquo;, "
+        "&lsquo;high transpiration&rsquo;. Each condition has a confidence and an evidence chain. "
+        "Security cameras at the site can supply data for horticulture. They show the color and the "
+        "uniformity of the canopy, and wilt at the start of the light period. They also show the "
+        "height and the stacking in a period of some days, and a change of color in the first stage.")),
   ]})
 
-SECTIONS.append({"id": "architecture", "kicker": "Core content", "title": "Six-layer dashboard architecture",
+SECTIONS.append({"id": "architecture", "kicker": "Primary content", "title": "Structure of a dashboard with six layers",
   "blocks": [
-    p("The system is a six-layer pipeline that maps cleanly onto a Home Assistant&ndash;centred "
-      "stack. Most operations already have layers 0 and 1 without realising it. The intelligence "
-      "moves to the dashboard long before the actuation does: autonomous control is earned "
-      "channel by channel, after advisories prove correct."),
+    p("The system is a pipeline with six layers. It agrees with a system that has Home Assistant in "
+      "the middle. Most operations have layers 0 and 1, and the operators do not know it. The "
+      "dashboard gets the inference a long time before the control of the equipment gets it. "
+      "Autonomous control comes for one signal at a time, and only after the advisories for the "
+      "signal are correct."),
     steps([
-      ("Layer 0: Ingest", "Pull every raw stream onto one shared timebase. Most rooms already do this."),
-      ("Layer 1: Derive", "Turn raw into meaningful: VPD, dryback %, DLI, recovery slopes, shot response."),
-      ("Layer 2: Baseline", "Build per-cultivar / stage / photoperiod envelopes, seeded from horticultural priors and refined on your own runs."),
-      ("Layer 3: Infer", "Fuse everything into named conditions with confidence and evidence: rules plus anomaly detection, optionally an LLM reasoning pass."),
-      ("Layer 4: Prescribe", "Map each condition to a concrete action with a deadline."),
-      ("Layer 5: Present", "The calm dashboard. Optional gated Layer 5b closes the loop on low-risk, explicitly-licensed actions only."),
+      ("Layer 0: Input", "Put all the data on the same timebase. Most rooms do this."),
+      ("Layer 1: Values", "Calculate new values from the sensor data: VPD, dryback %, DLI, recovery rates and the effect of each shot."),
+      ("Layer 2: Baseline", "Make baseline ranges for each cultivar, stage and photoperiod. Start with known values from horticulture, and make the ranges more accurate with the data of your cycles."),
+      ("Layer 3: Inference", "Use sensor fusion to make named conditions, with confidence and evidence. The methods are the conditions that you set, and tests for unusual values. You can also add a step in which an LLM examines the data."),
+      ("Layer 4: Prescription", "Connect each condition to a task with a time limit."),
+      ("Layer 5: Display", "The calm dashboard. The optional Layer 5b has a gate. It gives closed-loop control only for tasks that have low risk and that have your approval."),
     ]),
     figure(L.flow("The six-layer pipeline",
-            [("0 Ingest", "one timebase"), ("1 Derive", "raw → meaningful"),
-             ("2 Baseline", "learned envelopes"), ("3 Infer", "named conditions"),
-             ("4 Prescribe", "action + deadline"), ("5 Present", "calm dashboard")],
-            note="Optional 5b Closed-Loop branches off Present for low-risk licensed actions only."), 5,
-      "The pipeline, layer by layer. Layer 2 baselines can be seeded from published horticultural "
-      "targets (Athena targets are one example) before you have any history of your own."),
-    callout("note", "Advisory-first is the design, not a limitation",
-      p("The human-in-the-loop posture is deliberate. An operation can run permanently at "
-        "&lsquo;advise only&rsquo; and capture most of the value. Layer 5b auto-applies only the "
-        "low-risk, explicitly-licensed actions. Anything irreversible or expensive stays "
-        "human-approved.")),
+            [("0 Input", "one timebase"), ("1 Values", "data → values"),
+             ("2 Baseline", "baselines from data"), ("3 Inference", "named conditions"),
+             ("4 Prescription", "task + time limit"), ("5 Display", "calm dashboard")],
+            note="Optional 5b: closed loop from Display, only for low-risk tasks that have your approval."), 5,
+      "The pipeline, layer by layer. You can start the baselines of Layer 2 with the targets for "
+      "horticulture in papers (the Athena targets are one example), before you have data from your "
+      "room."),
+    callout("note", "Advisory-first is the design, not a limit",
+      p("In this design, a person is in the loop. An operation can stay permanently at the "
+        "&lsquo;advise only&rsquo; stage and get most of the results. Layer 5b makes changes "
+        "automatically only for tasks that have low risk and that have your approval. A person must "
+        "give approval for each task that has a permanent effect or a high cost.")),
   ]})
 
-SECTIONS.append({"id": "dashboard-surface", "kicker": "Core content", "title": "Dashboard layout and priority zones",
+SECTIONS.append({"id": "dashboard-surface", "kicker": "Primary content", "title": "Structure of the dashboard and its four zones",
   "blocks": [
-    p("What the grower opens has four zones, in priority order, and on a good day, "
-      "three of them are empty. Zone&nbsp;1 is the <strong>Headline</strong>: one line of plant truth "
-      "in plain language with a status colour, which is 90% of what a busy grower needs 90% of the "
-      "time. Zone&nbsp;2 is the <strong>Watchlist</strong> of things drifting but not yet wrong, "
-      "the precursors, and it exists precisely to make the next zone rare. "
-      "Zone&nbsp;3 is <strong>Advisories</strong>, the only zone that should ever interrupt, each "
-      "prescriptive and time-bound. Zone&nbsp;4 is the <strong>Evidence and raw basement</strong>, "
-      "demoted but never deleted."),
+    p("The screen that the grower opens has four zones, and the first zone is the most important. "
+      "When the condition of the plant is correct, three of the zones are empty. Zone&nbsp;1 is the "
+      "<strong>Headline</strong>: one short sentence that is easy to read. It tells the condition "
+      "of the plant, and it has a color that shows the condition. This sentence gives 90% of the "
+      "information that a grower with much work must have, for 90% of the time.</p><p>Zone&nbsp;2 "
+      "is the <strong>Watchlist</strong>, with the items that have drift but are not incorrect at "
+      "this time (the precursors). The Watchlist makes advisories in the next zone not frequent. "
+      "Zone&nbsp;3 is <strong>Advisories</strong>, the only zone that sends a signal to the grower. "
+      "Each advisory has a prescription with a time limit. Zone&nbsp;4 is the zone for "
+      "<strong>evidence and sensor data</strong>. It has a low position, but you do not remove it."),
     grid([
-      card("Zone 1: Headline", "&lsquo;Flower Day 24 &middot; Room 3 &middot; On-track. Steering generative as intended. No action needed.&rsquo;", "always shown"),
-      card("Zone 2: Watchlist", "Drifting but not yet wrong: the precursors. Each item is a sentence, not a graph. Often empty.", "usually quiet"),
-      card("Zone 3: Advisories", "The only zone that interrupts. Prescriptive and time-bound. Expands to its evidence chain.", "rare by design"),
-      card("Zone 4: Evidence / raw", "The old dashboard, demoted. Fused signals, baselines, raw graphs, for drill-down and the post-mortem.", "the basement"),
+      card("Zone 1: Headline", "&lsquo;Flower Day 24 &middot; Room 3 &middot; Correct. The steering is generative, the same as the target. No task is necessary.&rsquo;", "always shown"),
+      card("Zone 2: Watchlist", "Items with drift that are not incorrect at this time: the precursors. Each item is a sentence, and not a graph. Frequently empty.", "usually empty"),
+      card("Zone 3: Advisories", "The only zone that sends a signal to the grower. Each advisory has a prescription with a time limit. It opens to show the evidence chain.", "not frequent, by design"),
+      card("Zone 4: Evidence and sensor data", "The previous dashboard, at a lower position. It has the signals after sensor fusion, baselines and graphs of sensor data. You use them to examine a problem, also after the problem occurs.", "the lowest position"),
     ], cols=2),
-    p("Colour and layout do real work here. Before you consciously focus on any text, your eye has "
-      "already picked up the status colour, the position on screen, and the one bold line. "
-      "Data designers call this pre-attentive processing" + _c("preattentive-dataviz") + ": visual properties "
-      "the eye registers automatically, before focused attention engages, so the &lsquo;all clear&rsquo; state is "
-      "grasped in a glance, not assembled from five panels."),
-    callout("key", "A sample advisory, in full",
-      p("&lsquo;Reduce dryback target 3% in Room 3 (Day 24)&hellip; Tip burn likely soon (illustrative) if "
-        "unaddressed. Confidence: high. <em>[Show evidence]</em>&rsquo;, and the evidence "
-        "expands to the fused signals, the baseline it violated, and the historical precedent. The "
-        "old dashboard was 100% Zone 4. The new one leads with Zones 1&ndash;3 and keeps 4 in the "
-        "basement.")),
+    p("Color and layout are important here. You see the color, the position on the screen and the "
+      "headline before you read the sentence. The name for this effect is pre-attentive processing" +
+      _c("preattentive-dataviz") + ". It is the group of visual properties that you receive "
+      "automatically, before you select an item to examine. Thus you can see the &lsquo;no "
+      "problem&rsquo; state immediately, and you do not put the information from five panels "
+      "together."),
+    callout("key", "A full example of an advisory",
+      p("&lsquo;Decrease the dryback target by 3% in Room 3 (Day 24)&hellip; Tipburn is possible "
+        "soon (example) without this change. Confidence: high. <em>[Show evidence]</em>&rsquo;. The "
+        "evidence opens to show the signals after sensor fusion, the baseline range and the values "
+        "that are not in it, and a previous example. The previous dashboard was 100% Zone 4. The "
+        "new dashboard starts with Zones 1&ndash;3 and keeps Zone 4 at a low position.")),
   ]})
 
-SECTIONS.append({"id": "how-to", "kicker": "How to", "title": "Implementation path",
+SECTIONS.append({"id": "how-to", "kicker": "How to", "title": "Installation procedure",
   "blocks": [
-    p("This does not require a complete rebuild. Each stage delivers value and earns the next, and most of "
-      "the payoff lands by Stage&nbsp;3, long before any closed-loop control."),
-    figure(L.flow("The adoption ladder",
-            [("0 Telemetry", "today's raw graphs"),
-             ("1 Derive", "meaningful metrics, low effort"),
-             ("2 Baseline", "go quiet, kills alarm fatigue"),
-             ("3 Fuse", "watchlist + advisories come alive"),
-             ("4 Prescribe", "attach actions + deadlines"),
-             ("5 Closed-loop", "opt-in, gated")],
-            note="Most of the payoff lands by Stage 3. Stage 5 is optional."), 6,
-      "Six rungs from telemetry to closed-loop. Stage 2, baseline and go quiet, is the "
-      "single biggest step, because it ends alarm fatigue in one move."),
+    p("It is not necessary to assemble all the system again. Each stage gives results and makes the "
+      "next stage possible. Most of the results occur by Stage&nbsp;3, a long time before "
+      "closed-loop control."),
+    figure(L.flow("The six stages of use",
+            [("0 Telemetry", "the graphs you have"),
+             ("1 Values", "calculated values, small work"),
+             ("2 Baseline", "no false alarms, no alarm fatigue"),
+             ("3 Fusion", "watchlist + advisories operate"),
+             ("4 Prescription", "add tasks + time limits"),
+             ("5 Closed loop", "gate, optional")],
+            note="Most of the results occur by Stage 3. Stage 5 is optional."), 6,
+      "Six stages from telemetry to closed loop. Stage 2 (the baseline, with no false alarms) is "
+      "the largest step, because it stops alarm fatigue in one step."),
     steps([
-      ("Pick one room, one pattern", "Choose a single failure pattern (say, stalling dryback) and implement Stages 1–3 for just that pattern in Home Assistant."),
-      ("Run it shadow-mode for a cycle", "Run alongside the existing dashboard for a full cycle. Don't act on it yet. Watch whether it would have been right."),
-      ("Prove the lead time", "Measure the gap between the advisory firing and when the problem would have become visible. Prove it on one advisory before scaling."),
-      ("Scale pattern by pattern", "Add the next failure pattern, then the next room. Stage 4 (prescribe) and Stage 5 (closed-loop) are opt-in, channel by channel."),
+      ("Select one room and one type of problem", "Select one type of problem (for example, a dryback that stops). Install Stages 1–3 in Home Assistant for only this type of problem."),
+      ("Operate it in shadow mode for one cycle", "Operate the system with the dashboard that you have for a full cycle. Do not use its advisories to do tasks. Examine if each advisory is correct."),
+      ("Show the lead time", "Measure the time between the advisory and the time at which you can see the problem. Show this on one advisory before you use the system in more rooms."),
+      ("Add one type of problem at a time", "Add the next type of problem, then the next room. Stage 4 (prescription) and Stage 5 (closed loop) are optional, for one signal at a time."),
     ]),
-    callout("tip", "Stage 4 is a stable, valuable end state",
-      p("Advisory-first is not a stepping stone you are obligated to leave. An operation can sit at "
-        "Stage&nbsp;4 forever and capture most of the value. Stage&nbsp;5 closed-loop is optional and "
-        "gated to low-risk, licensed actions only.")),
+    callout("tip", "Stage 4 is a stable last stage",
+      p("You do not have to go from the advisory-first method to a different stage. An operation "
+        "can stay at Stage&nbsp;4 permanently and get most of the results. Stage&nbsp;5 (closed "
+        "loop) is optional, and it has a gate for tasks with low risk that have your approval.")),
   ]})
 
-SECTIONS.append({"id": "pitfalls", "kicker": "Pitfalls", "title": "Trust, confidence, and failure modes",
+SECTIONS.append({"id": "pitfalls", "kicker": "Problems", "title": "Trust, confidence and types of problem",
   "blocks": [
-    p("An advisory system that is wrong <em>and</em> confident is worse than no system at all. Trust "
-      "is a balance: you spend it with every wrong call and earn it with every right one, so advisory "
-      "<strong>precision</strong>, not raw volume, is what drives action. Five "
-      "guardrails are non-negotiable."),
-    table(["Guardrail", "Failure it prevents", "Mechanism"], [
-      ["Cold-start honestly", "False certainty from one cycle", "Seed from horticultural priors, widen confidence bands, label outputs &lsquo;still learning&rsquo;"],
-      ["Cheap to correct", "Resentment at wrong calls", "Every advisory is dismissable and markable as a false positive, and the marks tune the baselines"],
-      ["Track precision", "Silent quality drift", "Advisory precision and false-positive rate are first-class, visible metrics"],
-      ["Human in the loop", "Irreversible or costly mistakes", "Anything expensive or irreversible stays human-approved"],
-      ["Never a black box", "Loss of trust in the WHAT", "Every conclusion expands to its evidence chain"],
-    ], cls="compact", caption="The five guardrails. Each prevents a specific way an advisory system loses the grower's trust."),
-    callout("danger", "Treat the system's own blindness as a signal",
-      p("A drifted, noisy or flatlined sensor is itself an advisory. For example: &lsquo;EC probe in "
-        "Room 2 reads implausibly flat: suspect failure, EC-derived advisories "
-        "paused.&rsquo; A grower who can't see <em>why</em> will, correctly, stop trusting the "
-        "<em>what</em>. The system's job is to make the decision obvious, not to make it alone on "
-        "anything irreversible or expensive.")),
+    p("An advisory system that is incorrect <em>and</em> has high confidence is worse than no "
+      "system. Trust is a balance. Each incorrect advisory decreases the trust, and each correct "
+      "advisory increases it. Thus the <strong>precision</strong> of the advisories, and not the "
+      "number of advisories, causes the grower to do a task. Five guardrails are necessary."),
+    table(["Guardrail", "Problem that it prevents", "Mechanism"], [
+      ["Show low confidence at cold start", "Too much confidence from the data of one cycle", "Start with known values from horticulture. Make the confidence ranges larger. Put the label &lsquo;data not sufficient&rsquo; on the outputs."],
+      ["Easy to correct", "The grower does not want the system after incorrect advisories", "The grower can remove each advisory and identify it as a false positive. The identifications adjust the baselines."],
+      ["Monitor precision", "A drift in quality with no signal", "The precision of the advisories and the false-positive rate are important values that the grower can see."],
+      ["Person in the loop", "Errors with a permanent effect or a high cost", "A person gives approval for each task with a high cost or a permanent effect"],
+      ["Not a black box", "No trust in the advisory", "Each advisory opens to show its evidence chain"],
+    ], cls="compact", caption="The five guardrails. Each guardrail prevents one problem that decreases the trust of the grower in an advisory system."),
+    callout("danger", "A sensor problem is an advisory",
+      p("Make an advisory for a sensor that has drift, noise or a flat signal. For example: "
+        "&lsquo;The EC probe in Room 2 gives a flat value, and this value is not possible: the "
+        "probe can be defective, and the system stops the advisories from EC.&rsquo; If a grower "
+        "cannot see the <em>cause</em> of an advisory, the grower will, correctly, have no trust in "
+        "the <em>advisory</em>. The system must make the decision easy for the grower to see. A "
+        "person must make the decision for a task with a permanent effect or a high cost.")),
   ]})
 
-SECTIONS.append({"id": "expectations", "kicker": "Reality check", "title": "Expected results and limitations",
+SECTIONS.append({"id": "expectations", "kicker": "The results", "title": "Expected results and limitations",
   "blocks": [
-    p("If the new dashboard is working, the grower looks at it <strong>less</strong>, is surprised "
-      "<strong>less</strong>, and harvests <strong>more consistently</strong>. Six run-over-run "
-      "metrics make that concrete, and for half of them, the success direction is "
-      "<em>down</em>."),
-    figure(L.bars("Six KPIs and their target direction (illustrative)",
-            [("Lead time ↑", 80), ("Surprises ↓", 15), ("Precision ↑", 85),
-             ("Dwell time ↓", 25), ("Decisions/wk ↑", 70), ("Outcome variance ↓", 20)],
-            unit="", note="Bars show a healthy target profile, not measured data. Direction matters more than level.",
+    p("When the new dashboard operates correctly, the grower monitors it <strong>less</strong>, has "
+      "<strong>less</strong> damage with no advisory, and gets harvests with <strong>more "
+      "uniformity</strong>. Six key performance indicators (KPIs) from one cycle to the next show "
+      "this. For three of them, the target direction is <em>down</em>."),
+    figure(L.bars("Six KPIs and their target direction (example)",
+            [("Lead time ↑", 80), ("Damage ↓", 15), ("Precision ↑", 85),
+             ("Screen time ↓", 25), ("Decisions ↑", 70), ("Result variance ↓", 20)],
+            unit="", note="The bars show a target profile, not measured data. The direction is more important than the value.",
             maxv=100), 7,
-      "A healthy target profile across the six KPIs. Lead time, precision and decisions-per-week "
-      "should be high. Surprises, dashboard dwell time and outcome variance should be low."),
-    ul(["<strong>Lead time</strong>: hours or days between an advisory and when the problem would have become visible. The core KPI. The whole point is catching drift before it becomes damage.",
-        "<strong>Surprises</strong>: visible damage with no prior advisory. Drive this to zero.",
-        "<strong>Advisory precision</strong>: acted-upon advisories over total, plus the false-positive rate.",
-        "<strong>Dashboard dwell time</strong>: lower is better. Attention should return to the plants, not the screen.",
-        "<strong>Decisions surfaced per week</strong>: the output is decisions, not pageviews.",
-        "<strong>Outcome variance</strong>: yield and quality consistency, cycle over cycle."]),
-    callout("key", "The honest framing",
-      p("Most of the payoff lands by Stage&nbsp;3, and advisory-first may well be the right permanent "
-        "end state. You are never obligated to chase closed-loop control. The working names "
-        "(Plant-State Intelligence, &lsquo;calm dashboard&rsquo;) are explicitly placeholders: "
-        "substance over branding.")),
-    p("Start small. Build the inference layer that catches drift early, see the "
-      "<a href='signal-and-noise.html'>signal-and-noise</a> paper for the statistics underneath it, "
-      "and feed it the derived crop-steering metrics from "
-      "<a href='f2-crop-steering.html'>f2 crop steering</a>. The dashboard is only as good as the "
-      "states it reasons over."),
+      "A good target profile for the six KPIs. We recommend high values for lead time, precision "
+      "and the number of decisions each week. We recommend low values for damage with no advisory, "
+      "screen time and result variance."),
+    ul(["<strong>Lead time</strong>: the time (hours or days) between an advisory and the time at which you can see the problem. Lead time is the primary KPI. The system must find drift before it causes damage.",
+        "<strong>Damage with no advisory</strong>: damage that you can see, with no advisory before it. Decrease this to zero.",
+        "<strong>Advisory precision</strong>: the number of advisories that the grower used for a task, divided by the total number of advisories. Also monitor the false-positive rate.",
+        "<strong>Screen time</strong>: the time that the grower monitors the dashboard. A lower value is better. The grower must monitor the plants and not the screen.",
+        "<strong>Decisions each week</strong>: the number of decisions that the dashboard gives in one week. The output is decisions, and not views of the screen.",
+        "<strong>Result variance</strong>: the variation of yield and quality from one cycle to the next."]),
+    callout("key", "Closed-loop control is optional",
+      p("Most of the results occur by Stage&nbsp;3. It is possible that advisory-first is the "
+        "correct permanent last stage. You do not have to use closed-loop control. The names in "
+        "this paper (Plant-State Intelligence, &lsquo;calm dashboard&rsquo;) are only temporary "
+        "names. The content is more important than the name.")),
+    p("Start with a small system. Make the inference layer that finds drift in the first stage. "
+      "Refer to the <a href='signal-and-noise.html'>signal-and-noise</a> paper for the statistics "
+      "that it uses. Give the layer the calculated values for crop steering from <a "
+      "href='f2-crop-steering.html'>f2 crop steering</a>. The dashboard is only as good as the "
+      "states that it uses."),
   ]})

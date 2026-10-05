@@ -12,14 +12,14 @@ SLUG = "slab-irrigation-strategy"
 TITLE = "Rockwool Slab Irrigation"
 EYEBROW = "Water and substrate"
 SUB = (
-    "Rockwool blocks and slabs: substrate volume, emitter flow, drainage, "
+    "Rockwool blocks and slabs: volume of the substrate, flow rate of the drippers, drainage, "
     "root establishment, P0–P3 irrigation phases and root-zone EC."
 )
 META = [
-    ("droplet", "Feed & steering"),
-    ("image", "10 technical figures"),
-    ("quote", "21 cited sources"),
-    ("clock", "~18 min read"),
+    ("droplet", "Feed and steering"),
+    ("image", "10 diagrams"),
+    ("quote", "21 sources"),
+    ("clock", "~18 min to read"),
 ]
 RELATED = [
     "rockwool-crop-steering",

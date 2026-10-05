@@ -49,30 +49,30 @@ def _atlas_profile(entry, number):
             h(3, f"{number}. {entry['name']} ({entry['scientific']})"),
             photo(
                 entry["image"],
-                entry["identify"] + " <strong>Generated plate; not to scale and apparent magnification varies.</strong>",
+                entry["identify"] + " <strong>An AI tool made this photo. The photo does not show the correct sizes, and the magnification that you see is not the same on all photos.</strong>",
                 entry["alt"],
                 "OpenAI image generation",
             ),
             kv(
                 [
-                    ("Earliest reliable signs", entry["signs"]),
-                    ("Life cycle and spread", entry["biology"]),
-                    ("Condition-qualified development", entry["development"]),
-                    ("Size / inspection scale", entry["scale"]),
-                    ("Where to inspect", entry["inspect"]),
-                    ("Confirmation", entry["confirm"]),
-                    ("Lookalikes", entry["lookalikes"]),
-                    ("Internal threshold", entry["threshold"]),
+                    ("First signs that show the problem correctly", entry["signs"]),
+                    ("Life cycle and movement", entry["biology"]),
+                    ("Development and the conditions that change it", entry["development"]),
+                    ("Size and magnification for inspection", entry["scale"]),
+                    ("Where to look", entry["inspect"]),
+                    ("Identification check", entry["confirm"]),
+                    ("Problems with the same signs", entry["lookalikes"]),
+                    ("Facility threshold", entry["threshold"]),
                     ("First response", entry["response"]),
-                    ("Layered control options", entry["controls"]),
+                    ("Control methods for each layer", entry["controls"]),
                     ("Target stage and plant part", entry["targeting"]),
-                    ("Crop, worker, residue and compatibility constraints", entry["constraints"]),
-                    ("Specimen handling", entry["specimen"]),
-                    ("Dated recheck and success criterion", entry["recheck"]),
-                    ("Trace-back and CAPA trigger", entry["capa"]),
+                    ("Limits from the crop, the workers, the residue and compatibility", entry["constraints"]),
+                    ("How to collect and keep the specimen", entry["specimen"]),
+                    ("Recheck date and the condition for a good result", entry["recheck"]),
+                    ("Source trace and CAPA trigger", entry["capa"]),
                 ]
             ),
-            p("Profile evidence: " + evidence),
+            p("References for this profile: " + evidence),
         ]
     )
 
@@ -96,49 +96,59 @@ def build_sections():
             "title": "Purpose and scope",
             "blocks": [
                 lead(
-                    "This is an operating blueprint for an indoor medicinal-cannabis facility in Auckland. "
-                    "It joins pest and disease identification to clean stock, New Zealand input legality, "
-                    "worker safety, residue release, traceability and CAPA. The point is not to own the most "
-                    "sprays. The point is to keep biology and compliance from cornering you at the same time."
+                    "This blueprint is for the operation of an indoor medicinal cannabis facility "
+                    "in Auckland. It connects the identification of pests and diseases to clean "
+                    "stock and to the safety of workers. It also connects the identification to the "
+                    "regulations for products and organisms in New Zealand. It connects the "
+                    "identification to the release of batches after the residue test, to "
+                    "traceability and to CAPA. We do not want you to have the most sprays. We want "
+                    "you to have an alternative when a pest or disease problem and a compliance "
+                    "problem occur at the same time."
                 ),
                 p(
-                    "The supplied 128-page IPM Book V15 was used as a coverage benchmark: IPM principles, "
-                    "cultural/environmental/biological/chemical controls, programme construction, eight "
-                    "arthropod profiles, six disease profiles, identification resources, glossary and operator "
-                    "tools" + _c("athena-ipm-book-v15") + ". Its branded programmes, artwork, rates and prose "
-                    "are not reproduced. New Zealand official sources and primary literature control this paper."
+                    "We used the supplied 128-page IPM Book V15 to compare the coverage of this "
+                    "paper with the book" + _c("athena-ipm-book-v15") + ". The book includes these "
+                    "parts: the basic information about IPM, cultural controls, environmental "
+                    "controls, biological controls and chemical controls. It also includes how to "
+                    "make a program, eight arthropod profiles, six disease profiles, aids for "
+                    "identification, a glossary and tools for operators. This paper is not a copy "
+                    "of the book. It does not contain the commercial programs of the book, its "
+                    "figures or its rates. For this paper, sources of the authorities in New "
+                    "Zealand and primary literature are more important than the book."
                 ),
                 callout(
                     "danger",
-                    "Generated photographs are educational reconstructions",
+                    "An AI tool made the photos for training",
                     p(
-                        "Every photographic plate in this guide was generated for the paper. Use it to decide "
-                        "where to look and what to sample, never to claim species-level confirmation. Broad and "
-                        "russet mites require microscopy; HLVd requires RT-qPCR or RT-PCR; root and leaf diseases "
-                        "often require a diagnostic laboratory. A convincing image is not a test result."
+                        "Use a photo to select where to look and which part of the plant to collect "
+                        "as a sample. Do not use a photo to make sure that you know the species. An "
+                        "AI tool made each photo in this paper. Microscopy is necessary for broad "
+                        "mites and russet mites, and RT-qPCR or RT-PCR is necessary for HLVd. A "
+                        "diagnostic laboratory is frequently necessary for root diseases and leaf "
+                        "diseases. A photo that shows the correct signs is not a test result."
                     ),
                 ),
                 ul(
                     [
-                        "<strong>Live status wins.</strong> Re-check the current Ministry, ACVM, EPA, label, SDS and WorkSafe position at procurement and use.",
-                        "<strong>Facility thresholds are controlled values.</strong> Numbers in this blueprint are examples or planning defaults unless your approved SOP adopts them.",
-                        "<strong>Old damage does not heal.</strong> Verify success with live organisms, new lesions, new growth, traps, roots or laboratory results - not cosmetic recovery.",
-                        "<strong>Clean stock is the centre.</strong> A mother-room failure compounds through every daughter lot. Treat it accordingly.",
+                        "<strong>The current status is more important than this paper.</strong> Examine the current information each time that you get or use a product. Use the information from the Ministry, ACVM, EPA, WorkSafe, the label and the SDS.",
+                        "<strong>The thresholds of a facility are controlled values.</strong> The numbers in this blueprint are examples or start values. Use a number from this blueprint only if your approved SOP includes it.",
+                        "<strong>Previous damage stays on the plant.</strong> Examine living organisms, new lesions, new growth, traps, roots or laboratory results. Use them to make sure that a control had the correct effect. A plant that is in better condition is not a sign of the effect.",
+                        "<strong>Clean stock is the most important part.</strong> A problem in the mother room increases in each clone lot. Thus give the mother room the best protection.",
                     ]
                 ),
                 figure(
                     L.flow(
-                        "Evidence to action",
+                        "From data to task",
                         [
-                            ("Observe", "mapped scout, trap, environment or test"),
-                            ("Confirm", "microscopy or laboratory where required"),
+                            ("Monitor", "map scouting, traps, environment or test"),
+                            ("Confirm", "microscopy or laboratory where necessary"),
                             ("Classify", "room, incidence, severity, trend, zero-tolerance"),
-                            ("Select", "legal + effective + compatible + residue-defensible"),
-                            ("Verify", "recheck, record, close or CAPA"),
+                            ("Select", "regulation + efficacy + compatibility + residue limit"),
+                            ("Examine", "recheck, record, stop or CAPA"),
                         ],
                     ),
                     1,
-                    "The control path. Skipping confirmation or the legal gate is how a small biological problem becomes a batch problem.",
+                    "The figure shows the control sequence. If you do not do the identification check or the legal gate, a small pest or disease problem can become a batch problem.",
                 ),
             ],
         }
@@ -150,7 +160,7 @@ def build_sections():
             "kicker": "02 · Reference",
             "title": "Definitions",
             "blocks": [
-                p("The biological, diagnostic, operational and New Zealand regulatory terms used in this blueprint."),
+                p("This section gives the terms for biology, diagnosis, operation and the regulations of New Zealand. The blueprint uses these terms."),
                 grid([defterm(term, definition) for term, definition in GLOSSARY], cols=2),
             ],
         }
@@ -160,50 +170,56 @@ def build_sections():
         {
             "id": "ipm-system",
             "kicker": "03 · System",
-            "title": "IPM principles, control layers and feedback loop",
+            "title": "Basic information about IPM, control layers and the feedback loop",
             "blocks": [
                 p(
-                    "IPM is a loop: prevent entry, monitor consistently, identify correctly, compare the "
-                    "finding with a controlled threshold, combine compatible controls, then record and verify. "
-                    "If the recheck fails, the loop runs again at a higher response level. The arthropod review "
-                    "and the existing cannabis literature support layered indoor management rather than a single "
-                    "calendar product" + _c("ahmed-2024-hemp-pests-florida-jipm") + "."
+                    "IPM is a loop with these steps: prevent the movement of pests into the "
+                    "facility, monitor with the same procedure each time, and identify correctly. "
+                    "Then compare the finding with a controlled threshold, use compatible controls "
+                    "together, record the result and do a recheck. If the recheck shows that the "
+                    "result is not satisfactory, the loop starts again with a stronger response. "
+                    "The reference on arthropods and the cannabis literature agree with control in "
+                    "layers for an indoor crop, and not with one product on a calendar" +
+                    _c("ahmed-2024-hemp-pests-florida-jipm") + "."
                 ),
                 figure(
                     L.flow(
                         "The IPM decision loop",
                         [
                             ("Prevent", "exclusion, sanitation, clean stock"),
-                            ("Monitor", "fixed route, traps, roots, environment"),
+                            ("Monitor", "same route, traps, roots, environment"),
                             ("Identify", "organism + life stage + source"),
                             ("Threshold", "risk + incidence + severity + trend"),
-                            ("Control + verify", "layer tactics, recheck, record"),
+                            ("Control + check", "control layers, recheck, record"),
                         ],
                     ),
                     2,
-                    "Every intervention returns to monitoring. Without the recheck, it is activity rather than control.",
+                    "After each control step, do the monitoring again. If you do not do a recheck, the step is only a task and is not control.",
                 ),
                 table(
-                    ["Layer", "Purpose", "Rule"],
-                    [[name, body, "Build from this layer before moving upward"] for name, body in CONTROL_LAYERS],
+                    ["Layer", "Function", "Instruction"],
+                    [[name, body, "Use this layer before you use a higher layer."] for name, body in CONTROL_LAYERS],
                     cls="compact",
-                    caption="The control pyramid in operating form. Chemical and reduced-risk inputs sit last, not because they never work, but because they carry the narrowest legal and compatibility envelope.",
+                    caption="The table shows the control layers in the correct sequence for the operation. Chemical products and low-risk products are in the last layer. They can have the correct effect, but the regulations and the compatibility give them more limits than the products of the other layers.",
                 ),
                 callout(
                     "key",
-                    "Zero tolerance is not the same as eradication everywhere",
+                    "Zero tolerance is not the same as the removal of all pests from all areas",
                     p(
-                        "HLVd in clean stock, broad/russet mites in quarantine, root aphids in propagation, "
-                        "powdery mildew on flowers and Botrytis inside a bud are exclusion or quality events. "
-                        "A low fungus-gnat adult count in an established vegetative room may be a trend-management "
-                        "problem. Use organism and room consequence, not one universal number."
+                        "HLVd in clean stock and broad mites or russet mites in quarantine are "
+                        "exclusion events or quality events. Root aphids in propagation, powdery "
+                        "mildew on flowers and Botrytis in a bud are also exclusion events or "
+                        "quality events. A low count of adult fungus gnats in a vegetative room "
+                        "that is in operation can be a problem that you monitor with trend data. "
+                        "Use the organism and the consequence for the room. Do not use one number "
+                        "for all organisms and rooms."
                     ),
                 ),
                 table(
-                    ["Severity", "Name", "Definition", "Default response"],
-                    [[n, name, definition, "Monitor" if n == "0" else "Escalate by the approved decision matrix"] for n, name, definition in SEVERITY],
+                    ["Severity", "Name", "Definition", "Standard response"],
+                    [[n, name, definition, "Monitor" if n == "0" else "Escalate. Use the approved decision matrix."] for n, name, definition in SEVERITY],
                     cls="compact",
-                    caption="A site severity scale. Incidence, trend and zero-tolerance overrides still apply.",
+                    caption="This table is a severity scale for the site. You must also use the incidence and the trend. For some organisms, zero tolerance is more important than the scale.",
                 ),
             ],
         }
@@ -212,57 +228,70 @@ def build_sections():
     sections.append(
         {
             "id": "nz-legal-gate",
-            "kicker": "04 · New Zealand gate",
-            "title": "Legal eligibility of IPM controls in New Zealand",
+            "kicker": "04 · New Zealand legal gate",
+            "title": "The legal gate for IPM controls in NZ",
             "blocks": [
                 lead(
-                    "New Zealand medicinal cannabis does not have one pest-rule book. The decision sits across "
-                    "the medicinal-cannabis regulations and minimum quality standard, ACVM, HSNO/EPA controls, "
-                    "WorkSafe, analytical release, and Auckland trade-waste/environmental requirements."
+                    "In New Zealand, no one document has all the regulations for pests in medicinal "
+                    "cannabis. The decision uses these sources of regulations: the regulations for "
+                    "medicinal cannabis and the minimum quality standard, ACVM, and the controls of "
+                    "HSNO and EPA. It also uses WorkSafe, the release of batches after laboratory "
+                    "tests, and the requirements of Auckland for trade waste and for the "
+                    "environment."
                 ),
                 p(
-                    "Regulation 18 restricts pesticide treatment of cannabis crops, while Regulation 7 defines "
-                    "residues that must be tested and their limits. The Ministry's current guidance distinguishes "
-                    "inhalation from non-inhalation pathways and explicitly retains ACVM and HSNO obligations" +
-                    _c("moh-nz-pesticide-use-2024") + _c("moh-nz-mqs-2026") + ". The presence of abamectin, "
-                    "spinosad, pyrethrins or another analyte in a residue panel is not permission to apply it."
+                    "Regulation 18 has limits on the treatment of cannabis crops with pesticides. "
+                    "Regulation 7 gives the residues for which a test is necessary and the limits "
+                    "for these residues. The current guidance of the Ministry shows the difference "
+                    "between inhalation pathways and non-inhalation pathways. The guidance also "
+                    "clearly keeps the requirements of ACVM and HSNO" + _c("moh-nz-pesticide-use-2024") +
+                    _c("moh-nz-mqs-2026") + ". A residue panel can include abamectin, spinosad, "
+                    "pyrethrins or a different analyte. A substance in the panel does not show that "
+                    "the regulations let you apply it."
                 ),
                 p(
-                    "Most agricultural compounds require ACVM registration; some product classes are exempt, "
-                    "but the exemption conditions and other laws still apply" + _c("mpi-nz-acvm-exempt") + ". "
-                    "EPA approvals and controls must be confirmed, including the approval information in section "
-                    "15 of the current New Zealand SDS" + _c("epa-nz-hsno-approvals") + "."
+                    "For most agricultural compounds, ACVM registration is necessary. Some classes "
+                    "of product have an exemption, but you must obey the conditions of the "
+                    "exemption and the other regulations" + _c("mpi-nz-acvm-exempt") +
+                    ". You must make sure that the approvals and the controls of the EPA are "
+                    "correct. This check includes the approval information in section 15 of the "
+                    "current New Zealand SDS" + _c("epa-nz-hsno-approvals") + "."
                 ),
                 steps(LEGAL_GATES),
                 callout(
                     "warn",
-                    "Do not hard-code SKUs, rates, PHIs or REIs in a general paper",
+                    "Do not write SKUs, rates, PHIs or REIs in a general paper",
                     p(
-                        "Those values belong in the version-controlled approved-input register beside the current "
-                        "label and SDS. WorkSafe says REIs vary by product, crop/use and exposure; off-label use "
-                        "requires its own risk assessment. Indoor REI areas require signs and controlled entry" +
-                        _c("worksafe-nz-rei") + "."
+                        "Record these values in the approved-input register with the current label "
+                        "and SDS. Use version control for the register. WorkSafe tells you that the "
+                        "REI is different for each product, crop, application and exposure. For an "
+                        "application that is not on the label, a risk assessment for that "
+                        "application is necessary. An indoor area with an REI must have warning "
+                        "signs and controlled access" + _c("worksafe-nz-rei") +
+                        "."
                     ),
                 ),
                 table(
-                    ["Input class", "Planning position", "What still must be verified"],
+                    ["Class of product or organism", "Initial status", "Items to examine"],
                     [
-                        ["Fatty-acid soaps / permitted salts", "Potential reduced-risk contact option", "Exact medicinal-cannabis pathway, product authority, crop site, residue/quality, PPE/REI"],
-                        ["Sulphur", "Potential inhalation-capable active pathway", "Product authority, indoor exposure, crop-stage/quality limits, compatibility and current label"],
-                        ["Hydrogen peroxide", "Potential active pathway for defined uses", "Crop contact vs line/surface sanitation, concentration, worker exposure, phytotoxicity and discharge route"],
-                        ["Food / permitted food-additive actives", "Possible pathway only where every condition is met", "Novel-food/composition caveats, product ACVM/HSNO position, actual use and analytical route"],
-                        ["Microbial actives", "Several named species/strains appear in the regulation pathway", "Exact species/strain/product, viable use, ACVM/HSNO status, non-target/beneficial effects and label"],
-                        ["Conventional food-crop pesticide", "Not automatically inhalation-capable", "Whether a lawful non-inhalation or specific medicinal-cannabis pathway exists; residue calculation and testing"],
-                        ["Beneficial organism", "Not the same as a pesticide active", "Current organism status, import/release route, supplier, cold chain, containment and facility compatibility"],
+                        ["Soaps of fatty acids and permitted salts", "Possible low-risk contact alternative", "The correct pathway for medicinal cannabis, the approval of the product, the crop site, residue and quality, PPE and REI"],
+                        ["Sulfur", "Possible inhalation pathway for the active ingredient", "The approval of the product, the exposure in the indoor area, the limits for the crop stage and the quality, compatibility, and the current label"],
+                        ["Hydrogen peroxide", "Possible active pathway for specified applications", "Contact with the crop compared with sanitation of pipes and surfaces, concentration, exposure of workers, phytotoxicity and the discharge route"],
+                        ["Active ingredients from food and from permitted food additives", "Possible pathway only if you obey all the conditions", "Conditions for novel food and for composition. The ACVM and HSNO status of the product. The application that you do and the laboratory test route."],
+                        ["Active ingredients that are microbes", "The regulation pathway has the names of some species and strains", "The correct species, strain and product. Viability in the application. ACVM and HSNO status. Effects on organisms that are not the target and on beneficial organisms. The label."],
+                        ["Conventional pesticide for food crops", "Not automatically an inhalation pathway", "A permitted non-inhalation pathway or a permitted pathway for medicinal cannabis, if there is one. Also how to calculate the residue and how to do the residue tests."],
+                        ["Beneficial organism", "Not the same as an active ingredient of a pesticide", "The current status of the organism, the import route and the release route, the supplier, the cold chain, containment, and compatibility with the facility"],
                     ],
                     cls="compact",
-                    caption="A pathway screen, not a product recommendation. The approved-input register holds the current answer.",
+                    caption="This table is a first check of pathways. It does not tell you which product to select. The approved-input register shows the current status.",
                 ),
                 p(
-                    "Testing of pesticides and other non-critical minimum-quality-standard attributes may be "
-                    "performed by appropriately scoped GMP or ISO/IEC 17025:2017 laboratories, while critical "
-                    "tests require GMP capability. Confirm the laboratory scope and method before relying on a "
-                    "release plan" + _c("moh-nz-mqs-2026") + "."
+                    "A laboratory can do the tests for pesticides and for the other non-critical "
+                    "quality attributes of the minimum quality standard. The laboratory must have "
+                    "GMP or ISO/IEC 17025:2017 with the correct scope. For critical quality "
+                    "attributes, the laboratory must have GMP. Before you use a release procedure, "
+                    "make sure that the scope and the method of the laboratory are correct" +
+                    _c("moh-nz-mqs-2026") + "."
                 ),
             ],
         }
@@ -275,56 +304,59 @@ def build_sections():
             "title": "Clean-stock controls in IPM",
             "blocks": [
                 lead(
-                    "The mother room is not just where clones come from. It is a source-material system. Its "
-                    "failures multiply through every cutting, room and batch downstream."
+                    "The mother room is not only the area where clones start. It is a system for "
+                    "starting material. A problem in the mother room increases in each cutting, "
+                    "room and batch downstream."
                 ),
                 p(
-                    "HLVd can be asymptomatic, moves efficiently with vegetative propagation and contaminated "
-                    "tools, and research supports transmission risk through roots and recirculating hydroponic "
-                    "solution" + _c("hlvd_threat2023") + _c("hlvd_mgmt2025") +
-                    _c("hlvd-transmission-2025") + ". Visual health is therefore not a release test."
+                    "A plant with HLVd can show no symptoms. HLVd moves easily with vegetative "
+                    "propagation and with tools that have contamination. Investigations show a risk "
+                    "that HLVd can move through roots and through recirculating hydroponic solution" +
+                    _c("hlvd_threat2023") + _c("hlvd_mgmt2025") + _c("hlvd-transmission-2025") +
+                    ". Thus a visual check of the plant is not a test for release."
                 ),
                 figure(
                     L.flow(
-                        "Genetics admission",
+                        "New genetics",
                         [
                             ("Receive", "approved source + accession ID"),
-                            ("Quarantine", "separate air/water/tools/staff flow"),
-                            ("Inspect + trap", "arthropods, roots, symptoms"),
-                            ("Molecular index", "validated HLVd method and tissue"),
-                            ("Promote or destroy", "trace tree begins before release"),
+                            ("Quarantine", "dedicated air, water, tools and personnel"),
+                            ("Examine + traps", "arthropods, roots, symptoms"),
+                            ("HLVd test", "validated method and tissue for HLVd"),
+                            ("Release or destroy", "trace tree starts before release"),
                         ],
                     ),
                     3,
-                    "No genetics bypass quarantine, and no accession is promoted on appearance alone.",
+                    "All genetics must go through quarantine. Do not release an accession only because a visual check is satisfactory.",
                 ),
                 ul(
                     [
-                        "Foundation mothers are created only from released material and retain the cleanest controls.",
-                        "Production mothers, cutting lots and rooms inherit a traceable parent-child relationship.",
-                        "Tools are sanitised between defined plant units, not merely at the end of the shift.",
-                        "Quarantine, foundation stock and production stock do not share nutrient solution or unvalidated return water.",
-                        "A positive or inconclusive test has a written hold, repeat, destruction and traceback rule before the first sample is collected.",
+                        "Make foundation mothers only from released material. Foundation mothers have the best controls.",
+                        "You can trace the parent of each production mother, cutting lot and room.",
+                        "Sanitize tools between specified groups of plants. Do not sanitize tools only at the end of the work period.",
+                        "Quarantine, foundation stock and production stock do not use the same nutrient solution. They do not use the same return water without validation.",
+                        "Before you collect the first sample, write the procedure for a positive result or an inconclusive result. The procedure must show how to hold the plants, do the test again, destroy the plants and do the traceback.",
                     ]
                 ),
                 table(
-                    ["Plant class", "Planning cadence", "Sampling rule", "Decision rule"],
+                    ["Class of plant", "Typical frequency", "Instruction for sampling", "Instruction for the decision"],
                     [
-                        ["Incoming accession", "At entry and again before promotion where risk warrants", "Individual plant; validated tissue/method", "No promotion until release criteria are met"],
-                        ["Foundation mother", "At creation and risk-based recurring schedule", "Individual, no routine pooling unless validated", "Positive = destroy, hold linked daughters, investigate"],
-                        ["Production mother", "Before major cutting campaigns or site-defined recurring schedule", "Individual or validated pool with reflex testing", "Positive = stop clone movement and trace since last verified negative"],
-                        ["Clone lot", "Risk-based verification linked to mother status", "Lot-based plan with controls", "Hold linked rooms when source status is compromised"],
-                        ["Hydro environment", "Investigation / sentinel use where system risk exists", "Tank, return, root interface under validated method", "Positive environmental signal triggers cohort investigation, not automatic plant diagnosis"],
+                        ["Received accession", "At receipt, and again before release from quarantine if the risk makes it necessary", "One sample for each plant. Validated tissue and validated method.", "Do not release the accession until it agrees with the release criteria."],
+                        ["Foundation mother", "When you make the mother, and then at the times that the risk makes necessary", "Do one test for each plant. Do not use pooled samples as the usual method, unless you validate the pooled sample.", "Positive result: destroy the mother, hold the connected clones, do an investigation."],
+                        ["Production mother", "Before a large production of cuttings, or at the times that the site selects", "One sample for each plant or a validated pooled sample, with reflex testing", "Positive result: stop the movement of clones and trace the clones since the last negative result that you know is correct."],
+                        ["Clone lot", "A check that the risk and the status of the mother make necessary", "A sampling procedure for each lot, with controls", "Hold the connected rooms if the status of the source has a problem."],
+                        ["Hydro environment", "Investigation or sentinel testing if there is a risk in the system", "Tank, return water and root interface, with a validated method", "A positive result from the hydro environment starts an investigation of all the connected plants. The result does not give an automatic diagnosis of one plant."],
                     ],
                     cls="compact",
-                    caption="Planning cadence only. The controlled sampling plan must match the laboratory method, plant age, tissue, risk and facility history.",
+                    caption="The table gives typical frequencies only. The controlled sampling procedure must agree with the laboratory method, the age of the plant, the tissue, the risk and the records of the facility.",
                 ),
                 callout(
                     "danger",
-                    "A monthly test is not protection if the genealogy is broken",
+                    "A test each month gives no protection if the genealogy is broken",
                     p(
-                        "If you cannot identify every daughter lot since the last verified negative, a positive "
-                        "mother turns into a building-wide guessing exercise. Build the trace tree first."
+                        "Make the trace tree first. You must identify each clone lot since the last "
+                        "negative result that you know is correct. If you cannot, you do not know "
+                        "which rooms have the problem after a positive result for a mother."
                     ),
                 ),
             ],
@@ -338,43 +370,50 @@ def build_sections():
             "title": "Facility contamination pathways",
             "blocks": [
                 p(
-                    "Pests and pathogens do not care which department owns a vector. A clean-stock programme "
-                    "fails if workers backtrack, scissors cross mothers, return air connects quarantine, or a "
-                    "shared reservoir moves root pathogens. Cannabis disease reviews repeatedly identify stock, "
-                    "tools, water, debris, density and environmental conditions as interacting routes" +
+                    "A vector can move a pest or a pathogen from one area to a different area. It "
+                    "is not important which group of personnel has the vector. A clean-stock "
+                    "program gives no protection if a worker goes back to a clean area or if "
+                    "scissors go between mothers. It also gives no protection if return air "
+                    "connects to quarantine or if a reservoir for more than one area moves root "
+                    "pathogens. References on cannabis diseases frequently show these routes of "
+                    "contamination: stock, tools, water, debris, density and the conditions of the "
+                    "environment. The routes have an effect on each other" +
                     _c("punja-2021-emerging-diseases-cannabis") + "."
                 ),
                 figure(
                     L.flow(
-                        "One-way hygiene gradient",
+                        "Hygiene gradient, one direction",
                         [
-                            ("Clean support", "stores, clean PPE, released inputs"),
-                            ("Foundation", "clean stock, restricted staff/tools"),
-                            ("Production", "mothers, clones, veg, flower"),
+                            ("Clean supplies", "storage, clean PPE, released products"),
+                            ("Foundation", "clean stock, dedicated tools and personnel"),
+                            ("Production", "mothers, clones, growth, flower"),
                             ("Containment", "quarantine, suspect and treated areas"),
-                            ("Waste exit", "bagged, logged, no return path"),
+                            ("Waste exit", "bags, records, one direction"),
                         ],
                     ),
                     4,
-                    "Movement normally goes clean to dirty. Any authorised backtracking requires full decontamination and a recorded exception.",
+                    "Movement is usually from clean areas to dirty areas. If an approved exception lets a person go back to a clean area, the person must do a full decontamination first. You must record the exception.",
                 ),
                 grid(
                     [
-                        card("People", "Room-class gowning, clean-to-dirty shift order, no unrecorded backtracking, treated-area controls and site-specific training records."),
-                        card("Tools", "Room or plant-class ownership, verified sanitizer concentration/contact time, between-unit rules and a clean/dirty state that is obvious."),
-                        card("Air", "Quarantine separation, pressure intent, filtered supply, no shared contaminated return, canopy/dead-zone mapping and condensation checks."),
-                        card("Water", "Segregated tanks/circuits where consequence demands it, no unvalidated recirculation, biofilm control, drain mapping and backflow prevention."),
-                        card("Plant/material", "Approved sources, sealed waste, clean media/pots, controlled beneficial receipt and no cardboard/packaging wandering through clean rooms."),
-                        card("Waste", "Bag and log crop waste in the room; contain rinse/spill liquids; use approved disposal and trade-waste pathways, never stormwater."),
+                        card("Personnel", "Use gowning for each room class. Move from clean areas to dirty areas in each work period. Do not go back to a clean area without a record. Use controls for the treated areas. Keep training records for the site."),
+                        card("Tools", "Keep tools for one room or one plant class only. Make sure that the sanitizer concentration and the contact time are correct. Sanitize tools between groups of plants. Make it easy to know if a tool is clean or dirty."),
+                        card("Air", "Isolate quarantine from the other areas. Set the difference of pressure between rooms. Use filtered supply air. Do not use the same return air for an area with contamination and for a clean area. Make a map of the air movement in the canopy and of the dead zones. Do checks for condensation."),
+                        card("Water", "Where the consequence of a problem is high, use dedicated tanks and circuits. Do not use recirculating water without validation. Use biofilm control. Make a map of the drains. Prevent backflow."),
+                        card("Plants and materials", "Use approved sources. Seal waste. Use clean media and clean pots. Use controls for the beneficial organisms that you receive. Do not let cardboard or packaging go into clean rooms."),
+                        card("Waste", "Put crop waste in bags in the room. Record the waste. Contain rinse water and spill liquids. Use approved disposal pathways and trade waste pathways. Do not send waste to stormwater."),
                     ],
                     cols=2,
                 ),
                 p(
-                    "Watercare requires a trade-waste agreement when a business discharge is not low risk, with "
-                    "site controls and monitoring defined by the agreement" + _c("watercare-nz-trade-waste") + ". "
-                    "Auckland's E33 framework prioritises avoiding contaminant discharge and requires appropriate "
-                    "onsite management, containment, treatment or lawful disposal" +
-                    _c("auckland-unitary-plan-e33") + ". Site address, drainage and activity classification remain facility inputs."
+                    "A trade waste agreement with Watercare is necessary if the discharge of a "
+                    "facility is not low risk. The trade waste agreement gives the controls and the "
+                    "monitoring for the site" + _c("watercare-nz-trade-waste") +
+                    ". In the E33 requirements of Auckland, the primary task is to prevent the "
+                    "discharge of contaminants. The requirements also make it necessary to have the "
+                    "correct control on the site, containment, treatment or permitted disposal" +
+                    _c("auckland-unitary-plan-e33") + ". The address of the site, the drainage and "
+                    "the classification of the operation are data that the facility must supply."
                 ),
             ],
         }
@@ -384,49 +423,54 @@ def build_sections():
         {
             "id": "cultural-environmental",
             "kicker": "07 · Prevention",
-            "title": "Cultural and environmental controls",
+            "title": "Cultural controls and environmental controls",
             "blocks": [
                 p(
-                    "The quiet controls are the ones that scale: eliminate weeds, algae and plant debris; keep "
-                    "doors/screens/barriers functional; quarantine every genetic source; use one-way work; maintain "
-                    "a fixed scouting route; and commission root-zone and canopy conditions. They reduce both the "
-                    "chance of entry and the rate of spread after entry."
+                    "These controls continue to operate when the facility becomes larger. Remove "
+                    "weeds, algae and plant debris. Keep doors, screens and barriers in good "
+                    "condition. Put each source of genetics in quarantine. Move personnel and "
+                    "material in one direction.</p><p>Keep the same scouting route. Measure the "
+                    "conditions of the root zone and of the canopy. Set the conditions correctly. "
+                    "These controls decrease the risk that pests go into the facility, and the rate "
+                    "of movement of pests in the facility."
                 ),
                 table(
-                    ["Control point", "Minimum check", "Failure signal", "Correction"],
+                    ["Control point", "Minimum check", "Sign of a problem", "Correction"],
                     [
-                        ["Exterior/interior reservoirs", "Weeds, algae, drains, debris and standing water", "Repeated small-fly pressure or pest reservoirs", "Remove source, repair drainage/leaks, clean and verify"],
-                        ["Sanitizer", "Product, concentration, contact time, surface cleanliness", "No concentration record, dirty surface or premature wipe-off", "Remix, pre-clean, repeat full contact time"],
-                        ["Canopy air", "Representative airspeed/dead zones and leaf movement", "Still dense pockets, condensation or repeated Botrytis/PM zone", "Rebalance fans/HVAC and canopy density"],
-                        ["Night transition", "Leaf/surface temperature, RH, dew-point margin", "Condensation or a narrow margin during lights-off", "Change humidity removal, air movement, temperature ramp and irrigation timing"],
-                        ["Root zone", "Temperature, DO where relevant, moisture pattern, drain, biofilm/algae", "Warm saturated roots, poor drainage, sloughing or shared-cohort symptoms", "Correct irrigation/oxygen/heat, isolate and diagnose"],
-                        ["Sticky cards", "ID, colour, height, date, clean readable surface", "Unmapped cards or counts without position/history", "Replace, map and standardise reading"],
+                        ["External and internal pest reservoirs", "Weeds, algae, drains, debris and standing water", "Frequent high counts of small flies, or pest reservoirs", "Remove the source. Repair the drainage and the leaks. Clean the area. Examine the result."],
+                        ["Sanitizer", "Product, concentration, contact time, and a clean surface", "No record of the concentration, a dirty surface, or removal of the sanitizer before the end of the contact time", "Mix the sanitizer again. Clean the surface first. Use the full contact time again."],
+                        ["Canopy air", "Air speed at typical points, dead zones and movement of leaves", "Areas with high density and no air movement, condensation, or a zone with frequent Botrytis or powdery mildew", "Adjust the fans and the HVAC, and decrease the density of the canopy"],
+                        ["The change from day to night", "Temperature of leaves and surfaces, RH, and the dew-point margin", "Condensation, or a small dew-point margin while the lights are off", "Change humidity removal, air movement, temperature ramp and the time of irrigation"],
+                        ["Root zone", "Temperature, dissolved oxygen if it is important, moisture pattern, drain, biofilm and algae", "Warm saturated roots, drainage that is not satisfactory, sloughing, or the same symptoms in the plants of a cohort", "Correct the irrigation, the oxygen and the heat. Isolate the plants. Do a diagnosis."],
+                        ["Sticky traps", "ID, color, height, date, and a clean surface that you can read", "Traps that are not on the map, or counts with no position and no record of previous counts", "Replace the traps. Put the traps on the map. Use the same procedure to read the traps."],
                     ],
                     cls="compact",
-                    caption="Prevention checks must produce an observable pass/fail, not a vague instruction to keep the room clean.",
+                    caption="A prevention check must give a result that you can see, which is satisfactory or unsatisfactory. A general instruction to keep the room clean is not a check.",
                 ),
                 callout(
                     "note",
                     "Room RH is not the leaf microclimate",
                     p(
-                        "Dense canopy, cold surfaces, irrigation timing and lights-off transitions can create wet "
-                        "or near-condensing tissue while the wall sensor looks acceptable. Commission the actual "
-                        "risk locations and record the correction trigger."
+                        "A canopy with high density, cold surfaces, the time of irrigation and the "
+                        "change to darkness can cause wet tissue, or tissue near condensation. At "
+                        "the same time, the wall sensor can show a satisfactory value. Measure the "
+                        "conditions in the areas where the risk is. Record the trigger for a "
+                        "correction."
                     ),
                 ),
                 figure(
                     L.flow(
-                        "Weekly scouting route",
+                        "Scouting route each week",
                         [
-                            ("Prepare", "clean kit, map, prior trends, room order"),
-                            ("Trap line", "read IDs, preserve unknowns, replace"),
-                            ("Plant line", "top, underside, meristem, stem, flower"),
-                            ("Root line", "media, crown, drain, roots where sampled"),
-                            ("Close", "photos, samples, threshold, owner, recheck"),
+                            ("Prepare", "clean kit, map, previous trends, room sequence"),
+                            ("Traps", "read IDs, keep unknown organisms, replace"),
+                            ("Plants", "top, underside, meristem, stem, flower"),
+                            ("Roots", "media, crown, drain, roots for samples"),
+                            ("Record", "photos, samples, threshold, owner, recheck"),
                         ],
                     ),
                     5,
-                    "Same route, same points, same plant parts. Consistency makes trend data comparable.",
+                    "Use the same scouting route, the same points and the same plant parts. Thus you can compare the trend data.",
                 ),
             ],
         }
@@ -435,35 +479,41 @@ def build_sections():
     sections.append(
         {
             "id": "biological-controls",
-            "kicker": "08 · Living controls",
-            "title": "Biological control programmes",
+            "kicker": "08 · Controls with living organisms",
+            "title": "Biological control programs",
             "blocks": [
                 p(
-                    "A biological programme succeeds when the right organism arrives alive, is released into a "
-                    "suitable crop and climate, survives existing residues, finds the target stage, establishes "
-                    "where needed and is verified. Generalist and specialist predators are not interchangeable; "
-                    "neither are aphid or whitefly parasitoids" + _c("lopez-2023-amblyseius-swirskii-review-jipm") +
+                    "A biological control program gives a satisfactory result when all of these "
+                    "conditions occur. The organism that you receive must be the correct organism "
+                    "and a living organism. You release it into a crop and a climate that are "
+                    "correct for it. It survives the residues that are in the crop, finds the "
+                    "target stage and establishes where necessary. You do a check to make sure that "
+                    "the result is satisfactory. Generalist predators and specialist predators are "
+                    "not interchangeable, and aphid parasitoids and whitefly parasitoids are not "
+                    "interchangeable" + _c("lopez-2023-amblyseius-swirskii-review-jipm") +
                     _c("vanmaanen-2010-broad-mite-swirskii-biocontrol") + "."
                 ),
                 table(
-                    ["Control group", "Typical role", "Release-plan checks"],
+                    ["Control group", "Typical function", "Checks for the release procedure"],
                     BENEFICIAL_ROWS,
                     cls="compact",
-                    caption="Functional groups only. Verify current New Zealand organism status, supplier availability and product law before naming a deployable agent.",
+                    caption="The table shows only the groups and the function of each group. Before you select a beneficial organism, make sure that you know the current status of the organism in New Zealand. Make sure that a supplier can supply the organism and that the regulations let you use it.",
                 ),
                 steps(
                     [
-                        ("Approve", "Confirm organism/product identity, NZ legal status, supplier, compatibility and target stage."),
-                        ("Receive", "Record lot, arrival time/temperature, packaging condition and expiry/use window."),
-                        ("Verify viability", "Use the supplier method to check movement, counts, nematode survival or microbial condition; reject failed material."),
-                        ("Release", "Map rate and location against crop stage, pest distribution and environmental conditions."),
-                        ("Establish", "Check predators, parasitised hosts/mummies, prey-stage decline or other defined evidence."),
-                        ("Correct", "If establishment fails, find whether the cause was dead stock, wrong species/stage, climate, residues, timing or application."),
+                        ("Get approval", "Make sure that you know which organism or product you will use, and the name of the supplier. Make sure that you know the legal status in NZ, the compatibility and the target stage."),
+                        ("Receive", "Record the lot, and the time and temperature when you receive the product or organism. Record the condition of the packaging, the expiry date and the period in which you can use it."),
+                        ("Examine viability", "Use the method of the supplier. Examine the movement, the counts, the survival of nematodes or the condition of microbes. Reject material that is not satisfactory."),
+                        ("Release", "Make a map of the release rate and the release location. Compare the map with the crop stage, the areas where the pest is, and the conditions of the environment."),
+                        ("Establish", "Look for predators, hosts that have parasitoids, mummies, a smaller number of the prey stage, or other specified evidence."),
+                        ("Correct", "If the organisms do not establish, find the cause. The cause can be dead organisms, an incorrect species or stage, climate, residues, the time of release or application."),
                     ]
                 ),
                 p(
-                    "Imported invertebrates require species eligibility, permits/facilities where applicable and "
-                    "biosecurity/HSNO compliance. Do not turn a global supplier catalogue into an NZ release list" +
+                    "Make sure that the regulations let the species of the invertebrate come into "
+                    "New Zealand. Make sure that you have the permits and the facilities that are "
+                    "necessary. Obey the biosecurity requirements and HSNO. Do not use the list of "
+                    "products of a supplier in a different country as the release list for NZ" +
                     _c("mpi-nz-invertebrate-import") + "."
                 ),
             ],
@@ -474,43 +524,50 @@ def build_sections():
         {
             "id": "input-application",
             "kicker": "09 · Controlled exception",
-            "title": "Input selection and application",
+            "title": "Selection and application of products",
             "blocks": [
                 p(
-                    "Once a finding crosses threshold, select the fewest controls that cover the confirmed "
-                    "organism, life stage and plant part without breaking law, worker safety, beneficials or "
-                    "release. Rotate IRAC/FRAC modes where relevant; physical modes and living controls still need "
-                    "compatibility planning."
+                    "When a finding is more than the threshold, select the smallest number of "
+                    "controls. The controls must have an effect on the confirmed organism, the life "
+                    "stage and the plant part. The controls must agree with the regulations, be "
+                    "safe for workers, be compatible with the beneficial organisms, and not stop "
+                    "the release of batches. Where it is important, change the IRAC group or the "
+                    "FRAC group each time that you apply a control. You must also make sure that "
+                    "physical controls and controls with living organisms are compatible."
                 ),
                 table(
-                    ["Mode", "What it does", "Common failure"],
+                    ["Mode", "Function", "Typical problem"],
                     [
-                        ["Contact kill", "Acts only where spray reaches the organism", "Poor underside/flower coverage or protected life stages"],
-                        ["Smothering/desiccation", "Disrupts soft-bodied pests physically", "Crop-stage injury, incomplete coverage or incompatibility"],
-                        ["Microbial insect pathogen", "Infects susceptible pest stage under suitable conditions", "Wrong stage, low viability, unsuitable humidity or incompatible residue"],
-                        ["Predator/parasitoid", "Consumes or develops in a target pest", "Released too late, wrong host, dead arrival or no establishment"],
-                        ["Root-zone antagonist", "Suppresses pathogen establishment/pressure", "Asked to cure dead roots or mixed with a sanitiser that kills it"],
-                        ["Oxidation/sanitation", "Reduces contamination on the validated use site", "Assuming line/surface sanitation rate is safe or effective on living crop"],
-                        ["Environmental correction", "Removes a condition supporting the problem", "Treating room average while the microclimate remains wrong"],
+                        ["Contact control", "Kills only the organisms that the spray touches", "Coverage that is not satisfactory on the leaf underside or the flower, or life stages in areas that the spray cannot touch"],
+                        ["Smothering or desiccation", "Causes mechanical damage to soft-bodied pests", "Damage to the crop at some stages, coverage that is not full, or no compatibility"],
+                        ["Microbe that is an insect pathogen", "Causes an infection in a pest stage that this microbe can infect, if the conditions are correct", "Incorrect stage, low viability, humidity that is not correct, or residue that is not compatible"],
+                        ["Predator or parasitoid", "A predator eats the target pest. A parasitoid has its development in the target pest.", "A release after the correct time, an incorrect host, dead organisms when you receive them, or no establishment"],
+                        ["Root-zone antagonist", "Decreases the establishment and the quantity of the pathogen", "A person uses it to repair dead roots, or mixes it with a sanitizer that kills it"],
+                        ["Oxidation and sanitation", "Decreases contamination on the validated application site", "You think that a rate for the sanitation of pipes and surfaces is safe, or has efficacy, on the plants of the crop"],
+                        ["Correction of the environment", "Removes a condition that helps the problem", "Correction of the room average only, when the microclimate is not correct"],
                     ],
                     cls="compact",
-                    caption="Product-agnostic modes. The actual product, use site and rate come from the controlled register and current label/SDS.",
+                    caption="The table gives modes only. It does not give a product. Get the product, the application site and the rate from the controlled register and from the current label and SDS.",
                 ),
                 callout(
                     "warn",
-                    "Application quality is part of efficacy",
+                    "The quality of the application is part of the efficacy",
                     p(
-                        "Calibrate output, check water and mixing order, verify agitation, select nozzle/pressure, "
-                        "define target coverage, manage lights/HVAC, contain runoff, clean equipment, post REI "
-                        "signage and perform a phytotoxicity test patch when the approved SOP requires it. A legal "
-                        "product applied badly is still a failed treatment."
+                        "Calibrate the output. Make sure that the water is correct. Add the "
+                        "products in the correct sequence. Make sure that the agitation is correct. "
+                        "Select the nozzle, the pressure and the coverage of the target. Set the "
+                        "lights and the HVAC correctly.</p><p>Contain the runoff. Clean the "
+                        "equipment. Put warning signs in position for the REI. Do a phytotoxicity "
+                        "test on a small area of the crop if your approved SOP makes it necessary. "
+                        "A product that the regulations let you use gives an unsatisfactory result "
+                        "if you apply it incorrectly."
                     ),
                 ),
                 table(
-                    ["Approved-input register field", "Required"],
+                    ["Approved-input register field", "Necessary"],
                     [[field, "Yes"] for field in APPROVED_TOOL_FIELDS],
                     cls="compact",
-                    caption="Do not release an input to stores until every applicable field is complete and approved.",
+                    caption="Do not release a product to storage until you complete each applicable field and each field has approval.",
                 ),
             ],
         }
@@ -524,13 +581,17 @@ def build_sections():
             "title": "Arthropod identification",
             "blocks": [
                 lead(
-                    "The plate is the start of the diagnosis. Confirm morphology, sample the right plant part, "
-                    "separate lookalikes, then choose controls that reach the actual life stage."
+                    "The photo is the start of the diagnosis. Examine the morphology to make sure "
+                    "that the identification is correct. Collect a sample from the correct plant "
+                    "part. Find the difference between the organism and the problems with the same "
+                    "signs. Then select controls that have an effect on the life stage that you "
+                    "found."
                 ),
                 p(
-                    "Cannabis supports diverse piercing/sucking and root-zone pests; primary reviews emphasise "
-                    "that indoor management depends on accurate identification, life cycle and plant location" +
-                    _c("ahmed-2024-hemp-pests-florida-jipm") +
+                    "Cannabis has many different piercing-sucking pests and many pests in the root "
+                    "zone. Primary references show that, for control in an indoor crop, it is "
+                    "important to know the correct identification, the life cycle and the plant "
+                    "location" + _c("ahmed-2024-hemp-pests-florida-jipm") +
                     _c("pulkoski-burrack-2023-piercing-sucking-hemp") + "."
                 ),
             ]
@@ -546,17 +607,20 @@ def build_sections():
             "title": "Disease diagnosis and sampling",
             "blocks": [
                 lead(
-                    "Disease symptoms overlap. Use them to choose tissue, environmental records and the right "
-                    "laboratory route. Do not convert a picture match into a release decision."
+                    "Disease symptoms can be the same for different diseases. Use the symptoms to "
+                    "select the tissue, the records of the environment and the correct laboratory "
+                    "route. Do not make a release decision only because a symptom agrees with a "
+                    "photo."
                 ),
                 p(
-                    "Cannabis disease literature supports distinct management for powdery mildew, Botrytis, "
-                    "Pythium, Fusarium and systemic propagation threats" +
-                    _c("scott-punja-2021-powdery-mildew-management") +
-                    _c("mahmoud-2023-botrytis-budrot") +
-                    _c("punja-2023-fusarium-pythium-biocontrol") + ". Septoria diagnosis is complicated by "
-                    "closely related species and requires more than lesion colour" +
-                    _c("rahnama-2021-septoria-cannabis") + _c("ujata-2024-septoria-cannabicola") + "."
+                    "The cannabis literature on diseases gives evidence for different controls for "
+                    "powdery mildew, Botrytis, Pythium, Fusarium and systemic pathogens in "
+                    "propagation" + _c("scott-punja-2021-powdery-mildew-management") +
+                    _c("mahmoud-2023-botrytis-budrot") + _c("punja-2023-fusarium-pythium-biocontrol") +
+                    ". Related species of Septoria make the diagnosis not easy. Thus the color of "
+                    "the lesion is not sufficient for the diagnosis" +
+                    _c("rahnama-2021-septoria-cannabis") + _c("ujata-2024-septoria-cannabicola") +
+                    "."
                 ),
             ]
             + [_atlas_profile(entry, i + 1) for i, entry in enumerate(diseases)],
@@ -566,26 +630,27 @@ def build_sections():
     sections.append(
         {
             "id": "lookalikes",
-            "kicker": "12 · Diagnostic controls",
-            "title": "Diagnostic lookalikes",
+            "kicker": "12 · Controls for diagnosis",
+            "title": "Problems with the same signs",
             "blocks": [
                 p(
-                    "A diagnostic atlas without healthy controls trains people to see disease everywhere. Compare "
-                    "like with like: underside to underside, opened flower to opened flower, new meristem to new "
-                    "meristem, and roots at the same age and substrate."
+                    "An atlas without reference plants in good condition makes personnel see "
+                    "disease in all plants. Compare the same parts: underside to underside, opened "
+                    "flower to opened flower and new meristem to new meristem. Compare roots of the "
+                    "same age in the same substrate."
                 ),
                 term_gallery(REFERENCE_PLATES, "OpenAI image generation"),
                 table(
-                    ["Confusion", "Separating feature", "Next step"],
+                    ["Two problems with the same signs", "Sign that shows the difference", "Next step"],
                     [
-                        ["Fungus gnat adult vs winged root aphid", "Gnat has fly-like legs/antennae and wing venation; aphid has pear-shaped body and cornicles", "Preserve low-card specimen and use microscopy"],
-                        ["Broad/russet mites vs heat/light tacoing", "Mites/eggs on sampled leading edge; abiotic stress follows exposure pattern without organisms", "Microscope multiple tips before changing feed or climate"],
-                        ["Powdery mildew vs dried foliar residue", "PM forms raised growing colonies and fungal structures; residue follows droplets/rings and spray history", "Angled light, microscopy or lab if flower disposition depends on it"],
-                        ["Pythium vs abiotic root stress", "Water-soaked sloughing and linked disease pattern vs dry/tan stressed roots without pathogen proof", "Sample roots/water before sanitation and send to a diagnostic lab"],
-                        ["HLVd vs everything that stunts", "No visual feature is confirmatory", "RT-qPCR/RT-PCR with traceable sample and controls"],
+                        ["Adult fungus gnat compared with winged root aphid", "A gnat has the legs and the antennae of a fly, and wing veins. An aphid has a body in the shape of a pear, and cornicles.", "Keep the specimen from the sticky trap near the media. Use microscopy."],
+                        ["Broad mites or russet mites compared with tacoing from heat or light", "Mites and eggs on the outer edge of the symptoms, where you collect a sample. Abiotic stress agrees with the pattern of exposure and has no organisms.", "Examine many tips with a microscope before you change the feed or the climate."],
+                        ["Powdery mildew compared with dried residue on the leaf", "Powdery mildew makes colonies above the surface that increase in size, and fungal structures. Residue agrees with the pattern of drops and circular marks, and with the spray records.", "Light from one side, microscopy, or a laboratory test. Use a laboratory test if you make the decision about the flower from the identification."],
+                        ["Pythium compared with abiotic root stress", "Pythium: roots with water in the tissue, sloughing, and a pattern of disease in connected plants. Abiotic stress: dry tan roots with stress and no evidence of a pathogen.", "Collect samples of roots and water before sanitation. Send the samples to a diagnostic laboratory."],
+                        ["HLVd compared with all other causes of stunting", "No visual sign gives a sure diagnosis.", "RT-qPCR or RT-PCR, with a sample that you can trace and with controls"],
                     ],
                     cls="compact",
-                    caption="The generated comparison plates are training aids, not reference specimens.",
+                    caption="The photos that you use to compare are aids for training. An AI tool made them. They are not reference specimens.",
                 ),
             ],
         }
@@ -594,77 +659,77 @@ def build_sections():
     sections.append(
         {
             "id": "build-programme",
-            "kicker": "13 · Runtime",
-            "title": "Building the weekly IPM programme",
+            "kicker": "13 · Operation",
+            "title": "The IPM program for each week",
             "blocks": [
                 steps(
                     [
-                        ("Score consequence", "Room class, clean-stock status, target organism, crop stage and product-quality consequence."),
-                        ("Measure pressure", "Incidence, severity 0-4, life stages, spatial pattern, trap/root/lab trend and beneficial density."),
-                        ("Apply override", "Zero-tolerance findings bypass a numeric threshold and move directly to containment."),
-                        ("Find the source", "Incoming stock, staff/tool movement, air, water, media, packaging, weeds/algae or crop carryover."),
-                        ("Select layers", "Cultural and environmental correction, then compatible biological and lawful input options."),
-                        ("Schedule", "Target life stage, application/release date, room controls, mode rotation, recheck date and stop/escalate rule."),
-                        ("Verify", "Measure live organisms/new lesions/new growth, establishment, injury, residue implication and recurrence."),
-                        ("Close or CAPA", "Close only when the success criterion is met; otherwise revise cause and escalate."),
+                        ("Calculate the consequence", "Room class, clean-stock status, target organism, crop stage and the consequence for product quality."),
+                        ("Measure the problem", "Incidence, severity 0-4 and life stages. The pattern in the room and the trend of traps, roots and laboratory results. The density of beneficial organisms."),
+                        ("Zero-tolerance findings", "A zero-tolerance finding does not use a threshold with a number. Start containment immediately."),
+                        ("Find the source", "Received stock, movement of personnel and tools, air, water, media, packaging, weeds, algae, or pests from the previous crop."),
+                        ("Select layers", "First do a correction with cultural controls and environmental controls. Then select biological controls and permitted products that are compatible."),
+                        ("Schedule", "Select the target life stage and the date of application or release. Select the room controls, the change of mode, the recheck date, and the instruction to stop or to escalate."),
+                        ("Examine the result", "Measure living organisms, new lesions, new growth, establishment and damage to the plants. Examine the effect on residue and if the problem occurs again."),
+                        ("Stop or CAPA", "Stop the response only when the result agrees with the condition for a good result. If it does not, examine the cause again and escalate."),
                     ]
                 ),
                 table(
-                    ["Weekly meeting input", "Decision output"],
+                    ["Information for the meeting each week", "Decision output"],
                     [
-                        ["Trap and scouting trends", "Room/zone action, owner and recheck"],
-                        ["HLVd/pathogen results", "Release, hold, repeat, destroy and trace decision"],
-                        ["Beneficial receipt/release/establishment", "Continue, supplement, replace or investigate incompatibility"],
-                        ["Environmental and root-zone excursions", "Engineering/cultural correction with due date"],
-                        ["Input applications and treated-area status", "REI release, efficacy check and residue review"],
-                        ["Open CAPA and linked batches", "Containment status, evidence gap, quality disposition and effectiveness check"],
+                        ["Trap and scouting trends", "A task for each room or zone, an owner and a recheck"],
+                        ["HLVd and pathogen results", "A decision to release, hold, do the test again, destroy and trace"],
+                        ["Receipt, release and establishment of beneficial organisms", "A decision to continue, to add more organisms, to replace them, or to do an investigation of a problem with compatibility"],
+                        ["Excursions of the environment and of the root zone", "Correction with engineering controls or cultural controls, and a date for the end of the correction"],
+                        ["Applications of products and the status of treated areas", "Release of the area from the REI, a check of the efficacy and a check of the residue"],
+                        ["Open CAPA and connected batches", "Status of containment, gap in the evidence, quality decision for the batch, and a check of the effect of the CAPA"],
                     ],
                     cls="compact",
-                    caption="The weekly meeting produces room-specific actions, not a narrative report nobody uses.",
+                    caption="The meeting each week gives tasks for each room. It does not give a long report that no person uses.",
                 ),
-                h(3, "Control-strategy decision worksheet"),
+                h(3, "Worksheet for the decision about the control method"),
                 table(
-                    ["Decision field", "Controlled entry"],
+                    ["Decision item", "Controlled entry"],
                     [
                         ["Confirmed target, life stage and plant part", "FACILITY INPUT"],
-                        ["Current pressure: incidence, severity, trend and distribution", "FACILITY INPUT"],
-                        ["Source/pathway hypothesis and evidence", "FACILITY INPUT"],
-                        ["Cultural and environmental corrections", "FACILITY INPUT"],
-                        ["Biological option, establishment evidence and compatibility", "FACILITY INPUT"],
-                        ["Input option, legal gate, mode group and residue route", "FACILITY INPUT"],
-                        ["Crop/worker constraints, REI and treated-area release", "FACILITY INPUT"],
-                        ["Owner, action date, recheck date, success and stop/escalate rule", "FACILITY INPUT"],
+                        ["Current problem: incidence, severity, trend and distribution", "FACILITY INPUT"],
+                        ["Possible source and pathway, and the evidence", "FACILITY INPUT"],
+                        ["Corrections with cultural controls and environmental controls", "FACILITY INPUT"],
+                        ["Biological control, evidence of establishment and compatibility", "FACILITY INPUT"],
+                        ["Alternative product, legal gate, mode group and residue route", "FACILITY INPUT"],
+                        ["Limits from the crop and the workers, REI and release of the treated area", "FACILITY INPUT"],
+                        ["Owner, date of the task, recheck date, the condition for a good result, and the instruction to stop or to escalate", "FACILITY INPUT"],
                     ],
                     cls="compact",
-                    caption="Complete against the current approved-input and beneficial registers; product names and rates do not belong in an uncontrolled paper.",
+                    caption="Complete the worksheet with the current approved-input register and the current register of beneficial organisms. Do not write product names and rates in a paper that has no document control.",
                 ),
-                h(3, "Dated intervention and beneficial-release planner"),
+                h(3, "Table for control steps and releases of beneficial organisms, with dates"),
                 table(
-                    ["Date/time", "Room/zone", "Target stage", "Action or release", "Mode / organism", "Compatibility and REI", "Recheck"],
+                    ["Date and time", "Room or zone", "Target stage", "Task or release", "Mode or organism", "Compatibility and REI", "Recheck"],
                     [["FACILITY INPUT"] * 7 for _ in range(4)],
                     cls="compact",
-                    caption="Use enough rows to cover the target's condition-dependent development window; revise after each recheck.",
+                    caption="Use sufficient rows for the full period of development of the target. The period changes if the conditions change. Change the rows after each recheck.",
                 ),
-                h(3, "Target-by-approved-tool matrix"),
+                h(3, "Table of the target and the approved tool"),
                 table(
-                    ["Target", "Currently approved tool", "Target stage/site", "Evidence grade/source", "Legal verification date", "Compatibility", "Success measure"],
+                    ["Target", "Approved tool at this time", "Target stage and site", "Grade and source of the evidence", "Date of the check of the regulations", "Compatibility", "Measurement of a good result"],
                     [["FACILITY INPUT"] * 7 for _ in range(3)],
                     cls="compact",
-                    caption="A planning interface to the controlled registers, not a substitute for them.",
+                    caption="This table is an interface to the controlled registers. It does not replace them.",
                 ),
                 figure(
                     L.flow(
-                        "Finding to closure",
+                        "From finding to end",
                         [
                             ("Confirm", "organism, life stage, location"),
                             ("Contain", "movement, plants, water, treated area"),
-                            ("Control", "layered lawful plan"),
-                            ("Recheck", "defined evidence and date"),
-                            ("Close / CAPA", "criterion met or root cause revised"),
+                            ("Control", "permitted control layers"),
+                            ("Recheck", "specified data and date"),
+                            ("Stop or CAPA", "good result or cause examined again"),
                         ],
                     ),
                     6,
-                    "The minimum operational record for every threshold-triggering event.",
+                    "This figure shows the minimum record for each event with a finding that is more than the threshold.",
                 ),
             ],
         }
@@ -677,25 +742,27 @@ def build_sections():
             "title": "Crop-cycle IPM operations",
             "blocks": [
                 table(
-                    ["Stage", "Daily standard work", "Weekly / scheduled work", "Hard decision"],
+                    ["Stage", "Standard work for each day", "Work for each week, or scheduled work", "Mandatory decision"],
                     [
-                        ["Receiving / quarantine", "Accession, source/legal check, visual/root inspection, dedicated tools and waste", "Traps, HLVd/pathogen plan, reassessment", "Promote only when legal and biological release criteria are met"],
-                        ["Foundation / production mothers", "Health walk, tool control, irrigation and environment", "Molecular schedule, full scout, pruning-hygiene audit", "Positive HLVd or systemic/high-consequence pest = stop, hold, trace"],
-                        ["Cuttings / rooting", "Sanitary cutting, humidity/airflow, dead cutting and root review", "Root development, traps, fungus/root-disease check", "Patterned failure triggers source, water and diagnostic investigation"],
-                        ["Vegetative", "Environment/root-zone review and visible pest walk", "Full scout, cards, biological release/establishment", "Single high-risk hotspot or rising trend triggers targeted action"],
-                        ["Flower", "Climate/dew-point/air movement and dense-canopy inspection", "Full scout, late-flower destructive bud checks by risk, residue/use review", "Any PM on flowers or Botrytis in a bud is immediate action"],
-                        ["Harvest / dry / hold", "Hygienic handling, waste segregation, dry-room condition and mould checks", "Residue/microbial/foreign-matter sampling and deviation review", "Release, continue hold, remediate if lawful/validated, or reject"],
+                        ["Receipt and quarantine", "Accession, check of the source and of the regulations, visual inspection and inspection of roots, dedicated tools and waste", "Traps, procedure for HLVd and pathogens, and a new check of the status", "Release only if the accession agrees with the release criteria for the regulations and for biology."],
+                        ["Foundation mothers and production mothers", "Walk to examine the plants, control of tools, irrigation and environment", "Times of the molecular tests, full scouting, audit of hygiene in pruning", "A positive result for HLVd, or a pest that is systemic or has a high consequence: stop, hold, trace."],
+                        ["Cuttings and rooting", "Clean cutting procedure, humidity and airflow, dead cuttings, and inspection of roots", "Development of roots, traps, a check for fungus and for root disease", "A pattern of problems starts an investigation of the source and of the water, and a diagnosis."],
+                        ["Vegetative", "Inspection of the environment and the root zone. Walk to look for pests that you can see.", "Full scouting, sticky traps, release and establishment of biological controls", "One hotspot with a high risk, or a trend that increases, starts a control step for the target."],
+                        ["Flower", "Climate, dew point, air movement and inspection of canopy with high density", "Full scouting. In the last stage of flowering, cut the buds that have the highest risk. Examine the buds. Do a check of residue and application.", "Powdery mildew on a flower, or Botrytis in a bud: start the control steps immediately."],
+                        ["Harvest, drying and batch hold", "Hygiene when you move and touch the plant material, separation of waste, condition of the dry room and checks for mold", "Sampling for residue, microbes and unwanted material, and a check of the deviations", "Release the batch or continue the batch hold. Do a remediation if the regulations let you and the method has validation, or reject the batch."],
                     ],
                     cls="compact",
-                    caption="A complete crop-cycle control model. Exact timing follows cultivar, facility and approved production plan.",
+                    caption="The table is a full control model for the crop cycle. Use the approved production procedure for the times. The times change with the cultivar and the facility.",
                 ),
                 callout(
                     "key",
-                    "Post-harvest is still IPM",
+                    "IPM continues after harvest",
                     p(
-                        "Contaminated tools, slow or uneven drying, dense uninspected flowers and dirty processing "
-                        "equipment can erase a clean cultivation run. Product remains on hold until the required "
-                        "quality evidence and deviation review are complete."
+                        "Tools with contamination and dirty processing equipment can cause "
+                        "contamination of a clean crop. Slow drying, drying at different rates and "
+                        "flowers with high density that you do not examine can also cause problems "
+                        "for a clean crop. The product stays in batch hold until you have the "
+                        "necessary quality evidence and you complete the check of the deviations."
                     ),
                 ),
             ],
@@ -709,27 +776,28 @@ def build_sections():
             "title": "Containment, investigation and CAPA",
             "blocks": [
                 p(
-                    "Classify events as local, room-wide or systemic. Containment comes first; root cause and "
-                    "batch impact follow while evidence is preserved. CAPA is incomplete until the effectiveness "
-                    "check proves the change worked."
+                    "Classify each event as local, room-wide or systemic. First do the containment. "
+                    "Then find the root cause and the effect on the batch. Keep the evidence. Do "
+                    "not complete the CAPA until the check of the effect shows that the change had "
+                    "the correct effect."
                 ),
                 table(
-                    ["Event", "Immediate containment", "Batch/crop assessment", "CAPA focus"],
+                    ["Event", "First containment steps", "Investigation of the batch and the crop", "Items for the CAPA"],
                     [
-                        ["HLVd-positive mother", "Stop clone movement, isolate/bag under SOP, hold linked daughters", "All daughter lots since last verified negative plus connected tools/water", "Source, test cadence, sample integrity, tool sanitation, hydro segregation and traceability"],
-                        ["Powdery mildew on flower", "Isolate zone/room, bag affected tissue, intensify scouting", "Extent, crop stage, lawful options, residue and market disposition", "Night microclimate, density, airflow, scouting sensitivity and programme compatibility"],
-                        ["Botrytis inside flower", "Controlled removal without spore spread, inspect neighbours", "Lot hold/extent, cultivar/zone pattern, environmental history", "Humidity removal, condensation, flower architecture, handling injury and debris"],
-                        ["Root disease linked to shared water", "Isolate circuit, stop transfer, sample before sanitation", "All connected cohorts and source stock", "Reservoir/return design, biofilm, temperature/DO, cleaning validation and water segregation"],
-                        ["Worker enters during REI", "Remove worker, exposure response, secure area/signage", "Assess crop contact/contamination and treatment status", "Lockout, sign placement, training, supervision and access control"],
+                        ["Mother with a positive result for HLVd", "Stop the movement of clones. Isolate the mother. Put the mother in a bag. Use the SOP. Hold the connected clones.", "All clone lots since the last negative result that you know is correct, and the connected tools and water", "Source, frequency of tests, integrity of samples, sanitation of tools, separation of hydro systems, and traceability"],
+                        ["Powdery mildew on flower", "Isolate the zone or the room. Put the tissue with disease in bags. Increase the scouting.", "Size of the area with disease, crop stage, permitted alternatives, residue and the decision for the market", "Microclimate at night, density, airflow, sensitivity of the scouting and compatibility with the program"],
+                        ["Botrytis in a flower", "Remove the flower carefully. Prevent the movement of spores. Examine the plants near it.", "Batch hold and size of the area, pattern for each cultivar and zone, records of the environment", "Humidity removal, condensation, structure of the flower, damage when personnel touch the plants, and debris"],
+                        ["Root disease in plants that use the same water", "Isolate the circuit. Stop the movement of water and plants. Collect samples before sanitation.", "All connected cohorts and the source stock", "Design of the reservoir and of the return water, biofilm, temperature and DO, cleaning validation, and separation of water"],
+                        ["A worker goes into the area during the REI", "Remove the worker. Do the steps for the exposure. Prevent access to the area. Put warning signs in position.", "Examine the contact with the crop, the contamination and the treatment status", "Lockout, position of the warning signs, training, supervision and access control"],
                     ],
                     cls="compact",
-                    caption="CAPA joins biological cause, worker/system cause and product-quality consequence.",
+                    caption="The CAPA connects the cause in biology, the cause in the workers or the system, and the consequence for the quality of the product.",
                 ),
                 ol(
                     [
-                        "<strong>Release:</strong> required analytical results, treatment history, traceability and deviation review are satisfactory.",
-                        "<strong>Continue hold:</strong> result, investigation, repeat sample or linked-lot status is incomplete.",
-                        "<strong>Reject or validated remediation:</strong> the lot fails a limit, has an indefensible treatment history, or is linked to a systemic contamination failure. Remediation is not a substitute for prevention.",
+                        "<strong>Release:</strong> the necessary laboratory results, the treatment records, the traceability and the check of the deviations are satisfactory.",
+                        "<strong>Continue the batch hold:</strong> a result, a second sample or a connected lot status is not available. Also continue the batch hold while an investigation is in progress.",
+                        "<strong>Reject, or do a validated remediation:</strong> the lot does not agree with a limit. Do the same if the treatment records do not agree with the regulations. Do the same if the lot has a connection to systemic contamination. Remediation does not replace prevention.",
                     ]
                 ),
             ],
@@ -739,101 +807,101 @@ def build_sections():
     sections.append(
         {
             "id": "controlled-toolkit",
-            "kicker": "16 · Working tools",
+            "kicker": "16 · Tools for work",
             "title": "Controlled IPM tools",
             "blocks": [
                 h(3, "Facility approval sheet"),
                 "<style>.facility-input{display:grid;gap:6px}.facility-input input,.facility-input textarea{width:100%;padding:10px;border:1px solid var(--line);border-radius:6px;background:var(--paper);color:var(--ink);font:inherit}.facility-form{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.facility-input.wide{grid-column:1/-1}@media(max-width:720px){.facility-form{grid-template-columns:1fr}}</style>",
                 "<form class='facility-form'>"
-                + _input("site_address", "Facility address / Auckland zone")
-                + _input("licence_scope", "Licence and intended product lines")
-                + _input("room_map", "Controlled room-map revision")
-                + _input("quality_owner", "Quality/IPM approver")
+                + _input("site_address", "Facility address and Auckland zone")
+                + _input("licence_scope", "License, and types of product that the facility will make")
+                + _input("room_map", "Version of the controlled room map")
+                + _input("quality_owner", "Person who gives approval for quality and IPM")
                 + _input("diagnostic_lab", "Approved diagnostic laboratory and scope")
-                + _input("release_lab", "Release laboratory and pesticide method/LOQ")
-                + _input("watercare_status", "Trade-waste classification / agreement")
-                + _input("review_date", "Document review date")
-                + _input("sampling_density", "Controlled scouting density / representative-site method and rationale", True)
-                + _input("zero_tolerance", "Site zero-tolerance organisms and room classes", True)
-                + _input("thresholds", "Controlled numeric/trend thresholds and evidence source", True)
+                + _input("release_lab", "Laboratory for release, and the pesticide method and LOQ")
+                + _input("watercare_status", "Trade waste classification and trade waste agreement")
+                + _input("review_date", "Date of the next check of the document")
+                + _input("sampling_density", "Controlled density of scouting, method to select typical sites, and the evidence for the selection", True)
+                + _input("zero_tolerance", "Zero-tolerance organisms and room classes for the site", True)
+                + _input("thresholds", "Controlled thresholds with numbers and thresholds for trends, and the source of the evidence", True)
                 + "</form>",
-                h(3, "Weekly scouting record"),
+                h(3, "Scouting record for each week"),
                 table(
-                    ["Required field", "Entry"],
+                    ["Necessary field", "Entry"],
                     [[field, "FACILITY INPUT"] for field in SCOUT_FIELDS]
-                    + [["Planned sites, completed sites and missed/inaccessible-site exception", "FACILITY INPUT"]],
+                    + [["Sites to examine, completed sites, and exceptions for sites that you did not examine or sites without access", "FACILITY INPUT"]],
                     cls="compact",
-                    caption="Use one row/set per mapped site or exception. Unknown organisms receive a specimen/photo reference, not a guessed name.",
+                    caption="Use one row for each site on the map and for each exception. For an unknown organism, write the reference of the specimen or the photo. Do not write a name that you are not sure of.",
                 ),
-                h(3, "Quarantine and clean-to-dirty movement log"),
+                h(3, "Log of quarantine and of movement from clean to dirty"),
                 table(
-                    ["Date/time", "Person or material", "From", "To", "Release/status evidence", "PPE/tool change", "Exception approval"],
+                    ["Date and time", "Person or material", "From", "To", "Release and status evidence", "Change of PPE and tools", "Exception approval"],
                     [["FACILITY INPUT"] * 7 for _ in range(4)],
                     cls="compact",
-                    caption="Record every accession transfer and every authorised backtrack across the hygiene gradient.",
+                    caption="Record each movement of an accession and each approved movement back to a clean area on the hygiene gradient.",
                 ),
-                h(3, "Beneficial release and establishment record"),
+                h(3, "Record of the release and establishment of beneficial organisms"),
                 table(
                     ["Field", "Entry"],
                     [
-                        ["Species/strain, supplier and lot", "FACILITY INPUT"],
-                        ["NZ legal-status evidence and approval date", "FACILITY INPUT"],
-                        ["Arrival time, temperature and condition", "FACILITY INPUT"],
-                        ["Viability/count check and rejection decision", "FACILITY INPUT"],
-                        ["Target pest/stage, room map and release rate", "FACILITY INPUT"],
-                        ["Climate and incompatible residue review", "FACILITY INPUT"],
-                        ["Establishment/recheck date and evidence", "FACILITY INPUT"],
-                        ["Corrective action or close-out", "FACILITY INPUT"],
+                        ["Species, strain, supplier and lot", "FACILITY INPUT"],
+                        ["Evidence of the NZ legal status, and the approval date", "FACILITY INPUT"],
+                        ["Time, temperature and condition when you receive the organisms", "FACILITY INPUT"],
+                        ["Viability and count check, and the decision to reject", "FACILITY INPUT"],
+                        ["Target pest and stage, room map and release rate", "FACILITY INPUT"],
+                        ["Climate, and a check of residues that are not compatible", "FACILITY INPUT"],
+                        ["Establishment and recheck date, and evidence", "FACILITY INPUT"],
+                        ["Corrective action, or the decision to stop the response", "FACILITY INPUT"],
                     ],
                     cls="compact",
                 ),
-                h(3, "Spray / application quality checklist"),
+                h(3, "Checklist for the quality of spray and of application"),
                 table(
                     ["Check", "Controlled entry"],
                     [
-                        ["Event ID; approved product/lot; target; room/zone; crop stage", "FACILITY INPUT"],
-                        ["Current label/SDS, medicinal-cannabis, ACVM and HSNO evidence checked", "FACILITY INPUT"],
-                        ["Applicator, calibration, output, nozzle/pressure and target coverage", "FACILITY INPUT"],
-                        ["Water quality, mixing order, agitation and prepared volume", "FACILITY INPUT"],
-                        ["HVAC/lights controls, containment, weather/external-discharge risk", "FACILITY INPUT"],
-                        ["PPE, signage, access control, REI start/end and treated-area release", "FACILITY INPUT"],
-                        ["Unused mix, rinse, spill/waste disposition and equipment clean-down", "FACILITY INPUT"],
-                        ["Phytotoxicity, efficacy and residue recheck dates / results", "FACILITY INPUT"],
+                        ["Event ID, approved product and lot, target, room and zone, crop stage", "FACILITY INPUT"],
+                        ["Evidence of the check of the current label, SDS and the regulations for medicinal cannabis, ACVM and HSNO", "FACILITY INPUT"],
+                        ["Applicator, calibration, output, nozzle and pressure, and target coverage", "FACILITY INPUT"],
+                        ["Water quality, sequence for the mixture, agitation and volume of the mixture", "FACILITY INPUT"],
+                        ["Controls for HVAC and lights, containment, and risk of weather and external discharge", "FACILITY INPUT"],
+                        ["PPE, warning signs, access control, REI start and end, and release of the treated area", "FACILITY INPUT"],
+                        ["Mixture that you did not use, rinse water, disposal of spills and waste, and equipment clean-down", "FACILITY INPUT"],
+                        ["Phytotoxicity, efficacy and residue: recheck dates and results", "FACILITY INPUT"],
                     ],
                     cls="compact",
                 ),
-                h(3, "Outbreak, batch-impact and CAPA record"),
+                h(3, "Record of the outbreak, the effect on the batch, and the CAPA"),
                 table(
                     ["Field", "Entry"],
                     [
-                        ["Event ID, first detection and detector", "FACILITY INPUT"],
-                        ["Confirmed organism / evidence / uncertainty", "FACILITY INPUT"],
+                        ["Event ID, the first finding, and the person who found it", "FACILITY INPUT"],
+                        ["Confirmed organism, evidence and uncertainty", "FACILITY INPUT"],
                         ["Room, zone, plants, mothers, clone lots and batches", "FACILITY INPUT"],
-                        ["Linked staff, tools, air, water, media and input lots", "FACILITY INPUT"],
-                        ["Immediate containment and treated-area controls", "FACILITY INPUT"],
-                        ["Product-quality and residue impact assessment", "FACILITY INPUT"],
-                        ["Hold, destruction, remediation or release decision", "FACILITY INPUT"],
-                        ["Root cause and contributing conditions", "FACILITY INPUT"],
-                        ["Corrective and preventive actions, owners and dates", "FACILITY INPUT"],
-                        ["Effectiveness evidence and quality close-out", "FACILITY INPUT"],
+                        ["Connected personnel, tools, air, water, media and lots of products", "FACILITY INPUT"],
+                        ["Containment done immediately, and controls for the treated area", "FACILITY INPUT"],
+                        ["Investigation of the effect on product quality and on residue", "FACILITY INPUT"],
+                        ["Decision to hold, destroy, do a remediation, or release", "FACILITY INPUT"],
+                        ["Root cause and other conditions that help to cause the event", "FACILITY INPUT"],
+                        ["Corrective action and preventive action, with owners and dates", "FACILITY INPUT"],
+                        ["Evidence that the CAPA had the correct effect, and the decision of QA to stop the response", "FACILITY INPUT"],
                     ],
                     cls="compact",
                 ),
-                h(3, "Population-trend dashboard worksheet"),
+                h(3, "Worksheet for the dashboard of the population trend"),
                 table(
-                    ["Week/date", "Room/zone", "Target", "Trap or sampled units", "Live count / incidence", "Severity 0-4", "Beneficial density", "Action line", "Decision"],
+                    ["Week or date", "Room or zone", "Target", "Traps or points for samples", "Count of living organisms, or incidence", "Severity 0-4", "Density of beneficial organisms", "Action threshold", "Decision"],
                     [["FACILITY INPUT"] * 9 for _ in range(5)],
                     cls="compact",
-                    caption="Graph or trend these same controlled fields in the site's validated record system; record denominator and missed sites so the line means something.",
+                    caption="Make a graph of the trend of these same controlled fields in the validated record system of the site. Record the denominator and the sites that you did not examine. Thus you can read the graph correctly.",
                 ),
-                h(3, "Spill and waste control"),
+                h(3, "Control of spills and waste"),
                 ul(
                     [
-                        "Current drain map distinguishes sanitary sewer/trade waste from stormwater.",
-                        "Secondary containment and spill kits match the stored substances and credible spill volume.",
-                        "No pesticide, sanitiser, nutrient concentrate, contaminated rinse water or spill enters stormwater.",
-                        "Watercare and Auckland pollution-response triggers are posted and trained.",
-                        "Waste contractors and disposal records are current; annual drill findings enter CAPA.",
+                        "The current drain map shows which drains go to the sewer or to trade waste, and which drains go to stormwater.",
+                        "Secondary containment and spill kits are correct for the substances that you keep and for the spill volume that can occur.",
+                        "Do not let pesticide, sanitizer, nutrient concentrate, rinse water with contamination, or spill liquid go into stormwater.",
+                        "Show the Watercare and Auckland triggers for a pollution event in a position where personnel can see them. Give personnel training on the triggers.",
+                        "The waste contractors and the disposal records are current. The findings of the drill each year go into the CAPA.",
                     ]
                 ),
             ],
@@ -844,29 +912,33 @@ def build_sections():
         {
             "id": "training",
             "kicker": "17 · Competency",
-            "title": "Competency-based training",
+            "title": "Training for competency",
             "blocks": [
                 table(
-                    ["Module", "Audience", "Demonstrated outcome"],
+                    ["Module", "Personnel", "Result that personnel show"],
                     [
-                        ["NZ medicinal-cannabis input gate", "QA, procurement, IPM/cultivation leads", "Reject or approve a candidate input with the correct evidence trail"],
-                        ["Hygiene zoning and movement", "All cultivation, sanitation, maintenance and contractors", "Execute room order, tool/PPE changes and exception process"],
-                        ["Scouting and specimen handling", "Scouts and room leads", "Follow fixed route, identify plant parts, record incidence/severity, preserve unknown"],
-                        ["Mother stock and HLVd", "Nursery, mother and QA staff", "Collect traceable sample, place hold, trace daughters and execute positive response"],
-                        ["Beneficial control", "IPM team and receiving", "Verify delivery, viability, release map, compatibility and establishment"],
-                        ["Application, REI and PPE", "Applicators, supervisors, QA/EHS", "Calibrate, mix, apply, contain waste, post signs and release treated area"],
-                        ["CAPA and batch impact", "QA, cultivation management, IPM lead", "Run mock event from containment through effectiveness check"],
+                        ["The legal gate for NZ medicinal cannabis", "QA, procurement, IPM leads and cultivation leads", "Reject a possible product, or give approval for it, with a correct record of the evidence"],
+                        ["Hygiene zones and movement", "All personnel for cultivation, sanitation and maintenance, and contractors", "Do the room sequence, the changes of tools and PPE, and the procedure for exceptions"],
+                        ["Scouting, and how to collect and keep specimens", "Scouts and room leads", "Use the same scouting route. Identify plant parts. Record incidence and severity. Keep unknown specimens."],
+                        ["Mother stock and HLVd", "Personnel for the nursery, personnel for the mother plants and QA personnel", "Collect a sample that you can trace. Start a batch hold. Trace the clones. Do the steps for a positive result."],
+                        ["Control with beneficial organisms", "IPM personnel and personnel for receipt", "Examine the viability on receipt, the release map, the compatibility and the establishment"],
+                        ["Application, REI and PPE", "Applicators, supervisors, QA and EHS", "Calibrate. Mix. Apply. Contain waste. Put warning signs in position. Release the treated area."],
+                        ["CAPA and the effect on the batch", "QA, cultivation managers and the IPM lead", "Do a mock event from containment to the check of the effect"],
                     ],
                     cls="compact",
-                    caption="WorkSafe requires site-specific information, instruction, training and records; a prior course does not remove the site's duty" + _c("worksafe-nz-hs-training") + ".",
+                    caption="WorkSafe makes it necessary to have information, instruction, training and records for the site. Previous training of a person does not remove the duty of the site" + _c("worksafe-nz-hs-training") + ".",
                 ),
                 callout(
                     "note",
-                    "Drill the ugly events",
+                    "Do drills for events with a very bad effect",
                     p(
-                        "Run at least: HLVd-positive mother, Botrytis cluster in late flower, root disease on a "
-                        "shared circuit, unlawful input discovered after application, REI entry breach and a spill "
-                        "threatening a drain. A plan only earns trust after someone has tried to use it under pressure."
+                        "Do drills for these events as a minimum. A mother has a positive result "
+                        "for HLVd. A cluster of Botrytis occurs in the last stage of flowering. "
+                        "Root disease occurs on a circuit for more than one area.</p><p>After "
+                        "application, you find a product that the regulations do not let you use. A "
+                        "worker goes into an area during the REI. A spill can go to a drain. You "
+                        "know that a procedure is satisfactory only after personnel use it in a "
+                        "drill."
                     ),
                 ),
             ],
@@ -876,29 +948,31 @@ def build_sections():
     sections.append(
         {
             "id": "revision-register",
-            "kicker": "18 · Governance",
-            "title": "Evidence and revision register",
+            "kicker": "18 · Control of the document",
+            "title": "Evidence and version register",
             "blocks": [
                 table(
-                    ["Claim class", "Minimum evidence", "Review trigger"],
+                    ["Class of claim", "Minimum evidence", "Trigger for a new check"],
                     [
-                        ["NZ legal / regulatory", "Current official Ministry, MPI, EPA, WorkSafe, Watercare or Auckland source", "Any law/guidance revision, new product/organism, annual review"],
-                        ["Pest/disease biology", "Primary paper or strong technical review; species caveat", "New diagnostic result, organism not behaving as assumed"],
-                        ["Product/organism status", "Current register/approval, label, SDS, supplier and site approval", "Every purchase/use and any document revision"],
-                        ["Facility threshold", "Site history, risk rationale and quality approval", "Trend miss, crop loss, false alarm, process or market change"],
-                        ["Operational setpoint", "Named facility SOP/validation and measured data", "Equipment, cultivar, room, substrate or process change"],
-                        ["Generated image", "Final prompt, generation tool, human diagnostic review and disclosure", "Morphology error, confusion in training or better verified reference"],
+                        ["NZ regulations", "A current source from an authority: the Ministry, MPI, EPA, WorkSafe, Watercare or Auckland", "A change of a regulation or guidance, a new product or organism, or the check each year"],
+                        ["Biology of pests and diseases", "A primary paper or a review article of high quality, with the limits for the species", "A new result of diagnosis, or an organism with behavior that is different from the behavior in this blueprint"],
+                        ["Status of the product or organism", "Current register and approval, label, SDS, supplier and approval of the site", "Each time that you get a product or use it, and each change of the document"],
+                        ["Facility threshold", "Records of the site, the evidence for the risk, and quality approval", "A trend that you did not find, crop loss, a false alarm, or a change of production procedure or market"],
+                        ["Setpoint for operation", "A facility SOP or validation that you can identify, and measured data", "A change of equipment, cultivar, room, substrate or production procedure"],
+                        ["A photo that an AI tool made", "The last prompt, the AI tool, a check of the diagnosis that a person does, and a record that an AI tool made the photo", "An error in the morphology, a problem in training, or a better reference that you know is correct"],
                     ],
                     cls="compact",
-                    caption="This blueprint is controlled guidance, not a frozen truth. Review the volatile parts before the static prose.",
+                    caption="This blueprint is controlled guidance and can change. Examine the parts that change frequently before you examine the parts that do not change.",
                 ),
                 callout(
                     "key",
-                    "Implementation judgement",
+                    "A strong IPM program",
                     p(
-                        "The resilient programme is the one that keeps unlawful inputs out, infected genetics out, "
-                        "water and air from becoming transport systems, staff movement legible, and release logic "
-                        "visible at the moment a control is chosen. Everything else is decoration."
+                        "In a strong IPM program, the facility has no products that the regulations "
+                        "do not let you use, and no genetics with an infection. Water and air do "
+                        "not become systems that move pests and pathogens. The movement of "
+                        "personnel is easy to see. You can see the release criteria when you select "
+                        "a control. All other parts are not necessary."
                     ),
                 ),
             ],

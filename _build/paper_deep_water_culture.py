@@ -9,15 +9,16 @@ IMG = "assets/img/deep-water-culture"
 GPT = "gpt-image-1"
 
 SLUG = "deep-water-culture"
-TITLE = "Deep water culture, from first principles"
+TITLE = "Deep water culture: the basic physics and chemistry"
 EYEBROW = "Water culture · Root-zone oxygen"
-SUB = ("After reading this paper you will understand why solution temperature is the master control "
-       "for every other parameter in water culture, how to set aeration rate so it adds oxygen "
-       "without stripping the chemical boundary layer roots build for themselves, and what an ORP "
-       "probe is actually measuring — and what it is not. The worked example is cannabis in an "
-       "RDWC system, but the dissolved-oxygen physics and the iron chemistry apply to any crop.")
+SUB = ("This paper shows that the temperature of the solution is the primary control for all the "
+       "other conditions in water culture. It shows how to set the aeration rate. The correct rate "
+       "adds oxygen and does not remove the chemical boundary layer that the roots make. It also "
+       "shows the quantity that an ORP probe measures and the quantities that it does not measure. "
+       "The example in this paper is cannabis in a recirculating type of deep water culture (RDWC). "
+       "The physics of dissolved oxygen and the chemistry of iron apply to all crops.")
 META = [("droplet", "Water culture"), ("image", "17 diagrams · 10 photos"),
-        ("quote", "Evidence-linked · 40 sources"), ("clock", "~38 min read")]
+        ("quote", "40 sources"), ("clock", "~38 min to read")]
 RELATED = ["substrates-overview", "water-quality", "ph-management",
            "nutrient-mixing-athena", "one-steering-law"]
 
@@ -59,884 +60,979 @@ SECTIONS = []
 # 1 ------------------------------------------------------------------ intro
 SECTIONS.append({"id": "intro", "kicker": "Start here", "title": "Purpose and scope",
   "blocks": [
-    lead("In coco or rockwool the substrate is a buffer. It holds water, holds air, holds a charge, "
-         "and quietly forgives the feed you got slightly wrong this morning. Deep water culture "
-         "deletes that buffer. The roots hang in the nutrient solution itself, and the reservoir "
-         "has to do every job the substrate used to do, simultaneously, continuously, with "
-         "no margin."),
-    p("Everything else in this paper is a "
-      "consequence of it. The highest growth rates in soilless culture and the fastest crop "
-      "failures in soilless culture come from the same property: there is nothing between your "
-      "decision and the root. Done well the upside is real, reviews of deep-water-culture "
-      "tomato report consistently better biomass accumulation, photosynthetic efficiency, root "
-      "development and yield than soil or other hydroponic systems, attributed to the continuous "
-      "supply of oxygenated, nutrient-rich solution" + _c("dwc-nsele-2026-dwc-tomato") + "."),
-    figure(L.flow("What the reservoir has to do at the same time",
-            [("Hold water", "the entire root system is submerged, permanently"),
-             ("Hold oxygen", "no air-filled pores, so every mg of O2 arrives dissolved"),
-             ("Hold the feed", "EC and pH with no substrate buffering the swing"),
-             ("Hold the biology", "one shared water volume touches every plant")],
-            note="Coco does the first three passively. In water culture all four are active, powered systems."), 1,
-      "In a substrate these four functions are split between the medium, the drip line and the "
-      "drain. In water culture they collapse into one volume of moving water, and any one of them "
-      "failing takes the others with it."),
+    lead("In coco or rockwool, the substrate is a buffer. The substrate holds water, holds air and "
+         "holds an electrical charge. It also decreases the effect of a small error in the feed. "
+         "Deep water culture has no buffer. The roots hang in the nutrient solution, and the "
+         "reservoir must do all the tasks of the substrate at the same time and continuously. The "
+         "reservoir has no headroom."),
+    p("All the other sections of this paper are a result of this fact. The highest growth rates in "
+      "soilless culture and the fastest crop failure come from the same property. There is no "
+      "buffer between your decision and the root.</p><p>If you operate the system correctly, you "
+      "can get a better result than in other systems. Reviews of deep-water-culture tomato report "
+      "the same result in many tests. The tomato has more biomass, higher efficiency of "
+      "photosynthesis, more root growth and higher yield than tomato in soil or in other hydroponic "
+      "systems. The reviews give the continuous supply of a solution that contains oxygen and has a "
+      "high nutrient content as the cause." + _c("dwc-nsele-2026-dwc-tomato")),
+    figure(L.flow("The tasks of the reservoir at the same time",
+            [("Hold water", "All the roots are in the water, permanently"),
+             ("Hold oxygen", "No pores with air, thus each milligram of O2 is in solution"),
+             ("Hold the feed", "EC and pH have no substrate buffer against change"),
+             ("Hold the biology", "One water volume touches all the plants")],
+            note="Coco does the first three tasks with no power. In water culture, all four tasks use power."), 1,
+      "In a substrate system, the medium, the drip line and the drain each do some of these four "
+      "functions. In water culture, one volume of water that flows does all four functions. A "
+      "malfunction of one function causes malfunctions of the other functions."),
     photo(f"{IMG}/01-rdwc-room.jpg",
-      "A commercial RDWC room. Every bucket is plumbed to the same loop, which means every bucket "
-      "shares one EC, one pH, one temperature and one microbial population. That is the strength "
-      "and the risk in a single image.", model=GPT),
+      "An RDWC room in a production facility. The same loop connects all the buckets. Thus all the "
+      "buckets have the same EC, the same pH, the same temperature and the same group of microbes. "
+      "The photo shows a good property and a risk at the same time.", model=GPT),
     defterm("Deep water culture (DWC)",
-      "Roots suspended directly in an aerated nutrient solution, with the crown held above the "
-      "waterline by a net pot and inert media such as expanded clay. A single bucket is DWC. "
-      "Buckets plumbed to a shared control reservoir with a circulation pump is "
-      "<strong>RDWC</strong>, recirculating deep water culture."),
+      "The roots hang directly in a nutrient solution with aeration. A net pot and inert media, for "
+      "example expanded clay, hold the crown above the water level. One bucket is DWC. Buckets that "
+      "connect to one reservoir with a circulation pump are <strong>RDWC</strong>. RDWC is the "
+      "recirculating type of DWC."),
     figure(D.bucket_xsection(), 2,
-      "One site in section. Note the two volumes that are not the same number: the "
-      "<strong>operating volume</strong> you dose against, and the <strong>left-over volume</strong> "
-      "below the bulkhead that a drain cannot reach." + _c("dwc-athena-rdwc-2024")),
+      "The figure shows a cross section of one plant site. The two volumes are different. The "
+      "<strong>operating volume</strong> is the volume that you use to calculate the dose. The "
+      "<strong>remaining volume</strong> is the volume below the bulkhead, and the drain cannot "
+      "remove it." + _c("dwc-athena-rdwc-2024")),
     photo(f"{IMG}/02-bucket-open.jpg",
-      "The same thing in the flesh: net pot seated in the lid, expanded clay holding the crown "
-      "clear of the water, and the root curtain hanging free in solution. There is no substrate "
-      "between the feed and the root.", model=GPT),
+      "The photo shows the same system. The net pot is in the lid. Expanded clay holds the crown "
+      "above the water. The roots hang free in the solution. There is no substrate between the feed "
+      "and the root.", model=GPT),
     defterm("Control bucket",
-      "A plant-free vessel in an RDWC loop that carries the pump, the top-off float, the probes "
-      "and the heater or chiller. Every reading and every dose happens here, so no plant site is "
-      "ever the measurement point." + _c("dwc-athena-rdwc-2024")),
-    callout("key", "The three numbers this paper is built around",
-      ul(["<strong>Dissolved oxygen</strong>, how much O<sub>2</sub> is in the water, in mg/L. "
-          "Sets the ceiling on root respiration.",
-          "<strong>Solution temperature</strong>, sets both how much oxygen the water "
-          "<em>can</em> hold and how fast the roots and microbes <em>consume</em> it. The master dial.",
-          "<strong>ORP</strong>, oxidation-reduction potential, in millivolts. The most "
-          "misread number in hydroponics, and the one this paper spends the most time on."], "tight")),
+      "A bucket with no plant in an RDWC loop. The bucket contains the pump, the float valve for "
+      "the RO water, the probes, and the heater or chiller. You do all the measurements and add all "
+      "the doses in this bucket. Thus no plant site is a point of measurement." +
+      _c("dwc-athena-rdwc-2024")),
+    callout("key", "The three primary numbers of this paper",
+      ul(["<strong>Dissolved oxygen (DO)</strong> is the quantity of O<sub>2</sub> in the water, in "
+          "mg/L. It is the ceiling for root respiration.",
+          "<strong>Solution temperature</strong> changes the maximum quantity of oxygen that the "
+          "water <em>can</em> hold. It also changes the rate at which the roots and microbes "
+          "<em>use</em> the oxygen. Solution temperature is the primary control.",
+          "<strong>ORP</strong> is the oxidation-reduction potential, in millivolts. Growers read "
+          "this number incorrectly more frequently than other numbers in hydroponics. This paper "
+          "gives more information about ORP than about the other two numbers."], "tight")),
     callout("note", "Who this is for",
-      p("Anyone running or considering water culture, and anyone who has looked at an ORP reading "
-        "and not known what to do about it. It assumes you already know what EC and pH are. If you "
-        "do not, read the pH and water-quality papers first. Cannabis is the worked example, but "
-        "the physics applies to any crop.")),
+      p("This paper is for a person who operates a water culture system or who thinks about it. It "
+        "is also for a person who sees an ORP reading and does not know the next step. This paper "
+        "does not give information about EC and pH. If you do not know EC and pH, read the pH paper "
+        "and the water-quality paper first. The example is cannabis, but the physics applies to all "
+        "crops.")),
   ]})
 
 # 2 ------------------------------------------------------------- oxygen budget
 SECTIONS.append({"id": "oxygen-budget", "kicker": "Physics", "title": "Oxygen solubility in nutrient solution",
   "blocks": [
-    p("Start with the constraint nobody can negotiate. Oxygen is barely soluble in water. Think of "
-      "dissolved oxygen the way you think of carbonation in a cold drink: gas held in the liquid "
-      "only up to a ceiling set by temperature and pressure, released when you warm or agitate it. "
-      "Dissolved oxygen is that same idea — invisible, held in solution, and present in far smaller "
-      "amounts than the air around the tank. The higher the temperature, the lower that ceiling. "
-      "At 20 &deg;C (68 &deg;F) under normal air at sea level, water holds about <strong>9.1 mg/L</strong> of dissolved "
-      "oxygen at equilibrium" + _c("dwc-benson-krause-1984") + ". Air itself, by comparison, is "
-      "about 280 mg/L of oxygen. Water at saturation carries roughly one-thirtieth of the oxygen "
-      "that the same volume of air carries. That is the number a submerged root has to live on."),
+    p("Start with the limit that you cannot change. Only a small quantity of oxygen dissolves in "
+      "water. Water holds dissolved oxygen only up to a ceiling. The ceiling changes with the "
+      "temperature and the pressure. The water releases the oxygen when its temperature increases "
+      "or when you shake the water. When the temperature is higher, the ceiling is lower.</p><p>At "
+      "20 &deg;C (68 &deg;F), in equilibrium with usual air at sea level, water holds approximately "
+      "<strong>9.1 mg/L</strong> of dissolved oxygen." + _c("dwc-benson-krause-1984") +
+      " Air contains approximately 280 mg/L of oxygen. Water at saturation contains approximately "
+      "one part in thirty of the oxygen in the same volume of air. A root in the solution has only "
+      "this quantity of oxygen."),
     defterm("Saturation",
-      "The concentration a gas reaches in a liquid when the liquid is in equilibrium with the gas "
-      "above it. It is set by Henry's law: dissolved concentration is proportional to the partial "
-      "pressure of that gas in the gas phase." + _c("dwc-bok-2023-o2-solubility")),
-    figure(L.line("Air-saturated dissolved oxygen falls as water warms",
+      "The concentration that a gas has in a liquid when the liquid is in equilibrium with the gas "
+      "above it. Henry's law shows that the dissolved concentration is in proportion to the partial "
+      "pressure of the gas in the gas phase." + _c("dwc-bok-2023-o2-solubility")),
+    figure(L.line("DO decreases when the temperature is higher",
             [("10", 11.29), ("14", 10.31), ("18", 9.47), ("20", 9.09), ("22", 8.74),
              ("25", 8.26), ("28", 7.83), ("30", 7.56)],
             ["10 C", "14 C", "18 C", "20 C", "22 C", "25 C", "28 C", "30 C"],
             ylab="mg/L", ymin=6, ymax=12,
-            note="Fresh water, 1 atm, in equilibrium with air. Standard solubility tables."), 3,
-      "Warming the reservoir from 18 to 28 &deg;C (64&ndash;82 &deg;F) removes about 17% of the oxygen the water can hold, "
-      "before a single root has breathed any of it." + _c("dwc-benson-krause-1984")),
-    callout("key", "Warming a reservoir is doubly bad",
-      p("Solubility falls roughly 1.7% per &deg;C near 20 &deg;C (68 &deg;F). Over the same 10 &deg;C span, biological "
-        "oxygen demand roughly <em>doubles</em>, root and microbial respiration follow a "
-        "Q<sub>10</sub> near 2. Supply down about a sixth, demand up about double: the ratio of "
-        "available oxygen to oxygen demanded falls by roughly a factor of two and a half. This is why "
-        "reservoir temperature, not aeration hardware, is the first thing to check when a system "
-        "starts failing.")),
-    p("Now the part that confuses people. Growers running an oxygen concentrator through a fine "
-      "diffuser routinely report 15&ndash;25 mg/L, and then worry that they are dangerously "
-      "supersaturated. Both halves of the following sentence are true, and holding both at once is "
-      "the key to understanding the reading."),
+            note="Fresh water, 1 atm, in equilibrium with air. Source: standard solubility tables."), 3,
+      "When the reservoir temperature increases from 18 to 28 &deg;C (64&ndash;82 &deg;F), the "
+      "water can hold approximately 17% less oxygen. This occurs before the roots use the oxygen." +
+      _c("dwc-benson-krause-1984")),
+    callout("key", "A higher reservoir temperature causes two problems",
+      p("At approximately 20 &deg;C (68 &deg;F), the solubility of oxygen decreases by "
+        "approximately 1.7% for each &deg;C. Root respiration and the respiration of microbes have "
+        "a Q<sub>10</sub> of approximately 2. Thus, when the temperature increases by 10 &deg;C, "
+        "the roots and microbes use approximately <em>two times</em> as much oxygen. At the same "
+        "time, the oxygen that the water holds decreases by approximately one sixth. Thus the ratio "
+        "of the available oxygen to the oxygen that the roots and microbes use decreases by "
+        "approximately two and a half times. When a system has a problem, the first check is the "
+        "temperature of the reservoir and not the aeration equipment.")),
+    p("Many growers read a high DO value incorrectly. Growers who use an oxygen concentrator with a "
+      "diffuser that makes small bubbles frequently report 15&ndash;25 mg/L. Then they think that "
+      "the water holds a dangerous quantity of oxygen. Two facts are correct at the same time. Use "
+      "the two facts together to read the value correctly."),
     grid([
-      card("Relative to air: yes, supersaturated",
-           p("At 22 &deg;C (72 &deg;F) air-saturated water holds about 8.7 mg/L. A reading of 20 mg/L is about "
-             "<strong>2.3&times; air saturation</strong>. If you switched the gas off and left the "
-             "water open to the room, it would slowly out-gas back toward 8.7."), tag="2.3&times;"),
-      card("Relative to your gas: not saturated at all",
-           p("A pressure-swing concentrator delivers roughly 90&ndash;95% oxygen. Henry's law scales "
-             "with partial pressure, so at 22 &deg;C (72 &deg;F) that gas could push water to roughly "
-             "<strong>38 mg/L</strong> at equilibrium. Your 20 mg/L is about half of that. While the "
-             "gas is flowing, nothing is straining to escape."), tag="~52%"),
+      card("In relation to air: yes, more than saturation",
+           p("At 22 &deg;C (72 &deg;F), water at air saturation holds approximately 8.7 mg/L. A "
+             "reading of 20 mg/L is approximately <strong>2.3&times; air saturation</strong>. If "
+             "you stop the gas and let the water stay open to the room air, the water will slowly "
+             "release oxygen. The value will decrease to 8.7 mg/L."), tag="2.3&times;"),
+      card("In relation to your gas: far below saturation",
+           p("A pressure-swing concentrator supplies a gas that has approximately 90&ndash;95% "
+             "oxygen. Henry's law shows that the concentration is in proportion to the partial "
+             "pressure. Thus, at 22 &deg;C (72 &deg;F), this gas can give approximately <strong>38 "
+             "mg/L</strong> in the water at equilibrium. Your 20 mg/L is approximately half of this "
+             "value. While the gas flows, the oxygen stays in the water."), tag="approximately 52%"),
     ], cols=2),
-    callout("note", "Why that distinction matters operationally",
-      p("A solution that is supersaturated relative to <em>air</em> but undersaturated relative to "
-        "the <em>gas being injected</em> is stable while the gas flows and decays gently when it "
-        "stops. It does not spontaneously nucleate bubbles on root surfaces. The failure mode to "
-        "actually worry about is not gas embolism, it is the pump stopping, at which point "
-        "you are on a decay curve toward 8.7 mg/L with a root mass sized for 20.")),
-    p("The other lever is bubble size. Conventional air stones make bubbles of a few millimetres "
-      "that rise and burst in seconds. Nanobubbles, below roughly 200 nm, carry a "
-      "negatively charged surface that resists coalescence and a high internal pressure that keeps "
-      "gas dissolving. In the original characterisation work they remained measurable in water for "
-      "about <strong>70 days</strong>" + _c("dwc-ebina-2013-nanobubble") + ". That is a genuinely "
-      "different transport regime, not a marketing gradient: the gas keeps dissolving long after "
-      "the visible bubbling has stopped."),
+    callout("note", "This difference is important in operation",
+      p("A solution can hold more oxygen than the saturation value for <em>air</em> and less oxygen "
+        "than the saturation value for the <em>gas that you inject</em>. This solution is stable "
+        "while the gas flows. When the gas stops, the oxygen decreases slowly. The solution does "
+        "not make bubbles on the surfaces of the roots.</p><p>The important problem is not gas "
+        "embolism. The important problem is that the pump stops. After the pump stops, the oxygen "
+        "decreases to 8.7 mg/L, but the root mass has the size for 20 mg/L.")),
+    p("The size of the bubbles is the other control. A usual air stone makes bubbles that are some "
+      "millimeters in size. These bubbles move up and break in some seconds.</p><p>Nanobubbles are "
+      "smaller than approximately 200 nm. The surface of a nanobubble has a negative charge. As a "
+      "result, two bubbles do not become one bubble. The pressure in a nanobubble is high, and thus "
+      "the gas continues to dissolve.</p><p>In the first tests on nanobubbles, a measurement found "
+      "them in water for approximately <strong>70 days</strong>." + _c("dwc-ebina-2013-nanobubble") +
+      " The nanobubbles supply the gas by a different method. The gas continues to dissolve for a "
+      "long time after the bubbles that you can see stop."),
     figure(D.bubble_scale(), 4,
-      "Bubble size is not a quality gradient, it is three different physical regimes. Only the "
-      "nano regime delivers gas without delivering a rising plume, which, as the next "
-      "section shows, is the whole problem with coarse aeration." + _c("dwc-ebina-2013-nanobubble")),
+      "The three bubble sizes are not three grades of quality. The physics of the three sizes is "
+      "different. Only nanobubbles supply gas with no plume of bubbles. As the next section shows, "
+      "the plume is the primary problem of aeration with large bubbles." +
+      _c("dwc-ebina-2013-nanobubble")),
     photo(f"{IMG}/08-nanobubble.jpg",
-      "Left: a coarse air stone, large bubbles, visible turbulent plume. Right: nanobubble water, "
-      "an even opalescent haze with no rising column. Same gas, entirely different mechanical "
-      "consequence for the root zone.", model=GPT),
+      "Left: an air stone that makes large bubbles. You can see a plume with turbulence. Right: "
+      "water with nanobubbles. The water is not transparent, and there is no plume. The gas is the "
+      "same, but the mechanical effect on the root zone is very different.", model=GPT),
   ]})
 
 # 3 ------------------------------------------------------------ how much is enough
 SECTIONS.append({"id": "how-much", "kicker": "Targets", "title": "Plant oxygen demand",
   "blocks": [
-    p("The literature is unusually consistent about the bottom of the range and unusually messy "
-      "about the top. Both facts are useful."),
-    p("At the bottom: in bell pepper grown in floating culture, growth and photosynthesis were "
-      "measurably impaired below about <strong>3.8 mg/L</strong> on ammonium nutrition and below "
-      "<strong>5.3 mg/L</strong> on nitrate nutrition, with the authors recommending those as hard "
-      "floors" + _c("dwc-roosta-2024-o2-nform") + ". That nitrogen-form split is not a curiosity: "
-      "nitrate assimilation is itself energetically expensive, so a nitrate-fed root has a higher "
-      "oxygen bill than an ammonium-fed one."),
-    figure(L.bars("Dissolved-oxygen levels used across the hydroponic literature",
-            [("Hypoxic", 2.0), ("NH4 floor", 3.8), ("NO3 floor", 5.3),
-             ("Air sat. 20 C", 9.1), ("NFT enriched", 8.8), ("DWC enriched", 15.0),
+    p("The data from tests agree about the bottom of the range, but they do not agree about the top "
+      "of the range. These two facts are important."),
+    p("At the bottom of the range, a test used bell pepper in floating culture. With ammonium "
+      "nutrition, the growth and the photosynthesis decreased when the DO was less than "
+      "approximately <strong>3.8 mg/L</strong>. With nitrate nutrition, they decreased when the DO "
+      "was less than <strong>5.3 mg/L</strong>. The authors recommended these two values as floors. "
+      "The DO must not be less than these values." + _c("dwc-roosta-2024-o2-nform") +
+      "</p><p>The difference between the two types of nitrogen is important. Nitrate assimilation "
+      "uses a large quantity of energy. Thus a root with nitrate uses more oxygen than a root with "
+      "ammonium."),
+    figure(L.bars("DO values in hydroponic tests",
+            [("Hypoxia", 2.0), ("NH4 floor", 3.8), ("NO3 floor", 5.3),
+             ("Saturation 20C", 9.1), ("NFT with O2", 8.8), ("DWC with O2", 15.0),
              ("O2 concentrator", 20.0)], unit=" mg/L",
-            note="Floors are experimentally derived; the top two are what enrichment systems deliver, not requirements.",
+            note="Tests give the floors. The top two values come from enrichment systems. They are not minimum values.",
             maxv=24), 5,
-      "The gap between the ~5 mg/L physiological floor and the 15&ndash;20 mg/L that enrichment "
-      "hardware delivers is where all the argument lives. Above roughly 8&ndash;10 mg/L the "
-      "evidence for further benefit becomes crop-specific and cost-sensitive." +
-      _c("dwc-roosta-2024-o2-nform") + _c("dwc-nitu-2024-nft-oxygen") + _c("dwc-qin-2025-do-enrichment")),
-    p("At the top, the honest answer is that returns diminish and then stop. Raising NFT lettuce "
-      "from about 7 mg/L to about 8.5&ndash;9 mg/L produced large gains, fresh mass up to "
-      "110% higher in one cultivar, root mass up 78%" + _c("dwc-nitu-2024-nft-oxygen") + ". But a "
-      "deep-water-culture trial that ran controlled enrichment at 10, 15 and 20 mg/L found the "
-      "response was entirely crop-specific: arugula gained 63&ndash;191% above 15 mg/L, kale gained "
-      "nothing at any level, and the enrichment carried a <strong>140% higher electricity cost</strong>. "
-      "Only arugula at 20 mg/L returned enough to pay for the energy" + _c("dwc-qin-2025-do-enrichment") + "."),
-    figure(L.zones("The dissolved-oxygen operating band", 0, 22,
-            [(0, 3.8, L.REDL, "Hypoxic: root damage"),
-             (3.8, 6.0, L.AMBL, "Marginal"),
-             (6.0, 10.0, L.GL, "Good: air-sat and a bit over"),
-             (10.0, 22.0, L.BLUL, "Enriched: crop-specific, pay for it")], unit=" mg/L",
-            note="Below 3.8 you are damaging roots. Above ~10 you are buying yield you may not get."), 6,
-      "Getting from hypoxic to comfortable is the single highest-return move in water culture. "
-      "Getting from comfortable to enriched is an economics question, not a horticulture one."),
-    callout("warn", "Hypoxia damages the plant before you can see it in the roots",
-      p("Low root-zone oxygen does not begin with brown roots. It begins with an energy deficit. "
-        "The root cortex may still get enough O<sub>2</sub> to absorb nutrients while the stele"
-        ", the central tissue that loads nutrients into the xylem for transport to the shoot"
-        ", goes hypoxic and its H<sup>+</sup>-ATPases stall" + _c("dwc-colmer-2010-ion-transport") +
-        ". The plant takes ions up and cannot ship them. Separately, hypoxia closes aquaporins and "
-        "triggers stomatal closure, so water transport falls too" + _c("dwc-tan-2018-aquaporins") +
-        ". You see a plant that looks nutrient-deficient and slightly wilty with a perfectly good "
-        "feed in the tank. Root browning and lysis come later" + _c("dwc-drew-1997-hypoxia") + ".")),
-    callout("tip", "The diagnostic that costs nothing",
-      p("A deficiency pattern that does not respond to correcting the feed, in a system whose EC and "
-        "pH are on target, should send you to the DO meter and the thermometer before it sends you "
-        "to the nutrient shelf.")),
+      "Growers do not agree about the values between the floor of approximately 5 mg/L for the "
+      "plant and the 15&ndash;20 mg/L that enrichment equipment supplies. At more than "
+      "approximately 8&ndash;10 mg/L, the data show that the effect of more DO is different for "
+      "each crop. The cost of the enrichment is also important." + _c("dwc-roosta-2024-o2-nform") +
+      _c("dwc-nitu-2024-nft-oxygen") + _c("dwc-qin-2025-do-enrichment")),
+    p("At the top of the range, the effect of more oxygen becomes smaller and then stops. In NFT "
+      "(nutrient film technique) lettuce, the plants became much larger when the DO increased from "
+      "approximately 7 mg/L to approximately 8.5&ndash;9 mg/L. The wet weight was up to 110% higher "
+      "in one cultivar, and the root mass was 78% higher." + _c("dwc-nitu-2024-nft-oxygen") +
+      "</p><p>A test in deep water culture used controlled enrichment at 10, 15 and 20 mg/L. The "
+      "effect was different for each crop. Arugula became 63&ndash;191% larger at more than 15 "
+      "mg/L, and kale did not become larger at all the DO values. The enrichment caused a "
+      "<strong>140% higher electricity cost</strong>. Only arugula at 20 mg/L gave sufficient value "
+      "for the cost of the energy." + _c("dwc-qin-2025-do-enrichment")),
+    figure(L.zones("The range of DO for operation", 0, 22,
+            [(0, 3.8, L.REDL, "Hypoxia: root damage"),
+             (3.8, 6.0, L.AMBL, "Low"),
+             (6.0, 10.0, L.GL, "Good: near air saturation"),
+             (10.0, 22.0, L.BLUL, "Enrichment: for some crops, at a cost")], unit=" mg/L",
+            note="Less than 3.8: root damage. Approximately 10 or more: more cost, and the yield is not sure."), 6,
+      "To increase the DO from hypoxia to the Good zone is the task with the highest value for its "
+      "cost in water culture. To increase the DO from the Good zone to the Enrichment zone is a "
+      "decision about cost and not about horticulture."),
+    callout("warn", "Hypoxia causes damage to the plant before you can see it in the roots",
+      p("When the oxygen in the root zone is low, the first effect is not brown roots. The first "
+        "effect is not sufficient energy. The cortex of the root can continue to get sufficient "
+        "O<sub>2</sub> to absorb nutrients. At the same time, the stele has hypoxia.</p><p>The "
+        "stele is the inner tissue that loads nutrients into the xylem. The xylem moves the "
+        "nutrients to the shoot. The H<sup>+</sup>-ATPases in the stele stop." +
+        _c("dwc-colmer-2010-ion-transport") + "</p><p>The plant absorbs ions, but it cannot send "
+        "them to the shoot. Hypoxia also closes the aquaporins and causes the stomata to close. As "
+        "a result, the plant moves less water." + _c("dwc-tan-2018-aquaporins") +
+        "</p><p>The plant shows the symptoms of a nutrient deficiency and a small wilt, but the "
+        "tank has a correct feed. Subsequently, the roots become brown and lysis occurs." +
+        _c("dwc-drew-1997-hypoxia"))),
+    callout("tip", "A check with no cost",
+      p("Examine this condition. The EC and pH are on target, but a deficiency symptom does not "
+        "change when you correct the feed. In this condition, use the DO meter and the thermometer "
+        "first. Do this before you apply other nutrients.")),
   ]})
 
 # 4 --------------------------------------------------------- the aeration paradox
 SECTIONS.append({"id": "aeration-paradox", "kicker": "Aeration rate has a ceiling", "title": "Aeration limits and dissolved oxygen",
   "blocks": [
-    lead("This is the section most likely to change how you run your system. Aeration delivers "
-         "oxygen, which is good. Aeration also delivers <em>agitation</em>, which is not. Past a "
-         "modest rate, the agitation costs you more than the oxygen buys."),
-    p("The clearest demonstration comes from deep-flow hydroponics run at aeration rates from 0 to "
-      "2 L/min. Gentle solution movement (not violent, gentle) dramatically reduced "
-      "iron uptake and induced chlorosis in sunflower and corn. The same nutrient solution at the "
-      "same pH in a peat-based medium produced ample iron and chlorophyll. Tomato was largely "
-      "unaffected; species differ" + _c("dwc-langenfeld-2025-agitation-iron") + "."),
-    callout("key", "Aeration strips the chemical layer roots build to feed themselves",
-      p("A root does not simply absorb whatever is in the bulk solution. It builds a thin unstirred "
-        "boundary layer around itself and chemically engineers it, pumping out protons to "
-        "acidify it, exuding reductants and chelators to make iron available. Think of it as the "
-        "seasoning a cook keeps right at the prep station: specific, calibrated, and useless the "
-        "moment someone blasts a fan across the bench. That microenvironment "
-        "is <em>the plant's own nutrient-acquisition machinery</em>. Bubbling stirs it away. Turning "
-        "the aeration up does not just add oxygen; it demolishes the boundary layer the root built "
-        "to feed itself." + _c("dwc-langenfeld-2025-agitation-iron"))),
+    lead("This section can change how you operate your system more than the other sections can. "
+         "Aeration supplies oxygen, which is good. Aeration also supplies <em>movement</em> of the "
+         "water, which is not good. At rates that are more than moderate, the bad effect of the "
+         "movement is larger than the good effect of the oxygen."),
+    p("A test shows this clearly. The test used deep-flow hydroponics at aeration rates of 0 to 2 "
+      "L/min. Weak movement of the solution (not strong movement) made the iron uptake much less, "
+      "and it caused chlorosis in sunflower and corn. The same nutrient solution at the same pH, in "
+      "a medium of peat, gave the plants sufficient iron and chlorophyll. In tomato, the effect was "
+      "small. The species are different." + _c("dwc-langenfeld-2025-agitation-iron")),
+    callout("key", "Aeration removes the chemical layer that the roots make for nutrient uptake",
+      p("A root does not only absorb the material that is in the bulk solution. The root makes a "
+        "thin boundary layer around the root, and the solution in this layer does not move. The "
+        "root changes the chemistry of this layer. The root releases protons to decrease the pH in "
+        "the layer. It also releases reductants and chelators to make iron available.</p><p>This "
+        "layer is <em>the nutrient uptake system of the plant</em>. The bubbles mix the layer into "
+        "the bulk solution. When you increase the aeration, you add oxygen and you also remove the "
+        "boundary layer that the root made to absorb nutrients." +
+        _c("dwc-langenfeld-2025-agitation-iron"))),
     figure(D.boundary_layer(), 7,
-      "The single most useful picture in this paper. Left: gentle flow, the unstirred layer holds, "
-      "the root has acidified it and iron is available. Right: the same root in the same solution "
-      "with the air turned up. The layer is gone, and the root is now negotiating with bulk "
-      "chemistry it has no way to modify." + _c("dwc-langenfeld-2025-agitation-iron")),
-    p("There is a second, blunter mechanism. Aggressive aeration strips dissolved CO<sub>2</sub> out "
-      "of the solution. Carbonic acid is a real contributor to solution pH, so venting it drives pH "
-      "up. In a deep-water-culture aquaponics trial the heavily aerated beds yielded "
-      "<strong>29% less</strong> than unaerated controls at harvest, and dissolved oxygen "
-      "never dropped below 5 mg/L in any treatment, so oxygen was never the limiting factor. The "
-      "authors attributed the loss to the pH shift that came with the aeration" +
-      _c("dwc-bodenmiller-2017-aeration") + "."),
-    p("So what rate is right? Two independent sources converge on almost exactly the same number, "
-      "which is the most reassuring thing in this paper."),
+      "This figure is the most important figure in this paper. Left: weak flow. The layer stays in "
+      "position, the root decreases the pH in the layer, and iron is available. Right: the same "
+      "root in the same solution with a higher air flow. The layer is not there. The root must use "
+      "the chemistry of the bulk solution, and it cannot change this chemistry." +
+      _c("dwc-langenfeld-2025-agitation-iron")),
+    p("There is a second mechanism. Strong aeration removes dissolved CO<sub>2</sub> from the "
+      "solution. Carbonic acid has an effect on the pH of the solution. When the aeration removes "
+      "the CO<sub>2</sub>, the pH increases.</p><p>In a deep-water-culture aquaponics test, the "
+      "plants with strong aeration gave <strong>29% less</strong> yield at harvest than the control "
+      "plants with no aeration. In all the treatments, the dissolved oxygen was always 5 mg/L or "
+      "more. Thus oxygen was not the limiting factor. The authors gave the pH change that came with "
+      "the aeration as the cause of the smaller yield." + _c("dwc-bodenmiller-2017-aeration")),
+    p("The next task is to find the correct rate. Two sources independently give almost the same "
+      "number. Thus you can be more sure of this number than of the other numbers in this paper."),
     grid([
-      card("From the research",
-           p("A zero-discharge hydroponic management system holds DO near saturation with "
-             "<strong>gentle aeration at about 100 mL&#183;min<sup>-1</sup> per litre</strong> of "
-             "solution, in a bed at least 20 cm (8 in) deep. Ample depth stabilises concentrations and "
-             "reduces root density; gentle aeration improves uniformity without destroying the "
-             "rhizosphere." + _c("dwc-langenfeld-2024-zero-discharge")), tag="100 mL/min/L"),
+      card("From tests",
+           p("A zero-discharge hydroponic system holds the DO near saturation. The aeration is at a "
+             "low rate of approximately <strong>100 mL&#183;min<sup>-1</sup> for each "
+             "liter</strong> of solution. The minimum depth of the solution is 20 cm (8 in). "
+             "Sufficient depth makes the concentrations stable and decreases the root density. The "
+             "low rate of aeration makes the concentrations more equal and does not cause damage to "
+             "the rhizosphere." + _c("dwc-langenfeld-2024-zero-discharge")), tag="100 mL/min/L"),
       card("From the manufacturer",
-           p("A commercial RDWC procedure specifies <strong>one 5 &times; 5 cm (2 &times; 2 in) medium round air "
-             "stone per 30 L (7.9 gal) bucket</strong>, positioned at the bottom, about 2.5 cm (1 in) from the wall, "
-             "and explicitly <em>never</em> directly under the net pot, because &lsquo;too "
-             "much turbidity can cause severe damage to new roots&rsquo;." + _c("dwc-athena-rdwc-2024")),
+           p("A manufacturer's RDWC procedure gives <strong>one circular air stone of medium size, "
+             "5 &times; 5 cm (2 &times; 2 in), for each 30 L (7.9 gal) bucket</strong>. The "
+             "procedure tells you to put the air stone at the bottom, approximately 2.5 cm (1 in) "
+             "from the wall. The procedure also gives this instruction: <em>do not</em> put the air "
+             "stone directly below the net pot, because &lsquo;too much turbidity can cause severe "
+             "damage to new roots&rsquo;." + _c("dwc-athena-rdwc-2024")),
            tag="1 stone / 30 L"),
     ], cols=2),
-    callout("note", "Check the arithmetic yourself",
-      p("A 30 L (7.9 gal) bucket at 100 mL&#183;min<sup>-1</sup>&#183;L<sup>-1</sup> wants about 3 L/min of "
-        "air. Reckoned on the operating volume of roughly 19 L (5.0 gal) rather than the nominal bucket size, "
-        "it wants about 1.9 L/min. A single medium round air stone at typical manifold pressure "
-        "flows somewhere in the 2&ndash;4 L/min range. The peer-reviewed number and the commercial "
-        "spec land on the same hardware. A researcher measuring iron chlorosis and a commercial "
-        "grower watching root damage found the same limit from opposite directions.")),
-    figure(L.zones("Aeration rate: the window is narrower than most people run", 0, 400,
-            [(0, 40, L.REDL, "Too little: hypoxia"),
+    callout("note", "Calculate the numbers",
+      p("For a 30 L (7.9 gal) bucket at 100 mL&#183;min<sup>-1</sup>&#183;L<sup>-1</sup>, the "
+        "necessary air flow is approximately 3 L/min. For the operating volume of approximately 19 "
+        "L (5.0 gal) and not the size of the bucket, the necessary air flow is approximately 1.9 "
+        "L/min. One circular air stone of medium size, at a usual manifold pressure, has a flow of "
+        "2&ndash;4 L/min.</p><p>Thus the number from the paper and the specification of the "
+        "manufacturer give the same equipment. The paper measured iron chlorosis. A grower looked "
+        "at root damage. The two sources found the same limit from opposite directions.")),
+    figure(L.zones("Aeration rate: the window is small, and most growers use more", 0, 400,
+            [(0, 40, L.REDL, "Too low: hypoxia"),
              (40, 160, L.GL, "The window"),
-             (160, 400, L.AMBL, "Too much: rhizosphere stripped, CO2 vented, pH drifts up")],
+             (160, 400, L.AMBL, "Too much: rhizosphere removed, less CO2, pH increases")],
             unit="",
-            note="Air flow in mL per minute per litre of solution. Centred on ~100. Most hobby DWC builds sit far right."), 8,
-      "Growers instinctively treat aeration as a safety margin and over-provision it. The evidence "
-      "says the top of the range has its own failure mode, and it presents as an iron deficiency "
-      "you cannot feed your way out of."),
-    callout("tip", "Placement is a control variable, not a detail",
-      p("Air stones at the bottom of the bucket and offset from the wall let the column rise past "
-        "the root mass rather than through it. A stone directly under the net pot drives the "
-        "highest-shear part of the plume straight through the youngest, most fragile root tips. "
-        "Same air volume, completely different outcome." + _c("dwc-athena-rdwc-2024"))),
+            note="Air flow in mL/min for each liter. The window is at approximately 100. Most hobby growers are far to the right."), 8,
+      "Growers frequently think that more aeration gives more safety. Thus they use too much air. "
+      "The data show that a high rate has a different problem. The problem shows as an iron "
+      "deficiency, and more feed does not correct it."),
+    callout("tip", "The position of the air stone is a control",
+      p("Put the air stone at the bottom of the bucket and at a distance from the wall. Then the "
+        "bubbles move up around the root mass and not through it. A stone directly below the net "
+        "pot causes the part of the plume with the highest shear to move straight through the new "
+        "root tips. These root tips break easily. The air volume is the same, but the result is "
+        "very different." + _c("dwc-athena-rdwc-2024"))),
     figure(D.airstone_placement(), 9,
-      "Identical hardware, identical air volume, opposite result. The left bucket aims the plume "
-      "through the root mass; the right one lets it rise alongside." + _c("dwc-athena-rdwc-2024")),
+      "The equipment is the same and the air volume is the same, but the result is the opposite. In "
+      "the left bucket, the plume moves through the root mass. In the right bucket, the plume moves "
+      "up along the root mass." + _c("dwc-athena-rdwc-2024")),
     photo(f"{IMG}/06-airstone.jpg",
-      "What you are aiming for underwater: a fine, even column rising near the wall and past the "
-      "roots, not a rolling boil through the middle of them.", model=GPT),
-    p("This is also the strongest argument for nanobubble generation over conventional stones. "
-      "Nanobubbles dissolve gas without producing a rising plume, which decouples oxygen delivery "
-      "from mechanical agitation, the two things a coarse air stone forces you to buy "
-      "together. Micro/nanobubble-aerated irrigation at 15 and 30 mg/L produced larger root volume, "
-      "richer rhizosphere bacterial communities and higher yields than at 5 mg/L" +
-      _c("dwc-wang-2024-mnb-microbiome") + ", and reviews of the technology in controlled "
-      "environment agriculture frame it primarily as a way to keep the root zone aerobic enough "
-      "for beneficial microbes to function" + _c("dwc-mamun-2025-onb-health") + "."),
+      "The correct result in the water is small bubbles that move up near the wall and around the "
+      "roots. It is not a plume with strong turbulence through the middle of the roots.", model=GPT),
+    p("The primary good property of nanobubble equipment, compared with usual air stones, is that "
+      "it supplies gas without a plume of bubbles. A usual air stone gives you the oxygen supply "
+      "and the mechanical movement of the water together. Nanobubble equipment does not.</p><p>A "
+      "test compared irrigation at 5 mg/L with irrigation from microbubbles and nanobubbles at 15 "
+      "and 30 mg/L. The two higher values gave a larger root volume and a higher yield. The "
+      "rhizosphere also had a higher number of species of bacteria." +
+      _c("dwc-wang-2024-mnb-microbiome") + " Reviews in controlled environment agriculture show "
+      "nanobubbles primarily as a method to keep sufficient oxygen in the root zone for beneficial "
+      "microbes." + _c("dwc-mamun-2025-onb-health")),
   ]})
 
 # 5 -------------------------------------------------------------------- ORP
-SECTIONS.append({"id": "orp", "kicker": "What ORP actually measures", "title": "Interpreting ORP readings",
+SECTIONS.append({"id": "orp", "kicker": "The quantity that ORP measures", "title": "How to read an ORP value",
   "blocks": [
-    lead("Oxidation-reduction potential — ORP — is the most commonly misinterpreted measurement in water "
-         "culture. Before the technical definition: think of it the way a piece of polished silver "
-         "cutlery behaves in different water. In clean, oxygen-rich water it stays bright; in water "
-         "full of sulphides and rotting organics it tarnishes. ORP is the probe that reads that same "
-         "chemical condition without needing the silver. A platinum electrode in the reservoir outputs "
-         "the balance between oxidising and reducing species as a voltage in millivolts. It is worth "
-         "getting right, because the correct interpretation changes the action you take."),
+    lead("Oxidation-reduction potential (ORP) is the measurement that growers read incorrectly more "
+         "frequently than the other measurements in water culture. A platinum electrode in the "
+         "reservoir gives a voltage in millivolts. The voltage is the balance between oxidizers and "
+         "reductants in the solution. It is important to read ORP correctly, because the correct "
+         "reading changes the task that you do."),
     defterm("ORP / redox potential",
-      "The electrical potential, in millivolts, of an inert platinum electrode immersed in the "
-      "solution, measured against a reference electrode. It reflects the balance of oxidising and "
-      "reducing species, the solution's overall tendency to accept or donate electrons."),
-    p("Here is where most people go wrong, and the correction is not what you would guess. "
-      "<strong>Raising dissolved oxygen does reliably raise ORP, but almost none of that rise "
-      "is oxygen acting on the electrode.</strong> Both halves matter. Growers who are told &lsquo;ORP "
-      "is not an oxygen measurement&rsquo; and then watch their ORP jump 200 mV when they switch to an "
-      "oxygen concentrator quite reasonably conclude they have been misinformed. They have not; the "
-      "causal chain just runs through the water rather than through the electrode."),
-    p("The O<sub>2</sub>/H<sub>2</sub>O couple has a large standard potential on paper but exchanges "
-      "electrons extremely slowly at a platinum surface. In the language of electrochemistry it has a "
-      "very low exchange current density: it is kinetically irreversible. Two things follow. The "
-      "electrode never actually reaches oxygen equilibrium, at pH 5.8 a fully equilibrated "
-      "oxygen electrode would sit near <strong>690 mV</strong> against a silver/silver-chloride "
-      "reference, and real reservoirs read hundreds of millivolts below that. And the <em>direct</em> "
-      "response to oxygen concentration is small enough that you can calculate it on the back of an "
-      "envelope."),
-    callout("key", "Do the arithmetic before you attribute an ORP change to oxygen",
-      p("The Nernst slope for a four-electron couple is 59.16 &divide; 4 = <strong>14.8 mV per decade</strong> "
-        "of oxygen partial pressure. Going from air (<em>p</em>O<sub>2</sub> 0.21 atm) to a "
-        "concentrator at roughly 93% O<sub>2</sub> is 0.65 of a decade. Maximum direct shift: "
-        "<strong>about 10 mV</strong>. If your ORP moved by more than a few tens of millivolts, "
-        "oxygen did not do it directly. Something in the water changed. And that is worth "
-        "knowing, because it is usually the more important fact.")),
-    callout("evidence", "A field case: 220-260 mV on air, about 480 mV on an oxygen concentrator",
-      p("A grower running a nanobubbler reported ORP sitting at <strong>220-260 mV</strong> on plain "
-        "air. The system mostly worked, but new reservoirs with freshly transplanted clones brought "
-        "recurring <em>Pythium</em> and cyanobacteria, persistent biofilm, and one detail that gives "
-        "the whole game away: <em>the roots stayed up in the clay pebbles and would not grow down "
-        "into the water.</em> After switching the same system to an oxygen concentrator, ORP settled "
-        "around <strong>480 mV</strong>, biofilm essentially stopped, and the root-avoidance "
-        "resolved.")
-      + p("That is a ~240 mV shift where the arithmetic above allows about 10. The other ~230 mV is "
-          "not oxygen on the electrode. It is the reservoir itself having changed. At 220-260 mV "
-          "the water was carrying a real load of reduced organic carbon and supporting active "
-          "anaerobic and micro-aerophilic metabolism. Those reduced species <em>are</em> fast, "
-          "well-poised couples, and they were holding the electrode down. Flooding the system with "
-          "oxygen burned that load out and collapsed the population producing it. Remove the "
-          "reductants and the electrode floats up to a far higher mixed potential.")
-      + p("So the rise is real, it is useful, and it is worth acting on. It is not a "
-          "measurement of oxygen. It is the cleanliness readout responding to a cleanliness "
-          "change that oxygen caused. Which is exactly what ORP is for.")),
-    callout("note", "A second pathway, genuinely unsettled",
-      p("Gas-liquid interfaces at micro and nano scale have been shown to generate hydroxyl radicals "
-        "with no catalyst at all, driven by hydroxide enrichment and the interfacial electric field" +
-        _c("dwc-yang-2025-microbubble-ros") + ", and spin-trap work has detected radical signatures "
-        "in microbubble-treated water months after treatment" + _c("dwc-takahashi-2021-nb-radicals") +
-        ". Against that, a careful study found no detectable hydroxyl radical from oxygen nanobubbles "
-        "under ambient conditions, and showed that a widely used fluorescent probe returns a false "
-        "positive because the bubble surface is proton-rich" + _c("dwc-chae-2023-nb-ros-null") + ". "
-        "Treat any radical contribution as unproven and second-order. The reductant-removal mechanism "
-        "above is sufficient to explain what growers actually observe, and it does not require the "
-        "chemistry to be exotic.")),
-    callout("key", "What a Pt electrode reads in a dilute solution is a mixed potential",
-      p("A rigorous study of natural waters calculated the redox potential separately for six "
-        "different couples in the same water. They disagreed by up to <strong>1200 mV</strong>. The "
-        "authors concluded that in dilute waters with low concentrations of redox-active species, "
-        "the measured platinum potential is a mixed potential of limited quantitative meaning, and "
-        "cannot be used to model speciation" + _c("dwc-stefansson-2005-redox") + ". A hydroponic "
-        "reservoir is exactly such a water.")),
+      "The voltage, in millivolts, of an inert electrode of platinum in the solution. The "
+      "measurement uses a reference electrode. The voltage shows the balance between the oxidizers "
+      "and the reductants. It also shows if the solution accepts electrons or gives electrons."),
+    p("Most growers read ORP incorrectly at this point. <strong>When you increase the dissolved "
+      "oxygen, the ORP always increases, but almost none of the ORP change is the effect of oxygen "
+      "on the electrode.</strong> Each part is important.</p><p>Growers who hear &lsquo;ORP is not "
+      "an oxygen measurement&rsquo; then see the ORP increase by 200 mV when they change to an "
+      "oxygen concentrator. These growers think that the information was incorrect. The information "
+      "was not incorrect. The change occurs in the water and not at the electrode."),
+    p("The O<sub>2</sub>/H<sub>2</sub>O redox couple has a large standard potential on paper, but "
+      "it accepts and gives electrons very slowly at a platinum surface. In electrochemistry, the "
+      "exchange current density of this redox couple is very low. Two results follow.</p><p>First, "
+      "the electrode is not in equilibrium with the oxygen. At pH 5.8, an oxygen electrode in full "
+      "equilibrium has approximately <strong>690 mV</strong> against a silver/silver-chloride "
+      "reference electrode. Measurements in reservoirs are less than this value by a large number "
+      "of millivolts.</p><p>Second, the <em>direct</em> effect of the oxygen concentration is "
+      "small, and you can calculate it easily."),
+    callout("key", "Calculate before you give oxygen as the cause of an ORP change",
+      p("The Nernst slope for a redox couple with four electrons is 59.16 &divide; 4 = <strong>14.8 "
+        "mV for each decade</strong> of oxygen partial pressure. A decade is a change of ten times. "
+        "The change from air (partial pressure of O<sub>2</sub> 0.21 atm) to a concentrator with "
+        "approximately 93% O<sub>2</sub> is 0.65 of a decade. The maximum direct effect is "
+        "<strong>approximately 10 mV</strong>.</p><p>If your ORP changes by much more than this "
+        "maximum, oxygen did not cause the change directly. Something in the water changed. This "
+        "change in the water is usually the more important fact.")),
+    callout("evidence", "A report from a grower: 220-260 mV on air, approximately 480 mV on an oxygen concentrator",
+      p("A grower who used nanobubble equipment measured an ORP of <strong>220-260 mV</strong> with "
+        "air only. The system usually gave good results. But new reservoirs with new clones that "
+        "the grower transplanted had <em>Pythium</em> and cyanobacteria again and again, and the "
+        "biofilm stayed.</p><p>One sign was important: <em>the roots stayed up in the expanded clay "
+        "and did not go into the water.</em> The grower changed the same system to an oxygen "
+        "concentrator. Then the ORP stayed at approximately <strong>480 mV</strong>, the biofilm "
+        "almost stopped, and the roots went into the water.")
+      + p("This change is approximately 240 mV. The maximum effect that you calculate above is "
+          "approximately 10 mV. The other approximately 230 mV is not the effect of oxygen on the "
+          "electrode. The reservoir changed.</p><p>At 220-260 mV, the water had a large load of "
+          "reduced organic carbon. The microbes in the water had active metabolism with no oxygen "
+          "or with a low oxygen content. These reductants <em>are</em> fast redox couples with good "
+          "poise, and they kept the electrode at a low voltage. The large quantity of oxygen caused "
+          "oxidation of this load. It also made the group of microbes that made the load much "
+          "smaller. When you remove the reductants, the electrode increases to a much higher mixed "
+          "potential.")
+      + p("Thus the ORP change is correct and important, and you can do a task because of it. It is "
+          "not a measurement of oxygen. The ORP value shows how clean the water is. The oxygen made "
+          "the water more clean, and the ORP value showed this change. To show this type of change "
+          "is the correct use of ORP.")),
+    callout("note", "A second pathway: the test results do not agree",
+      p("Tests show that the interfaces of microbubbles and nanobubbles make hydroxyl radicals "
+        "without a catalyst. The cause is a high concentration of hydroxide and the electric field "
+        "at the interface." + _c("dwc-yang-2025-microbubble-ros") + " Tests with a spin trap found "
+        "signs of radicals in water with microbubbles, months after the treatment." +
+        _c("dwc-takahashi-2021-nb-radicals") + "</p><p>But a careful test found no hydroxyl radical "
+        "from oxygen nanobubbles in usual conditions. The test also showed that a fluorescent "
+        "probe, which many tests use, shows a radical when there is no radical. The cause is that "
+        "the surface of the bubble has a high concentration of protons." +
+        _c("dwc-chae-2023-nb-ros-null") + " Think of a radical effect as a small effect that tests "
+        "do not show. The mechanism above, with removal of reductants, is a sufficient cause for "
+        "the results that growers see. It does not use unusual chemistry.")),
+    callout("key", "A platinum electrode in a dilute solution gives a mixed potential",
+      p("A careful test on waters from the environment calculated the redox potential independently "
+        "for each of six different redox couples in the same water. The difference between the six "
+        "values was up to <strong>1200 mV</strong>. The authors found that, in dilute solutions "
+        "with low concentrations of redox-active species, the platinum voltage is a mixed "
+        "potential. It gives only approximate numbers, and you cannot use it to calculate the "
+        "speciation." + _c("dwc-stefansson-2005-redox") + " A hydroponic reservoir is this type of "
+        "solution.")),
     figure(D.orp_mixed_potential(), 10,
-      "Every redox-active species in the reservoir pulls the electrode toward its own potential, "
-      "weighted by how fast it exchanges electrons. The meter shows the compromise. Dissolved "
-      "oxygen is the weakest voice in the room." + _c("dwc-stefansson-2005-redox")),
-    figure(L.hbars("What actually moves ORP in a nutrient reservoir",
+      "Each redox-active species in the reservoir changes the voltage of the electrode in the "
+      "direction of the voltage of that species. A species that accepts and gives electrons fast "
+      "has a larger effect. The meter shows the mixed result. Dissolved oxygen has a very small "
+      "effect." + _c("dwc-stefansson-2005-redox")),
+    figure(L.hbars("The causes of ORP changes in a nutrient reservoir",
             [("Hypochlorous acid dose", 100), ("Hydrogen peroxide dose", 85),
              ("Oxygen - INDIRECT", 78), ("Iron redox state", 55),
-             ("Reduced organic load", 45), ("Microbial respiration", 40),
-             ("pH (59 mV per unit)", 35), ("Oxygen - DIRECT on Pt", 8)], unit="",
-            note="Relative influence on the reading. Oxygen appears twice, and the two entries are not the same thing."), 11,
-      "The distinction that resolves most ORP arguments. Oxygen acting <em>directly</em> on the "
-      "electrode is the weakest effect on the chart, capped near 10 mV. Oxygen acting "
-      "<em>indirectly</em>, by oxidising out the reduced organic load and collapsing the "
-      "anaerobic population that was holding the reading down, is one of the strongest, and "
-      "is what growers actually observe." + _c("dwc-suslow-2004-orp") + _c("dwc-stefansson-2005-redox")),
-    p("The second surprise is that <strong>ORP is meaningless without the pH beside it</strong>. Most "
-      "environmentally relevant redox couples consume protons as they accept electrons. The Nernst "
-      "equation makes the consequence exact: at 25 &deg;C (77 &deg;F) the potential shifts by about "
-      "<strong>59 mV per pH unit</strong>, falling as pH rises."),
-    callout("note", "A worked example from a real grower thread",
-      p("A grower reported pH moving from 6.0 to 5.8 across a day while ORP went from 476 to 482 mV. "
-        "Is that a real change in the chemistry? Run the number: a drop of 0.2 pH units should raise "
-        "the potential of a proton-coupled couple by about 0.2 &times; 59 = <strong>12 mV</strong>. "
-        "Observed was +6 mV, same sign, roughly half the magnitude. The "
-        "&lsquo;ORP climb&rsquo; was largely the pH change being reported back, and if anything the "
-        "underlying redox chemistry drifted slightly <em>downward</em>. Logging ORP without logging "
-        "pH alongside it produces exactly this kind of phantom trend.")),
-    p("The third surprise explains a common frustration: probes that take hours to settle in the "
-      "reservoir but minutes in calibration fluid."),
+             ("Reduced organic load", 45), ("Respiration of microbes", 40),
+             ("pH (59 mV/unit)", 35), ("Oxygen - DIRECT on Pt", 8)], unit="",
+            note="Size of the effect on the reading. Oxygen is in the chart two times, and the two entries are different."), 11,
+      "Most ORP problems stop when growers know this difference. The <em>direct</em> effect of "
+      "oxygen on the electrode is smaller than all the other effects on the chart. The maximum is "
+      "approximately 10 mV. The <em>indirect</em> effect of oxygen is one of the largest effects. "
+      "Oxygen causes oxidation of the reduced organic load, and it makes the group of anaerobic "
+      "microbes that kept the reading low smaller. Growers see this effect." + _c("dwc-suslow-2004-orp") +
+      _c("dwc-stefansson-2005-redox")),
+    p("The second important fact is that <strong>you cannot use an ORP value without the pH "
+      "value</strong>. Most redox couples in the environment use protons when they accept "
+      "electrons. The Nernst equation gives the correct result. At 25 &deg;C (77 &deg;F), the "
+      "voltage changes by approximately <strong>59 mV for each pH unit</strong>, and it decreases "
+      "when the pH increases."),
+    callout("note", "An example from a grower",
+      p("A grower measured a change of the pH from 6.0 to 5.8 in one day. In the same day, the ORP "
+        "changed from 476 to 482 mV. Calculate the number to find if the chemistry changed. When "
+        "the pH decreases by 0.2 units, the voltage of a redox couple that uses protons increases "
+        "by approximately 0.2 &times; 59 = <strong>12 mV</strong>.</p><p>The measured change was +6 "
+        "mV. The sign is the same, and the size is approximately half. The &lsquo;ORP climb&rsquo; "
+        "was mostly the pH change that the ORP showed. The redox chemistry possibly changed by a "
+        "small value in the <em>down</em> direction. If you record the ORP without the pH, you get "
+        "this type of incorrect trend.")),
+    p("The third important fact is about a frequent problem. A probe gets a stable value in the "
+      "reservoir after some hours, but it gets a stable value in a calibration standard after some "
+      "minutes."),
     defterm("Poise",
-      "A solution is well <strong>poised</strong> when it contains a redox couple at high enough "
-      "concentration, exchanging electrons fast enough, to drive the electrode to its potential "
-      "quickly and hold it there. A poorly poised solution has no such couple, so the electrode "
-      "drifts for hours toward an ill-defined mixed potential."),
-    callout("tip", "Why calibration standards settle in two minutes and your reservoir takes six hours",
-      p("ORP standards such as ZoBell's solution or quinhydrone are <em>engineered</em> to be "
-        "strongly poised. They contain a fast, reversible couple at millimolar concentration "
-        "precisely so the electrode locks on. A clean, well-oxygenated, low-organic nutrient "
-        "solution is the opposite: chemically it is close to a blank. A probe that takes hours to "
-        "settle after being cycled or re-immersed is correctly reporting that "
-        "your solution has almost nothing redox-active in it, which for a mineral hydroponic system "
-        "is good news." + _c("dwc-stefansson-2005-redox"))),
-    p("None of which means ORP is useless. It means ORP is a <strong>sanitiser and cleanliness "
-      "gauge</strong>, and used that way it is genuinely valuable. It is the established control "
-      "variable for hypochlorous-acid disinfection in produce handling, where it tracks free "
-      "available chlorine far more responsively than a concentration test" + _c("dwc-suslow-2004-orp") + "."),
-    p("A commercial RDWC procedure treats it exactly this way, and defines three zones with a "
-      "sensory cross-check for each" + _c("dwc-athena-rdwc-2024") + ":"),
-    table(["Zone", "What is happening", "Smell", "Consequence"], [
-      ["<strong>Anaerobic</strong>", "ORP has fallen; reduced organics and anaerobic metabolism dominate. "
-       "A field report of a persistently biofilm-prone air-stone system put this at <strong>220-260 mV</strong>",
-       "Putrid", "Pathogen growth, root rot, roots refusing to enter the water"],
-      ["<strong>Safe</strong>", "Clean water, oxidiser present but not accumulating",
-       "Fresh bean sprouts", "White roots, normal uptake"],
-      ["<strong>ORP shock</strong>", "Oxidiser over-dosed; highly oxidised environment",
-       "Chlorine", "Root's ability to exchange nutrients is impaired"],
-    ], cls="compact", caption="The three ORP zones and their sensory signatures. The smell "
-      "test is often faster and more reliable than the probe, and requires no calibration."),
-    callout("warn", "ORP shock presents as a nutrient deficiency",
-      p("The manufacturer's own warning is explicit: hypochlorous acid is safe to plant tissue, but "
-        "<em>overuse in an RDWC system creates a highly oxidised environment that reduces nutrient "
-        "uptake</em>, and it &lsquo;appears as a nutrient deficiency, yellowing or dry, "
-        "crusty foliage&rsquo;. RDWC needs much lower ORP than other methods because of the extended "
-        "contact time and the sheer volume of solution touching root tissue" + _c("dwc-athena-rdwc-2024") +
-        ". Two different root-zone faults, hypoxia and over-oxidation, both present as "
-        "leaf yellowing. Guessing between them costs you a crop.")),
+      "A solution has good <strong>poise</strong> when it contains a redox couple at a sufficient "
+      "concentration. The redox couple accepts and gives electrons fast, and the electrode gets its "
+      "voltage quickly and keeps it. A solution with low poise has no such redox couple. As a "
+      "result, the voltage of the electrode changes slowly for some hours to a mixed potential with "
+      "no clear value."),
+    callout("tip", "Two minutes for a calibration standard, six hours for your reservoir",
+      p("Manufacturers <em>make</em> calibration standards with a high poise. ZoBell's solution and "
+        "quinhydrone are examples. They contain a fast redox couple at a concentration in the "
+        "millimolar range. Thus the electrode gets its voltage quickly.</p><p>A nutrient solution "
+        "that is clean, has a high oxygen content and has a low organic content is the opposite. It "
+        "has almost no redox-active compounds. Thus a probe can get a stable value only after some "
+        "hours, after you start it again or put it in the solution again. The probe shows the "
+        "condition of the solution correctly. This condition is good for a mineral hydroponic "
+        "system." + _c("dwc-stefansson-2005-redox"))),
+    p("These facts do not show that ORP is not important. ORP is an <strong>indicator of the "
+      "sanitizer and of how clean the water is</strong>. When you use ORP for this task, it is very "
+      "important. ORP is the usual control value to disinfect with hypochlorous acid in produce "
+      "handling. In this task, ORP gives the value for the free available chlorine faster than a "
+      "concentration test does." + _c("dwc-suslow-2004-orp")),
+    p("A manufacturer's RDWC procedure uses ORP for this task. The procedure gives three zones. For "
+      "each zone, it gives a smell as a second check:" + _c("dwc-athena-rdwc-2024")),
+    table(["Zone", "Condition of the water", "Smell", "Result"], [
+      ["<strong>Anaerobic</strong>", "The ORP is low. The reduced organic load and anaerobic "
+       "metabolism are the primary effect. A report from a grower of an air-stone system with "
+       "biofilm that stayed gave <strong>220-260 mV</strong> for this zone.",
+       "The smell of rot", "Pathogen growth and root rot. The roots do not go into the water."],
+      ["<strong>Safe</strong>", "The water is clean. An oxidizer is in the water, but its concentration does not increase.",
+       "The smell of clean bean sprouts", "The roots are white, and the uptake is usual."],
+      ["<strong>ORP shock</strong>", "The dose of the oxidizer is too large, and the environment has very high oxidation.",
+       "The smell of chlorine", "The roots cannot absorb nutrients correctly."],
+    ], cls="compact", caption="The three ORP zones and their smells. The smell test is frequently "
+      "faster and more accurate than the probe, and you do not calibrate it."),
+    callout("warn", "ORP shock shows the same symptoms as a nutrient deficiency",
+      p("<em>If you use too much hypochlorous acid in RDWC, the oxidation is very high, and the "
+        "nutrient uptake decreases.</em> Hypochlorous acid is safe for plant tissue. The "
+        "manufacturer writes that the effect &lsquo;appears as a nutrient deficiency, yellowing or "
+        "dry, crusty foliage&rsquo;.</p><p>The roots touch the solution for a long time, and a "
+        "large volume of solution touches them." + _c("dwc-athena-rdwc-2024") +
+        " Thus an RDWC system must have a much lower ORP than other methods. Hypoxia and too much "
+        "oxidation are two different faults in the root zone. The two faults cause yellow leaves. "
+        "If you select the cause without a check, you can cause a crop failure.")),
     grid([
-      card("If you dose no chemical oxidiser",
-           p("A high, stable ORP mostly means your solution is clean and free of reduced organic "
-             "load. There is no oxidiser present to shock anything, so a high number is not a "
-             "warning, read it as a hygiene indicator. It is the <em>low</em> end that should "
-             "worry you: a reading that sits low and drifts lower, with no oxidiser in the system, "
-             "is reporting an accumulating reduced load and a reservoir heading anaerobic.")),
-      card("If you dose hypochlorous or peroxide",
-           p("ORP is now tracking your oxidiser residual and the manufacturer's shock zone is a real "
-             "risk. This is when the number needs an upper limit, a logged pH beside it, and a "
-             "reduction in dose rather than an addition of anything.")),
+      card("If you add no chemical oxidizer",
+           p("A high and stable ORP usually shows that your solution is clean and has no reduced "
+             "organic load. No oxidizer is in the solution, thus no ORP shock can occur. A high "
+             "number does not show a problem, and you can read it as an indicator of hygiene. The "
+             "<em>low</em> end is the problem. Examine a reading that is low and decreases, with no "
+             "oxidizer in the system. It shows that the reduced organic load increases and the "
+             "reservoir becomes anaerobic.")),
+      card("If you add hypochlorous acid or peroxide",
+           p("In this condition, the ORP shows the quantity of oxidizer that stays in the solution, "
+             "and the shock zone of the manufacturer is a risk. The ORP value must have a maximum "
+             "limit and a recorded pH value with it. If the ORP is too high, decrease the dose of "
+             "oxidizer. Do not add other products.")),
     ], cols=2),
-    callout("tip", "Probe placement: isolate it from the bubble storm",
-      p("A probe sitting in an active bubble plume reads the bubbles as much as the water, which is "
-        "the usual explanation for a DO reading that swings between 15 and 25 mg/L. Mount probes in "
-        "a calm, flow-through pocket, a perforated bottle or a small stilling well fed by "
-        "circulation but shielded from the air stone. Biofilm growing on the electrode surface "
-        "itself shifts a platinum reading by hundreds of millivolts" + _c("dwc-sholikah-2025-pt-electrode") +
-        ", so probe cleaning is a scheduled task, not a troubleshooting step.")),
+    callout("tip", "The position of the probe: keep it away from the bubbles",
+      p("A probe in a plume of bubbles measures the bubbles and the water. This effect is the usual "
+        "cause of a DO reading that changes between 15 and 25 mg/L. Put the probes in a bottle with "
+        "holes or in a stilling tube. The water in the bottle or tube has low turbulence. "
+        "Circulation supplies the water, but the bubbles from the air stone do not go into the "
+        "bottle or tube.</p><p>Biofilm on the surface of the electrode changes a platinum reading "
+        "by a large number of millivolts." + _c("dwc-sholikah-2025-pt-electrode") +
+        " Clean the probe regularly. Do not clean it only when you find a problem.")),
     photo(f"{IMG}/10-probe-reading.jpg",
-      "Calibration is not optional maintenance in water culture, it is the difference between a "
-      "diagnosis and a guess. A drifting ORP probe and a fouled ORP probe look identical on the "
-      "display.", model=GPT),
+      "Calibration is not optional in water culture. A calibrated probe gives information that you "
+      "can use to find the cause. A probe that you do not calibrate gives only an estimate. A probe "
+      "with drift and a dirty probe show the same value on the display.", model=GPT),
   ]})
 
 # 6 ------------------------------------------------------------------- iron
-SECTIONS.append({"id": "iron", "kicker": "Chemistry", "title": "Iron chelation and chlorosis",
+SECTIONS.append({"id": "iron", "kicker": "Chemistry", "title": "Iron chelates and chlorosis",
   "blocks": [
-    p("Iron is the element water culture punishes you over. It is required in large amounts relative "
-      "to other micronutrients, it is almost insoluble in oxygenated water at anything above mildly "
-      "acidic pH, and it only stays available because we wrap it in a chelate."),
+    p("Iron is the element that causes the most problems in water culture. The plant must have a "
+      "larger quantity of iron than of the other micronutrients. In water with oxygen, almost no "
+      "iron dissolves when the pH is higher than mildly acidic. Iron stays available only because "
+      "we put it in a chelate."),
     defterm("Chelate",
-      "An organic molecule that grips a metal ion in multiple places at once, holding it in solution "
-      "and stopping it precipitating or reacting. Fertiliser iron is nearly always supplied as a "
-      "chelate: Fe-EDTA, Fe-DTPA or Fe-EDDHA."),
-    p("The three common chelates are not interchangeable. They differ in how high a pH they can hold "
-      "iron at, and in how well they resist having their iron displaced by competing metals."),
-    table(["Chelate", "Practical pH ceiling", "Behaviour", "Cost"], [
-      ["<strong>Fe-EDTA</strong>", "~6.0&ndash;6.5",
-       "Becomes unstable above pH 6.5; iron is displaced and forms insoluble FePO<sub>4</sub> and "
-       "Fe(OH)<sub>3</sub>. Also competes with Cu, Zn and Mn for the ligand" + _c("dwc-ilyas-2025-fe-chelates"),
-       "Lowest"],
-      ["<strong>Fe-DTPA</strong>", "~7.0&ndash;7.5",
-       "A meaningful margin above EDTA, and the usual choice when pH cannot be held tightly or when "
-       "conditions are oxidising", "Middle"],
-      ["<strong>Fe-EDDHA</strong>", "~9.0+",
-       "Holds iron under genuinely alkaline conditions; stability is well characterised across pH "
-       "and over time" + _c("dwc-klem-2021-eddha") + ". Stains solutions dark red", "Highest"],
-    ], caption="Working pH ceilings for the three fertiliser iron chelates. The ceiling is not a "
-      "cliff. Degradation is progressive and time-dependent."),
-    figure(L.zones("Where each iron chelate still holds its iron", 3.0, 9.5,
-            [(3.0, 6.5, L.AMBL, "Fe-EDTA"), (6.5, 7.5, L.GL, "DTPA territory"),
+      "An organic molecule that holds a metal ion at more than one point at the same time. The "
+      "chelate holds the ion in solution, and the ion does not precipitate or change to other "
+      "compounds. Fertilizer iron is almost always a chelate: Fe-EDTA, Fe-DTPA or Fe-EDDHA."),
+    p("The three chelates that growers use frequently are not interchangeable. They are different "
+      "in the maximum pH at which they can hold iron. They are also different in how strongly they "
+      "keep their iron when other metals try to replace it."),
+    table(["Chelate", "Maximum pH for use", "Properties", "Cost"], [
+      ["<strong>Fe-EDTA</strong>", "approximately 6.0&ndash;6.5",
+       "The chelate becomes not stable at a pH of more than 6.5. It releases the iron, and the iron "
+       "becomes FePO<sub>4</sub> and Fe(OH)<sub>3</sub>, which do not dissolve. Copper, zinc and "
+       "manganese can also replace the iron in the ligand." + _c("dwc-ilyas-2025-fe-chelates"),
+       "Low"],
+      ["<strong>Fe-DTPA</strong>", "approximately 7.0&ndash;7.5",
+       "The maximum pH is higher than for EDTA by a large difference. The chelate is the usual "
+       "selection when you cannot keep the pH constant or when the solution has high oxidation.", "Middle"],
+      ["<strong>Fe-EDDHA</strong>", "approximately 9.0 or more",
+       "The chelate holds iron in alkaline conditions. The data show that it is stable at different "
+       "pH values and for different times." + _c("dwc-klem-2021-eddha") + " It makes the solution "
+       "dark red.", "High"],
+    ], caption="Usual maximum pH values for the three fertilizer iron chelates. The ceiling is not "
+      "a sharp limit. Degradation occurs gradually and increases with time."),
+    figure(L.zones("The pH at which each iron chelate holds its iron", 3.0, 9.5,
+            [(3.0, 6.5, L.AMBL, "Fe-EDTA"), (6.5, 7.5, L.GL, "DTPA range"),
              (7.5, 9.5, L.BLUL, "EDDHA only")], unit=" pH",
-            note="Typical RDWC runs pH 5.8-6.3, which sits right at the top of the EDTA band."), 12,
-      "A recirculating system that drifts to pH 6.5 has not left the range plants like, but it has "
-      "left the range Fe-EDTA is comfortable in." + _c("dwc-ilyas-2025-fe-chelates")),
-    callout("note", "What a commercial line actually does about this",
-      p("One widely used mineral programme splits the iron between products: the base product "
-        "supplies iron as <strong>Fe-EDTA</strong> alongside calcium nitrate and the EDTA-chelated "
-        "micronutrients, while the bloom product supplies iron as <strong>Fe-DTPA</strong>" +
-        _c("dwc-athena-proline") + ". Read against the pH schedule. Which starts around "
-        "6.2&ndash;6.3 and steps down to 5.8 through flower" + _c("dwc-athena-rdwc-2024") + " &mdash; "
-        "that is a sensible hedge: EDTA does the cheap work in the acid part of the range, DTPA "
-        "provides margin for the early, higher-pH part of the run and for any drift.")),
+            note="A typical RDWC system has a pH of 5.8-6.3, which is near the top of the EDTA range."), 12,
+      "The pH of a recirculating system can change slowly to 6.5. This pH is in the good range for "
+      "plants, but it is not in the good range for Fe-EDTA." + _c("dwc-ilyas-2025-fe-chelates")),
+    callout("note", "The method of a manufacturer for this problem",
+      p("One mineral nutrient set that many growers use divides the iron between two products. The "
+        "primary product supplies the iron as <strong>Fe-EDTA</strong>, together with calcium "
+        "nitrate and the micronutrients that have EDTA as the chelate. The bloom product supplies "
+        "the iron as <strong>Fe-DTPA</strong>." + _c("dwc-athena-proline") + "</p><p>Compare this "
+        "with the pH schedule. The pH starts at approximately 6.2&ndash;6.3 and decreases to 5.8 "
+        "during the flowering stage." + _c("dwc-athena-rdwc-2024") + " This method is good. The "
+        "EDTA supplies the iron at a low cost in the acid part of the range. The DTPA gives "
+        "headroom in the first part of the crop, when the pH is higher, and for drift of the pH.")),
     callout("warn", "Two different causes, one symptom",
-      p("Interveinal chlorosis in new growth, yellow between green veins on the youngest "
-        "leaves, is the classic iron signature. In water culture it has at least two causes "
-        "that call for opposite actions:"
-        + ul(["<strong>Chelate failure</strong>. PH has drifted above what your chelate holds. "
-              "Fix the pH, or move to a stronger chelate.",
-              "<strong>Rhizosphere stripping</strong>. Aeration is agitating away the boundary "
-              "layer the root uses to acquire iron" + _c("dwc-langenfeld-2025-agitation-iron") +
-              ". Turn the air <em>down</em>."], "tight")
-        + "<p>Adding more iron fixes neither, and in the second case makes the underlying "
-          "mismanagement harder to see.</p>")),
+      p("Interveinal chlorosis in new growth shows as yellow tissue between green veins on the new "
+        "leaves. It is the usual sign of iron deficiency. In water culture, it has a minimum of two "
+        "causes. The corrections for the causes are opposite:" + ul(["<strong>Defective chelate.</strong> The pH changed to a value higher than the "
+              "maximum pH of your chelate. Correct the pH, or change to a stronger chelate.",
+              "<strong>Rhizosphere removal.</strong> The aeration removes the boundary layer that "
+              "the root uses to get iron." + _c("dwc-langenfeld-2025-agitation-iron") +
+              " <em>Decrease</em> the aeration."], "tight") + "<p>More iron does not correct the "
+        "two causes. For the second cause, more iron also makes the incorrect operation of the "
+        "system harder to see.</p>")),
     photo(f"{IMG}/05-chlorosis.jpg",
-      "Interveinal chlorosis on new growth: pale blade, veins still dark green, older leaves below "
-      "unaffected. The pattern tells you it is iron. It does not tell you whether the cause is pH "
-      "or aeration, and those call for opposite corrections.", model=GPT),
-    p("Research into alternative iron sources continues, Schiff-base Fe(II) complexes stable "
-      "at alkaline pH have outperformed both Fe-EDTA and Fe-EDDHA on root and shoot dry weight in "
-      "maize" + _c("dwc-mirbolook-2023-fe-source") + ", but none of it is commercially "
-      "relevant yet. For now the lever is pH control and chelate selection."),
+      "Interveinal chlorosis on new growth. The blade is pale, the veins are dark green, and the "
+      "leaves at the bottom of the plant have no symptoms. The symptom shows that the problem is "
+      "iron. The symptom does not show if the cause is the pH or the aeration, and the corrections "
+      "for these two causes are opposite.", model=GPT),
+    p("Tests on other iron sources continue. A test on corn used Schiff-base complexes of Fe(II). "
+      "These compounds are stable at alkaline pH. They gave a higher dry weight of roots and shoots "
+      "than Fe-EDTA and Fe-EDDHA." + _c("dwc-mirbolook-2023-fe-source") + " But they are not "
+      "available for production at this time. At this time, the controls are pH control and "
+      "selection of the chelate."),
   ]})
 
 # 7 ---------------------------------------------------------------- organics
 SECTIONS.append({"id": "organics", "kicker": "Organics and oxygen headroom", "title": "Organic inputs in recirculating reservoirs",
   "blocks": [
-    p("Ask whether to run kelp, fulvic acid or microbial inoculants in DWC and you will get two "
-      "confident, opposite answers. Both camps are describing real experience. The disagreement is "
-      "about which constraint binds in <em>their</em> system."),
-    callout("key", "The mechanism both sides are arguing about",
-      p("Every gram of reduced organic carbon you add to a reservoir is food for heterotrophic "
-        "bacteria. Those bacteria multiply and respire, and respiration consumes dissolved oxygen. "
-        "In water-treatment language you have added <strong>biochemical oxygen demand</strong>. "
-        "You are now spending part of your aeration budget on feeding microbes rather than roots, "
-        "and the organic load will also pull ORP down as reduced compounds accumulate.")),
-    p("That is the case against. It is a real mechanism and it is why the standard advice for "
-      "mineral hydroponics is to keep the solution clean. A commercial RDWC line goes further and "
-      "explicitly dose-schedules a hypochlorous-acid product throughout the run precisely to keep "
-      "organic load from accumulating, and warns that lines previously used with organic inputs may "
-      "need repeated cleaning cycles to clear organic particulates" + _c("dwc-athena-rdwc-2024") + "."),
-    p("Now the case for, which deserves a fair hearing. Growers running high dissolved oxygen, "
-      "particularly nanobubble systems holding 15&ndash;20 mg/L, report running fulvic acid "
-      "and biological inputs successfully, with no root disease. That is coherent: BOD is a "
-      "<em>rate</em> problem, and if your oxygen supply rate is two to three times what a "
-      "conventional air stone delivers, you can carry an organic load that would suffocate a "
-      "conventional system. Humic and fulvic substances have well-documented biostimulant effects on "
-      "lateral root growth and nutrient-use efficiency" + _c("dwc-canellas-2015-humic") + ", and "
-      "reviews of oxygenated nanobubble technology explicitly frame high DO as the enabling "
-      "condition for beneficial microbes to function in the root zone" + _c("dwc-mamun-2025-onb-health") + "."),
+    p("Growers have opposite methods. Some add kelp, fulvic acid or inoculants of microbes to DWC, "
+      "and some do not. Each group is sure that it is correct. The results of each group are "
+      "correct. The difference is in the limiting factor of the system of <em>each</em> group."),
+    callout("key", "The mechanism for the two positions",
+      p("Each gram of reduced organic carbon that you add to a reservoir is feed for heterotrophic "
+        "bacteria. These bacteria increase in number. Their respiration uses dissolved oxygen. In "
+        "water treatment, you add <strong>biochemical oxygen demand (BOD)</strong>. Thus you use a "
+        "part of your aeration for the microbes and not for the roots. The organic load also "
+        "decreases the ORP when the reduced organic load increases.")),
+    p("The position against organic inputs is this. The mechanism is correct. Because of this "
+      "mechanism, the usual instruction for mineral hydroponics is to keep the solution clean. A "
+      "manufacturer's RDWC procedure does more. The schedule adds a product with hypochlorous acid "
+      "during the crop, and thus the organic load does not increase. The manufacturer also writes "
+      "that more than one cleaning cycle can be necessary for pipes that had organic inputs before, "
+      "to remove organic particles." + _c("dwc-athena-rdwc-2024")),
+    p("The other position also has good data. Some growers use a high dissolved oxygen value, for "
+      "example with nanobubble systems at 15&ndash;20 mg/L. These growers have good results with "
+      "fulvic acid and biological inputs, and they have no root disease. This agrees with the "
+      "mechanism: BOD is a problem of <em>rate</em>. If your oxygen supply rate is two to three "
+      "times the rate of a usual air stone, you can have a large organic load. A usual system has "
+      "hypoxia with this load.</p><p>Tests show that humic substances and fulvic acid have "
+      "biostimulant effects on the growth of lateral roots and on nutrient-use efficiency." +
+      _c("dwc-canellas-2015-humic") + " Reviews of nanobubble methods with oxygen show that a high "
+      "DO is the condition that lets beneficial microbes do their tasks in the root zone." +
+      _c("dwc-mamun-2025-onb-health")),
     grid([
-      card("What is actually true",
-           p("The microbial community in a recirculating system is not a threat by default. In "
-             "deep-water-culture lettuce run over five reuse cycles, bacterial communities shifted "
-             "significantly between cycles and some correlated with plant-defence gene expression"
-             ", the authors argue that solution communities which activate plant defences are "
-             "a promising route to chemical-free Pythium suppression" + _c("dwc-kenderdine-2026-recirc") + ".")),
-      card("And what is over-claimed",
-           p("Plants exert a stronger selective influence on their own rhizosphere than the water "
-             "column does. In a comparison across hydroponic and aquaponic sources, root community "
-             "composition clustered by plant, not by what was dosed upstream" +
-             _c("dwc-lobanov-2022-plants-dictate") + ". You have less control over the root "
-             "microbiome than the product labels imply.")),
+      card("The data show",
+           p("The group of microbes in a recirculating system is not always a risk. A test used "
+             "deep-water-culture lettuce during five cycles with the same solution. The groups of "
+             "bacteria changed by a large quantity between cycles. Some groups had a relation to "
+             "the expression of plant defense genes. The authors think that groups in the solution "
+             "that activate plant defenses can be a good method to decrease Pythium without "
+             "chemical products." + _c("dwc-kenderdine-2026-recirc"))),
+      card("More than the data show",
+           p("The plant has a stronger effect on the group of microbes at its roots than the water "
+             "in the reservoir has. A test compared sources in hydroponics and aquaponics. The "
+             "groups of microbes on the roots were almost the same for roots of one plant. They "
+             "were not the same for roots that had the same upstream product." +
+             _c("dwc-lobanov-2022-plants-dictate") + " You have less control of the microbes on the "
+             "roots than the labels on the products show.")),
     ], cols=2),
-    callout("tip", "How to decide, rather than pick a side",
-      p("Ask what your dissolved-oxygen headroom is. Running near air saturation on air stones, at "
-        "8&ndash;9 mg/L, you have almost no margin, keep the reservoir mineral and clean. "
-        "Running an oxygen concentrator or nanobubble generator at 15&ndash;20 mg/L, you have real "
-        "headroom and can spend some of it on biology. Either way, measure DO before and after you "
-        "introduce an organic input. If it drops and stays down, the microbes are eating your "
-        "margin.")),
-    callout("warn", "The specific trap",
-      p("Fulvic and humic products often carry their own iron and chelating capacity, which is why "
-        "adding them can visibly move ORP, an initial drop as reduced carbon enters, then a "
-        "sustained shift as the iron equilibrium re-establishes. Do not read that ORP movement as "
-        "evidence about oxygen. It is a chemistry change, and it is happening to a chelate system "
-        "you have now made more complicated to reason about.")),
-    p("If you do want biology, targeted inoculants have better evidence behind them than "
-      "general-purpose organic feeds. <em>Bacillus subtilis</em> and <em>Pseudomonas fluorescens</em> "
-      "applied together suppressed <em>Pythium aphanidermatum</em> synergistically, upregulating "
-      "defence genes and raising survival to 83%" + _c("dwc-rashad-2024-biocontrol") + ", and "
-      "<em>Pseudomonas</em> biocontrol across crops can match chemical fungicides, with the "
-      "consistent caveat that field performance is far less reliable than laboratory performance" +
-      _c("dwc-alattas-2024-pseudomonas") + "."),
+    callout("tip", "Make a decision with data and not with a group",
+      p("Find the dissolved-oxygen headroom of your system. If your system is near air saturation "
+        "with air stones, at 8&ndash;9 mg/L, you have almost no headroom. Keep the reservoir "
+        "mineral and clean.</p><p>If your system uses an oxygen concentrator or nanobubble "
+        "equipment at 15&ndash;20 mg/L, you have headroom. You can use some of the headroom for "
+        "biology.</p><p>In each condition, measure the DO before and after you add an organic "
+        "input. If the DO decreases and stays low, the microbes use your headroom.")),
+    callout("warn", "A problem to prevent",
+      p("Do not read the ORP change as information about oxygen. Products with fulvic acid or humic "
+        "substances frequently contain iron and chelate compounds. Thus the ORP can change when you "
+        "add them. First, the ORP decreases when the reduced organic carbon goes into the water. "
+        "Then the ORP changes to a different value that stays, when the iron equilibrium becomes "
+        "stable again. The cause is a change in the chemistry of a chelate system with more "
+        "compounds.")),
+    p("If you want to use biology, inoculants for one target have better data than general organic "
+      "feeds. A test used <em>Bacillus subtilis</em> and <em>Pseudomonas fluorescens</em> together. "
+      "The two bacteria together decreased <em>Pythium aphanidermatum</em> more than the effect of "
+      "one of the bacteria plus the effect of the other. They increased the expression of defense "
+      "genes, and the survival increased to 83%." + _c("dwc-rashad-2024-biocontrol") +
+      " Biocontrol with <em>Pseudomonas</em> in many crops can give the same result as chemical "
+      "fungicides. But the results in production are much less sure than the results in the "
+      "laboratory." + _c("dwc-alattas-2024-pseudomonas")),
   ]})
 
 # 8 ----------------------------------------------------------------- pathology
-SECTIONS.append({"id": "pathology", "kicker": "Failure mode", "title": "Root rot: oxygen stress and pathogen risk",
+SECTIONS.append({"id": "pathology", "kicker": "Type of problem", "title": "Root rot: oxygen stress and pathogen risk",
   "blocks": [
-    lead("The single most important finding in the water-culture pathology literature is that low "
-         "dissolved oxygen and <em>Pythium</em> root rot are not two independent risks. They are one "
-         "coupled failure with a shared pathway through root-zone oxygen status."),
-    p("A review synthesising hydroponic systems engineering, plant physiology and oomycete pathology "
-      "makes the case directly. Progressive root-mat development degrades passive aeration and "
-      "creates hypoxic conditions. Hypoxia impairs root membrane integrity and alters the exudate "
-      "profile leaking from the root. Those altered exudates are what <em>Pythium</em> zoospores "
-      "home in on, encyst against, and use to make the transition from biotrophic to necrotrophic"
-      ", from quietly present to actively killing" + _c("dwc-scott-2026-do-pythium") + "."),
-    figure(L.flow("The root-rot cascade",
-            [("Oxygen falls", "temperature rises, root mat thickens, or aeration fails"),
-             ("Membranes leak", "hypoxic roots lose integrity; exudate profile changes"),
-             ("Zoospores home in", "altered exudates are a chemical beacon"),
-             ("Necrotrophic switch", "an elicitor triggers browning and active tissue kill"),
-             ("Collapse", "root function lost, whole-plant carbon gain falls")],
-            note="Every arrow is downstream of the first box. Treating the pathogen without fixing oxygen restarts the cascade."), 13,
-      "Root rot in water culture is rarely a hygiene failure in isolation. It is usually an oxygen "
-      "failure that a ubiquitous opportunist exploited." + _c("dwc-scott-2026-do-pythium") + _c("dwc-sutton-2006-pythium")),
-    photo_sequence("What the cascade looks like at the root",
-      [("Healthy", f"{IMG}/03-roots-healthy.jpg"), ("Collapsing", f"{IMG}/04-roots-rot.jpg")],
-      "Left: brilliant white, fine, densely branched, glistening. Right: the same root mass after "
-      "the cascade, tan-brown, matted and slimy at the core, with a fringe of white still "
-      "surviving at the periphery where oxygen still reaches. That fringe is the tell: this is a "
-      "gradient failure, not an infection that arrived all at once.", model=GPT),
-    callout("key", "Where to spend your effort",
-      p("The definitive review of <em>Pythium</em> in hydroponic crops draws a conclusion that "
-        "contradicts how most systems are designed: measures that disinfest the nutrient solution "
-        "<em>as it recirculates outside the crop</em> have commonly minor impact on epidemics. What "
-        "works is treatment that suppresses the pathogen <strong>in the roots and root zone</strong>" +
-        _c("dwc-sutton-2006-pythium") + ". A UV steriliser on the return line is doing less than the "
-        "brochure implies if the root zone itself is warm and under-oxygenated.")),
-    p("Environmental stress is the other half of the story. The same review finds stress factors "
-      "predispose roots to <em>Pythium</em> attack by stress factors, and notes that "
-      "infection markedly slows leaf-area expansion and whole-plant carbon gain "
-      "<em>without</em> significantly reducing photosynthetic efficiency per unit leaf area" +
-      _c("dwc-sutton-2006-pythium") + ". The plant is not sick-looking; it is just quietly building "
-      "less canopy than it should. By the time it looks obviously wrong, you have lost weeks."),
-    callout("tip", "The tell that arrives before the brown roots",
-      p("In water culture there is an early behavioural sign worth more than any probe: "
-        "<strong>roots that stay up in the clay pebbles and will not grow down into the "
-        "solution.</strong> A root system actively declining to enter the water is telling you the "
-        "water is hostile, too warm, too low in oxygen, or carrying a microbial load it is "
-        "avoiding. Growers who fix the oxygen supply report the behaviour reversing. Read it as a "
-        "root-zone alarm, not as a slow-establishing plant.")),
-    p("On chemical oxidisers as a treatment: they work, and they have a cost. Hydrogen peroxide "
-      "applied into hydroponic solution across 0&ndash;400 mg/L produced visible root injury in "
-      "every crop tested, with cucumber the most susceptible, and the concentrations needed for "
-      "pathogen control sat at or above the injury threshold" + _c("dwc-eicher-sodo-2020-h2o2") + ". "
-      "In an ebb-and-flow trial, higher peroxide rates restricted lettuce growth and failed to "
-      "control algae at any rate tested" + _c("dwc-hendrickson-2022-h2o2") + "."),
-    callout("warn", "The peroxide reflex",
-      p("Dumping peroxide into a reservoir at the first sign of brown roots is understandable and "
-        "usually counterproductive. It burns root tissue that is already compromised, it is consumed "
-        "within hours so it does nothing durable, and it treats the symptom while the cause, "
-        "warm, under-oxygenated water, is untouched. Check the thermometer and the air "
-        "manifold first. A hypochlorous product dosed at a maintenance rate is a more defensible "
-        "routine approach than peroxide shocks, and the manufacturer schedules it that way: a large "
-        "dose at fill and change-out, then a small continuous maintenance rate through the run" +
-        _c("dwc-athena-rdwc-2024") + ".")),
+    lead("The data on pathology in water culture give one primary result. Low dissolved oxygen and "
+         "<em>Pythium</em> root rot are related risks. They are one problem with one pathway: the "
+         "oxygen condition of the root zone."),
+    p("A review of hydroponic systems, plant physiology and oomycete pathology shows this directly. "
+      "As the root mat becomes larger, the passive aeration decreases, and the root zone has "
+      "hypoxia. Hypoxia damages the root membranes and changes the exudates that the roots release. "
+      "<em>Pythium</em> zoospores move to the changed exudates and attach to the roots.</p><p>The "
+      "zoospores also use these exudates to change from the biotrophic phase to the necrotrophic "
+      "phase. In the biotrophic phase, the pathogen is in the plant and does not show. In the "
+      "necrotrophic phase, the pathogen kills the tissue." + _c("dwc-scott-2026-do-pythium")),
+    figure(L.flow("Root rot: the sequence",
+            [("Less oxygen", "temperature is high, root mat is large, or aeration stops"),
+             ("Membrane damage", "Hypoxia damages the roots, and the exudates change."),
+             ("Zoospores attach", "changed exudates are a chemical signal"),
+             ("Necrotrophic phase", "a signal makes roots brown, then the pathogen kills tissue"),
+             ("Result", "root function stops. The plant gets less carbon, in total.")],
+            note="Each arrow is downstream of the first step. If you decrease only the pathogen, the sequence starts again."), 13,
+      "Root rot in water culture is not frequently only a hygiene problem. It is usually an oxygen "
+      "problem, and a pathogen that is in all environments uses the problem." +
+      _c("dwc-scott-2026-do-pythium") + _c("dwc-sutton-2006-pythium")),
+    photo_sequence("The sequence at the root",
+      [("Good", f"{IMG}/03-roots-healthy.jpg"), ("Root rot", f"{IMG}/04-roots-rot.jpg")],
+      "Left: white roots, thin, with many branches and a shiny surface. Right: the same root mass "
+      "after the sequence of root rot. The root mass is light brown, with a root mat and slime in "
+      "the inner part. The outer edge continues to have white roots, where oxygen continues to get "
+      "to the roots. This white edge is the sign. The problem is a gradient of oxygen, and it is "
+      "not an infection that came at one time.", model=GPT),
+    callout("key", "The task with the largest effect",
+      p("The primary review of <em>Pythium</em> in hydroponic crops gives a result that is "
+        "different from the method of most systems. Methods that disinfect the nutrient solution "
+        "<em>in the pipes, away from the crop,</em> frequently have a small effect on epidemics. A "
+        "treatment that decreases the pathogen <strong>in the roots and root zone</strong> has an "
+        "effect." + _c("dwc-sutton-2006-pythium") + " A UV sterilizer on the return line does less "
+        "than you think, if the root zone is warm and has not sufficient oxygen.")),
+    p("Stress from the environment is the other part. The same review finds that roots with stress "
+      "get a <em>Pythium</em> infection more easily. The review also shows that an infection makes "
+      "the growth of leaf area much slower, and the plant gets less carbon. The efficiency of "
+      "photosynthesis for each unit of leaf area does <em>not</em> decrease by a large quantity." +
+      _c("dwc-sutton-2006-pythium") + " The plant does not show symptoms, but it makes a smaller "
+      "canopy than a plant without infection. When the plant clearly shows a problem, the plant is "
+      "behind by some weeks of growth."),
+    callout("tip", "The sign before the roots become brown",
+      p("In water culture, one sign is more important than a probe. It is the first sign: "
+        "<strong>the roots stay up in the expanded clay and do not go into the solution.</strong> "
+        "If the roots do not go into the water, the water is not good for the roots. The water is "
+        "too warm, it has not sufficient oxygen, or it has a load of microbes that the roots stay "
+        "away from. Growers who correct the oxygen supply find that the roots then go into the "
+        "water. Read this sign as an alarm for the root zone and not as &lsquo;slow "
+        "establishment&rsquo;.")),
+    p("Chemical oxidizers have an effect as a treatment, and they also have a bad effect. A test "
+      "added hydrogen peroxide to hydroponic solution at 0&ndash;400 mg/L. The peroxide caused root "
+      "damage that you can see in each crop in the test. Cucumber was the crop with the most "
+      "damage. The concentrations that decrease the pathogen were at the threshold for damage or "
+      "more than the threshold." + _c("dwc-eicher-sodo-2020-h2o2") + "</p><p>In a test with "
+      "ebb-and-flow irrigation, high peroxide rates made the growth of lettuce smaller, and no rate "
+      "decreased algae." + _c("dwc-hendrickson-2022-h2o2")),
+    callout("warn", "Peroxide as the first step",
+      p("Do not add peroxide to the reservoir at the first sign of brown roots. Many growers do "
+        "this, but it usually causes more problems.</p><p>The tissue of the roots is in bad "
+        "condition, and the peroxide causes more damage to it. The peroxide decreases to zero in "
+        "some hours, and thus its effect does not stay. The peroxide has an effect only on the "
+        "symptom. The cause is warm water with not sufficient oxygen, and the peroxide does not "
+        "change it.</p><p>First, do a check of the thermometer and the air manifold. A product with "
+        "hypochlorous acid at a small continuous dose is a better regular method than peroxide "
+        "shocks. The manufacturer gives this schedule: a large dose at fill and change-out, then a "
+        "small continuous dose during the crop." + _c("dwc-athena-rdwc-2024"))),
   ]})
 
 # 9 --------------------------------------------------------------- temperature
 SECTIONS.append({"id": "temperature", "kicker": "Temperature first", "title": "Solution temperature",
   "blocks": [
-    p("If you take one operational lever away from this paper, take this one. Reservoir temperature "
-      "simultaneously sets oxygen supply, oxygen demand, pathogen growth rate and pH stability. "
-      "Nothing else you can adjust touches that many variables at once."),
-    p("The experimental case is clean. Cooling a recirculating hydroponic solution across four "
-      "setpoints from 33 &deg;C (91 &deg;F) down to 22 &deg;C (72 &deg;F) raised dissolved oxygen in both the feed and the "
-      "drain, raised measured <em>oxygen consumption by the roots</em>, and improved every growth, "
-      "yield and quality attribute measured, across three cropping seasons over two years" +
-      _c("dwc-alrawahy-2019-rzt") + ". Note the second result: cooler roots did not respire less, "
-      "they respired more, because they were no longer oxygen-limited."),
+    p("If you use only one control from this paper, use this control. The reservoir temperature "
+      "changes four values at the same time. They are the oxygen supply, the oxygen demand, the "
+      "growth rate of pathogens and how stable the pH is. No other control that you can adjust "
+      "changes as many values at the same time."),
+    p("The data from tests are clear. A test decreased the temperature of a recirculating "
+      "hydroponic solution at four setpoints, from 33 &deg;C (91 &deg;F) to 22 &deg;C (72 &deg;F). "
+      "The DO increased in the feed and in the drain. The roots used <em>more oxygen</em>, and the "
+      "test measured this. Each measurement of growth, yield and quality was better. The test had "
+      "three seasons of crops in two years." + _c("dwc-alrawahy-2019-rzt") + "</p><p>The second "
+      "result is important. When the temperature decreased, the respiration of the roots did not "
+      "decrease. It increased, because oxygen was no longer the limiting factor."),
     figure(D.supply_demand(), 14,
-      "The two curves that make temperature the master dial. Every degree of warming takes oxygen "
-      "out of the water and simultaneously asks the root for more of it." +
+      "These two curves show that temperature is the primary control. Each degree of temperature "
+      "increase removes oxygen from the water. At the same time, the root uses more oxygen." +
       _c("dwc-benson-krause-1984") + _c("dwc-alrawahy-2019-rzt")),
-    p("Commercial practice tracks a descending ramp rather than a single setpoint. A published RDWC "
-      "programme steps solution temperature down through the crop" + _c("dwc-athena-rdwc-2024") + ":"),
-    figure(L.line("Commercial RDWC solution-temperature schedule",
+    p("In production, a ramp that decreases is the usual method, and not one setpoint. A procedure "
+      "of a manufacturer for RDWC decreases the solution temperature in steps during the crop:" +
+      _c("dwc-athena-rdwc-2024")),
+    figure(L.line("RDWC solution-temperature schedule (manufacturer)",
             [("Veg", 21.1), ("Fl 1", 20.6), ("Fl 2", 20.0), ("Fl 3", 19.4), ("Fl 4", 18.9),
              ("Fl 5", 18.3), ("Fl 6", 17.8), ("Fl 7", 16.7), ("Fl 8", 16.7), ("Finish", 13.9)],
-            ["Veg", "Fl1", "Fl2", "Fl3", "Fl4", "Fl5", "Fl6", "Fl7", "Fl8", "Fin"],
+            ["VEG", "Fl1", "Fl2", "Fl3", "Fl4", "Fl5", "Fl6", "Fl7", "Fl8", "FIN"],
             ylab="°C", ymin=12, ymax=23,
-            note="Warm enough to establish, then progressively cooler as root mass and oxygen demand grow."), 15,
-      "The ramp is not arbitrary. Root mass and total oxygen demand rise through the crop, so the "
-      "supply side has to rise with it, and the cheapest way to raise dissolved oxygen is to "
-      "lower the temperature." + _c("dwc-athena-rdwc-2024")),
-    table(["Boundary", "Value", "Why it exists"], [
-      ["Do not transplant clones below", "18.9 &deg;C (66 &deg;F)",
-       "Cold shock on a root system with no established mass; pH also swings with temperature"],
-      ["Uptake begins to fall below", "16.7 &deg;C (62 &deg;F)",
-       "Cold roots take up nutrients more slowly, the floor on the useful range"],
-      ["Deliberate cold finish", "13.9 &deg;C (57 &deg;F) for the last ~10 days",
-       "Accepts reduced uptake in exchange for colour expression, when uptake no longer matters"],
-      ["Pathogen comfort zone", "above ~22&ndash;24 &deg;C (72&ndash;75 &deg;F)",
-       "Warm water is where low DO and fast <em>Pythium</em> growth meet"],
-    ], cls="compact", caption="Temperature boundaries from a commercial RDWC procedure, with the "
-      "reasoning behind each." + _c("dwc-athena-rdwc-2024")),
+            note="Warm for the new plants. Then it decreases as root mass and oxygen demand increase."), 15,
+      "The ramp is not random. The root mass and the total oxygen demand increase during the crop, "
+      "thus the oxygen supply must increase also. The method with the lowest cost to increase the "
+      "dissolved oxygen is to decrease the temperature." + _c("dwc-athena-rdwc-2024") +
+      " On the horizontal axis, VEG is the vegetative stage, each Fl label is a week of flowering, "
+      "and FIN is the finish."),
+    table(["Limit", "Value", "Cause of the limit"], [
+      ["Do not transplant clones at less than", "18.9 &deg;C (66 &deg;F)",
+       "Cold shock for a root system with a very small mass. The pH also changes when the temperature changes."],
+      ["The uptake starts to decrease at less than", "16.7 &deg;C (62 &deg;F)",
+       "Roots at a low temperature absorb nutrients more slowly. This temperature is the floor of the good range."],
+      ["Cold finish that you select", "13.9 &deg;C (57 &deg;F) for the last approximately 10 days",
+       "You accept less uptake to get more color in the flowers. Do this when the uptake is no longer important."],
+      ["Zone of high pathogen growth", "more than approximately 22&ndash;24 &deg;C (72&ndash;75 &deg;F)",
+       "In warm water, the DO is low and the growth of <em>Pythium</em> is fast."],
+    ], cls="compact", caption="Temperature limits from a manufacturer's RDWC procedure, with the "
+      "cause of each limit." + _c("dwc-athena-rdwc-2024")),
     callout("tip", "Chiller or no chiller",
-      p("In any room warmer than about 24 &deg;C (75 &deg;F) with lights on, an uninsulated reservoir will "
-        "equilibrate somewhere unhelpful. Insulate first. It is free and it flattens the "
-        "diurnal swing. Then chill if you still cannot hold the band. Note the interaction with "
-        "aeration: a blower drawing hot room air is also a heater, which is one more reason the air "
-        "supply belongs outside the canopy space. In a CO<sub>2</sub>-enriched flower room the air "
-        "pump should sit outside the room entirely" + _c("dwc-athena-rdwc-2024") + ".")),
+      p("A room can have a temperature of more than approximately 24 &deg;C (75 &deg;F) with the "
+        "lights on. In this condition, a reservoir with no insulation will have a temperature that "
+        "is not good. First, put insulation on the reservoir. It has no cost, and it decreases the "
+        "changes of temperature between day and night. Then, if you cannot keep the temperature in "
+        "the range, use a chiller.</p><p>Aeration has a relation to temperature. A blower that "
+        "moves hot room air is also a heater. Thus the air supply must be away from the canopy "
+        "space. In a flower room with CO<sub>2</sub> enrichment, put the air pump out of the room." +
+        _c("dwc-athena-rdwc-2024"))),
   ]})
 
 # 10 -------------------------------------------------------------------- feed
 SECTIONS.append({"id": "feed", "kicker": "Nutrition", "title": "Nutrient concentration in deep-water culture",
   "blocks": [
-    p("Growers moving from coco to RDWC almost always over-feed at first, because the EC numbers "
-      "look wrong. They are not wrong. Water culture genuinely runs lower, and the reason is "
-      "structural."),
-    callout("key", "Contact time is the variable that changed",
-      p("In coco, the root sees concentrated feed briefly during a shot and then sits in a substrate "
-        "whose pore-water EC it has partly consumed. In DWC the entire root system is in continuous "
-        "contact with the full solution volume, all day, every day. The same delivered nutrition "
-        "needs a much lower concentration. The manufacturer states it plainly: RDWC EC is lower than "
-        "traditional feeding programmes because of the high volume of solution in constant contact "
-        "with the root system" + _c("dwc-athena-rdwc-2024") + ".")),
-    figure(L.line("Commercial RDWC electrical-conductivity schedule",
+    p("Growers who change from coco to RDWC almost always apply too much feed at first, because the "
+      "EC numbers look incorrect. The numbers are correct. Water culture uses smaller EC values, "
+      "and the cause is the structure of the system."),
+    callout("key", "The roots touch the solution all the time",
+      p("In coco, the roots touch concentrated feed for a short time during a shot. Then the roots "
+        "are in a substrate, and they use a part of the nutrients in the pore water. In DWC, all "
+        "the roots touch the full volume of the solution continuously, all day and each day. For "
+        "the same nutrition, a much smaller concentration is sufficient. The manufacturer writes "
+        "that the EC for RDWC is less than the EC of usual feed schedules. The cause is that a "
+        "large volume of solution touches the root system continuously." + _c("dwc-athena-rdwc-2024"))),
+    figure(L.line("RDWC electrical-conductivity schedule (manufacturer)",
             [("Initial", 0.21), ("V2", 0.33), ("V4", 0.67), ("F1", 0.71), ("F2", 0.93),
              ("F3", 1.07), ("F4", 1.21), ("F5", 1.36), ("F6", 1.50), ("F7", 1.36), ("F8", 1.29)],
-            ["Init", "V2", "V4", "F1", "F2", "F3", "F4", "F5", "F6", "F7", "F8"],
+            ["Start", "V2", "V4", "F1", "F2", "F3", "F4", "F5", "F6", "F7", "F8"],
             ylab="EC (mS/cm)", ymin=0, ymax=1.8,
-            note="Feathering up gradually, peaking mid-late flower, then tapering. Finish runs 0-1.0."), 16,
-      "Peak EC around 1.5 mS/cm is roughly half what many coco programmes run at the same stage. "
-      "The plant is not being underfed; the delivery mechanism is different." + _c("dwc-athena-rdwc-2024")),
+            note="Feathering up, a peak in the second half of flower, then the EC decreases. The finish is 0-1.0."), 16,
+      "The peak EC of approximately 1.5 mS/cm is approximately half the EC that many coco feed "
+      "schedules use at the same stage. The plant has sufficient feed. The supply method is "
+      "different." + _c("dwc-athena-rdwc-2024")),
     defterm("Feathering up",
-      "Raising EC gradually through repeated small nutrient additions rather than in steps. In a "
-      "reservoir shared by every plant, a large single addition is a shock delivered to the whole "
-      "crop at once." + _c("dwc-athena-rdwc-2024")),
+      "A method to increase the EC gradually. You add small quantities of nutrient many times, and "
+      "you do not add the nutrient in large steps. In a reservoir that all the plants use, one "
+      "large dose is a shock to all the plants at the same time." + _c("dwc-athena-rdwc-2024")),
     defterm("Addback",
-      "Nutrient returned to the system through the control bucket to restore EC, which is "
-      "continuously depleted both by plant uptake and by fresh-water top-off. In a recirculating "
-      "system nutrients are consumed at different rates, so the solution progressively "
-      "<em>unbalances</em> even while its EC looks correct. Which is what change-outs exist "
-      "to fix."),
-    p("There is a strong independent check on the lean-feeding principle. In closed-system "
-      "hydroponics with continuous root-zone nutrient quantification, doubling nutrient input from "
-      "2 to 4 mS/cm raised nutrient accumulation in solution but produced <strong>no significant "
-      "increase in yield or quality</strong> in medical cannabis. Nor did raising phosphorus from 15 "
-      "to 90 mg/L, despite flower phosphorus concentration rising 70%. The authors' conclusion is "
-      "that cannabis tolerates high nutrient concentrations, but neither excess phosphorus nor "
-      "excess fertilisation improves yield or quality" + _c("dwc-hershkowitz-2025-p-ec") + "."),
-    p("pH runs a parallel schedule, stepping from about 6.2&ndash;6.3 at fill down to 5.8 and holding "
-      "there through flower" + _c("dwc-athena-rdwc-2024") + ". The published guidance calls pH the "
-      "most important parameter to adhere to, with a note that it moves rapidly after an addback and "
-      "should be allowed to stabilise before correcting, chasing it immediately after dosing "
-      "is how growers end up over-buffering."),
-    callout("note", "Nitrogen form is a pH lever, not just a nitrogen choice",
-      p("Roots take up cations and anions unequally and balance the charge by exporting H<sup>+</sup> "
-        "or OH<sup>-</sup>. Pure nitrate nutrition drove solution pH to about 8.0; excessive ammonium "
-        "drove it to 3.6; an appropriate mixed ratio held it near 5.8 with the best yield and "
-        "nitrogen-use efficiency" + _c("dwc-zhu-2021-nh4-no3") + ". If your reservoir climbs "
-        "relentlessly and you are dosing acid daily, the ammonium fraction of your feed is a lever "
-        "worth examining before you buy a bigger acid pump.")),
-    p("Two more line items worth understanding. Potassium silicate is commonly used in these "
-      "programmes as the pH-up agent, which conveniently delivers silicon at the same time, "
-      "silicon deposits in cell walls, supports antioxidant systems and improves stress tolerance" +
-      _c("dwc-hassan-2024-silicon") + ". And the &lsquo;finish&rsquo; phase in water culture runs EC "
-      "down toward zero, which is trivially easy here compared to a substrate: you simply stop adding "
-      "back and let the plants eat the reservoir down."),
-    callout("warn", "One thing water culture cannot do",
-      p("Controlled drought stress applied late in flower has been shown to raise cannabinoid "
-        "concentration and yield per unit area substantially in container-grown cannabis" +
-        _c("dwc-caplan-2019-drought") + ". Water culture cannot execute it. If your steering "
-        "strategy depends on generative dryback, DWC is structurally the wrong system, not a "
-        "worse one, a different one. Its advantages lie in uninterrupted vegetative-phase growth "
-        "rate, not in water-based steering.")),
+      "The nutrient that you add to the system through the control bucket to increase the EC to the "
+      "correct value. The EC decreases continuously, because the plants absorb nutrient and because "
+      "you add fresh water. In a recirculating system, the plants use the nutrients at different "
+      "rates. As a result, the solution becomes <em>less balanced</em> with time, also when the EC "
+      "looks correct. A change-out corrects this problem."),
+    p("A test from a different source agrees strongly with the low-EC feed method. The test used "
+      "closed-system hydroponics and measured the nutrients in the root zone continuously. When the "
+      "test applied two times more nutrient, from 2 to 4 mS/cm, the nutrient in the solution "
+      "increased. But the yield and the quality of the medical cannabis <strong>did not increase "
+      "clearly</strong>.</p><p>The test also increased the phosphorus from 15 to 90 mg/L. The "
+      "phosphorus concentration in the flower increased by 70%, but the yield and the quality did "
+      "not increase. The authors found that cannabis can have high nutrient concentrations without "
+      "damage. But more phosphorus and more fertilizer do not make the yield or the quality better." +
+      _c("dwc-hershkowitz-2025-p-ec")),
+    p("The pH also has a schedule. The pH decreases in steps from approximately 6.2&ndash;6.3 at "
+      "fill to 5.8, and then it stays there during the flowering stage." + _c("dwc-athena-rdwc-2024") +
+      " The instructions of the manufacturer tell you that the pH is the most important value to "
+      "keep on target. The instructions also tell you that the pH changes quickly after an addback. "
+      "Let the pH become stable before you correct it. If you correct the pH immediately after a "
+      "dose, you can add too much buffer."),
+    callout("note", "The type of nitrogen changes the pH, and it is not only a selection of nitrogen",
+      p("Roots absorb cations and anions in different quantities. The roots keep the electrical "
+        "charge balanced when they release H<sup>+</sup> or OH<sup>-</sup>. With only nitrate, the "
+        "solution pH increased to approximately 8.0. With too much ammonium, the pH decreased to "
+        "3.6. A correct mixed ratio kept the pH at approximately 5.8, and it gave the best yield "
+        "and the best nitrogen-use efficiency." + _c("dwc-zhu-2021-nh4-no3") +
+        "</p><p>If the pH increases continuously and you add acid each day, examine the ammonium "
+        "fraction of your feed. Do this before you get a larger acid pump.")),
+    p("Two more points are important. Potassium silicate is frequently the pH-up agent in these "
+      "schedules, and it also supplies silicon. Silicon goes into the cell walls, helps the "
+      "antioxidant systems and increases the tolerance to stress." + _c("dwc-hassan-2024-silicon") +
+      "</p><p>In the &lsquo;finish&rsquo; phase of water culture, the EC decreases to a value near "
+      "zero. This phase is very easy, compared with a substrate. Stop the addback, and the plants "
+      "use the nutrients in the reservoir."),
+    callout("warn", "A task that water culture cannot do",
+      p("Water culture cannot do controlled drought stress in the last weeks of flower. This stress "
+        "increases the cannabinoid concentration by a large quantity. It also increases the yield "
+        "for each unit of area by a large quantity. Tests show this for cannabis in containers." +
+        _c("dwc-caplan-2019-drought") + "</p><p>If your crop steering uses generative dryback, DWC "
+        "is structurally the incorrect system. DWC is not a worse system. It is a different "
+        "system.</p><p>DWC is good for a continuous growth rate in the vegetative stage. It is not "
+        "good for steering with water.")),
   ]})
 
 # 11 ------------------------------------------------------------------- build
-SECTIONS.append({"id": "build", "kicker": "Build", "title": "DWC system sizing and construction",
+SECTIONS.append({"id": "build", "kicker": "Assembly", "title": "DWC system: size and assembly",
   "blocks": [
-    p("Design decisions in water culture are mostly about buying yourself margin, because the "
-      "system has none by default."),
+    p("Most decisions for a water culture system are about headroom, because a system has no "
+      "headroom unless you make it."),
     defterm("Operating volume",
-      "The working solution volume with the level sitting just below the planting deck. In a "
-      "published commercial spec, roughly 40 L (10.6 gal) in a 49 L (12.9 gal) module and roughly 19 L (5.0 gal) in a 30 L (7.9 gal) module" +
-      _c("dwc-athena-rdwc-2024") + "."),
+      "The volume of solution in the system when the water level is directly below the planting "
+      "deck. In the specification of a manufacturer, the operating volume is approximately 40 L "
+      "(10.6 gal) in a 49 L (12.9 gal) module. It is approximately 19 L (5.0 gal) in a 30 L (7.9 "
+      "gal) module." + _c("dwc-athena-rdwc-2024")),
     defterm("Change-out volume",
-      "Operating volume minus the liquid that stays behind when the system drains to the top of the "
-      "bulkhead. Worth calculating once: in a published 32-site example, 1325 L (350 gal) operating volume "
-      "leaves 375 L (99 gal) behind, so a &lsquo;full&rsquo; change-out actually replaces 946 L (250 gal), about "
-      "<strong>71%</strong> of the water" + _c("dwc-athena-rdwc-2024") + ". A full change-out is not "
-      "a reset to zero, and it matters when you are trying to correct an accumulated imbalance."),
+      "The operating volume minus the liquid that stays in the system when the system drains to the "
+      "top of the bulkhead. Calculate it one time. In a 32-site example from a manufacturer, the "
+      "operating volume is 1325 L (350 gal), and 375 L (99 gal) stays in the system. Thus a "
+      "&lsquo;full&rsquo; change-out replaces 946 L (250 gal), approximately <strong>71%</strong> "
+      "of the water." + _c("dwc-athena-rdwc-2024") + " A full change-out does not set the system to "
+      "zero. This fact is important when the solution has an imbalance and you want to correct it."),
     steps([
-      ("Size the volume generously",
-       "More water is more thermal mass, more chemical buffer and more time to notice a problem. "
-       "Depth also matters independently: at least 20 cm (8 in) of solution stabilises concentrations and "
-       "improves uniformity" + _c("dwc-langenfeld-2024-zero-discharge") + "."),
-      ("Put every control in a plant-free bucket",
-       "Probes, heater or chiller, top-off float, circulation pump and dosing all belong in the "
-       "control bucket. No plant site should ever be the measurement point, and nothing concentrated "
-       "should ever meet a root."),
-      ("Size aeration to the window, not to the maximum",
-       "Around 100 mL&#183;min<sup>-1</sup> per litre" + _c("dwc-langenfeld-2024-zero-discharge") +
-       ", or one medium air stone per 30 L (7.9 gal) bucket" + _c("dwc-athena-rdwc-2024") + ". Published "
-       "manifold pressures run about 6.5 kPa in veg and 7.0&ndash;7.5 kPa in flower on a water-column "
-       "gauge. Resist the urge to over-provision."),
-      ("Place stones deliberately",
-       "Bottom of the bucket, offset roughly 2.5 cm (1 in) from the wall, never directly under the net pot. "
-       "Check every stone bubbles uniformly at fill. A clogged stone is a silent, "
-       "single-plant hypoxia event."),
+      ("Make the volume large",
+       "More water gives more thermal mass, more chemical buffer and more time to see a problem. "
+       "Depth is also important independently. A minimum of 20 cm (8 in) of solution makes the "
+       "concentrations stable and makes them more equal." + _c("dwc-langenfeld-2024-zero-discharge")),
+      ("Put all the controls in a bucket with no plant",
+       "Put the probes and the heater or chiller in the control bucket. Put the float valve, the "
+       "circulation pump and the dose point in the same bucket. Do not use a plant site as a point "
+       "of measurement. Do not let a concentrated product touch a root."),
+      ("Set the aeration to the window and not to the maximum",
+       "Use approximately 100 mL&#183;min<sup>-1</sup> for each liter," +
+       _c("dwc-langenfeld-2024-zero-discharge") + " or one air stone of medium size for each 30 L "
+       "(7.9 gal) bucket." + _c("dwc-athena-rdwc-2024") + " The manufacturer gives manifold "
+       "pressures on a water-column gauge. They are approximately 6.5 kPa in the vegetative stage "
+       "and 7.0&ndash;7.5 kPa in flower. Do not supply too much air."),
+      ("Put the air stones in the correct position",
+       "Put each air stone at the bottom of the bucket, approximately 2.5 cm (1 in) from the wall. "
+       "Do not put an air stone directly below the net pot. At fill, do a check that bubbles come "
+       "out of each stone at the same rate. A clogged stone causes hypoxia for one plant, and there "
+       "is no sign."),
       ("Keep air pumps and blowers out of the room",
-       "They are heat sources, and in a CO<sub>2</sub>-enriched room they should be outside it "
-       "entirely" + _c("dwc-athena-rdwc-2024") + "."),
-      ("Plumb continuous RO top-off",
-       "A float valve in the control bucket fed from an RO manifold holds level automatically. "
-       "Manual top-off means EC and level both sawtooth, and every plant feels it."),
-      ("Rinse and condition the media before it touches a plant",
-       "Expanded clay carries dust and fines. The published procedure rinses it, soaks it in "
-       "acidified water with a hypochlorous product, then rinses again" + _c("dwc-athena-rdwc-2024") +
-       ". Net pots get a sanitiser dunk to remove factory dust and plastic particles."),
-      ("Set the crown above the waterline",
-       "The basal stem and any rockwool cube must sit above the solution or you get stem rot. The "
-       "solution should just bubble over the structural ring beneath the planting deck, "
-       "close enough to reach, not so deep it drowns the crown."),
+       "The air pumps and blowers are sources of heat. In a room with CO<sub>2</sub> enrichment, "
+       "put them out of the room." + _c("dwc-athena-rdwc-2024")),
+      ("Connect a continuous supply of RO water",
+       "A float valve in the control bucket, with water from an RO manifold, keeps the water level "
+       "constant automatically. If you add water by hand, the EC and the water level increase and "
+       "decrease again and again. Each plant shows the effect."),
+      ("Clean and prepare the media before it touches a plant",
+       "Expanded clay contains dust and small particles. The procedure of the manufacturer has "
+       "three steps." + _c("dwc-athena-rdwc-2024") + " Flush the expanded clay with water. Soak it "
+       "in water with acid and a product with hypochlorous acid. Flush it again with water. Put the "
+       "net pots in a sanitizer for a short time to remove dust and particles of plastic."),
+      ("Set the crown above the water level",
+       "The basal stem and the rockwool cube must stay above the solution. If they are in the "
+       "solution, stem rot occurs. The solution must be at the structural ring below the planting "
+       "deck. At this level, the roots get the solution easily, and the solution is not above the "
+       "crown."),
     ]),
-    callout("tip", "Design in a failure mode you can survive",
-      p("Ask what happens when the power fails at 2 a.m. A large, cool, well-oxygenated volume "
-        "carries a crop for hours. A small, warm, marginal one is in trouble within one. Battery "
-        "backup on the air pump buys more crop insurance per dollar than backup on almost anything "
-        "else in the room, because the oxygen reserve is the resource with the shortest half-life.")),
+    callout("tip", "Prepare for a time with no power",
+      p("At 2 a.m., the power can stop. A large volume of cool water with a high oxygen content "
+        "keeps the crop in good condition for some hours. A small volume of warm water with not "
+        "sufficient oxygen has a problem in one hour. For each dollar, a battery for the air pump "
+        "gives more protection for the crop than a battery for almost all other equipment. The "
+        "cause is that the oxygen in the water decreases faster than the other quantities in the "
+        "system.")),
     figure(D.system_schematic(), 17,
-      "The whole loop. Plant sites are deliberately dumb, every probe, dose, pump and float "
-      "lives in the one bucket with no plant in it, so nothing concentrated ever meets a root and "
-      "no single site can be mistaken for the system." + _c("dwc-athena-rdwc-2024")),
+      "The full loop. The plant sites have no probes, no pumps and no float valves. All the probes, "
+      "doses, pumps and float valves are in one bucket with no plant. Thus no concentrated product "
+      "touches a root, and you cannot use one plant site as a measurement of the system." +
+      _c("dwc-athena-rdwc-2024")),
     photo(f"{IMG}/07-control-bucket.jpg",
-      "A control bucket in practice: pump, float valve on the RO line, and probes clipped into a "
-      "perforated stilling tube that shields them from the bubble plume.", model=GPT),
+      "A control bucket: the photo shows the pump, the float valve on the RO pipe, and the probes "
+      "in a stilling tube with holes. The stilling tube keeps the probes away from the plume of "
+      "bubbles.", model=GPT),
   ]})
 
 # 12 --------------------------------------------------------------------- run
 SECTIONS.append({"id": "run", "kicker": "Operate", "title": "Operation and troubleshooting",
   "blocks": [
-    p("Water culture rewards routine and punishes improvisation. The daily round is short; the value "
-      "is in doing it every day, at the same time, and writing the numbers down."),
+    p("Water culture gives good results when you do a regular procedure. It gives bad results when "
+      "you do tasks without a procedure. The procedure for each day is short. Do the same tasks "
+      "each day, at the same time, and write the numbers."),
     grid([
-      card("Every day", ul([
-        "Level at operating volume; top-off working",
-        "Solution temperature in band for the stage",
-        "Circulation pump flowing; discharge valve clear",
-        "Air pump running, every stone bubbling evenly",
-        "pH and EC, from a calibrated meter",
-        "<strong>Smell the reservoir</strong>, fresh, not putrid, not chlorine",
+      card("Each day", ul([
+        "Make sure that the water level is at the operating volume and that the float valve operates.",
+        "Make sure that the solution temperature is in the range for the stage.",
+        "Make sure that the circulation pump operates and that the drain valve has no blockage.",
+        "Make sure that the air pump operates and that bubbles come out of each stone at the same rate.",
+        "Measure the pH and EC with a calibrated meter.",
+        "<strong>Smell the reservoir.</strong> The smell must be clean. It must not be the smell of rot or of chlorine.",
         "Look for leaks",
-      ], "tight"), tag="~5 min"),
-      card("Every week", ul([
+      ], "tight"), tag="approximately 5 min"),
+      card("Each week", ul([
         "Calibrate pH and EC probes",
-        "Clean the ORP and DO probes. Biofilm is a silent error" + _c("dwc-sholikah-2025-pt-electrode"),
-        "Verify pH and EC against a second meter",
-        "Inspect a root mass: white and firm, not tan and slimy",
-        "Check inline filters",
-        "Review the trend, not just today's number",
-      ], "tight"), tag="~30 min"),
+        "Clean the ORP and DO probes. Biofilm causes an error that you cannot see." + _c("dwc-sholikah-2025-pt-electrode"),
+        "Compare the pH and EC readings with a second meter.",
+        "Examine a root mass. The roots must be white and hard, and not light brown with slime.",
+        "Do a check of the inline filters.",
+        "Examine the trend and not only the number for this day.",
+      ], "tight"), tag="approximately 30 min"),
     ], cols=2),
-    p("Change-outs are the reset mechanism, and knowing when to reach for one is most of the skill. "
-      "A partial change-out replaces 20&ndash;50% to correct minor imbalance; a full change-out drains "
-      "to the bulkhead and rebuilds the solution" + _c("dwc-athena-rdwc-2024") + "."),
-    table(["Situation", "Action"], [
-      ["Routine, at three weeks of veg", "Partial"],
-      ["pH drifting despite correction", "Partial first; full if it persists"],
-      ["Plants have slowed feeding despite stable parameters", "Partial"],
-      ["pH rising or falling beyond allowable limits", "Full"],
-      ["pH correction needs a steadily increasing amount of buffer", "Full"],
-      ["Parameters went out of range through operator error", "Full"],
-      ["Flipping to bloom after four or more weeks of veg", "Full"],
-      ["Post-defoliation, or around days 26&ndash;32", "Full"],
-      ["10&ndash;14 days before harvest", "Full"],
-    ], cls="compact", caption="Change-out triggers from a published commercial procedure. The pattern "
-      "is worth noting: <em>escalating buffer demand</em> is the signal that the solution has "
-      "unbalanced, even when EC and pH still read correctly." + _c("dwc-athena-rdwc-2024")),
-    callout("warn", "Change-outs are a race",
-      p("Roots exposed to air are stressed and damaged fast. Drain quickly, refill immediately, and "
-        "power the system down while you do it. Have the replacement water made and tempered "
-        "<em>before</em> you open the drain, the worst version of this job is discovering "
-        "mid-drain that the RO tank is empty.")),
+    p("A change-out is the method to start the solution again. The primary task is to know when to "
+      "do a change-out. A partial change-out replaces 20&ndash;50% of the solution to correct a "
+      "small imbalance. A full change-out drains the system to the bulkhead, and you make the "
+      "solution again." + _c("dwc-athena-rdwc-2024")),
+    table(["Condition", "Task"], [
+      ["Usual change-out at three weeks of the vegetative stage", "Partial change-out"],
+      ["The pH changes slowly although you correct it", "Partial change-out first. If the problem stays, full change-out."],
+      ["The plants absorb less nutrient, but the values are stable", "Partial change-out"],
+      ["The pH increases or decreases to a value that is out of the permitted limits", "Full change-out"],
+      ["To correct the pH, you must add more and more buffer each time", "Full change-out"],
+      ["The values went out of range because the operator made an error", "Full change-out"],
+      ["Change to the flowering stage after four or more weeks of the vegetative stage", "Full change-out"],
+      ["After defoliation, or at approximately days 26&ndash;32", "Full change-out"],
+      ["10&ndash;14 days before harvest", "Full change-out"],
+    ], cls="compact", caption="Conditions for a change-out, from a manufacturer's procedure. An "
+      "important point: <em>more and more buffer</em> is the signal that the solution has a "
+      "nutrient imbalance, also when the EC and pH read correctly." + _c("dwc-athena-rdwc-2024")),
+    callout("warn", "A change-out must be fast",
+      p("Roots in air get stress, and damage occurs fast. Drain the system quickly. Fill it again "
+        "immediately. Stop the power to the system while you do the change-out. Make the new water "
+        "and set its temperature <em>before</em> you open the drain. The worst condition is an RO "
+        "tank that is empty when the drain is in progress.")),
     photo(f"{IMG}/09-changeout.jpg",
-      "A change-out in progress. Drain open, refill line already staged. The clock is running on "
-      "root exposure from the moment the level drops.", model=GPT),
-    p("Diagnosis is where the sections of this paper come together. Most water-culture faults present "
-      "as one of three symptoms, and each has multiple causes calling for opposite actions:"),
-    table(["What you see", "Likely causes", "First check", "Common wrong move"], [
+      "A change-out in progress. The drain is open, and the pipe for the new water is in position. "
+      "The time that the roots are in air starts when the water level decreases.", model=GPT),
+    p("To find the cause of a fault, use the information from all the sections of this paper. Most "
+      "water-culture faults show as one of three symptoms. Each symptom has more than one cause, "
+      "and the corrections can be opposite:"),
+    table(["Symptom", "Possible causes", "First check", "Frequent incorrect step"], [
       ["Interveinal chlorosis, new growth",
-       "Chelate failed above its pH ceiling; or aeration stripping the rhizosphere",
-       "pH history, then aeration rate",
-       "Adding more iron"],
-      ["General yellowing, dry crusty leaf edges",
-       "ORP shock from oxidiser over-dose",
-       "Oxidiser dose rate; smell for chlorine",
-       "Reading it as a feed deficiency and adding nutrient"],
-      ["Slow growth, slight wilt, feed on target",
-       "Hypoxia, stelar oxygen deficit before visible root damage",
-       "Solution temperature, then DO, then every air stone",
-       "Raising EC"],
-      ["Brown, slimy roots; putrid smell",
+       "The chelate does not hold the iron above its maximum pH, or the aeration removes the rhizosphere layer.",
+       "The pH record, then the aeration rate",
+       "More iron"],
+      ["The leaves are yellow, and the edges of the leaves are dry and hard.",
+       "ORP shock because the dose of oxidizer is too large",
+       "The dose rate of the oxidizer. Smell for chlorine.",
+       "You think that it is a feed deficiency, and you add nutrient."],
+      ["The growth is slow, there is a small wilt, and the feed is on target.",
+       "Hypoxia: the stele has not sufficient oxygen before you can see root damage.",
+       "The solution temperature, then the DO, then each air stone",
+       "More EC"],
+      ["The roots are brown with slime, and the smell is the smell of rot.",
        "Root rot, downstream of low oxygen",
-       "Temperature and aeration, not the pathogen",
-       "Peroxide shock without fixing oxygen"],
-      ["pH climbing relentlessly",
-       "Nitrate-dominant nitrogen; or CO<sub>2</sub> stripped by over-aeration",
-       "Ammonium fraction of the feed; aeration rate",
-       "Escalating acid doses"],
-      ["DO reading swinging wildly",
-       "Probe sitting in the bubble plume",
-       "Probe placement, read in a calm pocket",
-       "Believing the number"],
-      ["Roots stay in the clay, will not enter the water",
-       "Hostile solution: warm, low DO, or high microbial load",
-       "Temperature and DO, then reservoir cleanliness",
-       "Waiting it out as &lsquo;slow establishment&rsquo;"],
-      ["ORP jumped ~200 mV after an equipment change",
-       "The reservoir got cleaner, not a direct oxygen effect",
-       "Whether a chemical oxidiser is in play; log pH alongside",
-       "Reading it as a dissolved-oxygen measurement"],
-    ], caption="The diagnostic table. Often the correct action is to turn something "
-      "<em>down</em> rather than add something."),
-    callout("key", "The five things that matter most, in order",
-      ol(["<strong>Solution temperature.</strong> It sets oxygen supply, oxygen demand and pathogen "
-          "growth rate simultaneously. Nothing else has that reach.",
-          "<strong>Adequate but gentle aeration.</strong> Get above the hypoxic floor, then stop. "
-          "The top of the range has its own failure mode.",
-          "<strong>pH, held steadily.</strong> It determines whether your iron chelate is doing its "
-          "job, and it is the parameter with the least buffering behind it.",
-          "<strong>Cleanliness.</strong> Organic load is oxygen demand. Spend your DO headroom "
-          "deliberately, not accidentally.",
-          "<strong>Written-down numbers.</strong> Every diagnosis in the table above is a trend "
-          "question. A single reading answers almost nothing, least of all an ORP reading "
-          "without its pH."], "tight")),
+       "The temperature and the aeration, and not the pathogen",
+       "A peroxide shock without a correction of the oxygen"],
+      ["The pH increases continuously",
+       "Nitrogen with a high fraction of nitrate, or too much aeration that removes CO<sub>2</sub>",
+       "The ammonium fraction of the feed, then the aeration rate",
+       "Acid doses that increase each time"],
+      ["The DO value changes by a very large quantity",
+       "The probe is in the plume of bubbles",
+       "The position of the probe. Read the value in an area with low turbulence.",
+       "You think that the number is correct."],
+      ["The roots stay in the expanded clay and do not go into the water",
+       "The solution is not good for the roots: it is warm, or the DO is low, or the load of microbes is high",
+       "The temperature and the DO, then how clean the reservoir is",
+       "You wait, and you think that it is &lsquo;slow establishment&rsquo;"],
+      ["The ORP increased by approximately 200 mV after a change of equipment",
+       "The reservoir became more clean. The cause is not the direct effect of oxygen.",
+       "Find if a chemical oxidizer is in the water. Record the pH with the ORP.",
+       "You read it as a measurement of dissolved oxygen."],
+    ], caption="The table of faults. Frequently the correct step is to <em>decrease</em> something "
+      "and not to add something."),
+    callout("key", "The five most important points, in sequence",
+      ol(["<strong>Solution temperature.</strong> It changes the oxygen supply, the oxygen demand "
+          "and the pathogen growth rate at the same time. No other control has this effect.",
+          "<strong>Sufficient aeration at a low rate.</strong> Increase the DO to more than the "
+          "floor for hypoxia, then stop. The top of the range has a different problem.",
+          "<strong>A stable pH.</strong> If the pH is too high, your iron chelate does not hold the "
+          "iron. The pH is the value with a very small buffer.",
+          "<strong>A clean reservoir.</strong> The organic load is oxygen demand. Use your DO "
+          "headroom with a decision, and not by accident.",
+          "<strong>Recorded numbers.</strong> To find the cause of each fault in the table above, "
+          "examine the trend. One reading gives almost no information. An ORP reading without the "
+          "pH gives no information."], "tight")),
   ]})

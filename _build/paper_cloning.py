@@ -5,12 +5,13 @@ from components import (p, lead, h, ul, ol, callout, defterm, table, figure,
 import figs_lib as L
 
 SLUG = "cloning"
-TITLE = "How to root cannabis cuttings"
+TITLE = "How to make roots on cannabis cuttings"
 EYEBROW = "Propagation · Cloning"
-SUB = ("Take cannabis cuttings that root reliably. This walks a beginner from picking a "
-       "mother plant to a transplant-ready clone in 14 days.")
+SUB = ("This guide shows you how to make roots on cannabis cuttings correctly each time. It gives a "
+       "new grower all the steps, from the selection of a mother plant to a clone that you can "
+       "transplant in 14 days.")
 META = [("seedling", "Propagation"), ("image", "9 diagrams"),
-        ("quote", "Evidence-linked · 7 sources"), ("clock", "~12 min read")]
+        ("quote", "Citations · 7 sources"), ("clock", "~12 min read")]
 RELATED = ["light-acclimation", "ipm-sop", "tissue-culture"]
 REF_IDS = ["caplan-2018-stem-cuttings", "esposito-2026-morphology-predictors",
            "kim-2025-light-temp-rh", "landis-2022-iba-hemp-i3", "fattorini-2017-iba-to-iaa",
@@ -24,227 +25,265 @@ SECTIONS = []
 
 SECTIONS.append({"id": "intro", "kicker": "01 · Start here", "title": "Purpose and scope",
   "blocks": [
-    lead("A <strong>clone</strong> is a cutting taken from a living plant that grows its own roots and "
-         "becomes a new, genetically identical plant. No flowers and no seeds are involved. You are "
-         "rooting a piece of stem, not germinating a seed."),
-    p("Cloning gives every plant in a batch the same genetics as a known, proven plant called the "
-      "<strong>mother</strong>. Same genetics means the same growth speed, the same yield and the same "
-      "chemistry, so the batch finishes together and yields what the last one did. That is why nearly "
-      "every commercial grow clones rather than seeds."),
-    p("Well-run propagation rooms often root clones at ~90 percent or better as an operational target" + _c("caplan-2018-stem-cuttings") +
-      ", with cuttings ready to transplant in about 10 to 14 days" + _c("kim-2025-light-temp-rh") +
-      "."),
+    lead("A <strong>clone</strong> is a cutting from a plant. The cutting makes roots and becomes a "
+         "new plant with the same genetics as the first plant. Cloning does not use flowers or "
+         "seeds. You make roots on a piece of stem, and you do not germinate a seed."),
+    p("Cloning gives each plant in a batch the same genetics as a known plant with good results. "
+      "This plant is the <strong>mother plant</strong>. The same genetics gives the same speed of "
+      "growth, the same yield and the same chemical properties. As a result, all the plants in the "
+      "batch complete the crop cycle at the same time. The yield is the same as the yield of the "
+      "last batch. Thus almost all commercial growers use clones and not seeds."),
+    p("In a propagation room that operators control correctly, the rooting rate is frequently "
+      "approximately 90 percent or more" + _c("caplan-2018-stem-cuttings") + ". Operators use this "
+      "rate as a target. You can transplant the cuttings after approximately 10 to 14 days" +
+      _c("kim-2025-light-temp-rh") + "."),
     figure(L.flow("From mother plant to transplant",
-            [("Mother", "healthy plant kept in growth"), ("Take cutting", "clean 45° cut below a node"),
-             ("Stick in cube", "under a humidity dome"), ("Roots emerge", "day 7–14"),
+            [("Mother", "plant kept in good growth"), ("Take cutting", "cut at 45° below a node"),
+             ("Stick in cube", "in a humidity dome"), ("Roots emerge", "day 7–14"),
              ("Transplant", "~day 14")]), 1,
-      "The whole job in five steps. Roots appear between day 7 and day 14, and the clone "
-      "is ready to move on at around two weeks." + _c("kim-2025-light-temp-rh")),
+      "The figure shows the five steps of the full procedure. You can see roots between day 7 and "
+      "day 14. You can transplant the clone at approximately two weeks." + _c("kim-2025-light-temp-rh")),
     callout("note", "Who this is for",
-      p("Anyone who wants to copy a plant they like and get a uniform batch every time. Pair it with "
-        "the <a href='light-acclimation.html'>light acclimation</a> guide for moving fresh clones into "
-        "stronger light, and the <a href='ipm-sop.html'>IPM hygiene</a> guide for keeping the room clean.")),
+      p("This guide is for a grower who wants to make a copy of a plant with the traits that the "
+        "grower wants. The grower also wants a batch in which all the plants are the same, each "
+        "time. Use the <a href='light-acclimation.html'>light acclimation</a> guide with this guide "
+        "to move new clones into stronger light. Use the <a href='ipm-sop.html'>IPM hygiene</a> "
+        "guide with this guide to keep the room clean.")),
   ]})
 
-SECTIONS.append({"id": "key-terms", "kicker": "02 · The vocabulary", "title": "Definitions",
+SECTIONS.append({"id": "key-terms", "kicker": "02 · The terms", "title": "Definitions",
   "blocks": [
-    p("These six terms come up throughout this guide. Know them before reading on."),
-    defterm("Node", "The point on a stem where leaves and side-shoots attach. New roots and new "
-            "growth both come from nodes, so your cut and your rooting both depend on them."),
-    defterm("Mother plant", "A plant kept permanently in vegetative (leafy) growth, never "
-            "flowered, purely to supply cuttings."),
-    defterm("Cutting / clone", "The severed shoot you are rooting. The two words mean the same thing "
-            "once it is off the mother."),
-    defterm("Rooting cube", "The rockwool or peat plug the cutting sits in while it roots. It holds "
-            "water and air around the stem."),
-    defterm("Dome", "The clear plastic lid that traps humidity over the tray. <strong>Burping</strong> "
-            "means lifting it briefly to swap stale air for fresh."),
-    defterm("Hardening off", "Opening the dome vents in stages, then removing the dome, so the "
-            "clones get used to normal room air before transplant."),
-    figure(L.flow("Anatomy of a prepared cutting",
-            [("Node", "where roots will form"), ("Internode", "bare stem between nodes"),
-             ("45° basal cut", "fresh, just below a node"), ("Lower leaves removed", "to reduce water loss"),
+    p("This guide uses these six terms many times. Make sure that you know the terms before you continue."),
+    defterm("Node", "The point on a stem where the leaves and the side shoots attach. New roots and "
+            "new growth start at the nodes. Thus you cut the stem near a node, and the new roots "
+            "start at the node."),
+    defterm("Mother plant", "A plant that you keep permanently in vegetative growth (growth of "
+            "leaves). The plant does not make flowers. You keep the plant only to supply cuttings."),
+    defterm("Cutting / clone", 'The shoot that you cut from the mother plant to make roots on it. '
+            'After you cut the shoot, "cutting" and "clone" are two names for the same shoot.'),
+    defterm("Rooting cube", "The cube of rockwool or peat that holds the cutting while the cutting "
+            "makes roots. The cube holds water and air around the stem."),
+    defterm("Dome", "The transparent plastic lid that holds the humidity in the air above the tray. "
+            "A <strong>burp</strong> is a task in which you lift the dome for a short time. The "
+            "task replaces the air in the dome with new air."),
+    defterm("Hardening off", "The procedure in which you open the dome vents in stages and then "
+            "remove the dome. The clones then adapt to the usual air of the room before the "
+            "transplant."),
+    figure(L.flow("Parts of a prepared cutting",
+            [("Node", "where roots will start"), ("Internode", "stem between nodes"),
+             ("45° basal cut", "new, directly below a node"), ("Lower leaves removed", "to keep more water"),
              ("Fan tips trimmed", "to ~50–70%"), ("Stem in cube", "1.5–2.5 cm (0.6–1.0 in) deep")]), 2,
-      "A cutting prepared for sticking: a clean angled cut below a node, lower leaves stripped, large "
-      "fan-leaf tips trimmed back, and the stem set well into the cube."),
+      "The figure shows a cutting that you prepare for the cube. Cut the stem at an angle directly "
+      "below a node, and make sure that the end is clean. Remove the bottom leaves. Cut the tips of "
+      "the large fan leaves. Put the stem in the cube to the correct depth."),
   ]})
 
 SECTIONS.append({"id": "mother-and-cut", "kicker": "03 · Selecting and cutting", "title": "Selecting and cutting shoots",
   "blocks": [
-    p("A good clone starts with a good shoot. Pick upright shoots from the upper-to-mid canopy that are "
-      "at least 3 mm (0.1 in) thick and 15 cm (6 in) long. Thicker, well-lit shoots carry more stored energy and "
-      "root faster than thin, shaded interior growth" + _c("esposito-2026-morphology-predictors") +
-      ". Shoot thickness and leaf colour reliably predict how well a cutting will root" + _c("esposito-2026-morphology-predictors") + "."),
-    p("Water the mother thoroughly the day before so cuttings are hydrated and turgid; wilted tissue "
-      "roots poorly. Take cuttings at the start of the light cycle with a sterile blade, making a clean "
-      "45-degree cut just below a node, and drop each cutting straight into a holding jug of dilute "
-      "solution so the cut end never sits in air."),
-    callout("tip", "Why a 45° cut, and why no air",
-      ul(["A <strong>45° cut</strong> exposes more surface area than a flat cut, so more cells can turn into roots.",
-          "If the cut end dries out in air, a bubble enters the stem and blocks water from moving up—the same way a bubble trapped in a drinking straw stops the flow. This is called an <strong>air embolism</strong>. Keep the end wet from the moment it is cut.",
-          "Sterilize the blade between mother plants so you don't carry disease from one to the next." + _c("punja-2023-fusarium-pythium-biocontrol")], "tight")),
-    figure(L.bars("Where to take cuttings from on the mother",
+    p("A good clone starts with a good shoot. Select vertical shoots from the top and middle parts "
+      "of the canopy. Each shoot must be a minimum of 3 mm (0.1 in) thick and 15 cm (6 in) long. "
+      "Thicker shoots that receive good light have larger energy reserves. These shoots make roots "
+      "more quickly than thin shoots in the shade of the inner canopy" +
+      _c("esposito-2026-morphology-predictors") + ". The thickness of the shoot and the color of "
+      "the leaves are accurate indicators of the root growth of the cutting" +
+      _c("esposito-2026-morphology-predictors") + "."),
+    p("Apply sufficient water to the mother plant on the day before you cut the shoots. Then the "
+      "cuttings are full of water and have turgor, and tissue that shows wilt does not easily make "
+      "roots. Use a sterilized blade. At the start of the light cycle, cut each shoot at 45° "
+      "directly below a node. Put each cutting immediately in a container with a weak solution. "
+      "Make sure that the surface of the end is clean and that the end does not stay in the air."),
+    callout("tip", "Cut at 45° and keep air out of the stem",
+      ul(["If you cut the stem at <strong>45°</strong>, the surface at the end of the stem is larger than if you cut the stem flat. Thus more cells can become root cells.",
+          "If the end of the stem dries in the air, a bubble of air goes into the stem. This bubble is an <strong>air embolism</strong>, and it stops the flow of water up the stem. Keep the end wet from the time that you cut the stem.",
+          "Sterilize the blade between mother plants. Thus you do not move disease from one plant to the next." + _c("punja-2023-fusarium-pythium-biocontrol")], "tight")),
+    figure(L.bars("Position of the shoot on the mother plant",
             [("Upper-mid (best)", 92), ("Lower interior", 58), ("Soft tip growth", 70)], unit="% root",
-            note="Indicative rooting success by shoot origin. Firm, well-lit upper-mid shoots root best.",
+            note="Typical rooting results. Hard shoots with good light at the top and middle make the most roots.",
             maxv=100), 3,
-      "Upright shoots from the well-lit upper-to-mid canopy root most reliably. Weak shaded interior "
-      "growth lags well behind." + _c("esposito-2026-morphology-predictors")),
+      "Vertical shoots from the top and middle of the canopy, in good light, make roots at the "
+      "highest rate. Weak shoots in the shade of the inner canopy have much lower rates." +
+      _c("esposito-2026-morphology-predictors")),
   ]})
 
 SECTIONS.append({"id": "hormone-and-cube", "kicker": "04 · Hormone and cube", "title": "Rooting hormone and propagation cubes",
   "blocks": [
-    p("Cuttings have no roots yet, so a <strong>rooting hormone</strong> is applied to push the stem to "
-      "grow them. A plant hormone is a chemical signal—like a thermostat telling a heater to run—that "
-      "tells cells what to do. The active ingredient in rooting products is usually "
-      "<strong>IBA (indole-3-butyric acid)</strong>, a member of a class of plant growth signals "
-      "called auxins" + _c("landis-2022-iba-hemp-i3") +
-      ". Inside the stem the plant converts IBA into its active form (IAA), which is the signal that "
-      "actually starts root growth" + _c("fattorini-2017-iba-to-iaa") + ". It sells as a gel or a liquid."),
-    p("Make a fresh 45-degree cut right before sticking to expose new tissue, coat the bottom 1&ndash;2 cm "
-      "(0.4&ndash;0.8 in) of stem in rooting gel, and insert it 1.5&ndash;2.5 cm (0.6&ndash;1.0 in) into a pre-soaked cube. Firm it just enough "
-      "that the cube lifts with the stem when you tug gently, the <em>lift test</em>, but "
-      "don't crush the cube."),
+    p("A cutting has no roots at the start. Thus you apply a <strong>rooting hormone</strong> to "
+      "start the production of roots. A plant hormone is a chemical signal that gives instructions "
+      "to the cells. The active ingredient in rooting hormones is usually <strong>IBA "
+      "(indole-3-butyric acid)</strong>, an auxin, which is a type of plant growth signal" +
+      _c("landis-2022-iba-hemp-i3") + ". In the stem, the plant changes IBA to IAA, and IAA is the "
+      "signal that starts root growth" + _c("fattorini-2017-iba-to-iaa") + ". A rooting hormone is "
+      "available as a gel or as a liquid."),
+    p("Cut the stem again at 45° immediately before you put the cutting in the cube. Thus the end "
+      "of the stem has new tissue. Apply rooting hormone gel to the bottom 1&ndash;2 cm "
+      "(0.4&ndash;0.8 in) of the stem. Put the stem 1.5&ndash;2.5 cm (0.6&ndash;1.0 in) deep in a "
+      "soaked cube. Push the cube lightly against the stem, but do not compress the cube. To do the "
+      "<em>lift test</em>, lift the stem carefully, and make sure that the cube moves up with the "
+      "stem."),
     steps([
-      ("Pre-soak the cube", "Soak rockwool or peat cubes in clone feed for at least 15 minutes. Let them drain freely. Do NOT squeeze them out, or you crush the air out of them."),
-      ("Fresh cut", "Re-cut the stem at 45° just before sticking to open clean, un-embolised tissue."),
-      ("Apply hormone", "Gel: dip the cut end about 1–2 cm (0.4–0.8 in) deep. Liquid/alcohol dip: soak the cut end for about 30 seconds."),
-      ("Stick & lift-test", "Insert 1.5–2.5 cm (0.6–1.0 in) deep. Tug gently: the cube should rise with the stem."),
+      ("Soak the cube first", "Soak the rockwool or peat cubes in clone feed for a minimum of 15 minutes. Let the cubes drain freely. Do not compress the cubes to remove the water. If you compress a cube, you remove the air from the cube."),
+      ("Cut the stem again", "Cut the stem again at 45° immediately before you put the cutting in the cube. Thus the tissue at the end is clean and has no air embolism."),
+      ("Apply hormone", "For gel, put the bottom end of the stem approximately 1–2 cm (0.4–0.8 in) deep in the gel. For a liquid or alcohol hormone, soak the bottom end of the stem for approximately 30 seconds."),
+      ("Put the stem in the cube and do the lift test", "Put the stem 1.5–2.5 cm (0.6–1.0 in) deep in the cube. Lift the stem carefully. The cube must move up with the stem."),
     ]),
-    callout("warn", "Under 30 seconds from cut to cube",
-      p("Keep the time from the final cut to sticking under about 30 seconds. The longer a fresh cut "
-        "end sits in air, the more likely an air bubble blocks water uptake and the cutting stalls.")),
-    figure(L.line("Hormone concentration vs rooting (typical IBA response)",
+    callout("warn", "Put the cutting in the cube in less than 30 seconds",
+      p("After you cut the stem for the last time, put the cutting in the cube in approximately 30 "
+        "seconds or less. When the stem end is in the air for a longer time, the risk of an air "
+        "bubble increases. The bubble stops the uptake of water, and the cutting stops its growth.")),
+    figure(L.line("Hormone concentration and rooting (typical IBA effect)",
             [(0, 55), (1, 74), (2, 88), (3, 90), (4, 78)],
             ["0 (none)", "low", "medium", "high", "too high"],
             ylab="% rooted", ymin=40, ymax=100,
-            note="Rooting rises with IBA dose up to a point, then over-strong hormone burns the stem and rooting falls off."), 4,
-      "Too little hormone and rooting is slow; too much scorches the stem base. Commercial gels come "
-      "pre-mixed to land in the productive range." + _c("landis-2022-iba-hemp-i3")),
+            note="Rooting increases with the IBA dose to a maximum. A higher dose causes damage to the stem, and rooting decreases."), 4,
+      "If the quantity of hormone is not sufficient, root growth is slow. Too much hormone causes "
+      "damage to the bottom of the stem. The manufacturer mixes a rooting hormone gel to a "
+      "concentration in the range for good rooting." + _c("landis-2022-iba-hemp-i3")),
   ]})
 
 SECTIONS.append({"id": "dome-environment", "kicker": "05 · Environment", "title": "Dome, humidity, temperature and light",
   "blocks": [
-    p("A cutting with no roots cannot pull water up the stem, so it survives on humidity until roots "
-      "form. The dome traps moisture so water enters the leaves directly from the air while the stem "
-      "grows roots."),
-    p("Keep the air around 24&ndash;26&deg;C (75&ndash;79&deg;F) and start with high humidity (85&ndash;95% RH) inside a "
-      "closed dome, then step it down as roots develop" + _c("kim-2025-light-temp-rh") + ". Put a heat mat "
-      "under the tray to keep the cube itself at 22&ndash;24&deg;C (72&ndash;75&deg;F). Cube temperature sets rooting speed "
-      "more than air temperature does" + _c("olympios-rootzone-temp") + "."),
-    p("VPD measures how hard the air is pulling on leaf surfaces—drier and warmer air pulls harder. "
-      "Think of it as how thirsty the air is for water: the higher the VPD, the faster a surface loses "
-      "moisture. Keep VPD low (0.3&ndash;0.5 kPa) while cuttings have no roots; raise it in steps as "
-      "roots grow and the clone can replace what it loses."),
-    p("Keep light gentle, about 60&ndash;100 PPFD (a measure of light intensity reaching the "
-      "plant) in the first days, rising toward 150&ndash;200 by hardening off" + _c("kim-2025-light-temp-rh") +
-      ". Measure it <strong>with the dome in place</strong>, because the plastic cuts the light reaching "
-      "the cutting underneath."),
-    figure(L.zones("Dome humidity by rooting phase", 60, 100,
+    p("A cutting with no roots cannot pull water up the stem. Thus the cutting gets water from the "
+      "humidity of the air until the roots start. The dome holds the humidity around the cutting. "
+      "As a result, water goes directly from the air into the leaves while the stem makes roots."),
+    p("Keep the air temperature at approximately 24&ndash;26&deg;C (75&ndash;79&deg;F). At the "
+      "start, keep the humidity high (85&ndash;95% RH) in a closed dome. Then decrease the humidity "
+      "in steps when the roots become longer" + _c("kim-2025-light-temp-rh") +
+      ". Put a heat mat below the tray to keep the cube temperature at 22&ndash;24&deg;C "
+      "(72&ndash;75&deg;F). The cube temperature has more effect on the speed of root growth than "
+      "the air temperature has" + _c("olympios-rootzone-temp") + "."),
+    p("VPD shows how much the air pulls water from the surface of a leaf. Air with less humidity "
+      "and a higher temperature pulls more water from the leaf. When the VPD is higher, the surface "
+      "of a leaf dries more quickly. Keep the VPD low (0.3&ndash;0.5 kPa) while the cuttings have "
+      "no roots. Then increase the VPD in steps when the roots become longer. The clone can then "
+      "replace the water that it transpires."),
+    p("Keep the light intensity low in the first days, at approximately 60&ndash;100 PPFD (the "
+      "intensity of the light at the plant). Increase the intensity to 150&ndash;200 PPFD at the "
+      "time of hardening off" + _c("kim-2025-light-temp-rh") + ". Measure the intensity "
+      "<strong>with the dome in position</strong>, because the plastic decreases the light "
+      "intensity at the cutting below it."),
+    figure(L.zones("Dome humidity in each root phase", 60, 100,
             [(85, 95, L.GL, "Initial heal (d1–4)"), (80, 85, L.GXL, "Early root (d5–7)"),
              (70, 80, L.AMBL, "Mid root (d8–10)"), (65, 75, L.BLUL, "Harden (d11–14)")],
             unit="% RH",
-            note="Humidity is highest at the start and steps down as roots take over water uptake."), 5,
-      "Target dome humidity falls in stages across the run as the clone grows roots and can start "
-      "drawing its own water." + _c("kim-2025-light-temp-rh")),
+            note="Humidity is highest at the start. It decreases in steps when roots supply the water."), 5,
+      "The target humidity in the dome decreases in stages during the cycle. The clone makes roots "
+      "and then starts to get water with its roots." + _c("kim-2025-light-temp-rh")),
     table(["Phase", "Days", "RH", "VPD (kPa)", "Light (PPFD)"], [
       ["Initial healing", "1–4", "85–95%", "0.3–0.5", "60–100"],
-      ["Early rooting", "5–7", "80–85%", "0.5–0.7", "80–120"],
-      ["Mid rooting", "8–10", "70–80%", "0.6–0.8", "100–150"],
-      ["Hardening", "11–14", "65–75%", "0.8–1.0", "150–200"],
-    ], cls="compact", caption="Four-phase environment targets, all at 24–26 °C (75–79 °F) air and a 22–24 °C (72–75 °F) cube. VPD is how hard the air pulls on leaf surfaces; higher kPa means drier air." + _c("kim-2025-light-temp-rh")),
-    callout("note", "Air movement, not a fan in the face",
-      p("Gentle air movement in the room is good, but never aim a fan directly at un-rooted clones. "
-        "With no roots to replace lost water, a direct breeze dries them out and wilts them fast.")),
+      ["Start of root growth", "5–7", "80–85%", "0.5–0.7", "80–120"],
+      ["Middle of root growth", "8–10", "70–80%", "0.6–0.8", "100–150"],
+      ["Hardening off", "11–14", "65–75%", "0.8–1.0", "150–200"],
+    ], cls="compact", caption="The table gives the environment targets for the four phases. In all phases, the air temperature is 24–26 °C (75–79 °F) and the cube temperature is 22–24 °C (72–75 °F). VPD shows how much the air pulls water from the surface of a leaf. A higher VPD value shows drier air." + _c("kim-2025-light-temp-rh")),
+    callout("note", "Air movement: do not point a fan at the cuttings",
+      p("A low airflow in the room is good. Do not point a fan directly at clones that have no "
+        "roots. These clones cannot replace the water that they transpire. Air that flows directly "
+        "on the clones dries them and quickly causes wilt.")),
   ]})
 
-SECTIONS.append({"id": "timeline", "kicker": "06 · Do this", "title": "14-day cloning schedule",
+SECTIONS.append({"id": "timeline", "kicker": "06 · Do this", "title": "14-day cloning procedure",
   "blocks": [
-    p("Most of cloning is knowing when to leave the tray alone."),
+    p("A large part of the work in cloning is to know when you must not touch the tray."),
     figure(L.flow("The 14-day arc",
-            [("d1–4", "dome shut, no touch"), ("d5–7", "first water + open vents"),
-             ("d7", "check for white roots"), ("d8–10", "prop vents wider"),
+            [("d1–4", "do not touch the dome"), ("d5–7", "first water and open vents"),
+             ("d7", "examine for white roots"), ("d8–10", "prop vents wider"),
              ("d11", "hardening-off test"), ("d14", "transplant")]), 6,
-      "Closed and untouched at the start, then the dome opens in stages as roots appear and the "
-      "clone learns to drink for itself."),
-    p("<strong>Days 1&ndash;4:</strong> vents fully closed, do not touch. The trapped humidity makes the "
-      "cutting close its leaf pores and focus on rooting. <strong>Days 5&ndash;7:</strong> the first "
-      "watering usually comes due. Judge it by tray weight. Irrigate when the tray has dropped "
-      "40&ndash;50% below its Day 0 weight, and never let it fall below 30% loss, because a permanently "
-      "soggy cube rots" + _c("msu-moisture-propagation") + ". The cube fading from dark to light brown is "
-      "the same signal."),
-    p("Clone feed starts mild (~0.6&ndash;1.2 mS/cm, product-dependent) and rises only once roots "
-      "appear; ~1.5 mS/cm can burn soft cuttings. Run it at pH 5.5&ndash;6.0 with the water at "
-      "20&ndash;22&deg;C (68&ndash;72&deg;F). From day 7 start a daily <strong>burp</strong>, begin propping the vents open, "
-      "and lift one edge cube to look for emerging white roots. On day 11 run the hardening-off test: "
-      "lift the domes, wait 10 minutes, and if fewer than 5 clones per tray wilt, leave the dome off; if "
-      "5 or more wilt, re-dome and retry tomorrow. Transplant at around day 14."),
-    figure(L.zones("Vent state across the run", 1, 14,
+      "At the start, the dome is closed and you do not touch the tray. Then you open the dome in "
+      "stages when you see roots. The clone starts to get water with its roots."),
+    p("<strong>Days 1&ndash;4:</strong> Keep the vents fully closed. Do not touch the tray. The "
+      "humidity in the dome makes the cutting close its leaf pores. Then the cutting uses its "
+      "energy to make roots.</p><p><strong>Days 5&ndash;7:</strong> It is usually necessary to "
+      "apply water for the first time. Use the weight of the tray to find the time. Apply water "
+      "when the weight of the tray is 40&ndash;50% less than its weight on Day 0. Do not apply "
+      "water when the weight loss is less than 30%. Rot starts in a cube that is permanently wet" +
+      _c("msu-moisture-propagation") + ". The color of the cube changes from dark brown to light "
+      "brown, and this change is the same signal."),
+    p("Start the clone feed at a low EC, approximately 0.6&ndash;1.2 mS/cm (the value is different "
+      "for each product). Increase the EC only after you see roots. An EC of approximately 1.5 "
+      "mS/cm can cause damage to soft cuttings. Keep the pH of the feed at 5.5&ndash;6.0 and the "
+      "temperature of the water at 20&ndash;22&deg;C (68&ndash;72&deg;F).</p><p>From day 7, do one "
+      "<strong>burp</strong> each day. Start to hold the vents open. Lift one cube at the edge of "
+      "the tray and examine the cube for white roots.</p><p>On day 11, do the test for hardening "
+      "off. Lift the dome from each tray and wait 10 minutes. If less than 5 clones in a tray show "
+      "wilt, keep the dome off. If 5 or more clones in a tray show wilt, put the dome on the tray "
+      "again. Do the test again on the next day. Transplant the clones at approximately day 14."),
+    figure(L.zones("Vent opening in the cycle", 1, 14,
             [(1, 4, L.REDL, "Closed"), (5, 7, L.AMBL, "Burp 5–10 min/day"),
              (8, 10, L.GXL, "25–50% open"), (11, 14, L.GL, "50–100% open")],
             unit="day",
-            note="The dome opens in stages from fully closed to fully off as roots establish."), 7,
-      "How far the dome vents are open by day. Closed at the start protects rootless cuttings; fully "
-      "open by the end hardens them for room air."),
-    table(["Day", "What you do", "What you're looking for"], [
-      ["1–4", "Dome shut, do not touch", "Cuttings standing turgid, not wilting"],
-      ["5–7", "First water by weight; start opening vents", "Cube fading dark→light; 40–50% weight loss"],
-      ["7+", "Daily burp; lift an edge cube", "First white roots emerging"],
-      ["11", "Hardening-off test (dome off 10 min)", "<5 wilting per tray → dome stays off"],
-      ["14", "Transplant the keepers", "Roots ≥2–3 cm (0.8–1.2 in) on multiple sides; cube holds together"],
-    ], cls="compact", caption="The day-by-day routine condensed. Transplant criteria are the key go/no-go at the end."),
+            note="You open the dome in stages, from fully closed to off, when the roots become longer."), 7,
+      "The figure shows the opening of the dome vents on each day. At the start, closed vents keep "
+      "the humidity high for cuttings that have no roots. At the end, fully open vents adapt the "
+      "cuttings to the air of the room."),
+    table(["Day", "Task", "Items to examine"], [
+      ["1–4", "Keep the dome closed. Do not touch the tray.", "The cuttings have turgor and show no wilt."],
+      ["5–7", "Use the tray weight to find the time for the first water. Start to open the vents.", "The color of the cube changes from dark brown to light brown. The weight loss of the tray is 40–50%."],
+      ["7+", "Do one burp each day. Lift one cube at the edge of the tray.", "The first white roots show."],
+      ["11", "Do the test for hardening off. Keep the dome off for 10 minutes.", "If less than 5 clones in a tray show wilt, keep the dome off."],
+      ["14", "Transplant the keepers", "The roots are a minimum of 2–3 cm (0.8–1.2 in) long on more than one side of the cube. The cube stays in one piece."],
+    ], cls="compact", caption="The table is a short list of the tasks for each day. The conditions for transplant at the end are the primary check for the decision to transplant the clones."),
   ]})
 
-SECTIONS.append({"id": "troubleshooting", "kicker": "07 · When it goes wrong", "title": "Troubleshooting",
+SECTIONS.append({"id": "troubleshooting", "kicker": "07 · When there is a problem", "title": "Troubleshooting",
   "blocks": [
-    p("Most clone failures trace to a handful of causes, and they look distinct enough to diagnose at a "
-      "glance."),
-    table(["Symptom", "Likely cause", "What to do"], [
-      ["Severe wilting, days 1–2", "Dome RH too low / light too high / heat mat off", "RH ≥85%, drop PPFD, get the cube to 22–24 °C (72–75 °F)"],
-      ["Mold or slimy cubes", "Standing water, poor hygiene, or too warm", "Empty standing water; gloves-only handling; keep cubes <26 °C (79 °F)"],
-      ["Burnt / crispy leaf tips", "Feed EC or VPD too high (too dry)", "Drop EC 0.2–0.3, raise RH, slow the vent opening"],
-      ["Yellowing before roots", "Mother was deficient, or feed EC too low", "Review mother nutrition; nudge EC up next run"],
-      ["White fuzzy mold in dome", "Humidity too high with no air exchange", "Burp more often; never skip dome hygiene"],
-      ["Uneven / patchy rooting", "Inconsistent cube moisture or hormone", "Soak cubes evenly; consistent gel dip depth"],
-    ], cls="compact", caption="Diagnose by symptom, then act. Many of these overlap, so fix the most likely cause first and watch for a day."),
-    callout("danger", "Tools and hands spread disease",
-      p("Disease in a propagation room spreads cutting to cutting through tools and hands. Sterilize "
-        "tools for at least 2 minutes in 71% isopropyl alcohol (or chlorine dioxide for at least 180 "
-        "seconds), and handle cubes with gloves only. Bare hands spread algae and pathogens" + _c("punja-2023-fusarium-pythium-biocontrol") +
-        ". Good hygiene prevents the damping-off and root-rot organisms that wipe out whole trays" + _c("punja-2023-fusarium-pythium-biocontrol") + ".")),
+    p("Most problems with clones have a small number of causes. Each cause shows different "
+      "symptoms, thus you can find the cause quickly."),
+    table(["Symptom", "Possible cause", "Task"], [
+      ["Much wilt in days 1–2", "The RH in the dome is too low, the light intensity is too high, or the heat mat is off.", "Make sure that the RH is a minimum of 85%. Decrease the PPFD. Adjust the cube temperature to 22–24 °C (72–75 °F)."],
+      ["Mold or slime on the cubes", "Water stays in the tray, the hygiene is bad, or the cubes are too warm.", "Remove the water that stays in the tray. Touch the cubes only with gloves. Keep the cubes at less than 26 °C (79 °F)."],
+      ["Leaf tips that are dry and brown", "The feed EC or the VPD is too high (the air is too dry).", "Decrease the EC by 0.2–0.3. Increase the RH. Open the vents more slowly."],
+      ["Yellow leaves before the roots show", "The mother plant had a nutrient deficiency, or the feed EC is too low.", "Examine the nutrition of the mother plant. In the next cycle, increase the EC by a small quantity."],
+      ["White mold with fibers in the dome", "The humidity is too high and there is no air exchange.", "Do more burps. Always do the hygiene procedures for the dome."],
+      ["Irregular rooting", "The moisture of the cubes or the quantity of hormone is different between cubes.", "Soak all the cubes equally. Put each cutting in the gel to the same depth."],
+    ], cls="compact", caption="Find the cause from the symptom, then do the task. Many causes have the same symptoms. Thus correct the cause that is most possible first, and monitor the cuttings for one day."),
+    callout("danger", "Tools and hands move disease",
+      p("Sterilize the tools in 71% isopropyl alcohol for a minimum of 2 minutes (or in chlorine "
+        "dioxide for a minimum of 180 seconds). Touch the cubes only with gloves. In a propagation "
+        "room, tools and hands move disease from one cutting to the next. Hands without gloves move "
+        "algae and pathogens" + _c("punja-2023-fusarium-pythium-biocontrol") +
+        ". Good hygiene prevents the organisms of damping-off disease and root rot. These organisms "
+        "kill all the cuttings in a tray" + _c("punja-2023-fusarium-pythium-biocontrol") +
+        ".")),
   ]})
 
-SECTIONS.append({"id": "expectations", "kicker": "08 · Reality check", "title": "Expected results and limitations",
+SECTIONS.append({"id": "expectations", "kicker": "08 · Typical results", "title": "Expected results and limitations",
   "blocks": [
-    p("A realistic first goal is <strong>90 percent</strong> rooting, with experienced rooms hitting 95 "
-      "percent or higher" + _c("caplan-2018-stem-cuttings") + ". Expect roots in 10 to 14 days, and treat "
-      "anything past 21 days with no roots as a problem to escalate, not a clone to keep waiting on."),
-    p("Not every cutting will make it. Sorting at transplant, called "
-      "<strong>culling</strong>, is part of the process. <strong>Keepers</strong> have strong "
-      "roots and light-green tops. <strong>Rejects</strong> rooted but only put out one to three weak "
-      "roots. <strong>Kills</strong> have zero roots and get discarded. Plan for this by taking 15 to 40 "
-      "percent more cuttings than the number of plants you actually need, so culls don't leave you short."),
-    figure(L.bars("Plan for overage: a 100-plant target at 40% over",
+    p("A first target of <strong>90 percent</strong> rooting is possible. Operators who do cloning "
+      "frequently get 95 percent or more" + _c("caplan-2018-stem-cuttings") + ". The roots show in "
+      "10 to 14 days. If a cutting has no roots after 21 days, there is a problem. Do an "
+      "investigation of the cause. Do not wait for the cutting."),
+    p("Some cuttings do not give a satisfactory result. At transplant, you select the cuttings to "
+      "keep and the cuttings to discard. This <strong>culling</strong> is part of the "
+      "procedure.</p><p>A <strong>keeper</strong> has strong roots and light green tops. A "
+      "<strong>reject</strong> has only one to three weak roots. A <strong>kill</strong> has no "
+      "roots, and you discard it.</p><p>Make 15 to 40 percent more cuttings than the necessary "
+      "number of plants. Thus the number of plants is sufficient after you discard the weak "
+      "cuttings."),
+    figure(L.bars("A target of 100 plants with 40% more cuttings",
             [("Cuttings taken", 140), ("Veg (rooted)", 120), ("Flowered", 100)], unit=" plants",
-            note="Take more than you need so culling at each stage still leaves a full batch.",
+            note="Make more cuttings than necessary. The batch is full after culling at each stage.",
             maxv=160), 8,
-      "Working back from the number you need to flower, take a healthy surplus up front so culls at "
-      "rooting and veg still land you on target."),
-    figure(L.bars("Sorting at transplant: keepers, rejects, kills",
+      "The figure starts with the number of plants for the flowering stage. Make more cuttings at "
+      "the start. Thus you have the target number of plants after the culling at the rooting stage "
+      "and at the vegetative stage."),
+    figure(L.bars("Culling at transplant: keepers, rejects, kills",
             [("Keepers", 90), ("Rejects", 6), ("Kills", 4)], unit="%",
-            note="A dialed room sends about nine in ten through as strong keepers.",
+            note="In an adjusted room, approximately nine of ten are strong keepers",
             maxv=100), 9,
-      "What a good tray looks like when sorted: most cuttings are strong keepers, with a small tail of "
-      "weak rejects and a few kills." + _c("caplan-2018-stem-cuttings")),
-    p("Some genetics root slower. For slow-to-root cultivars, take the cuttings a few days "
-      "earlier so they still hit the transplant date on schedule. Record tray weights, EC and pH, and "
-      "success rate per batch, so next run you know which cultivars to cut early and whether the room "
-      "has drifted."),
-    callout("key", "Three rules",
-      ol(["<strong>90% is the floor, not the ceiling.</strong> A new grower hitting 90% is doing well; a dialed room runs 95%+. Below 80% means something in the environment or hygiene is off.",
-          "<strong>Cull hard at transplant.</strong> Throwing out weak clones up front protects the uniformity of the whole batch.",
-          "<strong>The environment does the work.</strong> Humidity, cube temperature and light matter more than any brand of hormone. Dial those in first."])),
-    p("Once your clones are rooted and hardened off, the next job is moving them into stronger "
-      "light without shocking them. See the <a href='light-acclimation.html'>light acclimation</a> "
-      "guide. Keep the propagation room clean from day one with the "
-      "<a href='ipm-sop.html'>IPM hygiene</a> routine."),
+      "The figure shows a good tray after the culling. Most cuttings are strong keepers. A small "
+      "number of cuttings are weak rejects, and a small number are kills." +
+      _c("caplan-2018-stem-cuttings")),
+    p("Some cultivars make roots more slowly. For these cultivars, make the cuttings some days "
+      "before the usual date. Thus you can transplant the cuttings at the correct date. Record the "
+      "tray weights, the EC and pH, and the rooting rate for each batch. Then, in the next cycle, "
+      "you know the cultivars that you must cut before the usual date. You also know if there is a "
+      "drift in the room conditions."),
+    callout("key", "Three important items",
+      ol(["<strong>90% is the minimum, not the maximum.</strong> A new grower who gets 90% has a good result, and an adjusted room gets 95% or more. If the rate is less than 80%, the environment or the hygiene is incorrect.",
+          "<strong>Discard all the weak clones at transplant.</strong> When you discard the weak clones at the start, the batch keeps its uniformity.",
+          "<strong>The environment has the largest effect.</strong> The humidity, the cube temperature and the light have more effect than the hormone product that you use. Adjust these items first."])),
+    p("After the clones have roots and you complete the hardening off, the next task is to move the "
+      "clones into stronger light. Do not cause stress to the clones. Refer to the <a "
+      "href='light-acclimation.html'>light acclimation</a> guide. Use the <a "
+      "href='ipm-sop.html'>IPM hygiene</a> procedure to keep the propagation room clean from the "
+      "first day."),
   ]})

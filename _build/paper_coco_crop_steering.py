@@ -6,13 +6,14 @@ import figs_lib as L
 
 SLUG = "coco-crop-steering"
 TITLE = "Precision coco cultivation: crop steering in coir"
-EYEBROW = "Beginner · Coco & crop steering"
-SUB = ("Coco coir dries and wets predictably, which makes it the easiest substrate to steer. "
-       "This paper explains what a root-zone sensor reads, how a daily wet-and-dry cycle works, "
-       "and how to use dryback to push a plant toward leaves or toward flower. "
-       "No prior root-zone experience needed.")
-META = [("droplet", "Beginner"), ("image", "5 diagrams"),
-        ("quote", "Evidence-linked · 10 sources"), ("clock", "~16 min read")]
+EYEBROW = "Basic · Coco and crop steering"
+SUB = ("Coco coir is the easiest substrate for crop steering, because the wet and dry cycles give "
+       "the same result each time. This paper gives information about the numbers that a root-zone "
+       "sensor shows. It shows how the wet and dry cycle of one day operates. It also shows how to "
+       "use dryback to cause more leaf growth or more flower growth. It is not necessary to know "
+       "about the root zone before you read this paper.")
+META = [("droplet", "Basic"), ("image", "5 diagrams"),
+        ("quote", "Data with sources · 10 sources"), ("clock", "Approximately 16 min to read")]
 RELATED = ["root-zone-teros12", "grow-room-systems", "tissue-culture"]
 REF_IDS = ["abad2005-coir", "noguera2003-cec", "malik2025-media", "hilhorst2000-ec",
            "caplan2019-drought", "stack2024-drought", "welling2025-aba",
@@ -25,197 +26,221 @@ SECTIONS = []
 
 SECTIONS.append({"id": "start", "kicker": "01 · Read this first", "title": "Purpose and scope",
   "blocks": [
-    lead("&lsquo;Crop steering&rsquo; is a simple idea behind a jargon name: by controlling "
-         "<em>when</em> and <em>how much</em> you water, you can push a plant to grow bigger and "
-         "leafier, or to focus on dense, resinous flower. Coco coir is the easiest substrate to do "
-         "this in, because it responds fast and predictably."),
-    p("You do not need to have measured a root zone before to use this guide. Every term is defined. "
-      "By the end you will know what the numbers on a root-zone sensor mean, and how a daily "
-      "wet-and-dry rhythm becomes a steering wheel for your plant."),
-    callout("note", "Who this is for",
-      p("Anyone growing in coco, or thinking about it, who wants results they can repeat instead of "
-        "watering &lsquo;when it feels dry.&rsquo; Pairs with the "
-        "<a href='root-zone-teros12.html'>root-zone sensor</a> and "
-        "<a href='grow-room-systems.html'>grow-room systems</a> papers.")),
+    lead("&lsquo;Crop steering&rsquo; is an easy method. When you control <em>when</em> and <em>how "
+         "much</em> water you apply, you can cause the plant to become larger with more leaves. Or "
+         "you can cause the plant to make flowers with a high density and more resin. Coco coir is "
+         "the easiest substrate for crop steering, because it becomes wet and dry quickly and the "
+         "result is the same each time."),
+    p("You can use this paper if you did not measure a root zone before. Each term has a "
+      "definition. At the end, you will know how to read the numbers of a root-zone sensor. You "
+      "will also know how to use the wet and dry rhythm of each day to control the plant."),
+    callout("note", "Who this paper is for",
+      p("This paper is for each grower who uses coco or thinks about coco. These growers want "
+        "results that they can get again. They do not want to apply water &lsquo;when it feels "
+        "dry.&rsquo; Use this paper with the <a href='root-zone-teros12.html'>root-zone sensor</a> "
+        "paper and the <a href='grow-room-systems.html'>grow room systems</a> paper.")),
   ]})
 
-SECTIONS.append({"id": "terms", "kicker": "02 · The vocabulary", "title": "Definitions",
+SECTIONS.append({"id": "terms", "kicker": "02 · The terms", "title": "Definitions",
   "blocks": [
-    p("You do not need to memorise these, just get the gist. Each one comes back in context."),
-    defterm("Coco coir", "A growing medium made from the fibrous husk of coconuts. It holds water "
-            "like a sponge but still keeps lots of air around the roots."),
-    defterm("Substrate", "The general word for whatever the roots grow in: coco, rockwool, "
-            "peat or soil. <a href='glossary.html#gl-substrate'>Glossary &rarr;</a>"),
-    defterm("VWC (volumetric water content)", "How wet the root zone is, as a percentage of its "
-            "volume. 60% VWC means water fills 60% of the pot's space."),
-    defterm("EC (electrical conductivity)", "A proxy for how much fertiliser salt is dissolved in "
-            "the root zone. Higher EC means a stronger, saltier feed."),
-    defterm("Field capacity", "The wettest the substrate gets right after it drains: sponge "
-            "full, excess dripped out. This is your daily &lsquo;full&rsquo; mark."),
-    defterm("Dryback", "The drop in VWC between waterings as the plant drinks and the substrate "
-            "dries. This is the single most important steering tool."),
-    defterm("Crop steering", "Deliberately nudging the plant vegetative (leafy) or generative "
-            "(flower/resin) using irrigation, climate and light."),
-    defterm("Shot", "One short irrigation pulse. Crop steering replaces one big daily soak with "
-            "several small, timed shots."),
+    p("It is not necessary to know all of these terms at this time. It is sufficient to know the basic information of each term. Each term occurs again in this paper, with more information."),
+    defterm("Coco coir", "A substrate that comes from the fibers of coconut husk. It contains "
+            "water, but it also keeps a large quantity of air around the roots."),
+    defterm("Substrate", "The general name for each material that contains the roots. Examples are "
+            "coco, rockwool, peat and soil. <a href='glossary.html#gl-substrate'>Glossary &rarr;</a>"),
+    defterm("VWC (volumetric water content)", "The quantity of water in the root zone, as a "
+            "percentage of the volume of the root zone. If the VWC is 60%, water fills 60% of the "
+            "space in the pot."),
+    defterm("EC (electrical conductivity)", "An approximate measurement of the quantity of "
+            "fertilizer salt in the water of the root zone. When the EC is higher, the feed is "
+            "stronger and contains more salt."),
+    defterm("Field capacity", "The maximum quantity of water that the substrate contains "
+            "immediately after it drains. This quantity is the &lsquo;full&rsquo; level for each "
+            "day."),
+    defterm("Dryback", "The quantity by which the VWC decreases between two irrigations. The plant "
+            "uses water and the substrate becomes dry. Dryback is the most important control for "
+            "crop steering."),
+    defterm("Crop steering", "A method to cause vegetative growth (leaves) or generative growth "
+            "(flowers and resin) in the plant. The method uses irrigation, climate and light."),
+    defterm("Shot", "One short period of irrigation. Crop steering replaces one large irrigation "
+            "each day with some small shots at set times."),
   ]})
 
 SECTIONS.append({"id": "why-coco", "kicker": "03 · The substrate", "title": "Coco substrate properties",
   "blocks": [
-    p("Coco holds a lot of water <strong>and</strong> a lot of air at the "
-      "same time. At field capacity, roughly a fifth to a third of its volume is still "
-      "air-filled pore space" + _c("abad2005-coir") + ". That oxygen is what keeps roots "
-      "healthy and lets you water often without drowning them."),
+    p("Coco contains a large quantity of water <strong>and</strong> a large quantity of air at the "
+      "same time. At field capacity, approximately a fifth to a third of the volume of the coco is "
+      "pore space that contains air" + _c("abad2005-coir") + ". This air supplies oxygen to the "
+      "roots. As a result, the roots stay in good condition, and you can apply water frequently. "
+      "The roots continue to get oxygen."),
     figure(L.bars("Air around the roots at field capacity",
             [("Coco coir", 25), ("Peat", 12), ("Rockwool", 18)], unit="%",
-            note="Air-filled porosity: higher means more oxygen at the roots when fully wet.",
+            note="Air-filled porosity: a higher value gives more oxygen at the roots when fully wet.",
             maxv=32), 1,
-      "Coco holds more air at field capacity than peat, so roots get oxygen even when the medium is "
-      "wet. Exact values vary with the pith-to-chip mix and pot size." + _c("abad2005-coir") + _c("malik2025-media")),
-    p("Coco also carries a mild electrical charge on its fibres that grabs and releases nutrients: "
-      "its <strong>cation exchange capacity</strong>" + _c("noguera2003-cec") + ". Think of it "
-      "as a small battery for feed. It buffers swings, but it also means fresh coco will hold back "
-      "some calcium and magnesium until it is &lsquo;charged&rsquo; (pre-soaked in a cal-mag feed)."),
-    callout("tip", "Charge your coco first",
-      p("New coco can lock up calcium and magnesium for the first week or two. Pre-soak (buffer) it "
-        "with a cal-mag solution before planting, or expect early deficiency spots until it settles.")),
+      "At field capacity, coco contains more air than peat. Thus the roots get oxygen when the "
+      "substrate is wet. The values are not the same for all coco. They change with the ratio of "
+      "pith to pieces of husk and with the size of the pot." + _c("abad2005-coir") +
+      _c("malik2025-media")),
+    p("The fibers of coco have a small electrical charge. The charge holds nutrients and releases "
+      "them. This property is the <strong>cation exchange capacity</strong>" + _c("noguera2003-cec") +
+      ". As a result, the nutrients in the root zone change less when the feed changes.</p><p>But "
+      "new coco holds some of the calcium and magnesium of the feed. Thus the plant cannot use this "
+      "calcium and magnesium. This continues until you soak the coco in a solution of calcium and "
+      "magnesium."),
+    callout("tip", "Soak new coco first",
+      p("New coco can hold calcium and magnesium in the first one or two weeks, and the plant "
+        "cannot use them. Before you put the plants in the coco, soak the coco in a solution of "
+        "calcium and magnesium. If you do not, deficiency marks can occur on the leaves at the "
+        "start of the crop, until the coco is stable.")),
   ]})
 
 SECTIONS.append({"id": "reading", "kicker": "04 · The signals", "title": "Reading the root zone: VWC and EC",
   "blocks": [
-    p("A root-zone sensor reports two living numbers: <strong>VWC</strong> (how wet) and "
-      "<strong>EC</strong> (how salty). Together they tell you what the plant is doing and what to "
-      "do next."),
-    p("Here is the trick beginners miss: <strong>as the substrate dries, the salt left behind "
-      "gets more concentrated, so EC rises</strong>. The water leaves and the fertiliser does not. "
-      "Think of a glass of seawater left on a sunny bench—as the water evaporates, the same "
-      "salt is left in less water, so it tastes saltier even though nothing was added. A "
-      "sensor estimates the &lsquo;pore-water EC&rsquo; the roots actually feel from the bulk "
-      "reading, the moisture and the temperature" + _c("hilhorst2000-ec") + ". That is why EC "
-      "readings get unreliable once VWC falls into single digits."),
-    figure(L.line("A normal day in coco: VWC drops, then refills",
+    p("A root-zone sensor gives two numbers that change with time: <strong>VWC</strong> (the "
+      "quantity of water) and <strong>EC</strong> (the quantity of salt). Together they show the "
+      "condition of the plant and the next step for you."),
+    p("New growers frequently do not know this fact. <strong>When the substrate dries, the "
+      "concentration of salt in it increases and, as a result, the EC increases.</strong> The "
+      "quantity of water decreases, but the quantity of fertilizer does not decrease.</p><p>The "
+      "sensor uses the bulk EC reading, the moisture and the temperature to calculate an estimate "
+      "of the &lsquo;pore-water EC&rsquo;" + _c("hilhorst2000-ec") + ". The pore-water EC is the EC "
+      "of the water that touches the roots. Thus the EC readings are not accurate when the VWC is "
+      "less than 10%."),
+    figure(L.line("A usual day in coco: VWC falls, then increases",
             [(0, 60), (1, 57), (2, 53), (3, 49), (4, 47), (5, 60)],
             ["lights on", "+3h", "+6h", "+9h", "pre-dark", "next shot"],
             ylab="VWC %", ymin=40, ymax=66,
-            note="The plant drinks the pot down through the day, and irrigation refills it back to field capacity."), 2,
-      "A healthy daily curve: a controlled fall (the dryback) followed by a refill to field "
-      "capacity. The size and timing of that fall is your steering lever."),
-    callout("key", "Two numbers, one story",
-      ul(["<strong>VWC falling</strong> means the plant is drinking (good), until it falls too far and growth stalls.",
-          "<strong>EC drifting up</strong> as VWC falls is normal. A big jump means the root zone is getting too salty, so water it.",
-          "<strong>EC drifting down</strong> over days means the plant is eating salt faster than you feed, so raise feed EC."], "tight")),
+            note="During the day, the plant uses the water in the pot. Irrigation fills the pot again to field capacity."), 2,
+      "This curve shows one day for a plant in good condition. The VWC falls by a controlled "
+      "quantity (the dryback). Then irrigation increases the VWC to field capacity. The size and "
+      "the time of the dryback are your steering control."),
+    callout("key", "Read the two numbers together",
+      ul(["<strong>When the VWC falls</strong>, the plant uses water. This effect is good until the VWC falls too far. Then the growth of the plant stops.",
+          "It is usual when <strong>the EC increases slowly</strong> as the VWC falls. If the EC increases by a large quantity in a short time, the root zone has too much salt. Thus apply water.",
+          "<strong>When the EC decreases slowly</strong> during some days, the plant uses the salt faster than the feed supplies it. Thus increase the EC of the feed."], "tight")),
   ]})
 
-SECTIONS.append({"id": "dryback", "kicker": "05 · The dryback", "title": "Dryback: your main steering lever",
+SECTIONS.append({"id": "dryback", "kicker": "05 · The dryback", "title": "Dryback: your primary control for crop steering",
   "blocks": [
-    callout("evidence", "Grain of salt",
-      "<p><strong>Borderline:</strong> Caplan-style single late droughts are <em>related</em> to generative drybacks "
-      "but not the same experiment as multi-week daily sawteeth. Use dryback as a gentle bias; never wilt. "
-      "Your probe-native % is not a universal media law.</p>"),
-    p("A <strong>dryback</strong> is letting the root zone dry by a chosen amount before you "
-      "water again. Think of a kitchen sponge: you decide how much to let it dry before running it "
-      "under the tap again—barely damp versus nearly stiff are different choices, and the plant "
-      "responds to each differently. A mild, controlled water deficit changes how the plant grows."),
-    p("When the root zone dries a little, the plant makes a stress hormone called "
-      "<strong>abscisic acid (ABA)</strong>, which shifts it away from leafy growth and toward "
-      "flowering and resin production" + _c("welling2025-aba") + ". Done deliberately at the right time, "
-      "controlled water-deficit has been shown to <em>raise</em> cannabinoid content without costing "
-      "yield" + _c("caplan2019-drought") + "."),
+    callout("evidence", "Be careful with this information",
+      "<p><strong>Limit of the data:</strong> One drought in the last stage of the crop, as in the "
+      "test of Caplan, is <em>related</em> to generative drybacks. But it is not the same test as "
+      "dryback cycles each day for many weeks. Use dryback to cause a small change in the plant. Do "
+      "not let wilt occur. The percentage values of your probe are not the same for all "
+      "substrates.</p>"),
+    p("A <strong>dryback</strong> is the quantity by which the root zone dries before you apply "
+      "water again. You select this quantity. The effect on the plant is different for a small "
+      "dryback and for a large dryback. A small, controlled water deficit changes the growth of the "
+      "plant."),
+    p("When the root zone dries by a small quantity, the plant makes a stress hormone. The name of "
+      "this hormone is <strong>abscisic acid (ABA)</strong>. ABA decreases vegetative growth and "
+      "increases the production of flowers and resin" + _c("welling2025-aba") +
+      ". The data show that a controlled water deficit at the correct time <em>increases</em> the "
+      "cannabinoid content, and the yield does not decrease" + _c("caplan2019-drought") +
+      "."),
     callout("warn", "A dryback is not a drought",
-      p("The difference is dose and timing. <strong>Moderate</strong>, measured drybacks that you "
-        "stop on time preserve yield. A <strong>severe</strong> drought that runs too long crashes "
-        "both yield and cannabinoids" + _c("stack2024-drought") + ". Steer with a scalpel, not a hammer. "
-        "Always water before the plant actually wilts.")),
-    p("Bigger drybacks push generative (flower). Smaller drybacks, kept wetter, push vegetative "
-      "(leaves and size). That one dial, how far you let it dry, is most of crop steering."),
+      p("The difference is the dose and the time. <strong>Moderate</strong> drybacks keep the yield "
+        "when you measure them and stop them at the correct time. A <strong>large</strong> drought "
+        "that continues for too long decreases the yield and the cannabinoids by a large quantity" +
+        _c("stack2024-drought") + ". Make small, careful changes. Always apply water before the "
+        "plant shows wilt.")),
+    p("Larger drybacks give more generative growth (flowers). Smaller drybacks, which keep the "
+      "substrate wetter, give more vegetative growth (leaves and size). This one control is most of "
+      "crop steering: the quantity by which you let the root zone dry."),
   ]})
 
-SECTIONS.append({"id": "phases", "kicker": "06 · The daily rhythm", "title": "Daily irrigation cycle: P0–P3",
+SECTIONS.append({"id": "phases", "kicker": "06 · The rhythm of each day", "title": "Irrigation cycle of one day: P0–P3",
   "blocks": [
-    p("Growers split the lights-on day into four phases. You do not need fancy gear to think this "
-      "way. It is a rhythm of dry, refill, maintain, dry."),
+    p("Growers divide the lights-on day into four phases. You can use this method without special "
+      "equipment. The rhythm of the phases is: dry, fill again, keep full, and dry."),
     figure(L.flow("The four phases of the irrigation day",
-            [("P0", "morning dryback at lights-on"), ("P1", "ramp up: small shots refill"),
-             ("P2", "maintain near field capacity"), ("P3", "overnight dryback")]), 3,
-      "P0 is the short morning dryback after lights-on, before the first feed, that gets the plant "
-      "drinking. P1 is a series of small shots that climb the root zone back up. P2 holds it full "
-      "while the plant works. P3 is the big overnight dryback that falls through the dark."),
-    figure(L.bars("Where VWC sits through the phases",
+            [("P0", "first dryback at lights-on"), ("P1", "ramp: small shots fill again"),
+             ("P2", "keep near field capacity"), ("P3", "overnight dryback")]), 3,
+      "P0 is the short dryback after lights-on and before the first feed. It makes the plant start "
+      "to use water. In P1, small shots increase the VWC again. In P2, the shots keep the root zone "
+      "full during the day. P3 is the large dryback during the night."),
+    figure(L.bars("The VWC in each phase",
             [("P0 end", 46), ("P1", 54), ("P2", 60), ("P3 start", 57)], unit="%", target=55,
-            note="Generative steering runs the whole band lower. Vegetative runs it higher and flatter.", maxv=70), 4,
-      "A generative day (shown) lets the dryback run deeper and keeps shots smaller. A vegetative day keeps "
-      "VWC higher and the dryback shallow."),
-    table(["Phase", "What it is", "What it does"], [
-      ["<strong>P0</strong>", "After lights-on, before the first shot, no water", "A short morning dryback that gets the plant drinking before feeding starts"],
-      ["<strong>P1</strong>", "A series of small shots after lights-on", "Refills the root zone back to field capacity, gently"],
-      ["<strong>P2</strong>", "Maintenance shots", "Holds VWC near full and flushes out built-up salt (EC control)"],
-      ["<strong>P3</strong>", "Last shot, then overnight", "The big overnight dryback; sets the generative or vegetative tone for the day"],
-    ], caption="The P0–P3 framework. The numbers you choose for each phase are your steering recipe."),
+            note="Generative steering keeps the VWC lower. Vegetative steering keeps it higher, with less change.", maxv=70), 4,
+      "This chart shows a generative day. On a generative day, the dryback is larger and the shots "
+      "are smaller. On a vegetative day, the VWC is higher and the dryback is smaller."),
+    table(["Phase", "Definition", "Effect"], [
+      ["<strong>P0</strong>", "The time after lights-on and before the first shot. You do not apply water.", "A short dryback. It makes the plant start to use water before the first feed."],
+      ["<strong>P1</strong>", "A number of small shots after lights-on", "Fills the root zone again to field capacity, carefully"],
+      ["<strong>P2</strong>", "Maintenance shots", "Keeps the VWC near full and flushes the salt that collects (EC control)"],
+      ["<strong>P3</strong>", "The last shot, then the night", "The large dryback during the night. It sets the type of steering for the day: generative or vegetative."],
+    ], caption="The P0–P3 phases. The numbers that you select for each phase are your steering method."),
   ]})
 
-SECTIONS.append({"id": "steering", "kicker": "07 · Steering levers", "title": "Vegetative and generative steering",
+SECTIONS.append({"id": "steering", "kicker": "07 · Steering controls", "title": "Vegetative and generative steering",
   "blocks": [
-    p("&lsquo;Generative&rsquo; means flowers, density and resin. &lsquo;Vegetative&rsquo; means "
-      "leaves, stems and size. You bias the plant with a handful of levers that all work by changing "
-      "how hard the plant has to work for water."),
-    table(["Lever", "Push GENERATIVE (flower)", "Push VEGETATIVE (leaf/size)"], [
-      ["Dryback", "Bigger, longer drybacks", "Smaller drybacks, stay wetter"],
+    p("&lsquo;Generative&rsquo; growth is the growth of flowers, density and resin. "
+      "&lsquo;Vegetative&rsquo; growth is the growth of leaves, stems and size. You change the "
+      "growth of the plant with a small number of controls. All of these controls change how easily "
+      "the plant gets water."),
+    table(["Control", "For GENERATIVE growth (flower)", "For VEGETATIVE growth (leaves and size)"], [
+      ["Dryback", "Drybacks that are larger and longer", "Smaller drybacks. The substrate stays wetter."],
       ["Feed EC", "Higher EC (more osmotic stress)", "Lower EC"],
-      ["Shots", "Fewer, smaller, later start", "Earlier, more frequent, bigger"],
-      ["Day/night temp", "Cooler nights, wider day-night gap", "Warmer, flatter temps"],
-      ["VPD / humidity", "Drier air (higher VPD)", "More humid air (lower VPD)"],
-    ], caption="Most levers work through <strong>transpiration</strong>—the process by which a plant pulls water up from its roots and releases it through the leaf surface, similar to how skin releases sweat. The faster a plant transpires, the more it drinks. Use one or two levers at a time, not all at once."),
-    p("Raising feed EC makes the root-zone solution more concentrated than the water inside the "
-      "plant. The plant has to push harder to pull water in across that gap—this is "
-      "<strong>osmotic stress</strong>. A modest EC increase tightens generative growth; push it "
-      "too high and growth shuts down."),
-    p("Temperature is on that list because the gap between day and night temperature controls stretch. "
-      "A warm day with a cool night keeps plants compact. A warm night makes them stretch" + _c("moe1995-dif") +
-      ". The dryness of the air around the leaves controls how fast the plant transpires. Think of a "
-      "hot dry wind on your skin after a swim—the wind does not add moisture, it draws it out "
-      "faster. <strong>Vapour pressure deficit (VPD)</strong> is the technical name for this, "
-      "measured in kPa: the gap between how much water vapour the air could hold at that temperature "
-      "and how much it actually holds. Higher VPD means more demanding air. Above a certain point "
-      "the leaf pores close to limit water loss, and transpiration slows even though the air is "
-      "still dry" + _c("grossiord2020-vpd") + "."),
-    callout("danger", "Change one thing at a time",
-      p("Every lever interacts. If you yank the dryback, raise EC, drop humidity and cool the night "
-        "all at once, you will not know what helped or hurt, and you may tip a steer into real "
-        "stress. Move one dial, watch for a few days, then adjust.")),
+      ["Shots", "A smaller number of shots, smaller shots, and a longer time before the first shot", "More frequent shots, larger shots, and a shorter time before the first shot"],
+      ["Day and night temperature", "A lower night temperature and a larger difference between day and night", "Higher temperatures and a smaller difference between day and night"],
+      ["VPD and humidity", "Drier air (higher VPD)", "Air with more humidity (lower VPD)"],
+    ], caption="Most of these controls change the plant through <strong>transpiration</strong>. Transpiration occurs when a plant pulls water up from the roots and releases it through the surface of the leaves. When the plant transpires faster, it uses more water. Use one or two controls at a time. Do not use all of the controls at the same time."),
+    p("When you increase the EC of the feed, the solution in the root zone has a higher "
+      "concentration than the water in the plant. The plant must pull harder to get water because "
+      "of the difference in concentration. This effect is <strong>osmotic stress</strong>. If you "
+      "increase the EC by a moderate quantity, the generative growth becomes stronger. If you "
+      "increase the EC too much, the growth stops."),
+    p("Temperature is in the table above because the difference between day temperature and night "
+      "temperature controls stretch. A warm day and a cool night give less stretch. A warm night "
+      "gives more stretch" + _c("moe1995-dif") + ".</p><p>The air around the leaves controls the "
+      "rate of transpiration. When the air is drier, the plant transpires faster. <strong>Vapor "
+      "pressure deficit (VPD)</strong> is the measurement of how dry the air is. You measure VPD in "
+      "kPa. VPD is the difference between the quantity of water vapor that the air can hold at that "
+      "temperature and the quantity that it holds. When the VPD is higher, the air removes more "
+      "water from the plant.</p><p>When the VPD is more than some value, the pores of the leaf "
+      "close to keep the water in the leaf. Then the transpiration decreases, but the air continues "
+      "to be dry" + _c("grossiord2020-vpd") + "."),
+    callout("danger", "Change one control at a time",
+      p("All controls have an effect on each other. Do not make large changes to the dryback, the "
+        "EC, the humidity and the night temperature at the same time. Then you cannot know which "
+        "change was good or bad, and the plant can get too much stress.</p><p>Change one control. "
+        "Monitor the plant for some days. Then adjust the controls.")),
   ]})
 
 SECTIONS.append({"id": "week", "kicker": "08 · Week by week", "title": "Flowering steering by week",
   "blocks": [
-    p("Flowering indoors usually runs about 8–10 weeks once you flip the lights to a 12-hour "
-      "night" + _c("moher2023-photoperiod") + ". The steering changes across that arc:"),
+    p("The flowering stage in a grow room usually continues for approximately 8 to 10 weeks after "
+      "you change the light cycle to a 12-hour night" + _c("moher2023-photoperiod") +
+      ". The steering changes during these weeks:"),
     steps([
-      ("Late veg", "Steer vegetative: keep VWC high, drybacks small, EC moderate. Build a big, healthy plant and root system."),
-      ("Flower wk 1–2 (stretch)", "Plants nearly double in height. Keep nights cooler and the day-night gap modest to limit stretch, and begin gentle generative drybacks."),
-      ("Flower wk 3–6 (build)", "Peak generative steering: firm drybacks, higher EC, hold P2 full to feed bulking flowers."),
-      ("Flower wk 7+ (ripen)", "Ease off. A controlled late water-deficit can lift potency, but stop before stress shows."),
-      ("Finish (ease EC; long plain-water flush has weak quality evidence)", "Lower EC feeds in the final stretch. Let the plant wind down cleanly."),
+      ("End of the vegetative stage", "Use vegetative steering: keep the VWC high, keep the drybacks small, and keep the EC moderate. Make the plant and the root system large and in good condition."),
+      ("Weeks 1 to 2 of flowering (stretch)", "The plants become almost two times as high. To decrease stretch, keep the night temperature lower and the difference between day and night temperature moderate. In this stage, start to use small generative drybacks."),
+      ("Weeks 3 to 6 of flowering (flowers become larger)", "Use the maximum generative steering. Use strong drybacks and a higher EC. In P2, keep the root zone full to supply feed to the flowers while they become larger."),
+      ("From week 7 of flowering (ripening)", "Use less steering. A controlled water deficit in this stage can increase the potency. But stop the deficit before the plant shows stress."),
+      ("Finish (decrease the EC. The data that show better quality from a long flush with only water are weak)", "In the last part of the crop, apply feed with a lower EC. Let the plant complete its growth slowly and without problems."),
     ]),
   ]})
 
-SECTIONS.append({"id": "trouble", "kicker": "09 · When it goes wrong", "title": "Troubleshooting",
+SECTIONS.append({"id": "trouble", "kicker": "09 · When a problem occurs", "title": "Troubleshooting",
   "blocks": [
-    table(["Symptom", "Likely cause", "What to do"], [
-      ["EC climbing every day, plant sulking", "Salt building up, drybacks too hard or not enough flush", "Bigger P2 shots to flush, lower feed EC a touch"],
-      ["VWC barely drops all day", "Overwatering or plant not drinking (cold/dark/sick)", "Fewer or smaller shots, check root health, temps, light"],
-      ["Leaves clawing, tips burnt", "Feed EC too high for conditions", "Drop EC, ensure enough water volume per shot"],
-      ["Tall, stretchy, floppy plants", "Too vegetative: warm nights, small drybacks", "Cooler nights, wider day-night gap, firmer drybacks"],
-      ["Early cal-mag deficiency", "Fresh coco not buffered", "Pre-charge coco, add cal-mag to early feeds"],
-      ["Wilting between shots", "Dryback gone too far (drought, not steer)", "Water sooner, shorten P0/P3. Never let it actually wilt"],
+    table(["Symptom", "Possible cause", "Correction"], [
+      ["The EC increases each day, and the plant is not in good condition", "Salt collects. The drybacks are too large, or the flush is not sufficient.", "Use larger shots in P2 to flush the salt. Decrease the EC of the feed by a small quantity."],
+      ["The VWC falls by only a small quantity during the day", "Too much irrigation, or the plant does not use water because of disease, low light, or a low temperature", "Use a smaller number of shots, or smaller shots. Do a check of the condition of the roots, the temperature and the light."],
+      ["Damaged leaf tips and leaves that bend down", "The EC of the feed is too high for the conditions", "Decrease the EC. Make sure that each shot has a sufficient volume of water."],
+      ["The plants are high, with too much stretch and weak stems", "The plants are too vegetative because the nights are warm and the drybacks are small", "Decrease the night temperature. Increase the difference between day and night temperature. Use larger drybacks."],
+      ["Calcium and magnesium deficiency in the first weeks", "New coco that you did not soak in calcium and magnesium", "Before you use the coco, soak it in a solution of calcium and magnesium. Add calcium and magnesium to the first feeds."],
+      ["The plant shows wilt between shots", "The dryback is too large. It is a drought and not crop steering.", "Apply water after a smaller dryback. Make P0 and P3 shorter. Do not let the plant show wilt."],
     ], cls="compact"),
   ]})
 
-SECTIONS.append({"id": "expect", "kicker": "10 · Straight talk", "title": "Expected results and limitations",
+SECTIONS.append({"id": "expect", "kicker": "10 · Clear information", "title": "Expected results and limitations",
   "blocks": [
-    callout("key", "Three rules",
-      ol(["<strong>There is no universal recipe.</strong> The right VWC, EC and dryback numbers depend on your strain, pot size, climate and light. Start from the ranges here and tune to <em>your</em> plants.",
-          "<strong>Steering is a bias, not a switch.</strong> You are nudging odds over days, not flipping a plant overnight.",
-          "<strong>The root zone is only one lever.</strong> Light, temperature, humidity and airflow all push the same plant. Read the <a href='grow-room-systems.html'>systems guide</a> next."])),
-    p("Get a sensor on the root zone, learn what one normal day looks like on your setup, then "
-      "change one thing at a time. That method—sensor first, baseline second, one change at "
-      "a time—is what makes coco consistent across runs."),
+    callout("key", "Three important points",
+      ol(["<strong>There is no one set of numbers that is correct for all rooms.</strong> The correct numbers for VWC, EC and dryback are different if the cultivar, the pot size, the climate or the light is different. Start with the ranges in this paper and adjust them for <em>your</em> plants.",
+          "<strong>Steering makes a result more possible, but it does not give a fast change.</strong> The effect occurs during some days. You do not change a plant in one night.",
+          "<strong>The root zone is only one control.</strong> Light, temperature, humidity and airflow all have an effect on the same plant. After this paper, read the <a href='grow-room-systems.html'>grow room systems</a> paper."])),
+    p("Put a sensor in the root zone. Find the baseline, which is the values of one usual day in "
+      "your system. Then change one control at a time. This method has three steps: a sensor first, "
+      "a baseline second, and one change at a time. The method makes coco give the same results in "
+      "each crop."),
   ]})

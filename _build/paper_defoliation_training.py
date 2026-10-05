@@ -7,11 +7,12 @@ import figs_lib as L
 SLUG = "defoliation-training"
 TITLE = "Defoliation and plant training for maximum yield"
 EYEBROW = "Canopy · Training"
-SUB = ("Topping, low-stress training, trellising, lollipopping and defoliation each reshape "
-       "the plant in a specific way. This paper explains what each technique does, when in the "
-       "grow cycle to use it, and how to tell when you have gone too far.")
+SUB = ("Topping, low-stress training, trellising, lollipopping and defoliation each have a "
+       "different effect on the shape of the plant. This paper gives information about the effect "
+       "of each method and the time to use it in the cycle of the crop. It also shows how to know "
+       "when you do too much.")
 META = [("scissors", "Canopy"), ("image", "12 diagrams"),
-        ("quote", "Evidence-linked · 8 sources"), ("clock", "~12 min read")]
+        ("quote", "8 sources"), ("clock", "~12 min to read")]
 RELATED = ["airflow-design", "mould-risk", "harvest-dry-trim-cure"]
 REF_IDS = ["sikora-2019-apical-bud-hemp", "massuela-2022-pruning-cbd-yield",
            "rodriguez-morrison-2021-ppfd-yield", "danziger-2022-planting-density",
@@ -25,334 +26,360 @@ SECTIONS = []
 
 SECTIONS.append({"id": "intro", "kicker": "Start here", "title": "Purpose and scope",
   "blocks": [
-    lead("Plant training and defoliation are deliberate physical interventions, bending, "
-         "tying, and selectively removing leaves and branches, that reshape a cannabis plant "
-         "so more of its energy lands in the flowers you actually harvest."),
-    p("Left alone, a plant grows tall with one dominant top and a tangle of weak, shaded lower "
-      "growth that produces airy, low-value flower. <strong>Training</strong> flattens and widens "
-      "the canopy (the leafy roof of growth) so light hits more bud sites evenly. "
-      "<strong>Defoliation</strong> removes selected leaves and opens the interior so "
-      "light and air reach the middle instead of being blocked. Done right, these techniques raise "
-      "yield and quality. Done badly or too aggressively, they stress the plant and cost you flower."),
-    ul(["<strong>Two families of technique:</strong> training (reshaping via bending, tying and "
-        "cutting growth tips) and defoliation (removing leaves and lower growth).",
-        "The goal is an even, flat, well-lit canopy where every bud site gets strong light and airflow.",
-        "This is an active, scheduled process tied to specific days of the grow, not a one-time event.",
-        "Overdoing it is a real risk. This guide covers what <em>not</em> to remove."]),
-    figure(L.flow("Untrained plant vs trained flat canopy",
-            [("Untrained", "one tall cola, shaded fluffy lower growth"),
-             ("Train + spread", "branches bent flat across a trellis"),
-             ("Trained", "many even tops, light reaches every site")],
-            note="Flattening the canopy turns one light-hogging top into a field of even bud sites."), 1,
-      "An untrained plant wastes light on a single top while the interior stays dark and airy. A "
-      "trained, flat canopy shares strong light across dozens of bud sites at the same height."),
-    callout("note", "Who this is for",
-      p("Anyone growing cannabis who wants repeatable yield instead of a jungle. Pairs with the "
-        "<a href='airflow-design.html'>airflow design</a> and "
-        "<a href='mould-risk.html'>mould risk</a> papers, since canopy work is half about light "
-        "and half about keeping air moving.")),
+    lead("Plant training and defoliation change the shape of a cannabis plant. You bend and attach "
+         "branches, and you remove some leaves and branches. As a result, more of the energy of the "
+         "plant goes into the flowers that you harvest."),
+    p("Without training, a plant has a large height and one primary top. The bottom growth is weak "
+      "and in shade, and it makes flowers that have a low density and a low value. "
+      "<strong>Training</strong> makes the canopy flat and wide. The canopy is the layer of leaves "
+      "at the top of the plant. Thus more bud sites get light "
+      "equally.</p><p><strong>Defoliation</strong> removes some leaves and opens the middle of the "
+      "canopy. Thus the middle of the plant gets light and air, and the leaves do not stop them. If "
+      "you do these methods correctly, they increase the yield and the quality. If you do them "
+      "incorrectly or too much, they cause stress to the plant and decrease the quantity of flower."),
+    ul(["<strong>Two groups of methods:</strong> training (to change the shape of the plant, you "
+        "bend branches, attach branches and cut the growing tips) and defoliation (you remove "
+        "leaves and bottom growth).",
+        "Make the canopy flat and level, with strong light and airflow at each bud site.",
+        "You do these tasks on set days in the cycle of the crop. You do not do them one time only.",
+        "If you do too much, there is a risk of damage. This paper shows the parts that you must <em>not</em> remove."]),
+    figure(L.flow("Plant without training and plant with a flat canopy",
+            [("Without training", "one high cola, bottom growth in shade"),
+             ("Training and spreading", "branches bent flat across a trellis"),
+             ("After training", "many tops, same height, light on each site")],
+            note="A flat canopy changes one top that gets all the light into many bud sites at the same height."), 1,
+      "In a plant without training, one top uses most of the light. The inner part of the plant "
+      "stays in shade, with flowers of low density. A flat canopy after training gives strong light "
+      "to many bud sites at the same height."),
+    callout("note", "Who this paper is for",
+      p("This paper is for each cannabis grower who wants a yield that is the same each time. Use "
+        "this paper with the <a href='airflow-design.html'>airflow design</a> and <a "
+        "href='mould-risk.html'>mold risk</a> papers. The work on the canopy changes the quantity "
+        "of light and the airflow.")),
   ]})
 
-SECTIONS.append({"id": "key-terms", "kicker": "Vocabulary", "title": "Definitions",
+SECTIONS.append({"id": "key-terms", "kicker": "Terms", "title": "Definitions",
   "blocks": [
-    p("Before the how-to, here is the full vocabulary used throughout. These terms come up "
-      "constantly in grow rooms and many beginners conflate them. Don't memorise them. "
-      "Each comes back in context."),
-    defterm("Node", "The point on a stem where leaves and branches grow out. Counting nodes is how "
-            "training is measured (&lsquo;keep the top 3 nodes&rsquo;)."),
-    defterm("Topping", "Cutting off the very top growing tip to stop upward growth and force two new "
-            "tops from the node below it."),
-    defterm("FIM", "A partial top: cutting most but not all of the tip, which can "
-            "produce several new tops instead of just two."),
-    defterm("Apical dominance", "The plant's natural tendency to push one main top taller than the "
-            "side branches. Topping and LST break this so side branches catch up."),
-    defterm("LST (Low-Stress Training)", "Gently bending and tying branches down to spread them "
-            "flat, without cutting anything."),
-    defterm("Trellis / SCROG (Screen of Green)", "Horizontal netting the canopy grows up through, "
-            "used to hold branches spread out and evenly spaced."),
-    defterm("Lollipopping", "Stripping the small branches, nodes and leaves off the bottom of the "
-            "plant so it looks like a lollipop: bare stick below, canopy on top."),
-    defterm("Defanning / defoliation", "Selectively removing large fan leaves to open the canopy "
-            "for light and air."),
-    defterm("Fan leaves", "The big, classic cannabis leaves that collect light, not the "
-            "small sugar leaves growing out of the buds themselves."),
-    defterm("Source vs sink", "A &lsquo;source&rsquo; leaf makes more sugar than it uses; a "
-            "&lsquo;sink&rsquo; (a flower, or a shaded leaf) consumes more than it makes."),
-    figure(L.flow("Anatomy of a plant, bottom to top",
-            [("Lollipop zone", "lower ~third: stripped"),
-             ("Lateral branches", "side arms, bent flat"),
-             ("Nodes + fan leaves", "keep top 3 nodes"),
-             ("Growing tip", "topped to make new tops")],
-            note="Training works on the tip; lollipopping clears the base; defanning thins the middle."), 2,
-      "The parts of the plant each technique acts on, from the bare lower &lsquo;lollipop zone&rsquo; "
-      "up to the growing tip that topping removes."),
+    p("Read these terms before the procedures. The paper uses these terms in all sections. Growers "
+      "use these terms frequently, and many new growers do not know the difference between them. "
+      "You do not have to know all the terms at this time. Each term occurs again, with more "
+      "information."),
+    defterm("Node", "The point on a stem where leaves and branches start. You count the nodes to "
+            "measure the training (&lsquo;keep the top 3 nodes&rsquo;)."),
+    defterm("Topping", "You cut the growing tip at the top of the plant. The growth in height "
+            "stops, and two new tops start from the node below it."),
+    defterm("FIM", "A topping that is not full: you cut most of the tip, but not all of it. This "
+            "type of topping can cause more than two new tops to start."),
+    defterm("Apical dominance", "A plant usually makes one primary top that is higher than the side "
+            "branches. Topping and LST stop this effect. Thus the side branches can become as high "
+            "as the primary top."),
+    defterm("LST (Low-Stress Training)", "You bend the branches down carefully and attach them, to "
+            "make the branches flat. You do not cut the plant."),
+    defterm("Trellis / SCROG (Screen of Green)", "A horizontal net. The branches become higher "
+            "through the openings of the net. The net holds the branches apart, at equal distances."),
+    defterm("Lollipopping", "You remove the small branches, nodes and leaves from the bottom of the "
+            "plant. The result is a bare stem at the bottom and the canopy at the top."),
+    defterm("Defanning / defoliation", "You remove some large fan leaves to open the canopy for "
+            "light and air."),
+    defterm("Fan leaves", "The large leaves of the cannabis plant that absorb light. They are not "
+            "the small sugar leaves in the buds."),
+    defterm("Source and sink", "A &lsquo;source&rsquo; leaf makes more sugar than it uses. A "
+            "&lsquo;sink&rsquo; (a flower, or a leaf in shade) uses more sugar than it makes."),
+    figure(L.flow("The parts of a plant, from bottom to top",
+            [("Lollipop zone", "bottom third: removed"),
+             ("Lateral branches", "side branches, bent flat"),
+             ("Nodes and fan leaves", "top 3 nodes stay"),
+             ("Growing tip", "cut to make new tops")],
+            note="Use training on the tip, lollipopping on the bottom, and defanning on the middle."), 2,
+      "The parts of the plant where you use each method, from the bare &lsquo;lollipop zone&rsquo; "
+      "at the bottom to the growing tip that topping removes."),
   ]})
 
-SECTIONS.append({"id": "training-light", "kicker": "The core idea",
+SECTIONS.append({"id": "training-light", "kicker": "Basic information",
   "title": "Yield effects of training and defoliation",
   "blocks": [
-    p("The underlying mechanism is simple: <strong>light and air reaching more of the plant</strong>. "
-      "A flat, spread canopy puts dozens of bud sites at the same height under strong light, instead "
-      "of one top hogging it all while the rest sits in shade."),
-    p("Light intensity is measured in <strong>PPFD</strong> (photosynthetic photon flux density: "
-      "how much usable light lands on the canopy each second). Flower-room light climbs from roughly "
-      "400&ndash;800 PPFD in early flower to a peak around 1000&ndash;1200 PPFD mid-bloom" +
-      _c("rodriguez-morrison-2021-ppfd-yield") + ". That intensity only pays off if it actually "
-      "reaches the bud, which is why the interior must be opened up. Cannabis yield keeps "
-      "responding to higher light right up into that range when the canopy can use it" +
-      _c("rodriguez-morrison-2021-ppfd-yield") + "."),
-    figure(L.line("Target canopy light (PPFD) across the grow",
+    p("The basic effect is easy: <strong>more of the plant gets light and air</strong>. A flat, "
+      "wide canopy has many bud sites at the same height, in strong light. Without training, one "
+      "top gets all the light, and the other parts of the plant stay in shade."),
+    p("You measure the intensity of light in <strong>PPFD</strong> (photosynthetic photon flux "
+      "density: the quantity of light that the plant can use and that the canopy receives each "
+      "second). In a flowering room, the light is approximately 400 to 800 PPFD at the start of "
+      "flowering. The light increases to a maximum of approximately 1000 to 1200 PPFD in the middle "
+      "of bloom." + _c("rodriguez-morrison-2021-ppfd-yield") + " This intensity increases the yield "
+      "only if the bud receives the light. Thus you must open the middle of the canopy. The yield "
+      "of cannabis continues to increase with higher light, up to this range, if the canopy can use "
+      "the light." + _c("rodriguez-morrison-2021-ppfd-yield")),
+    figure(L.line("Target canopy light (PPFD) during the crop",
             [(0, 350), (1, 450), (2, 600), (3, 800), (4, 1000), (5, 1150), (6, 1200), (7, 1050), (8, 900)],
-            ["veg", "fl wk1", "wk2", "wk3", "wk4", "wk5", "wk6", "wk7", "wk8"],
+            ["vegetative", "wk1", "wk2", "wk3", "wk4", "wk5", "wk6", "wk7", "wk8"],
             ylab="PPFD", ymin=0, ymax=1300,
-            note="Light rises into a 1000-1200 plateau mid-bloom, then tapers at the end."), 3,
-      "A typical flower-room light curve: 400&ndash;800 PPFD in week 1, a 1000&ndash;1200 plateau "
-      "weeks 4&ndash;7, then a taper. Opening the canopy is what lets the plateau reach lower buds." +
-      _c("rodriguez-morrison-2021-ppfd-yield")),
-    p("The <strong>sources-and-sinks</strong> framework explains the trade-off. A well-lit leaf is a "
-      "sugar factory (a source) feeding the buds. But a shaded leaf deep in the canopy flips into a "
-      "drain (a sink), consuming more than it makes" + _c("massuela-2022-pruning-cbd-yield") + ". "
-      "Opening the canopy converts shaded would-be sinks back into productive sources, and improves "
-      "airflow at the same time."),
-    figure(L.flow("Sources, sinks, and what opening the canopy changes",
-            [("Lit fan leaf", "SOURCE: makes sugar"),
-             ("Sugar flow", "feeds the flower"),
-             ("Flower", "SINK: consumes sugar"),
-             ("Shaded leaf opened up", "flips SINK back to SOURCE")],
-            note="A leaf that is fed light pays its way. A shaded one costs you. Open the canopy to flip it back."), 4,
-      "Well-lit fan leaves feed the flowers. Shaded interior leaves become a drain. Opening the "
-      "canopy turns them back into producers and drops humidity around the buds." +
-      _c("massuela-2022-pruning-cbd-yield")),
-    p("Better airflow through an open canopy lowers the humidity that pools around dense buds, which "
-      "directly reduces bud-rot risk. The air can only absorb a certain amount of moisture; when it "
-      "is already close to full, it stops pulling humidity away from plant surfaces and leaves it "
-      "sitting around the buds. Think of a dry sponge versus a wet one: the dry sponge soaks up "
-      "water fast, the saturated one can barely take any more. <strong>VPD</strong> (vapour pressure "
-      "deficit) measures exactly how much absorbing capacity the air still has. Aim to keep VPD "
-      "between 0.8 and 1.2 kPa. Stagnant, humid air inside a closed canopy is exactly the "
-      "condition that lets grey mould take hold in a thick cola" +
-      _c("mahmoud-2023-budrot-botrytis") + "."),
-    callout("key", "Why the work pays off",
-      ul(["Spreading the canopy flat lets many bud sites share the strongest light instead of one top.",
-          "Opening the interior lets that high light reach lower and inner buds that would otherwise stay airy.",
-          "Better airflow lowers humidity around dense buds and cuts mould and bud-rot risk" +
-          _c("mahmoud-2023-budrot-botrytis") + ".",
-          "Keep VPD roughly 0.8&ndash;1.2 kPa. Airflow from defoliation helps hold it there."], "tight")),
+            note="The light increases to a plateau of 1000 to 1200 in the middle of bloom, then decreases at the end."), 3,
+      "A usual light curve for a flowering room: 400 to 800 PPFD in week 1, a plateau of 1000 to "
+      "1200 PPFD in weeks 4 to 7, and then the light decreases. When you open the canopy, the "
+      "bottom buds also get the light of the plateau." + _c("rodriguez-morrison-2021-ppfd-yield")),
+    p("The <strong>source and sink</strong> model shows the effect of light on a leaf. A leaf in "
+      "good light makes sugar and supplies it to the buds. This leaf is a source. But a leaf in "
+      "shade, deep in the canopy, becomes a sink. It uses more sugar than it makes." +
+      _c("massuela-2022-pruning-cbd-yield") + "</p><p>When you open the canopy, the leaves in shade "
+      "can become sources again. At the same time, the airflow becomes better."),
+    figure(L.flow("Sources and sinks, and the effect of an open canopy",
+            [("Fan leaf in light", "SOURCE: makes sugar"),
+             ("Sugar flow", "goes to flowers"),
+             ("Flower", "SINK: uses the sugar"),
+             ("Leaf in an open canopy", "SINK becomes SOURCE again")],
+            note="A leaf in light makes more sugar than it uses. A leaf in shade uses more than it makes. Open the canopy."), 4,
+      "Fan leaves in good light supply sugar to the flowers. Inner leaves in shade become sinks. "
+      "When you open the canopy, they become sources again, and the humidity around the buds "
+      "decreases." + _c("massuela-2022-pruning-cbd-yield")),
+    p("Better airflow through an open canopy decreases the humidity around buds with high density. "
+      "This directly decreases the risk of bud rot. The air can absorb only a maximum quantity of "
+      "moisture. When the air has almost this maximum, it does not remove humidity from the "
+      "surfaces of the plant. Thus the humidity stays around the buds.</p><p><strong>VPD</strong> "
+      "(vapor pressure deficit) measures how much more moisture the air can absorb. Keep the VPD in "
+      "the range of 0.8 to 1.2 kPa. Air with high humidity that does not move, in a closed canopy, "
+      "lets gray mold start in a thick cola." + _c("mahmoud-2023-budrot-botrytis")),
+    callout("key", "Results of the work",
+      ul(["A flat, wide canopy lets many bud sites get the strongest light, and not only one top.",
+          "An open middle lets the bottom buds and the inner buds get this high light. Without the light, these buds have low density.",
+          "Better airflow decreases the humidity around buds with high density and decreases the "
+          "risk of mold and bud rot." + _c("mahmoud-2023-budrot-botrytis"),
+          "Keep the VPD at approximately 0.8 to 1.2 kPa. The airflow from defoliation helps to keep it in this range."], "tight")),
   ]})
 
-SECTIONS.append({"id": "topping-lst", "kicker": "The core idea",
-  "title": "Topping, FIM and low-stress training in veg",
+SECTIONS.append({"id": "topping-lst", "kicker": "Basic information",
+  "title": "Topping, FIM and low-stress training in the vegetative stage",
   "blocks": [
-    p("Topping and LST both fight <strong>apical dominance</strong>, the plant's habit of "
-      "sending one top racing upward while the side branches lag. Topping cuts that tip off, which "
-      "redirects growth hormones to the side branches and turns one main top into two or more, "
-      "creating a bushier, wider plant" + _c("sikora-2019-apical-bud-hemp") + ". Removing the apical "
-      "bud has been shown to change how the whole plant allocates growth and yield" +
-      _c("sikora-2019-apical-bud-hemp") + "."),
-    p("<strong>LST</strong> does the same thing without cutting: you bend the tall central stem down "
-      "and tie it sideways so the lower branches catch up and the canopy levels out. Because nothing "
-      "is cut, there is no recovery time, which makes LST the gentler, beginner-friendly "
-      "option, especially in a home tent. Topping is the heavier tool, best reserved for longer veg "
-      "cycles or tall, stretchy genetics" + _c("massuela-springer-2026-topping-hemp") + "."),
+    p("Topping and LST decrease <strong>apical dominance</strong>. With apical dominance, one top "
+      "becomes high quickly, and the side branches stay behind. Topping removes that tip. Thus the "
+      "growth hormones go to the side branches, and one primary top becomes two or more tops. The "
+      "plant becomes wider and has more branches." + _c("sikora-2019-apical-bud-hemp") +
+      " A test shows that the removal of the apical bud changes the parts of all of the plant where "
+      "growth and yield occur." + _c("sikora-2019-apical-bud-hemp")),
+    p("<strong>LST</strong> has the same effect, and you do not cut the plant. You bend the high "
+      "middle stem down and attach it to the side. Thus the bottom branches become as high as the "
+      "middle stem, and the canopy becomes level.</p><p>Because you do not cut the plant, there is "
+      "no recovery time. Thus LST is the careful method that is best for new growers and for a home "
+      "tent. Topping is the stronger method. It is best for longer vegetative stages or for "
+      "genetics with much stretch." + _c("massuela-springer-2026-topping-hemp")),
     figure(L.flow("Topping: one tip becomes two tops",
-            [("One apical top", "growing straight up"),
+            [("One primary top", "that goes straight up"),
              ("Cut the tip", "remove the top node"),
-             ("Two new tops", "emerge from the node below")],
-            note="Cutting the tip releases the side shoots from apical dominance."), 5,
-      "Topping removes the dominant tip; the node below responds by pushing two new tops, doubling "
-      "the bud sites at that height." + _c("sikora-2019-apical-bud-hemp")),
-    figure(L.flow("LST: bend, don't cut",
-            [("Tall central stem", "dominant, upright"),
-             ("Bend + tie down", "pull it sideways to the pot edge"),
-             ("Even canopy", "side branches fan out and level off")],
-            note="Same flattening as topping, with no wound and no recovery time."), 6,
-      "Low-stress training reshapes the plant by bending and tying instead of cutting: lower "
-      "stress, no recovery, easy for beginners."),
-    p("In commercial veg, the first topping is typically done around <strong>day 5&ndash;7</strong> "
-      "of veg, with noticeably taller outlier plants getting 2&ndash;3 nodes removed to match the rest "
-      "of the canopy height. In a standard 14-day veg, plants are often topped only once, if at all; "
-      "a 21-day veg is where topping becomes routine" + _c("massuela-springer-2026-topping-hemp") + "."),
-    table(["Height class", "Typical veg length", "Topping approach"], [
-      ["Tall / stretchy genetics", "~8&ndash;10 days", "Top early; remove 2&ndash;3 nodes from outliers"],
-      ["Mid genetics", "~10&ndash;14 days", "Top once around day 5&ndash;7, or LST only"],
-      ["Short genetics", "~14&ndash;21 days", "Often LST only; topping optional"],
+             ("Two new tops", "start from the node below")],
+            note="When you cut the tip, apical dominance stops for the side shoots."), 5,
+      "Topping removes the primary tip. The node below the tip makes two new tops. Thus the number "
+      "of bud sites at that height becomes two times larger." + _c("sikora-2019-apical-bud-hemp")),
+    figure(L.flow("LST: bend, do not cut",
+            [("High middle stem", "primary, vertical"),
+             ("Bend down and attach", "pull it to the edge of the pot"),
+             ("Level canopy", "side branches become wide and level")],
+            note="The result is the same as topping, with no damage and no recovery time."), 6,
+      "With low-stress training, you change the shape of the plant when you bend and attach "
+      "branches, and you do not cut. The stress is lower, there is no recovery time, and it is easy "
+      "for new growers."),
+    p("In commercial rooms, the first topping is usually at approximately <strong>day 5 to "
+      "7</strong> of the vegetative stage. Growers remove 2 to 3 nodes from plants that are much "
+      "higher than the other plants. The removal makes the height the same as the height of the "
+      "remaining canopy. In a usual vegetative stage of 14 days, growers do only one topping, or no "
+      "topping. In a vegetative stage of 21 days, topping is the usual procedure." +
+      _c("massuela-springer-2026-topping-hemp")),
+    table(["Height group", "Usual length of the vegetative stage", "Method of topping"], [
+      ["Genetics with large height and much stretch", "Approximately 8 to 10 days", "Do the topping at the start of the vegetative stage. Remove 2 to 3 nodes from plants that are much higher than the other plants."],
+      ["Genetics with average height", "Approximately 10 to 14 days", "Do the topping one time at approximately day 5 to 7, or use only LST"],
+      ["Genetics with small height", "Approximately 14 to 21 days", "Frequently use only LST. Topping is not necessary."],
     ], cls="compact",
-    caption="Match the technique to veg length and how tall the genetics run. Shorter, faster vegs "
-            "lean on LST; longer vegs make routine topping worthwhile." +
-            _c("massuela-springer-2026-topping-hemp")),
-    callout("tip", "Beginners: start with LST",
-      p("If you are new, skip topping for your first run and use LST. Bending and tying gives you "
-        "most of the flat-canopy benefit with none of the recovery risk. You can always add "
-        "topping once you know how your genetics stretch.")),
+    caption="Select the method for the length of the vegetative stage and the height of the "
+            "genetics. For a shorter vegetative stage, use LST. For a longer vegetative stage, "
+            "topping is a good procedure." + _c("massuela-springer-2026-topping-hemp")),
+    callout("tip", "New growers: start with LST",
+      p("If you are new, do not use topping in your first crop. Use LST. When you bend and attach "
+        "branches, you get most of the result of a flat canopy, and the plant does not have to "
+        "recover. After you know the stretch of your genetics, you can use topping.")),
   ]})
 
-SECTIONS.append({"id": "trellis-spread", "kicker": "The core idea",
-  "title": "Trellising and canopy management",
+SECTIONS.append({"id": "trellis-spread", "kicker": "Basic information",
+  "title": "Trellising and canopy control",
   "blocks": [
-    p("A <strong>trellis</strong> is horizontal netting stretched over the table that the plants grow "
-      "up through. It does two jobs: early on it holds a spread canopy in place, and later it stops "
-      "heavy buds from snapping their branches. Spreading the branches so light reaches the whole "
-      "table is what makes the high mid-bloom PPFD actually translate into yield" +
-      _c("anthony-2020-training-light-interception") + "."),
-    p("A common workflow sets all three trellis layers on <strong>day 1 of flower</strong>, with the "
-      "first net placed 2.5&ndash;5 cm (1&ndash;2 in) below the top of the canopy. Around day 5&ndash;7 the plants "
-      "have grown through that first net and the team <strong>spreads</strong> the branches: "
-      "pulling them out from the central stalk and tucking them into open squares so light reaches the "
-      "middle and the whole table fills out evenly."),
-    figure(L.flow("Three trellis layers, three jobs",
-            [("Net 1 (low)", "spread: open the center to light"),
-             ("Net 2 (mid)", "support: hold branches as they stretch"),
-             ("Net 3 (high)", "support: carry heavy flower weight")],
-            note="The first net spreads; the upper nets exist mainly to hold flower weight."), 7,
-      "Side view of a flower table with three stacked nets. The lowest spreads the canopy; the upper "
-      "two support the weight of bulking flowers." + _c("anthony-2020-training-light-interception")),
-    figure(L.flow("Spreading: fill every square",
-            [("Central stalk", "branches bunched in the middle"),
-             ("Pull outward", "draw each branch into an open square"),
-             ("Even grid", "every square filled, center lit")],
-            note="Spreading early opens the center and reduces how many leaves you later remove."), 8,
-      "Top-down, spreading pulls branches off the central stalk into the empty trellis squares so the "
-      "table fills evenly and the interior is no longer shaded."),
-    ul(["All trellis levels are set on flower day 1; the first net sits 2.5&ndash;5 cm (1&ndash;2 in) below the canopy top.",
-        "Plants grow through the first net by about day 5 and are spread out from the central stalk.",
-        "Spreading opens the center to light and airflow and reduces how many fan leaves you later remove.",
-        "Net count scales with height: short plants need about 2 layers, tall genetics need 3."]),
-    callout("note", "Less spreading work, less defoliation later",
-      p("The better you spread the canopy early, the fewer fan leaves you will have to remove later. "
-        "A well-spread table is already open to light, so defoliation is then a light touch-up, "
-        "not major surgery.")),
+    p("A <strong>trellis</strong> is a horizontal net above the table, and the plants become higher "
+      "through the net. The trellis has two tasks. At the start, it holds a wide canopy in "
+      "position. After this, it prevents damage to the branches because of the weight of the heavy "
+      "buds. When you do the spreading of the branches, all of the table gets light. Thus the high "
+      "PPFD in the middle of bloom gives a higher yield." +
+      _c("anthony-2020-training-light-interception")),
+    p("A usual procedure is to set all three trellis layers on <strong>day 1 of flowering</strong>. "
+      "The first net is 2.5 to 5 cm (1 to 2 in) below the top of the canopy. At approximately day 5 "
+      "to 7, the plants are through that first net. Then the personnel do the "
+      "<strong>spreading</strong> of the branches. They pull the branches away from the middle "
+      "stalk and put them in the openings of the net. Thus the middle gets light, and the branches "
+      "fill all of the table equally."),
+    figure(L.flow("Three trellis layers, three tasks",
+            [("Net 1 (low)", "spreading: light in the middle"),
+             ("Net 2 (middle)", "hold the branches during stretch"),
+             ("Net 3 (high)", "hold the heavy weight of the flowers")],
+            note="The first net does the spreading. The primary task of the top nets is to hold the weight of the flowers."), 7,
+      "The side of a table in the flowering stage, with three nets one above the other. The lowest "
+      "net does the spreading of the canopy. The top two nets hold the weight of the flowers when "
+      "they become larger." + _c("anthony-2020-training-light-interception")),
+    figure(L.flow("Spreading: fill each opening",
+            [("Middle stalk", "all branches in the middle"),
+             ("Pull away from the stalk", "put each branch in an empty opening"),
+             ("Equal spacing", "each opening filled, light in the middle")],
+            note="Spreading at the start opens the middle. Thus you remove a smaller number of leaves after this."), 8,
+      "From above: the spreading moves the branches away from the middle stalk into the empty "
+      "openings of the trellis. Thus the branches fill the table equally, and the middle is not in "
+      "shade."),
+    ul(["Set all trellis levels on day 1 of flowering. The first net is 2.5 to 5 cm (1 to 2 in) below the top of the canopy.",
+        "At approximately day 5, the plants are through the first net. Then you do the spreading of the branches away from the middle stalk.",
+        "Spreading opens the middle to light and airflow. Thus you remove a smaller number of fan leaves after this.",
+        "The number of nets changes with the height of the plants. For short plants, use approximately 2 layers. For genetics with large height, use 3 layers."]),
+    callout("note", "Better spreading, less defoliation",
+      p("When you do the spreading of the canopy at the start, you remove a smaller number of fan "
+        "leaves after this. A table with good spreading is open to light. Thus defoliation is a "
+        "small task and not a large task.")),
   ]})
 
 SECTIONS.append({"id": "schedule", "kicker": "Do this",
-  "title": "Defoliation and training schedule",
+  "title": "Times for defoliation and training",
   "blocks": [
-    p("Here is a clear flower-room timeline you can follow as a default and adjust to your genetics. "
-      "It runs from trellising on day 1 through to an optional final defan late in bloom."),
-    figure(L.flow("The flower-room work timeline",
-            [("Day 1", "trellis the tables"),
-             ("Day 5-14", "spread through the first net"),
-             ("Day 7-10", "Phase 1: lollipop the base"),
-             ("Day 21-28", "Phase 2: defan lower leaves"),
-             ("Day 42-49", "Phase 3: optional final defan")],
-            note="Heavy work is front-loaded into early flower; late work is optional and per-strain."), 9,
-      "The default flower timeline, day 1 to week 7. The aggressive structural work happens early; "
-      "the only late task is an optional, strain-by-strain final defan."),
+    p("This section gives a procedure with times for a flowering room. Use it as a default, and "
+      "adjust it to your genetics. The procedure starts with trellising on day 1. The last task is "
+      "a defanning, if necessary, in the last part of bloom."),
+    figure(L.flow("Times of the work in the flowering room",
+            [("Day 1", "set the trellis on the tables"),
+             ("Day 5-14", "spreading with the first net"),
+             ("Day 7-10", "Phase 1: lollipopping of the bottom"),
+             ("Day 21-28", "Phase 2: bottom defanning"),
+             ("Day 42-49", "Phase 3: last defanning, if necessary")],
+            note="The heavy work is in the first part of flowering. The last work is not necessary, and you make the decision for each cultivar."), 9,
+      "The default procedure with times for the flowering stage, from day 1 to week 7. The heavy "
+      "work on the structure of the canopy is in the first part. The only task in the last part is "
+      "a defanning that is not always necessary, and you make the decision for each cultivar."),
     steps([
-      ("Day 1: Trellis", "Set all trellis levels. Place the first net 2.5&ndash;5 cm (1&ndash;2 in) below the top of the canopy."),
-      ("Day 5&ndash;14: Spread", "Once plants grow through the first net, pull branches off the central stalk into the open squares to fill the table evenly."),
-      ("Day 7&ndash;10: Phase 1 lollipop", "Strip the small branches, nodes and leaves from the lower half/third. Keep at least the top 3 nodes on each main branch."),
-      ("Day 21&ndash;28: Phase 2 defan", "Remove the lower fan leaves across every plant for light penetration and airflow."),
-      ("Day 42&ndash;49: Phase 3 defan", "Optional final defan, decided strain by strain. Only do it if a particular strain still needs more light or air in the canopy."),
+      ("Day 1: Trellis", "Set all trellis levels. Put the first net 2.5 to 5 cm (1 to 2 in) below the top of the canopy."),
+      ("Day 5&ndash;14: Spreading", "When the plants are through the first net, pull the branches away from the middle stalk. Put the branches in the openings to fill the table equally."),
+      ("Day 7&ndash;10: Phase 1 lollipopping", "Remove the small branches, nodes and leaves from the bottom half or the bottom third of the plant. Keep a minimum of the top 3 nodes on each primary branch."),
+      ("Day 21&ndash;28: Phase 2 defanning", "Remove the bottom fan leaves on all the plants. Thus more light and air go into the inner part of the canopy."),
+      ("Day 42&ndash;49: Phase 3 defanning", "A last defanning, if necessary. You make the decision for each cultivar. Do it only if more light or air is necessary in the canopy for that cultivar."),
     ]),
-    table(["Flower day", "Action", "Why"], [
-      ["Day 1", "Trellis (all levels)", "Lock the canopy structure before growth fills in"],
-      ["Day 5&ndash;14", "Spread through first net", "Open the center to light; fill the table evenly"],
-      ["Day 7&ndash;10", "Phase 1 lollipopping", "Remove lower larf that would never finish well"],
-      ["Day 21&ndash;28", "Phase 2 defanning", "Light and airflow to the lower and inner buds"],
-      ["Day 42&ndash;49", "Phase 3 defanning (optional)", "Final touch-up only if that strain needs it"],
+    table(["Day of flowering", "Task", "Result"], [
+      ["Day 1", "Trellis (all levels)", "Set the structure of the canopy before the plants fill the space"],
+      ["Day 5&ndash;14", "Spreading with the first net", "Open the middle to light. Fill the table equally."],
+      ["Day 7&ndash;10", "Phase 1 lollipopping", "Remove the bottom larf. It cannot make good flower."],
+      ["Day 21&ndash;28", "Phase 2 defanning", "Light and airflow to the bottom and inner buds"],
+      ["Day 42&ndash;49", "Phase 3 defanning (if necessary)", "Only if more light or air is necessary for that cultivar"],
     ], cls="compact",
-    caption="A default flower-room timeline. The lollipop zone is roughly the bottom 25&ndash;45 cm "
-            "(10&ndash;18 in), the lower third, where growth would otherwise make small, underdeveloped larf."),
+    caption="A default procedure with times for the flowering room. The lollipop zone is "
+            "approximately the bottom 25 to 45 cm (10 to 18 in), the bottom third. In this zone, "
+            "the growth makes small larf that does not get full maturity."),
     figure(L.flow("The lollipop zone",
-            [("Top: keep", "top 3 nodes per branch stay"),
-             ("Middle: thin", "defan for light and air"),
-             ("Bottom 10-18in: remove", "lower third stripped to a stick")],
-            note="Clear the bottom third; keep the top 3 nodes on every main branch."), 10,
-      "Lollipopping removes the lower ~25&ndash;45 cm (10&ndash;18 in), the bottom third, and keeps "
-      "at least the top 3 nodes on each main branch, so the plant spends energy on flower that will actually finish."),
-    callout("warn", "Lollipop early, not late",
-      p("Phase 1 lollipopping belongs in the first week or two of flower, while the plant can still "
-        "recover and redirect energy. Stripping the base hard late in bloom just wounds the plant "
-        "when it should be bulking flower.")),
+            [("Top: keep", "top 3 nodes of each branch stay"),
+             ("Middle: defanning", "defanning for light and air"),
+             ("Bottom 10-18in: remove", "bottom third removed, bare stem")],
+            note="Remove the bottom third. Keep the top 3 nodes on each primary branch."), 10,
+      "Lollipopping removes approximately the bottom 25 to 45 cm (10 to 18 in), the bottom third. "
+      "It keeps a minimum of the top 3 nodes on each primary branch. Thus the plant uses its energy "
+      "for the flowers that get full maturity."),
+    callout("warn", "Do lollipopping in the first stage",
+      p("Do Phase 1 lollipopping in the first week or the first two weeks of flowering. At this "
+        "time, the plant can recover and send its energy to the other parts. Do not remove much of "
+        "the bottom in the last stage of bloom. The removal causes damage to the plant, because the "
+        "plant must make the flowers larger in this stage.")),
   ]})
 
-SECTIONS.append({"id": "pitfalls", "kicker": "Avoid these",
+SECTIONS.append({"id": "pitfalls", "kicker": "Problems to prevent",
   "title": "Troubleshooting",
   "blocks": [
-    p("The single biggest mistake is <strong>removing too many fan leaves</strong>. Fan leaves are "
-      "&lsquo;sources&rsquo; that make more energy than they use, so the goal is to leave as many on "
-      "as possible while still achieving light penetration and airflow. Strip too many and you starve "
-      "the buds you are trying to grow. Over-pruning can cut into both yield and cannabinoid "
-      "content rather than helping" + _c("massuela-2022-pruning-cbd-yield") + "."),
-    figure(L.flow("Over-defoliated vs correctly thinned",
-            [("Over-stripped", "bare stems, few leaves: STARVED"),
-             ("vs", "leave the sources on"),
-             ("Correctly thinned", "open interior, plenty of fan leaves: FED + AIRY")],
-            note="Open the canopy, but leave the leaves that feed it. More bare stem is not better."), 11,
-      "Left: an over-defoliated plant with little leaf area left to feed the flowers. Right: a "
-      "correctly thinned plant with an open interior, but plenty of fan-leaf sources retained." +
-      _c("massuela-2022-pruning-cbd-yield")),
-    p("The second trap is <strong>overcrowding</strong>. Plants packed too close trigger a "
-      "<strong>shade-avoidance response</strong>: sensing neighbours' shade, they waste energy "
-      "stretching weak inner branches toward light instead of building flower" +
-      _c("wang-2020-shade-avoidance") + ". Proper spacing means far less defoliation is needed, "
-      "because the canopy was never a jungle to begin with."),
-    p("A common starting point is about 0.21 m² (2.3 ft²) per plant, with a typical working range of "
-      "0.17&ndash;0.28 m² (1.8&ndash;3.0 ft²). Denser planting can raise total yield per area but reduces uniformity, so "
-      "there is a real trade-off rather than a single &lsquo;correct&rsquo; number" +
-      _c("danziger-2022-planting-density") + "."),
-    figure(L.zones("Plant spacing: density zones (sqft per plant)",
+    p("The largest problem is that you <strong>remove too many fan leaves</strong>. Fan leaves are "
+      "&lsquo;sources&rsquo;: they make more energy than they use. Thus keep as many fan leaves on "
+      "the plant as possible, and get sufficient light and airflow in the canopy. If you remove too "
+      "many leaves, the buds do not get sufficient energy. Too much pruning can decrease the yield "
+      "and the cannabinoid content, and it does not help." + _c("massuela-2022-pruning-cbd-yield")),
+    figure(L.flow("Too much defoliation and correct defoliation",
+            [("Too much removed", "bare stems, low energy"),
+             ("Select", "keep source leaves"),
+             ("Correct defoliation", "open middle, many fan leaves: ENERGY AND AIRFLOW")],
+            note="Open the canopy, but keep the leaves that supply energy. More bare stem is not better."), 11,
+      "Left: a plant with too much defoliation, with a small leaf area to supply the flowers. "
+      "Right: a plant with correct defoliation, with an open middle and many fan-leaf sources that "
+      "stay on the plant." + _c("massuela-2022-pruning-cbd-yield")),
+    p("The second problem is <strong>overcrowding</strong>. Plants that are too near each other "
+      "cause a <strong>shade avoidance response</strong>. The plants sense the shade of the plants "
+      "near them. Then they use energy to make the weak inner branches longer, in the direction of "
+      "the light, and not to make flowers." + _c("wang-2020-shade-avoidance") +
+      " With correct spacing, much less defoliation is necessary. The canopy has a correct density "
+      "from the start."),
+    p("A usual start point is approximately 0.21 m² (2.3 ft²) for each plant. The usual range is "
+      "0.17 to 0.28 m² (1.8 to 3.0 ft²). A higher plant density can increase the total yield for "
+      "each area, but it decreases the uniformity. Thus you cannot get the highest yield and the "
+      "highest uniformity together, and there is no one &lsquo;correct&rsquo; number." +
+      _c("danziger-2022-planting-density")),
+    figure(L.zones("Plant spacing: density zones (sqft for each plant)",
             1.0, 3.5,
-            [(1.0, 1.8, L.REDL, "too dense: shade avoidance"),
-             (1.8, 3.0, L.GL, "working range"),
-             (3.0, 3.5, L.AMBL, "sparse: wasted space")],
+            [(1.0, 1.8, L.REDL, "high density: shade avoidance"),
+             (1.8, 3.0, L.GL, "usual range"),
+             (3.0, 3.5, L.AMBL, "waste of space")],
             unit=" sqft",
-            note="Start around 2.3 sqft. Below ~1.8 sqft plants stretch and shade each other."), 12,
-      "Spacing zones: too dense triggers shade avoidance" + _c("wang-2020-shade-avoidance") +
-      ", the 0.17&ndash;0.28 m² (1.8&ndash;3.0 ft²) band is the usual working range, and correct spacing means far less "
-      "plant work overall." + _c("danziger-2022-planting-density")),
-    table(["Mistake", "What goes wrong", "Do this instead"], [
-      ["Over-defoliating", "Removes the leaves feeding the buds; yield and potency drop", "Leave as many fan-leaf sources as possible; open just enough"],
-      ["Overcrowding", "Shade-avoidance: weak, stretchy inner growth", "Space ~0.21 m² (2.3 ft²)/plant; range 0.17&ndash;0.28 m²"],
-      ["Topping in flower", "Wounds the plant when it should be bulking", "Do all topping in veg"],
-      ["Heavy defan late in bloom", "Stress with no time to recover", "Match aggressive work to early flower"],
-      ["Musty smell, dying inner leaves", "Canopy too closed; bud-rot risk rising", "Improve airflow first, not strip every leaf"],
+            note="Start at approximately 2.3 sqft. With less than 1.8 sqft, plants have more stretch and make shade for each other."), 12,
+      "Spacing zones. A density that is too high causes shade avoidance." +
+      _c("wang-2020-shade-avoidance") + " The usual range is 0.17 to 0.28 m² (1.8 to 3.0 ft²). With "
+      "correct spacing, you do much less work on the plants." + _c("danziger-2022-planting-density")),
+    table(["Problem", "Effect", "Correct procedure"], [
+      ["Too much defoliation", "You remove the leaves that supply the buds. The yield and the potency decrease.", "Keep as many fan-leaf sources as possible. Open the canopy only as much as necessary."],
+      ["Overcrowding", "Shade avoidance: the inner growth is weak and has much stretch", "Use approximately 0.21 m² (2.3 ft²) for each plant. The range is 0.17 to 0.28 m²."],
+      ["Topping in the flowering stage", "It causes damage to the plant when the plant must make the flowers larger", "Do all the topping in the vegetative stage"],
+      ["Heavy defanning in the last stage of bloom", "Stress, with no time to recover", "Do the heavy work in the first stage of flowering"],
+      ["A smell of mold, and inner leaves that die", "The canopy is too closed, and the risk of bud rot increases", "First, increase the airflow. Do not remove all the leaves."],
     ], cls="compact",
-    caption="The common beginner traps. Note the last row: the fix for a stuffy canopy is airflow, "
-            "not stripping it bare." + _c("mahmoud-2023-budrot-botrytis")),
-    callout("danger", "Leaves are not the enemy",
-      p("It is tempting to keep cutting until the plant looks &lsquo;clean.&rsquo; Resist it. Every "
-        "fan leaf you remove was feeding flower. Open the canopy enough for light and air, then "
-        "stop. If the room still smells musty, the answer is more airflow, not more cutting. Read the "
-        "<a href='airflow-design.html'>airflow design</a> paper." +
+    caption="The usual problems of new growers. In the last row, the correct procedure for a canopy "
+            "with air that does not move is more airflow. It is not the removal of all the leaves." +
+            _c("mahmoud-2023-budrot-botrytis")),
+    callout("danger", "Leaves are not the problem",
+      p("Do not continue to cut until the plant is &lsquo;clean&rsquo;. Each fan leaf that you "
+        "remove supplies energy to the flowers. Open the canopy sufficiently for light and air, and "
+        "then stop. If the room continues to have a smell of mold, increase the airflow. Do not cut "
+        "more. Read the <a href='airflow-design.html'>airflow design</a> paper." +
         _c("massuela-2022-pruning-cbd-yield"))),
   ]})
 
-SECTIONS.append({"id": "expectations", "kicker": "Reality check",
+SECTIONS.append({"id": "expectations", "kicker": "The limits",
   "title": "Expected results and limitations",
   "blocks": [
-    p("Training and defoliation are real yield and quality levers, but they are not magic, and the "
-      "numbers depend on your genetics, light and environment. Treat the whole approach as "
-      "data-driven and iterative: expect to refine over about three runs of the same cultivar before "
-      "you hit its sweet spot for yield and quality."),
-    figure(L.line("Dialling in a cultivar over three runs",
+    p("Training and defoliation are controls for the yield and the quality, but they have limits. "
+      "The numbers change if your genetics, light or environment change. Use the data of each crop "
+      "to adjust the method for the next crop. It is possible that you must adjust the method in "
+      "approximately three crops of the same cultivar, to get its best yield and quality."),
+    figure(L.line("Adjust the method for a cultivar in three crops",
             [(0, 100), (1, 118), (2, 128)],
-            ["run 1", "run 2", "run 3"],
-            ylab="yield/quality index", ymin=90, ymax=140,
-            note="Same cultivar, same room: training and defoliation get tuned each run."), 13,
-      "Yield and quality typically climb across the first three runs of a cultivar as you learn how "
-      "it stretches and how much canopy work it actually wants."),
-    p("Good planning of genetics and spacing is one of the cheapest gains available. Choosing "
-      "the right plant count and layout can move yield per area and uniformity more than expensive gear does, with no "
-      "extra overhead, because uniformity and light interception both improve" +
-      _c("danziger-2022-planting-density") + _c("anthony-2020-training-light-interception") + "."),
-    ul(["Expect to refine over about 3 runs of a cultivar before you hit its yield/quality sweet spot.",
-        "Good genetic planning and spacing can be worth 15&ndash;30% to the bottom line at no extra cost" +
-        _c("danziger-2022-planting-density") + ".",
-        "Not every strain needs every phase. The optional Phase 3 defan is decided per strain by observation.",
-        "Track and photograph each run so changes are based on your own data, not generic advice.",
-        "Slow-growing genetics behave differently and need a gentler, less aggressive hand."]),
-    callout("key", "Three rules",
-      ol(["<strong>There is no universal recipe.</strong> Start from this timeline and tune the day "
-          "ranges and how much you remove to <em>your</em> genetics, light and room.",
-          "<strong>Less is usually more.</strong> Leave the leaves that feed the plant; open the "
-          "canopy just enough for light and air, then stop.",
-          "<strong>Your camera is your best tool.</strong> Photograph the canopy each run; next-run "
-          "decisions should come from what you actually saw, not a one-size-fits-all rule."])),
-    p("Get the canopy flat and spread early, lollipop the base, defan only as much as light and air "
-      "require, and write down what you did. That discipline, not any single magic cut, "
-      "is what makes training and defoliation pay off. When you are ready to take the "
-      "finished plant further, read the "
-      "<a href='harvest-dry-trim-cure.html'>harvest, dry, trim and cure</a> paper next, and keep the "
-      "<a href='mould-risk.html'>mould risk</a> guide handy through bloom."),
+            ["crop 1", "crop 2", "crop 3"],
+            ylab="yield and quality index", ymin=90, ymax=140,
+            note="Same cultivar, same room: you adjust the training and the defoliation in each crop."), 13,
+      "The yield and the quality usually increase in the first three crops of a cultivar. During "
+      "these crops, you find the stretch of the cultivar and the quantity of work on the canopy "
+      "that is necessary."),
+    p("Good selection of the genetics and the spacing gives a better result at low cost. The "
+      "correct number of plants and the correct layout change the yield for each area and the "
+      "uniformity. The effect can be larger than the effect of equipment with a high cost, and the "
+      "cost does not increase. The effect occurs because the uniformity and the light interception "
+      "increase." + _c("danziger-2022-planting-density") +
+      _c("anthony-2020-training-light-interception")),
+    ul(["It is possible that you must adjust the method in approximately 3 crops of a cultivar, to get its best yield and quality.",
+        "Good selection of the genetics and the spacing can increase the profit by 15 to 30%, and "
+        "the cost does not increase." + _c("danziger-2022-planting-density"),
+        "It is not necessary to do all the phases for each cultivar. You make the decision about the Phase 3 defanning for each cultivar, from the condition of the plants.",
+        "Record each crop and make photos of the canopy. Then use your data for the changes, and do not use general instructions.",
+        "For genetics with slow growth, use careful methods and remove a smaller quantity."]),
+    callout("key", "Three important facts",
+      ol(["<strong>No procedure is correct for all rooms.</strong> Start from this procedure with "
+          "times. Adjust the day ranges and the quantity that you remove for <em>your</em> "
+          "genetics, light and room.",
+          "<strong>A small quantity of removal is usually better.</strong> Keep the leaves that "
+          "supply the plant. Open the canopy only sufficiently for light and air, and then stop.",
+          "<strong>Your camera is the best tool.</strong> Make photos of the canopy in each crop. "
+          "Use these photos for your decisions in the next crop, and do not use a general method "
+          "for all rooms."])),
+    p("Make the canopy flat, and do the spreading at the start. Use lollipopping on the bottom of "
+      "the plant. Use defanning only as much as is necessary for light and air. Record your tasks. "
+      "This procedure, and not one task only, gives the result of training and "
+      "defoliation.</p><p>To prepare for the next stage, read the paper on <a "
+      "href='harvest-dry-trim-cure.html'>harvest, dry, trim and cure</a>. During bloom, use the <a "
+      "href='mould-risk.html'>mold risk</a> paper."),
   ]})
