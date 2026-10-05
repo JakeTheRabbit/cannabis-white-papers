@@ -12,10 +12,10 @@ MN = "font-family:ui-monospace,Consolas,monospace"
 def fig_stem_xsec():
     """Accurate young cannabis (dicot) stem transverse section — eustele, not succulent."""
     W, H = 760, 420
-    p = [f'<svg viewBox="0 0 {W} {H}" width="{W}" height="{H}" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Annotated transverse section of a young Cannabis sativa stem">']
+    p = [f'<svg viewBox="0 0 {W} {H}" width="{W}" height="{H}" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="A section across a young stem of Cannabis sativa, with notes">']
     p.append(f'<rect width="{W}" height="{H}" fill="{PAPER}"/>')
-    p.append(f'<text x="24" y="28" fill="{INK}" font-size="15" font-weight="700" style="{FS}">Young cannabis stem, cut across</text>')
-    p.append(f'<text x="24" y="46" fill="{INK2}" font-size="12" style="{FS}">Sap tubes sit in a ring around the pith. Hop latent viroid travels in the sap. The meristem tip above this cut has no sap tubes yet.</text>')
+    p.append(f'<text x="24" y="28" fill="{INK}" font-size="15" font-weight="700" style="{FS}">New cannabis stem, cut across</text>')
+    p.append(f'<text x="24" y="46" fill="{INK2}" font-size="12" style="{FS}">Sap tubes are in a ring around the pith. HpLVd moves in the sap. At this stage, the meristem tip above this section has no sap tubes.</text>')
     cx, cy, R = 250, 240, 150
     # epidermis + cortex
     p.append(f'<circle cx="{cx}" cy="{cy}" r="{R}" fill="{GL}" stroke="{G}" stroke-width="2"/>')
@@ -48,36 +48,36 @@ def fig_stem_xsec():
         return (f'<circle cx="{lx}" cy="{y}" r="6" fill="{col}"/>'
                 f'<text x="{lx+16}" y="{y+4}" fill="{INK}" font-size="13.5" font-weight="700" style="{FS}">{t1}</text>'
                 f'<text x="{lx+16}" y="{y+22}" fill="{INK2}" font-size="11.5" style="{FS}">{t2}</text>')
-    p.append(cl(90, GD, "Epidermis + hairs", "Outer skin. Surface bleach can reach this."))
-    p.append(cl(150, G, "Cortex", "Packing tissue. Endophytes hide deeper."))
-    p.append(cl(210, RED, "Phloem (outer of each bundle)", "Sap. This is where HpLVd travels."))
-    p.append(cl(270, BLU, "Xylem (inner of each bundle)", "Water from the roots. Not the viroid path."))
-    p.append(cl(330, AMB, "Pith", "Soft centre. Fungi can live here (Holmes 2021)."))
-    p.append(f'<text x="24" y="{H-16}" fill="{MUT}" font-size="11" style="{FS}">A nodal cutting includes this whole ring of sap tubes. A 0.2–0.5 mm meristem dome does not.</text>')
+    p.append(cl(90, GD, "Epidermis + hairs", "Outer skin. Bleach on the surface can touch it."))
+    p.append(cl(150, G, "Cortex", "Packing tissue. Endophytes are deeper."))
+    p.append(cl(210, RED, "Phloem (outer part of each bundle)", "Sap. HpLVd moves here."))
+    p.append(cl(270, BLU, "Xylem (inner part of each bundle)", "Water from the roots. HpLVd does not move here."))
+    p.append(cl(330, AMB, "Pith", "Soft center. Fungi can be here (Holmes 2021)."))
+    p.append(f'<text x="24" y="{H-16}" fill="{MUT}" font-size="11" style="{FS}">A stem piece with one bud includes all of this ring of sap tubes. A 0.2–0.5 mm meristem dome does not.</text>')
     p.append('</svg>')
     return "".join(p)
 
 
 def fig_hormone():
     W, H = 760, 280
-    p = [f'<svg viewBox="0 0 {W} {H}" width="{W}" height="{H}" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Cytokinin versus auxin hormone seesaw">']
+    p = [f'<svg viewBox="0 0 {W} {H}" width="{W}" height="{H}" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="The ratio of the hormones cytokinin and auxin. High cytokinin causes shoots, and high auxin causes roots.">']
     p.append(f'<rect width="{W}" height="{H}" fill="{PAPER}"/>')
-    p.append(f'<text x="24" y="28" fill="{INK}" font-size="15" font-weight="700" style="{FS}">The only hormone logic you need</text>')
+    p.append(f'<text x="24" y="28" fill="{INK}" font-size="15" font-weight="700" style="{FS}">The two hormones that you must know</text>')
     # left cytokinin
     p.append(f'<rect x="24" y="50" width="330" height="190" rx="12" fill="{GL}" stroke="{G}"/>')
     p.append(f'<text x="189" y="82" text-anchor="middle" fill="{GD}" font-size="16" font-weight="700" style="{FS}">Cytokinin high</text>')
     p.append(f'<text x="189" y="108" text-anchor="middle" fill="{INK}" font-size="13" style="{FS}">mT · TDZ · BA</text>')
-    p.append(f'<text x="189" y="140" text-anchor="middle" fill="{INK2}" font-size="13" style="{FS}">Pushes SHOOTS</text>')
+    p.append(f'<text x="189" y="140" text-anchor="middle" fill="{INK2}" font-size="13" style="{FS}">Causes SHOOTS</text>')
     p.append(f'<text x="189" y="164" text-anchor="middle" fill="{INK2}" font-size="12" style="{FS}">Initiation / multiplication</text>')
-    p.append(f'<text x="189" y="196" text-anchor="middle" fill="{MUT}" font-size="11.5" style="{FS}">Too much → glassy (hyperhydric)</text>')
-    p.append(f'<text x="189" y="216" text-anchor="middle" fill="{MUT}" font-size="11.5" style="{FS}">shoots and callus. Less is more.</text>')
+    p.append(f'<text x="189" y="196" text-anchor="middle" fill="{MUT}" font-size="11.5" style="{FS}">Too much → glassy growth (hyperhydricity)</text>')
+    p.append(f'<text x="189" y="216" text-anchor="middle" fill="{MUT}" font-size="11.5" style="{FS}">in shoots and callus. Use less cytokinin.</text>')
     # right auxin
     p.append(f'<rect x="406" y="50" width="330" height="190" rx="12" fill="{BLUL}" stroke="{BLU}"/>')
     p.append(f'<text x="571" y="82" text-anchor="middle" fill="{BLU}" font-size="16" font-weight="700" style="{FS}">Auxin high</text>')
     p.append(f'<text x="571" y="108" text-anchor="middle" fill="{INK}" font-size="13" style="{FS}">IBA · NAA · IAA</text>')
-    p.append(f'<text x="571" y="140" text-anchor="middle" fill="{INK2}" font-size="13" style="{FS}">Pushes ROOTS</text>')
-    p.append(f'<text x="571" y="164" text-anchor="middle" fill="{INK2}" font-size="12" style="{FS}">Rooting, or a dip on the cut base</text>')
-    p.append(f'<text x="571" y="196" text-anchor="middle" fill="{MUT}" font-size="11.5" style="{FS}">Too much IBA can suppress</text>')
+    p.append(f'<text x="571" y="140" text-anchor="middle" fill="{INK2}" font-size="13" style="{FS}">Causes ROOTS</text>')
+    p.append(f'<text x="571" y="164" text-anchor="middle" fill="{INK2}" font-size="12" style="{FS}">Rooting, or a dip of the cut bottom end</text>')
+    p.append(f'<text x="571" y="196" text-anchor="middle" fill="{MUT}" font-size="11.5" style="{FS}">Too much IBA can decrease</text>')
     p.append(f'<text x="571" y="216" text-anchor="middle" fill="{MUT}" font-size="11.5" style="{FS}">rooting (Holmes: 5 µM &gt; 42 µM).</text>')
     p.append(f'<text x="380" y="150" text-anchor="middle" fill="{INK}" font-size="22" font-weight="700">↔</text>')
     p.append('</svg>')
@@ -86,21 +86,21 @@ def fig_hormone():
 
 def fig_home_vs_facility():
     W, H = 760, 340
-    p = [f'<svg viewBox="0 0 {W} {H}" width="{W}" height="{H}" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Home lab versus medicinal facility comparison">']
+    p = [f'<svg viewBox="0 0 {W} {H}" width="{W}" height="{H}" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="The figure compares a home laboratory with a licensed facility">']
     p.append(f'<rect width="{W}" height="{H}" fill="{PAPER}"/>')
     rows = [
-        ("Clean air", "Still-air box or small hood", "ISO 7 room + ISO 5 laminar hoods"),
-        ("Sterilise media", "Pressure cooker, 15 psi / 20 min", "Validated autoclave + load log"),
-        ("Goal", "Learn the craft; keep a cultivar", "Indexed clean mothers + liners"),
-        ("Proof of clean", "You cannot claim it", "qPCR lot release, retain samples"),
-        ("Throughput", "Tens of jars", "Hundreds–thousands of vessels / week"),
-        ("Records", "Notebook + dates on lids", "Batch record, strain ID, chain of custody"),
-        ("Budget to start", "≈ $200–550 DIY / ~$2k kit", "Capex: hoods, autoclave, HVAC, QC"),
+        ("Clean air", "Still-air box or small hood", "ISO 7 room + ISO 5 laminar-flow hoods"),
+        ("Sterilize media", "Pressure cooker, 15 psi / 20 min", "Validated autoclave + load log"),
+        ("Task", "Know the method. Keep a cultivar.", "Mother plants + liners (negative test)"),
+        ("Condition for “clean”", "You cannot use “clean”", "qPCR to release a lot. Keep backup samples."),
+        ("Quantity of work", "Tens of jars", "Hundreds to thousands of vessels each week"),
+        ("Records", "Notes + dates on lids", "Batch record, cultivar ID, chain of custody"),
+        ("Cost to start", "Approximately $200–550, or $2,000 for a kit", "Capital cost: hoods, autoclave, HVAC, QC"),
     ]
     p.append(f'<rect x="250" y="16" width="230" height="28" rx="8" fill="{GL}"/>')
     p.append(f'<text x="365" y="35" text-anchor="middle" fill="{GD}" font-size="13" font-weight="700" style="{FS}">HOME LAB</text>')
     p.append(f'<rect x="500" y="16" width="240" height="28" rx="8" fill="{BLUL}"/>')
-    p.append(f'<text x="620" y="35" text-anchor="middle" fill="{BLU}" font-size="13" font-weight="700" style="{FS}">MEDICINAL FACILITY</text>')
+    p.append(f'<text x="620" y="35" text-anchor="middle" fill="{BLU}" font-size="13" font-weight="700" style="{FS}">LICENSED FACILITY</text>')
     for i, (k, a, b) in enumerate(rows):
         y = 56 + i * 38
         p.append(f'<text x="16" y="{y+18}" fill="{INK}" font-size="12.5" font-weight="700" style="{FS}">{k}</text>')
@@ -114,16 +114,16 @@ def fig_home_vs_facility():
 
 def fig_facility_flow():
     W, H = 760, 300
-    p = [f'<svg viewBox="0 0 {W} {H}" width="{W}" height="{H}" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Facility material flow dirty to clean">']
+    p = [f'<svg viewBox="0 0 {W} {H}" width="{W}" height="{H}" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="The flow of material in a facility, from dirty areas to clean areas only">']
     p.append(f'<rect width="{W}" height="{H}" fill="{PAPER}"/>')
-    p.append(f'<text x="24" y="26" fill="{INK}" font-size="15" font-weight="700" style="{FS}">Material flow — dirty to clean, never the reverse</text>')
+    p.append(f'<text x="24" y="26" fill="{INK}" font-size="15" font-weight="700" style="{FS}">Material flow: from dirty to clean areas only</text>')
     rooms = [
-        ("Intake / quarantine", AMBL, AMB, "Donor plants\nin, scouting"),
-        ("Media kitchen", GL, G, "Weigh, pour,\nautoclave"),
-        ("Transfer room\nISO 7 / hood ISO 5", BLUL, BLU, "Cut, plate,\nsubculture"),
+        ("Intake / quarantine", AMBL, AMB, "Mother plants come in.\nExamine the plants."),
+        ("Media kitchen", GL, G, "Weigh, fill jars,\nsterilize."),
+        ("Transfer room\nISO 7 / hood ISO 5", BLUL, BLU, "Cut, put in jars,\ndo subcultures."),
         ("Growth room", GL, GD, "Shelves, 16 h\nlight, 24–26 °C"),
-        ("Hardening / nursery", GXL, G, "Humidity step-\ndown, then veg"),
-        ("QC / indexing", PURL, PUR, "qPCR, retain,\npass / destroy"),
+        ("Hardening / nursery", GXL, G, "Decrease humidity in steps.\nThen vegetative growth."),
+        ("QC / indexing", PURL, PUR, "qPCR, keep samples,\nrelease / discard."),
     ]
     for i, (name, fill, col, note) in enumerate(rooms):
         x = 16 + (i % 3) * 248
@@ -143,13 +143,13 @@ def fig_facility_flow():
 
 def fig_explant_size():
     W, H = 760, 250
-    p = [f'<svg viewBox="0 0 {W} {H}" width="{W}" height="{H}" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Explant size versus cleanliness versus survival">']
+    p = [f'<svg viewBox="0 0 {W} {H}" width="{W}" height="{H}" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="The effect of the size of the explant on how clean it is and on its survival">']
     p.append(f'<rect width="{W}" height="{H}" fill="{PAPER}"/>')
-    p.append(f'<text x="24" y="26" fill="{INK}" font-size="15" font-weight="700" style="{FS}">What you cut decides what you get</text>')
+    p.append(f'<text x="24" y="26" fill="{INK}" font-size="15" font-weight="700" style="{FS}">The cut piece changes the result</text>')
     cards = [
-        ("Nodal segment", "8–15 mm, one bud", "Easy. Keeps the disease.", "Use this to learn the method.", GL, G),
-        ("Shoot tip / microtip", "Under 5 mm", "Fewer internal microbes.", "Best first cut (Das 2024).", BLUL, BLU),
-        ("Meristem dome", "0.2–0.5 mm", "Best chance to leave HpLVd behind.", "Needs a microscope.", PURL, PUR),
+        ("Nodal segment", "8–15 mm, one bud", "Easy. Keeps the disease.", "Use it for your first batches.", GL, G),
+        ("Shoot tip / microtip", "Less than 5 mm", "Internal microbes: a smaller number.", "Best first piece (Das 2024).", BLUL, BLU),
+        ("Meristem dome", "0.2–0.5 mm", "Can give a piece with no HpLVd.", "Use a microscope.", PURL, PUR),
     ]
     for i, (t, size, a, b, fill, col) in enumerate(cards):
         x = 20 + i * 246
@@ -164,12 +164,12 @@ def fig_explant_size():
 
 def fig_meristem_setup():
     W, H = 760, 400
-    p = [f'<svg viewBox="0 0 {W} {H}" width="{W}" height="{H}" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Hood layout for meristem cutting">']
+    p = [f'<svg viewBox="0 0 {W} {H}" width="{W}" height="{H}" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="The layout of the bench in the hood for when you cut a meristem">']
     p.append(f'<rect width="{W}" height="{H}" fill="{PAPER}"/>')
-    p.append(f'<text x="24" y="26" fill="{INK}" font-size="15" font-weight="700" style="{FS}">Bench layout inside the hood or still-air box</text>')
-    p.append(f'<text x="24" y="46" fill="{INK2}" font-size="12" style="{FS}">Air blows from the back of the hood toward you. Do not put tall objects behind an open jar.</text>')
+    p.append(f'<text x="24" y="26" fill="{INK}" font-size="15" font-weight="700" style="{FS}">Bench layout in the hood or still-air box</text>')
+    p.append(f'<text x="24" y="46" fill="{INK2}" font-size="12" style="{FS}">Air blows from the rear of the hood to you. Do not put high objects behind an open jar.</text>')
     p.append(f'<rect x="20" y="58" width="720" height="280" rx="10" fill="{GXL}" stroke="{GD}" stroke-width="2"/>')
-    p.append(f'<text x="380" y="78" text-anchor="middle" fill="{MUT}" font-size="11" style="{FS}">BACK OF HOOD  ·  filtered air comes from here</text>')
+    p.append(f'<text x="380" y="78" text-anchor="middle" fill="{MUT}" font-size="11" style="{FS}">REAR OF HOOD  ·  filtered air comes from here</text>')
 
     def zone(x, y, w, h, n, title, lines, fill, col):
         s = [f'<rect x="{x}" y="{y}" width="{w}" height="{h}" rx="8" fill="{fill}" stroke="{col}"/>']
@@ -180,28 +180,28 @@ def fig_meristem_setup():
             s.append(f'<text x="{x+12}" y="{y+42+i*15}" fill="{INK2}" font-size="11.5" style="{FS}">{ln}</text>')
         return "".join(s)
 
-    p.append(zone(36, 92, 200, 82, "1", "Tools rest", ["Bead steriliser here.", "Left of the dish."], AMBL, AMB))
-    p.append(zone(250, 92, 260, 140, "2", "Microscope + dish", ["Stereo microscope, 10–40×.", "Black dish under the lens.", "Only open field on the bench."], GL, GD))
-    p.append(zone(524, 92, 200, 82, "3", "Fresh medium", ["Closed jars. Open one only", "when the piece is ready."], BLUL, BLU))
-    p.append(zone(36, 188, 200, 82, "4", "Waste", ["Peeled leaves, used blades.", "Do not reach over zone 2."], REDL, RED))
-    p.append(zone(524, 188, 200, 82, "5", "You", ["Sit facing the hood.", "Hands enter from the front."], PURL, PUR))
-    p.append(f'<text x="380" y="318" text-anchor="middle" fill="{INK}" font-size="12.5" style="{FS}">Hands never pass over an open jar or the open dish.</text>')
-    p.append(f'<text x="24" y="380" fill="{MUT}" font-size="11" style="{FS}">Home: same five zones inside the still-air box. Fans and AC off.</text>')
+    p.append(zone(36, 92, 200, 82, "1", "Tool area", ["Glass-bead sterilizer here.", "On the left of the dish."], AMBL, AMB))
+    p.append(zone(250, 92, 260, 140, "2", "Microscope + dish", ["Stereo microscope, 10–40×.", "Black dish below the lens.", "The only open area on the bench."], GL, GD))
+    p.append(zone(524, 92, 200, 82, "3", "New medium", ["Closed jars. Open one jar", "only when the piece is prepared."], BLUL, BLU))
+    p.append(zone(36, 188, 200, 82, "4", "Waste", ["Removed leaves, used blades.", "Do not move hands above zone 2."], REDL, RED))
+    p.append(zone(524, 188, 200, 82, "5", "You", ["Be in front of the hood.", "Hands come from the front."], PURL, PUR))
+    p.append(f'<text x="380" y="318" text-anchor="middle" fill="{INK}" font-size="12.5" style="{FS}">Do not move hands above an open jar or the open dish.</text>')
+    p.append(f'<text x="24" y="380" fill="{MUT}" font-size="11" style="{FS}">Home: the same five zones in the still-air box. Fans and air-conditioning off.</text>')
     p.append('</svg>')
     return "".join(p)
 
 
 def fig_meristem_tools():
     W, H = 760, 250
-    p = [f'<svg viewBox="0 0 {W} {H}" width="{W}" height="{H}" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Tools for a meristem cut">']
+    p = [f'<svg viewBox="0 0 {W} {H}" width="{W}" height="{H}" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="The tools that you use to cut a meristem">']
     p.append(f'<rect width="{W}" height="{H}" fill="{PAPER}"/>')
-    p.append(f'<text x="24" y="24" fill="{INK}" font-size="15" font-weight="700" style="{FS}">Tools. Use these, not kitchen knives.</text>')
+    p.append(f'<text x="24" y="24" fill="{INK}" font-size="15" font-weight="700" style="{FS}">Tools. Use these. Do not use kitchen knives.</text>')
     tools = [
         ("A", "Stereo microscope", "10–40×. You cannot", "see 0.3 mm without it."),
-        ("B", "Fine forceps", "Left hand. Holds the", "stem 3–5 mm down."),
-        ("C", "#11 scalpel", "Pointed blade. Right", "hand. Peels and cuts."),
-        ("D", "Black dish", "Dark so the pale", "dome shows up."),
-        ("E", "Bead steriliser", "~250 °C, 20 seconds.", "Safer than open flame."),
+        ("B", "Small forceps", "Left hand. Holds the", "stem 3–5 mm down."),
+        ("C", "#11 scalpel", "Right hand. Blade with", "a point. Cuts leaves."),
+        ("D", "Black dish", "Black. Thus the pale", "dome is easy to see."),
+        ("E", "Glass-bead sterilizer", "~250 °C, 20 seconds.", "Safer than open flame."),
         ("F", "70% alcohol", "Gloves and bench.", "Does not kill HpLVd."),
     ]
     for i, (n, t, a, b) in enumerate(tools):
@@ -218,39 +218,39 @@ def fig_meristem_tools():
 
 def fig_meristem_hands():
     W, H = 760, 230
-    p = [f'<svg viewBox="0 0 {W} {H}" width="{W}" height="{H}" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Hand positions for meristem cutting">']
+    p = [f'<svg viewBox="0 0 {W} {H}" width="{W}" height="{H}" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="The positions of the hands when you cut a meristem">']
     p.append(f'<rect width="{W}" height="{H}" fill="{PAPER}"/>')
-    p.append(f'<text x="24" y="26" fill="{INK}" font-size="15" font-weight="700" style="{FS}">Hand positions. Do not switch them.</text>')
+    p.append(f'<text x="24" y="26" fill="{INK}" font-size="15" font-weight="700" style="{FS}">Hand positions. Do not change hands.</text>')
     p.append(f'<rect x="24" y="44" width="350" height="168" rx="12" fill="{GL}" stroke="{G}"/>')
-    p.append(f'<text x="199" y="74" text-anchor="middle" fill="{GD}" font-size="15" font-weight="700" style="{FS}">Left hand — forceps</text>')
+    p.append(f'<text x="199" y="74" text-anchor="middle" fill="{GD}" font-size="15" font-weight="700" style="{FS}">Left hand: forceps</text>')
     p.append(f'<text x="199" y="106" text-anchor="middle" fill="{INK2}" font-size="13" style="{FS}">Hold the stem 3–5 mm below the tip.</text>')
-    p.append(f'<text x="199" y="128" text-anchor="middle" fill="{INK2}" font-size="13" style="{FS}">Rest your wrist on the bench.</text>')
-    p.append(f'<text x="199" y="150" text-anchor="middle" fill="{INK2}" font-size="13" style="{FS}">Do not squeeze the dome.</text>')
+    p.append(f'<text x="199" y="128" text-anchor="middle" fill="{INK2}" font-size="13" style="{FS}">Put your wrist on the bench.</text>')
+    p.append(f'<text x="199" y="150" text-anchor="middle" fill="{INK2}" font-size="13" style="{FS}">Do not apply force to the dome.</text>')
     p.append(f'<text x="199" y="180" text-anchor="middle" fill="{INK}" font-size="12.5" font-weight="700" style="{FS}">This hand does not cut.</text>')
     p.append(f'<rect x="386" y="44" width="350" height="168" rx="12" fill="{BLUL}" stroke="{BLU}"/>')
-    p.append(f'<text x="561" y="74" text-anchor="middle" fill="{BLU}" font-size="15" font-weight="700" style="{FS}">Right hand — #11 scalpel</text>')
-    p.append(f'<text x="561" y="106" text-anchor="middle" fill="{INK2}" font-size="13" style="{FS}">Blade almost flat. Slide under a leaf.</text>')
-    p.append(f'<text x="561" y="128" text-anchor="middle" fill="{INK2}" font-size="13" style="{FS}">Peel outward, away from the dome.</text>')
-    p.append(f'<text x="561" y="150" text-anchor="middle" fill="{INK2}" font-size="13" style="{FS}">Final cut is one downward nick.</text>')
-    p.append(f'<text x="561" y="180" text-anchor="middle" fill="{INK}" font-size="12.5" font-weight="700" style="{FS}">Resterilise after every few peels.</text>')
+    p.append(f'<text x="561" y="74" text-anchor="middle" fill="{BLU}" font-size="15" font-weight="700" style="{FS}">Right hand: #11 scalpel</text>')
+    p.append(f'<text x="561" y="106" text-anchor="middle" fill="{INK2}" font-size="13" style="{FS}">Blade almost flat. Move it below a leaf.</text>')
+    p.append(f'<text x="561" y="128" text-anchor="middle" fill="{INK2}" font-size="13" style="{FS}">Remove the leaf, away from the dome.</text>')
+    p.append(f'<text x="561" y="150" text-anchor="middle" fill="{INK2}" font-size="13" style="{FS}">The last step is one nick down.</text>')
+    p.append(f'<text x="561" y="180" text-anchor="middle" fill="{INK}" font-size="12.5" font-weight="700" style="{FS}">Sterilize again after you remove some leaves.</text>')
     p.append('</svg>')
     return "".join(p)
 
 
 def fig_meristem_sequence():
     W, H = 760, 500
-    p = [f'<svg viewBox="0 0 {W} {H}" width="{W}" height="{H}" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Eight movements to cut a meristem">']
+    p = [f'<svg viewBox="0 0 {W} {H}" width="{W}" height="{H}" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="The eight movements that you use to cut a meristem">']
     p.append(f'<rect width="{W}" height="{H}" fill="{PAPER}"/>')
-    p.append(f'<text x="24" y="24" fill="{INK}" font-size="15" font-weight="700" style="{FS}">The cut, one movement at a time</text>')
+    p.append(f'<text x="24" y="24" fill="{INK}" font-size="15" font-weight="700" style="{FS}">How to cut, one movement at a time</text>')
     steps = [
-        ("1", "Take a 10–15 mm tip", "Vegetative shoot.", "Strip large leaves now."),
-        ("2", "Onto the black dish", "One drop sterile water.", "Under the microscope."),
-        ("3", "Hold with forceps", "Left hand, 3–5 mm down.", "Tip pointing up."),
-        ("4", "Peel the outer leaves", "Blade under the leaf.", "Flick the leaf away."),
-        ("5", "Peel the next pair", "Same motion. Slow.", "Stop at pale tissue."),
-        ("6", "Leave two tiny leaves", "They shield the dome", "during the bleach step."),
-        ("7", "Cut under the dome", "One nick, 0.2–0.4 mm.", "Do not saw."),
-        ("8", "Move to the gel", "Forceps or a needle.", "Stand it up. Lid on."),
+        ("1", "Cut a 10–15 mm tip", "Vegetative shoot.", "Remove the large leaves."),
+        ("2", "Onto the black dish", "One drop sterilized water.", "At the microscope."),
+        ("3", "Hold with forceps", "Left hand, 3–5 mm down.", "Point the tip up."),
+        ("4", "Remove the outer leaves", "Blade below the leaf.", "Move the leaf away."),
+        ("5", "Remove the next pair", "Same movement. Slow.", "Stop at pale tissue."),
+        ("6", "Keep two small leaves", "They give the dome", "protection from bleach."),
+        ("7", "Cut below the dome", "One nick, 0.2–0.4 mm.", "Cut one time."),
+        ("8", "Move to the gel", "Forceps or a needle.", "Make it vertical. Put the lid on."),
     ]
     for i, (n, t, a, b) in enumerate(steps):
         coln = i % 4
@@ -298,14 +298,14 @@ def fig_meristem_sequence():
 
 def fig_meristem_scope():
     W, H = 760, 270
-    p = [f'<svg viewBox="0 0 {W} {H}" width="{W}" height="{H}" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="What the meristem looks like as leaves are peeled">']
+    p = [f'<svg viewBox="0 0 {W} {H}" width="{W}" height="{H}" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="The meristem in the microscope while you remove the leaves">']
     p.append(f'<rect width="{W}" height="{H}" fill="{PAPER}"/>')
-    p.append(f'<text x="24" y="22" fill="{INK}" font-size="15" font-weight="700" style="{FS}">What you should see through the microscope</text>')
+    p.append(f'<text x="24" y="22" fill="{INK}" font-size="15" font-weight="700" style="{FS}">The correct sequence at the microscope</text>')
     views = [
-        ("A  Start", "Green. Many leaves.", "Too big. Keep peeling.", True),
-        ("B  Outer leaves off", "Fewer leaves. Tip shows.", "Keep peeling.", True),
-        ("C  Two tiny leaves left", "Pale dome visible.", "Stop. Bleach this.", False),
-        ("D  After the cut", "0.2–0.4 mm piece.", "This goes on the gel.", False),
+        ("A  Start", "Green. Many leaves.", "Too large. Remove more leaves.", True),
+        ("B  Outer leaves off", "Some leaves. Tip shows.", "Remove more leaves.", True),
+        ("C  Two small leaves stay", "Pale dome shows.", "Stop. Apply bleach.", False),
+        ("D  After you cut", "0.2–0.4 mm piece.", "Put it on the gel.", False),
     ]
     for i, (title, a, b, extra) in enumerate(views):
         x = 20 + i * 185
@@ -330,14 +330,14 @@ def fig_meristem_scope():
 
 def fig_meristem_size():
     W, H = 760, 190
-    p = [f'<svg viewBox="0 0 {W} {H}" width="{W}" height="{H}" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="How small a meristem is">']
+    p = [f'<svg viewBox="0 0 {W} {H}" width="{W}" height="{H}" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="The small size of a meristem">']
     p.append(f'<rect width="{W}" height="{H}" fill="{PAPER}"/>')
     p.append(f'<text x="24" y="24" fill="{INK}" font-size="15" font-weight="700" style="{FS}">How small the piece is</text>')
     items = [
-        (70, "Stem piece", "10–15 mm", "First-run cut", 32, G),
-        (250, "Shoot tip", "about 5 mm", "Das Stage I", 18, BLU),
-        (420, "Meristem + 2 leaves", "0.2–0.4 mm", "Cleanup cut", 6, PUR),
-        (590, "Rice grain", "about 5 mm", "For scale", 16, AMB),
+        (70, "Stem piece", "10–15 mm", "For first batches", 32, G),
+        (250, "Shoot tip", "approximately 5 mm", "Das Stage I", 18, BLU),
+        (420, "Meristem + 2 leaves", "0.2–0.4 mm", "For disease removal", 6, PUR),
+        (590, "Rice grain", "approximately 5 mm", "For scale", 16, AMB),
     ]
     for x, t, sz, note, r, col in items:
         p.append(f'<circle cx="{x+50}" cy="78" r="{r}" fill="{col}" opacity=".9"/>')

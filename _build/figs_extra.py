@@ -6,15 +6,15 @@ from figs import (G, GD, GL, GXL, INK, INK2, MUT, LINE, AMB, AMBL, RED, REDL,
 # FIG 9, explant selection trade-off
 def fig_explant():
     W=720; H=362
-    cols=[("Nodal segment","~10 mm, 1 node",GL,GD,"Easiest","Surface clean only",
-           "Keeps vascular tissue, so a viroid stays put. The beginner default for plain cloning."),
-          ("Shoot tip","2-5 mm + primordia",GL,GD,"Medium","Partly clean",
-           "Cleaner genetics. Cut it too big and ~50% turn fungal."),
-          ("Meristem dome","0.2-0.5 mm dome",PURL,PUR,"Hardest","Pathogen-FREE",
-           "Needs a dissecting scope. The only route that clears HpLVd. ~5% contaminate.")]
-    p=[f'<svg viewBox="0 0 {W} {H}" width="{W}" height="{H}" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Explant type trade-off">']
+    cols=[("Nodal segment","approximately 10 mm, 1 node",GL,GD,"Easy","On the surface only",
+           "It has vascular tissue, thus a viroid stays. New growers use it for usual cloning."),
+          ("Shoot tip","2-5 mm + leaf primordia",GL,GD,"Middle","Not fully clean",
+           "Less disease. If it is too large, ~50% have fungus."),
+          ("Meristem dome","0.2-0.5 mm dome",PURL,PUR,"Not easy","No pathogens",
+           "Use a dissecting microscope. The only method that removes HpLVd. ~5% have contamination.")]
+    p=[f'<svg viewBox="0 0 {W} {H}" width="{W}" height="{H}" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="The figure compares the types of explant. When the piece is smaller, the disease is less and the survival is less.">']
     p.append(f'<rect width="{W}" height="{H}" fill="{PAPER}"/>')
-    p.append(f'<text x="24" y="28" fill="{INK}" font-size="15" font-weight="700" style="{FS}">Pick your explant: cleaner means smaller means harder to keep alive</text>')
+    p.append(f'<text x="24" y="28" fill="{INK}" font-size="15" font-weight="700" style="{FS}">Select the explant: a smaller piece has less disease and less survival</text>')
     cw=222; x0=22; gap=12; top=46
     for i,(t,sz,fill,col,diff,clean,note) in enumerate(cols):
         x=x0+i*(cw+gap)
@@ -37,7 +37,7 @@ def fig_explant():
             p.append(f'<path d="M{midx-14},{dy} Q{midx},{dy-24} {midx+14},{dy} Z" fill="{PUR}"/>')
             p.append(f'<circle cx="{midx}" cy="{dy-6}" r="20" fill="none" stroke="{PUR}" stroke-width="1.6" stroke-dasharray="3 3"/>')
         fy=top+150
-        for lab,val,c in (("Difficulty",diff,col),("Cleanliness",clean,col)):
+        for lab,val,c in (("How easy",diff,col),("How clean",clean,col)):
             p.append(f'<text x="{x+14}" y="{fy}" fill="{MUT}" font-size="10.5" style="{FS}">{lab}</text>')
             p.append(f'<text x="{x+cw-14}" y="{fy}" text-anchor="end" fill="{c}" font-size="11.5" font-weight="700" style="{FS}">{val}</text>')
             fy+=20
@@ -47,7 +47,7 @@ def fig_explant():
                 p.append(f'<text x="{x+14}" y="{ly}" fill="{INK2}" font-size="10.3" style="{FS}">{line}</text>'); ly+=14; line=w
             else: line=(line+" "+w).strip()
         if line: p.append(f'<text x="{x+14}" y="{ly}" fill="{INK2}" font-size="10.3" style="{FS}">{line}</text>')
-    p.append(f'<text x="24" y="{H-8}" fill="{MUT}" font-size="11" style="{FS}">&larr; easier / dirtier&nbsp;&nbsp;|&nbsp;&nbsp;harder / cleaner &rarr;</text>')
+    p.append(f'<text x="24" y="{H-8}" fill="{MUT}" font-size="11" style="{FS}">&larr; easy / more disease&nbsp;&nbsp;|&nbsp;&nbsp;not easy / less disease &rarr;</text>')
     p.append('</svg>')
     return "".join(p)
 
@@ -57,10 +57,10 @@ def fig_hlvd_clearance():
           ("Wife",50),("Hybrid 9",26),("Hybrid 5",14),("EarlyPearly",14)]
     W=720; H=332; left=54; right=20; top=58; bot=H-58
     n=len(data); plotw=W-left-right; step=plotw/n; bw=step*0.62
-    p=[f'<svg viewBox="0 0 {W} {H}" width="{W}" height="{H}" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="HLVd clearance rate by cultivar">']
+    p=[f'<svg viewBox="0 0 {W} {H}" width="{W}" height="{H}" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="A bar chart of the rate of removal of HpLVd for each cultivar">']
     p.append(f'<rect width="{W}" height="{H}" fill="{PAPER}"/>')
-    p.append(f'<text x="24" y="26" fill="{INK}" font-size="15" font-weight="700" style="{FS}">HpLVd clearance is brutally genotype-dependent</text>')
-    p.append(f'<text x="24" y="46" fill="{MUT}" font-size="11.5" style="{FS}">One meristem + thermotherapy protocol, 13 cultivars. Disease fully eradicated in just 5 of 13.</text>')
+    p.append(f'<text x="24" y="26" fill="{INK}" font-size="15" font-weight="700" style="{FS}">HpLVd removal changes very much with the cultivar</text>')
+    p.append(f'<text x="24" y="46" fill="{MUT}" font-size="11.5" style="{FS}">One protocol of meristem culture and thermotherapy for 13 cultivars. It removed the disease fully in only 5 of 13.</text>')
     for v in (0,25,50,75,100):
         y=bot-(v/100)*(bot-top)
         p.append(f'<line x1="{left}" y1="{y}" x2="{W-right}" y2="{y}" stroke="{LINE}" stroke-width="0.8" stroke-dasharray="3 4"/>')
@@ -72,7 +72,7 @@ def fig_hlvd_clearance():
         p.append(f'<rect x="{x}" y="{bot-h}" width="{bw}" height="{h}" rx="4" fill="{col}" opacity=".9"/>')
         p.append(f'<text x="{x+bw/2}" y="{bot-h-6}" text-anchor="middle" fill="{col}" font-size="11" font-weight="700" style="{FS}">{val}%</text>')
         p.append(f'<text x="{x+bw/2}" y="{bot+15}" text-anchor="middle" fill="{INK2}" font-size="9.6" style="{FS}">{name}</text>')
-    p.append(f'<text x="{left}" y="{H-8}" fill="{MUT}" font-size="10.3" style="{FS}">*&ldquo;Athena&rdquo; here is a cannabis STRAIN, not the Athena Ag kit. Source: 13-cultivar thermotherapy study, 2024-25.</text>')
+    p.append(f'<text x="{left}" y="{H-8}" fill="{MUT}" font-size="10.3" style="{FS}">*&ldquo;Athena&rdquo; here is a cannabis cultivar, not the Athena Ag kit. Source: test of thermotherapy on 13 cultivars, 2024-25.</text>')
     p.append('</svg>')
     return "".join(p)
 
@@ -83,9 +83,9 @@ def fig_subculture():
     maxsub=10; maxmut=100; plotw=W-left-right; ploth=bot-top
     def X(s): return left+(s-1)/(maxsub-1)*plotw
     def Y(m): return bot-(m/maxmut)*ploth
-    p=[f'<svg viewBox="0 0 {W} {H}" width="{W}" height="{H}" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Mutation accumulation versus subculture number">']
+    p=[f'<svg viewBox="0 0 {W} {H}" width="{W}" height="{H}" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="A chart that shows how the number of mutations increases with the number of subcultures">']
     p.append(f'<rect width="{W}" height="{H}" fill="{PAPER}"/>')
-    p.append(f'<text x="24" y="24" fill="{INK}" font-size="14.5" font-weight="700" style="{FS}">Every subculture adds mutations, reset before clones drift</text>')
+    p.append(f'<text x="24" y="24" fill="{INK}" font-size="14.5" font-weight="700" style="{FS}">Each subculture adds mutations. Start again before the clones change.</text>')
     p.append(f'<rect x="{left}" y="{top}" width="{X(5)-left}" height="{ploth}" fill="{GL}" opacity=".55"/>')
     p.append(f'<text x="{(left+X(5))/2}" y="{top+18}" text-anchor="middle" fill="{GD}" font-size="11" font-weight="700" style="{FS}">SAFE &le; 5 cycles</text>')
     p.append(f'<rect x="{X(5)}" y="{top}" width="{X(10)-X(5)}" height="{ploth}" fill="{AMBL}" opacity=".55"/>')
@@ -106,9 +106,9 @@ def fig_subculture():
 # FIG 12, annotated Athena kit
 def fig_athena_kit():
     W=720; H=384
-    p=[f'<svg viewBox="0 0 {W} {H}" width="{W}" height="{H}" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Athena Culture Kit annotated">']
+    p=[f'<svg viewBox="0 0 {W} {H}" width="{W}" height="{H}" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="The Athena Culture Kit with notes on its contents">']
     p.append(f'<rect width="{W}" height="{H}" fill="{PAPER}"/>')
-    p.append(f'<text x="24" y="26" fill="{INK}" font-size="15" font-weight="700" style="{FS}">What is in the Athena Culture Kit, and what they will not tell you</text>')
+    p.append(f'<text x="24" y="26" fill="{INK}" font-size="15" font-weight="700" style="{FS}">Athena Culture Kit: contents, and information that Athena does not give</text>')
     p.append(f'<rect x="40" y="44" width="640" height="246" rx="14" fill="{GXL}" stroke="{GD}" stroke-width="2"/>')
     def comp(x,y,w,h,fill,col,label,sub):
         s=[f'<rect x="{x}" y="{y}" width="{w}" height="{h}" rx="9" fill="{fill}" stroke="{col}" stroke-width="1.5"/>']
@@ -118,32 +118,32 @@ def fig_athena_kit():
     p.append(comp(64,68,180,72,GL,G,"Laminar flow hood","HEPA H13, 0.5-0.9 m/s"))
     p.append(comp(260,68,180,72,GL,G,"One-touch autoclave","sterilize media + tools"))
     p.append(comp(456,68,200,72,GL,G,"Tools + toolbox","scalpel, forceps, lid guide"))
-    p.append(comp(64,160,180,72,BLUL,BLU,"SHOOTS media (blue)","multiply shoots"))
+    p.append(comp(64,160,180,72,BLUL,BLU,"SHOOTS media (blue)","make more shoots"))
     p.append(comp(260,160,180,72,GL,G,"ROOTS media","callus + rooting"))
-    p.append(comp(456,160,200,72,AMBL,AMB,"Cleanse + Bleach","surface sterilants"))
-    p.append(comp(64,248,592,30,PANEL2,MUT,"~120 vessels out of the box  ·  refills extra: $15/vessel, $30-40/media box, $100 HEPA",""))
+    p.append(comp(456,160,200,72,AMBL,AMB,"Cleanse + Bleach","for surface sterilization"))
+    p.append(comp(64,248,592,30,PANEL2,MUT,"&asymp;120 vessels in the kit  ·  cost of refills: $15 for each vessel, $30-40 for each media box, $100 HEPA",""))
     ly=314
     p.append(f'<rect x="40" y="{ly}" width="16" height="16" rx="3" fill="{GL}" stroke="{G}"/>')
-    p.append(f'<text x="62" y="{ly+13}" fill="{INK2}" font-size="11.5" style="{FS}">Confirmed specs</text>')
+    p.append(f'<text x="62" y="{ly+13}" fill="{INK2}" font-size="11.5" style="{FS}">Known contents</text>')
     p.append(f'<rect x="200" y="{ly}" width="16" height="16" rx="3" fill="{AMBL}" stroke="{AMB}"/>')
-    p.append(f'<text x="222" y="{ly+13}" fill="{INK2}" font-size="11.5" style="{FS}">Undisclosed / proprietary:</text>')
-    p.append(f'<text x="40" y="{ly+36}" fill="{AMB}" font-size="11" style="{FS}">Media base salt (MS? DKW?), the hormones &amp; their doses, the bleach/Cleanse dilutions &amp; soak times, all trade secret.</text>')
-    p.append(f'<text x="40" y="{ly+52}" fill="{AMB}" font-size="11" style="{FS}">No qPCR test and no thermotherapy ship in the box, so the kit cannot, by itself, PROVE a plant is clean.</text>')
+    p.append(f'<text x="222" y="{ly+13}" fill="{INK2}" font-size="11.5" style="{FS}">Athena gives no information:</text>')
+    p.append(f'<text x="40" y="{ly+36}" fill="{AMB}" font-size="11" style="{FS}">The basal salts of the media (MS or DKW?), the hormones and their doses, the dilutions and times of bleach and Cleanse: all trade secrets.</text>')
+    p.append(f'<text x="40" y="{ly+52}" fill="{AMB}" font-size="11" style="{FS}">The kit has no qPCR test and no thermotherapy. Thus the kit cannot show that a plant is clean.</text>')
     p.append('</svg>')
     return "".join(p)
 
 # FIG 13, contamination visual ID
 def fig_contam():
     W=720; H=252
-    cards=[("BACTERIA",REDL,RED,"Shiny cream/white slime or ooze at the cut base; cloudy medium; sour smell.","Often LATENT, erupts after 1-2 wk"),
-           ("FUNGI",AMBL,AMB,"Fuzzy cottony threads; black, green or yellow spore spots spreading fast.","Airborne spores = an air/technique problem"),
-           ("YEAST",PURL,PUR,"Cloudy medium, bready smell, glossy raised dots. Doubles in under 90 min.","One slip wrecks a batch overnight"),
-           ("ENDOPHYTE",BLUL,BLU,"Looks clean for weeks, then a bloom from INSIDE the tissue.","Rode in with the mother, bleach cannot reach it")]
+    cards=[("BACTERIA",REDL,RED,"Shiny cream or white slime at the cut end. Cloud in the medium. Unusual odor.","Frequently LATENT, shows after 1-2 wk"),
+           ("FUNGI",AMBL,AMB,"White mold. Black, green or yellow areas of spores. The mold increases quickly.","Airborne spores: a problem of air or method"),
+           ("YEAST",PURL,PUR,"Shiny dots, cloud in the medium, smell of yeast. Increases two times in less than 90 min.","One error kills a batch in one night."),
+           ("ENDOPHYTE",BLUL,BLU,"No sign for weeks. Then it increases quickly from INSIDE the tissue.","From the mother plant. Bleach cannot touch it.")]
     cw=168; gap=12; x0=18; top=56
-    p=[f'<svg viewBox="0 0 {W} {H}" width="{W}" height="{H}" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Contamination identification">']
+    p=[f'<svg viewBox="0 0 {W} {H}" width="{W}" height="{H}" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="The signs that identify each type of contamination in a vessel">']
     p.append(f'<rect width="{W}" height="{H}" fill="{PAPER}"/>')
-    p.append(f'<text x="24" y="26" fill="{INK}" font-size="15" font-weight="700" style="{FS}">Know your enemy: the four ways a jar goes bad</text>')
-    p.append(f'<text x="24" y="45" fill="{MUT}" font-size="11.5" style="{FS}">Inspect every vessel daily. When in doubt, pull it out, one bad jar infects the shelf.</text>')
+    p.append(f'<text x="24" y="26" fill="{INK}" font-size="15" font-weight="700" style="{FS}">The four types of contamination in a vessel</text>')
+    p.append(f'<text x="24" y="45" fill="{MUT}" font-size="11.5" style="{FS}">Examine each vessel each day. If you are not sure, remove it. One vessel with contamination can cause contamination on the shelf.</text>')
     for i,(t,fill,col,desc,tag) in enumerate(cards):
         x=x0+i*(cw+gap)
         p.append(f'<rect x="{x}" y="{top}" width="{cw}" height="172" rx="11" fill="{fill}" stroke="{col}" stroke-width="1.4"/>')

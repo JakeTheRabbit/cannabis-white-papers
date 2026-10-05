@@ -13,7 +13,7 @@ def _svg(w, h, label, parts):
 # ---------------------------------------------------------------- cube cross-section
 def fig_cube_anatomy():
     W, H = 720, 360
-    p = [f'<text x="24" y="28" fill="{INK}" font-size="15" font-weight="700" style="{FS}">Inside a rockwool block: where the water actually sits</text>']
+    p = [f'<text x="24" y="28" fill="{INK}" font-size="15" font-weight="700" style="{FS}">In a rockwool block: the positions of the water</text>']
     bx, by, bw, bh = 60, 70, 360, 230
     # block body
     p.append(f'<rect x="{bx}" y="{by}" width="{bw}" height="{bh}" rx="6" fill="{DRYL}" stroke="{MUT}" stroke-width="2"/>')
@@ -41,26 +41,26 @@ def fig_cube_anatomy():
              f'<text x="{lx+4}" y="{y}" fill="{INK}" font-size="13" font-weight="700" style="{FS}">{t1}</text>',
              f'<text x="{lx+4}" y="{y+17}" fill="{INK2}" font-size="11.5" style="{FS}">{t2}</text>']
         return "".join(s)
-    p.append(cl(90, WATER, "Water held on the fibres", "Clings as a film; this is your WC%."))
-    p.append(cl(150, DRY, "Air-filled porosity", "Gaps between fibres = root oxygen."))
-    p.append(cl(210, GD, "Roots", "Live in the moist film + air mix."))
-    p.append(cl(270, SALT, "Dissolved salts (EC)", "Stay in the water, not the fibre. CEC ≈ 0."))
-    p.append(f'<text x="24" y="{H-12}" fill="{MUT}" font-size="11" style="{FS}">Rockwool holds nothing chemically (CEC near zero), so 100% of what you feed reaches the plant, and salts concentrate as the water leaves.</text>')
+    p.append(cl(90, WATER, "Water on the fibers", "A film on the fibers. This film is the WC%."))
+    p.append(cl(150, DRY, "Air between the fibers", "The roots get oxygen from this air."))
+    p.append(cl(210, GD, "Roots", "In the moist film and in the air."))
+    p.append(cl(270, SALT, "Dissolved salts (EC)", "In the water, not on the fibers. CEC ≈ 0."))
+    p.append(f'<text x="24" y="{H-12}" fill="{MUT}" font-size="11" style="{FS}">Rockwool holds no nutrients (CEC near zero). Thus the plant gets 100% of the feed. The salt concentration increases when the water leaves.</text>')
     return _svg(W, H, "Rockwool block cross-section", p)
 
 # ---------------------------------------------------------------- water-content band gauge
 def fig_wc_band():
     W, H = 720, 330
-    bands = [(92, 100, WATER, "100-92%", "Saturated, just irrigated, little air"),
-             (70, 92, BLU, "92-70%", "Field capacity to wet, vegetative / bulk"),
-             (55, 70, G, "70-55%", "Working band, healthy roots + air"),
+    bands = [(92, 100, WATER, "100-92%", "Saturated, after irrigation, less air"),
+             (70, 92, BLU, "92-70%", "Field capacity to wet, vegetative and bulking"),
+             (55, 70, G, "70-55%", "Working band, roots in good condition + air"),
              (42, 55, AMB, "55-42%", "Generative dryback, more stress, more air"),
-             (30, 42, RED, "42-30%", "Stress floor, EC spikes, edges drying"),
-             (0, 30, "var(--fig-red)", "below 30%", "Non-recoverable, channels, hand-soak only")]
+             (30, 42, RED, "42-30%", "Stress floor, EC increases, edges become dry"),
+             (0, 30, "var(--fig-red)", "less than 30%", "Cannot become wet again, channeling, manual soak only")]
     left, right, top, bot = 250, 60, 56, H - 34
     def Y(v): return bot - (v / 100) * (bot - top)
-    p = [f'<text x="24" y="26" fill="{INK}" font-size="15" font-weight="700" style="{FS}">The rockwool water-content band</text>',
-         f'<text x="24" y="44" fill="{MUT}" font-size="11.5" style="{FS}">WC% = how full the block is. Steer inside the band; never fall off the bottom.</text>']
+    p = [f'<text x="24" y="26" fill="{INK}" font-size="15" font-weight="700" style="{FS}">The water-content scale of rockwool</text>',
+         f'<text x="24" y="44" fill="{MUT}" font-size="11.5" style="{FS}">WC% shows how full of water the block is. Keep the WC in the working band. Do not let it become less than the recovery floor.</text>']
     for lo, hi, c, rng, lab in bands:
         y1, y2 = Y(hi), Y(lo)
         p.append(f'<rect x="{left}" y="{y1:.0f}" width="{W-left-right}" height="{(y2-y1):.0f}" fill="{c}" opacity=".5"/>')
@@ -94,13 +94,13 @@ def _cube(x, y, w, h, water_frac, salt, channel, dry_core):
 
 def fig_dryout():
     W, H = 760, 300
-    p = [f'<text x="20" y="26" fill="{INK}" font-size="15" font-weight="700" style="{FS}">What happens to a block as it dries</text>']
+    p = [f'<text x="20" y="26" fill="{INK}" font-size="15" font-weight="700" style="{FS}">How a block dries</text>']
     cw, gap, x0, y0, ch = 150, 36, 24, 56, 150
     stages = [
-        ("1 Saturated", 0.92, False, False, False, "Full of water, little air. Just irrigated.", G),
-        ("2 Healthy dryback", 0.6, False, False, False, "Air enters, roots breathe, EC normal. Good.", G),
-        ("3 Too dry", 0.38, True, False, False, "Less water, same salt: EC stacks, osmotic stress.", AMB),
-        ("4 Non-recoverable", 0.18, True, True, True, "Dry core, water channels straight past it.", RED),
+        ("1 Saturated", 0.92, False, False, False, "Full of water, less air. After irrigation.", G),
+        ("2 Good dryback", 0.6, False, False, False, "More air. Roots get oxygen. EC is usual. Good.", G),
+        ("3 Too dry", 0.38, True, False, False, "Less water, same salt: the EC increases, osmotic stress.", AMB),
+        ("4 No recovery", 0.18, True, True, True, "Dry center. The water flows through channels around it.", RED),
     ]
     for i, (t, wf, salt, ch_, dc, desc, col) in enumerate(stages):
         x = x0 + i * (cw + gap)
@@ -120,8 +120,8 @@ def fig_dryout():
 # ---------------------------------------------------------------- rewet / channeling
 def fig_rewet():
     W, H = 720, 320
-    p = [f'<text x="24" y="26" fill="{INK}" font-size="15" font-weight="700" style="{FS}">Why a dried-out block won’t just rewet from the dripper</text>']
-    for idx, (cx, title, recoverable) in enumerate([(180, "Still moist: rewets evenly", True), (520, "Too dry: water channels past", False)]):
+    p = [f'<text x="24" y="26" fill="{INK}" font-size="15" font-weight="700" style="{FS}">A block that is too dry cannot become wet again from the dripper</text>']
+    for idx, (cx, title, recoverable) in enumerate([(180, "Moist: it becomes wet again equally", True), (520, "Too dry: water flows through channels", False)]):
         bx, by, bw, bh = cx-110, 64, 220, 180
         p.append(f'<text x="{cx}" y="56" text-anchor="middle" fill="{(GD if recoverable else RED)}" font-size="12.5" font-weight="700" style="{FS}">{title}</text>')
         p.append(f'<rect x="{bx}" y="{by}" width="{bw}" height="{bh}" rx="5" fill="{DRYL if not recoverable else WATERL}" stroke="{MUT}" stroke-width="1.5"/>')
@@ -132,12 +132,12 @@ def fig_rewet():
         if recoverable:
             # even spread
             p.append(f'<path d="M{cx},{by} q0,40 0,80 M{cx},{by+30} q-50,20 -90,40 M{cx},{by+30} q50,20 90,40" fill="none" stroke="{WATER}" stroke-width="2.4" opacity=".8"/>')
-            p.append(f'<text x="{cx}" y="{by+bh+24}" text-anchor="middle" fill="{GD}" font-size="11" style="{FS}">water spreads through the fibres</text>')
+            p.append(f'<text x="{cx}" y="{by+bh+24}" text-anchor="middle" fill="{GD}" font-size="11" style="{FS}">the water goes to all parts of the fiber</text>')
         else:
             p.append(f'<ellipse cx="{cx}" cy="{by+bh/2}" rx="62" ry="58" fill="{DRY}" opacity=".9"/>')
             p.append(f'<path d="M{cx-30},{by} L{cx-26},{by+bh}" stroke="{WATER}" stroke-width="4"/>')
             p.append(f'<path d="M{cx+34},{by} L{cx+28},{by+bh}" stroke="{WATER}" stroke-width="4"/>')
-            p.append(f'<text x="{cx}" y="{by+bh/2+4}" text-anchor="middle" fill="var(--fig-red)" font-size="10.5" font-weight="700" style="{FS}">dry core</text>')
-            p.append(f'<text x="{cx}" y="{by+bh+24}" text-anchor="middle" fill="{RED}" font-size="11" style="{FS}">runs down channels, core stays dry</text>')
-    p.append(f'<text x="24" y="{H-12}" fill="{MUT}" font-size="11" style="{FS}">Below ~30% WC the dry fibre matrix repels even spreading. Water finds preferential channels and exits as runoff, so the drip-rate that hydrated a wet block cannot re-saturate a dry one. You must hand-soak.</text>')
+            p.append(f'<text x="{cx}" y="{by+bh/2+4}" text-anchor="middle" fill="var(--fig-red)" font-size="10.5" font-weight="700" style="{FS}">dry center</text>')
+            p.append(f'<text x="{cx}" y="{by+bh+24}" text-anchor="middle" fill="{RED}" font-size="11" style="{FS}">flows through channels, the center stays dry</text>')
+    p.append(f'<text x="24" y="{H-12}" fill="{MUT}" font-size="11" style="{FS}">When the WC is less than ~30%, the dry fiber cannot pull water through the block. Water finds channels and flows out as runoff. The dripper cannot saturate a dry block again. Soak the block manually.</text>')
     return _svg(W, H, "Rockwool rewetting and channeling", p)

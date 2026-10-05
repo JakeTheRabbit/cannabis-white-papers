@@ -45,10 +45,10 @@ def _block(p, x, y, w, h, wfrac, salt=False):
 
 def field_capacity():
     W, H = 700, 250
-    p = []; _title(p, "Saturation, field capacity and dryback", "the same block at three points in a day")
-    stages = [("Saturated", 0.95, "just irrigated, almost no air"),
-              ("Field capacity", 0.7, "free water drained, daily peak"),
-              ("Dryback low", 0.45, "plant drank, air + oxygen in")]
+    p = []; _title(p, "Saturation, field capacity and dryback", "the same block at three times of the day")
+    stages = [("Saturated", 0.95, "after irrigation, almost no air"),
+              ("Field capacity", 0.7, "free water drained, peak each day"),
+              ("Dryback low", 0.45, "plant used water, air + oxygen in")]
     bw, x0, y0, bh = 150, 60, 64, 120
     for i, (t, wf, d) in enumerate(stages):
         x = x0 + i * (bw + 60)
@@ -62,20 +62,20 @@ def field_capacity():
 
 def ec_concentration():
     W, H = 700, 250
-    p = []; _title(p, "Why EC climbs as the root zone dries", "salt stays put while water leaves")
-    for i, (t, wf, n, col) in enumerate([("Full + dilute", 0.9, 6, GD), ("Dry + concentrated", 0.45, 6, RED)]):
+    p = []; _title(p, "The EC increases when the root zone dries", "the salt stays, the water decreases")
+    for i, (t, wf, n, col) in enumerate([("Full and low EC", 0.9, 6, GD), ("Dry and high EC", 0.45, 6, RED)]):
         x = 70 + i * 330; bw, by, bh = 200, 64, 130
         _block(p, x, by, bw, bh, wf, salt=True)
         p.append(f'<text x="{x+bw/2}" y="{by+bh+24}" text-anchor="middle" fill="{col}" font-size="12.5" font-weight="700" style="{FS}">{t}</text>')
         if i == 0:
             p.append(f'<text x="{x+bw+65}" y="{by+bh/2}" text-anchor="middle" fill="{MUT}" font-size="22">&rarr;</text>')
-    _wrap(p, W/2, H-18, "Same number of salt grains, less water to dissolve them: the EC the roots feel rises as water content falls.", MUT, 70, 11)
+    _wrap(p, W/2, H-18, "The salt quantity is the same, but there is less water. Thus the EC at the roots increases when the water content decreases.", MUT, 70, 11)
     return _svg(W, H, "EC concentration on dryback", p)
 
 
 def photoperiod():
     W, H = 700, 220
-    p = []; _title(p, "Photoperiod: the light schedule flips the plant", "hours of light vs dark over 24h")
+    p = []; _title(p, "Photoperiod: the light cycle changes the growth stage", "hours of light and dark in 24h")
     for i, (t, on) in enumerate([("Vegetative 18/6", 18), ("Flower 12/12", 12)]):
         y = 70 + i * 70; x0, bw = 200, 440
         p.append(f'<text x="24" y="{y+18}" fill="{INK}" font-size="12" font-weight="700" style="{FS}">{t}</text>')
@@ -84,17 +84,17 @@ def photoperiod():
         p.append(f'<rect x="{x0+onw:.0f}" y="{y}" width="{bw-onw:.0f}" height="28" fill="{INK}" opacity=".55" stroke="{LINE}"/>')
         p.append(f'<text x="{x0+onw/2:.0f}" y="{y+18}" text-anchor="middle" fill="{INK}" font-size="11" font-weight="700" style="{FS}">{on}h light</text>')
         p.append(f'<text x="{x0+onw+(bw-onw)/2:.0f}" y="{y+18}" text-anchor="middle" fill="{PAPER}" font-size="11" font-weight="700" style="{FS}">{24-on}h dark</text>')
-    p.append(f'<text x="24" y="{H-12}" fill="{MUT}" font-size="11" style="{FS}">12 hours of uninterrupted dark triggers and holds flowering. A light leak in the dark can revert or stress the plant.</text>')
+    p.append(f'<text x="24" y="{H-12}" fill="{MUT}" font-size="11" style="{FS}">12 hours of continuous darkness cause flowering and keep it in progress. A light leak can cause stress or vegetative growth.</text>')
     return _svg(W, H, "Photoperiod schedule", p)
 
 
 def ph_availability():
     W, H = 700, 280
-    p = []; _title(p, "pH and nutrient availability (soilless)", "most nutrients open up around pH 5.5-6.5")
+    p = []; _title(p, "pH and nutrient availability (soilless)", "most nutrients are available at approximately pH 5.5-6.5")
     left, right, top, bot = 60, 40, 70, 210
     lo, hi = 4.0, 8.0
     def X(v): return left + (v - lo) / (hi - lo) * (W - left - right)
-    bands = [(4.0, 5.3, REDL, "locked"), (5.3, 5.8, AMBL, "ok"), (5.8, 6.3, GL, "best"), (6.3, 6.8, AMBL, "ok"), (6.8, 8.0, REDL, "locked")]
+    bands = [(4.0, 5.3, REDL, "lockout"), (5.3, 5.8, AMBL, "good"), (5.8, 6.3, GL, "best"), (6.3, 6.8, AMBL, "good"), (6.8, 8.0, REDL, "lockout")]
     for s, e, c, l in bands:
         p.append(f'<rect x="{X(s):.0f}" y="{top}" width="{X(e)-X(s):.0f}" height="{bot-top}" fill="{c}" opacity=".55"/>')
         p.append(f'<text x="{(X(s)+X(e))/2:.0f}" y="{top+18}" text-anchor="middle" fill="{INK}" font-size="10.5" font-weight="700" style="{FS}">{l}</text>')
@@ -104,16 +104,16 @@ def ph_availability():
     p.append(f'<path d="{path}" fill="none" stroke="{GD}" stroke-width="3"/>')
     for v in (4, 5, 6, 7, 8):
         p.append(f'<text x="{X(v):.0f}" y="{bot+18}" text-anchor="middle" fill="{MUT}" font-size="10.5" style="{MN}">pH {v}</text>')
-    p.append(f'<text x="24" y="{H-8}" fill="{MUT}" font-size="11" style="{FS}">Drift out of the green band and nutrients precipitate or stop being taken up, even though they are in the tank: lockout.</text>')
+    p.append(f'<text x="24" y="{H-8}" fill="{MUT}" font-size="11" style="{FS}">When the pH is not in the green band, nutrients precipitate or the roots cannot absorb them. The nutrients are in the tank: lockout.</text>')
     return _svg(W, H, "pH nutrient availability", p)
 
 
 def nutrient_mobility():
     W, H = 700, 290
-    p = []; _title(p, "Mobile vs immobile: where the symptom shows", "the plant moves mobile nutrients to new growth")
+    p = []; _title(p, "Mobile and immobile: where you see the symptom", "the plant moves mobile nutrients to new growth")
     for i, (t, where, col, leaves) in enumerate([
-        ("Mobile (N, P, K, Mg)", "old / lower leaves first", AMB, "low"),
-        ("Immobile (Ca, Fe, B, S)", "new / upper leaves first", RED, "high")]):
+        ("Mobile (N, P, K, Mg)", "the leaves at the bottom first", AMB, "low"),
+        ("Immobile (Ca, Fe, B, S)", "the new growth at the top first", RED, "high")]):
         cx = 200 + i * 320
         # stem
         p.append(f'<line x1="{cx}" y1="80" x2="{cx}" y2="230" stroke="{GD}" stroke-width="3"/>')
@@ -130,9 +130,9 @@ def nutrient_mobility():
 
 def stomata():
     W, H = 700, 250
-    p = []; _title(p, "Stomata: the leaf's adjustable pores", "guard cells swell to open, slacken to close")
-    for i, (t, open_, d) in enumerate([("Open (turgid)", True, "CO2 in, water vapour out, transpiring"),
-                                       ("Closed (flaccid)", False, "gas exchange stops, plant conserves water")]):
+    p = []; _title(p, "Stomata: the adjustable pores of the leaf", "turgor in the guard cells opens and closes the pore")
+    for i, (t, open_, d) in enumerate([("Open (turgor high)", True, "CO2 in, water vapor out (transpiration)"),
+                                       ("Closed (turgor low)", False, "gas exchange stops, plant keeps water")]):
         cx = 200 + i * 320; cy = 130
         gap = 26 if open_ else 5
         col = G if open_ else AMB
@@ -148,8 +148,8 @@ def stomata():
 
 def porosity():
     W, H = 700, 250
-    p = []; _title(p, "What a substrate is made of", "solids hold structure; pores hold water and air")
-    media = [("Coco", 12, 35, 53), ("Rockwool", 4, 30, 66), ("Peat mix", 18, 45, 37)]
+    p = []; _title(p, "The parts of a substrate", "Solids give structure. Pores contain water and air.")
+    media = [("Coco", 12, 35, 53), ("Rockwool", 4, 30, 66), ("Peat mixture", 18, 45, 37)]
     x0, bw, gap, base, hgt = 90, 120, 70, 210, 130
     for i, (name, solid, water, air) in enumerate(media):
         x = x0 + i * (bw + gap); y = base - hgt
@@ -165,13 +165,13 @@ def porosity():
                 p.append(f'<text x="{x+bw/2}" y="{cy+h/2+4:.0f}" text-anchor="middle" fill="{INK}" font-size="10" font-weight="700" style="{FS}">{lab} {pct}%</text>')
             cy += h
         p.append(f'<text x="{x+bw/2}" y="{base+20}" text-anchor="middle" fill="{GD}" font-size="12" font-weight="700" style="{FS}">{name}</text>')
-    p.append(f'<text x="24" y="{H-8}" fill="{MUT}" font-size="11" style="{FS}">Air-filled porosity is root oxygen; water-holding capacity is the buffer. The ratio is what makes a medium wet or airy.</text>')
+    p.append(f'<text x="24" y="{H-8}" fill="{MUT}" font-size="11" style="{FS}">Air-filled porosity gives root oxygen. Water-holding capacity is the buffer. The ratio shows if the medium is wet or has more air.</text>')
     return _svg(W, H, "Substrate composition", p)
 
 
 def setpoint_band():
     W, H = 700, 240
-    p = []; _title(p, "Setpoint, target band and the real reading", "you steer to a band, not a single number")
+    p = []; _title(p, "Setpoint, target band and the reading", "Control the value to a band, not to one number")
     left, right, top, bot = 50, 30, 60, 200
     def Y(v): return bot - v / 100 * (bot - top)
     p.append(f'<rect x="{left}" y="{Y(70):.0f}" width="{W-left-right}" height="{Y(40)-Y(70):.0f}" fill="{GL}" opacity=".5"/>')
@@ -182,15 +182,15 @@ def setpoint_band():
     n = len(pts)
     path = "M" + " L".join(f"{left+i/(n-1)*(W-left-right):.0f},{Y(v):.0f}" for i, v in enumerate(pts))
     p.append(f'<path d="{path}" fill="none" stroke="{INK}" stroke-width="2.4"/>')
-    p.append(f'<text x="24" y="{H-8}" fill="{MUT}" font-size="11" style="{FS}">Act on the signal only when the reading leaves the band, not on every wiggle around the setpoint.</text>')
+    p.append(f'<text x="24" y="{H-8}" fill="{MUT}" font-size="11" style="{FS}">Change the control only when the reading is not in the band. Do not change it for small changes in the band.</text>')
     return _svg(W, H, "Setpoint and band", p)
 
 
 def gen_vs_veg():
     W, H = 700, 270
-    p = []; _title(p, "Steering the plant with water", "wetter, smaller swings = leafy; drier, bigger swings = flower")
-    for i, (t, wet, col, d) in enumerate([("Vegetative", True, G, "high water content, small dryback, fast leafy growth"),
-                                          ("Generative", False, AMB, "lower water content, big dryback, flower & ripening")]):
+    p = []; _title(p, "Crop steering with water", "Wetter, small drybacks: leaf growth. Drier, large drybacks: flower growth.")
+    for i, (t, wet, col, d) in enumerate([("Vegetative", True, G, "high water content, small dryback, fast leaf growth"),
+                                          ("Generative", False, AMB, "lower water content, large dryback, flower and ripening")]):
         cx = 200 + i * 320; base = 210
         p.append(f'<line x1="{cx}" y1="100" x2="{cx}" y2="{base}" stroke="{GD}" stroke-width="3"/>')
         spread = 40 if wet else 22

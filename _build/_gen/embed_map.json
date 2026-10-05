@@ -54,7 +54,7 @@
  "light-acclimation": {
   "gallery": [
    [
-    "Photoinhibition / bleaching",
+    "Photoinhibition and bleaching",
     "assets/img/t-light-acclimation-photoinhibition-bleaching.jpg"
    ]
   ],
@@ -142,7 +142,7 @@
  "tissue-culture": {
   "gallery": [
    [
-    "Hyperhydricity (a.k.a. vitrification)",
+    "Hyperhydricity (vitrification)",
     "assets/img/t-tissue-culture-hyperhydricity-a-k-a-vitrification.jpg"
    ]
   ],

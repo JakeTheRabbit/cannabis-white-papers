@@ -33,21 +33,21 @@ def _panel(x, y, w, h, n, title, lines, fill=None, col=None):
 
 def fig_sop_map():
     steps = [
-        ("0", "Room + hood", "Clean the room. Buy and set up the hood."),
-        ("1", "Open the day", "Wipe. Warm the hood 20 min. Gown."),
-        ("2", "Mix medium", "Weigh. pH. Agar. Pour. Autoclave."),
-        ("3", "Hold 7 days", "Watch jars. Bin any that cloud."),
-        ("4", "Cut + bleach", "Take tissue. Surface-sterilise."),
-        ("5", "Plate", "One piece, one jar. Label. Lid."),
-        ("6", "Scout", "Day 7 and day 21. Bin dirty."),
-        ("7", "Multiply", "Recut clean shoots every 3–4 weeks."),
-        ("8", "Meristem", "Microscope cut if you need cleanup."),
-        ("9", "Root", "IBA in gel, or dip into a plug."),
-        ("10", "Harden", "Dome. Open vents. Then a pot."),
+        ("0", "Room + hood", "Clean the room. Purchase and install the hood."),
+        ("1", "Opening procedure", "Clean. Operate the hood for 20 min. Put on a gown."),
+        ("2", "Mix medium", "Weigh. pH. Agar. Fill jars. Sterilize."),
+        ("3", "Hold 7 days", "Monitor jars. Discard a jar with a cloud."),
+        ("4", "Cut + sterilize", "Cut the piece. Sterilize its surface."),
+        ("5", "Put in jars", "One piece in one jar. Make a label. Put the lid on."),
+        ("6", "Examine", "Day 7 and 21. Discard dirty jars."),
+        ("7", "Multiplication", "Do a subculture of the clean shoots each 3–4 weeks."),
+        ("8", "Meristem", "Microscope cut, if you must remove disease."),
+        ("9", "Rooting", "IBA in gel, or a dip, then a plug."),
+        ("10", "Acclimatization", "Dome. Open the vents. Then a pot."),
         ("11", "Test", "Send tissue for HpLVd qPCR."),
     ]
     W, H = 760, 430
-    parts = [_title("SOP map. Do these in order.")]
+    parts = [_title("SOP tasks. Do them in sequence.")]
     for i, (n, t, d) in enumerate(steps):
         col, row = i % 4, i // 4
         x, y = 16 + col * 186, 40 + row * 124
@@ -57,15 +57,15 @@ def fig_sop_map():
 
 def fig_room_treat():
     items = [
-        ("1", "Empty", "Take everything out.", "No plants. No cardboard."),
-        ("2", "Wash", "Warm water + detergent.", "Walls, floor, bench, door."),
-        ("3", "Bleach", "10% household bleach.", "Wet 10 min. Then rinse."),
-        ("4", "Alcohol", "70% ethanol or IPA.", "Wipe. Let it dry."),
-        ("5", "Seal", "Tape gaps. No carpet.", "Door sweep if you can."),
+        ("1", "Empty", "Remove all items.", "No plants. No cardboard."),
+        ("2", "Clean", "Warm water + detergent.", "Walls, floor, bench, door."),
+        ("3", "Bleach", "10% household bleach.", "Keep wet 10 min. Flush."),
+        ("4", "Alcohol", "70% ethanol or IPA.", "Clean. Let it dry."),
+        ("5", "Seal gaps", "Use tape. No carpet.", "Door sweep if you can."),
         ("6", "Hold", "Hood on 30 min.", "Then start work."),
     ]
     W, H = 760, 250
-    parts = [_title("How to treat the room, once, before first use")]
+    parts = [_title("Prepare the room one time, before first use")]
     for i, (n, t, a, b) in enumerate(items):
         x = 16 + (i % 6) * 124
         parts.append(_panel(x, 40, 116, 190, n, t, [a, b], GL if i < 4 else AMBL, GD if i < 4 else AMB))
@@ -74,25 +74,25 @@ def fig_room_treat():
 
 def fig_hood_buy():
     W, H = 760, 300
-    parts = [_title("What to order. Horizontal flow. H13 or H14 HEPA.")]
+    parts = [_title("Hood to purchase. Horizontal flow. H13 or H14 HEPA.")]
     rows = [
         ("Must have", GL, GD, [
-            "Horizontal laminar flow (air toward you)",
+            "Horizontal laminar flow (air to you)",
             "H13 or H14 HEPA, plus a pre-filter",
-            "Metal body. Not cardboard. Not a grow tent",
-            "Work opening at least 400 mm wide",
+            "Metal cabinet. No cardboard. No grow tent",
+            "Work opening width: minimum 400 mm",
         ]),
-        ("Ask the seller", BLUL, BLU, [
+        ("Message to the seller", BLUL, BLU, [
             "EN1822 or equivalent filter certificate",
-            "Face velocity 0.30–0.50 m/s (photos + spec)",
+            "Face velocity 0.30–0.50 m/s (photos + data)",
             "Replacement HEPA size and price",
             "Voltage 220–240 V if you are in AU/NZ/EU",
         ]),
-        ("Skip", REDL, RED, [
-            "Vertical-only “biosafety” boxes for this job",
+        ("Do not purchase", REDL, RED, [
+            "Vertical “biosafety” cabinets for this task",
             "No pre-filter, foam-only, or “HEPA-like”",
-            "UV as the only steriliser (it is extra, not the hood)",
-            "Used filters. Buy a new sealed HEPA",
+            "UV only (it does not replace the hood)",
+            "Used filters. Get a new sealed HEPA",
         ]),
     ]
     for i, (t, fill, col, lines) in enumerate(rows):
@@ -106,17 +106,17 @@ def fig_hood_buy():
 
 def fig_hood_flow():
     W, H = 760, 260
-    parts = [_title("How the hood works. Air one way. You sit in front.")]
+    parts = [_title("Hood operation. Air in one direction. You are in front.")]
     # box
     parts.append(f'<rect x="80" y="70" width="520" height="150" rx="8" fill="{GXL}" stroke="{GD}" stroke-width="2"/>')
     parts.append(f'<rect x="80" y="70" width="70" height="150" fill="{BLUL}" stroke="{BLU}"/>')
-    parts.append(f'<text x="115" y="130" text-anchor="middle" fill="{BLU}" font-size="11" font-weight="700" style="{FS}">pre</text>')
+    parts.append(f'<text x="115" y="130" text-anchor="middle" fill="{BLU}" font-size="11" font-weight="700" style="{FS}">Pre-filter</text>')
     parts.append(f'<text x="115" y="146" text-anchor="middle" fill="{BLU}" font-size="11" font-weight="700" style="{FS}">+HEPA</text>')
     for y in (90, 120, 150, 180):
         parts.append(f'<path d="M160,{y} L560,{y}" stroke="{BLU}" stroke-width="2" marker-end="url(#a)"/>')
     parts.append('<defs><marker id="a" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 Z" fill="var(--fig-blue)"/></marker></defs>')
     parts.append(f'<text x="360" y="64" text-anchor="middle" fill="{INK2}" font-size="12" style="{FS}">clean air sheet  →  0.30–0.50 m/s</text>')
-    parts.append(f'<text x="360" y="248" text-anchor="middle" fill="{INK2}" font-size="12" style="{FS}">You sit here. Do not block the filter face. Do not put tall jars behind open work.</text>')
+    parts.append(f'<text x="360" y="248" text-anchor="middle" fill="{INK2}" font-size="12" style="{FS}">You are here. Do not put objects on or in front of the filter. Do not put high jars behind an open jar.</text>')
     parts.append(f'<rect x="620" y="110" width="90" height="70" rx="8" fill="{PURL}" stroke="{PUR}"/>')
     parts.append(f'<text x="665" y="150" text-anchor="middle" fill="{PUR}" font-size="12" font-weight="700" style="{FS}">you</text>')
     return _svg(W, H, "Hood airflow", "".join(parts))
@@ -124,14 +124,14 @@ def fig_hood_flow():
 
 def fig_hood_setup():
     items = [
-        ("1", "Unbox", "Check the HEPA is sealed.", "No crushed corners."),
-        ("2", "Place", "Level, solid bench.", "30 cm clear behind intake."),
-        ("3", "Voltage", "Match the plate.", "Use a surge board."),
-        ("4", "First run", "On for 30 minutes.", "Empty. No work yet."),
-        ("5", "Flow check", "Tissue strip in the stream.", "It should lean steadily out."),
-        ("6", "Wipe", "70% alcohol on steel.", "Never wet the HEPA face."),
-        ("7", "Log", "Form F-12.", "Date, velocity note, pass."),
-        ("8", "Daily", "On 20 min before work.", "Wipe. Then start."),
+        ("1", "Remove packaging", "Do a check of the HEPA seal.", "No damage at the corners."),
+        ("2", "Position", "Level, stable bench.", "30 cm free air behind the intake."),
+        ("3", "Voltage", "Use the nameplate voltage.", "Power board + surge protection."),
+        ("4", "First operation", "On for 30 minutes.", "Empty. No work at this time."),
+        ("5", "Flow check", "Tissue strip in the airflow.", "It bends out and stays stable."),
+        ("6", "Clean", "70% alcohol on steel.", "Do not spray the HEPA face."),
+        ("7", "Record", "Form F-12.", "Date, velocity, result."),
+        ("8", "Each day", "On 20 min before work.", "Clean. Then start."),
     ]
     W, H = 760, 310
     parts = [_title("Hood setup, first day")]
@@ -144,15 +144,15 @@ def fig_hood_setup():
 
 def fig_day_open():
     items = [
-        ("1", "Clothes", "Clean top. Hair tied.", "No outdoor shoes in the room."),
+        ("1", "Clothing", "Clean. Hair up.", "No outdoor shoes in the room."),
         ("2", "Hood on", "20 minutes empty.", "Listen for the fan."),
-        ("3", "Wipe room", "70% alcohol, bench + door.", "Form F-01."),
-        ("4", "Wipe hood", "Steel only. Back to front.", "Never the filter face."),
-        ("5", "Gloves", "New nitrile. Spray 70%.", "Re-spray after any exit."),
-        ("6", "Tools in", "Only today’s jars + tools.", "Waste bag on the left."),
+        ("3", "Clean room", "70% alcohol, bench + door.", "Form F-01."),
+        ("4", "Clean hood", "Steel only. Rear to front.", "Not the filter face."),
+        ("5", "Gloves", "New nitrile. Spray 70%.", "Spray after you go out."),
+        ("6", "Tools in", "Only jars + tools to use.", "Waste bag on the left."),
     ]
     W, H = 760, 250
-    parts = [_title("Start of every work day")]
+    parts = [_title("Start of each work day")]
     for i, (n, t, a, b) in enumerate(items):
         x = 16 + (i % 6) * 124
         parts.append(_panel(x, 40, 116, 190, n, t, [a, b]))
@@ -161,17 +161,17 @@ def fig_day_open():
 
 def fig_media_steps():
     items = [
-        ("1", "Water", "800 mL RO or distilled", "in a 1 L flask or pot."),
-        ("2", "Salts + sugar", "MS 4.4 g. Sugar 30 g.", "Stir until clear."),
-        ("3", "Extras", "Inositol 0.1 g.", "Charcoal 1 g optional."),
-        ("4", "pH", "5.6–5.8 now.", "Before agar."),
-        ("5", "Agar", "6–8 g (9.5 g if glassy).", "Heat to dissolve."),
-        ("6", "Pour", "Jars 1/3 full.", "Loose lids."),
-        ("7", "Autoclave", "121 °C / 15 psi / 20 min.", "Form F-02 + F-03."),
-        ("8", "Hold", "7 days on the shelf.", "Bin any that cloud."),
+        ("1", "Water", "800 mL RO or distilled water", "in a 1 L flask or pot."),
+        ("2", "Salts + sugar", "MS 4.4 g. Sugar 30 g.", "Mix until dissolved."),
+        ("3", "Other ingredients", "myo-Inositol 0.1 g.", "Charcoal 1 g optional."),
+        ("4", "pH", "Set to 5.6–5.8.", "Before agar."),
+        ("5", "Agar", "6–8 g (9.5 g if glassy growth).", "Dissolve with heat."),
+        ("6", "Fill jars", "To 1/3 of each jar.", "Loose lids."),
+        ("7", "Sterilize", "121 °C / 15 psi / 20 min.", "Form F-02 + F-03."),
+        ("8", "Hold", "7 days on the shelf.", "Discard jars with a cloud."),
     ]
     W, H = 760, 310
-    parts = [_title("Mix and sterilise 1 litre of medium")]
+    parts = [_title("Mix and sterilize 1 liter of medium")]
     for i, (n, t, a, b) in enumerate(items):
         x = 16 + (i % 4) * 186
         y = 40 + (i // 4) * 130
@@ -181,15 +181,15 @@ def fig_media_steps():
 
 def fig_bleach_steps():
     items = [
-        ("1", "Cut", "10–15 mm tip or node.", "Strip big leaves."),
-        ("2", "Soap wash", "Tap + drop of soap.", "10–20 minutes."),
+        ("1", "Cut", "10–15 mm tip or node.", "Remove large leaves."),
+        ("2", "Clean + soap", "Tap water + drop", "of soap. 10–20 min."),
         ("3", "70% alcohol", "30–60 seconds.", "Then drain."),
-        ("4", "Bleach", "0.6–1% NaOCl + Tween.", "20–30 min, stir."),
-        ("5", "Rinse ×3", "Sterile water.", "3–5 min each."),
-        ("6", "Trim ends", "In the hood.", "Cut off bleach-burn."),
+        ("4", "Bleach", "0.6–1% NaOCl + Tween.", "20–30 min, mix."),
+        ("5", "Clean ×3", "Sterilized water.", "3–5 min each."),
+        ("6", "Cut ends", "In the hood. Remove", "bleach damage."),
     ]
     W, H = 760, 250
-    parts = [_title("Surface-sterilise the plant piece")]
+    parts = [_title("Sterilize the surface of the explant")]
     for i, (n, t, a, b) in enumerate(items):
         x = 16 + i * 124
         parts.append(_panel(x, 40, 116, 190, n, t, [a, b]))
@@ -198,15 +198,15 @@ def fig_bleach_steps():
 
 def fig_plate_steps():
     items = [
-        ("1", "Open one jar", "In the air stream.", "Lid face down, to the side."),
-        ("2", "Stand the piece", "Cut base in the gel.", "Bud above the gel."),
-        ("3", "Lid on", "At once.", "Do not talk over it."),
+        ("1", "Open one jar", "In the airflow.", "Lid face down, to the side."),
+        ("2", "Put the piece", "Cut end in the gel.", "Bud above the gel."),
+        ("3", "Lid on", "Immediately.", "Do not speak near it."),
         ("4", "Label", "Cultivar, date, type.", "Form F-04."),
         ("5", "Shelf", "24–26 °C, 16 h light.", "Do not open to look."),
-        ("6", "Day 7", "Scout. Bin cloudy.", "Form F-07."),
+        ("6", "Day 7", "Examine. Discard", "dirty jars. Form F-07."),
     ]
     W, H = 760, 250
-    parts = [_title("Plate one piece")]
+    parts = [_title("Put one piece in a jar")]
     for i, (n, t, a, b) in enumerate(items):
         x = 16 + i * 124
         parts.append(_panel(x, 40, 116, 190, n, t, [a, b]))
@@ -215,11 +215,11 @@ def fig_plate_steps():
 
 def fig_scout():
     W, H = 760, 220
-    parts = [_title("Scout. Three outcomes.")]
+    parts = [_title("Examine. Three results.")]
     cards = [
-        ("Keep", GL, GD, "Clear gel. Green tissue.", "No smell. No fuzz.", "Leave it closed."),
-        ("Bin", REDL, RED, "Cloud, slime, or fuzz.", "Or a sour smell.", "Seal. Bag. Bin. Log F-07."),
-        ("Watch", AMBL, AMB, "Slight haze, day 3–5.", "Do not open it.", "Check again day 7 and 21."),
+        ("Keep", GL, GD, "Transparent gel. Green tissue.", "No odor. No mold.", "Keep it closed."),
+        ("Discard", REDL, RED, "Cloud, slime, or mold.", "Or an unusual odor.", "Seal in a bag. Discard. Record F-07."),
+        ("Monitor", AMBL, AMB, "A small cloud, day 3–5.", "Do not open it.", "Examine again on day 7 and 21."),
     ]
     for i, (t, fill, col, a, b, c) in enumerate(cards):
         x = 20 + i * 246
@@ -233,22 +233,22 @@ def fig_scout():
 
 def fig_paper_pack():
     W, H = 760, 340
-    parts = [_title("Paper pack. Fill these. Do not skip the lot number.")]
+    parts = [_title("Paper forms. Fill these. Write the lot number each time.")]
     forms = [
-        ("F-01", "Room daily clean"),
+        ("F-01", "Room clean each day"),
         ("F-02", "Autoclave load"),
         ("F-03", "Media batch"),
-        ("F-04", "Initiation / plate"),
+        ("F-04", "Initiation / put in jars"),
         ("F-05", "Subculture"),
         ("F-06", "Meristem cut"),
-        ("F-07", "Contamination cull"),
+        ("F-07", "Contamination discarded jars"),
         ("F-08", "Rooting"),
-        ("F-09", "Harden"),
-        ("F-10", "Index / qPCR"),
-        ("F-11", "Mother intake"),
+        ("F-09", "Acclimatization"),
+        ("F-10", "Indexing / qPCR"),
+        ("F-11", "Mother plant intake"),
         ("F-12", "Hood check"),
         ("F-13", "Gown / entry"),
-        ("F-14", "Lot register"),
+        ("F-14", "Lot record"),
     ]
     for i, (code, name) in enumerate(forms):
         x = 16 + (i % 7) * 106

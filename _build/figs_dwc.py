@@ -35,8 +35,8 @@ def _lead(x1, y1, x2, y2, col=MUT):
 # ---------------------------------------------------------------- 1. bucket cross-section
 def bucket_xsection():
     W, H = 760, 540
-    p = _title("Cross-section of one RDWC site",
-               "Note the two volumes that are not the same number.")
+    p = _title("Cross section of one RDWC site",
+               "The two volumes are different.")
     bx, bw, bt, bb = 210, 250, 92, 452          # bucket box
     water_y, bulk_y = 150, 392                  # waterline, bulkhead centre
 
@@ -106,32 +106,32 @@ def bucket_xsection():
                 f'stroke="{col}" stroke-width="1.6"/>')
     p.append(bracket(150, water_y, bb - 2, BLU))
     p.append(bracket(112, bulk_y, bb - 2, AMB))
-    p.append(_t(146, water_y + 52, "operating", BLU, 11, 700, "end"))
-    p.append(_t(146, water_y + 66, "volume", BLU, 11, 700, "end"))
-    p.append(_t(146, water_y + 82, "~40 L in a", MUT, 9.8, None, "end"))
+    p.append(_t(146, water_y + 52, "operating volume", BLU, 11, 700, "end"))
+    p.append(_t(146, water_y + 66, "of solution", BLU, 11, 700, "end"))
+    p.append(_t(146, water_y + 82, "approximately 40 L in a", MUT, 9.8, None, "end"))
     p.append(_t(146, water_y + 94, "49 L module", MUT, 9.8, None, "end"))
-    p.append(_t(108, bulk_y + 34, "left-over", AMB, 11, 700, "end"))
+    p.append(_t(108, bulk_y + 34, "remaining volume", AMB, 11, 700, "end"))
     p.append(_t(108, bulk_y + 48, "~11 L", AMB, 10, None, "end"))
-    p.append(_t(108, bulk_y + 61, "stays put", MUT, 9.5, None, "end"))
+    p.append(_t(108, bulk_y + 61, "stays in the bucket", MUT, 9.5, None, "end"))
 
     # right-hand labels
     labels = [
         (bt - 40, "Basal stem stays ABOVE the water", GD),
-        (bt - 4, "Net pot + expanded clay", INK2),
-        (water_y - 8, "Waterline just under the deck", BLU),
-        (bt + 150, "Root mass in free solution", INK2),
-        (bulk_y - 16, "Bulkhead + recirculating line", INK2),
-        (bb - 18, "Air stone: bottom, off the wall,", INK2),
+        (bt - 4, "Net pot and expanded clay", INK2),
+        (water_y - 8, "Water level immediately below the deck", BLU),
+        (bt + 150, "Root mass free in the solution", INK2),
+        (bulk_y - 16, "Bulkhead and return line", INK2),
+        (bb - 18, "Air stone: at the bottom, away from the wall,", INK2),
     ]
     lx = bx + bw + 26
     for y, s, col in labels:
         p.append(_t(lx, y, s, col, 11, 700 if col != INK2 else None))
-    p.append(_t(lx, bb - 5, "never under the net pot", RED, 11, 700))
+    p.append(_t(lx, bb - 5, "not below the net pot", RED, 11, 700))
     p.append(_lead(bx + bw - 4, bt - 44, lx - 8, bt - 44))
     p.append(_lead(bx + bw - 20, water_y, lx - 8, water_y - 12))
     p.append(_lead(bx + bw - 30, bt + 146, lx - 8, bt + 146))
     p.append(_lead(bx + bw + 20, bulk_y, lx - 8, bulk_y - 20))
-    p.append(_t(24, H - 14, "A ‘full’ change-out drains only to the bulkhead, so it replaces about 71% of the water — not all of it.",
+    p.append(_t(24, H - 14, "A ‘full’ change-out drains the system only to the bulkhead. Thus it replaces approximately 71% of the water and not all the water.",
                 MUT, 11))
     return _svg(W, H, "Cross-section of one RDWC bucket", p)
 
@@ -139,15 +139,15 @@ def bucket_xsection():
 # ---------------------------------------------------------------- 2. root boundary layer
 def boundary_layer():
     W, H = 760, 400
-    p = _title("The root boundary layer, and what bubbling does to it",
-               "The same root, the same solution. Only the water movement differs.")
+    p = _title("The root boundary layer and the effect of aeration on it",
+               "The root and the solution are the same. Only the movement of the water is different.")
     for k, (cx, ok) in enumerate([(206, True), (554, False)]):
         cy = 232
         col = G if ok else RED
         band = GL if ok else REDL
         p.append(f'<rect x="{cx-166}" y="86" width="332" height="256" rx="12" '
                  f'fill="{PANEL2}" stroke="{LINE}"/>')
-        p.append(_t(cx, 110, "Gentle flow: layer intact" if ok else "Agitated: layer stripped",
+        p.append(_t(cx, 110, "Weak flow: the layer stays" if ok else "High air flow: no layer",
                     col, 12.5, 700, "middle"))
         # bulk solution stipple
         for i in range(26):
@@ -185,10 +185,10 @@ def boundary_layer():
                 p.append(f'<path d="M{cx+108},{cy+dy-5} l8,5 l-8,5" fill="none" stroke="{col}" '
                          f'stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/>')
         p.append(_t(cx, 322,
-                    "Acidified, reduced, iron available" if ok else "Bulk pH, bulk chemistry, iron unavailable",
+                    "Low pH, reductants, iron available" if ok else "pH and chemistry of the solution, no iron available",
                     INK2, 10.8, None, "middle"))
     p.append(_t(24, H - 14,
-                "The root builds this layer to feed itself. Aeration does not just add oxygen — past a point it demolishes the machinery.",
+                "The root makes this layer to absorb nutrients. Aeration adds oxygen, but a high aeration rate also removes the layer.",
                 MUT, 11))
     return _svg(W, H, "Root boundary layer intact versus stripped by agitation", p)
 
@@ -196,7 +196,7 @@ def boundary_layer():
 # ---------------------------------------------------------------- 3. air stone placement
 def airstone_placement():
     W, H = 760, 372
-    p = _title("Air stone placement: same air volume, opposite outcome")
+    p = _title("Air stone position: the same air volume gives the opposite result")
     import math
     for cx, ok in ((206, False), (554, True)):
         col = RED if not ok else G
@@ -224,13 +224,13 @@ def airstone_placement():
         p.append(f'<rect x="{cx-96}" y="{H-46}" width="192" height="28" rx="6" '
                  f'fill="{REDL if not ok else GL}" opacity=".8"/>')
         p.append(_t(cx, H - 27,
-                    "✗  Under the net pot" if not ok else "✓  Bottom, ~2.5 cm off the wall",
+                    "✗  Below the net pot" if not ok else "✓  Bottom, ~2.5 cm from the wall",
                     INK, 11.5, 700, "middle"))
         p.append(_t(cx, bt + 198,
-                    "Plume shears through the" if not ok else "Plume rises past the root",
+                    "The plume moves through the" if not ok else "The plume moves up along the",
                     INK2, 10.4, None, "middle"))
         p.append(_t(cx, bt + 211,
-                    "youngest root tips" if not ok else "mass, not through it",
+                    "new root tips" if not ok else "root mass, not through it",
                     INK2, 10.4, None, "middle"))
     return _svg(W, H, "Correct and incorrect air stone placement in a DWC bucket", p)
 
@@ -238,8 +238,8 @@ def airstone_placement():
 # ---------------------------------------------------------------- 4. system schematic
 def system_schematic():
     W, H = 760, 400
-    p = _title("The RDWC loop: every control lives in the plant-free bucket",
-               "Plant sites are dumb. Measurement, dosing, heating and top-off all happen in one place.")
+    p = _title("The RDWC loop: all the controls are in the control bucket",
+               "The plant sites have no controls. You measure, add doses, control the temperature and add RO water in one bucket.")
     # plant sites
     sx, sy = 300, 96
     for i in range(3):
@@ -254,7 +254,7 @@ def system_schematic():
     p.append(_t(sx - 141, sy + 32, "CONTROL BUCKET", INK, 11.5, 700, "middle"))
     p.append(_t(sx - 141, sy + 46, "no plant in it", MUT, 10, None, "middle"))
     for j, (s, col) in enumerate([("circulation pump", INK2), ("pH · EC · DO · ORP probes", BLU),
-                                  ("heater / chiller", AMB), ("RO top-off float", BLU),
+                                  ("heater or chiller", AMB), ("float valve for RO water", BLU),
                                   ("nutrient addback point", G)]):
         p.append(f'<circle cx="{sx-216}" cy="{sy+68+j*26}" r="3.6" fill="{col}"/>')
         p.append(_t(sx - 205, sy + 72 + j * 26, s, INK2, 10.4))
@@ -264,7 +264,7 @@ def system_schematic():
     p.append(_t(sx + 150, sy + 22, "feed manifold →", G, 10.5, 700, "middle"))
     p.append(f'<path d="M{sx+700-260},{sy+212} L{sx-24},{sy+212} L{sx-24},{sy+150} L{sx-50},{sy+150}" '
              f'fill="none" stroke="{BLU}" stroke-width="3.4"/>')
-    p.append(_t(sx + 150, sy + 227, "← return to control bucket, by gravity", BLU, 10.5, 700, "middle"))
+    p.append(_t(sx + 150, sy + 227, "← gravity flow back to the control bucket", BLU, 10.5, 700, "middle"))
     for i in range(3):
         x = sx + i * 132 + 52
         p.append(f'<line x1="{x}" y1="{sy+30}" x2="{x}" y2="{sy}" stroke="{G}" stroke-width="2"/>')
@@ -274,7 +274,7 @@ def system_schematic():
     p.append(_t(W - 26, H - 102, "room wall", MUT, 10, None, "end"))
     p.append(f'<rect x="26" y="{H-72}" width="128" height="40" rx="8" fill="{AMBL}" stroke="{AMB}" stroke-width="1.6"/>')
     p.append(_t(90, H - 53, "air blower", INK, 11, 700, "middle"))
-    p.append(_t(90, H - 40, "outside the room", MUT, 9.6, None, "middle"))
+    p.append(_t(90, H - 40, "out of the room", MUT, 9.6, None, "middle"))
     p.append(f'<path d="M154,{H-52} L{W-60},{H-52}" stroke="{AMB}" stroke-width="3"/>')
     for i in range(3):
         x = sx + i * 132 + 78
@@ -286,17 +286,17 @@ def system_schematic():
 # ---------------------------------------------------------------- 5. ORP mixed potential
 def orp_mixed_potential():
     W, H = 760, 400
-    p = _title("Why the ORP number is not an oxygen number",
-               "Six couples in one water can sit 1200 mV apart. The electrode reports a compromise.")
+    p = _title("The ORP value is not a measurement of oxygen",
+               "Six redox couples in one water can be 1200 mV apart. The electrode shows a mixed potential.")
     ax, ay, aw = 250, 88, 420
     p.append(f'<line x1="{ax}" y1="{ay}" x2="{ax}" y2="{ay+224}" stroke="{LINE}" stroke-width="1.4"/>')
     barmax = 176
     rows = [
-        ("O₂ / H₂O", 0.86, "very slow at Pt — barely counts", MUT, 0.30),
-        ("HOCl / Cl⁻", 0.96, "fast and strong — dominates if dosed", RED, 1.0),
-        ("H₂O₂ / H₂O", 0.80, "fast, strong, short-lived", AMB, 1.0),
-        ("Fe³⁺ / Fe²⁺", 0.52, "genuinely poises the solution", PUR, 0.95),
-        ("Organic C (reduced)", 0.24, "pulls the reading down", GD, 0.8),
+        ("O₂ / H₂O", 0.86, "very slow at Pt, almost no effect", MUT, 0.30),
+        ("HOCl / Cl⁻", 0.96, "fast and strong, the largest effect if you add it", RED, 1.0),
+        ("H₂O₂ / H₂O", 0.80, "fast, strong, for a short time", AMB, 1.0),
+        ("Fe³⁺ / Fe²⁺", 0.52, "gives the solution good poise", PUR, 0.95),
+        ("Reduced organic carbon", 0.24, "decreases the reading", GD, 0.8),
     ]
     for i, (name, frac, note, col, op) in enumerate(rows):
         y = ay + 18 + i * 42
@@ -310,15 +310,15 @@ def orp_mixed_potential():
     p.append(f'<line x1="{ax}" y1="{my}" x2="{ax+barmax}" y2="{my}" stroke="{LINE}" stroke-width="1"/>')
     mx = ax + 0.60 * barmax
     p.append(f'<rect x="{mx-46:.0f}" y="{my+12}" width="92" height="34" rx="7" fill="{INK2}"/>')
-    p.append(_t(mx, my + 27, "what the", PAPER, 10, 700, "middle"))
-    p.append(_t(mx, my + 40, "meter shows", PAPER, 10, 700, "middle"))
+    p.append(_t(mx, my + 27, "the value", PAPER, 10, 700, "middle"))
+    p.append(_t(mx, my + 40, "on the meter", PAPER, 10, 700, "middle"))
     p.append(f'<path d="M{mx:.0f},{my+12} L{mx:.0f},{ay+10}" '
              f'stroke="{INK2}" stroke-width="1.4" stroke-dasharray="3 4"/>')
     p.append(_t(ax - 12, my + 32, "mixed potential", INK, 11, 700, "end"))
-    p.append(_t(ax, ay - 10, "weakly oxidising", MUT, 10))
-    p.append(_t(ax + barmax, ay - 10, "strongly oxidising →", MUT, 10, None, "end"))
+    p.append(_t(ax, ay - 10, "weak oxidizer", MUT, 10))
+    p.append(_t(ax + barmax, ay - 10, "strong oxidizer →", MUT, 10, None, "end"))
     p.append(_t(24, H - 14,
-                "Dissolved oxygen sits at the bottom of the list. If you dose no oxidiser, ORP is mostly telling you how clean the water is.",
+                "Dissolved oxygen has a very small effect. If you do not add an oxidizer, the ORP value is a primary indication of how clean the water is.",
                 MUT, 11))
     return _svg(W, H, "How competing redox couples produce a mixed potential at the electrode", p)
 
@@ -326,11 +326,11 @@ def orp_mixed_potential():
 # ---------------------------------------------------------------- 6. bubble scale
 def bubble_scale():
     W, H = 760, 320
-    p = _title("Three bubble regimes, three completely different behaviours")
+    p = _title("The three bubble sizes have three different properties")
     cols = [
-        ("Coarse", "air stone", "1–5 mm", "seconds", "rises fast, bursts,\nstirs hard", AMB, AMBL, [16, 12, 19]),
-        ("Fine / micro", "diffuser", "10–100 µm", "minutes", "rises slowly,\nmilky appearance", BLU, BLUL, [7, 5, 8, 6, 7]),
-        ("Nano", "generator", "< 200 nm", "~70 days", "does not rise,\nkeeps dissolving", G, GL, [2.4] * 14),
+        ("Large bubbles", "air stone", "1–5 mm", "seconds", "moves up fast, breaks,\nmakes turbulence", AMB, AMBL, [16, 12, 19]),
+        ("Microbubbles", "diffuser", "10–100 µm", "minutes", "moves up slowly,\nwhite water", BLU, BLUL, [7, 5, 8, 6, 7]),
+        ("Nanobubbles", "equipment", "< 200 nm", "approximately 70 days", "does not move up,\ncontinues to dissolve", G, GL, [2.4] * 14),
     ]
     for i, (name, sub, size, life, note, col, band, radii) in enumerate(cols):
         cx = 152 + i * 232
@@ -345,12 +345,12 @@ def bubble_scale():
             by = 128 + (j * 31) % 76
             p.append(f'<circle cx="{bx:.0f}" cy="{by:.0f}" r="{r}" fill="{PAPER}" stroke="{col}" stroke-width="1.3" opacity=".95"/>')
         p.append(_t(cx, 224, size, col, 12, 700, "middle", MN))
-        p.append(_t(cx, 241, "persists ~" + life, INK2, 10.4, None, "middle"))
+        p.append(_t(cx, 241, "Stays for " + life, INK2, 10.4, None, "middle"))
         for k, ln in enumerate(note.split("\n")):
             p.append(_t(cx, 256 + k * 12, ln, MUT, 9.8, None, "middle"))
         p.append(_t(cx, 285, sub, MUT, 10, None, "middle"))
     p.append(_t(24, H - 12,
-                "Nanobubbles decouple oxygen delivery from mechanical agitation — the two things a coarse air stone forces you to buy together.",
+                "Nanobubbles supply oxygen with no movement of the water. Large bubbles supply oxygen and movement of the water together.",
                 MUT, 11))
     return _svg(W, H, "Coarse, fine and nano bubble regimes compared", p)
 
@@ -358,8 +358,8 @@ def bubble_scale():
 # ---------------------------------------------------------------- 7. supply vs demand
 def supply_demand():
     W, H = 720, 356
-    p = _title("Warming the reservoir cuts supply and raises demand at the same time",
-               "Two curves moving apart. This is why temperature is the master dial.")
+    p = _title("A hotter reservoir has less oxygen supply and more oxygen demand at the same time",
+               "The distance between the two curves increases. Thus temperature is the primary control.")
     left, right, top, bot = 62, 34, 74, H - 66
     plotw = W - left - right
     xs = [14, 17, 20, 23, 26, 29, 32]
@@ -384,12 +384,12 @@ def supply_demand():
         p.append(f'<circle cx="{X(i):.0f}" cy="{Ys(v):.0f}" r="3.4" fill="{BLU}"/>')
     for i, v in enumerate(dem):
         p.append(f'<circle cx="{X(i):.0f}" cy="{Yd(v):.0f}" r="3.4" fill="{RED}"/>')
-    p.append(_t(X(0) + 8, Ys(sup[0]) - 12, "oxygen the water can hold", BLU, 11, 700))
-    p.append(_t(X(6) - 8, Yd(dem[6]) - 14, "oxygen the root demands", RED, 11, 700, "end"))
+    p.append(_t(X(0) + 8, Ys(sup[0]) - 12, "oxygen that the water can hold", BLU, 11, 700))
+    p.append(_t(X(6) - 8, Yd(dem[6]) - 14, "oxygen that the root uses", RED, 11, 700, "end"))
     # the widening gap
     p.append(f'<path d="M{X(6)-26:.0f},{Ys(sup[6]):.0f} L{X(6)-26:.0f},{Yd(dem[6]):.0f}" '
              f'stroke="{AMB}" stroke-width="1.6" stroke-dasharray="4 3"/>')
     p.append(_t(24, H - 14,
-                "Supply falls ~1.7% per °C. Demand roughly doubles per 10 °C. Across 14→32 °C the ratio worsens by about 5×.",
+                "Supply decreases 1.7% for each °C. Demand increases 2× for each 10 °C. The ratio is 5× worse from 14 to 32 °C. Values are approximate.",
                 MUT, 11))
     return _svg(W, H, "Oxygen supply falling and oxygen demand rising with temperature", p)

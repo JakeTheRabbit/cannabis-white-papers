@@ -10,15 +10,15 @@ GREEN = G; DGREEN = GD
 # ---------------------------------------------------------------- seeds
 def germination():
     W, H = 760, 250
-    p = []; _title(p, "From seed to seedling", "what happens, in order, after the seed takes on water")
+    p = []; _title(p, "From seed to seedling", "the sequence after the seed absorbs water")
     soil = 175
     p.append(f'<rect x="20" y="{soil}" width="{W-40}" height="6" fill="{DRY}" opacity=".5"/>')
     stages = [
         ("Dry seed", "viable, dormant"),
-        ("Imbibition", "soaks up water, coat splits"),
-        ("Radicle", "taproot emerges, roots down"),
-        ("Cotyledons", "shoot hooks up, seed leaves open"),
-        ("True leaves", "first real serrated leaves"),
+        ("Imbibition", "absorbs water, the seed coat breaks"),
+        ("Radicle", "taproot comes out, moves down"),
+        ("Cotyledons", "shoot bends up, seed leaves open"),
+        ("True leaves", "first serrated leaves"),
     ]
     bw = (W - 40) / 5
     for i, (t, d) in enumerate(stages):
@@ -54,7 +54,7 @@ def germination():
 
 def seed_anatomy():
     W, H = 640, 300
-    p = []; _title(p, "Inside a cannabis seed", "the parts that become the plant")
+    p = []; _title(p, "Parts of a cannabis seed", "the parts that become the plant")
     cx, cy = 230, 165
     p.append(f'<ellipse cx="{cx}" cy="{cy}" rx="120" ry="90" fill="{DRYL}" stroke="{INK2}" stroke-width="2"/>')
     p.append(f'<ellipse cx="{cx}" cy="{cy}" rx="108" ry="78" fill="none" stroke="{DRY}" stroke-width="1.4" stroke-dasharray="3 3"/>')
@@ -74,15 +74,15 @@ def seed_anatomy():
     lab(cx+30, cy-40, W-20, 150, "Cotyledons (seed leaves)")
     lab(cx-22, cy+10, W-20, 200, "Embryo")
     lab(cx-12, cy+55, W-20, 240, "Radicle (becomes taproot)")
-    p.append(f'<text x="24" y="{H-10}" fill="{MUT}" font-size="11" style="{FS}">The coat protects; the endosperm feeds; the embryo is the plant in miniature, radicle down, cotyledons up.</text>')
+    p.append(f'<text x="24" y="{H-10}" fill="{MUT}" font-size="11" style="{FS}">Seed coat: protection. Endosperm: nutrients. Embryo: a small plant, radicle down, cotyledons up.</text>')
     return _svg(W, H, "Seed anatomy", p)
 
 
 # ---------------------------------------------------------------- defoliation / training
 def apical_dominance():
     W, H = 700, 290
-    p = []; _title(p, "Apical dominance, and how topping releases it", "the tip hormone suppresses the buds below it")
-    for i, (t, topped) in enumerate([("Intact: one dominant tip", False), ("Topped: two tips take over", True)]):
+    p = []; _title(p, "Apical dominance, and how topping stops it", "the tip hormone prevents growth of the buds below it")
+    for i, (t, topped) in enumerate([("No topping: one primary top", False), ("After topping: two primary tops", True)]):
         cx = 200 + i * 320; base = 250; topy = 95
         p.append(f'<line x1="{cx}" y1="{base}" x2="{cx}" y2="{topy if not topped else topy+30}" stroke="{DGREEN}" stroke-width="4"/>')
         if not topped:
@@ -92,22 +92,22 @@ def apical_dominance():
             for ly in (150, 195):
                 for sgn in (-1, 1):
                     p.append(f'<circle cx="{cx+sgn*18}" cy="{ly}" r="5" fill="{MUT}"/>')
-            _wrap(p, cx, base+22, "side buds suppressed, plant grows tall and single", INK2, 30)
+            _wrap(p, cx, base+22, "side buds do not become larger, one top becomes high", INK2, 30)
         else:
             p.append(f'<line x1="{cx}" y1="{topy+30}" x2="{cx-12}" y2="{topy+34}" stroke="{RED}" stroke-width="2" stroke-dasharray="3 2"/>')
             for sgn in (-1, 1):
                 p.append(f'<path d="M{cx},{topy+30} q{sgn*30},-10 {sgn*36},-34" fill="none" stroke="{DGREEN}" stroke-width="3.5"/>')
                 p.append(f'<circle cx="{cx+sgn*36}" cy="{topy-6}" r="9" fill="{GD}"/>')
-            _wrap(p, cx, base+22, "cut breaks the hormone, two colas form", INK2, 30)
+            _wrap(p, cx, base+22, "topping stops the hormone, two colas start", INK2, 30)
         p.append(f'<text x="{cx}" y="80" text-anchor="middle" fill="{DGREEN}" font-size="12.5" font-weight="700" style="{FS}">{t}</text>')
     return _svg(W, H, "Apical dominance", p)
 
 
 def fim_vs_topping():
     W, H = 700, 280
-    p = []; _title(p, "Topping vs FIM: where you cut", "the cut line decides how many new tops you get")
-    for i, (t, frac, n, d) in enumerate([("Topping", 1.0, "2 tops", "clean cut below the newest node"),
-                                          ("FIM", 0.2, "3-4 tops", "pinch ~80% of the tip, leave the base ragged")]):
+    p = []; _title(p, "Topping and FIM: where you cut", "the position where you cut gives the number of new tops")
+    for i, (t, frac, n, d) in enumerate([("Topping", 1.0, "2 tops", "cut cleanly below the newest node"),
+                                          ("FIM", 0.2, "3-4 tops", "cut approximately 80% of the tip, not all of it")]):
         cx = 200 + i * 320; tipy = 90
         p.append(f'<line x1="{cx}" y1="220" x2="{cx}" y2="{tipy}" stroke="{DGREEN}" stroke-width="4"/>')
         for sgn in (-1, 1):
@@ -124,7 +124,7 @@ def fim_vs_topping():
 
 def lollipop_zones():
     W, H = 660, 290
-    p = []; _title(p, "Lollipopping: keep the top, strip the bottom", "light and air reach the buds that pay")
+    p = []; _title(p, "Lollipopping: keep the top, remove the bottom", "light and air go to the buds with good yield")
     cx, base, top = 300, 250, 80
     p.append(f'<line x1="{cx}" y1="{base}" x2="{cx}" y2="{top}" stroke="{DGREEN}" stroke-width="4"/>')
     # keep zone (top third) green
@@ -138,15 +138,15 @@ def lollipop_zones():
                 p.append(f'<line x1="{cx+sgn*20}" y1="{ly-8}" x2="{cx+sgn*52}" y2="{ly+8}" stroke="{RED}" stroke-width="1.6"/>')
     p.append(f'<text x="{cx+165}" y="{top+30}" fill="{DGREEN}" font-size="11.5" font-weight="700" style="{FS}">KEEP</text>')
     p.append(f'<text x="{cx+165}" y="{base-30}" fill="{RED}" font-size="11.5" font-weight="700" style="{FS}">REMOVE</text>')
-    p.append(f'<text x="{cx-200}" y="{base-30}" fill="{MUT}" font-size="10" style="{FS}">larf &amp; shade</text>')
-    p.append(f'<text x="24" y="{H-10}" fill="{MUT}" font-size="11" style="{FS}">Remove the lower third (small ‘larf’ buds and shade leaves) so energy, light and airflow go to the productive canopy.</text>')
+    p.append(f'<text x="{cx-200}" y="{base-30}" fill="{MUT}" font-size="10" style="{FS}">larf and shade</text>')
+    p.append(f'<text x="24" y="{H-10}" fill="{MUT}" font-size="11" style="{FS}">Remove the bottom third (small ‘larf’ buds and shade leaves). Thus energy, light and airflow go to the top canopy.</text>')
     return _svg(W, H, "Lollipopping zones", p)
 
 
 def training_compare():
     W, H = 720, 250
-    p = []; _title(p, "Training methods and the canopy they make", "more, even tops = more light = more yield")
-    plants = [("Untrained", 1, "tall"), ("Topped", 2, "bushy"), ("LST", 4, "spread"), ("SCROG", 8, "flat even")]
+    p = []; _title(p, "Training methods and the canopy that they make", "more tops, same height = more light = more yield")
+    plants = [("No training", 1, "tall"), ("Topping", 2, "bushy"), ("LST", 4, "spread"), ("SCROG", 8, "flat even")]
     bw = W / 4
     for i, (t, tops, shape) in enumerate(plants):
         cx = bw * i + bw / 2; base = 190; top = 110
@@ -162,13 +162,13 @@ def training_compare():
             if shape == "flat even":
                 p.append(f'<line x1="{cx-80}" y1="{top+12}" x2="{cx+80}" y2="{top+12}" stroke="{MUT}" stroke-width="1" stroke-dasharray="2 2"/>')
         p.append(f'<text x="{cx}" y="{base+24}" text-anchor="middle" fill="{DGREEN}" font-size="12" font-weight="700" style="{FS}">{t}</text>')
-        p.append(f'<text x="{cx}" y="{base+40}" text-anchor="middle" fill="{INK2}" font-size="10" style="{FS}">{tops} main cola{"s" if tops>1 else ""}</text>')
+        p.append(f'<text x="{cx}" y="{base+40}" text-anchor="middle" fill="{INK2}" font-size="10" style="{FS}">{tops} primary cola{"s" if tops>1 else ""}</text>')
     return _svg(W, H, "Training comparison", p)
 
 
 def bud_anatomy():
     W, H = 640, 300
-    p = []; _title(p, "Parts of a flower (bud)", "what you are actually looking at")
+    p = []; _title(p, "Parts of a flower (bud)", "the parts that you see on a bud")
     cx, cy = 220, 175
     # cola shape
     p.append(f'<path d="M{cx},80 C{cx-70},120 {cx-60},230 {cx},255 C{cx+60},230 {cx+70},120 {cx},80 Z" fill="{GL}" stroke="{DGREEN}" stroke-width="2"/>')
@@ -184,29 +184,29 @@ def bud_anatomy():
     def lab(x, y, tx, ty, t):
         p.append(f'<line x1="{x}" y1="{y}" x2="{tx}" y2="{ty}" stroke="{MUT}" stroke-width="1"/>')
         p.append(f'<text x="{tx+6}" y="{ty+4}" fill="{INK}" font-size="11" font-weight="700" style="{FS}">{t}</text>')
-    lab(cx, 85, W-200, 80, "Cola (flower cluster)")
-    lab(cx-5, 150, W-200, 130, "Calyx (the bud core)")
+    lab(cx, 85, W-200, 80, "Cola (group of buds)")
+    lab(cx-5, 150, W-200, 130, "Calyx (inner part of the bud)")
     lab(cx+30, 140, W-200, 180, "Pistils (the hairs)")
     lab(cx+40, 175, W-200, 230, "Trichomes (resin)")
-    p.append(f'<text x="24" y="{H-10}" fill="{MUT}" font-size="11" style="{FS}">Pistils change colour with maturity; trichomes (not pistils) are the reliable ripeness signal.</text>')
+    p.append(f'<text x="24" y="{H-10}" fill="{MUT}" font-size="11" style="{FS}">Pistils change color with maturity. Trichomes (not pistils) are the accurate signal of ripeness.</text>')
     return _svg(W, H, "Bud anatomy", p)
 
 
 # ---------------------------------------------------------------- airflow
 def boundary_layer():
     W, H = 700, 250
-    p = []; _title(p, "The boundary layer: still air on the leaf", "the film that slows water and CO2 exchange")
+    p = []; _title(p, "The boundary layer: air that does not move on the leaf", "the film that decreases the movement of water and CO2")
     lx, ly, lw = 120, 150, 460
     p.append(f'<rect x="{lx}" y="{ly}" width="{lw}" height="16" rx="8" fill="{G}" stroke="{DGREEN}"/>')
     p.append(f'<rect x="{lx}" y="{ly-20}" width="{lw}" height="20" fill="{BLUL}" opacity=".5"/>')
-    p.append(f'<text x="{lx+lw/2}" y="{ly-6}" text-anchor="middle" fill="{BLU}" font-size="10.5" style="{FS}">still boundary-layer air</text>')
+    p.append(f'<text x="{lx+lw/2}" y="{ly-6}" text-anchor="middle" fill="{BLU}" font-size="10.5" style="{FS}">boundary layer (air that does not move)</text>')
     for k, (yy, lab, thick) in enumerate([(ly-60, "moving room air", 3)]):
         for xx in range(lx+20, lx+lw-10, 70):
             p.append(f'<path d="M{xx},{yy} l40,0" stroke="{INK2}" stroke-width="{thick}" marker-end=""/>')
             p.append(f'<path d="M{xx+40},{yy} l-7,-4 M{xx+40},{yy} l-7,4" stroke="{INK2}" stroke-width="{thick}" fill="none"/>')
-    p.append(f'<text x="{lx}" y="{ly-70}" fill="{INK2}" font-size="10.5" style="{FS}">moving room air</text>')
+    p.append(f'<text x="{lx}" y="{ly-70}" fill="{INK2}" font-size="10.5" style="{FS}">room air that moves</text>')
     p.append(f'<text x="{lx+lw/2}" y="{ly+34}" text-anchor="middle" fill="{DGREEN}" font-size="10.5" style="{FS}">leaf surface</text>')
-    p.append(f'<text x="24" y="{H-12}" fill="{MUT}" font-size="11" style="{FS}">Good airflow thins this film so the leaf can transpire and take up CO2. Dead-still air thickens it and the leaf stalls, the airflow goal is to keep it thin, not to blast the plants.</text>')
+    p.append(f'<text x="24" y="{H-12}" fill="{MUT}" font-size="11" style="{FS}">Airflow keeps the film thin: the leaf can transpire and absorb CO2. No air movement makes the film thick. Do not use strong airflow.</text>')
     return _svg(W, H, "Boundary layer", p)
 
 
@@ -226,16 +226,16 @@ def transpiration():
     for ox in (-60, 60):
         p.append(f'<path d="M{cx+ox},95 q{ox/6},-20 {ox/4},-30" fill="none" stroke="{BLU}" stroke-width="2" stroke-dasharray="3 3"/>')
     p.append(f'<text x="{cx-150}" y="100" fill="{WATER}" font-size="11" font-weight="700" style="{FS}">uptake</text>')
-    p.append(f'<text x="{cx+90}" y="60" fill="{BLU}" font-size="11" font-weight="700" style="{FS}">vapour out (VPD pull)</text>')
-    p.append(f'<text x="{cx-60}" y="285" fill="{DRY}" font-size="11" font-weight="700" style="{FS}">roots draw water + nutrients</text>')
+    p.append(f'<text x="{cx+90}" y="60" fill="{BLU}" font-size="11" font-weight="700" style="{FS}">vapor out (VPD pull)</text>')
+    p.append(f'<text x="{cx-60}" y="285" fill="{DRY}" font-size="11" font-weight="700" style="{FS}">roots absorb water and nutrients</text>')
     return _svg(W, H, "Transpiration stream", p)
 
 
 def laminar_turbulent():
     W, H = 700, 240
-    p = []; _title(p, "Laminar vs turbulent airflow", "you want gentle turbulence in the canopy")
-    for i, (t, turb, d) in enumerate([("Laminar (smooth)", False, "slides over the top, leaves a still pocket below"),
-                                      ("Turbulent (mixed)", True, "stirs air into the canopy, thins the boundary layer")]):
+    p = []; _title(p, "Laminar and turbulent airflow", "you want low turbulence in the canopy")
+    for i, (t, turb, d) in enumerate([("Laminar (smooth)", False, "air moves along the top. The air below does not move"),
+                                      ("Turbulent (mixed)", True, "mixes air into the canopy and makes the boundary layer thin")]):
         x0 = 60 + i * 340; cy = 120
         p.append(f'<rect x="{x0}" y="{cy+20}" width="240" height="14" rx="7" fill="{G}" stroke="{DGREEN}"/>')
         if not turb:
@@ -252,47 +252,47 @@ def laminar_turbulent():
 
 def air_exchange():
     W, H = 660, 280
-    p = []; _title(p, "Air exchange: turning the room over", "fresh in, stale out, mixed throughout")
+    p = []; _title(p, "Air exchange: new air replaces used air", "new air in, used air out, mixed in the room")
     rx, ry, rw, rh = 120, 70, 420, 150
     p.append(f'<rect x="{rx}" y="{ry}" width="{rw}" height="{rh}" rx="6" fill="{PANEL2}" stroke="{LINE}" stroke-width="1.5"/>')
     p.append(f'<path d="M{rx-50},{ry+40} l50,0" stroke="{BLU}" stroke-width="4"/>')
     p.append(f'<path d="M{rx},{ry+40} l-8,-5 M{rx},{ry+40} l-8,5" stroke="{BLU}" stroke-width="4" fill="none"/>')
-    p.append(f'<text x="{rx-52}" y="{ry+30}" fill="{BLU}" font-size="10.5" style="{FS}">fresh in</text>')
+    p.append(f'<text x="{rx-52}" y="{ry+30}" fill="{BLU}" font-size="10.5" style="{FS}">new air in</text>')
     p.append(f'<path d="M{rx+rw},{ry+rh-40} l50,0" stroke="{AMB}" stroke-width="4"/>')
     p.append(f'<path d="M{rx+rw+50},{ry+rh-40} l-8,-5 M{rx+rw+50},{ry+rh-40} l-8,5" stroke="{AMB}" stroke-width="4" fill="none"/>')
-    p.append(f'<text x="{rx+rw+2}" y="{ry+rh-48}" fill="{AMB}" font-size="10.5" style="{FS}">stale out</text>')
+    p.append(f'<text x="{rx+rw+2}" y="{ry+rh-48}" fill="{AMB}" font-size="10.5" style="{FS}">used air out</text>')
     # circulation
     for ccx in (rx+120, rx+250, rx+360):
         p.append(f'<circle cx="{ccx}" cy="{ry+rh/2}" r="26" fill="none" stroke="{GD}" stroke-width="2" stroke-dasharray="4 3"/>')
         p.append(f'<path d="M{ccx+26},{ry+rh/2} l-6,-7 M{ccx+26},{ry+rh/2} l-9,2" stroke="{GD}" stroke-width="2" fill="none"/>')
-    p.append(f'<text x="{rx+rw/2}" y="{ry+rh+26}" text-anchor="middle" fill="{MUT}" font-size="11" style="{FS}">Air changes per hour (ACH) = how many times the whole room volume is replaced each hour.</text>')
+    p.append(f'<text x="{rx+rw/2}" y="{ry+rh+26}" text-anchor="middle" fill="{MUT}" font-size="11" style="{FS}">Air changes for each hour (ACH): the number of times that new air replaces all the room air each hour.</text>')
     return _svg(W, H, "Air exchange", p)
 
 
 # ---------------------------------------------------------------- GMP / quality
 def cleanroom_grades():
     W, H = 700, 250
-    p = []; _title(p, "Cleanroom grades: cleaner where it matters", "tighter air the closer you get to open product")
+    p = []; _title(p, "Cleanroom grades: more clean near the product", "the number of particles in the air is lower near open product")
     grades = [("Grade D", "general / packaging", REDL), ("Grade C", "support areas", AMBL), ("Grade B", "background to A", GXL), ("Grade A", "open product / fill", GL)]
     cx, cy = 350, 150;
     for i, (g, d, c) in enumerate(grades):
         rw = 300 - i * 66; rh = 150 - i * 32
         p.append(f'<rect x="{cx-rw/2:.0f}" y="{cy-rh/2:.0f}" width="{rw:.0f}" height="{rh:.0f}" rx="6" fill="{c}" opacity=".6" stroke="{LINE}"/>')
         p.append(f'<text x="{cx:.0f}" y="{cy-rh/2+16:.0f}" text-anchor="middle" fill="{INK}" font-size="10.5" font-weight="700" style="{FS}">{g}</text>')
-    p.append(f'<text x="24" y="{H-12}" fill="{MUT}" font-size="11" style="{FS}">Nested zones: each step inward holds fewer airborne particles. Grade A (or ISO 5) is where product is open; outer grades buffer it.</text>')
+    p.append(f'<text x="24" y="{H-12}" fill="{MUT}" font-size="11" style="{FS}">Each inner zone has a smaller number of airborne particles. Grade A (or ISO 5) is for open product. The outer grades are a buffer.</text>')
     return _svg(W, H, "Cleanroom grades", p)
 
 
 def ccp_tree():
     W, H = 700, 290
-    p = []; _title(p, "Is this step a Critical Control Point?", "the HACCP decision, simplified")
+    p = []; _title(p, "Is this step a Critical Control Point?", "an easy HACCP decision")
     def box(x, y, w, h, t, c=PANEL2):
         p.append(f'<rect x="{x}" y="{y}" width="{w}" height="{h}" rx="6" fill="{c}" stroke="{LINE}"/>')
         _wrap(p, x+w/2, y+h/2-2, t, INK, int(w/7), 10.5)
     box(280, 55, 140, 40, "Is there a hazard here?")
-    box(280, 120, 140, 40, "Can a later step control it?")
-    box(60, 195, 150, 44, "CCP: must control & monitor here", GL)
-    box(480, 195, 150, 44, "Not a CCP, control it later", AMBL)
+    box(280, 120, 140, 40, "Can a subsequent step control it?")
+    box(60, 195, 150, 44, "CCP: must control and monitor here", GL)
+    box(480, 195, 150, 44, "Not a CCP, control it in a subsequent step", AMBL)
     p.append(f'<line x1="350" y1="95" x2="350" y2="120" stroke="{MUT}" stroke-width="1.5"/>')
     p.append(f'<text x="356" y="112" fill="{MUT}" font-size="9" style="{FS}">yes</text>')
     p.append(f'<path d="M280,160 L135,195" stroke="{MUT}" stroke-width="1.5"/>')
@@ -304,10 +304,10 @@ def ccp_tree():
 
 def qa_vs_qc():
     W, H = 700, 230
-    p = []; _title(p, "QA vs QC", "build it right vs catch what is wrong")
+    p = []; _title(p, "QA and QC", "make it correct, and find the errors")
     for i, (t, sub, items, c) in enumerate([
-        ("QA  (Quality Assurance)", "process · prevent · proactive", ["SOPs & training", "validated methods", "the system that stops defects"], GL),
-        ("QC  (Quality Control)", "product · detect · reactive", ["sampling & testing", "release/reject calls", "checks that catch defects"], BLUL)]):
+        ("QA  (Quality Assurance)", "procedure · prevent · before the problem", ["SOPs and training", "validated methods", "the system that prevents errors"], GL),
+        ("QC  (Quality Control)", "product · find · after the problem", ["sampling and testing", "release or reject decisions", "checks that find errors"], BLUL)]):
         x = 40 + i * 340
         p.append(f'<rect x="{x}" y="60" width="300" height="150" rx="8" fill="{c}" opacity=".5" stroke="{LINE}"/>')
         p.append(f'<text x="{x+150}" y="86" text-anchor="middle" fill="{INK}" font-size="13" font-weight="700" style="{FS}">{t}</text>')
@@ -319,8 +319,8 @@ def qa_vs_qc():
 
 def doc_hierarchy():
     W, H = 640, 270
-    p = []; _title(p, "The quality document pyramid", "policy at the top, records at the base")
-    levels = [("Policy / Quality Manual", "what & why", GL), ("Procedures (SOPs)", "how, step by step", GXL), ("Work instructions / forms", "the exact detail", AMBL), ("Records", "proof it happened", BLUL)]
+    p = []; _title(p, "The structure of quality documents", "policy at the top, records at the bottom")
+    levels = [("Policy / Quality Manual", "the target and the cause", GL), ("Procedures (SOPs)", "how, step by step", GXL), ("Work instructions / forms", "the full steps", AMBL), ("Records", "shows that it occurred", BLUL)]
     cx, top, totalh = 320, 60, 180
     for i, (t, d, c) in enumerate(levels):
         y = top + i * (totalh / 4)
@@ -335,10 +335,10 @@ def doc_hierarchy():
 # ---------------------------------------------------------------- tissue culture / water / ipm
 def qpcr_vs_lamp():
     W, H = 700, 240
-    p = []; _title(p, "Two ways to test for the viroid", "both find HpLVd; one needs a lab, one does not")
+    p = []; _title(p, "Two test methods for the viroid", "two methods find HpLVd, but only one is for a laboratory")
     for i, (t, steps, d) in enumerate([
-        ("RT-qPCR", ["extract RNA", "thermal cycle", "fluorescence read"], "gold standard, lab thermocycler, most sensitive"),
-        ("RT-LAMP", ["simple prep", "one warm temp", "colour change"], "fast, cheap, in-room, slightly less sensitive")]):
+        ("RT-qPCR", ["extract RNA", "heat cycles", "measure fluorescence"], "reference method, lab thermocycler, most sensitive"),
+        ("RT-LAMP", ["easy to prepare", "one temperature", "color change"], "fast, low cost, in the room, less sensitive by a small value")]):
         y = 70 + i * 80; x0 = 150; bw = 130
         p.append(f'<text x="24" y="{y+24}" fill="{DGREEN}" font-size="12.5" font-weight="700" style="{FS}">{t}</text>')
         for k, s in enumerate(steps):
@@ -353,7 +353,7 @@ def qpcr_vs_lamp():
 
 def ro_membrane():
     W, H = 680, 240
-    p = []; _title(p, "Reverse osmosis: pushing water through, leaving salts", "pressure makes clean water; salts are flushed away")
+    p = []; _title(p, "Reverse osmosis: water flows through, salts stay behind", "pressure makes clean water. The salts flow away")
     mx = 340
     p.append(f'<rect x="{mx-6}" y="70" width="12" height="120" fill="{INK2}"/>')
     p.append(f'<text x="{mx}" y="205" text-anchor="middle" fill="{INK2}" font-size="10" style="{FS}">membrane</text>')
@@ -362,10 +362,10 @@ def ro_membrane():
         for sy in range(90, 180, 26):
             p.append(f'<circle cx="{sx}" cy="{sy}" r="3" fill="{SALT}"/>')
     p.append(f'<rect x="80" y="80" width="{mx-90}" height="100" fill="{WATERL}" opacity=".4"/>')
-    p.append(f'<text x="{(80+mx)/2:.0f}" y="74" text-anchor="middle" fill="{INK}" font-size="10.5" font-weight="700" style="{FS}">feed: water + salts</text>')
+    p.append(f'<text x="{(80+mx)/2:.0f}" y="74" text-anchor="middle" fill="{INK}" font-size="10.5" font-weight="700" style="{FS}">feed: water and salts</text>')
     # permeate side clean
     p.append(f'<rect x="{mx+6}" y="80" width="180" height="100" fill="{WATERL}" opacity=".7"/>')
-    p.append(f'<text x="{mx+96}" y="74" text-anchor="middle" fill="{INK}" font-size="10.5" font-weight="700" style="{FS}">pure permeate</text>')
+    p.append(f'<text x="{mx+96}" y="74" text-anchor="middle" fill="{INK}" font-size="10.5" font-weight="700" style="{FS}">clean permeate</text>')
     for yy in (105, 135, 165):
         p.append(f'<path d="M{mx-30},{yy} l60,0" stroke="{WATER}" stroke-width="2.5"/>')
         p.append(f'<path d="M{mx+30},{yy} l-7,-4 M{mx+30},{yy} l-7,4" stroke="{WATER}" stroke-width="2.5" fill="none"/>')
@@ -376,7 +376,7 @@ def ro_membrane():
 
 def alkalinity_buffer():
     W, H = 680, 250
-    p = []; _title(p, "Alkalinity is pH's hidden buffer", "high-alkalinity water resists your pH-down, then drops fast")
+    p = []; _title(p, "Alkalinity is the buffer of the pH", "high-alkalinity water prevents a pH correction, then the pH decreases quickly")
     left, right, top, bot = 60, 30, 60, 200
     def X(f): return left + f * (W - left - right)
     def Y(v): return bot - (v - 4) / (8 - 4) * (bot - top)
@@ -387,18 +387,18 @@ def alkalinity_buffer():
     for v in (4, 5, 6, 7, 8):
         p.append(f'<line x1="{left}" y1="{Y(v):.0f}" x2="{W-right}" y2="{Y(v):.0f}" stroke="{LINE}" stroke-width=".8" stroke-dasharray="3 4"/>')
         p.append(f'<text x="{left-8}" y="{Y(v)+4:.0f}" text-anchor="end" fill="{MUT}" font-size="10" style="{MN}">{v}</text>')
-    p.append(f'<text x="{X(.3):.0f}" y="{Y(7.3):.0f}" fill="{INK2}" font-size="10" style="{FS}">buffer resists</text>')
-    p.append(f'<text x="{X(.78):.0f}" y="{Y(5.2):.0f}" fill="{RED}" font-size="10" style="{FS}">crash</text>')
+    p.append(f'<text x="{X(.3):.0f}" y="{Y(7.3):.0f}" fill="{INK2}" font-size="10" style="{FS}">buffer: pH stable</text>')
+    p.append(f'<text x="{X(.78):.0f}" y="{Y(5.2):.0f}" fill="{RED}" font-size="10" style="{FS}">fast change</text>')
     p.append(f'<text x="{(left+W)/2:.0f}" y="{bot+22:.0f}" text-anchor="middle" fill="{MUT}" font-size="10.5" style="{FS}">acid added &rarr;</text>')
-    p.append(f'<text x="24" y="{H-8}" fill="{MUT}" font-size="11" style="{FS}">Treat alkalinity (bicarbonate), not just pH: high-alkalinity water fights every correction, then over-swings.</text>')
+    p.append(f'<text x="24" y="{H-8}" fill="{MUT}" font-size="11" style="{FS}">Correct the alkalinity (bicarbonate), not only the pH. High-alkalinity water prevents each correction, then the pH goes too far.</text>')
     return _svg(W, H, "Alkalinity buffering", p)
 
 
 def spray_vs_drench():
     W, H = 680, 250
-    p = []; _title(p, "Foliar spray vs root drench", "where the product lands decides what it can do")
-    for i, (t, foliar, d) in enumerate([("Foliar spray", True, "coats leaf surfaces; contact action, fast, washes/wears off"),
-                                        ("Root drench", False, "into the medium; taken up by roots, systemic, lasts longer")]):
+    p = []; _title(p, "Foliar spray and root drench", "the effect of the product is different in each area")
+    for i, (t, foliar, d) in enumerate([("Foliar spray", True, "touches the leaves, fast, but the effect is short"),
+                                        ("Root drench", False, "in the medium, roots absorb it. Systemic, longer effect")]):
         cx = 200 + i * 320; base = 200; top = 105
         p.append(f'<line x1="{cx}" y1="{base}" x2="{cx}" y2="{top}" stroke="{DGREEN}" stroke-width="3"/>')
         for ly in (120, 150, 180):
@@ -409,7 +409,7 @@ def spray_vs_drench():
             for sgn in (-1, 1):
                 for ly in (120, 150):
                     p.append(f'<circle cx="{cx+sgn*30}" cy="{ly-6}" r="2" fill="{BLU}"/>')
-            p.append(f'<text x="{cx}" y="100" text-anchor="middle" fill="{BLU}" font-size="10">droplets on leaves</text>')
+            p.append(f'<text x="{cx}" y="100" text-anchor="middle" fill="{BLU}" font-size="10">liquid on the leaves</text>')
         else:
             p.append(f'<path d="M{cx},{base+22} l0,12" stroke="{WATER}" stroke-width="3"/>')
             for dy in (210,):
@@ -421,10 +421,10 @@ def spray_vs_drench():
 
 def floor_plan():
     W, H = 700, 280
-    p = []; _title(p, "A clean one-way facility flow", "people and product move dirty-to-clean, never back")
-    rooms = [("Intake / mother", 40, 70, 150, 80, GXL), ("Veg", 200, 70, 120, 80, GL),
+    p = []; _title(p, "A clean one-way facility flow", "personnel and product go from dirty to clean and do not go back")
+    rooms = [("Intake / mother", 40, 70, 150, 80, GXL), ("Vegetative", 200, 70, 120, 80, GL),
              ("Flower", 330, 70, 150, 80, GL), ("Dry / cure", 490, 70, 110, 80, AMBL),
-             ("Trim / pack", 490, 170, 110, 70, BLUL), ("QA / vault", 330, 170, 150, 70, PURL)]
+             ("Trim, packaging", 490, 170, 110, 70, BLUL), ("QA / vault", 330, 170, 150, 70, PURL)]
     for t, x, y, w, h, c in rooms:
         p.append(f'<rect x="{x}" y="{y}" width="{w}" height="{h}" rx="5" fill="{c}" opacity=".55" stroke="{LINE}"/>')
         _wrap(p, x+w/2, y+h/2+4, t, INK, int(w/7), 10.5)
@@ -433,5 +433,5 @@ def floor_plan():
         p.append(f'<path d="M{x1},{y1} L{x2},{y2}" stroke="{DGREEN}" stroke-width="2.5"/>')
         dx, dy = x2-x1, y2-y1
         p.append(f'<circle cx="{x2}" cy="{y2}" r="3" fill="{DGREEN}"/>')
-    p.append(f'<text x="24" y="{H-12}" fill="{MUT}" font-size="11" style="{FS}">One-directional flow keeps clean product away from incoming material and waste, the backbone of contamination control.</text>')
+    p.append(f'<text x="24" y="{H-12}" fill="{MUT}" font-size="11" style="{FS}">One-way flow keeps clean product away from waste and from material that comes in. It is the primary contamination control.</text>')
     return _svg(W, H, "Facility flow", p)
