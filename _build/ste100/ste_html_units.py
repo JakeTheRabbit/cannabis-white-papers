@@ -6,8 +6,8 @@ units file (same format as every other ste_* tool) and later writes the edited u
 exact byte spans they came from.  Markup, scripts, styles, SVG, comments and every other byte of
 the file stay exactly as they are.
 
-  PY = C:\\Users\\BenIsdale\\AppData\\Local\\Programs\\Python\\Python312\\python.exe
-  PY _build/ste100/ste_html_units.py extract  <html-file> [--work DIR] [--scope body|main|article|all] [--force]
+  PY = python    (any Python 3)
+  PY _build/ste100/ste_html_units.py extract <html-file> [--work DIR] [--scope body|main|article|all] [--force]
   PY _build/ste100/ste_html_units.py apply    <html-file> [--work DIR] [--dry-run] [--force]
   PY _build/ste100/ste_html_units.py status   <html-file> [--work DIR]
   PY _build/ste100/ste_html_units.py selftest <html-file>... | --all-defaults
