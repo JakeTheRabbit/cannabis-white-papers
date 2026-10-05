@@ -1,0 +1,6 @@
+# paper_pest_id - STE rewrite report (saved by the coordinator from the agent's reply)
+Status: DONE. Lint (units) E=0 W=1 (GR-7 "female" mite = false positive); rendered E=0 W=1; verify PASS; section gate OK. 167 of 257 units changed (labels 31 of 44).
+TN added 107 (species/groups, damage/chemistry, IPM terms, tools). General-to-audit: card, cost, dark, dot, pale, program, relative, calendar, detection, prevention, population, streak, sticky. Unused (delete): pupa. TV added: infect. Number changes: none (parity W "AND" -> "and", "ID" -> "identification").
+Content decisions: "guide" -> "paper"; idioms removed (bugs, who's who, lever, hold the line, open the door, spray bottle); "Jurisdiction note:" prefix dropped; "control" (signals only) -> "keep numbers small"/"treatment"/"method"/"effect"; above/below limits -> "less than"; note U0228 recast as information; U0012 and U0244 split.
+Needs review: "mapped density" (U0127); "heat tacoing" -> "heat stress (leaf curl)" (U0077); "taint" -> "bad aroma or flavor"; "life" for organisms (U0090); "Think" for "Suspect" (U0232); "Start" for "Act" (U0238, 167%); U0136 (117%); "Hidden pests" -> "Pests that you do not see".
+Tool feedback: gaps as above (limits, "fast", "control"); R1.2 noun/verb check inconsistent ("count", "release").

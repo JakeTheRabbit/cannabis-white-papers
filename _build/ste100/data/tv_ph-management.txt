@@ -1,0 +1,4 @@
+dissolve
+react
+precipitate
+bind

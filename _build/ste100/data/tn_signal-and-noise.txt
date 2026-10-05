@@ -1,0 +1,81 @@
+jitter
+transient
+spike
+alarm fatigue
+tuning
+radio engineering
+manufacturing
+statistics
+cost
+sentence
+hundreds
+thousands
+physical
+procedural
+data pipeline
+clock skew
+fishbone diagram
+ishikawa diagram
+false positive
+control rule
+western electric rules
+nelson rules
+line
+cadence
+mean
+raw data
+dead-band
+channel
+common-cause
+tampering
+lag
+commercial room
+commercial success
+commercial production
+commercial value
+wave
+oscillation
+pattern
+rolling average
+moving average
+gate
+hunting
+coefficient of variation
+timestamp
+replication
+square root
+aliasing
+sampling theorem
+irrigation response
+undersampling
+statistical process control
+walter
+edwards
+nelson
+western electric
+standard deviation
+false alarm
+capital
+smoothing
+median filter
+exponentially weighted
+over-smoothing
+saw-tooth
+actuator
+summary
+smart watering
+control chart
+control limits
+shewhart
+deming
+bell laboratories
+nyquist
+shannon
+blind
+logged
+tuned
+averaging
+aggregation
+dead-bands
+pour-through
+special-cause

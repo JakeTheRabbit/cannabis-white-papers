@@ -249,8 +249,40 @@ germination
 purpose and scope
 expected results and limitations
 results and limitations
+evidence and limitations
 grow room
 grow-room
 grow rooms
 grow tent
 grow light
+# colors (category 17: colors are technical nouns in STE)
+white
+black
+red
+green
+blue
+yellow
+orange
+purple
+pink
+brown
+gray
+dark brown
+light brown
+light green
+amber
+# body parts / materials used in procedures
+hand
+skin
+alcohol
+isopropyl alcohol
+# product names shown in photo credits (names of products, Rule 1.5)
+grok
+imagine
+grok imagine
+nano banana
+nano banana 2
+gpt image
+gpt image 2
+openai
+cinema studio

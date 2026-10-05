@@ -1,0 +1,190 @@
+physics
+chemistry
+equilibrium
+solubility
+henry's law
+partial pressure
+atm
+concentrator
+pressure-swing
+diffuser
+nanobubble
+bulkhead
+float valve
+lid
+expanded clay
+inert media
+inert medium
+cross section
+photo
+operating volume
+millivolt
+oxidation-reduction potential
+sea level
+fresh water
+gas embolism
+crop failure
+drip line
+negative charge
+electrical charge
+review
+deep water culture
+recirculating deep water culture
+cost
+brown
+white
+yellow
+green
+red
+cortex
+stele
+aquaporin
+lysis
+bulk solution
+proton
+reductant
+chelator
+carbonic acid
+aquaponics
+limiting factor
+author
+rhizosphere
+shear
+microbubble
+controlled environment agriculture
+beneficial microbe
+hobby grower
+sunflower
+corn
+arugula
+kale
+bell pepper
+floating culture
+nitrate assimilation
+nutrient film technique
+min
+hypoxia
+zero-discharge
+oxidizer
+redox
+redox potential
+redox couple
+redox state
+standard potential
+exchange current density
+electrochemistry
+nernst slope
+nernst equation
+decade
+electron
+cyanobacteria
+reduced organic carbon
+reduced organic load
+mixed potential
+hydroxyl radical
+hydroxide
+electric field
+spin trap
+fluorescent probe
+speciation
+dilute solution
+anaerobic
+inert electrode
+electrode
+platinum
+poise
+millimolar
+calibration standard
+zobell's solution
+quinhydrone
+free available chlorine
+hypochlorous acid
+produce handling
+smell
+bean sprout
+stilling tube
+catalyst
+direct effect
+indirect effect
+radical
+pt
+organic
+chelate
+micronutrient
+mildly acidic
+interveinal chlorosis
+ligand
+schiff-base complex
+pale
+dark green
+dark red
+light brown
+oxygen demand
+biochemical oxygen demand
+kelp
+fulvic acid
+inoculant
+heterotrophic bacteria
+cleaning cycle
+humic substance
+biostimulant
+plant defense
+defense gene
+bacillus subtilis
+pseudomonas fluorescens
+pythium aphanidermatum
+pseudomonas
+fungicide
+survival
+humic
+fulvic
+biological input
+schedule
+pathology
+oomycete
+zoospore
+exudate
+biotrophic
+necrotrophic
+root mat
+passive aeration
+slime
+epidemic
+sterilizer
+cucumber
+algae
+ebb-and-flow
+change-out
+partial change-out
+full change-out
+change-out volume
+blower
+feathering up
+addback
+cation
+anion
+antioxidant
+planting deck
+thermal mass
+dust
+dollar
+imbalance
+inline filter
+water-column gauge
+shock zone
+plant physiology
+membrane
+return line
+season
+concentrated feed
+concentrated product
+potassium silicate
+structural ring
+battery
+gpt-image
+gpt-image-1
+deck
+fe
+cl
+gravity
+demand

@@ -1,0 +1,37 @@
+diagnosis
+plant health
+old leaves
+old leaf
+mobile
+immobile
+mobility
+macronutrient
+micronutrient
+interveinal chlorosis
+dead tissue
+claw
+dark green
+color pattern
+ph lockout
+lockout
+nutrient burn
+nutrient antagonism
+tip burn
+failure mode
+buffering
+mg
+ca
+fe
+mn
+zn
+cu
+mo
+cost
+bronze
+commercial crop
+ph management
+nutrient mixing
+flush
+odor
+dark leaves
+confidence

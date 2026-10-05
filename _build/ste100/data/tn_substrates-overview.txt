@@ -1,0 +1,34 @@
+growing medium
+inert
+inert medium
+water-holding capacity
+water-holding
+porosity
+total porosity
+air-filled porosity
+cation exchange capacity
+exchange site
+meq
+millisiemens
+millisiemens per centimeter
+acidity
+raw coco
+buffering
+pre-buffering
+pre-buffered
+living soil
+organic matter
+organic
+bed
+amendment
+compost
+garden soil
+landfill
+cost
+column
+pale
+lockout
+inoculum
+exposure time
+parameter
+crop-steering

@@ -1,0 +1,7 @@
+# paper_compliance - STE rewrite report (saved by the coordinator from the agent's reply)
+Status: DONE. Lint (units) E=0 W=0; rendered E=0 W=0; verify PASS; section gate OK. 296 of 387 units changed (labels 39 of 50).
+TN added 145 (all used; data/tn_compliance-track-trace.txt): roles, places/bodies, licensing, track-and-trace, quality/GMP, record tools. Borderline general words to audit: business, cost, sale, status, shelf, line, form, note, owner, event. TV added: trace, cultivate, witness, destroy, backfill. Number changes: none.
+Content decisions: analogies removed (paperwork machine, DNA, mate, audit gold, forgiveness, red flag); "stranger" -> "person who was not there"; "regime", "control", "operation" kept as subject-field terms; ALCOA+ attribute names kept as names; flow-figure texts keep original wrapped line counts.
+Needs review: "trustworthy" -> "good"; "explicitly", "dozens", "most instructive" dropped; U0122 says "2003rd batch" but CL-2603 looks like year-month (kept); closing paragraph names "Daily checks" and "GMP hash manufacturing", which differ from the new paper titles; 7 labels exceed +15% but fit.
+NOT covered: figs_compliance.json (5 figures, ~139 texts).
+Tool feedback: figure SVG hash needs same 16-char wrap line count (undocumented); SUB counts as paragraph (max 6 sentences) only in rendered check; false positives GR-4 "these causes", R1.2 "is not clear", R3.2 "no record is missing"; capitalized mid-sentence words skip vocabulary checks.

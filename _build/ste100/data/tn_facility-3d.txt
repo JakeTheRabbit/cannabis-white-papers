@@ -1,0 +1,142 @@
+architect
+contractor
+electrician
+inspector
+investor
+expert
+auditor
+intruder
+user
+qualified professional
+floor plan
+security plan
+building code
+document
+drawing
+datasheet
+dimension chain
+airflow design
+stair
+stairwell
+riser
+tread
+lintel
+beam
+wall run
+run
+centerline
+pass-through
+roller door
+envelope
+partition
+void
+service void
+roof
+lobby
+hallway
+office
+aisle
+walkway
+rectangle
+box
+cylinder
+cone
+grille
+leg rail
+rail
+corrugated texture
+siren
+safe
+drug safe
+vault
+walk-in vault
+cable
+network
+bullet camera
+doorbell camera
+ptz camera
+ac head
+mini-split
+checkbox
+lens
+gpu
+integrated graphics
+laptop
+tablet
+computer
+shadow camera
+orbit camera
+directional light
+emissive surface
+pixel ratio
+draw call
+frame rate
+tone mapping
+roughness
+mesh
+benchmark
+shadow
+frame
+software
+software code
+library
+browser
+web
+file
+scene
+3d model
+three.js
+json
+html
+svg
+gltf
+mqtt
+react
+blender
+home assistant
+importmap
+script block
+schema
+geometry
+instancing
+asset
+hero asset
+photoreal
+picking
+raycasting
+generator
+builder
+audit mode
+tour mode
+field of view
+blind spot
+page
+format
+field
+grow facility
+grow fixture
+pure white
+structural engineering
+cost
+construction
+layout
+clash
+campus
+surveillance
+destruction
+video
+security
+jurisdiction
+processing
+gas exchange
+rolling bench
+rolling benches
+line
+image
+js
+digital twin
+angle
+fps
+engineering
+fit-out
+sun

@@ -1,0 +1,10 @@
+sign
+purify
+recover
+press
+agitate
+sieve
+winterize
+dissolve
+destroy
+denature

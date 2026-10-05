@@ -1,0 +1,150 @@
+electrode
+potential
+pin
+bus
+battery
+amplifier
+mains
+lead
+tape
+firmware
+chip
+impedance
+hardware
+event
+correlation
+biopotential
+biosignal
+plant-biosignal
+membrane
+library
+waveform
+sketch
+positive
+negative
+deflection
+action potential
+common-mode rejection
+signal chain
+home assistant
+band-pass
+reference drive
+driven reference
+wire
+relative value
+absolute value
+rail
+stimulus
+heartbeat
+data acquisition
+spike
+wave
+living cell
+nerve
+animal
+ion channel
+instrumentation amplifier
+analog-to-digital converter
+microcontroller
+alert
+gain
+bill of materials
+provisional
+experimental
+education
+price
+passive i2c splitter
+splitter
+sparkfun
+adafruit
+aliexpress
+robotshop
+botland
+tinytronics
+dupont
+vivent
+m5stickc plus2
+lipo
+breakout
+snap lead
+cable
+electrode pad
+pharmacy
+jumper
+prototype
+heatshrink
+spare part
+electronics
+shop
+reseller
+tutorial
+header
+center point
+ballast
+variable
+cup
+conductive gel
+needle
+epidermis
+ion exchange
+chemistry
+insertion
+configuration
+secret
+file
+lambda
+physiological unit
+circadian rhythm
+mains pickup
+binary sensor
+inference
+amplitude
+plant-state dashboard
+telemetry
+shielded lead
+enclosure
+common ground
+ground loop
+noise floor
+half-cell potential
+half-cell offset
+variation potential
+contact impedance
+contact
+stainless probe
+full scale
+mains hum
+common-mode hum
+electrical activity
+real time
+trained model
+commercial unit
+commercial pin contact
+commercial product
+validated meter
+response
+cost
+high-rate sketch
+reference electrode
+soil reference
+pin number
+millivolt
+microvolt
+raw signal
+raw trace
+raw millivolts
+guide
+bit
+board
+chain
+m5stack
+micropore tape
+upper stem
+lower stem
+wiring
+stack
+detection rate
+yaml
+raw
+real-time
+wound

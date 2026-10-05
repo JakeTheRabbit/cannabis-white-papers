@@ -1,0 +1,61 @@
+guide
+lift test
+demand
+water demand
+summary
+advanced
+substrate-specific calibration
+age
+tape measure
+turgor
+working floor
+osmotic stress
+algae
+buffering
+hydrophobic
+capillarity
+root ball
+root mass
+wetting agent
+potting mix
+expanded clay
+hydroton
+semi-hydroponics
+amendment
+fallback
+watchdog
+cation exchange capacity
+channeling
+living soil
+clay pebbles
+clay pebble
+inert
+gravity
+recirculation
+stagnant water
+working dryback
+turgor timing
+cost
+infrared
+crop water stress index
+squeeze test
+load cell
+lysimeter
+reference plant
+capacitance probe
+grosens
+evaporative cooling
+evaporative demand
+bulk ec
+working band
+working root zone
+photosynthetic photon flux density
+daily light integral
+physiology
+line
+morning
+column
+afternoon
+flush
+water-use efficiency
+dashed line

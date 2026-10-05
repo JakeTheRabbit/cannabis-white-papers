@@ -1,0 +1,6 @@
+# paper_hash_rosin - STE rewrite report (saved by the coordinator from the agent's reply)
+Status: DONE. Lint (units) E=0 W=0; rendered E=0 W=0; verify PASS. 486 of 690 units changed (labels 0; 83 SVG texts in figs_hash_rosin.json need --svg-text pass).
+TN added 119 (equipment, product/material, property, procedure, other). General words kept as TN, audit: balance, run, pass, wash, input, author. TV: press, cure, dab, crystallize, nucleate, decarboxylate, dissolve. Number changes: none.
+Content decisions: honey, sponge, mushroom, lollipop, frosty analogies made literal; lever -> control; platen -> plate; sleeve -> outer bag; decarb -> decarboxylation; budder -> badder; fats -> lipids; carts -> vape cartridges.
+Needs review: "thousands" -> "very large number"; "whole", "flat", "settled" dropped; "firm contact" -> "low value that holds the bag"; "glossary at the end" kept but Definitions is section 2 (SOURCE ERROR).
+Tool feedback: ste_lookup shows other papers' TN as available; lint misses POS errors (complete, accepted adjective; value, work, finish verb; fast adverb; increase, fill, melt noun); "Cause:" reads as imperative (limit 20); cooler/cleaner/warmer fail but hotter/colder pass.

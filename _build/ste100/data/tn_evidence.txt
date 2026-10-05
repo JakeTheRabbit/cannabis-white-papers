@@ -1,0 +1,135 @@
+damping-off | seedling disease (life form, rule 1.5)
+feminized | seed type; glossary term feminized seed
+induction | treatment that makes a female plant make pollen (seed production)
+colloidal silver | material used to induce pollen on female plants
+paper towel | material of the germination method
+firmness | measured property of a seed (seed quality check)
+age | measure of time since the harvest or the germination
+somatic mutation | genetic change in a cell of the plant (life science)
+rooting | process of making roots (as in the cloning paper)
+air embolism | air bubble in the stem; glossary term (cloning)
+systemic pathogen | pathogen that moves through the whole plant (as systemic agent)
+nodal cutting | cutting with a node; tissue culture
+cleanup | meristem cleanup of a plant (tissue culture term)
+recalcitrant species | species whose tissue does not make a new plant easily (tissue culture)
+indexing | disease test of tissue culture; glossary term
+aseptic technique | glossary term (tissue culture)
+kit | set of equipment
+seed transmission | movement of a pathogen in the seed
+cross | breeding cross of two plants
+endophyte | microbe inside plant tissue; glossary term
+far-red | light of long wavelength; glossary term
+bleaching | symptom of light damage on leaf tissue; glossary term
+lollipopping | training method; glossary term
+bulking | growth stage of the flower; glossary term
+calendar | table of days
+couch-lock | strong sedative effect of cannabis (name of the effect)
+channeling | preferential flow of water in a dry slab; glossary term
+recovery floor | glossary term (rockwool water content limit)
+inert | chemically inactive medium; glossary term inert medium
+drive | name of the drive part of the steering model of the paper
+brake | name of the brake part of the steering model of the paper
+tacoing | name of a leaf symptom (leaf edges bend up)
+thigmomorphogenesis | plant response to mechanical movement (life science)
+basil | crop name (life form)
+lettuce | crop name (life form)
+tomato | crop name (life form)
+immobile nutrient | glossary term
+micronutrient | glossary term
+atlas | collection of images of symptoms
+hardness | water chemistry; glossary term
+chloramine | water chemistry; glossary term
+precipitate | chemistry; glossary term
+residue | chemistry; matter that stays
+residual solvent | glossary term (lab testing)
+partitioning | chemistry: distribution of a compound between phases
+inverse | mathematics: 1 divided by the value
+physics | science field
+commercial rooms | rooms where a crop is made for sale (plant-biology paper uses the same term)
+commercial system | system that a manufacturer sells
+commercial products | products that a manufacturer sells
+indoor | place: indoor cultivation
+engineering | discipline
+approval status | regulation term (product approval)
+legal status | regulation term
+phone | equipment
+formula | mathematics
+water activity | glossary term (lab testing)
+gowning | glossary term (personnel hygiene)
+regulator | authority of the regulation
+map | ppfd map; glossary term
+ladder tables | name of the table type in the scaling paper
+guide | document type
+porosity | substrate property
+lockout | nutrient lockout; glossary term
+plant state | glossary term
+emotional states | science term of the cited papers
+entity | home assistant software object
+layout | arrangement of equipment in the facility
+peer review | quality method of science
+genealogy | glossary term (traceability)
+jurisdiction | regulation term
+inverse-square law | glossary term (physics)
+gas exchange | plant physiology
+occupational limits | regulation term (exposure limit)
+dark period | plant physiology; glossary term
+water-holding | part of the glossary term water-holding capacity
+water-holding capacity | glossary term
+living soil | glossary term
+relative risk | statistics
+claims data | statistics (data from insurance claims)
+absolute rates | statistics
+immune system | medicine
+exclusion | glossary term (ipm)
+monitoring | ipm method
+register | list of products of the regulator
+hierarchy | glossary term (hierarchy of controls)
+scouting | glossary term (ipm)
+action thresholds | glossary term (ipm)
+kitchen | place
+foliar sprays | glossary term
+country | place
+sticky traps | glossary term
+vector | disease vector (life science)
+log reductions | microbiology measure
+post-harvest | glossary term
+cleanroom | facility term
+toilet seat | equipment
+biosecurity | discipline
+capacitance | physics; sensor type
+volume of influence | glossary term (sensor)
+sensor fusion | glossary term
+failure modes | engineering term
+transpiration proxies | glossary term
+crop coefficients | agronomy term
+false alarms | control engineering term
+deadbands | glossary term (dead-band)
+alerts | message of the system that shows a problem
+standards | document type
+process industry | industry sector
+western electric rules | name of a set of control rules
+nelson rules | name of a set of control rules
+control theory | engineering discipline
+advisory | glossary term
+phase machines | name of the software type in the f2 paper
+biopotentials | glossary term of the biosignal paper
+electrode | equipment
+hobby | not a professional activity
+millivolts | unit
+trained library | name of the library of trained data
+classification | method
+cost | economics
+clash | engineering term (interference between objects)
+concrete | material
+reliability | engineering property
+auto-tick | glossary term
+deaths | medicine (outcome of the cited study)
+surgery | medicine (field of the cited study)
+home assistant | name of the software product
+validation | gmp term
+implementation intentions | glossary term
+base rates | statistics
+journal | type of document in reference lists
+raw sensor readings | data type
+dimmer | equipment (light control)
+emergency stop | name of a safety function (machine safety)

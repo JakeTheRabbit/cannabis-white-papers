@@ -1,0 +1,53 @@
+home assistant
+home automation
+software
+cost
+cloud account
+grow table
+package
+integration
+logic
+default
+mainline
+mains
+mains water
+relay board
+firmware
+ethernet
+switch
+float
+clock
+watchdog
+abort
+prefix
+entity
+template
+enabled
+offline
+online
+toggle
+tab
+sawtooth
+master gate
+irrigation-allowed
+binary sensor
+raw value
+raw probe value
+dielectric sensor
+dash
+command center
+injection
+interlock
+reset
+morning dryback
+reproduction
+message
+alert
+script
+service
+hr
+guide
+catch test
+schedule
+unavailable
+wi-fi

@@ -1,0 +1,8 @@
+# paper_cannabinoids_terpenes - STE rewrite report (saved by the coordinator from the agent's reply)
+Status: DONE. Lint (units) E=0 W=3 (R8 dash-only table cells U0314, U0319, U0324); rendered E=0 W=3; verify PASS; section gate OK. 265 of 378 units changed (labels 14 of 29).
+TN added 112 (chemical names, enzymes/genetics, trichome anatomy, kinetics, aroma, products, field terms). Audit-flagged GENERAL, kept: claim, price, cost, reaction, cross, human, retail, memory, cavity. TV added: evaporate, oxidize.
+Number changes: U0064 "fifty" -> "50%" (+50); U0109 "one hundred" -> "100 times" (+100) [word->numeral only]; "tens of thousands" -> "many thousand" (U0116).
+Content decisions: analogies/idioms removed (baking powder, hot pan, cut apple, hot coffee, blood type, factory, warehouse, receipt); "What it is" -> "It is"; "Tell/Fix" -> "Sign in the COA/Correction"; major -> primary; family/class -> group; "set" (determine) -> "control"; 21 units split.
+Nuance lost: "intelligently", "forensically", "signature", "decades-old", pine needle, bright/sharp/harsh descriptors, "most likely", CBC "not reported separately", "plausible" concentrations, "direct" tests.
+NOT covered: six SVG figures in figs_cannabinoids_terpenes.json (factory floor, warehouse text).
+Tool feedback: ste_verify rendered lint drops <br> without space (false R6.3; agent added a space after <br> in 12 units); parity prints "links changed: lost -, added -" for every section (false W); lint skips tokens with two capitals (THC-dominant); `cost` in tn_chrome but not shared lint; approved senses machine-oriented so sense errors invisible.

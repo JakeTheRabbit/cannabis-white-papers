@@ -1,0 +1,6 @@
+# paper_ph_management - STE rewrite report (saved by the coordinator from the agent's reply)
+Status: DONE. Lint (units) E=0 W=0; rendered E=0 W=0; verify PASS; section gate OK. 136 of 188 units changed (labels 30 of 39).
+TN added 55 (chemistry, instrument/procedure, day names for chart axis labels). TV added: dissolve, react, precipitate, bind. Number changes: none.
+Content decisions: analogies removed (supplement tablet, thermostat deadband, antacid); "hydro" -> hydroponics; "band" -> range (values) or area (coloured zone); axis abbreviations -> full day names; "Vocabulary" -> "Terms"; "The core idea" -> "Basic information"; "Reality check" -> "Usual results"; title -> "pH: the definition and how to keep it stable"; 20 labels exceed +15%, equal wrap lines.
+Needs review: "trips people up" -> "a grower frequently makes errors"; "gates everything downstream" -> "controls all the next steps"; line chart title no longer says "excursions need action" (the note does); "pens die" -> "defective pen"; "stirring" -> "mix the solution"; the bar unit " drops" is not extracted.
+Tool feedback: label-length +15% fires on every 3-letter abbreviation that must be spelled out; the wrap-line geometry is the real constraint.

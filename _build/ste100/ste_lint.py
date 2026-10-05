@@ -211,6 +211,16 @@ class Lexicon:
         """Technical verb: listed base form or its -s / -ed forms (no -ing)."""
         return any(v in self.tv_words for v in verb_bases(w))
 
+    def is_comparative(self, w):
+        """lower / higher / larger ...: comparative or superlative of an approved adjective."""
+        for suf in ("er", "est"):
+            if w.endswith(suf) and len(w) > len(suf) + 2:
+                stem = w[:-len(suf)]
+                for base in (stem, stem + "e", stem[:-1] + "y" if stem.endswith("i") else None):
+                    if base and "adjective" in self.headwords.get(base, []):
+                        return True
+        return False
+
     def approved(self, w):
         if w in self.forms or w in NUMBER_WORDS:
             return True
@@ -589,7 +599,8 @@ def check_vocab(u, text, heading, kind, L, unknown_counter, findings):
                             "technical noun '%s' used as a verb: use an approved verb + the noun ('apply water', 'make roots')" % w, tctx)
                 # Rule 1.2: an approved word used as another part of speech
                 ap_all = set(L.headwords.get(w, []))
-                if (ap_all == {"verb"} or ap_all == {"noun"} or w in L.homographs) and not L.is_tn(w):
+                if (ap_all == {"verb"} or ap_all == {"noun"} or w in L.homographs) and not L.is_tn(w) \
+                        and not L.is_comparative(w):
                     bad = None
                     if w in L.homographs:
                         bad = L.homographs[w][1] - ap_all
@@ -806,7 +817,8 @@ def units_from_markdown(path):
         if p.startswith("```"):
             continue
         for line in p.splitlines():
-            ln = line.strip()
+            ln = re.sub(r"^(?:>\s*)+", "", line.strip())
+            ln = re.sub(r"\[\^[^\]]+\]", "", ln)                  # footnote markers [^id]
             if not ln or ln.startswith("|---") or ln.startswith("```"):
                 continue
             kind = "p"
@@ -947,6 +959,8 @@ def main(argv=None):
     else:
         ap.print_help()
         return 2
+    if args.slug in ("ALL", "*"):          # global view: every paper's technical nouns / verbs together
+        args.slug = None
     findings, unknown = run(units, args)
     nE = report(units, findings, unknown, args)
     return 1 if nE else 0

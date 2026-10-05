@@ -1,0 +1,5 @@
+# paper_grow_room_systems - STE rewrite report (saved by the coordinator from the agent's reply)
+Status: DONE. Lint (units) E=0 W=0; rendered E=0 W=0; verify PASS; section gate OK. 87 of 118 units changed (labels 12 of 20).
+TN added 12 (coupled system, daily light integral, humid, convection, carbon fixation, dead zone, indoor cultivation, airflow design, leaf curl, whole plant, whole canopy, relative). TV added: rot. Number changes: none (CO2 mention counts kept equal per section).
+Content decisions: removed sweating, sponge, convoy and idioms (pull on each other, sweet spot, jumpy, lying, taco, upstream); convoys -> groups; chain -> sequence; title "a systems guide" -> "Cannabis grow room systems"; "Lighting demand" -> "Quantity of light"; "Straight talk" -> "Facts and limits"; U0067 split; flow-label wrap counts unchanged.
+Needs review: "counter-intuitively" (U0064); "perfect but jumpy" (U0062); "taco" (U0100); "No prior knowledge needed" -> "not necessary to know about cultivation" (U0011); link text "coco & crop steering" -> "coco and crop steering" (U0073).

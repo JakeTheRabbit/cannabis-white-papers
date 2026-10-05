@@ -1,0 +1,57 @@
+tap | equipment: tap that gives water (tap water)
+tap water | water: water from the supply of a public supplier
+well | place: hole in the ground that gives water
+well water | water: water from a well
+rainwater | water: water from rain, collected
+rain | weather: water that falls from the sky
+soft water | water: class of water with low hardness (glossary term hardness)
+hard water | water: class of water with high hardness
+soft tap water | water: tap water with low hardness
+hard tap water | water: tap water with high hardness
+slightly hard water | water: class of hardness 17 to 60 mg/l
+moderately hard water | water: class of hardness 60 to 120 mg/l
+very hard water | water: class of hardness more than 180 mg/l
+hardness | measure: quantity of calcium and magnesium in water (glossary term)
+chloramine | chemistry: disinfectant of chlorine and ammonia (glossary term)
+micronutrient | glossary term
+lockout | glossary term: nutrient lockout
+calmag | product: supplement of calcium and magnesium (glossary term calmag)
+reverse osmosis | filtration method (glossary term)
+filtration | process: removal of material from water
+membrane | equipment: semipermeable layer of the ro unit
+catalytic carbon | material: carbon that removes chloramine
+catalytic carbon filter | equipment: filter with catalytic carbon (glossary term)
+build back | procedure: addition of minerals to ro water again (glossary term)
+buffering | property: resistance to a change of ph (glossary term)
+buffering capacity | property: resistance to a change of ph (glossary term)
+electrical conductivity | measure: how well water conducts electricity
+electric charge | physics: charge of an ion
+parts per million | unit (glossary term)
+total dissolved solids | measure: minerals dissolved in water
+conversion factor | mathematics: factor that converts ec to ppm
+pen | equipment: hand meter in the shape of a pen (glossary: ph pen)
+mixing | procedure: mixing of the nutrient solution
+gallon | unit
+grain | unit: grain for each gallon (gpg)
+coast | place: land near the sea
+roof | building part
+season | time: part of the year
+parameter | measure: property of the water that you measure
+summary | document part: list of the primary points
+base | chemistry: alkaline compound that increases the ph
+phosphoric acid | chemistry
+nitric acid | chemistry
+citric acid | chemistry
+beneficial microbe | glossary term
+living soil | glossary term
+cost | economics: price of an item
+ph management | document: name of a paper of this site
+acidity | chemistry: how acid the water is
+waste water | water: water that the ro unit rejects
+ph pen | equipment
+supplement | product: material that you add to the feed (calmag supplement)
+ca | chemistry: symbol of calcium
+mg | chemistry: symbol of magnesium
+na | chemistry: symbol of sodium
+marketing | business: advertising of products
+type | (shared approved word, not needed)

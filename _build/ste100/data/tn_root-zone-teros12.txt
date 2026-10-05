@@ -1,0 +1,71 @@
+guide
+column
+observation
+cost
+symptom
+diagnosis
+raw reading
+raw estimate
+raw vwc
+wire
+prong
+cable
+bulk ec
+bulk electrical conductivity
+bulk permittivity
+volume of influence
+electric field
+high-frequency electric field
+ellipsoid
+capacitance sensor
+capacitance probe
+cubic meter
+drained upper limit
+gravity
+generic calibration
+generic curve
+generic
+relative permittivity
+calibration equation
+equation
+physical quantity
+physical effect
+dielectric
+dielectric response
+line
+error band
+representativeness
+representative position
+uncertainty
+parameter
+sensitivity
+nonlinearity
+gain error
+additive offset
+additive calibration offset
+residual error
+absolute value
+absolute vwc
+overshoot
+artifact
+channeling
+wetting
+hydrophobic substrate
+stored water
+confidence
+confidence score
+witness
+second witness
+capacity anchor
+water-balance model
+safety interlock
+cohort model
+effective substrate volume
+load cell
+flow meter
+specific yield
+smart irrigation
+substrate-specific calibration
+field
+measurement chain
+hilhorst

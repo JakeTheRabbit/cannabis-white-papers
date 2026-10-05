@@ -1,0 +1,127 @@
+air conditioner
+cooling
+heating
+sensible heat
+latent heat
+sensible heat load
+latent heat load
+conservation law
+imperial unit
+rating
+coefficient of performance
+thunderstorm
+engineer
+engineering note
+spike
+comfort cooling
+office
+quotation
+data sheet
+pint
+evaporative cooler
+mini-split
+multi-split
+energy cost
+indoor facility
+refrigeration
+motor
+dissolved nutrient
+square foot
+square feet
+gallon
+envelope
+shed
+propane
+natural gas
+burner
+combustion
+physics
+margin
+consultant
+arithmetic
+crop loss
+failure
+psychrometric data
+afternoon
+inverter
+capacitor
+roof
+plant health
+garage
+forum
+sun
+refrigerant
+field guidance
+irrigation schedule
+drip schedule
+capital cost
+cost
+packaged unit
+rooftop unit
+supply air
+return air
+chilled water
+fan coil
+hot-gas reheat
+direct-expansion
+mechanical design
+integrated unit
+desiccant
+freezing point
+ducted dehumidifier
+single-stage
+conditioned air
+return air inlet
+diffuser
+discharge air
+aisle
+interlock
+reuse
+raw water
+permeate
+technician
+dead zone
+deadband
+lockout
+shield
+aspirated probe
+heat recovery
+standby mode
+uninterruptible power supply
+maintenance schedule
+filter schedule
+short cycling
+handheld meter
+pan
+float switch
+stain
+smell
+spare equipment
+spare unit
+spare capacity
+spare capacitor
+refrigerant line
+central chiller
+desiccant wheel
+air handling loop
+distilled water
+comfort
+airflow design
+air path
+geometry
+morning
+sediment filter
+lead
+redundancy
+refrigerant charge
+aspirated sensor
+life-cycle analysis
+indoor production
+environmental control
+control variable
+band
+operating cost
+dust
+integrated pest management
+energy use
+cross-section

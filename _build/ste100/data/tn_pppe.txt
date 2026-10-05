@@ -1,0 +1,124 @@
+plant health
+biosecurity
+coverall
+hairnet
+shoe cover
+boot cover
+hair cover
+beard cover
+beard net
+bouffant
+smock
+scrubs
+gown
+gowning
+de-gowning
+donning
+doffing
+clothing
+street clothes
+jacket
+shoe
+boot
+footwear
+mask
+eyewear
+lab coat
+nitrile
+single-use
+sterile
+aseptic
+cleanroom
+cleanroom grade
+microbial
+microbial specification
+release gate
+laminar-flow hood
+demarcation line
+sticky mat
+mat
+footbath
+anteroom
+locker
+toilet
+lid
+sole
+elbow
+cuff
+sleeve
+finger
+fingertip
+thumb
+palm
+nail
+back of the hand
+phone
+pen
+door handle
+earbud
+jewelry
+makeup
+watch
+ring
+chewing gum
+electronic cigarette
+break area
+personal
+personal protective equipment
+fomite
+bioaerosol
+aerosol
+plume
+skin flake
+viable
+infected
+barrier
+cross-contamination
+hazard
+hierarchy of controls
+elimination
+substitution
+isolation
+engineering controls
+administrative controls
+health and safety
+health and safety at work act
+worksafe
+pcbu
+person conducting a business or undertaking
+business
+employer
+duty
+legal
+reasonable care
+reasonable instruction
+reasonably practicable
+offense
+cost
+visitor
+contractor
+patient
+jurisdiction
+supervision
+vault
+security
+post-harvest
+food
+food-contact
+good agricultural and collection practice
+log reduction
+alcohol rub
+hand hygiene
+hand wash
+inside-out
+tens
+millions
+parking area
+suit
+handling area
+new zealand
+facial hair
+body
+goggles
+respirator
+quat

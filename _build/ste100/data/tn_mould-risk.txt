@@ -1,0 +1,20 @@
+band
+health
+scouting
+mycotoxin
+penicillium
+cladosporium
+aspergillus
+water activity
+aw
+immune system
+claims data
+yeast
+hay
+free moisture
+poison
+absolute rate
+literature
+commercial product
+medicine
+visual inspection

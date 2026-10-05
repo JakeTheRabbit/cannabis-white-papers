@@ -53,3 +53,4 @@ utility | part of the home assistant identifier utility_meter
 ok | part of the home assistant identifier binary_sensor.environment_ok
 tag | nfc tag (equipment); also the home assistant entity name tag
 tap | touch on the screen or on an nfc tag (noun)
+fogg

@@ -1,0 +1,63 @@
+perception
+cognition
+inference
+prescription
+advisory
+precursor
+coupled system
+coupled effect
+coupling
+learned envelope
+named condition
+evidence chain
+special-cause variation
+common-cause variation
+statistical process control
+jitter
+spike
+scatter
+aliasing
+tampering
+oscillation
+sampling cadence
+rolling average
+median filter
+mean
+sigma
+actuator
+air conditioner
+false positive
+classification
+plant state
+calm dashboard
+failure
+failure mode
+tip burn
+salt creep
+lead time
+cooling setpoint
+co2 supplementation
+on-track
+raw data
+salt accumulation
+prediction
+shadow mode
+self-correction
+black box
+diagnosis
+corrective action
+sensor fusion
+recovery slope
+sun load
+standard deviation
+cooling
+confidence
+evidence
+fusion
+bridge metric
+metric
+morning stress
+cost
+eye
+commercial cultivation
+plant-state

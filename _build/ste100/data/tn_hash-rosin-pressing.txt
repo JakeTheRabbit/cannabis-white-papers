@@ -1,0 +1,120 @@
+press | equipment: machine that applies heat and force to hash
+force | physics: a push or pull on an object (the issue 9 dictionary lists force as a technical noun)
+plate | equipment: heated metal plate of the press
+mesh | material: woven screen of the press bag
+wash | procedure: ice-water wash that makes bubble hash
+gauge | equipment: instrument that shows the pressure
+haze | property: cloudy look of rosin
+vacuum | physics: space with very low pressure (freeze dryer)
+kief | product: the powder of dry sift
+dry sift | product and method: hash made with dry screens
+bubble hash | product: hash made in ice water
+dab | product: small dose of rosin that a person vaporizes
+cartridge | product: container of oil for a vape device
+vape cartridge | product: cartridge for a vape device
+diamond | product: crystal of thca in rosin
+crystal | material: solid with a regular structure
+badder | product: soft smooth texture of rosin
+butane | chemistry: solvent gas
+white | color term
+gold | color term
+thousandth | number word: one part in a thousand (micron)
+press run | procedure: one cycle of the press with one batch
+run | procedure: one cycle of the press with one batch
+collection | procedure: step in which you collect the rosin from the plates
+input | procedure: the material that goes into the press
+input material | procedure: the material that goes into the press
+pressing | procedure: the making of rosin in a press
+body effect | effect of cannabis on the body
+sauce | product: liquid terpene-rich oil around thca diamonds
+live rosin | product: rosin pressed from fresh-frozen hash
+nail | equipment: hot surface on which rosin is vaporized (dab nail)
+batter | product: another name for badder
+fat | chemistry: natural plant fat (lipid)
+channel | property: path in the puck where the oil flows around the material
+purity | property: share of intact trichome heads in the hash
+pre-rolled joint | product: joint that is made in advance
+capitate-stalked trichome | plant part: large trichome with a head on a stalk
+cloudy trichome | plant part: trichome head at peak ripeness
+reabsorption | process: oil goes back into the used material
+freeze dryer | equipment: dries frozen material in a vacuum
+lyophilizer | equipment: another name for a freeze dryer
+full-melt | product grade: hash of 5 to 6 stars
+fresh-frozen | material: plant frozen immediately after the cut
+cold chain | procedure: the steps that must stay cold
+dwell time | procedure: time that the bag stays in the press under heat and force
+dwell | part of the term dwell time
+pre-press | procedure: step that makes the material into a puck
+puck | material: flat dense disk of material
+blowout | fault: break of the bag
+emulsion | chemistry: unstable mixture of oil and water
+viscosity | physics: how thick a liquid is
+nucleation | chemistry: start of crystal formation
+monoterpene | chemistry: terpene with the smallest mass
+pinene | chemistry: name of a monoterpene
+myrcene | chemistry: name of a monoterpene
+water activity | measure: free moisture of a material, scale 0 to 1
+hash hole | product: pre-rolled joint with a core of hash or rosin
+edible | product: food product that contains cannabis
+melt grade | measure: scale of quality for hash
+static charge | physics
+author | document term: the person who wrote this paper
+intoxication | pharmacology: effect of a substance on the mind
+static glove method | procedure: name of the method with a static charge on a glove
+static glove | equipment: glove with a static charge
+lights-off | grow room term: the time when the lights go off
+lightness | property: how light a color is
+dark | color term (only in dark color, dark rosin)
+fresh press | product: rosin that you use directly after the press, with no cure
+live diamonds | product: diamonds from live rosin
+crystallization | chemistry: formation of crystals
+core | product part: middle part of a hash hole
+conditioning | procedure: adjustment of the moisture of the material before the press
+cost | economics: price of a method
+clarity | property: how clear (transparent) the rosin is
+blue | color term
+red | color term
+cloudy | trichome state term (clear, cloudy, amber)
+parchment | material: paper for the press
+matrix | document: table of cause and effect
+matrices | plural of matrix
+thermal mass | physics: heat capacity of the bag and its content
+app | equipment: software on a phone that controls the press
+agitation | procedure: mixing or movement of material in water or of rosin
+green | color term
+shatter | product: hard glassy texture of rosin
+sap | product: soft sticky texture of rosin
+seam | part of the bag: fold at the open end
+greasy texture | rosin texture term: oily appearance and feel
+live badder | product: badder made from live rosin
+work bag | equipment: top bag of the wash stack that holds the plant material
+work screen | equipment: first screen of the dry sift stack
+stack | equipment: set of bags or screens of different micron
+card | tool: flat card used to move dry sift on a screen
+dab tool | tool: tool to collect rosin
+microplane | tool: fine grater
+patty | material: wet disk of hash
+grading | procedure: giving a melt grade to hash
+mechanical separation | procedure: separation of diamonds from sauce
+distilled water | material: water purified by distillation
+hash maker | role: person who makes hash
+aw | symbol of water activity
+pass | procedure: one movement of the card or glove across the screen
+nitrile | material of the glove
+freezer | equipment: cold storage below the freezing point
+mtorr | unit of pressure (millitorr)
+personal scale | production scale: use by one person
+craft scale | production scale: small-batch production
+commercial scale | production scale: large production for sale
+refrigerator | equipment: cold storage above the freezing point
+mason jar | equipment: glass jar with a screw lid
+crystal ball | product: round cluster of thca crystals in jam
+jam | product: rosin with diamonds in a jar
+jam method | procedure: jar method to make diamonds
+jar method | procedure: jar method to make diamonds
+lid | equipment: cover of a jar
+donut | shape: ring with a hole
+effective pressure | physics: force on the bag divided by the bag area
+half-melt | product grade: hash of 4 stars
+live products | product category: products made from fresh-frozen material
+light color

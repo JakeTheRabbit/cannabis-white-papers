@@ -1,0 +1,8 @@
+# paper_plant_biology - STE rewrite report (saved by the coordinator from the agent's reply)
+Status: DONE. Lint (units) E=0 W=72 (GR-7 on "male/female" plant sex); rendered E=0 W=67; verify PASS; section gate OK for this paper. 277 of 380 units changed (labels 32 of 45).
+TN added 178 (data/tn_plant-biology.txt). Weak entries to audit: age, angle, calendar, clock, compact, cost, family, north, strain, transition, variety; "indoor" unused. TV added: die, pollinate.
+Number changes: none ("+2" on U0233 = digit in CO2).
+Content decisions: analogies removed (hourglass, kitchen pan, household, sponge, solar panel); slang removed (veg, flip, herm, banana, cull); "flip" -> "change of the light cycle"; one name each for growing tip, pod, exposed anther, feminized seed; 27 paragraph splits; text grew 38%, reading-time label kept at 26.
+Needs review: U0079 "it promotes the reserves" (unclear) -> "The axillary buds become active"; U0140 "short-night flip" contradicted mechanism -> change to long nights; U0088 recast (transpiration = water loss, pulls water); "centuries/thousands of years/hundreds" vaguer (U0042, U0062, U0093); dropped "(your call)" U0148, "reliably" U0161, jeweler's U0128, tumble U0126, slimy U0262; "mechanism" used in biology sense.
+NOT covered: 6 diagrams in figs_plant_biology.json (non-STE text).
+Tool feedback: R1.7 false positives ("to sugar molecules", "time to flowering", "auxin to cytokinin"); wrapped flow-diagram label with different line count fails SVG hash (U0217, U0241); ste_verify glues table cells (cell starting with number loses a match); no check for approved words in wrong meaning (unit, accident, through, come, live).

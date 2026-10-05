@@ -1,0 +1,7 @@
+# paper_unit_economics - STE rewrite report (saved by the coordinator from the agent's reply)
+Status: DONE. Lint (units) E=0 W=0; rendered E=0 W=0; verify PASS; section gate OK. 332 of 476 units changed (labels 29 of 41).
+TN added 99 (economics, maths, units/lighting, facility, reference-cell author names). TV added: pay, sell. Number changes: none.
+Content decisions: "flip-to-flip" and "turn time" were one defined term meaning two things -> now "cycle length" (63 days) and "turn time" (7 days), both in Definitions; "fictional" -> "example room"; scoreboard/dial/cost stack/tier/path/line -> primary metric/quantity/list of costs/price group/alternative/item; "per" -> "for each"; idioms cut (hobby, minefield, astrology, pit stop); 14 units split.
+Needs review: "almost certainly" -> "very possible" (U0078); "forum bragging" tone gone (U0013, U0060); "hundreds of g/m2" -> "more than two hundred" (U0474); "cash fine/ugly" -> "cash flow good/low" (U0459); "≈" kept in 6 diagram labels; labels U0290 (119%) and U0292 (156%) exceed +15%.
+NOT covered: ~88 SVG text lines in figs_unit_economics.json (denoms, spread, coststack, cycles, tornado).
+Tool feedback: R1.2 misses noun/verb misuse (measure noun, report verb, complete adjective) and conjunction "as"; quoted text unchecked; flow-figure labels must keep wrap line count (16 chars/line) or SVG hash fails (undocumented); ste_verify glues table cells (cell-initial number not counted).

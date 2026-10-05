@@ -1,0 +1,23 @@
+post-harvest | stage: all steps after the cut of the plant (glossary term)
+water activity | measure: how available the water in the flower is, scale 0 to 1.00 (glossary term)
+aw | symbol of water activity
+takedown | procedure: removal of the dry plants from the racks (name of a step in the figures)
+burping | procedure: short opening of a sealed container during curing (glossary term)
+burp | procedure: one opening of a sealed container in burping
+sale | economics: the sale of the product (weight for sale)
+airflow-design | document: name of a paper of this site
+nutrient-mixing | document: name of a paper of this site
+calendar | document: table of dates (the planned date of the harvest)
+cloudy | trichome state term (transparent, cloudy, amber)
+tag | equipment: label with a code on the plant, for traceability
+lollipopping | procedure: removal of the lower growth under the canopy (glossary term)
+defanning | procedure: removal of the large fan leaves (glossary term)
+whole plant | plant: the plant in one piece, with the stem, the branches and the buds
+cost | economics: price of an item (low-cost moisture meter)
+yeast | life form: microbe that grows on wet flower
+scissors | equipment: tool to cut the leaves
+lid | equipment: cover of the bin
+barrel | equipment: container for curing
+hang-dry | procedure: the drying of whole plants that hang in the dry room
+bucking | procedure: cutting of the trimmed buds from the stem (glossary term)
+standard | document: technical standard of an organization (astm d8197 standard)

@@ -1,0 +1,6 @@
+# paper_plant_state_dashboard - STE rewrite report (saved by the coordinator from the agent's reply)
+Status: DONE. Lint (units) E=0 W=0; rendered E=0 W=0; verify PASS; section gate OK. 205 of 257 units changed (labels 57 of 78).
+TN added 65 (dashboard design, plant/crop, economics; borderline: state, design, guide, evidence, trust, assumption, sentence, headline, watchlist, gauge, gate, layout). TV added: none. Number changes: none.
+Content decisions: layer/stage names verbs -> nouns: Ingest/Derive/Infer/Prescribe/Present/Fuse -> Input/Values/Inference/Prescription/Display/Fusion; analogies removed (cockpit and co-pilot, thirsty air, wall of graphs, basement, cries wolf, stepping stone); "Grain of salt" -> "Weak"; KPI "Surprises" -> "Damage with no advisory"; "Dwell time" -> "Screen time"; META "Operational guide" -> "Operation guide"; PPFD, DLI, KPI expanded once; 4 paragraph splits.
+Needs review: "tired" in a label (kept as "after a long day of work" in U0013); UX; "prognostic"; "earns the next" -> "makes the next stage possible"; four labels exceed +15% but fit the 113 px boxes: U0157 157%, U0195 133%, U0159 and U0197 127%.
+Tool feedback: label must keep same wrapped line count (now in RULES); "live" approved only as "explosive"; "note", "sentence", "text", "line", "word", "state", "design", "evidence", "trust" not approved or missing from dictionary.

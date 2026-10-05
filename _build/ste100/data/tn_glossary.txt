@@ -1,0 +1,432 @@
+daily light integral
+flip
+bleaching
+reactive oxygen species
+light reactions
+co2 supplementation
+integrated pest management
+scouting
+biological control
+biocontrol
+insect
+prey
+generalist predator
+specialist predator
+foliar spray
+drench
+re-entry interval
+withholding period
+residue
+frass
+sticky trap
+sachet
+release box
+pouch
+carrier material
+exclusion
+organ
+in vitro
+ex vitro
+nodal segment
+totipotency
+aseptic technique
+yeast
+vitamin
+gelling agent
+meta-topolin
+subculture
+hyperhydricity
+vitrification
+glassy shoot
+acclimatization
+hardening
+indexing
+hop latent viroid
+dudding
+photosynthetic photon flux density
+endophyte
+capacitance
+electric field
+bulk ec
+sensor fusion
+confidence
+telemetry
+statistics
+statistical process control
+cleanroom
+gowning
+standard operating procedure
+recall
+customer
+action threshold
+post-harvest
+burping
+water activity
+bucking
+scissors
+stem-snap test
+industry standard
+aw
+chemical reaction
+crystals
+precipitate
+lockout
+dilution
+athena guide
+indole-3-butyric acid
+synthetic auxin
+plug
+lid
+air embolism
+culling
+apical dominance
+recovery time
+spreading
+lollipopping
+lollipop
+defanning
+sink
+larf
+shade avoidance response
+cotyledon
+embryo
+taproot
+radicle
+true leaves
+seed coat
+feminized seed
+ruderalis
+subspecies
+damping-off
+imbibition
+photosynthetically active radiation
+lumen
+square meter
+quantum meter
+compact growth
+joule
+photosynthetic photon flux
+phytochrome
+pigment
+florigen
+ultraviolet light
+eye
+inverse-square law
+hanging height
+ppfd map
+par map
+grid
+square of the distance
+limiting factor
+cost
+essential element
+macronutrient
+micronutrient
+old leaves
+immobile nutrient
+interveinal chlorosis
+dark green
+parts per million
+claw
+nutrient antagonism
+buffering
+inert medium
+phosphoric acid
+potassium hydroxide
+ph pen
+milky white
+bulking
+hermaphroditism
+beneficial organism
+parasitoid wasp
+bacterium
+preventative agent
+curative agent
+alternative food
+outbreak
+generation time
+egg stage
+egg-laying adult
+infestation
+stippling
+honeydew
+whitefly
+sooty mold
+scope
+magnifier
+magnification
+broad mite
+egg
+bti
+btk
+thuringiensis
+israelensis
+kurstaki
+larva
+larvae
+caterpillar
+entomopathogenic nematodes
+worm
+feltiae
+parasite
+hardness
+grain
+gallon
+beneficial microbe
+chloramine
+catalytic carbon filter
+reverse osmosis
+filtration
+semipermeable membrane
+build back
+rainwater
+supplement
+wasp
+host pest
+membrane
+growing medium
+water-holding capacity
+porosity
+cation exchange capacity
+cation
+positive electric charge
+meq
+molten rock
+bog moss
+living soil
+organic soil
+soil bed
+recycled organic living soil
+pre-buffering
+exchange sites
+cal-mag
+well water
+coastal water
+actuator
+advisory
+annex
+architect
+auto irrigation
+background drip baseline
+blind spot
+web browser
+butane
+sampling cadence
+calm dashboard
+graphics card
+pressure cascade
+gowning cascade
+evidence chain
+class
+coconut husk
+coefficient of variation
+collection
+computerized system
+cone
+coverage
+acceptance criterion
+cubic meter
+cursor
+default
+deming
+gas detection
+diagnosis
+dielectric constant
+dielectric probe
+document
+drawing
+effectiveness
+learned envelope
+equation
+field of view
+firmware
+file format
+furniture
+gate
+gated closed loop
+genealogy
+international harmonization guideline
+hardware
+home automation
+home assistant
+image
+inference layer
+volume of influence
+initials
+instancing
+integration
+data integrity
+international standard
+intrusion
+jitter
+three.js
+lag
+legal responsibility
+code library
+line
+logic
+machine
+management review
+senior management
+market
+mean
+median filter
+medicinal cannabis
+medicine
+morning dryback
+mouse
+named condition
+non-viable particle
+viable air
+on-track
+organization
+oscillation
+document owner
+pan-tilt-zoom
+pass-through
+phone
+photo
+floor plan
+platform
+prediction
+preferential flow
+prescription
+transpiration proxy
+pure white
+qualification
+ray
+regulator
+requirement
+resource
+responsibility
+roller door
+roof
+nyquist rule
+scene
+schema
+sensitivity
+digital serial protocol
+shared-drain puzzle
+sump puzzle
+signature
+smoothing
+software
+spike
+status
+sump
+substrate-specific calibration
+tampering
+tone mapping
+audit trail
+trajectory
+transient
+tuning
+digital twin
+utilities
+validated state
+validation
+version
+vigor
+leading indicator
+lagging indicator
+moving average
+rolling average
+exponentially-weighted moving average
+common-cause variation
+special-cause variation
+dead-band
+fail-safe
+blocked-dripper guard
+explosion-proof
+lower-confidence-bound
+representativeness fault
+residual solvent
+channeling
+aliasing
+hunting
+raycasting
+picking
+system enabled
+grow table
+phase state
+coupled system
+plant state
+salt accumulation pattern
+corrective action
+preventive action
+alert
+alert limit
+action limit
+backup
+classification
+detail
+disposition
+evidence
+exception
+hazard
+switch
+transfer
+register
+review
+production run
+design stage
+drained upper limit
+free drainage
+specific yield
+free water
+protective clothing
+starting material
+cleaning validation
+cooling setpoint
+manufacturing
+relay board
+maintenance
+water balance
+manual override
+quality standard
+esphome
+open-source
+file
+gltf
+draw call
+js
+recovery floor
+pause point
+pre-dark
+killer item
+dosing pump
+irrigation timeout
+do-confirm
+pencil-whipping
+implementation intention
+technician
+auto-tick
+personal protective equipment
+plant and personal protective equipment
+protective covers
+de-gowning
+fomite
+pen
+handle
+bioaerosol
+toilet
+cross-contamination
+hierarchy of controls
+engineering controls
+administrative controls
+person conducting a business or undertaking
+health and safety at work act
+legal duty
+employer
+support system
+cooling
+sensible heat load
+latent heat load
+air conditioner
+pint
+transpiration stream
+dense flowering canopy
+dense canopy
+formula dvwc/delivered_ml
+file master_crop_steering_app.py
+flush

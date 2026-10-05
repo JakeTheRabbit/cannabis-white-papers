@@ -1,0 +1,107 @@
+phytoseiulus
+persimilis
+amblyseius
+swirskii
+cucumeris
+neoseiulus
+californicus
+aphidius
+colemani
+matricariae
+beauveria
+bassiana
+steinernema
+feltiae
+bacillus
+thuringiensis
+kurstaki
+aculops
+cannabicola
+phorodon
+encarsia
+eretmocerus
+russet mite
+broad mite
+root aphid
+cannabis aphid
+green peach aphid
+rice root aphid
+whitefly
+caterpillar
+budworm
+predatory mite
+parasitoid wasp
+wasp
+nematode
+beneficial nematode
+insect
+egg
+adult
+pupa
+moth
+fly
+host
+bacterium
+population
+sap-sucker
+stippling
+frass
+honeydew
+webbing
+sooty mold
+phytotoxicity
+residue
+heat stress
+nutrient burn
+molted skin
+cupped
+glossy
+sticky card
+sticky
+scope
+magnification
+action threshold
+life cycle
+generation time
+preventative
+curative
+beneficial
+biological control
+biopesticide
+insecticidal soap
+micronized sulfur
+drench
+monitoring
+scouting
+jurisdiction
+integrated pest management
+diagnosis
+crop loss
+program
+growing tip
+plant health
+bti
+btk
+card
+larvae
+pupae
+pale
+dark
+streak
+dot
+leaf curl
+growing medium
+outbreak
+sap-suckers
+prevention
+reactive
+cost
+relative
+specialist predator
+square meter
+microbial
+calendar
+detection
+sticky-card
+airflow design
+scouting walk

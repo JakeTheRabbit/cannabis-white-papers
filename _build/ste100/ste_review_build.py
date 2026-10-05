@@ -28,20 +28,35 @@ def show(s):
     return s
 
 
+def _groups(work):
+    """Every folder under work/ that holds units.original.txt + units.txt (papers, data modules,
+    html pages, images, <figure file>/svg)."""
+    found = []
+    for dp, dn, fn in os.walk(work):
+        if "units.original.txt" in fn and "units.txt" in fn:
+            rel = os.path.relpath(dp, work).replace("\\", "/")
+            found.append((rel, dp))
+    return sorted(found)
+
+
+def _kind(rel):
+    if rel.startswith("paper_"):
+        return "paper"
+    if rel.endswith("/svg"):
+        return "diagram text"
+    if rel.startswith(("data.", "ipm_blueprint")):
+        return "data / blueprint"
+    return "page / other"
+
+
 def collect(only=None):
     work = os.path.join(HERE, "work")
     papers = []
-    for d in sorted(os.listdir(work)):
-        p = os.path.join(work, d)
-        if not (d.startswith("paper_") and os.path.isdir(p)):
+    for rel, p in _groups(work):
+        if only and only not in rel:
             continue
-        if only and only not in d:
-            continue
-        a, b = os.path.join(p, "units.original.txt"), os.path.join(p, "units.txt")
-        if not (os.path.exists(a) and os.path.exists(b)):
-            continue
-        _, ou = read_units(a)
-        _, nu = read_units(b)
+        _, ou = read_units(os.path.join(p, "units.original.txt"))
+        _, nu = read_units(os.path.join(p, "units.txt"))
         new = {u.id: u for u in nu}
         rows, changed, wb, wa = [], 0, 0, 0
         for u in ou:
@@ -55,10 +70,13 @@ def collect(only=None):
             wa += len(at.split())
             rows.append([u.id, u.kind, u.ctx, bt, at, 1 if ch else 0])
         rep = ""
-        rp = os.path.join(p, "REPORT.md")
-        if os.path.exists(rp):
-            rep = open(rp, encoding="utf-8").read()[:6000]
-        papers.append({"module": d, "n": len(rows), "changed": changed, "wb": wb, "wa": wa, "rows": rows, "report": rep})
+        for name in ("REPORT.md", "../REPORT.md", "REPORT_part1.md", "REPORT_part2.md"):
+            rp = os.path.join(p, name)
+            if os.path.exists(rp):
+                rep += open(rp, encoding="utf-8").read()[:6000] + "\n"
+        papers.append({"module": rel, "kind": _kind(rel), "n": len(rows), "changed": changed, "wb": wb, "wa": wa,
+                       "rows": rows, "report": rep})
+    papers.sort(key=lambda d: (["paper", "data / blueprint", "page / other", "diagram text"].index(d["kind"]), d["module"]))
     return papers
 
 
@@ -88,9 +106,9 @@ const plist=document.getElementById('plist'),view=document.getElementById('view'
 function esc(s){return s.replace(/[&<>]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;'}[c]))}
 function renderList(){const q=pf.value.toLowerCase();plist.innerHTML='';
  DATA.forEach((p,i)=>{if(q&&!p.module.toLowerCase().includes(q))return;const a=document.createElement('a');
-  a.innerHTML=esc(p.module.replace('paper_',''))+'<small>'+p.changed+'/'+p.n+'</small>';a.onclick=()=>show(i);a.dataset.i=i;plist.appendChild(a)})}
+  a.innerHTML=esc(p.module.replace('paper_',''))+'<small>'+p.changed+'/'+p.n+'</small>';a.title=p.kind;a.onclick=()=>show(i);a.dataset.i=i;plist.appendChild(a)})}
 function show(i){const p=DATA[i];[...plist.children].forEach(a=>a.classList.toggle('on',a.dataset.i==i));
- view.innerHTML='<h2>'+esc(p.module)+'</h2><div class="stats">'+p.changed+' of '+p.n+' units changed &middot; words '+p.wb+' &rarr; '+p.wa+'</div>'+
+ view.innerHTML='<h2>'+esc(p.module)+'</h2><div class="stats">'+esc(p.kind)+' &middot; '+p.changed+' of '+p.n+' units changed &middot; words '+p.wb+' &rarr; '+p.wa+'</div>'+
  (p.report?'<details><summary>Agent report</summary><pre>'+esc(p.report)+'</pre></details>':'')+
  '<div class="bar"><input type="text" id="qf" placeholder="Search text"><label><input type="checkbox" id="co" checked> changed only</label></div><table><thead><tr><th style="width:120px">Unit</th><th>Before</th><th>After (STE)</th></tr></thead><tbody id="tb"></tbody></table>';
  const draw=()=>{const q=document.getElementById('qf').value.toLowerCase(),co=document.getElementById('co').checked;let h='';

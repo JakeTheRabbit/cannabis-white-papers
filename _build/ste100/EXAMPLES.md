@@ -31,7 +31,7 @@ After: `Apply water until the block is full. During the day, the water content d
 ## Safety text (warn/danger callout)
 
 Before: `Never let the block dry below 25% water content, or it will channel and refuse water.`
-After: `WARNING-style order first, result second:` `Do not let the water content become less than 25%. A block that is too dry cannot receive water again. The roots become dry and the plant can be defective.`
+After: `Do not let the water content become less than 25%. A block that is too dry cannot receive water again. The roots become dry and the plant can be defective.` (command first, then the result)
 
 (`never` → `Do not`; `below` for a limit → `less than`; `will channel` and `refuse` are not approved: say what the block cannot do and what follows.)
 

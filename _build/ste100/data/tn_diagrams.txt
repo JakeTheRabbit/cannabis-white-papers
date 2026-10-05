@@ -1,0 +1,68 @@
+band
+water activity
+aw
+action threshold
+apical dominance
+burping
+scouting
+severity
+photo
+lollipopping
+bleaching
+dark
+cleanroom
+foliar spray
+foliar
+root drench
+drench
+systemic
+lockout
+ph lockout
+mobile nutrients
+immobile nutrients
+immobile
+telemetry
+warning
+radicle
+cotyledon
+cotyledons
+taproot
+endosperm
+embryo
+viable seed
+viable
+seed coat
+true leaves
+porosity
+channeling
+buffer
+setpoint
+dryback
+quarantine
+hop latent viroid
+cost
+reverse osmosis
+membrane
+availability
+turgor
+guard cell
+gas exchange
+water-holding capacity
+turbulent
+policy
+one-way
+dormant
+imbibition
+serrated
+testa
+larf
+transpiration stream
+critical control point
+hazard
+quality assurance
+document
+form
+thermocycler
+permeate
+vault
+fluorescence

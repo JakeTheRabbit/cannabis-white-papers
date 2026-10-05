@@ -198,3 +198,20 @@ Look up anything else with `ste_lookup.py <word>`; `--entry <word>` shows the di
 `light` (adj) small mass or weight; `free` can move easily; `high` / `low` large / small value; `long` / `short` length or duration;
 `between` related to something before and after in time or position; `with` association, help, or means; `about` concerned with;
 `above` / `below` physical position only (limits: "more than", "less than").
+
+## More from the cloning pilot
+
+| Avoid | Write |
+|---|---|
+| `as` (conjunction) | `when`, `while` or `because` |
+| faster, longer, best (adverbs) | "more quickly", "for a longer time", "the most" |
+| schedule (noun) | procedure; "times" |
+| "a 45° cut" | "cut the stem at 45°" (`cut` is a verb; the noun is only "one complete sequence") |
+| within 30 seconds | "in 30 seconds or less" |
+| transmit (disease) | `transmit` only means to send a signal or energy. For a disease say "the disease can move from one plant to another" |
+| clear plastic | transparent plastic |
+| by (classified by) | recast |
+| point (= idea) | recast |
+| active | recast (use / working) |
+| colors and body parts | not in the dictionary: they are technical nouns (already in the shared list: white, brown, yellow, green, red … hand, skin) |
+| lower leaves | bottom leaves (`lower` = more low in value; position = `bottom`) |

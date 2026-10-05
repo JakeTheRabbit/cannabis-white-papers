@@ -1,0 +1,452 @@
+integrated pest management
+blueprint
+indoor
+medicinal cannabis
+plant health
+auckland
+new zealand
+starting material
+monitoring
+photo
+corrective action
+patient
+inhalation
+substance
+active ingredient
+route
+residue
+registration
+exemption
+evidence
+status
+document
+hazard
+version
+database
+personal protective equipment
+requirement
+restricted entry interval
+application
+accreditation
+limit of quantification
+confidence
+release
+beneficial organism
+insect
+parasitoid
+nematode
+antagonist
+debris
+weed
+scouting
+stormwater
+sewer
+trade waste
+watercare
+legal gate
+rinse water
+register
+approved-input register
+finding
+recheck
+colony
+lesion
+map
+incidence
+rice
+cream
+pear
+fly
+cornicle
+specialist
+generation
+leg
+worm
+head capsule
+shore fly
+standing water
+live young
+sticky trap
+plate
+magnification
+development
+compatibility
+specimen
+microscopy
+arthropod
+exclusion
+severity
+diagnosis
+diagnostic laboratory
+broad mite
+adult
+literature
+calendar
+reduced-risk
+decision matrix
+program
+living organism
+cultural control
+environmental control
+biological control
+event
+wing
+antenna
+antennae
+body
+egg
+larvae
+pupa
+pupae
+algae
+slime film
+potato
+hand lens
+response
+young plant
+foundation mother plant
+foundation mother plants
+production mother plant
+production mother plants
+legal status
+chain of custody
+dark
+shore flies
+trap count
+approved input
+drench
+nymph
+book
+page
+commercial
+pale
+scarring
+edema
+hotspot
+underside
+oval
+slide
+tape mount
+cart
+cut flower
+two-spotted spider mite
+frass
+webbing
+stippling
+bronzing
+russeting
+honeydew
+vial
+dust
+fringe
+contact
+guidance
+abamectin
+spinosad
+pyrethrin
+analyte
+agricultural compound
+class
+exposure
+risk assessment
+warning sign
+fatty acid
+phytotoxicity
+discharge
+food
+novel food
+food additive
+composition
+strain
+conventional pesticide
+import
+cold chain
+scope
+quality attribute
+critical quality attribute
+non-critical quality attribute
+release criteria
+accession
+foundation
+return water
+positive result
+negative result
+inconclusive result
+traceback
+pooled sample
+reflex testing
+sentinel
+cohort
+age
+genealogy
+trace tree
+validation
+ridge
+blister
+herbicide
+fasciation
+dissecting microscope
+coverage
+mount
+micrometer
+vigor
+hop latent viroid
+trace-back
+vector
+consequence
+infestation
+suspect
+decontamination
+exception
+gowning
+backflow
+cardboard
+disposal
+trade waste agreement
+classification
+prevention
+count
+pest reservoir
+dew point margin
+pattern
+sloughing
+owner
+kit
+scissors
+return air
+treated area
+dead zone
+address
+barrier
+crawler
+moth
+eye
+scale insect
+host
+ant
+clothing
+cannabis aphid
+green peach aphid
+potato aphid
+whitefly
+sooty mold
+budworm
+caterpillar
+pellet
+sugar leaf
+foliar spray
+microbial quality
+generalist predator
+specialist predator
+expiry date
+survival
+mummy
+prey
+dead organism
+invertebrate
+biosecurity
+country
+physical control
+smothering
+desiccation
+soft-bodied
+establishment
+agitation
+nozzle
+field
+atlas
+piercing-sucking
+systemic pathogen
+winged
+tacoing
+growing tip
+abiotic
+angle
+tan
+stunting
+dead root
+damping-off
+molecular testing
+zoospore
+sclerotia
+decay
+receipt
+excursion
+engineering control
+worksheet
+distribution
+molecular test
+pruning
+systemic
+rooting
+dead cutting
+processing
+integrity
+market
+sensitivity
+design
+cleaning validation
+lockout
+supervision
+remediation
+meeting
+laboratory isolation
+chlamydospore
+surveillance
+accession number
+quality assurance
+pooling
+sequencing
+leaf spot
+flask
+splash
+rt-qpcr
+rt-pcr
+clone line
+inoculum
+applicator
+outbreak
+uncertainty
+preventive action
+population
+action threshold
+denominator
+spill
+spill kit
+pollution
+contractor
+drill
+competency
+procurement
+lead
+nursery
+supervisor
+manager
+mock event
+duty
+cluster
+claim
+review article
+behavior
+crop loss
+false alarm
+prompt
+phytoseiulus
+persimilis
+neoseiulus
+californicus
+fallacis
+cucumeris
+amblyseius
+orius
+lacewing
+aphidius
+encarsia
+formosa
+eretmocerus
+stratiolaelaps
+scimitus
+dalotia
+coriaria
+steinernema
+feltiae
+beauveria
+trichoderma
+bacillus
+streptomyces
+entomopathogenic
+parasitism
+dip
+sprench
+legal basis
+non-inhalation
+mode of action
+physical mode of action
+biological mode of action
+pre-harvest interval
+withholding period
+review
+soil
+scout
+septoria
+pycnidium
+pycnidia
+fruiting body
+fruiting bodies
+chemical
+sachet
+wasp
+bronze
+conidium
+conidia
+cupping
+fungicide
+insecticide
+molt
+metamorphosis
+fertilization
+preventive
+curative
+rogue
+roguing
+stimulus
+veterinary medicine
+minimum quality standard
+wastewater network
+commercial site
+industrial site
+line
+dew-point margin
+corrective and preventive action
+oomycete
+parasite
+spelling
+beneficial microbe
+parthenogenesis
+action limit
+batch hold
+alate
+asexual
+axil
+dudding
+instar
+mycelium
+oospore
+rhopalosiphum
+rufiabdominale
+bradysia
+frankliniella
+occidentalis
+tetranychus
+urticae
+polyphagotarsonemus
+latus
+aculops
+cannabicola
+trialeurodes
+vaporariorum
+bemisia
+tabaci
+phorodon
+myzus
+persicae
+macrosiphum
+euphorbiae
+golovinomyces
+neocannabina
+complex
+lepidopteran
+openai image generation
+life stage
+life cycle
+root mass
+identification
+zero tolerance
+predatory mite
+molted skin
+beneficial nematode
+chemical or low-risk control
+low-risk control
+powdery mildew
+image
+key terms

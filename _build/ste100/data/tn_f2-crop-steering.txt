@@ -1,0 +1,62 @@
+software
+hardware
+integration
+main line
+default
+reproduction
+bulking
+home assistant
+appdaemon
+fail-safe
+fail-safes
+switch
+system enabled
+auto irrigation
+watch mode
+manual override
+ec stacking
+tuya
+plug
+float
+gate
+morning
+alert
+phone
+button
+guard
+water hammer
+lockout
+entity
+factory default
+dielectric probe
+multiplier
+service
+override
+interlock
+dry-run guard
+blocked-dripper guard
+flag
+disk
+salinity
+process-control chart
+counter
+midnight
+arm switch
+line
+duration
+vwc
+field
+master
+app
+py
+veg
+gen
+per
+max
+daily
+execute
+script
+ha
+addons
+restart
+enabled

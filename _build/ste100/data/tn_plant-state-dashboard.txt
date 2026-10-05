@@ -1,0 +1,65 @@
+state
+calm dashboard
+telemetry
+telemetry-dump
+plant-state intelligence
+named condition
+inference
+prescription
+prediction
+advisory
+sensor fusion
+trajectory
+leading indicator
+lagging indicator
+precursor
+diagnosis
+transpiration proxy
+stress index
+stacking
+confidence
+evidence
+evidence chain
+headline
+watchlist
+trust
+fatigue
+alarm fatigue
+alarm flood
+process industry
+capacitive moisture probe
+vigor
+recovery
+daily light integral
+closed loop
+closed-loop
+gate
+timebase
+pipeline
+gauge
+black box
+cold start
+false positive
+false-positive
+guardrail
+shadow mode
+lead time
+home assistant
+pre-attentive processing
+layout
+key performance indicator
+guide
+design
+validation
+assumption
+accumulation
+autonomous control
+false alarm
+alarm management standard
+cost
+vision
+security camera
+fusion
+statistics
+photosynthetic photon flux density
+sentence

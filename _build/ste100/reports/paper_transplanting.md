@@ -1,0 +1,7 @@
+# paper_transplanting - STE rewrite report (saved by the coordinator from the agent's reply)
+Status: DONE. Lint (units) E=0 W=0; rendered E=0 W=0; verify PASS; section gate OK. 257 of 320 units changed (labels 30 of 36).
+TN added (plant parts/physiology, conditions/processes, materials/products, people/fields/documents). TV added: wilt, rot, girdle, condition. Number changes: none (~, ≈, ≥, +, > became words).
+Content decisions: 16 paragraphs split; analogies removed (engine, rent, paper towel, raisin, doormat, real-estate, furniture, forum ideology); names unified: island effect = dry root ball in wet medium; osmotic cliff = osmotic stress; water-in = first irrigation; hardening = acclimation; flip = change to flowering; final = last; ladder = sequence; practitioner convention = grower method; For/Against = Good/Problem.
+Needs review: U0047 "significantly" -> "by a large quantity"; U0211 "to survive" -> "to keep water in the plant"; U0150 "limited by contact" -> "more slowly"; six labels exceed 115% (U0212, 213, 216, 223, 259, 261) but fit.
+NOT covered: figs_transplanting.json (77 SVG strings; still says ladder, direct to final, route).
+Tool feedback: lint cannot see approved words in wrong meaning/POS (live, life, wound, shock, injury, mechanism, tolerance, rough, heavy, against, control); TV "condition" not recognized mid-sentence (W R1.2); R1.7 false positive "change to flowering"; R3.2 false positive "is overpotting"; flow sub-labels wrap at 16 chars (now in RULES); ste_merge consumes part files (use fix_NN).

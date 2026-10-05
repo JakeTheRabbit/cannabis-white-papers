@@ -1,0 +1,5 @@
+print
+purchase
+dissolve
+die
+wilt

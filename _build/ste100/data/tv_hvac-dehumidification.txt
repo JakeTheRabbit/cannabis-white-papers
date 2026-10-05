@@ -1,0 +1,4 @@
+condense
+evaporate
+adsorb
+defrost

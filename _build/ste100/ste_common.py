@@ -85,7 +85,7 @@ UNIT_WORDS = (
 )
 NUM = r"[-+−–]?\d+(?:[.,]\d+)*"
 NUMRANGE = NUM + r"(?:\s?(?:[–—-]|to)\s?" + r"\d+(?:[.,]\d+)*)?"
-NUMUNIT = re.compile(r"(?<![\w.])(" + NUMRANGE + r")(?:\s?(?:" + UNIT_WORDS + r")(?![A-Za-z]))?")
+NUMUNIT = re.compile(r"(?<![\w.\-])(" + NUMRANGE + r")(?:\s?(?:" + UNIT_WORDS + r")(?![A-Za-z]))?")
 QUOTED = re.compile(r"\"[^\"]*\"|“[^”]*”|‘[^’]{3,}’")
 ALNUM_ID = re.compile(r"\b(?=[A-Za-z0-9\-]*\d)(?=[A-Za-z0-9\-]*[A-Za-z])[A-Za-z0-9]+(?:-[A-Za-z0-9]+)*\b")
 SLASHED = re.compile(r"\b[A-Za-z]+(?:/[A-Za-z]+)+\b")

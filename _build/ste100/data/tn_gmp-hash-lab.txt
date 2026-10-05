@@ -1,0 +1,187 @@
+good manufacturing practice
+cleanroom
+gate
+validation
+qualification
+class
+classification
+classified room
+classified zone
+classified electrical area
+genealogy
+coverage
+management
+status
+cascade
+unidirectional
+filtration
+coverall
+lab coat
+street clothes
+corridor
+interlock
+ambient
+aw
+butane
+propane
+flammability
+headspace
+column
+vacuum
+fat
+hydrocarbon
+ignition
+ingredient
+utility
+sediment
+ice hopper
+stream
+expiry
+complaint
+microbial
+bulk
+finished goods
+finished concentrate
+finished batch
+goods-in
+market
+mycotoxin
+aflatoxin
+ochratoxin
+cadmium
+arsenic
+mercury
+carcinogen
+analyte
+pb
+raw flower
+carryover
+coli
+plate
+remediation
+signature
+effectiveness check
+effectiveness
+scope
+5-why
+fishbone
+ishikawa
+severity
+patient
+recall
+director
+supervisor
+manager
+reviewer
+owner
+lead
+cage
+unusable
+licensed disposal
+disposal
+manifest
+witness
+median
+mock recall
+retrieval
+leg
+swab
+swab sample
+rinse sample
+acceptance criterion
+acceptance criteria
+capital
+compliant
+sterile
+pharmaceutical
+recreational cannabis
+medicinal cannabis
+dose form
+positive-pressure
+positive pressure
+negative pressure
+negative
+positive
+respiratory illness
+gastrointestinal
+open wound
+health check
+dashed line
+um
+stack
+recovery
+decision tree
+one-way
+in-process
+fresh-frozen
+pre-filter
+explosion-proof
+self-inspection
+most penetrating particle size
+parts per billion
+distribution
+factor
+state
+toxic metal
+event
+hazard
+critical
+major
+minor
+action limit
+residual solvent
+residual
+water activity
+disposition
+wash
+purge
+process
+production run
+incoming
+legal
+legal advice
+requirement
+jurisdiction
+contamination control strategy
+document
+auditor
+inspector
+corrective and preventive action
+corrective
+preventive
+critical control point
+review
+management review
+milling
+dispensing
+manufacturing
+sale
+two-person rule
+rating
+transfer
+design
+evidence
+mains
+station
+retained reference sample
+release
+cleanliness
+gowning
+prevention
+attributable
+collection
+standard
+pre-filters
+why
+environmental monitoring
+monitoring
+cleaning
+cleaning validation
+point of use
+live resin
+legible
+contemporaneous
+original
+complete
+consistent
+enduring
