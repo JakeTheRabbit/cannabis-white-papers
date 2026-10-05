@@ -199,7 +199,7 @@ SECTIONS.append({"id": "chlorine-hardness", "kicker": "Primary information: chem
   ]})
 
 SECTIONS.append({"id": "ro-buildback", "kicker": "Primary information: the decision on RO",
-  "title": "Reverse osmosis and mineral rebuilding",
+  "title": "Reverse osmosis and the minerals that you add",
   "blocks": [
     p("Reverse osmosis removes the minerals from water. The water then has almost zero PPM, usually "
       "0 to 10 ppm TDS. Thus each mineral that the plant gets is a mineral that you select." +

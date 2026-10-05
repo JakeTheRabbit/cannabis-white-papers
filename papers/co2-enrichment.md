@@ -111,7 +111,7 @@ The best yield data for cannabis come from controlled tests at Utah State Univer
 >
 > These numbers, and most of the ‘20–40% uplift’ values, are on vendor blogs. There is no controlled test for these numbers. The test at Utah State University is the primary source with controlled data. It gives a yield gain of approximately 40% for the flowers at 1,200–1,400 ppm[^westmoreland2023-usu]. If a vendor gives a more accurate number, do not accept it until you examine the test.
 
-## CO2 supply and dosing
+## CO2 supply and dose
 
 There are four usual methods to put CO2 into a room. One method is clearly the best for a sealed cannabis room:
 

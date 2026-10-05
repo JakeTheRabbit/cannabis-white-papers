@@ -78,7 +78,7 @@ SECTIONS.append({"id": "key-terms", "kicker": "02 · The terms", "title": "Defin
       "the large fan leaves. Put the stem in the cube to the correct depth."),
   ]})
 
-SECTIONS.append({"id": "mother-and-cut", "kicker": "03 · Selecting and cutting", "title": "Selecting and cutting shoots",
+SECTIONS.append({"id": "mother-and-cut", "kicker": "03 · Selecting and cutting", "title": "Select and cut shoots",
   "blocks": [
     p("A good clone starts with a good shoot. Select vertical shoots from the top and middle parts "
       "of the canopy. Each shoot must be a minimum of 3 mm (0.1 in) thick and 15 cm (6 in) long. "

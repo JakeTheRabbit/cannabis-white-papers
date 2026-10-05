@@ -82,7 +82,7 @@ SECTIONS.append({"id": "key-terms", "kicker": "The terms", "title": "Definitions
       "the task of the other number." + _c("aroya-drying-water-activity-guide")),
   ]})
 
-SECTIONS.append({"id": "harvest-timing", "kicker": "Step 1, the information", "title": "Harvest timing",
+SECTIONS.append({"id": "harvest-timing", "kicker": "Step 1, the information", "title": "Time of harvest",
   "blocks": [
     p("Harvest is the procedure in which you cut all the plants after they complete the flowering. "
       "Examine the flower to find the maturity of the plants. Do not use the date on the calendar."),
@@ -106,7 +106,7 @@ SECTIONS.append({"id": "harvest-timing", "kicker": "Step 1, the information", "t
         "approximate indication.")),
   ]})
 
-SECTIONS.append({"id": "harvest-method", "kicker": "Step 2, the procedure", "title": "Harvest method and wet-plant weighing",
+SECTIONS.append({"id": "harvest-method", "kicker": "Step 2, the procedure", "title": "Harvest method and weight of the wet plant",
   "blocks": [
     p("Cut each whole plant and hang it to dry. Do not remove the buds from the plant first. "
       "Release each plant from the bottom two layers of the trellis net (the net that holds the "

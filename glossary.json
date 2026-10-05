@@ -118,7 +118,7 @@
    "slug": "tissue-culture"
   },
   {
-   "term": "Acclimatisation (hardening)",
+   "term": "Acclimatization (hardening)",
    "defn": "Acclimatization (hardening) is the task to make a plantlet from tissue culture stronger. You decrease the humidity and increase the light gradually. Thus the plantlet does not die in usual air.",
    "tags": [
     "tissue culture"
@@ -185,7 +185,7 @@
    "slug": "root-zone-teros12"
   },
   {
-   "term": "VPD (vapour pressure deficit)",
+   "term": "Vapor pressure deficit (VPD)",
    "defn": "VPD shows how strongly the air pulls moisture from plants. It is one number that you calculate from the temperature and the humidity. This number changes the rate at which plants transpire.",
    "tags": [
     "environment"
@@ -217,7 +217,7 @@
    "slug": "substrates-overview"
   },
   {
-   "term": "Generative vs vegetative",
+   "term": "Generative and vegetative",
    "defn": "The two growth modes of a plant are vegetative growth (leaves, stems and size) and generative growth (flowers, fruit and density). Crop steering changes the balance between the two modes.",
    "tags": [
     "crop steering"
@@ -301,7 +301,7 @@
    "slug": "plant-state-dashboard"
   },
   {
-   "term": "Setpoint vs target",
+   "term": "Setpoint and target",
    "defn": "A setpoint is the specified value that a controller tries to keep at this time. A target is the wider result that you want to get for a period of days.",
    "tags": [
     "control"
@@ -325,7 +325,7 @@
    "slug": "closed-loop"
   },
   {
-   "term": "Signal vs noise",
+   "term": "Signal and noise",
    "defn": "A signal is a change that occurs in the plant or in the root zone. Noise is a small random change from the sensor or from the environment, and it does not show a change in the plant. Good control uses the signal and ignores the noise.",
    "tags": [
     "control",
@@ -407,7 +407,7 @@
    "slug": "root-zone-teros12"
   },
   {
-   "term": "Resolution vs accuracy",
+   "term": "Resolution and accuracy",
    "defn": "Resolution is the smallest change that a sensor can show (0.001 m3/m3 here). Accuracy is how close the value is to the correct value (+/-0.03 with the general equation, +/-0.01-0.02 after calibration). The two are not the same.",
    "tags": [
     "reference"
@@ -487,7 +487,7 @@
    "slug": "smart-watering-vrwe"
   },
   {
-   "term": "Water balance / bank account",
+   "term": "Water balance",
    "defn": "The water balance is the water that you supply (irrigation), minus the water that the plant uses, minus the runoff. You calculate it continuously. It is equal to the estimate of the water in the pot.",
    "tags": [
     "precision"
@@ -527,7 +527,7 @@
    "slug": "smart-watering-vrwe"
   },
   {
-   "term": "Shared-drain (sump) puzzle",
+   "term": "Shared-drain (sump) problem",
    "defn": "The shared-drain puzzle (sump puzzle) occurs when the water from some rooms, from the AC and from the dehumidifier goes into one bucket. Thus you cannot know which source caused a flush.",
    "tags": [
     "precision"
@@ -591,7 +591,7 @@
    "slug": "signal-and-noise"
   },
   {
-   "term": "Moving (rolling) average",
+   "term": "Moving average (rolling average)",
    "defn": "A moving average (rolling average) is the average of the last N readings. You calculate it again when you get each new reading. It decreases random variation, but it adds a small lag.",
    "tags": [
     "reference"
@@ -727,7 +727,7 @@
    "slug": "plant-state-dashboard"
   },
   {
-   "term": "Common cause vs special cause",
+   "term": "Common-cause variation and special-cause variation",
    "defn": "Common-cause variation is the usual small random change, and you do not adjust the operation for it. Special-cause variation is an unusual change, for example a point that is out of a limit or a sequence of points that is not random. An investigation is necessary for it.",
    "tags": [
     "reference"
@@ -799,7 +799,7 @@
    "slug": "signal-and-noise"
   },
   {
-   "term": "Leading vs lagging indicator",
+   "term": "Leading indicator and lagging indicator",
    "defn": "A leading indicator is a sign that occurs before the damage, and it tells you about the problem. A lagging indicator is a symptom that shows that the damage occurred.",
    "tags": [
     "precision"
@@ -839,7 +839,7 @@
    "slug": "plant-state-dashboard"
   },
   {
-   "term": "Closed loop (gated)",
+   "term": "Closed loop (with approval)",
    "defn": "In a gated closed loop, the system does automatically only the tasks that have a low risk and a specified license. A person must give approval for each task that is permanent or has a high cost.",
    "tags": [
     "precision"
@@ -959,7 +959,7 @@
    "slug": "f2-crop-steering"
   },
   {
-   "term": "System enabled vs Auto irrigation",
+   "term": "System enabled and Auto irrigation",
    "defn": "System enabled is the primary arm/kill switch. When it is OFF, no shot occurs. Auto irrigation only stops the automatic shots, and you can apply manual shots.",
    "tags": [
     "precision"
@@ -999,7 +999,7 @@
    "slug": "f2-crop-steering"
   },
   {
-   "term": "Vegetative vs generative",
+   "term": "Vegetative and generative",
    "defn": "The two steering targets are the vegetative target and the generative target. The vegetative target increases the growth of roots and leaves (longer drybacks, lower EC). The generative target increases flowering and fruit (shorter drybacks, higher EC).",
    "tags": [
     "precision"
@@ -1599,7 +1599,7 @@
    "slug": "ipm-sop"
   },
   {
-   "term": "Generalist vs specialist predator",
+   "term": "Generalist and specialist predator",
    "defn": "A generalist predator eats many types of pest and also eats pollen. It stays in the crop when there is no prey. A specialist predator eats one type of pest quickly, but its number decreases when there is no prey of that type.",
    "tags": [
     "reference"
@@ -1863,7 +1863,7 @@
    "slug": "ph-management"
   },
   {
-   "term": "Grams per litre (g/L)",
+   "term": "Grams per liter (g/L)",
    "defn": "Grams for each liter (g/L) is the unit of dose for nutrient powders. To find the grams to weigh, multiply the g/L on the label by the volume of the tank. For example, multiply by 50 for a tank of 50 L.",
    "tags": [
     "reference"
@@ -2039,7 +2039,7 @@
    "slug": "defoliation-training"
   },
   {
-   "term": "Source vs sink",
+   "term": "Source and sink",
    "defn": "A source is a leaf with sufficient light that makes more sugar than it uses. A sink is a flower, a root or a leaf in shade that uses more sugar than it makes. When you open the canopy, the sinks that are in shade become sources again.",
    "tags": [
     "reference"
@@ -2127,7 +2127,7 @@
    "slug": "seeds-germination"
   },
   {
-   "term": "Feminised seed",
+   "term": "Feminized seed",
    "defn": "A feminized seed is a seed that a breeder makes to give almost only female plants. Thus it is not necessary to identify and remove male plants.",
    "tags": [
     "reference"
@@ -2663,7 +2663,7 @@
    "slug": "ipm-sop"
   },
   {
-   "term": "Preventative vs curative",
+   "term": "Preventative and curative",
    "defn": "A preventative agent is an agent that you put in the crop before pests come. It stays in the crop on an alternative food. A curative agent is an agent that you release to decrease an outbreak that is in progress and that becomes larger.",
    "tags": [
     "reference"
@@ -2969,7 +2969,7 @@
    "slug": "daily-checks"
   },
   {
-   "term": "Read-do vs do-confirm",
+   "term": "Read-do and do-confirm",
    "defn": "Read-do and do-confirm are the two types of checklist. In a read-do checklist, you do each step when you read it, for example for setup or calibration. In a do-confirm checklist, you do the tasks without the checklist, then you stop and make sure that you did all the important items.",
    "tags": [
     "operations"
@@ -3002,7 +3002,7 @@
    "slug": "daily-checks"
   },
   {
-   "term": "Auto-tick (self-completing check)",
+   "term": "Auto-tick (check that the system completes)",
    "defn": "An auto-tick is a check item that the system records as done automatically, when its telemetry shows that the condition is correct. Thus the person does only the items that a sensor cannot examine.",
    "tags": [
     "operations",

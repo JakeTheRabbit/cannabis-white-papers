@@ -452,7 +452,7 @@ SECTIONS.append({
 SECTIONS.append({
     "id": "week",
     "kicker": "Task 10",
-    "title": "Operating procedure for each week",
+    "title": "Procedure of operation for each week",
     "blocks": [
         table(
             ["Day", "Home", "Licensed facility"],

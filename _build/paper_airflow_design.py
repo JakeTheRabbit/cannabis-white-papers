@@ -636,7 +636,7 @@ SECTIONS.append({"id": "fan-types", "kicker": "10 · The equipment", "title": "F
         "correctly. The Pipp test in section 09 was a test of this setup."), tag="Recirculation · vertical racks"),
   ]})
 
-SECTIONS.append({"id": "ranking", "kicker": "11 · The selection", "title": "Selecting fans for canopy airflow",
+SECTIONS.append({"id": "ranking", "kicker": "11 · The selection", "title": "Select fans for canopy airflow",
   "blocks": [
     p("A ranking is correct only for one condition, and you must give this condition. This ranking "
       "is for <strong>the airflow that is important for the crop, for each dollar of installed "
@@ -751,7 +751,7 @@ SECTIONS.append({"id": "placement", "kicker": "12 · The position", "title": "Fa
         _c("uconn-haf") + ".")),
   ]})
 
-SECTIONS.append({"id": "sizing", "kicker": "13 · The numbers", "title": "Sizing the system",
+SECTIONS.append({"id": "sizing", "kicker": "13 · The numbers", "title": "Size of the system",
   "blocks": [
     p("For many years, the greenhouse industry calculated the size of horizontal airflow. Its "
       "approximate values are also correct for an indoor room. Start with these values. Then "

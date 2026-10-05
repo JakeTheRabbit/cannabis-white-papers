@@ -257,7 +257,7 @@ SECTIONS.append({"id": "howmuch", "kicker": "06 · The dose", "title": "CO2 targ
   ]})
 
 # ---------------------------------------------------------------- 07
-SECTIONS.append({"id": "delivery", "kicker": "07 · Supply of CO2", "title": "CO2 supply and dosing",
+SECTIONS.append({"id": "delivery", "kicker": "07 · Supply of CO2", "title": "CO2 supply and dose",
   "blocks": [
     p("There are four usual methods to put CO2 into a room. One method is clearly the best for a "
       "sealed cannabis room:"),

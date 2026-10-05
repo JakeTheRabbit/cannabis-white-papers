@@ -508,7 +508,7 @@ If F-10 has no result, the plant is a clone. It is not a clean mother plant.
 >
 > 70% alcohol does not break the RNA of Hop latent viroid. Put the tools in 5–10% household bleach for 1–2 minutes, or in 1000 ppm hypochlorous acid for 1 minute. Then flush the tools with water.[^hlvd_mgmt2025] If you can, use one blade for each cultivar.
 
-## Operating procedure for each week
+## Procedure of operation for each week
 
 | Day | Home | Licensed facility |
 | --- | --- | --- |

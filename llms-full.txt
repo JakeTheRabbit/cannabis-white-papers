@@ -1703,7 +1703,7 @@ If F-10 has no result, the plant is a clone. It is not a clean mother plant.
 >
 > 70% alcohol does not break the RNA of Hop latent viroid. Put the tools in 5–10% household bleach for 1–2 minutes, or in 1000 ppm hypochlorous acid for 1 minute. Then flush the tools with water.[^hlvd_mgmt2025] If you can, use one blade for each cultivar.
 
-## Operating procedure for each week
+## Procedure of operation for each week
 
 | Day | Home | Licensed facility |
 | --- | --- | --- |
@@ -2246,7 +2246,7 @@ The AHU is the unit that does the heating, the cooling and the drying of the air
 
 Recirculation · vertical racksIn-rack airflow systems (vertical farms)If the plants are on racks with many tiers, no other fan type operates correctly. Each tier is a closed space with a small height, and fans that hang above the racks cannot supply air to it. In-rack systems have a fan bar with ducts, and you install the fan bar in the rack. The fan bar pushes air along each tier or down through each tier[^vas-inrack]. On racks, an in-rack system is the only system that operates correctly. The Pipp test in section 09 was a test of this setup.
 
-## Selecting fans for canopy airflow
+## Select fans for canopy airflow
 
 A ranking is correct only for one condition, and you must give this condition. This ranking is for **the airflow that is important for the crop, for each dollar of installed cost**. The room is **a sealed indoor flower room with one tier**, with a canopy of approximately 20 to 200 m² (215 to 2,150 ft²). When the room is different, the sequence of the fans is different. The points after the table show how.
 
@@ -2296,7 +2296,7 @@ Then examine the room in a vertical section. In most rooms, the airflow is only 
 >
 > Operate the circulation fans for **24 hours each day**, when the lights are on and when the lights are off. The extension service recommends that the fans operate continuously. The fans can be off when the exhaust fans operate or the vents are open, because the room has air exchange at these times[^bartok-haf]. When the lights are off, the leaf temperature decreases and becomes almost the same as the dew point, and condensation starts. At this time, you must not have still air[^uconn-haf].
 
-## Sizing the system
+## Size of the system
 
 For many years, the greenhouse industry calculated the size of horizontal airflow. Its approximate values are also correct for an indoor room. Start with these values. Then measure the airflow. Adjust the fans:
 
@@ -2473,7 +2473,7 @@ The best yield data for cannabis come from controlled tests at Utah State Univer
 >
 > These numbers, and most of the ‘20–40% uplift’ values, are on vendor blogs. There is no controlled test for these numbers. The test at Utah State University is the primary source with controlled data. It gives a yield gain of approximately 40% for the flowers at 1,200–1,400 ppm[^westmoreland2023-usu]. If a vendor gives a more accurate number, do not accept it until you examine the test.
 
-## CO2 supply and dosing
+## CO2 supply and dose
 
 There are four usual methods to put CO2 into a room. One method is clearly the best for a sealed cannabis room:
 
@@ -4268,7 +4268,7 @@ Hardness is the only part of your source water that helps the plant. Hardness is
 
 *Types of hardness. The minerals help the plant when the hardness is low, and pH problems occur when the hardness is high.*
 
-## Reverse osmosis and mineral rebuilding
+## Reverse osmosis and the minerals that you add
 
 Reverse osmosis removes the minerals from water. The water then has almost zero PPM, usually 0 to 10 ppm TDS. Thus each mineral that the plant gets is a mineral that you select.[^umass-water-quality-ph-alkalinity]RO also removes calcium and magnesium. Thus you must do the build back. In the build back, you add minerals to the water again. For the build back, you usually add a CalMag supplement and your base nutrients. The target is approximately 100 to 200 ppm, with sufficient Ca and Mg before the other nutrients of the feed.[^kpai-2024-mineral-nutrition-vegetative-cannabis]
 
@@ -6400,7 +6400,7 @@ This guide uses these six terms many times. Make sure that you know the terms be
 
 > **Diagram.** The figure shows a cutting that you prepare for the cube. Cut the stem at an angle directly below a node, and make sure that the end is clean. Remove the bottom leaves. Cut the tips of the large fan leaves. Put the stem in the cube to the correct depth.
 
-## Selecting and cutting shoots
+## Select and cut shoots
 
 A good clone starts with a good shoot. Select vertical shoots from the top and middle parts of the canopy. Each shoot must be a minimum of 3 mm (0.1 in) thick and 15 cm (6 in) long. Thicker shoots that receive good light have larger energy reserves. These shoots make roots more quickly than thin shoots in the shade of the inner canopy[^esposito-2026-morphology-predictors]. The thickness of the shoot and the color of the leaves are accurate indicators of the root growth of the cutting[^esposito-2026-morphology-predictors].
 
@@ -7289,7 +7289,7 @@ Two of these terms are the most important in this paper. It is not necessary to 
 
 > **Diagram.** Water activity is the number that you use to control the procedure. Moisture content is the number that you give in a report. A frequent error of new growers is to use one number for the task of the other number.[^aroya-drying-water-activity-guide]
 
-## Harvest timing
+## Time of harvest
 
 Harvest is the procedure in which you cut all the plants after they complete the flowering. Examine the flower to find the maturity of the plants. Do not use the date on the calendar.
 
@@ -7306,7 +7306,7 @@ The trichomes are the best signal of maturity. Examine the trichomes with a loup
 >
 > If the calendar shows that you must cut the plants, but most of the trichomes are transparent, wait. Examine the flower to find the maturity. The date gives only an approximate indication.
 
-## Harvest method and wet-plant weighing
+## Harvest method and weight of the wet plant
 
 Cut each whole plant and hang it to dry. Do not remove the buds from the plant first. Release each plant from the bottom two layers of the trellis net (the net that holds the plant). Keep the top layer on the plant. The layer holds the plant. Then cut the primary stalk at the bottom.
 

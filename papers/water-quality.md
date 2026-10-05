@@ -102,7 +102,7 @@ Hardness is the only part of your source water that helps the plant. Hardness is
 
 *Types of hardness. The minerals help the plant when the hardness is low, and pH problems occur when the hardness is high.*
 
-## Reverse osmosis and mineral rebuilding
+## Reverse osmosis and the minerals that you add
 
 Reverse osmosis removes the minerals from water. The water then has almost zero PPM, usually 0 to 10 ppm TDS. Thus each mineral that the plant gets is a mineral that you select.[^umass-water-quality-ph-alkalinity]RO also removes calcium and magnesium. Thus you must do the build back. In the build back, you add minerals to the water again. For the build back, you usually add a CalMag supplement and your base nutrients. The target is approximately 100 to 200 ppm, with sufficient Ca and Mg before the other nutrients of the feed.[^kpai-2024-mineral-nutrition-vegetative-cannabis]
 

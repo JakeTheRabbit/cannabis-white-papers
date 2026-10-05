@@ -199,7 +199,7 @@ The AHU is the unit that does the heating, the cooling and the drying of the air
 
 Recirculation · vertical racksIn-rack airflow systems (vertical farms)If the plants are on racks with many tiers, no other fan type operates correctly. Each tier is a closed space with a small height, and fans that hang above the racks cannot supply air to it. In-rack systems have a fan bar with ducts, and you install the fan bar in the rack. The fan bar pushes air along each tier or down through each tier[^vas-inrack]. On racks, an in-rack system is the only system that operates correctly. The Pipp test in section 09 was a test of this setup.
 
-## Selecting fans for canopy airflow
+## Select fans for canopy airflow
 
 A ranking is correct only for one condition, and you must give this condition. This ranking is for **the airflow that is important for the crop, for each dollar of installed cost**. The room is **a sealed indoor flower room with one tier**, with a canopy of approximately 20 to 200 m² (215 to 2,150 ft²). When the room is different, the sequence of the fans is different. The points after the table show how.
 
@@ -249,7 +249,7 @@ Then examine the room in a vertical section. In most rooms, the airflow is only 
 >
 > Operate the circulation fans for **24 hours each day**, when the lights are on and when the lights are off. The extension service recommends that the fans operate continuously. The fans can be off when the exhaust fans operate or the vents are open, because the room has air exchange at these times[^bartok-haf]. When the lights are off, the leaf temperature decreases and becomes almost the same as the dew point, and condensation starts. At this time, you must not have still air[^uconn-haf].
 
-## Sizing the system
+## Size of the system
 
 For many years, the greenhouse industry calculated the size of horizontal airflow. Its approximate values are also correct for an indoor room. Start with these values. Then measure the airflow. Adjust the fans:
 

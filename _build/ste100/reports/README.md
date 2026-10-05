@@ -53,6 +53,9 @@ Paper text grew from 204,000 to 284,000 words (+39%): STE needs more, shorter se
 - tc-sop map: "Discard a jar with a cloud" against the paper (discard all jars of the lot).
 - photo captions: U0111 "strong airflow" against the mold paper (weak airflow with turbulence); U0121 percentage points against the f2 definition (percentage of the peak).
 
+## Residual scan of the built site
+`ste_site_lint.py` lints the text of every built page (navigation, evidence panels, captions, glossary and index included) with the global lexicon. Before the last cleanup it reported 3,865 findings at the 45-paper stage and 123 at the end. The last real ones were fixed: eight section titles with an -ing form were recast ("Select and cut shoots", "Size of the system", "Time of harvest" ...), and 14 glossary term names were changed to American spelling or approved words ("Acclimatization (hardening)", "Grams per liter (g/L)", "Moving average (rolling average)", "Common-cause variation and special-cause variation"; twelve "X vs Y" names became "X and Y"). What remains is extractor noise: the page title is drawn twice (so the extractor glues it to the next text, for example "cuttingshow"), `&ndash;` entities read as semicolons, and the heuristic mode (no spaCy) reports a few false perfect or progressive tenses.
+
 ## Files
 - `reports/<module>.md`: report of each rewrite (changes, technical nouns added, number changes, nuance lost, tool feedback).
 - `reports/svg/*.md`: reports of the diagram-text groups and the hand edits.

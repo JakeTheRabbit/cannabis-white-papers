@@ -55,7 +55,7 @@ This guide uses these six terms many times. Make sure that you know the terms be
 
 > **Diagram.** The figure shows a cutting that you prepare for the cube. Cut the stem at an angle directly below a node, and make sure that the end is clean. Remove the bottom leaves. Cut the tips of the large fan leaves. Put the stem in the cube to the correct depth.
 
-## Selecting and cutting shoots
+## Select and cut shoots
 
 A good clone starts with a good shoot. Select vertical shoots from the top and middle parts of the canopy. Each shoot must be a minimum of 3 mm (0.1 in) thick and 15 cm (6 in) long. Thicker shoots that receive good light have larger energy reserves. These shoots make roots more quickly than thin shoots in the shade of the inner canopy[^esposito-2026-morphology-predictors]. The thickness of the shoot and the color of the leaves are accurate indicators of the root growth of the cutting[^esposito-2026-morphology-predictors].
 

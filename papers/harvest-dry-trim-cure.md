@@ -53,7 +53,7 @@ Two of these terms are the most important in this paper. It is not necessary to 
 
 > **Diagram.** Water activity is the number that you use to control the procedure. Moisture content is the number that you give in a report. A frequent error of new growers is to use one number for the task of the other number.[^aroya-drying-water-activity-guide]
 
-## Harvest timing
+## Time of harvest
 
 Harvest is the procedure in which you cut all the plants after they complete the flowering. Examine the flower to find the maturity of the plants. Do not use the date on the calendar.
 
@@ -70,7 +70,7 @@ The trichomes are the best signal of maturity. Examine the trichomes with a loup
 >
 > If the calendar shows that you must cut the plants, but most of the trichomes are transparent, wait. Examine the flower to find the maturity. The date gives only an approximate indication.
 
-## Harvest method and wet-plant weighing
+## Harvest method and weight of the wet plant
 
 Cut each whole plant and hang it to dry. Do not remove the buds from the plant first. Release each plant from the bottom two layers of the trellis net (the net that holds the plant). Keep the top layer on the plant. The layer holds the plant. Then cut the primary stalk at the bottom.
 
