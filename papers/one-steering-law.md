@@ -2,9 +2,9 @@
 slug: "one-steering-law"
 title: "One steering law: coco, rockwool, soil and water"
 eyebrow: "Flowering · Crop steering"
-summary: "Coco, rockwool, soil and plain water share one way of steering a plant with water, running on four different sponges. Learn the steering once, with pictures and no jargon, and you can grow in any of them, because the sponge only changes the numbers."
+summary: "Coco, rockwool, soil and a tank of water use the same method of steering. This paper gives the method one time, with diagrams. Then you can use the method with each substrate, because the substrate changes only the numbers."
 track: "Flowering"
-read_time: "~22 min read"
+read_time: "~22 min to read"
 diagrams: "31 diagrams"
 related: ["coco-crop-steering", "rockwool-crop-steering", "substrates-overview", "root-zone-teros12", "smart-watering-vrwe", "f2-crop-steering"]
 url: "https://www.growlabs.nz/wiki/one-steering-law.html"
@@ -19,388 +19,389 @@ refs: [{"id": "caplan2019-drought", "n": 1, "cite": "Caplan D, Dixon M, Zheng Y 
 
 # One steering law: coco, rockwool, soil and water
 
-_Flowering · Crop steering · ~22 min read_
+_Flowering · Crop steering · ~22 min to read_
 
-> Coco, rockwool, soil and plain water share one way of steering a plant with water, running on four different sponges. Learn the steering once, with pictures and no jargon, and you can grow in any of them, because the sponge only changes the numbers.
+> Coco, rockwool, soil and a tank of water use the same method of steering. This paper gives the method one time, with diagrams. Then you can use the method with each substrate, because the substrate changes only the numbers.
 
 ## Purpose and scope
 
-> **EVIDENCE — Grain of salt**
+> **EVIDENCE: Weak**
 >
-> **Borderline:** Do not import high-intensity rockwool substrate EC (mid-3s to 6) into beginner coco recipes. DWC disease risk rises with heat and low dissolved oxygen. There is no universal ‘above 23 °C (73 °F) = dead tomorrow’ clock.
+> **Limit of the data:** Do not use the electrical conductivity (EC) values of high-intensity rockwool steering (approximately 3.5 to 6) in coco procedures for new growers. In deep water culture (DWC), the risk of disease increases when the water is hot and the dissolved oxygen is low. There is no time limit that is correct for all systems, such as ‘at a temperature of more than 23 °C (73 °F), the heat kills the plant in one day’.
 
-A cannabis plant can pour its energy into **leaves**, a bigger, bushier green plant, or into **flower**: the sticky buds you actually harvest. ‘Steering’ just means using water to nudge the plant toward one or the other.
+A cannabis plant can use its energy to make **leaves**. A plant with more leaves is larger and has more green material. The plant can also use its energy to make **flower**. Flower is the group of buds with resin that you harvest. ‘Steering’ is the control of the plant with water. The water causes a small change in the plant in the direction of more leaves or more flower.
 
-> **TIP — Think of it like driving**
+> **TIP: One method for each substrate**
 >
-> Whether you grow in coco, rockwool, soil or plain water, you steer the exact same way, like a hatchback, a truck and a sports car all use one wheel, one pedal, one gear stick. You don’t relearn _driving_ for each car. You won’t relearn _steering_ for each sponge.
+> Coco, rockwool, soil and a tank of water are four substrates. A substrate is the material that contains the roots. You use the same method of steering in all four. This method is the _steering law_. A different substrate does not change the method. It changes only the numbers.
 
-> **Diagram.** Leaves means a bigger green plant; flower means the buds you harvest. Steering just slides the plant between the two.
+> **Diagram.** Leaves make a larger plant with more green material. Flower is the group of buds that you harvest. Steering changes the plant in the direction of leaves or of flower.
 
-The three controls never change. Every sponge is driven with the same three:
+The three controls do not change. You use the same three controls for each substrate:
 
-- **The wheel**, how full the sponge is right now (growers call it VWC). The one number you steer on.
-- **The engine**, the daily **drink-down** (growers call it dryback): how far you let the plant wring the sponge dry each day. Your most powerful lever.
-- **The second dial**, feed strength (growers call it EC): how strong you make the feed.
+- **Water content** is the quantity of water in the substrate at this time. The grower term is volumetric water content (VWC). Use this one number to control the plant.
+- **Dryback** is the quantity by which the water content decreases each day. You control the quantity of water that the plant removes from the substrate. This control has the largest effect.
+- **Feed strength** is the concentration of the feed around the roots. The grower term is EC. You select the strength of the feed.
 
-The sponge itself (coco, rockwool, soil, water) is just the **gearbox** underneath. Swap it and the controls don’t change; only the numbers do.
+The substrate (coco, rockwool, soil or a tank of water) does not change the three controls. It changes **only the numbers**.
 
-> **Diagram.** You drive every sponge with the same three controls; the sponge is only the gearbox underneath.
+> **Diagram.** You use the same three controls for each substrate. The substrate changes only the numbers.
 
-Here is the whole routine you’re about to learn. Each morning when the lights come on: let the sponge dry a little, fill it back up in small sips, hold it steady through the day, then let it dry out overnight, and start again tomorrow. Everything else is detail hung off this loop.
+After you read this paper, you will know the full procedure. Each morning, at lights-on, let the water content decrease by a small quantity. Then fill the substrate again with small shots. A shot is a small quantity of water that the dripper supplies in a short time.Keep the water content stable during the day. During the night, let the substrate dry. The next day, start again. The other sections of this paper give more information about each part of this loop.
 
-> **Diagram.** The entire job in one daily ring: fill up, drink down, hold, dry, repeat.
+> **Diagram.** The full task is one cycle each day. You fill the substrate, and the water content decreases (dryback). You keep the water content stable, and the substrate dries. Then the cycle starts again.
 
-> **NOTE — What’s optional here**
+> **NOTE: Optional sections**
 >
-> Sections 1–6 and the last one teach you to grow by hand. The two **nerd-bonus** sections on moisture sensors and auto-watering robots are skippable, if you’re growing by hand, you lose nothing.
+> Sections 1 to 6 and the last section give the information for manual steering. The two **optional** sections are about moisture sensors and automatic irrigation controllers. If you irrigate manually, these two sections are not necessary.
 
-> **KEY — In one sentence**
+> **KEY: In short**
 >
-> There’s one way to steer a plant with water, toward leaves or toward flower, and coco, rockwool, soil and water just change the numbers, not the steering.
+> One method of steering with water controls the plant in the direction of leaves or of flower. Coco, rockwool, soil and water change only the numbers. They do not change the steering.
 
 ## Definitions
 
-If a word ever felt like jargon, it’s here in plain words. Grower’s term first, what it really means second.
+If a term in this paper is new to you, find it in this section. Each item gives the term and then the definition.
 
-**Crop steering** — Controlling when and how much you water to nudge a plant toward leaves (a bigger green plant) or toward flower (the buds you harvest). A gentle bias built over days, not a switch you flip overnight.
+**Crop steering**: Crop steering is the control of the time and the quantity of the water that you apply to the plant. It causes a small change in the plant in the direction of leaves (a larger plant with more green material) or flower (the buds that you harvest). The change occurs during some days. The plant does not change in one night.
 
-**Growing medium / substrate (the sponge)** — The stuff a plant’s roots live in, coco, rockwool, soil or a tank of water. Throughout this paper we just call it ‘the sponge’.
+**Substrate (medium)**: The material that contains the roots of the plant: coco, rockwool, soil or a tank of water. This paper uses the term ‘substrate’ for all four.
 
-**How-full % (VWC)** — How full the sponge is with water, as a percent of its space. 60% means water fills 60 of every 100 holes. The steering-wheel position, the one number you steer on.
+**Water content (VWC)**: The quantity of water in the substrate, as a percentage of the space in the substrate. At 60%, water fills 60 of each 100 pores. VWC is the volumetric water content. It is the one number that you use to control the plant.
 
-**Drink-down (dryback)** — The fall in how-full % between waterings, the high minus the low, counted in percentage POINTS (78% to 58% is a 20-point drink-down). How hard the plant wrings the sponge. The single most important steering tool.
+**Dryback**: The quantity by which the water content decreases between two shots. It is the high value minus the low value. Measure it in percentage points. When the water content decreases from 78% to 58%, the dryback is 20 points. The dryback shows the quantity of water that the plant removes from the substrate. It is the most important control for steering.
 
-**Percentage points vs percent** — We always count the drink-down in POINTS: 78 down to 58 is a fall of 20 points. A bare ‘20%’ is ambiguous, so this paper never writes a bare ‘%’ for a drink-down.
+**Percentage points and percent**: We always measure the dryback in points. When the water content decreases from 78 to 58, the dryback is 20 points. It is not possible to know if the value ‘20%’ is a quantity in points or in percent. Thus this paper gives each dryback in points.
 
-**Feed strength (EC)** — How strong the fertiliser feed is around the roots. Higher means stronger and saltier. It rises on its own as the sponge dries, because the water leaves but the food stays. (Electrical conductivity, in mS/cm, think of it as a 1-to-10 strength scale.)
+**Feed strength (EC)**: The concentration of the fertilizer feed around the roots. A higher value is a stronger feed with more salt. When the substrate dries, the quantity of water decreases and the nutrients stay. Thus the EC increases, and you do not add feed. EC is the electrical conductivity, in mS/cm. You can use a scale of strength from 1 to 10 for the EC.
 
-**The ‘full’ mark (field capacity)** — The wettest the sponge gets right after it stops dripping. Your daily ‘full’ mark. A property of your exact pot and sponge, not a textbook number, and it shrinks as roots fill the pot.
+**Field capacity**: The highest water content that the substrate has after the drainage of water stops. It is the maximum water content for each day. The value is different for each pot and each substrate. It is not a reference value. The value decreases when the roots fill the pot.
 
-**The danger line (recovery floor)** — The hard line the drink-down must never cross (about 25–30% full in rockwool). Below it the sponge stops soaking water back up and water tunnels straight through. The dripper can’t fix it.
+**Recovery floor**: The minimum water content, approximately 25 to 30% in rockwool. The dryback must not make the water content less than this value. If the water content is less than this value, the substrate does not absorb water again, and the water flows straight through the substrate. The dripper cannot correct this condition.
 
-**Leaves mode (vegetative)** — Steering the plant toward leaves, stems and size, kept wetter, with a small drink-down, a weaker feed and many small sips. ‘Grow-the-body.’
+**Vegetative mode**: Steering of the plant in the direction of leaves, stems and size. The substrate is wetter, the dryback is small, the feed is weaker, and the shots are small and many. In this mode, the plant makes leaves and stems and becomes larger.
 
-**Flower mode (generative)** — Steering toward flower, density and resin, let drier, with a bigger drink-down, a stronger feed and fewer larger sips. ‘Make-the-buds’, the part you harvest.
+**Generative mode**: Steering of the plant in the direction of flower, density and resin. The substrate is drier, the dryback is larger, the feed is stronger, the number of shots is smaller and each shot is larger. In this mode, the plant makes the buds that you harvest.
 
-**The thirst alarm (ABA)** — The plant’s stress hormone. A little controlled thirst makes the plant release it, which nudges the plant away from leaves and toward flower and resin, the reason a drink-down steers. You never measure it.
+**Abscisic acid (ABA)**: The stress hormone of the plant. A small, controlled water deficit causes the plant to release ABA. ABA causes a small change in the plant, away from leaves and in the direction of flower and resin. Thus a dryback controls the plant. You do not measure ABA.
 
-**The four daily beats (P0–P3)** — The four beats of every steered day: dry a little at lights-on, fill up to the ‘full’ mark in small sips, hold the band all day, then wind down and let the big overnight drink-down reset everything.
+**The four phases of each day (P0–P3)**: The four phases of each day of steering. In the first phase, at lights-on, the water content decreases by a small quantity. In the second phase, you fill the substrate to field capacity with small shots. In the third phase, you keep the water content in a range during the day. In the fourth phase, you stop the shots, and the large night dryback sets the substrate to the start condition for the next day.
 
-**Sip (shot)** — One small timed splash of water, sized as a percent of the sponge’s volume. Steering replaces one big daily soak with several small sips; how long each runs is worked out from pot size, dripper speed and dripper count.
+**Shot**: A small quantity of water that the dripper supplies in a short time. The size of a shot is a percentage of the volume of the substrate. Steering uses some small shots each day, and not one large quantity of water. You calculate the time of each shot from the size of the pot, the flow rate of the dripper and the number of drippers.
 
-**Zig-zag / sawtooth** — The shape of a healthy how-full graph, a gradual fall (drink-down) then a sharp rise (sip), over and over. A flat or only-falling line means watering isn’t actually happening.
+**Sawtooth**: The shape of a correct graph of the water content. The line decreases slowly (the dryback) and then increases quickly (a shot). The two parts occur again and again. A line that does not change, or a line that only decreases, shows that irrigation does not occur.
 
-**Forgiveness (CEC / buffer)** — How much a sponge cushions your feeding mistakes by holding and releasing food. Coco has lots, living soil self-fixes, rockwool has almost none, plain water has none.
+**Buffer (CEC)**: The quantity by which a substrate decreases the effect of an error in the feed. The substrate holds nutrients and releases them again. CEC is the cation exchange capacity. Coco has a large buffer, and living soil corrects errors in the feed. Rockwool has almost no buffer, and water has no buffer.
 
-**Drip-out (runoff)** — The small fraction of feed that drains out the bottom (about 10–20%). Not waste. It washes off stacked salt and is the dipstick that reads the sponge’s true feed strength.
+**Runoff**: The small fraction of the feed that drains from the bottom of the pot, approximately 10 to 20%. Runoff is not waste. It removes the salt that collects in the substrate. When you measure the runoff, you find the correct feed strength of the substrate.
 
-**Channeling (water tunnelling through)** — When water runs straight down one path and out the bottom, missing the roots, while the core stays dry. You spot it by how fast the water came out, not how much.
+**Channeling**: The condition in which the water flows straight down along one line and out of the bottom of the pot. The water does not go to the roots, and the middle of the substrate stays dry. To find channeling, examine the flow rate of the water from the pot, and not the quantity of water.
 
-**Permittivity (how strongly it reacts to the probe)** — How strongly a material responds to the probe’s tiny electric field. Water reacts a lot, dry sponge barely, air almost none. That gap lets a buried probe feel water it can’t see.
+**Permittivity**: The size of the effect that a material has on the weak electric field of the probe. Water has a large effect, dry substrate has a small effect, and air has almost no effect. This difference lets a probe in the substrate find water that you cannot see.
 
-**Precise vs right (resolution vs accuracy)** — Precise = lots of decimals shown; right = actually close to the truth. A sensor can be precise and still be off by a few points until you calibrate it.
+**Resolution and accuracy**: Resolution is the number of decimal places that the sensor shows. Accuracy is the size of the error of the reading. A sensor with a small error has a high accuracy. A sensor can have a high resolution and an error of a small number of points until you calibrate it.
 
-**Second witness** — An independent check (water dripping out the bottom, or the pot’s weight) required to confirm a probe reading before any water moves.
+**Second check**: A check with a different method to make sure that the probe reading is correct. The check can be the water that drains from the pot or the weight of the pot. Do this check before you apply water.
 
-**Water tally / piggy bank (water balance)** — A running count of water IN (the dripper sips) minus water OUT (the plant breathing it out, plus what drains), giving the real water in the pot without trusting one sensor.
+**Water balance**: The quantity of water that you apply to the pot, minus the water that the plant transpires and the water that drains. The controller calculates this value all the time. The water that you apply is the water from the shots of the dripper. The water balance gives the quantity of water in the pot. Thus you do not use only one sensor.
 
-**Confidence** — How much to trust today’s reading, high when the clues agree, low when they disagree. High lets an auto-waterer give a full sip; low means a tiny sip, wait, or ask a human.
+**Confidence**: A value that shows if the reading is correct. The confidence is high when the data agree and low when the data do not agree. When the confidence is high, the controller can apply a full shot. When the confidence is low, it applies a very small shot, waits, or gives the decision to a person.
 
-**Never flood, never starve** — The single safety rule on all automatic watering, water more only when sure there’s room, and when in doubt do the safe thing. A lying sensor can only make the system more careful, never trick it into overwatering.
+**Safe irrigation**: The one safety instruction for all automatic irrigation: apply more water only when you know that there is space in the substrate. If you are not sure, do the safe step. A sensor with an incorrect reading can only make the controller more careful. It cannot cause the controller to apply too much water.
 
-**The gearbox (transfer function)** — The plain idea that the sponge takes your watering and changes it by fixed amounts before the roots feel it, same input, different output per sponge.
+**Transfer function**: The change that the substrate makes to your irrigation before the roots receive it. The substrate changes the irrigation by constant quantities. The same irrigation gives a different effect on the roots for each substrate.
 
 ## Substrate water storage
 
-> **TIP — Think of it like a kitchen sponge**
+> **TIP: Each substrate has pores**
 >
-> Hold a kitchen sponge under the tap until it’s full, then let it drip. Every way of growing  (coco, rockwool, soil, even roots dangling in water) is that same sponge: a fixed number of little holes that hold either water or air. From here on, one picture: the sponge.
+> Each substrate (coco, rockwool, soil, and also roots in water) has a constant number of small pores. Each pore contains water or air. From here, this paper uses this one model for all the substrates.
 
-A growing medium is just the stuff the roots live in. The total room inside is **fixed**, and every hole holds either water or air. Push water in and you squeeze air out. **More water always means less air.**
+The substrate is the material that contains the roots. The total space in the substrate is **constant**, and each pore contains water or air. When water goes in, the water pushes air out. **When there is more water, there is always less air.**
 
-That matters because roots need to _breathe_ as much as drink. Roots drown if it stays too wet and stall if it stays too dry; every sponge just sits at a different default point on that water-versus-air see-saw.
+The quantity of air is important because the roots must have _air_ and water. If the substrate stays too wet, the roots do not get sufficient air. If it stays too dry, the growth of the roots stops. Each substrate has a different usual ratio of water to air.
 
-> **Diagram.** The room inside a sponge is fixed, so you cannot add water without pushing out the air the roots breathe.
+> **Diagram.** The space in a substrate is constant. When you add water, the water pushes air out of the pores. The roots use this air.
 
-Different sponges keep wildly different amounts of air even when soaking wet[^malik2025-media], and that single fact decides how easy each one is to overwater.
+Different substrates keep very different quantities of air, also when the substrate is fully wet[^malik2025-media]. This one fact causes the difference between substrates in the risk that you apply too much water.
 
-> **Diagram.** Coco keeps about a fifth of its room as air even when soaked; rockwool only a tenth. Which is why coco is so hard to drown.
+> **Diagram.** Coco keeps approximately one part in five of its space as air when it is fully wet. Rockwool keeps only one part in ten. Thus you cannot easily apply too much water to coco.
 
-> **NOTE — Real numbers**
+> **NOTE: Numbers**
 >
-> - Coco air when soaked: about **22%**[^abad2005-coir] · rockwool only about **10%**
-> - Peat keeps about **18–25%** air when wet · coco’s total room is about 94–96%
+> - Coco keeps approximately **22%** air when it is fully wet[^abad2005-coir]. Rockwool keeps only approximately **10%**.
+> - Peat keeps approximately **18 to 25%** air when it is wet. The total space in coco is approximately 94 to 96%.
 
-There’s a **second, hidden trait** too, just as important: how much a sponge _forgives a feeding mistake_. Some sponges soak up your mistake and protect you[^noguera2003-cec]; others punish you instantly. We’ll measure this properly later, for now, just ‘forgiving’ versus ‘harsh’.
+A substrate has a **second trait** that you do not see easily. This trait is also important: the _buffer_. The buffer is the quantity by which the substrate decreases the effect of an error in the feed. Some substrates absorb the error and prevent damage to the plant[^noguera2003-cec].In other substrates, the effect of the error occurs immediately. This paper gives the measurements in a subsequent section. At this time, we use only the terms ‘large buffer’ and ‘small buffer’.
 
-> **Diagram.** The same feeding mistake is cushioned by forgiving sponges (soil, coco) and breaks straight through harsh ones (rockwool, water).
+> **Diagram.** Substrates with a large buffer (soil, coco) absorb the same error in the feed. In substrates with a small buffer (rockwool, water), the effect of the error occurs immediately.
 
-> **KEY — In one sentence**
+> **KEY: In short**
 >
-> Every way of growing is one sponge with a fixed amount of room, and watering just decides how much of that room is water versus air.
+> Each substrate has a constant quantity of space. Irrigation controls the part of the space that contains water and the part that contains air.
 
-## Water availability and dryback
+## Water content and dryback
 
-> **TIP — Think of it like wringing a sponge**
+> **TIP: The plant removes water from the substrate**
 >
-> Water isn’t just food. It’s the steering wheel. Picture the plant gripping the sponge and wringing a little water out each day. How hard you let it wring is the engine of steering. A gentle wring grows leaves; a hard wring grows flowers.
+> Water is not only a material that the plant uses. Water is also a control. Each day, the plant removes some water from the substrate. You control the quantity of water that the plant removes. A small dryback causes more leaves. A large dryback causes more flowers.
 
-**How-full %** is the one number you steer on, how full the sponge is right now. 60% means water fills 60 of every 100 holes. The **drink-down** is the fall in how-full % between waterings: the high after a sip, minus the low before the next.
+**Water content** is the one number that you use to control the plant. It shows the quantity of water in the substrate at this time. At 60%, water fills 60 of each 100 pores. **Dryback** is the quantity by which the water content decreases between two shots. It is the high value after a shot, minus the low value before the next shot.
 
-> **NOTE — Say it in points, never a bare ‘%’**
+> **NOTE: Give the dryback in points, not in ‘%’**
 >
-> Always count the drink-down in percentage **POINTS**: 78% down to 58% is a **20-point** drink-down (a fall of 20 on the 0–100 scale). A bare ‘20%’ is ambiguous, so this guide always says points.
+> Always measure the dryback in percentage **points**. When the water content decreases from 78% to 58%, the dryback is **20 points** (the value decreases by 20 on the scale of 0 to 100). It is not possible to know if the value ‘20%’ is a quantity in points or in percent. Thus this paper always gives points.
 
-> **Diagram.** The drink-down is simply how far the water level drops before you water again, here, 78% down to 58% is a 20-point drink-down (a rockwool example).
+> **Diagram.** The dryback is the quantity by which the water content decreases before you apply water again. Here, the water content decreases from 78% to 58%, and the dryback is 20 points (an example for rockwool).
 
-**Why drying steers the plant.** A little daily thirst makes the plant act as if summer is ending, so it hurries to make flowers instead of more leaves[^caplan2019-drought]. You’re gently tapping a ‘hurry up and flower’ button, and it works through a stress hormone the plant releases under mild water deficit[^welling2025-aba]. It’s a **nudge, not damage**. You never need the hormone’s name to grow.
+**How drying controls the plant.** A small water deficit each day causes a change in the plant. The same change occurs at the end of summer. As a result, the plant makes flowers quickly, and not more leaves[^caplan2019-drought].This effect occurs through a stress hormone that the plant releases when it has a small water deficit[^welling2025-aba]. The effect is a **small change, and not damage**. It is not necessary to know the name of the hormone for the steering.
 
-> **Diagram.** A little thirst makes the plant act as if summer is ending, flipping an inner switch from grow-leaves to make-flowers, a gentle nudge, not harm.
+> **Diagram.** A small water deficit causes a change in the plant. The same change occurs at the end of summer. The plant changes from the production of leaves to the production of flowers. The change is small and it is not damage.
 
-Bigger, deeper drink-downs push flower (make-the-buds); smaller drink-downs, kept wetter, push leaves and size (grow-the-body). Same lever, different depth. And it’s a **bias built over days**, never an overnight switch: you tip the odds one notch at a time, like turning a dimmer.
+Larger drybacks cause more flower (the buds). Smaller drybacks, with a wetter substrate, cause more leaves and a larger plant. The control is the same, and only the size of the dryback is different. The effect increases **during some days**. It does not occur in one night. Make a small change each day.
 
-> **Diagram.** You never flip the plant overnight; you nudge a dimmer one notch a day, across the week, from mostly-leaves toward mostly-flower.
+> **Diagram.** Do not change the plant in one night. Make a small change each day. During the week, the plant changes from mostly leaves to mostly flower.
 
-> **WARN — A drink-down is not a drought**
+> **WARN: A dryback is not a drought**
 >
-> The difference is dose and timing. Stop it on time and you keep your yield; run it too far and you crash both yield and quality[^stack2024-drought]. Always water before the plant wilts. Steer with a scalpel, not a hammer.
+> Always apply water before wilt occurs. The difference between a dryback and a drought is the dose and the time. When you stop the dryback at the correct time, you keep the yield. When the dryback continues for too long, the yield and the quality decrease by a large quantity[^stack2024-drought]. Use small and accurate changes, not large changes.
 
-> **Diagram.** A healthy drink-down is caught and refilled before the plant wilts; a drought keeps falling through the red zone and crashes the crop.
+> **Diagram.** You stop a correct dryback and apply water again before wilt occurs. In a drought, the water content continues to decrease through the red zone, and the drought causes damage to the crop.
 
-> **NOTE — Real numbers (rockwool example. Yours will differ)**
+> **NOTE: Numbers (example for rockwool, your values are different)**
 >
-> - Leaves mode: 5–15 point drink-down · flower mode: 20–30 point drink-down
-> - Young / early: 5–10 points · late veg & bulking: 10–15 points · the overnight dry-down adds another 5–15 and re-airs the roots
-> - A real finding: easing the overnight dry-down to leave it ~10% wetter actually _lifted_ medicinal yield. Some dry-down is essential, too much hurts.
+> - Vegetative mode: a dryback of 5 to 15 points. Generative mode: a dryback of 20 to 30 points.
+> - Plants in the first stage: 5 to 10 points. The last stage of vegetative growth and bulking: 10 to 15 points. The night dryback adds 5 to 15 points more, and air goes to the roots again.
+> - A test shows that a smaller night dryback, with a substrate that is approximately 10% wetter, _increased_ the yield of medicinal cannabis. Some dryback is necessary, but too much dryback causes damage.
 
-> **KEY — In one sentence**
+> **KEY: In short**
 >
-> You steer the plant by how hard you let it wring the sponge dry each day. Gently for leaves, hard for flowers.
+> You control the plant with the dryback. The dryback is the quantity of water that the plant removes from the substrate each day. A small dryback causes more leaves. A large dryback causes more flowers.
 
 ## Feed strength and root-zone EC
 
-> **TIP — Think of it like squash on a windowsill**
+> **TIP: Evaporation makes a solution stronger**
 >
-> Make a glass of squash, then leave it on a sunny windowsill. As the water evaporates, the drink gets stronger and sweeter, same sugar, less water. The root zone does exactly this with the feed.
+> When evaporation removes water from a solution, the other material in the solution stays. As a result, the solution becomes stronger. The root zone does the same with the feed.
 
-**Feed strength** (growers call it EC) is how strong the fertiliser feed is around the roots. Higher means stronger and saltier. Here is the one physical fact that ties it to everything else: as the sponge dries, the water leaves but the food stays behind, so the feed concentrates and strengthens on its own[^hilhorst2000-ec]. A deep drink-down for flower is therefore partly a _feed-strength squeeze_, not only a water one. Water and feed are really the **same lever**.
+**Feed strength** (the grower term is EC) is the concentration of the fertilizer feed around the roots. A higher EC is a stronger feed with more salt. The feed strength changes when the water content changes. One fact causes this change. When the substrate dries, the quantity of water decreases and the nutrients stay. Thus the feed becomes stronger, although you do not add more feed[^hilhorst2000-ec].As a result, a large dryback for flower is a _change in the feed strength_ and also a change in the water. Water and feed are the **same control**.
 
-> **Diagram.** Count the food dots, always six. As the water drops, the same food crowds closer, so the feed gets stronger on its own.
+> **Diagram.** Count the nutrients in the diagram. The number is always six. When the water decreases, the same nutrients are in a smaller volume, and the feed becomes stronger.
 
-So read the two numbers as **one story**: how-full % falling is the plant drinking (good, until it falls too far); feed drifting stronger as it dries is normal; a big strength jump means too salty (water more to dilute); feed drifting weaker over days means the plant is eating faster than you feed (feed a bit stronger). Weaker and wetter pushes leaves; stronger and drier pushes flower.
+Read the two numbers **together**. When the water content decreases, the plant uses water. This effect is good until the water content decreases too much. It is usual that the feed becomes stronger when the substrate dries.If the feed strength increases by a large quantity in a short time, the feed has too much salt. Then apply more water to decrease the concentration of salt.If the feed strength decreases slowly during some days, the plant uses nutrients faster than the feed supplies them. Then increase the feed strength by a small quantity. A weaker feed and a wetter substrate cause more leaves. A stronger feed and a drier substrate cause more flower.
 
-> **Diagram.** As the pot dries the feed climbs; every sip resets both, wetness and feed strength move together.
+> **Diagram.** When the pot dries, the feed strength increases. Each shot makes the two values go back to the start values. The water content and the feed strength change together.
 
-> **NOTE — Real numbers (rockwool / water. Yours will differ)**
+> **NOTE: Numbers (example for rockwool and water, your values are different)**
 >
-> - Feed roughly **doubles** as the sponge dries to a third left: a feed set at 3.0 can read 5.0 in the block by late afternoon
-> - Leaves mode ~3.0 · flower mode ~4.5–6.0 · healthy daily range ~2–6
-> - The feed reading gets unreliable once the sponge is nearly dry
+> - The feed strength becomes approximately **two times** larger when only one part in three of the water stays in the substrate. For example, a feed that you set at 3.0 can read 5.0 in the block at the end of the afternoon.
+> - Vegetative mode: approximately 3.0. Generative mode: approximately 4.5 to 6.0. A good range for each day is approximately 2 to 6.
+> - The reading of the feed strength can be incorrect when the substrate is almost dry.
 
-> **NOTE — Coco growers, one note**
+> **NOTE: For coco growers**
 >
-> Coco’s forgiving sponge soaks up some of the extra feed, so the strength climbs **more gently** than in rockwool or plain water. The squash picture is the rockwool/water version, coco’s is softer.
+> Coco has a large buffer. It absorbs some of the nutrients when the feed becomes stronger. Thus the feed strength increases **more slowly** than in rockwool or in water. The model in this section is for rockwool and water. In coco, the effect is smaller.
 
-> **KEY — In one sentence**
+> **KEY: In short**
 >
-> When the sponge dries, the water leaves but the food stays, so drying the plant out also makes its feed stronger. Water and feed are the same lever.
+> When the substrate dries, the quantity of water decreases and the nutrients stay. Thus a dryback also makes the feed stronger. Water and feed are the same control.
 
 ## Field capacity and dryback limits
 
-> **TIP — Think of it like a lift in a building**
+> **TIP: Keep the water content between two limits**
 >
-> The top floor is ‘full’, fill past it and water just spills out the bottom. The basement is a trap door: drop the sponge below it and it bakes dry, water runs straight past the roots, and the dripper can’t save it. You steer in the floors between, never hitting either.
+> The maximum limit is field capacity. If you continue to apply water after the water content is at this value, the water flows out of the bottom of the pot. The minimum limit is the recovery floor.
+> If the substrate dries to less than this value, the water flows straight through the substrate and does not go to the roots. The dripper cannot correct this condition. Keep the water content between the two limits. Do not let it become equal to one of the limits.
 
-The **‘full’ mark** (growers call it field capacity) is the wettest the sponge gets after it stops dripping, your daily ceiling to refill toward. Crucially, it’s a property of **your exact pot and sponge**, not a textbook number, and it shrinks as roots fill the pot. You learn it from a handful of real waterings.
+**Field capacity** is the highest water content that the substrate has after the drainage of water stops. It is the maximum value of each day, and you fill the substrate until the water content is at this value. The value is different for **each pot and each substrate**. It is not a reference value, and it decreases when the roots fill the pot. You find it from a small number of irrigation events.
 
-The **danger line** (growers call it the recovery floor) is a hard safety limit: dry past it and the sponge stops soaking water back up, water just tunnels straight through. From the dripper that’s unfixable; it needs a hand-soak or a fresh sponge. The drink-down is your steering; the danger line is your safety limit, two different numbers.
+The **recovery floor** is a safety limit. If the substrate dries to less than this value, it does not absorb water again, and the water flows straight through it. The dripper cannot correct this condition. You must soak the substrate manually, or use a new substrate. The dryback is your steering, and the recovery floor is your safety limit. They are two different numbers.
 
-> **Diagram.** A ‘full’ mark on top you never overflow, a danger line at the bottom you never fall through, steer in the safe band between them.
+> **Diagram.** Do not let the water content become more than field capacity at the top. Do not let it become less than the recovery floor at the bottom. Control the plant in the safe range between the two limits.
 
-> **Diagram.** Dried past the danger line, the core bakes and cracks, so poured water tunnels down the cracks and out the bottom while the middle stays bone dry.
+> **Diagram.** If the substrate dries to less than the recovery floor, it becomes very dry and gaps open in it. The water that you apply flows down the gaps and out of the bottom. The middle stays dry.
 
-One more friend: the small daily **drip-out** (growers call it runoff), about 10–20% of what you fed, draining out the bottom. It’s _not_ waste. It washes out stacked-up salt, and it’s your dipstick for reading the sponge’s true feed strength.
+**Runoff** is the small quantity of feed that drains from the bottom of the pot each day. It is approximately 10 to 20% of the feed that you apply. Runoff is _not_ waste. It removes the salt that collects in the substrate. When you measure the runoff, you find the correct feed strength of the substrate.
 
-> **Diagram.** The few drops that run out carry off built-up salt and let you read the real feed strength at the roots.
+> **Diagram.** The small quantity of water that drains out removes the salt that collects in the substrate. It also lets you read the correct feed strength at the roots.
 
-> **NOTE — Real numbers (rockwool example. Yours will differ)**
+> **NOTE: Numbers (example for rockwool, your values are different)**
 >
-> - Rockwool danger line ~**25–30%** how-full · working band ~55–92%
-> - A healthy daily range often sits ~30–70% how-full · sponge temperature 20–26°C (68–79°F)
-> - Daily drip-out at ‘full’ ~10–20% · learn your ‘full’ mark from about 5 real, agreeing waterings
+> - The recovery floor of rockwool is approximately **25 to 30%** water content. The range of operation is approximately 55 to 92%.
+> - Frequently, a good range for each day is approximately 30 to 70% water content. The temperature of the substrate is 20 to 26 °C (68 to 79 °F).
+> - The runoff of each day at field capacity is approximately 10 to 20%. Find your field capacity from approximately 5 irrigation events that agree with each other.
 
-> **KEY — In one sentence**
+> **KEY: In short**
 >
-> There’s a ‘full’ mark you never overflow and a danger line you never fall through. And steering means swinging the sponge safely between them.
+> Do not let the water content become more than field capacity or less than the recovery floor. Steering is the safe change of the water content between these two limits.
 
-## Daily irrigation phases
+## Irrigation phases in each day
 
-> **TIP — Think of it like breathing on a schedule**
+> **TIP: Four phases in each day**
 >
-> A small morning exhale (dry down a little), a big drink (fill up in sips), steady breathing all day (hold the band), then one deep overnight breath (the big dry-down) that pulls fresh air back to the roots. Same four beats, every single day.
+> Each day has four phases. In the morning, the water content decreases by a small quantity. Then shots fill the substrate. During the day, the water content stays in a range. During the night, one large dryback lets air go to the roots again. The four phases are the same each day.
 
-You don’t water at random. You water on a fixed **four-beat schedule** tied to the lights. Growers label the beats P0, P1, P2, P3; you can just call them:
+Do not apply water at random times. Apply water in **four phases** at the same times each day. The phases agree with the lights. The four phases have the labels P0, P1, P2 and P3. In this paper, the phases are:
 
-1. **Dry a little** — At lights-on, let the sponge dry down a small amount before the first sip, the first deliberate squeeze of the day.
-2. **Fill up** — Refill in small, slightly growing sips until you hit the day’s ‘full’ peak. Stop the moment you hit it. You’ll rarely give every planned sip.
-3. **Hold steady** — Keep it in a band all day, topping up when it dips, nudging feed strength to steer.
-4. **Wind down** — Stop before lights-off and coast through the night on emergency-only top-ups, letting the big overnight drink-down reset everything.
+1. **Small dryback**: At lights-on, let the water content decrease by a small quantity before the first shot. The dryback of this phase is the first dryback of the day, and you control it.
+2. **Fill**: Fill the substrate again with small shots. Increase the size of each shot by a small quantity. Continue until the water content is at the peak of the day. Stop at this value. Frequently, you do not apply all the shots that you selected for the phase.
+3. **Stable water content**: Keep the water content in a range all day. When the water content is less than the lowest value of the range, apply a small shot. Make small changes to the feed strength to control the plant.
+4. **Night dryback**: Stop the shots before lights-off. During the night, apply water only in an emergency. The large night dryback sets the substrate to the start condition for the next day.
 
-> **Diagram.** Every lights-on day is the same four beats, in the same order: dry a little, fill up, hold steady, wind down.
+> **Diagram.** Each day with lights-on has the same four phases in the same sequence: small dryback, fill, stable water content and night dryback.
 
-A **sip** (growers call it a shot) is one short timed splash, sized as a small percent of the sponge’s volume. How long to run it, in seconds, is worked out like a recipe, from pot size, dripper speed and number of drippers. The controller does that maths; you just give it the three ingredients.
+A **shot** is a small quantity of water that the dripper supplies in a short time. The size of a shot is a small percentage of the volume of the substrate. The irrigation controller calculates the time of each shot, in seconds. It uses the size of the pot, the flow rate of the dripper and the number of drippers. You give the controller these three values.
 
-The healthy signature is a **zig-zag** graph (a sawtooth): a gradual fall (drink-down), a sharp rise (sip), over and over. A flat line, or a line that only falls, means watering isn’t actually happening, something’s broken.
+A correct graph of the water content has the shape of a **sawtooth**. The line decreases slowly (the dryback) and then increases quickly (a shot), and the two parts occur again and again. A line that does not change, or a line that only decreases, shows that the irrigation does not occur. There is a fault.
 
-> **Diagram.** If the water graph zig-zags like teeth, steering is working; a line that only falls and flatlines is a fault.
+> **Diagram.** If the graph of the water content is a sawtooth, the steering operates correctly. A line that only decreases and then does not change shows a fault.
 
-Here’s the punchline that _is_ the one steering law, visible in one room: **leaves mode and flower mode run the exact same four beats.** Only the target numbers  (drink-down depth, feed strength, sip size) change. Never the rhythm.
+In one room, the _steering law_ is this: **vegetative mode and generative mode use the same four phases.** Only the target numbers change. The target numbers are the size of the dryback, the feed strength and the size of the shot. The rhythm does not change.
 
-> **Diagram.** Leaves mode and flower mode are the same daily loop. You only slot in a different numbers-card.
+> **Diagram.** Vegetative mode and generative mode use the same loop each day. You use a different set of numbers.
 
-> **WARN — Never run factory defaults un-checked**
+> **WARN: Check the values from the manufacturer before you use them**
 >
-> A placeholder of ‘50% full / 50% drink-down’ is not your sponge. Learn your own ‘full’ mark and danger line first, then set the targets to them.
+> First find the field capacity and the recovery floor of your substrate. Then set the targets to agree with them. A value of ‘50% water content and 50% dryback’ from the manufacturer is not correct for your substrate.
 
-> **KEY — In one sentence**
+> **KEY: In short**
 >
-> Every steered day is the same four beats, dry a little, fill up, hold steady, wind down overnight, and that repeating zig-zag is steering working.
+> Each day of steering has the same four phases: a small dryback, a fill, a stable water content and a night dryback. The sawtooth that occurs again and again shows that the steering operates correctly.
 
 ## Substrate moisture as the control variable
 
-> **TIP — Think of it like a gearbox**
+> **TIP: The substrate changes the effect of your irrigation**
 >
-> You already know how to drive. A gearbox sits between your foot and the wheels, same pedal, but it decides how your push turns into speed. The sponge is that gearbox between your watering and what the roots feel. Swap it and you don’t relearn driving. You just read the new gearbox’s label.
+> The substrate is between your irrigation and the roots. It changes the effect of your irrigation. A different substrate does not cause a new method of steering. You find the numbers for the new substrate.
 
-This is the keystone. The sponge takes your watering decision and **changes it by fixed amounts** before the roots feel it, same input, different output per sponge. So learning a new sponge is never learning a new way to steer. It’s reading the new sponge’s label and dialling in **four numbers**: how wet ‘full’ is, how much air it keeps when full, how much it forgives a bad feed, and how dry is too dry.
+This section has the most important information in this paper. The substrate has a transfer function: it **changes your irrigation by constant quantities** before the roots receive it. The same irrigation has a different effect for each substrate. Thus a new substrate does not cause a new method of steering. You find only **four numbers** for the new substrate. The four numbers are the water content at field capacity, the quantity of air at field capacity, the buffer, and the recovery floor.
 
-> **Diagram.** Your watering goes in, the sponge-gearbox changes it, and that is what the roots feel, same driver and wheel, four swappable gearboxes.
+> **Diagram.** Your irrigation goes into the substrate. The substrate changes it, and the roots receive the changed irrigation. The method of steering is the same for the four different substrates.
 
-Every sponge fills in the **same form**, only the numbers differ. That’s the thesis made literal:
+Each substrate has the **same set of items**, and only the numbers are different. The table shows this:
 
-> **Diagram.** Four identical spec cards: every sponge has the same rows (air, forgiveness, prep, danger line), just with different numbers filled in.
+> **Diagram.** Four sets of specifications with the same rows (air, buffer, procedure to prepare the substrate, recovery floor). The numbers in the rows are different.
 
-| What it does | Coco | Rockwool | Living soil | Plain water (tank) |
+| Specification | Coco | Rockwool | Living soil | Water (tank) |
 | --- | --- | --- | --- | --- |
-| Air when soaked | ~22%, keeps the most air, very hard to overwater | ~10%, drowns easily, holds the most water | airier than rockwool (peat ~18–25%) | roots hang in water; air from an air pump |
-| Forgiveness (cushions a bad feed) | a lot, a built-in shock absorber | almost none. What you set is what the plant gets | self-fixing, life & minerals steady it in minutes | none. The tank is the only buffer |
-| Danger line / main failure | fades gently; feed reading unreliable when nearly dry; steals cal-mag if not pre-charged | sharp cliff ~25–30%; water tunnels below it; felt the same hour | forgiving; no sharp cliff; overwatering hides then compounds | no dryness cliff but a heat one: root rot above ~23°C (73°F) within a day |
-| Prep / starting pH | pre-soak in cal-mag 8–24 h; feed pH 5.8–6.2 | starts near pH 8, condition to ~5.5; run 5.5–6.0; reusable ~3 yrs | settles its own pH ~5.2–6.5; usually don’t pH the input | hold pH 5.5–6.0, tank 18–20°C (64–68°F), air pump always on |
-| Good for a beginner? | **yes**, just charge it before planting | precise but unforgiving; earn your way to it | **yes**, top of the forgiveness ladder | no, expert only |
+| Air when fully wet | Approximately 22%. Coco keeps the most air, and you cannot easily apply too much water. | Approximately 10%. Rockwool holds the most water, and it is easy to apply too much water. | More air than rockwool. For peat, the value is approximately 18 to 25%. | The roots are in the water. An air pump supplies the air. |
+| Buffer (decreases the effect of an incorrect feed) | A large buffer that is part of the coco. | Almost no buffer. The plant gets the feed that you set. | The soil corrects errors in the feed. Organisms and minerals make the feed stable in minutes. | No buffer. The tank is the only buffer. |
+| Recovery floor and primary fault | When the coco dries, the effect on the plant is slow. The reading of the feed strength can be incorrect when the coco is almost dry. If you do not first soak the coco in calcium and magnesium, it removes calcium and magnesium from the feed. | The limit is at approximately 25 to 30%, and the change at the limit is fast. At less than this value, channeling occurs. The plant shows the effect in the same hour. | A large buffer. There is no fast change at a limit. Too much water has no effect that you can see at first, and then the problem increases. | There is no fast change for dry conditions, but there is a limit for heat. Root rot occurs at a temperature of more than approximately 23 °C (73 °F), in one day or less. |
+| Procedure to prepare the substrate, and pH at the start | Soak the coco in a solution of calcium and magnesium for 8 to 24 h. The pH of the feed is 5.8 to 6.2. | The pH at the start is approximately 8. Before you use the rockwool, change the pH to approximately 5.5. Then keep the pH at 5.5 to 6.0. You can use the rockwool again for approximately 3 years. | The soil sets the pH at approximately 5.2 to 6.5. Usually, you do not adjust the pH of the input water. | Keep the pH at 5.5 to 6.0. Keep the tank at 18 to 20 °C (64 to 68 °F). Operate the air pump all the time. |
+| Good for a new grower | **Yes.** Soak the coco in calcium and magnesium before you put the plants in it. | It gives accurate control, but it has almost no buffer. Use an easier substrate first. | **Yes.** It has the largest buffer of the four substrates. | No. Use it only after you use the easier substrates. |
 
-*Same fields, different numbers. Picking a sponge isn’t learning new steering. It’s choosing your failure mode[^malik2025-media].*
+*The rows are the same, and the numbers are different. When you select a substrate, you do not select a new method of steering. You select the primary fault that can occur[^malik2025-media].*
 
-Notice the trade hidden in that table: **the more control a sponge gives you, the less it protects you from yourself.** So beginners start at the forgiving top of the ladder and earn their way down.
+The table shows this: **when a substrate gives more control, it has a smaller buffer for your errors.** Thus a new grower starts with a substrate that has a large buffer, and then uses the substrates that have a smaller buffer.
 
-> **Diagram.** Sponges ranked from most forgiving (living soil, top) to most demanding (plain water, bottom). Start at the top.
+> **Diagram.** The substrates are in a sequence from the largest buffer (living soil, at the top) to the smallest buffer (water, at the bottom). Start at the top.
 
-> **Diagram.** First ever grow? Start with living soil or coco. Earn your way to rockwool and water later.
+> **Diagram.** For your first cultivation, start with living soil or coco. Use rockwool and water after you use these easier substrates.
 
-> **TIP — Start here. A recipe you can run tonight (coco)**
+> **TIP: Start here: a procedure for coco**
 >
-> |  | Leaves mode (grow-the-body) | Flower mode (make-the-buds) |
+> |  | Vegetative mode | Generative mode |
 > | --- | --- | --- |
 > | Lights | 12 / 12 | 12 / 12 |
-> | ‘Full’ mark | learn per pot | learn per pot |
-> | Drink-down | 5–15 points | 20–30 points |
-> | Feed strength | ~3.0 | 4.5–6.0 |
-> | Sips | many, small | fewer, bigger |
+> | Field capacity | Find the value for each pot. | Find the value for each pot. |
+> | Dryback | 5 to 15 points | 20 to 30 points |
+> | Feed strength | Approximately 3.0 | 4.5 to 6.0 |
+> | Shots | Many small shots | A small number of large shots |
 >
-> *Start with this, watch one week, then change one thing at a time.*
+> *Start with these values. Monitor the plants for one week. Then change one control at a time.*
 
-> **KEY — In one sentence**
+> **KEY: In short**
 >
-> The sponge is a gearbox that only changes four numbers and which mistake will hurt you, the steering itself never changes.
+> The substrate changes only four numbers and the type of error that causes damage to the plant. The steering does not change.
 
-## Sensor reliability and interpretation
+## Sensor accuracy and readings
 
-> **NOTE — Optional section**
+> **NOTE: Optional section**
 >
-> Skip this whole part unless you want to understand the sensors. Growing by hand, you don’t need it. The one idea worth taking: your moisture number is a **good guess, not gospel**, watch the trend, and get a second opinion before you trust it.
+> It is not necessary to read this section unless you want to know how the sensors operate. If you irrigate manually, this section is not necessary. One piece of information is important: the moisture number is an **estimate, and not an accurate value**. Monitor the trend, and do a second check before you use the number.
 
-How a probe even feels water: water reacts to the probe’s tiny electric field **far more strongly** than dry sponge or air do[^szerement-dielectric-2019]. That huge gap is the whole trick, and it works the same in coco, rockwool and soil.
+A probe finds water because water has a **much stronger effect** on the weak electric field of the probe than dry substrate or air has[^szerement-dielectric-2019]. The probe uses this large difference in coco, rockwool and soil.
 
-> **Diagram.** Water reacts to the probe’s electric field far more than dry sponge or air. That gap is how a buried probe feels water it cannot see.
+> **Diagram.** Water has a much stronger effect on the electric field of the probe than dry substrate or air. This difference lets a probe in the substrate find water that you cannot see.
 
-**Precise is not the same as right.** The probe shows lots of decimals but can still be off by a few points[^tdr-fdr-soil-review-2024], like a clock that ticks every second but is set ten minutes fast. Until you calibrate it to your sponge, you may be steering inside the error.
+**A high resolution is not the same as accuracy.** The probe shows many decimal places, but it can have an error of a small number of points[^tdr-fdr-soil-review-2024]. Until you calibrate the probe for your substrate, it is possible that you control the plant in the range of the error.
 
-> **Diagram.** A number with many decimals can still be wrong, like a smooth-ticking clock set ten minutes fast, until you calibrate it.
+> **Diagram.** A number with many decimal places can be incorrect until you calibrate the probe.
 
-And one probe is one **local witness**. It only feels a soda-can-sized spot, not the whole pot. Never wire one probe straight to a valve; get a second witness (water dripping out, or pot weight) before water moves. Steer on the _shape_ of the drink-down, not the exact number.
+One probe is one **local measurement**. It measures only the small volume of influence around the probe, and not all the pot. Do not connect one probe directly to a valve. Do a second check (the water that drains from the pot, or the weight of the pot) before you apply water. Use the _shape_ of the dryback to control the plant, and not the value of one reading.
 
-> **Diagram.** One probe lights only a soda-can-sized spot, so confirm with a second witness, drip-out or pot weight, before any water moves.
+> **Diagram.** One probe measures only a small volume. Make sure that a second check agrees before you apply water: the runoff or the weight of the pot.
 
-> **WARN — Worth pinning even if you skip the rest**
+> **WARN: Important, also if you do not read the other sections**
 >
-> If your drink-down is **smaller than your sensor’s error**, you’re guessing. Calibrate the sensor, or use a bigger drink-down.
+> If your dryback is **smaller than the error of your sensor**, your steering is an estimate. Calibrate the sensor, or use a larger dryback.
 
-> **KEY — In one sentence**
+> **KEY: In short**
 >
-> The probe is a fuel gauge, not a dipstick. It can read a bit wrong, so trust the trend and get a second opinion before you water.
+> The probe gives an estimate of the water content. The estimate can have a small error. Thus use the trend, and do a second check before you apply water.
 
-## Automated irrigation decision logic
+## Decisions of the automatic irrigation controller
 
-> **NOTE — Optional section**
+> **NOTE: Optional section**
 >
-> Skip this unless you’re building an automatic waterer. By hand, _you_ are the brain and the rest of the guide is enough. The single reassuring idea: never trust one sensor, and do not flood or starve, when unsure, do the safe thing.
+> It is not necessary to read this section unless you assemble an automatic irrigation controller. If you irrigate manually, _you_ are the controller, and the other sections give sufficient information. One important instruction: do not use only one sensor. Do not apply too much water. Do not let the substrate become too dry. If you are not sure, do the safe step.
 
-A good auto-waterer keeps a running **water tally**, like a piggy bank: water IN (the dripper sips, known precisely) minus water OUT (the plant breathing water out, like sweating, plus what drains) equals the real water in the pot. The sensor becomes one _opinion_ to double-check, not the boss.
+A good controller calculates the **water balance** all the time. The controller adds the water from the shots of the dripper, and you know this quantity accurately. The controller subtracts the water that the plant transpires and the water that drains. The result is the quantity of water in the pot. The sensor gives one _estimate_, and the controller compares it with the water balance. The sensor is not the only source of data.
 
-> **Diagram.** You can know the water level by adding what went in and subtracting what left, a piggy bank, instead of trusting one twitchy sensor.
+> **Diagram.** You can find the quantity of water in the pot. Add the water that you apply. Subtract the water that the plant transpires and the water that drains. Do not use only one sensor with readings that are not stable.
 
-Every guess carries a **confidence level**, high when the clues agree, low when they disagree. High lets the robot give a full sip; medium only a small safe sip; low means wait or ask a human.
+Each estimate has a **confidence**. The confidence is high when the data agree and low when the data do not agree. When the confidence is high, the controller applies a full shot. When the confidence is between high and low, it applies only a small, safe shot. When the confidence is low, the controller waits or gives the decision to a person.
 
-> **Diagram.** Only water a full amount when the clues agree; when they don’t, do the safe thing, a small sip, wait, or ask a human.
+> **Diagram.** Apply a full quantity of water only when the data agree. When the data do not agree, do the safe step. Apply a small shot, wait, or give the decision to a person.
 
-The whole decision is just three choices, all fenced by one rule. A lying sensor can only ever make the robot _more_ careful, never trick it into overwatering.
+The decision has only three possible results, and one safety instruction applies to all three. A sensor with an incorrect reading can only make the controller _more_ careful. It cannot cause the controller to apply too much water.
 
-> **Diagram.** The auto-waterer only ever waters a measured bit, waits, or asks you, all fenced by ‘prefer mild deficit over flooding when uncertain; keep a hard VWC floor’.
+> **Diagram.** The controller can only apply a measured quantity of water, wait, or give the decision to you. One safety instruction limits all three: ‘If you are not sure, select a small water deficit and not too much water. Keep the VWC always more than the recovery floor.’
 
-And the reassuring part: **the brain works the same no matter the sponge.** The same check-the-clues, keep-a-tally, gate-on-confidence routine runs identically for coco, rockwool, soil and water. The sponge only changes the numbers it learns, never the logic.
+The controller **uses the same method for each substrate.** The method has three steps, and it is the same for coco, rockwool, soil and water. The controller examines the data, calculates the water balance, and uses the confidence to select the correct step. The substrate changes only the numbers that the controller uses. It does not change the method.
 
-> **KEY — In one sentence**
+> **KEY: In short**
 >
-> An auto-waterer keeps a water piggy-bank, attaches a confidence to its guess, and only ever errs toward ‘prefer mild deficit over flooding when uncertain; keep a hard VWC floor’, on any sponge.
+> An automatic irrigation controller calculates the water balance and gives a confidence to each estimate. If the controller makes an error, the error is only in the safe direction. The safety instruction is: ‘If you are not sure, select a small water deficit and not too much water. Keep the VWC always more than the recovery floor.’ The controller does this with each substrate.
 
-## Applying the steering law across substrates
+## The steering law for all substrates
 
-> **TIP — Step back and look**
+> **TIP: The full method**
 >
-> Past the dashboard, the gearbox, all of it. You see one grower doing one thing: watching the sponge, deciding, watering a little, and letting it dry. Same wheel, same lever, same dial in every sponge. Now you can grow in any of them.
+> One grower does one task, with or without sensors and equipment. The grower monitors the substrate, selects the correct step, applies a small quantity of water, and lets the substrate dry. The three controls are the same for each substrate. You can use the method with each of the four substrates.
 
-Everything you learned stacks into one machine: the sponge (gearbox), then how-full % (the wheel), then the drink-down (the engine), then feed strength (the second dial), all running on the four-beat daily routine. The probe and the auto-brain are optional side-modules, bolt them on only if you automate.
+All the information in this paper is for one system. The system has four parts: the substrate, the water content, the dryback and the feed strength. The four parts operate in the four phases of each day. The probe and the automatic controller are optional. Add them only if you use automatic irrigation.
 
-The same daily zig-zag works in every sponge, only the numbers shift it:
+The same sawtooth of each day is correct for each substrate. Only the numbers are different:
 
-> **Diagram.** The same daily shape runs in coco, rockwool, soil and water, only each sponge’s own ‘full’ mark, danger line and feed strength change.
+> **Diagram.** The same shape of each day occurs in coco, rockwool, soil and water. Only the field capacity, the recovery floor and the feed strength of each substrate change.
 
-Across a whole grow the drink-down has the **same shape on every sponge**, gentle and wet early, drier and deeper through mid-flower, easing off near the end. Leaves mode is just gentle cruising; flower mode is firmer driving, on the same road.
+During a full crop cycle, the dryback has the **same shape on each substrate**. In the first stage, the dryback is small and the substrate is wet. Through the middle of flowering, the dryback is larger and the substrate is drier. Near the end, the dryback becomes smaller. Vegetative mode uses small drybacks, and generative mode uses larger drybacks. The method of steering is the same.
 
-> **Diagram.** Across the whole grow you steer the same way, gentle early, deepest in mid-flower, easing at the end, with feed strength climbing alongside.
+> **Diagram.** In a full crop cycle, you use the same method of steering. The dryback is small in the first stage, largest in the middle of flowering, and smaller again at the end. The feed strength increases at the same time.
 
-> **Diagram.** What the dials actually do to a living plant, seedling, leafy body, fat flowers, ripening, start to finish.
+> **Diagram.** The effect of the controls on one plant, from the start to the end. The stages are the seedling, the plant with leaves, the large flowers and the ripening.
 
-> **NOTE — Real numbers**
+> **NOTE: Numbers**
 >
-> - Forgiveness ladder, most to least: living soil → coco → peat → rockwool → plain water
-> - Whole-grow rockwool arc: veg gentle; flower wk1–3 drink-down 10–18 points; wk4–6 deepest, 20–30 points and feed strongest; wk7–8 eases to 18–25 points
-> - Keeping the daytime a bit wetter can give higher yield at the same quality across most of flowering, steer by timing and drink-down, not by starving.
+> - Sequence from the largest buffer to the smallest buffer: living soil → coco → peat → rockwool → water
+> - Rockwool, full crop cycle: in vegetative growth, the dryback is small. In weeks 1 to 3 of flowering, the dryback is 10 to 18 points. In weeks 4 to 6, the dryback is largest, 20 to 30 points, and the feed is strongest. In weeks 7 to 8, the dryback decreases to 18 to 25 points.
+> - A substrate that is wetter by a small quantity during the day can give a higher yield with the same quality in most of flowering. Control the plant with the time of the shots and the dryback, and not with a large water deficit.
 
-There’s no magic recipe. Start on the forgiving end (living soil or coco), get a probe on the root zone, learn what **one normal day** looks like, then change one thing at a time. That discipline, not a number, is what makes any sponge repeatable. To go deeper, read the [coco crop steering](coco-crop-steering.html) and [rockwool crop steering](rockwool-crop-steering.html) papers, how the [root-zone sensor](root-zone-teros12.html) really sees, and the [smart watering](smart-watering-vrwe.html) brain.
+There is no one set of numbers that is correct for all rooms. Start with a substrate that has a large buffer (living soil or coco). Put a probe in the root zone. Monitor the data of the probe for one **usual day**. Then change one control at a time. This method, and not a number, gives the same results each time in each substrate.For more information, read the papers about [crop steering in coco](coco-crop-steering.html) and [crop steering in rockwool](rockwool-crop-steering.html). The paper about the [root-zone sensor](root-zone-teros12.html) shows how the sensor measures the substrate. The paper about [automatic irrigation](smart-watering-vrwe.html) gives information about the controller.
 
-> **KEY — The promise, now earned**
+> **KEY: The steering law**
 >
-> Steering is one law; the sponge only changes the constants.
+> The steering law is the same for all substrates. The substrate changes only the numbers in the steering law.
 
 ## References
 
-[^caplan2019-drought]: Caplan D, Dixon M, Zheng Y (2019). Increasing inflorescence dry weight and cannabinoid content in medical cannabis using controlled drought stress. HortScience 54(5):964-969. https://doi.org/10.21273/HORTSCI13510-18 (peer-reviewed)
-[^welling2025-aba]: Welling MT, et al. (2025). Regulation of secondary metabolism in Cannabis sativa L. by abscisic acid and water deficit during early flower development. Plant Stress 17:100968. https://doi.org/10.1016/j.stress.2025.100968 (peer-reviewed)
-[^stack2024-drought]: Stack GM, Cala AR, Quade MA, et al. (2024). Severe drought significantly reduces floral hemp (Cannabis sativa L.) yield and cannabinoid content but moderate drought does not. Ind. Crops Prod. 209:117974. https://doi.org/10.1016/j.indcrop.2024.117974 (peer-reviewed)
-[^hilhorst2000-ec]: Hilhorst MA (2000). A pore water conductivity sensor. Soil Sci. Soc. Am. J. 64(6):1922-1925. https://doi.org/10.2136/sssaj2000.6461922x (peer-reviewed)
-[^abad2005-coir]: Abad M, Noguera P, Puchades R, Maquieira A, Noguera V (2005). Physical properties of various coconut coir dusts compared to peat. HortScience 40(7):2138-2144. https://doi.org/10.21273/HORTSCI.40.7.2138 (peer-reviewed)
-[^noguera2003-cec]: Noguera P, Abad M, Puchades R, Maquieira A, Noguera V (2003). Influence of particle size on physical and chemical properties of coconut coir dust as container medium. Commun. Soil Sci. Plant Anal. 34(3-4):593-605. https://doi.org/10.1081/CSS-120017842 (peer-reviewed)
-[^malik2025-media]: Malik M, Tlustoš P (2025). Soilless growing media for cannabis cultivation. Agriculture 15(18):1955. https://www.mdpi.com/2077-0472/15/18/1955 (peer-reviewed)
-[^szerement-dielectric-2019]: Szerement J, Woszczyk A, Szyplowska A, Kafarski M, Lewandowski A, Wilczek A, Skierucha W. A Seven-Rod Dielectric Sensor for Determination of Soil Moisture in Well-Defined Sample Volumes. Sensors (Basel). 2019;19(7):1646. https://doi.org/10.3390/s19071646 (peer-reviewed)
-[^tdr-fdr-soil-review-2024]: Advancements in dielectric soil moisture sensor calibration: A comprehensive review of methods and techniques. Computers and Electronics in Agriculture. 2024;218:108663. https://doi.org/10.1016/j.compag.2024.108663 (peer-reviewed)
+[^caplan2019-drought]: Caplan D, Dixon M, Zheng Y (2019). Increasing inflorescence dry weight and cannabinoid content in medical cannabis using controlled drought stress. HortScience 54(5):964-969. https://doi.org/10.21273/HORTSCI13510-18 (source with peer review)
+[^welling2025-aba]: Welling MT, et al. (2025). Regulation of secondary metabolism in Cannabis sativa L. by abscisic acid and water deficit during early flower development. Plant Stress 17:100968. https://doi.org/10.1016/j.stress.2025.100968 (source with peer review)
+[^stack2024-drought]: Stack GM, Cala AR, Quade MA, et al. (2024). Severe drought significantly reduces floral hemp (Cannabis sativa L.) yield and cannabinoid content but moderate drought does not. Ind. Crops Prod. 209:117974. https://doi.org/10.1016/j.indcrop.2024.117974 (source with peer review)
+[^hilhorst2000-ec]: Hilhorst MA (2000). A pore water conductivity sensor. Soil Sci. Soc. Am. J. 64(6):1922-1925. https://doi.org/10.2136/sssaj2000.6461922x (source with peer review)
+[^abad2005-coir]: Abad M, Noguera P, Puchades R, Maquieira A, Noguera V (2005). Physical properties of various coconut coir dusts compared to peat. HortScience 40(7):2138-2144. https://doi.org/10.21273/HORTSCI.40.7.2138 (source with peer review)
+[^noguera2003-cec]: Noguera P, Abad M, Puchades R, Maquieira A, Noguera V (2003). Influence of particle size on physical and chemical properties of coconut coir dust as container medium. Commun. Soil Sci. Plant Anal. 34(3-4):593-605. https://doi.org/10.1081/CSS-120017842 (source with peer review)
+[^malik2025-media]: Malik M, Tlustoš P (2025). Soilless growing media for cannabis cultivation. Agriculture 15(18):1955. https://www.mdpi.com/2077-0472/15/18/1955 (source with peer review)
+[^szerement-dielectric-2019]: Szerement J, Woszczyk A, Szyplowska A, Kafarski M, Lewandowski A, Wilczek A, Skierucha W. A Seven-Rod Dielectric Sensor for Determination of Soil Moisture in Well-Defined Sample Volumes. Sensors (Basel). 2019;19(7):1646. https://doi.org/10.3390/s19071646 (source with peer review)
+[^tdr-fdr-soil-review-2024]: Advancements in dielectric soil moisture sensor calibration: A comprehensive review of methods and techniques. Computers and Electronics in Agriculture. 2024;218:108663. https://doi.org/10.1016/j.compag.2024.108663 (source with peer review)

@@ -2,9 +2,9 @@
 slug: "cannabinoids-terpenes"
 title: "Cannabinoids and Terpenes"
 eyebrow: "Reference · Chemistry"
-summary: "Two compound families—cannabinoids and terpenes—are made in the same microscopic gland, as acids, on one shared pathway. This paper covers where each is made, what each compound is and is not, how both decay after harvest, and which grow decisions actually move the numbers. After reading, you will be able to read any COA intelligently and know which levers are real and which are vendor claims."
+summary: "The plant makes cannabinoids and terpenes, two groups of compounds, in the same small gland, as acids, on one pathway. This paper tells you where the plant makes each group and how the quantity of each group decreases after harvest. It gives the facts about each compound and corrects incorrect claims about it. It also tells you the decisions of the grower that change the numbers. After you read this paper, you will know how to read a COA. You will know the levers that have an effect and the claims of suppliers that have no data."
 track: "Know the plant"
-read_time: "~24 min read"
+read_time: "~24 min to read"
 diagrams: "10 diagrams"
 related: ["lab-testing-coas", "hash-rosin-pressing", "harvest-dry-trim-cure"]
 url: "https://www.growlabs.nz/wiki/cannabinoids-terpenes.html"
@@ -19,396 +19,398 @@ refs: [{"id": "radwan2021-constituents", "n": 1, "cite": "Radwan MM, Chandra S, 
 
 # Cannabinoids and Terpenes
 
-_Reference · Chemistry · ~24 min read_
+_Reference · Chemistry · ~24 min to read_
 
-> Two compound families—cannabinoids and terpenes—are made in the same microscopic gland, as acids, on one shared pathway. This paper covers where each is made, what each compound is and is not, how both decay after harvest, and which grow decisions actually move the numbers. After reading, you will be able to read any COA intelligently and know which levers are real and which are vendor claims.
+> The plant makes cannabinoids and terpenes, two groups of compounds, in the same small gland, as acids, on one pathway. This paper tells you where the plant makes each group and how the quantity of each group decreases after harvest. It gives the facts about each compound and corrects incorrect claims about it. It also tells you the decisions of the grower that change the numbers. After you read this paper, you will know how to read a COA. You will know the levers that have an effect and the claims of suppliers that have no data.
 
 ## Purpose and scope
 
-Every price negotiation, every lab report, every argument about quality in this industry comes down to two families of molecules: **cannabinoids** (the potency) and **terpenes** (the smell and flavour). Both are made in the same microscopic gland on the flower surface, the **trichome**, and almost everything a grower does either builds that gland's contents or wastes them. This paper is the field guide: where the compounds are made, how the plant assembles them, what each one is and is not, how they fall apart, and which levers you actually hold.
+Two groups of molecules cause the differences in the quality of flower, in the results of a lab test and in the price of flower. The first group is **cannabinoids** (the potency). The second group is **terpenes** (the aroma and flavor). The plant makes the two groups in the same small gland on the surface of the flower. This gland is the **trichome**. Almost all tasks of a grower increase or decrease the quantity of compounds in this gland.This paper tells you where the plant makes the compounds and how the plant assembles them. It gives the facts about each compound and corrects incorrect claims about it. It tells you how the compounds decrease in quantity after harvest, and it tells you the levers that you have.
 
-The scale of the chemistry is bigger than the market suggests: researchers have reported more than 500 distinct compounds from cannabis, including 125 cannabinoids and about 120 terpenes[^radwan2021-constituents]. Commercially, perhaps six cannabinoids and eight terpenes do nearly all the talking. Learn those, and every COA, every strain menu and every marketing claim becomes readable.
+Cannabis contains many more compounds than the labels on products show. Reports show more than 500 different compounds in cannabis. Of these compounds, 125 are cannabinoids and approximately 120 are terpenes[^radwan2021-constituents]. Approximately six cannabinoids and eight terpenes are the most important in flower products. When you know these compounds, you can read each COA, each list of cultivars and each claim about a product.
 
-**Cannabinoid** — A family of compounds effectively unique to cannabis (THC, CBD, CBG and relatives). They interact with receptor systems in humans; the plant most likely makes them for defence. The value driver of the crop.
+**Cannabinoid**: A group of compounds that almost no other plant makes (THC, CBD, CBG and related compounds). The compounds have an effect on the receptor systems of a person. It is possible that the plant makes them for protection. They give the crop most of its value.
 
-**Terpene** — Small, volatile oils that give plants their smell: pine, citrus, pepper, hops. Not unique to cannabis. They are the entire aroma and flavour of flower, and they evaporate far more easily than cannabinoids do.
+**Terpene**: Small oil molecules that evaporate easily. They give plants their aroma, for example the aroma of pine, citrus, pepper and hops. Many other plants also make terpenes. Terpenes are all of the aroma and flavor of flower. They evaporate much more easily than cannabinoids.
 
-**Trichome** — The mushroom-shaped resin gland on flowers and sugar leaves, the visible ‘frost’. Both compound families are made and stored in its head.
+**Trichome**: The resin gland on flowers and sugar leaves. The gland has a head on a stalk. You can see the glands as the ‘frost’ on the flower. The plant makes the two groups of compounds in the head, and the compounds stay in the head.
 
-**Resin** — The sticky oil inside trichome heads: cannabinoid acids + terpenes + waxes. When people pay for potency or flavour, they are paying for resin.
+**Resin**: The tacky oil in the heads of trichomes. It contains cannabinoid acids, terpenes and waxes. The potency and the flavor of flower are in the resin. Thus the value of flower is its resin.
 
-**THCA** — Tetrahydrocannabinolic acid, the form of THC the living plant actually makes. Not intoxicating until heat converts it (decarboxylation).
+**THCA**: Tetrahydrocannabinolic acid. THCA is the acid of THC, and the plant makes THCA and not THC. THCA does not cause intoxication until heat changes it (decarboxylation).
 
-**Decarboxylation** — The heat-driven step that removes a carboxyl group (–COOH) from a cannabinoid acid, releasing CO₂ as gas and leaving the active, neutral molecule. Think of it like baking powder in dough: nothing changes at room temperature, but heat triggers a one-way reaction and the CO₂ gas escapes—once gone, there is no reverse. ‘Decarb’ for short.
+**Decarboxylation**: The step in which heat removes a carboxyl group (–COOH) from a cannabinoid acid. The reaction releases CO₂ as a gas, and the molecule that stays is active and neutral. Heat causes the reaction. After the gas is in the air, the reaction cannot occur in the opposite direction. The short name is ‘decarb’.
 
-**Chemotype** — A plant's genetically fixed cannabinoid ratio class: THC-dominant, balanced, CBD-dominant, CBG-dominant or cannabinoid-free. Set at germination; no grow tactic changes it.
+**Chemotype**: The type of cannabinoid ratio of a plant. The types are THC-dominant, a balance of THC and CBD, CBD-dominant, CBG-dominant and without cannabinoids. The type is in the genes of the plant from germination. No task of the grower changes it.
 
-**COA** — Certificate of Analysis, the lab report listing cannabinoid and terpene content. The receipt for everything in this paper.
+**COA**: Certificate of Analysis. The COA is the lab report that gives the cannabinoid content and the terpene content. It shows the result of each decision in this paper.
 
-> **NOTE — What this paper will not do**
+> **NOTE: Limits of this paper**
 >
-> It will not tell you what any compound does to a patient. Effects are described here only as _reported_ or _under study_, because that is the honest state of most of the evidence, and because therapeutic claims are the regulator's and clinician's lane, not a grow guide's. This is chemistry for growers: what the molecules are, where they come from, and how not to lose them.
+> This paper does not tell you the effect of a compound on a person. It gives each effect only as a _report_ or as an effect for which _investigations are in progress_. Most of the data about effects are of these two types. Also, claims about medical effects are the task of the regulator and of medical personnel, not of a reference for growers. This paper gives chemistry for growers: the molecules, the sources of the molecules, and how to keep the molecules.
 
-## Chemistry overview
+## Basic facts of the chemistry
 
-Everything the industry trades on is made in **trichome heads**, as **acids** (THCA, CBDA, not THC and CBD), on **one assembly line** whose hub is a single molecule: **CBGA**, the ‘mother cannabinoid’[^gulck2020-biosynthesis]. Genetics decide the _ratio_ of the outputs (the chemotype) and largely fix the terpene palette[^demeijer2003-chemotype]; the grow decides _how much_ gets made; and everything after harvest only subtracts.
+The plant makes all the compounds that have a value in **trichome heads**. It makes them as **acids** (THCA and CBDA, not THC and CBD) on **one pathway**. In the middle of the pathway is one molecule: **CBGA**, the ‘mother cannabinoid’[^gulck2020-biosynthesis].The genes control the _ratio_ of the products (the chemotype). They also control most of the terpene profile[^demeijer2003-chemotype]. The cultivation controls _how much_ the plant makes. After harvest, the quantity of the compounds can only decrease.
 
-The two families die differently, and that difference runs half this paper. **Terpenes evaporate**: think of the smell rising from a hot pan—the warmer the surface, the faster molecules leave it. The light ‘monoterpenes’ do this at room temperature, which is why hot fast drying smells wonderful and costs you the product[^eyal2023-terpenes]. **Cannabinoids oxidise**: think of a cut apple browning in a bowl—oxygen converts it slowly, no enzyme needed, and there is no reversing it. THC degrades toward CBN the same way, and light accelerates it faster than anything else[^fairbairn1976-stability]. Flavour is lost to warm air; potency is lost to light, oxygen and years.
+The two groups decrease for different causes, and half of this paper is about this difference. **Terpenes evaporate**. When the temperature of a surface increases, the molecules go from the surface into the air at a higher rate. The light ‘monoterpenes’ evaporate at room temperature. Thus during fast drying with hot air, the room has a strong aroma, but the quantity of terpenes in the product decreases[^eyal2023-terpenes].**Cannabinoids oxidize**. Oxygen changes the cannabinoids slowly. No enzyme is necessary, and the change cannot occur in the opposite direction. The oxidation of THC makes CBN. Of all the causes, light makes the degradation of THC the fastest[^fairbairn1976-stability].Warm air decreases the flavor. Light, oxygen and a long storage time decrease the potency.
 
-> **KEY — The one-sentence version**
+> **KEY: The primary point of this paper**
 >
-> Potency and flavour are built once, in the same gland, as fragile acids and volatile oils. The grower's job is to pick genetics that can make them, keep the plant healthy enough to fill the trichomes, and protect the chemistry from the moment of harvest onward: cool, dark, gentle, sealed.
+> The plant makes the potency and the flavor one time only, in the same gland, as acids that change easily and oils that evaporate easily. The task of the grower has three parts. Select genetics that can make the compounds. Keep the plant in good condition. It can then fill the trichomes. From the time of harvest, keep the product cool, in darkness and sealed, and touch it carefully.
 
-## Trichome secretory cells
+## Cells of the trichome that make resin
 
-Cannabis carries three kinds of glandular trichome: tiny **bulbous** glands, **sessile** glands that sit flat on the surface, and the money-maker, the **capitate-stalked** trichome, a resin head lifted on a stalk. Detailed microscopy shows the stalked heads carry **12–16 secretory disc cells** at their base, versus eight in sessile heads, and it is the stalked type whose signature tracks high cannabinoid content[^livingston2020-trichomes]. Strikingly, stalked trichomes develop _from_ sessile-looking intermediates as the flower matures, the frost you watch build through flowering is a population growing up, not just growing more[^livingston2020-trichomes].
+Cannabis has three types of glandular trichome. The **bulbous trichome** is very small. The **sessile trichome** is flat on the surface. The **capitate-stalked trichome** has a resin head on a stalk, and it is the type that gives the most value. A microscope shows that the heads of stalked trichomes have **12 to 16 secretory disc cells** at the bottom. The heads of sessile trichomes have eight.The stalked trichome is the type that agrees with a high cannabinoid content[^livingston2020-trichomes]. A stalked trichome starts _from_ a trichome that looks the same as a sessile trichome, and it changes as the maturity of the flower increases. The ‘frost’ on the flower increases during flowering. The cause is not only that the plant makes more trichomes. The trichomes also change from one type to a different type[^livingston2020-trichomes].
 
-> **Diagram.** The capitate-stalked trichome in cross-section. The disc cells at the base of the head are the factory; the cuticle-bound storage cavity above them is the warehouse. Stalked heads carry 12–16 disc cells and the high-cannabinoid, monoterpene-rich profile; sessile heads make do with eight[^livingston2020-trichomes].
+> **Diagram.** A cross-section of the capitate-stalked trichome. The disc cells at the bottom of the head make the resin. The storage cavity above the disc cells keeps the resin, and a cuticle is the wall of the cavity. Heads of stalked trichomes have 12 to 16 disc cells and a profile with a high content of cannabinoids and monoterpenes. Heads of sessile trichomes have eight disc cells[^livingston2020-trichomes].
 
-The division of labour matters. The **disc cells are the factory floor**, isolated trichomes show intense expression of the cannabinoid and terpene biosynthesis genes[^livingston2020-trichomes], and the finished resin is exported into the **storage cavity**, a sac whose only wall is a stretched waxy cuticle. The plant does not reabsorb it. Once made, the inventory just sits there: defended, fragile, and entirely surface-mounted.
+The two parts of the trichome have different tasks. The **disc cells make the resin**. Isolated trichomes show a high expression of the genes for the biosynthesis of cannabinoids and terpenes[^livingston2020-trichomes]. When the resin is complete, it goes into the **storage cavity**.The only wall of the cavity is a thin layer of wax, the cuticle. The plant does not absorb the resin again. After the plant makes the resin, it stays in the cavity. The cavity gives protection to the resin, but it breaks easily, and it is on the surface of the plant.
 
-Three practical consequences fall straight out of the anatomy:
+The anatomy of the trichome causes three results for the grower:
 
-- **Potency lives on the surface.** Resin scales with bract and sugar-leaf surface area, not bud mass. Which is part of why dense, well-lit flower with high bract density assays above larfy bulk.
-- **Every rough touch is theft.** The cavity wall is a film of wax. Tumbling, squeezing, over-handling and aggressive trimming rupture heads and leave the resin on gloves and machinery instead of in the jar.
-- **The whole solventless industry is anatomy.** Ice-water hash and dry sift are just ways of snapping cold, brittle heads off intact, collecting the warehouse without the building.
+- **The potency is on the surface.** The quantity of resin increases with the surface area of the bracts and sugar leaves, not with the mass of the bud. One result is that flower with a high density of bracts and good light has a higher potency in a lab test than low-density flower.
+- **If you are not careful when you touch the flower, you remove resin.** The wall of the cavity is a film of wax. Movement of the flower in equipment, pressure on the flower, many touches and trimming that is not careful break the heads. As a result, the resin stays on gloves and equipment and not in the jar.
+- **The solventless methods use this anatomy.** Ice-water hash and dry sift are methods that remove the heads of trichomes from the flower when the heads are cold. Cold heads break off the stalk and stay in good condition. Thus the methods collect the storage cavities without the other parts of the plant.
 
-> **TIP — What a loupe shows that a lab result cannot**
+> **TIP: Information that only a loupe gives**
 >
-> A loupe tells you more than a lab turnaround: head density, head size, and how intact the heads are after handling. If your trim room's product looks sandblasted under 60×, the potency you grew is in the machine, not the bag.
+> A loupe tells you the density of the heads, the size of the heads, and the condition of the heads after you touch them. A loupe gives you this information faster than a lab test. If the heads in the product from your trimming room look rough at 60×, the potency is in the equipment and not in the bag.
 
 ## Cannabinoid and terpene biosynthesis
 
-The pathway reads like a small factory diagram, and it is worth learning because chemotypes, CBG flower, THCV and half the COA make sense only downstream of it. The plant starts with **hexanoyl-CoA**, a six-carbon starter drawn from fatty-acid metabolism, and extends it with three **malonyl-CoA** units to build **olivetolic acid**, the aromatic core, using a polyketide synthase working with olivetolic acid cyclase (OAC)[^gulck2020-biosynthesis].
+Know the pathway, because the chemotypes, CBG flower, THCV and half of the COA are results of the pathway. The plant starts with **hexanoyl-CoA**, a starter unit that has six carbons and is from the metabolism of fatty acids. The plant adds three **malonyl-CoA** units to it and makes **olivetolic acid**, the aromatic core. A polyketide synthase does this together with olivetolic acid cyclase (OAC)[^gulck2020-biosynthesis].
 
-Then the two halves of the molecule meet. A membrane-bound prenyltransferase, first demonstrated in 1998 as **GOT**, geranylpyrophosphate:olivetolate geranyltransferase, bolts a ten-carbon terpene unit, **geranyl diphosphate (GPP)**, onto olivetolic acid. The product is **cannabigerolic acid, CBGA**. The enzyme is fussy: it accepts olivetolic acid but not its decarboxylated cousin olivetol, which is why the plant's whole line runs in acid form[^fellermeier1998-cbga].
+Then the two parts of the molecule connect. An enzyme in a membrane, a prenyltransferase, attaches a terpene unit with ten carbons to olivetolic acid. This terpene unit is **geranyl diphosphate (GPP)**. A test in 1998 first showed the enzyme as **GOT**, geranylpyrophosphate:olivetolate geranyltransferase.The product is **cannabigerolic acid (CBGA)**. The enzyme accepts olivetolic acid, but it does not accept olivetol, which is olivetolic acid without the carboxyl group. Thus each product of the pathway is an acid[^fellermeier1998-cbga].
 
-> **Diagram.** The map. A fatty-acid-derived starter plus a terpene unit meet at CBGA, and three oxidocyclase enzymes (THCA, CBDA and CBCA synthase) each fold CBGA into a different acid[^gulck2020-biosynthesis][^fellermeier1998-cbga]. Note what is missing: no branch makes CBN, and no branch makes neutral THC.
+> **Diagram.** The diagram of the pathway. A starter unit from fatty acids and a terpene unit connect to make CBGA. Three oxidocyclase enzymes (THCA synthase, CBDA synthase and CBCA synthase) each change CBGA to a different acid[^gulck2020-biosynthesis][^fellermeier1998-cbga]. The diagram does not show CBN or neutral THC, because no branch makes them.
 
-CBGA is the hub, the **mother cannabinoid**. Three synthases compete for it: **THCA synthase** folds it into THCA, **CBDA synthase** into CBDA, and **CBCA synthase** into CBCA[^gulck2020-biosynthesis]. Which of those enzymes a plant carries in working order is exactly what the chemotype locus encodes, hold that thought for two sections.
+CBGA is in the middle of the pathway: it is the **mother cannabinoid**. Three synthases use CBGA at the same time. **THCA synthase** changes it to THCA, **CBDA synthase** changes it to CBDA, and **CBCA synthase** changes it to CBCA[^gulck2020-biosynthesis]. The chemotype locus controls the enzymes that operate correctly in a plant. A subsequent section gives more information about the locus.
 
-Two footnotes worth knowing. First, the **propyl series**: when the line starts from a shorter starter, the same machinery yields divarinic acid, then CBGVA, then **THCVA and CBDVA**, the three-carbon-tail ‘varin’ cannabinoids like THCV[^gulck2020-biosynthesis][^radwan2021-constituents]. Second, the absences: the plant makes essentially no CBN and very little neutral THC. Both are breakdown products of what the enzymes made, not products of the enzymes[^gulck2020-biosynthesis].
+The pathway has two more facts. First, the **propyl series**. When the pathway starts from a shorter starter unit, the same enzymes make divarinic acid, then CBGVA, then **THCVA and CBDVA**. These compounds are the ‘varin’ cannabinoids, which have a side chain with three carbons, for example THCV[^gulck2020-biosynthesis][^radwan2021-constituents].Second, the plant makes almost no CBN and a very small quantity of neutral THC. The two compounds are degradation products of the compounds that the enzymes made. The enzymes do not make them[^gulck2020-biosynthesis].
 
-> **NOTE — Why a grower should care about an enzyme map**
+> **NOTE: The enzyme diagram: information for the grower**
 >
-> Because it converts three market curiosities into obvious chemistry: CBG-rich flower is a plant whose downstream synthases are broken, so the hub piles up; chemotype is which synthase alleles you inherited, so no environment trick flips THC into CBD; and CBN on a COA is a storage report, not a genetic trait you can breed toward or away from at the synthase level.
+> The diagram gives the cause of three results. The first result is CBG flower. Flower with a high content of CBG is from a plant. In this plant, the synthases after CBGA do not operate correctly, thus the quantity of CBGA increases.
+> The second result is the chemotype. The chemotype is the set of synthase alleles that the plant gets from its parents. Thus no change in the environment can change THC to CBD. The third result is CBN on a COA. CBN is a record of the storage, and it is not a genetic trait. Breeding cannot increase or decrease CBN, because no synthase makes CBN.
 
 ## Decarboxylation: THCA and THC
 
-The single most misunderstood fact in cannabis chemistry: **the living plant does not make THC** in any meaningful quantity. It makes THCA, the same molecule wearing a carboxyl group (–COOH). And THCA is **not intoxicating** in that form. Raw flower is, chemically speaking, a bag of inactive acid. Heat removes the carboxyl group as CO₂ gas and switches the molecule on: that is **decarboxylation**[^wang2016-decarb].
+Many persons do not know this fact: **the plant does not make THC** in an important quantity. It makes THCA, which is the same molecule with a carboxyl group (–COOH). THCA **does not cause intoxication**. Flower that you did not heat contains acid that is not active. Heat removes the carboxyl group as CO₂ gas and makes the molecule active. This reaction is **decarboxylation**[^wang2016-decarb].
 
-> **Diagram.** The switch. Heat snaps the –COOH off THCA; CO₂ leaves as gas (12.3% of the molecule's mass) and Δ9-THC remains. The 0.877 factor on every COA is this mass loss, nothing more.
+> **Diagram.** The change from THCA to THC. Heat removes the –COOH from THCA. THCA releases CO₂ as a gas (12.3% of the mass of the molecule), and Δ9-THC stays. The number 0.877 on each COA is only the fraction of the mass that stays.
 
-A lit joint or a vape coil decarbs in a fraction of a second. Everything else (ovens, extracts, edibles processing) runs on kinetics, and the kinetics have been measured properly. Heating cannabis extract between 80 °C (176 °F) and 145 °C (293 °F), Wang and colleagues found decarboxylation follows clean **first-order** behaviour, with rate constants for THCA of 0.18, 0.66 and 1.83 × 10⁻³ s⁻¹ at 80 °C (176 °F), 95 °C (203 °F) and 110 °C (230 °F)[^wang2016-decarb]. Translated: at 110 °C (230 °F), half the remaining THCA converts roughly every six minutes.
+When a person burns the flower or applies heat to it in a vaporizer, decarboxylation is complete in less than one second. In all other methods (ovens, extracts and the production of edibles), the rate of the reaction controls the result, and tests measured the rate correctly. The data of Wang show that the decarboxylation of cannabis extract between 80 °C (176 °F) and 145 °C (293 °F) is **first-order**. The rate constants for THCA are 0.18, 0.66 and 1.83 × 10⁻³ s⁻¹ at 80 °C (176 °F), 95 °C (203 °F) and 110 °C (230 °F)[^wang2016-decarb]. Thus at 110 °C (230 °F), half of the THCA that stays changes to THC in each period of approximately six minutes.
 
-> **Diagram.** What first-order means in practice: conversion is fast at the start and asymptotic at the end, the last few percent of acid take as long as the first fifty. Curve computed from the rate constant measured by Wang et al.[^wang2016-decarb]
+> **Diagram.** In a first-order reaction, the conversion is fast at the start and slow at the end. The time for the last small percentage of acid is the same as the time for the first 50%. The curve uses the rate constant in the data of Wang[^wang2016-decarb].
 
-The acids are not all equally willing. THCA converts about **twice as fast** as CBDA or CBGA at the same temperature. Its activation energy is lower (88 kJ/mol vs 112 and 109)[^wang2016-decarb]. Anyone processing CBD material on a THC schedule under-decarbs it.
+The acids do not change at the same rate. THCA changes approximately **two times as fast** as CBDA or CBGA at the same temperature. The activation energy of THCA is lower (88 kJ/mol compared with 112 kJ/mol and 109 kJ/mol)[^wang2016-decarb]. If a person uses the same schedule of heat for CBD material as for THC, the decarboxylation of the CBD material is not complete.
 
-> **Diagram.** Same oven, different clocks. CBDA and CBGA need roughly double THCA's time at a given temperature, derived from the rate constants in Wang et al.[^wang2016-decarb]
+> **Diagram.** The three acids change at different rates in the same oven. The time for CBDA and CBGA is approximately two times the time for THCA at the same temperature. The times are from the rate constants in the data of Wang[^wang2016-decarb].
 
-Decarb is a two-front war. Stop too early and inactive acid remains; push too hot or too long and you start burning the building down, the freed THC oxidises onward toward CBN, and the monoterpenes, whose volatility at decarb temperatures is enormous, stream out of the material[^eyal2023-terpenes]. One detail from the kinetics work is telling: run under vacuum, THCA converted to THC with _no CBN formation observed_, starve the reaction of oxygen and the onward degradation largely stops[^wang2016-decarb].
+Decarboxylation has two risks. If the time of heat is too short, acid that is not active stays. If the temperature is too high or the time is too long, the THC that the reaction made oxidizes more and changes to CBN. Also, the monoterpenes evaporate very fast at the temperature of decarboxylation, and they go from the material into the air[^eyal2023-terpenes].One result of the tests of the rate is important. In a vacuum, THCA changed to THC and the test found _no CBN_. When you remove the oxygen from the reaction, the degradation of the THC almost stops[^wang2016-decarb].
 
-> **WARN — Decarb never fully stops**
+> **WARN: Decarboxylation continues at room temperature**
 >
-> Room temperature is just a very slow oven. Flower in storage drifts from acid toward neutral over months. Which is why an old jar assays differently from the COA printed at harvest, before any potency was actually lost. If total THC is stable but the THCA:THC split has moved, you are watching decarb, not degradation.
+> At room temperature, decarboxylation continues at a very low rate. During some months of storage, the acids in the flower change slowly to neutral compounds. Thus the COA of a jar in long storage and the COA at harvest can show different values. The difference occurs before the potency decreases. When the ratio of THCA to THC changes but the total THC stays the same, the cause is decarboxylation. It is not degradation.
 
-## Major cannabinoids
+## Primary cannabinoids
 
-Six cannabinoids cover nearly every commercial conversation. For each: what it is, where it comes from, and, just as important, what it is _not_. Effects language here is deliberately conservative: _reported_ means human use reports and early studies, not established medicine.
+Six cannabinoids are the most important in flower products. For each cannabinoid, the entry below gives the definition (It is), the source, and the incorrect claims about it (_It is not_). This paper gives effects carefully. An effect that is a _report_ comes from reports of persons who use the compound, or from first tests. It is not a medical effect that sufficient tests show.
 
 **Δ9-THC / THCA**
 
-**What it is:** the principal intoxicating cannabinoid; in the plant, almost entirely present as THCA. The molecule the drug-type market prices.
-**What it is not:** a quality score. Two flowers at 20% total THC can be worlds apart in aroma, freshness and resin condition. Potency is one column of the COA, not the verdict.
+**It is:** the primary cannabinoid that causes intoxication. In the plant, it is almost all THCA. The price of THC-dominant flower is for the quantity of THC.
+ **It is not:** an indicator of quality. Two flowers with 20% total THC can be very different in aroma, time since harvest and condition of the resin. The potency is only one item of the COA, and it does not show all the quality of the flower.
 
 **CBD / CBDA**
 
-**What it is:** the major non-intoxicating cannabinoid; dominant in chemotype III plants and the hemp industry's backbone. Among the most-studied cannabinoids in medicine.
-**What it is not:** a licence for claims. What CBD does or does not treat is clinical territory; a grower's honest statement stops at the measured percentage.
+**It is:** a primary cannabinoid that does not cause intoxication. It is the dominant cannabinoid in plants of chemotype III, and it is the primary cannabinoid in hemp production. It is one of the cannabinoids with the most medical investigations.
+ **It is not:** a license for claims. A claim about the diseases for which CBD has an effect is the task of medical personnel. The information that a grower gives stops at the measured percentage.
 
 **CBG / CBGA**
 
-**What it is:** the neutral form of the mother acid. Most flower shows well under 1% because CBGA gets consumed making everything else; chemotype IV cultivars accumulate it because their downstream synthases are broken[^demeijer2009-chemotype5].
-**What it is not:** ‘the new THC’. It is non-intoxicating, and most claims around it are marketing running ahead of evidence.
+**It is:** the neutral compound of the mother acid. Most flower has much less than 1% CBG, because the plant uses CBGA to make all the other cannabinoids. Cultivars of chemotype IV have a high quantity of CBGA, because their synthases after CBGA do not operate correctly[^demeijer2009-chemotype5].
+ **It is not:** ‘the new THC’. It does not cause intoxication. Suppliers give most claims about it, and the data are not sufficient for them.
 
 **CBN**
 
-**What it is:** the oxidation product of THC. Heat, oxygen and time (not any enzyme) make it. So reliable a breakdown marker that the CBN:THC ratio is used to estimate the age of stored samples[^ross1997-cbn-age].
-**What it is not:** a proven sleep aid. The ‘sedating cannabinoid’ story is popular and thinly evidenced; on a COA, read CBN first as a freshness flag.
+**It is:** the oxidation product of THC. Heat, oxygen and time make CBN, and no enzyme makes it. CBN is a very good sign of degradation, thus persons use the ratio of CBN to THC to get an estimate of the storage time[^ross1997-cbn-age].
+ **It is not:** a product that causes sedation, with an effect that tests show. The claim that CBN is a ‘sedating cannabinoid’ is frequent, but the data for it are weak. On a COA, read CBN first as a sign of the storage time.
 
 **CBC / CBCA**
 
-**What it is:** the third branch off CBGA, via CBCA synthase; known since the 1960s and genuinely one of the majors on paper[^radwan2021-constituents]. Non-intoxicating; usually present at fractions of a percent.
-**What it is not:** something most growers will ever select for, labs often don't even report it separately.
+**It is:** the third branch from CBGA, through CBCA synthase. Persons found CBC in the 1960s, and in the data it is one of the primary cannabinoids[^radwan2021-constituents]. It does not cause intoxication. The quantity is usually a fraction of one percent.
+ **It is not:** a cannabinoid that most growers will select for. Labs frequently give no result for CBC.
 
 **THCV / THCVA**
 
-**What it is:** THC's short-tailed ‘propyl’ cousin from the varin line, first isolated in 1971; certain lineages carry meaningfully more[^radwan2021-constituents].
-**What it is not:** an established appetite or energy product. Reported effects are under active study; supply is scarce and mostly a breeding story for now.
+**It is:** a compound related to THC that has a short ‘propyl’ side chain, from the propyl series. Persons first found THCV in 1971. Some cultivars contain a much higher quantity[^radwan2021-constituents].
+ **It is not:** a product for appetite or energy with an effect that tests show. Investigations of the effects in reports are in progress. The supply is small, and at this time THCV is mostly a task of breeders.
 
-> **NOTE — The other 119**
+> **NOTE: The other 119**
 >
-> Most of the remaining catalogued cannabinoids are trace relatives, isomers, or artefacts of heat, light and analysis, real chemistry, marginal commerce[^radwan2021-constituents]. If a product sheet leads with an exotic letter combination, ask for the COA line that quantifies it.
+> Most of the other cannabinoids in the lists occur in trace quantities only. They are related compounds, isomers, or compounds that heat, light or the lab test makes. They are correct chemistry, but they have almost no effect on the price of flower[^radwan2021-constituents]. A data sheet for a product can give a cannabinoid that is not one of the primary cannabinoids. We recommend that you make sure that the COA gives the quantity of that cannabinoid.
 
-## Chemotypes I–V and inherited ratios
+## Chemotypes I–V and ratios from the parents
 
-Cannabinoid ratio is determined by a single gene location—like blood type in humans, one locus decides the outcome and you cannot change it after the seed. Cross a true THC plant with a true CBD plant, score the offspring, and the cannabinoid ratio behaves exactly like a textbook Mendelian trait: two possible alleles, predictable ratios in every generation. The classic genetic work resolved it to a single locus, **B**, with two codominant alleles: BT (functional THCA synthase) and BD (functional CBDA synthase). Two copies of BT gives a THC-dominant plant (chemotype I); two of BD gives CBD-dominant (chemotype III); one of each gives the mixed, roughly 1:1 chemotype II, and F₂ crosses segregate 1:2:1, exactly as Mendel would have it[^demeijer2003-chemotype].
+One locus (a position on the DNA) controls the cannabinoid ratio. The locus controls the ratio from the seed, and you cannot change the ratio after that. When you make a cross of a THC-dominant plant and a CBD-dominant plant and examine the offspring, the cannabinoid ratio is a Mendelian trait. There are two alleles, and you can calculate the ratios in the offspring.The investigations of genetics show that one locus, **B**, controls the ratio. The locus has two codominant alleles: BT (a THCA synthase that operates correctly) and BD (a CBDA synthase that operates correctly). A plant with two copies of BT is THC-dominant (chemotype I). A plant with two copies of BD is CBD-dominant (chemotype III). A plant with one copy of each is chemotype II, which has a mixed ratio of approximately 1:1. In F₂ crosses, the chemotypes occur in the ratio 1:2:1, which agrees with the Mendelian ratio[^demeijer2003-chemotype].
 
-> **Diagram.** The five chemotypes. I–III are the B-locus story: which synthase alleles the plant carries[^demeijer2003-chemotype]. Type IV accumulates CBGA because downstream conversion is crippled; type V, genuinely cannabinoid-free, traces to a recessive knockout (o/o) that also segregates 1:2:1[^demeijer2009-chemotype5].
+> **Diagram.** The five chemotypes. Types I to III are the result of the B locus, and thus of the synthase alleles of the plant[^demeijer2003-chemotype]. Type IV has a high quantity of CBGA, because the conversion after CBGA does not operate correctly. Type V has no cannabinoids. A recessive allele (o/o) stops the pathway. In crosses, this allele also gives the ratio 1:2:1[^demeijer2009-chemotype5].
 
-The outer chemotypes complete the map. **Type IV** plants carry non-functional downstream synthases, so the mother acid CBGA accumulates. This is where CBG flower comes from. **Type V** plants make no cannabinoids at all: crosses with normal plants showed a single recessive factor (allele _o_) that blocks the pathway outright, again segregating 1:2:1[^demeijer2009-chemotype5]. Chemotype V is a fibre-breeding and research curiosity, but it proves the point: every rung of the ratio ladder is genetics.
+The two other chemotypes complete the diagram. **Type IV** plants have synthases after CBGA that do not operate. Thus the quantity of the mother acid CBGA increases. The result is CBG flower.**Type V** plants make no cannabinoids. Crosses with usual plants showed that one recessive allele (_o_) stops the pathway fully. The ratio is again 1:2:1[^demeijer2009-chemotype5]. Chemotype V is only a plant for fiber breeding and for investigations. It shows that genetics controls each type of the ratio.
 
-The crucial nuance: the locus controls the **ratio**, not the **amount**. How much total cannabinoid a plant makes is polygenic and environment-sensitive, canopy health, light, maturity at harvest. So breeding and seed choice set the split; the grow sets the size of the pie[^demeijer2003-chemotype].
+An important limit: the locus controls the **ratio**, but it does not control the **quantity**. Many genes and the environment control the total quantity of cannabinoid that a plant makes. The environment includes the condition of the canopy, the light and the maturity at harvest. Thus the breeding and the selection of seed control the ratio. The cultivation controls the total quantity[^demeijer2003-chemotype].
 
-> **TIP — Verify chemotype before a cultivar earns bench space**
+> **TIP: Find the chemotype before you give bench space to a cultivar**
 >
-> Chemotype is testable from a young plant's leaf assay. You do not need to flower out a room to learn a ‘CBD line’ is really chemotype II and will run hot on THC. For a medicinal market that buys certified ratios, verify chemotype before a cultivar earns bench space.
+> A lab test of a leaf from a plant before the flowering stage gives the chemotype. You can find that a ‘CBD line’ is chemotype II before the room is in the flowering stage. A plant of chemotype II will have a high THC content. If the product is for medical use, the ratios must have a certificate. Make sure of the chemotype before you give bench space to a cultivar.
 
-## Terpene classes and volatility
+## Terpene groups and volatility
 
-Terpenes are built from five-carbon isoprene units, and the count is the classification: **monoterpenes** (two units, C10 — myrcene, limonene, pinene, terpinolene, linalool) and **sesquiterpenes** (three units, C15 — caryophyllene, humulene)[^booth2019-terpenes]. Cannabis makes both in the same trichomes as the cannabinoids, around 61 monoterpenes and 51 sesquiterpenes have been reported across the species[^radwan2021-constituents], and a dedicated family of terpene synthase genes sets which ones a cultivar leans on[^booth2019-terpenes].
+Each terpene contains isoprene units, and each unit has five carbons. **Monoterpenes** have two units (C10): myrcene, limonene, pinene, terpinolene and linalool. **Sesquiterpenes** have three units (C15): caryophyllene and humulene[^booth2019-terpenes]. The two types have a different number of units.Cannabis makes the two types in the same trichomes as the cannabinoids. Reports show approximately 61 monoterpenes and 51 sesquiterpenes in the species[^radwan2021-constituents]. A group of terpene synthase genes controls the terpenes that a cultivar makes in a high quantity[^booth2019-terpenes].
 
-The class difference that matters operationally is **volatility**—how readily a compound escapes into the air. Think of cold water versus a steaming mug of coffee: the coffee's aroma reaches you across the room because its molecules have enough energy to leave the liquid surface. Monoterpenes behave like the hot coffee; sesquiterpenes hold on roughly one hundred times harder; cannabinoids barely evaporate at all. Measured vapour pressures at 20 °C (68 °F) confirm this: monoterpenes run 1–4 Torr (α-pinene 3.57, β-pinene 2.18, myrcene 1.69, limonene 1.13) while the sesquiterpenes sit two orders of magnitude lower (β-caryophyllene 0.021, α-humulene 0.010). The cannabinoids are barely on the same chart: CBD at 6.3 × 10⁻⁶ and THC at 5.2 × 10⁻⁷ Torr[^eyal2023-terpenes].
+The primary difference of the groups for the grower is the **volatility**. Volatility is how easily a compound goes from a material into the air. A molecule goes into the air when it has sufficient energy to go from the surface of the liquid. Monoterpenes have a high volatility. Sesquiterpenes have a volatility approximately 100 times lower. Cannabinoids almost do not evaporate.The measured vapor pressures at 20 °C (68 °F) show this. The vapor pressures of monoterpenes are 1 to 4 Torr (α-pinene 3.57, β-pinene 2.18, myrcene 1.69 and limonene 1.13). The vapor pressures of sesquiterpenes are two orders of magnitude lower (β-caryophyllene 0.021 and α-humulene 0.010). The vapor pressures of cannabinoids are very much lower: CBD 6.3 × 10⁻⁶ Torr and THC 5.2 × 10⁻⁷ Torr[^eyal2023-terpenes].
 
-> **Diagram.** Seven orders of magnitude on one ladder. Monoterpenes evaporate at room temperature; sesquiterpenes hang on ~100× harder; cannabinoids effectively do not evaporate at all. Values measured at 20 °C (68 °F)[^eyal2023-terpenes]. The popular ‘THC boils at 157 °C (315 °F)’ charts are wrong, its true boiling point extrapolates past 400 °C (752 °F)[^eyal2023-terpenes].
+> **Diagram.** The values are in a range of seven orders of magnitude on one scale. Monoterpenes evaporate at room temperature. Sesquiterpenes have a volatility approximately 100× lower. Cannabinoids almost do not evaporate. The test measured the values at 20 °C (68 °F)[^eyal2023-terpenes]. Charts that show ‘THC boils at 157 °C (315 °F)’ are incorrect. The correct boiling point is more than 400 °C (752 °F). The test calculated this value from the data[^eyal2023-terpenes].
 
-This single chart explains the drying room. Track the volatile oil of the same buds fresh and after air-drying and storage, and the monoterpene share collapses from about **92% to 62%** over three months while the sesquiterpene share climbs to fill the gap[^ross1996-volatileoil][^radwan2021-constituents], the bright, sharp top notes leave first, and the profile drifts toward pepper and wood. Notably, drying changed the oil's _proportions_, not its ingredient list[^ross1996-volatileoil]: nothing new appears, the light fraction just walks away. Cold, slow, dark drying is not folklore; it is vapour-pressure management.
+This chart gives information about the drying room. A test measured the volatile oil of the same buds when they were new and after drying in air and storage. The monoterpene proportion of the oil decreased from approximately **92% to 62%** in three months, and the sesquiterpene proportion increased[^ross1996-volatileoil][^radwan2021-constituents].The part of the aroma from the monoterpenes evaporates first, and the profile changes to a pepper aroma and a wood aroma. The drying changed the _proportions_ of the oil, but it did not change the list of compounds in the oil[^ross1996-volatileoil]. No new compound occurs, and the light fraction decreases. Cold, slow drying in darkness is a method to control the vapor pressure.
 
-> **KEY — Flat aroma on a passing THC number means the terpenes have already left**
+> **KEY: A weak aroma with a good THC value shows that the terpenes decreased**
 >
-> Potency survives sloppy logistics; aroma does not. A sample can hold its THC number through a hot van and a month on a shelf while its monoterpenes quietly leave. When flower smells flat but assays fine, this ladder is what happened.
+> The potency stays when the conditions are not good, but the aroma does not. A sample can keep its THC value after some days in hot conditions and one month on a shelf, but its monoterpenes evaporate. When flower has a weak aroma but a good lab result, the cause is the volatility scale in the chart above.
 
-## Commercially relevant terpenes
+## Primary terpenes of flower products
 
-Commercial cannabis clusters into a small number of terpene profiles. Analysis of tens of thousands of US retail samples found products fall into three broad groups: high **caryophyllene + limonene**, high **myrcene + pinene**, and high **terpinolene + myrcene**[^smith2022-diversity], and that popular indica/sativa/hybrid labels map poorly onto the underlying chemistry[^smith2022-diversity]. Here are the eight names worth knowing; aroma is fact, effect folklore is flagged as folklore.
+Flower products have a small number of terpene profiles. A test of many thousand retail samples in the US found three primary groups of products. The first group has high **caryophyllene and limonene**. The second group has high **myrcene and pinene**. The third group has high **terpinolene and myrcene**[^smith2022-diversity]. The test also found that the labels indica, sativa and hybrid do not agree fully with the chemistry[^smith2022-diversity].This section gives eight terpenes that you must know. The data for aroma are facts. This paper marks the claims about effects as claims without data.
 
 **Myrcene**
 
-Monoterpene. Earthy, musky, ripe-mango. The most common heavyweight in commercial flower and an anchor of two of the three market clusters[^smith2022-diversity]. The ‘couch-lock terpene’ story is folklore. What is demonstrated is aroma and abundance, not sedation.
+Monoterpene. Aroma of soil, musk and mango. Flower products most frequently contain myrcene in a high quantity. Myrcene is a primary component of two of the three groups of products[^smith2022-diversity]. The claim that myrcene is a ‘couch-lock terpene’ has no data. The data show the aroma and the high quantity, not sedation.
 
 **Limonene**
 
-Monoterpene. Citrus peel. Pairs with caryophyllene in one major market cluster[^smith2022-diversity]. Bright, volatile (1.13 Torr at 20 °C (68 °F)[^eyal2023-terpenes]), a freshness indicator as much as a flavour.
+Monoterpene. Aroma of citrus peel. Limonene occurs with caryophyllene in one primary group of products[^smith2022-diversity]. Limonene evaporates easily: the vapor pressure is 1.13 Torr at 20 °C (68 °F)[^eyal2023-terpenes]. The quantity of limonene shows the storage time of the product, and limonene also gives flavor.
 
 **α- / β-Pinene**
 
-Monoterpenes. Pine needle, resin. The most volatile of the majors (α-pinene 3.57 Torr[^eyal2023-terpenes]), first out the door in a warm dry. Memory and alertness claims remain under study; treat as aroma.
+Monoterpenes. Aroma of pine and resin. Of the primary terpenes, pinene evaporates the most easily (α-pinene 3.57 Torr[^eyal2023-terpenes]), thus pinene is the first terpene to evaporate in drying with warm air. Investigations of the claims about memory and alertness are in progress. At this time, think of pinene as an aroma only.
 
 **Terpinolene**
 
-Monoterpene. Complex, floral, piney, a little petrol. Rarely dominant, but when it is, it defines the cultivar's whole nose; one of the three cluster signatures[^smith2022-diversity].
+Monoterpene. A mixed aroma: floral aroma, pine aroma and a small quantity of gasoline aroma. Terpinolene is not frequently the dominant terpene, but when it is, terpinolene gives the aroma of the cultivar. In one of the three groups of products, the terpinolene content is high[^smith2022-diversity].
 
 **β-Caryophyllene**
 
-Sesquiterpene, pepper, clove. The exception in all of terpene science: it is a genuine cannabinoid-receptor ligand, a selective CB2 agonist (Ki = 155 nM) with no CB1 binding, a ‘dietary cannabinoid’ also found in black pepper[^gertsch2008-caryophyllene]. CB2 is not the intoxication receptor, so this is pharmacology, not potency. Low volatility; survives drying well[^eyal2023-terpenes].
+Sesquiterpene with an aroma of pepper and clove. Caryophyllene is different from all other terpenes. It is an agonist of the CB2 receptor (Ki = 155 nM), and it does not attach to the CB1 receptor. It is a ‘dietary cannabinoid’ that is also in black pepper[^gertsch2008-caryophyllene]. The CB2 receptor does not cause intoxication, thus this effect is pharmacology and not potency. The volatility is low, and caryophyllene stays in the material during drying[^eyal2023-terpenes].
 
 **Linalool**
 
-Monoterpene alcohol. Lavender. Almost always minor in cannabis, loud when present. The relaxation story borrows heavily from lavender-oil research, not cannabis trials, under study, not established.
+Monoterpene alcohol. Aroma of lavender. The quantity in cannabis is almost always small, but the aroma is strong when linalool occurs. The data for the claim about relaxation are mostly from investigations of lavender oil and not from tests on cannabis. Investigations of the claim are in progress, and the data are not sufficient.
 
 **α-Humulene**
 
-Sesquiterpene, hops (it is the signature hop aroma compound), woody and bitter. Caryophyllene's constant companion and the least volatile major measured (0.010 Torr[^eyal2023-terpenes]).
+Sesquiterpene. Aroma of hops (humulene is the compound with the typical aroma of hops), wood aroma and bitterness. It frequently occurs with caryophyllene. Of the primary terpenes that the test measured, it has the lowest volatility (0.010 Torr[^eyal2023-terpenes]).
 
 **Ocimene**
 
-Monoterpene. Sweet, green, herbal. A frequent supporting player that spikes in some cultivars; like the other monoterpenes, easily lost to heat.
+Monoterpene. Sweet aroma, green aroma and herb aroma. Ocimene frequently occurs as a secondary terpene. In some cultivars, the quantity is high. It evaporates easily in heat, the same as the other monoterpenes.
 
-> **NOTE — Why caryophyllene gets a longer entry**
+> **NOTE: Caryophyllene and the receptor data**
 >
-> Every terpene gets marketed with receptor language; caryophyllene is the only one where the receptor claim is demonstrated, replicated pharmacology[^gertsch2008-caryophyllene]. Careful screening of the other majors found no direct CB1 or CB2 activity at plausible concentrations[^finlay2020-terpenoids]. One real example and many assumed ones, which is the entourage story in miniature.
+> Suppliers give receptor claims for all terpenes. Caryophyllene is the only terpene for which the data show the receptor effect, and other tests found the same result[^gertsch2008-caryophyllene]. A careful test of the other primary terpenes found no effect on the CB1 receptor or the CB2 receptor. The concentrations in the test can occur when a person uses the product[^finlay2020-terpenoids]. Thus there is one correct example and many examples without data. The entourage effect has the same structure.
 
-## Entourage effect: evidence and marketing claims
+## Entourage effect: data and claims
 
-The claim: cannabis compounds work better together than in isolation, terpenes and minor cannabinoids shape, soften or steer THC's effect. The most influential statement of it is Russo's 2011 review proposing phytocannabinoid–terpenoid synergy across a range of indications[^russo2011-entourage]. It is a genuinely interesting hypothesis paper, and its own language is conditional: synergy, _if proven_, would open new product pipelines[^russo2011-entourage].
+The claim is that a mixture of the compounds of cannabis has a stronger effect than one compound only. In this claim, terpenes and the small cannabinoids change the effect of THC. The most important paper about the claim is the paper of Russo from 2011. This paper gives the hypothesis of a synergy of cannabinoids and terpenoids for a range of diseases[^russo2011-entourage]. The paper is about a hypothesis. The paper gives a condition: a synergy, _if tests show it_, will make new products possible[^russo2011-entourage].
 
-What does the ledger actually show? On the demonstrated side: caryophyllene really is a CB2 agonist[^gertsch2008-caryophyllene], cannabis produces hundreds of co-occurring compounds[^radwan2021-constituents], and pharmacology has plenty of precedent for mixture effects. On the other side: when the five most common terpenes were tested directly, alone and combined with THC, at human CB1 and CB2 receptors, they showed **no receptor activity and no modulation of THC's signal**[^finlay2020-terpenoids]. And the sceptical reviews land hard: the term began as a ‘hypothetical afterthought’ in 1998 and has been rebranded and marketed far beyond its evidence, with the possibility of unfavourable interactions rarely mentioned[^cogan2020-entourage].
+The table below gives the data. The data show three facts. Caryophyllene is a CB2 agonist[^gertsch2008-caryophyllene]. Cannabis makes many hundred compounds that occur together[^radwan2021-constituents]. In pharmacology, there are many examples of effects of mixtures.One test gives the opposite result. It used the five terpenes that occur most frequently, with THC and without THC, on human CB1 and CB2 receptors. The test showed **no receptor effect and no change of the signal of THC**[^finlay2020-terpenoids].Other papers do not agree with the claim. These papers tell you that the term started as a ‘hypothetical afterthought’ in 1998. They tell you that suppliers at this time use the term in claims that show far more than the data show. They also tell you that persons do not frequently give information about bad effects of mixtures[^cogan2020-entourage].
 
-| Status | Claim | Where it stands |
+| Condition | Claim | Data at this time |
 | --- | --- | --- |
-| **Demonstrated** | β-caryophyllene activates CB2 (Ki 155 nM), no CB1 | Replicated receptor pharmacology[^gertsch2008-caryophyllene] |
-| **Demonstrated** | Cannabis is polypharmacy, hundreds of co-occurring compounds | Uncontroversial chemistry[^radwan2021-constituents] |
-| **Not demonstrated** | Common terpenes act at CB1/CB2 or modulate THC there | Direct tests were negative[^finlay2020-terpenoids] |
-| **Hypothesis** | Whole-flower effects differ meaningfully from isolate THC | Proposed, plausible, unproven at product level[^russo2011-entourage][^cogan2020-entourage] |
-| **Marketing** | ‘This terpene profile delivers this effect’ | No controlled evidence for any specific profile→effect map[^cogan2020-entourage] |
+| **Shown** | β-caryophyllene is an agonist of the CB2 receptor (Ki 155 nM), and it has no effect on the CB1 receptor | Other tests found the same receptor effect[^gertsch2008-caryophyllene] |
+| **Shown** | Cannabis contains many hundred compounds that occur together | Accepted chemistry[^radwan2021-constituents] |
+| **Not shown** | The most frequent terpenes have an effect at the CB1 receptor or the CB2 receptor, or they change the effect of THC there | Tests on the receptors found no effect[^finlay2020-terpenoids] |
+| **Hypothesis** | The effects of flower with all its compounds are very different from the effects of isolate THC | It is possible, but no test shows it for products[^russo2011-entourage][^cogan2020-entourage] |
+| **Supplier claim** | ‘This terpene profile causes this effect’ | No test with controls shows a connection of a profile to an effect[^cogan2020-entourage] |
 
-*The entourage ledger, honestly kept.*
+*The data about the entourage effect, in a correct table.*
 
-The honest reading is narrow: mixtures _might_ matter, one mechanism is real, the specific profile-to-effect promises on retail menus are unsupported, and terpene-CB-receptor mechanisms have been directly tested and found wanting. None of this makes terpenes worthless. They are the product's flavour, its freshness record, and its identity. That is value enough without borrowed pharmacology.
+The data show only these facts. It is _possible_ that mixtures have an effect. One mechanism is correct. The claims in the lists of suppliers that give an effect for each profile have no data. Tests of terpene mechanisms at the CB receptors did not find them.Terpenes continue to have value. They give the flavor of the product, they are a record of the storage time, and they show the cultivar of the product. This value is sufficient without pharmacology from other sources.
 
-> **KEY — How to sell chemistry without overselling it**
+> **KEY: Correct claims about chemistry**
 >
-> State what you measured: cannabinoid ratio, total terpenes, the top five by weight, harvest and test dates. Describe aroma in aroma words. Leave effects to the people licensed to discuss them. In a medicinal framework, that is a compliance requirement.
+> Give the data that you measured. These data are the cannabinoid ratio, the total terpenes, the five terpenes with the highest weight, and the dates of harvest and test. Use aroma terms to give the aroma. Do not give information about effects. Only persons with a license can do this. For medical use, compliance makes this necessary.
 
 ## Cannabinoid and terpene degradation
 
-Two decays run in parallel from the moment of harvest, and they have different physics. **Terpenes evaporate**, fastest when warm, monoterpenes first (previous sections). **Cannabinoids oxidise**. THC's endpoint is CBN, and the drivers are oxygen, heat, light and time. Neither decay reverses. Every storage decision is a rate control on these two processes.
+From the time of harvest, two changes decrease the quantity of the compounds at the same time, and they have different causes. **Terpenes evaporate**. They evaporate the fastest when the temperature is high, and monoterpenes evaporate first (previous sections).**Cannabinoids oxidize**. The end product of the oxidation of THC is CBN. The causes are oxygen, heat, light and time. Each of the two changes occurs in one direction only. Each decision about storage controls the rate of these two changes.
 
-> **Diagram.** The one-way road. Decarboxylation moves THCA into the active window; oxidation grinds THC on into CBN. Light is the odd driver out. It destroys THC fastest of all, but by routes that do not produce CBN[^fairbairn1976-stability]. Storage losses shown from the four-year room-temperature study[^ross1997-cbn-age].
+> **Diagram.** The changes occur in one direction only. Decarboxylation changes THCA to THC, which is active. Oxidation changes THC to CBN. Light is different from the other causes. Light decreases the THC faster than the other causes, but through mechanisms that do not make CBN[^fairbairn1976-stability]. The values for storage are from the four-year test at room temperature[^ross1997-cbn-age].
 
-The numbers are sobering. Flower stored at 20–22 °C (68–72 °F) in the dark lost on average **16.6% of its THC in the first year**, 26.8% by year two, 34.5% by year three and 41.4% by year four, and the CBN:THC ratio climbed so predictably that it is used forensically to estimate sample age[^ross1997-cbn-age].
+Flower in storage at 20 to 22 °C (68 to 72 °F) in darkness had a THC content that was, on average, **16.6% lower after the first year**. After year two, the THC content was 26.8% lower. After year three, it was 34.5% lower. After year four, it was 41.4% lower. The ratio of CBN to THC increased at a rate that you can calculate. Thus persons use the ratio to get an estimate of the storage time of a sample[^ross1997-cbn-age].
 
-> **Diagram.** Two-fifths of the potency gone in four years, in _good_ conditions (dark, room temperature). Warmth, light and air headspace all steepen this curve[^ross1997-cbn-age].
+> **Diagram.** In _good_ conditions (darkness and room temperature), the potency decreases by approximately two-fifths in four years. Heat, light and the air in the container each make the potency decrease faster[^ross1997-cbn-age].
 
-The classic stability work adds the ranking of enemies. Across two years of storage trials, **exposure to light, not even direct sun, was the greatest single factor** in cannabinoid loss; temperature up to 20 °C (68 °F) was insignificant by comparison; and air oxidation caused significant losses of its own[^fairbairn1976-stability]. The same work supplies the mechanism nuance in Figure 8: THC lost to light does _not_ reappear as CBN, while THC lost to air in the dark does, so a high-CBN sample was stored warm and airy, not necessarily bright[^fairbairn1976-stability]. Well-kept material, meanwhile, was ‘reasonably stable’ for one to two years in the dark at room temperature[^fairbairn1976-stability].
+Tests of storage for two years give the sequence of the causes. Of all causes, **light decreased the cannabinoids the most**, and the light was not necessarily bright sunlight. Compared with light, temperature up to 20 °C (68 °F) had no important effect. Oxidation by air also decreased the cannabinoids by an important quantity[^fairbairn1976-stability].The same tests give more information about the mechanisms (Figure 8). When light decreases the THC, the THC does _not_ become CBN. When oxidation by air in darkness decreases the THC, the THC does become CBN. Thus a sample with a high CBN content was in warm storage with air, and it was not necessarily in bright light[^fairbairn1976-stability].Material in good storage was ‘reasonably stable’ for one to two years in darkness at room temperature[^fairbairn1976-stability].
 
-Terpenes degrade in storage too, not only by evaporation but by **oxidation**, which changes their character rather than their quantity: oxidised monoterpene notes read as stale, piney-turned-solvent, old-spice-rack. The proportional drift measured in dried, stored buds (the 92% → 62% monoterpene slide) is both losses stacked together[^ross1996-volatileoil].
+Terpenes also decrease in storage, and not only by evaporation. They also decrease by **oxidation**. Oxidation changes the aroma of the terpenes and not their quantity. Oxidized monoterpenes have a stale aroma: the pine aroma changes to a solvent aroma. The change in the proportions in dried buds in storage (the monoterpene proportion from 92% to 62%) is the result of the two decreases together[^ross1996-volatileoil].
 
-- **Light:** the #1 killer, opaque containers, dark rooms, no display jars[^fairbairn1976-stability]
-- **Temperature:** cool always beats warm; every process on this page is temperature-driven
-- **Oxygen:** the CBN route, full containers, minimal headspace, sealed[^fairbairn1976-stability]
-- **Surface area:** whole buds keep their own cuticle armour; grinding multiplies every loss
-- **Time:** the one you cannot switch off, sell fresh, date everything[^ross1997-cbn-age]
+- **Light:** Cause number 1 (the largest effect). Use containers that do not transmit light. Keep rooms in darkness. Do not use jars for display[^fairbairn1976-stability].
+- **Temperature:** Cool storage is always better than warm storage. The temperature controls the rate of each change in this paper.
+- **Oxygen:** The cause of the change to CBN. Use full, sealed containers with a small volume of air[^fairbairn1976-stability].
+- **Surface area:** Buds that stay as buds keep the protection of the cuticle. Flower in small pieces has a larger surface area, and the compounds decrease faster.
+- **Time:** You cannot stop time. Supply the product when it is new, and write a date on each lot[^ross1997-cbn-age].
 
-> **WARN — A clear display jar is the worst storage environment you can choose**
+> **WARN: Do not use a clear jar to display flower**
 >
-> A clear jar under retail lighting combines the top killer (light), warmth from the fixtures, and a headspace refreshed at every opening. It is the perfect machine for converting flower into CBN and flat aroma, keep display stock separate from sale stock.
+> Do not keep flower in a clear jar that has lights above it. A clear jar lets light go in, and light is the cause with the largest effect. The lights also give heat, and new air goes into the jar each time you open it. As a result, the flower changes to CBN and the aroma becomes weak. Keep the stock for display in a different area from your other stock.
 
 ## Cultivation levers and their limits
 
-Ranked by how much they move the number, with the evidence state attached. Because this is where vendor claims and grow-forum folklore concentrate.
+The list gives the levers in the sequence of their effect on the numbers. It gives the condition of the data for each lever. Many claims of suppliers, and many claims of growers without data, are about these levers.
 
-1. **Genetics, dominant, and it isn't close.** Chemotype is Mendelian[^demeijer2003-chemotype]; the terpene palette is written in the cultivar's terpene synthase genes[^booth2019-terpenes]; commercial chemistry clusters by cultivar family[^smith2022-diversity]. If the plant cannot make it, nothing in your environment recipe will summon it.
-2. **Harvest timing.** Trichome populations mature, heads develop, profiles shift measurably as flowers ripen[^livingston2020-trichomes]. Picking on the calendar instead of the trichome forfeits chemistry you already paid to grow.
-3. **Plant health and light.** A full, healthy, well-lit canopy grows more trichome real estate. This is the honest path to ‘more terpenes’: more gland, not magic inputs.
-4. **Environment tweaks, small, contested, cultivar-dependent.** See the UV story below before spending money here.
-5. **Post-harvest, zero upside, unlimited downside.** Drying, curing and storage can only preserve (previous section). Rate-control, not production.
+1. **Genetics has the largest effect. The effect of each other lever is much smaller.** The chemotype is a Mendelian trait[^demeijer2003-chemotype]. The terpene synthase genes of the cultivar control the terpene profile[^booth2019-terpenes]. The chemistry of flower products is in groups, and each group agrees with a group of cultivars[^smith2022-diversity]. If the plant cannot make a compound, no setting of the environment will cause the plant to make it.
+2. **Time of harvest.** When the ripeness of the flowers increases, the maturity of the trichomes increases and the heads change. The profiles also change, and tests can measure the change[^livingston2020-trichomes]. If you harvest on a set date and not on the condition of the trichomes, you do not get all the compounds. The cultivation had a cost for these compounds.
+3. **The condition of the plant and the light.** A canopy that is full, in good condition and has good light has more surface area of trichomes. The correct method to get ‘more terpenes’ is more glands. Special inputs do not do this.
+4. **Changes of the environment.** The effect is small, the data do not agree, and the effect is different for different cultivars. Read the information about UV below before you accept the cost of equipment for this lever.
+5. **After harvest, the compounds cannot increase, but they can decrease by a large quantity.** Drying, curing and storage can only keep the compounds (previous section). They control rates and do not make compounds.
 
-The **UV myth** deserves its own paragraph because it sells hardware. The story, UV stress drives THC up as a sunscreen response, leans on small, decades-old studies. When it was finally tested properly in modern drug-type cultivars indoors, across a range of UV-B doses: **no increase in cannabinoid concentration, no increase in yield, and progressively more photosynthetic damage as dose rose**[^rodriguez2021-uvb]. That is one careful trial on two cultivars, not the final word for every genotype and spectrum, but the burden of proof now sits squarely on the UV vendor, not the sceptic.
+The **UV claim** is important, because suppliers of equipment use it. The claim is that UV stress causes the plant to make more THC as a protection. The claim uses the data of small tests from many years before. A correct test used current THC-dominant cultivars in a grow room and a range of UV-B doses. The test showed that **the concentration of cannabinoids did not increase and the yield did not increase**. It also showed that **the damage to photosynthesis increased when the dose increased**[^rodriguez2021-uvb].The test is one careful test on two cultivars. It is not the last result for each genotype and spectrum. But at this time the supplier of UV equipment must show test data for the claim.
 
-> **NOTE — Evidence state for environment claims, in one line**
+> **NOTE: The data for environment claims in short**
 >
-> Controlled trials keep finding the same shape: genetics and plant health dominate; environmental ‘stress hacks’ deliver small, inconsistent, cultivar-specific chemistry changes at real cost to yield. Any input promising +30% terpenes should come with a COA pair and a cultivar name, or it's a story.
+> Tests with controls give the same result each time. Genetics and the condition of the plant have the largest effect. ‘Stress hacks’ in the environment give small changes in chemistry. The changes are different in each test and different for each cultivar, and they decrease the yield. We recommend that each input with the claim of +30% terpenes has a COA pair and the name of a cultivar. If it does not, the claim has no data.
 
 ## Cannabinoids and terpenes on a COA
 
-A COA is this whole paper compressed into a table. The cannabinoid section reports **acid and neutral forms separately**, fresh, well-kept flower shows nearly everything as THCA with a sliver of THC. The two are combined with the decarb arithmetic from Figure 3:
+A COA is a table with the results of all the chemistry in this paper. The cannabinoid section of the COA gives **a result for each acid and a result for each neutral compound**. New flower in good storage has almost all the THC as THCA and a small quantity as THC. Use the number for decarboxylation from Figure 3 to get the total:
 
-- **total THC:** THC + 0.877 × THCA, the 0.877 is the mass surviving CO₂ loss
-- **total CBD:** CBD + 0.877 × CBDA, same factor, same reason
-- **Why 0.877:** molar masses: 314.5 (neutral) ÷ 358.5 (acid). Bookkeeping, not biology
-- **Dry-weight basis:** results are usually corrected for moisture, check which basis before comparing labs
+- **total THC:** THC + 0.877 × THCA. The number 0.877 is the fraction of the mass that stays after the molecule releases CO₂.
+- **total CBD:** CBD + 0.877 × CBDA. The number and the cause are the same.
+- **Source of the number 0.877:** The molar mass of the neutral compound (314.5) divided by the molar mass of the acid (358.5). The number is only chemistry and not biology.
+- **Dry weight:** Labs usually correct the results for moisture. Before you compare labs, find if each lab gives the results for dry weight.
 
-Read past the headline number and the COA becomes a **history of the sample**:
+When you read more than the primary number on the COA, the COA is a **record of the sample**:
 
-- **High THCA, low THC, negligible CBN**, fresh material, handled cool. What you want to see.
-- **Neutral fraction creeping up**, age or heat exposure; decarb has been running in storage (Section 5).
-- **CBN present and climbing**, the age stamp: warm, airy or simply old storage[^ross1997-cbn-age].
-- **Terpene total low, sesquiterpene-heavy for the cultivar**. The monoterpenes have left; hot dry or long shelf time[^ross1996-volatileoil].
-- **Chemotype mismatch**, a ‘CBD cultivar’ reporting substantial THC is chemotype II genetics doing exactly what its B locus says[^demeijer2003-chemotype].
+- **High THCA, low THC and almost no CBN:** the material is new, and the storage was cool. You want this result.
+- **The neutral fraction increases slowly:** the cause is storage time or heat. Decarboxylation occurred in storage (Section 5).
+- **CBN occurs and increases:** CBN is the sign of the storage time. The storage was warm, had air, or was only for a long time[^ross1997-cbn-age].
+- **The terpene total is low, and the quantity of sesquiterpenes is high for the cultivar.** The monoterpenes evaporated. The cause is hot drying or a long time on a shelf[^ross1996-volatileoil].
+- **Chemotype that does not agree:** a ‘CBD cultivar’ with a large THC content has genetics of chemotype II. The B locus causes this result[^demeijer2003-chemotype].
 
-Terpene panels typically report a percent-by-weight list with the top handful of compounds doing most of the total; profile shape is cultivar identity[^smith2022-diversity], and its condition is your process record. Sampling, uncertainty, and how labs vary is its own subject, covered in the lab testing paper in this series.
+A terpene panel typically gives a list of compounds in percent by weight. A small number of compounds make most of the total. The shape of the profile shows the cultivar[^smith2022-diversity], and the condition of the profile is the record of your procedures. The paper about lab testing in this group of papers gives information about sampling, uncertainty and the differences in the results of different labs.
 
-> **TIP — Use the COA pair trick**
+> **TIP: Use a COA pair**
 >
-> One COA describes a sample. Two COAs of the same lot, at packaging and months later, describe your storage. The deltas (THCA→THC drift, CBN appearance, monoterpene fade) are exactly the degradation chemistry of this paper, measured on your own product.
+> One COA gives the data of one sample. Two COAs of the same lot give the data about your storage: one COA at packaging and one COA some months after. The differences are that THCA changes to THC, CBN occurs, and monoterpenes evaporate. These differences are the chemistry of degradation in this paper, measured on your product.
 
-## Common causes of cannabinoid and terpene loss
+## Frequent causes of low cannabinoid and terpene content
 
-Every one of these is chemistry from earlier sections wearing work clothes. The COA tell is how you catch it after the fact; the fix is how you stop paying for it twice.
+Each cause in this section is a result of the chemistry in the previous sections. The sign in the COA shows the cause after the cause occurred. The correction makes sure that the cause does not occur again.
 
-**Harvested on the calendar**
+**Harvest on a set date**
 
-Trichome heads immature or past peak; profile you bred for never fully built[^livingston2020-trichomes].
-**Tell:** potency and terpene totals below cultivar's known ceiling.
-**Fix:** loupe the trichomes; harvest the plant, not the schedule.
+The maturity of the trichome heads is too low, or it is after the peak. The profile of the cultivar does not become full[^livingston2020-trichomes].
+ **Sign in the COA:** the totals of potency and terpenes are lower than the known maximum for the cultivar.
+ **Correction:** examine the trichomes with a loupe. Harvest on the condition of the plant, not on a set date.
 
-**Hot, fast dry**
+**Hot, fast drying**
 
-Monoterpenes stream off warm surfaces. Vapour pressure does the stealing[^eyal2023-terpenes][^ross1996-volatileoil].
-**Tell:** aroma flat; terpene panel light and sesquiterpene-skewed.
-**Fix:** cool, slow, dark dry; the room that feels too cold is about right.
+Monoterpenes evaporate from warm surfaces. The vapor pressure causes this[^eyal2023-terpenes][^ross1996-volatileoil].
+ **Sign in the COA:** the aroma is weak, the terpene total in the panel is low, and the proportion of sesquiterpenes is high.
+ **Correction:** dry the flower with cool air, slowly, and in darkness. A room that is cold to a person is approximately correct.
 
-**Light on stored product**
+**Light on product in storage**
 
-The single greatest cannabinoid killer in the storage literature[^fairbairn1976-stability].
-**Tell:** THC down without matching CBN rise.
-**Fix:** opaque packaging, dark storerooms, no window displays.
+In the papers about storage, light is the cause that decreases the cannabinoids the most[^fairbairn1976-stability].
+ **Sign in the COA:** the THC content decreases, but the CBN content does not increase by the same quantity.
+ **Correction:** use packaging that does not transmit light, keep the product in rooms in darkness, and do not keep product for display in windows.
 
-**Warm + oxygen + months**
+**Heat, oxygen and months**
 
-The classic CBN route: air oxidation in storage[^fairbairn1976-stability][^ross1997-cbn-age].
-**Tell:** CBN line appears and climbs; harsh flavour.
-**Fix:** cool store, full containers, minimal headspace, sell on date order.
+The usual cause of CBN is oxidation by air in storage[^fairbairn1976-stability][^ross1997-cbn-age].
+ **Sign in the COA:** the COA shows CBN, and the CBN content increases. The flavor is bad.
+ **Correction:** keep the storage cool. Use full containers with a small volume of air. Supply the stock in the sequence of the dates.
 
-**Rough handling & grinding**
+**Touch that is not careful, and small pieces of flower**
 
-Every tumble ruptures cuticle-walled heads; grinding multiplies surface area for both decays.
-**Tell:** shake assays higher than the buds it fell from; product loses nose within days.
-**Fix:** gentle trim settings, minimal transfers, grind at point of use only.
+Each movement of the flower in equipment breaks heads, because the wall of a head is a cuticle. Flower in small pieces has a larger surface area, thus evaporation and oxidation are faster.
+ **Sign in the COA:** the loose material that falls from the buds has a higher potency in a lab test than the buds. The aroma of the product decreases in some days.
+ **Correction:** use careful settings for trimming and do not move the product many times. Make the flower into small pieces only at the time that you use it.
 
-**Paying for stress myths**
+**Cost of claims about stress**
 
-UV rigs and stress protocols sold on decades-old data; the controlled trial found no cannabinoid gain and dose-dependent damage[^rodriguez2021-uvb].
-**Tell:** spend rises, COAs don't move.
-**Fix:** demand paired-COA evidence on your cultivar before buying photons you can't sell.
+The claims for UV equipment and stress procedures use only data from many years before. The test with controls found that the cannabinoids did not increase and that the damage increased when the dose increased[^rodriguez2021-uvb].
+ **Sign in the COA:** the cost increases, but the COAs do not change.
+ **Correction:** make sure that the supplier gives COA pairs for your cultivar. Do this before you accept the cost of equipment that gives light with no value in the product.
 
-## Quick reference
+## Reference tables
 
-| Compound | Acid parent | Origin | What it is | What it is not |
+| Compound | Parent acid | Source | It is | It is not |
 | --- | --- | --- | --- | --- |
-| Δ9-THC | THCA | THCA synthase ← CBGA | The intoxicating one; the priced number | A quality verdict on its own |
-| CBD | CBDA | CBDA synthase ← CBGA | Major non-intoxicating cannabinoid | A licence for medical claims |
-| CBG | CBGA | The pathway hub itself | Mother acid's neutral form; chemotype IV headline | ‘The new THC’ |
-| CBN | , (none) | Oxidised THC, no enzyme | An age & storage marker[^ross1997-cbn-age] | A biosynthesised or proven-sedative product |
-| CBC | CBCA | CBCA synthase ← CBGA | The quiet third branch; trace levels | Something most COAs even itemise |
-| THCV | THCVA | Propyl (varin) series | Short-tail THC cousin; lineage-dependent | An established functional ingredient |
+| Δ9-THC | THCA | THCA synthase ← CBGA | The cannabinoid that causes intoxication. The price is for the quantity of THC. | An indicator of quality |
+| CBD | CBDA | CBDA synthase ← CBGA | A primary cannabinoid that does not cause intoxication | A license for medical claims |
+| CBG | CBGA | The middle of the pathway | The neutral compound of the mother acid. The primary cannabinoid of chemotype IV. | ‘The new THC’ |
+| CBN | None | Oxidized THC. No enzyme makes it. | A sign of the storage time[^ross1997-cbn-age] | A product of biosynthesis, or a cause of sedation that tests show |
+| CBC | CBCA | CBCA synthase ← CBGA | The small third branch. Trace quantities. | A compound that most COAs give a result for |
+| THCV | THCVA | Propyl series (‘varin’) | A compound related to THC with a short side chain. The quantity is different for different cultivars. | A compound with an effect that the data show |
 
-*The six cannabinoids that matter commercially.*
+*The six cannabinoids that are important in flower products.*
 
-| Terpene | Class | Aroma | VP @ 20 °C (Torr) | Survives drying? |
+| Terpene | Group | Aroma | Vapor pressure at 20 °C (Torr) | Stays in the material during drying |
 | --- | --- | --- | --- | --- |
-| α-Pinene | Mono | Pine, resin | 3.57[^eyal2023-terpenes] | Worst, first to leave |
-| β-Pinene | Mono | Pine, herbal | 2.18[^eyal2023-terpenes] | Poor |
-| Myrcene | Mono | Earthy, mango | 1.69[^eyal2023-terpenes] | Poor |
-| Limonene | Mono | Citrus peel | 1.13[^eyal2023-terpenes] | Poor |
-| Terpinolene | Mono | Floral-pine, petrol | — | Poor (monoterpene) |
-| Ocimene | Mono | Sweet, green | — | Poor (monoterpene) |
-| Linalool | Mono (alcohol) | Lavender | — | Moderate |
-| β-Caryophyllene | Sesqui | Pepper, clove | 0.021[^eyal2023-terpenes] | Good, plus the CB2 story[^gertsch2008-caryophyllene] |
-| α-Humulene | Sesqui | Hops, woody | 0.010[^eyal2023-terpenes] | Best of the majors |
+| α-Pinene | Monoterpene | Pine, resin | 3.57[^eyal2023-terpenes] | Very low. It evaporates first. |
+| β-Pinene | Monoterpene | Pine, herb aroma | 2.18[^eyal2023-terpenes] | Low |
+| Myrcene | Monoterpene | Soil, mango | 1.69[^eyal2023-terpenes] | Low |
+| Limonene | Monoterpene | Citrus peel | 1.13[^eyal2023-terpenes] | Low |
+| Terpinolene | Monoterpene | Floral aroma, pine, gasoline aroma | — | Low (monoterpene) |
+| Ocimene | Monoterpene | Sweet aroma, green aroma | — | Low (monoterpene) |
+| Linalool | Monoterpene (alcohol) | Lavender | — | Average |
+| β-Caryophyllene | Sesquiterpene | Pepper, clove | 0.021[^eyal2023-terpenes] | High. It also has the CB2 receptor effect[^gertsch2008-caryophyllene] |
+| α-Humulene | Sesquiterpene | Hops, wood aroma | 0.010[^eyal2023-terpenes] | The highest of the primary terpenes |
 
-*The big eight (plus β-pinene). Dashes: no measured value in the cited vapour-pressure study.*
+*The eight primary terpenes (and β-pinene). A cell without a value shows that the test of vapor pressure that this paper uses has no measured value.*
 
-| Number to remember | Value | Why |
+| Important number | Value | Information |
 | --- | --- | --- |
-| Decarb mass factor | 0.877 | total THC = THC + 0.877 × THCA on every COA |
-| THCA half-life at 110 °C | ≈ 6.3 min | and CBDA/CBGA take roughly double[^wang2016-decarb] |
-| Monoterpene share, fresh → stored | ≈ 92% → 62% | three months of drying + storage[^ross1996-volatileoil] |
-| THC loss, year one at 20–22 °C (68–72 °F) | ≈ 17% | dark storage; light makes it worse[^ross1997-cbn-age][^fairbairn1976-stability] |
-| Caryophyllene CB2 Ki | 155 nM | the one demonstrated terpene–receptor link[^gertsch2008-caryophyllene] |
-| Chemotype segregation | 1:2:1 | single locus, codominant alleles[^demeijer2003-chemotype] |
+| Mass number for decarboxylation | 0.877 | Total THC = THC + 0.877 × THCA on each COA |
+| THCA half-life at 110 °C | ≈ 6.3 min | The half-life of CBDA and CBGA is approximately two times longer[^wang2016-decarb] |
+| Monoterpene proportion, new product → product in storage | ≈ 92% → 62% | Three months of drying and storage[^ross1996-volatileoil] |
+| The THC content decreases in year one at 20–22 °C (68–72 °F) | ≈ 17% | Storage in darkness. Light makes the potency decrease faster[^ross1997-cbn-age][^fairbairn1976-stability] |
+| Caryophyllene CB2 Ki | 155 nM | The only connection of a terpene to a receptor that tests show[^gertsch2008-caryophyllene] |
+| Ratio of chemotypes in the offspring | 1:2:1 | One locus with codominant alleles[^demeijer2003-chemotype] |
 
-*Six numbers that carry most of this paper.*
+*Six numbers that contain most of the information in this paper.*
 
-## Cannabinoid and terpene control principles
+## Control of cannabinoids and terpenes
 
-> **Diagram.** The whole paper in one row. Left of harvest you can build chemistry; right of harvest you can only protect it.
+> **Diagram.** All of this paper in one row. Before harvest (on the left), you can make compounds. After harvest (on the right), you can only keep them.
 
-> **KEY — One principle: build once, then slow the decay**
+> **KEY: The plant makes the compounds one time, then you slow the degradation**
 >
-> **The plant builds it once; everything afterwards is subtraction.** Genetics write the menu, trichomes cook and store it as fragile acids and volatile oils, and from harvest onward you are managing two decay rates, evaporation for flavour, oxidation for potency. Nothing in a bottle adds chemistry back. Cool, dark, gentle, sealed, fresh: that is the entire post-harvest playbook, and the COA is the honest record of every choice above.
+> **The plant makes the compounds one time. After that, the quantity can only decrease.** The genetics set the profile. The trichomes make the compounds and keep them as acids that change easily and oils that evaporate easily. From the time of harvest, you control two rates: evaporation for the flavor and oxidation for the potency.
+> No product can add the compounds again. The complete procedure after harvest has five parts: cool storage, darkness, sealed containers, careful movement of the product, and a short storage time. The COA is the correct record of each decision above.
 
-Where to next in this series: **lab testing & COAs** for how these numbers are actually measured (and mismeasured); **harvest, dry, trim & cure** for the process that spends or saves the terpenes; and **hash & rosin pressing** for what happens when you collect the trichome heads and take the chemistry somewhere else.
+Read these papers after this paper: **lab testing and COAs**, **harvest, dry, trim and cure**, and **hash and rosin pressing**. The paper about lab testing and COAs tells you how labs measure these numbers, and how labs measure them incorrectly. The paper about harvest, dry, trim and cure tells you the procedure that decreases or keeps the terpenes. The paper about hash and rosin pressing tells you the result when you collect the trichome heads and use the compounds in a different product.
 
 ## References
 
-[^radwan2021-constituents]: Radwan MM, Chandra S, Gul S, ElSohly MA (2021). Cannabinoids, phenolics, terpenes and alkaloids of cannabis. Molecules 26(9):2774. (125 cannabinoids and 120 terpenes among >500 reported constituents.) https://pmc.ncbi.nlm.nih.gov/articles/PMC8125862/ (peer-reviewed)
-[^livingston2020-trichomes]: Livingston SJ, Quilichini TD, Booth JK, et al. (2020). Cannabis glandular trichomes alter morphology and metabolite content during flower maturation. The Plant Journal 101(1):37-56. https://onlinelibrary.wiley.com/doi/10.1111/tpj.14516 (peer-reviewed)
-[^gulck2020-biosynthesis]: Gülck T, Møller BL (2020). Phytocannabinoids: origins and biosynthesis. Trends in Plant Science 25(10):985-1004. https://www.cell.com/trends/plant-science/fulltext/S1360-1385(20)30187-4 (peer-reviewed)
-[^fellermeier1998-cbga]: Fellermeier M, Zenk MH (1998). Prenylation of olivetolate by a hemp transferase yields cannabigerolic acid, the precursor of tetrahydrocannabinol. FEBS Letters 427(2):283-285. https://febs.onlinelibrary.wiley.com/doi/10.1016/S0014-5793(98)00450-5 (peer-reviewed)
-[^wang2016-decarb]: Wang M, Wang Y-H, Avula B, et al. (2016). Decarboxylation study of acidic cannabinoids: a novel approach using ultra-high-performance supercritical fluid chromatography/photodiode array-mass spectrometry. Cannabis and Cannabinoid Research 1(1):262-271. https://pmc.ncbi.nlm.nih.gov/articles/PMC5549281/ (peer-reviewed)
-[^ross1997-cbn-age]: Ross SA, ElSohly MA (1997). CBN and Δ9-THC concentration ratio as an indicator of the age of stored marijuana samples. Bulletin on Narcotics (UNODC) 49(1-2):139-147. https://www.unodc.org/unodc/en/data-and-analysis/bulletin/bulletin_1997-01-01_1_page008.html (peer-reviewed)
-[^demeijer2003-chemotype]: de Meijer EPM, Bagatta M, Carboni A, et al. (2003). The inheritance of chemical phenotype in Cannabis sativa L. Genetics 163(1):335-346. https://pmc.ncbi.nlm.nih.gov/articles/PMC1462421/ (peer-reviewed)
-[^demeijer2009-chemotype5]: de Meijer EPM, Hammond KM, Sutton A (2009). The inheritance of chemical phenotype in Cannabis sativa L. (IV): cannabinoid-free plants. Euphytica 168:95-112. https://link.springer.com/article/10.1007/s10681-009-9894-7 (peer-reviewed)
-[^booth2019-terpenes]: Booth JK, Bohlmann J (2019). Terpenes in Cannabis sativa — from plant genome to humans. Plant Science 284:67-72. https://www.sciencedirect.com/science/article/pii/S0168945219301190 (peer-reviewed)
-[^eyal2023-terpenes]: Eyal AM, Berneman Zeitouni D, Tal D, et al. (2023). Vapor pressure, vaping, and corrections to misconceptions related to medical cannabis' active pharmaceutical ingredients' physical properties and compositions. Cannabis and Cannabinoid Research 8(3):414-425. https://pmc.ncbi.nlm.nih.gov/articles/PMC10249740/ (peer-reviewed)
-[^ross1996-volatileoil]: Ross SA, ElSohly MA (1996). The volatile oil composition of fresh and air-dried buds of Cannabis sativa. Journal of Natural Products 59(1):49-51. https://pubs.acs.org/doi/10.1021/np960004a (peer-reviewed)
-[^gertsch2008-caryophyllene]: Gertsch J, Leonti M, Raduner S, et al. (2008). Beta-caryophyllene is a dietary cannabinoid. PNAS 105(26):9099-9104. (Selective CB2 agonist, Ki = 155 ± 4 nM; no CB1 binding.) https://pmc.ncbi.nlm.nih.gov/articles/PMC2449371/ (peer-reviewed)
-[^smith2022-diversity]: Smith CJ, Vergara D, Keegan B, Jikomes N (2022). The phytochemical diversity of commercial cannabis in the United States. PLoS ONE 17(5):e0267498. https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0267498 (peer-reviewed)
-[^russo2011-entourage]: Russo EB (2011). Taming THC: potential cannabis synergy and phytocannabinoid-terpenoid entourage effects. British Journal of Pharmacology 163(7):1344-1364. https://pmc.ncbi.nlm.nih.gov/articles/PMC3165946/ (peer-reviewed)
-[^cogan2020-entourage]: Cogan PS (2020). The ‘entourage effect’ or ‘hodge-podge hashish’: the questionable rebranding, marketing, and expectations of cannabis polypharmacy. Expert Review of Clinical Pharmacology 13(8):835-845. https://www.tandfonline.com/doi/abs/10.1080/17512433.2020.1721281 (peer-reviewed)
-[^finlay2020-terpenoids]: Finlay DB, Sircombe KJ, Nimick M, Jones C, Glass M (2020). Terpenoids from cannabis do not mediate an entourage effect by acting at cannabinoid receptors. Frontiers in Pharmacology 11:359. https://www.frontiersin.org/journals/pharmacology/articles/10.3389/fphar.2020.00359/full (peer-reviewed)
-[^fairbairn1976-stability]: Fairbairn JW, Liebmann JA, Rowan MG (1976). The stability of cannabis and its preparations on storage. Journal of Pharmacy and Pharmacology 28(1):1-7. https://academic.oup.com/jpp/article-abstract/28/1/1/6196321 (peer-reviewed)
-[^rodriguez2021-uvb]: Rodriguez-Morrison V, Llewellyn D, Zheng Y (2021). Cannabis inflorescence yield and cannabinoid concentration are not increased with exposure to short-wavelength ultraviolet-B radiation. Frontiers in Plant Science 12:725078. https://pmc.ncbi.nlm.nih.gov/articles/PMC8593374/ (peer-reviewed)
+[^radwan2021-constituents]: Radwan MM, Chandra S, Gul S, ElSohly MA (2021). Cannabinoids, phenolics, terpenes and alkaloids of cannabis. Molecules 26(9):2774. (125 cannabinoids and 120 terpenes among >500 reported constituents.) https://pmc.ncbi.nlm.nih.gov/articles/PMC8125862/ (source with peer review)
+[^livingston2020-trichomes]: Livingston SJ, Quilichini TD, Booth JK, et al. (2020). Cannabis glandular trichomes alter morphology and metabolite content during flower maturation. The Plant Journal 101(1):37-56. https://onlinelibrary.wiley.com/doi/10.1111/tpj.14516 (source with peer review)
+[^gulck2020-biosynthesis]: Gülck T, Møller BL (2020). Phytocannabinoids: origins and biosynthesis. Trends in Plant Science 25(10):985-1004. https://www.cell.com/trends/plant-science/fulltext/S1360-1385(20)30187-4 (source with peer review)
+[^fellermeier1998-cbga]: Fellermeier M, Zenk MH (1998). Prenylation of olivetolate by a hemp transferase yields cannabigerolic acid, the precursor of tetrahydrocannabinol. FEBS Letters 427(2):283-285. https://febs.onlinelibrary.wiley.com/doi/10.1016/S0014-5793(98)00450-5 (source with peer review)
+[^wang2016-decarb]: Wang M, Wang Y-H, Avula B, et al. (2016). Decarboxylation study of acidic cannabinoids: a novel approach using ultra-high-performance supercritical fluid chromatography/photodiode array-mass spectrometry. Cannabis and Cannabinoid Research 1(1):262-271. https://pmc.ncbi.nlm.nih.gov/articles/PMC5549281/ (source with peer review)
+[^ross1997-cbn-age]: Ross SA, ElSohly MA (1997). CBN and Δ9-THC concentration ratio as an indicator of the age of stored marijuana samples. Bulletin on Narcotics (UNODC) 49(1-2):139-147. https://www.unodc.org/unodc/en/data-and-analysis/bulletin/bulletin_1997-01-01_1_page008.html (source with peer review)
+[^demeijer2003-chemotype]: de Meijer EPM, Bagatta M, Carboni A, et al. (2003). The inheritance of chemical phenotype in Cannabis sativa L. Genetics 163(1):335-346. https://pmc.ncbi.nlm.nih.gov/articles/PMC1462421/ (source with peer review)
+[^demeijer2009-chemotype5]: de Meijer EPM, Hammond KM, Sutton A (2009). The inheritance of chemical phenotype in Cannabis sativa L. (IV): cannabinoid-free plants. Euphytica 168:95-112. https://link.springer.com/article/10.1007/s10681-009-9894-7 (source with peer review)
+[^booth2019-terpenes]: Booth JK, Bohlmann J (2019). Terpenes in Cannabis sativa — from plant genome to humans. Plant Science 284:67-72. https://www.sciencedirect.com/science/article/pii/S0168945219301190 (source with peer review)
+[^eyal2023-terpenes]: Eyal AM, Berneman Zeitouni D, Tal D, et al. (2023). Vapor pressure, vaping, and corrections to misconceptions related to medical cannabis' active pharmaceutical ingredients' physical properties and compositions. Cannabis and Cannabinoid Research 8(3):414-425. https://pmc.ncbi.nlm.nih.gov/articles/PMC10249740/ (source with peer review)
+[^ross1996-volatileoil]: Ross SA, ElSohly MA (1996). The volatile oil composition of fresh and air-dried buds of Cannabis sativa. Journal of Natural Products 59(1):49-51. https://pubs.acs.org/doi/10.1021/np960004a (source with peer review)
+[^gertsch2008-caryophyllene]: Gertsch J, Leonti M, Raduner S, et al. (2008). Beta-caryophyllene is a dietary cannabinoid. PNAS 105(26):9099-9104. (Selective CB2 agonist, Ki = 155 ± 4 nM; no CB1 binding.) https://pmc.ncbi.nlm.nih.gov/articles/PMC2449371/ (source with peer review)
+[^smith2022-diversity]: Smith CJ, Vergara D, Keegan B, Jikomes N (2022). The phytochemical diversity of commercial cannabis in the United States. PLoS ONE 17(5):e0267498. https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0267498 (source with peer review)
+[^russo2011-entourage]: Russo EB (2011). Taming THC: potential cannabis synergy and phytocannabinoid-terpenoid entourage effects. British Journal of Pharmacology 163(7):1344-1364. https://pmc.ncbi.nlm.nih.gov/articles/PMC3165946/ (source with peer review)
+[^cogan2020-entourage]: Cogan PS (2020). The ‘entourage effect’ or ‘hodge-podge hashish’: the questionable rebranding, marketing, and expectations of cannabis polypharmacy. Expert Review of Clinical Pharmacology 13(8):835-845. https://www.tandfonline.com/doi/abs/10.1080/17512433.2020.1721281 (source with peer review)
+[^finlay2020-terpenoids]: Finlay DB, Sircombe KJ, Nimick M, Jones C, Glass M (2020). Terpenoids from cannabis do not mediate an entourage effect by acting at cannabinoid receptors. Frontiers in Pharmacology 11:359. https://www.frontiersin.org/journals/pharmacology/articles/10.3389/fphar.2020.00359/full (source with peer review)
+[^fairbairn1976-stability]: Fairbairn JW, Liebmann JA, Rowan MG (1976). The stability of cannabis and its preparations on storage. Journal of Pharmacy and Pharmacology 28(1):1-7. https://academic.oup.com/jpp/article-abstract/28/1/1/6196321 (source with peer review)
+[^rodriguez2021-uvb]: Rodriguez-Morrison V, Llewellyn D, Zheng Y (2021). Cannabis inflorescence yield and cannabinoid concentration are not increased with exposure to short-wavelength ultraviolet-B radiation. Frontiers in Plant Science 12:725078. https://pmc.ncbi.nlm.nih.gov/articles/PMC8593374/ (source with peer review)

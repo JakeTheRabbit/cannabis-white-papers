@@ -1,10 +1,10 @@
 ---
 slug: "pppe"
 title: "PPPE: plant and personal protective equipment"
-eyebrow: "Plant health · PPE & biosecurity"
-summary: "Coveralls, hairnets, gloves, and shoe covers do two jobs at once: they protect the worker from hazards, and they keep the worker's particles, microbes, and pests off the crop. People are the primary contamination source in any clean production space. This paper covers how much contamination a person actually sheds, the minimum PPE for each production area, the room-by-room kit, and the gowning and hand hygiene procedures that stop contamination from crossing the clean/dirty line."
+eyebrow: "Plant health · PPE and biosecurity"
+summary: "Coveralls, hairnets, gloves and shoe covers give the worker protection from hazards, and they keep contamination from the worker away from the crop. The contamination is the particles, the microbes and the pests of the worker. A person is the primary source of contamination in each clean production space. This paper gives information about the quantity of contamination that a person releases. It also gives the minimum PPE for each production area and the equipment for each room. It gives the procedures for gowning and hand hygiene that stop contamination at the demarcation line between clean and dirty areas."
 track: "Plant health"
-read_time: "~17 min read"
+read_time: "~17 min to read"
 diagrams: "9 diagrams"
 related: ["ipm-sop", "mould-risk", "tissue-culture", "daily-checks"]
 url: "https://www.growlabs.nz/wiki/pppe.html"
@@ -19,197 +19,197 @@ refs: [{"id": "cleanroom-humans-source", "n": 1, "cite": "Cleanroom contaminatio
 
 # PPPE: plant and personal protective equipment
 
-_Plant health · PPE & biosecurity · ~17 min read_
+_Plant health · PPE and biosecurity · ~17 min to read_
 
-> Coveralls, hairnets, gloves, and shoe covers do two jobs at once: they protect the worker from hazards, and they keep the worker's particles, microbes, and pests off the crop. People are the primary contamination source in any clean production space. This paper covers how much contamination a person actually sheds, the minimum PPE for each production area, the room-by-room kit, and the gowning and hand hygiene procedures that stop contamination from crossing the clean/dirty line.
+> Coveralls, hairnets, gloves and shoe covers give the worker protection from hazards, and they keep contamination from the worker away from the crop. The contamination is the particles, the microbes and the pests of the worker. A person is the primary source of contamination in each clean production space. This paper gives information about the quantity of contamination that a person releases. It also gives the minimum PPE for each production area and the equipment for each room. It gives the procedures for gowning and hand hygiene that stop contamination at the demarcation line between clean and dirty areas.
 
 ## Purpose and scope
 
-> **NOTE — Jurisdiction**
+> **NOTE: Jurisdiction**
 >
-> Jurisdiction note: PPE duties and HSWA wording below are NZ-oriented; other jurisdictions differ.
+> The PPE duties and the terms of the Health and Safety at Work Act (HSWA) below are for NZ. Other jurisdictions are different.
 
-PPE in a grow is not really about you. In most rooms the gear is there to protect the **plant** from you: from the skin you shed, the spores on your jacket, the mites on your shoes and the viroid on your hands. The same coverall that keeps your clothes clean also keeps your contamination off the crop. That is why we call it PPPE, plant _and_ personal protective equipment.
+In a grow room, PPE is not only for you. In most rooms, the equipment gives protection to the **plant** from you. The contamination is the skin flakes that you release. It is also the spores on your jacket, the mites on your shoes and the viroid on your hands. The same coverall that keeps your clothing clean also keeps your contamination away from the crop. Thus the name is PPPE: plant _and_ personal protective equipment.
 
-People are typically the dominant contamination source in any clean space (exact share varies by facility design)[^cleanroom-humans-source]. You cannot stop a human shedding. You can only put a barrier around the human and move them through the building in a controlled way.
+Persons are typically the primary source of contamination in each clean space. The percentage is different in different facilities.[^cleanroom-humans-source] A person cannot stop the particles that the person releases. You can only put a barrier around the person and control the movement of the person through the building.
 
-> **KEY — One shared glove can infect a crop**
+> **KEY: A glove that you use for more than one plant can cause infection in a crop**
 >
-> One contaminated mother plant or one shared glove can spread Hop Latent Viroid to an entire crop, and under experimental conditions infection of linked cuttings can approach complete cohort infection within weeks of propagation from infected stock[^hlvd-transmission-2025]. The spread is mechanical, on tools, cuttings and hands, not airborne. Gloves-per-plant and gowning are not box-ticking; they are crop insurance.
+> One contaminated mother plant, or one glove that you use for more than one plant, can cause Hop Latent Viroid infection in the full crop. In tests, the infection of related cuttings can include almost all the cuttings of the group in some weeks after propagation from infected stock.[^hlvd-transmission-2025] The movement of the infection is mechanical: it is on tools, cuttings and hands. It is not in the air. A change of gloves for each plant and the gowning procedure are not only checks for compliance. They give protection to the crop.
 
-> **NOTE — Two different reasons to gown**
+> **NOTE: Two functions of gowning**
 >
-> In cultivation, dry and trim, PPE protects the product. In **extraction** it flips to protecting the worker (solvents, fire), and in the vault it is mostly security. Same word, different purpose, different kit. This paper is about the biosecurity side, with the legal duties that sit under all of it.
+> In cultivation, in drying and in trimming, PPE gives protection to the product. In **extraction**, the function changes: PPE gives protection to the worker (solvents, fire). In the vault, PPE is mostly for security. The name is the same, but the function and the equipment are different. This paper is about biosecurity. It also gives the legal duties that apply to all of these areas.
 
 ## Definitions
 
-**PPE / PPPE** — Personal protective equipment. Here, plant _and_ personal: the same gear protects the crop from the person and the person from hazards.
+**PPE / PPPE**: PPE is personal protective equipment. PPPE is plant _and_ personal protective equipment. The same equipment gives the crop protection from the person, and it gives the person protection from hazards.
 
-**Gowning / de-gowning** — Putting on (donning) and taking off (doffing) protective clothing in a defined order, across a clean/dirty line, so contamination never crosses.
+**Gowning / de-gowning**: Gowning is the procedure to put on protective clothing (donning). De-gowning is the procedure to remove protective clothing (doffing). Do these procedures in a specified sequence, across the demarcation line between the clean area and the dirty area. Thus the contamination does not go across the demarcation line.
 
-**Fomite** — An object that carries and transfers microbes, a phone, a pen, a door handle, a tool. Hands move contamination from fomite to crop.
+**Fomite**: An object with microbes on it, for example a phone, a pen, a door handle or a tool. The microbes can move from the object to your hands. Hands move contamination from the fomite to the crop.
 
-**Bioaerosol** — Airborne particles carrying living things, skin flakes with bacteria, fungal spores, droplets from speech or a toilet flush.
+**Bioaerosol**: Particles in the air that contain viable organisms. Examples are skin flakes with bacteria, fungal spores, and drops of liquid from a person who speaks or when a person flushes a toilet.
 
-**Cross-contamination** — Moving contamination from a dirty area or item to a clean one, for example walking from flower back into propagation without re-gowning.
+**Cross-contamination**: The movement of contamination from a dirty area or item to a clean area or item. For example, a person goes from the room for the flowering stage to the propagation room and does not do the gowning procedure again.
 
-**Hierarchy of controls** — The legal order for managing risk: eliminate, substitute, isolate, engineer, administrate, and only then PPE as the last line[^worksafe-grwm].
+**Hierarchy of controls**: The legal sequence of the controls for risk: elimination, substitution, isolation, engineering controls, administrative controls, and then PPE as the last control.[^worksafe-grwm]
 
-**PCBU** — Person Conducting a Business or Undertaking, the NZ legal term for the duty-holding business (your employer) under the Health and Safety at Work Act[^hswa-2015].
+**PCBU**: Person Conducting a Business or Undertaking. PCBU is the NZ legal term for the business that has the duty (your employer) in HSWA.[^hswa-2015]
 
-**Reasonably practicable** — The legal standard for how far you must go: weigh the risk against the effort and cost of controlling it. High-consequence, cheap-to-control risks must be controlled.
+**Reasonably practicable**: The legal limit for the quantity of work that you must do. Compare the risk with the work and the cost of its control. You must control a risk when its effect is large and its cost of control is low.
 
-## Personnel contamination risks
+## Risks of contamination from personnel
 
-A person working in a cultivation room is the dominant contamination source in the space—generating particles, microbes, and pests continuously just by being present.
+A person in a cultivation room is the primary source of contamination in the space. The person releases particles, microbes and pests all the time, only because the person is in the room.
 
-> **Diagram.** People are the number-one contamination source in a clean space[^cleanroom-humans-source]. You shed roughly ten million skin flakes a day, about a tenth carrying live bacteria[^cdc-skin-squames], and an occupied room gains tens of millions of bacteria and millions of fungal spores per person per hour[^human-microbial-cloud].
+> **Diagram.** Persons are the primary source of contamination in a clean space.[^cleanroom-humans-source] A person releases approximately ten million skin flakes each day, and approximately a tenth of them have viable bacteria on them.[^cdc-skin-squames] A room with persons receives tens of millions of bacteria and millions of fungal spores for each person each hour.[^human-microbial-cloud]
 
-- **Movement is the multiplier.** A gowned person emits about 100,000 particles a minute standing still, a million walking, and up to five million working fast[^cleanroom-humans-source]. Slow, calm movement is itself a control.
-- **Your phone is a high-touch fomite.** Phones carry skin and environmental flora, and they ride to your face and back to your hands all day[^phone-fomite].
-- **Your shoes are a pest and spore taxi.** Soles carry live pathogens and fungal spores, and walking re-launches settled organisms into the air[^shoe-floor-contamination]. Mites and powdery mildew arrive on clothing and footwear.
-- **The toilet throws a plume.** A flush lofts aerosols to about 1.5 m (4.9 ft) within seconds, viable for minutes to hours; a closed lid cuts it sharply[^toilet-plume].
+- **Movement increases the quantity of particles.** A person in a gown releases approximately 100,000 particles each minute when the person does not move. The person releases approximately a million when the person walks, and a maximum of five million when the person works fast.[^cleanroom-humans-source] Slow movement is a control.
+- **Your phone is a fomite that you touch frequently.** A phone has skin microbes and microbes from the environment on it. The phone goes to your head and back to your hands all day.[^phone-fomite]
+- **Your shoes move pests and spores.** The soles have viable pathogens and fungal spores on them. When you walk, the organisms on the floor go into the air again.[^shoe-floor-contamination] Mites and powdery mildew come into the room on clothing and footwear.
+- **A toilet makes a plume of aerosol.** When a person flushes the toilet, aerosol goes to a height of approximately 1.5 m (4.9 ft) in seconds. The aerosol stays viable for minutes to hours. A closed lid decreases the aerosol by a large quantity.[^toilet-plume]
 
-> **NOTE — Hands are the main bridge, and hygiene is not a cure**
+> **NOTE: Hands move contamination, and hygiene does not remove all of it**
 >
-> Washing helps but does not sterilise: alcohol rubs often achieve ~2–3 log reductions (~99–99.9%) under test conditions; plain soap and water remove soil and many organisms without sterilising hands[^hand-hygiene-logreduction]. That is why hand hygiene is a frequent loop at every transition, and why gloves and barriers carry the rest.
+> A hand wash helps, but it does not sterilize the hands. In test conditions, an alcohol rub frequently gives approximately 2 to 3 log reductions (approximately 99 to 99.9%). Soap and water remove soil and many organisms, but they do not sterilize the hands.[^hand-hygiene-logreduction] Thus you do hand hygiene frequently, at each change of area. Gloves and barriers give the remaining protection.
 
-## Minimum PPE requirements
+## Minimum necessary PPE
 
-Before any room-specific extras, there is a non-negotiable baseline for entering any production or handling area. It mirrors food-GMP personnel rules[^fda-21cfr117-personnel] and WHO good agricultural and collection practice[^who-gacp-2003].
+You must use a baseline of PPE to go into each production area or handling area. Add the items for a specified room after this baseline. The baseline agrees with the personnel regulations for food GMP[^fda-21cfr117-personnel] and with the WHO good agricultural and collection practice[^who-gacp-2003].
 
-1. **Clean, dedicated outer garment** put on at entry (gown, smock, scrubs or coverall), never your street clothes.
-2. **Hair fully restrained**, bouffant or hairnet, plus a beard cover for facial hair.
-3. **Single-use nitrile gloves**, intact, changed when damaged or contaminated.
-4. **Controlled footwear**, dedicated room shoes or covers, never the boots you wore in from the car park.
-5. **Hand hygiene on entry** and after any contamination or absence.
-6. **No personal items**, phone, jewellery, watch, makeup, left in a locker outside.
+1. **Clean outer clothing for this area only**, which you put on at the entrance (gown, smock, scrubs or coverall). Do not use your street clothes.
+2. **Hair and beard cover.** Put a bouffant or a hairnet on all of your hair. Put a beard cover on facial hair.
+3. **Single-use nitrile gloves.** Use gloves that have no damage. Replace a glove when it has damage or contamination.
+4. **Footwear for this area only**: room shoes or shoe covers. Do not use the boots that you wore in the parking area.
+5. **Hand hygiene.** Do hand hygiene at the entrance, after contamination and after you are away from the area.
+6. **No personal items.** Keep your phone, jewelry, watch and makeup in a locker before you go into the area.
 
-> **NOTE — Strip before you gown**
+> **NOTE: Remove personal items before the gowning procedure**
 >
-> Remove jewellery, watches and makeup and store your phone before you put anything on. They cannot be cleaned, they shed particles, and a ring or watch hides bacteria a glove then traps against the crop.
+> Remove jewelry, watches and makeup before you put on clothing. Keep your phone in a locker. You cannot clean these items, and they release particles. A ring or a watch holds bacteria between the item and the skin. A glove then holds the bacteria against the crop.
 
-## Room-specific PPE requirements
+## PPE for each room
 
-PPE intensity tracks the value and vulnerability of what is in the room, not a single suit everywhere. Strictest where the genetics live and where product is open and headed to a patient.
+The grade of PPE is different for each room, because the value of the contents and the risk to the contents are different. Do not use the same PPE in all rooms. Use the highest grade where the genetics are, and where the product is open and goes to a patient.
 
-> **Diagram.** PPE escalates from the vault up to the tissue-culture lab. Mother and propagation rooms get the strictest biosecurity because one infected plant propagates to the whole crop[^hlvd-transmission-2025].
+> **Diagram.** The grade of PPE increases from the vault to the tissue-culture lab. Mother rooms and propagation rooms have the highest biosecurity, because each plant that you propagate from one infected plant has the infection.[^hlvd-transmission-2025]
 
-| Zone | PPE level | Key points |
+| Zone | PPE grade | Primary items |
 | --- | --- | --- |
-| Tissue-culture lab | Aseptic / ISO-5 | Scrub to elbow, sterile gloves, lab coat, work in a laminar-flow hood, no jewellery |
-| Mother / propagation | Strictest biosecurity | Full gown, fresh gloves per plant, dedicated tools, serviced first in the day |
-| Dry / cure | Cleanroom-grade | Product is exposed and microbial spec is a release gate |
-| Veg / flower | Standard gown | Gown, hairnet, gloves, dedicated room footwear, sticky mat at the door |
-| Trim / pack | Food-contact grade | Hairnet, beard net, gloves, smock, frequent glove changes |
-| Vault / store | Minimal (security) | Gloves to keep product clean; controls are mostly security |
+| Tissue-culture lab | Aseptic / ISO-5 | Scrub the arms to the elbows. Use sterile gloves and a lab coat. Work in a laminar-flow hood. Do not use jewelry. |
+| Mother / propagation | Highest biosecurity | Full gown. New gloves for each plant. Tools for this room only. Work in this room first in the day. |
+| Dry / cure | Cleanroom grade | The product is open, and the microbial specification is a release gate. |
+| Vegetative stage / flowering stage | Standard gown | Gown, hairnet, gloves, footwear for this room only, sticky mat at the door |
+| Trim / packaging | Food-contact grade | Hairnet, beard net, gloves, smock. Change the gloves frequently. |
+| Vault / storage | Minimum (security) | Gloves to keep the product clean. The controls are mostly for security. |
 
-*Order people through the day clean-to-dirty: propagation and mothers first, before anyone has been in flower or post-harvest.*
+*Persons must go through the rooms in sequence, from clean to dirty. They go to propagation rooms and mother rooms first, before they go to the rooms for the flowering stage or to post-harvest areas.*
 
-> **NOTE — Visitors gown to the same standard**
+> **NOTE: Visitors must use the same PPE as personnel**
 >
-> A contractor or visitor is the same contamination risk as staff, often worse (they were just somewhere else). Gown them to the room's standard or keep them out of mother, propagation, tissue culture and dry rooms entirely, and log every entry.
+> A contractor or a visitor is the same contamination risk as personnel. Frequently the risk is larger, because the contractor or visitor was in a different area before. Make sure that they put on the PPE that is necessary for the room. Or do not let them go into mother rooms, propagation rooms, tissue-culture rooms and dry rooms. Make a record of each time that a person goes in.
 
 ## Gowning procedure
 
-Order matters. You gown top-to-bottom so that particles shed while dressing fall onto areas you have not covered yet, and you cross a physical clean/dirty line as you go[^gmp-gowning-procedure].
+The sequence is important. Put on the PPE from the top to the bottom. Thus the particles that you release when you put on the clothing fall on parts of the body that have no clothing at this time. At the same time, you go across the demarcation line between the dirty area and the clean area.[^gmp-gowning-procedure]
 
-> **Diagram.** Donning order: strip personal items, hair and beard first, then mask and eyewear, inner gloves, coverall and hood, boot covers as you step over the line, outer gloves over the cuffs, sanitise, enter[^gmp-gowning-procedure].
+> **Diagram.** Do the gowning in this sequence. Remove personal items, then put on the hair cover and the beard cover. Put on the mask and the eyewear, then the inner gloves, then the coverall and the hood. Put on the boot covers when you go across the demarcation line. Put the outer gloves on the cuffs of the coverall. Sanitize your hands and go in.[^gmp-gowning-procedure]
 
-> **KEY — De-gown in reverse, dirtiest first**
+> **KEY: Do the de-gowning in the opposite sequence, with the dirtiest item first**
 >
-> Coming out, remove the most contaminated items first and do not touch their outer surfaces: outer gloves, boot covers (stepping back over the line), coverall rolled inside-out, eyewear, hood, mask by its loops, hairnet, inner gloves, then wash. Single-use items go in the right bin in the anteroom.
+> When you go out, remove the most contaminated items first. Do not touch the outer surfaces of these items. The sequence is: outer gloves, boot covers (when you go back across the demarcation line), coverall (remove it inside-out), eyewear, hood, mask (touch only the loops), hairnet and inner gloves. Then wash your hands. Put the single-use items in the correct bin in the anteroom.
 
 ## Hands and gloves
 
-Hands are the main transfer bridge, so hand hygiene is the most repeated action in the building. Do it on entry, before clean or aseptic work, after waste or any contamination, after any absence, and again on re-entry[^who-hand-hygiene].
+Hands move most of the contamination from one area to a different area. Thus hand hygiene is the task that you do most frequently in the building. Do hand hygiene at the entrance, and before clean work or aseptic work. Do it also after waste or contamination, after you are away from the area, and when you go in again.[^who-hand-hygiene]
 
-> **Diagram.** The technique covers every surface (palms, between fingers, backs, thumbs, fingertips and nails). Soap and water for 40 to 60 seconds when hands are soiled; an alcohol rub of at least 60% alcohol for 20 to 30 seconds otherwise[^who-hand-hygiene].
+> **Diagram.** The method is for all surfaces of the hand: palms, the spaces between the fingers, the back of the hand, thumbs, fingertips and nails. When the hands are dirty, use soap and water for 40 to 60 seconds. When the hands are not dirty, use an alcohol rub with a minimum of 60% alcohol for 20 to 30 seconds.[^who-hand-hygiene]
 
-> **Diagram.** Gloves are the most contaminated item, so they come off first and inside-out, glove-to-glove then skin-to-skin, so bare skin never touches the dirty exterior[^cdc-glove-removal].
+> **Diagram.** The gloves are the most contaminated item. Remove them first, inside-out. First, a glove touches a glove. Then, skin touches skin. Thus bare skin does not touch the dirty outer surface.[^cdc-glove-removal]
 
-> **WARN — Gloves do not replace washing**
+> **WARN: Wash your hands also when you use gloves**
 >
-> A glove is a barrier, not a clean hand. Wash before you don and immediately after you doff[^cdc-glove-removal], and change gloves between plants in mother and propagation and any time they touch a non-clean surface. A dirty glove spreads viroid just as well as a dirty hand.
+> A glove is a barrier. It is not a clean hand. Wash your hands before you put on gloves and immediately after you remove them.[^cdc-glove-removal] Change the gloves between plants in mother rooms and propagation rooms. Also change the gloves when they touch a surface that is not clean. A dirty glove moves viroid from one plant to a different plant as much as a dirty hand.
 
-## Common non-compliance scenarios
+## Frequent errors of compliance
 
 #### Phones and personal items
 
-No phones, earbuds, jewellery, watches or makeup in production or clean areas. A phone is a fomite you hold to your face and cannot clean[^phone-fomite]. Lockers outside the gowning room, everything in before you gown.
+Do not put phones, earbuds, jewelry, watches or makeup into production areas or clean areas. A phone is a fomite that you hold to your head, and you cannot clean it.[^phone-fomite] Put all of these items in lockers before you go into the gowning room.
 
 #### The toilet
 
-Toilets must not open into production. A flush throws a viable bioaerosol over 1 m (3 ft) in seconds[^toilet-plume], so anyone back from the restroom is a bridge until they have washed and re-gowned.
+A toilet must not have a door into a production area. When a person flushes a toilet, viable bioaerosol goes to a height of more than 1 m (3 ft) in seconds.[^toilet-plume] Thus a person who comes back from the toilet can move contamination into the area. The risk continues until the person washes the hands and does the gowning procedure again.
 
-> **Diagram.** De-gown before the toilet, close the lid before flushing, wash, then wash and sanitise again on return and re-gown with fresh garments before re-entering[^toilet-plume].
+> **Diagram.** Do the de-gowning procedure before you go to the toilet. Close the lid before you flush. Wash your hands. When you come back, wash and sanitize your hands again. Then put on clean clothing before you go into the area again.[^toilet-plume]
 
-#### Eating and breaks
+#### Food, drink and break areas
 
-No eating, drinking, gum or vaping in production. De-gown to leave for a break area, then wash and re-gown on the way back.
+Do not eat, drink, use chewing gum or use an electronic cigarette in a production area. Before you go to a break area, do the de-gowning procedure. When you come back, wash your hands and do the gowning procedure again.
 
 #### Footwear and the floor
 
-> **Diagram.** Layered threshold controls: a sticky mat captures most particles, a footbath disinfects, and a dedicated room boot or shoe cover goes on as you step over the demarcation line[^shoe-floor-contamination].
+> **Diagram.** The controls at the threshold have layers. A sticky mat removes most of the particles from the shoes. A footbath disinfects the shoes. You put on the boots or shoe covers for the room when you go across the demarcation line.[^shoe-floor-contamination]
 
-#### Cross-contamination: one-way flow
+#### Cross-contamination: flow in one direction
 
-> **Diagram.** Move people and clean materials clean → dirty; waste and used PPE only dirty → exit. Never back. Backtracking means re-gowning, and a dirty-side hand or sleeve must never touch the clean side.
+> **Diagram.** Move persons and clean materials from the clean area to the dirty area. Move waste and used PPE only from the dirty area to the exit. Do not go back. If a person goes back, the person must do the gowning procedure again. A hand or a sleeve from the dirty side must not touch the clean side.
 
-## Responsibilities under HSWA 2015
+## Duties in HSWA 2015
 
-In New Zealand, PPE and hygiene are not just good practice, they are legal duties under the Health and Safety at Work Act 2015[^hswa-2015], overseen by WorkSafe[^worksafe-grwm].
+In New Zealand, PPE and hygiene are legal duties in the Health and Safety at Work Act 2015 (HSWA). They are not only good procedures.[^hswa-2015] WorkSafe monitors the compliance with these duties.[^worksafe-grwm]
 
-> **Diagram.** The law requires you to control risk by the hierarchy of controls and treat PPE as the _last_ line, after eliminating, substituting, isolating, engineering and administrative controls[^worksafe-grwm].
+> **Diagram.** The regulations tell you to control risk with the hierarchy of controls. You must use PPE as the _last_ control, after elimination, substitution, isolation, engineering controls and administrative controls.[^worksafe-grwm]
 
 **The business (PCBU) must**
 
-- Ensure worker health and safety so far as is reasonably practicable (s36).
-- Apply higher controls before relying on PPE.
-- **Provide PPE and free replacements, and never charge workers for it** (s27).
-- Give information, training, supervision and adequate facilities.
+- Make sure of the health and safety of workers, as far as is reasonably practicable (s36).
+- Apply the higher controls before you use PPE.
+- **Supply PPE and replacements. Make sure that the workers have no cost for PPE** (s27).
+- Give information, training, supervision and sufficient facilities.
 
 **Workers must**
 
-- Take reasonable care for their own and others' safety (s45).
-- Follow reasonable instructions, wear the required PPE, follow gowning and hygiene SOPs.
-- Not misuse or interfere with anything provided for safety.
-- Visitors carry the same take-care and follow-instruction duties.
+- Use reasonable care for their safety and for the safety of other persons (s45).
+- Obey the reasonable instructions. Put on the necessary PPE. Obey the SOPs for gowning and hygiene.
+- Do not use safety items incorrectly. Do not change them or cause damage to them.
+- Visitors have the same duties: use reasonable care and obey the instructions.
 
-> **KEY — PPE is the last control, not the first**
+> **KEY: PPE is the last control, not the first**
 >
-> PPE supplements higher controls, it does not replace them[^worksafe-grwm]. Design the rooms, airflow and flow to remove the hazard first; the gown is what catches what is left. And the business pays for it, charging a worker for required PPE is an offence[^hswa-2015].
+> PPE comes after the higher controls and gives more protection. You must continue to use the higher controls.[^worksafe-grwm] First, make the rooms, the airflow and the flow correct to remove the hazard. The gown holds the contamination that stays. The business has the cost of the PPE. It is an offense to give a worker the cost of PPE that is necessary.[^hswa-2015]
 
-## Quick-reference requirements
+## Reference list
 
-- **Baseline, every room:** gown, hairnet + beard net, gloves, room shoes, wash, no personal items
-- **Gown order:** hair -> mask -> eyewear -> inner gloves -> coverall -> hood -> boot covers -> outer gloves
-- **De-gown:** reverse, dirtiest first, then wash
-- **Hand wash:** soap 40-60s, or alcohol rub 20-30s (>=60%)
-- **Gloves:** off first, inside-out; never replace washing; per-plant in propagation
-- **Phones:** banned in clean areas, lockers outside
-- **Toilet:** de-gown, lid down, wash, wash + sanitise on return, re-gown
-- **Flow:** clean → dirty for people/materials; dirty → exit for waste, re-gown to backtrack
-- **Law (NZ):** PCBU provides PPE free (s27); PPE is the last control
+- **Baseline for each room:** Gown, hairnet and beard net, gloves, room shoes, wash the hands, no personal items
+- **Gowning sequence:** Hair, then mask, then eyewear, then inner gloves, then coverall, then hood, then boot covers, then outer gloves
+- **De-gowning:** Opposite sequence, dirtiest item first, then wash the hands
+- **Hand wash:** Soap: 40 to 60 seconds. Alcohol rub: 20 to 30 seconds (minimum 60% alcohol).
+- **Gloves:** Remove first, inside-out. Wash your hands also when you use gloves. In propagation, new gloves for each plant.
+- **Phones:** Do not put phones into clean areas. Use lockers before the gowning room.
+- **Toilet:** Do the de-gowning procedure. Close the lid. Wash the hands. When you come back, wash and sanitize the hands. Do the gowning procedure again.
+- **Flow:** Persons and materials: from clean to dirty. Waste: from dirty to the exit. To go back, do the gowning procedure again.
+- **Regulations (NZ):** The PCBU supplies PPE at no cost to workers (s27). PPE is the last control.
 
-> **KEY — The mindset that makes it stick**
+> **KEY: Think about the plant first**
 >
-> Frame every glove and gown as plant protection first. A human cannot help shedding millions of particles an hour. The suit, the order, the flow and the wash are simply how we keep that off a crop that a single contaminated touch can ruin.
+> Think of each glove and each gown as protection for the plant first. A person releases millions of particles each hour. The person cannot stop the particles. The suit, the sequence, the flow and the hand wash keep these particles away from a crop. One contaminated touch can cause very bad damage to a crop.
 
 ## References
 
-[^cleanroom-humans-source]: Cleanroom contamination analyses: personnel are typically the dominant contamination source (industry figures often cite a large majority; exact share varies by facility); a gowned worker emits ~100,000 particles/min at rest, ~1,000,000 walking, up to ~5,000,000 in active work. https://www.precgroup.com/70-percent-of-cleanroom-contamination/ (industry/manufacturer source)
-[^cdc-skin-squames]: Noble / CDC Emerging Infectious Diseases: humans disseminate ~10^7 skin squames per day, of which roughly 10% carry viable bacteria. https://wwwnc.cdc.gov/eid/article/7/2/70-0225_article (peer-reviewed)
-[^human-microbial-cloud]: Human microbial-emissions research: an occupied space gains roughly 37 million bacterial and 7 million fungal genome copies per person per hour above the unoccupied baseline. https://pmc.ncbi.nlm.nih.gov/articles/PMC7950481/ (peer-reviewed)
-[^phone-fomite]: Mobile phones as fomites: high-touch devices carry skin and environmental flora (methods and comparisons vary across studies), isolates including S. aureus, E. coli and Candida. https://pmc.ncbi.nlm.nih.gov/articles/PMC3939586/ (peer-reviewed)
-[^shoe-floor-contamination]: Shoe-sole and floor contamination: soles carry MRSA, C. difficile, E. coli and other organisms; walking re-disperses settled organisms, contributing a meaningful share of airborne CFU. https://www.infectioncontroltoday.com/view/shoe-sole-and-floor-contamination-new-consideration-environmental-hygiene (industry/manufacturer source)
-[^hlvd-transmission-2025]: Mechanical transmission and management of Hop Latent Viroid (HLVd) in cannabis: spread via contaminated tools and cuttings; under experimental conditions linked cuttings can approach complete infection within weeks; controls include fresh gloves per plant, tool sterilisation and footbaths. Plants (MDPI) 2025, 14:830. https://www.mdpi.com/2223-7747/14/5/830 (peer-reviewed)
-[^hand-hygiene-logreduction]: Comparative hand-hygiene efficacy: alcohol-based handrubs often achieve ~2–3 log reductions of transient flora under test conditions (~99–99.9%); soap and water remove soil and many organisms but neither sterilises hands. (Note: 1 log ≈ 90%, not ~58–83%.) https://www.ncbi.nlm.nih.gov/pmc/articles/PMC117885/ (peer-reviewed)
-[^toilet-plume]: Toilet-flush bioaerosol ('toilet plume'): a flush lofts aerosols to ~1.5 m within seconds; particles remain viable for minutes to hours, and a closed lid produces markedly less aerosol. https://pmc.ncbi.nlm.nih.gov/articles/PMC9732293/ (peer-reviewed)
-[^fda-21cfr117-personnel]: US FDA. 21 CFR 117.10, Personnel (current good manufacturing practice for food): clean outer garments, personal cleanliness, hand washing, hair restraints, glove integrity. https://www.ecfr.gov/current/title-21/chapter-I/subchapter-B/part-117/subpart-B (industry/manufacturer source)
-[^who-gacp-2003]: World Health Organization (2003). WHO guidelines on good agricultural and collection practices (GACP) for medicinal plants. https://www.who.int/publications/i/item/9241546271 (industry/manufacturer source)
-[^who-hand-hygiene]: World Health Organization. Hand hygiene: the Five Moments and recommended technique (soap-and-water 40-60s; alcohol-based handrub 20-30s, ≥60% alcohol). https://www.who.int/teams/integrated-health-services/infection-prevention-control/hand-hygiene (industry/manufacturer source)
-[^cdc-glove-removal]: US CDC. How to safely remove gloves: glove-to-glove then skin-to-skin, peeling inside-out so bare skin never contacts the contaminated exterior; hand hygiene before and after. https://www.cdc.gov/ebola/media/pdfs/2024/05/poster-how-to-remove-gloves.pdf (industry/manufacturer source)
-[^gmp-gowning-procedure]: GMP / cleanroom gowning and de-gowning procedures: top-to-bottom donning order across a clean/dirty demarcation bench, reverse dirtiest-first removal. https://www.pharmanow.live/pharma-manufacturing/cleanroom-gowning-procedures-guide (industry/manufacturer source)
-[^hswa-2015]: Health and Safety at Work Act 2015 (NZ): s36 PCBU primary duty of care; s45 worker duties; s27 PCBU must provide what is required (including PPE) and must not charge workers for it. https://www.legislation.govt.nz/act/public/2015/0070/latest/DLM5976894.html (industry/manufacturer source)
-[^worksafe-grwm]: WorkSafe New Zealand and the Health and Safety at Work (General Risk and Workplace Management) Regulations 2016, reg 6: control risk by the hierarchy of controls, with PPE as the last resort. https://www.worksafe.govt.nz/managing-health-and-safety/getting-started/introduction-hswa-special-guide/ (industry/manufacturer source)
+[^cleanroom-humans-source]: Cleanroom contamination analyses: personnel are typically the dominant contamination source (industry figures often cite a large majority; exact share varies by facility); a gowned worker emits ~100,000 particles/min at rest, ~1,000,000 walking, up to ~5,000,000 in active work. https://www.precgroup.com/70-percent-of-cleanroom-contamination/ (source from a manufacturer or industry)
+[^cdc-skin-squames]: Noble / CDC Emerging Infectious Diseases: humans disseminate ~10^7 skin squames per day, of which roughly 10% carry viable bacteria. https://wwwnc.cdc.gov/eid/article/7/2/70-0225_article (source with peer review)
+[^human-microbial-cloud]: Human microbial-emissions research: an occupied space gains roughly 37 million bacterial and 7 million fungal genome copies per person per hour above the unoccupied baseline. https://pmc.ncbi.nlm.nih.gov/articles/PMC7950481/ (source with peer review)
+[^phone-fomite]: Mobile phones as fomites: high-touch devices carry skin and environmental flora (methods and comparisons vary across studies), isolates including S. aureus, E. coli and Candida. https://pmc.ncbi.nlm.nih.gov/articles/PMC3939586/ (source with peer review)
+[^shoe-floor-contamination]: Shoe-sole and floor contamination: soles carry MRSA, C. difficile, E. coli and other organisms; walking re-disperses settled organisms, contributing a meaningful share of airborne CFU. https://www.infectioncontroltoday.com/view/shoe-sole-and-floor-contamination-new-consideration-environmental-hygiene (source from a manufacturer or industry)
+[^hlvd-transmission-2025]: Mechanical transmission and management of Hop Latent Viroid (HLVd) in cannabis: spread via contaminated tools and cuttings; under experimental conditions linked cuttings can approach complete infection within weeks; controls include fresh gloves per plant, tool sterilisation and footbaths. Plants (MDPI) 2025, 14:830. https://www.mdpi.com/2223-7747/14/5/830 (source with peer review)
+[^hand-hygiene-logreduction]: Comparative hand-hygiene efficacy: alcohol-based handrubs often achieve ~2–3 log reductions of transient flora under test conditions (~99–99.9%); soap and water remove soil and many organisms but neither sterilises hands. (Note: 1 log ≈ 90%, not ~58–83%.) https://www.ncbi.nlm.nih.gov/pmc/articles/PMC117885/ (source with peer review)
+[^toilet-plume]: Toilet-flush bioaerosol ('toilet plume'): a flush lofts aerosols to ~1.5 m within seconds; particles remain viable for minutes to hours, and a closed lid produces markedly less aerosol. https://pmc.ncbi.nlm.nih.gov/articles/PMC9732293/ (source with peer review)
+[^fda-21cfr117-personnel]: US FDA. 21 CFR 117.10, Personnel (current good manufacturing practice for food): clean outer garments, personal cleanliness, hand washing, hair restraints, glove integrity. https://www.ecfr.gov/current/title-21/chapter-I/subchapter-B/part-117/subpart-B (source from a manufacturer or industry)
+[^who-gacp-2003]: World Health Organization (2003). WHO guidelines on good agricultural and collection practices (GACP) for medicinal plants. https://www.who.int/publications/i/item/9241546271 (source from a manufacturer or industry)
+[^who-hand-hygiene]: World Health Organization. Hand hygiene: the Five Moments and recommended technique (soap-and-water 40-60s; alcohol-based handrub 20-30s, ≥60% alcohol). https://www.who.int/teams/integrated-health-services/infection-prevention-control/hand-hygiene (source from a manufacturer or industry)
+[^cdc-glove-removal]: US CDC. How to safely remove gloves: glove-to-glove then skin-to-skin, peeling inside-out so bare skin never contacts the contaminated exterior; hand hygiene before and after. https://www.cdc.gov/ebola/media/pdfs/2024/05/poster-how-to-remove-gloves.pdf (source from a manufacturer or industry)
+[^gmp-gowning-procedure]: GMP / cleanroom gowning and de-gowning procedures: top-to-bottom donning order across a clean/dirty demarcation bench, reverse dirtiest-first removal. https://www.pharmanow.live/pharma-manufacturing/cleanroom-gowning-procedures-guide (source from a manufacturer or industry)
+[^hswa-2015]: Health and Safety at Work Act 2015 (NZ): s36 PCBU primary duty of care; s45 worker duties; s27 PCBU must provide what is required (including PPE) and must not charge workers for it. https://www.legislation.govt.nz/act/public/2015/0070/latest/DLM5976894.html (source from a manufacturer or industry)
+[^worksafe-grwm]: WorkSafe New Zealand and the Health and Safety at Work (General Risk and Workplace Management) Regulations 2016, reg 6: control risk by the hierarchy of controls, with PPE as the last resort. https://www.worksafe.govt.nz/managing-health-and-safety/getting-started/introduction-hswa-special-guide/ (source from a manufacturer or industry)

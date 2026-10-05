@@ -1,10 +1,10 @@
 ---
 slug: "hvac-dehumidification"
 title: "HVAC and dehumidification for grow rooms"
-eyebrow: "Environment · Plant"
-summary: "Every watt put into a grow room comes back out as heat, and nearly every litre irrigated comes back out as vapour. This paper shows you how to calculate both loads honestly, choose and size the right equipment, manage the humidity spike when the lights go off, and plan for the night something fails."
-track: "Environment & climate"
-read_time: "~22 min read"
+eyebrow: "Environment · Climate system"
+summary: "Each watt that you put into a grow room becomes heat, and almost all the water that you apply becomes vapor. This paper shows how to calculate the two loads correctly and how to select equipment of the correct size. It shows how to control the humidity spike when the lights stop. It also shows how to prepare for a night when a unit does not operate."
+track: "Environment and climate"
+read_time: "~22 min to read"
 diagrams: "11 diagrams"
 related: ["grow-room-systems", "temp-humidity-vpd", "airflow-design"]
 url: "https://www.growlabs.nz/wiki/hvac-dehumidification.html"
@@ -19,334 +19,342 @@ refs: [{"id": "rii-hvac-bpg", "n": 1, "cite": "Resource Innovation Institute (20
 
 # HVAC and dehumidification for grow rooms
 
-_Environment · Plant · ~22 min read_
+_Environment · Climate system · ~22 min to read_
 
-> Every watt put into a grow room comes back out as heat, and nearly every litre irrigated comes back out as vapour. This paper shows you how to calculate both loads honestly, choose and size the right equipment, manage the humidity spike when the lights go off, and plan for the night something fails.
+> Each watt that you put into a grow room becomes heat, and almost all the water that you apply becomes vapor. This paper shows how to calculate the two loads correctly and how to select equipment of the correct size. It shows how to control the humidity spike when the lights stop. It also shows how to prepare for a night when a unit does not operate.
 
 ## Purpose and scope
 
-A grow room is a machine that turns electricity into light, light into plant, and water into vapour. The lights are the half everyone budgets for. The climate plant, cooling, heating, dehumidification, is the half that hauls the heat and the water back out, every hour of every day, and it typically eats 30–60% of an indoor facility’s energy bill[^rii-hvac-bpg].
+A grow room is a system that changes electricity into light, light into plant growth, and water into vapor. Each grower calculates the energy cost of the lights. The lights are one half of the system. The climate system (cooling, heating and dehumidification) is the other half. It removes the heat and the water from the room, each hour of each day. It typically uses 30 to 60% of the energy cost of an indoor facility[^rii-hvac-bpg].
 
-When it’s sized right you barely think about it. When it’s guessed, a mini-split off a BTU chart and a dehumidifier that looked big in the shop. You find out in week 6 of flower, at 2 a.m., when the room is cold, saturated, and growing _Botrytis_ instead of flower.
+When the system has the correct size, you do not think about it. If you do not calculate the size, the result is a problem. For example, you select a mini-split from a BTU chart and a dehumidifier that looks large. You find the problem in week 6 of flowering, at 2 a.m. The room is cold and saturated, and _Botrytis_ causes damage to the flowers.
 
-This paper is written for someone speccing their first serious room or sanity-checking a mechanical quote. No refrigeration background assumed. By the end you should be able to do your own load arithmetic, read a dehumidifier spec sheet with suspicion, and explain exactly why the humidity pins to 85% the moment the lights go out.
+This paper is for a person who selects the equipment for a first large room. It is also for a person who examines a quotation for mechanical equipment, to make sure that it is correct. It is not necessary to know about refrigeration. After you read this paper, you can calculate the loads for your room. You can examine the data sheet of a dehumidifier and make sure that its rating is correct for your conditions. You can also give the cause of the humidity of 85% when the lights go off.
 
-> **KEY — The two conservation laws that do all the work**
+> **KEY: The two conservation laws**
 >
-> **1. Every watt in becomes heat.** Lights, fans, pumps and dehumidifiers: in a sealed insulated room, all of it ends up as heat the cooling has to remove. **2. Every litre in must leave.** As runoff down the drain, a little as plant tissue, and the rest as vapour your equipment must condense back to liquid. Sizing a climate system is just doing this accounting honestly.
+> **1. Each watt that goes in becomes heat.** In a sealed room with insulation, all of the electrical power of lights, fans, pumps and dehumidifiers becomes heat. The cooling system must remove this heat.
+> **2. Each liter of water that goes in must go away from the room.** Some of the water flows out as runoff through the drain. A small quantity stays in the plant tissue. The remaining water becomes vapor, and your equipment must condense this vapor to liquid again. To select the size of a climate system, you only count these watts and liters correctly.
 
 ## Definitions
 
-**Sensible heat** — Heat that changes air _temperature_, the kind a thermometer sees. Lights are almost entirely a sensible load.
+**Sensible heat**: Heat that changes the _temperature_ of the air. A thermometer shows the change. Almost all of the heat from the lights is sensible heat.
 
-**Latent heat** — Heat hidden in water vapour, invisible to a thermometer. Think of a 26 °C (79 °F) day before a thunderstorm versus a dry 26 °C (79 °F) day: the thermometer reads the same, but the humid air is packed with extra energy locked in the vapour. Evaporating 1 L of water absorbs about 0.68 kWh; that energy sits invisibly in the air until a cold coil condenses the vapour back to liquid and releases the heat again. Latent load = moisture load.
+**Latent heat**: Heat that is in water vapor and that a thermometer cannot show. A day of 26 °C (79 °F) before a thunderstorm, with high humidity, and a dry day of 26 °C (79 °F) give the same thermometer value. But the air with high humidity contains more energy in the vapor. When 1 L of water evaporates, it absorbs approximately 0.68 kWh. This energy stays in the air until a cold coil condenses the vapor to liquid and releases the heat again. The latent heat load is the moisture load.
 
-**BTU and ton** — Imperial heat units the HVAC trade still quotes. 1 kW = 3,412 BTU/h. 1 “ton” of cooling = 12,000 BTU/h ≈ 3.5 kW. A “5-ton unit” moves ~17.6 kW of heat.
+**BTU and ton**: Imperial units of heat. HVAC suppliers continue to use them. 1 kW = 3,412 BTU/h. 1 “ton” of cooling = 12,000 BTU/h = approximately 3.5 kW. A “5-ton unit” moves approximately 17.6 kW of heat.
 
-**Pint (dehumidifier rating)** — US dehumidifier capacity unit: pints of water removed per day. 1 US pint = 0.473 L, so a “500-pint” unit removes ~237 L/day, at its rating conditions, not necessarily at yours.
+**Pint (dehumidifier rating)**: A US unit for the capacity of a dehumidifier. It is the quantity of water in pints that the dehumidifier removes each day. 1 US pint = 0.473 L. Thus a “500-pint” unit removes approximately 237 L/day at its rating conditions. At your conditions, the unit can remove a different quantity.
 
-**Relative humidity (RH)** — How full the air is of vapour, as a % of what it could hold at its current temperature. Capacity roughly halves for every ~10 °C (18 °F) drop, which is the entire lights-off story in one sentence.
+**Relative humidity (RH)**: The quantity of vapor in the air, as a percentage of the maximum quantity that the air can hold at its temperature. When the air temperature decreases by approximately 10 °C (18 °F), the capacity of the air becomes approximately half. This one fact is a primary cause of the humidity spike at lights-off.
 
-**Dew point** — The temperature at which air becomes saturated and water condenses on any surface at or below it. Unlike RH, dew point tracks the actual grams of water in the air, which makes it the better control target.
+**Dew point**: The temperature at which the air becomes saturated. At this temperature, water condenses on each surface that has a temperature equal to or less than the dew point. The dew point shows the quantity of water in the air, in grams. RH does not show this quantity. Thus the dew point is the better control target.
 
-**VPD** — Vapour pressure deficit, the drying power of the air, combining temperature and RH. It drives transpiration rate, which means it drives your latent load. Covered fully in the [temperature, humidity and VPD paper](temp-humidity-vpd.html).
+**VPD**: Vapor pressure deficit. It is the drying power of the air, and you calculate it from the temperature and the RH. VPD changes the rate of transpiration, and thus it changes the latent heat load. The [temperature, humidity and VPD paper](temp-humidity-vpd.html) gives all the information about VPD.
 
-**COP** — Coefficient of performance: kW of heat moved per kW of electricity used. Modern compressors run COP 3–4; electric resistance heaters are stuck at 1.0. This one number explains most HVAC efficiency arguments.
+**COP**: Coefficient of performance. It is the quantity of heat in kW that the unit moves for each kW of electricity that it uses. A new compressor has a COP of 3 to 4. An electric resistance heater has a COP of 1.0, and this value cannot change. Most persons use this one number when they compare the efficiency of HVAC equipment.
 
-## Sensible and latent loads
+## Sensible heat load and latent heat load
 
-A comfort air conditioner in an office does one job: remove dry heat. A grow room asks for two: remove heat _and_ remove water. Engineers split these as the **sensible load** (temperature) and the **latent load** (moisture), and grow rooms are unusual because the latent side rivals or exceeds the sensible side for much of the cycle, a ratio almost no comfort-cooling equipment is built for[^desertaire-an25-load][^hpac-latent].
+An air conditioner (AC) for comfort cooling in an office does one task: it removes dry heat. A grow room has two tasks: remove heat _and_ remove water. Engineers divide the heat load into the **sensible heat load** (temperature) and the **latent heat load** (moisture). In a grow room, for much of the cycle, the latent heat load is as large as the sensible heat load, or larger. This ratio is not usual. Almost no equipment for comfort cooling has the correct capacity for it[^desertaire-an25-load][^hpac-latent].
 
-> **Diagram.** The two exits. Lights drive the sensible channel; the crop’s transpiration drives the latent channel. Different loads, different equipment, different failure modes.
+> **Diagram.** The two exits for the heat. The lights cause the sensible heat load, and the transpiration of the crop causes the latent heat load. The two loads have different equipment and different faults.
 
-**Where the sensible load comes from:** the lights, overwhelmingly. In an insulated, sealed room, essentially every watt of electrical input becomes heat that the cooling plant must remove, and lighting is the single largest share[^desertaire-an25-load][^streit2023-hvacd]. Dehumidifiers, fan motors, pumps and people add the rest.
+**The source of the sensible heat load:** almost all of it is from the lights. In a sealed room with insulation, almost all of the electrical power becomes heat that the cooling system must remove. Lighting is the largest part of this heat[^desertaire-an25-load][^streit2023-hvacd]. Dehumidifiers, fan motors, pumps and persons add the remaining heat.
 
-**Where the latent load comes from:** the plants. A cannabis leaf is covered in tiny pores called stomata. When they open in the light, the plant draws water up from the roots and releases it as vapour into the air — the same way your skin releases sweat to cool you down. The plant isn’t wasting water; evaporation cools the leaf and pulls more water (and dissolved nutrients) upward from the root zone. Transpiration is this continuous, light-driven release of water vapour through the stomata. Transpiration _is_ the latent load: of the water delivered to the root zone, roughly 95%+ passes up through the plant and out the stomata as vapour, Desert Aire’s engineering note puts it near 99% of water taken up by the roots[^desertaire-an25-load], and facility engineers design on 80–95% of total irrigation returning to the air[^streit2023-water]. Your crop is not decoration sitting inside the climate system. Your crop _is_ the humidifier, running at hundreds of litres a day, powered by your lights and throttled by VPD[^grossiord2020-vpd].
+**The source of the latent heat load:** the plants. A cannabis leaf has many small pores in its surface. These pores are the stomata. When the stomata are open in the light, the plant moves water up from the roots and releases it into the air as vapor. The water that the plant releases is not waste. Evaporation decreases the temperature of the leaf and moves more water (and dissolved nutrients) up from the root zone.In transpiration, the plant continuously releases water vapor through the stomata, and the light causes it. Transpiration _is_ the latent heat load. The plant moves approximately 95% or more of the water that you supply to the root zone out of the stomata as vapor. The engineering note of Desert Aire gives a value near 99% of the water that the roots absorb[^desertaire-an25-load]. Facility engineers calculate with 80 to 95% of the total irrigation water that goes into the air again[^streit2023-water].Your crop is part of the climate system. Your crop _is_ the humidifier. It releases many liters of water each day. Your lights supply the energy, and the VPD controls the rate[^grossiord2020-vpd].
 
-> **NOTE — The twist: plants convert sensible into latent**
+> **NOTE: Plants change sensible heat into latent heat**
 >
-> Evaporating water absorbs heat. A transpiring canopy is a giant evaporative cooler. So the air temperature rises _less_ than the lights’ wattage suggests, and beginners conclude the heat “wasn’t that bad”. It didn’t leave. It moved into the vapour, and you pay it back with interest at the coil that condenses that vapour out. Total heat rejected always equals total watts in; the plants only decide how it’s split between the two channels.
+> When water evaporates, it absorbs heat. A canopy that transpires is a very large evaporative cooler. Thus the air temperature increases _less_ than the watts of the lights show.
+> A new grower can think that the heat is not a large problem. But the heat does not go away from the room. It moves into the vapor. The coil that condenses this vapor must remove the heat again. The total heat that you remove is always equal to the total watts that go in. The plants change only how much of the heat is sensible heat and how much is latent heat.
 
-## Calculating room heat loads
+## Calculate the heat loads of the room
 
-Everything from here on uses one worked room so the numbers stay honest: **40 m² of flowering canopy** (~430 sq ft), 10 × 700 W LED fixtures, sealed and CO₂-enriched, insulated internal walls, two 800 W dehumidifiers, ~500 W of circulation fans and pumps, two crew working in it. Swap in your own numbers, the method is the point.
+All the examples from here use one room. Thus the numbers agree with each other. The room has **40 m² of flowering canopy** (approximately 430 square feet), 10 × 700 W LED fixtures, two 800 W dehumidifiers, and approximately 500 W of circulation fans and pumps.The room is sealed and has CO₂ enrichment, and the internal walls have insulation. Two persons are in the room. Replace these numbers with the numbers of your room. The method is the same.
 
-> **Diagram.** 9.3 kW of connected sensible load. Note the second bar: your dehumidifiers are heaters, nearly 100% of their draw lands in the room as heat, plus the latent heat of every litre they condense[^hydrobuilder-ac-sizing].
+> **Diagram.** The connected sensible heat load is 9.3 kW. Examine the second bar: your dehumidifiers are heaters. Almost 100% of their electrical power becomes heat in the room, and they also release the latent heat of each liter that they condense[^hydrobuilder-ac-sizing].
 
-| Load | Type | In the example room | Notes |
+| Load | Type | In the example room | Information |
 | --- | --- | --- | --- |
-| Grow lights | Sensible | 7.0 kW | The dominant load; scales with installed W[^streit2023-hvacd] |
-| Dehumidifiers | Sensible | 1.6 kW draw + condensing heat | Run mostly at night. They are the night heater |
-| Fans, pumps, controls | Sensible | ~0.5 kW | Small individually, never zero |
-| People | Sensible + latent | ~0.1 kW each | ≈400 BTU/h per person[^hydrobuilder-ac-sizing] |
-| Envelope (walls, roof) | Sensible | ≈0 (insulated internal room) | Real for containers, sheds, top floors, do not assume zero there |
-| Transpiration | Latent | ~175 L/day (next section) | The latent load, full stop[^desertaire-an25-load] |
-| Media + wet surfaces | Latent | Small share | Evaporation from slab faces, trays, wet floors[^desertaire-an25-load] |
-| Ventilation air | Both | ≈0 (sealed room) | In vented rooms, humid outside air is a real latent load |
+| Grow lights | Sensible heat | 7.0 kW | The largest load. It increases when the installed power in W increases[^streit2023-hvacd]. |
+| Dehumidifiers | Sensible heat | 1.6 kW of electrical power + heat of condensation | The dehumidifiers operate mostly at night. They are the heater at night. |
+| Fans, pumps, controls | Sensible heat | approximately 0.5 kW | Each item is small, but the total is not zero. |
+| Persons | Sensible heat and latent heat | approximately 0.1 kW for each person | approximately 400 BTU/h for each person[^hydrobuilder-ac-sizing] |
+| Envelope (walls and roof) | Sensible heat | approximately 0 (internal room with insulation) | The load is not zero in containers, sheds and top floors. Do not use zero for these. |
+| Transpiration | Latent heat | approximately 175 L/day (next section) | Transpiration is the latent heat load[^desertaire-an25-load]. |
+| Media and wet surfaces | Latent heat | Small part | Water evaporates from the faces of slabs, from trays and from wet floors[^desertaire-an25-load]. |
+| External air | Sensible heat and latent heat | approximately 0 (sealed room) | In rooms with vents, external air with high humidity adds a latent heat load. |
 
-*The load inventory. Sensible scales with kilowatts installed; latent scales with litres irrigated.*
+*The list of loads. When you install more kilowatts, the sensible heat load increases. When you apply more liters of water, the latent heat load increases.*
 
-> **WARN — CO₂ burners are a double load**
+> **WARN: CO₂ burners add two loads**
 >
-> A propane or natural-gas CO₂ burner adds heat _and_ water, combustion produces roughly 1.5 kg of water vapour per kg of propane burned, straight into your latent load. Bottled or bulk CO₂ adds neither. If you run burners, both sides of your load calc grow.
+> A CO₂ burner that uses propane or natural gas adds heat _and_ water. Combustion makes approximately 1.5 kg of water vapor for each kg of propane that burns. This vapor goes directly into the latent heat load. CO₂ from bottles or from a tank does not add heat or water. When you use burners, the sensible heat load is larger and the latent heat load is larger.
 
 ## Water balance and dehumidification load
 
-Here is the single most useful sizing fact in this paper: **your dehumidification requirement is written by your irrigation schedule**. Not by room volume, not by plant count charts, by litres per day. Water that goes in and doesn’t leave down the drain leaves through the air[^quest-perfect-dehu][^streit2023-water].
+The most important fact for the size of the equipment is that **the dehumidification load is the result of your irrigation schedule**. The volume of the room and the number of plants do not give this load. The liters of water for each day give it. Water that goes in and does not flow out through the drain goes into the air[^quest-perfect-dehu][^streit2023-water].
 
-> **Diagram.** The water balance for the example room. 240 L irrigated, 60 L captured as runoff, ~5 L retained in tissue, leaving ~175 L/day that the climate plant must condense back to liquid. Water in ≈ water out[^quest-perfect-dehu].
+> **Diagram.** The balance of water for the example room. You apply 240 L of water. The drain collects 60 L as runoff. The tissue keeps approximately 5 L. The remaining approximately 175 L/day goes into the air, and the climate system must condense it to liquid again. Water in and water out are approximately equal[^quest-perfect-dehu].
 
-1. **Count the water in** — 40 m² of canopy × 6 L/m²/day at mid-flower = **240 L/day**. Your irrigation controller already knows this number exactly.
-2. **Subtract collected runoff** — 25% runoff captured to drain = 60 L that never touches the air. 240 − 60 = **180 L/day stays in the room**. (Runoff left standing in trays evaporates, then it’s latent load again. Drain it.)
-3. **Subtract what the plant keeps** — Plant tissue holds only a few percent of uptake, call it 5 L/day. The rest transpires[^desertaire-an25-load]. **≈175 L/day becomes vapour.**
-4. **Convert for spec sheets** — 175 L ÷ 0.473 = **≈370 US pints/day**. Quest’s shortcut (gallons fed minus drained, times 8) lands on the same answer[^quest-perfect-dehu].
+1. **Count the water that goes in**: 40 m² of canopy × 6 L/m²/day at the middle of flowering = **240 L/day**. The irrigation controller records this number.
+2. **Subtract the runoff that you collect**: 25% runoff to the drain = 60 L. This water does not touch the air. 240 − 60 = **180 L/day stays in the room**. (Runoff that stays in trays evaporates and becomes latent heat load again. Drain the runoff.)
+3. **Subtract the water that the plant keeps**: Plant tissue holds only a small percentage of the water that the plant absorbs. Use 5 L/day. The remaining water transpires[^desertaire-an25-load]. **Approximately 175 L/day becomes vapor.**
+4. **Change to pints for the data sheet**: 175 L ÷ 0.473 = **approximately 370 US pints/day**. The easy method of Quest (gallons that you apply minus gallons of runoff, times 8) gives the same result[^quest-perfect-dehu].
 
-> **Diagram.** The latent load is not constant. It ramps with the crop, peaking exactly when the canopy is densest and mould risk is highest. Size for the peak week, not the average.
+> **Diagram.** The latent heat load is not constant. It increases with the crop. It has its peak when the canopy has the highest density and the risk of mold is highest. Select the capacity for the week of the peak load, not for the average load.
 
-> **TIP — The free load calculation**
+> **TIP: Calculate the load from the data of your room**
 >
-> You do not need to model transpiration. You already meter it. Litres in (controller log) minus litres of runoff (measure it for one representative day) is your daily latent load, per room, per crop stage. It is better data than any consultant’s estimate, and it’s free. Log it every cycle; it also tells you when the crop is drinking abnormally, which is a plant-health signal, not just an HVAC one.
+> It is not necessary to make a model of the transpiration, because you measure it. The liters of water that go in (from the log of the controller) minus the liters of runoff (measure the runoff for one typical day) are the latent heat load for one day. Do this for each room and for each crop stage. These data are better than the estimate of a consultant, and you have them.
+> Record the load in each cycle. The record also shows when the crop uses a different quantity of water than usual. A different quantity of water is a signal of plant health, and not only a signal for the HVAC system.
 
-## Cooling-load calculation
+## Calculate the cooling load
 
-Every forum will tell you “3,000–4,000 BTU per 1,000 W of light”. Here’s the secret: that isn’t horticultural wisdom, it’s a unit conversion. 1 W of electricity makes 3.412 BTU/h of heat, always, by physics[^hydrobuilder-ac-sizing]. The folklore is roughly right about the lights and silent about everything else. Which is how rooms end up 20–30% short.
+Each forum tells you “3,000 to 4,000 BTU for each 1,000 W of light”. This number is not from horticulture. It is a change of units: 1 W of electricity always makes 3.412 BTU/h of heat, because of physics[^hydrobuilder-ac-sizing]. The forum number is approximately correct for the lights, but it does not include the other equipment. As a result, rooms have a cooling capacity that is 20 to 30% less than the correct capacity.
 
-> **Diagram.** The folklore band (left two bars) covers the lights and nothing else. The dehumidifiers, fans and people are real heat; the margin is what keeps you from running at 100% duty on a 35 °C (95 °F) day.
+> **Diagram.** The forum numbers (the two bars on the left) include only the lights. The dehumidifiers, the fans and the persons also make heat. The margin prevents operation at 100% of the capacity on a day of 35 °C (95 °F).
 
-1. **List every watt in the room** — Lights 7,000 W. Dehumidifiers 1,600 W. Fans and pumps 500 W. Two crew ≈240 W[^hydrobuilder-ac-sizing]. Envelope gain: ~0 here, real if your room has a hot roof or sun-struck wall.
-2. **Sum it** — 7,000 + 1,600 + 500 + 240 ≈ **9.3 kW of sensible load**.
-3. **Convert to trade units** — 9.3 kW × 3,412 = ≈31,700 BTU/h = ≈2.6 tons of cooling.
-4. **Add margin, not hope** — 20–25% covers hot ambients, dirty coils and derate with age[^hydrobuilder-ac-sizing]: spec ≈**11.6 kW (≈40,000 BTU/h, ≈3.3 tons)**.
-5. **Split it across units** — Two smaller units beat one big one: staged capacity for light loads, and a failure loses half your cooling, not all of it (Section 12).
+1. **List each watt in the room**: Lights 7,000 W. Dehumidifiers 1,600 W. Fans and pumps 500 W. Two persons approximately 240 W[^hydrobuilder-ac-sizing]. Heat from the envelope: approximately 0 here. It is not zero if your room has a hot roof or a wall in the sun.
+2. **Add the values**: 7,000 + 1,600 + 500 + 240 = approximately **9.3 kW of sensible heat load**.
+3. **Change to BTU/h and tons**: 9.3 kW × 3,412 = approximately 31,700 BTU/h = approximately 2.6 tons of cooling.
+4. **Add a margin**: A margin of 20 to 25% is for high external temperatures, dirty coils and capacity that becomes smaller with time[^hydrobuilder-ac-sizing]. Select approximately **11.6 kW (approximately 40,000 BTU/h, approximately 3.3 tons)**.
+5. **Divide the capacity between units**: Two smaller units are better than one large unit. They give capacity in stages for small loads. If one unit stops, half of the cooling continues to operate (Section 12).
 
-> **WARN — Where rule-of-thumb sizing breaks down**
+> **WARN: When the forum numbers are not correct**
 >
-> - **Rooms that exhaust air through the lights or to outside**, part of the heat never enters the room, so folklore oversizes. (This is where the old “3 BTU/W for vented HPS” number came from.)
-> - **Non-insulated spaces**, containers, garages, top floors under hot roofs. Envelope load can add kilowatts the folklore never saw.
-> - **Forgetting the dehumidifiers**. They add their draw _and_ return the latent heat of every condensed litre as sensible heat. An AC sized without them fights the dehus all afternoon.
-> - **Treating cooling capacity as latent capacity**, a nameplate kW of cooling is sensible + latent combined; how much of it does moisture work depends on coil temperature and airflow. The next section sizes moisture properly.
+> - **Rooms in which air flows through the lights and out to the external air.** Some of the heat does not go into the room. As a result, the forum numbers give a capacity that is too large. (This condition is the source of the number “3 BTU/W for vented HPS”.)
+> - **Spaces without insulation:** containers, garages and top floors below hot roofs. The envelope load can add kilowatts that the forum numbers do not include.
+> - **The load does not include the dehumidifiers.** The dehumidifiers add their electrical power _and_ they release the latent heat of each condensed liter as sensible heat. If the AC size does not include this heat, the AC can be too small in the afternoon.
+> - **The cooling capacity is not the capacity for latent heat.** A nameplate kW of cooling (the kW that the manufacturer gives) is the capacity for sensible heat and for latent heat together. The part that removes moisture changes if the coil temperature or the airflow changes. The next section shows how to calculate the capacity for moisture correctly.
 
-## Dehumidifier sizing
+## Calculate the dehumidifier capacity
 
-Dehumidifier sizing is the water balance from Section 05 plus two corrections everyone skips: **when** the moisture arrives, and **what the machine actually removes at your conditions** rather than at the rating point on the box.
+To calculate the dehumidifier capacity, start with the water balance from Section 05. Then make two corrections that most persons do not make. The first correction is for the **time** at which the moisture goes into the air. The second correction is for the **quantity of moisture that the unit removes at your conditions**, and not at the rating conditions of the unit.
 
-1. **Start from the vapour load** — Example room: ≈175 L/day ≈ 370 pints/day total.
-2. **Split day from night** — Transpiration doesn’t stop in the dark, stomata close partially, media keeps evaporating. Assume 70/30: day 122 L over 12 h (≈10 L/h), **night 53 L over 12 h (≈4.4 L/h)**. Check the split against your own condensate volumes and correct it. It varies with cultivar and night climate.
-3. **Day duty** — With lights on, the AC coils condense a share of the moisture while cooling; dehumidifiers top up. This is the easy shift.
-4. **Night duty, the sizing case** — With lights off there is no sensible load, the AC stops, and its incidental moisture removal stops with it[^desertaire-an25-load]. **The dehumidifiers alone must carry 4.4 L/h.** That is 105 L/day of removal _rate_.
-5. **Derate the nameplate** — Ratings are quoted warm, commonly 26.7 °C (80 °F) / 60% RH, and refrigerant units remove less as the room cools[^sylvane-desiccant]. If the manufacturer’s curve shows ~⅔ of nameplate at your 19 °C (66 °F) night, you need ≈160 L/day of nameplate _running_ to hold the night: e.g. two 80 L/day units flat out.
-6. **Then apply N+1** — Two units exactly covering the night means one failure ends the crop. Fit three 80s (or two 120s) so any single unit can die on a Saturday night without drama (Section 12).
+1. **Start with the dehumidification load**: Example room: approximately 175 L/day = approximately 370 pints/day in total.
+2. **Divide the day and the night**: Transpiration does not stop when the lights are off. The stomata close in part, and water continues to evaporate from the media. Use a ratio of 70/30 for the day and the night. The day has 122 L in 12 h (approximately 10 L/h), and **the night has 53 L in 12 h (approximately 4.4 L/h)**. Compare the ratio with the condensate volumes of your room and correct it. The ratio changes with the cultivar and the night climate.
+3. **The day load**: When the lights are on, the AC coils condense some of the moisture during the cooling. The dehumidifiers remove the remaining moisture. This period is easy.
+4. **Use the night load for the size**: When the lights are off, there is no sensible heat load, and the AC stops. The moisture that the AC removes during the cooling also stops[^desertaire-an25-load]. **Only the dehumidifiers remove moisture, and they must remove 4.4 L/h.** This _rate_ of removal is equal to 105 L/day.
+5. **Correct the nameplate capacity**: Manufacturers give the ratings at a warm temperature, usually 26.7 °C (80 °F) and 60% RH. Refrigerant units remove less water when the room becomes colder[^sylvane-desiccant]. The curve from the manufacturer can show approximately ⅔ of the nameplate capacity at a night temperature of 19 °C (66 °F). Then approximately 160 L/day of nameplate capacity must be in _operation_ to hold the night conditions. For example, use two 80 L/day units at maximum capacity.
+6. **Then apply N+1**: If two units supply only the night capacity, a failure of one unit causes crop loss. Install three units of 80 L/day (or two units of 120 L/day). Then one unit can stop on a Saturday night without a problem (Section 12).
 
-| Canopy | Water in (6 L/m²/day) | Vapour to remove | In pints |
+| Canopy | Water in (6 L/m²/day) | Vapor to remove | In pints |
 | --- | --- | --- | --- |
-| 10 m² (tent-to-small room) | 60 L/day | ≈44 L/day | ≈92 ppd |
-| 20 m² | 120 L/day | ≈87 L/day | ≈185 ppd |
-| 40 m² (example room) | 240 L/day | ≈175 L/day | ≈370 ppd |
-| 80 m² | 480 L/day | ≈349 L/day | ≈738 ppd |
+| 10 m² (tent or small room) | 60 L/day | approximately 44 L/day | approximately 92 pints/day |
+| 20 m² | 120 L/day | approximately 87 L/day | approximately 185 pints/day |
+| 40 m² (example room) | 240 L/day | approximately 175 L/day | approximately 370 pints/day |
+| 80 m² | 480 L/day | approximately 349 L/day | approximately 738 pints/day |
 
-*Pure arithmetic at 6 L/m²/day irrigation, 25% collected runoff, ~97% of retained water transpired. Scale linearly for your own schedule; then derate nameplates to your night temperature and add N+1.*
+*These values come from arithmetic only. They use irrigation of 6 L/m²/day and 25% collected runoff. Approximately 97% of the water that stays in the room becomes vapor. For the irrigation schedule of your room, multiply the values by the ratio of your irrigation to this irrigation. Then correct the nameplate capacity for your night temperature and add N+1.*
 
-Per fixture, the example works out to 17.5 L (≈37 pints) per light per day, a handy pub-quote number, but notice it’s downstream of the irrigation schedule, not a property of the light. Quest’s field guidance of 0.5–2 pints per square foot of canopy per day brackets the same range[^quest-dehu101], our room computes to ~0.86 pints/sq ft. When a rule of thumb and your arithmetic agree, you can trust the arithmetic; when they disagree, trust the arithmetic anyway.
+For each fixture, the example gives 17.5 L (approximately 37 pints) for each light each day. This number is easy to use, but it comes from the irrigation schedule and it is not a property of the light. The field guidance of Quest is 0.5 to 2 pints for each square foot of canopy each day[^quest-dehu101]. The example room is in this range, with approximately 0.86 pints for each square foot. If an approximate number and your arithmetic agree, you can accept the arithmetic. If they do not agree, use the arithmetic.
 
-> **NOTE — Sealed vs vented changes the answer**
+> **NOTE: The result is different for a sealed room and for a room with vents**
 >
-> Everything above assumes a sealed, recirculating room, the norm for CO₂-enriched flower. A vented room exhausts moist air instead of condensing it, so dehu requirements drop but you inherit the outdoor climate: in a humid summer (Auckland in February, most of Queensland) intake air can _add_ latent load rather than remove it. Vented sizing starts from your local psychrometrics, not from this table.
+> The values above are for a sealed room with recirculating air. A sealed room with CO₂ enrichment is the usual room for flowering. A room with vents sends the moist air out and does not condense it.
+> Thus the necessary dehumidifier capacity is less, but the external climate has an effect on the room. In a summer with high humidity (Auckland in February, most of Queensland), the air that goes into the room can _add_ latent heat load and not remove it. The capacity for a room with vents starts from the psychrometric data for your location, and not from this table.
 
-## HVAC equipment classes
+## Types of HVAC equipment
 
-Four families of cooling, plus the dehumidifiers that bolt onto all of them. Engineering firms describe the same ladder: packaged DX with standalone dehus at entry level, DX with hot-gas reheat in the middle, chilled water at scale[^streit2023-hvacd].
+There are four types of cooling equipment. You add dehumidifiers to all of them. Engineers divide the equipment into the same types. At the lowest capital cost, the system is a packaged unit with direct-expansion (DX) cooling and room dehumidifiers. In the middle, the system is a DX unit with hot-gas reheat. For a large facility, the system uses chilled water[^streit2023-hvacd].
 
-> **Diagram.** The four classes. Capex rises left to right and top to bottom; so does control quality and the ease of building in redundancy[^streit2023-hvacd].
+> **Diagram.** The four types. The capital cost increases from left to right and from top to bottom. The quality of control increases in the same direction, and it is easier to add spare equipment[^streit2023-hvacd].
 
-**Mini-split / multi-split**
+**Mini-split or multi-split**
 
-Refrigerant line to a wall or ceiling head. Cheap, available everywhere, installed in a day. Cooling-biased: latent removal is incidental, control is a ±1–2 °C (±2–4 °F) wall thermostat, and there’s no reheat, so it overcools while dehumidifying. Right answer for veg rooms, dry rooms and small flower rooms _with_ standalone dehus doing the moisture work.
+A refrigerant line goes to a unit on the wall or on the ceiling. The capital cost is low, you can get the unit in all areas, and you can install it in one day. The unit is for cooling, and it removes moisture only as a secondary effect. The control is a wall thermostat with a tolerance of ±1 to 2 °C (±2 to 4 °F), and there is no reheat. Thus the unit decreases the temperature too much when it removes moisture. It is correct for rooms for vegetative growth, for drying rooms and for small flowering rooms _with_ room dehumidifiers that remove the moisture.
 
-**Packaged / rooftop unit (RTU)**
+**Packaged unit or rooftop unit (RTU)**
 
-One factory cabinet outside the envelope, ducted supply and return. Direct-expansion (DX) cooling, real airflow, service access without entering the grow. The workhorse tier for single rooms and small facilities, still pair it with dehumidifiers, and prefer staged or inverter compressors over single-stage[^streit2023-hvacd].
+One cabinet from the manufacturer is external to the envelope. It has ducts for supply air and return air. It has direct-expansion (DX) cooling and a high airflow. You can do the maintenance from an external area.
+This type is standard for one room and for small facilities. Use dehumidifiers with it also. We recommend compressors with stages or inverter compressors, and not single-stage compressors[^streit2023-hvacd].
 
-**Chilled water + fan coils**
+**Chilled water and fan coils**
 
-A central chiller makes cold water; insulated loops feed fan-coil units in each room. Scales across many rooms, concentrates redundancy at the plant (two chillers backing the whole facility), and with heating-water or reheat coils gives genuine independent temperature and humidity control[^streit2023-hvacd]. Needs real mechanical design. This is an engineered system, not a purchase.
+A central chiller makes cold water. Pipe loops with insulation supply the water to fan coil units in each room. The system can supply many rooms, and the spare capacity is at the chillers (two chillers supply cooling to all of the facility). With hot-water coils or reheat coils, it can control the temperature and the humidity independently[^streit2023-hvacd]. It must have a mechanical design. Engineers make this system for each facility, and you cannot select it from a list of units.
 
-**Integrated grow unit (HVACD)**
+**Integrated unit for grow rooms (HVACD)**
 
-Purpose-built cabinets that cool, dehumidify and reheat in one sequenced box, sized from your load calc and controlled on dew point. Built precisely for the lights-off problem. Premium capex; strongest case in tightly controlled flower and drying rooms where climate misses cost real money[^rii-hvac-bpg].
+These cabinets are for grow rooms. One cabinet does the cooling, the dehumidification and the reheat in one controlled sequence. The size comes from the loads that you calculate, and the control uses the dew point. The manufacturer makes the cabinet for the problem at lights-off. The capital cost is high. This unit is best for flowering rooms and drying rooms with accurate control, where a climate error has a large cost[^rii-hvac-bpg].
 
-**Standalone vs ducted dehumidifiers.** Standalone (hang-above-canopy or floor) units are cheap, movable and simple, but they dump their heat and noise in the room and their condensate wants managing. Ducted/inline units sit outside the canopy, plumb their drains properly, and share the air-handling path, at higher install cost. Either way: **plumb the drain**. A bucket is a humidifier with extra steps.
+**Room dehumidifiers and ducted dehumidifiers.** Room dehumidifiers (above the canopy or on the floor) have a low capital cost, you can move them, and they are easy to use. But they release their heat and their noise into the room, and you must remove the condensate.Ducted dehumidifiers are external to the canopy, have drains with correct pipes, and use the same ducts as the HVAC system. Their installation cost is higher. In the two types, **connect the drain to a pipe**. Water in a bucket evaporates into the room again.
 
 |  | Refrigerant dehumidifier | Desiccant dehumidifier |
 | --- | --- | --- |
-| How it works | Pulls air over a cold coil; vapour condenses; drains as liquid | Adsorbs vapour into a desiccant wheel; regenerated with a heater |
-| Sweet spot | Warm rooms, 18–30 °C (64–86 °F), i.e. flower rooms | Cool rooms, keeps full capacity where coils frost[^sylvane-desiccant] |
-| Cold behaviour | Capacity falls as the room cools; coils can ice below ~15 °C (59 °F) | Unbothered by cold; works to near-freezing[^sylvane-desiccant] |
-| Heat added to room | Compressor draw + latent heat of condensed water | More, regeneration heat lands in the airstream (+3–5 °C (+5–9 °F) typical)[^sylvane-desiccant] |
-| Typical grow use | Flower and veg rooms, the default | Cold drying/curing rooms (16–18 °C / 61–64 °F), winter spaces |
+| How it operates | The air flows along a cold coil. The vapor condenses to liquid and goes to the drain. | A desiccant wheel adsorbs the vapor. A heater removes the vapor from the desiccant wheel again. |
+| Best conditions | Warm rooms of 18 to 30 °C (64 to 86 °F). These rooms are the rooms for flowering. | Cool rooms, where ice occurs on coils. The desiccant dehumidifier keeps its full capacity there[^sylvane-desiccant]. |
+| Operation in cold rooms | The capacity decreases when the room becomes colder. Ice can occur on the coils at less than approximately 15 °C (59 °F). | Cold does not change its operation. It operates at temperatures near the freezing point[^sylvane-desiccant]. |
+| Heat that the unit adds to the room | Electrical power of the compressor + latent heat of the condensed water | More heat. The heater that dries the desiccant wheel puts heat into the airflow, typically +3 to 5 °C or +5 to 9 °F[^sylvane-desiccant]. |
+| Typical use in grow rooms | The usual selection for rooms for flowering and for vegetative growth. | Cold drying rooms and curing rooms (16 to 18 °C / 61 to 64 °F), and spaces in winter |
 
-*Refrigerant for the grow, desiccant for the cold dry room is the usual split.*
+*The usual selection is a refrigerant dehumidifier for the grow room and a desiccant dehumidifier for the cold drying room.*
 
 ## Lights-off humidity spike
 
-Watch any grow room’s trend graph and you’ll see the same signature: the moment the lights cut, RH leaps 15–25 points in under an hour. Three things happen at once, and every one of them pushes the same direction:
+In the trend graph of a grow room, you see the same change each time. In less than one hour after the lights go off, the RH increases by 15 to 25 percentage points. Three effects occur at the same time, and each one increases the RH:
 
-1. **The sensible load vanishes.** 7 kW of light heat disappears in one second. The AC, which was condensing moisture as a side effect of cooling, ramps to zero and takes its moisture removal with it[^desertaire-an25-load][^quest-dehu101].
-2. **The air cools, so RH rises with no new water at all.** Air’s capacity to hold vapour roughly halves per 10 °C (18 °F) drop. Cool the example room’s 26 °C (79 °F) / 55% air to 19 °C (66 °F) and it sits at ≈84% RH, same grams of water, smaller container. (Quest’s version of the same arithmetic: 24 °C (75 °F) at 57% becomes ≈80% at 18 °C (64 °F)[^quest-dehu101].)
-3. **The crop keeps transpiring.** Slower in the dark, but far from zero, and wet media keeps evaporating all night. In the example room that’s still ≈4.4 L of new vapour every hour.
+1. **The sensible heat load stops.** The 7 kW of heat from the lights becomes zero in one second. The AC condenses moisture as a side effect of the cooling. This removal of moisture stops when the AC stops[^desertaire-an25-load][^quest-dehu101].
+2. **The air becomes colder, and the RH increases with no new water.** When the temperature decreases by approximately 10 °C (18 °F), the capacity of the air for vapor becomes approximately half. When the air of the example room changes from 26 °C (79 °F) and 55% RH to 19 °C (66 °F), the RH is approximately 84%. The quantity of water in grams is the same, but the air can hold less. The arithmetic of Quest gives the same result: 57% RH at 24 °C (75 °F) becomes approximately 80% RH at 18 °C (64 °F)[^quest-dehu101].
+3. **The crop continues to transpire.** The rate is lower when the lights are off, but it is not near zero. Water also continues to evaporate from wet media all night. In the example room, the new vapor is approximately 4.4 L each hour.
 
-> **Diagram.** The lights-off signature. Temperature falls, RH spikes toward the mould window, and the gap between the spike and your night target is exactly the dehumidification capacity you did, or didn’t, install.
+> **Diagram.** The change at lights-off. The temperature decreases, and the RH increases in the direction of the mold range. The dehumidification capacity that you installed, or did not install, causes the difference between the RH at the spike and your night target.
 
-> **Diagram.** Late flower wants the low half of the band. Every hour spent above ~70% at night is time in _Botrytis_’ preferred climate[^punja-budrot-cjb].
+> **Diagram.** In the last weeks of flowering, the RH must be in the lower half of the range. Each hour with an RH of more than approximately 70% at night is an hour in the climate that is best for _Botrytis_[^punja-budrot-cjb].
 
-**Why this window matters so much:** bud rot (_Botrytis cinerea_) thrives in cool, near-saturated, still air, and dense late-flower colas hold exactly that microclimate internally[^punja-budrot-cjb]. The room hits its highest RH at its lowest temperature, dew forms on whatever surface sits below the dew point (at 26 °C (79 °F) / 55%, that’s any surface under ~16 °C (61 °F), duct skins, exterior walls, cold glass), and the crop is at its most vulnerable stage. The night latent capacity you sized in Section 07 is not a comfort feature. It is mould control.
+**This period is very important.** Bud rot (_Botrytis cinerea_) occurs in cool air that is almost saturated and does not move. Colas with high density in the last weeks of flowering contain this microclimate in their inner area[^punja-budrot-cjb]. The room has its highest RH at its lowest temperature. The crop is at the stage with the highest risk.Dew occurs on each surface that is colder than the dew point. At 26 °C (79 °F) and 55% RH, dew occurs on each surface that is colder than approximately 16 °C (61 °F). Examples are the surfaces of ducts, external walls and cold glass. The capacity for the latent heat load at night, which you calculate in Section 07, is not for comfort. It is for mold control.
 
-> **TIP — Pre-dry the room and ramp the lights down slowly**
+> **TIP: Dry the air before lights-off, and decrease the light slowly**
 >
-> - **Pre-dry the room:** run dehumidifiers hard for the final hour of lights-on so the room enters the night at the bottom of its RH band, with headroom.
-> - **Ramp, don’t step:** if your controller supports it, stage the lights down over 15–30 minutes so the AC and dehus track the transition instead of getting ambushed by it.
-> - **Use the dehu heat:** a dehumidifier returns ~0.68 kWh per litre plus its own draw as heat, in the example room that’s ~4.6 kW through the night, usually most of what’s needed to hold 19 °C. Free night heating, already paid for.
-> - **Alarm on rate-of-rise:** RH climbing faster than your modelled spike means a dehu has dropped out. You want that text at 22:10, not the smell at 07:00.
+> - **Dry the room before lights-off:** operate the dehumidifiers at maximum capacity in the last hour of lights-on. Thus the room goes into the night at the lower end of its RH range, with headroom.
+> - **Decrease the light in a ramp, and not in one step.** If your controller can do this, decrease the lights in stages in 15 to 30 minutes. Thus the AC and the dehumidifiers have time to adjust to the change.
+> - **Use the heat of the dehumidifiers.** A dehumidifier releases approximately 0.68 kWh as heat for each liter of water, plus its electrical power. In the example room, the heat is approximately 4.6 kW during the night. It is usually most of the heat that is necessary to hold 19 °C. This night heating has no cost, because the dehumidifiers must operate at night.
+> - **Set an alarm for the rate at which the RH increases.** If the RH increases faster than the spike that you calculated, a dehumidifier is not in operation. It is better to get the alarm at 22:10 than to find mold at 07:00.
 
-> **DANGER — Droplets on surfaces at lights-off: act the same night**
+> **DANGER: Drops of water on surfaces at lights-off: do the steps that night**
 >
-> If you ever see droplets on walls, ducts or fixtures at lights-off, you are past warnings: liquid water in a _Botrytis_ room. That night: raise the night temperature setpoint a degree (warmer air holds the same water at lower RH), run every dehu you own, and open the canopy with airflow. Then fix the capacity shortfall before the next dark period, not before the next crop.
+> If you see drops of water on walls, ducts or fixtures at lights-off, the room has liquid water. Liquid water is very bad for the crop, because of the risk of _Botrytis_.
+> Do these steps that night. Increase the night temperature setpoint by one degree (air at a higher temperature holds the same water at a lower RH). Operate each dehumidifier that you have. Open the canopy with airflow.
+> Then increase the capacity before the next period with the lights off. Do not wait for the next crop.
 
-## HVAC supply, return and circulation
+## HVAC supply air, return air and circulation
 
-The climate plant conditions air; the room still has to _distribute_ it. Two systems, two jobs: the air handling loop delivers conditioned air and drags moist warm air back to the coils, sealed grow rooms typically turn the room’s air over 20–40 times per hour, recirculating ~100% of it to keep CO₂ and keep outside contaminants out[^streit2023-hvacd], while circulation fans stir the canopy so no leaf sits in its own humid boundary layer (that story is the [airflow design paper](airflow-design.html)).
+The climate system supplies conditioned air, and the air must go to _all_ parts of the room. There are two systems with two tasks. The air handling loop supplies conditioned air and moves the warm, moist air to the coils again. A sealed grow room typically moves a volume of air equal to the room volume 20 to 40 times each hour. The air is approximately 100% recirculating air, to keep the CO₂ in the room and to keep external contaminants out[^streit2023-hvacd]. Circulation fans move the air in the canopy, and thus no leaf stays in a boundary layer of high humidity (the [airflow design paper](airflow-design.html) gives information about this).
 
-> **Diagram.** Supply high on one side, return low on the other, so conditioned air is forced through the canopy zone rather than over it. Circulation fans handle the last metre; the dehumidifier drains to a plumbed line, not a bucket.
+> **Diagram.** The supply air is at the top on one side, and the return air is at the bottom on the other side. Thus the conditioned air flows through the canopy zone and not above it. Circulation fans move the air for the last meter. The dehumidifier drains into a pipe and not into a bucket.
 
-- **Supply high, return low.** Dry supply air is less dense paths matter less than geometry: pushing supply across the ceiling and pulling return at floor level forces air through the canopy, where the load actually is.
-- **Don’t short-circuit the air path.** A supply diffuser blowing straight into a nearby return conditions the duct, not the room. Sensors near that path read beautifully while the far corner rots.
-- **Place dehumidifiers deliberately.** Discharge aimed along a wall or aisle, not blasting one bench of plants with hot dry air; intake sitting in the moist zone, not in its own dry plume, a unit re-breathing its own discharge reads a dry room and idles while the canopy stays wet.
-- **Watch compressor short-cycling.** A grossly oversized single-stage AC satisfies the thermostat in minutes and shuts down before the coil ever gets cold and wet enough to condense much. You get temperature control and no dehumidification, plus compressor wear. Staged or inverter capacity, plus minimum-run timers, is the fix.
+- **Put the supply air at the top and the return air at the bottom.** Dry supply air has a lower density. The air paths are less important than the geometry. Supply the air across the ceiling and remove the return air at floor level. Thus the air flows through the canopy, where the load is.
+- **Do not let the supply air go directly to the return air.** If a supply diffuser sends air directly into a return air inlet near the diffuser, the conditioned air stays in the duct system. It does not go into the room. Sensors near that airflow show good values, but there is rot in the far corner.
+- **Select the position of the dehumidifiers carefully.** Point the discharge air along a wall or an aisle. Do not point the hot, dry air at one bench of plants. Put the intake in the moist zone, and not in the dry plume of the unit. If the intake receives the discharge air of the same unit, its sensor measures dry air and the unit does not operate. The canopy stays wet.
+- **Monitor the compressor for short cycling.** Short cycling occurs when a single-stage AC is much too large. The room temperature becomes equal to the thermostat setpoint in minutes, and the AC stops. The coil does not become cold and wet for a sufficient time to condense much water. You get temperature control, but no dehumidification, and the compressor has more damage from operation. Capacity in stages or an inverter, with timers for a minimum operation time, corrects this problem.
 
-## Condensate management and reuse
+## Condensate drains, measurement and reuse
 
-Everything the coils and dehumidifiers condense has to go somewhere, in the example room, ~175 L/day of it. That flow is a maintenance liability, a free instrument, and a potential water resource, in that order.
+The water that the coils and the dehumidifiers condense must go away from the equipment. In the example room, the quantity is approximately 175 L/day. This flow is, in this sequence, a maintenance problem, a no-cost instrument and a possible source of water.
 
-- **A maintenance liability:** every unit needs a trapped, sloped drain or a reliable condensate pump with a float cut-out. Pans and trays grow biofilm and drip on canopy; blocked drains shut units down (good ones) or overflow into ceilings (the rest). Tray and drain cleaning is an IPM task, not optional housekeeping.
-- **A free instrument:** metered condensate is your measured latent load. Falling condensate at constant irrigation means either runoff went up or removal capacity went down, both worth knowing by breakfast.
-- **A resource:** most of the irrigation water you paid for comes back as near-distilled condensate, and it can be captured and reused[^streit2023-water].
+- **A maintenance problem:** each unit must have a drain with a trap and a slope, or a good condensate pump with a float switch. Biofilm occurs in pans and trays, and the water falls on the canopy. A blocked drain stops a good unit, but in other units the water flows into the ceiling. Maintenance of the trays and the drains is a task in integrated pest management (IPM), and it is necessary.
+- **A no-cost instrument:** when you measure the condensate, you measure the latent heat load. If the condensate decreases and the irrigation is constant, the runoff is larger or the removal capacity is smaller. Find the cause by the next morning.
+- **A source of water:** most of the irrigation water that you apply becomes condensate again, and this condensate is almost distilled water. You can collect it and use it again[^streit2023-water].
 
-> **Diagram.** The reuse path. Condensate is low-EC with pH typically 5.5–6.5, but it can carry VOCs, metals picked up from coils (copper, zinc, lead) and microbial load from wet trays, treat before it touches the crop[^ncia-condensate].
+> **Diagram.** The reuse steps. Condensate has a low EC and a typical pH of 5.5 to 6.5. But it can contain VOCs, metals from the coils (copper, zinc and lead), and microbes from wet trays. Apply a treatment to it before it touches the crop[^ncia-condensate].
 
-> **NOTE — Compliance angle**
+> **NOTE: Compliance**
 >
-> Under GACP-style quality systems and most medicinal licensing regimes, irrigation water quality must be controlled and documented. If condensate re-enters the crop, its treatment train and test results belong in your water SOP alongside the source water, decide and document _before_ the auditor asks[^ncia-condensate].
+> In a GACP quality system, and in most medical license systems, you must control the quality of the irrigation water and record it. If condensate goes into the crop water again, your water SOP must include its treatment steps and its test results, as for the source water. The decision about condensate in the crop water, and its record, are necessary _before_ an audit[^ncia-condensate].
 
-## Redundancy planning
+## Redundancy for failures
 
-Run the failure before it runs you. Example room, week 6, 23:00: two 80 L/day units are carrying the night at ≈⅔ nameplate. One trips on a failed capacitor. Do the arithmetic: the room’s ~150 m³ of air at 19 °C (66 °F) / 60% RH can only absorb about **one more litre of water** before saturation. And the crop is adding ≈4.4 L every hour. The surviving unit removes barely half of that. RH is against the ceiling within the hour, condensation starts on the coldest surfaces, and nothing else in the room can help because the AC has no sensible load to run against. This is not a slow drift you catch at the morning walk-through. It runs away in minutes.
+Calculate the effect of a failure before it occurs. Example room, week 6, 23:00: two units of 80 L/day hold the night at approximately ⅔ of the nameplate capacity. One unit stops because of a defective capacitor. Do the arithmetic: the air in the room is approximately 150 m³ at 19 °C (66 °F) and 60% RH. This air can absorb only approximately **one more liter of water** before saturation.The crop adds approximately 4.4 L each hour. The remaining unit removes approximately half of this quantity. In less than one hour, the RH is at its maximum, and condensation starts on the coldest surfaces. No other equipment in the room can help, because the AC has no sensible heat load and does not operate.The change is not slow, and you do not find it when you walk through the room in the morning. The RH increases in minutes.
 
-**N+1** is the fix, and it’s exactly what it sounds like: N units cover the design load; you install one more, so any single failure leaves the room fully served. Apply it in order of what kills the crop fastest:
+**N+1** redundancy is the correct method. N units supply the calculated load, and you install one more unit. Thus, if one unit stops, the remaining units give the full capacity. Apply it in the sequence of the failures that cause the fastest crop loss:
 
-1. **Night dehumidification first.** No fallback exists, when a dehu dies at night, nothing else removes water. Three 80s where two carry the load.
-2. **Cooling second.** Day cooling failure has a fallback: shed the load. Interlock the lights so a cooling fault dims them to 50% or kills them. You can afford a lost day of photosynthesis; you cannot afford 40 °C over a full photoperiod. Two smaller ACs also beat one big one here.
-3. **Controls and alarms last but not least**, the redundancy you don’t know has failed doesn’t exist. Alarms must reach a human who can act, and must survive the same power event that caused the fault.
+1. **Night dehumidification first.** There is no alternative. When a dehumidifier stops at night, no other equipment removes water. Use three units of 80 L/day where two units supply the load.
+2. **Cooling second.** For a cooling failure in the day, there is an alternative: decrease the load. Connect the lights to the cooling with an interlock. When a cooling fault occurs, the interlock decreases the light to 50% or stops the lights. You can accept one day with no photosynthesis, but you cannot accept 40 °C for a full photoperiod. Two smaller ACs are also better than one large AC for this.
+3. **Controls and alarms last.** A spare unit that is defective, and that you do not know about, gives no protection. Alarms must go to a person who can correct the problem. The alarms must continue to operate during the same power failure that caused the fault.
 
-**Night dehu dies**
+**Night dehumidifier stops**
 
-RH runs away in minutes (arithmetic above). **Detect:** RH rate-of-rise alarm. **Survive:** N+1 capacity, auto-restart after trip, a spare capacitor on the shelf.
+The RH increases in minutes (arithmetic above). **How you find it:** an alarm for the rate at which the RH increases. **Protection:** N+1 capacity, automatic start after the unit stops, and a spare capacitor in storage.
 
-**Day AC dies**
+**Day AC stops**
 
-9 kW keeps arriving with nowhere to go; a sealed room climbs degrees per hour. **Detect:** temp alarm + current sensor on the unit. **Survive:** lights interlock sheds the load automatically; second unit carries a de-rated day.
+The 9 kW of heat continues to come into the room, and it has no exit. In a sealed room, the temperature increases by some degrees each hour. **How you find it:** a temperature alarm and a current sensor on the unit. **Protection:** the lights interlock decreases the load automatically, and the second unit supplies the cooling for a day with a lower load.
 
-**Condensate drain blocks**
+**Condensate drain is blocked**
 
-Water where it shouldn’t be; float switch stops the unit. Which quietly becomes a capacity failure. **Detect:** unit-stopped alarm, weekly tray inspection. **Survive:** plumbed drains, floats tested monthly, trays on the cleaning roster.
+Water is in a position where it must not be, and the float switch stops the unit. The result is a failure of capacity with no signal. **How you find it:** an alarm for a stopped unit, and an inspection of the trays each week. **Protection:** drains with pipes, a test of the float switches each month, and the trays in the maintenance schedule.
 
-**Coil ices up**
+**Ice on the coil**
 
-Starved airflow (dirty filter), low charge, or a too-cold room. Unit runs, removes nothing, then dumps meltwater. **Detect:** runtime with no condensate flow. **Survive:** filter schedule, defrost-capable units, desiccant in genuinely cold spaces[^sylvane-desiccant].
+The causes are not sufficient airflow (dirty filter), low refrigerant charge, or a room that is too cold. The unit operates but removes no water. Then the ice melts, and the water falls from the unit. **How you find it:** operation time with no condensate flow. **Protection:** a filter schedule, units that can defrost, and a desiccant dehumidifier in spaces that are very cold[^sylvane-desiccant].
 
-**Sensor drifts or lies**
+**Sensor gives incorrect values**
 
-The controller faithfully chases fiction; the room follows. **Detect:** monthly cross-check against a decent handheld at canopy height. **Survive:** two sensors per room and control on the worse reading.
+The controller uses the incorrect value, and the room changes to the incorrect condition. **How you find it:** a check each month with a good handheld meter at canopy height. **Protection:** two sensors in each room, and control with the worse reading.
 
-**Power blip**
+**Short power failure**
 
-Everything stops; what restarts? Compressors need delay timers, some dehus wake in standby. A room can look powered and be doing nothing. **Detect:** post-outage checklist, alarms on a UPS. **Survive:** test the black-start on purpose, once, before summer does it for you.
+All the equipment stops. It is necessary to know which equipment starts again. A compressor must have a timer for the interval before it starts again, and some dehumidifiers go to standby mode and do not operate. A room can look as if it has power, but the equipment does not operate.
+**How you find it:** a checklist after a power failure, and alarms with power from an uninterruptible power supply (UPS). **Protection:** do a test of the start after a power failure. Do the test one time, at a time that you select, and before a power failure in the summer.
 
-> **KEY — Break it on purpose**
+> **KEY: Stop the equipment at a time that you select**
 >
-> Once per cycle, in early veg when stakes are low: kill each climate unit for an hour and watch the trends. You’ll learn your real runway (minutes? hours?), whether the alarms fire, and whether the auto-restarts work. Cheap insurance, and the only way to know your N+1 is real rather than nameplate.
+> Do this test one time in each cycle, at the start of vegetative growth, when the risk is low. Stop each climate unit for one hour and monitor the trends. You will know how much time you have before the problem becomes dangerous (minutes or hours). You will also know if the alarms operate and if the units start again automatically. This test has a low cost. It is the only method to make sure that your N+1 is correct and not only a nameplate value.
 
-## HVAC staging and deadbands
+## Stages and deadbands of the HVAC controls
 
-A grow room runs heating, cooling and dehumidification within metres of each other, and two of the three make the third’s job worse: cooling raises RH; dehumidifying adds heat. Un-coordinated, they fight, the AC overcools, RH climbs, the dehu heats, the AC returns, around and around, burning power and cycling compressors. The cure is sequencing, not bigger hardware.
+In a grow room, the heating, the cooling and the dehumidification operate near each other. Two of the three make the task of the third worse: cooling increases the RH, and dehumidification adds heat. If there is no control sequence, the units decrease the result of each other. The AC decreases the temperature too much, the RH increases, the dehumidifier adds heat, and the AC starts again. This cycle uses much electrical power and causes the compressors to start and stop many times. The correct method is a control sequence, and not larger equipment.
 
-> **Diagram.** The loop every decent controller implements. The deadband, the tolerance around the setpoint where nothing switches. Is what gives each machine room to finish its job before the next one starts.
+> **Diagram.** The loop that each good controller uses. The deadband is the tolerance around the setpoint, where no equipment starts or stops. The deadband gives each unit time to complete its task before the next unit starts.
 
-- **Deadbands:** control to a band, not a knife-edge. Day 26 °C (79 °F) ±0.5 °C, RH 55–60% is a structure (yours will differ, setpoints belong to the crop, see the [VPD paper](temp-humidity-vpd.html); cannabis photosynthesis runs happily around 25–30 °C (77–86 °F)[^chandra2008-photo]). Tight bands feel professional and mostly buy you equipment cycling.
-- **Sequencing:** heat and cool must never run together (lockout between them); dehumidification may run alongside either, but its reheat should come from the machine, hot-gas reheat, not from the heaters fighting the AC[^streit2023-hvacd].
-- **Day/night setpoints with ramps:** separate targets for lights-on and lights-off, connected by 15–30 minute ramps so the transition is driven, not endured (Section 09).
-- **Control moisture on dew point where you can:** %RH swings with every temperature wobble even when the water content hasn’t changed; dew point tracks the actual grams. At the day/night transition, dew-point control is dramatically calmer.
-- **Sensor placement is a control decision:** an aspirated or well-shielded sensor at canopy height, out of any supply jet or dehu plume. The controller can only be as honest as its sensor (Section 12’s quiet killer).
+- **Deadbands:** control to a band and not to one value. For example, the setpoint in the day is 26 °C (79 °F) ±0.5 °C, and the RH is 55 to 60%. Your values are different, because the crop gives the setpoints (read the [VPD paper](temp-humidity-vpd.html)). The photosynthesis of cannabis operates correctly at approximately 25 to 30 °C (77 to 86 °F)[^chandra2008-photo]. A small band can show good control, but it mostly causes frequent starts and stops of the equipment.
+- **Sequence:** the heating and the cooling must not operate at the same time (use a lockout between them). The dehumidification can operate with the heating or with the cooling. We recommend that the reheat comes from the unit, for example hot-gas reheat, and not from heaters that decrease the result of the AC[^streit2023-hvacd].
+- **Setpoints for the day and for the night, with ramps.** Use different targets for lights-on and for lights-off. Connect them with ramps of 15 to 30 minutes. Thus you control the change (Section 09).
+- **Control the moisture with the dew point when you can.** The %RH changes with each small change of temperature, also when the water content is the same. The dew point shows the quantity of water in grams. At the change between day and night, control with the dew point is much more stable.
+- **The position of the sensor is a control decision.** Use an aspirated sensor, or a sensor with a good shield, at canopy height. Put it away from a jet of supply air and from the plume of a dehumidifier. The controller can be only as accurate as its sensor (Section 12, sensor with incorrect values).
 
 ## HVAC efficiency, reheat and heat recovery
 
-Climate is where the money goes. Energy runs 30–60% of indoor operating expense[^rii-hvac-bpg], and life-cycle analysis of US indoor production found environmental control the dominant driver of both energy use and emissions, 2,300–5,200 kg CO₂e per kg of dried flower depending on location[^summers2021-ghg]. Every design choice in this section moves that number.
+The climate system is a large part of the energy cost. Energy is 30 to 60% of the operating cost of an indoor facility[^rii-hvac-bpg]. A life-cycle analysis of indoor production in the US found that environmental control is the primary cause of energy use and of emissions. The emissions are 2,300 to 5,200 kg CO₂e for each kg of dried flower, and the value changes with the location[^summers2021-ghg]. Each selection of equipment in this section changes that number.
 
 - **1 kW of electricity:** 3,412 BTU/h of heat, always
-- **1 ton of cooling:** 12,000 BTU/h ≈ 3.52 kW
+- **1 ton of cooling:** 12,000 BTU/h = approximately 3.52 kW
 - **1 US pint:** 0.473 L
-- **Condensing 1 L of vapour:** ≈0.68 kWh of latent heat released at the coil
-- **Resistance heater:** COP 1.0 — the most expensive heat you can buy
-- **Modern compressor:** COP 3–4 — moves 3–4 kW of heat per kW consumed
+- **Condensation of 1 L of vapor:** approximately 0.68 kWh of latent heat that the coil releases
+- **Resistance heater:** COP 1.0. This type of heat has the highest cost.
+- **New compressor:** COP 3 to 4. It moves 3 to 4 kW of heat for each kW that it uses.
 
-- **Hot-gas reheat is the flagship move.** Dehumidification means cooling air below its dew point, then warming it back so you don’t overcool the room. Electric reheat pays full price (COP 1) for heat you just paid to remove. Hot-gas reheat recycles the compressor’s own rejected heat to do the rewarming, near-free reheat, standard on mid-tier DX and integrated units[^streit2023-hvacd].
-- **Right-size rather than oversize.** Oversized single-stage equipment short-cycles: worse dehumidification, worse efficiency, shorter compressor life. Margin belongs in _staged_ capacity (two circuits, inverter drive), not in one heroic unit.
-- **LEDs shift the ratio, not the rules.** At equal PPFD, LEDs draw fewer watts, so the sensible load drops, but the crop transpires much the same, so the latent load doesn’t. LED rooms are latent-dominated rooms: expect the dehumidifier spec, and the winter heating question, to matter _more_, not less.
-- **Reuse heat you already own.** Dehu heat holds the night temperature (Section 09); condenser heat can pre-warm dry rooms or water. Rejecting heat outside all winter while running COP-1 heaters inside is a bill you chose.
-- **Maintenance is an efficiency program:** dirty filters and fouled coils quietly tax capacity and COP for months before anything actually fails. Filters monthly; coils each cycle.
+- **Hot-gas reheat is the best method.** For dehumidification, the unit decreases the air temperature to less than its dew point. Then the unit increases the air temperature again, and thus the room does not become too cold. Electric reheat uses new electrical power (COP 1) for heat that you removed. Hot-gas reheat uses the heat that the compressor releases for the reheat. The cost of this reheat is almost zero, and it is standard on DX units of medium cost and on integrated units[^streit2023-hvacd].
+- **Select the correct size, and do not select a size that is too large.** A single-stage unit that is too large has short cycling. The result is worse dehumidification, lower efficiency and a shorter life of the compressor. Put the margin in capacity in _stages_ (two circuits or an inverter) and not in one very large unit.
+- **LEDs change the ratio, but not the physics.** At the same PPFD, LEDs use less electrical power, and thus the sensible heat load decreases. But the crop transpires almost the same quantity of water, and thus the latent heat load does not decrease. In LED rooms, the latent heat load is the primary load. As a result, the dehumidifier capacity and the heating in winter are _more_ important, and not less important.
+- **Use again the heat of your equipment.** The heat from the dehumidifiers holds the night temperature (Section 09). Heat from the condenser can increase the temperature of drying rooms or of water. You can send heat to the external air in winter and operate COP-1 heaters in the room at the same time. Then the high energy cost is your selection.
+- **Maintenance increases efficiency.** Dirty filters and dirty coils decrease the capacity and the COP for months, with no alarm, before a unit stops. Clean or replace the filters each month. Clean the coils in each cycle.
 
 ## Troubleshooting
 
-| Symptom | Likely cause | First moves |
+| Symptom | Possible cause | First steps |
 | --- | --- | --- |
-| RH pins 80%+ every lights-off | Night latent load exceeds real (derated) dehu capacity; AC idle at night | Measure water-in minus runoff vs installed capacity at night temp (Sections 05–07); pre-dry the last hour; add nameplate |
-| Room creeps hot all afternoon, AC never stops | Undersized vs full equipment load, dirty coil/filter, or low refrigerant | Redo the watt count (Section 06); wash coils, change filters; then call the fridgie |
-| AC cycles fast; temp fine, RH never falls | Oversized single-stage unit short-cycling. Coil never stays cold long enough to condense | Minimum-run timers; staged/inverter capacity; let dehus own the moisture |
-| Room cold _and_ humid (clammy) | Cooling running without reheat, classic mini-split-as-dehumidifier | Raise cooling setpoint; add dehu with reheat (or hot-gas reheat unit); heat and dehumidify separately |
-| Condensation on ducts/walls at night | Surfaces below the air's dew point | More night dehu capacity; raise night temp a touch; insulate cold surfaces; verify with an IR thermometer |
-| Dehu runs constantly, tank barely fills | Room colder than rating point, iced coil, or unit re-breathing its own dry plume | Check coil for frost and filter for dust; read the capacity curve at your temp; reposition; desiccant if the space is genuinely cold |
-| Musty smell, stains below units | Blocked condensate pans/traps, biofilm in trays | Clean and disinfect trays; flush drains; float switch working? add to weekly roster |
-| One corner always wetter, mould starts there | Air-distribution dead zone | Fix supply/return geometry (Section 10); add circulation; thin the canopy; verify with a handheld meter |
-| Sensors read fine but buds still rot | Wall sensor lying about the canopy microclimate | Measure inside the canopy at cola height; control on dew point; more through-canopy airflow[^punja-budrot-cjb] |
+| The RH is 80% or more at each lights-off | The latent heat load at night is more than the corrected dehumidifier capacity. The AC does not operate at night. | Measure the water that goes in minus the runoff. Compare it with the installed capacity at the night temperature (Sections 05 to 07). Dry the air in the last hour of lights-on. Add nameplate capacity. |
+| The temperature of the room increases slowly in the afternoon, and the AC does not stop | The AC is too small for the full equipment load, the coil or the filter is dirty, or the refrigerant is low | Count the watts again (Section 06). Clean the coils. Replace the filters. Then get a refrigeration technician. |
+| The AC starts and stops frequently. The temperature is correct, but the RH does not decrease. | A single-stage unit that is too large has short cycling. The coil does not stay cold for a sufficient time to condense water. | Use timers for a minimum operation time. Use capacity in stages or an inverter. Let the dehumidifiers remove the moisture. |
+| The room is cold _and_ has high humidity | The cooling operates without reheat, and the problem is frequent when a mini-split is the dehumidifier. | Increase the cooling setpoint. Add a dehumidifier with reheat (or a unit with hot-gas reheat). Use different equipment for the heating and for the dehumidification. |
+| Condensation on ducts and walls at night | The surfaces are colder than the dew point of the air | Add dehumidifier capacity for the night. Increase the night temperature by a small value. Install insulation on cold surfaces. Measure the result with an IR thermometer. |
+| The dehumidifier operates all the time, but the tank fills very slowly | The room is colder than the rating conditions, the coil has ice, or the intake receives the dry plume of the same unit | Examine the coil for ice and the filter for dust. Read the capacity curve for your temperature. Change the position of the unit. Use a desiccant dehumidifier if the space is very cold. |
+| Smell of mold, and stains below the units | Blocked condensate pans or traps, and biofilm in trays | Clean the trays. Disinfect the trays. Flush the drains. Make sure that the float switch operates. Add the trays to the maintenance schedule for each week. |
+| One corner is always wetter, and mold starts there | Dead zone in the airflow | Correct the geometry of the supply air and the return air (Section 10). Add circulation. Decrease the density of the canopy. Measure the result with a handheld meter. |
+| The sensors show correct values, but rot occurs on the buds | The sensor on the wall does not show the microclimate of the canopy | Measure in the canopy at the height of the colas. Control with the dew point. Add airflow through the canopy[^punja-budrot-cjb]. |
 
-*Work top to bottom: measure before replacing hardware. Most ‘broken HVAC’ is an honest machine obeying a wrong assumption.*
+*Start at the top of the table and continue to the bottom. Measure before you replace equipment. Most ‘broken HVAC’ equipment operates correctly, but the information that it uses is incorrect.*
 
 ## Heat and moisture balance
 
-> **KEY — The mental model**
+> **KEY: The primary model**
 >
-> A grow room is an accounting problem wearing a plant costume. **Follow the watt:** every kilowatt of equipment becomes a kilowatt of heat; count them and you have the sensible load. **Follow the litre:** every litre irrigated, minus drain, becomes vapour; count them and you have the latent load. The climate plant is just the return path for both, and it must work at 02:00 in the dark as well as at 14:00 under full light.
+> **Count the watts.** Each kilowatt of equipment becomes a kilowatt of heat, and the total is the sensible heat load. **Then count the liters.** Each liter that you apply, minus the drain, becomes vapor, and the total is the latent heat load. The climate system removes the two loads. It must operate at 02:00 with the lights off and at 14:00 with the lights on.
 
-1. Count watts → sensible load. Folklore counts only the lights; you count everything (Section 06).
-2. Count litres → latent load. Water in minus runoff, converted to pints for the spec sheet (Sections 05, 07).
-3. Night is the design case: no sensible load, no AC help, transpiration continuing. Size dehumidification for lights-off at _your_ night temperature, derated from nameplate.
-4. N+1 the night dehumidification; interlock the lights to the cooling. Then break each unit on purpose once, and watch what happens.
-5. Control moisture (dew point) with deadbands and sequencing so the machines cooperate; ramp the day/night transition.
-6. Meter irrigation, runoff and condensate, the free, continuous load calculation that also tells you when the crop changes.
+1. Count the watts to get the sensible heat load. The forum numbers count only the lights, but you count all the equipment (Section 06).
+2. Count the liters to get the latent heat load. Use the water that goes in minus the runoff, and change it to pints for the data sheet (Sections 05 and 07).
+3. Use the night load for the size. At night there is no sensible heat load, the AC does not help, and transpiration continues. Calculate the dehumidifier capacity for lights-off at _your_ night temperature, and correct the nameplate capacity.
+4. Use N+1 for the night dehumidification. Connect the lights to the cooling with an interlock. Then stop each unit one time, at a time that you select, and monitor the result.
+5. Control the moisture (dew point) with deadbands and a control sequence. Thus the units operate together. Use a ramp for the change between day and night.
+6. Measure the irrigation, the runoff and the condensate. These measurements give the load continuously at no cost, and they also show when the crop changes.
 
-The climate plant is one subsystem of the room. Read it alongside the [grow-room systems guide](grow-room-systems.html), the [temperature, humidity and VPD paper](temp-humidity-vpd.html) for what the setpoints should actually be, and the [airflow design paper](airflow-design.html) for the last metre of air movement.
+The climate system is one part of the grow room. Read this paper with the [grow room systems paper](grow-room-systems.html). For the correct setpoints, read the [temperature, humidity and VPD paper](temp-humidity-vpd.html). For the last meter of air movement, read the [airflow design paper](airflow-design.html).
 
 ## References
 
-[^rii-hvac-bpg]: Resource Innovation Institute (2019). Best practices guide: HVAC for cannabis cultivation & controlled environment agriculture (peer-reviewed industry guide from RII's Technical Advisory Council; energy is 30-60% of indoor operating expense; centralised CEA dehumidification substantially reduces operating cost). https://resourceinnovation.org/blog/riis-hvac-best-practices-guide-demystifies-approaches-to-efficient-cooling-and-dehumidification/ (industry/manufacturer source)
-[^desertaire-an25-load]: Desert Aire. Grow room load determination. Application Note 25 (DA125) (lighting is the largest sensible load in indoor farming; latent load is transpiration plus evaporation from media, irrigation and wetted surfaces; ~99% of water delivered to the roots passes through the stomata as vapour; at lights-off a standard air conditioner satisfies the small sensible demand and shuts off before the moisture is removed). Manufacturer engineering note. https://www.desert-aire.com/resources/application-notes/grow-room-load-determination (industry/manufacturer source)
-[^streit2023-hvacd]: Streit L (IMEG Corp). Cannabis grow facility design 101, part 3: HVACD and air distribution. PHCP Pros (grow lights are the bulk of the sensible cooling load; latent load follows irrigation — water in equals water out; typical rooms run 20-40 air turns per hour with ~100% recirculation; equipment tiers from packaged DX plus dehumidifiers, through DX with hot-gas reheat, to chilled-water plants with reheat). Engineering trade article. https://www.phcppros.com/articles/16050-cannabis-grow-facility-design-101-part-3-hvacd-and-air-distribution (industry/manufacturer source)
-[^hpac-latent]: HPAC Engineering. Latent loads matter: HVAC for cannabis grow facilities (transpiration returns most irrigation water to room air as vapour, the dominant dehumidification load; filters do not remove it). https://www.hpac.com/industrial/article/21270796/latent-loads-matter-hvac-for-cannabis-grow-facilities (industry/manufacturer source)
-[^grossiord2020-vpd]: Grossiord C, Buckley TN, Cernusak LA, et al. (2020). Plant responses to rising vapor pressure deficit. New Phytologist 226(6):1550-1566. https://doi.org/10.1111/nph.16485 (peer-reviewed)
-[^hydrobuilder-ac-sizing]: Hydrobuilder Learning Center. Grow room air conditioner sizing guide (every watt of equipment makes ~3.41 BTU/h of heat; HPS folklore runs 3.5-4 BTU/W; dehumidifier draw returns ~100% as heat; ~400 BTU/h per person; add 20-30% margin; 1 ton = 12,000 BTU/h). Industry sizing guide. https://learn.hydrobuilder.com/grow-room-air-conditioner-sizing-buying-guide/ (industry/manufacturer source)
-[^streit2023-water]: Streit L (IMEG Corp). Cannabis grow facility design 101, part 2: water usage. PHCP Pros (80-95% of irrigation water is transpired and returns via the HVACD system as condensate from coils and dehumidifiers; condensate can be captured, retreated — typically through RO — and reused for irrigation). Engineering trade article. https://www.phcppros.com/articles/15572-cannabis-grow-facility-design-101-part-2-water-usage (industry/manufacturer source)
-[^quest-perfect-dehu]: Quest Climate. Grow room dehumidifiers: perfect your setup (water in = water out sizing: gallons irrigated minus gallons drained, times 8 pints per gallon — e.g. 25 gal fed with 5 gal to drain = 160 pints/day to remove; plan dehumidification for worst-case days). Manufacturer application guide. https://www.questclimate.com/perfect-grow-room-dehumidifier/ (industry/manufacturer source)
-[^quest-dehu101]: Quest Climate. Dehumidification 101 for cannabis growers (air conditioners dehumidify poorly and sit idle at lights-off, so dedicated dehumidifiers carry the overnight moisture; baseline 0.5-2 pints/day per square foot of canopy; cooling air raises its RH — a mid-70s °F room at ~57% RH lands near 80% when cooled to 65 °F; excess humidity drives Botrytis and powdery mildew). Manufacturer application guide. https://www.questclimate.com/dehumidification-101-cannabis-growers/ (industry/manufacturer source)
-[^sylvane-desiccant]: Sylvane. Desiccant vs. refrigerant dehumidifiers: which is best for you? (refrigerant units condense moisture on a cold coil and lose capacity as the space cools, icing at low temperatures; desiccant wheels keep near-full capacity in cold rooms and add several degrees of regeneration heat to the airstream). Industry knowledge base. https://www.sylvane.com/blogs/knowledge-center/desiccant-vs-refrigerant-dehumidifiers (industry/manufacturer source)
-[^punja-budrot-cjb]: Mahmoud M, BenRejeb I, Punja ZK, Buirs L, Jabaji S (2023). Understanding bud rot development, caused by Botrytis cinerea, on cannabis grown under greenhouse conditions. Botany / Can. J. Bot. 101(8). https://doi.org/10.1139/cjb-2022-0139 (peer-reviewed)
-[^ncia-condensate]: Robinson T, Lisabeth K (Silver Bullet Water Treatment) (2020). Condensate recapture for cannabis cultivation facilities. National Cannabis Industry Association member blog (condensate is low-TDS with pH ~5.5-6.5 from dissolved CO2, but can carry VOCs, coil metals — lead, zinc, aluminium, copper — and microbes; treat with filtration plus UV/AOP disinfection before reuse, and baseline-test regularly). https://thecannabisindustry.org/member-blog-condensate-recapture-for-cannabis-cultivation-facilities-making-informed-decisions-to-save-resources-and-improve-efficiency/ (industry/manufacturer source)
-[^chandra2008-photo]: Chandra S, Lata H, Khan IA, ElSohly MA (2008). Photosynthetic response of Cannabis sativa L. to variations in photosynthetic photon flux densities, temperature and CO2 conditions. Physiol. Mol. Biol. Plants 14(4):299-306. https://pmc.ncbi.nlm.nih.gov/articles/PMC3550641/ (peer-reviewed)
-[^summers2021-ghg]: Summers HM, Sproul E, Quinn JC (2021). The greenhouse gas emissions of indoor cannabis production in the United States. Nature Sustainability 4:644-650 (life-cycle emissions of 2,283-5,184 kg CO2e per kg of dried flower depending on location; environmental control — HVAC and ventilation — among the dominant energy and emissions drivers alongside lighting and CO2 supply). https://doi.org/10.1038/s41893-021-00691-w (peer-reviewed)
+[^rii-hvac-bpg]: Resource Innovation Institute (2019). Best practices guide: HVAC for cannabis cultivation & controlled environment agriculture (peer-reviewed industry guide from RII's Technical Advisory Council; energy is 30-60% of indoor operating expense; centralised CEA dehumidification substantially reduces operating cost). https://resourceinnovation.org/blog/riis-hvac-best-practices-guide-demystifies-approaches-to-efficient-cooling-and-dehumidification/ (source from a manufacturer or industry)
+[^desertaire-an25-load]: Desert Aire. Grow room load determination. Application Note 25 (DA125) (lighting is the largest sensible load in indoor farming; latent load is transpiration plus evaporation from media, irrigation and wetted surfaces; ~99% of water delivered to the roots passes through the stomata as vapour; at lights-off a standard air conditioner satisfies the small sensible demand and shuts off before the moisture is removed). Manufacturer engineering note. https://www.desert-aire.com/resources/application-notes/grow-room-load-determination (source from a manufacturer or industry)
+[^streit2023-hvacd]: Streit L (IMEG Corp). Cannabis grow facility design 101, part 3: HVACD and air distribution. PHCP Pros (grow lights are the bulk of the sensible cooling load; latent load follows irrigation — water in equals water out; typical rooms run 20-40 air turns per hour with ~100% recirculation; equipment tiers from packaged DX plus dehumidifiers, through DX with hot-gas reheat, to chilled-water plants with reheat). Engineering trade article. https://www.phcppros.com/articles/16050-cannabis-grow-facility-design-101-part-3-hvacd-and-air-distribution (source from a manufacturer or industry)
+[^hpac-latent]: HPAC Engineering. Latent loads matter: HVAC for cannabis grow facilities (transpiration returns most irrigation water to room air as vapour, the dominant dehumidification load; filters do not remove it). https://www.hpac.com/industrial/article/21270796/latent-loads-matter-hvac-for-cannabis-grow-facilities (source from a manufacturer or industry)
+[^grossiord2020-vpd]: Grossiord C, Buckley TN, Cernusak LA, et al. (2020). Plant responses to rising vapor pressure deficit. New Phytologist 226(6):1550-1566. https://doi.org/10.1111/nph.16485 (source with peer review)
+[^hydrobuilder-ac-sizing]: Hydrobuilder Learning Center. Grow room air conditioner sizing guide (every watt of equipment makes ~3.41 BTU/h of heat; HPS folklore runs 3.5-4 BTU/W; dehumidifier draw returns ~100% as heat; ~400 BTU/h per person; add 20-30% margin; 1 ton = 12,000 BTU/h). Industry sizing guide. https://learn.hydrobuilder.com/grow-room-air-conditioner-sizing-buying-guide/ (source from a manufacturer or industry)
+[^streit2023-water]: Streit L (IMEG Corp). Cannabis grow facility design 101, part 2: water usage. PHCP Pros (80-95% of irrigation water is transpired and returns via the HVACD system as condensate from coils and dehumidifiers; condensate can be captured, retreated — typically through RO — and reused for irrigation). Engineering trade article. https://www.phcppros.com/articles/15572-cannabis-grow-facility-design-101-part-2-water-usage (source from a manufacturer or industry)
+[^quest-perfect-dehu]: Quest Climate. Grow room dehumidifiers: perfect your setup (water in = water out sizing: gallons irrigated minus gallons drained, times 8 pints per gallon — e.g. 25 gal fed with 5 gal to drain = 160 pints/day to remove; plan dehumidification for worst-case days). Manufacturer application guide. https://www.questclimate.com/perfect-grow-room-dehumidifier/ (source from a manufacturer or industry)
+[^quest-dehu101]: Quest Climate. Dehumidification 101 for cannabis growers (air conditioners dehumidify poorly and sit idle at lights-off, so dedicated dehumidifiers carry the overnight moisture; baseline 0.5-2 pints/day per square foot of canopy; cooling air raises its RH — a mid-70s °F room at ~57% RH lands near 80% when cooled to 65 °F; excess humidity drives Botrytis and powdery mildew). Manufacturer application guide. https://www.questclimate.com/dehumidification-101-cannabis-growers/ (source from a manufacturer or industry)
+[^sylvane-desiccant]: Sylvane. Desiccant vs. refrigerant dehumidifiers: which is best for you? (refrigerant units condense moisture on a cold coil and lose capacity as the space cools, icing at low temperatures; desiccant wheels keep near-full capacity in cold rooms and add several degrees of regeneration heat to the airstream). Industry knowledge base. https://www.sylvane.com/blogs/knowledge-center/desiccant-vs-refrigerant-dehumidifiers (source from a manufacturer or industry)
+[^punja-budrot-cjb]: Mahmoud M, BenRejeb I, Punja ZK, Buirs L, Jabaji S (2023). Understanding bud rot development, caused by Botrytis cinerea, on cannabis grown under greenhouse conditions. Botany / Can. J. Bot. 101(8). https://doi.org/10.1139/cjb-2022-0139 (source with peer review)
+[^ncia-condensate]: Robinson T, Lisabeth K (Silver Bullet Water Treatment) (2020). Condensate recapture for cannabis cultivation facilities. National Cannabis Industry Association member blog (condensate is low-TDS with pH ~5.5-6.5 from dissolved CO2, but can carry VOCs, coil metals — lead, zinc, aluminium, copper — and microbes; treat with filtration plus UV/AOP disinfection before reuse, and baseline-test regularly). https://thecannabisindustry.org/member-blog-condensate-recapture-for-cannabis-cultivation-facilities-making-informed-decisions-to-save-resources-and-improve-efficiency/ (source from a manufacturer or industry)
+[^chandra2008-photo]: Chandra S, Lata H, Khan IA, ElSohly MA (2008). Photosynthetic response of Cannabis sativa L. to variations in photosynthetic photon flux densities, temperature and CO2 conditions. Physiol. Mol. Biol. Plants 14(4):299-306. https://pmc.ncbi.nlm.nih.gov/articles/PMC3550641/ (source with peer review)
+[^summers2021-ghg]: Summers HM, Sproul E, Quinn JC (2021). The greenhouse gas emissions of indoor cannabis production in the United States. Nature Sustainability 4:644-650 (life-cycle emissions of 2,283-5,184 kg CO2e per kg of dried flower depending on location; environmental control — HVAC and ventilation — among the dominant energy and emissions drivers alongside lighting and CO2 supply). https://doi.org/10.1038/s41893-021-00691-w (source with peer review)

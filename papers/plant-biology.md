@@ -2,9 +2,9 @@
 slug: "plant-biology"
 title: "Cannabis plant biology and the life cycle"
 eyebrow: "Reference · Biology"
-summary: "What kind of plant cannabis actually is, every part named, and the mechanisms underneath. The life cycle stage by stage, how night length triggers flowering, sex and hermaphroditism, photosynthesis, roots and hormones. After this paper you can name the structures you are managing, explain how the dark period works, and follow the mechanism references in every other paper on this site."
+summary: "This paper gives the type of the cannabis plant, the name of each part and the mechanisms in the plant. It also gives information about the life cycle, the effect of night length on flowering, sex and hermaphroditism, photosynthesis, roots and hormones. After you read this paper, you know the names of the structures that you control and the mechanism of the dark period. You can also use the references to mechanisms in all other papers on this site."
 track: "Know the plant"
-read_time: "~26 min read"
+read_time: "~26 min to read"
 diagrams: "12 diagrams"
 related: ["flowering-stages", "seeds-germination", "lighting-fundamentals"]
 url: "https://www.growlabs.nz/wiki/plant-biology.html"
@@ -19,358 +19,359 @@ refs: [{"id": "small-2015-cannabis-taxonomy", "n": 1, "cite": "Small, E. (2015).
 
 # Cannabis plant biology and the life cycle
 
-_Reference · Biology · ~26 min read_
+_Reference · Biology · ~26 min to read_
 
-> What kind of plant cannabis actually is, every part named, and the mechanisms underneath. The life cycle stage by stage, how night length triggers flowering, sex and hermaphroditism, photosynthesis, roots and hormones. After this paper you can name the structures you are managing, explain how the dark period works, and follow the mechanism references in every other paper on this site.
+> This paper gives the type of the cannabis plant, the name of each part and the mechanisms in the plant. It also gives information about the life cycle, the effect of night length on flowering, sex and hermaphroditism, photosynthesis, roots and hormones. After you read this paper, you know the names of the structures that you control and the mechanism of the dark period. You can also use the references to mechanisms in all other papers on this site.
 
 ## Purpose and scope
 
-Every other paper on this site quietly assumes you know what a node is, why the dark period is sacred, and what a trichome actually does. This is the paper that teaches it. It is the reference chapter: the plant itself, part by part and stage by stage, with the mechanisms underneath explained in plain language.
+The other papers on this site use the terms node, dark period and trichome. They do not give the definitions of these terms or the function of each structure. This paper gives the definitions and the functions. It is the reference paper for the site. It gives information about each part of the plant and each stage of the life cycle. It also gives the mechanisms in the plant, and the information is easy to read.
 
-You do not need any biology background. Every term is defined the first time it appears, and the whole vocabulary is collected in a quick-reference table at the end. Read it once end to end before your first grow, then come back whenever a word or a mechanism trips you in another paper.
+It is not necessary to know biology before you read this paper. This paper gives the definition of each term where the term first occurs. At the end of the paper, a reference table contains all the terms. Read the paper one time from the start to the end before your first crop. Then, when you do not know a term or a mechanism in a different paper, read this paper again.
 
-Where a topic has its own dedicated paper, this chapter gives you the biology and hands over: [seeds and germination](seeds-germination.html) for popping seeds, [the flower cycle week by week](flowering-stages.html) for running bloom, [lighting fundamentals](lighting-fundamentals.html) for the hardware side of light, and [defoliation and training](defoliation-training.html) for shaping the plant. Here we cover the why that sits under all of them.
+This paper gives the biology and the causes of the effects for germination, flowering, light and training. A different paper gives full information on each of these items. Use [seeds and germination](seeds-germination.html) for the germination of seeds. Use [flower week by week](flowering-stages.html) for each week of flowering. Use [basic lighting](lighting-fundamentals.html) for the lighting equipment. Use [defoliation and training](defoliation-training.html) to change the shape of the plant.
 
-> **NOTE — Who this is for**
+> **NOTE: Persons who use this paper**
 >
-> Anyone starting out, and anyone mid-grow who keeps meeting words like bract, internode, phytochrome or sink and wants them nailed down once, properly, with sources.
+> This paper is for a person who starts a cannabis crop. It is also for a person who has a crop in progress. This person frequently reads terms such as bract, internode, phytochrome or sink in other papers. This paper gives the correct definition of each term, with sources.
 
 ## Cannabis growth form and taxonomy
 
-Cannabis sativa L. is an annual, normally dioecious, wind-pollinated flowering herb in the family Cannabaceae, the same small family as hops. It completes its whole life in one season, keeps male and female flowers on separate plants, and mails its pollen on the wind.[^small-2015-cannabis-taxonomy][^mcpartland-2018-cannabis-systematics]
+Cannabis sativa L. is a flowering herb in the family Cannabaceae. This family is small, and hops is also in the family. The plant is annual, usually dioecious and wind-pollinated. It completes its life in one season. The male flowers and the female flowers are on different plants, and the wind moves the pollen.[^small-2015-cannabis-taxonomy][^mcpartland-2018-cannabis-systematics]
 
-- **Family:** Cannabaceae. Its closest famous relative is hops (Humulus)[^mcpartland-2018-cannabis-systematics]
-- **Life span:** Annual: germinates, grows, flowers once and dies within a year
-- **Sexes:** Dioecious: male and female are usually separate plants
-- **Pollination:** Wind. No petals, no nectar, no insects involved
-- **Flowering trigger:** Night length. It is a short-day (really a long-night) plant
-- **Chromosomes:** 2n = 20: nine autosome pairs plus X and Y sex chromosomes[^divashuk-2014-xy-sex-chromosomes]
-- **Photosynthesis:** C3 — responds strongly to added light and CO2 when temperature allows[^chandra-2008-photosynthetic-response]
+- **Family:** Cannabaceae. Hops (Humulus) is the closest relative that many persons know[^mcpartland-2018-cannabis-systematics]
+- **Life span:** Annual: the plant germinates, becomes larger, makes flowers one time and dies in one year or less
+- **Sexes:** Dioecious: the male and the female are usually different plants
+- **Pollination:** Wind. The flowers have no petals and no nectar, and insects do not move the pollen
+- **Flowering trigger:** Night length. The plant is a short-day plant. More accurately, it is a long-night plant
+- **Chromosomes:** 2n = 20: nine pairs of autosomes and the sex chromosomes X and Y[^divashuk-2014-xy-sex-chromosomes]
+- **Photosynthesis:** C3. The rate of photosynthesis increases much when you add light and CO2, if the temperature is correct[^chandra-2008-photosynthetic-response]
 
-Each of those dry facts is a grow-room rule wearing a lab coat:
+Each of these facts has an effect in the grow room:
 
-- **Annual** means no second chances inside a season. The plant runs its program once. Indoors you replay the seasons with a light timer, which is why the schedule matters so much.
-- **Dioecious** means roughly half of regular seeds become males you must find and remove. Unpollinated females (sinsemilla) put their energy into resin instead of seed.
-- **Wind-pollinated** means pollen is airborne, abundant and mobile. One shedding male, or one stressed female throwing anthers, can seed an entire room, and pollen rides clothing and airflow between rooms.
-- **Short-day** means an unbroken dark period is the flowering switch. Light discipline is the trigger mechanism itself.
+- **Annual**: the plant has only one life cycle in a season. It cannot start the life cycle again in the same season. In a grow room, you make the seasons again with a light timer. Thus the light cycle is very important.
+- **Dioecious**: approximately half of the regular seeds become male plants. You must find these plants and remove them. A female plant without pollination (sinsemilla) uses its energy to make resin and not to make seed.
+- **Wind-pollinated**: the wind moves the pollen. The pollen is in the air in a large quantity, and it moves easily. One male plant that releases pollen can make seed in all the female flowers in a room. A female plant that makes anthers because of stress can do the same. Pollen also moves on clothing and with the airflow between rooms.
+- **Short-day**: a continuous dark period is the trigger for flowering. Thus the control of the light is the control of the trigger mechanism.
 
-> **KEY — Four facts, most of the rulebook**
+> **KEY: Four facts cause most of the procedures**
 >
-> Annual, dioecious, wind-pollinated, night-triggered. Nearly every hard rule in cultivation  (cull males early, seal the dark period, plan the whole cycle before you start) is one of these four facts asserting itself.
+> The four facts are: the plant is annual, dioecious and wind-pollinated, and the night length is the trigger for flowering. Nearly all important procedures in cultivation have one of these four facts as the cause. For example, growers remove the male plants immediately, prevent all light leaks in the dark period, and schedule the full cycle before they start.
 
 ## Sativa, indica and ruderalis classification
 
-The folk story says there are two (or three) kinds of cannabis: tall, airy, energising _sativas_; short, dense, sedating _indicas_; and a tiny weedy _ruderalis_ that flowers on its own. It is a useful shorthand for growth habit. As biology, and especially as a predictor of effect, it does not hold up.
+Many persons think that there are two or three types of cannabis. In this classification, _sativa_ plants have a large height and a low foliage density, and they give a stimulant effect. _Indica_ plants have a small height and a high foliage density, and they give a sedative effect. _Ruderalis_ plants are very small and make flowers with no light trigger. The labels are short names for the growth form, and growers use them. As a classification in biology, the labels are not correct, and they are less correct for the effect on a person.
 
-Botanically, most taxonomists treat cannabis as a single, extraordinarily variable species, Cannabis sativa L., pulled in different directions by thousands of years of human selection for fibre, seed and resin. The hemp-versus-drug split is a THC threshold written into law, not a clean biological boundary.[^small-2015-cannabis-taxonomy]
+Most taxonomists think that cannabis is one species with very large variation: Cannabis sativa L. For many thousand years, persons selected cannabis plants for fiber, seed and resin. This selection caused the large variation. The difference between hemp and drug cannabis is a limit for THC in the regulations. It is not a clear difference in biology.[^small-2015-cannabis-taxonomy]
 
-It gets worse for the street labels: in the formal taxonomy, virtually all drug cannabis, everything sold as sativa _and_ everything sold as indica, sits inside the same subspecies (C. sativa subsp. indica). The street terms map loosely onto narrow-leaflet versus broad-leaflet drug lineages, and 'ruderalis' is a debated name for feral, short-season northern populations rather than a settled species.[^mcpartland-2018-cannabis-systematics]
+The taxonomy also does not agree with the labels sativa and indica. In the taxonomy, almost all drug cannabis is in one subspecies (C. sativa subsp. indica). This includes all cannabis with the label sativa _and_ all cannabis with the label indica. The labels agree only in part with two groups of lineages of drug cannabis: the narrow-leaflet drug group and the broad-leaflet drug group. The name 'ruderalis' is for feral populations in the north with a short season. Not all taxonomists accept the name 'ruderalis' for a species.[^mcpartland-2018-cannabis-systematics]
 
-Genomics settled the practical question. A 2021 study genotyped over 100 commercial samples at roughly 100,000 genetic markers: samples labelled sativa and indica were genetically indistinguishable at the whole-genome level. The labels tracked only a handful of aroma terpenes, controlled by variation in terpene synthase genes, in other words, the label weakly predicts smell, not ancestry and not pharmacology.[^watts-2021-terpene-synthase-labels]
+Genomics gave a clear result for growers. A test in 2021 examined the genes of more than 100 commercial samples at approximately 100,000 genetic markers. The test found no difference in the full genome between the samples with the label sativa and the samples with the label indica. The labels agreed only with a small number of aroma terpenes, and variation in the terpene synthase genes controls these terpenes. Thus the label gives weak information about the aroma, but not about the lineage or the pharmacology.[^watts-2021-terpene-synthase-labels]
 
-**Cultivar (what growers call a strain)** — A named, cultivated variety, Wedding Cake, GG4. The horticultural term is cultivar; 'strain' is entrenched grower slang for the same thing.
+**Cultivar (strain)**: A variety of cannabis in cultivation that has a name, for example Wedding Cake or GG4. The correct term in horticulture is cultivar. Many growers use the term 'strain' for the same type of plant.
 
-**Chemotype (chemovar)** — Classification by chemistry instead of folklore: Type I is THC-dominant, Type II mixed THC:CBD, Type III CBD-dominant. Read it off a lab certificate of analysis (COA), not off the label art.
+**Chemotype (chemovar)**: A classification that uses the chemistry of the plant. Type I has mostly THC. Type II has a mixture of THC and CBD. Type III has mostly CBD. Read the chemotype on a lab certificate of analysis (COA) and not on the label.
 
-**Genotype vs phenotype** — Genotype is the genetic deck the plant is dealt; phenotype is how that deck plays out in your environment. Same clone, two rooms, two phenotype expressions.
+**Genotype and phenotype**: The genotype is the set of genes of the plant. The phenotype is the effect of these genes in your environment. One clone in two different rooms can show two different phenotypes.
 
-| Folk claim | Verdict | What the evidence says |
+| Many persons think that | Result | Data |
 | --- | --- | --- |
-| Sativa = energising, indica = sedating | Weak | Labels are genetically indistinct; effects come from cannabinoid dose, terpene mix, the person and the setting[^watts-2021-terpene-synthase-labels] |
-| Leaf shape predicts the high | No | Leaflet width tracks lineage and climate history, not pharmacology[^mcpartland-2018-cannabis-systematics] |
-| Indica and sativa are separate species | Contested, mostly no | Mainstream treatment: one variable species with subspecies; centuries of crossing have blended the pools anyway[^small-2015-cannabis-taxonomy] |
-| Ruderalis is the autoflower parent | Broadly yes | Feral short-season populations are day-neutral; breeders introgressed that trait into modern autoflowers[^toth-2022-autoflower1-early1] |
-| The strain name tells you what you are getting | Unreliable | Names are unregulated; the same name can differ genetically between suppliers. Trust COAs and your own logs[^watts-2021-terpene-synthase-labels] |
+| Sativa gives a stimulant effect and indica gives a sedative effect | Weak | There is no difference in the genetics of the groups with different labels. The dose of cannabinoids, the terpene profile, the person and the conditions in which the person uses cannabis cause the effects.[^watts-2021-terpene-synthase-labels] |
+| The shape of the leaf tells you the effect on a person | No | The width of the leaflet shows the lineage and the climate of the area where the lineage started. It does not show the pharmacology.[^mcpartland-2018-cannabis-systematics] |
+| Indica and sativa are different species | Mostly no. The data do not give a clear result. | Most taxonomists think that cannabis is one species with large variation and with subspecies. Crossing for a very long time also mixed the gene pools.[^small-2015-cannabis-taxonomy] |
+| Ruderalis is the parent of the autoflower cultivars | Yes, in general | Feral populations with a short season are day-neutral. Breeders added this trait to the new autoflower cultivars.[^toth-2022-autoflower1-early1] |
+| The name of the cultivar tells you the properties of the plant | Not accurate | No regulation controls the names. Different suppliers can use the same name for plants with different genetics. Use COAs and your records.[^watts-2021-terpene-synthase-labels] |
 
-*The folk taxonomy, audited. Keep the words as growth-habit shorthand; drop them as pharmacology.*
+*A check of the sativa, indica and ruderalis taxonomy. Use the terms as short names for the growth form. Do not use them to find the effect on a person.*
 
-> **TIP — What to use instead**
+> **TIP: Alternatives to the labels**
 >
-> Buy and breed on chemotype (COA numbers), documented cultivar behaviour (stretch, finish time, mould tolerance) and your own grow logs. 'Sativa' and 'indica' still earn their keep as rough descriptions of plant shape, nothing more.
+> Use the chemotype (COA numbers) when you get cultivars or do breeding. Also use the recorded properties of the cultivar (stretch, flowering time, mold tolerance) and your crop records. You can continue to use the labels 'sativa' and 'indica' as approximate names for the shape of the plant. Do not use them for more than this.
 
 ## Plant anatomy
 
-Strip away the mystique and a cannabis plant is a repeating unit stacked on itself: a stem segment, a node carrying leaves, and a dormant growing tip tucked into each leaf angle. Learn that unit and you can read any plant in any room.
+The plant makes the same group of parts again and again along the stem. The group has a stem segment, a node with leaves, and a dormant growing tip. The growing tip is in the angle between the leaf stalk and the stem. When you know these parts, you can examine each plant in each room.
 
-> **Diagram.** The whole machine, labelled. Above ground: a main stem of nodes and internodes, fan leaves, an apical meristem on top and an axillary bud at every node. Below ground: taproot, laterals and the root hairs that do the actual drinking.
+> **Diagram.** The full plant with labels. Above the substrate: a primary stem with nodes and internodes, fan leaves, an apical meristem at the top and an axillary bud at each node. Below the substrate: a taproot, lateral roots, and the root hairs that absorb the water.
 
-**Node and internode** — A node is the joint on a stem where leaves, buds and branches attach. The internode is the bare stem between two nodes. Tight internodes = a compact plant; long internodes = stretch.
+**Node and internode**: A node is the joint on a stem where leaves, buds and branches attach. The internode is the part of the stem with no leaves between two nodes. When the internodes are short, the plant is compact. Long internodes show stretch.
 
-**Apical meristem** — The main growing tip, a tiny dome of stem cells that builds every new leaf and stem segment. Cut it off (topping) and the plant does not die; it promotes the reserves.
+**Apical meristem**: The primary growing tip. It is a very small dome of stem cells that makes each new leaf and each new stem segment. If you remove it (topping), the plant does not die. The axillary buds become active.
 
-**Axillary bud** — A dormant backup meristem sitting in the angle (axil) between leaf stalk and stem at every node. Every branch, and ultimately every bud site, starts as one of these.
+**Axillary bud**: A dormant meristem that is a reserve for the apical meristem. It is in the angle (axil) between the leaf stalk and the stem at each node. Each branch starts as an axillary bud, and each bud site also starts as an axillary bud.
 
-**Fan leaf vs sugar leaf** — Fan leaves are the big palmate solar panels on long stalks. Sugar leaves are the small leaves that grow from inside flower clusters, dusted in trichomes, hence the name.
+**Fan leaf and sugar leaf**: Fan leaves are the large leaves with a palmate shape on long stalks. They absorb light for the plant. Sugar leaves are the small leaves in the flower clusters. Trichomes on the surface of the sugar leaves are the cause of the name.
 
-**Petiole and stipule** — The petiole is the leaf stalk connecting blade to stem. Stipules are the two small green spikes at each node, beginners regularly mistake them for female pre-flowers.
+**Petiole and stipule**: The petiole is the leaf stalk that connects the blade to the stem. The stipules are two small green spikes at each node. A new grower frequently identifies a stipule incorrectly as a female pre-flower.
 
-The meristems are the plant's growth budget. The apical meristem normally dominates, and the axillary buds wait. Every training technique, topping, low-stress training, the trellis work in the [defoliation and training](defoliation-training.html) paper, is just a way of reassigning that budget to the meristems you want (the hormone mechanics are in section 14).
+The meristems use the energy of the plant for growth. Usually, apical dominance keeps the axillary buds dormant. Each training method sends the energy to the meristems that you want. Topping, low-stress training (LST) and the work with a trellis are methods of training (see the [defoliation and training](defoliation-training.html) paper). Section 14 gives the hormone mechanisms.
 
-Leaves keep score of maturity. Seedling leaves start with a single leaflet, then three, then five, up to seven or more per fan leaf as the plant hits its stride.[^hesami-2023-morphological-lifecycle] Leaf arrangement is another tell: young plants place leaves in opposite pairs, and as the plant approaches flowering it shifts to alternate (staggered) placement, a visible sign the shoot has switched programs.[^spitzer-rimon-2019-florogenesis]
+The leaves show the maturity of the plant. The first leaves of a seedling have one leaflet. The next leaves have three leaflets and then five leaflets. After that, a fan leaf has seven leaflets or more.[^hesami-2023-morphological-lifecycle]The positions of the leaves also show the maturity. A new plant has opposite leaves in pairs. When the plant is near flowering, it changes to alternate leaves (one leaf at each node). You can see this change, and it is a sign that the shoot changes to flowering.[^spitzer-rimon-2019-florogenesis]
 
-Leaves lose water constantly through tiny pores on their surface. That invisible loss creates a pull all the way down to the roots — the same effect as a wet sponge releasing moisture from one face while drawing it in from the other. That upward pulling force is called transpiration. The stem is the plumbing that connects the two halves: xylem hauls water and minerals up from the roots via that transpiration pull, and phloem moves sugar from the leaves to wherever it is being spent. Keep that two-pipe picture. It is the whole basis of the photosynthesis and source-sink story in section 12.
+Leaves release water through very small pores on their surface all the time. This movement of water out of the leaves is transpiration, and you cannot see it. Transpiration pulls water up from the roots through the stem.The stem connects the shoot to the roots. The xylem moves water and minerals up from the roots, and transpiration causes this movement. The phloem moves sugar from the leaves to each part of the plant that uses it. Section 12 uses this model of two pipes for photosynthesis and for sources and sinks.
 
-> **NOTE — Seed plant vs clone, underground**
+> **NOTE: The roots of a plant from seed and of a clone**
 >
-> A seed-grown plant builds a taproot with laterals branching off it. A rooted cutting never gets one. It grows a fibrous ball of adventitious roots from the cut stem instead (see the [cloning](cloning.html) paper). Both work; clones are simply shallower and quicker to dry out at the base.
+> A plant from seed makes a taproot with lateral roots on it. A cutting with roots does not make a taproot. It makes a mass of fibrous adventitious roots at the end of the stem that you cut (see the [cloning](cloning.html) paper). The two types of root system are good for the plant. A clone has roots that are less deep, and the bottom of the clone dries more quickly.
 
 ## Flower anatomy
 
-An individual female cannabis flower is tiny and easy to misread: one small ovary wrapped in a resin-coated leaf-like pod, with two white hairs reaching out of the top. What growers call a bud is hundreds of these units packed along a stem axis with small sugar leaves between them.[^spitzer-rimon-2019-florogenesis]
+One female cannabis flower is very small and easy to identify incorrectly. It has one small ovary in a pod that has the shape of a leaf and that has a layer of resin. Two white hairs are on the top of the pod. A bud is a very large number of these flowers along a stem axis, with small sugar leaves between them.[^spitzer-rimon-2019-florogenesis]
 
-> **Diagram.** Left: a single female flower, bract, ovary in its thin perianth film, two stigmas. Right: the stack. A bud is this unit repeated hundreds of times along an axis; a cola is a big cluster of buds on a main stem.[^spitzer-rimon-2019-florogenesis]
+> **Diagram.** Left: one female flower. It has a bract, an ovary in a thin perianth film, and two stigmas. Right: flowers along an axis. A bud has these parts again and again along an axis. A cola is a large cluster of buds on a primary stem.[^spitzer-rimon-2019-florogenesis]
 
-**Bract** — The small resin-dense pod that encloses each ovary. It carries the highest density of capitate-stalked trichomes on the plant, most of the potency of flower lives on bracts. Growers almost universally call it a calyx; botanically it is a bract.
+**Bract**: The small pod with a high density of resin that contains each ovary. It has the highest density of capitate-stalked trichomes on the plant. Most of the potency of the flower is in the bracts. Growers almost always use the term calyx for the bract, but in botany it is a bract.
 
-**Calyx (the real one)** — In cannabis, the true calyx is a thin, transparent film of tissue hugging the ovary inside the bract. You will rarely notice it. Harmless slang aside, know which structure people actually mean.
+**Calyx (the correct structure)**: In cannabis, the correct calyx is a thin transparent film of tissue around the ovary in the bract. You cannot see it easily. Make sure that you know the correct structure when a person uses the term calyx.
 
-**Pistil** — The complete female organ: ovary plus the stigmas. Grower usage calls the visible hairs 'pistils'; strictly, the hairs are stigmas.
+**Pistil**: The complete female organ: the ovary and the stigmas. Growers use the term 'pistils' for the white hairs that you can see. Correctly, the hairs are stigmas.
 
-**Stigma** — One of the two white hairs protruding from each bract, built to catch airborne pollen. They emerge white and age to orange-brown whether or not pollination happens, colour is a maturity hint, not a pregnancy test.
+**Stigma**: One of the two white hairs on each bract. The stigma catches the pollen in the air. The stigmas are white at first, and they become orange-brown with age. This change occurs with pollination and without pollination. Thus the color shows the maturity. It does not show if pollination occurred.
 
-**Cola** — A large terminal cluster of buds on the end of a main stem or branch, the apical cola is the big one on top.
+**Cola**: A large cluster of buds at the end of a primary stem or of a branch. The apical cola is the largest cola, at the top of the plant.
 
-The stigma story explains sinsemilla. If pollen lands, the ovary swells into a seed and the plant redirects energy from resin and flower-building into seed-filling. Keep every male and every anther out of the room and the females sit unpollinated, stacking bracts and resin instead, seedless flower, sinsemilla, which is the entire commercial product.
+The function of the stigmas shows how sinsemilla occurs. When pollen touches a stigma, the ovary becomes larger and becomes a seed. Then the plant uses its energy to fill the seed, and it uses less energy for the resin and for the flowers.Make sure that no male plant and no anther is in the room. Then the female plants have no pollination, and they make more bracts and more resin. This flower without seeds is sinsemilla, and it is all of the commercial product.
 
-Male flowers are a different design for a different job: five small tepals and five hanging stamens that shake pollen into the airflow, clustered in loose panicles with almost none of the trichome coverage females carry. They open, shed for days, and die, evolutionarily they only exist to fill the air with pollen.[^small-2015-cannabis-taxonomy]
+Male flowers have a different structure for a different function. A male flower has five small tepals and five stamens that hang down. The stamens release pollen into the airflow.The flowers are in loose panicles, and they have almost no trichomes. The female flowers have many trichomes. The male flowers open, release pollen for some days, and die. In evolution, their only function is to fill the air with pollen.[^small-2015-cannabis-taxonomy]
 
-> **WARN — One open male seeds a room**
+> **WARN: One open male flower causes seed in the room**
 >
-> A single flowering male sheds millions of airborne grains, and HVAC will deliver them for you. Unless you are deliberately breeding, males get identified early (section 10) and removed before any flower opens.
+> If you do not do breeding, find the male plants before a flower opens (section 10). Then remove them. One male plant in flower releases many million pollen grains into the air. The HVAC system moves them in the room.
 
 ## Trichome anatomy and function
 
-Everything the market pays for (THC, CBD, the aroma terpenes) is manufactured and stored in glandular trichomes: microscopic mushroom-shaped glands on the flower surface. The cannabinoids are not 'in the bud' in some general sense; they sit in a resin reservoir inside each gland head, between the secretory cells and their waxy cap.[^livingston-2020-trichome-maturation]
+Glandular trichomes make and keep the compounds that make the flower a commercial product: THC, CBD and the aroma terpenes. Glandular trichomes are very small mushroom-shaped glands on the surface of the flower. The cannabinoids are not in all of the bud. They are in a resin reservoir in each gland head. The reservoir is between the secretory cells and the wax cap.[^livingston-2020-trichome-maturation]
 
-> **Diagram.** The three gland types at a glance. Bulbous glands are tiny and minor. Capitate-sessile glands sit flush on leaves. Capitate-stalked glands, the tall ones that give flower its frost, are the main cannabinoid and terpene factories.[^livingston-2020-trichome-maturation]
+> **Diagram.** The three types of gland. Bulbous glands are very small and make only a small quantity of resin. Capitate-sessile glands have no stalk, and they are on the surface of the leaves. Capitate-stalked glands are high above the surface and give the flower a layer of resin. They are the primary area where the plant makes cannabinoids and terpenes.[^livingston-2020-trichome-maturation]
 
-**Bulbous trichome** — The smallest gland type, a few cells and roughly 10-30 µm across, scattered over most surfaces. A minor contributor to resin.
+**Bulbous trichome**: The smallest type of gland. It has a small number of cells and a diameter of approximately 10 to 30 µm. Bulbous trichomes are on most surfaces of the plant. They make only a small quantity of the resin.
 
-**Capitate-sessile trichome** — A gland head sitting directly on the surface with almost no stalk, built on about eight secretory cells. Common on leaves and on younger tissue.
+**Capitate-sessile trichome**: A gland head that is directly on the surface and has almost no stalk. The head has approximately eight secretory cells. These trichomes are frequent on leaves and on new tissue.
 
-**Capitate-stalked trichome** — The flagship: a multicellular stalk raising a large head built on 12-16 secretory cells. Densest on the bracts and sugar leaves of female flowers. This type makes flower sticky and potent.
+**Capitate-stalked trichome**: The primary type of gland. It has a stalk of many cells, and the stalk holds a large head above the surface. The head has 12 to 16 secretory cells. The density of this type is highest on the bracts and on the sugar leaves of female flowers. This type gives the flower its resin and its potency.
 
-The types are connected, not separate castes: as flowers mature, sessile-like glands convert into capitate-stalked ones. The head is raised on a new stalk and the secretory disc gains cells (eight in sessile heads, 12-16 in stalked). Gland output shifts with maturity too, which is part of why harvest timing changes the character of the product, not just its strength.[^livingston-2020-trichome-maturation]
+The types are not different groups. When the maturity of the flower increases, glands that have the shape of capitate-sessile glands change to capitate-stalked glands. The head moves up on a new stalk, and the secretory disc has more cells (eight in sessile heads and 12 to 16 in stalked heads). The output of the glands also changes with the maturity. This change in the output is one cause of the change in the quality of the product with the harvest time. The harvest time changes the quality and not only the potency.[^livingston-2020-trichome-maturation]
 
-> **Diagram.** Why the stalked type dominates production: roughly double the secretory machinery of a sessile head, raised on a stalk and packed densest on the bracts.[^livingston-2020-trichome-maturation]
+> **Diagram.** The stalked type makes most of the resin. It has approximately two times the secretory cells of a sessile head. It is on a stalk, and its density is highest on the bracts.[^livingston-2020-trichome-maturation]
 
-Two practical consequences. First, gland heads change colour with age, clear, then milky, then amber. Which is the harvest-timing signal covered properly in [the flower cycle paper](flowering-stages.html). Second, the heads sit on breakable stalks: every rough handle, tumble or warm touch after harvest knocks resin off the flower, which is why drying, trimming and hash work (see [hash and rosin](hash-rosin-pressing.html)) are all built around being cold and gentle.
+The structure of the glands has two effects. First, the gland heads change color with time. They are transparent, then milky, then amber. This color is the signal for the harvest time, and [flower week by week](flowering-stages.html) gives full information on this signal.Second, the heads are on stalks that break easily. After harvest, the quantity of resin on the flower decreases if the flower falls. It also decreases if you do not touch the flower carefully, or if you touch it with a warm hand. Thus all the procedures for drying, trimming and the work with hash (see [hash rosin](hash-rosin-pressing.html)) use a low temperature and a careful touch.
 
-> **TIP — Buy a loupe before you buy anything else**
+> **TIP: Get a loupe before you get other instruments**
 >
-> A NZ$15 jeweller's loupe (60x) turns trichomes from folklore into data: type, density, colour, damage. It is the single cheapest instrument in cultivation.
+> A loupe (60x) for NZ$15 gives you data on the trichomes: the type, the density, the color and the damage. It is the instrument with the lowest cost in cultivation.
 
 ## Cannabis life cycle
 
-Cannabis is monocarpic: it flowers once, with everything it has, and then dies. Harvest is you interrupting its senescence at the profitable moment. The stages below are one continuous program; each hands the next its starting conditions.[^hesami-2023-morphological-lifecycle]
+Cannabis is monocarpic: the plant makes flowers one time, with all of its reserves, and then dies. At harvest, you stop the senescence of the plant at the time that is best for the product. The stages below are one continuous sequence. Each stage gives the conditions at the start of the next stage.[^hesami-2023-morphological-lifecycle]
 
-> **Diagram.** The whole arc in one band. Indoors you control how long the plant sits in veg (the light schedule holds it there); flowering length is mostly written in the genetics.[^hesami-2023-morphological-lifecycle]
+> **Diagram.** All stages of the life cycle in one diagram. In a grow room, you control the length of the vegetative stage with the light cycle. The genetics mostly set the length of flowering.[^hesami-2023-morphological-lifecycle]
 
-1. **Germination (roughly 3-7 days)** — The seed takes up water, metabolism switches on, and the radicle, the embryonic root, breaks out first and steers down with gravity. Everything runs on stored seed reserves. Detail and technique in the [seeds and germination](seeds-germination.html) paper.
-2. **Seedling (weeks 1-3)** — The two round cotyledons (seed leaves) open and the first true, serrated leaves appear, single leaflets at first, then three, then five. Under the surface the priority is root establishment; above it the plant is fragile to overwatering and damping-off.[^hesami-2023-morphological-lifecycle]
-3. **Vegetative (from ~week 3, as long as you choose)** — Pure infrastructure: nodes, leaf area and root mass compound while long days hold flowering off. The plant also matures internally. A young plant is not yet competent to flower, which is why cuttings and seedlings need a few weeks before the light flip does anything clean.[^hesami-2023-morphological-lifecycle]
-4. **Pre-flower / transition (1-2 weeks)** — With age, small solitary flowers appear at nodes, even under long days, announcing sex and flowering readiness. The short-night flip then converts the shoot tips from making leaves to making the packed flower clusters, and the plant stretches hard while it re-tools.[^spitzer-rimon-2019-florogenesis]
-5. **Flowering (7-10 weeks for most cultivars)** — Stretch, bud set, bulking, ripening. Buds become the highest-priority sink for sugar (section 12), stigmas and trichomes mark the clock, and the week-by-week detail lives in [the flower cycle paper](flowering-stages.html).
-6. **Senescence (the last stretch)** — The wind-down is programmed, not pathological: nitrogen is remobilised out of the fan leaves into the flowers, so lower leaves yellow and drop; resin matures; a pollinated plant races to finish seed and shuts down faster. Then the annual dies, or you harvest.
+1. **Germination (approximately 3 to 7 days)**: The seed absorbs water, and its metabolism starts. The radicle (the root of the embryo) moves through the seed coat first. Then it moves down because of gravity. The reserves in the seed supply all the energy. The [seeds and germination](seeds-germination.html) paper gives full information on the method.
+2. **Seedling (weeks 1 to 3)**: The two circular cotyledons (seed leaves) open. The plant makes the first true leaves. They have a serrated edge, and they have one leaflet at first, then three, then five. Below the substrate, the most important task is to make roots. Above the substrate, too much water and damping-off can cause damage to the plant.[^hesami-2023-morphological-lifecycle]
+3. **Vegetative (from approximately week 3, for the time that you select)**: The plant makes its structure: nodes, leaf area and root mass. These parts become larger while long days prevent flowering. The maturity of the plant also increases. At first, a new plant cannot make flowers. Thus a cutting or a seedling must have some weeks of vegetative growth. Then the change of the light cycle from long days to long nights gives a clear result.[^hesami-2023-morphological-lifecycle]
+4. **Pre-flower and transition (1 to 2 weeks)**: With age, the plant makes one small flower at each node, also when the days are long. These flowers show the sex of the plant and that the plant can make flowers. After the change of the light cycle to long nights, the shoot tips make flower clusters with a high density. They stop the production of leaves. The plant has a strong stretch during this change.[^spitzer-rimon-2019-florogenesis]
+5. **Flowering (7 to 10 weeks for most cultivars)**: The parts of this stage are stretch, bud set, bulking and ripening. The buds become the primary sink for sugar (section 12). The stigmas and the trichomes show the maturity. The [flower week by week](flowering-stages.html) paper gives full information on each week.
+6. **Senescence (the last stage)**: The genetics of the plant set the sequence of senescence. It is not a disease. The plant moves nitrogen from the fan leaves to the flowers, and thus the lower leaves become yellow and fall. The maturity of the resin increases. A plant with pollination completes its seed in a short time, and its senescence is faster. Then the plant dies, or you harvest it.
 
-> **Diagram.** Where the calendar actually goes. The fixed cost is flowering; veg length is a lever you hold, which is how rooms are scheduled back from harvest dates.
+> **Diagram.** The time of each stage. The length of flowering does not change. You control the length of the vegetative stage. Thus you can calculate the date to start each room from the date of harvest.
 
-Autoflowering cultivars compress this map and ignore the light schedule entirely. They get their own section (09) because the difference is genetic, not managerial.
+Autoflower cultivars have a shorter sequence of stages, and the light cycle does not change this sequence. Section 09 gives information on these cultivars. The difference is in the genetics and not in the tasks of the grower.
 
 ## Photoperiodism and flowering
 
-Cannabis measures the length of each dark period using a light-sensitive pigment. Think of it as a slow-draining hourglass: red daylight fills the glass through the day, and darkness drains it slowly overnight. Only after many unbroken hours of dark does the glass empty far enough to release the flowering signal. That pigment is called phytochrome. It exists in two interconvertible forms: Pr (inactive) flips to Pfr (active) the instant red light (~660 nm) hits it, and Pfr flips back under far-red light (~730 nm) or slowly, over hours, in darkness. Daylight is rich in red, so all day Pfr stays high: a chemical flag reading 'the lights are on'.[^legris-2019-phytochrome-mechanisms]
+The plant measures the length of each dark period with a pigment. The pigment is phytochrome, and light changes it. Phytochrome has two types: Pr (not active) and Pfr (active). Red light (approximately 660 nm) changes Pr to Pfr immediately. Far-red light (approximately 730 nm) changes Pfr to Pr. In darkness, Pfr also changes to Pr, but slowly, during some hours.Daylight has much red light. Thus the quantity of Pfr stays high during the day, and it is a chemical signal that the lights are on. During the night, the quantity of Pfr decreases slowly. After many hours of continuous darkness, the quantity of Pfr is less than the value that starts the flowering signal.[^legris-2019-phytochrome-mechanisms]
 
-> **Diagram.** The toggle and the timer. Red light builds active Pfr instantly; darkness drains it slowly. A long unbroken night lets Pfr fall low enough, for long enough, that the flowering program runs, and one brief flash of light resets the whole countdown.[^legris-2019-phytochrome-mechanisms]
+> **Diagram.** The two phytochrome types and the timer. Red light makes active Pfr immediately, and darkness decreases Pfr slowly. In a long continuous night, Pfr has a low value for a sufficient time, and the plant starts the flowering sequence. One short flash of light starts the timer again.[^legris-2019-phytochrome-mechanisms]
 
-The slow dark decay is the timer. A short-day plant like cannabis is really a **long-night** plant: it commits to flowering when the unbroken dark period exceeds its critical length, night after night. The classic proof is night interruption, break a long night in the middle with even a brief period of light and the plant behaves as if the night were short, staying vegetative. That is precisely why growers keep flowering rooms light-tight and, in reverse, why a mother room can hold plants in veg by never letting a long night happen.[^legris-2019-phytochrome-mechanisms]
+The slow decrease of Pfr in darkness is the timer. A short-day plant such as cannabis is a **long-night** plant. The plant starts flowering when the continuous dark period is longer than the critical night length, night after night.A standard test is night interruption: a short period of light in the middle of a long night. Then the night is not long for the plant, and the plant stays vegetative. Thus growers must prevent light leaks in flowering rooms. In a room for mother plants, do not let a long night occur. Then the plants stay vegetative.[^legris-2019-phytochrome-mechanisms]
 
-> **Diagram.** Why 12/12 is the standard: 12 h of clean darkness sits safely past the critical night length of essentially all photoperiod drug cultivars.[^ahrens-2023-photoperiod-optimum]
+> **Diagram.** 12/12 is the standard light cycle. 12 h of continuous darkness is longer than the critical night length of nearly all photoperiod cultivars of drug cannabis. Thus it is a safe value.[^ahrens-2023-photoperiod-optimum]
 
-Controlled work shows how sharp the response is: cannabis plantlets grown in vitro flowered under a 12 h photoperiod but stayed vegetative when the light period was extended, small changes in night length flip the decision cleanly.[^ahrens-2023-photoperiod-lightleak-revert] And 12/12 is a safe default rather than a biological law: a trial across ten indoor cultivars found most flowered fine under a 13 h day, and several yielded more thanks to the extra daily light, a cultivar-by-cultivar experiment worth running once a line is stable, never an assumption.[^ahrens-2023-photoperiod-optimum]
+Controlled tests show that the change from vegetative growth to flowering is sudden. Cannabis plantlets in vitro made flowers with a photoperiod of 12 h, but they stayed vegetative when the period of light was longer. A small change in the night length gives a clear change in the result.[^ahrens-2023-photoperiod-lightleak-revert]But 12/12 is a safe standard value, and it is not necessary in biology. A test with ten cultivars in grow rooms showed that most of them made flowers correctly with a 13 h day. Some of the cultivars had a higher yield because of the longer light period.[^ahrens-2023-photoperiod-optimum] We recommend that you do this test for each cultivar when the genetics of the cultivar are stable. Do not think that the result is the same for all cultivars.
 
-Two subtleties worth owning. First, the full mechanism is more than the toggle: phytochrome feeds a circadian clock, which gates production of a mobile flowering signal (florigen, the FT protein) in the leaves that travels to the shoot tips. Which is why the whole plant flowers together.[^legris-2019-phytochrome-mechanisms] Second, light beyond the visible red edge still counts: high-intensity near-infrared (~850 nm) delayed cannabis flowering by 12 days in testing, because phytochrome absorption does not stop dead at 700 nm. At the low intensities of a typical security-camera illuminator a few metres from the canopy the effect is negligible. But do not park IR floodlights over flowering plants.[^kusuma-2021-nir-leds-delay-flowering-phytochrome]
+There are two more items. First, the full mechanism is more than the change between Pr and Pfr. Phytochrome gives signals to a circadian clock. The clock controls the production of a signal for flowering that moves in the plant: florigen, the FT protein. The leaves make florigen, and it goes to the shoot tips. Thus all parts of the plant start flowering at the same time.[^legris-2019-phytochrome-mechanisms]Second, light with a wavelength longer than red light also has an effect. In a test, near-infrared light with a high intensity (approximately 850 nm) increased the time until flowering by 12 days. The cause is that phytochrome also absorbs light with a wavelength of more than 700 nm. A typical illuminator of a security camera has a low intensity, and it is some meters from the canopy. Its effect is very small. But do not put IR lamps with a high intensity above flowering plants.[^kusuma-2021-nir-leds-delay-flowering-phytochrome]
 
-**Photoperiod** — The length of the daily light period. 'A photoperiod plant' is grower shorthand for a cultivar that flowers in response to it (via night length).
+**Photoperiod**: The length of the period of light in each day. Growers use the term 'photoperiod plant' for a cultivar that starts flowering because of the photoperiod. The cause is the night length.
 
-**Critical night length** — The minimum unbroken darkness that commits a short-day plant to flowering. For photoperiod cannabis, plan on ~12 h; the exact edge varies by cultivar.
+**Critical night length**: The minimum continuous darkness that causes a short-day plant to start flowering. For photoperiod cannabis, schedule approximately 12 h. The accurate limit changes with the cultivar.
 
-> **WARN — Treat the dark period as infrastructure**
+> **WARN: Prevent light leaks in the dark period**
 >
-> Walk the flowering room during lights-off after 10 minutes of letting your eyes adapt. Tape over equipment LEDs, seal door frames, check pinholes in ducting. Repeated light leaks delay and degrade flowering and are one of the stress inputs behind hermaphroditism (section 11).[^punja-holmes-2020-hermaphroditism]
+> Go into the flowering room when the lights are off. Wait 10 minutes in darkness. Then examine the room for light leaks. Put tape on the LEDs of the equipment.
+> Seal the door frames. Examine the ducts for small holes. Light leaks that occur again and again increase the time until flowering and decrease the quality of the flowers. They are also one of the stress inputs that cause hermaphroditism (section 11).[^punja-holmes-2020-hermaphroditism]
 
-## Autoflowering and ruderalis traits
+## Autoflower and ruderalis traits
 
-Far northern feral cannabis, the populations often called Cannabis ruderalis, though its rank as a species is contested, faced summers where nights barely happen. Waiting for long nights there means dying unpollinated in the frost, so those populations evolved day-neutrality: flower on age, ignore the photoperiod.[^small-2015-cannabis-taxonomy][^mcpartland-2018-cannabis-systematics]
+In the far north, feral cannabis populations had summers with almost no night. Many persons use the name Cannabis ruderalis for these populations, but taxonomists do not all accept this species. A plant that waits for long nights there dies in the frost without pollination. Thus, in evolution, these populations became day-neutral. The plants make flowers with age, and the photoperiod does not change this.[^small-2015-cannabis-taxonomy][^mcpartland-2018-cannabis-systematics]
 
-Breeders moved that trait into modern drug cultivars, and its genetics are now mapped: autoflowering segregates as a simple recessive trait at a major locus (named Autoflower1), with additional day-neutral and early-flowering loci known, and the candidate genes sit in the plant's clock-and-flowering pathway. The practical consequence of 'recessive' matters: cross an autoflower with a photoperiod plant and the offspring are photoperiod, the trait hides unless both parents carry it.[^toth-2022-autoflower1-early1]
+Breeders added this trait to new cultivars of drug cannabis. Tests show the genetics of the trait. The autoflower trait is recessive, and one primary locus controls it (Autoflower1). Tests also show other day-neutral loci and loci for a short time until flowering. The candidate genes are in the pathway of the plant clock and flowering.The recessive trait has an important effect when you do breeding. If you make a cross of an autoflower with a photoperiod plant, the offspring are photoperiod plants. The trait does not show unless the two parents have it.[^toth-2022-autoflower1-early1]
 
-Running autos is a different management contract. You gain schedule freedom (18-24 h of light daily from seed to harvest, no light-tight paranoia for the trigger) and a short, predictable calendar of roughly 10-12 weeks seed to harvest. You give up control: you cannot hold an auto in veg, cannot keep one as a mother plant, and cannot re-veg your way out of a mistake. The internal clock only runs forward. Stress that costs a photoperiod plant a week costs an auto a chunk of its fixed lifespan.
+With autoflowers, you can use different light cycles and you get a short calendar. You can use 18 to 24 h of light each day from seed to harvest. You do not have to prevent light leaks for the trigger. The calendar is approximately 10 to 12 weeks from seed to harvest.You also have less control. You cannot hold an autoflower in the vegetative stage. You cannot keep one as a mother plant. You cannot make the plant vegetative again to correct an error. The internal clock only counts forward.Stress can add one week to the time of a photoperiod plant. The same stress removes a part of the life span of an autoflower, because the genetics set the life span.
 
 |  | Photoperiod cultivar | Autoflower cultivar |
 | --- | --- | --- |
-| Flowering trigger | Long unbroken nights (the flip to 12/12) | Internal age clock, flowers regardless of schedule[^toth-2022-autoflower1-early1] |
-| Veg length | Yours to choose, days to years | Fixed by genetics, ~3-4 weeks |
-| Mother plants / cloning | Standard practice | Impractical, clones share the donor's age clock |
-| Light leaks in flower | Serious risk: delay, reversion, herms | Irrelevant to the trigger (stress still matters) |
-| Recovering from stress | Extend veg, re-veg possible | No pause button; damage is permanent |
-| Typical calendar | Veg (your call) + 7-10 wk flower | ~10-12 wk total, seed to harvest |
+| Flowering trigger | Long continuous nights (the change to 12/12) | Internal clock for the age of the plant. Flowering starts with all light cycles.[^toth-2022-autoflower1-early1] |
+| Length of the vegetative stage | You select the length, from days to years | The genetics set the length: approximately 3 to 4 weeks |
+| Mother plants / cloning | Standard procedure | A clone has the same age clock as the plant that supplied the cutting. Thus the clone cannot stay in the vegetative stage. |
+| Light leaks in the flowering stage | Dangerous. The time until flowering increases. The plant can change to vegetative growth again. Hermaphrodites can occur. | No effect on the trigger (stress continues to be important) |
+| After stress | You can increase the length of the vegetative stage, and the plant can be vegetative again | You cannot stop the clock. The damage is permanent. |
+| Typical length of the crop | Vegetative stage (you select) + 7 to 10 weeks of flowering | Approximately 10 to 12 weeks in total, from seed to harvest |
 
-*Two contracts with the same species. Autos trade control for speed and schedule freedom.*
+*Two types of crop with the same species. Autoflowers give you speed and you can use different light cycles, but you have less control.*
 
 ## Sex determination and pre-flower identification
 
-Cannabis carries true sex chromosomes, which is rare in plants: females are XX, males are XY, and the male is the heterogametic sex, exactly the human arrangement. The X is the largest chromosome in the set and the Y is larger than any autosome, so sex is decided at fertilisation, not by growing conditions.[^divashuk-2014-xy-sex-chromosomes] Regular seed therefore runs close to 50:50, and every regular-seed grow is a sexing exercise: identify the males early, remove them before any flower opens.
+Cannabis has sex chromosomes. Plants do not frequently have sex chromosomes. Female plants are XX and male plants are XY. A male plant has two different sex chromosomes, the same as a person. The X is the largest chromosome in the set, and the Y is larger than each autosome. Fertilization sets the sex of the plant, and the growth conditions do not set it.[^divashuk-2014-xy-sex-chromosomes]Thus the ratio of male plants to female plants in regular seed is approximately 50:50. In each crop from regular seed, you must find the sex of each plant. Find the male plants. Remove them before a flower opens.
 
-The plant declares itself before the flip. With age, small solitary pre-flowers form in the leaf axils of upper nodes (under long days, no trigger required) typically from around week 3-4 of veg.[^spitzer-rimon-2019-florogenesis] Reading them is a loupe job at first: females show a pointed pod with two white stigmas; males show small round pollen sacs on a short stalk, with no hairs. The stipules, those thin green spikes at every node, fool everyone once; they are on both sexes and mean nothing.
+The plant shows its sex before the change of the light cycle. With age, the plant makes small pre-flowers, one at each of the nodes at the top of the plant, in the leaf axils. Long days do not prevent this, and a trigger is not necessary. This occurs typically from approximately week 3 to 4 of the vegetative stage.[^spitzer-rimon-2019-florogenesis]At first, use a loupe to examine the pre-flowers. A female plant has a pod with a sharp point and two white stigmas. A male plant has small pollen sacs with a circular shape on a short stalk, and it has no hairs.The stipules are thin green spikes at each node. They are on the two sexes, and they do not show the sex of the plant. Many growers identify them incorrectly the first time.
 
-> **Diagram.** The node check. Two wispy stigmas from a pointed pod = female, keep. Round balls on a little stalk = male, cull before anything opens. A female flower with a yellow exposed anther (banana) = hermaphrodite, treat as a pollen source.[^punja-holmes-2020-hermaphroditism]
+> **Diagram.** The check at a node. A pod with a sharp point and two thin stigmas is a female plant: keep it. Pollen sacs with a circular shape on a short stalk are a male plant: remove it before a flower opens. A female flower with a yellow exposed anther is a hermaphrodite and it is a source of pollen.[^punja-holmes-2020-hermaphroditism]
 
-If a plant refuses to declare, patience or a brief 12/12 period will force the issue, or sidestep the whole exercise with feminised seed (next section). For breeding work you keep your males, of course, but in a separate space with its own airflow, because of section 05's warning: pollen is the one contaminant you cannot recall.
+If you cannot find the sex of a plant, wait. Or give the plant 12/12 for a short period, and the plant shows its sex. You can also prevent this task with feminized seed (see the next section). For breeding, keep the male plants in a room where the air does not go to the other rooms. Section 05 gives a warning: pollen is the only contaminant that you cannot remove after it is in the air.
 
-**Pre-flower** — The first solitary flower at a node, showing sex weeks before real flowering. Loupe territory at first appearance.
+**Pre-flower**: The first flower at a node. It shows the sex of the plant some weeks before the flowering stage. At first, you can see it only with a loupe.
 
-**Sinsemilla** — Literally 'without seed': unpollinated female flower, the entire commercial product. Achieved by having no viable pollen anywhere near the room.
+**Sinsemilla**: The term is 'without seed'. It is a female flower without pollination, and it is all of the commercial product. To make sinsemilla, make sure that there is no viable pollen near the room.
 
-## Hermaphrodites, stress, and feminised seed
+## Hermaphrodites, stress and feminized seed
 
-Chromosomes set sex; expression can still bend. A genetically female plant can produce functional male anthers, either mixed male flowers or the infamous 'banana' (an exposed anther pushing out of a female flower). Documented drivers: genetic predisposition in some lines, and stress, light leaks and photoperiod disruption, heat, physical damage, running far past ripeness. Hermaphroditism in commercial rooms produces viable pollen and unwanted seed without a single male present.[^punja-holmes-2020-hermaphroditism]
+The chromosomes set the sex of the plant, but the expression of the sex can change. A plant with female chromosomes can make male anthers that make pollen. It can make mixed male flowers, or an exposed anther on a female flower.A trait in the genetics of some cultivars is one recorded cause. Other recorded causes are stress, light leaks, a photoperiod that is not correct, heat and damage to the plant. A harvest a very long time after ripeness is also a cause. In commercial rooms, hermaphroditism makes viable pollen and seed that you do not want, with no male plant in the room.[^punja-holmes-2020-hermaphroditism]
 
-There is a genetic sting in the tail: seed sired by a hermaphrodite's pollen on a female carries no Y chromosome, so the offspring are female, feminised by accident. Tested herm-derived seed germinated at 90-95% and produced female progeny, but it is effectively self-pollination: low genetic variation, and it can quietly select for the herm tendency itself. Do not build a seed bank out of stress events.[^punja-holmes-2020-hermaphroditism]
+There is a problem in the genetics. Seed from the pollen of a hermaphrodite on a female plant has no Y chromosome. Thus the offspring are female plants. This seed is feminized seed that you did not want. In a test, seed from hermaphrodites had a germination rate of 90 to 95% and made female progeny.But this seed is a result of self-pollination. The variation in the genetics is low. Self-pollination can also select for the trait of hermaphroditism. Do not make a seed bank with seed from plants that have stress.[^punja-holmes-2020-hermaphroditism]
 
-Commercial feminised seed uses the same loophole deliberately, with chemistry instead of stress. Ethylene, a plant hormone, pushes cannabis toward female expression; block ethylene signalling and a genetic female will push out viable male flowers. The standard tool is STS (silver thiosulfate): repeated foliar sprays on a chosen female induce pollen that carries only X chromosomes, that pollen goes onto another female, and essentially all resulting seed is female. Gibberellin sprays can force maleness too, though less reliably, and sprayed plants are breeding stock, never product.[^flajsman-2021-feminized-seed-production]
+Feminized seed uses the same mechanism, but with chemistry and not with stress. Ethylene is a plant hormone, and it causes the expression of female flowers. If you stop the ethylene signal, a plant with female chromosomes makes viable male flowers. The standard method uses STS (silver thiosulfate). You apply a spray on the leaves of a female plant that you select, again and again.The spray causes pollen that has only X chromosomes. You put this pollen on a different female plant. Almost all of the seed that results is female. A spray of gibberellin can also cause male flowers, but the result is not as good. Use the plants that you spray only for breeding, and not as product.[^flajsman-2021-feminized-seed-production]
 
-> **Diagram.** Sex reversal without touching the genetics: every parent and every offspring is XX. This is why feminised seed exists and why it dominates the seed market.[^flajsman-2021-feminized-seed-production]
+> **Diagram.** A change of sex with no change to the genetics: all parents and all offspring are XX. Thus it is possible to make feminized seed, and most growers use it.[^flajsman-2021-feminized-seed-production]
 
-> **DANGER — Bananas shed pollen too**
+> **DANGER: Exposed anthers release pollen too**
 >
-> Treat an exposed anther exactly like a male in the room: isolate or cull the plant, note the cultivar and the stress that preceded it, and check its neighbours daily for a week. Anthers can self-seed the plant that made them and everything downwind.[^punja-holmes-2020-hermaphroditism]
+> Do the same for an exposed anther as for a male plant in the room. Isolate the plant or remove it. Record the cultivar and the stress that occurred before the anther. Examine the plants near it each day for one week. Anthers can cause seed in the plant that made them and in all plants in the direction of the airflow.[^punja-holmes-2020-hermaphroditism]
 
 ## Photosynthesis: light, CO2 and temperature
 
-Leaves do one thing that the rest of the plant depends on entirely: they turn light and air into sugar. The process has a ceiling — more light helps up to a point, just as more heat under a kitchen pan only speeds cooking until the chef can't keep up; add CO2 and you raise that ceiling. This process is photosynthesis: chloroplasts in the leaves use light energy to split water and bolt CO2 from the air onto sugar molecules. Sugar is the plant's only income — every gram of root, leaf and flower is bought with it. Light drives the reaction, CO2 is the raw material, and temperature sets how fast the enzymatic machinery can run.
+The leaves use light and air to make sugar. All other parts of the plant use this sugar. This mechanism is photosynthesis. The chloroplasts in the leaves use the energy of light to divide water molecules and to attach CO2 from the air to molecules of sugar.The mechanism has a maximum rate. More light increases the rate up to a limit. If you add CO2, the limit increases.Sugar is the only supply for the growth of the plant. The plant uses sugar to make each gram of root, leaf and flower. Light supplies the energy. CO2 supplies the carbon. The temperature sets the speed of the enzymes.
 
-Because all three feed one process, they limit each other. Classic gas-exchange work on cannabis leaves found photosynthesis climbing with light intensity up to roughly 1500 µmol/m²/s at around 30 °C (86 °F), and rising further when CO2 was enriched toward 750 ppm, raise one input and the next one becomes the ceiling.[^chandra-2008-photosynthetic-response] That is the entire logic of [CO2 enrichment](co2-enrichment.html): high light plus enriched CO2 plus a warmer room move together, or not at all. (Leaf-level numbers from one variety are a shape, not a setpoint, whole canopies, cultivars and VPD shift the curve, which is the territory of [the grow room as one system](grow-room-systems.html).)
+Light, CO2 and temperature all control the same mechanism, photosynthesis. Thus each of the three sets a limit for the other two. Standard tests of gas exchange on cannabis leaves showed that photosynthesis increases with the light intensity up to approximately 1500 µmol/m²/s at approximately 30 °C (86 °F). Photosynthesis increased more when the concentration of CO2 increased up to 750 ppm. When you increase one input, the next input becomes the limit.[^chandra-2008-photosynthetic-response]Thus in [CO2 enrichment](co2-enrichment.html), high light, a high concentration of CO2 and a high temperature must increase together, or not at all. The numbers for one leaf of one cultivar show the shape of the curve. They are not a setpoint. Full canopies, different cultivars and VPD change the curve (see [grow room systems](grow-room-systems.html)).
 
-> **Diagram.** Diminishing returns are built into the leaf. Each step of light buys less than the last, and past saturation you are just heating the room, unless CO2 and temperature rise to match.[^chandra-2008-photosynthetic-response]
+> **Diagram.** When the light increases by equal steps, photosynthesis increases by smaller and smaller steps. The leaf has this property. After saturation, more light only makes the room hotter, unless CO2 and the temperature also increase.[^chandra-2008-photosynthetic-response]
 
-Where the sugar goes is the other half of the story. Mature leaves are **sources** (net sugar exporters) and everything else competes for their output — think of it as a household where some members earn income and the rest spend it. Growing tips, roots and above all flowers are **sinks** (net importers). The phloem allocates by demand, and demand has a pecking order that changes with life stage: in veg, new leaves and roots win; after the flip, the flowers become the dominant sink and everything else queues behind them.
+The second half of the mechanism is the movement of the sugar. Mature leaves are **sources**: they send more sugar to other parts than they receive. All other parts of the plant use the sugar from the leaves. Growing tips, roots and, most of all, flowers are **sinks**: they receive more sugar from other parts than they send.The phloem sends the sugar to the parts that use the most sugar. These parts change with the stage of the life cycle. In the vegetative stage, new leaves and roots use the most sugar. After the change of the light cycle, the flowers are the primary sink, and all other parts receive sugar after the flowers.
 
-> **Diagram.** The economy under the canopy. Late-flower yellowing of fan leaves is this system working: the plant strips its own solar panels for parts and ships the nitrogen to the buds.
+> **Diagram.** In the last stage of flowering, the fan leaves become yellow. This color shows the correct operation of the system. The plant moves the nitrogen from the fan leaves to the buds.
 
-This model earns its keep daily: it is why healthy fan leaves are kept until late flower (they are the income), why [defoliation](defoliation-training.html) targets shaded, non-earning leaves rather than the well-lit ones, and why late-cycle leaf yellowing is often remobilisation on schedule rather than a deficiency to chase.
+You use this model each day. Fan leaves in good condition make the sugar for the plant. Thus you keep them until the last stage of flowering. [Defoliation](defoliation-training.html) removes the leaves in shade that do not make sugar. It does not remove the leaves with good light.In the last stage of the cycle, the leaves frequently become yellow because the plant moves the nutrients out of them, at the correct time. A yellow leaf at this stage is frequently not a deficiency. Do not try to correct it.
 
-**Source and sink** — Source: a tissue exporting sugar (mature sunlit leaf). Sink: a tissue importing it (root tip, young leaf, flower). Yield is sources funding the sinks you care about.
+**Source and sink**: A source is a tissue that sends sugar to other parts (a mature leaf in the light). A sink is a tissue that receives sugar (a root tip, a new leaf or a flower). The yield is the sugar that the sources supply to the sinks that you want.
 
 ## Root systems
 
-Half the organism is underground and invisible, and most beginner disasters happen there first. The architecture is simple: from seed, a taproot drives down and lateral roots branch off it; from a cutting, a fibrous ball of adventitious roots forms instead. Either way the absorbing surface is not the thick white cables you see at transplant. It is the fuzz of root hairs just behind the growing tips, fragile, short-lived and constantly rebuilt as the roots explore.
+Half of the plant is below the substrate, and you cannot see it. Most problems of a new grower start there. A plant from seed has a taproot with lateral roots on it. A cutting does not make a taproot. It makes a mass of fibrous adventitious roots.In each type of root system, the surface that absorbs the water is not the thick white roots that you see at transplant. The surface is the root hairs immediately behind the growing tips of the roots. The root hairs break easily and live a short time. The plant makes new root hairs all the time as the roots become longer.
 
-Roots run on oxygen. They photosynthesise nothing and respire constantly, burning sugar sent down from the leaves. And that respiration needs O2 from the air spaces in the substrate. Flood those spaces and trouble starts within hours: water and nutrient uptake fall, the plant wilts _while sitting in water_, and root tissue starts dying, with opportunist pathogens (pythium and friends) queuing up behind the injury.[^morard-1996-root-oxygen] This is the mechanism behind the classic beginner trap: overwatering and underwatering look identical from above. One is thirst; the other is suffocation.
+Roots use oxygen. They do not photosynthesize. Their respiration is continuous, and they use sugar that the phloem sends down from the leaves. Respiration uses O2 from the spaces for air in the substrate. If water fills these spaces, problems start in some hours.The uptake of water and nutrients decreases, the plant shows wilt _when it is in water_, and the root tissue starts to die. Opportunist pathogens such as pythium then cause infection in the damaged tissue.[^morard-1996-root-oxygen] This mechanism causes a frequent error of new growers. A plant with too much water and a plant with not sufficient water look the same above the substrate. The plant with not sufficient water has water stress. The roots of the plant with too much water have no oxygen.
 
-The fix is structural, not behavioural willpower: substrates are engineered air-water compromises (that is the air-filled porosity story in [the substrates paper](substrates-overview.html)), and watering is judged by weight or measured dryback rather than the calendar, the operating system of [crop steering](coco-crop-steering.html).
+The correction is in the system and not in the tasks of the grower. The manufacturer makes a substrate with the correct ratio of air to water (see [substrates compared](substrates-overview.html) for the air-filled porosity). Apply water when the weight of the pot or the measured dryback shows that it is necessary. Do not use the calendar. Crop steering uses this method (see [coco and crop steering](coco-crop-steering.html)).
 
-The last few millimetres around each root, the rhizosphere, is its own ecosystem. Roots leak sugars and acids into it, feeding a dense microbial community that cycles nutrients, occupies the real estate pathogens want, and chemically differs from the bulk substrate: pH at the root surface shifts with which nutrients the plant is absorbing, which is one reason measured runoff never quite matches what the roots experience (see [pH management](ph-management.html)).
+The rhizosphere is the zone of some millimeters around each root. Roots release sugars and acids into the rhizosphere. A group of microbes with a high density uses these sugars and acids. The microbes are part of the nutrient cycle, and they use the space that pathogens want.The chemistry of the rhizosphere is different from the chemistry of the substrate that is far from the roots. The pH at the root surface changes with the nutrients that the plant absorbs. Thus the runoff that you measure does not agree fully with the conditions at the roots (see [pH control](ph-management.html)).
 
-> **TIP — Judge the half you cannot see by proxy**
+> **TIP: Use data from instruments for the half that you cannot see**
 >
-> Pot weight, dryback rate, runoff EC/pH, root colour at transplant (white and branching = good; brown, slimy or smelly = oxygen problem). The roots report daily, through instruments, not eyesight.
+> Use these data: the weight of the pot and the dryback rate. Also use the runoff EC and pH, and the root color at transplant. White roots with branches are good. Brown roots that are soft or that have a bad aroma show an oxygen problem. The roots give you data each day with instruments and not with your eyes.
 
 ## Plant hormones
 
-Five hormone families explain most of what a cannabis plant does, and most of what growers do to it. Every training technique is hormone manipulation performed with scissors and timers; every rooting gel and feminisation spray is the chemical version of the same game.
+Five families of hormones cause most of the effects in a cannabis plant. They also cause most of the effects of the work of the grower. Each training method changes the hormones with tools that cut the plant and with timers. Each rooting gel and each spray to make feminized seed changes the hormones with chemical compounds.
 
-| Hormone | Made mainly in | What it does | Where growers exploit it |
+| Hormone | Primary source | Function | How growers use it |
 | --- | --- | --- | --- |
-| **Auxin** | Shoot tips (apical meristem) | Enforces apical dominance, the tip suppresses the axillary buds below it; triggers root initiation at high local concentration | **Topping** removes the auxin source, releasing side shoots into a bushier, multi-cola plant. LST flattens the auxin gradient for the same effect without cutting. Rooting gels are synthetic auxins (IBA/NAA) painted onto cuttings |
-| **Cytokinin** | Root tips | Promotes shoot growth and branching; counterweight to auxin; delays leaf ageing | The auxin:cytokinin balance decides shoots-versus-roots, a big healthy root system literally signals the top to branch. Tissue-culture multiplication runs on added cytokinin (see [tissue culture](tissue-culture.html)) |
-| **Gibberellin (GA)** | Young leaves, seeds | Drives stem elongation and helps break seed dormancy | The post-flip stretch is GA at work, and part of why crowding and shade (which shift light quality) make plants leggier. GA sprays can force male flowers for breeding, though STS does it better[^flajsman-2021-feminized-seed-production] |
-| **Ethylene** | Stressed, wounded and ripening tissue | Gas hormone: senescence, ripening, and a push toward female flower expression | Blocking it with STS masculinises a female, the entire feminised-seed industry (section 11). Its stress role is also why wounding and rough handling echo through the plant[^flajsman-2021-feminized-seed-production] |
-| **ABA (abscisic acid)** | Roots and leaves under water stress | The drought manager: closes stomata, slows expansion, enforces seed dormancy | Controlled drybacks lean on ABA signalling, part of the mechanism crop steering uses to push a plant generative. Overdo it and the same hormone stalls growth entirely |
+| **Auxin** | Shoot tips (apical meristem) | Causes apical dominance: the tip stops the growth of the axillary buds below it. At a high local concentration, auxin starts root initiation. | **Topping** removes the source of auxin. The side shoots become larger, and the plant has more branches and more colas. LST makes the gradient of auxin flat and has the same effect, but you do not remove the tip. Rooting gels contain synthetic auxins (IBA and NAA). You apply them to the cuttings. |
+| **Cytokinin** | Root tips | Increases the growth of shoots and the number of branches. Its effect is the opposite of auxin. It decreases the speed of leaf senescence. | The ratio of auxin and cytokinin controls the ratio of shoots and roots. A large root system in good condition sends signals to the top of the plant to make branches. Multiplication in tissue culture uses added cytokinin (see [tissue culture](tissue-culture.html)). |
+| **Gibberellin (GA)** | New leaves and seeds | Causes the stem to become longer. It helps to stop the dormancy of seeds. | GA causes the stretch after the change of the light cycle. GA is also part of the cause of long internodes when plants are near each other or in shade, because shade changes the light quality. A spray of GA can cause male flowers for breeding, but STS gives a better result.[^flajsman-2021-feminized-seed-production] |
+| **Ethylene** | Tissue with stress, damaged tissue and tissue in ripening | A hormone that is a gas. It causes senescence and ripening, and it causes the expression of female flowers. | If you stop ethylene with STS, a female plant makes male flowers. Feminized seed production uses this effect (section 11). Ethylene is also a stress signal. Thus damage and rough touch have an effect in all parts of the plant.[^flajsman-2021-feminized-seed-production] |
+| **ABA (abscisic acid)** | Roots and leaves with water stress | In drought, ABA closes the stomata, decreases the rate of growth, and causes the dormancy of seeds | Controlled drybacks use the ABA signal. The ABA signal is part of the mechanism that crop steering uses to cause generative growth. If the dryback is too large, the same hormone stops growth fully. |
 
-*The five levers. Concentrations, ratios and gradients, not on/off switches, decide the outcome.*
+*The five controls. The concentration, the ratio and the gradient of the hormones set the result. A hormone is not only on or off.*
 
-> **NOTE — Gradients, not switches**
+> **NOTE: The effect of a hormone is a gradient**
 >
-> Hormones act by concentration and ratio, varying tissue by tissue. That is why topping releases only the nearest few nodes, why rooting gel goes on the cut and not the leaves, and why one stressor rarely has one tidy effect.
+> The effect of a hormone changes with its concentration and with its ratio to other hormones. The concentration and the ratio are different in each tissue. Thus topping releases from apical dominance only the nearest nodes below the point where you cut the stem. Thus you apply rooting gel to the end of the stem that you cut, and not to the leaves. One cause of stress frequently has more than one effect.
 
-## Common biological failure modes
+## Frequent problems in plant biology
 
-Most cultivation disasters are one of the mechanisms in this paper running exactly as designed, against you. The six below account for a large share of ruined first grows.
+In most problems in cultivation, one of the mechanisms in this paper operates correctly, but the result is not good for you. The six problems below cause damage to many first crops.
 
 **Light leak in the dark period**
 
-Phytochrome resets, the night count restarts: flowering stalls, plants drift back toward veg, and the stress feeds herm risk. **Fix:** dark-adapt your eyes and walk the room during lights-off; tape LEDs, seal doors.[^legris-2019-phytochrome-mechanisms]
+Light changes Pr to Pfr, and the timer of the night starts again. Flowering stops, the plants change to vegetative growth again, and the stress increases the risk of hermaphrodites. **Correction:** let your eyes adapt to the darkness. Go into the room when the lights are off. Put tape on the LEDs. Seal the doors.[^legris-2019-phytochrome-mechanisms]
 
-**Stress stack in late flower**
+**Many types of stress in the last stage of flowering**
 
-Heat spikes, light interruptions and damage push genetically female plants to throw anthers, bananas, and self-seed the room. **Fix:** stable climate, sealed dark period, herm-prone cultivars culled from the lineup.[^punja-holmes-2020-hermaphroditism]
+A sudden high temperature, light leaks in the dark period, and damage cause plants with female chromosomes to make anthers. The anthers can cause seed in all the room. **Correction:** keep a stable climate. Prevent light leaks in the dark period. Remove the cultivars that frequently make hermaphrodites.[^punja-holmes-2020-hermaphroditism]
 
-**Overwatering**
+**Too much water**
 
-Flooded substrate = zero root oxygen = uptake stops within hours. It looks like thirst from above, so beginners water again. **Fix:** judge by pot weight and dryback, never by droop alone.[^morard-1996-root-oxygen]
+When water fills the substrate, the roots have no oxygen, and uptake stops in some hours. From above the substrate, the signs are the same as for a plant with not sufficient water. Thus a new grower applies water again. **Correction:** use the weight of the pot and the dryback to find the time to apply water. Do not use wilt only.[^morard-1996-root-oxygen]
 
 **Pollen in the room**
 
-One open male or one banana, and a wind-pollinated species does the rest through your HVAC: a seeded crop. **Fix:** sex early at the nodes, cull males before flowers open, quarantine anything breeding-related.[^punja-holmes-2020-hermaphroditism]
+One open male flower or one exposed anther is sufficient. The plant is wind-pollinated, and the HVAC system moves the pollen. The result is a crop with seed. **Correction:** find the sex of each plant at the nodes before flowering. Remove the male plants before flowers open. Keep all plants for breeding in quarantine.[^punja-holmes-2020-hermaphroditism]
 
-**Structural work at the wrong time**
+**Structural work at an incorrect time**
 
-Topping and heavy training in flower spends the plant's budget on recovery while the buds queue for sugar. **Fix:** shape in veg; from bud set onward the meristems you care about are making flowers, not frames.
+Topping and much training in flowering use the reserves of the plant to repair the damage, while the buds wait for sugar. **Correction:** change the shape of the plant in the vegetative stage. From bud set, the meristems that you want make flowers and not structure.
 
-**Shopping by folk label**
+**Selection with the sativa and indica labels**
 
-Buying 'a relaxing indica' is buying label art: the labels are genetically indistinct and predict aroma at best. **Fix:** chemotype and COA numbers, cultivar sheets, your own logs.[^watts-2021-terpene-synthase-labels]
+If you get a cultivar because of a label such as 'an indica with a sedative effect', you get only a label. The labels do not show a difference in the genetics, and they give weak information about the aroma. **Correction:** use the chemotype and the COA numbers, the data sheets of the cultivar, and your records.[^watts-2021-terpene-synthase-labels]
 
-## Plant biology quick reference
+## Plant biology reference table
 
-The working vocabulary of this site, one line each. Bookmark this section, every other paper uses these words without stopping to define them.
+The table gives the terms that this site uses, one row for each term. Make a bookmark for this section, because all other papers use these terms with no definition.
 
-| Term | Plain meaning | Why you care |
+| Term | Definition | Effect in cultivation |
 | --- | --- | --- |
-| Annual | Lives one season, flowers once, dies | No mid-season restarts; plan the whole cycle |
-| Dioecious | Male and female are separate plants | Regular seed = ~half males to find and cull |
-| Chemotype | Classification by measured chemistry (THC:CBD) | Beats sativa/indica labels for predicting the product |
-| Node / internode | Stem joint / stem between joints | Node spacing reads stretch; nodes host every branch and bud |
-| Apical meristem | The main growing tip | Topping removes it to release side shoots |
-| Axillary bud | Dormant backup tip at each node | Raw material of every branch and training plan |
-| Fan / sugar leaf | Big solar panels / small in-bud leaves | Fan leaves fund the plant; sugar leaves flag trim work |
-| Bract | Resin-dense pod around each ovary ('calyx' in slang) | Highest trichome density on the plant |
-| Pistil / stigma | Female organ / its two white hairs | Stigma colour is a rough maturity hint |
-| Trichome | Glandular resin factory (bulbous, sessile, stalked) | Where cannabinoids and terpenes are made and stored |
-| Photoperiod | Daily light length (the schedule) | The lever that starts and holds flowering |
-| Critical night length | Minimum unbroken darkness that triggers flower | Why 12/12 works and why leaks break it |
-| Phytochrome (Pr/Pfr) | The red/far-red pigment switch | The sensor behind every photoperiod rule |
-| Autoflower | Cultivar that flowers on age, not photoperiod | Different contract: fast, schedule-free, unforgiving |
-| Pre-flower | First solitary flower at a node | Sexes the plant weeks before real flowering |
-| Hermaphrodite | Female producing male anthers under stress/genetics | A pollen source with no male in the room |
-| STS | Silver thiosulfate, blocks ethylene signalling | How feminised seed is made |
-| Source / sink | Sugar exporter / sugar importer | The economics behind defoliation and late yellowing |
-| Rhizosphere | The living few millimetres around each root | Where pH, microbes and uptake actually happen |
+| Annual | The plant completes its life in one season, makes flowers one time and dies | The plant cannot start again in the season. Schedule the full cycle. |
+| Dioecious | The male and the female are different plants | Regular seed: approximately half of the plants are male. Find them and remove them. |
+| Chemotype | Classification with the measured chemistry (THC:CBD) | Gives better information on the product than the labels sativa and indica |
+| Node / internode | Joint on the stem / part of the stem between joints | The distance between nodes shows the stretch. Each branch and each bud starts at a node. |
+| Apical meristem | The primary growing tip | Topping removes it, and the side shoots become larger |
+| Axillary bud | Dormant reserve growing tip at each node | Each branch starts from it, and training methods use it |
+| Fan leaf and sugar leaf | Large leaves that absorb light / small leaves in the bud | Fan leaves supply the sugar for the plant. Trimming removes the sugar leaves. |
+| Bract | Pod with a high density of resin around each ovary (growers use the term 'calyx') | Highest trichome density on the plant |
+| Pistil / stigma | Female organ / its two white hairs | The color of the stigma shows the approximate maturity |
+| Trichome | Gland that makes resin (bulbous, sessile or stalked) | Makes and keeps cannabinoids and terpenes |
+| Photoperiod | The length of the period of light each day (the light cycle) | The control that starts flowering and keeps it |
+| Critical night length | Minimum continuous darkness that starts flowering | The 12/12 cycle gives more darkness than this limit. A light leak stops the dark period. |
+| Phytochrome (Pr and Pfr) | The pigment that changes between red light and far-red light | The sensor for all photoperiod effects |
+| Autoflower | Cultivar that makes flowers with age and not with the photoperiod | A different type of crop: fast, with all light cycles, and with less control |
+| Pre-flower | The first flower at a node | Shows the sex of the plant some weeks before flowering |
+| Hermaphrodite | Female plant that makes male anthers because of stress or genetics | A source of pollen when no male plant is in the room |
+| STS | Silver thiosulfate. It stops the ethylene signal | The method to make feminized seed |
+| Source / sink | Tissue that sends sugar / tissue that receives sugar | The mechanism for defoliation and for yellow leaves in the last stage of flowering |
+| Rhizosphere | The zone of some millimeters around each root | pH, microbes and uptake occur in this zone |
 
-*The site's vocabulary in one place. Terms are defined in full in their sections above.*
+*The terms of this site in one table. Each term has a full definition in its section above.*
 
-> **KEY — Mental model to keep**
+> **KEY: Model of the plant**
 >
-> A cannabis plant is a sugar factory on a night clock. Veg builds the factory, leaves, roots, nodes. The long night flips the market, and flowers become the only customer. Hormones are the levers, trichomes are the product, roots are the half you manage by instruments, and every rule in every other paper traces back to one of those facts.
+> A cannabis plant makes sugar, and a clock for the night controls the plant. The vegetative stage makes the structure: leaves, roots and nodes. The long night changes the plant, and the flowers become the only sink for sugar. Hormones are the controls of the plant, and trichomes are the product. You control the roots, which are half of the plant, with instruments. Each procedure in the other papers has one of these facts as the cause.
 
-From here, follow the plant's own order: [seeds and germination](seeds-germination.html) to start one, [the flower cycle](flowering-stages.html) to run bloom week by week, and [lighting fundamentals](lighting-fundamentals.html) for the hardware behind the photoperiod rules this chapter explained.
+Next, follow the sequence of the life cycle of the plant. Use [seeds and germination](seeds-germination.html) to start a plant. Use [flower week by week](flowering-stages.html) for each week of flowering. Use [basic lighting](lighting-fundamentals.html) for the equipment for the photoperiod.
 
 ## References
 
-[^small-2015-cannabis-taxonomy]: Small, E. (2015). Evolution and Classification of Cannabis sativa (Marijuana, Hemp) in Relation to Human Utilization. The Botanical Review, 81(3), 189-294. https://doi.org/10.1007/s12229-015-9157-3 https://link.springer.com/article/10.1007/s12229-015-9157-3 (peer-reviewed)
-[^mcpartland-2018-cannabis-systematics]: McPartland, J. M. (2018). Cannabis Systematics at the Levels of Family, Genus, and Species. Cannabis and Cannabinoid Research, 3(1), 203-212. https://doi.org/10.1089/can.2018.0039 https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6225593/ (peer-reviewed)
-[^watts-2021-terpene-synthase-labels]: Watts, S., McElroy, M., Migicovsky, Z., Maassen, H., van Velzen, R., & Myles, S. (2021). Cannabis labelling is associated with genetic variation in terpene synthase genes. Nature Plants, 7(10), 1330-1334. https://doi.org/10.1038/s41477-021-01003-y https://www.nature.com/articles/s41477-021-01003-y (peer-reviewed)
-[^hesami-2023-morphological-lifecycle]: Hesami M, Pepe M, Jones AMP. Morphological Characterization of Cannabis sativa L. Throughout Its Complete Life Cycle. Plants. 2023;12(20):3646. https://doi.org/10.3390/plants12203646 (peer-reviewed)
-[^spitzer-rimon-2019-florogenesis]: Spitzer-Rimon B, Duchin S, Bernstein N, Kamenetsky R. Architecture and Florogenesis in Female Cannabis sativa Plants. Front Plant Sci. 2019;10:350. https://doi.org/10.3389/fpls.2019.00350 (peer-reviewed)
-[^livingston-2020-trichome-maturation]: Livingston SJ, Quilichini TD, Booth JK, Wong DCJ, Rensing KH, Laflamme-Yonkman J, Castellarin SD, Bohlmann J, Page JE, Samuels AL. Cannabis glandular trichomes alter morphology and metabolite content during flower maturation. Plant J. 2020;101(1):37-56. https://doi.org/10.1111/tpj.14516 (peer-reviewed)
-[^legris-2019-phytochrome-mechanisms]: Legris, M., Ince, Y. Ç., & Fankhauser, C. (2019). Molecular mechanisms underlying phytochrome-controlled morphogenesis in plants. Nature Communications, 10, 5219. https://doi.org/10.1038/s41467-019-13045-0 https://www.nature.com/articles/s41467-019-13045-0 (peer-reviewed)
-[^ahrens-2023-photoperiod-lightleak-revert]: Moher M, Jones M, Zheng Y. Photoperiodic Response of In Vitro Cannabis sativa Plants. HortScience. 2021;56(1):108-113. https://doi.org/10.21273/HORTSCI15452-20 (peer-reviewed)
-[^ahrens-2023-photoperiod-optimum]: Ahrens A, Llewellyn D, Zheng Y. Is Twelve Hours Really the Optimum Photoperiod for Promoting Flowering in Indoor-Grown Cultivars of Cannabis sativa? Plants. 2023;12(14):2605. https://doi.org/10.3390/plants12142605 (peer-reviewed)
-[^kusuma-2021-nir-leds-delay-flowering-phytochrome]: Kusuma, P., Westmoreland, F.M., Zhen, S., & Bugbee, B. (2021). Photons from NIR LEDs can delay flowering in short-day soybean and Cannabis: Implications for phytochrome activity. PLOS ONE, 16(7), e0255232. https://doi.org/10.1371/journal.pone.0255232 (peer-reviewed)
-[^toth-2022-autoflower1-early1]: Toth, J. A., Stack, G. M., Carlson, C. H., & Smart, L. B. (2022). Identification and mapping of major-effect flowering time loci Autoflower1 and Early1 in Cannabis sativa L. Frontiers in Plant Science, 13, 991680. https://doi.org/10.3389/fpls.2022.991680 https://www.frontiersin.org/journals/plant-science/articles/10.3389/fpls.2022.991680/full (peer-reviewed)
-[^divashuk-2014-xy-sex-chromosomes]: Divashuk, M. G., Alexandrov, O. S., Razumova, O. V., Kirov, I. V., & Karlov, G. I. (2014). Molecular Cytogenetic Characterization of the Dioecious Cannabis sativa with an XY Chromosome Sex Determination System. PLoS ONE, 9(1), e85118. https://doi.org/10.1371/journal.pone.0085118 https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0085118 (peer-reviewed)
-[^punja-holmes-2020-hermaphroditism]: Punja, Z. K., & Holmes, J. E. (2020). Hermaphroditism in Marijuana (Cannabis sativa L.) Inflorescences — Impact on Floral Morphology, Seed Formation, Progeny Sex Ratios, and Genetic Variation. Frontiers in Plant Science, 11, 718. https://doi.org/10.3389/fpls.2020.00718 https://www.frontiersin.org/journals/plant-science/articles/10.3389/fpls.2020.00718/full (peer-reviewed)
-[^flajsman-2021-feminized-seed-production]: Flajsman, M., Slapnik, M., & Murovec, J. (2021). Production of Feminized Seeds of High CBD Cannabis sativa L. by Manipulation of Sex Expression and Its Application to Breeding. Frontiers in Plant Science, 12, 718092. https://doi.org/10.3389/fpls.2021.718092 https://pmc.ncbi.nlm.nih.gov/articles/PMC8591233/ (peer-reviewed)
-[^chandra-2008-photosynthetic-response]: Chandra, S., Lata, H., Khan, I. A., & ElSohly, M. A. (2008). Photosynthetic response of Cannabis sativa L. to variations in photosynthetic photon flux densities, temperature and CO2 conditions. Physiology and Molecular Biology of Plants, 14(4), 299-306. https://doi.org/10.1007/s12298-008-0027-x https://link.springer.com/article/10.1007/s12298-008-0027-x (peer-reviewed)
-[^morard-1996-root-oxygen]: Morard, P., & Silvestre, J. (1996). Plant injury due to oxygen deficiency in the root environment of soilless culture: A review. Plant and Soil, 184, 243-254. https://doi.org/10.1007/BF00010453 https://link.springer.com/article/10.1007/BF00010453 (peer-reviewed)
+[^small-2015-cannabis-taxonomy]: Small, E. (2015). Evolution and Classification of Cannabis sativa (Marijuana, Hemp) in Relation to Human Utilization. The Botanical Review, 81(3), 189-294. https://doi.org/10.1007/s12229-015-9157-3 https://link.springer.com/article/10.1007/s12229-015-9157-3 (source with peer review)
+[^mcpartland-2018-cannabis-systematics]: McPartland, J. M. (2018). Cannabis Systematics at the Levels of Family, Genus, and Species. Cannabis and Cannabinoid Research, 3(1), 203-212. https://doi.org/10.1089/can.2018.0039 https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6225593/ (source with peer review)
+[^watts-2021-terpene-synthase-labels]: Watts, S., McElroy, M., Migicovsky, Z., Maassen, H., van Velzen, R., & Myles, S. (2021). Cannabis labelling is associated with genetic variation in terpene synthase genes. Nature Plants, 7(10), 1330-1334. https://doi.org/10.1038/s41477-021-01003-y https://www.nature.com/articles/s41477-021-01003-y (source with peer review)
+[^hesami-2023-morphological-lifecycle]: Hesami M, Pepe M, Jones AMP. Morphological Characterization of Cannabis sativa L. Throughout Its Complete Life Cycle. Plants. 2023;12(20):3646. https://doi.org/10.3390/plants12203646 (source with peer review)
+[^spitzer-rimon-2019-florogenesis]: Spitzer-Rimon B, Duchin S, Bernstein N, Kamenetsky R. Architecture and Florogenesis in Female Cannabis sativa Plants. Front Plant Sci. 2019;10:350. https://doi.org/10.3389/fpls.2019.00350 (source with peer review)
+[^livingston-2020-trichome-maturation]: Livingston SJ, Quilichini TD, Booth JK, Wong DCJ, Rensing KH, Laflamme-Yonkman J, Castellarin SD, Bohlmann J, Page JE, Samuels AL. Cannabis glandular trichomes alter morphology and metabolite content during flower maturation. Plant J. 2020;101(1):37-56. https://doi.org/10.1111/tpj.14516 (source with peer review)
+[^legris-2019-phytochrome-mechanisms]: Legris, M., Ince, Y. Ç., & Fankhauser, C. (2019). Molecular mechanisms underlying phytochrome-controlled morphogenesis in plants. Nature Communications, 10, 5219. https://doi.org/10.1038/s41467-019-13045-0 https://www.nature.com/articles/s41467-019-13045-0 (source with peer review)
+[^ahrens-2023-photoperiod-lightleak-revert]: Moher M, Jones M, Zheng Y. Photoperiodic Response of In Vitro Cannabis sativa Plants. HortScience. 2021;56(1):108-113. https://doi.org/10.21273/HORTSCI15452-20 (source with peer review)
+[^ahrens-2023-photoperiod-optimum]: Ahrens A, Llewellyn D, Zheng Y. Is Twelve Hours Really the Optimum Photoperiod for Promoting Flowering in Indoor-Grown Cultivars of Cannabis sativa? Plants. 2023;12(14):2605. https://doi.org/10.3390/plants12142605 (source with peer review)
+[^kusuma-2021-nir-leds-delay-flowering-phytochrome]: Kusuma, P., Westmoreland, F.M., Zhen, S., & Bugbee, B. (2021). Photons from NIR LEDs can delay flowering in short-day soybean and Cannabis: Implications for phytochrome activity. PLOS ONE, 16(7), e0255232. https://doi.org/10.1371/journal.pone.0255232 (source with peer review)
+[^toth-2022-autoflower1-early1]: Toth, J. A., Stack, G. M., Carlson, C. H., & Smart, L. B. (2022). Identification and mapping of major-effect flowering time loci Autoflower1 and Early1 in Cannabis sativa L. Frontiers in Plant Science, 13, 991680. https://doi.org/10.3389/fpls.2022.991680 https://www.frontiersin.org/journals/plant-science/articles/10.3389/fpls.2022.991680/full (source with peer review)
+[^divashuk-2014-xy-sex-chromosomes]: Divashuk, M. G., Alexandrov, O. S., Razumova, O. V., Kirov, I. V., & Karlov, G. I. (2014). Molecular Cytogenetic Characterization of the Dioecious Cannabis sativa with an XY Chromosome Sex Determination System. PLoS ONE, 9(1), e85118. https://doi.org/10.1371/journal.pone.0085118 https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0085118 (source with peer review)
+[^punja-holmes-2020-hermaphroditism]: Punja, Z. K., & Holmes, J. E. (2020). Hermaphroditism in Marijuana (Cannabis sativa L.) Inflorescences — Impact on Floral Morphology, Seed Formation, Progeny Sex Ratios, and Genetic Variation. Frontiers in Plant Science, 11, 718. https://doi.org/10.3389/fpls.2020.00718 https://www.frontiersin.org/journals/plant-science/articles/10.3389/fpls.2020.00718/full (source with peer review)
+[^flajsman-2021-feminized-seed-production]: Flajsman, M., Slapnik, M., & Murovec, J. (2021). Production of Feminized Seeds of High CBD Cannabis sativa L. by Manipulation of Sex Expression and Its Application to Breeding. Frontiers in Plant Science, 12, 718092. https://doi.org/10.3389/fpls.2021.718092 https://pmc.ncbi.nlm.nih.gov/articles/PMC8591233/ (source with peer review)
+[^chandra-2008-photosynthetic-response]: Chandra, S., Lata, H., Khan, I. A., & ElSohly, M. A. (2008). Photosynthetic response of Cannabis sativa L. to variations in photosynthetic photon flux densities, temperature and CO2 conditions. Physiology and Molecular Biology of Plants, 14(4), 299-306. https://doi.org/10.1007/s12298-008-0027-x https://link.springer.com/article/10.1007/s12298-008-0027-x (source with peer review)
+[^morard-1996-root-oxygen]: Morard, P., & Silvestre, J. (1996). Plant injury due to oxygen deficiency in the root environment of soilless culture: A review. Plant and Soil, 184, 243-254. https://doi.org/10.1007/BF00010453 https://link.springer.com/article/10.1007/BF00010453 (source with peer review)

@@ -2,9 +2,9 @@
 slug: "rockwool-crop-steering"
 title: "Crop steering in rockwool: water content, drybacks, and the recovery floor"
 eyebrow: "Feed · Rockwool steering"
-summary: "Rockwool holds no nutrients of its own and has almost no buffer — what you feed is what the plant gets, within the same hour. That makes it the most precise substrate to steer and the fastest to show a mistake. This guide explains what a water-content percentage means in practice, how to calculate and read a dryback, the water level below which a block will not rewet from the dripper, and how to keep the slab in the right zone from clone to harvest without ever picking up a hose."
+summary: "The plant gets the feed that you apply in the same hour, because rockwool does not contain nutrients and has almost no buffer. Thus rockwool is the most accurate substrate to control, and it shows an error more quickly than other substrates. This paper shows how to read a water-content percentage, and how to calculate and read a dryback. It also shows the lowest water content from which the dripper can make a block wet again. It also shows how to keep the slab in the correct zone from clone to harvest without a hose."
 track: "Flowering"
-read_time: "~18 min read"
+read_time: "~18 min to read"
 diagrams: "7 diagrams"
 related: ["coco-crop-steering", "root-zone-teros12", "f2-crop-steering", "irrigation-manual"]
 url: "https://www.growlabs.nz/wiki/rockwool-crop-steering.html"
@@ -19,230 +19,230 @@ refs: [{"id": "grodan-irrigation-medicinal", "n": 1, "cite": "Grodan (ROCKWOOL G
 
 # Crop steering in rockwool: water content, drybacks, and the recovery floor
 
-_Feed · Rockwool steering · ~18 min read_
+_Feed · Rockwool steering · ~18 min to read_
 
-> Rockwool holds no nutrients of its own and has almost no buffer — what you feed is what the plant gets, within the same hour. That makes it the most precise substrate to steer and the fastest to show a mistake. This guide explains what a water-content percentage means in practice, how to calculate and read a dryback, the water level below which a block will not rewet from the dripper, and how to keep the slab in the right zone from clone to harvest without ever picking up a hose.
+> The plant gets the feed that you apply in the same hour, because rockwool does not contain nutrients and has almost no buffer. Thus rockwool is the most accurate substrate to control, and it shows an error more quickly than other substrates. This paper shows how to read a water-content percentage, and how to calculate and read a dryback. It also shows the lowest water content from which the dripper can make a block wet again. It also shows how to keep the slab in the correct zone from clone to harvest without a hose.
 
 ## Purpose and scope
 
-Rockwool (stone wool) is spun rock fibre. It holds no nutrients of its own and reacts with nothing you feed it, so **root-zone EC is essentially the EC of the pore water (unused feed still leaves as runoff or concentrates on dryback)**[^grodan-irrigation-medicinal]. That makes it the most precise substrate you can steer with. It also means the block has no buffer: get the water wrong and the plant feels it the same hour.
+Rockwool (stone wool) is a fiber of rock. Rockwool does not contain nutrients and does not change the feed. Thus **the EC of the root zone is approximately the same as the EC of the pore water (feed that the plant does not use flows out of the block as runoff or increases in concentration during the dryback)**[^grodan-irrigation-medicinal].Rockwool is the most accurate substrate to control, but it has no buffer. If the water content is incorrect, the plant shows the effect in the same hour.
 
-This guide is only about the water and salt in the block, the part most growers run on feel. By the end you will know exactly what a water-content percentage is, how to calculate a dryback, the minimum you must feed, the point past which a dried-out block cannot be saved by the dripper, and how to hold the slab in the right zone for the whole grow using sensors and an irrigation controller, never a hose.
+This paper is only about the water and the salt in the block. Most growers feel the block with their hands to find its condition. They do not measure the water and the salt.At the end of this paper, you will know the definition of a water-content percentage and how to calculate a dryback. You will know the minimum quantity of feed to apply. You will know the lowest water content from which the dripper can make a dry block wet again. You will also know how to keep the slab in the correct zone from clone to harvest. For this, you use sensors and an irrigation controller. You do not use a hose.
 
-> **KEY — The one-paragraph version**
+> **KEY: The method in short**
 >
-> Saturate the block, then let it lose a controlled amount of water each day (the **dryback**). The size and timing of that dryback is your main steering lever. Feed enough each day to refresh the salts and get a little runoff, but never let the block fall below its recovery floor (around **25-30% water content**), because below that it channels and will not rewet from a dripper[^owen-norden-preferential-flow-2024].
+> Saturate the block. Then let the water content decrease by a controlled quantity each day (the **dryback**). The size and the time of the dryback are the primary controls for steering. Each day, apply sufficient feed to replace the salts in the block and to get a small quantity of runoff. Do not let the water content become less than the recovery floor (approximately **25 to 30% water content**). When the water content is less than this value, channeling occurs and the dripper cannot make the block wet again[^owen-norden-preferential-flow-2024].
 
-> **NOTE — Written for your kit**
+> **NOTE: The equipment that this paper uses**
 >
-> Assumes a slab-and-cube setup on pressure-compensating drippers, with a substrate moisture and EC sensor and an irrigation controller, the Athena-style 4″ cube on a 3×6×36 slab being typical[^athena-spacing-irrigation]. The smaller the dripper, the finer your control of the root zone[^athena-spacing-irrigation].
+> This paper is for a system of slabs and cubes with pressure-compensating drippers. The system has a sensor for the moisture and EC of the substrate and an irrigation controller. A typical system has a 4″ cube of the Athena type on a 3×6×36 slab[^athena-spacing-irrigation]. When the dripper is smaller, you can control the root zone more accurately[^athena-spacing-irrigation].
 
 ## Definitions
 
-**Water content (WC%)** — The share of the block's volume that is water right now, as a percentage. A slab at 70% WC is 70% full of water by volume. This single number is what you steer.
+**Water content (WC%)**: The percentage of the volume of the block that is water at this time. A slab at 70% WC has water in 70% of its volume. You control this one number.
 
-**Saturation / field capacity** — Saturation is the block as full as it can get just after irrigating. Field capacity is what it settles back to once free water has drained out. Your daily peak sits around field capacity.
+**Saturation and field capacity**: Saturation is the condition when the block is as full of water as possible, immediately after irrigation. Field capacity is the water content that stays in the block after the free water drains out. The peak of each day is approximately at field capacity.
 
-**Dryback** — The drop in water content between the daily peak and the next low, caused by the plant drinking and by evaporation. Measured in percentage points of WC.
+**Dryback**: The quantity by which the water content decreases from the peak of the day to the next trough (the lowest value). The plant uses water, and the water evaporates from the block. You measure the dryback in percentage points of WC.
 
-**Dryback %** — The size of that drop. Can be stated as _points_ (peak 75% to trough 55% = a 20-point dryback) or as a _fraction of the peak_. This guide uses points unless it says otherwise.
+**Dryback %**: The size of the dryback. You can write it in _points_ (if the peak is 75% and the trough is 55%, the dryback is 20 points) or as a _fraction of the peak_. This paper uses points. If the paper uses a fraction, it tells you.
 
-**Runoff (drain / leachate)** — The feed that exits the bottom of the block. A small daily runoff flushes built-up salt and tells you the EC inside the block.
+**Runoff (drain or leachate)**: The feed that flows out of the bottom of the block. A small quantity of runoff each day flushes the salt that collects in the block. The EC of the runoff gives you information about the EC in the block.
 
-**Substrate EC** — The salt strength of the water _inside_ the block. This, not the dripper or drain EC, is what the plant actually experiences[^grodan-irrigation-medicinal] and what you steer to[^moon-rootzone-ec-2018].
+**Substrate EC**: The salt strength of the water _in the block_. This EC, and not the EC of the dripper or the drain, is the EC that the plant gets[^grodan-irrigation-medicinal]. It is also the EC that you use as the target for control[^moon-rootzone-ec-2018].
 
-**Recovery floor** — The lowest water content a block can reach and still rewet evenly from the dripper. Below it the fibre channels and the core stays dry.
+**Recovery floor**: The lowest water content from which the dripper can make a block wet again. The block then becomes wet equally in all parts. When the water content is less than this value, channeling occurs in the fiber and the center stays dry.
 
-**Channeling / preferential flow** — When water runs down a few open paths instead of spreading through the fibre, so it exits as runoff while the core stays dry[^owen-norden-preferential-flow-2024].
+**Channeling (preferential flow)**: The condition in which water flows down through a small number of open channels and does not go to all parts of the fiber. As a result, the water flows out of the block as runoff and the center stays dry[^owen-norden-preferential-flow-2024].
 
-**Generative vs vegetative steering** — Drier, bigger drybacks push the plant generative (toward flower and fruit). Wetter, smaller drybacks keep it vegetative (leafy growth)[^caplan2019-drought].
+**Generative steering and vegetative steering**: A drier block and larger drybacks cause generative growth (growth of flowers and fruit). A wetter block and smaller drybacks keep the plant in vegetative growth (growth of leaves)[^caplan2019-drought].
 
-**Shot** — A single timed irrigation pulse. Shot size and spacing build the daily water-content curve.
+**Shot**: One short period of irrigation at a set time. The size of the shots and the interval between them make the water-content curve for each day.
 
-## Water distribution in rockwool
+## Water in rockwool
 
-A rockwool block is mostly air. Around 95% of its volume is space between the fibres; the fibre itself is a tiny fraction[^malik2025-media]. Water clings to the fibres as a film and fills the smaller gaps, while the larger gaps stay full of air. Water content is simply how much of that space is water versus air at any moment.
+A rockwool block is mostly air. Approximately 95% of its volume is space between the fibers. The fibers are a very small fraction of the volume[^malik2025-media]. Water attaches to the fibers as a film and fills the smaller spaces. The larger spaces stay full of air. The water content is the quantity of this space that is water, and not air, at each time.
 
-> **Diagram.** Water held as a film on the fibres is your WC%. The air between fibres is root oxygen. Soil particles carry an electrical charge that grabs and holds dissolved nutrients the way a magnet holds iron filings — binding them and releasing them slowly. Rockwool fibres carry almost none of that charge. That property is called cation-exchange capacity (CEC). Near-zero CEC in rockwool means dissolved salts stay in the water and are fully available to the plant[^grodan-irrigation-medicinal].
+> **Diagram.** The film of water on the fibers is the WC%. The air between the fibers is the oxygen for the roots. Soil particles have an electrical charge that holds dissolved nutrients and releases them slowly. Rockwool fibers have almost none of this electrical charge. This property is the cation exchange capacity (CEC). Because the CEC of rockwool is approximately zero, the dissolved salts stay in the water and the plant can use all of them[^grodan-irrigation-medicinal].
 
-Two consequences fall straight out of this. First, when water leaves the block the salt does not, so the EC of the water left behind climbs as the block dries. Second, because the medium buffers nothing, the EC and water content you set are the EC and water content the roots get, which is why rockwool can be steered so precisely and why mistakes show up so fast.
+These properties have two results. First, when the plant and the air remove water from the block, the salt stays in the block. Thus the EC of the water that stays in the block increases when the block dries. Second, because rockwool has no buffer, the roots get the EC and the water content that you set. As a result, you can control rockwool accurately and an error shows quickly.
 
-## Interpreting water-content percentage
+## Read the water-content percentage
 
-Everything in rockwool steering is a position on one vertical scale: how full the block is. Learn the band and where the danger is, and the rest is timing.
+In rockwool steering, each condition of the block is a position on one vertical scale. The scale shows how full of water the block is. Make sure that you know the working band and the position of the risk. After this, the only other control is the time.
 
-> **Diagram.** The working band runs roughly 55-92% WC. Vegetative and bulking phases sit high; generative pushes ride lower. The dashed line near 30% is the recovery floor, fall below it and the block channels.
+> **Diagram.** The working band is approximately 55 to 92% WC. In the vegetative and bulking phases, the water content is high. In generative steering, the water content is lower. The dashed line near 30% is the recovery floor. When the water content is less than this value, channeling occurs in the block.
 
-> **NOTE — These are starting numbers, not laws**
+> **NOTE: These numbers are start values**
 >
-> Grodan is explicit that medicinal cultivars are highly variable, so there is no single correct water content[^grodan-irrigation-medicinal]. Treat every figure here as a starting point you confirm against your own slabs and sensor.
+> The information from Grodan shows that medicinal cultivars are very different from each other. Thus there is no one correct water content[^grodan-irrigation-medicinal]. Each value in this paper is a start value. It is necessary to make sure that the value is correct for your slabs and your sensor.
 
-Note where the headroom is. The block can sit happily anywhere from field capacity down into the mid-40s. The cliff is only at the bottom. That asymmetry is the whole reason a controlled dryback is safe but an uncontrolled one is fatal.
+Make sure that you know the position of the headroom. The block has no problems at all values from field capacity to approximately 45% WC. The risk is only at the bottom. Thus a controlled dryback is safe, but a dryback that you do not control is very dangerous.
 
-## Dryback calculation and management
+## Calculate and control the dryback
 
-A dryback is the block losing water between its daily high and its next low. Think of a wet sponge left on the bench: it starts fully soaked, then air and the plant draw water out through the day. The amount it loses — from its soaked peak to its driest point before the next watering — is the dryback. The _size_ of that swing and _when_ you let it happen is the single biggest lever you have over how the plant grows.
+A dryback is the quantity by which the water content decreases from the peak of the day to the lowest value before the next irrigation. After irrigation, the block is full of water. Then, during the day, the plant uses water and the air removes water from the block. The _size_ of the dryback and _when_ you let it occur are the most important controls for the growth of the plant.
 
-> **Diagram.** One daily cycle. The trough never approaches the floor, the peak refreshes the block. The gap between peak and trough is the dryback.
+> **Diagram.** The curve shows one cycle of one day. The trough is not near the floor. The peak supplies new feed to the block. The difference between the peak and the trough is the dryback.
 
-> **KEY — How to calculate a dryback**
+> **KEY: How to calculate a dryback**
 >
-> Dryback in points = **peak WC − trough WC**. If the slab peaks at 78% and drops to 58% before the next irrigation, that is a **20-point dryback**. As a fraction of the peak it is 20 ÷ 78 = **26%**. Either way, your sensor gives you both numbers directly, read the high after the last shot and the low just before the next.
+> Dryback in points = **peak WC − trough WC**. If the slab has a peak of 78% and decreases to 58% before the next irrigation, the dryback is **20 points**. As a fraction of the peak, the dryback is 20 ÷ 78 = **26%**. The sensor gives you the two values directly. Read the peak value after the last shot and the trough value immediately before the next shot.
 
-| Phase | Typical daily dryback | What it steers |
+| Phase | Usual dryback for each day | Effect |
 | --- | --- | --- |
-| Propagation / early veg | 5-10 points | Roots chase water, gentle |
-| Late veg / bulk (wet) | 10-15 points | Maximum growth, vegetative |
-| Generative flower push | 20-30 points | Stacks flower, slows stretch |
-| Overnight (any phase) | add 5-15 points | Re-oxygenates the root zone |
+| Propagation and the first stage of vegetative growth | 5 to 10 points | The roots become longer and go to the water. The steering is weak. |
+| End of vegetative growth and bulking (wet) | 10 to 15 points | Maximum vegetative growth |
+| Generative steering for flowers | 20 to 30 points | The flowers have a high density, and the stretch is slower. |
+| During the night (in each phase) | Add 5 to 15 points | The root zone gets oxygen again. |
 
-*Dryback sizes as a starting framework. Bigger and earlier is more generative; smaller and later is more vegetative.*
+*These dryback sizes are start values. A larger dryback that starts at a time before the time in vegetative steering is more generative. A smaller dryback that starts at a time after the time in generative steering is more vegetative.*
 
-> **NOTE — What the night dryback does**
+> **NOTE: The effect of the night dryback**
 >
-> As the block dries overnight, air refills the gaps and the roots and beneficial microbes get oxygen. Grodan's trials found that easing the standard night dryback by about 10% (a slightly wetter night) lifted yield in medicinal crops, because the root zone keeps working even while the canopy rests[^grodan-irrigation-medicinal]. Some night dryback is essential; too much is not.
+> When the block dries during the night, air fills the spaces again. The roots and the beneficial microbes get oxygen. Tests by Grodan showed that the yield of medicinal crops increased when the usual night dryback decreased by approximately 10% (the water content was higher at night by a small quantity). The yield increased because the root zone continues to operate when the canopy does not operate[^grodan-irrigation-medicinal]. Some night dryback is necessary. A night dryback that is too large is not good.
 
-## Block dry-out dynamics
+## How a block dries
 
-A dryback is good up to a point and dangerous past it. The same process, water leaving the block, does four different things in sequence as it goes too far.
+A dryback is good when it is less than a limit. A dryback that is more than this limit is dangerous. When the dryback is larger, the plant and the air remove more water from the block. The removal of water has four different effects, one after the other.
 
-> **Diagram.** Stages 1-2 are the healthy dryback you want: water leaves, air and oxygen enter. Stage 3 is too far: with less water but the same salt, the EC inside the block rises. When EC rises high enough, the concentration outside the root cell is greater than inside, and water is pulled out of the root instead of into it — the way salting a cucumber pulls moisture through the skin in the wrong direction. That reversal is osmotic stress[^hydrus-soilless-substrate-dynamics]. Stage 4 is past the floor: a dry core forms and water channels around it.
+> **Diagram.** Stages 1 and 2 are the dryback that you want, because the block has less water and more air and oxygen. Stage 3 is a dryback that is too large, because the block has less water and the same quantity of salt, thus the EC increases. When the EC is sufficiently high, the salt concentration around a root cell is more than in the cell. Then the higher concentration pulls water out of the root and not into the root. This effect is osmotic stress[^hydrus-soilless-substrate-dynamics]. In stage 4, the water content is less than the recovery floor, and water flows around a dry center through channels.
 
-The middle stage is the one that catches people out. Because rockwool holds no salt of its own, the salt that was dissolved in the water stays put while the water disappears. Think of a pot of stock left to reduce on the stove: as the liquid goes down, the flavour concentrates. A block drying from 75% to 45% WC keeps only about three-fifths of its water (45 ÷ 75), so the salt left behind concentrates by the inverse, roughly two-thirds higher, because EC rises as 1 divided by the fraction of water remaining[^hydrus-soilless-substrate-dynamics]. A 3.0 EC feed can climb past 5.0 EC in the root zone by late afternoon. That is why big drybacks must be paired with enough volume and runoff to keep the salt in check, covered below.
+Many growers do not know about stage 3. Rockwool does not contain salt. Thus the salt in the water stays in the block when the plant and the air remove the water. When a block dries from 75% to 45% WC, it keeps only approximately three-fifths of its water (45 ÷ 75).Thus the concentration of the salt in the block increases by the inverse of this fraction. This quantity is approximately two-thirds more. The EC after drying is the EC before drying divided by the fraction of water that stays in the block[^hydrus-soilless-substrate-dynamics]. A feed with an EC of 3.0 can increase to more than 5.0 EC in the root zone in the late afternoon. Thus, for a large dryback, you must apply a sufficient volume of feed and get sufficient runoff to control the salt. The section about the minimum irrigation volume gives more information.
 
-> **WARN — Dryback stress is partly salt stress**
+> **WARN: A part of dryback stress is salt stress**
 >
-> When you push a generative dryback, you are not only making the plant work for water, you are also concentrating its food. Watch substrate EC, not just water content. If EC climbs faster than you intend on the dryback, shrink the dryback or lower the feed EC.
+> Monitor the substrate EC and not only the water content. With a generative dryback, the plant does not get water easily. The concentration of the feed in the block also increases. If the EC increases too quickly during the dryback, decrease the dryback or decrease the EC of the feed.
 
-## Critical dry-out threshold
+## Threshold for a dry block
 
-There is a water content below which a rockwool block will not rewet from the dripper no matter how long you run it. Nothing else here matters as much, because it is invisible until it has already happened.
+When the water content of a rockwool block is less than the recovery floor, the dripper cannot make the block wet again. A long irrigation time does not change this fact. No other fact in this paper is as important, because you can see the problem only after it occurs.
 
-> **Diagram.** A block still in the working band rewets evenly: water spreads through the moist fibre. A block taken too dry develops a dry core that the fibre can no longer pull water into. Think of pouring water onto very dry cracked soil — it runs in rivulets straight to the drain while the earth between the cracks stays dry. The same thing happens inside a dried rockwool block: new water finds the few open channels, runs straight down them and exits as runoff while the core stays bone dry[^owen-norden-preferential-flow-2024].
+> **Diagram.** A block in the working band becomes wet again equally in all parts. The water goes to all parts of the wet fiber. A block that is too dry has a dry center, and the fiber cannot pull water into the center. New water finds the small number of open channels. The water flows straight down through the channels and out of the block as runoff, and the center stays dry[^owen-norden-preferential-flow-2024].
 
-Below roughly **25-30% WC** the dry fibre stops wicking and preferential flow takes over[^owen-norden-preferential-flow-2024][^hydrus-soilless-substrate-dynamics]. The drip rate that kept a healthy block topped up cannot re-saturate a dry one, because the water never contacts the dry interior. Your runoff reads high and your sensor barely moves, the classic signature of a channeling block.
+When the water content is less than approximately **25 to 30% WC**, the dry fiber cannot pull water through the block and preferential flow occurs[^owen-norden-preferential-flow-2024][^hydrus-soilless-substrate-dynamics]. The flow rate of the dripper keeps a block that is in good condition full of water. But this flow rate cannot saturate a dry block again, because the water does not touch the dry inner part. The runoff is high and the sensor shows almost no change. These two symptoms show a block with channeling.
 
-> **DANGER — If a block has gone too dry**
+> **DANGER: If a block is too dry**
 >
-> - Stop trusting the dripper to fix it. More drip just makes more runoff.
-> - Rehydrate by hand or by flooding: a long, slow, low-volume soak (or sitting the block in shallow feed) until the core takes water back, sometimes over hours.
-> - Then return to a normal schedule and find out why it dried out: a clogged dripper, a missed P1 ramp, a dead controller, or a dryback set too deep.
-> - A block that has been to the floor repeatedly develops permanent dry pockets and uneven wetting. Replace it rather than fight it.
+> - Do not use the dripper to repair the block. More drip only causes more runoff.
+> - Soak the block manually. Apply a small volume of water slowly for a long time. You can also put the block in a small depth of feed. Continue until the center gets water again. The procedure can continue for some hours.
+> - Then use the usual irrigation times again. Find the cause of the dry block. The cause can be a dripper with a blockage or a P1 ramp that did not occur. It can also be a controller that does not operate or a dryback that is too large.
+> - If a block is at the recovery floor many times, it has permanent dry areas. The block does not become wet equally in all parts. Replace the block. Do not try to repair it.
 
-> **KEY — The rule that prevents all of this**
+> **KEY: The method that prevents all of this**
 >
-> Set a hard minimum water content in your controller and never let the trough cross it. The dryback is steering; the floor is a safety limit. They are not the same number and you should know both for every slab.
+> Set a minimum water content in your controller as a limit. Do not let the trough become less than this value. The dryback is for steering. The floor is a safety limit. The dryback and the floor are not the same number. Make sure that you know the two numbers for each slab.
 
 ## Minimum irrigation volume
 
-Feeding rockwool is a balance of two jobs: put back the water the plant drank, and flush enough fresh feed through to stop salt stacking. Underfeed and EC climbs and the block trends toward the floor; overfeed and you drown the roots and lose your dryback.
+When you apply feed to rockwool, two tasks are necessary. First, replace the water that the plant used. Second, flush sufficient new feed through the block. Then the salt does not collect. If the quantity of feed is too small, the EC increases and the water content decreases in the direction of the floor. If you apply too much feed, the roots are in too much water and the dryback does not occur.
 
-1. **Size each shot to a few points of WC** — A single shot should lift water content by roughly 2-5 points. Big enough to register on the sensor, small enough not to blow straight to runoff.
-2. **Reach field capacity in the P1 ramp** — Stack several shots after lights-on to climb from the overnight low back up to field capacity, then hold it.
-3. **Get a small daily runoff** — Aim for around 10-20% runoff once the block is at field capacity. That runoff is how you flush stacked salt and how you read substrate EC[^grodan-irrigation-medicinal].
-4. **Use runoff EC as the feedback** — If substrate or runoff EC is climbing day over day, you are not flushing enough, increase shot size or frequency. If EC is falling below target, cut runoff back.
-5. **Never let the trough hit the floor** — Whatever the dryback, the pre-irrigation low must stay above the recovery floor with margin.
+1. **Make each shot increase the WC by a small number of points**: Make each shot increase the water content by approximately 2 to 5 points. If the shot is too small, the sensor does not show a change. If the shot is too large, the water goes directly to runoff.
+2. **Fill the block to field capacity in the P1 ramp**: After lights-on, apply some shots in sequence. Increase the water content from the lowest value of the night to field capacity. Then keep the water content at field capacity.
+3. **Get a small quantity of runoff each day**: When the block is at field capacity, make the runoff approximately 10 to 20%. Use this runoff to flush the salt that collects and to read the substrate EC[^grodan-irrigation-medicinal].
+4. **Use runoff EC as the feedback**: If the substrate EC or the runoff EC increases each day, you do not flush sufficiently. Increase the size or the frequency of the shots. If the EC becomes less than the target, decrease the runoff.
+5. **Keep the trough more than the floor value**: For all drybacks, the trough value before irrigation must stay more than the recovery floor, with some headroom.
 
-> **Diagram.** Runoff is your salt-management and measurement tool. Size the daily feed so a controlled fraction drains.
+> **Diagram.** You use the runoff to control the salt and to measure the EC. Select the quantity of feed for each day. Then a controlled fraction of the feed drains.
 
-> **NOTE — Minimum feed is a floor, not a target**
+> **NOTE: The minimum feed is a lower limit and not a target**
 >
-> The minimum is whatever volume keeps the block above its recovery floor and substrate EC on target. In heavy flower under high light that can be a lot of small shots; in propagation it is very little. Let the sensor and the runoff EC set the number, not a fixed clock[^nemali-2006-set-point-irrigation].
+> The minimum is the volume that keeps the water content more than the recovery floor and keeps the substrate EC at the target. In the stage with heavy flowers and high light, the minimum can be a large number of small shots. In propagation, the volume is very small. The sensor and the runoff EC give the number, and a timer does not give the number[^nemali-2006-set-point-irrigation].
 
 ## Vegetative and generative steering in rockwool
 
-You steer the plant by choosing where the block sits in the band, how big the daily dryback is, and when you let it happen. Drier and bigger and earlier is generative; wetter and smaller and later is vegetative[^caplan2019-drought].
+You control the plant with three selections. The first selection is the position of the block in the working band. The second is the size of the dryback for each day. The third is the time when the dryback occurs. In generative steering, the block is drier, the dryback is larger, and the dryback starts at a time before the time in vegetative steering. In vegetative steering, the block is wetter, the dryback is smaller, and the dryback starts at a time after the time in generative steering[^caplan2019-drought].
 
-| Lever | Vegetative (leafy growth) | Generative (flower / fruit) |
+| Control | Vegetative (growth of leaves) | Generative (flower and fruit) |
 | --- | --- | --- |
-| Daily peak WC | High, near field capacity | Lower, mid-band |
-| Dryback size | Small, 5-15 points | Large, 20-30 points |
-| First shot after lights-on | Early, short ramp | Delayed, longer overnight dryback |
-| Substrate EC | Lower end of target | Higher, concentrated by the dryback |
-| When to use | Early flower, bulking, recovery | Stretch control, flower set, ripening |
+| Peak WC of each day | High, at approximately field capacity | Lower, in the middle of the working band |
+| Size of the dryback | Small, 5 to 15 points | Large, 20 to 30 points |
+| First shot after lights-on | A short interval after lights-on, and a short ramp | A longer interval after lights-on, and a longer dryback in the night |
+| Substrate EC | The lower part of the target | Higher, because the dryback increases the concentration |
+| When to use | First stage of flowering, bulking, and recovery | Control of stretch, flower set, and ripening |
 
-*The same three controls (peak, dryback, timing) produce both behaviours. You are not changing the feed, you are changing the water curve.*
+*The same three controls (peak, dryback and time) cause the two types of growth. You do not change the feed. You change the water curve.*
 
-> **NOTE — Feed generously through the front half of flower**
+> **NOTE: Apply a large quantity of feed in the first half of flowering**
 >
-> Grodan's trials found a consistently wetter daytime strategy produced higher yield with the same cannabinoid levels, especially across the first six of eight flowering weeks[^grodan-irrigation-medicinal]. Steer generative with timing and dryback, but do not starve the plant of water and feed while it is still building the crop.
+> Tests by Grodan showed that the yield was higher when the block was always wetter during the day. The cannabinoid levels were the same. The effect occurred most in the first six of the eight weeks of flowering[^grodan-irrigation-medicinal]. You can control generative growth with the time and the size of the dryback. But a quantity of water and feed that is too small is not good for the plant while it continues to make the crop.
 
-## Maintaining rockwool saturation
+## Keep rockwool saturated
 
-The goal is to never touch a hose: the controller holds the block in the right zone from clone to chop, flushing salt with daily runoff so you never have to manually leach or top up a dry cube. The strategy is a planned arc of water content and dryback across the grow.
+The controller keeps the block in the correct zone from clone to harvest, and you do not touch a hose. The runoff of each day flushes the salt. Thus it is not necessary to flush the block manually or to add water to a dry cube. Set the values of water content and dryback for each stage of the crop before the crop starts.
 
-> **Diagram.** An indicative dryback arc. Stay wet and gentle early to build the plant, push drier and more generative once flower is established, then steady it for ripening[^grodan-irrigation-medicinal].
+> **Diagram.** The curve of the dryback is approximate. At first, keep the block wet and the steering weak, to make the plant larger. After flower set, make the block drier and the steering more generative. Then keep the dryback stable for ripening[^grodan-irrigation-medicinal].
 
-| Stage | Daily peak WC | Dryback | Substrate EC | Runoff |
+| Stage | Peak WC of each day | Dryback | Substrate EC | Runoff |
 | --- | --- | --- | --- | --- |
-| Clone / prop | High, gentle | 5-10 pts | Start higher than you'd think | Minimal |
-| Veg | High | 10-15 pts | Step up | Low, 5-10% |
-| Flower wk 1-3 | High (wet, bulking) | 10-18 pts | Step up again | 10-15% |
-| Flower wk 4-6 | Mid | 20-30 pts | Highest | 15-20% to flush |
-| Flower wk 7-8 | Mid, steady | 18-25 pts | Ease / as planned | Maintain |
+| Clone and propagation | High, with weak steering | 5 to 10 points | Use a start value that is higher than you think is correct | Very small |
+| Vegetative stage | High | 10 to 15 points | Increase | Low, 5 to 10% |
+| Weeks 1 to 3 of flowering | High (wet, bulking) | 10 to 18 points | Increase again | 10 to 15% |
+| Weeks 4 to 6 of flowering | In the middle of the working band | 20 to 30 points | Highest | 15 to 20%, to flush the salt |
+| Weeks 7 to 8 of flowering | In the middle of the working band, stable | 18 to 25 points | Decrease by a small quantity, or use the value that you set before | Keep the same value |
 
-*A complete arc. EC climbs by stage because rockwool is inert and the plant's appetite rises with light[^grodan-irrigation-medicinal]. Runoff rises to flush the higher salt load.*
+*The table shows the curve for all stages. The EC increases in each stage, because rockwool is an inert substrate and the plant uses more feed when the light increases[^grodan-irrigation-medicinal]. The runoff increases to flush the larger quantity of salt.*
 
-> **KEY — Why this removes hand-flushing**
+> **KEY: You do not flush the block manually**
 >
-> A daily controlled runoff continuously replaces the salty water in the block with fresh feed, so EC never stacks to the point of needing a manual leach. And because the trough never crosses the recovery floor, no cube ever dries out enough to need a manual soak. The system holds the equilibrium for you, every day, if you set the limits correctly.
+> A controlled runoff each day continuously replaces the water in the block that has a high salt concentration with new feed. Thus the EC does not increase to a value at which it is necessary to flush the block manually. Because the trough does not become less than the recovery floor, no cube becomes very dry. Thus it is not necessary to soak a cube manually. The system keeps the water and the salt in balance each day, if the limits that you set are correct.
 
-## Sensor-based crop-steering systems
+## Systems with sensors for crop steering
 
-None of this works on a timer alone. Steering rockwool means measuring the block and letting the controller act on the measurement, closing the loop[^nemali-2006-set-point-irrigation][^tavan-2021-sensor-irrigation-soilless].
+You cannot use only a timer for this method. To control rockwool, measure the block and let the controller use the measurement. The result is a closed loop[^nemali-2006-set-point-irrigation][^tavan-2021-sensor-irrigation-soilless].
 
-- **Measure inside the block.** A substrate sensor reads water content and EC where the roots are. Steer to substrate EC, not dripper or drain EC[^grodan-irrigation-medicinal][^moon-rootzone-ec-2018].
-- **Let the controller hold the curve.** The irrigation controller runs the P1 ramp to field capacity, the P2 maintenance shots, and the P0/P3 dryback windows automatically, to water-content set-points rather than fixed times[^nemali-2006-set-point-irrigation].
-- **Set the safety floor in software.** A hard minimum water content the controller will always irrigate to defend, so the block can never reach the channeling point even if a dryback is set too deep.
-- **Watch the runoff EC daily.** It is your early warning that salt is stacking or that you are over-flushing.
+- **Measure in the block.** A substrate sensor reads the water content and the EC where the roots are. Use the substrate EC as the target for control. Do not use the EC of the dripper or the drain[^grodan-irrigation-medicinal][^moon-rootzone-ec-2018].
+- **Let the controller keep the curve.** The irrigation controller operates the P1 ramp to field capacity, the P2 maintenance shots, and the P0 and P3 dryback periods automatically. It uses water-content setpoints and not a timer[^nemali-2006-set-point-irrigation].
+- **Set the safety floor in the software.** The safety floor is a minimum water content. The controller always irrigates to keep the water content more than this minimum. Thus channeling cannot occur in the block, also when the dryback that you set is too large.
+- **Monitor the runoff EC each day.** It shows when the salt starts to collect and when you flush too much.
 
-The companion papers cover the hardware and the daily cycle in depth: what the substrate sensor actually sees, how the watering brain decides, the P0-P3 cycle itself, and how to install and run the system.
+The related papers give more information about the equipment and the cycle of each day. They show the values that the substrate sensor measures and how the controller makes a decision. They also show the P0 to P3 cycle and how to install and operate the system.
 
-> **NOTE — The point of precision**
+> **NOTE: Accuracy and automation**
 >
-> Because rockwool buffers nothing, a closed-loop controller can steer it to a tighter tolerance than any buffered medium[^grodan-irrigation-medicinal]. The inertness that makes it unforgiving is exactly what makes it the best substrate to automate.
+> Rockwool has no buffer. Thus a closed-loop controller can control rockwool with a smaller tolerance than each substrate that has a buffer[^grodan-irrigation-medicinal]. Rockwool is an inert substrate, and thus it shows each error. But this property also makes rockwool the best substrate for automation.
 
 ## Troubleshooting
 
-| Symptom | Likely cause | Fix |
+| Symptom | Possible cause | Correction |
 | --- | --- | --- |
-| Runoff high, sensor barely moves | Block channeling, core too dry | Hand-soak to rewet, then raise the floor and check drippers |
-| Substrate EC climbing day over day | Not enough runoff, salt stacking | Bigger or more frequent shots to lift daily runoff |
-| Substrate EC falling below target | Over-flushing, too much runoff | Cut shot size or frequency |
-| WC won't reach field capacity | Shots too small, clogged dripper, or P1 too short | Check drippers, lengthen the P1 ramp[^netafim-irrigation-maintenance] |
-| Dryback far bigger than set | Plant drinking hard under high light, or a missed shot | Add P2 shots; verify controller and sensor |
-| Slabs uneven across the room | Dripper flow or placement varies | Flush and check lines[^netafim-irrigation-maintenance]; match dripper count to slab[^athena-spacing-irrigation] |
+| The runoff is high and the sensor shows almost no change | Channeling occurs in the block, and the center is too dry | Soak the block manually to make it wet again. Then increase the value of the floor and do a check of the drippers. |
+| The substrate EC increases each day | The runoff is not sufficient and the salt collects | Use larger shots or more frequent shots to increase the runoff of each day |
+| The substrate EC becomes less than the target | You flush too much, and the runoff is too large | Decrease the size or the frequency of the shots |
+| The WC stays less than field capacity | The shots are too small, a dripper has a blockage, or P1 is too short | Do a check of the drippers. Make the P1 ramp longer[^netafim-irrigation-maintenance] |
+| The dryback is much larger than the value that you set | The plant uses water at a high rate in high light, or a shot did not occur | Add P2 shots. Do a check of the controller and the sensor |
+| The slabs are not the same across the room | The flow or the position of the drippers is different | Flush the tubing and do a check of it[^netafim-irrigation-maintenance]. Use the correct number of drippers for each slab[^athena-spacing-irrigation] |
 
-*Most rockwool problems are a water-content or EC reading drifting from plan. The sensor tells you which, and the fix follows.*
+*Most problems with rockwool are a drift of the water content or of the EC from the set value. The sensor shows which reading drifts. Then you know the correction.*
 
-## Quick-reference targets
+## Reference targets
 
-- **Working band:** ~55-92% WC
-- **Recovery floor (do not cross):** ~25-30% WC
-- **Shot size:** lift WC ~2-5 points
-- **Daily runoff:** ~10-20% at field capacity
-- **Vegetative dryback:** 5-15 points
-- **Generative dryback:** 20-30 points
-- **EC by stage:** rises prop -> veg -> flower
-- **Steer EC to:** the substrate reading, not drain
+- **Working band:** approximately 55 to 92% WC
+- **Recovery floor (minimum limit):** approximately 25 to 30% WC
+- **Shot size:** The WC increases by approximately 2 to 5 points
+- **Runoff for each day:** approximately 10 to 20% at field capacity
+- **Vegetative dryback:** 5 to 15 points
+- **Generative dryback:** 20 to 30 points
+- **EC for each stage:** increases from propagation to vegetative growth and then to the flowering stage
+- **Target for control of the EC:** the substrate reading and not the drain reading
 
-> **KEY — The whole method in five lines**
+> **KEY: The method in five steps**
 >
-> - Saturate to field capacity each morning with a P1 ramp.
-> - Hold it through the day with P2 maintenance shots and a small runoff.
-> - Let a planned dryback happen, sized to how generative you want to steer.
-> - Never let the trough cross the recovery floor.
-> - Steer to substrate EC and water content, read off the sensor, run by the controller.
+> - Each morning, saturate the block to field capacity with a P1 ramp.
+> - During the day, keep the block at field capacity with P2 maintenance shots and a small runoff.
+> - Let the dryback that you set occur. Set its size for the quantity of generative steering that you want.
+> - Do not let the trough become less than the recovery floor.
+> - Use the substrate EC and the water content as the targets for control. The sensor gives the values and the controller does the control.
 
 ## References
 
-[^grodan-irrigation-medicinal]: Grodan (ROCKWOOL Group). Grodan research reveals new insights into optimal irrigation strategy for large-scale production of medicinal crops. Whitepaper, with B. Nikaj; trials in partnership with Wageningen University & Research, 2020-2022. https://www.grodan.com/ (industry/manufacturer source)
-[^owen-norden-preferential-flow-2024]: Owen, J., & Norden, D. (Profile Products). Understanding drainage in horticultural growing media. Greenhouse Management. https://www.greenhousemag.com/article/growing-media-defining-drainage-improve-substrate/ (industry/manufacturer source)
-[^hydrus-soilless-substrate-dynamics]: International Society for Horticultural Science (ISHS). Utilizing the HYDRUS model as a tool for understanding soilless substrate water dynamics. Acta Horticulturae 1168. https://www.ishs.org/ishs-article/1168_41 (peer-reviewed)
-[^moon-rootzone-ec-2018]: Moon T, Ahn TI, Son JE. Forecasting Root-Zone Electrical Conductivity of Nutrient Solutions in Closed-Loop Soilless Cultures via a Recurrent Neural Network Using Environmental and Cultivation Information. Frontiers in Plant Science. 2018;9:859. https://doi.org/10.3389/fpls.2018.00859 (peer-reviewed)
-[^nemali-2006-set-point-irrigation]: Nemali, K. S. & van Iersel, M. W. (2006). An automated system for controlling drought stress and irrigation in potted plants. Scientia Horticulturae, 110(3), 292-297. https://doi.org/10.1016/j.scienta.2006.07.009 (peer-reviewed)
-[^tavan-2021-sensor-irrigation-soilless]: Tavan, M., Wee, B., Brodie, G., Fuentes, S., Pang, A., & Gupta, D. (2021). Optimizing Sensor-Based Irrigation Management in a Soilless Vertical Farm for Growing Microgreens. Frontiers in Sustainable Food Systems, 4, 622720. https://doi.org/10.3389/fsufs.2020.622720 (peer-reviewed)
-[^caplan2019-drought]: Caplan D, Dixon M, Zheng Y (2019). Increasing inflorescence dry weight and cannabinoid content in medical cannabis using controlled drought stress. HortScience 54(5):964-969. https://doi.org/10.21273/HORTSCI13510-18 (peer-reviewed)
-[^malik2025-media]: Malik M, Tlustoš P (2025). Soilless growing media for cannabis cultivation. Agriculture 15(18):1955. https://www.mdpi.com/2077-0472/15/18/1955 (peer-reviewed)
-[^netafim-irrigation-maintenance]: Netafim. Complete Irrigation Maintenance Guide (driplines, flushing, filtration and system upkeep). https://www.netafim.com/ (industry/manufacturer source)
-[^athena-spacing-irrigation]: Athena Agriculture. Plant Spacing & Irrigation (metric), document A01.001 (pot, rockwool and pressure-compensating dripper selection). https://athenaag.com/ (industry/manufacturer source)
+[^grodan-irrigation-medicinal]: Grodan (ROCKWOOL Group). Grodan research reveals new insights into optimal irrigation strategy for large-scale production of medicinal crops. Whitepaper, with B. Nikaj; trials in partnership with Wageningen University & Research, 2020-2022. https://www.grodan.com/ (source from a manufacturer or industry)
+[^owen-norden-preferential-flow-2024]: Owen, J., & Norden, D. (Profile Products). Understanding drainage in horticultural growing media. Greenhouse Management. https://www.greenhousemag.com/article/growing-media-defining-drainage-improve-substrate/ (source from a manufacturer or industry)
+[^hydrus-soilless-substrate-dynamics]: International Society for Horticultural Science (ISHS). Utilizing the HYDRUS model as a tool for understanding soilless substrate water dynamics. Acta Horticulturae 1168. https://www.ishs.org/ishs-article/1168_41 (source with peer review)
+[^moon-rootzone-ec-2018]: Moon T, Ahn TI, Son JE. Forecasting Root-Zone Electrical Conductivity of Nutrient Solutions in Closed-Loop Soilless Cultures via a Recurrent Neural Network Using Environmental and Cultivation Information. Frontiers in Plant Science. 2018;9:859. https://doi.org/10.3389/fpls.2018.00859 (source with peer review)
+[^nemali-2006-set-point-irrigation]: Nemali, K. S. & van Iersel, M. W. (2006). An automated system for controlling drought stress and irrigation in potted plants. Scientia Horticulturae, 110(3), 292-297. https://doi.org/10.1016/j.scienta.2006.07.009 (source with peer review)
+[^tavan-2021-sensor-irrigation-soilless]: Tavan, M., Wee, B., Brodie, G., Fuentes, S., Pang, A., & Gupta, D. (2021). Optimizing Sensor-Based Irrigation Management in a Soilless Vertical Farm for Growing Microgreens. Frontiers in Sustainable Food Systems, 4, 622720. https://doi.org/10.3389/fsufs.2020.622720 (source with peer review)
+[^caplan2019-drought]: Caplan D, Dixon M, Zheng Y (2019). Increasing inflorescence dry weight and cannabinoid content in medical cannabis using controlled drought stress. HortScience 54(5):964-969. https://doi.org/10.21273/HORTSCI13510-18 (source with peer review)
+[^malik2025-media]: Malik M, Tlustoš P (2025). Soilless growing media for cannabis cultivation. Agriculture 15(18):1955. https://www.mdpi.com/2077-0472/15/18/1955 (source with peer review)
+[^netafim-irrigation-maintenance]: Netafim. Complete Irrigation Maintenance Guide (driplines, flushing, filtration and system upkeep). https://www.netafim.com/ (source from a manufacturer or industry)
+[^athena-spacing-irrigation]: Athena Agriculture. Plant Spacing & Irrigation (metric), document A01.001 (pot, rockwool and pressure-compensating dripper selection). https://athenaag.com/ (source from a manufacturer or industry)

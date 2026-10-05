@@ -83,7 +83,7 @@
  function closeSearch(){ if(sm)sm.classList.remove('show'); }
  function render(q){
    cur=search(q); sel=-1;
-   if(!cur.length){ sr.innerHTML='<div class="sr-empty">No matches. Try a broader word, like &ldquo;humidity&rdquo;, &ldquo;pests&rdquo; or &ldquo;feed&rdquo;.</div>'; return; }
+   if(!cur.length){ sr.innerHTML='<div class="sr-empty">No results. Use different terms, for example &ldquo;humidity&rdquo;, &ldquo;pests&rdquo; or &ldquo;feed&rdquo;.</div>'; return; }
    sr.innerHTML=cur.map(function(o,i){ var x=o.x;
      return '<a class="sr-item" data-i="'+i+'" href="'+x.url+'">'+
        '<div class="sr-k">'+esc(x.type)+(x.paper&&x.type!=='paper'?(' &middot; '+esc(x.paper)):'')+'</div>'+

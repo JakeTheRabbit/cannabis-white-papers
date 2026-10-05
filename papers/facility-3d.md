@@ -1,10 +1,10 @@
 ---
 slug: "facility-3d"
-title: "Designing a grow facility in 3D before you build it"
-eyebrow: "Facility · Design"
-summary: "Lay out rooms, equipment and airflow in a 3D model on your screen, and catch the expensive mistakes before anyone pours concrete."
-track: "Facility & quality"
-read_time: "~14 min read"
+title: "A 3D model of a grow facility before construction"
+eyebrow: "Facility · Layout"
+summary: "With a 3D model on your screen, you can find errors that have a high cost before construction starts. The model shows the rooms, the equipment and the airflow."
+track: "Facility and quality"
+read_time: "~14 min to read"
 diagrams: "11 diagrams"
 related: ["airflow-design", "grow-room-systems", "f2-crop-steering"]
 url: "https://www.growlabs.nz/wiki/facility-3d.html"
@@ -17,203 +17,203 @@ attribution: "The Cannabis White Papers"
 refs: [{"id": "threejs-repo", "n": 1, "cite": "mrdoob and contributors. three.js, JavaScript 3D Library [WebGL/WebGPU scene-graph rendering library]. GitHub repository (MIT License). Accessed 2026-06-22.", "url": "https://github.com/mrdoob/three.js/", "peer": false}, {"id": "kitaya-2003-air-current-gas-exchange", "n": 2, "cite": "Kitaya, Y., Tsuruyama, J., Shibuya, T., Endo, M., & Yoshida, M. (2003). Effects of air current speed on gas exchange in plant leaves and plant canopies. Advances in Space Research, 31(1), 177–182. DOI:10.1016/S0273-1177(02)00747-0", "url": "https://doi.org/10.1016/S0273-1177(02)00747-0", "peer": true}, {"id": "kimura-2020-leaf-boundary-layer", "n": 3, "cite": "Kimura, K., Yasutake, D., Yamanami, A., & Kitano, M. (2020). Spatial examination of leaf-boundary-layer conductance using artificial leaves for assessment of light airflow within a plant canopy under different controlled greenhouse conditions. Agricultural and Forest Meteorology, 280, 107773. DOI:10.1016/j.agrformet.2019.107773", "url": "https://doi.org/10.1016/j.agrformet.2019.107773", "peer": true}, {"id": "ibc-2024-1011-5-2-stairs", "n": 4, "cite": "International Code Council (2024). 2024 International Building Code (IBC), Section 1011.5.2, Riser height and tread depth (stair riser 7 in. max / 4 in. min; rectangular tread 11 in. min).", "url": "https://codes.iccsafe.org/s/IBC2024P1/chapter-10-means-of-egress/IBC2024P1-Ch10-Sec1011.5.2", "peer": false}, {"id": "wac-314-55-083-cannabis-security", "n": 5, "cite": "Washington State Liquor and Cannabis Board. WAC 314-55-083, Security and traceability requirements for cannabis licensees (surveillance of all entrances/exits, processing/storage/destruction areas and POS; min. 640x470 resolution; min. 10 fps; recordings retained >=45 days; storage device secured against tampering/theft).", "url": "https://app.leg.wa.gov/wac/default.aspx?cite=314-55-083", "peer": false}]
 ---
 
-# Designing a grow facility in 3D before you build it
+# A 3D model of a grow facility before construction
 
-_Facility · Design · ~14 min read_
+_Facility · Layout · ~14 min to read_
 
-> Lay out rooms, equipment and airflow in a 3D model on your screen, and catch the expensive mistakes before anyone pours concrete.
+> With a 3D model on your screen, you can find errors that have a high cost before construction starts. The model shows the rooms, the equipment and the airflow.
 
 ## Purpose and scope
 
-> **NOTE — Jurisdiction**
+> **NOTE: Jurisdiction**
 >
-> Jurisdiction note: security and egress examples may cite US (WAC/IBC) rules for illustration. Use the code and licence rules of the jurisdiction that will inspect you.
+> Examples of security and exit in this paper can refer to US regulations (WAC and IBC). These regulations are only examples. The correct building codes and license regulations are those of the jurisdiction that will do the inspection of your facility.
 
-A grow facility is a building full of rooms, equipment, airflow paths and security cameras. The usual way to plan one, a flat top-down architect's drawing, can only really be read by experts. A **3D model** is the same plan rebuilt on your screen as a thing you can rotate, zoom into and click on, so investors, electricians, inspectors and staff all understand it instantly.
+A grow facility is a building with rooms, equipment, airflow and security cameras. The usual document for a facility is the floor plan, a flat drawing from above that an architect makes. Only experts can read a floor plan easily. A **3D model** is the same floor plan on your screen. You can turn it, make it larger or smaller, and select parts of it. Thus investors, electricians, inspectors and personnel can read it immediately.
 
-Describe the building as data instead of drawing it. You write a data file, a plain list of rooms and their dimensions, and let code draw the building from that data. Re-planning the facility for the next harvest then becomes nothing more than editing some numbers. The worked example throughout this paper is a real two-storey licensed cultivation facility measuring 14.8 by 16.7 m (48.6 by 54.8 ft).
+Write the building as data and do not make a drawing of it. You write a data file with a list of the rooms and their dimensions. The software code makes the building from this data. To change the layout of the facility for the next harvest, you only change some numbers.The example in this paper is a cultivation facility with a license and with two floors. The size is 14.8 by 16.7 m (48.6 by 54.8 ft).
 
-- A 3D model makes spatial relationships visible: airflow paths, camera sightlines, bench density, and where the ducts and drains run.
-- It is built with Three.js, a free web library, so the whole thing is one HTML file that opens in any browser with nothing to install.[^threejs-repo]
-- Because the floor plan is a data file, asking ‘what if we fit a fourth bench?’ means editing a list, not redrawing the building.
-- The same model serves four jobs at once: a design tool, a compliance exhibit for licensing, a staff training aid, and a live monitoring dashboard.
+- A 3D model shows the position of the objects in relation to each other. It shows the direction of the airflow, the area that each camera can see, and the density of the benches. It also shows the position of the ducts and the drains.
+- The model uses Three.js, a library for the web with no cost. All of the model is one HTML file that you can use in each browser. Other software is not necessary.[^threejs-repo]
+- The floor plan is a data file. Thus, to find the effect of a fourth bench, you change a list. You do not make the drawing of the building again.
+- The same model does four tasks at the same time. It is a tool for the layout and a document of compliance for the license. It is also an aid for the training of personnel and a dashboard with current data.
 
-> **Diagram.** The same facility, two ways to read it. The 3D view does not replace the architect's drawing. It makes that drawing legible to everyone else.
+> **Diagram.** The same facility, in a drawing and in a model. The 3D model does not replace the drawing of the architect. It makes the information of the drawing easy to read for all other persons.
 
 ## Definitions
 
-Here is the vocabulary. None of these need prior knowledge. They are the words this topic keeps using. Read this once and the rest of the paper reads easily.
+This section gives the terms of this paper. It is not necessary to know these terms before you read this paper. These terms occur many times in this paper. Read this section one time. Then the remaining part of this paper is easy to read.
 
-**3D model** — A picture of the building you can rotate, zoom and click on a screen. Not a fixed photo, but a thing you move around.
+**3D model**: A model of the building on a screen. You can turn it, make it larger or smaller, and select parts of it. The model does not stay in one view. You can move in the model.
 
-**Three.js** — A free code library that draws 3D scenes inside an ordinary web browser, with nothing to install.
+**Three.js**: A software library with no cost that makes 3D scenes in a web browser. Other software is not necessary.
 
-**Floor plan** — The architect's flat, top-down drawing of walls, doors and rooms.
+**Floor plan**: The flat drawing of the walls, doors and rooms that an architect makes. It shows the building from above.
 
-**Render / scene** — To ‘render’ is to draw the picture. The ‘scene’ is everything in the model: walls, benches, lights, cameras.
+**Render and scene**: To ‘render’ is to show the model on the screen. The ‘scene’ is all of the objects in the model: walls, benches, lights and cameras.
 
-**JSON / data file** — A plain list of facts, room names, sizes and positions, that the code reads to build the model.
+**JSON data file**: A file with a list of data: the names, sizes and positions of the rooms. The software code reads this file to make the model.
 
-**FOV cone** — ‘Field of view’ cone: a see-through wedge showing exactly what one camera can see, so blind spots show up as floor with no tint.
+**FOV cone**: The ‘field of view’ cone. It is a transparent cone that shows the area that one camera can see. Thus an area of the floor with no color is a blind spot.
 
-**Fit-out** — The equipment and furniture added to a bare room: benches, lights, dehumidifiers, CO₂ cylinders.
+**Fit-out**: The equipment that you add to an empty room, for example benches, lights, dehumidifiers and CO₂ cylinders.
 
-**Digital twin** — A 3D model wired to live sensors, so it shows the real, current temperature and humidity of each room.
+**Digital twin**: A 3D model with a connection to sensors. It shows the current temperature and humidity of each room.
 
-## Data-based building model
+## Building model from data
 
-**Do not draw the building by hand in code.** This is the single most important decision in the whole approach. Describe it as data, and let the code interpret that data into geometry. The reference schema, the shape of the data file, needs only four kinds of record to capture almost any grow building.
+**Do not make the building manually in software code.** This decision is the most important decision of this method. Write the building as data, and let the software code make the geometry from the data. The reference schema, the structure of the data file, has only four types of record. Thus it can show almost all buildings for cultivation.
 
-Each **room** is stored as a rectangle, `[x, y, width, depth]` in metres. Each **wall** is a centre-line with openings positioned by how far along the run they sit, and a single global wall thickness of 0.15 m (5.9 in) avoids a whole class of typos. Everything uses one unit equals one metre, so the millimetre numbers on the architect's plan (4800, 9200) are divided by 1000 once, at data-entry time, and never thought about again.
+The data file shows each **room** as a rectangle, `[x, y, width, depth]` in meters. It shows each **wall** as a centerline with openings. The position of an opening is its distance along the wall.One wall thickness of 0.15 m (5.9 in) for all walls prevents many errors when you write the data. All values use one unit: one unit is one meter. Thus you divide the millimeter values on the floor plan of the architect (4800, 9200) by 1000 one time, when you write the data. You do not do this again.
 
-> **KEY — The four record types**
+> **KEY: The four types of record**
 >
-> - **Rooms**: an interior footprint rectangle in metres.
-> - **Walls**: a centre-line with openings (doors, the 4.6 m (15.1 ft) roller door, pass-throughs) placed by distance along the run.
-> - **Equipment**: benches, dehumidifiers, AC heads, CO₂ tanks.
-> - **Devices**: cameras, sirens, safes, network and power racks.
+> - **Rooms**: a rectangle for the inner floor area, in meters.
+> - **Walls**: a centerline with openings (doors, the roller door of 4.6 m (15.1 ft), and pass-through openings) at a distance along the wall.
+> - **Equipment**: benches, dehumidifiers, AC heads and CO₂ tanks.
+> - **Devices**: cameras, sirens, safes, and racks for the network and for power.
 
-Doors, the roller door and pass-throughs are all the _same_ thing: an ‘opening’ on a wall, with a width and a head (top) height. That sameness keeps the data file short. Because the model is data, it survives every re-plan. You edit numbers, not geometry.
+Doors, the roller door and pass-through openings are all the _same_ type of object, an ‘opening’ in a wall. An opening has a width and a head height (the height of the top). Thus the data file is short. Because the model is data, it stays correct when you change the layout. You change numbers, and you do not change geometry.
 
-> **Diagram.** The four record types, with the key fields each one carries. Roughly 25 wall rows describe the entire reference building's envelope and partitions.
+> **Diagram.** The four types of record, with the primary fields of each type. Approximately 25 wall rows show the full envelope and the partitions of the reference building.
 
-> **Diagram.** Because all three views read the same numbers, fixing a dimension once fixes it everywhere.
+> **Diagram.** All three read the same numbers. Thus, when you correct a dimension one time, it is correct in all three.
 
-## Building the shell: floors, walls, openings and stairs
+## The shell of the building: floors, walls, openings and stairs
 
-Code builds the physical shell from the data: the floors, walls and stairs. **Floor slabs** are flat 2D shapes ‘extruded’ (pushed up) into thickness, and they can include holes. You need a hole for the void where the stairwell drops through. Each **wall run** is split by its openings into solid segments, with a lintel (a short beam) filling the gap above each door.
+The software code makes the shell of the building from the data: the floors, the walls and the stairs. **Floor slabs** are flat 2D shapes. The code ‘extrudes’ each shape (it gives the shape a thickness), and a shape can have holes. You must make a hole for the void of the stairwell. The openings divide each **wall run** into solid parts. A lintel (a short beam) fills the space above each door.
 
-**Stairs** are a loop of step-shaped boxes. The reference building climbs 3.25 m (10.7 ft) over a 4.5 m (14.8 ft) run as 16 steps of 203 mm (8 in) each. Drawing the stair this way doubles as a buildability check: if the steps don't fit the space at a sensible riser height, you find out now, on screen, not on site. Standard building codes cap a stair riser at about 178 mm (7 in) with a tread of at least 279 mm (11 in), so a 203 mm (8 in) riser flags as steep and tells you to lengthen the run.[^ibc-2024-1011-5-2-stairs]
+**Stairs** are a sequence of boxes in the shape of steps. In the reference building, the stairs have a total height of 3.25 m (10.7 ft) and a run of 4.5 m (14.8 ft). They have 16 steps of 203 mm (8 in) each. The model also checks the stairs before construction.If the space is not sufficient for steps with a correct riser height, you see this on the screen and not on the site. The usual building codes give a maximum of approximately 178 mm (7 in) for a riser and a minimum of 279 mm (11 in) for a tread. Thus a riser of 203 mm (8 in) is too high, and it shows that you must make the run longer.[^ibc-2024-1011-5-2-stairs]
 
-- Floor slabs are extruded shapes that can carry holes for stairwells and service voids.
-- A wall is a centre-line plus openings; openings split it into segments with lintels above. No complex geometry needed.
-- Each storey gets its own group, so switching floors just hides one and shows the other (its labels hide automatically too).
-- Details like the corrugated roller-door texture come from about 10 lines of code, with no image files.
+- Floor slabs are extruded shapes. They can have holes for stairwells and for service voids.
+- A wall is a centerline with openings. The openings divide the wall into parts, with lintels above them. Only boxes are necessary.
+- The model has one group of objects for each floor. When you change floors, the model shows one floor and does not show the other floor. The labels of the other floor also do not show.
+- Approximately 10 lines of software code make small parts, for example the corrugated texture of the roller door. Image files are not necessary.
 
-> **Diagram.** One wall run, read left to right. The opening's ‘at’ value is simply how far along the wall it starts.
+> **Diagram.** One wall run, from left to right. The ‘at’ value of an opening is the distance along the wall at which the opening starts.
 
-| Check | Value | Verdict |
+| Check | Value | Result |
 | --- | --- | --- |
-| Total rise | 3.25 m (10.7 ft) | fixed by the two floor heights |
-| Horizontal run | 4.5 m (14.8 ft) | the space allotted on the plan |
-| Risers | 16 × 203 mm (8 in) | steep, over the 178 mm code max |
-| Treads | 281 mm (11.1 in) | comfortable, above the 279 mm min |
-| Fit | Fits the 4.5 m run | OK, but lengthen run to ease the riser |
+| Total height | 3.25 m (10.7 ft) | The two floor heights give this value |
+| Horizontal run | 4.5 m (14.8 ft) | the space in the floor plan |
+| Risers | 16 × 203 mm (8 in) | Too high. More than the maximum of 178 mm in the building code. |
+| Treads | 281 mm (11.1 in) | Good. More than the minimum of 279 mm. |
+| Fit | Correct for the run of 4.5 m | Correct. But make the run longer to decrease the riser height. |
 
-*A stair sanity-check the model performs for free. The 203 mm riser is buildable but steep against code minimums[^ibc-2024-1011-5-2-stairs], a prompt to revisit it early.*
+*The model does this check of the stairs automatically. The riser of 203 mm is possible, but it is too high compared with the values in the building code[^ibc-2024-1011-5-2-stairs]. This result is a signal to examine the riser at the start.*
 
 ## Facility fit-out and airflow
 
-**Fit-out** turns a generic building into a grow facility, and every piece is built from simple shapes. No modelling software required. The reference flower rooms use 1.2 by 7.6 m (3.9 by 24.9 ft) rolling benches, three per room, giving 27.4 m² (295 ft²) of canopy in a 44 m² (474 ft²) room: about 62% of the floor, a number the model shows at a glance.
+**Fit-out** changes a building into a grow facility. You make each object from easy shapes. Special software is not necessary.The reference flower rooms have three rolling benches in each room. Each bench is 1.2 by 7.6 m (3.9 by 24.9 ft). The canopy area is 27.4 m² (295 ft²) in a room of 44 m² (474 ft²), which is approximately 62% of the floor. The model shows this number immediately.
 
-Plants are the highest-count object, 210 of them here, so they are ‘instanced’, meaning drawn in one batch rather than one at a time. That single trick is the biggest performance lever in the whole model. The climate gear (dehumidifiers, carbon filter/fan units hung at 2.45 m (8.0 ft), mini-split AC heads, CO₂ cylinders) each get a tiny builder, sized straight from the datasheet.
+The plants are the objects with the highest number, 210 in this model. Thus the model uses ‘instancing’: the software renders all the plants in one batch and not one at a time. This method is the most important method to make the model operate quickly. The climate equipment (dehumidifiers, carbon filter and fan units hung at 2.45 m (8.0 ft), mini-split AC heads and CO₂ cylinders) has a small builder for each item. Each builder uses the size from the datasheet.
 
-Each leaf releases water vapour and absorbs CO₂ continuously. In still air, the layer of air right at the leaf surface quickly becomes saturated with moisture and depleted of CO₂ — like the warm, humid air that settles around your face when you stand very still: even in a cool room that thin film cuts off further exchange with the air around it. This is the leaf boundary layer: a shallow, stationary pocket of air already altered by the leaf’s own transpiration.[^kitaya-2003-air-current-gas-exchange] Moving air strips that film away and replaces it with fresh room air, restoring the gradient that drives gas exchange. The plan’s target of 3500 m³/h of horizontal airflow per flower room is drawn as toggleable arrows that an HVAC contractor reads instantly. Modest, even air movement across the canopy keeps boundary-layer conductance high and uniform. Too little leaves dead spots; too much can close stomata.[^kimura-2020-leaf-boundary-layer]
+Each leaf releases water vapor and absorbs CO₂ all the time. In air that does not move, the layer of air at the surface of the leaf quickly has the maximum moisture and less CO₂. This thin film prevents more gas exchange with the air around it, also in a cool room. This film is the leaf boundary layer: a thin layer of air that does not move. The transpiration of the leaf makes this air different.[^kitaya-2003-air-current-gas-exchange]Air that moves removes this film and replaces it with new air from the room. The air movement makes the gradient for gas exchange again.The floor plan has a target of 3500 m³/h of horizontal airflow for each flower room. The model shows this airflow as arrows that you can show or not show, and an HVAC contractor reads them immediately. A small and equal movement of air across the canopy keeps the conductance of the boundary layer high and equal. If the movement is too small, areas where the air does not move occur. If the movement is too large, the stomata can close.[^kimura-2020-leaf-boundary-layer]
 
-> **Diagram.** The model surfaces canopy density automatically. You never measure it by hand. 62% is a healthy, walkable density for a flower room.
+> **Diagram.** The model shows the canopy density automatically, and you do not measure it manually. 62% is a good density for a flower room. It lets personnel walk in the room.
 
-> **Diagram.** Airflow shown as a top-down loop. Drawing it makes the air path visible to contractors and inspectors, and reveals where benches would stall the flow.[^kitaya-2003-air-current-gas-exchange]
+> **Diagram.** The figure shows the airflow as a loop, seen from above. When you show the airflow, contractors and inspectors can see the direction of the air, and you can find where the benches stop the flow.[^kitaya-2003-air-current-gas-exchange]
 
-| Item | Built from | Count |
+| Item | Made from | Number |
 | --- | --- | --- |
-| Rolling bench | Box + leg rails, 1.2 × 7.6 m (3.9 × 24.9 ft) | 9 (3 per flower room) |
-| Dehumidifier | Box + grille face | 7 |
-| Carbon filter / fan | Cylinder + duct, hung at 2.45 m (8.0 ft) | 10 |
-| AC head (mini-split) | Flattened box above doors | 8 |
-| CO₂ cylinder | Capped cylinder, floor-standing | 6 |
+| Rolling bench | Box and leg rails, 1.2 × 7.6 m (3.9 × 24.9 ft) | 9 (3 for each flower room) |
+| Dehumidifier | Box and grille | 7 |
+| Carbon filter and fan | Cylinder and duct, hung at 2.45 m (8.0 ft) | 10 |
+| AC head (mini-split) | Flat box above the doors | 8 |
+| CO₂ cylinder | Closed cylinder, on the floor | 6 |
 
-*The equipment schedule. Each item is a small reusable builder, and placing them in 3D reveals clashes early: a filter over an aisle, an AC head fouling a door.*
+*The list of equipment. Each item has a small builder that you can use again. When you put the items in 3D, you find clashes at the start. Examples are a filter above an aisle or an AC head that touches the door when it moves.*
 
-> **TIP — Clashes you only see in 3D**
+> **TIP: Clashes that you can see only in 3D**
 >
-> A flat plan hides height. In 3D you immediately catch a carbon filter hung at 2.45 m (8.0 ft) over a walkway, an AC head sitting above a door swing, or a dehumidifier that lands on a bench. Pair this with the [airflow design](airflow-design.html) paper to size the fans before you place them.
+> A flat floor plan does not show height. In 3D you see immediately a carbon filter hung at 2.45 m (8.0 ft) above a walkway. You also see an AC head above the area where a door moves, or a dehumidifier in the same position as a bench. Use the [airflow design](airflow-design.html) paper to find the size of the fans before you put them in the model.
 
-## Visible security and compliance controls
+## Security and compliance controls that you can see
 
-Licensed cultivation is audited on its **security plan**, and modelling that layer turns a paper checklist into something you can walk an inspector through. Each camera gets a translucent **FOV cone**: its length is the usable range, its width is the lens angle. Blind spots show up as floor with no tint at all.
+An auditor examines the **security plan** of a cultivation facility with a license. When you put this layer in the model, a checklist on paper becomes a model that you can show to an inspector. Each camera has a transparent **FOV cone**. The length of the cone is the range of the camera, and the width of the cone is the angle of the lens. An area of the floor with no color is a blind spot.
 
-Cannabis security rules are jurisdiction-specific, but they are concrete: a typical regime requires surveillance of every entrance, exit, and processing, storage and destruction area, at a minimum resolution and frame rate, with recordings retained for weeks[^wac-314-55-083-cannabis-security]. Modelling the cameras as cones lets you prove that coverage visually instead of arguing it from a list. The reference facility models roughly 22 cameras (20 bullet, 1 doorbell, 1 PTZ), 16 sirens, 2 floor-bolted drug safes, a walk-in vault (the drying room itself), and the PoE/UPS racks (three 6U plus one 13U) that keep it all powered.
+The security regulations for cannabis are different in each jurisdiction. For example, typical regulations make surveillance necessary for each entrance, exit, and area for processing, storage and destruction. They also give a minimum resolution and frame rate for the cameras. The video records must stay in storage for some weeks.[^wac-314-55-083-cannabis-security]When you show the cameras as cones, you can show visually that the cameras see all necessary areas. A list is not necessary for this.The model of the reference facility has approximately 22 cameras (20 bullet cameras, 1 doorbell camera and 1 PTZ camera), 16 sirens and 2 drug safes attached to the floor. It also has a walk-in vault (this vault is the drying room) and the PoE and UPS racks (three racks of 6U and one rack of 13U). The racks supply power to all of this equipment.
 
-- Camera cones answer licensing questions visually: do three flower-room cameras cover all three benches? Does the hallway pair leave a lobby gap?
-- Blind spots appear as un-tinted floor, far easier to spot than reading a coverage list.
-- Sirens, safes, the vault and the network/power racks are all modelled, because cable runs and UPS placement are part of the security story.
-- One checkbox shows or hides the whole security layer: audit mode versus tour mode.
-- The roof PTZ camera's 70°, 12 m (39 ft) cone is checked against the upper open-plan office for intrusion coverage.
+- Camera cones give a visual check for the license. The cones show if the three cameras in a flower room can see all three benches. They also show if there is an area of the lobby that the two cameras in the hallway do not see.
+- A blind spot is an area of the floor with no color. You find it much more easily than in a list of the areas that the cameras see.
+- The model has the sirens, the safes, the vault and the racks for the network and for power. The cable routing and the position of the UPS are a part of the security plan, and thus the model shows them.
+- One checkbox shows or does not show all of the security layer. The checkbox gives audit mode or tour mode.
+- The model compares the cone of the PTZ camera on the roof (70°, 12 m (39 ft)) with the office on the top floor, which has no partitions. It shows if the camera can see an intruder.
 
-> **Diagram.** Top-down camera coverage. Any floor outside every cone is a blind spot. Here, a gap between cameras 2 and 3 that re-aiming closes.[^wac-314-55-083-cannabis-security]
+> **Diagram.** The camera cones, seen from above. An area of the floor that is not in a cone is a blind spot. Here, there is a gap between cameras 2 and 3, and the gap closes when you point the cameras in a new direction.[^wac-314-55-083-cannabis-security]
 
-| Device | Count | Placement logic |
+| Device | Number | Cause of the position |
 | --- | --- | --- |
-| Cameras | 22 (20 bullet, 1 doorbell, 1 PTZ) | Every entrance, exit and grow/process area |
-| Sirens | 16 | Audible coverage of all occupied zones |
-| Drug safes | 2 | Floor-bolted, inside monitored rooms |
-| Walk-in vault | 1 | The drying room doubles as secured storage |
-| PoE + UPS racks | 3 × 6U + 1 × 13U | Short cable runs; power survives an outage |
+| Cameras | 22 (20 bullet cameras, 1 doorbell camera, 1 PTZ camera) | Each entrance, each exit and each area for cultivation and for processing |
+| Sirens | 16 | Personnel can hear a siren in each zone where they are |
+| Drug safes | 2 | Attached to the floor, in rooms that have surveillance |
+| Walk-in vault | 1 | The drying room is also the storage with security |
+| PoE and UPS racks | 3 × 6U and 1 × 13U | Short cable routing. The power continues when the supply stops. |
 
-*The device schedule and why each sits where it does. Cable runs and UPS placement are modelled because they are part of what an auditor checks.[^wac-314-55-083-cannabis-security]*
+*The list of devices, with the cause of the position of each device. The model shows the cable routing and the position of the UPS because an auditor examines them.[^wac-314-55-083-cannabis-security]*
 
-## 3D modelling workflow
+## Procedure for the 3D model
 
-Here is the practical order of work, with nothing skipped. The whole thing is one HTML file, a JSON block, and roughly 600 lines of generator code, small enough to lift straight from a reference document and adapt.
+This section gives the sequence of the work, with all the steps. The model is one HTML file with a JSON block and approximately 600 lines of generator code. It is small, and thus you can make a copy of it from a reference document and change it for your facility.
 
-1. **Read the dimension chains** — Off the architect's plan, read the chains (e.g. 4800 + 4632.40 + 4800 across the top) and divide every millimetre figure by 1000 to get metres.
-2. **Transcribe to JSON** — Enter rooms, walls, equipment and devices into the four-record schema. This is the real work, and it becomes your single source of truth.
-3. **Build the shell** — Run the shell builders: floor slabs, walls with openings and lintels, then the stairs (which also sanity-check themselves).
-4. **Add the fit-out** — Run the fit-out builders: benches, instanced plants, and climate gear sized from datasheets.
-5. **Add the security layer** — Place cameras with their FOV cones, sirens, safes, the vault and the racks; group them under one toggle.
-6. **Add interaction** — An orbit camera plus a one-click top view that reproduces the 2D plan, and click-to-inspect so each room and device reports its own contents.
+1. **Read the dimension chains**: Read the dimension chains on the floor plan of the architect (for example 4800 + 4632.40 + 4800 across the top). Divide each value in millimeters by 1000 to get meters.
+2. **Write the data in JSON**: Write the rooms, the walls, the equipment and the devices in the schema of four records. This task is the primary task, and it becomes your one source of correct data.
+3. **Make the shell**: Use the shell builders for the floor slabs, the walls with openings and lintels, and then the stairs. The model also checks the stairs.
+4. **Add the fit-out**: Use the fit-out builders for the benches, the plants with instancing and the climate equipment. Use the sizes from the datasheets.
+5. **Add the security layer**: Put the cameras with their FOV cones, the sirens, the safes, the vault and the racks in the model. Make one checkbox for all of them.
+6. **Add the user controls**: Add an orbit camera and a view from above that shows the 2D floor plan with one selection. Add a function that shows the contents of each room and device when you select it.
 
-> **NOTE — Reuse is copy-and-replace**
+> **NOTE: Copy and replace to use the model again**
 >
-> To start a new facility, save the page, copy the importmap and script block, and replace the data tables with your own plan. The generator code does not change. Only the numbers do.
+> To start a new facility, you make a copy of the page with the importmap and the script block. Then you replace the data tables in the copy with the data of your facility. The generator code does not change. Only the numbers change.
 
 ## Troubleshooting
 
-Most mistakes come from a handful of repeatable errors. The biggest by far is modelling in code instead of in data. Do that and every re-plan becomes painful, because you have thrown away your single source of truth. The rest are rendering details that are easy to fix once you know them.
+Most errors are of a small number of types, and these types occur many times. The most important error is a building that you make in software code and not in data. When you do this, each change of the layout is not easy, because you do not have one source of correct data. The other errors are small problems when the software renders the model. They are easy to correct when you know them.
 
-| Pitfall | The fix |
+| Error | Correction |
 | --- | --- |
-| Modelling in code, not data | Keep the building in the JSON schema and let code only interpret it. This is the cardinal rule. |
-| One real light per grow fixture | 14 shadow-casting lights kill the frame rate. Use one directional ‘sun’ plus emissive (glowing) surfaces. |
-| Pure-white walls blow out | Under ACES tone mapping, white clips. Use a warm off-white (0xe8e6e0) at high roughness. |
-| Shadow camera too big | An oversized shadow camera makes mushy shadows. Size it to the building, not the world. |
-| Picking against the whole scene | Users accidentally select walls. Raycast a curated ‘pickables’ list instead. |
-| Forgetting wall thickness as a global | Set thickness once (0.15 m / 5.9 in) and reuse it. This removes a whole class of typos. |
+| You make the building in software code and not in data | Keep the building in the JSON schema, and let the software code only read it. This method is the primary method. |
+| One light in the model for each grow fixture | 14 lights with shadows decrease the frame rate by a large quantity. Use one directional light (the ‘sun’) and emissive surfaces (surfaces that give light). |
+| Walls in pure white are too bright | With ACES tone mapping, white values cannot be more than the maximum value. Use a warm color that is almost white (0xe8e6e0), with a high roughness. |
+| A shadow camera that is too large | A shadow camera that is too large makes shadows with a low resolution. Make the size of the shadow camera correct for the building and not for all of the scene. |
+| Picking in all of the scene | Users select walls when they do not want to select them. Use raycasting on a list of the objects that users can select, and not on all of the scene. |
+| No one value of wall thickness for all walls | Set the thickness one time to 0.15 m (5.9 in) and use it again. This prevents many errors when you write the data. |
 
-*Six common pitfalls and the recommended fix for each. The first one is the only one that costs you weeks. The rest cost minutes.*
+*Six frequent errors and the recommended correction for each. The time to correct the first error is some weeks. The time to correct each other error is some minutes.*
 
-> **WARN — The cardinal sin, restated**
+> **WARN: The most important error, again**
 >
-> Remember one thing: the moment you start hand-placing geometry in code, you have lost the ability to re-plan cheaply. Every ‘what if’ then means re-coding instead of re-typing a number.
+> Do not put geometry in the software code manually. If you put geometry in the software code manually, you cannot change the layout at a low cost. Then, for each ‘what if’, you change the software code. You do not change a number.
 
 ## Expected results and limitations
 
-Set expectations honestly. This kind of model is light and fast: the reference demo draws a full two-storey facility, about 450 meshes plus instanced plants, at 60 frames per second on integrated graphics, and scales to whole campuses by instancing and merging geometry while keeping draw calls under about 300.
+Know the limits of the model. This type of model is small and it operates quickly. The reference model renders a full facility with two floors at 60 frames each second on integrated graphics. The facility has approximately 450 meshes and the plants with instancing. The model can render full campuses if you use instancing, put the geometry together, and keep the draw calls to less than approximately 300.
 
-Simple shapes carry you surprisingly far. You only reach for a proper modelling tool (Blender, exported as glTF) when you need a single photoreal ‘hero’ asset. The model is a planning, compliance and monitoring aid. It is **not** a structural-engineering or code-compliance sign-off. The airflow and security targets it visualises still need a qualified professional to validate.
+Easy shapes are sufficient for almost all tasks. You use a special tool (Blender, with a file in glTF format) only when one asset with photoreal quality is necessary. You can use the model to make the layout, to show compliance and to monitor the facility. It is **not** a structural engineering approval, and it is not an approval of compliance with the building code. A qualified professional must make sure that the airflow and security targets in the model are correct.
 
-> **Diagram.** A capability ladder. Most facilities never need to climb past the first rung for planning.
+> **Diagram.** The stages of the model, in the sequence of work. For most facilities, only the first stage is necessary for the layout.
 
-| Budget | Target | Why |
+| Item | Target | Information |
 | --- | --- | --- |
-| Meshes | ~450 | A full two-storey facility shell + fit-out |
-| Frame rate | 60 fps | Smooth on integrated graphics |
-| Draw calls | < 300 | Keeps low-end laptops and tablets usable |
-| Pixel ratio | capped at 2 | Stops 4K screens overworking the GPU |
-| Shadow lights | 1 | One sun; the rest are emissive surfaces |
+| Meshes | approximately 450 | The shell and the fit-out of a full facility with two floors |
+| Frame rate | 60 fps | The model operates smoothly on integrated graphics |
+| Draw calls | < 300 | Laptops and tablets with a low capacity can use the model |
+| Pixel ratio | The maximum is 2 | Prevents too much load on the GPU with 4K screens |
+| Shadow lights | 1 | One directional light (the ‘sun’). The other lights are emissive surfaces. |
 
-*The performance budget. Hit these and the model stays smooth almost anywhere. The 60-fps figure is a reproduce-to-verify benchmark, not a guarantee for every machine.*
+*The limits for performance. When you keep these values, the model operates correctly on almost all computers. The value of 60 fps is a benchmark. You can do the benchmark again to make sure of the value. The value is not the same on all computers.*
 
-> **KEY — What it is, and what it is not**
+> **KEY: The model: tasks and limits**
 >
-> A 3D facility model is a design tool, a compliance exhibit, a training aid and, wired to sensors, a live dashboard. It is not an engineering sign-off. Treat every airflow, structural and security target it shows as something to confirm with a professional, not as approved.
+> A 3D facility model is a tool for the layout, a document of compliance and an aid for training. When you connect it to sensors, it is also a dashboard with current data. It is not an engineering approval. A qualified professional must make sure that each target for airflow, for the structure and for security in the model is correct. Do not think that the model gives approval of the targets.
 
-Start with primitives, get your plan into data, and the model pays for itself the first time it catches a clash before construction. From here, read the [grow-room systems](grow-room-systems.html) paper to see what fills each room, or the [irrigation manual](irrigation-manual.html) for wiring the model to live irrigation data.
+Start with easy shapes and put your floor plan in data. When the model finds a clash before construction, the cost of the clash is more than the cost of the model. For more information about the equipment in each room, read the [grow-room systems](grow-room-systems.html) paper. For more information about how to connect the model to current irrigation data, read the [irrigation manual](irrigation-manual.html).
 
 ## References
 
-[^threejs-repo]: mrdoob and contributors. three.js, JavaScript 3D Library [WebGL/WebGPU scene-graph rendering library]. GitHub repository (MIT License). Accessed 2026-06-22. https://github.com/mrdoob/three.js/ (industry/manufacturer source)
-[^kitaya-2003-air-current-gas-exchange]: Kitaya, Y., Tsuruyama, J., Shibuya, T., Endo, M., & Yoshida, M. (2003). Effects of air current speed on gas exchange in plant leaves and plant canopies. Advances in Space Research, 31(1), 177–182. DOI:10.1016/S0273-1177(02)00747-0 https://doi.org/10.1016/S0273-1177(02)00747-0 (peer-reviewed)
-[^kimura-2020-leaf-boundary-layer]: Kimura, K., Yasutake, D., Yamanami, A., & Kitano, M. (2020). Spatial examination of leaf-boundary-layer conductance using artificial leaves for assessment of light airflow within a plant canopy under different controlled greenhouse conditions. Agricultural and Forest Meteorology, 280, 107773. DOI:10.1016/j.agrformet.2019.107773 https://doi.org/10.1016/j.agrformet.2019.107773 (peer-reviewed)
-[^ibc-2024-1011-5-2-stairs]: International Code Council (2024). 2024 International Building Code (IBC), Section 1011.5.2, Riser height and tread depth (stair riser 7 in. max / 4 in. min; rectangular tread 11 in. min). https://codes.iccsafe.org/s/IBC2024P1/chapter-10-means-of-egress/IBC2024P1-Ch10-Sec1011.5.2 (industry/manufacturer source)
-[^wac-314-55-083-cannabis-security]: Washington State Liquor and Cannabis Board. WAC 314-55-083, Security and traceability requirements for cannabis licensees (surveillance of all entrances/exits, processing/storage/destruction areas and POS; min. 640x470 resolution; min. 10 fps; recordings retained >=45 days; storage device secured against tampering/theft). https://app.leg.wa.gov/wac/default.aspx?cite=314-55-083 (industry/manufacturer source)
+[^threejs-repo]: mrdoob and contributors. three.js, JavaScript 3D Library [WebGL/WebGPU scene-graph rendering library]. GitHub repository (MIT License). Accessed 2026-06-22. https://github.com/mrdoob/three.js/ (source from a manufacturer or industry)
+[^kitaya-2003-air-current-gas-exchange]: Kitaya, Y., Tsuruyama, J., Shibuya, T., Endo, M., & Yoshida, M. (2003). Effects of air current speed on gas exchange in plant leaves and plant canopies. Advances in Space Research, 31(1), 177–182. DOI:10.1016/S0273-1177(02)00747-0 https://doi.org/10.1016/S0273-1177(02)00747-0 (source with peer review)
+[^kimura-2020-leaf-boundary-layer]: Kimura, K., Yasutake, D., Yamanami, A., & Kitano, M. (2020). Spatial examination of leaf-boundary-layer conductance using artificial leaves for assessment of light airflow within a plant canopy under different controlled greenhouse conditions. Agricultural and Forest Meteorology, 280, 107773. DOI:10.1016/j.agrformet.2019.107773 https://doi.org/10.1016/j.agrformet.2019.107773 (source with peer review)
+[^ibc-2024-1011-5-2-stairs]: International Code Council (2024). 2024 International Building Code (IBC), Section 1011.5.2, Riser height and tread depth (stair riser 7 in. max / 4 in. min; rectangular tread 11 in. min). https://codes.iccsafe.org/s/IBC2024P1/chapter-10-means-of-egress/IBC2024P1-Ch10-Sec1011.5.2 (source from a manufacturer or industry)
+[^wac-314-55-083-cannabis-security]: Washington State Liquor and Cannabis Board. WAC 314-55-083, Security and traceability requirements for cannabis licensees (surveillance of all entrances/exits, processing/storage/destruction areas and POS; min. 640x470 resolution; min. 10 fps; recordings retained >=45 days; storage device secured against tampering/theft). https://app.leg.wa.gov/wac/default.aspx?cite=314-55-083 (source from a manufacturer or industry)

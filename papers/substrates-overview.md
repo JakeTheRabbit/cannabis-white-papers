@@ -1,10 +1,10 @@
 ---
 slug: "substrates-overview"
-title: "Substrates compared: coco, rockwool, soil, hydro"
-eyebrow: "Beginner · Substrate"
-summary: "A from-zero guide to what cannabis roots grow in: how each medium holds water and air, how it handles nutrients, how forgiving it is, and how to pick one."
-track: "Water, substrate & feed"
-read_time: "~11 min read"
+title: "Substrates compared: coco, rockwool, soil and hydroponics"
+eyebrow: "Basic · Substrate"
+summary: "This paper compares the substrates for cannabis roots and shows how to select one. It gives information about the water and air in each medium, the effect of each medium on the nutrients, and the tolerance for errors. It is not necessary to know about substrates before you read this paper."
+track: "Water, substrate and feed"
+read_time: "~11 min to read"
 diagrams: "11 diagrams"
 related: ["coco-crop-steering", "ph-management", "water-quality"]
 url: "https://www.growlabs.nz/wiki/substrates-overview.html"
@@ -17,168 +17,169 @@ attribution: "The Cannabis White Papers"
 refs: [{"id": "xiong-2017-coir-rockwool-peat-tomato", "n": 1, "cite": "Xiong J, Tian Y, Wang J, Liu W, Chen Q. Comparison of Coconut Coir, Rockwool, and Peat Cultivations for Tomato Production: Nutrient Balance, Plant Growth and Fruit Quality. Frontiers in Plant Science. 2017;8:1327. doi:10.3389/fpls.2017.01327", "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5539188/", "peer": true}, {"id": "abad-2002-coir-dust-peat-substitute", "n": 2, "cite": "Abad M, Noguera P, Puchades R, Maquieira A, Noguera V. Physico-chemical and chemical properties of some coconut coir dusts for use as a peat substitute for containerised ornamental plants. Bioresource Technology. 2002;82(3):241-245. doi:10.1016/S0960-8524(01)00189-4", "url": "https://www.sciencedirect.com/science/article/abs/pii/S0960852401001894", "peer": true}, {"id": "bevan-2021-cannabis-npk-soilless", "n": 3, "cite": "Bevan L, Jones M, Zheng Y. Optimisation of Nitrogen, Phosphorus, and Potassium for Soilless Production of Cannabis sativa in the Flowering Stage Using Response Surface Analysis. Frontiers in Plant Science. 2021;12:764103. doi:10.3389/fpls.2021.764103", "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8635921/", "peer": true}, {"id": "cockson-2019-cannabis-nutrient-disorders", "n": 4, "cite": "Cockson P, Landis H, Smith T, Hicks K, Whipker BE. Characterization of Nutrient Disorders of Cannabis sativa. Applied Sciences. 2019;9(20):4432. doi:10.3390/app9204432", "url": "https://www.mdpi.com/2076-3417/9/20/4432", "peer": true}, {"id": "le-pythium-hydroponic-epidemiology-review", "n": 5, "cite": "Le DH, et al. Etiology and epidemiology of Pythium root rot in hydroponic crops: current knowledge and perspectives. Summa Phytopathologica. (review) Available via SciELO Brazil.", "url": "https://www.scielo.br/j/sp/a/cGCh3FGRRzGLVFJf577mypy/?lang=en", "peer": true}, {"id": "frontiers-2026-do-pythium-strawberry-nft", "n": 6, "cite": "Dissolved oxygen limitation and Pythium root rot in strawberry NFT systems: mechanisms, research gaps, and prospects for substrate-free production. Frontiers in Plant Science. 2026. doi:10.3389/fpls.2026.1829367", "url": "https://www.frontiersin.org/journals/plant-science/articles/10.3389/fpls.2026.1829367/full", "peer": true}, {"id": "raviv-lieth-soilless-culture-afp", "n": 7, "cite": "Raviv M, Lieth JH (eds.). Soilless Culture: Theory and Practice. Elsevier/Academic Press, 2008. ISBN 978-0-444-52975-6. (Chapter: Physical Characteristics of Soilless Media.)", "url": "https://shop.elsevier.com/books/soilless-culture-theory-and-practice/raviv/978-0-444-52975-6", "peer": true}, {"id": "joseph-2024-rockwool-recovery-composting", "n": 8, "cite": "Composting of recovered rock wool from hydroponics for the production of soil amendment. Environmental Science and Pollution Research. 2024. doi:10.1007/s11356-024-33041-2", "url": "https://link.springer.com/article/10.1007/s11356-024-33041-2", "peer": true}, {"id": "abad-2017-peat-use-horticulture", "n": 9, "cite": "Peat Use in Horticulture. IntechOpen (peer-reviewed book chapter), 2018. doi:10.5772/intechopen.79611", "url": "https://www.intechopen.com/chapters/62735", "peer": true}]
 ---
 
-# Substrates compared: coco, rockwool, soil, hydro
+# Substrates compared: coco, rockwool, soil and hydroponics
 
-_Beginner · Substrate · ~11 min read_
+_Basic · Substrate · ~11 min to read_
 
-> A from-zero guide to what cannabis roots grow in: how each medium holds water and air, how it handles nutrients, how forgiving it is, and how to pick one.
+> This paper compares the substrates for cannabis roots and shows how to select one. It gives information about the water and air in each medium, the effect of each medium on the nutrients, and the tolerance for errors. It is not necessary to know about substrates before you read this paper.
 
 ## Purpose and scope
 
-A **substrate** (also called a growing medium) is just the material a plant's roots live in. It holds the plant up and acts as the reservoir for water, air and dissolved nutrients. This guide compares the five materials cannabis growers actually use, assuming you know nothing yet.
+A **substrate** (a growing medium) is the material that contains the roots of a plant. It holds the plant in position, and it is the reservoir for water, air and dissolved nutrients. This paper compares the five media that cannabis growers use: coco, rockwool, peat, living soil and deep water culture (DWC). It is not necessary to know about substrates before you read this paper.
 
-By the end you will understand the two trade-offs that decide everything: how much water versus air a medium holds, and how much it cushions your nutrient mistakes. With those two ideas you can pick the right medium for your setup.
+At the end of this paper, you will know the two properties of a medium that have the largest effect on the result. The first property is the quantity of water and the quantity of air that the medium holds. The second property is the tolerance of the medium for your errors. When the tolerance is high, an error in the nutrients or in the water has a small effect on the plant. With this information, you can select the correct medium for your setup.
 
-> **Diagram.** The whole field splits into media that physically hold the roots and water culture where the roots hang in the solution itself.
+> **Diagram.** The alternatives are in two groups: the media that hold the roots in position, and water culture. In water culture, the roots hang in the nutrient solution.
 
-> **NOTE — Who this is for**
+> **NOTE: Who this paper is for**
 >
-> Total beginners choosing a first medium, and anyone who wants to know why their setup behaves the way it does. It pairs with the [coco crop-steering paper](coco-crop-steering.html), which goes deep on driving one specific medium hard once you have picked it.
+> This paper is for a person who selects a first medium and does not know about substrates. It is also for a person who wants to know the cause of the results in a setup. The [coco crop-steering paper](coco-crop-steering.html) gives full information about the accurate control of coco, after you select it. You can use the two papers together.
 
 ## Definitions
 
-Two numbers describe how any medium behaves when wet. The rest are about nutrients. You do not need to memorise these, just get the gist.
+Two values give the condition of a medium when it is wet. The other terms are about nutrients. It is not necessary to know all these terms at this time. It is sufficient to know the basic information about each term.
 
-**Water-holding capacity** — The share of the pore space that still holds water after the medium drains. Higher means it stays wetter for longer.
+**Water-holding capacity**: The part of the pore space that contains water after the medium drains. When the value is higher, the medium stays wet for a longer time.
 
-**Air-filled porosity** — The share of the pore space holding air at that same drained moment. Water and air share one fixed total, so more water means less air.
+**Air-filled porosity**: The part of the pore space that contains air after the medium drains. Water and air fill the same pore space, and the total does not change. Thus when the quantity of water increases, the quantity of air decreases.
 
-**EC (electrical conductivity)** — How much dissolved nutrient salt is in the water, in milliSiemens per centimetre (mS/cm). Higher EC is a stronger, saltier feed.
+**EC (electrical conductivity)**: The quantity of dissolved nutrient salt in the water, in milliSiemens per centimeter (mS/cm). A higher EC is a stronger feed with more salt.
 
-**pH** — Acidity on a 0-14 scale. The cannabis root-zone sweet spot is about 5.5-6.5, tightening to 5.8-6.2 for precise soilless control.[^cockson-2019-cannabis-nutrient-disorders]
+**pH**: A measurement of acidity on a scale of 0 to 14. The best pH range in the root zone of cannabis is approximately 5.5 to 6.5. For accurate control in soilless media, the range becomes smaller: 5.8 to 6.2.[^cockson-2019-cannabis-nutrient-disorders]
 
-**CEC (cation exchange capacity)** — Some growing media hold nutrient ions the way a sponge holds water — grab them when the feed is strong, release them slowly when it is weak. A medium's capacity to do this is its cation exchange capacity, measured in meq/100g.[^abad-2002-coir-dust-peat-substitute] High CEC means the medium buffers your feeding mistakes, but it also means raw coco stockpiles ions selectively — see Buffering below.
+**CEC (cation exchange capacity)**: Some media hold nutrient ions. They absorb the ions when the feed is strong and release them slowly when the feed is weak. The capacity of a medium to hold ions is its cation exchange capacity, in meq/100g.[^abad-2002-coir-dust-peat-substitute] When the CEC is high, the medium buffers your errors in the feed. But when the CEC is high, raw coco also removes some ions from the feed, and not other ions. Refer to the definition of Buffering below.
 
-**Buffering** — When you make a dosing mistake, a buffered medium absorbs some of the shock before it reaches the roots — like a room with thick walls where a cold draught outside barely registers inside. A buffered medium forgives a bad mix. An inert one, like rockwool, passes every change straight to the roots.
+**Buffering**: When you make an error in the dose, a buffered medium absorbs a part of the effect before the effect goes to the roots. Thus a buffered medium has a high tolerance for a feed that you mix incorrectly. An inert medium, for example rockwool, does not absorb the effect. Each change goes directly to the roots.
 
-**Dryback** — Letting the medium partly dry between waterings sends the plant a mild stress signal that encourages roots to grow deeper — like briefly turning off a garden tap so the plant reaches further. How far the medium dries between waterings is called dryback. It is the main lever crop steering uses, covered in the [coco paper](coco-crop-steering.html).
+**Dryback**: When you let the medium become dry between two irrigations, but not fully dry, the plant receives a weak stress signal. This signal causes the roots to go deeper in the medium. The quantity by which the medium dries between two irrigations is the dryback. Dryback is the primary control in crop steering. The [coco paper](coco-crop-steering.html) gives more information.
 
-> **Diagram.** Total pore space is a fixed bar. Wetting the medium pushes the split toward water and squeezes out the air the roots need to breathe.
+> **Diagram.** The bar shows the total pore space, and the size of the bar does not change. When the quantity of water in the medium increases, the part for water becomes larger and the part for air becomes smaller. The roots use this air to get oxygen.
 
-## Water versus air: the porosity trade-off
+## Porosity: more water gives less air
 
-Roots need oxygen as much as water. A medium that stays saturated drowns the roots and invites rot, while one that holds too little water dries out and stresses the plant. The five media sit at different points on that see-saw.
+Oxygen is as necessary for the roots as water. If a medium stays saturated, the roots do not get sufficient oxygen and root rot can occur. If a medium does not hold sufficient water, it becomes dry and causes stress in the plant. The five media are at different positions between these two conditions.
 
-Rockwool is roughly 96% total porosity but only about 11% air-filled, with around 91% water-holding, so it holds a lot of water and releases it freely[^raviv-lieth-soilless-culture-afp]. Peat sits near 90-95% total porosity with a higher 18-25% air fraction[^abad-2017-peat-use-horticulture]. Coco coir is the standout: even saturated it can keep around 22% air, beating rockwool's ~10%, which is why coco resists drowning[^abad-2002-coir-dust-peat-substitute]. DWC is the extreme case, where roots dangle in nutrient water and get oxygen only from a pump.
+Rockwool has a total porosity of approximately 96%, but the air-filled porosity is only approximately 11%. The water-holding capacity is approximately 91%. Thus rockwool holds a large quantity of water and releases it easily.[^raviv-lieth-soilless-culture-afp] Peat has a total porosity of approximately 90 to 95% and a higher air-filled porosity of 18 to 25%.[^abad-2017-peat-use-horticulture]Coco coir is different from the other media. Saturated coco coir can keep approximately 22% air, and saturated rockwool keeps approximately 10%. As a result, it is not easy to apply too much water to coco.[^abad-2002-coir-dust-peat-substitute] DWC is at the end of this range. The roots hang in nutrient water and get oxygen only from a pump.
 
-> **Diagram.** Coco keeps the most air when wet, which is why it is hard to overwater. Peat is naturally airier than rockwool.[^abad-2002-coir-dust-peat-substitute][^raviv-lieth-soilless-culture-afp]
+> **Diagram.** Coco keeps the most air when it is wet. Thus it is not easy to apply too much water to coco. Peat has more air than rockwool.[^abad-2002-coir-dust-peat-substitute][^raviv-lieth-soilless-culture-afp]
 
-| Medium | Total porosity | Air-filled | Water-holding | Air when saturated |
+| Medium | Total porosity | Air-filled porosity | Water-holding capacity | Air when saturated |
 | --- | --- | --- | --- | --- |
-| Rockwool | ~96% | ~11% | ~91% | ~10% |
-| Coco coir | ~94-96% | high | high | ~22% |
-| Peat | ~90-95% | 18-25% | high | moderate |
+| Rockwool | approximately 96% | approximately 11% | approximately 91% | approximately 10% |
+| Coco coir | approximately 94 to 96% | high | high | approximately 22% |
+| Peat | approximately 90 to 95% | 18 to 25% | high | moderate |
 
-*After draining, irrigated rockwool holds roughly 80% solution, 15% air and 5% fibre by volume.[^raviv-lieth-soilless-culture-afp]*
+*After irrigation, when the rockwool drains, approximately 80% of the volume is solution, 15% is air and 5% is fiber.[^raviv-lieth-soilless-culture-afp]*
 
-> **KEY — The whole game in one line**
+> **KEY: The primary fact**
 >
-> More water means less air. The medium that keeps air around the roots even when wet is the one that forgives a heavy hand on the watering.
+> When there is more water, there is less air. A medium that keeps air around the roots when it is wet has a high tolerance for too much water.
 
-## Nutrient buffering by substrate
+## Buffering of nutrients in each substrate
 
-An inert medium like rockwool holds almost no nutrients of its own. Its native EC is negligible and its pH is alkaline, around 8, so whatever you feed is exactly what the roots get[^raviv-lieth-soilless-culture-afp]. That is precise, but unforgiving of a bad mix.
+An inert medium, for example rockwool, contains almost no nutrients. The EC of the medium is very low, and its pH is alkaline: approximately 8. Thus the feed that you apply is the feed that the roots get.[^raviv-lieth-soilless-culture-afp] The control of the feed is accurate, but the tolerance for an incorrect mix is low.
 
-Coco is the opposite. Its high CEC, roughly 40–100 meq/100g, buffers EC swings, but raw coco's exchange sites come loaded with potassium and sodium: when feed water flows through, those sites swap K and Na into the water and pull Ca and Mg out, removing the nutrients the plant needs most before they reach the root[^abad-2002-coir-dust-peat-substitute]. That causes a cal-mag deficiency unless the coco is buffered (pre-soaked in cal-mag) or bought pre-buffered[^cockson-2019-cannabis-nutrient-disorders].
+Coco is the opposite of rockwool. Coco has a high CEC of approximately 40 to 100 meq/100g, and this CEC buffers the changes in EC. But raw coco has exchange sites that hold potassium and sodium. When the feed water flows through the coco, the sites release potassium and sodium into the water. At the same time, they absorb calcium and magnesium from the water. Calcium and magnesium are the nutrients that are the most necessary for the plant, and the sites remove them before they go to the roots.[^abad-2002-coir-dust-peat-substitute]The result is a deficiency of calcium and magnesium, unless you buffer the coco (soak it in a solution of calcium and magnesium) or you use pre-buffered coco.[^cockson-2019-cannabis-nutrient-disorders]
 
-Living soil is the most forgiving of all. Microbes, organic matter and minerals hold the root zone near pH 5.2-6.5 over hours to days when biology is healthy. Many organic growers still do not acidify routine waterings, but avoid extreme alkaline water and monitor if problems appear. In DWC there is no buffer at all: the reservoir is the only thing standing between your plants and a mistake.
+Living soil has the highest tolerance for errors of all the media. Microbes, organic matter and minerals keep the pH of the root zone at approximately 5.2 to 6.5 for hours to days. This effect occurs when the soil biology is in good condition. Many organic growers do not decrease the pH of the water for usual irrigations. But they do not use very alkaline water, and they monitor the pH if problems occur.In DWC there is no buffer. The reservoir is the only protection from an error.
 
-> **Diagram.** From no cushion (DWC, rockwool) through coco's EC buffering to living soil, which self-regulates pH after every watering.
+> **Diagram.** The scale goes from no buffer (DWC and rockwool), to the EC buffering of coco, and then to living soil. Living soil corrects its pH after each irrigation.
 
-> **TIP — Match the cushion to your patience**
+> **TIP: Select a medium for the work that you do**
 >
-> If you cannot promise a perfect feed every time, pick a medium that forgives you. The more control a medium gives, the less it protects you from yourself.
+> If you cannot make the feed correct each time, select a medium with a high tolerance for errors. When a medium gives more control, it gives less protection from your errors.
 
-## Reuse, cost and environmental footprint
+## Number of uses, cost and effect on the environment
 
-Media differ enormously in how many runs you get. Rockwool can be re-used for up to about three years with proper sanitation, but it is energy-intensive to make and banned from landfill in some countries, which is why it has declined in parts of Europe and Japan[^joseph-2024-rockwool-recovery-composting]. Coco can be rinsed, re-buffered and re-used for a few cycles, then composted into garden soil, though most is shipped from overseas.
+The media are very different in the number of crops that you can get from each medium. You can use rockwool again for a maximum of approximately three years, if you do the sanitation correctly. But much energy is necessary to make rockwool, and in some areas the regulations do not let you put it in a landfill. As a result, growers in parts of Europe and Japan use less rockwool.[^joseph-2024-rockwool-recovery-composting]You can clean coco with water, buffer it again and use it again for some cycles. Then you can make compost from it for garden soil. But most coco moves a long distance to the grower.
 
-Living soil is the re-use champion. A recycled organic living soil (ROLS) bed is amended between runs and grows indefinitely, getting better with age. DWC has no medium to dispose of, but you replace the nutrient reservoir constantly and depend on continuous electricity for the pumps. Peat is cheap and effective but is a slowly renewing resource with a real carbon cost, which pushes many growers toward coco[^abad-2017-peat-use-horticulture].
+You can use living soil again more times than all the other media. You add amendments to a bed of recycled organic living soil (ROLS) between two crops. The bed has no limit on the number of crops, and it becomes better with time.DWC has no medium to discard. But you replace the nutrient reservoir frequently, and the pumps must have continuous electricity. Peat has a low cost and gives good results. But it becomes available again only after a very long time, and it has a carbon cost. As a result, many growers select coco.[^abad-2017-peat-use-horticulture]
 
-| Medium | Typical re-use | End-of-life | Cost tier | Environmental note |
+| Medium | Typical number of uses | End of life | Cost group | Effect on the environment |
 | --- | --- | --- | --- | --- |
-| Living soil | Indefinite (ROLS, amend) | Stays in service | Low after setup | Lowest waste once established |
-| Coco coir | A few re-buffered cycles | Composts into soil | Low-medium | High shipping footprint |
-| Peat | Single use typical | Compostable | Low | Slow to renew, carbon cost |
-| Rockwool | ~3 years with sanitation | Landfill-restricted in places | Medium | Energy-heavy to make |
-| DWC | No medium | Nothing to discard | Medium (gear + power) | Constant reservoir + 24/7 power |
+| Living soil | No limit (ROLS, with amendments) | The soil stays in the bed | Low after the setup | Lowest waste after the setup |
+| Coco coir | Some cycles, with buffering again | Becomes compost for soil | Low to moderate | Large effect on the environment, because the coco moves a long distance |
+| Peat | Usually one cycle | Can become compost | Low | Becomes available again slowly. Has a carbon cost. |
+| Rockwool | Approximately 3 years, with sanitation | Some areas do not let you put it in a landfill | Moderate | Much energy to make |
+| DWC | No medium | No medium to discard | Moderate (equipment and power) | Frequent replacement of the reservoir, power for 24 hours each day, 7 days each week |
 
-*There is no clean winner. The lowest-waste option (living soil) needs the most up-front work.*
+*No medium is the best in all columns. Living soil has the lowest waste, but it has the most work at the start.*
 
 ## Substrate selection
 
-Match the medium to your tolerance for fiddling, not to what wins a yield contest. The right answer is the one whose daily demands you will actually keep up with.
+Select a medium for the quantity of work that you accept. Do not select a medium because it gives the highest yield. The correct medium has tasks that you can continue to do each day.
 
-> **Diagram.** A simple ladder from most forgiving to most demanding. Most beginners should start at the top two rungs.
+> **Diagram.** The steps go from the medium with the highest tolerance for errors to the medium with the most work each day. We recommend that most new growers start at the top two steps.
 
-> **Diagram.** Living soil and quality soil mixes forgive the most. DWC forgives the least, so it is not a first grow.
+> **Diagram.** Living soil and soil mixes of good quality have the highest tolerance for errors. DWC has the lowest tolerance. Thus DWC is not a good medium for a first crop.
 
-> **WARN — Skip DWC for your first run**
+> **WARN: Do not use DWC for your first crop**
 >
-> DWC can give explosive growth, but a warm reservoir or a dead air pump can kill a plant in a day[^frontiers-2026-do-pythium-strawberry-nft]. Learn the basics in a more forgiving medium first.
+> DWC can cause very fast growth. But a warm reservoir or an air pump that stops can kill a plant in one day.[^frontiers-2026-do-pythium-strawberry-nft] First, use a medium with a higher tolerance for errors. Then you will know the basic procedures.
 
-## Setup and management by substrate
+## Setup and procedures for each substrate
 
-Every medium has one non-negotiable prep step. Get that right and the rest is routine.
+Each medium has one step to prepare the medium. You must do this step. When you do it correctly, the other tasks are easy.
 
-1. **Coco** — Rinse and pre-buffer: soak 8-24h in a cal-mag solution unless bought pre-buffered. Then feed every watering at pH 5.8-6.2 and low EC, watering little and often.
-2. **Rockwool** — Pre-soak the cubes or slabs at pH ~5.5 before transplanting, because dry rockwool sits near pH 8. After that, never let it go bone-dry.
-3. **Living soil** — Build or buy the bed, let it cycle a few weeks, then water-only. Leave pH alone unless symptoms appear.
-4. **DWC** — Hold the reservoir at 18–20 °C (65–68 °F), dissolved oxygen at 7–9 mg/L, pH 5.5–6.0, and run the air pump 24/7.
+1. **Coco**: Clean the coco with water. If the coco is not pre-buffered, soak it for 8 to 24 hours in a solution of calcium and magnesium. Then apply feed in each irrigation, at pH 5.8 to 6.2 and a low EC. Apply small quantities of water frequently.
+2. **Rockwool**: Before you transplant, soak the cubes or slabs in a solution at pH approximately 5.5. Dry rockwool has a pH of approximately 8. After this, do not let the rockwool become fully dry.
+3. **Living soil**: Make the bed, or get a bed from a supplier. Let the bed cycle for some weeks. Then apply only water. Do not adjust the pH, unless symptoms occur.
+4. **DWC**: Keep the reservoir at 18 to 20 °C (65 to 68 °F), the dissolved oxygen at 7 to 9 mg/L, and the pH at 5.5 to 6.0. Operate the air pump 24 hours each day, 7 days each week.
 
-| Medium | Prep step | Feed / water routine | pH target | Do not skip |
+| Medium | Step to prepare | Procedure for feed and water | pH target | Do not ignore |
 | --- | --- | --- | --- | --- |
-| Coco | Rinse + cal-mag buffer | Feed every watering, low EC | 5.8-6.2 | The pre-buffer soak |
-| Rockwool | Pre-soak at pH ~5.5 | Frequent, never dry out | 5.5-6.0 | Conditioning before planting |
-| Living soil | Cycle a few weeks | Water-only | Leave alone | Not pH-ing the water |
-| DWC | Set up pump + temperature control | Recirculating reservoir | 5.5-6.0 | Air pump on 24/7 |
+| Coco | Clean with water. Buffer with calcium and magnesium. | Apply feed in each irrigation, low EC | 5.8 to 6.2 | The pre-buffering step |
+| Rockwool | Soak at pH approximately 5.5 | Frequent irrigation. Do not let the rockwool become dry. | 5.5 to 6.0 | Soak the rockwool before you put plants in it |
+| Living soil | Cycle for some weeks | Only water | Do not adjust | Do not adjust the pH of the water |
+| DWC | Install the pump and the temperature control | Recirculating reservoir | 5.5 to 6.0 | Operate the air pump 24 hours each day, 7 days each week |
 
-*The single thing most beginners skip is the prep column. Each one is the difference between a smooth start and an early problem.[^cockson-2019-cannabis-nutrient-disorders]*
+*Most new growers do not do the step to prepare the medium. For each medium, this step is the difference between an easy start and a problem at the start.[^cockson-2019-cannabis-nutrient-disorders]*
 
-> **Diagram.** Warmer water holds less dissolved oxygen, but Pythium risk has no universal 23 °C cliff. Set the operating band from the crop and system, then monitor temperature, dissolved oxygen and root health.[^le-pythium-hydroponic-epidemiology-review][^frontiers-2026-do-pythium-strawberry-nft]
+> **Diagram.** Warm water holds less dissolved oxygen. But the risk of Pythium does not have one threshold of 23 °C for all conditions. Select the range of operation for the crop and the system. Then monitor the temperature, the dissolved oxygen and the condition of the roots.[^le-pythium-hydroponic-epidemiology-review][^frontiers-2026-do-pythium-strawberry-nft]
 
 ## Troubleshooting
 
-The classic beginner mistakes are medium-specific, and most look like something they are not.
+The usual errors of a new grower are different for each medium. Most of these errors show symptoms of a different problem.
 
-| Medium | Classic mistake | What you see | The fix |
+| Medium | Usual error | The effect that you see | Correction |
 | --- | --- | --- | --- |
-| Coco | Skipping the buffer step | Cal-mag deficiency: rusty spots, yellowing | Pre-buffer the coco, add cal-mag to early feeds |
-| Rockwool | Planting into dry cubes | Pale, locked-out plant (pH-8 lockout) | Pre-soak at pH ~5.5 before transplant |
-| Rockwool | Overwatering low-air matrix | Slow, soggy, suffocating roots | Fewer shots, let it breathe between |
-| Living soil | pH-ing water or adding salts | Stalled growth, dying microbes | Water-only, leave the pH alone |
-| DWC | Warm water or dead air pump | Root health can collapse quickly | Hold the validated temperature and aeration band; monitor DO |
+| Coco | No buffering step | Deficiency of calcium and magnesium: orange-brown marks on the leaves, and leaves with a yellow color | Do the pre-buffering of the coco. Add calcium and magnesium to the first feeds. |
+| Rockwool | You put the plants in dry cubes | Pale plant with pH-8 lockout | Soak at pH approximately 5.5 before you transplant |
+| Rockwool | Too much water in a medium with a small quantity of air | Slow growth. Wet roots that do not get sufficient oxygen. | Apply a smaller number of shots. Let air go into the rockwool between the shots. |
+| Living soil | You adjust the pH of the water or add salts | Growth stops, and the quantity of microbes decreases | Apply only water. Do not adjust the pH. |
+| DWC | Warm water, or an air pump that stops | The condition of the roots can become very bad in a short time | Keep the temperature and the aeration in the range that is correct for your system. Monitor the dissolved oxygen. |
 
-*The coco and rockwool rows are misread as feeding problems. They are really prep problems.[^cockson-2019-cannabis-nutrient-disorders][^le-pythium-hydroponic-epidemiology-review]*
+*Growers read the problems in the coco and rockwool rows incorrectly as problems with the feed. The cause of these problems is an error in the step to prepare the medium.[^cockson-2019-cannabis-nutrient-disorders][^le-pythium-hydroponic-epidemiology-review]*
 
-> **DANGER — DWC temperature and aeration**
+> **DANGER: DWC temperature and aeration**
 >
-> Warm water reduces the dissolved-oxygen margin, and a failed air pump removes active aeration. Neither condition causes root rot by itself; disease risk also depends on the crop, pathogen, inoculum and exposure time[^le-pythium-hydroponic-epidemiology-review][^frontiers-2026-do-pythium-strawberry-nft]. Monitor temperature, dissolved oxygen and roots, keep a backup air pump ready, and add a chiller when the system cannot hold its validated range.
+> Monitor the temperature, the dissolved oxygen and the roots. Make sure that a second air pump is available. If the system cannot keep the correct range, add a chiller.
+> Warm water decreases the headroom of dissolved oxygen. An air pump that stops removes the aeration from the pump. Root rot does not occur because of only one of these conditions. The risk of disease also changes with the crop, the pathogen, the inoculum and the exposure time.[^le-pythium-hydroponic-epidemiology-review][^frontiers-2026-do-pythium-strawberry-nft]
 
 ## Expected results and limitations
 
-No medium grows the plant for you. They differ in where the difficulty sits, not in whether there is difficulty. Living soil front-loads the work of building the bed, then runs hands-off. Coco and rockwool spread the work across daily feeding and monitoring. DWC concentrates the risk into a few parameters that must never slip.
+No medium does the work for you. In each medium, some tasks are not easy, and the media are different in the part of the procedure where these tasks occur. In living soil, most of the work is at the start, when you make the bed. After this, the bed operates with a very small quantity of work from you. In coco and rockwool, the work is the feed and the checks each day. In DWC, the risk is in a small number of parameters, and these parameters must stay in the correct range.
 
-> **Diagram.** Effort and risk climb from left to right. The ceiling rises too, but only the disciplined grower reaches it. A tidy soil grow beats a sloppy hydro one every time.
+> **Diagram.** The work and the risk increase from left to right. The maximum also increases, but only a careful grower gets it. A soil crop that you control correctly gives better results than a hydroponic crop that you control incorrectly, each time.
 
-Fed precisely, inert media like coco and rockwool can edge out soil on yield and speed in research comparisons[^xiong-2017-coir-rockwool-peat-tomato], and soilless cannabis responds strongly to dialed-in feeding[^bevan-2021-cannabis-npk-soilless]. But that only holds once your environment and irrigation are consistent.
+If the feed is accurate, inert media, for example coco and rockwool, can give a better yield and speed than soil. Tests that compare media show this result.[^xiong-2017-coir-rockwool-peat-tomato] The difference is small. In soilless cannabis, an accurate feed has a large effect on the results.[^bevan-2021-cannabis-npk-soilless] But this result is possible only when your environment and your irrigation are stable.
 
-> **KEY — How to actually get good**
+> **KEY: How to become a good grower**
 >
-> 1. **Pick the failure mode you can live with.** Every medium fails differently. Choose the one whose worst case you can prevent.
-> 2. **Run one full cycle before you judge it.** You learn a medium by living a whole grow in it, not by reading about it.
-> 3. **Change one variable next time.** Do not switch everything at once, or you will never know what helped.
+> 1. **Select the problem that you can accept.** Each medium causes a different problem. Select a medium when you can prevent the worst problem of that medium.
+> 2. **Do one full crop cycle in a medium before you make a decision about it.** You know a medium when you do one full crop in the medium. You do not know it when you only read about it.
+> 3. **Change one parameter in the next crop.** Do not change all the parameters at the same time, because you cannot know which change helped.
 
-Get one full run under your belt, then refine. When you are ready to drive a medium hard, the [coco crop-steering paper](coco-crop-steering.html) picks up where this one leaves off, and the [pH guide](ph-management.html) covers the number that quietly decides whether your feed even reaches the roots.
+First, do one full crop. Then make your procedures better. The [coco crop-steering paper](coco-crop-steering.html) continues from this paper when you want accurate control of a medium. The [pH paper](ph-management.html) gives information about the pH value. If the pH value is not correct, the feed does not go to the roots.
 
 ## References
 
-[^xiong-2017-coir-rockwool-peat-tomato]: Xiong J, Tian Y, Wang J, Liu W, Chen Q. Comparison of Coconut Coir, Rockwool, and Peat Cultivations for Tomato Production: Nutrient Balance, Plant Growth and Fruit Quality. Frontiers in Plant Science. 2017;8:1327. doi:10.3389/fpls.2017.01327 https://pmc.ncbi.nlm.nih.gov/articles/PMC5539188/ (peer-reviewed)
-[^abad-2002-coir-dust-peat-substitute]: Abad M, Noguera P, Puchades R, Maquieira A, Noguera V. Physico-chemical and chemical properties of some coconut coir dusts for use as a peat substitute for containerised ornamental plants. Bioresource Technology. 2002;82(3):241-245. doi:10.1016/S0960-8524(01)00189-4 https://www.sciencedirect.com/science/article/abs/pii/S0960852401001894 (peer-reviewed)
-[^bevan-2021-cannabis-npk-soilless]: Bevan L, Jones M, Zheng Y. Optimisation of Nitrogen, Phosphorus, and Potassium for Soilless Production of Cannabis sativa in the Flowering Stage Using Response Surface Analysis. Frontiers in Plant Science. 2021;12:764103. doi:10.3389/fpls.2021.764103 https://pmc.ncbi.nlm.nih.gov/articles/PMC8635921/ (peer-reviewed)
-[^cockson-2019-cannabis-nutrient-disorders]: Cockson P, Landis H, Smith T, Hicks K, Whipker BE. Characterization of Nutrient Disorders of Cannabis sativa. Applied Sciences. 2019;9(20):4432. doi:10.3390/app9204432 https://www.mdpi.com/2076-3417/9/20/4432 (peer-reviewed)
-[^le-pythium-hydroponic-epidemiology-review]: Le DH, et al. Etiology and epidemiology of Pythium root rot in hydroponic crops: current knowledge and perspectives. Summa Phytopathologica. (review) Available via SciELO Brazil. https://www.scielo.br/j/sp/a/cGCh3FGRRzGLVFJf577mypy/?lang=en (peer-reviewed)
-[^frontiers-2026-do-pythium-strawberry-nft]: Dissolved oxygen limitation and Pythium root rot in strawberry NFT systems: mechanisms, research gaps, and prospects for substrate-free production. Frontiers in Plant Science. 2026. doi:10.3389/fpls.2026.1829367 https://www.frontiersin.org/journals/plant-science/articles/10.3389/fpls.2026.1829367/full (peer-reviewed)
-[^raviv-lieth-soilless-culture-afp]: Raviv M, Lieth JH (eds.). Soilless Culture: Theory and Practice. Elsevier/Academic Press, 2008. ISBN 978-0-444-52975-6. (Chapter: Physical Characteristics of Soilless Media.) https://shop.elsevier.com/books/soilless-culture-theory-and-practice/raviv/978-0-444-52975-6 (peer-reviewed)
-[^joseph-2024-rockwool-recovery-composting]: Composting of recovered rock wool from hydroponics for the production of soil amendment. Environmental Science and Pollution Research. 2024. doi:10.1007/s11356-024-33041-2 https://link.springer.com/article/10.1007/s11356-024-33041-2 (peer-reviewed)
-[^abad-2017-peat-use-horticulture]: Peat Use in Horticulture. IntechOpen (peer-reviewed book chapter), 2018. doi:10.5772/intechopen.79611 https://www.intechopen.com/chapters/62735 (peer-reviewed)
+[^xiong-2017-coir-rockwool-peat-tomato]: Xiong J, Tian Y, Wang J, Liu W, Chen Q. Comparison of Coconut Coir, Rockwool, and Peat Cultivations for Tomato Production: Nutrient Balance, Plant Growth and Fruit Quality. Frontiers in Plant Science. 2017;8:1327. doi:10.3389/fpls.2017.01327 https://pmc.ncbi.nlm.nih.gov/articles/PMC5539188/ (source with peer review)
+[^abad-2002-coir-dust-peat-substitute]: Abad M, Noguera P, Puchades R, Maquieira A, Noguera V. Physico-chemical and chemical properties of some coconut coir dusts for use as a peat substitute for containerised ornamental plants. Bioresource Technology. 2002;82(3):241-245. doi:10.1016/S0960-8524(01)00189-4 https://www.sciencedirect.com/science/article/abs/pii/S0960852401001894 (source with peer review)
+[^bevan-2021-cannabis-npk-soilless]: Bevan L, Jones M, Zheng Y. Optimisation of Nitrogen, Phosphorus, and Potassium for Soilless Production of Cannabis sativa in the Flowering Stage Using Response Surface Analysis. Frontiers in Plant Science. 2021;12:764103. doi:10.3389/fpls.2021.764103 https://pmc.ncbi.nlm.nih.gov/articles/PMC8635921/ (source with peer review)
+[^cockson-2019-cannabis-nutrient-disorders]: Cockson P, Landis H, Smith T, Hicks K, Whipker BE. Characterization of Nutrient Disorders of Cannabis sativa. Applied Sciences. 2019;9(20):4432. doi:10.3390/app9204432 https://www.mdpi.com/2076-3417/9/20/4432 (source with peer review)
+[^le-pythium-hydroponic-epidemiology-review]: Le DH, et al. Etiology and epidemiology of Pythium root rot in hydroponic crops: current knowledge and perspectives. Summa Phytopathologica. (review) Available via SciELO Brazil. https://www.scielo.br/j/sp/a/cGCh3FGRRzGLVFJf577mypy/?lang=en (source with peer review)
+[^frontiers-2026-do-pythium-strawberry-nft]: Dissolved oxygen limitation and Pythium root rot in strawberry NFT systems: mechanisms, research gaps, and prospects for substrate-free production. Frontiers in Plant Science. 2026. doi:10.3389/fpls.2026.1829367 https://www.frontiersin.org/journals/plant-science/articles/10.3389/fpls.2026.1829367/full (source with peer review)
+[^raviv-lieth-soilless-culture-afp]: Raviv M, Lieth JH (eds.). Soilless Culture: Theory and Practice. Elsevier/Academic Press, 2008. ISBN 978-0-444-52975-6. (Chapter: Physical Characteristics of Soilless Media.) https://shop.elsevier.com/books/soilless-culture-theory-and-practice/raviv/978-0-444-52975-6 (source with peer review)
+[^joseph-2024-rockwool-recovery-composting]: Composting of recovered rock wool from hydroponics for the production of soil amendment. Environmental Science and Pollution Research. 2024. doi:10.1007/s11356-024-33041-2 https://link.springer.com/article/10.1007/s11356-024-33041-2 (source with peer review)
+[^abad-2017-peat-use-horticulture]: Peat Use in Horticulture. IntechOpen (peer-reviewed book chapter), 2018. doi:10.5772/intechopen.79611 https://www.intechopen.com/chapters/62735 (source with peer review)

@@ -1,10 +1,10 @@
 ---
 slug: "coco-crop-steering"
 title: "Precision coco cultivation: crop steering in coir"
-eyebrow: "Beginner · Coco & crop steering"
-summary: "Coco coir dries and wets predictably, which makes it the easiest substrate to steer. This paper explains what a root-zone sensor reads, how a daily wet-and-dry cycle works, and how to use dryback to push a plant toward leaves or toward flower. No prior root-zone experience needed."
+eyebrow: "Basic · Coco and crop steering"
+summary: "Coco coir is the easiest substrate for crop steering, because the wet and dry cycles give the same result each time. This paper gives information about the numbers that a root-zone sensor shows. It shows how the wet and dry cycle of one day operates. It also shows how to use dryback to cause more leaf growth or more flower growth. It is not necessary to know about the root zone before you read this paper."
 track: "Flowering"
-read_time: "~16 min read"
+read_time: "Approximately 16 min to read"
 diagrams: "5 diagrams"
 related: ["root-zone-teros12", "grow-room-systems", "tissue-culture"]
 url: "https://www.growlabs.nz/wiki/coco-crop-steering.html"
@@ -19,161 +19,162 @@ refs: [{"id": "abad2005-coir", "n": 1, "cite": "Abad M, Noguera P, Puchades R, M
 
 # Precision coco cultivation: crop steering in coir
 
-_Beginner · Coco & crop steering · ~16 min read_
+_Basic · Coco and crop steering · Approximately 16 min to read_
 
-> Coco coir dries and wets predictably, which makes it the easiest substrate to steer. This paper explains what a root-zone sensor reads, how a daily wet-and-dry cycle works, and how to use dryback to push a plant toward leaves or toward flower. No prior root-zone experience needed.
+> Coco coir is the easiest substrate for crop steering, because the wet and dry cycles give the same result each time. This paper gives information about the numbers that a root-zone sensor shows. It shows how the wet and dry cycle of one day operates. It also shows how to use dryback to cause more leaf growth or more flower growth. It is not necessary to know about the root zone before you read this paper.
 
 ## Purpose and scope
 
-‘Crop steering’ is a simple idea behind a jargon name: by controlling _when_ and _how much_ you water, you can push a plant to grow bigger and leafier, or to focus on dense, resinous flower. Coco coir is the easiest substrate to do this in, because it responds fast and predictably.
+‘Crop steering’ is an easy method. When you control _when_ and _how much_ water you apply, you can cause the plant to become larger with more leaves. Or you can cause the plant to make flowers with a high density and more resin. Coco coir is the easiest substrate for crop steering, because it becomes wet and dry quickly and the result is the same each time.
 
-You do not need to have measured a root zone before to use this guide. Every term is defined. By the end you will know what the numbers on a root-zone sensor mean, and how a daily wet-and-dry rhythm becomes a steering wheel for your plant.
+You can use this paper if you did not measure a root zone before. Each term has a definition. At the end, you will know how to read the numbers of a root-zone sensor. You will also know how to use the wet and dry rhythm of each day to control the plant.
 
-> **NOTE — Who this is for**
+> **NOTE: Who this paper is for**
 >
-> Anyone growing in coco, or thinking about it, who wants results they can repeat instead of watering ‘when it feels dry.’ Pairs with the [root-zone sensor](root-zone-teros12.html) and [grow-room systems](grow-room-systems.html) papers.
+> This paper is for each grower who uses coco or thinks about coco. These growers want results that they can get again. They do not want to apply water ‘when it feels dry.’ Use this paper with the [root-zone sensor](root-zone-teros12.html) paper and the [grow room systems](grow-room-systems.html) paper.
 
 ## Definitions
 
-You do not need to memorise these, just get the gist. Each one comes back in context.
+It is not necessary to know all of these terms at this time. It is sufficient to know the basic information of each term. Each term occurs again in this paper, with more information.
 
-**Coco coir** — A growing medium made from the fibrous husk of coconuts. It holds water like a sponge but still keeps lots of air around the roots.
+**Coco coir**: A substrate that comes from the fibers of coconut husk. It contains water, but it also keeps a large quantity of air around the roots.
 
-**Substrate** — The general word for whatever the roots grow in: coco, rockwool, peat or soil. [Glossary →](glossary.html#gl-substrate)
+**Substrate**: The general name for each material that contains the roots. Examples are coco, rockwool, peat and soil. [Glossary →](glossary.html#gl-substrate)
 
-**VWC (volumetric water content)** — How wet the root zone is, as a percentage of its volume. 60% VWC means water fills 60% of the pot's space.
+**VWC (volumetric water content)**: The quantity of water in the root zone, as a percentage of the volume of the root zone. If the VWC is 60%, water fills 60% of the space in the pot.
 
-**EC (electrical conductivity)** — A proxy for how much fertiliser salt is dissolved in the root zone. Higher EC means a stronger, saltier feed.
+**EC (electrical conductivity)**: An approximate measurement of the quantity of fertilizer salt in the water of the root zone. When the EC is higher, the feed is stronger and contains more salt.
 
-**Field capacity** — The wettest the substrate gets right after it drains: sponge full, excess dripped out. This is your daily ‘full’ mark.
+**Field capacity**: The maximum quantity of water that the substrate contains immediately after it drains. This quantity is the ‘full’ level for each day.
 
-**Dryback** — The drop in VWC between waterings as the plant drinks and the substrate dries. This is the single most important steering tool.
+**Dryback**: The quantity by which the VWC decreases between two irrigations. The plant uses water and the substrate becomes dry. Dryback is the most important control for crop steering.
 
-**Crop steering** — Deliberately nudging the plant vegetative (leafy) or generative (flower/resin) using irrigation, climate and light.
+**Crop steering**: A method to cause vegetative growth (leaves) or generative growth (flowers and resin) in the plant. The method uses irrigation, climate and light.
 
-**Shot** — One short irrigation pulse. Crop steering replaces one big daily soak with several small, timed shots.
+**Shot**: One short period of irrigation. Crop steering replaces one large irrigation each day with some small shots at set times.
 
 ## Coco substrate properties
 
-Coco holds a lot of water **and** a lot of air at the same time. At field capacity, roughly a fifth to a third of its volume is still air-filled pore space[^abad2005-coir]. That oxygen is what keeps roots healthy and lets you water often without drowning them.
+Coco contains a large quantity of water **and** a large quantity of air at the same time. At field capacity, approximately a fifth to a third of the volume of the coco is pore space that contains air[^abad2005-coir]. This air supplies oxygen to the roots. As a result, the roots stay in good condition, and you can apply water frequently. The roots continue to get oxygen.
 
-> **Diagram.** Coco holds more air at field capacity than peat, so roots get oxygen even when the medium is wet. Exact values vary with the pith-to-chip mix and pot size.[^abad2005-coir][^malik2025-media]
+> **Diagram.** At field capacity, coco contains more air than peat. Thus the roots get oxygen when the substrate is wet. The values are not the same for all coco. They change with the ratio of pith to pieces of husk and with the size of the pot.[^abad2005-coir][^malik2025-media]
 
-Coco also carries a mild electrical charge on its fibres that grabs and releases nutrients: its **cation exchange capacity**[^noguera2003-cec]. Think of it as a small battery for feed. It buffers swings, but it also means fresh coco will hold back some calcium and magnesium until it is ‘charged’ (pre-soaked in a cal-mag feed).
+The fibers of coco have a small electrical charge. The charge holds nutrients and releases them. This property is the **cation exchange capacity**[^noguera2003-cec]. As a result, the nutrients in the root zone change less when the feed changes.But new coco holds some of the calcium and magnesium of the feed. Thus the plant cannot use this calcium and magnesium. This continues until you soak the coco in a solution of calcium and magnesium.
 
-> **TIP — Charge your coco first**
+> **TIP: Soak new coco first**
 >
-> New coco can lock up calcium and magnesium for the first week or two. Pre-soak (buffer) it with a cal-mag solution before planting, or expect early deficiency spots until it settles.
+> New coco can hold calcium and magnesium in the first one or two weeks, and the plant cannot use them. Before you put the plants in the coco, soak the coco in a solution of calcium and magnesium. If you do not, deficiency marks can occur on the leaves at the start of the crop, until the coco is stable.
 
 ## Reading the root zone: VWC and EC
 
-A root-zone sensor reports two living numbers: **VWC** (how wet) and **EC** (how salty). Together they tell you what the plant is doing and what to do next.
+A root-zone sensor gives two numbers that change with time: **VWC** (the quantity of water) and **EC** (the quantity of salt). Together they show the condition of the plant and the next step for you.
 
-Here is the trick beginners miss: **as the substrate dries, the salt left behind gets more concentrated, so EC rises**. The water leaves and the fertiliser does not. Think of a glass of seawater left on a sunny bench—as the water evaporates, the same salt is left in less water, so it tastes saltier even though nothing was added. A sensor estimates the ‘pore-water EC’ the roots actually feel from the bulk reading, the moisture and the temperature[^hilhorst2000-ec]. That is why EC readings get unreliable once VWC falls into single digits.
+New growers frequently do not know this fact. **When the substrate dries, the concentration of salt in it increases and, as a result, the EC increases.** The quantity of water decreases, but the quantity of fertilizer does not decrease.The sensor uses the bulk EC reading, the moisture and the temperature to calculate an estimate of the ‘pore-water EC’[^hilhorst2000-ec]. The pore-water EC is the EC of the water that touches the roots. Thus the EC readings are not accurate when the VWC is less than 10%.
 
-> **Diagram.** A healthy daily curve: a controlled fall (the dryback) followed by a refill to field capacity. The size and timing of that fall is your steering lever.
+> **Diagram.** This curve shows one day for a plant in good condition. The VWC falls by a controlled quantity (the dryback). Then irrigation increases the VWC to field capacity. The size and the time of the dryback are your steering control.
 
-> **KEY — Two numbers, one story**
+> **KEY: Read the two numbers together**
 >
-> - **VWC falling** means the plant is drinking (good), until it falls too far and growth stalls.
-> - **EC drifting up** as VWC falls is normal. A big jump means the root zone is getting too salty, so water it.
-> - **EC drifting down** over days means the plant is eating salt faster than you feed, so raise feed EC.
+> - **When the VWC falls**, the plant uses water. This effect is good until the VWC falls too far. Then the growth of the plant stops.
+> - It is usual when **the EC increases slowly** as the VWC falls. If the EC increases by a large quantity in a short time, the root zone has too much salt. Thus apply water.
+> - **When the EC decreases slowly** during some days, the plant uses the salt faster than the feed supplies it. Thus increase the EC of the feed.
 
-## Dryback: your main steering lever
+## Dryback: your primary control for crop steering
 
-> **EVIDENCE — Grain of salt**
+> **EVIDENCE: Be careful with this information**
 >
-> **Borderline:** Caplan-style single late droughts are _related_ to generative drybacks but not the same experiment as multi-week daily sawteeth. Use dryback as a gentle bias; never wilt. Your probe-native % is not a universal media law.
+> **Limit of the data:** One drought in the last stage of the crop, as in the test of Caplan, is _related_ to generative drybacks. But it is not the same test as dryback cycles each day for many weeks. Use dryback to cause a small change in the plant. Do not let wilt occur. The percentage values of your probe are not the same for all substrates.
 
-A **dryback** is letting the root zone dry by a chosen amount before you water again. Think of a kitchen sponge: you decide how much to let it dry before running it under the tap again—barely damp versus nearly stiff are different choices, and the plant responds to each differently. A mild, controlled water deficit changes how the plant grows.
+A **dryback** is the quantity by which the root zone dries before you apply water again. You select this quantity. The effect on the plant is different for a small dryback and for a large dryback. A small, controlled water deficit changes the growth of the plant.
 
-When the root zone dries a little, the plant makes a stress hormone called **abscisic acid (ABA)**, which shifts it away from leafy growth and toward flowering and resin production[^welling2025-aba]. Done deliberately at the right time, controlled water-deficit has been shown to _raise_ cannabinoid content without costing yield[^caplan2019-drought].
+When the root zone dries by a small quantity, the plant makes a stress hormone. The name of this hormone is **abscisic acid (ABA)**. ABA decreases vegetative growth and increases the production of flowers and resin[^welling2025-aba]. The data show that a controlled water deficit at the correct time _increases_ the cannabinoid content, and the yield does not decrease[^caplan2019-drought].
 
-> **WARN — A dryback is not a drought**
+> **WARN: A dryback is not a drought**
 >
-> The difference is dose and timing. **Moderate**, measured drybacks that you stop on time preserve yield. A **severe** drought that runs too long crashes both yield and cannabinoids[^stack2024-drought]. Steer with a scalpel, not a hammer. Always water before the plant actually wilts.
+> The difference is the dose and the time. **Moderate** drybacks keep the yield when you measure them and stop them at the correct time. A **large** drought that continues for too long decreases the yield and the cannabinoids by a large quantity[^stack2024-drought]. Make small, careful changes. Always apply water before the plant shows wilt.
 
-Bigger drybacks push generative (flower). Smaller drybacks, kept wetter, push vegetative (leaves and size). That one dial, how far you let it dry, is most of crop steering.
+Larger drybacks give more generative growth (flowers). Smaller drybacks, which keep the substrate wetter, give more vegetative growth (leaves and size). This one control is most of crop steering: the quantity by which you let the root zone dry.
 
-## Daily irrigation cycle: P0–P3
+## Irrigation cycle of one day: P0–P3
 
-Growers split the lights-on day into four phases. You do not need fancy gear to think this way. It is a rhythm of dry, refill, maintain, dry.
+Growers divide the lights-on day into four phases. You can use this method without special equipment. The rhythm of the phases is: dry, fill again, keep full, and dry.
 
-> **Diagram.** P0 is the short morning dryback after lights-on, before the first feed, that gets the plant drinking. P1 is a series of small shots that climb the root zone back up. P2 holds it full while the plant works. P3 is the big overnight dryback that falls through the dark.
+> **Diagram.** P0 is the short dryback after lights-on and before the first feed. It makes the plant start to use water. In P1, small shots increase the VWC again. In P2, the shots keep the root zone full during the day. P3 is the large dryback during the night.
 
-> **Diagram.** A generative day (shown) lets the dryback run deeper and keeps shots smaller. A vegetative day keeps VWC higher and the dryback shallow.
+> **Diagram.** This chart shows a generative day. On a generative day, the dryback is larger and the shots are smaller. On a vegetative day, the VWC is higher and the dryback is smaller.
 
-| Phase | What it is | What it does |
+| Phase | Definition | Effect |
 | --- | --- | --- |
-| **P0** | After lights-on, before the first shot, no water | A short morning dryback that gets the plant drinking before feeding starts |
-| **P1** | A series of small shots after lights-on | Refills the root zone back to field capacity, gently |
-| **P2** | Maintenance shots | Holds VWC near full and flushes out built-up salt (EC control) |
-| **P3** | Last shot, then overnight | The big overnight dryback; sets the generative or vegetative tone for the day |
+| **P0** | The time after lights-on and before the first shot. You do not apply water. | A short dryback. It makes the plant start to use water before the first feed. |
+| **P1** | A number of small shots after lights-on | Fills the root zone again to field capacity, carefully |
+| **P2** | Maintenance shots | Keeps the VWC near full and flushes the salt that collects (EC control) |
+| **P3** | The last shot, then the night | The large dryback during the night. It sets the type of steering for the day: generative or vegetative. |
 
-*The P0–P3 framework. The numbers you choose for each phase are your steering recipe.*
+*The P0–P3 phases. The numbers that you select for each phase are your steering method.*
 
 ## Vegetative and generative steering
 
-‘Generative’ means flowers, density and resin. ‘Vegetative’ means leaves, stems and size. You bias the plant with a handful of levers that all work by changing how hard the plant has to work for water.
+‘Generative’ growth is the growth of flowers, density and resin. ‘Vegetative’ growth is the growth of leaves, stems and size. You change the growth of the plant with a small number of controls. All of these controls change how easily the plant gets water.
 
-| Lever | Push GENERATIVE (flower) | Push VEGETATIVE (leaf/size) |
+| Control | For GENERATIVE growth (flower) | For VEGETATIVE growth (leaves and size) |
 | --- | --- | --- |
-| Dryback | Bigger, longer drybacks | Smaller drybacks, stay wetter |
+| Dryback | Drybacks that are larger and longer | Smaller drybacks. The substrate stays wetter. |
 | Feed EC | Higher EC (more osmotic stress) | Lower EC |
-| Shots | Fewer, smaller, later start | Earlier, more frequent, bigger |
-| Day/night temp | Cooler nights, wider day-night gap | Warmer, flatter temps |
-| VPD / humidity | Drier air (higher VPD) | More humid air (lower VPD) |
+| Shots | A smaller number of shots, smaller shots, and a longer time before the first shot | More frequent shots, larger shots, and a shorter time before the first shot |
+| Day and night temperature | A lower night temperature and a larger difference between day and night | Higher temperatures and a smaller difference between day and night |
+| VPD and humidity | Drier air (higher VPD) | Air with more humidity (lower VPD) |
 
-*Most levers work through **transpiration**—the process by which a plant pulls water up from its roots and releases it through the leaf surface, similar to how skin releases sweat. The faster a plant transpires, the more it drinks. Use one or two levers at a time, not all at once.*
+*Most of these controls change the plant through **transpiration**. Transpiration occurs when a plant pulls water up from the roots and releases it through the surface of the leaves. When the plant transpires faster, it uses more water. Use one or two controls at a time. Do not use all of the controls at the same time.*
 
-Raising feed EC makes the root-zone solution more concentrated than the water inside the plant. The plant has to push harder to pull water in across that gap—this is **osmotic stress**. A modest EC increase tightens generative growth; push it too high and growth shuts down.
+When you increase the EC of the feed, the solution in the root zone has a higher concentration than the water in the plant. The plant must pull harder to get water because of the difference in concentration. This effect is **osmotic stress**. If you increase the EC by a moderate quantity, the generative growth becomes stronger. If you increase the EC too much, the growth stops.
 
-Temperature is on that list because the gap between day and night temperature controls stretch. A warm day with a cool night keeps plants compact. A warm night makes them stretch[^moe1995-dif]. The dryness of the air around the leaves controls how fast the plant transpires. Think of a hot dry wind on your skin after a swim—the wind does not add moisture, it draws it out faster. **Vapour pressure deficit (VPD)** is the technical name for this, measured in kPa: the gap between how much water vapour the air could hold at that temperature and how much it actually holds. Higher VPD means more demanding air. Above a certain point the leaf pores close to limit water loss, and transpiration slows even though the air is still dry[^grossiord2020-vpd].
+Temperature is in the table above because the difference between day temperature and night temperature controls stretch. A warm day and a cool night give less stretch. A warm night gives more stretch[^moe1995-dif].The air around the leaves controls the rate of transpiration. When the air is drier, the plant transpires faster. **Vapor pressure deficit (VPD)** is the measurement of how dry the air is. You measure VPD in kPa. VPD is the difference between the quantity of water vapor that the air can hold at that temperature and the quantity that it holds. When the VPD is higher, the air removes more water from the plant.When the VPD is more than some value, the pores of the leaf close to keep the water in the leaf. Then the transpiration decreases, but the air continues to be dry[^grossiord2020-vpd].
 
-> **DANGER — Change one thing at a time**
+> **DANGER: Change one control at a time**
 >
-> Every lever interacts. If you yank the dryback, raise EC, drop humidity and cool the night all at once, you will not know what helped or hurt, and you may tip a steer into real stress. Move one dial, watch for a few days, then adjust.
+> All controls have an effect on each other. Do not make large changes to the dryback, the EC, the humidity and the night temperature at the same time. Then you cannot know which change was good or bad, and the plant can get too much stress.
+> Change one control. Monitor the plant for some days. Then adjust the controls.
 
 ## Flowering steering by week
 
-Flowering indoors usually runs about 8–10 weeks once you flip the lights to a 12-hour night[^moher2023-photoperiod]. The steering changes across that arc:
+The flowering stage in a grow room usually continues for approximately 8 to 10 weeks after you change the light cycle to a 12-hour night[^moher2023-photoperiod]. The steering changes during these weeks:
 
-1. **Late veg** — Steer vegetative: keep VWC high, drybacks small, EC moderate. Build a big, healthy plant and root system.
-2. **Flower wk 1–2 (stretch)** — Plants nearly double in height. Keep nights cooler and the day-night gap modest to limit stretch, and begin gentle generative drybacks.
-3. **Flower wk 3–6 (build)** — Peak generative steering: firm drybacks, higher EC, hold P2 full to feed bulking flowers.
-4. **Flower wk 7+ (ripen)** — Ease off. A controlled late water-deficit can lift potency, but stop before stress shows.
-5. **Finish (ease EC; long plain-water flush has weak quality evidence)** — Lower EC feeds in the final stretch. Let the plant wind down cleanly.
+1. **End of the vegetative stage**: Use vegetative steering: keep the VWC high, keep the drybacks small, and keep the EC moderate. Make the plant and the root system large and in good condition.
+2. **Weeks 1 to 2 of flowering (stretch)**: The plants become almost two times as high. To decrease stretch, keep the night temperature lower and the difference between day and night temperature moderate. In this stage, start to use small generative drybacks.
+3. **Weeks 3 to 6 of flowering (flowers become larger)**: Use the maximum generative steering. Use strong drybacks and a higher EC. In P2, keep the root zone full to supply feed to the flowers while they become larger.
+4. **From week 7 of flowering (ripening)**: Use less steering. A controlled water deficit in this stage can increase the potency. But stop the deficit before the plant shows stress.
+5. **Finish (decrease the EC. The data that show better quality from a long flush with only water are weak)**: In the last part of the crop, apply feed with a lower EC. Let the plant complete its growth slowly and without problems.
 
 ## Troubleshooting
 
-| Symptom | Likely cause | What to do |
+| Symptom | Possible cause | Correction |
 | --- | --- | --- |
-| EC climbing every day, plant sulking | Salt building up, drybacks too hard or not enough flush | Bigger P2 shots to flush, lower feed EC a touch |
-| VWC barely drops all day | Overwatering or plant not drinking (cold/dark/sick) | Fewer or smaller shots, check root health, temps, light |
-| Leaves clawing, tips burnt | Feed EC too high for conditions | Drop EC, ensure enough water volume per shot |
-| Tall, stretchy, floppy plants | Too vegetative: warm nights, small drybacks | Cooler nights, wider day-night gap, firmer drybacks |
-| Early cal-mag deficiency | Fresh coco not buffered | Pre-charge coco, add cal-mag to early feeds |
-| Wilting between shots | Dryback gone too far (drought, not steer) | Water sooner, shorten P0/P3. Never let it actually wilt |
+| The EC increases each day, and the plant is not in good condition | Salt collects. The drybacks are too large, or the flush is not sufficient. | Use larger shots in P2 to flush the salt. Decrease the EC of the feed by a small quantity. |
+| The VWC falls by only a small quantity during the day | Too much irrigation, or the plant does not use water because of disease, low light, or a low temperature | Use a smaller number of shots, or smaller shots. Do a check of the condition of the roots, the temperature and the light. |
+| Damaged leaf tips and leaves that bend down | The EC of the feed is too high for the conditions | Decrease the EC. Make sure that each shot has a sufficient volume of water. |
+| The plants are high, with too much stretch and weak stems | The plants are too vegetative because the nights are warm and the drybacks are small | Decrease the night temperature. Increase the difference between day and night temperature. Use larger drybacks. |
+| Calcium and magnesium deficiency in the first weeks | New coco that you did not soak in calcium and magnesium | Before you use the coco, soak it in a solution of calcium and magnesium. Add calcium and magnesium to the first feeds. |
+| The plant shows wilt between shots | The dryback is too large. It is a drought and not crop steering. | Apply water after a smaller dryback. Make P0 and P3 shorter. Do not let the plant show wilt. |
 
 ## Expected results and limitations
 
-> **KEY — Three rules**
+> **KEY: Three important points**
 >
-> 1. **There is no universal recipe.** The right VWC, EC and dryback numbers depend on your strain, pot size, climate and light. Start from the ranges here and tune to _your_ plants.
-> 2. **Steering is a bias, not a switch.** You are nudging odds over days, not flipping a plant overnight.
-> 3. **The root zone is only one lever.** Light, temperature, humidity and airflow all push the same plant. Read the [systems guide](grow-room-systems.html) next.
+> 1. **There is no one set of numbers that is correct for all rooms.** The correct numbers for VWC, EC and dryback are different if the cultivar, the pot size, the climate or the light is different. Start with the ranges in this paper and adjust them for _your_ plants.
+> 2. **Steering makes a result more possible, but it does not give a fast change.** The effect occurs during some days. You do not change a plant in one night.
+> 3. **The root zone is only one control.** Light, temperature, humidity and airflow all have an effect on the same plant. After this paper, read the [grow room systems](grow-room-systems.html) paper.
 
-Get a sensor on the root zone, learn what one normal day looks like on your setup, then change one thing at a time. That method—sensor first, baseline second, one change at a time—is what makes coco consistent across runs.
+Put a sensor in the root zone. Find the baseline, which is the values of one usual day in your system. Then change one control at a time. This method has three steps: a sensor first, a baseline second, and one change at a time. The method makes coco give the same results in each crop.
 
 ## References
 
-[^abad2005-coir]: Abad M, Noguera P, Puchades R, Maquieira A, Noguera V (2005). Physical properties of various coconut coir dusts compared to peat. HortScience 40(7):2138-2144. https://doi.org/10.21273/HORTSCI.40.7.2138 (peer-reviewed)
-[^noguera2003-cec]: Noguera P, Abad M, Puchades R, Maquieira A, Noguera V (2003). Influence of particle size on physical and chemical properties of coconut coir dust as container medium. Commun. Soil Sci. Plant Anal. 34(3-4):593-605. https://doi.org/10.1081/CSS-120017842 (peer-reviewed)
-[^malik2025-media]: Malik M, Tlustoš P (2025). Soilless growing media for cannabis cultivation. Agriculture 15(18):1955. https://www.mdpi.com/2077-0472/15/18/1955 (peer-reviewed)
-[^hilhorst2000-ec]: Hilhorst MA (2000). A pore water conductivity sensor. Soil Sci. Soc. Am. J. 64(6):1922-1925. https://doi.org/10.2136/sssaj2000.6461922x (peer-reviewed)
-[^caplan2019-drought]: Caplan D, Dixon M, Zheng Y (2019). Increasing inflorescence dry weight and cannabinoid content in medical cannabis using controlled drought stress. HortScience 54(5):964-969. https://doi.org/10.21273/HORTSCI13510-18 (peer-reviewed)
-[^stack2024-drought]: Stack GM, Cala AR, Quade MA, et al. (2024). Severe drought significantly reduces floral hemp (Cannabis sativa L.) yield and cannabinoid content but moderate drought does not. Ind. Crops Prod. 209:117974. https://doi.org/10.1016/j.indcrop.2024.117974 (peer-reviewed)
-[^welling2025-aba]: Welling MT, et al. (2025). Regulation of secondary metabolism in Cannabis sativa L. by abscisic acid and water deficit during early flower development. Plant Stress 17:100968. https://doi.org/10.1016/j.stress.2025.100968 (peer-reviewed)
-[^grossiord2020-vpd]: Grossiord C, Buckley TN, Cernusak LA, et al. (2020). Plant responses to rising vapor pressure deficit. New Phytologist 226(6):1550-1566. https://doi.org/10.1111/nph.16485 (peer-reviewed)
-[^moe1995-dif]: Myster J, Moe R (1995). Effect of diurnal temperature alternations on plant morphology in some greenhouse crops, a mini review. Scientia Horticulturae 62(4):205-215. https://doi.org/10.1016/0304-4238(95)00783-P (peer-reviewed)
-[^moher2023-photoperiod]: Moher M, Llewellyn D, Jones M, Zheng Y (2023). Is twelve hours really the optimum photoperiod for promoting flowering in indoor-grown cultivars of Cannabis sativa? Plants 12(14):2605. https://doi.org/10.3390/plants12142605 (peer-reviewed)
+[^abad2005-coir]: Abad M, Noguera P, Puchades R, Maquieira A, Noguera V (2005). Physical properties of various coconut coir dusts compared to peat. HortScience 40(7):2138-2144. https://doi.org/10.21273/HORTSCI.40.7.2138 (source with peer review)
+[^noguera2003-cec]: Noguera P, Abad M, Puchades R, Maquieira A, Noguera V (2003). Influence of particle size on physical and chemical properties of coconut coir dust as container medium. Commun. Soil Sci. Plant Anal. 34(3-4):593-605. https://doi.org/10.1081/CSS-120017842 (source with peer review)
+[^malik2025-media]: Malik M, Tlustoš P (2025). Soilless growing media for cannabis cultivation. Agriculture 15(18):1955. https://www.mdpi.com/2077-0472/15/18/1955 (source with peer review)
+[^hilhorst2000-ec]: Hilhorst MA (2000). A pore water conductivity sensor. Soil Sci. Soc. Am. J. 64(6):1922-1925. https://doi.org/10.2136/sssaj2000.6461922x (source with peer review)
+[^caplan2019-drought]: Caplan D, Dixon M, Zheng Y (2019). Increasing inflorescence dry weight and cannabinoid content in medical cannabis using controlled drought stress. HortScience 54(5):964-969. https://doi.org/10.21273/HORTSCI13510-18 (source with peer review)
+[^stack2024-drought]: Stack GM, Cala AR, Quade MA, et al. (2024). Severe drought significantly reduces floral hemp (Cannabis sativa L.) yield and cannabinoid content but moderate drought does not. Ind. Crops Prod. 209:117974. https://doi.org/10.1016/j.indcrop.2024.117974 (source with peer review)
+[^welling2025-aba]: Welling MT, et al. (2025). Regulation of secondary metabolism in Cannabis sativa L. by abscisic acid and water deficit during early flower development. Plant Stress 17:100968. https://doi.org/10.1016/j.stress.2025.100968 (source with peer review)
+[^grossiord2020-vpd]: Grossiord C, Buckley TN, Cernusak LA, et al. (2020). Plant responses to rising vapor pressure deficit. New Phytologist 226(6):1550-1566. https://doi.org/10.1111/nph.16485 (source with peer review)
+[^moe1995-dif]: Myster J, Moe R (1995). Effect of diurnal temperature alternations on plant morphology in some greenhouse crops, a mini review. Scientia Horticulturae 62(4):205-215. https://doi.org/10.1016/0304-4238(95)00783-P (source with peer review)
+[^moher2023-photoperiod]: Moher M, Llewellyn D, Jones M, Zheng Y (2023). Is twelve hours really the optimum photoperiod for promoting flowering in indoor-grown cultivars of Cannabis sativa? Plants 12(14):2605. https://doi.org/10.3390/plants12142605 (source with peer review)

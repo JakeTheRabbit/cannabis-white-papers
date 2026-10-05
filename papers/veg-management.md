@@ -1,10 +1,10 @@
 ---
 slug: "veg-management"
-title: "Vegetative management: build the frame, then flip"
-eyebrow: "Veg · Timing"
-summary: "This paper shows you how to calculate the right veg length for your room — from plant count, pot size and canopy area — and explains why almost every week-3 flower problem is either prevented or locked in during veg. By the end you will have the decision chain to set a flip day from a spec, not a guess."
+title: "The vegetative stage: make the frame, then do the flip"
+eyebrow: "Vegetative · Flip time"
+summary: "This paper shows you how to calculate the correct number of days of the vegetative stage for your room. You use the plant count, the pot size and the canopy area. The paper also shows that, in the vegetative stage, you prevent almost all problems in week 3 of flowering, or you cause them. At the end, you have a sequence of decisions that gives the flip day from a specification and not from an estimate."
 track: "Vegetative growth"
-read_time: "~14 min read"
+read_time: "~14 min to read"
 diagrams: "11 diagrams"
 related: ["defoliation-training", "light-acclimation"]
 url: "https://www.growlabs.nz/wiki/veg-management.html"
@@ -17,304 +17,309 @@ attribution: "The Cannabis White Papers"
 refs: [{"id": "dang-2022-photoperiod-switch-meta", "n": 1, "cite": "Dang M, Arachchige NM, Campbell LG (2022). Optimizing photoperiod switch to maximize floral biomass and cannabinoid yield in Cannabis sativa L.: a meta-analytic quantile regression approach. Frontiers in Plant Science 12:797425. (Vegetative durations across 26 studies spanned 13-180 days, median 30; floral biomass favoured short vegetative periods while cannabinoid concentration peaked with longer ones.)", "url": "https://www.frontiersin.org/articles/10.3389/fpls.2021.797425/full", "peer": true}, {"id": "schober-2024-veg-duration-density", "n": 2, "cite": "Schober T, Präger A, Hartung J, Graeff-Hönninger S (2024). The effects of plant density and duration of vegetative growth phase on agronomic traits of medicinal cannabis (Cannabis sativa L.): a regression analysis. PLoS ONE 19(12):e0315951. (Per-plant inflorescence yield rose ~3.3 g per extra week of veg across 1-4 weeks; higher density cut yield per plant while area yields held or rose.)", "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0315951", "peer": true}, {"id": "danziger-2022-planting-density", "n": 3, "cite": "Danziger N, Bernstein N. Too Dense or Not Too Dense: Higher Planting Density Reduces Cannabinoid Uniformity but Increases Yield/Area in Drug-Type Medical Cannabis. Frontiers in Plant Science. 2022;13:713481. doi:10.3389/fpls.2022.713481", "url": "https://doi.org/10.3389/fpls.2022.713481", "peer": true}, {"id": "backer-2019-yield-gap", "n": 4, "cite": "Backer R, Schwinghamer T, Rosenbaum P, McCarty V, Eichhorn Bilodeau S, Lyu D, Ahmed MB, Robinson G, Lefsrud M, Wilkins O, Smith DL (2019). Closing the yield gap for cannabis: a meta-analysis of factors determining cannabis yield. Frontiers in Plant Science 10:495. (Plant density reduced yield per plant but was not an effective predictor of yield per square metre.)", "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6491815/", "peer": true}, {"id": "poorter-2012-pot-size", "n": 5, "cite": "Poorter H, Bühler J, van Dusschoten D, Climent J, Postma JA (2012). Pot size matters: a meta-analysis of the effects of rooting volume on plant growth. Functional Plant Biology 39(11):839-850. (Across 65 studies, doubling pot size increased biomass ~43% on average; small pots throttle growth mainly via reduced photosynthesis per unit leaf area.)", "url": "https://www.publish.csiro.au/fp/fp12049", "peer": true}, {"id": "gwe-flowering-stretch", "n": 6, "cite": "Nebula Haze. How to prepare for the flowering stretch (flip at roughly half your available final height; stretch magnitude varies strongly by strain). GrowWeedEasy, industry cultivation guide.", "url": "https://www.growweedeasy.com/flowering-stretch", "peer": false}, {"id": "ilgm-stretch-guide", "n": 7, "cite": "I Love Growing Marijuana (ILGM). Stretching cannabis plants: what it is and why it matters (stretch largely complete around day 21 of flower; some plants double or triple in height; sativa-leaning cultivars stretch more). Industry cultivation guide.", "url": "https://ilgm.com/resources/guides/stretching-cannabis-plants", "peer": false}, {"id": "rqs-topping-guide", "n": 8, "cite": "Royal Queen Seeds. Topped vs non-topped cannabis plants — is topping worth it? (Top at 4-6 nodes, ~3-4 weeks into veg, cutting between the 4th and 5th node; allow 7-14 days of recovery and extend veg accordingly.) Industry cultivation guide.", "url": "https://www.royalqueenseeds.com/us/blog-topped-vs-non-topped-cannabis-plants-is-topping-worth-it-n1532", "peer": false}, {"id": "moher-2022-cannabis-vegetative-light-intensity-morphology", "n": 9, "cite": "Moher, M., Llewellyn, D., Jones, M., & Zheng, Y. (2022). Light intensity can be used to modify the growth and morphological characteristics of cannabis during the vegetative stage of indoor production. Industrial Crops and Products, 183, 114909. https://doi.org/10.1016/j.indcrop.2022.114909", "url": "https://www.sciencedirect.com/science/article/abs/pii/S0926669022003922", "peer": true}, {"id": "jin-2019-indoor-review", "n": 10, "cite": "Jin D, Jin S, Chen J (2019). Cannabis indoor growing conditions, management practices, and post-harvest treatment: a review. American Journal of Plant Sciences 10(6):925-946. (Optimum growth ~25-30 °C; RH ~75% for juveniles stepping down to ~55-60% through veg and flower, i.e. VPD ~0.8 rising to ~1.3-1.4 kPa.)", "url": "https://www.scirp.org/journal/paperinformation?paperid=93052", "peer": true}, {"id": "chandra2008-photo", "n": 11, "cite": "Chandra S, Lata H, Khan IA, ElSohly MA (2008). Photosynthetic response of Cannabis sativa L. to variations in photosynthetic photon flux densities, temperature and CO2 conditions. Physiol. Mol. Biol. Plants 14(4):299-306.", "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3550641/", "peer": true}, {"id": "moher2023-photoperiod", "n": 12, "cite": "Moher M, Llewellyn D, Jones M, Zheng Y (2023). Is twelve hours really the optimum photoperiod for promoting flowering in indoor-grown cultivars of Cannabis sativa? Plants 12(14):2605.", "url": "https://doi.org/10.3390/plants12142605", "peer": true}, {"id": "saloner-2020-cannabis-nitrogen-supply", "n": 13, "cite": "Saloner, A., & Bernstein, N. (2020). Response of Medical Cannabis (Cannabis sativa L.) to Nitrogen Supply Under Long Photoperiod. Frontiers in Plant Science, 11, 572293. https://doi.org/10.3389/fpls.2020.572293", "url": "https://www.frontiersin.org/journals/plant-science/articles/10.3389/fpls.2020.572293/full", "peer": true}, {"id": "grodan-growguide-steering", "n": 14, "cite": "Grodan. Grow Guide, Cannabis Edition — Chapter 3: introduction to crop steering (vegetative-phase irrigation as small frequent shots ~3% of substrate volume, 5-15% runoff fraction, avoiding drybacks below ~25-30% WC in blocks after transplant). Manufacturer technical guide.", "url": "https://www.grodan101.com/syssiteassets/downloads/grow-guide/chapter-3---introduction-to-crop-steering.pdf", "peer": false}]
 ---
 
-# Vegetative management: build the frame, then flip
+# The vegetative stage: make the frame, then do the flip
 
-_Veg · Timing · ~14 min read_
+_Vegetative · Flip time · ~14 min to read_
 
-> This paper shows you how to calculate the right veg length for your room — from plant count, pot size and canopy area — and explains why almost every week-3 flower problem is either prevented or locked in during veg. By the end you will have the decision chain to set a flip day from a spec, not a guess.
+> This paper shows you how to calculate the correct number of days of the vegetative stage for your room. You use the plant count, the pot size and the canopy area. The paper also shows that, in the vegetative stage, you prevent almost all problems in week 3 of flowering, or you cause them. At the end, you have a sequence of decisions that gives the flip day from a specification and not from an estimate.
 
 ## Purpose and scope
 
-By the time you flip to 12/12, most of what the harvest can be is already locked in: how many bud sites exist, how much leaf powers them, whether the canopy is level, and whether the roots can fund the stretch. Flower doesn't build any of that. Veg does. Flower just runs the machine that veg built.
+Before the flip to 12/12, the vegetative stage makes four items. These four items give most of the possible harvest. The first two items are the number of bud sites and the quantity of leaf that gives energy to the bud sites. The other two items are the uniformity of the canopy and the capacity of the roots to supply the water and nutrients for the stretch. Flowering does not make these items. Flowering uses the items that the vegetative stage made.
 
-Because veg feels uneventful (no buds, nothing to weigh) beginners treat it as a waiting room and operators treat it as a buffer. Both are expensive. Across published indoor trials, growers run veg anywhere from about 2 to 26 weeks, with a median around 30 days[^dang-2022-photoperiod-switch-meta]. That spread isn't confusion. Different rooms genuinely need different veg lengths, and this paper is about calculating yours instead of guessing it.
+The vegetative stage has no buds and no product to weigh. Thus new growers wait in the vegetative stage, and operators use the stage as a buffer. These two methods have a high cost.The data of tests of indoor cultivation in other papers show that growers keep plants in the vegetative stage for approximately 2 to 26 weeks. The median is approximately 30 days[^dang-2022-photoperiod-switch-meta]. The wide range is not an error. Different rooms have different correct numbers of days. This paper shows you how to calculate the number for your room, and not to make an estimate.
 
-The working logic: veg exists to build a **frame** (roots, stems, nodes and leaf) sized to the share of canopy each plant must fill. Plant count, pot size and target canopy fix the frame; the frame fixes the days. Everything else (stretch budgets, topping timing, environment, feed, root-zone gates) hangs off that.
+The function of the vegetative stage is to make a **frame**. The frame is the roots, the stems, the nodes and the leaves of the plant. The frame must have the correct size to fill the canopy area of each plant. The plant count, the pot size and the target canopy give the size of the frame.The size of the frame gives the number of days. All other decisions in this paper start from the frame. These decisions are the maximum flip height, the time of the topping, the climate, the feed and the condition of the root zone.
 
-> **Diagram.** The four things veg builds. Every day of veg should be buying one of them; a day that isn't is rent.
+> **Diagram.** The four parts that the vegetative stage makes. We recommend that each day of the vegetative stage makes one of the four parts. A day that does not make one of them gives no result.
 
-> **NOTE — Who this is for**
+> **NOTE: Growers who use this paper**
 >
-> Anyone who has ever flipped 'when it looked big enough', from a first tent to a licensed room. Pairs with [defoliation & training](defoliation-training.html) (the how of cutting and bending) and [light acclimation](light-acclimation.html) (the how of raising PPFD). This paper is the _when and how long_.
+> This paper is for all growers who did the flip because they thought that the size of the plants was sufficient. The growers can have a first tent or a room that has a license. Use this paper with [defoliation and training](defoliation-training.html), which tells you how to cut and bend the plants. Also use [light acclimation](light-acclimation.html), which tells you how to increase the PPFD. This paper tells you _when_ to do the flip and _for how many days_ to continue the vegetative stage.
 
 ## Definitions
 
-Eight terms carry this whole guide. Skim them once; each comes back in context.
+This paper uses eight terms many times. Read the terms one time. Each term occurs again in the sections that follow.
 
-**Flip** — Switching the light schedule from long days (usually 18 hours on) to 12/12, which triggers flowering in photoperiod cannabis. 'Flip day' ends veg.
+**Flip**: The change of the light cycle from long days (usually 18 hours of light) to 12/12. The change starts flowering in photoperiod cannabis. The flip day completes the vegetative stage.
 
-**Node / internode** — A node is the point on a stem where leaves and side branches emerge; the internode is the bare stem between two nodes. Node count is how plant age and topping height are measured. Short internodes = a compact, strong plant.
+**Node / internode**: A node is the point on a stem where the leaves and the side branches attach. The internode is the part of the stem between two nodes, and it has no leaves. You measure the age of the plant and the topping height with the node count. A plant with short internodes is a compact plant and is strong.
 
-**Apical dominance** — The plant's habit of pouring growth into one main tip so it outraces the side branches. Topping and training exist to break it.
+**Apical dominance**: The primary tip of the plant has most of the growth. Thus the primary tip becomes longer more quickly than the side branches. Topping and training stop this effect.
 
-**Topping / FIM** — Topping removes the main growing tip entirely, forcing two new leaders from the node below. FIM cuts through most of the tip instead, giving 3-4 messier leaders.
+**Topping / FIM**: Topping removes all of the primary growing tip. As a result, two new leaders (primary stems) start at the node below the removed tip. FIM cuts through most of the tip, but it does not remove all of the tip. FIM gives 3 to 4 leaders with lower uniformity.
 
-**Stretch** — The rapid vertical growth in the first 1-3 weeks after the flip, when many cultivars grow to 1.5-2× (sometimes 3×) their flip height before vertical growth stops.
+**Stretch**: The fast growth in height in the first 1 to 3 weeks after the flip. In this time, many cultivars increase in height to 1.5 to 2× the height at the flip (some cultivars to 3×). Then the growth in height stops.
 
-**Canopy** — The top layer of the crop that actually intercepts light, measured as area (m²), fullness (how few gaps) and levelness (how even the height).
+**Canopy**: The top layer of the crop that receives the light. You measure the canopy by three values: the area (m²), the number of gaps (a full canopy has a small number of gaps) and the uniformity (the tops have the same height).
 
-**Root-bound** — A root system that has run out of container: roots circle the pot wall, the pot needs constant watering, and growth stalls. A root-bound plant cannot fund a stretch.
+**Root-bound**: A root system that has no more space in the container. The roots go around the wall of the pot, you must apply water to the pot frequently, and the growth stops. A root-bound plant cannot supply the water and nutrients for the stretch.
 
-**EC (electrical conductivity)** — The strength of the nutrient solution, in mS/cm. Higher EC = more dissolved fertiliser. Veg feeds ramp EC up as the plant grows.
+**EC (electrical conductivity)**: The strength of the nutrient solution, in mS/cm. When the EC is higher, the solution has more fertilizer. In the vegetative stage, you increase the EC of the feed when the plant becomes larger.
 
-## Vegetative growth objectives
+## Function of vegetative growth
 
-Flowering doesn't create structure. Buds form at nodes and branch tips that already exist when you flip, plus whatever the stretch adds in its first weeks. So the size of the frame at flip is a hard ceiling on what one plant can carry. This shows up cleanly in trial data: in a controlled study that varied veg length from 1 to 4 weeks, each extra week of veg added about **3.3 g of dry flower per plant**, near-linearly[^schober-2024-veg-duration-density].
+Flowering does not make structure. The buds start at the nodes and branch tips that the plant has at the flip. The buds also start at the new nodes and tips that the stretch adds in the first weeks. Thus the size of the frame at the flip is the maximum limit for the quantity of flower that one plant can hold.The data from a test show this. In this controlled test, the time of the vegetative stage was different for each group, from 1 to 4 weeks. Each week more in the vegetative stage added approximately **3.3 g of dry flower for each plant**, and the relation was almost linear[^schober-2024-veg-duration-density].
 
-> **Diagram.** Per-plant yield climbs roughly linearly with veg length in the tested range, bigger frame, more to carry[^schober-2024-veg-duration-density]. The catch: per-plant is not the same metric as per-room.
+> **Diagram.** In the range of the test, the yield for each plant increases almost linearly with the number of days of the vegetative stage[^schober-2024-veg-duration-density]. A larger frame holds more flower. But the yield for each plant is not the same as the yield for each room.
 
-Here is the twist that makes veg length a real decision instead of 'more is better': **the room doesn't pay you per plant, it pays you per square metre (sq ft).** A full canopy of many small plants and a full canopy of a few big plants intercept roughly the same light. In trial data, packing plants tighter cuts yield per plant while yield per area holds or climbs[^danziger-2022-planting-density], and across studies plant density is a poor predictor of yield per m² (ft²)[^backer-2019-yield-gap]. Meta-analysis of photoperiod-switch timing points the same way: at fixed area, short veg periods maximise floral output per unit time, because the canopy refills faster with more, smaller frames[^dang-2022-photoperiod-switch-meta].
+The number of days of the vegetative stage is a decision, because more days are not always better. **The room gives yield for each m² (sq ft), and not for each plant.** A full canopy of many small plants and a full canopy of a small number of large plants receive approximately the same quantity of light. In test data, a higher plant density gives a lower yield for each plant, but the yield for each area stays the same or increases[^danziger-2022-planting-density]. In the data of many tests, the plant density is a weak indicator of the yield for each m² (ft²)[^backer-2019-yield-gap].A meta-analysis of the time of the flip gives the same result. For the same area, a short vegetative stage gives the maximum quantity of flower in each unit of time. The cause is that many small frames fill the canopy more quickly[^dang-2022-photoperiod-switch-meta].
 
-So veg length is not a lever you push for yield. It is the variable that _balances the equation_: however many plants you run, each must build a frame that fills its share of the canopy, no more, no less. Few plants, big shares, long veg. Many plants, small shares, short veg. Same canopy either way; what changes is turns per year, plant count overhead, and risk (more on that in the economics section).
+The number of days of the vegetative stage is not a control that you use to increase the yield. The number of days must _agree with the plant count_. Each plant must make a frame that fills its part of the canopy, not more and not less.A small number of plants has a large canopy area for each plant and a long vegetative stage. A large number of plants has a small canopy area for each plant and a short vegetative stage. The canopy is the same in the two conditions. The number of crop cycles each year, the work for the plant count and the risk are different. The section on the cost of the vegetative stage gives more information.
 
-> **KEY — The core answer**
+> **KEY: The primary instruction**
 >
-> **Veg for exactly as long as it takes each plant to build its share of the canopy at or below the maximum flip height, then flip.** Every day short of that is unfilled canopy in flower; every day past it is a lost fraction of a turn.
+> **Keep the plants in the vegetative stage until the canopy area of each plant is full. The height of each plant must be the maximum flip height or less. Then do the flip.** Each day of the vegetative stage that is too short gives an area of the canopy that is not full in flowering. Each day that is too long removes a fraction of a crop cycle.
 
-## Vegetative duration: plant count, pot size, canopy and days
+## Days of the vegetative stage: plant count, pot size and canopy
 
-Work the chain in this order. Days come out the far end. They are never the input.
+Do the steps in this sequence. The number of days is the last result. Do not use the number of days as an input.
 
-1. **Fix the plant count** — Licence condition, tag budget, risk appetite or plan, whatever binds first. This is usually the least negotiable number in the room.
-2. **Measure the canopy** — Bench or tray area you intend to fill wall-to-wall, in m² (ft²). Divide by plant count: that is each plant's share. The frame it must build.
-3. **Match the pot to the frame** — A root zone can only carry so much plant. Small shares run in 4–6 L (1.1–1.6 gal); half-square-metre shares want 10–30 L (2.6–7.9 gal); full-square-metre trees want 30 L+ (7.9 gal+) or beds (next section for why).
-4. **Pick the training that makes the shape** — Untopped single colas for small shares; one topping round plus tie-downs for standard shares; staged topping rounds for trees. See [defoliation & training](defoliation-training.html).
-5. **Veg until the gate, then flip** — Flip when the canopy is ~80-90% filled, level, and at or below your maximum flip height (stretch section), a state, not a date. The days this takes _is_ your veg duration; write it down for next run.
+1. **Find the plant count**: Use the lowest of these limits. The limits are the license condition, the number of tags, your risk limit, and the number that you select. You usually cannot change this number easily in the room.
+2. **Measure the canopy**: Measure the area of the bench or tray that you will fill from wall to wall, in m² (ft²). Divide the area by the plant count. The result is the canopy area of each plant. Each plant must make a frame for this area.
+3. **Select a pot for the frame**: The root zone has a limit for the size of the plant. For a small canopy area, use a pot of 4–6 L (1.1–1.6 gal). For a canopy area of half a square meter, use 10–30 L (2.6–7.9 gal). For large plants with a full square meter, use 30 L or more (7.9 gal or more) or beds. The next section gives more information.
+4. **Select the training that makes the shape**: For a small canopy area, use plants with one cola and no topping. For a usual canopy area, do the topping one time and low-stress training (bend the stems to the side and attach them). For large plants, do the topping in stages. Refer to [defoliation and training](defoliation-training.html).
+5. **Continue until the conditions are correct, then do the flip**: Do the flip when the canopy is approximately 80 to 90% full and the tops have the same height. The height of the plants must be the maximum flip height or less (refer to the section on the stretch). Use this condition of the canopy and not a date. The number of days until this condition _is_ the number of days of your vegetative stage. Record this number for the next crop cycle.
 
-> **Diagram.** The decision chain. Plant count, canopy area and pot size are the inputs; veg days are the output. The three archetypes at the bottom cover most indoor rooms.
+> **Diagram.** The sequence of decisions. The plant count, the canopy area and the pot size are the inputs. The number of days of the vegetative stage is the output. The three types at the bottom are correct for most grow rooms.
 
-| Archetype | Plants per m² | Pot / block | Typical veg | Training |
+| Type | Plants for each m² | Pot or block | Usual vegetative stage | Training |
 | --- | --- | --- | --- | --- |
-| Sea of green (SOG) | 10-20+ | 4-6 L | ~7-14 days | None, single colas |
-| Topped standard | 2-4 | 10-30 L | ~14-28 days | Top once + tie-downs + net |
-| Trees / count-capped | ~1 | 30 L+ or beds | 35+ days | Staged topping rounds + net |
+| Sea of green (SOG) | 10-20+ | 4-6 L | approximately 7 to 14 days | No training. One cola for each plant. |
+| Usual topped plants | 2-4 | 10-30 L | approximately 14 to 28 days | One topping, low-stress training and a net |
+| Large plants, with a plant count that has a limit | approximately 1 | 30 L or more, or beds | 35 days or more | Topping in stages and a net |
 
-*Hedged conventions, not lab constants, cultivar vigour, environment and transplant size all shift the day counts. The structure of the trade-off is what published density and veg-length trials support[^schober-2024-veg-duration-density][^danziger-2022-planting-density].*
+*These values are approximate grower methods and not accurate values from a laboratory. The growth rate of the cultivar, the environment and the size of the transplant change the number of days. The tests of plant density and of the days of the vegetative stage in other papers agree with the structure of this relation[^schober-2024-veg-duration-density][^danziger-2022-planting-density].*
 
-One nuance from the meta-analysis worth knowing: floral _biomass_ favoured short veg, but cannabinoid _concentration_ peaked with longer veg (roughly 6-7 weeks) in the pooled data[^dang-2022-photoperiod-switch-meta]. Treat that as a weak, cultivar-dependent signal, not a target. Potency is mostly genetics and flowering conditions. It mainly says: if you're forced into long veg by a plant-count cap, you are not obviously giving quality away.
+The meta-analysis also gives this information. A short vegetative stage gave more flower _biomass_. But the _concentration_ of cannabinoids was at the maximum with a longer vegetative stage (approximately 6 to 7 weeks) in the data from all the tests[^dang-2022-photoperiod-switch-meta].This signal is weak and it is different for different cultivars. Do not use it as a target. The genetics and the conditions of flowering give most of the potency. If a limit of the plant count causes a long vegetative stage, the data do not show that the quality is lower.
 
-## Pot size and vegetative duration
+## Pot size and days of the vegetative stage
 
-Roots are the half of the frame you can't see, and they cap everything. Each leaf works like a kitchen in reverse: instead of burning fuel to produce heat, it uses captured light to manufacture sugar. That process is called photosynthesis, and it is what powers every gram of new tissue the plant adds. When the root zone runs out of room, that manufacturing line is the first thing to slow — the leaf still looks green but it processes less. A meta-analysis of 65 container studies found that, on average, **doubling root-zone volume increased plant biomass by ~43%**, and that cramped roots throttle growth mainly by cutting photosynthesis per unit leaf area, not just by limiting water[^poorter-2012-pot-size]. A root-bound plant is like a thermostat stuck at a lower setting: from the outside the plant looks fine, but the growth rate has been quietly throttled.
+The roots are the half of the frame that you cannot see, and they give the limit for all the growth. Each leaf uses light to make sugar by photosynthesis. Photosynthesis supplies the energy for each gram of new tissue that the plant makes. When the root zone has no more space, photosynthesis is the first function that becomes slower. The leaf stays green, but it makes less sugar.A meta-analysis of 65 container tests showed that, on average, **two times the volume of the root zone increased the plant biomass by approximately 43%**. Roots in a small volume decrease the growth mostly because the photosynthesis for each unit of leaf area decreases. The lower supply of water is not the only cause[^poorter-2012-pot-size]. A root-bound plant has a lower growth rate, but the plant does not always show a sign of the problem.
 
-> **Diagram.** Container volume is a growth ceiling, and small pots hit it fast, mostly through reduced photosynthesis, which no fertiliser fixes[^poorter-2012-pot-size].
+> **Diagram.** The volume of the container is a limit for growth. In a small pot, the limit occurs more quickly, mostly because photosynthesis decreases. More fertilizer cannot correct this problem[^poorter-2012-pot-size].
 
-The practical consequence: **every pot size buys a limited veg window** before the plant outgrows it. Run past the window and you either transplant again (fine, if planned) or flip a root-bound plant (never fine). The windows below are working conventions, vigorous cultivars in warm rooms burn through them faster:
+**Each pot size gives a maximum time of vegetative growth** before the plant becomes too large for the pot. After this time, you can transplant the plant again, or you can do the flip with a root-bound plant. A second transplant is correct if it is in your procedure. Do not do the flip with a root-bound plant. The times below are usual methods of growers. Cultivars with a high growth rate in warm rooms use the time more quickly:
 
-| Container | Comfortable veg window | Suits |
+| Container | Correct time in the vegetative stage | For these plants |
 | --- | --- | --- |
-| 4-6 L pot / 4″ block | ~1-2 weeks | SOG single colas |
-| 10-15 L pot / block on slab | ~2-4 weeks | Topped standard plants |
-| 25-30 L pot | ~4-6 weeks | Large topped plants, small trees |
-| 45 L+ / beds | 6+ weeks | Trees, mother-adjacent frames |
+| 4-6 L pot / 4″ block | approximately 1 to 2 weeks | SOG plants with one cola |
+| 10-15 L pot / block on slab | approximately 2 to 4 weeks | Usual topped plants |
+| 25-30 L pot | approximately 4 to 6 weeks | Large topped plants and large plants |
+| 45 L or more / beds | 6 weeks or more | Very large plants and frames of the size of a mother plant |
 
-*Hedged convention: the window ends when roots reach the walls and the pot needs watering faster than your system wants to water. Match the pot to the planned days, or shorten the days to match the pot.*
+*These times are grower methods. The time ends when the roots touch the walls of the pot and you must apply water more frequently than your system does. Select a pot for the number of days of the vegetative stage. You can also decrease the number of days for the pot that you have.*
 
-> **DANGER — Never flip root-bound**
+> **DANGER: Do not do the flip with a root-bound plant**
 >
-> Stretch roughly doubles water and nutrient demand in three weeks, precisely when a root-bound pot can least supply it. The result is wilting between irrigations, early deficiency in week 2-3 of flower, and small, airy bud on a plant that looked fine at flip. If roots are circling and the pot dries in hours, pot up and give it a week _before_ the flip, not after.
+> Transplant the plant to a larger pot if the roots go around the wall of the pot. Also transplant the plant if the pot dries in a small number of hours. Do this transplant one week _before_ the flip, and not after the flip.
+> The stretch increases the quantity of water and nutrients that the plant uses to approximately two times in three weeks. A root-bound pot cannot supply this quantity. The plant then shows wilt between the irrigations. A deficiency occurs in weeks 2 to 3 of flowering. The buds are small and have low density. The plant can be in good condition at the flip.
 
-## Planning flip height from ceiling clearance
+## Calculate the flip height from the clearance of the ceiling
 
-The most common veg sin isn't vegging too short. It's flipping too tall. After the flip, most cultivars surge vertically for 1-3 weeks, with the stretch largely finished around day 21 of flower[^ilgm-stretch-guide]. How much they stretch is strongly cultivar-dependent: compact indica-leaning plants might add ~50%, typical hybrids roughly double, and stretchy sativa-leaning cultivars can double or more[^gwe-flowering-stretch][^ilgm-stretch-guide]. Final height ≈ flip height × 1.5-2 for most plants you'll run. And you must budget for it before you flip, because you cannot un-stretch a plant into a fixed ceiling.
+The most frequent error in the vegetative stage is not a stage that is too short. The error is a flip at a height that is too large. After the flip, most cultivars increase quickly in height for 1 to 3 weeks. The stretch almost stops at approximately day 21 of flowering[^ilgm-stretch-guide].The stretch is very different for each cultivar. Cultivars with low stretch and mostly indica genetics can add approximately 50% to their height. Usual hybrids increase their height to approximately two times. Cultivars with high stretch and mostly sativa genetics can increase their height to two times or more[^gwe-flowering-stretch][^ilgm-stretch-guide].For most plants, the height after the stretch is approximately 1.5 to 2 times the flip height. This number is the stretch ratio of the cultivar. Calculate the stretch before the flip. After the flip, you cannot decrease the height of the plant, and the ceiling does not move.
 
-The arithmetic is three lines. Take the room height, subtract the fixture, its hang gap and the clearance the canopy needs below it (commonly ~60–90 cm (24–35 in) all-in for LED, more for HPS), subtract pot-plus-bench height (~30 cm (12 in)). What's left is **usable plant height H**. Divide H by your cultivar's stretch multiplier: that is your **maximum flip height**. Unknown cultivar? Assume ×2 — the industry default of 'flip at half your available height'[^gwe-flowering-stretch].
+There are three steps. First, subtract the fixture, the gap above it and the clearance to the canopy from the height of the room. In total, these values are usually approximately 60–90 cm (24–35 in) for LED, and more for HPS. Then subtract the height of the pot and the bench, approximately 30 cm (12 in). The result is the **available plant height H**.Divide H by the stretch ratio of your cultivar. The result is the **maximum flip height**. If you do not know the stretch ratio of the cultivar, use ×2. Growers usually do the flip at half of the available height[^gwe-flowering-stretch].
 
-> **Diagram.** Work backwards: ceiling minus fixture stack minus bench gives usable height H; H divided by the stretch multiplier gives max flip height. The same 45 cm (18 in) flip is safe at ×1.5-2.0 and in the fixture at ×2.5.
+> **Diagram.** The procedure starts at the ceiling. Subtract the height of the fixture, the gaps and the bench. The result is the available height H. H divided by the stretch ratio is the maximum flip height. A flip at 45 cm (18 in) is safe at ×1.5 to 2.0. At ×2.5, the plant touches the fixture.
 
-| Cultivar type | Typical multiplier | Max flip height (H = 100 cm) |
+| Cultivar type | Usual stretch ratio | Maximum flip height (H = 100 cm) |
 | --- | --- | --- |
-| Compact / indica-leaning | ×1.5 | ≤65 cm |
-| Typical hybrid | ×2.0 | ≤50 cm |
-| Stretchy / sativa-leaning | ×2.5+ | ≤40 cm |
+| Low stretch, mostly indica | ×1.5 | A maximum of 65 cm |
+| Usual hybrid | ×2.0 | A maximum of 50 cm |
+| High stretch, mostly sativa | ×2.5 or more | A maximum of 40 cm |
 
-*Multipliers are hedged industry conventions[^gwe-flowering-stretch][^ilgm-stretch-guide], cultivars vary widely, and spectrum, temperature regime and topping history all shift stretch. Your own last-run number beats any table.*
+*The stretch ratios are approximate grower methods[^gwe-flowering-stretch][^ilgm-stretch-guide]. The ratio is very different for different cultivars. The spectrum, the temperature conditions and the topping that you did before also change the stretch. The number that you measured in the last crop cycle is more accurate than a table.*
 
-> **TIP — Turn the multiplier into data**
+> **TIP: Measure the stretch ratio of your plants**
 >
-> Tag one plant per cultivar. Measure height on flip day and again at day 21 of flower. Divide. That ratio, written on the strain card, converts next cycle's stretch from a gamble into a plan. After two runs you'll trust it more than any published range, and you should.
+> Attach a label to one plant of each cultivar. Measure the height of the plant on the flip day and again on day 21 of flowering. Divide the second height by the first height. Write the ratio in the record of the cultivar. With this ratio, you know the stretch for the next crop cycle. After two crop cycles, we recommend that you use the ratio of your plants and not a range from other papers.
 
-## Topping and FIM: timing and node counts
+## Topping and FIM: time and number of nodes
 
-Topping is the veg tool that turns one dominant tip into two even leaders and a wider, flatter frame. The full how-and-why lives in [defoliation & training](defoliation-training.html). What belongs in the _timing_ paper is the schedule cost, because every cut spends veg days.
+Topping changes the one tip that has apical dominance into two equal leaders and a wider frame with a more level top. The paper [defoliation and training](defoliation-training.html) gives all the information about the procedure and the cause. This paper is about the _time_ of the topping and its cost in days, because each topping uses days of the vegetative stage.
 
-The working rule: top when the plant has **4-6 true nodes**, typically 3-4 weeks into veg from a rooted clone or seedling, cutting above the 4th node (between the 4th and 5th), higher wastes the effect, lower removes too much plant and risks a stall[^rqs-topping-guide]. Count nodes from the bottom, and never count the cotyledons (the first smooth round leaves). Expect **7-14 days of recovery** before growth speed returns, and add that time to the veg plan explicitly[^rqs-topping-guide].
+Do the topping when the plant has **4 to 6 nodes**. A clone that has roots, or a seedling, usually has this number of nodes 3 to 4 weeks after the start of the vegetative stage. Cut above node 4 (between node 4 and node 5). If you cut higher, the topping has less effect. If you cut lower, you remove too much of the plant, and it is possible that the growth stops[^rqs-topping-guide].Count the nodes from the bottom. Do not count the cotyledons (the first leaves, which have a smooth, circular shape). The recovery after the topping is **7 to 14 days**. During the recovery, the growth rate is low. Add the days of the recovery to the days of the vegetative stage[^rqs-topping-guide].
 
-> **Diagram.** Left: the cut goes above node 4 on a plant showing 4-6 nodes. Right: two even leaders rebuild from the top remaining node. The 7-14 day recovery bill[^rqs-topping-guide] is paid in veg days, plan it, don't discover it.
+> **Diagram.** Left: you cut above node 4 on a plant that has 4 to 6 nodes. Right: two equal leaders make new growth from the top node that stays. The recovery of 7 to 14 days uses days of the vegetative stage[^rqs-topping-guide]. Add these days to the days of the vegetative stage before you do the topping.
 
-**FIM** (cutting through the top ~¾ of the tip rather than below it) trades predictability for speed: 3-4 leaders instead of 2, less height lost, less even regrowth. Fine for tents and trees; most commercial rooms prefer the symmetry of a clean top.
+**FIM** cuts through approximately ¾ of the tip, from the top. It does not cut below the tip. FIM is faster, but you know the result less accurately than with topping. FIM gives 3 to 4 leaders and not 2 leaders.The plant keeps more height, but the new growth has less uniformity. FIM is good for tents and for large plants. Most commercial rooms use topping, because it gives two leaders that are equal.
 
-1. **SOG:** don't top at all. The whole point is one fast cola per plant.
-2. **Topped standard:** one round, at 4-6 nodes, done at least 10-14 days before the planned flip so recovery finishes in veg[^rqs-topping-guide].
-3. **Trees:** staged rounds, top, let leaders recover, top the leaders. Each round adds roughly 1-2 weeks of veg; three rounds is a month-plus of structure time.
-4. **Never** top during the stretch: the plant is re-organising for flower and responds unevenly, and you've spent recovery time you no longer have.
+1. **SOG:** Do not do the topping. The primary function of SOG is one fast cola for each plant.
+2. **Usual topped plants:** Do the topping one time at 4 to 6 nodes. Do it a minimum of 10 to 14 days before the flip. Then the plant completes the recovery in the vegetative stage[^rqs-topping-guide].
+3. **Large plants:** Do the topping in stages. Do the topping, wait for the recovery of the leaders, then do the topping of the leaders. Each stage adds approximately 1 to 2 weeks to the vegetative stage. Three stages are more than one month of time for the structure.
+4. **Do not** do the topping during the stretch. The plant changes its structure for flowering, and the new growth is different on different parts of the plant. Also, you use days of recovery that you do not have.
 
-> **WARN — The last-cut deadline**
+> **WARN: The last day for topping**
 >
-> Count backwards from flip day: **flip minus 10-14 days is the last day for any major cut.** Topping later than that means either postponing the flip (a real cost, decide it deliberately) or flipping mid-recovery with uneven leaders, which the stretch then amplifies into an uneven canopy for the whole flower run.
+> Subtract 10 to 14 days from the flip day. **The result is the last day to do the topping, or to cut a large part of the plant.** If you do the topping after this day, there are two possible results. The first result: you wait before you do the flip. The second result: you do the flip during the recovery.
+> If you wait, you have a cost. Make this decision carefully. If you do the flip during the recovery, the leaders have different sizes. The stretch increases the difference, and the uniformity of the canopy is low for all of flowering.
 
-## Canopy establishment in vegetative growth
+## Canopy in vegetative growth
 
-Light height is a room-level setting: one fixture height serves every plant under it. That makes the _tallest_ plant the dictator, raise the light to protect it and every shorter plant is suddenly under-lit; hold the light down and the tall plant bleaches and heat-stresses. An uneven canopy at flip locks in a PPFD spread of hundreds of µmol between neighbouring plants for the entire flower cycle.
+The height of the light is one setting for the room: one fixture height for all the plants below it. The height of the light must agree with the plant that has the _largest_ height. If you increase the height of the light to prevent damage to this plant, all the shorter plants receive light that is not sufficient. If you keep the light at a low height, this plant shows bleaching and heat stress. At the flip, the canopy can have no uniformity. Then plants near each other have a PPFD difference of more than 100 µmol for all the flowering cycle.
 
-> **Diagram.** One tall plant forces the fixture up and the whole room's light map apart; a canopy levelled in veg puts every top in the same band. Uniformity is set before the flip, not after it.
+> **Diagram.** One plant with a large height increases the height of the fixture. As a result, the PPFD map of the room has large differences. A canopy with equal height from the vegetative stage puts all the tops in the same range of PPFD. You make the uniformity before the flip and not after the flip.
 
-Uniformity is also a commercial property, not just an agronomic one: denser, less uniform canopies measurably increase plant-to-plant and within-plant variability in cannabinoid content. Which is grade risk in any market that tests[^danziger-2022-planting-density]. Levelling is done in veg with boring tools, in this order:
+Uniformity is also important for commercial rooms, and not only for the growth of the plant. A canopy with a higher density and a lower uniformity increases the variation of the cannabinoid content. The variation occurs between plants and in one plant, and you can measure it[^danziger-2022-planting-density]. This variation is a risk to the grade when laboratory tests are necessary. To make the height of the canopy equal in the vegetative stage, use these easy methods in this sequence:
 
-- **Start level:** one cultivar per light zone, clones from the same cohort (rooted within a few days of each other), graded by size at transplant. A 30%-undersized runt never catches up, cull it or bench it separately.
-- **Position:** naturally taller plants to the edges and corners where PPFD falls off; short plants centre-stage under the hot spot.
-- **Tie down, don't cut down:** from mid-veg, bend and tie the tall leaders sideways (low-stress training) so short neighbours close the gap, no recovery time spent.
-- **Net on before stretch:** the trellis goes over the canopy in late veg or at flip while everything is short, then tops get tucked through the squares during weeks 1-3 of flower.
+- **Start with the same height.** Use one cultivar in each light zone and clones from one group. The difference between the times when the clones made roots is a small number of days. Put plants of the same size together at the transplant. A plant that is 30% smaller than the group does not become the same size as the group. Remove this plant or put it on a different bench.
+- **Position:** Put the cultivars with the largest height at the edges and the corners, where the PPFD decreases. Put the short plants in the middle, below the area with the highest PPFD.
+- **Bend the plants down and do not cut them.** From the middle of the vegetative stage, bend the leaders with the largest height to the side. Attach them (low-stress training). Thus the short plants near them fill the gap, and you do not use recovery time.
+- **Install the net before the stretch.** Put the trellis net above the canopy in the last part of the vegetative stage, or at the flip. All the plants are short at this time. In weeks 1 to 3 of flowering, put the tops through the openings of the net.
 
-> **NOTE — A trellis is a plan, not a rescue**
+> **NOTE: A net is for the stretch, not for a correction**
 >
-> Nets installed in week 3 of flower (over sticky, branched, tangled plants) break branches and cost hours. The net's job is to receive the stretch as it happens. If it isn't on by flip day, it mostly isn't going on.
+> In week 3 of flowering, the plants have resin and many branches that touch each other. If you install a net at this time, the net breaks branches and the work uses many hours. The net must hold the plants while the stretch occurs. If you do not install the net on the flip day, you usually do not install it.
 
 ## Vegetative climate targets
 
-Veg wants a slightly warmer, wetter, gentler room than flower: the plant is all leaf, shallow-rooted early on, and building tissue rather than ripening it. The table gives working bands; the two figures below unpack the ones people argue about. One row — VPD — needs a brief introduction before you hit the numbers. At any given temperature, air can hold only so much water vapour. The gap between what the air actually holds and its maximum is how hungry that air is for moisture right now. Picture a wet sponge left on a warm counter: on a dry day it dries in an hour; on a humid day it stays damp for hours. The plant leaf is the sponge. Vapour-pressure deficit (VPD, measured in kPa) is that gap — the bigger the number, the harder the air pulls on the leaf. The target steps from around 0.8 kPa early in veg up to 1.0–1.3 kPa as the plant matures; the table below carries the full context.
+In the vegetative stage, the room has a higher temperature, a higher humidity and less stress to the plant than in flowering. The differences are small. The cause is that the plant is almost all leaf, and the roots are not deep in the first stage. The plant makes tissue, and the ripening of the tissue does not start.The table gives the ranges that you can use. The two figures below give more information about the temperature and the PPFD.Read this information about the row for VPD before the numbers. At a given temperature, air can contain only a maximum quantity of water vapor. The difference between the vapor in the air and this maximum shows how much more vapor the air can receive at this time. This difference is the vapor pressure deficit (VPD), in kPa.When the VPD increases, the air removes water from the leaf more quickly. The target VPD is approximately 0.8 kPa at the start of the vegetative stage, and it increases to 1.0–1.3 kPa before the flip. The table below gives more information.
 
-| Parameter | Early veg (fresh transplant) | Late veg (pre-flip) | Basis |
+| Condition | Start of the vegetative stage (new transplant) | End of the vegetative stage (before the flip) | Source |
 | --- | --- | --- | --- |
-| Air temp, lights on | 25-28 °C | 25-30 °C | Cannabis leaf photosynthesis peaks around 25-30 °C[^chandra2008-photo][^jin-2019-indoor-review] |
-| Relative humidity | 65-75% | 55-65% | Review targets: ~75% for juveniles stepping down toward ~55-60%[^jin-2019-indoor-review] |
-| VPD | ~0.8 kPa | 1.0-1.3 kPa | Same review, expressed as vapour-pressure deficit[^jin-2019-indoor-review] |
-| PPFD | 300-600 µmol/m²/s, ramping | 600-900 µmol/m²/s | 21-day veg trial across 135-1430 µmol[^moher-2022-cannabis-vegetative-light-intensity-morphology] |
-| Photoperiod | 18/6 (convention) | 18/6 until flip day | Long days hold veg; cultivars can initiate flower at photoperiods up to ~14 h[^moher2023-photoperiod] |
-| CO2 | Ambient (~400-600 ppm) is fine | 700-800+ ppm pays only with high PPFD | Photosynthesis rises with CO2 to at least ~750 ppm at high light[^chandra2008-photo] |
+| Air temperature, lights on | 25-28 °C | 25-30 °C | The photosynthesis of cannabis leaves is at the maximum at approximately 25-30 °C[^chandra2008-photo][^jin-2019-indoor-review] |
+| Relative humidity | 65-75% | 55-65% | The reference gives a target of approximately 75% for plants in the first stage. The target then decreases to approximately 55 to 60%[^jin-2019-indoor-review] |
+| VPD | approximately 0.8 kPa | 1.0-1.3 kPa | The same reference gives these values as vapor pressure deficit[^jin-2019-indoor-review] |
+| PPFD | 300-600 µmol/m²/s, with a ramp | 600-900 µmol/m²/s | A test of 21 days of vegetative growth, with values from 135 to 1430 µmol[^moher-2022-cannabis-vegetative-light-intensity-morphology] |
+| Photoperiod | 18/6 (grower method) | 18/6 until the flip day | Long days keep the plants in the vegetative stage. Cultivars can start flowering at photoperiods of a maximum of approximately 14 h[^moher2023-photoperiod] |
+| CO2 | The usual air of the room (approximately 400-600 ppm) is sufficient | 700 to 800 ppm or more has an effect only with a high PPFD | Photosynthesis increases when the CO2 increases to approximately 750 ppm or more, at high light[^chandra2008-photo] |
 
-*Working bands for photoperiod cultivars in soilless media. Numbers without a citation are hedged convention; treat all of them as starting points to verify against your own canopy.*
+*These ranges are for photoperiod cultivars in soilless media. The numbers without a citation are approximate grower methods. Use all the numbers as start points, and make sure that they are correct for the canopy in your room.*
 
-> **Diagram.** The veg temperature landscape[^chandra2008-photo]. Cooler rooms aren't safer. They're just slower, and slow veg is paid for in days.
+> **Diagram.** The temperature zones for the vegetative stage[^chandra2008-photo]. A room with a lower temperature is not safer. It is only slower, and a slow vegetative stage uses more days.
 
-**Light in veg steers shape, not just speed.** In the 21-day trial above, higher PPFD made plants shorter, thicker-stemmed and shorter-internoded, roughly linearly; ~600 µmol produced a more open frame with better airflow, while ~900 µmol produced the compact, sturdy transplants commercial rooms want, with no light-stress signs even at the top of the tested range[^moher-2022-cannabis-vegetative-light-intensity-morphology]. Low-light veg (150-300 µmol) is why home-grown plants arrive at flip lanky and floppy. Ramp intensity up over days, not in one jump. The ramp itself is covered in [light acclimation](light-acclimation.html).
+**The light in the vegetative stage changes the shape of the plant and not only the speed of growth.** In the test of 21 days, a higher PPFD made the plants shorter, with thicker stems and shorter internodes. The change was almost linear.At approximately 600 µmol, the frame was more open and had better airflow. At approximately 900 µmol, the transplants were short and strong. There were no signs of light stress, also at the top of the range of the test[^moher-2022-cannabis-vegetative-light-intensity-morphology]. Operators of commercial rooms want this type of transplant.Low light (150-300 µmol) in the vegetative stage is the cause of long and weak plants at the flip in tents. Increase the intensity in steps during some days, and not in one step. The paper [light acclimation](light-acclimation.html) gives the information about the ramp.
 
-> **Diagram.** Veg PPFD is a shape dial: more light, shorter internodes, thicker stems[^moher-2022-cannabis-vegetative-light-intensity-morphology].
+> **Diagram.** The PPFD in the vegetative stage controls the shape: more light gives shorter internodes and thicker stems[^moher-2022-cannabis-vegetative-light-intensity-morphology].
 
-> **WARN — Guard the photoperiod edge**
+> **WARN: Monitor the limit of the photoperiod**
 >
-> Modern cultivars are not all '12 hours or nothing': in a ten-cultivar trial, every one initiated flowering at photoperiods up to 14 h[^moher2023-photoperiod]. A veg room drifting toward short days, a failing timer, a mis-set sunrise/sunset controller, a long power cut, can start flipping plants you meant to keep vegetative. Hold veg at 16-18 h and put the light schedule on your daily checks.
+> Keep the photoperiod of the vegetative stage at 16 to 18 h. Add the light cycle to your checks for each day. A cultivar can start flowering at a photoperiod that is longer than 12 hours. In a test of ten cultivars, all the cultivars started flowering at photoperiods of a maximum of 14 h[^moher2023-photoperiod].
+> The days in a vegetative room can become shorter. Examples are a timer that does not operate correctly and a light controller with an incorrect setting. A long period with no electricity is also an example. In this condition, the plants that you want to keep in the vegetative stage can start the flip.
 
 ## Vegetative nutrition
 
-Veg tissue is protein and chlorophyll factory-work, and both are nitrogen-hungry, which is why every veg feed is 'N-forward' relative to bloom formulas. The dose-response work is unusually clean here: in fertigation trials on medical cannabis, vegetative growth peaked around **160 mg/L N**, with 30 mg/L plants visibly starved and 320 mg/L plants going backwards[^saloner-2020-cannabis-nitrogen-supply]. More nitrogen is not more growth; it's a curve with a top.
+In the vegetative stage, the plant makes mostly protein and chlorophyll, and the two contain much nitrogen. Thus each feed for the vegetative stage has a higher proportion of nitrogen (N) than the feed for flowering.The data show the relation between the dose of N and the growth accurately. In tests of fertigation on medical cannabis, the vegetative growth was at the maximum at approximately **160 mg/L N**. Plants at 30 mg/L had nitrogen deficiency that you can see, and plants at 320 mg/L had less growth than the maximum[^saloner-2020-cannabis-nitrogen-supply]. More nitrogen does not give more growth. The curve has a peak.
 
-In drain-to-waste coco or rockwool, the practical control knob is feed EC, ramped with plant size (hedged conventions, verified against runoff EC and leaf colour):
+In coco or rockwool with drain to waste, the primary control is the feed EC. Increase the feed EC when the plant size increases. The values below are approximate grower methods. Do a check of the values with the runoff EC and the color of the leaves:
 
-| Stage | Feed EC (mS/cm) | What you're doing |
+| Stage | Feed EC (mS/cm) | Task |
 | --- | --- | --- |
-| Fresh transplant, week 1 | ~1.5-1.8 | Gentle start while roots explore the new volume |
-| Mid-veg | ~2.0-2.4 | Full N-forward feed; plant in full build mode |
-| Last week of veg → flip | ~2.4-3.0 | Carry EC up so the plant enters stretch with reserves |
+| New transplant, week 1 | approximately 1.5 to 1.8 | A careful start, while the roots go into the new volume |
+| Middle of the vegetative stage | approximately 2.0 to 2.4 | Full feed with a high proportion of N. The plant makes new tissue at the maximum rate. |
+| Last week of the vegetative stage, until the flip | approximately 2.4 to 3.0 | Increase the EC. The plant has reserves when the stretch starts. |
 
-*Hedged convention for drain-to-waste soilless systems, in line with manufacturer stone-wool guidance[^grodan-growguide-steering], exact numbers vary by product line and water. Watch trends in runoff EC: climbing hard means you're feeding stronger than the plant is drinking.*
+*These values are a grower method for soilless systems with drain to waste. They agree with the information of the manufacturer of stone wool[^grodan-growguide-steering]. The numbers are different for different products and water. Monitor the trend of the runoff EC. If the runoff EC increases quickly, the feed is stronger than the quantity that the plant uses.*
 
-Two rules of thumb do most of the work. **Colour before calendar:** a veg plant should hold an even mid-green, pale, yellowing lower leaves mean the N supply is behind the build rate; near-black blue-green with clawed tips means it's ahead. **Don't taper N before the flip:** the stretch runs substantially on nitrogen mobilised from veg tissue, so a plant sent into 12/12 already pale will fade hard by week 3 of flower, from the bottom up.
+Two methods do most of the work. **Use the color and not the date.** In the vegetative stage, the plant must have an equal medium-green color. If the bottom leaves are light green or yellow, the supply of N is less than the growth rate. If the leaves are blue-green and almost black, with claw tips, the supply of N is more than the growth rate.**Do not decrease the N before the flip.** The stretch uses mostly nitrogen that the plant moves from the tissue of the vegetative stage. Thus a plant with light green or yellow leaves at the start of 12/12 has a strong fade by week 3 of flowering. The fade goes from the bottom to the top.
 
-> **WARN — Pale at flip is a veg mistake paid in flower**
+> **WARN: Light green leaves at the flip cause a problem in flowering**
 >
-> Week-3 lower-leaf yellowing gets blamed on bloom nutrients constantly. The cause is usually two weeks earlier: an under-fed, root-limited or light-crushed plant that entered stretch with no nitrogen reserve. Fix it in veg, by flip day it is largely pre-paid.
+> Correct light green leaves in the vegetative stage. At the flip day, the plant then has most of the nitrogen for the stretch. Growers frequently think that the nutrients for flowering cause yellow bottom leaves in week 3 of flowering. The cause is usually in the time two weeks before. The plant had feed that was not sufficient, a root zone that was too small, or light stress. The plant then started the stretch with no nitrogen reserve.
 
-## Root-zone establishment before flowering
+## Growth of the roots before flowering
 
-The fastest way to lose a week of veg is to drown a fresh transplant. A just-potted plant has a small root ball in a large, wet volume: keep that volume saturated and the roots have no reason to explore and no oxygen to do it with. Manufacturer stone-wool guidance for veg is small, frequent shots, on the order of ~3% of substrate volume, with a modest 5-15% runoff fraction, while avoiding hard drybacks (below roughly 25-30% water content in blocks) that stall young roots[^grodan-growguide-steering]. The rhythm is: wet enough to live, dry enough that roots keep chasing the water down and out.
+The fastest method to stop the growth for one week is to apply too much water to a new transplant. A new transplant has a small root ball in a large volume of wet substrate. If the volume stays saturated, the roots have no cause to go into the volume, and the volume has no oxygen for them.The manufacturer of stone wool gives information for the vegetative stage. Apply small, frequent shots of approximately 3% of the substrate volume, with a small runoff fraction of 5 to 15%. The information also shows that drybacks must not be large. A water content of less than approximately 25 to 30% in blocks stops new roots[^grodan-growguide-steering]. The substrate must have sufficient water for the roots. The substrate must also dry, and then the roots continue to go in the direction of the water.
 
-By flip day the root zone, not the calendar, is the report card. Overnight dryback is the drop in substrate moisture between your last irrigation shot and first light the next morning — roots keep pulling water through the dark hours, so the pot gets measurably lighter by dawn. Think of a sponge left after washing dishes: it keeps releasing water long after you put it down. When that overnight dip repeats reliably, two or three nights running, the roots are established and actively exploring. Three checks confirm they are ready: roots visible at the container walls and drain holes (or slab face); a _predictable_ overnight dryback, the sensor showing the same morning dip each day; and irrigation demand trending up day over day. That established, exploring root system is what funds the stretch, when water and nutrient demand roughly doubles in three weeks. Flip before it exists and the stretch stalls; flip long after and you're root-bound (section above).
+The root zone, and not the date, shows the result of the vegetative stage on the flip day. The night dryback is the quantity by which the substrate moisture decreases from the last irrigation shot to the start of the next light period. The roots continue to absorb water during the night. Thus the weight of the pot is lower at the start of the next light period, and you can measure the difference.When the night dryback is the same on two or three nights in sequence, the roots are in good condition and go into the substrate. Three checks show that the roots are correct for the flip. First, you can see roots at the walls of the container and at the drain holes (or on the face of the slab). Second, the night dryback is _stable_: the sensor shows the same decrease each day at the start of the light period. Third, the plant uses more water each day.A root system in good condition that goes into the substrate supplies the water and nutrients for the stretch. In the stretch, the quantity of water and nutrients that the plant uses increases to approximately two times in three weeks. If you do the flip before the roots are in this condition, the stretch stops. If you wait for a long time, the plant becomes root-bound (refer to the section on pot size).
 
-> **Diagram.** An indicative 18-day clone-to-flip block for a topped plant in 10–11 L (2.6–2.9 gal): root-in, top, recover, level, then a gate. SOG compresses the same shape to ~7–10 days; trees stretch it to 5–8 weeks. The gate decides the flip, the calendar just forecasts it.
+> **Diagram.** An approximate example of 18 days from a clone to the flip, for a topped plant in 10–11 L (2.6–2.9 gal). The sequence is the growth of the roots, the topping, the recovery, the uniformity of the canopy, and then the pre-flip check. SOG makes the same sequence shorter, in approximately 7–10 days. Large plants make the sequence longer, in 5 to 8 weeks. The pre-flip check gives the day of the flip. A date that you select before the check gives only an estimate.
 
-1. **Roots at the walls** — White roots at the pot walls/drain holes or wrapping the block face; daily water demand trending up.
-2. **Height under the line** — Tallest top at or below max flip height (usable height ÷ stretch multiplier).
-3. **Canopy level and full** — Tops within ~10 cm (4 in) of each other; ~80-90% of each plant's canopy share filled; net on.
-4. **Cuts recovered** — Last topping ≥10-14 days ago; leaders even; no fresh major wounds going into stretch[^rqs-topping-guide].
-5. **Fed and green** — No active deficiency; feed at late-veg EC; plant an even mid-green with N reserves for the stretch.
+1. **Roots at the walls**: Make sure that white roots are at the walls and the drain holes of the pot. For a block, make sure that white roots are around the face of the block. Make sure that the plant uses more water each day.
+2. **Height less than the limit**: Make sure that the top with the largest height is at the maximum flip height or lower (the available height divided by the stretch ratio).
+3. **Uniformity and a full canopy**: Make sure that the height difference between the tops is approximately 10 cm (4 in) or less. Make sure that approximately 80 to 90% of the canopy area of each plant is full. Install the net.
+4. **Recovery after the topping**: Make sure that the last topping was a minimum of 10 to 14 days before the flip. Make sure that the leaders are equal. Make sure that you do not cut a large part of the plant when the stretch starts[^rqs-topping-guide].
+5. **Feed and green color**: Make sure that there is no deficiency. Use the feed EC for the end of the vegetative stage. Make sure that the plant has an equal medium-green color and has N reserves for the stretch.
 
-> **KEY — The pre-flip gate**
+> **KEY: The pre-flip check**
 >
-> All five, or you don't flip. You fix the failing one first. A flip delayed two days to finish root-in costs you two days. A flip forced past a failing gate costs you the weak version of the entire flower cycle.
+> Do the flip only when all five conditions are correct. If one condition is not correct, correct it first. If you wait two days to complete the growth of the roots, you use two days. If you do the flip when one condition is not correct, the result is a weak flowering cycle.
 
-## Vegetative duration economics
+## Cost of the vegetative stage
 
-Flower length is written in the genetics, call it 56-63 days and largely untouchable. Veg length is therefore _the_ schedule lever you own, and it trades three currencies: turns per year plants per gram risk per plant.
+The genetics gives the time of flowering. It is approximately 56 to 63 days, and you cannot change it easily. Thus the number of days of the vegetative stage is _the_ time that you control. It changes three quantities: crop cycles each year, plants for each gram and risk for each plant.
 
-> **Diagram.** Longer veg costs turns: going from 10 to 35 days of veg in the same room drops roughly a full cycle per year. That cost buys bigger plants and fewer of them, whether that's a good trade depends on what caps you.
+> **Diagram.** A longer vegetative stage decreases the number of crop cycles. For 35 days of vegetative stage and not 10 days in the same room, the room has approximately one crop cycle less each year. This cost gives larger plants and a smaller number of plants. The result can be good or bad for you. If the plant count has a limit, the result is good. If time has a limit, the result is not good.
 
-**Where plant count is capped, veg length is the lever you have left.** If a licence condition, agreement or your own risk model limits how many plants you may run, yield per plant becomes the metric that matters, and per-plant yield scales with veg length and frame size[^schober-2024-veg-duration-density]. Fewer, bigger plants also carry real operational discounts: fewer tags and records per gram in a track-and-trace regime, fewer transplants, fewer IPM scouting units, and lower plant-to-plant variability risk than a dense canopy[^danziger-2022-planting-density]. The inverse holds where count is free and time is the constraint: short veg, high density, more turns[^dang-2022-photoperiod-switch-meta].
+**If the plant count has a limit, the number of days of the vegetative stage is the control that you can use.** A license condition, an agreement or your risk model can limit the number of plants. In this condition, the yield for each plant is the important value. The yield for each plant increases with the days of the vegetative stage and with the size of the frame[^schober-2024-veg-duration-density].A smaller number of large plants also decreases the cost of operation. This condition gives a smaller number of tags and records for each gram in a traceability system. It gives a smaller number of transplants and a smaller number of plants to examine for IPM. It also gives a lower risk of variation between plants than a canopy with a high density[^danziger-2022-planting-density].If the plant count has no limit, time is the limit. Then use a short vegetative stage, a high density and more crop cycles[^dang-2022-photoperiod-switch-meta].
 
-**Veg length also has to fit your veg room.** At steady state, a flower room flipping a new cohort every N weeks needs the veg area to hold each cohort for the full veg length. The longer the veg, the more cohorts stack up on the veg benches at once — long-veg strategies quietly demand a bigger veg room, more veg light, and more weeks of exposure to a veg-room pest outbreak. Cheap per m² (ft²), but not free.
+**The days of the vegetative stage must also agree with the size of your vegetative room.** When the production is stable, a flowering room gets a new group of plants each N weeks. The vegetative area must hold each group for all the days of the vegetative stage. When the vegetative stage is longer, more groups are on the vegetative benches at the same time.A long vegetative stage gives three results. The vegetative room is larger, and it has more light. The plants have more weeks of risk from a large number of pests in the vegetative room. The cost for each m² (ft²) is low, but it is not zero.
 
-- **Flower block:** 56-63 days, fixed by genetics, not negotiable
-- **Veg ~10 days:** ≈5 turns/yr · most plants and tags · least per-plant risk exposure
-- **Veg ~21 days:** ≈4.3 turns/yr · the usual commercial balance
-- **Veg 35+ days:** ≈3.7 turns/yr · fewest plants per gram, the count-capped play
+- **Flowering period:** 56 to 63 days. The genetics gives this period, and you cannot change it.
+- **Vegetative stage of approximately 10 days:** Approximately 5 crop cycles each year. The most plants and tags. The lowest risk for each plant.
+- **Vegetative stage of approximately 21 days:** Approximately 4.3 crop cycles each year. This vegetative stage is the usual balance in commercial rooms.
+- **Vegetative stage of 35 days or more:** Approximately 3.7 crop cycles each year. The smallest number of plants for each gram. This vegetative stage is the method for a plant count that has a limit.
 
-> **NOTE — Decide which currency you're paid in**
+> **NOTE: Two methods: time or frame**
 >
-> Free plant count → sell time: short veg, high density, maximum turns. Capped plant count → sell frame: long veg, big pots, trees. The worst position is the unexamined middle, medium plants, medium density, chosen by habit, optimising nothing.
+> When the plant count has no limit, the method is time: a short vegetative stage, a high density and the maximum number of crop cycles. When the plant count has a limit, the method is frame: a long vegetative stage, large pots and large plants. The worst condition is the middle: plants of medium size and medium density that growers select without a check. This condition is not the best for time, and it is not the best for frame.
 
-## Common vegetative-growth mistakes
+## Frequent errors in vegetative growth
 
-Every one of these is cheap to prevent in veg and expensive to discover in flower. Most rooms that struggle in week 3 of flower committed one of them a month earlier.
+Each of these errors has a low cost to prevent in the vegetative stage, and a high cost to find in flowering. Most rooms with problems in week 3 of flowering had one of these errors one month before.
 
-**Flipping root-bound**
+**The flip of a root-bound plant**
 
-Pot dries out by lunchtime, roots circling the walls, growth stalled, and it gets flipped anyway. Stretch demand lands on a root system that can't fund it: wilting, early fade, airy bud. **Fix:** match pot to planned veg days; if in doubt, pot up and add a week _before_ flip.
+The pot dries in a small number of hours, the roots go around the walls, and the growth stops. The grower does the flip with these signs. The stretch uses a quantity of water and nutrients that is more than the root system can supply. Then the plant shows wilt, a fade in the first stage of flowering, and buds with low density. **Correction:** Select a pot for the number of days of the vegetative stage. If you are not sure, transplant the plant to a larger pot and add one week _before_ the flip.
 
-**Flipping too tall**
+**A flip at a height that is too large**
 
-Stretch outruns the ceiling; tops grow into the fixture, bleach and cook, and dimming to save them starves the rest of the room. **Fix:** max flip height = usable height ÷ stretch multiplier, enforced on flip day, no exceptions.
+After the stretch, the height of the plant is more than the available height. The tops touch the fixture and show bleaching and heat damage. If you decrease the light to prevent damage to the tops, the other plants in the room receive light that is not sufficient. **Correction:** The maximum flip height is the available height divided by the stretch ratio. Apply this limit on the flip day for all plants.
 
-**Uneven canopy at flip**
+**A canopy with no uniformity at the flip**
 
-One tall cultivar or a few over-vegged plants pin the light high while the rest under-run for nine weeks. **Fix:** level in veg, graded clones, tall plants tied down and benched to the edges, runts culled, net on at flip.
+One cultivar with a large height can increase the height of the fixture. Plants that stayed too long in the vegetative stage can have the same effect. The other plants receive light that is not sufficient for nine weeks.
+**Correction:** Make the height of the canopy equal in the vegetative stage. Use clones of the same size. Bend the plants that have the largest height down, and put them at the edges. Remove the smallest plants. Install the net at the flip.
 
-**Topping too late**
+**Topping after the last day**
 
-A cut ten days before flip means flipping mid-recovery: uneven leaders that the stretch amplifies into a lopsided canopy. **Fix:** last major cut 10-14 days before flip, on the calendar the day you top.
+If you cut the plant ten days before the flip, the flip is during the recovery. The leaders have different sizes, and the stretch increases the difference. The canopy then has a low uniformity. **Correction:** Do the last topping 10 to 14 days before the flip. Write this date in your record on the day that you do the topping.
 
-**Drowning fresh transplants**
+**Too much water at a new transplant**
 
-Big new pot kept saturated 'to help it settle in': oxygen-starved roots, no exploration, fungus gnats, a stalled week. **Fix:** small frequent shots, modest runoff, let the roots chase moisture into the new volume.
+The grower keeps a large new pot saturated to help the plant. The roots do not have sufficient oxygen, they do not go into the substrate, fungus gnats occur, and the growth stops for one week. **Correction:** Apply small, frequent shots with a small runoff. Let the roots go to the water in the new volume.
 
-**Veg with no target**
+**A vegetative stage with no target**
 
-'One more week' by vibes, no canopy spec, no gate. Every unplanned week is a lost fraction of a turn, the most expensive habit in the room. **Fix:** write count × share × max height before transplant; flip on the gate.
+The grower adds 'one more week' with no data, no canopy specification and no pre-flip check. Each week that is not in the procedure removes a fraction of a crop cycle. This method has the highest cost in the room. **Correction:** Before the transplant, write the specification: the plant count, the canopy area of each plant and the maximum height. Do the flip when the pre-flip check is correct.
 
 ## Troubleshooting
 
-Veg problems telegraph themselves early if you read the plant against the plan. The common ones:
+If you compare the plant with the specification, you see the first signs of a problem in the vegetative stage. The frequent problems are in the table below:
 
-| Symptom | Likely cause | What to do |
+| Sign | Possible cause | Correction |
 | --- | --- | --- |
-| Transplant sits still for a week+ | Over-wet root-in; roots not exploring | Cut shot sizes, let the volume breathe between shots; check drainage[^grodan-growguide-steering] |
-| Long internodes, floppy stems | PPFD too low for the frame you want | Raise veg light in steps toward ~600-900 µmol[^moher-2022-cannabis-vegetative-light-intensity-morphology]; add airflow for stem strength |
-| Even pale green, lower leaves first | Nitrogen supply behind growth rate | Lift feed EC / N toward the veg optimum[^saloner-2020-cannabis-nitrogen-supply]; recheck in 4-5 days |
-| Dark blue-green, clawed tips | Nitrogen ahead of growth rate | Ease feed EC back; hold N-forward ratio but lower the dose |
-| Pistils/flowers forming in the veg room | Photoperiod fault, timer, controller or light leak into a ≤14 h day | Audit the schedule and door discipline[^moher2023-photoperiod]; single calyxes at nodes (preflowers) are normal maturity, full flowering is not |
-| One plant towers over the cohort | Cultivar mix under one light, or clone-age spread | Tie it down and bench it to the edge now; next run, cohort by cultivar and rooting date |
-| Pot needs water 3× a day | Root-bound, the container clock ran out | Pot up and give it a week, or flip today if all other gates pass; never 'push through' a root-bound stretch[^poorter-2012-pot-size] |
+| No growth of the transplant for one week or more | Too much water at the start. The roots do not go into the substrate. | Decrease the shot sizes. Let air go into the substrate between the shots. Do a check of the drainage[^grodan-growguide-steering] |
+| Long internodes and weak stems | The PPFD is too low for the frame that you want | Increase the light in the vegetative stage in steps to approximately 600–900 µmol[^moher-2022-cannabis-vegetative-light-intensity-morphology]. Add airflow to make the stems strong. |
+| Light green color on all leaves, with the bottom leaves first | The supply of nitrogen is less than the growth rate | Increase the feed EC or the N to the value for maximum growth in the vegetative stage[^saloner-2020-cannabis-nitrogen-supply]. Examine the plant again in 4 to 5 days. |
+| Blue-green color, almost black, with claw tips | The supply of nitrogen is more than the growth rate | Decrease the feed EC. Keep the ratio with a high proportion of N, but decrease the dose. |
+| Pistils or flowers in the vegetative room | A fault in the photoperiod: a timer, a controller or a light leak, with a day of 14 h or less | Do an audit of the light cycle and of the procedure for the door[^moher2023-photoperiod]. Preflowers (one calyx at a node) are usual maturity. Full flowering is not usual. |
+| One plant has a much larger height than the group | Different cultivars below one light, or clones of different ages | Bend the plant down and put it at the edge of the bench at this time. In the next crop cycle, make groups of plants of the same cultivar that made roots at the same time. |
+| You must apply water to the pot 3× each day | The plant is root-bound: the time for this pot is at the end | Transplant the plant to a larger pot and wait one week. Or do the flip at this time if all the other conditions of the pre-flip check are correct. Do not let a root-bound plant start the stretch[^poorter-2012-pot-size] |
 
-*Read symptoms against the plan (target frame, target days), not in isolation. The same yellow leaf means different things at day 5 and day 25 of veg.*
+*Compare the signs with the specification (target frame and target days). Do not use one sign only. A yellow leaf on day 5 and a yellow leaf on day 25 of the vegetative stage show different conditions.*
 
-> **KEY — The mental model to keep**
+> **KEY: The model for the vegetative stage**
 >
-> **Veg is a countdown to a canopy spec, not a waiting room.** The spec is written before transplant: N plants × each filling its share of the canopy × at or under max flip height, level, rooted to the walls, green. Every veg day either moves the room toward that spec or it's rent. When the spec is met, flip. That day, not Saturday.
+> **The function of the vegetative stage is to make a canopy that agrees with the specification. It is not a time in which you wait.** Write the specification before the transplant. The specification gives N plants. The canopy area of each plant is full, and the plant has the maximum flip height or less.
+> The canopy has equal height, the roots are at the walls, and the leaves are green. Each day of the vegetative stage must make the room agree more with the specification, or the day gives no result. When the room agrees with the specification, do the flip on that day.
 
-From here: the cutting-and-bending toolkit lives in [defoliation & training](defoliation-training.html), and the safe way to carry PPFD from clone light to a 900-µmol veg canopy is in [light acclimation](light-acclimation.html).
+The paper [defoliation and training](defoliation-training.html) gives the procedures to cut and bend the plants. The paper [light acclimation](light-acclimation.html) gives the safe procedure to increase the PPFD from clone light to a vegetative canopy of 900 µmol.
 
 ## References
 
-[^dang-2022-photoperiod-switch-meta]: Dang M, Arachchige NM, Campbell LG (2022). Optimizing photoperiod switch to maximize floral biomass and cannabinoid yield in Cannabis sativa L.: a meta-analytic quantile regression approach. Frontiers in Plant Science 12:797425. (Vegetative durations across 26 studies spanned 13-180 days, median 30; floral biomass favoured short vegetative periods while cannabinoid concentration peaked with longer ones.) https://www.frontiersin.org/articles/10.3389/fpls.2021.797425/full (peer-reviewed)
-[^schober-2024-veg-duration-density]: Schober T, Präger A, Hartung J, Graeff-Hönninger S (2024). The effects of plant density and duration of vegetative growth phase on agronomic traits of medicinal cannabis (Cannabis sativa L.): a regression analysis. PLoS ONE 19(12):e0315951. (Per-plant inflorescence yield rose ~3.3 g per extra week of veg across 1-4 weeks; higher density cut yield per plant while area yields held or rose.) https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0315951 (peer-reviewed)
-[^danziger-2022-planting-density]: Danziger N, Bernstein N. Too Dense or Not Too Dense: Higher Planting Density Reduces Cannabinoid Uniformity but Increases Yield/Area in Drug-Type Medical Cannabis. Frontiers in Plant Science. 2022;13:713481. doi:10.3389/fpls.2022.713481 https://doi.org/10.3389/fpls.2022.713481 (peer-reviewed)
-[^backer-2019-yield-gap]: Backer R, Schwinghamer T, Rosenbaum P, McCarty V, Eichhorn Bilodeau S, Lyu D, Ahmed MB, Robinson G, Lefsrud M, Wilkins O, Smith DL (2019). Closing the yield gap for cannabis: a meta-analysis of factors determining cannabis yield. Frontiers in Plant Science 10:495. (Plant density reduced yield per plant but was not an effective predictor of yield per square metre.) https://pmc.ncbi.nlm.nih.gov/articles/PMC6491815/ (peer-reviewed)
-[^poorter-2012-pot-size]: Poorter H, Bühler J, van Dusschoten D, Climent J, Postma JA (2012). Pot size matters: a meta-analysis of the effects of rooting volume on plant growth. Functional Plant Biology 39(11):839-850. (Across 65 studies, doubling pot size increased biomass ~43% on average; small pots throttle growth mainly via reduced photosynthesis per unit leaf area.) https://www.publish.csiro.au/fp/fp12049 (peer-reviewed)
-[^gwe-flowering-stretch]: Nebula Haze. How to prepare for the flowering stretch (flip at roughly half your available final height; stretch magnitude varies strongly by strain). GrowWeedEasy, industry cultivation guide. https://www.growweedeasy.com/flowering-stretch (industry/manufacturer source)
-[^ilgm-stretch-guide]: I Love Growing Marijuana (ILGM). Stretching cannabis plants: what it is and why it matters (stretch largely complete around day 21 of flower; some plants double or triple in height; sativa-leaning cultivars stretch more). Industry cultivation guide. https://ilgm.com/resources/guides/stretching-cannabis-plants (industry/manufacturer source)
-[^rqs-topping-guide]: Royal Queen Seeds. Topped vs non-topped cannabis plants — is topping worth it? (Top at 4-6 nodes, ~3-4 weeks into veg, cutting between the 4th and 5th node; allow 7-14 days of recovery and extend veg accordingly.) Industry cultivation guide. https://www.royalqueenseeds.com/us/blog-topped-vs-non-topped-cannabis-plants-is-topping-worth-it-n1532 (industry/manufacturer source)
-[^moher-2022-cannabis-vegetative-light-intensity-morphology]: Moher, M., Llewellyn, D., Jones, M., & Zheng, Y. (2022). Light intensity can be used to modify the growth and morphological characteristics of cannabis during the vegetative stage of indoor production. Industrial Crops and Products, 183, 114909. https://doi.org/10.1016/j.indcrop.2022.114909 https://www.sciencedirect.com/science/article/abs/pii/S0926669022003922 (peer-reviewed)
-[^jin-2019-indoor-review]: Jin D, Jin S, Chen J (2019). Cannabis indoor growing conditions, management practices, and post-harvest treatment: a review. American Journal of Plant Sciences 10(6):925-946. (Optimum growth ~25-30 °C; RH ~75% for juveniles stepping down to ~55-60% through veg and flower, i.e. VPD ~0.8 rising to ~1.3-1.4 kPa.) https://www.scirp.org/journal/paperinformation?paperid=93052 (peer-reviewed)
-[^chandra2008-photo]: Chandra S, Lata H, Khan IA, ElSohly MA (2008). Photosynthetic response of Cannabis sativa L. to variations in photosynthetic photon flux densities, temperature and CO2 conditions. Physiol. Mol. Biol. Plants 14(4):299-306. https://pmc.ncbi.nlm.nih.gov/articles/PMC3550641/ (peer-reviewed)
-[^moher2023-photoperiod]: Moher M, Llewellyn D, Jones M, Zheng Y (2023). Is twelve hours really the optimum photoperiod for promoting flowering in indoor-grown cultivars of Cannabis sativa? Plants 12(14):2605. https://doi.org/10.3390/plants12142605 (peer-reviewed)
-[^saloner-2020-cannabis-nitrogen-supply]: Saloner, A., & Bernstein, N. (2020). Response of Medical Cannabis (Cannabis sativa L.) to Nitrogen Supply Under Long Photoperiod. Frontiers in Plant Science, 11, 572293. https://doi.org/10.3389/fpls.2020.572293 https://www.frontiersin.org/journals/plant-science/articles/10.3389/fpls.2020.572293/full (peer-reviewed)
-[^grodan-growguide-steering]: Grodan. Grow Guide, Cannabis Edition — Chapter 3: introduction to crop steering (vegetative-phase irrigation as small frequent shots ~3% of substrate volume, 5-15% runoff fraction, avoiding drybacks below ~25-30% WC in blocks after transplant). Manufacturer technical guide. https://www.grodan101.com/syssiteassets/downloads/grow-guide/chapter-3---introduction-to-crop-steering.pdf (industry/manufacturer source)
+[^dang-2022-photoperiod-switch-meta]: Dang M, Arachchige NM, Campbell LG (2022). Optimizing photoperiod switch to maximize floral biomass and cannabinoid yield in Cannabis sativa L.: a meta-analytic quantile regression approach. Frontiers in Plant Science 12:797425. (Vegetative durations across 26 studies spanned 13-180 days, median 30; floral biomass favoured short vegetative periods while cannabinoid concentration peaked with longer ones.) https://www.frontiersin.org/articles/10.3389/fpls.2021.797425/full (source with peer review)
+[^schober-2024-veg-duration-density]: Schober T, Präger A, Hartung J, Graeff-Hönninger S (2024). The effects of plant density and duration of vegetative growth phase on agronomic traits of medicinal cannabis (Cannabis sativa L.): a regression analysis. PLoS ONE 19(12):e0315951. (Per-plant inflorescence yield rose ~3.3 g per extra week of veg across 1-4 weeks; higher density cut yield per plant while area yields held or rose.) https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0315951 (source with peer review)
+[^danziger-2022-planting-density]: Danziger N, Bernstein N. Too Dense or Not Too Dense: Higher Planting Density Reduces Cannabinoid Uniformity but Increases Yield/Area in Drug-Type Medical Cannabis. Frontiers in Plant Science. 2022;13:713481. doi:10.3389/fpls.2022.713481 https://doi.org/10.3389/fpls.2022.713481 (source with peer review)
+[^backer-2019-yield-gap]: Backer R, Schwinghamer T, Rosenbaum P, McCarty V, Eichhorn Bilodeau S, Lyu D, Ahmed MB, Robinson G, Lefsrud M, Wilkins O, Smith DL (2019). Closing the yield gap for cannabis: a meta-analysis of factors determining cannabis yield. Frontiers in Plant Science 10:495. (Plant density reduced yield per plant but was not an effective predictor of yield per square metre.) https://pmc.ncbi.nlm.nih.gov/articles/PMC6491815/ (source with peer review)
+[^poorter-2012-pot-size]: Poorter H, Bühler J, van Dusschoten D, Climent J, Postma JA (2012). Pot size matters: a meta-analysis of the effects of rooting volume on plant growth. Functional Plant Biology 39(11):839-850. (Across 65 studies, doubling pot size increased biomass ~43% on average; small pots throttle growth mainly via reduced photosynthesis per unit leaf area.) https://www.publish.csiro.au/fp/fp12049 (source with peer review)
+[^gwe-flowering-stretch]: Nebula Haze. How to prepare for the flowering stretch (flip at roughly half your available final height; stretch magnitude varies strongly by strain). GrowWeedEasy, industry cultivation guide. https://www.growweedeasy.com/flowering-stretch (source from a manufacturer or industry)
+[^ilgm-stretch-guide]: I Love Growing Marijuana (ILGM). Stretching cannabis plants: what it is and why it matters (stretch largely complete around day 21 of flower; some plants double or triple in height; sativa-leaning cultivars stretch more). Industry cultivation guide. https://ilgm.com/resources/guides/stretching-cannabis-plants (source from a manufacturer or industry)
+[^rqs-topping-guide]: Royal Queen Seeds. Topped vs non-topped cannabis plants — is topping worth it? (Top at 4-6 nodes, ~3-4 weeks into veg, cutting between the 4th and 5th node; allow 7-14 days of recovery and extend veg accordingly.) Industry cultivation guide. https://www.royalqueenseeds.com/us/blog-topped-vs-non-topped-cannabis-plants-is-topping-worth-it-n1532 (source from a manufacturer or industry)
+[^moher-2022-cannabis-vegetative-light-intensity-morphology]: Moher, M., Llewellyn, D., Jones, M., & Zheng, Y. (2022). Light intensity can be used to modify the growth and morphological characteristics of cannabis during the vegetative stage of indoor production. Industrial Crops and Products, 183, 114909. https://doi.org/10.1016/j.indcrop.2022.114909 https://www.sciencedirect.com/science/article/abs/pii/S0926669022003922 (source with peer review)
+[^jin-2019-indoor-review]: Jin D, Jin S, Chen J (2019). Cannabis indoor growing conditions, management practices, and post-harvest treatment: a review. American Journal of Plant Sciences 10(6):925-946. (Optimum growth ~25-30 °C; RH ~75% for juveniles stepping down to ~55-60% through veg and flower, i.e. VPD ~0.8 rising to ~1.3-1.4 kPa.) https://www.scirp.org/journal/paperinformation?paperid=93052 (source with peer review)
+[^chandra2008-photo]: Chandra S, Lata H, Khan IA, ElSohly MA (2008). Photosynthetic response of Cannabis sativa L. to variations in photosynthetic photon flux densities, temperature and CO2 conditions. Physiol. Mol. Biol. Plants 14(4):299-306. https://pmc.ncbi.nlm.nih.gov/articles/PMC3550641/ (source with peer review)
+[^moher2023-photoperiod]: Moher M, Llewellyn D, Jones M, Zheng Y (2023). Is twelve hours really the optimum photoperiod for promoting flowering in indoor-grown cultivars of Cannabis sativa? Plants 12(14):2605. https://doi.org/10.3390/plants12142605 (source with peer review)
+[^saloner-2020-cannabis-nitrogen-supply]: Saloner, A., & Bernstein, N. (2020). Response of Medical Cannabis (Cannabis sativa L.) to Nitrogen Supply Under Long Photoperiod. Frontiers in Plant Science, 11, 572293. https://doi.org/10.3389/fpls.2020.572293 https://www.frontiersin.org/journals/plant-science/articles/10.3389/fpls.2020.572293/full (source with peer review)
+[^grodan-growguide-steering]: Grodan. Grow Guide, Cannabis Edition — Chapter 3: introduction to crop steering (vegetative-phase irrigation as small frequent shots ~3% of substrate volume, 5-15% runoff fraction, avoiding drybacks below ~25-30% WC in blocks after transplant). Manufacturer technical guide. https://www.grodan101.com/syssiteassets/downloads/grow-guide/chapter-3---introduction-to-crop-steering.pdf (source from a manufacturer or industry)

@@ -1,10 +1,10 @@
 ---
 slug: "plant-biosignal-sensor"
-title: "Build a plant-biosignal sensor with M5Stack and ESPHome"
-eyebrow: "Build · Precision & automation"
-summary: "Plants produce tiny electrical signals — microvolts to a few millivolts — that shift when light turns on, water runs low, or the plant is stressed. This guide walks you through building the sensor that captures those signals: an M5Stack ESP32, an ECG front-end chip, and ESPHome for about NZ$110. You will log the raw trace into Home Assistant and learn to read the daily rhythm and stress events — not as a validated water or nutrient meter, but as a real-time window into plant electrical activity."
-track: "Precision & automation"
-read_time: "~14 min read"
+title: "Make a plant-biosignal sensor with M5Stack and ESPHome"
+eyebrow: "Assembly · Precision and automation"
+summary: "Plants make small electrical signals, from microvolts to some millivolts. The signals change when the light comes on, when the water becomes low, or when the plant has stress. This guide shows how to make the sensor that records these signals. The sensor has an M5Stack ESP32, an ECG front-end chip and ESPHome, and the cost is approximately NZ$110. You will record the raw trace in Home Assistant and know how to read the rhythm of each day and the stress events. The sensor is not a validated meter for water or nutrients, but it shows the electrical activity of the plant in real time."
+track: "Precision and automation"
+read_time: "~14 min to read"
 diagrams: ""
 related: ["plant-state-dashboard", "signal-and-noise", "closed-loop"]
 url: "https://www.growlabs.nz/wiki/plant-biosignal-sensor.html"
@@ -17,116 +17,117 @@ attribution: "The Cannabis White Papers"
 refs: [{"id": "pb_mdpi_ad8232", "n": 1, "cite": "Marques JAL et al. (2023). From AD8232 to biopotentials sensors: open-source project and benchmark. Electronics (MDPI), 12(4):833.", "url": "https://www.mdpi.com/2079-9292/12/4/833", "peer": true}, {"id": "pb_arxiv_esp32", "n": 2, "cite": "AD8232 bioelectric signal processing with ESP32 (2025). arXiv:2505.18173.", "url": "https://arxiv.org/pdf/2505.18173", "peer": false}, {"id": "pb_pmc_plantsignals", "n": 3, "cite": "Plant bioelectrical signals for environmental and emotional state classification (2024). PMC. (AD8232 at 400 Hz; ~85% lamp on/off detection accuracy.)", "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC12649952/", "peer": true}, {"id": "pb_hackster_flora", "n": 4, "cite": "Verma A. Interacting with the Flora: an ESP32 + AD8232 + BH1750 + DS18B20 plant-signal rig. Hackster.io.", "url": "https://www.hackster.io/ankurverma608/interacting-with-the-flora-7ef65f", "peer": false}, {"id": "pb_vivent", "n": 5, "cite": "Vivent Biosignals, VITA1 plant-driven cultivation sensor (manufacturer documentation).", "url": "https://vivent-biosignals.com/plant-driven-cultivation/", "peer": false}, {"id": "pb_esphome_ads1115", "n": 6, "cite": "ESPHome, ADS1115 4-channel 16-bit A/D converter component (documentation).", "url": "https://esphome.io/components/sensor/ads1115/", "peer": false}]
 ---
 
-# Build a plant-biosignal sensor with M5Stack and ESPHome
+# Make a plant-biosignal sensor with M5Stack and ESPHome
 
-_Build · Precision & automation · ~14 min read_
+_Assembly · Precision and automation · ~14 min to read_
 
-> Plants produce tiny electrical signals — microvolts to a few millivolts — that shift when light turns on, water runs low, or the plant is stressed. This guide walks you through building the sensor that captures those signals: an M5Stack ESP32, an ECG front-end chip, and ESPHome for about NZ$110. You will log the raw trace into Home Assistant and learn to read the daily rhythm and stress events — not as a validated water or nutrient meter, but as a real-time window into plant electrical activity.
+> Plants make small electrical signals, from microvolts to some millivolts. The signals change when the light comes on, when the water becomes low, or when the plant has stress. This guide shows how to make the sensor that records these signals. The sensor has an M5Stack ESP32, an ECG front-end chip and ESPHome, and the cost is approximately NZ$110. You will record the raw trace in Home Assistant and know how to read the rhythm of each day and the stress events. The sensor is not a validated meter for water or nutrients, but it shows the electrical activity of the plant in real time.
 
 ## Purpose and scope
 
-Plants generate tiny electrical signals. Ions move across cell membranes when the plant responds to light, water, wounding or nutrient change, and that movement shows up as a sub-millivolt voltage you can read with electrodes on the stem[^pb_pmc_plantsignals]. Commercial units like the Vivent VITA1 do exactly this, then use trained models to infer water and stress state from how the signal drifts[^pb_vivent].
+Plants make small electrical signals. When a plant changes in response to light, water, a wound or a change in nutrients, ions move across the cell membranes. This movement makes a voltage of less than one millivolt. You can read this voltage with electrodes on the stem[^pb_pmc_plantsignals]. Commercial units, for example the Vivent VITA1, do the same. They then use trained models to calculate the water condition and the stress condition from the drift of the signal[^pb_vivent].
 
-Electrically, reading a plant is the same problem as reading a heartbeat: a small, noisy, high-impedance voltage you must amplify cleanly. That means the cheap, proven ECG front-end chip, the **AD8232**, works straight out of the box for plants[^pb_mdpi_ad8232]. Bolt it to an ESP32 and ESPHome and you have a logging plant-biosignal sensor for about NZ$110.
+To read a plant is the same electrical problem as to read a heartbeat. The voltage is small, it has noise, and it has high impedance. You must amplify it and not increase the noise. Thus the **AD8232**, a standard ECG front-end chip with a low cost, is correct for plants without changes[^pb_mdpi_ad8232]. Connect this chip to an ESP32 and ESPHome, and you have a plant-biosignal sensor that records data. The cost is approximately NZ$110.
 
-> **NOTE — What this build is, and isn't**
+> **NOTE: Functions and limits of this sensor**
 >
-> - **It reproduces the acquisition**: the raw signal, the daily rhythm, the big deflections after a stress event, light-on/off detection (one study reported ~85% under its protocol, not guaranteed on this exact hardware class)[^pb_pmc_plantsignals], all logged in Home Assistant.
-> - **It does not reproduce the paid model.** A VITA1's N/P/K/Ca read-outs come from a trained model on a curated signal library. You get the millivolts; you build your own correlations over time.
-> - **ESPHome polls, it doesn't capture waveforms.** Fast sub-second spikes need the high-rate sketch noted at the end. For trend work, polling is the right tool, and it already samples finer than a VITA1's 5-minute dashboard.
+> - **This sensor does the same data acquisition.** It records the raw signal and the rhythm of each day. It also records the large deflections after a stress event and the change when the light starts and stops. One investigation gave a detection rate of approximately 85% for the light changes, with its protocol. It is not sure that you get the same value with this type of hardware[^pb_pmc_plantsignals]. The sensor records all of this in Home Assistant.
+> - **This sensor does not give the model of the commercial product.** The N, P, K and Ca readings of a VITA1 come from a trained model and a library of selected signals. You get the millivolts. With time, you can find your correlations.
+> - **ESPHome reads the sensor at set intervals. It does not record waveforms.** To see fast spikes of less than one second, you must have the high-rate sketch at the end of this guide. For trends, the reading at set intervals is the correct method. It samples at a higher rate than the dashboard of a VITA1, which shows a value each 5 minutes.
 
 ## Definitions
 
-**Biopotential** — Every living cell maintains a charge difference across its membrane — like a tiny battery, with a positive side and a negative side. When ions move in response to light, water, or stress, that charge difference shifts, and you can measure the resulting voltage from outside the tissue. In plants it runs microvolts to a few millivolts, riding on a slowly-drifting baseline.
+**Biopotential**: Each living cell has a difference of electrical charge across its membrane. The membrane has a positive side and a negative side, as a small battery has. When ions move because of light, water or stress, this difference changes. Then you can measure the voltage from the outer side of the tissue. In plants, the voltage is from some microvolts to some millivolts. It is on a baseline that changes slowly.
 
-**Variation potential** — When part of a plant is wounded or sharply stressed, the charge balance across cell membranes in that region shifts rapidly, and that shift spreads along the plant as an electrical wave. This is a variation potential — the big, slow deflection that shows up on your trace after a clear stress event, and the clearest single event you will see on a DIY rig.
+**Variation potential**: A part of a plant can have a wound or a strong stress. Then the balance of electrical charge across the cell membranes in that area changes quickly. This change moves along the plant as an electrical wave. This wave is a variation potential. It is the large, slow deflection that you see on your trace after a stress event. It is the event that is the easiest to see on a DIY sensor.
 
-**Action potential** — A fast, self-propagating electrical spike — similar in concept to the nerve signals animals use, but slower and driven by different ion channels. Real in plants but sub-second, so it needs high-rate sampling to catch, unlike the slow trends this build is designed to log.
+**Action potential**: A fast electrical spike. After it starts, it continues to move along the tissue. It is almost the same as the nerve signals of animals, but it is slower, and different ion channels cause it. Action potentials occur in plants, but each action potential is shorter than one second. Thus a high sampling rate is necessary to record them. This sensor measures slow trends and not action potentials.
 
-**Electrode** — The metal contact that couples the plant's voltage into your circuit. Ag/AgCl with gel, or a stainless probe just under the skin.
+**Electrode**: The metal contact that connects the voltage of the plant to your circuit. The contact is Ag/AgCl with gel, or a stainless probe below the skin.
 
-**Common-mode rejection** — Noise-cancelling headphones compare the sound on both sides of the earcup and subtract what they share, leaving only what differs. An instrumentation amplifier does the same electrically: it discards anything that appears equally on both inputs — mains hum, for example — and amplifies only the difference between them. This is the whole reason to use a front-end chip rather than a bare ADC.
+**Common-mode rejection**: An instrumentation amplifier compares the signal on its two inputs. It removes the part of the signal that is the same on the two inputs, for example the mains hum. It amplifies only the difference between the two inputs. Thus you use a front-end chip and not an ADC without an amplifier.
 
-**ADC** — Analog-to-digital converter. Turns the amplifier's analog voltage into numbers a microcontroller can read. Here, a 16-bit ADS1115 over I2C.
+**ADC**: Analog-to-digital converter. It changes the analog voltage of the amplifier into numbers that a microcontroller can read. In this sensor, the ADC is a 16-bit ADS1115 that connects through I2C.
 
 ## The signal chain
 
-Everything is one line from plant to dashboard. Two electrodes sense the stem, one references the soil; the AD8232 amplifies and filters; the ADS1115 digitises; the ESP32 publishes.
+The sensor is a chain from the plant to the dashboard. Two electrodes measure the stem and one electrode is the reference in the soil. The AD8232 amplifies and filters the signal. The ADS1115 digitizes it. The ESP32 sends it to Home Assistant.
 
-> **Diagram.** The chain. Amplify first, digitise second, and the same I2C bus also carries the light, temperature and humidity sensors that give the plant trace its context.
+> **Diagram.** The signal chain. Amplify the signal first and digitize it second. The same I2C bus also connects the light sensor, the temperature sensor and the humidity sensor. These sensors give information about the conditions at the time of the plant trace.
 
-> **KEY — Why not just wire electrodes to the ADC?**
+> **KEY: Do not connect the electrodes directly to the ADC**
 >
-> Plant signals are a few millivolts at most, and the plant cannot supply much current — any resistance in the measurement path drains the signal before it arrives. The ADS1115 alone has no common-mode rejection and no reference drive, so mains hum swamps the reading. The AD8232 gives you the gain, a band-pass filter that passes only the frequencies plant signals occupy, _and_ a driven soil-reference electrode that holds the reading steady[^pb_mdpi_ad8232]. It is the difference between a signal and a mess.
+> Plant signals are a maximum of some millivolts. The plant cannot supply much current. Thus each resistance between the plant and the ADC decreases the signal before it goes to the ADC. The ADS1115 without an amplifier has no common-mode rejection and no reference drive. Thus the mains hum is larger than the plant signal in the reading.
+> The AD8232 gives you the gain. It has a band-pass filter that lets only the frequencies of the plant signals go through. It _also_ has a driven reference electrode in the soil, and this electrode holds the reading stable[^pb_mdpi_ad8232]. Thus the reading shows the signal and not only noise.
 
 ## Bill of materials
 
-> **EVIDENCE — Grain of salt**
+> **EVIDENCE: Weak**
 >
-> **Provisional / experimental:** This build logs relative biopotentials for education and correlation hunting. It is _not_ a validated water, nutrient, or stress meter. Do not irrigate or feed from this signal alone.
+> **Provisional and experimental:** This sensor records biopotentials as relative values, for education and to find correlations. It is _not_ a validated meter for water, nutrients or stress. Do not use only this signal to make a decision about irrigation or feed.
 
-About NZ$110. M5Stack parts come as plug-together Grove modules; the two non-M5Stack parts (the AD8232 front-end and the ADS1115 ADC) are the standard cheap substitutes, because nobody sells a biopotential amplifier in the Grove ecosystem. Prices are indicative, mid-2026.
+The cost is approximately NZ$110. The M5Stack parts are Grove modules that you connect together. The two parts that are not from M5Stack are the AD8232 front-end and the ADS1115 ADC. These two parts are the usual alternatives with a low cost, because there is no biopotential amplifier in the Grove modules. The prices are approximate values for the middle of 2026.
 
-| Part | Role | Where to buy | ~NZD |
+| Part | Function | Where to get it | Approximate NZD |
 | --- | --- | --- | --- |
-| **M5StickC PLUS2** ESP32 + screen + LiPo | Controller & display | [shop.m5stack.com](https://shop.m5stack.com/products/m5stickc-plus2-esp32-mini-iot-development-kit) (EOL; successor M5StampS3) | 32 |
-| **ENV IV Unit** (SHT40 + BMP280) | Air temp, humidity, pressure | [shop.m5stack.com](https://shop.m5stack.com/products/env-iv-unit-with-temperature-humidity-air-pressure-sensor-sht40-bmp280) | 14 |
-| **DLight Unit** (BH1750) | Light level (lux) | [shop.m5stack.com](https://shop.m5stack.com/products/dlight-unit-ambient-light-sensor-bh1750fvi-tr) | 12 |
-| **1-to-3 HUB Unit** (passive I2C splitter) | Share one bus across three devices | [shop.m5stack.com](https://shop.m5stack.com/products/mini-hub-module) | 6 |
-| **AD8232 ECG module** (SparkFun SEN-12650 or clone) | Biopotential front-end [non-M5Stack] | [sparkfun.com](https://www.sparkfun.com/sparkfun-single-lead-heart-rate-monitor-ad8232.html) · clone on AliExpress ~NZ$9 | 9 |
-| **ADS1115 breakout** (16-bit I2C ADC) | Digitise the analog output [non-M5Stack] | [adafruit.com/product/1085](https://www.adafruit.com/product/1085) · clone ~NZ$6 | 6 |
-| **Electrodes**, Ag/AgCl EEG cups _or_ stainless probes + snap leads | Skin contact [non-M5Stack] | [SparkFun sensor cable](https://www.sparkfun.com/products/12970) + [electrode pads](https://www.sparkfun.com/products/12969), or medical Ag/AgCl set | 14 |
-| **Electrode gel** (Ten20) + micropore tape | Low-impedance contact | Pharmacy | 9 |
-| DuPont jumpers, small proto board, heatshrink | Glue between AD8232 and ADS1115 | Junk box / any hobby shop | 8 |
-| Total ≈ NZ$110. A bare M5StampS3 instead of the StickC drops it below NZ$95 at the cost of the on-board screen. |
+| **M5StickC PLUS2** ESP32 with screen and LiPo battery | Controller and display | [M5Stack shop](https://shop.m5stack.com/products/m5stickc-plus2-esp32-mini-iot-development-kit) (end of life, EOL: M5StampS3 replaces it) | 32 |
+| **ENV IV Unit** (SHT40 + BMP280) | Air temperature, humidity, pressure | [M5Stack shop](https://shop.m5stack.com/products/env-iv-unit-with-temperature-humidity-air-pressure-sensor-sht40-bmp280) | 14 |
+| **DLight Unit** (BH1750) | Light intensity (lux) | [M5Stack shop](https://shop.m5stack.com/products/dlight-unit-ambient-light-sensor-bh1750fvi-tr) | 12 |
+| **1-to-3 HUB Unit** (passive I2C splitter) | Connect three devices to one bus | [M5Stack shop](https://shop.m5stack.com/products/mini-hub-module) | 6 |
+| **AD8232 ECG module** (SparkFun SEN-12650 or an equivalent) | Biopotential front-end [not from M5Stack] | [SparkFun](https://www.sparkfun.com/sparkfun-single-lead-heart-rate-monitor-ad8232.html) · equivalent on AliExpress, approximately NZ$9 | 9 |
+| **ADS1115 breakout** (16-bit I2C ADC) | Digitize the analog output [not from M5Stack] | [Adafruit product 1085](https://www.adafruit.com/product/1085) · equivalent, approximately NZ$6 | 6 |
+| **Electrodes**: Ag/AgCl EEG cups _or_ stainless probes with snap leads | Skin contact [not from M5Stack] | [SparkFun sensor cable](https://www.sparkfun.com/products/12970) and [electrode pads](https://www.sparkfun.com/products/12969), or a medical set of Ag/AgCl electrodes | 14 |
+| **Electrode gel** (Ten20) and micropore tape | Contact with low impedance | Pharmacy | 9 |
+| DuPont jumper wires, a small prototype board, heatshrink | Connections between the AD8232 and the ADS1115 | Your spare parts, or an electronics shop | 8 |
+| Total: approximately NZ$110. If the controller is an M5StampS3 and not the StickC, the total is less than NZ$95. The alternative does not have the screen that is on the board of the StickC. |
 
-> **WARN — Two parts are marked EOL**
+> **WARN: Two parts are at the end of their life (EOL)**
 >
-> M5Stack has retired the StickC PLUS2 and ENV IV, but both are still stocked by resellers (RobotShop, Botland, TinyTronics) and have the most tutorials. If you want current parts, the **M5StampS3** replaces the controller and the **ENV Pro** replaces the ENV IV. The firmware only changes by two I2C pin numbers.
+> M5Stack stopped the production of the StickC PLUS2 and the ENV IV. But resellers (RobotShop, Botland, TinyTronics) continue to have them in stock, and they have the most tutorials. If you want current parts, the **M5StampS3** replaces the controller and the **ENV Pro** replaces the ENV IV. In the firmware, only two I2C pin numbers change.
 
 ## Wiring
 
-Everything downstream of the controller is one I2C bus, fanned out by the HUB. The single analog wire in the whole build is the AD8232 output into the ADS1115's A0 pin. Electrodes plug into the AD8232's three-pin header.
+After the controller, the sensor has one I2C bus. The HUB connects this bus to three devices. The only analog wire in the sensor goes from the output of the AD8232 to the A0 pin of the ADS1115. The electrodes connect to the header with three pins of the AD8232.
 
-> **Diagram.** Wiring. One I2C bus (SDA blue, SCL green, power red) fans out through the HUB to three devices; the lone analog hop (amber) is AD8232 output into ADS1115 A0.
+> **Diagram.** The wiring. One I2C bus (SDA blue, SCL green, power red) connects the controller to three devices through the HUB. The only analog connection (amber) is the output of the AD8232 to A0 of the ADS1115.
 
-| From | Pin | To | Pin / target |
+| From | Pin | To | Pin or target |
 | --- | --- | --- | --- |
 | M5 Grove Port A | SDA (G32) | HUB → all I2C devices | SDA |
 | M5 Grove Port A | SCL (G33) | HUB → all I2C devices | SCL |
-| M5 Grove Port A | 5V / GND | HUB → ENV/DLight; 3.3V to ADS1115 + AD8232 | VDD / GND |
+| M5 Grove Port A | 5V / GND | HUB → ENV and DLight. 3.3V to ADS1115 and AD8232 | VDD / GND |
 | AD8232 | OUTPUT | ADS1115 | A0 |
 | AD8232 | 3.3V / GND | controller 3.3V / GND | — |
-| AD8232 | LA / RA / RL | electrodes | upper stem / lower stem / soil |
+| AD8232 | LA / RA / RL | electrodes | upper stem, lower stem, soil |
 
-> **WARN — Power the AD8232 from clean 3.3 V**
+> **WARN: Supply the AD8232 with clean 3.3 V**
 >
-> Its output centre-point and noise floor track the supply, so feed it the 3.3 V rail, not the noisy 5 V USB rail. Keep electrode leads short and twisted, and route them away from lights, ballasts and pumps. Battery power (the StickC's LiPo) beats USB for noise.
+> Use the 3.3 V rail for the chip. Do not use the 5 V USB rail, because it has more noise. The center point of the output and the noise floor change when the supply changes. Keep the electrode leads short and twisted. Put the leads away from lights, ballasts and pumps. A battery (the LiPo of the StickC) gives less noise than USB power.
 
-## Electrodes and placement
+## Electrodes and their position
 
-**Contact impedance** is the resistance between the electrode metal and the plant's tissue. Think of it like a loose headphone jack — a poor connection weakens the signal and lets noise in before it reaches the amplifier. The AD8232 handles everything downstream; your electrode contact quality is the one variable you control. Two workable options[^pb_hackster_flora]:
+**Contact impedance** is the resistance between the metal of the electrode and the tissue of the plant. A bad connection decreases the signal and lets noise go in before the signal goes to the amplifier. The AD8232 does all the work after this point. The quality of the electrode contact is the one variable that you control. You can use one of these two alternatives[^pb_hackster_flora]:
 
 **Ag/AgCl EEG cups**
 
-Best signal quality. Fill the cup with conductive gel and tape it to the stem. Non-invasive, but the gel dries and must be refreshed every few days.
+This alternative gives the best signal quality. Fill the cup with conductive gel and attach it to the stem with tape. It does not cause a wound in the plant, but the gel becomes dry. Replace the gel after some days.
 
-**Stainless probes / needles**
+**Stainless probes or needles**
 
-Insert 2–3 mm (0.08–0.12 in) just under the epidermis. More stable and closest to how commercial pin-contacts read ‘inside’ the plant, but it wounds the plant, so use one clean, sterilised insertion.
+Put the probe 2 to 3 mm (0.08 to 0.12 in) below the epidermis. This alternative is more stable. It is almost the same as the method of commercial pin contacts, which measure the signal in the plant. But it causes a wound in the plant. Thus put the probe in the plant one time only, and use a clean sterilized probe.
 
-1. **Place the pair along the stem** — LA (sense +) on the upper stem near a node; RA (sense −) 5–15 cm (2–6 in) lower on the same stem. This pair captures the travelling signal.
-2. **Reference into the soil** — RL (the driven reference) goes into the moist root-zone soil. It is what cancels common-mode hum, so don't skip it.
-3. **Gel and tape** — A dab of Ten20 under each surface contact, then micropore tape for light, steady pressure. A rising, noisy baseline is usually a drying electrode, not a sick plant.
-4. **Let it settle** — When metal contacts wet tissue, ions exchange at the surface and build a small voltage of their own — a **half-cell potential**, the same effect that makes a lemon and two different coins into a battery. Allow 10–30 minutes for this to stabilise. The initial drift is electrode chemistry settling, not plant activity.
+1. **Put the pair of electrodes along the stem**: Put LA (sense +) on the upper stem near a node. Put RA (sense −) 5 to 15 cm (2 to 6 in) below LA on the same stem. This pair of electrodes records the signal that moves along the stem.
+2. **Put the reference in the soil**: Put RL (the driven reference) in the moist soil of the root zone. It removes the common-mode hum. Make sure that you connect RL.
+3. **Gel and tape**: Put a small quantity of Ten20 below each surface contact. Then attach the contact with micropore tape, which gives a light and stable pressure. If the baseline increases slowly and has more noise, the cause is usually that the electrode becomes dry. The cause is not usually a problem in the plant.
+4. **Wait until the signal is stable**: When metal touches wet tissue, ion exchange occurs at the surface and makes a small voltage. This voltage is a **half-cell potential**. Wait 10 to 30 minutes for the voltage to become stable. The first drift comes from the chemistry of the electrode and not from the plant.
 
-> **DANGER — Needle electrodes wound the plant**
+> **DANGER: Needle electrodes cause a wound in the plant**
 >
-> A fresh insertion itself triggers a variation potential, useful once as a known stimulus, then let it heal. Sterilise with alcohol and use a single clean insertion; don't ring-bark the stem with a row of holes.
+> Make one clean insertion only, with a probe that you sterilized with alcohol. Do not make a row of holes around the stem, because a row of holes can girdle the stem. A new insertion causes a variation potential. You can use it one time as a known stimulus. Then let the wound close.
 
 ## ESPHome firmware
 
-The full config. Put your Wi-Fi, API and OTA secrets in ESPHome's `secrets.yaml`, flash from the ESPHome dashboard, and it auto-discovers into Home Assistant. On a StampS3 or Core2, change the board line and, if needed, the two I2C pins.
+The full configuration follows. Put your Wi-Fi, API and OTA secrets in the file `secrets.yaml` of ESPHome. Install the firmware from the ESPHome dashboard. Home Assistant then finds the sensor automatically. For a StampS3 or a Core2, change the board setting. If it is necessary, also change the two I2C pins.
 
 esphome:
   name: plant-biosignal
@@ -224,43 +225,43 @@ binary_sensor:
     name: "Electrode Lead-off"
     device_class: problem
 
-> **KEY — First-boot calibration**
+> **KEY: Calibration at the first start**
 >
-> With electrodes attached and settled, read `Plant Biopotential (raw)` in Home Assistant. Whatever steady voltage it sits at _is_ your baseline, so replace the `1.5` in the lambda with that number. Then `Plant Biopotential` reads ~0 mV at rest and swings signed around it[^pb_esphome_ads1115].
+> Attach the electrodes and wait until they are stable. Then read `Plant Biopotential (raw)` in Home Assistant. The stable voltage that you read _is_ your baseline. Replace the `1.5` in the lambda with this number. Then `Plant Biopotential` reads approximately 0 mV when there is no stimulus. It gives positive and negative values around this value[^pb_esphome_ads1115].
 
-## Interpreting plant-biosignal data
+## How to read plant-biosignal data
 
-These are _changes_ in potential, not a calibrated physiological unit. Compare a plant to itself over time, never plant-to-plant in raw millivolts.
+The values are _changes_ of the potential. They are not a calibrated physiological unit. Compare a plant with the same plant at other times. Do not compare plants with each other in raw millivolts.
 
-| What you see | Likely meaning |
+| Signal that you see | Possible condition |
 | --- | --- |
-| Smooth daily rise and fall tracking the light sensor | Healthy circadian activity, the baseline rhythm of a happy plant |
-| Sharp deflection then slow recovery after you touch or move it | A variation potential, the classic wound/stress signal |
-| Step change synced to lights on/off | Light response (documented ~85% detectable on this hardware)[^pb_pmc_plantsignals] |
-| Baseline slowly climbing and getting noisier, no plant event | Electrode drying out, re-gel it, not a plant problem |
-| 50/60 Hz fuzz dominating everything | Mains pickup, shorten and twist the leads, improve the soil reference |
-| Flat line at a rail (0 or full-scale) | Lead-off or broken contact, check the binary sensor |
+| The signal increases and decreases smoothly each day, at the same time as the light sensor | The circadian rhythm of a plant in good condition. This rhythm is the baseline. |
+| A fast deflection, then the signal goes back to the baseline slowly, after you touch or move the plant | A variation potential. It is the usual signal of a wound or stress. |
+| A step change at the same time as the lights come on or go off | Response to light. The data in the reference show a detection rate of approximately 85% with this hardware[^pb_pmc_plantsignals] |
+| The baseline increases slowly and has more noise, and there is no plant event | The electrode becomes dry. Put new gel on it. It is not a plant problem. |
+| 50/60 Hz noise that is larger than all the other signals | Mains pickup. Make the leads shorter, twist them, and make the soil reference better. |
+| A signal that does not change, at a rail (0 or full scale) | A lead is off or a contact has no connection. Examine the binary sensor. |
 
-To approach a commercial unit's _inference_, log the raw trace alongside VPD, light and irrigation events for a few weeks, then hunt for **your own** repeatable correlations, for example signal amplitude collapsing before visible wilt as an early water-stress warning. That correlation library is exactly what the paid product ships pre-built. Feed the trace into the [plant-state dashboard](plant-state-dashboard.html) to combine it with your other telemetry.
+To get close to the _inference_ of a commercial unit, record data for some weeks. Record the raw trace, the VPD, the light and the irrigation events. Then find **your** correlations that occur again. For example, the amplitude of the signal can decrease strongly before you see wilt, as a first sign of water stress. The commercial product includes this library of correlations. Send the trace to the [plant-state dashboard](plant-state-dashboard.html) to use it together with your other telemetry.
 
-## Limitations, calibration and safety
+## Limits, calibration and safety
 
-> **KEY — Set expectations before you solder**
+> **KEY: Limits to know before you solder**
 >
-> - **Relative, not absolute.** Good for trends and events on one plant, not for comparing plants or reading a calibrated number.
-> - **Re-baseline every reattach.** Half-cell offsets differ each time you place electrodes, so redo the first-boot calibration.
-> - **Higher noise floor than commercial rigs.** Battery power, short shielded leads and a small enclosure help most.
-> - **ESPHome is for trends.** For actual waveforms, flash a plain Arduino sketch that samples the ADS1115 at its full 860 SPS (or the AD8232 off an ESP32 ADC pin at 400 Hz, the rate used in the published plant-signal study[^pb_arxiv_esp32]). Same wiring, different firmware.
+> - **Relative values, not absolute values.** The values are good for trends and events on one plant. They are not good to compare plants or to read a calibrated number.
+> - **Set the baseline again each time that you attach the electrodes.** The half-cell offsets are different each time that you put the electrodes in position. Thus do the calibration at the first start again.
+> - **The noise floor is higher than in commercial units.** The items that give the largest decrease in noise are a battery supply, short shielded leads and a small enclosure.
+> - **ESPHome is for trends.** To record waveforms, install an Arduino sketch on the controller. The sketch must sample the ADS1115 at its maximum rate of 860 SPS. Or it must sample the AD8232 on an ESP32 ADC pin at 400 Hz. The investigation of plant signals used this rate[^pb_arxiv_esp32]. The wiring is the same and the firmware is different.
 
-> **DANGER — Keep it isolated**
+> **DANGER: Keep the sensor isolated**
 >
-> Keep the whole thing low-voltage and battery or USB powered. Never connect plant electrodes to anything mains-referenced, and use one common ground only, so you don't create a ground loop through the plant.
+> Keep the sensor at a low voltage. Supply it with a battery or with USB. Do not connect the plant electrodes to an item that has a connection to the mains. Use one common ground only. Thus there is no ground loop through the plant.
 
 ## References
 
-[^pb_mdpi_ad8232]: Marques JAL et al. (2023). From AD8232 to biopotentials sensors: open-source project and benchmark. Electronics (MDPI), 12(4):833. https://www.mdpi.com/2079-9292/12/4/833 (peer-reviewed)
-[^pb_arxiv_esp32]: AD8232 bioelectric signal processing with ESP32 (2025). arXiv:2505.18173. https://arxiv.org/pdf/2505.18173 (industry/manufacturer source)
-[^pb_pmc_plantsignals]: Plant bioelectrical signals for environmental and emotional state classification (2024). PMC. (AD8232 at 400 Hz; ~85% lamp on/off detection accuracy.) https://www.ncbi.nlm.nih.gov/pmc/articles/PMC12649952/ (peer-reviewed)
-[^pb_hackster_flora]: Verma A. Interacting with the Flora: an ESP32 + AD8232 + BH1750 + DS18B20 plant-signal rig. Hackster.io. https://www.hackster.io/ankurverma608/interacting-with-the-flora-7ef65f (industry/manufacturer source)
-[^pb_vivent]: Vivent Biosignals, VITA1 plant-driven cultivation sensor (manufacturer documentation). https://vivent-biosignals.com/plant-driven-cultivation/ (industry/manufacturer source)
-[^pb_esphome_ads1115]: ESPHome, ADS1115 4-channel 16-bit A/D converter component (documentation). https://esphome.io/components/sensor/ads1115/ (industry/manufacturer source)
+[^pb_mdpi_ad8232]: Marques JAL et al. (2023). From AD8232 to biopotentials sensors: open-source project and benchmark. Electronics (MDPI), 12(4):833. https://www.mdpi.com/2079-9292/12/4/833 (source with peer review)
+[^pb_arxiv_esp32]: AD8232 bioelectric signal processing with ESP32 (2025). arXiv:2505.18173. https://arxiv.org/pdf/2505.18173 (source from a manufacturer or industry)
+[^pb_pmc_plantsignals]: Plant bioelectrical signals for environmental and emotional state classification (2024). PMC. (AD8232 at 400 Hz; ~85% lamp on/off detection accuracy.) https://www.ncbi.nlm.nih.gov/pmc/articles/PMC12649952/ (source with peer review)
+[^pb_hackster_flora]: Verma A. Interacting with the Flora: an ESP32 + AD8232 + BH1750 + DS18B20 plant-signal rig. Hackster.io. https://www.hackster.io/ankurverma608/interacting-with-the-flora-7ef65f (source from a manufacturer or industry)
+[^pb_vivent]: Vivent Biosignals, VITA1 plant-driven cultivation sensor (manufacturer documentation). https://vivent-biosignals.com/plant-driven-cultivation/ (source from a manufacturer or industry)
+[^pb_esphome_ads1115]: ESPHome, ADS1115 4-channel 16-bit A/D converter component (documentation). https://esphome.io/components/sensor/ads1115/ (source from a manufacturer or industry)

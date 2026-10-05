@@ -2,9 +2,9 @@
 slug: "auckland-ipm-blueprint"
 title: "Integrated pest management blueprint for indoor medicinal cannabis in Auckland"
 eyebrow: "Plant health · Auckland medicinal cannabis"
-summary: "A working system for keeping pests and diseases out of an indoor medicinal-cannabis facility: clean starting material, confident identification, control choices that are lawful in New Zealand, monitoring through the crop cycle, and a written trail from the first finding through corrective action to batch hold or release."
+summary: "This blueprint is a system to keep pests and diseases out of an indoor facility for medicinal cannabis. The system has clean starting material, sure identification, control methods that the New Zealand regulations accept, and monitoring during the crop cycle. It also has a written record that includes the first finding, the corrective action, and the batch hold or release."
 track: "Plant health"
-read_time: "~55 min read"
+read_time: "~55 min to read"
 diagrams: ""
 related: ["ipm-sop", "pest-id", "mould-risk", "pppe", "tissue-culture"]
 url: "https://www.growlabs.nz/wiki/auckland-ipm-blueprint.html"
@@ -19,247 +19,248 @@ refs: [{"id": "moh-nz-pesticide-use-2024", "n": 1, "cite": "New Zealand Ministry
 
 # Integrated pest management blueprint for indoor medicinal cannabis in Auckland
 
-_Plant health · Auckland medicinal cannabis · ~55 min read_
+_Plant health · Auckland medicinal cannabis · ~55 min to read_
 
-> A working system for keeping pests and diseases out of an indoor medicinal-cannabis facility: clean starting material, confident identification, control choices that are lawful in New Zealand, monitoring through the crop cycle, and a written trail from the first finding through corrective action to batch hold or release.
+> This blueprint is a system to keep pests and diseases out of an indoor facility for medicinal cannabis. The system has clean starting material, sure identification, control methods that the New Zealand regulations accept, and monitoring during the crop cycle. It also has a written record that includes the first finding, the corrective action, and the batch hold or release.
 
 ## Purpose and scope
 
-This is an operating blueprint for an indoor medicinal-cannabis facility in Auckland. It joins pest and disease identification to clean stock, New Zealand input legality, worker safety, residue release, traceability and CAPA. The point is not to own the most sprays. The point is to keep biology and compliance from cornering you at the same time.
+This blueprint is for the operation of an indoor medicinal cannabis facility in Auckland. It connects the identification of pests and diseases to clean stock and to the safety of workers. It also connects the identification to the regulations for products and organisms in New Zealand. It connects the identification to the release of batches after the residue test, to traceability and to CAPA. We do not want you to have the most sprays. We want you to have an alternative when a pest or disease problem and a compliance problem occur at the same time.
 
-The supplied 128-page IPM Book V15 was used as a coverage benchmark: IPM principles, cultural/environmental/biological/chemical controls, programme construction, eight arthropod profiles, six disease profiles, identification resources, glossary and operator tools[^athena-ipm-book-v15]. Its branded programmes, artwork, rates and prose are not reproduced. New Zealand official sources and primary literature control this paper.
+We used the supplied 128-page IPM Book V15 to compare the coverage of this paper with the book[^athena-ipm-book-v15]. The book includes these parts: the basic information about IPM, cultural controls, environmental controls, biological controls and chemical controls. It also includes how to make a program, eight arthropod profiles, six disease profiles, aids for identification, a glossary and tools for operators. This paper is not a copy of the book. It does not contain the commercial programs of the book, its figures or its rates. For this paper, sources of the authorities in New Zealand and primary literature are more important than the book.
 
-> **DANGER — Generated photographs are educational reconstructions**
+> **DANGER: An AI tool made the photos for training**
 >
-> Every photographic plate in this guide was generated for the paper. Use it to decide where to look and what to sample, never to claim species-level confirmation. Broad and russet mites require microscopy; HLVd requires RT-qPCR or RT-PCR; root and leaf diseases often require a diagnostic laboratory. A convincing image is not a test result.
+> Use a photo to select where to look and which part of the plant to collect as a sample. Do not use a photo to make sure that you know the species. An AI tool made each photo in this paper. Microscopy is necessary for broad mites and russet mites, and RT-qPCR or RT-PCR is necessary for HLVd. A diagnostic laboratory is frequently necessary for root diseases and leaf diseases. A photo that shows the correct signs is not a test result.
 
-- **Live status wins.** Re-check the current Ministry, ACVM, EPA, label, SDS and WorkSafe position at procurement and use.
-- **Facility thresholds are controlled values.** Numbers in this blueprint are examples or planning defaults unless your approved SOP adopts them.
-- **Old damage does not heal.** Verify success with live organisms, new lesions, new growth, traps, roots or laboratory results - not cosmetic recovery.
-- **Clean stock is the centre.** A mother-room failure compounds through every daughter lot. Treat it accordingly.
+- **The current status is more important than this paper.** Examine the current information each time that you get or use a product. Use the information from the Ministry, ACVM, EPA, WorkSafe, the label and the SDS.
+- **The thresholds of a facility are controlled values.** The numbers in this blueprint are examples or start values. Use a number from this blueprint only if your approved SOP includes it.
+- **Previous damage stays on the plant.** Examine living organisms, new lesions, new growth, traps, roots or laboratory results. Use them to make sure that a control had the correct effect. A plant that is in better condition is not a sign of the effect.
+- **Clean stock is the most important part.** A problem in the mother room increases in each clone lot. Thus give the mother room the best protection.
 
-> **Diagram.** The control path. Skipping confirmation or the legal gate is how a small biological problem becomes a batch problem.
+> **Diagram.** The figure shows the control sequence. If you do not do the identification check or the legal gate, a small pest or disease problem can become a batch problem.
 
 ## Definitions
 
-The biological, diagnostic, operational and New Zealand regulatory terms used in this blueprint.
+This section gives the terms for biology, diagnosis, operation and the regulations of New Zealand. The blueprint uses these terms.
 
-## IPM principles, control layers and feedback loop
+## Basic information about IPM, control layers and the feedback loop
 
-IPM is a loop: prevent entry, monitor consistently, identify correctly, compare the finding with a controlled threshold, combine compatible controls, then record and verify. If the recheck fails, the loop runs again at a higher response level. The arthropod review and the existing cannabis literature support layered indoor management rather than a single calendar product[^ahmed-2024-hemp-pests-florida-jipm].
+IPM is a loop with these steps: prevent the movement of pests into the facility, monitor with the same procedure each time, and identify correctly. Then compare the finding with a controlled threshold, use compatible controls together, record the result and do a recheck. If the recheck shows that the result is not satisfactory, the loop starts again with a stronger response. The reference on arthropods and the cannabis literature agree with control in layers for an indoor crop, and not with one product on a calendar[^ahmed-2024-hemp-pests-florida-jipm].
 
-> **Diagram.** Every intervention returns to monitoring. Without the recheck, it is activity rather than control.
+> **Diagram.** After each control step, do the monitoring again. If you do not do a recheck, the step is only a task and is not control.
 
-| Layer | Purpose | Rule |
+| Layer | Function | Instruction |
 | --- | --- | --- |
-| Cultural | Keep the problem out, quarantine what arrives, clean surfaces and tools, control how people and plants move, remove the debris and weeds that shelter pests, and scout on a fixed route with a written record. | Build from this layer before moving upward |
-| Environmental | Take away the temperature, moisture, airflow and root-zone conditions that favour the problem. | Build from this layer before moving upward |
-| Biological | Establish the right predator, parasitoid, nematode or antagonist before pest pressure outruns it. A slow-cooked meal cannot be started at six and eaten at half past; predator numbers build on their own schedule too, so the release date is set by that build-up rather than by the day the problem became obvious. | Build from this layer before moving upward |
-| Chemical / reduced-risk | Use only after the legal gate is passed, aimed at the life stage that is actually vulnerable, and followed by a recheck on a date you set in advance. | Build from this layer before moving upward |
+| Cultural control | Keep the problem out. Put new material in quarantine. Clean the surfaces and tools, and control the movement of persons and plants. Remove the debris and weeds that give protection to pests. Do the scouting on a route that does not change, and keep a written record. | Use this layer before you use a higher layer. |
+| Environmental control | Remove the conditions of temperature, moisture, airflow and root zone that help the problem. | Use this layer before you use a higher layer. |
+| Biological control | Release the correct predator, parasitoid, nematode or antagonist before the pest pressure becomes too high. The number of predators increases slowly. Thus the date of release must agree with this slow increase and not with the day that the problem becomes clear. | Use this layer before you use a higher layer. |
+| Chemical or low-risk control | Use it only when the legal gate accepts the product. Apply it to the life stage that is not resistant to it. Then do a recheck on a date that you set before the application. | Use this layer before you use a higher layer. |
 
-*The control pyramid in operating form. Chemical and reduced-risk inputs sit last, not because they never work, but because they carry the narrowest legal and compatibility envelope.*
+*The table shows the control layers in the correct sequence for the operation. Chemical products and low-risk products are in the last layer. They can have the correct effect, but the regulations and the compatibility give them more limits than the products of the other layers.*
 
-> **KEY — Zero tolerance is not the same as eradication everywhere**
+> **KEY: Zero tolerance is not the same as the removal of all pests from all areas**
 >
-> HLVd in clean stock, broad/russet mites in quarantine, root aphids in propagation, powdery mildew on flowers and Botrytis inside a bud are exclusion or quality events. A low fungus-gnat adult count in an established vegetative room may be a trend-management problem. Use organism and room consequence, not one universal number.
+> HLVd in clean stock and broad mites or russet mites in quarantine are exclusion events or quality events. Root aphids in propagation, powdery mildew on flowers and Botrytis in a bud are also exclusion events or quality events. A low count of adult fungus gnats in a vegetative room that is in operation can be a problem that you monitor with trend data. Use the organism and the consequence for the room. Do not use one number for all organisms and rooms.
 
-| Severity | Name | Definition | Default response |
+| Severity | Name | Definition | Standard response |
 | --- | --- | --- | --- |
-| 0 | Not found | No confirmed organism and no damage. Keep to the planned monitoring frequency; nothing changes. | Monitor |
-| 1 | Trace | One confirmed individual, colony or lesion at one mapped point, with no sign of spread. | Escalate by the approved decision matrix |
-| 2 | Local | More than one finding within a single zone, or a trap count climbing over successive reads, without room-wide spread. | Escalate by the approved decision matrix |
-| 3 | Established | Several zones affected, more than one life stage recurring, disease incidence rising, or the biological programme losing ground. | Escalate by the approved decision matrix |
-| 4 | Systemic | Spread across the room or into linked rooms, clean stock involved, crop quality at risk, or shared infrastructure contaminated. | Escalate by the approved decision matrix |
+| 0 | Not found | No confirmed organism and no damage. Keep the set monitoring frequency, with no change. | Monitor |
+| 1 | Trace | One confirmed organism, colony or lesion at one point on the map, with no sign of movement to other points. | Escalate. Use the approved decision matrix. |
+| 2 | Local | More than one finding in one zone, or a trap count that increases from one reading to the next. The problem does not move across the room. | Escalate. Use the approved decision matrix. |
+| 3 | Established | Some zones have the problem, or more than one life stage occurs again and again. The incidence of disease increases, or the beneficial organisms do not control the pests. | Escalate. Use the approved decision matrix. |
+| 4 | Systemic | The problem moves across the room or into connected rooms. The problem is in clean stock, the crop quality is at risk, or equipment or systems of more than one room have contamination. | Escalate. Use the approved decision matrix. |
 
-*A site severity scale. Incidence, trend and zero-tolerance overrides still apply.*
+*This table is a severity scale for the site. You must also use the incidence and the trend. For some organisms, zero tolerance is more important than the scale.*
 
-## Legal eligibility of IPM controls in New Zealand
+## The legal gate for IPM controls in NZ
 
-New Zealand medicinal cannabis does not have one pest-rule book. The decision sits across the medicinal-cannabis regulations and minimum quality standard, ACVM, HSNO/EPA controls, WorkSafe, analytical release, and Auckland trade-waste/environmental requirements.
+In New Zealand, no one document has all the regulations for pests in medicinal cannabis. The decision uses these sources of regulations: the regulations for medicinal cannabis and the minimum quality standard, ACVM, and the controls of HSNO and EPA. It also uses WorkSafe, the release of batches after laboratory tests, and the requirements of Auckland for trade waste and for the environment.
 
-Regulation 18 restricts pesticide treatment of cannabis crops, while Regulation 7 defines residues that must be tested and their limits. The Ministry's current guidance distinguishes inhalation from non-inhalation pathways and explicitly retains ACVM and HSNO obligations[^moh-nz-pesticide-use-2024][^moh-nz-mqs-2026]. The presence of abamectin, spinosad, pyrethrins or another analyte in a residue panel is not permission to apply it.
+Regulation 18 has limits on the treatment of cannabis crops with pesticides. Regulation 7 gives the residues for which a test is necessary and the limits for these residues. The current guidance of the Ministry shows the difference between inhalation pathways and non-inhalation pathways. The guidance also clearly keeps the requirements of ACVM and HSNO[^moh-nz-pesticide-use-2024][^moh-nz-mqs-2026]. A residue panel can include abamectin, spinosad, pyrethrins or a different analyte. A substance in the panel does not show that the regulations let you apply it.
 
-Most agricultural compounds require ACVM registration; some product classes are exempt, but the exemption conditions and other laws still apply[^mpi-nz-acvm-exempt]. EPA approvals and controls must be confirmed, including the approval information in section 15 of the current New Zealand SDS[^epa-nz-hsno-approvals].
+For most agricultural compounds, ACVM registration is necessary. Some classes of product have an exemption, but you must obey the conditions of the exemption and the other regulations[^mpi-nz-acvm-exempt]. You must make sure that the approvals and the controls of the EPA are correct. This check includes the approval information in section 15 of the current New Zealand SDS[^epa-nz-hsno-approvals].
 
-1. **1. Intended end use** — Decide first whether any part of this lot could end up as flower that a patient inhales. If it could, keep it on the inhalation-capable pathway from the beginning. The rules covering products that are not inhaled are wider, and it is easy to drift into them without noticing. They are not available to a lot that may be inhaled.
-2. **2. Medicinal-cannabis pathway** — Confirm that the active substance or product has a route specifically accepted for medicinal cannabis, such as Regulation 18. Regulation 7 covers residues a laboratory measures in the finished product. A substance appearing there as something to be measured is not permission to apply it to the crop.
-3. **3. ACVM authority** — Confirm the product is registered, or that a documented exemption covers it and every condition attached to that exemption is met. Not finding a product on a register tells you nothing either way; absence is not evidence of an exemption.
-4. **4. HSNO approval** — Confirm the substance holds an EPA approval, and read the controls attached to it. The safety data sheet (SDS) is the supplier's hazard document for a product; check section 15 of the current New Zealand version, then verify what it says against the EPA database rather than trusting the sheet on its own.
-5. **5. Worker controls** — Read the current label and safety data sheet for the personal protective equipment (PPE) required, the controls on how the product is applied, and the re-entry rules. A freshly painted room looks finished long before it is comfortable to sit in, and the wait is set by the paint rather than by how the walls look. A treated crop area works the same way, and that wait has a name: the restricted entry interval, or REI, is the period after an application when nobody may enter unless the specified PPE and conditions are in place. An indoor area under an REI needs signage and controlled access.
-6. **6. Analytical route** — Before a product joins the approved-input register, settle four things: which residues must be tested, the limit the batch has to meet to be released, whether the laboratory's accreditation actually covers that test, and whether the method can measure low enough. That last point is the limit of quantification, or LOQ: the lowest concentration a method can report with acceptable confidence. A method whose LOQ sits above the release limit cannot show that the batch passes.
-7. **7. Biological compatibility** — Check the current side-effect data for every beneficial organism already working in the room: predatory mites and insects, parasitoids, nematodes and microbial products. Side-effect data records how a product affects those organisms and how long the effect lasts. A spray can be entirely lawful and still wipe out a biological programme that took weeks to establish.
-8. **8. Environmental route** — Decide in advance where unused mix, rinse water, contaminated PPE and spills will go, and how each is contained. Nothing goes to stormwater. Whether anything may be discharged to the sewer as trade waste depends on the position Watercare holds for the site.
+1. **1. End product of the lot**: Before all other steps, make the decision if a part of this lot can become flower that a patient inhales. If it can, keep the lot on the inhalation pathway from the start. The regulations for products that a patient does not inhale let you use more substances. It is easy to use these regulations accidentally. These regulations are not available to a lot that a patient can inhale.
+2. **2. Medicinal cannabis pathway**: Make sure that the active ingredient or product has a route that the regulations accept specially for medicinal cannabis. Regulation 18 is an example of this route. Regulation 7 is for residues that a laboratory measures in the end product. A substance can be in this regulation because a laboratory measures it. The regulation does not give approval to apply the substance to the crop.
+3. **3. ACVM authority**: Make sure that the product has a registration. If it does not, make sure that an exemption includes the product. Make sure that a document shows the exemption, and obey each condition of the exemption. If a product is not on a register, you do not know its status. This fact does not show that the product has an exemption.
+4. **4. HSNO approval**: Make sure that the substance has an EPA approval, and read the controls of the approval. The safety data sheet (SDS) is the hazard document of the supplier for a product. Examine section 15 of the current New Zealand version, and compare it with the EPA database. Do not use only the sheet.
+5. **5. Worker controls**: Read the current label and the safety data sheet. They give the necessary personal protective equipment (PPE) and the controls for the application. The restricted entry interval (REI) is the period after an application. In this period, a person can go into the area only with the specified PPE and conditions. The product sets the length of the period, and the crop area can look correct before the period ends. An indoor area with an REI must have signs and controlled access.
+6. **6. Laboratory test route**: Before you put a product in the approved-input register, make sure that you know four items. Find which residues the laboratory must measure and the limit of residues for the release of the batch. Make sure that the accreditation of the laboratory includes the test for these residues. Make sure that the method can measure a sufficiently low concentration. The lowest concentration that a method can measure with satisfactory confidence is the limit of quantification (LOQ). A method with an LOQ more than the limit for release cannot show that the batch is correct.
+7. **7. Compatible with beneficial organisms**: Examine the current side-effect data for each beneficial organism in the room. The beneficial organisms are predatory mites, predator insects, parasitoids, nematodes and microbe products. Side-effect data show the effect of a product on these organisms and the time that the effect continues. A spray can obey the regulations and also kill the beneficial organisms. The number of these organisms increased slowly, during many weeks.
+8. **8. Route to the environment**: Before the application, make a decision on where each of these items goes and how you contain it. The items are the remaining mixture, rinse water, PPE with contamination and spilled liquid. No item goes to stormwater. The position of Watercare for the site sets if an item can go to the sewer as trade waste.
 
-> **WARN — Do not hard-code SKUs, rates, PHIs or REIs in a general paper**
+> **WARN: Do not write SKUs, rates, PHIs or REIs in a general paper**
 >
-> Those values belong in the version-controlled approved-input register beside the current label and SDS. WorkSafe says REIs vary by product, crop/use and exposure; off-label use requires its own risk assessment. Indoor REI areas require signs and controlled entry[^worksafe-nz-rei].
+> Record these values in the approved-input register with the current label and SDS. Use version control for the register. WorkSafe tells you that the REI is different for each product, crop, application and exposure. For an application that is not on the label, a risk assessment for that application is necessary. An indoor area with an REI must have warning signs and controlled access[^worksafe-nz-rei].
 
-| Input class | Planning position | What still must be verified |
+| Class of product or organism | Initial status | Items to examine |
 | --- | --- | --- |
-| Fatty-acid soaps / permitted salts | Potential reduced-risk contact option | Exact medicinal-cannabis pathway, product authority, crop site, residue/quality, PPE/REI |
-| Sulphur | Potential inhalation-capable active pathway | Product authority, indoor exposure, crop-stage/quality limits, compatibility and current label |
-| Hydrogen peroxide | Potential active pathway for defined uses | Crop contact vs line/surface sanitation, concentration, worker exposure, phytotoxicity and discharge route |
-| Food / permitted food-additive actives | Possible pathway only where every condition is met | Novel-food/composition caveats, product ACVM/HSNO position, actual use and analytical route |
-| Microbial actives | Several named species/strains appear in the regulation pathway | Exact species/strain/product, viable use, ACVM/HSNO status, non-target/beneficial effects and label |
-| Conventional food-crop pesticide | Not automatically inhalation-capable | Whether a lawful non-inhalation or specific medicinal-cannabis pathway exists; residue calculation and testing |
-| Beneficial organism | Not the same as a pesticide active | Current organism status, import/release route, supplier, cold chain, containment and facility compatibility |
+| Soaps of fatty acids and permitted salts | Possible low-risk contact alternative | The correct pathway for medicinal cannabis, the approval of the product, the crop site, residue and quality, PPE and REI |
+| Sulfur | Possible inhalation pathway for the active ingredient | The approval of the product, the exposure in the indoor area, the limits for the crop stage and the quality, compatibility, and the current label |
+| Hydrogen peroxide | Possible active pathway for specified applications | Contact with the crop compared with sanitation of pipes and surfaces, concentration, exposure of workers, phytotoxicity and the discharge route |
+| Active ingredients from food and from permitted food additives | Possible pathway only if you obey all the conditions | Conditions for novel food and for composition. The ACVM and HSNO status of the product. The application that you do and the laboratory test route. |
+| Active ingredients that are microbes | The regulation pathway has the names of some species and strains | The correct species, strain and product. Viability in the application. ACVM and HSNO status. Effects on organisms that are not the target and on beneficial organisms. The label. |
+| Conventional pesticide for food crops | Not automatically an inhalation pathway | A permitted non-inhalation pathway or a permitted pathway for medicinal cannabis, if there is one. Also how to calculate the residue and how to do the residue tests. |
+| Beneficial organism | Not the same as an active ingredient of a pesticide | The current status of the organism, the import route and the release route, the supplier, the cold chain, containment, and compatibility with the facility |
 
-*A pathway screen, not a product recommendation. The approved-input register holds the current answer.*
+*This table is a first check of pathways. It does not tell you which product to select. The approved-input register shows the current status.*
 
-Testing of pesticides and other non-critical minimum-quality-standard attributes may be performed by appropriately scoped GMP or ISO/IEC 17025:2017 laboratories, while critical tests require GMP capability. Confirm the laboratory scope and method before relying on a release plan[^moh-nz-mqs-2026].
+A laboratory can do the tests for pesticides and for the other non-critical quality attributes of the minimum quality standard. The laboratory must have GMP or ISO/IEC 17025:2017 with the correct scope. For critical quality attributes, the laboratory must have GMP. Before you use a release procedure, make sure that the scope and the method of the laboratory are correct[^moh-nz-mqs-2026].
 
 ## Clean-stock controls in IPM
 
-The mother room is not just where clones come from. It is a source-material system. Its failures multiply through every cutting, room and batch downstream.
+The mother room is not only the area where clones start. It is a system for starting material. A problem in the mother room increases in each cutting, room and batch downstream.
 
-HLVd can be asymptomatic, moves efficiently with vegetative propagation and contaminated tools, and research supports transmission risk through roots and recirculating hydroponic solution[^hlvd_threat2023][^hlvd_mgmt2025][^hlvd-transmission-2025]. Visual health is therefore not a release test.
+A plant with HLVd can show no symptoms. HLVd moves easily with vegetative propagation and with tools that have contamination. Investigations show a risk that HLVd can move through roots and through recirculating hydroponic solution[^hlvd_threat2023][^hlvd_mgmt2025][^hlvd-transmission-2025]. Thus a visual check of the plant is not a test for release.
 
-> **Diagram.** No genetics bypass quarantine, and no accession is promoted on appearance alone.
+> **Diagram.** All genetics must go through quarantine. Do not release an accession only because a visual check is satisfactory.
 
-- Foundation mothers are created only from released material and retain the cleanest controls.
-- Production mothers, cutting lots and rooms inherit a traceable parent-child relationship.
-- Tools are sanitised between defined plant units, not merely at the end of the shift.
-- Quarantine, foundation stock and production stock do not share nutrient solution or unvalidated return water.
-- A positive or inconclusive test has a written hold, repeat, destruction and traceback rule before the first sample is collected.
+- Make foundation mothers only from released material. Foundation mothers have the best controls.
+- You can trace the parent of each production mother, cutting lot and room.
+- Sanitize tools between specified groups of plants. Do not sanitize tools only at the end of the work period.
+- Quarantine, foundation stock and production stock do not use the same nutrient solution. They do not use the same return water without validation.
+- Before you collect the first sample, write the procedure for a positive result or an inconclusive result. The procedure must show how to hold the plants, do the test again, destroy the plants and do the traceback.
 
-| Plant class | Planning cadence | Sampling rule | Decision rule |
+| Class of plant | Typical frequency | Instruction for sampling | Instruction for the decision |
 | --- | --- | --- | --- |
-| Incoming accession | At entry and again before promotion where risk warrants | Individual plant; validated tissue/method | No promotion until release criteria are met |
-| Foundation mother | At creation and risk-based recurring schedule | Individual, no routine pooling unless validated | Positive = destroy, hold linked daughters, investigate |
-| Production mother | Before major cutting campaigns or site-defined recurring schedule | Individual or validated pool with reflex testing | Positive = stop clone movement and trace since last verified negative |
-| Clone lot | Risk-based verification linked to mother status | Lot-based plan with controls | Hold linked rooms when source status is compromised |
-| Hydro environment | Investigation / sentinel use where system risk exists | Tank, return, root interface under validated method | Positive environmental signal triggers cohort investigation, not automatic plant diagnosis |
+| Received accession | At receipt, and again before release from quarantine if the risk makes it necessary | One sample for each plant. Validated tissue and validated method. | Do not release the accession until it agrees with the release criteria. |
+| Foundation mother | When you make the mother, and then at the times that the risk makes necessary | Do one test for each plant. Do not use pooled samples as the usual method, unless you validate the pooled sample. | Positive result: destroy the mother, hold the connected clones, do an investigation. |
+| Production mother | Before a large production of cuttings, or at the times that the site selects | One sample for each plant or a validated pooled sample, with reflex testing | Positive result: stop the movement of clones and trace the clones since the last negative result that you know is correct. |
+| Clone lot | A check that the risk and the status of the mother make necessary | A sampling procedure for each lot, with controls | Hold the connected rooms if the status of the source has a problem. |
+| Hydro environment | Investigation or sentinel testing if there is a risk in the system | Tank, return water and root interface, with a validated method | A positive result from the hydro environment starts an investigation of all the connected plants. The result does not give an automatic diagnosis of one plant. |
 
-*Planning cadence only. The controlled sampling plan must match the laboratory method, plant age, tissue, risk and facility history.*
+*The table gives typical frequencies only. The controlled sampling procedure must agree with the laboratory method, the age of the plant, the tissue, the risk and the records of the facility.*
 
-> **DANGER — A monthly test is not protection if the genealogy is broken**
+> **DANGER: A test each month gives no protection if the genealogy is broken**
 >
-> If you cannot identify every daughter lot since the last verified negative, a positive mother turns into a building-wide guessing exercise. Build the trace tree first.
+> Make the trace tree first. You must identify each clone lot since the last negative result that you know is correct. If you cannot, you do not know which rooms have the problem after a positive result for a mother.
 
 ## Facility contamination pathways
 
-Pests and pathogens do not care which department owns a vector. A clean-stock programme fails if workers backtrack, scissors cross mothers, return air connects quarantine, or a shared reservoir moves root pathogens. Cannabis disease reviews repeatedly identify stock, tools, water, debris, density and environmental conditions as interacting routes[^punja-2021-emerging-diseases-cannabis].
+A vector can move a pest or a pathogen from one area to a different area. It is not important which group of personnel has the vector. A clean-stock program gives no protection if a worker goes back to a clean area or if scissors go between mothers. It also gives no protection if return air connects to quarantine or if a reservoir for more than one area moves root pathogens. References on cannabis diseases frequently show these routes of contamination: stock, tools, water, debris, density and the conditions of the environment. The routes have an effect on each other[^punja-2021-emerging-diseases-cannabis].
 
-> **Diagram.** Movement normally goes clean to dirty. Any authorised backtracking requires full decontamination and a recorded exception.
+> **Diagram.** Movement is usually from clean areas to dirty areas. If an approved exception lets a person go back to a clean area, the person must do a full decontamination first. You must record the exception.
 
-**People**
+**Personnel**
 
-Room-class gowning, clean-to-dirty shift order, no unrecorded backtracking, treated-area controls and site-specific training records.
+Use gowning for each room class. Move from clean areas to dirty areas in each work period. Do not go back to a clean area without a record. Use controls for the treated areas. Keep training records for the site.
 
 **Tools**
 
-Room or plant-class ownership, verified sanitizer concentration/contact time, between-unit rules and a clean/dirty state that is obvious.
+Keep tools for one room or one plant class only. Make sure that the sanitizer concentration and the contact time are correct. Sanitize tools between groups of plants. Make it easy to know if a tool is clean or dirty.
 
 **Air**
 
-Quarantine separation, pressure intent, filtered supply, no shared contaminated return, canopy/dead-zone mapping and condensation checks.
+Isolate quarantine from the other areas. Set the difference of pressure between rooms. Use filtered supply air. Do not use the same return air for an area with contamination and for a clean area. Make a map of the air movement in the canopy and of the dead zones. Do checks for condensation.
 
 **Water**
 
-Segregated tanks/circuits where consequence demands it, no unvalidated recirculation, biofilm control, drain mapping and backflow prevention.
+Where the consequence of a problem is high, use dedicated tanks and circuits. Do not use recirculating water without validation. Use biofilm control. Make a map of the drains. Prevent backflow.
 
-**Plant/material**
+**Plants and materials**
 
-Approved sources, sealed waste, clean media/pots, controlled beneficial receipt and no cardboard/packaging wandering through clean rooms.
+Use approved sources. Seal waste. Use clean media and clean pots. Use controls for the beneficial organisms that you receive. Do not let cardboard or packaging go into clean rooms.
 
 **Waste**
 
-Bag and log crop waste in the room; contain rinse/spill liquids; use approved disposal and trade-waste pathways, never stormwater.
+Put crop waste in bags in the room. Record the waste. Contain rinse water and spill liquids. Use approved disposal pathways and trade waste pathways. Do not send waste to stormwater.
 
-Watercare requires a trade-waste agreement when a business discharge is not low risk, with site controls and monitoring defined by the agreement[^watercare-nz-trade-waste]. Auckland's E33 framework prioritises avoiding contaminant discharge and requires appropriate onsite management, containment, treatment or lawful disposal[^auckland-unitary-plan-e33]. Site address, drainage and activity classification remain facility inputs.
+A trade waste agreement with Watercare is necessary if the discharge of a facility is not low risk. The trade waste agreement gives the controls and the monitoring for the site[^watercare-nz-trade-waste]. In the E33 requirements of Auckland, the primary task is to prevent the discharge of contaminants. The requirements also make it necessary to have the correct control on the site, containment, treatment or permitted disposal[^auckland-unitary-plan-e33]. The address of the site, the drainage and the classification of the operation are data that the facility must supply.
 
-## Cultural and environmental controls
+## Cultural controls and environmental controls
 
-The quiet controls are the ones that scale: eliminate weeds, algae and plant debris; keep doors/screens/barriers functional; quarantine every genetic source; use one-way work; maintain a fixed scouting route; and commission root-zone and canopy conditions. They reduce both the chance of entry and the rate of spread after entry.
+These controls continue to operate when the facility becomes larger. Remove weeds, algae and plant debris. Keep doors, screens and barriers in good condition. Put each source of genetics in quarantine. Move personnel and material in one direction.Keep the same scouting route. Measure the conditions of the root zone and of the canopy. Set the conditions correctly. These controls decrease the risk that pests go into the facility, and the rate of movement of pests in the facility.
 
-| Control point | Minimum check | Failure signal | Correction |
+| Control point | Minimum check | Sign of a problem | Correction |
 | --- | --- | --- | --- |
-| Exterior/interior reservoirs | Weeds, algae, drains, debris and standing water | Repeated small-fly pressure or pest reservoirs | Remove source, repair drainage/leaks, clean and verify |
-| Sanitizer | Product, concentration, contact time, surface cleanliness | No concentration record, dirty surface or premature wipe-off | Remix, pre-clean, repeat full contact time |
-| Canopy air | Representative airspeed/dead zones and leaf movement | Still dense pockets, condensation or repeated Botrytis/PM zone | Rebalance fans/HVAC and canopy density |
-| Night transition | Leaf/surface temperature, RH, dew-point margin | Condensation or a narrow margin during lights-off | Change humidity removal, air movement, temperature ramp and irrigation timing |
-| Root zone | Temperature, DO where relevant, moisture pattern, drain, biofilm/algae | Warm saturated roots, poor drainage, sloughing or shared-cohort symptoms | Correct irrigation/oxygen/heat, isolate and diagnose |
-| Sticky cards | ID, colour, height, date, clean readable surface | Unmapped cards or counts without position/history | Replace, map and standardise reading |
+| External and internal pest reservoirs | Weeds, algae, drains, debris and standing water | Frequent high counts of small flies, or pest reservoirs | Remove the source. Repair the drainage and the leaks. Clean the area. Examine the result. |
+| Sanitizer | Product, concentration, contact time, and a clean surface | No record of the concentration, a dirty surface, or removal of the sanitizer before the end of the contact time | Mix the sanitizer again. Clean the surface first. Use the full contact time again. |
+| Canopy air | Air speed at typical points, dead zones and movement of leaves | Areas with high density and no air movement, condensation, or a zone with frequent Botrytis or powdery mildew | Adjust the fans and the HVAC, and decrease the density of the canopy |
+| The change from day to night | Temperature of leaves and surfaces, RH, and the dew-point margin | Condensation, or a small dew-point margin while the lights are off | Change humidity removal, air movement, temperature ramp and the time of irrigation |
+| Root zone | Temperature, dissolved oxygen if it is important, moisture pattern, drain, biofilm and algae | Warm saturated roots, drainage that is not satisfactory, sloughing, or the same symptoms in the plants of a cohort | Correct the irrigation, the oxygen and the heat. Isolate the plants. Do a diagnosis. |
+| Sticky traps | ID, color, height, date, and a clean surface that you can read | Traps that are not on the map, or counts with no position and no record of previous counts | Replace the traps. Put the traps on the map. Use the same procedure to read the traps. |
 
-*Prevention checks must produce an observable pass/fail, not a vague instruction to keep the room clean.*
+*A prevention check must give a result that you can see, which is satisfactory or unsatisfactory. A general instruction to keep the room clean is not a check.*
 
-> **NOTE — Room RH is not the leaf microclimate**
+> **NOTE: Room RH is not the leaf microclimate**
 >
-> Dense canopy, cold surfaces, irrigation timing and lights-off transitions can create wet or near-condensing tissue while the wall sensor looks acceptable. Commission the actual risk locations and record the correction trigger.
+> A canopy with high density, cold surfaces, the time of irrigation and the change to darkness can cause wet tissue, or tissue near condensation. At the same time, the wall sensor can show a satisfactory value. Measure the conditions in the areas where the risk is. Record the trigger for a correction.
 
-> **Diagram.** Same route, same points, same plant parts. Consistency makes trend data comparable.
+> **Diagram.** Use the same scouting route, the same points and the same plant parts. Thus you can compare the trend data.
 
-## Biological control programmes
+## Biological control programs
 
-A biological programme succeeds when the right organism arrives alive, is released into a suitable crop and climate, survives existing residues, finds the target stage, establishes where needed and is verified. Generalist and specialist predators are not interchangeable; neither are aphid or whitefly parasitoids[^lopez-2023-amblyseius-swirskii-review-jipm][^vanmaanen-2010-broad-mite-swirskii-biocontrol].
+A biological control program gives a satisfactory result when all of these conditions occur. The organism that you receive must be the correct organism and a living organism. You release it into a crop and a climate that are correct for it. It survives the residues that are in the crop, finds the target stage and establishes where necessary. You do a check to make sure that the result is satisfactory. Generalist predators and specialist predators are not interchangeable, and aphid parasitoids and whitefly parasitoids are not interchangeable[^lopez-2023-amblyseius-swirskii-review-jipm][^vanmaanen-2010-broad-mite-swirskii-biocontrol].
 
-| Control group | Typical role | Release-plan checks |
+| Control group | Typical function | Checks for the release procedure |
 | --- | --- | --- |
-| Canopy predatory mites | Phytoseiulus persimilis for spider-mite hotspots; Neoseiulus californicus or N. fallacis for broader spider-mite suppression; N. cucumeris or Amblyseius swirskii for thrips larvae and, where the evidence supports it, broad mites or young whitefly stages | Before calling any of these deployable, confirm the organism's current New Zealand status, whether a supplier can actually deliver it, which pest stage it attacks, whether the room climate suits it, how it is released in sachets or loose, what residues are already present, and whether there is evidence it establishes |
-| Canopy predators | Orius species against thrips life stages, and lacewing larvae against aphids and other exposed soft-bodied prey where the host fit is supported | Confirm current New Zealand status and supplier availability, then release against the correct prey stage and check how far they disperse, whether there is enough prey to stop them eating each other, the crop stage, and residues that would kill them |
-| Aphid parasitoids | Aphidius species chosen for the confirmed aphid host; cannabis, green peach and potato aphids are not interchangeable targets | Confirm current New Zealand status, supplier availability and host match. Then monitor the mummies that show parasitism is happening, watch for wasps that attack the parasitoids themselves where that is relevant, and track residues and when a replacement release is due |
-| Whitefly parasitoids | Encarsia formosa or Eretmocerus species chosen for the confirmed whitefly species and nymph stage | Confirm current New Zealand status and supplier availability, then confirm the whitefly species, the release timing, the climate, the evidence of parasitism, and whether residues in the room are compatible |
-| Root-zone predators | Stratiolaelaps scimitus and, where lawful and available, Dalotia coriaria against fungus-gnat larvae, soil-dwelling thrips stages and other small prey in the media | Confirm current New Zealand status and supplier availability; check media depth and moisture, whether there is prey for them, whether they arrive alive, how evenly they are distributed at release, the residues present, and whether they establish |
-| Beneficial nematodes | Steinernema feltiae against susceptible fungus-gnat larvae and other supported stages in the media | Confirm the product and organism are lawful and available; check live and dead morphology on arrival, keep them cold, use them promptly, and check agitation and oxygen in the tank, light exposure, filter and nozzle sizes, and whether a dip, drench or sprench suits |
-| Entomopathogenic microbes | Beauveria and other approved insect-pathogenic strains against the aphid, thrips, whitefly or other stages named on the label | Confirm the exact strain and product and its New Zealand pathway, then manage storage and viability, the contact and environmental conditions it needs, effects on non-target organisms, worker controls, residues, and the recheck |
-| Plant-pathogen antagonists | Trichoderma, Bacillus or Streptomyces strains for preventive suppression of supported root or foliar pathogens, not for reviving dead tissue or a plant already colonised internally | Confirm the exact strain and product, its New Zealand status and supplier availability. Keep it away from sanitisers, check it suits the reservoir and the crop, and check storage, whether it colonises, and what evidence exists for the outcome you want |
+| Canopy predatory mites | Phytoseiulus persimilis for hotspots of spider mites. Neoseiulus californicus or Neoseiulus fallacis for control of spider mites in a larger area. Neoseiulus cucumeris or Amblyseius swirskii for thrips larvae and, if there is evidence for it, for broad mites or the first stages of whitefly. | Before you use these organisms, examine the current New Zealand status of each organism. Make sure that a supplier has the organism, and that you know the pest stage that it eats. Make sure that the room climate is correct for it. Examine the method of release, in sachets or loose, and the residues that are in the room. Make sure that there is evidence that it stays in the crop and increases in number. |
+| Canopy predators | Orius species for the life stages of thrips. Lacewing larvae for aphids and other prey with soft bodies on the plant surface, if evidence shows that they agree with the prey. | Examine the current New Zealand status. Make sure that a supplier has the predators. Then release the predators when the prey is in the correct stage. Examine how far they move and the crop stage. Make sure that there is sufficient prey, because the predators eat each other when there is not. Examine the residues that kill them. |
+| Parasitoids of aphids | Aphidius species that you select for the confirmed aphid host. The cannabis aphid, the green peach aphid and the potato aphid are not interchangeable targets. | Examine the current New Zealand status. Make sure that a supplier has the parasitoids, and that they agree with the host. Then monitor the mummies, which show parasitism. Look for wasps that kill the parasitoids, if the wasps are a problem. Monitor the residues, and the date when the next release is necessary. |
+| Parasitoids of whitefly | Encarsia formosa or Eretmocerus species that you select for the confirmed whitefly species and nymph stage. | Examine the current New Zealand status. Make sure that a supplier has the parasitoids. Then examine the whitefly species, the time of release, the climate and the evidence of parasitism. Make sure that the residues in the room are compatible. |
+| Root-zone predators | Stratiolaelaps scimitus and, if the regulations accept it and it is available, Dalotia coriaria. They are for fungus gnat larvae, the stages of thrips that stay in the soil, and other small prey in the media. | Examine the current New Zealand status. Make sure that a supplier has the predators. Examine the depth and moisture of the media, and if there is prey for the predators. Make sure that the predators are live when you receive them. Examine how equally you put them in the media. Examine the residues that are in the media, and if the number of predators increases. |
+| Beneficial nematodes | Steinernema feltiae for fungus gnat larvae that are not resistant to it, and for other stages in the media if there is evidence for it. | Make sure that the regulations accept the product and the organism, and that they are available. When you receive the nematodes, examine a sample. Use the shape to find the live nematodes and the nematodes that died. Keep them cold and use them quickly. Examine the agitation and oxygen in the tank and the light on the nematodes. Examine the sizes of the filters and nozzles, and find if a dip, drench or sprench is correct. |
+| Entomopathogenic microbes | Beauveria and other approved strains that infect insects, for the aphid, thrips, whitefly or other stages that the label gives. | Examine the strain and the product, and its pathway in New Zealand. Then control the storage and the viability. Examine the contact and the conditions of the environment that are necessary for it. Examine the effect on organisms that are not the target. Examine the controls for workers, the residues, and the recheck. |
+| Plant-pathogen antagonists | Trichoderma, Bacillus or Streptomyces strains. They prevent disease from root pathogens or pathogens on the foliage, if there is evidence for it. They do not repair necrosis or a plant that has the pathogen in the internal tissue. | Examine the strain and the product, and its status in New Zealand. Make sure that a supplier has it. Keep it away from sanitizers. Examine if it is correct for the reservoir and the crop, the storage, and if it colonizes the roots. Examine the evidence for the result that you want. |
 
-*Functional groups only. Verify current New Zealand organism status, supplier availability and product law before naming a deployable agent.*
+*The table shows only the groups and the function of each group. Before you select a beneficial organism, make sure that you know the current status of the organism in New Zealand. Make sure that a supplier can supply the organism and that the regulations let you use it.*
 
-1. **Approve** — Confirm organism/product identity, NZ legal status, supplier, compatibility and target stage.
-2. **Receive** — Record lot, arrival time/temperature, packaging condition and expiry/use window.
-3. **Verify viability** — Use the supplier method to check movement, counts, nematode survival or microbial condition; reject failed material.
-4. **Release** — Map rate and location against crop stage, pest distribution and environmental conditions.
-5. **Establish** — Check predators, parasitised hosts/mummies, prey-stage decline or other defined evidence.
-6. **Correct** — If establishment fails, find whether the cause was dead stock, wrong species/stage, climate, residues, timing or application.
+1. **Get approval**: Make sure that you know which organism or product you will use, and the name of the supplier. Make sure that you know the legal status in NZ, the compatibility and the target stage.
+2. **Receive**: Record the lot, and the time and temperature when you receive the product or organism. Record the condition of the packaging, the expiry date and the period in which you can use it.
+3. **Examine viability**: Use the method of the supplier. Examine the movement, the counts, the survival of nematodes or the condition of microbes. Reject material that is not satisfactory.
+4. **Release**: Make a map of the release rate and the release location. Compare the map with the crop stage, the areas where the pest is, and the conditions of the environment.
+5. **Establish**: Look for predators, hosts that have parasitoids, mummies, a smaller number of the prey stage, or other specified evidence.
+6. **Correct**: If the organisms do not establish, find the cause. The cause can be dead organisms, an incorrect species or stage, climate, residues, the time of release or application.
 
-Imported invertebrates require species eligibility, permits/facilities where applicable and biosecurity/HSNO compliance. Do not turn a global supplier catalogue into an NZ release list[^mpi-nz-invertebrate-import].
+Make sure that the regulations let the species of the invertebrate come into New Zealand. Make sure that you have the permits and the facilities that are necessary. Obey the biosecurity requirements and HSNO. Do not use the list of products of a supplier in a different country as the release list for NZ[^mpi-nz-invertebrate-import].
 
-## Input selection and application
+## Selection and application of products
 
-Once a finding crosses threshold, select the fewest controls that cover the confirmed organism, life stage and plant part without breaking law, worker safety, beneficials or release. Rotate IRAC/FRAC modes where relevant; physical modes and living controls still need compatibility planning.
+When a finding is more than the threshold, select the smallest number of controls. The controls must have an effect on the confirmed organism, the life stage and the plant part. The controls must agree with the regulations, be safe for workers, be compatible with the beneficial organisms, and not stop the release of batches. Where it is important, change the IRAC group or the FRAC group each time that you apply a control. You must also make sure that physical controls and controls with living organisms are compatible.
 
-| Mode | What it does | Common failure |
+| Mode | Function | Typical problem |
 | --- | --- | --- |
-| Contact kill | Acts only where spray reaches the organism | Poor underside/flower coverage or protected life stages |
-| Smothering/desiccation | Disrupts soft-bodied pests physically | Crop-stage injury, incomplete coverage or incompatibility |
-| Microbial insect pathogen | Infects susceptible pest stage under suitable conditions | Wrong stage, low viability, unsuitable humidity or incompatible residue |
-| Predator/parasitoid | Consumes or develops in a target pest | Released too late, wrong host, dead arrival or no establishment |
-| Root-zone antagonist | Suppresses pathogen establishment/pressure | Asked to cure dead roots or mixed with a sanitiser that kills it |
-| Oxidation/sanitation | Reduces contamination on the validated use site | Assuming line/surface sanitation rate is safe or effective on living crop |
-| Environmental correction | Removes a condition supporting the problem | Treating room average while the microclimate remains wrong |
+| Contact control | Kills only the organisms that the spray touches | Coverage that is not satisfactory on the leaf underside or the flower, or life stages in areas that the spray cannot touch |
+| Smothering or desiccation | Causes mechanical damage to soft-bodied pests | Damage to the crop at some stages, coverage that is not full, or no compatibility |
+| Microbe that is an insect pathogen | Causes an infection in a pest stage that this microbe can infect, if the conditions are correct | Incorrect stage, low viability, humidity that is not correct, or residue that is not compatible |
+| Predator or parasitoid | A predator eats the target pest. A parasitoid has its development in the target pest. | A release after the correct time, an incorrect host, dead organisms when you receive them, or no establishment |
+| Root-zone antagonist | Decreases the establishment and the quantity of the pathogen | A person uses it to repair dead roots, or mixes it with a sanitizer that kills it |
+| Oxidation and sanitation | Decreases contamination on the validated application site | You think that a rate for the sanitation of pipes and surfaces is safe, or has efficacy, on the plants of the crop |
+| Correction of the environment | Removes a condition that helps the problem | Correction of the room average only, when the microclimate is not correct |
 
-*Product-agnostic modes. The actual product, use site and rate come from the controlled register and current label/SDS.*
+*The table gives modes only. It does not give a product. Get the product, the application site and the rate from the controlled register and from the current label and SDS.*
 
-> **WARN — Application quality is part of efficacy**
+> **WARN: The quality of the application is part of the efficacy**
 >
-> Calibrate output, check water and mixing order, verify agitation, select nozzle/pressure, define target coverage, manage lights/HVAC, contain runoff, clean equipment, post REI signage and perform a phytotoxicity test patch when the approved SOP requires it. A legal product applied badly is still a failed treatment.
+> Calibrate the output. Make sure that the water is correct. Add the products in the correct sequence. Make sure that the agitation is correct. Select the nozzle, the pressure and the coverage of the target. Set the lights and the HVAC correctly.
+> Contain the runoff. Clean the equipment. Put warning signs in position for the REI. Do a phytotoxicity test on a small area of the crop if your approved SOP makes it necessary. A product that the regulations let you use gives an unsatisfactory result if you apply it incorrectly.
 
-| Approved-input register field | Required |
+| Approved-input register field | Necessary |
 | --- | --- |
 | Product and supplier | Yes |
 | Active ingredient / living organism / strain | Yes |
 | Target organism and target life stage | Yes |
-| Inhalation or segregated non-inhalation pathway | Yes |
-| Medicinal-cannabis legal basis | Yes |
+| Inhalation pathway, or non-inhalation pathway with separation | Yes |
+| Legal basis for medicinal cannabis | Yes |
 | ACVM registration or exemption evidence | Yes |
-| EPA approval / HSNO controls and current SDS revision | Yes |
-| Label use, crop or contact site, and application method | Yes |
-| IRAC or FRAC group, or the physical or biological mode of action | Yes |
-| PPE, REI, signage, pre-harvest interval or withholding period, and crop-stage restriction | Yes |
-| Analytical method, required limit, and the LOQ achievable in practice | Yes |
-| Compatibility with every beneficial organism in the room | Yes |
-| Mixing, water quality, calibration and clean-out requirements | Yes |
-| Waste, rinse and spill route | Yes |
-| Evidence grade, approver, last verification and review due date | Yes |
+| EPA approval / HSNO controls and current SDS version | Yes |
+| Label instructions, crop or contact site, and application method | Yes |
+| IRAC or FRAC group, or the physical mode of action, or the biological mode of action | Yes |
+| PPE, REI, signs, pre-harvest interval or withholding period, and limit for the crop stage | Yes |
+| Test method, necessary limit, and the LOQ that is possible in the laboratory | Yes |
+| Compatibility with each beneficial organism in the room | Yes |
+| Requirements for mixture, water quality, calibration and clean-out | Yes |
+| Route for waste, rinse water and spilled liquid | Yes |
+| Evidence grade, the person who gives the approval, the last check, and the date of the next review | Yes |
 
-*Do not release an input to stores until every applicable field is complete and approved.*
+*Do not release a product to storage until you complete each applicable field and each field has approval.*
 
 ## Arthropod identification
 
-The plate is the start of the diagnosis. Confirm morphology, sample the right plant part, separate lookalikes, then choose controls that reach the actual life stage.
+The photo is the start of the diagnosis. Examine the morphology to make sure that the identification is correct. Collect a sample from the correct plant part. Find the difference between the organism and the problems with the same signs. Then select controls that have an effect on the life stage that you found.
 
-Cannabis supports diverse piercing/sucking and root-zone pests; primary reviews emphasise that indoor management depends on accurate identification, life cycle and plant location[^ahmed-2024-hemp-pests-florida-jipm][^pulkoski-burrack-2023-piercing-sucking-hemp].
+Cannabis has many different piercing-sucking pests and many pests in the root zone. Primary references show that, for control in an indoor crop, it is important to know the correct identification, the life cycle and the plant location[^ahmed-2024-hemp-pests-florida-jipm][^pulkoski-burrack-2023-piercing-sucking-hemp].
 
 #### 1. Rice root aphid (Rhopalosiphum rufiabdominale)
 
@@ -275,17 +276,17 @@ Cannabis supports diverse piercing/sucking and root-zone pests; primary reviews 
 
 #### 7. Whiteflies (Trialeurodes vaporariorum, Bemisia tabaci complex and related species)
 
-#### 8. Foliar aphids (Phorodon cannabis, Myzus persicae, Macrosiphum euphorbiae and others)
+#### 8. Aphids on leaves (Phorodon cannabis, Myzus persicae, Macrosiphum euphorbiae and other species)
 
-#### 9. Budworms and caterpillars (Lepidopteran larvae; species confirmation required)
+#### 9. Budworms and caterpillars (Lepidopteran larvae. You must identify the species.)
 
 ## Disease diagnosis and sampling
 
-Disease symptoms overlap. Use them to choose tissue, environmental records and the right laboratory route. Do not convert a picture match into a release decision.
+Disease symptoms can be the same for different diseases. Use the symptoms to select the tissue, the records of the environment and the correct laboratory route. Do not make a release decision only because a symptom agrees with a photo.
 
-Cannabis disease literature supports distinct management for powdery mildew, Botrytis, Pythium, Fusarium and systemic propagation threats[^scott-punja-2021-powdery-mildew-management][^mahmoud-2023-botrytis-budrot][^punja-2023-fusarium-pythium-biocontrol]. Septoria diagnosis is complicated by closely related species and requires more than lesion colour[^rahnama-2021-septoria-cannabis][^ujata-2024-septoria-cannabicola].
+The cannabis literature on diseases gives evidence for different controls for powdery mildew, Botrytis, Pythium, Fusarium and systemic pathogens in propagation[^scott-punja-2021-powdery-mildew-management][^mahmoud-2023-botrytis-budrot][^punja-2023-fusarium-pythium-biocontrol]. Related species of Septoria make the diagnosis not easy. Thus the color of the lesion is not sufficient for the diagnosis[^rahnama-2021-septoria-cannabis][^ujata-2024-septoria-cannabicola].
 
-#### 1. Powdery mildew (Golovinomyces and related powdery-mildew fungi on cannabis)
+#### 1. Powdery mildew (Golovinomyces and other powdery mildew fungi on cannabis)
 
 #### 2. Botrytis bud rot (Botrytis cinerea)
 
@@ -295,118 +296,118 @@ Cannabis disease literature supports distinct management for powdery mildew, Bot
 
 #### 5. Hop latent viroid disease (Hop latent viroid (HLVd))
 
-#### 6. Septoria leaf spot (Septoria cannabis, S. neocannabina, S. cannabicola and related diagnoses)
+#### 6. Septoria leaf spot (Septoria cannabis, S. neocannabina, S. cannabicola and other Septoria species)
 
-## Diagnostic lookalikes
+## Problems with the same signs
 
-A diagnostic atlas without healthy controls trains people to see disease everywhere. Compare like with like: underside to underside, opened flower to opened flower, new meristem to new meristem, and roots at the same age and substrate.
+An atlas without reference plants in good condition makes personnel see disease in all plants. Compare the same parts: underside to underside, opened flower to opened flower and new meristem to new meristem. Compare roots of the same age in the same substrate.
 
-Key terms, in the facilityOpenAI image generationHealthy leaf undersideHealthy white rootsHealthy shoot tipHealthy flower interiorFungus gnat beside a winged root aphidLeaf curl from heat and light, no mites presentDried spray residue, not powdery mildewRoot stress with no pathogen, which is not yet a diagnosis
+Terms in the facility OpenAI image generationLeaf underside in good conditionWhite roots in good conditionShoot tip in good conditionInner part of a flower in good conditionA fungus gnat near a root aphid with wingsLeaf edges that bend because of heat and light, with no mitesDry spray residue, and not powdery mildewRoot stress with no pathogen, and no diagnosis at this time
 
-| Confusion | Separating feature | Next step |
+| Two problems with the same signs | Sign that shows the difference | Next step |
 | --- | --- | --- |
-| Fungus gnat adult vs winged root aphid | Gnat has fly-like legs/antennae and wing venation; aphid has pear-shaped body and cornicles | Preserve low-card specimen and use microscopy |
-| Broad/russet mites vs heat/light tacoing | Mites/eggs on sampled leading edge; abiotic stress follows exposure pattern without organisms | Microscope multiple tips before changing feed or climate |
-| Powdery mildew vs dried foliar residue | PM forms raised growing colonies and fungal structures; residue follows droplets/rings and spray history | Angled light, microscopy or lab if flower disposition depends on it |
-| Pythium vs abiotic root stress | Water-soaked sloughing and linked disease pattern vs dry/tan stressed roots without pathogen proof | Sample roots/water before sanitation and send to a diagnostic lab |
-| HLVd vs everything that stunts | No visual feature is confirmatory | RT-qPCR/RT-PCR with traceable sample and controls |
+| Adult fungus gnat compared with winged root aphid | A gnat has the legs and the antennae of a fly, and wing veins. An aphid has a body in the shape of a pear, and cornicles. | Keep the specimen from the sticky trap near the media. Use microscopy. |
+| Broad mites or russet mites compared with tacoing from heat or light | Mites and eggs on the outer edge of the symptoms, where you collect a sample. Abiotic stress agrees with the pattern of exposure and has no organisms. | Examine many tips with a microscope before you change the feed or the climate. |
+| Powdery mildew compared with dried residue on the leaf | Powdery mildew makes colonies above the surface that increase in size, and fungal structures. Residue agrees with the pattern of drops and circular marks, and with the spray records. | Light from one side, microscopy, or a laboratory test. Use a laboratory test if you make the decision about the flower from the identification. |
+| Pythium compared with abiotic root stress | Pythium: roots with water in the tissue, sloughing, and a pattern of disease in connected plants. Abiotic stress: dry tan roots with stress and no evidence of a pathogen. | Collect samples of roots and water before sanitation. Send the samples to a diagnostic laboratory. |
+| HLVd compared with all other causes of stunting | No visual sign gives a sure diagnosis. | RT-qPCR or RT-PCR, with a sample that you can trace and with controls |
 
-*The generated comparison plates are training aids, not reference specimens.*
+*The photos that you use to compare are aids for training. An AI tool made them. They are not reference specimens.*
 
-## Building the weekly IPM programme
+## The IPM program for each week
 
-1. **Score consequence** — Room class, clean-stock status, target organism, crop stage and product-quality consequence.
-2. **Measure pressure** — Incidence, severity 0-4, life stages, spatial pattern, trap/root/lab trend and beneficial density.
-3. **Apply override** — Zero-tolerance findings bypass a numeric threshold and move directly to containment.
-4. **Find the source** — Incoming stock, staff/tool movement, air, water, media, packaging, weeds/algae or crop carryover.
-5. **Select layers** — Cultural and environmental correction, then compatible biological and lawful input options.
-6. **Schedule** — Target life stage, application/release date, room controls, mode rotation, recheck date and stop/escalate rule.
-7. **Verify** — Measure live organisms/new lesions/new growth, establishment, injury, residue implication and recurrence.
-8. **Close or CAPA** — Close only when the success criterion is met; otherwise revise cause and escalate.
+1. **Calculate the consequence**: Room class, clean-stock status, target organism, crop stage and the consequence for product quality.
+2. **Measure the problem**: Incidence, severity 0-4 and life stages. The pattern in the room and the trend of traps, roots and laboratory results. The density of beneficial organisms.
+3. **Zero-tolerance findings**: A zero-tolerance finding does not use a threshold with a number. Start containment immediately.
+4. **Find the source**: Received stock, movement of personnel and tools, air, water, media, packaging, weeds, algae, or pests from the previous crop.
+5. **Select layers**: First do a correction with cultural controls and environmental controls. Then select biological controls and permitted products that are compatible.
+6. **Schedule**: Select the target life stage and the date of application or release. Select the room controls, the change of mode, the recheck date, and the instruction to stop or to escalate.
+7. **Examine the result**: Measure living organisms, new lesions, new growth, establishment and damage to the plants. Examine the effect on residue and if the problem occurs again.
+8. **Stop or CAPA**: Stop the response only when the result agrees with the condition for a good result. If it does not, examine the cause again and escalate.
 
-| Weekly meeting input | Decision output |
+| Information for the meeting each week | Decision output |
 | --- | --- |
-| Trap and scouting trends | Room/zone action, owner and recheck |
-| HLVd/pathogen results | Release, hold, repeat, destroy and trace decision |
-| Beneficial receipt/release/establishment | Continue, supplement, replace or investigate incompatibility |
-| Environmental and root-zone excursions | Engineering/cultural correction with due date |
-| Input applications and treated-area status | REI release, efficacy check and residue review |
-| Open CAPA and linked batches | Containment status, evidence gap, quality disposition and effectiveness check |
+| Trap and scouting trends | A task for each room or zone, an owner and a recheck |
+| HLVd and pathogen results | A decision to release, hold, do the test again, destroy and trace |
+| Receipt, release and establishment of beneficial organisms | A decision to continue, to add more organisms, to replace them, or to do an investigation of a problem with compatibility |
+| Excursions of the environment and of the root zone | Correction with engineering controls or cultural controls, and a date for the end of the correction |
+| Applications of products and the status of treated areas | Release of the area from the REI, a check of the efficacy and a check of the residue |
+| Open CAPA and connected batches | Status of containment, gap in the evidence, quality decision for the batch, and a check of the effect of the CAPA |
 
-*The weekly meeting produces room-specific actions, not a narrative report nobody uses.*
+*The meeting each week gives tasks for each room. It does not give a long report that no person uses.*
 
-#### Control-strategy decision worksheet
+#### Worksheet for the decision about the control method
 
-| Decision field | Controlled entry |
+| Decision item | Controlled entry |
 | --- | --- |
 | Confirmed target, life stage and plant part | FACILITY INPUT |
-| Current pressure: incidence, severity, trend and distribution | FACILITY INPUT |
-| Source/pathway hypothesis and evidence | FACILITY INPUT |
-| Cultural and environmental corrections | FACILITY INPUT |
-| Biological option, establishment evidence and compatibility | FACILITY INPUT |
-| Input option, legal gate, mode group and residue route | FACILITY INPUT |
-| Crop/worker constraints, REI and treated-area release | FACILITY INPUT |
-| Owner, action date, recheck date, success and stop/escalate rule | FACILITY INPUT |
+| Current problem: incidence, severity, trend and distribution | FACILITY INPUT |
+| Possible source and pathway, and the evidence | FACILITY INPUT |
+| Corrections with cultural controls and environmental controls | FACILITY INPUT |
+| Biological control, evidence of establishment and compatibility | FACILITY INPUT |
+| Alternative product, legal gate, mode group and residue route | FACILITY INPUT |
+| Limits from the crop and the workers, REI and release of the treated area | FACILITY INPUT |
+| Owner, date of the task, recheck date, the condition for a good result, and the instruction to stop or to escalate | FACILITY INPUT |
 
-*Complete against the current approved-input and beneficial registers; product names and rates do not belong in an uncontrolled paper.*
+*Complete the worksheet with the current approved-input register and the current register of beneficial organisms. Do not write product names and rates in a paper that has no document control.*
 
-#### Dated intervention and beneficial-release planner
+#### Table for control steps and releases of beneficial organisms, with dates
 
-| Date/time | Room/zone | Target stage | Action or release | Mode / organism | Compatibility and REI | Recheck |
+| Date and time | Room or zone | Target stage | Task or release | Mode or organism | Compatibility and REI | Recheck |
 | --- | --- | --- | --- | --- | --- | --- |
 | FACILITY INPUT | FACILITY INPUT | FACILITY INPUT | FACILITY INPUT | FACILITY INPUT | FACILITY INPUT | FACILITY INPUT |
 | FACILITY INPUT | FACILITY INPUT | FACILITY INPUT | FACILITY INPUT | FACILITY INPUT | FACILITY INPUT | FACILITY INPUT |
 | FACILITY INPUT | FACILITY INPUT | FACILITY INPUT | FACILITY INPUT | FACILITY INPUT | FACILITY INPUT | FACILITY INPUT |
 | FACILITY INPUT | FACILITY INPUT | FACILITY INPUT | FACILITY INPUT | FACILITY INPUT | FACILITY INPUT | FACILITY INPUT |
 
-*Use enough rows to cover the target's condition-dependent development window; revise after each recheck.*
+*Use sufficient rows for the full period of development of the target. The period changes if the conditions change. Change the rows after each recheck.*
 
-#### Target-by-approved-tool matrix
+#### Table of the target and the approved tool
 
-| Target | Currently approved tool | Target stage/site | Evidence grade/source | Legal verification date | Compatibility | Success measure |
+| Target | Approved tool at this time | Target stage and site | Grade and source of the evidence | Date of the check of the regulations | Compatibility | Measurement of a good result |
 | --- | --- | --- | --- | --- | --- | --- |
 | FACILITY INPUT | FACILITY INPUT | FACILITY INPUT | FACILITY INPUT | FACILITY INPUT | FACILITY INPUT | FACILITY INPUT |
 | FACILITY INPUT | FACILITY INPUT | FACILITY INPUT | FACILITY INPUT | FACILITY INPUT | FACILITY INPUT | FACILITY INPUT |
 | FACILITY INPUT | FACILITY INPUT | FACILITY INPUT | FACILITY INPUT | FACILITY INPUT | FACILITY INPUT | FACILITY INPUT |
 
-*A planning interface to the controlled registers, not a substitute for them.*
+*This table is an interface to the controlled registers. It does not replace them.*
 
-> **Diagram.** The minimum operational record for every threshold-triggering event.
+> **Diagram.** This figure shows the minimum record for each event with a finding that is more than the threshold.
 
 ## Crop-cycle IPM operations
 
-| Stage | Daily standard work | Weekly / scheduled work | Hard decision |
+| Stage | Standard work for each day | Work for each week, or scheduled work | Mandatory decision |
 | --- | --- | --- | --- |
-| Receiving / quarantine | Accession, source/legal check, visual/root inspection, dedicated tools and waste | Traps, HLVd/pathogen plan, reassessment | Promote only when legal and biological release criteria are met |
-| Foundation / production mothers | Health walk, tool control, irrigation and environment | Molecular schedule, full scout, pruning-hygiene audit | Positive HLVd or systemic/high-consequence pest = stop, hold, trace |
-| Cuttings / rooting | Sanitary cutting, humidity/airflow, dead cutting and root review | Root development, traps, fungus/root-disease check | Patterned failure triggers source, water and diagnostic investigation |
-| Vegetative | Environment/root-zone review and visible pest walk | Full scout, cards, biological release/establishment | Single high-risk hotspot or rising trend triggers targeted action |
-| Flower | Climate/dew-point/air movement and dense-canopy inspection | Full scout, late-flower destructive bud checks by risk, residue/use review | Any PM on flowers or Botrytis in a bud is immediate action |
-| Harvest / dry / hold | Hygienic handling, waste segregation, dry-room condition and mould checks | Residue/microbial/foreign-matter sampling and deviation review | Release, continue hold, remediate if lawful/validated, or reject |
+| Receipt and quarantine | Accession, check of the source and of the regulations, visual inspection and inspection of roots, dedicated tools and waste | Traps, procedure for HLVd and pathogens, and a new check of the status | Release only if the accession agrees with the release criteria for the regulations and for biology. |
+| Foundation mothers and production mothers | Walk to examine the plants, control of tools, irrigation and environment | Times of the molecular tests, full scouting, audit of hygiene in pruning | A positive result for HLVd, or a pest that is systemic or has a high consequence: stop, hold, trace. |
+| Cuttings and rooting | Clean cutting procedure, humidity and airflow, dead cuttings, and inspection of roots | Development of roots, traps, a check for fungus and for root disease | A pattern of problems starts an investigation of the source and of the water, and a diagnosis. |
+| Vegetative | Inspection of the environment and the root zone. Walk to look for pests that you can see. | Full scouting, sticky traps, release and establishment of biological controls | One hotspot with a high risk, or a trend that increases, starts a control step for the target. |
+| Flower | Climate, dew point, air movement and inspection of canopy with high density | Full scouting. In the last stage of flowering, cut the buds that have the highest risk. Examine the buds. Do a check of residue and application. | Powdery mildew on a flower, or Botrytis in a bud: start the control steps immediately. |
+| Harvest, drying and batch hold | Hygiene when you move and touch the plant material, separation of waste, condition of the dry room and checks for mold | Sampling for residue, microbes and unwanted material, and a check of the deviations | Release the batch or continue the batch hold. Do a remediation if the regulations let you and the method has validation, or reject the batch. |
 
-*A complete crop-cycle control model. Exact timing follows cultivar, facility and approved production plan.*
+*The table is a full control model for the crop cycle. Use the approved production procedure for the times. The times change with the cultivar and the facility.*
 
-> **KEY — Post-harvest is still IPM**
+> **KEY: IPM continues after harvest**
 >
-> Contaminated tools, slow or uneven drying, dense uninspected flowers and dirty processing equipment can erase a clean cultivation run. Product remains on hold until the required quality evidence and deviation review are complete.
+> Tools with contamination and dirty processing equipment can cause contamination of a clean crop. Slow drying, drying at different rates and flowers with high density that you do not examine can also cause problems for a clean crop. The product stays in batch hold until you have the necessary quality evidence and you complete the check of the deviations.
 
 ## Containment, investigation and CAPA
 
-Classify events as local, room-wide or systemic. Containment comes first; root cause and batch impact follow while evidence is preserved. CAPA is incomplete until the effectiveness check proves the change worked.
+Classify each event as local, room-wide or systemic. First do the containment. Then find the root cause and the effect on the batch. Keep the evidence. Do not complete the CAPA until the check of the effect shows that the change had the correct effect.
 
-| Event | Immediate containment | Batch/crop assessment | CAPA focus |
+| Event | First containment steps | Investigation of the batch and the crop | Items for the CAPA |
 | --- | --- | --- | --- |
-| HLVd-positive mother | Stop clone movement, isolate/bag under SOP, hold linked daughters | All daughter lots since last verified negative plus connected tools/water | Source, test cadence, sample integrity, tool sanitation, hydro segregation and traceability |
-| Powdery mildew on flower | Isolate zone/room, bag affected tissue, intensify scouting | Extent, crop stage, lawful options, residue and market disposition | Night microclimate, density, airflow, scouting sensitivity and programme compatibility |
-| Botrytis inside flower | Controlled removal without spore spread, inspect neighbours | Lot hold/extent, cultivar/zone pattern, environmental history | Humidity removal, condensation, flower architecture, handling injury and debris |
-| Root disease linked to shared water | Isolate circuit, stop transfer, sample before sanitation | All connected cohorts and source stock | Reservoir/return design, biofilm, temperature/DO, cleaning validation and water segregation |
-| Worker enters during REI | Remove worker, exposure response, secure area/signage | Assess crop contact/contamination and treatment status | Lockout, sign placement, training, supervision and access control |
+| Mother with a positive result for HLVd | Stop the movement of clones. Isolate the mother. Put the mother in a bag. Use the SOP. Hold the connected clones. | All clone lots since the last negative result that you know is correct, and the connected tools and water | Source, frequency of tests, integrity of samples, sanitation of tools, separation of hydro systems, and traceability |
+| Powdery mildew on flower | Isolate the zone or the room. Put the tissue with disease in bags. Increase the scouting. | Size of the area with disease, crop stage, permitted alternatives, residue and the decision for the market | Microclimate at night, density, airflow, sensitivity of the scouting and compatibility with the program |
+| Botrytis in a flower | Remove the flower carefully. Prevent the movement of spores. Examine the plants near it. | Batch hold and size of the area, pattern for each cultivar and zone, records of the environment | Humidity removal, condensation, structure of the flower, damage when personnel touch the plants, and debris |
+| Root disease in plants that use the same water | Isolate the circuit. Stop the movement of water and plants. Collect samples before sanitation. | All connected cohorts and the source stock | Design of the reservoir and of the return water, biofilm, temperature and DO, cleaning validation, and separation of water |
+| A worker goes into the area during the REI | Remove the worker. Do the steps for the exposure. Prevent access to the area. Put warning signs in position. | Examine the contact with the crop, the contamination and the treatment status | Lockout, position of the warning signs, training, supervision and access control |
 
-*CAPA joins biological cause, worker/system cause and product-quality consequence.*
+*The CAPA connects the cause in biology, the cause in the workers or the system, and the consequence for the quality of the product.*
 
-1. **Release:** required analytical results, treatment history, traceability and deviation review are satisfactory.
-2. **Continue hold:** result, investigation, repeat sample or linked-lot status is incomplete.
-3. **Reject or validated remediation:** the lot fails a limit, has an indefensible treatment history, or is linked to a systemic contamination failure. Remediation is not a substitute for prevention.
+1. **Release:** the necessary laboratory results, the treatment records, the traceability and the check of the deviations are satisfactory.
+2. **Continue the batch hold:** a result, a second sample or a connected lot status is not available. Also continue the batch hold while an investigation is in progress.
+3. **Reject, or do a validated remediation:** the lot does not agree with a limit. Do the same if the treatment records do not agree with the regulations. Do the same if the lot has a connection to systemic contamination. Remediation does not replace prevention.
 
 ## Controlled IPM tools
 
@@ -414,81 +415,81 @@ Classify events as local, room-wide or systemic. Containment comes first; root c
 
 .facility-input{display:grid;gap:6px}.facility-input input,.facility-input textarea{width:100%;padding:10px;border:1px solid var(--line);border-radius:6px;background:var(--paper);color:var(--ink);font:inherit}.facility-form{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.facility-input.wide{grid-column:1/-1}@media(max-width:720px){.facility-form{grid-template-columns:1fr}}
 
-Facility address / Auckland zoneLicence and intended product linesControlled room-map revisionQuality/IPM approverApproved diagnostic laboratory and scopeRelease laboratory and pesticide method/LOQTrade-waste classification / agreementDocument review dateControlled scouting density / representative-site method and rationaleFACILITY INPUTSite zero-tolerance organisms and room classesFACILITY INPUTControlled numeric/trend thresholds and evidence sourceFACILITY INPUT
+Facility address and Auckland zoneLicense, and types of product that the facility will makeVersion of the controlled room mapPerson who gives approval for quality and IPMApproved diagnostic laboratory and scopeLaboratory for release, and the pesticide method and LOQTrade waste classification and trade waste agreementDate of the next check of the documentControlled density of scouting, method to select typical sites, and the evidence for the selectionFACILITY INPUTZero-tolerance organisms and room classes for the siteFACILITY INPUTControlled thresholds with numbers and thresholds for trends, and the source of the evidenceFACILITY INPUT
 
-#### Weekly scouting record
+#### Scouting record for each week
 
-| Required field | Entry |
+| Necessary field | Entry |
 | --- | --- |
-| Date and time, scout, room, zone, bench and fixed route point | FACILITY INPUT |
+| Date and time, scout, room, zone, bench and point on the set route | FACILITY INPUT |
 | Plant or lot ID and growth stage | FACILITY INPUT |
-| Leaf top, leaf underside, shoot tip, stem and crown, flower, media and roots checked | FACILITY INPUT |
-| Trap ID, colour, height, deploy and replace date, and counts by organism | FACILITY INPUT |
-| Confirmed organism, life stage, incidence and severity 0-4 | FACILITY INPUT |
-| Beneficial organism and the evidence it has established | FACILITY INPUT |
-| Environmental or root-zone anomaly, and any recent intervention | FACILITY INPUT |
+| Parts that you examined: top of the leaf, underside of the leaf, shoot tip, stem and crown, flower, media and roots | FACILITY INPUT |
+| Trap ID, color, height, date of installation and of replacement, and trap count for each organism | FACILITY INPUT |
+| Confirmed organism, life stage, incidence and severity 0 to 4 | FACILITY INPUT |
+| Beneficial organism and the evidence that its number increases | FACILITY INPUT |
+| Unusual condition in the environment or root zone, and the last treatment | FACILITY INPUT |
 | Photo ID, specimen ID, chain of custody and lab result | FACILITY INPUT |
-| Threshold status, containment, owner and due date | FACILITY INPUT |
-| Recheck date, success criterion, and close or CAPA decision | FACILITY INPUT |
-| Planned sites, completed sites and missed/inaccessible-site exception | FACILITY INPUT |
+| Threshold status, containment, person for the task and date for the task | FACILITY INPUT |
+| Recheck date, the condition for a good result, and the decision to stop the response or to open a CAPA | FACILITY INPUT |
+| Sites to examine, completed sites, and exceptions for sites that you did not examine or sites without access | FACILITY INPUT |
 
-*Use one row/set per mapped site or exception. Unknown organisms receive a specimen/photo reference, not a guessed name.*
+*Use one row for each site on the map and for each exception. For an unknown organism, write the reference of the specimen or the photo. Do not write a name that you are not sure of.*
 
-#### Quarantine and clean-to-dirty movement log
+#### Log of quarantine and of movement from clean to dirty
 
-| Date/time | Person or material | From | To | Release/status evidence | PPE/tool change | Exception approval |
+| Date and time | Person or material | From | To | Release and status evidence | Change of PPE and tools | Exception approval |
 | --- | --- | --- | --- | --- | --- | --- |
 | FACILITY INPUT | FACILITY INPUT | FACILITY INPUT | FACILITY INPUT | FACILITY INPUT | FACILITY INPUT | FACILITY INPUT |
 | FACILITY INPUT | FACILITY INPUT | FACILITY INPUT | FACILITY INPUT | FACILITY INPUT | FACILITY INPUT | FACILITY INPUT |
 | FACILITY INPUT | FACILITY INPUT | FACILITY INPUT | FACILITY INPUT | FACILITY INPUT | FACILITY INPUT | FACILITY INPUT |
 | FACILITY INPUT | FACILITY INPUT | FACILITY INPUT | FACILITY INPUT | FACILITY INPUT | FACILITY INPUT | FACILITY INPUT |
 
-*Record every accession transfer and every authorised backtrack across the hygiene gradient.*
+*Record each movement of an accession and each approved movement back to a clean area on the hygiene gradient.*
 
-#### Beneficial release and establishment record
+#### Record of the release and establishment of beneficial organisms
 
 | Field | Entry |
 | --- | --- |
-| Species/strain, supplier and lot | FACILITY INPUT |
-| NZ legal-status evidence and approval date | FACILITY INPUT |
-| Arrival time, temperature and condition | FACILITY INPUT |
-| Viability/count check and rejection decision | FACILITY INPUT |
-| Target pest/stage, room map and release rate | FACILITY INPUT |
-| Climate and incompatible residue review | FACILITY INPUT |
-| Establishment/recheck date and evidence | FACILITY INPUT |
-| Corrective action or close-out | FACILITY INPUT |
+| Species, strain, supplier and lot | FACILITY INPUT |
+| Evidence of the NZ legal status, and the approval date | FACILITY INPUT |
+| Time, temperature and condition when you receive the organisms | FACILITY INPUT |
+| Viability and count check, and the decision to reject | FACILITY INPUT |
+| Target pest and stage, room map and release rate | FACILITY INPUT |
+| Climate, and a check of residues that are not compatible | FACILITY INPUT |
+| Establishment and recheck date, and evidence | FACILITY INPUT |
+| Corrective action, or the decision to stop the response | FACILITY INPUT |
 
-#### Spray / application quality checklist
+#### Checklist for the quality of spray and of application
 
 | Check | Controlled entry |
 | --- | --- |
-| Event ID; approved product/lot; target; room/zone; crop stage | FACILITY INPUT |
-| Current label/SDS, medicinal-cannabis, ACVM and HSNO evidence checked | FACILITY INPUT |
-| Applicator, calibration, output, nozzle/pressure and target coverage | FACILITY INPUT |
-| Water quality, mixing order, agitation and prepared volume | FACILITY INPUT |
-| HVAC/lights controls, containment, weather/external-discharge risk | FACILITY INPUT |
-| PPE, signage, access control, REI start/end and treated-area release | FACILITY INPUT |
-| Unused mix, rinse, spill/waste disposition and equipment clean-down | FACILITY INPUT |
-| Phytotoxicity, efficacy and residue recheck dates / results | FACILITY INPUT |
+| Event ID, approved product and lot, target, room and zone, crop stage | FACILITY INPUT |
+| Evidence of the check of the current label, SDS and the regulations for medicinal cannabis, ACVM and HSNO | FACILITY INPUT |
+| Applicator, calibration, output, nozzle and pressure, and target coverage | FACILITY INPUT |
+| Water quality, sequence for the mixture, agitation and volume of the mixture | FACILITY INPUT |
+| Controls for HVAC and lights, containment, and risk of weather and external discharge | FACILITY INPUT |
+| PPE, warning signs, access control, REI start and end, and release of the treated area | FACILITY INPUT |
+| Mixture that you did not use, rinse water, disposal of spills and waste, and equipment clean-down | FACILITY INPUT |
+| Phytotoxicity, efficacy and residue: recheck dates and results | FACILITY INPUT |
 
-#### Outbreak, batch-impact and CAPA record
+#### Record of the outbreak, the effect on the batch, and the CAPA
 
 | Field | Entry |
 | --- | --- |
-| Event ID, first detection and detector | FACILITY INPUT |
-| Confirmed organism / evidence / uncertainty | FACILITY INPUT |
+| Event ID, the first finding, and the person who found it | FACILITY INPUT |
+| Confirmed organism, evidence and uncertainty | FACILITY INPUT |
 | Room, zone, plants, mothers, clone lots and batches | FACILITY INPUT |
-| Linked staff, tools, air, water, media and input lots | FACILITY INPUT |
-| Immediate containment and treated-area controls | FACILITY INPUT |
-| Product-quality and residue impact assessment | FACILITY INPUT |
-| Hold, destruction, remediation or release decision | FACILITY INPUT |
-| Root cause and contributing conditions | FACILITY INPUT |
-| Corrective and preventive actions, owners and dates | FACILITY INPUT |
-| Effectiveness evidence and quality close-out | FACILITY INPUT |
+| Connected personnel, tools, air, water, media and lots of products | FACILITY INPUT |
+| Containment done immediately, and controls for the treated area | FACILITY INPUT |
+| Investigation of the effect on product quality and on residue | FACILITY INPUT |
+| Decision to hold, destroy, do a remediation, or release | FACILITY INPUT |
+| Root cause and other conditions that help to cause the event | FACILITY INPUT |
+| Corrective action and preventive action, with owners and dates | FACILITY INPUT |
+| Evidence that the CAPA had the correct effect, and the decision of QA to stop the response | FACILITY INPUT |
 
-#### Population-trend dashboard worksheet
+#### Worksheet for the dashboard of the population trend
 
-| Week/date | Room/zone | Target | Trap or sampled units | Live count / incidence | Severity 0-4 | Beneficial density | Action line | Decision |
+| Week or date | Room or zone | Target | Traps or points for samples | Count of living organisms, or incidence | Severity 0-4 | Density of beneficial organisms | Action threshold | Decision |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | FACILITY INPUT | FACILITY INPUT | FACILITY INPUT | FACILITY INPUT | FACILITY INPUT | FACILITY INPUT | FACILITY INPUT | FACILITY INPUT | FACILITY INPUT |
 | FACILITY INPUT | FACILITY INPUT | FACILITY INPUT | FACILITY INPUT | FACILITY INPUT | FACILITY INPUT | FACILITY INPUT | FACILITY INPUT | FACILITY INPUT |
@@ -496,78 +497,79 @@ Facility address / Auckland zoneLicence and intended product linesControlled roo
 | FACILITY INPUT | FACILITY INPUT | FACILITY INPUT | FACILITY INPUT | FACILITY INPUT | FACILITY INPUT | FACILITY INPUT | FACILITY INPUT | FACILITY INPUT |
 | FACILITY INPUT | FACILITY INPUT | FACILITY INPUT | FACILITY INPUT | FACILITY INPUT | FACILITY INPUT | FACILITY INPUT | FACILITY INPUT | FACILITY INPUT |
 
-*Graph or trend these same controlled fields in the site's validated record system; record denominator and missed sites so the line means something.*
+*Make a graph of the trend of these same controlled fields in the validated record system of the site. Record the denominator and the sites that you did not examine. Thus you can read the graph correctly.*
 
-#### Spill and waste control
+#### Control of spills and waste
 
-- Current drain map distinguishes sanitary sewer/trade waste from stormwater.
-- Secondary containment and spill kits match the stored substances and credible spill volume.
-- No pesticide, sanitiser, nutrient concentrate, contaminated rinse water or spill enters stormwater.
-- Watercare and Auckland pollution-response triggers are posted and trained.
-- Waste contractors and disposal records are current; annual drill findings enter CAPA.
+- The current drain map shows which drains go to the sewer or to trade waste, and which drains go to stormwater.
+- Secondary containment and spill kits are correct for the substances that you keep and for the spill volume that can occur.
+- Do not let pesticide, sanitizer, nutrient concentrate, rinse water with contamination, or spill liquid go into stormwater.
+- Show the Watercare and Auckland triggers for a pollution event in a position where personnel can see them. Give personnel training on the triggers.
+- The waste contractors and the disposal records are current. The findings of the drill each year go into the CAPA.
 
-## Competency-based training
+## Training for competency
 
-| Module | Audience | Demonstrated outcome |
+| Module | Personnel | Result that personnel show |
 | --- | --- | --- |
-| NZ medicinal-cannabis input gate | QA, procurement, IPM/cultivation leads | Reject or approve a candidate input with the correct evidence trail |
-| Hygiene zoning and movement | All cultivation, sanitation, maintenance and contractors | Execute room order, tool/PPE changes and exception process |
-| Scouting and specimen handling | Scouts and room leads | Follow fixed route, identify plant parts, record incidence/severity, preserve unknown |
-| Mother stock and HLVd | Nursery, mother and QA staff | Collect traceable sample, place hold, trace daughters and execute positive response |
-| Beneficial control | IPM team and receiving | Verify delivery, viability, release map, compatibility and establishment |
-| Application, REI and PPE | Applicators, supervisors, QA/EHS | Calibrate, mix, apply, contain waste, post signs and release treated area |
-| CAPA and batch impact | QA, cultivation management, IPM lead | Run mock event from containment through effectiveness check |
+| The legal gate for NZ medicinal cannabis | QA, procurement, IPM leads and cultivation leads | Reject a possible product, or give approval for it, with a correct record of the evidence |
+| Hygiene zones and movement | All personnel for cultivation, sanitation and maintenance, and contractors | Do the room sequence, the changes of tools and PPE, and the procedure for exceptions |
+| Scouting, and how to collect and keep specimens | Scouts and room leads | Use the same scouting route. Identify plant parts. Record incidence and severity. Keep unknown specimens. |
+| Mother stock and HLVd | Personnel for the nursery, personnel for the mother plants and QA personnel | Collect a sample that you can trace. Start a batch hold. Trace the clones. Do the steps for a positive result. |
+| Control with beneficial organisms | IPM personnel and personnel for receipt | Examine the viability on receipt, the release map, the compatibility and the establishment |
+| Application, REI and PPE | Applicators, supervisors, QA and EHS | Calibrate. Mix. Apply. Contain waste. Put warning signs in position. Release the treated area. |
+| CAPA and the effect on the batch | QA, cultivation managers and the IPM lead | Do a mock event from containment to the check of the effect |
 
-*WorkSafe requires site-specific information, instruction, training and records; a prior course does not remove the site's duty[^worksafe-nz-hs-training].*
+*WorkSafe makes it necessary to have information, instruction, training and records for the site. Previous training of a person does not remove the duty of the site[^worksafe-nz-hs-training].*
 
-> **NOTE — Drill the ugly events**
+> **NOTE: Do drills for events with a very bad effect**
 >
-> Run at least: HLVd-positive mother, Botrytis cluster in late flower, root disease on a shared circuit, unlawful input discovered after application, REI entry breach and a spill threatening a drain. A plan only earns trust after someone has tried to use it under pressure.
+> Do drills for these events as a minimum. A mother has a positive result for HLVd. A cluster of Botrytis occurs in the last stage of flowering. Root disease occurs on a circuit for more than one area.
+> After application, you find a product that the regulations do not let you use. A worker goes into an area during the REI. A spill can go to a drain. You know that a procedure is satisfactory only after personnel use it in a drill.
 
-## Evidence and revision register
+## Evidence and version register
 
-| Claim class | Minimum evidence | Review trigger |
+| Class of claim | Minimum evidence | Trigger for a new check |
 | --- | --- | --- |
-| NZ legal / regulatory | Current official Ministry, MPI, EPA, WorkSafe, Watercare or Auckland source | Any law/guidance revision, new product/organism, annual review |
-| Pest/disease biology | Primary paper or strong technical review; species caveat | New diagnostic result, organism not behaving as assumed |
-| Product/organism status | Current register/approval, label, SDS, supplier and site approval | Every purchase/use and any document revision |
-| Facility threshold | Site history, risk rationale and quality approval | Trend miss, crop loss, false alarm, process or market change |
-| Operational setpoint | Named facility SOP/validation and measured data | Equipment, cultivar, room, substrate or process change |
-| Generated image | Final prompt, generation tool, human diagnostic review and disclosure | Morphology error, confusion in training or better verified reference |
+| NZ regulations | A current source from an authority: the Ministry, MPI, EPA, WorkSafe, Watercare or Auckland | A change of a regulation or guidance, a new product or organism, or the check each year |
+| Biology of pests and diseases | A primary paper or a review article of high quality, with the limits for the species | A new result of diagnosis, or an organism with behavior that is different from the behavior in this blueprint |
+| Status of the product or organism | Current register and approval, label, SDS, supplier and approval of the site | Each time that you get a product or use it, and each change of the document |
+| Facility threshold | Records of the site, the evidence for the risk, and quality approval | A trend that you did not find, crop loss, a false alarm, or a change of production procedure or market |
+| Setpoint for operation | A facility SOP or validation that you can identify, and measured data | A change of equipment, cultivar, room, substrate or production procedure |
+| A photo that an AI tool made | The last prompt, the AI tool, a check of the diagnosis that a person does, and a record that an AI tool made the photo | An error in the morphology, a problem in training, or a better reference that you know is correct |
 
-*This blueprint is controlled guidance, not a frozen truth. Review the volatile parts before the static prose.*
+*This blueprint is controlled guidance and can change. Examine the parts that change frequently before you examine the parts that do not change.*
 
-> **KEY — Implementation judgement**
+> **KEY: A strong IPM program**
 >
-> The resilient programme is the one that keeps unlawful inputs out, infected genetics out, water and air from becoming transport systems, staff movement legible, and release logic visible at the moment a control is chosen. Everything else is decoration.
+> In a strong IPM program, the facility has no products that the regulations do not let you use, and no genetics with an infection. Water and air do not become systems that move pests and pathogens. The movement of personnel is easy to see. You can see the release criteria when you select a control. All other parts are not necessary.
 
 ## References
 
-[^moh-nz-pesticide-use-2024]: New Zealand Ministry of Health. Pesticide use during cultivation of medicinal cannabis. Guidance under the Misuse of Drugs (Medicinal Cannabis) Regulations 2019; updated guidance effective from July 2024. https://www.health.govt.nz/regulation-legislation/medicinal-cannabis/information-for-industry/pesticide-use-during-cultivation (industry/manufacturer source)
-[^moh-nz-mqs-2026]: New Zealand Ministry of Health. Requirements for the medicinal cannabis minimum quality standard. Testing, validation, laboratory and pesticide requirements; page current in 2026. https://www.health.govt.nz/regulation-legislation/medicinal-cannabis/information-for-industry/working-with-medicinal-cannabis/requirements-for-the-minimum-quality-standard (industry/manufacturer source)
-[^mpi-nz-acvm-exempt]: New Zealand Ministry for Primary Industries. ACVMs exempt from registration: exemption classes, conditions and obligations under other legislation. https://www.mpi.govt.nz/agriculture/agricultural-compounds-vet-medicines/acvms-exempt-from-registration (industry/manufacturer source)
-[^mpi-nz-invertebrate-import]: New Zealand Ministry for Primary Industries. Steps to importing invertebrates: eligibility, import health standards, facilities, permits and EPA status determination. https://www.mpi.govt.nz/import/importing-live-animals/invertebrates/steps-to-importing-invertebrates (industry/manufacturer source)
-[^epa-nz-hsno-approvals]: New Zealand Environmental Protection Authority. What hazardous-substance approvals are and how to find an approval, including SDS section 15 and current controls. https://www.epa.govt.nz/hazardous-substances/substance-approvals-and-group-standards/what-approvals-are-and-how-to-find-one-for-your-product/ (industry/manufacturer source)
-[^worksafe-nz-rei]: WorkSafe New Zealand. Restricted entry intervals for pesticides - quick guide: labels/SDS, off-label risk assessment, indoor signs, access and PPE. https://www.worksafe.govt.nz/topic-and-industry/hazardous-substances/regulations/restricted-entry-intervals-for-pesticides/restricted-entry-intervals-for-pesticides-quick-guide/ (industry/manufacturer source)
-[^worksafe-nz-hs-training]: WorkSafe New Zealand. Information, instruction, supervision and training for workers handling hazardous substances. https://www.worksafe.govt.nz/topic-and-industry/hazardous-substances/managing/information-instruction-supervision-training/ (industry/manufacturer source)
-[^watercare-nz-trade-waste]: Watercare. Trade waste agreements: classification, controls, monitoring and management-plan requirements for Auckland businesses. https://www.watercare.co.nz/business/help-and-support/trade-waste/trade-waste-agreements (industry/manufacturer source)
-[^auckland-unitary-plan-e33]: Auckland Council. Auckland Unitary Plan Operative in Part, E33 Industrial and trade activities: contaminant avoidance, onsite management, containment and lawful disposal. https://unitaryplan.aucklandcouncil.govt.nz/Images/Auckland%20Unitary%20Plan%20Operative/Chapter%20E%20Auckland-wide/5.%20Environmental%20Risk/E33%20Industrial%20and%20trade%20activities.pdf (industry/manufacturer source)
-[^athena-ipm-book-v15]: Athena Ag, Inc. (2026). IPM Guide for Cannabis, V15 digital edition. Commercial vendor guide supplied by the user; used only as a coverage benchmark.  (industry/manufacturer source)
-[^ahmed-2024-hemp-pests-florida-jipm]: Ahmed, M. Z., McKenzie, C. L., & Osborne, L. S. (2024). Arthropod and mollusk pests of hemp, Cannabis sativa (Rosales: Cannabaceae), and their indoor management plan in Florida. Journal of Integrated Pest Management, 15(1), 1. https://doi.org/10.1093/jipm/pmad028 (peer-reviewed)
-[^pulkoski-burrack-2023-piercing-sucking-hemp]: Pulkoski, M. A., & Burrack, H. J. (2023). Assessing the impact of piercing-sucking pests on greenhouse-grown industrial hemp (Cannabis sativa L.). Environmental Entomology, 53(1), 1-10. https://doi.org/10.1093/ee/nvad044 (peer-reviewed)
-[^cranshaw-2018-phorodon-cannabis-north-america]: Cranshaw, W., Halbert, S. E., Favret, C., Britt, K., & Miller, G. L. (2018). Phorodon cannabis Passerini (Hemiptera: Aphididae), a newly recognized pest in North America found on industrial hemp. Insecta Mundi, 0662, 1-12. https://digitalcommons.unl.edu/insectamundi/1162/ (peer-reviewed)
-[^cranshaw-wainwright-2020-rice-root-aphid-cannabis]: Cranshaw, W., & Wainwright-Evans, S. (2020). Cannabis sativa as a host of rice root aphid (Hemiptera: Aphididae) in North America. Journal of Integrated Pest Management, 11(1), 15. https://doi.org/10.1093/jipm/pmaa008 (peer-reviewed)
-[^lopez-2023-amblyseius-swirskii-review-jipm]: Lopez, L. (2023). Meet Amblyseius swirskii (Acari: Phytoseiidae): a commonly used predatory mite in vegetable crops. Journal of Integrated Pest Management, 14(1), 20. https://doi.org/10.1093/jipm/pmad018 (peer-reviewed)
-[^vanmaanen-2010-broad-mite-swirskii-biocontrol]: van Maanen, R., Vila, E., Sabelis, M. W., & Janssen, A. (2010). Biological control of broad mites (Polyphagotarsonemus latus) with the generalist predator Amblyseius swirskii. Experimental and Applied Acarology, 52(1), 29-34. https://doi.org/10.1007/s10493-010-9343-2 (peer-reviewed)
-[^cloyd-2015-fungus-gnat-ecology-management]: Cloyd, R. A. (2015). Ecology of fungus gnats (Bradysia spp.) in greenhouse production systems associated with disease-interactions and alternative management strategies. Insects, 6(2), 325-332. https://doi.org/10.3390/insects6020325 (peer-reviewed)
-[^cloyd-2024-biopesticides-cannabis-oregon]: Effects of Selected Biopesticides on Two Arthropod Pests of Cannabis sativa L. in Northeastern Oregon. (2024). Crops, 4(4), 19. https://doi.org/10.3390/crops4040019 (peer-reviewed)
-[^punja-2021-emerging-diseases-cannabis]: Punja, Z. K. (2021). Emerging diseases of Cannabis sativa and sustainable management. Pest Management Science, 77(9), 3857-3870. https://doi.org/10.1002/ps.6307 (peer-reviewed)
-[^scott-punja-2021-powdery-mildew-management]: Scott, C., & Punja, Z. K. (2021). Evaluation of disease management approaches for powdery mildew on Cannabis sativa L. (marijuana) plants. Canadian Journal of Plant Pathology, 43(3), 394-412. https://doi.org/10.1080/07060661.2020.1836026 (peer-reviewed)
-[^mahmoud-2023-botrytis-budrot]: Mahmoud M, BenRejeb I, Punja ZK, Buirs L, Jabaji S. Understanding bud rot development, caused by Botrytis cinerea, on cannabis (Cannabis sativa L.) plants grown under greenhouse conditions. Botany. 2023;101(4):200-231. https://doi.org/10.1139/cjb-2022-0139 (peer-reviewed)
-[^punja-2023-fusarium-pythium-biocontrol]: Punja, Z.K., Tirajoh, A., Collyer, D., & Ni, L. (2023). Biological control of Fusarium oxysporum causing damping-off and Pythium myriotylum causing root and crown rot on cannabis (Cannabis sativa L.) plants. Canadian Journal of Plant Pathology, 45(3), 245-264. https://doi.org/10.1080/07060661.2023.2172082 (peer-reviewed)
-[^sutton-2006-pythium-hydroponic-etiology]: Sutton, J. C., Sopher, C. R., Owen-Going, T. N., Liu, W., Grodzinski, B., Hall, J. C., & Benchimol, R. L. (2006). Etiology and epidemiology of Pythium root rot in hydroponic crops: current knowledge and perspectives. Summa Phytopathologica, 32(4), 307-321. https://doi.org/10.1590/S0100-54052006000400001 (peer-reviewed)
-[^hlvd_threat2023]: Atallah OO et al. (2023). Hop latent viroid: a hidden threat to the cannabis industry. Viruses / PMC. https://pmc.ncbi.nlm.nih.gov/articles/PMC10053334/ (peer-reviewed)
-[^hlvd_mgmt2025]: Transmission, spread, longevity and management of hop latent viroid in cannabis in North America (2025). PMC. https://pmc.ncbi.nlm.nih.gov/articles/PMC11902214/ (peer-reviewed)
-[^hlvd-transmission-2025]: Mechanical transmission and management of Hop Latent Viroid (HLVd) in cannabis: spread via contaminated tools and cuttings; under experimental conditions linked cuttings can approach complete infection within weeks; controls include fresh gloves per plant, tool sterilisation and footbaths. Plants (MDPI) 2025, 14:830. https://www.mdpi.com/2223-7747/14/5/830 (peer-reviewed)
-[^rahnama-2021-septoria-cannabis]: Rahnama M, Szarka D, Li H, Dixon E, Castlebury LA, Gauthier N (2021). Reemergence of Septoria leaf spot caused by Septoria cannabis on hemp in Kentucky, confirmed by sequence data. Plant Disease 105:2286-2289. https://doi.org/10.1094/PDIS-12-20-2620-SC (peer-reviewed)
-[^ujata-2024-septoria-cannabicola]: Ujata AH, Konishi S, Kato Y, Tonami H, Nakashima C (2024). Septoria cannabicola, a new species on Cannabis sativa from Japan. Mycoscience 65:92-95. https://pmc.ncbi.nlm.nih.gov/articles/PMC11369300/ (peer-reviewed)
+[^moh-nz-pesticide-use-2024]: New Zealand Ministry of Health. Pesticide use during cultivation of medicinal cannabis. Guidance under the Misuse of Drugs (Medicinal Cannabis) Regulations 2019; updated guidance effective from July 2024. https://www.health.govt.nz/regulation-legislation/medicinal-cannabis/information-for-industry/pesticide-use-during-cultivation (source from a manufacturer or industry)
+[^moh-nz-mqs-2026]: New Zealand Ministry of Health. Requirements for the medicinal cannabis minimum quality standard. Testing, validation, laboratory and pesticide requirements; page current in 2026. https://www.health.govt.nz/regulation-legislation/medicinal-cannabis/information-for-industry/working-with-medicinal-cannabis/requirements-for-the-minimum-quality-standard (source from a manufacturer or industry)
+[^mpi-nz-acvm-exempt]: New Zealand Ministry for Primary Industries. ACVMs exempt from registration: exemption classes, conditions and obligations under other legislation. https://www.mpi.govt.nz/agriculture/agricultural-compounds-vet-medicines/acvms-exempt-from-registration (source from a manufacturer or industry)
+[^mpi-nz-invertebrate-import]: New Zealand Ministry for Primary Industries. Steps to importing invertebrates: eligibility, import health standards, facilities, permits and EPA status determination. https://www.mpi.govt.nz/import/importing-live-animals/invertebrates/steps-to-importing-invertebrates (source from a manufacturer or industry)
+[^epa-nz-hsno-approvals]: New Zealand Environmental Protection Authority. What hazardous-substance approvals are and how to find an approval, including SDS section 15 and current controls. https://www.epa.govt.nz/hazardous-substances/substance-approvals-and-group-standards/what-approvals-are-and-how-to-find-one-for-your-product/ (source from a manufacturer or industry)
+[^worksafe-nz-rei]: WorkSafe New Zealand. Restricted entry intervals for pesticides - quick guide: labels/SDS, off-label risk assessment, indoor signs, access and PPE. https://www.worksafe.govt.nz/topic-and-industry/hazardous-substances/regulations/restricted-entry-intervals-for-pesticides/restricted-entry-intervals-for-pesticides-quick-guide/ (source from a manufacturer or industry)
+[^worksafe-nz-hs-training]: WorkSafe New Zealand. Information, instruction, supervision and training for workers handling hazardous substances. https://www.worksafe.govt.nz/topic-and-industry/hazardous-substances/managing/information-instruction-supervision-training/ (source from a manufacturer or industry)
+[^watercare-nz-trade-waste]: Watercare. Trade waste agreements: classification, controls, monitoring and management-plan requirements for Auckland businesses. https://www.watercare.co.nz/business/help-and-support/trade-waste/trade-waste-agreements (source from a manufacturer or industry)
+[^auckland-unitary-plan-e33]: Auckland Council. Auckland Unitary Plan Operative in Part, E33 Industrial and trade activities: contaminant avoidance, onsite management, containment and lawful disposal. https://unitaryplan.aucklandcouncil.govt.nz/Images/Auckland%20Unitary%20Plan%20Operative/Chapter%20E%20Auckland-wide/5.%20Environmental%20Risk/E33%20Industrial%20and%20trade%20activities.pdf (source from a manufacturer or industry)
+[^athena-ipm-book-v15]: Athena Ag, Inc. (2026). IPM Guide for Cannabis, V15 digital edition. Commercial vendor guide supplied by the user; used only as a coverage benchmark.  (source from a manufacturer or industry)
+[^ahmed-2024-hemp-pests-florida-jipm]: Ahmed, M. Z., McKenzie, C. L., & Osborne, L. S. (2024). Arthropod and mollusk pests of hemp, Cannabis sativa (Rosales: Cannabaceae), and their indoor management plan in Florida. Journal of Integrated Pest Management, 15(1), 1. https://doi.org/10.1093/jipm/pmad028 (source with peer review)
+[^pulkoski-burrack-2023-piercing-sucking-hemp]: Pulkoski, M. A., & Burrack, H. J. (2023). Assessing the impact of piercing-sucking pests on greenhouse-grown industrial hemp (Cannabis sativa L.). Environmental Entomology, 53(1), 1-10. https://doi.org/10.1093/ee/nvad044 (source with peer review)
+[^cranshaw-2018-phorodon-cannabis-north-america]: Cranshaw, W., Halbert, S. E., Favret, C., Britt, K., & Miller, G. L. (2018). Phorodon cannabis Passerini (Hemiptera: Aphididae), a newly recognized pest in North America found on industrial hemp. Insecta Mundi, 0662, 1-12. https://digitalcommons.unl.edu/insectamundi/1162/ (source with peer review)
+[^cranshaw-wainwright-2020-rice-root-aphid-cannabis]: Cranshaw, W., & Wainwright-Evans, S. (2020). Cannabis sativa as a host of rice root aphid (Hemiptera: Aphididae) in North America. Journal of Integrated Pest Management, 11(1), 15. https://doi.org/10.1093/jipm/pmaa008 (source with peer review)
+[^lopez-2023-amblyseius-swirskii-review-jipm]: Lopez, L. (2023). Meet Amblyseius swirskii (Acari: Phytoseiidae): a commonly used predatory mite in vegetable crops. Journal of Integrated Pest Management, 14(1), 20. https://doi.org/10.1093/jipm/pmad018 (source with peer review)
+[^vanmaanen-2010-broad-mite-swirskii-biocontrol]: van Maanen, R., Vila, E., Sabelis, M. W., & Janssen, A. (2010). Biological control of broad mites (Polyphagotarsonemus latus) with the generalist predator Amblyseius swirskii. Experimental and Applied Acarology, 52(1), 29-34. https://doi.org/10.1007/s10493-010-9343-2 (source with peer review)
+[^cloyd-2015-fungus-gnat-ecology-management]: Cloyd, R. A. (2015). Ecology of fungus gnats (Bradysia spp.) in greenhouse production systems associated with disease-interactions and alternative management strategies. Insects, 6(2), 325-332. https://doi.org/10.3390/insects6020325 (source with peer review)
+[^cloyd-2024-biopesticides-cannabis-oregon]: Effects of Selected Biopesticides on Two Arthropod Pests of Cannabis sativa L. in Northeastern Oregon. (2024). Crops, 4(4), 19. https://doi.org/10.3390/crops4040019 (source with peer review)
+[^punja-2021-emerging-diseases-cannabis]: Punja, Z. K. (2021). Emerging diseases of Cannabis sativa and sustainable management. Pest Management Science, 77(9), 3857-3870. https://doi.org/10.1002/ps.6307 (source with peer review)
+[^scott-punja-2021-powdery-mildew-management]: Scott, C., & Punja, Z. K. (2021). Evaluation of disease management approaches for powdery mildew on Cannabis sativa L. (marijuana) plants. Canadian Journal of Plant Pathology, 43(3), 394-412. https://doi.org/10.1080/07060661.2020.1836026 (source with peer review)
+[^mahmoud-2023-botrytis-budrot]: Mahmoud M, BenRejeb I, Punja ZK, Buirs L, Jabaji S. Understanding bud rot development, caused by Botrytis cinerea, on cannabis (Cannabis sativa L.) plants grown under greenhouse conditions. Botany. 2023;101(4):200-231. https://doi.org/10.1139/cjb-2022-0139 (source with peer review)
+[^punja-2023-fusarium-pythium-biocontrol]: Punja, Z.K., Tirajoh, A., Collyer, D., & Ni, L. (2023). Biological control of Fusarium oxysporum causing damping-off and Pythium myriotylum causing root and crown rot on cannabis (Cannabis sativa L.) plants. Canadian Journal of Plant Pathology, 45(3), 245-264. https://doi.org/10.1080/07060661.2023.2172082 (source with peer review)
+[^sutton-2006-pythium-hydroponic-etiology]: Sutton, J. C., Sopher, C. R., Owen-Going, T. N., Liu, W., Grodzinski, B., Hall, J. C., & Benchimol, R. L. (2006). Etiology and epidemiology of Pythium root rot in hydroponic crops: current knowledge and perspectives. Summa Phytopathologica, 32(4), 307-321. https://doi.org/10.1590/S0100-54052006000400001 (source with peer review)
+[^hlvd_threat2023]: Atallah OO et al. (2023). Hop latent viroid: a hidden threat to the cannabis industry. Viruses / PMC. https://pmc.ncbi.nlm.nih.gov/articles/PMC10053334/ (source with peer review)
+[^hlvd_mgmt2025]: Transmission, spread, longevity and management of hop latent viroid in cannabis in North America (2025). PMC. https://pmc.ncbi.nlm.nih.gov/articles/PMC11902214/ (source with peer review)
+[^hlvd-transmission-2025]: Mechanical transmission and management of Hop Latent Viroid (HLVd) in cannabis: spread via contaminated tools and cuttings; under experimental conditions linked cuttings can approach complete infection within weeks; controls include fresh gloves per plant, tool sterilisation and footbaths. Plants (MDPI) 2025, 14:830. https://www.mdpi.com/2223-7747/14/5/830 (source with peer review)
+[^rahnama-2021-septoria-cannabis]: Rahnama M, Szarka D, Li H, Dixon E, Castlebury LA, Gauthier N (2021). Reemergence of Septoria leaf spot caused by Septoria cannabis on hemp in Kentucky, confirmed by sequence data. Plant Disease 105:2286-2289. https://doi.org/10.1094/PDIS-12-20-2620-SC (source with peer review)
+[^ujata-2024-septoria-cannabicola]: Ujata AH, Konishi S, Kato Y, Tonami H, Nakashima C (2024). Septoria cannabicola, a new species on Cannabis sativa from Japan. Mycoscience 65:92-95. https://pmc.ncbi.nlm.nih.gov/articles/PMC11369300/ (source with peer review)
