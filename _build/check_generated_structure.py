@@ -18,8 +18,8 @@ VOID_TAGS = {
     "meta", "param", "source", "track", "wbr",
 }
 SOURCE_NOTE_OVERRIDES = {
-    ("cannabis-tissue-culture-playbook", "sources"): "Evidence sources and image methods",
-    ("cannabis-tissue-culture-sop", "sources"): "Source notes",
+    ("cannabis-tissue-culture-playbook", "sources"): "Sources of data and methods for photos",
+    ("cannabis-tissue-culture-sop", "sources"): "Information on sources",
 }
 
 

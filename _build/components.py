@@ -124,7 +124,7 @@ def term_gallery(items, model=""):
         f"<figure class='tgal-item'><img src='{esc(src)}' alt='{esc(term)}' loading='lazy'>"
         f"<figcaption>{term}</figcaption></figure>" for term, src in items)
     cred = f"<span class='fcredit'>{model}</span>" if model else ""
-    return (f"<div class='tgal-wrap'><div class='kicker'>{icon('image',14)} Key terms, in the facility{cred}</div>"
+    return (f"<div class='tgal-wrap'><div class='kicker'>{icon('image',14)} Terms in the facility {cred}</div>"
             f"<div class='tgal'>{cells}</div></div>")
 
 # ---------------- stage card / grid / cards / kv / steps ----------------

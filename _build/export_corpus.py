@@ -86,14 +86,14 @@ def block_to_md(block, used):
         if ctitle:
             body_inner = body_inner.replace(ctitle.group(0), "", 1)
         body_md = "\n".join(block_to_md(x, used) for x in _split_blocks(body_inner)) or inline_md(body_inner, used)
-        head = f"**{kind.upper()} — {title_md}**" if title_md else f"**{kind.upper()}**"
+        head = f"**{kind.upper()}: {title_md}**" if title_md else f"**{kind.upper()}**"
         return "> " + (head + "\n\n" + body_md).replace("\n", "\n> ")
 
     # definition
     if b.startswith("<div class='defn'"):
         t = re.search(r"<span class='defn-t'>(.*?)</span>", b, re.S)
         d = re.search(r"<span class='defn-b'>(.*?)</span>", b, re.S)
-        return f"**{inline_md(t.group(1), used) if t else ''}** — {inline_md(d.group(1), used) if d else ''}"
+        return f"**{inline_md(t.group(1), used) if t else ''}**: {inline_md(d.group(1), used) if d else ''}"
 
     # table
     if b.startswith("<div class='tbl-wrap'") or b.startswith("<table"):
@@ -118,7 +118,7 @@ def block_to_md(block, used):
         for i, m in enumerate(re.findall(r"<li class='step'>(.*?)</li>", b, re.S), 1):
             t = re.search(r"<div class='step-t'>(.*?)</div>", m, re.S)
             d = re.search(r"<div class='step-b'>(.*?)</div>", m, re.S)
-            items.append(f"{i}. **{inline_md(t.group(1), used) if t else ''}** — {inline_md(d.group(1), used) if d else ''}")
+            items.append(f"{i}. **{inline_md(t.group(1), used) if t else ''}**: {inline_md(d.group(1), used) if d else ''}")
         return "\n".join(items)
 
     # lists
@@ -222,7 +222,7 @@ def paper_md(mod):
         if not r:
             continue
         cite = html.unescape(re.sub(r"<[^>]+>", "", r["cite"]))
-        tag = "peer-reviewed" if r.get("peer") else "industry/manufacturer source"
+        tag = "source with peer review" if r.get("peer") else "source from a manufacturer or industry"
         url = r.get("url", "")
         foot.append(f"[^{rid}]: {cite} {url} ({tag})")
         refs_struct.append({"id": rid, "n": n, "cite": cite, "url": url, "peer": bool(r.get("peer"))})
@@ -377,7 +377,7 @@ def main():
     render_readme(manifest)
 
     # glossary.json
-    json.dump({"name": ATTRIBUTION + " — glossary", "count": len(GLOSSARY),
+    json.dump({"name": ATTRIBUTION + ": glossary", "count": len(GLOSSARY),
                "license": LICENSE_ID, "terms": GLOSSARY},
               open(os.path.join(ROOT, "glossary.json"), "w", encoding="utf-8"),
               ensure_ascii=False, indent=1)
@@ -387,10 +387,10 @@ def main():
     for m in manifest:
         by_group.setdefault(m["track"] or "Other", []).append(m)
     L = [f"# {ATTRIBUTION}\n",
-         "> Beginner-friendly, evidence-linked field guides on medical cannabis cultivation: "
-         "propagation, crop steering, environment, plant health, precision irrigation, facility and quality.\n",
+         "> Guides for new growers on the cultivation of medicinal cannabis. Each guide links its facts to sources. "
+         "The papers cover propagation, crop steering, environment, plant health, precision irrigation, facility and quality.\n",
          f"Licensed {LICENSE_ID} ({LICENSE_URL}). Attribution: {ATTRIBUTION}. "
-         f"Each paper has a clean markdown version under /papers/ with sources preserved as footnotes.\n"]
+         f"Each paper has a version in the Markdown format in /papers/. The sources are footnotes in that file.\n"]
     order = [g["group"] for g in build.NAV.GROUPS]
     for grp in order + [k for k in by_group if k not in order]:
         items = by_group.get(grp)
@@ -402,13 +402,13 @@ def main():
             L.append(f"- [{m['title']}]({m['md_url']}): {desc}")
         L.append("")
     L.append("## Optional")
-    L.append(f"- [Full corpus (all papers)]({BASE}/llms-full.txt): every paper concatenated")
-    L.append(f"- [Manifest (JSON index)]({BASE}/manifest.json): machine-readable paper index")
+    L.append(f"- [All papers in one file]({BASE}/llms-full.txt): all papers, one after the other")
+    L.append(f"- [Manifest (JSON index)]({BASE}/manifest.json): index of the papers for software")
     L.append(f"- [Glossary (JSON)]({BASE}/glossary.json): {len(GLOSSARY)} defined terms")
     open(os.path.join(ROOT, "llms.txt"), "w", encoding="utf-8").write("\n".join(L) + "\n")
 
     # llms-full.txt
-    header = (f"# {ATTRIBUTION} — full corpus\n\nLicensed {LICENSE_ID} ({LICENSE_URL}). "
+    header = (f"# {ATTRIBUTION}: all papers\n\nLicensed {LICENSE_ID} ({LICENSE_URL}). "
               f"Attribution: {ATTRIBUTION}. {len(manifest)} papers, version {VERSION}, updated {UPDATED}.\n\n")
     open(os.path.join(ROOT, "llms-full.txt"), "w", encoding="utf-8").write(
         header + "\n\n---\n\n".join(full) + "\n")

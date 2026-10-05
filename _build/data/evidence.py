@@ -13,16 +13,16 @@ from components import esc
 
 DEFAULT = {
     "solid": [
-        "Core definitions and measurement units used in the paper",
-        "Safety-critical limits where occupational or standards sources are cited",
+        "The primary definitions and the units of measurement in the paper",
+        "Safety limits that have a citation to a regulation or a specification",
     ],
     "operational": [
-        "Numeric stage targets (light, climate, feed) as starting bands, not laws",
-        "SOPs that work in many rooms but need your genetics and meters",
+        "Target ranges for light, climate and feed in each stage. They are start values that you can change.",
+        "SOPs that work in many rooms, but you must adjust them for your genetics and meters",
     ],
     "provisional": [
-        "Any single-number 'guaranteed' yield or potency claim without a multi-site trial",
-        "Controller setpoints copied from another facility without re-calibration",
+        "A number for yield or potency that you will always get, with no test at many sites",
+        "Controller setpoints from a different facility, with no new calibration",
     ],
 }
 
@@ -30,504 +30,504 @@ DEFAULT = {
 PAPERS = {
     "seeds-germination": {
         "solid": [
-            "Seeds need water + warmth; damping-off is driven by overwet, stagnant conditions",
-            "Feminised seed is XX×XX induction (STS/colloidal silver class methods), not 100% herm-proof",
-            "Photoperiod plants respond to night length; autos flower largely by age/genetics",
+            "Water and a warm temperature are necessary for seeds. Damping-off occurs because of conditions that are too wet and have no air movement.",
+            "Feminized seed is the result of XX×XX induction with STS, colloidal silver or an equivalent method. The seed does not give 100% protection from hermaphrodites.",
+            "The length of the night controls flowering in photoperiod plants. Autoflower plants make flowers mostly because of their age and genetics.",
         ],
         "operational": [
-            "21–25 °C germination band and gentle seedling PPFD ramps",
-            "Humidity-dome / high RH early, then ease humidity as roots establish",
-            "Visual seed quality checks (colour/firmness) as a screen, not a lab viability assay",
+            "A germination temperature range of 21 to 25 °C, and slow PPFD ramps for seedlings.",
+            "Use a humidity dome and a high RH at the start. Then decrease the humidity when the roots become longer.",
+            "Visual checks of seed quality (color and firmness) as a first selection, and not as a laboratory test of viability.",
         ],
         "provisional": [
-            "Exact germination % for any seed lot (batch age and storage dominate)",
-            "Paper-towel 'near-perfect' success rates — method is secondary to seed quality and moisture control",
+            "One germination percentage for all seed lots. The age of the batch and the storage have the largest effect.",
+            "Very high germination rates for the paper towel method. The method is less important than the quality of the seed and the control of moisture.",
         ],
     },
     "cloning": {
         "solid": [
-            "Clones are genetic copies of the mother (barring rare somatic mutation)",
-            "High humidity and gentle light reduce cutting stress until roots form",
-            "Dirty tools and wet stagnant media raise soft-rot / pathogen risk",
+            "A clone has the same genetics as the mother plant. A somatic mutation, which is not frequent, can cause a difference.",
+            "High humidity and a low light intensity decrease the stress on a cutting until the cutting makes roots.",
+            "Dirty tools and wet media where the water does not move increase the risk of soft rot and of pathogens.",
         ],
         "operational": [
-            "IBA gel/powder protocols and dome venting schedules used in commercial prop rooms",
-            "90%+ rooting as a well-run room target, not a genetics guarantee",
-            "Mild feed after roots show; over-strong EC burns soft cuttings",
+            "Procedures with IBA gel or powder, and procedures to open the dome vents, in commercial rooms for propagation.",
+            "The target for a room with correct control is a rooting rate of 90% or more. Genetics do not make sure of this rate.",
+            "Apply a feed with a low EC after the roots show. An EC that is too high causes damage to soft cuttings.",
         ],
         "provisional": [
-            "Any single 'air embolism' story as the main soft-stem failure mode (desiccation usually dominates)",
-            "Exact day-to-root tables that ignore cultivar and environment",
+            "Air embolism as the one primary cause of soft stems. Drying of the cutting usually has the largest effect.",
+            "Tables with one number of days to roots that ignore the cultivar and the environment.",
         ],
     },
     "tissue-culture": {
         "solid": [
-            "Meristem tissue is often cleaner of systemic pathogens than nodal cuttings",
-            "No spray cures a viroid-infected plant; free ≠ resistant after cleanup",
-            "RT-qPCR (RNA) is the right class of test for HpLVd — not a casual 'DNA strip' alone",
+            "Meristem tissue frequently contains a smaller quantity of systemic pathogens than a nodal cutting contains.",
+            "A spray cannot remove a viroid infection from a plant. After a cleanup, a plant without the viroid is not resistant to the viroid.",
+            "RT-qPCR (RNA) is the correct type of test for HpLVd. A test with only a DNA strip is not correct.",
         ],
         "operational": [
-            "High first-run contamination losses for beginners (cannabis is recalcitrant)",
-            "Timeline of months for verified clean mothers including indexing",
-            "Aseptic technique quality dominates kit brand",
+            "In the first batch of a grower who is new to the work, contamination kills many cultures. Cannabis is a recalcitrant species.",
+            "Some months are necessary to get mother plants that tests show are clean. This time includes the indexing.",
+            "The quality of the aseptic technique has a larger effect than the manufacturer of the kit.",
         ],
         "provisional": [
-            "Facility infection prevalence surveys as permanent global rates (time/region-specific)",
-            "Exact seed-transmission percentages for every cross (genotype-dependent)",
-            "Claims that TC alone permanently clears every endophyte, mite, or surface pathogen without hygiene afterward",
+            "Infection rates from investigations of facilities as permanent rates for all areas. An investigation gives a rate for one time and one area.",
+            "One percentage of seed transmission for all crosses. The percentage changes with the genotype.",
+            "Only tissue culture, with no hygiene after it, as a permanent method to remove all endophytes, mites and surface pathogens.",
         ],
     },
     "light-acclimation": {
         "solid": [
-            "Sudden PPFD jumps cause photoinhibition / bleaching; ramps reduce that risk",
-            "12/12 vs 18/6 at equal PPFD cuts DLI by one-third (~33%)",
+            "A large and sudden increase of PPFD causes photoinhibition and bleaching. A ramp of PPFD decreases this risk.",
+            "At equal PPFD, a photoperiod of 12/12 gives a DLI that is one-third (approximately 33%) less than a photoperiod of 18/6.",
         ],
         "operational": [
-            "Multi-day dimmer or height ramps used in commercial rooms",
-            "Ambient-CO₂ practical intensity ceilings as stress/ROI guidance",
+            "Ramps of more than one day, with a dimmer or with the height of the fixture, in commercial rooms.",
+            "The maximum light intensities that growers can use in a room with no CO₂ enrichment. They give information about stress and ROI.",
         ],
         "provisional": [
-            "Any single far-red % yield jump generalized across all cultivars",
-            "Exact 'must hit X µmol by day Y' schedules without leaf-temp and VPD context",
+            "One percentage of yield increase from far-red light for all cultivars.",
+            "Schedules with the instruction that the PPFD must be X µmol on day Y, with no data on the leaf temperature and the VPD.",
         ],
     },
     "defoliation-training": {
         "solid": [
-            "Leaves are carbon sources; removing them removes photosynthetic capacity",
-            "Canopy structure affects light interception and airflow / mould risk",
+            "Leaves are sources of carbon. When you remove leaves, you remove capacity for photosynthesis.",
+            "The structure of the canopy has an effect on the light that the canopy absorbs, on the airflow, and on the risk of mold.",
         ],
         "operational": [
-            "Topping, LST, SCROG, lollipop timing windows used by many indoor growers",
-            "Stop heavy defoliation once bulk flower sets",
+            "Periods for topping, LST, SCROG and lollipopping that many indoor growers use.",
+            "Stop the removal of many leaves when flower bulking starts.",
         ],
         "provisional": [
-            "Fixed % yield gains from a specific defoliation recipe across all densities",
-            "Day 5–7 topping as universal (clone multi-node vs seed starts differ)",
+            "One percentage of yield increase from one defoliation procedure for all plant densities.",
+            "Topping on day 5 to 7 as the time for all plants. A clone starts with many nodes, and a plant from seed is different.",
         ],
     },
     "flowering-stages": {
         "solid": [
-            "Photoperiod cannabis needs long nights; light leaks can disrupt flowering",
-            "Trichomes and pistils are maturity cues; calendar alone is weak",
-            "Dense late canopies + high humidity raise Botrytis risk",
+            "Long nights are necessary for photoperiod cannabis. A light leak can cause problems for flowering.",
+            "Trichomes and pistils are signs of maturity. A calendar is a weak sign when it is the only sign.",
+            "In the last weeks of flowering, the risk of Botrytis increases when the canopy has a high density and the humidity is high.",
         ],
         "operational": [
-            "8–10 week hybrid flowering maps and stage climate bands",
-            "Stretch expectations that vary widely by cultivar and spectrum",
+            "Week-by-week tables for the 8 to 10 weeks of flowering of hybrids, and climate ranges for each stage.",
+            "The estimates of stretch are very different for each cultivar and each light spectrum.",
         ],
         "provisional": [
-            "Amber trichomes = CBN = couch-lock as a clean pharmacological switch (multi-factor; human CBN evidence limited)",
-            "Long plain-water 'flush' improving smoke quality (controlled tests often show little benefit)",
-            "Phone-LED / tiny indicator light as a proven herm trigger (night integrity matters; genetics + multi-stress dominate herms)",
+            "Amber trichomes, then CBN, then couch-lock, as one clear sequence. Many causes have an effect. The data on CBN in persons are small.",
+            "A long period in which you flush the plants with only water to increase smoke quality. Controlled tests frequently show a small effect.",
+            "A phone LED or a very small indicator light as a sure hermaphrodite trigger. Light leaks at night are important. Genetics and many stresses have the largest effect.",
         ],
     },
     "coco-crop-steering": {
         "solid": [
-            "Coco is relatively inert; root-zone EC and water content are highly operator-controlled",
-            "Mild water deficit can alter secondary metabolism; severe drought stresses plants",
+            "Coco is almost inert. The operator can control most of the EC and the water content of the root zone.",
+            "A small water deficit can change the secondary metabolism of the plant. A large drought causes stress in plants.",
         ],
         "operational": [
-            "Daily dryback + runoff EC as commercial steering levers",
-            "Field-capacity / dryback point targets after media-specific sensor calibration",
+            "The dryback of each day and the runoff EC, as the levers for steering in commercial rooms.",
+            "Targets for field capacity and for the dryback point, after you calibrate the sensor for each medium.",
         ],
         "provisional": [
-            "Mapping Caplan-style single late drought directly onto multi-week daily dryback recipes",
-            "Any fixed 'generative EC' band that ignores cultivar and light intensity",
+            "One drought in the last stage of the crop (the test of Caplan) directly as a procedure of dryback each day for many weeks.",
+            "One range of EC for generative growth that ignores the cultivar and the light intensity.",
         ],
     },
     "rockwool-crop-steering": {
         "solid": [
-            "Rockwool holds almost no nutrient reserve; pore-water chemistry tracks feed closely",
-            "Over-dry slabs can channel / rewet poorly",
+            "Rockwool contains almost no nutrients. The pore water has almost the same chemical properties as the feed.",
+            "A slab that is too dry can have channeling. The slab then does not become wet again correctly.",
         ],
         "operational": [
-            "Industry dryback bands and multi-shot irrigation schedules (Grodan-class practice)",
-            "Runoff management to limit salt accumulation",
+            "Dryback ranges and irrigation procedures with many shots that manufacturers use, as in the procedures of Grodan.",
+            "Control of the runoff to keep the salt that collects in the substrate at a minimum.",
         ],
         "provisional": [
-            "Exact recovery-floor WC % as a universal physics constant across all products",
-            "Pure inverse-EC maths as exact substrate EC without plant uptake",
+            "One value of the water content for the recovery floor as a constant of physics for all products.",
+            "An inverse formula for EC that ignores plant uptake, as the accurate substrate EC.",
         ],
     },
     "one-steering-law": {
         "solid": [
-            "Wet–dry and feed strength are the shared steering language across media",
-            "Soil buffers; coco/rockwool/water do not buffer the same way",
+            "The wet and dry cycle and the strength of the feed are the same steering controls in all media.",
+            "Soil is a buffer. Coco, rockwool and water do not have the same buffer.",
         ],
         "operational": [
-            "Unified mental model (drive / brake) for different substrates",
+            "One model for all substrates, with a drive and a brake.",
         ],
         "provisional": [
-            "Beginner coco recipes that import high-intensity rockwool substrate EC numbers",
-            "DWC 'root rot within a day above 23 °C' as a universal timeline (DO + heat matter, timing varies)",
+            "Coco procedures for a new grower that use the high-intensity substrate EC values of rockwool.",
+            "Root rot in DWC in one day or less at more than 23 °C as a time for all systems. DO and heat change the time.",
         ],
     },
     "harvest-dry-trim-cure": {
         "solid": [
-            "Water activity predicts microbial risk better than moisture % alone (ASTM-style 0.55–0.65 for flower)",
-            "Slow cool dark dry protects terpenes better than hot fast dry",
-            "Light and heat accelerate cannabinoid/terpene degradation in storage",
+            "Water activity is a better indicator of the risk from microbes than only the moisture percentage. For flower, an ASTM-type range is 0.55 to 0.65.",
+            "Slow drying in darkness at a cool temperature keeps more terpenes than fast drying at a hot temperature.",
+            "In storage, light and heat increase the rate of degradation of cannabinoids and terpenes.",
         ],
         "operational": [
-            "60 °F / 60% RH style hang-dry defaults and whole-plant hang practice",
-            "Dry-trim preference for many quality-focused rooms",
+            "Usual values of 60 °F and 60% RH for drying, and the procedure to hang all of the plant.",
+            "Many rooms select dry trim when quality is important.",
         ],
         "provisional": [
-            "Vendor '5–10% yield recovered' figures as multi-site peer results",
-            "Exact aw drop from trimming as a universal constant",
+            "A supplier value of 5 to 10% yield recovered as the result of tests at many sites with peer review.",
+            "The quantity by which trimming decreases the water activity (aw) as one value for all conditions.",
         ],
     },
     "gmp-hash-lab": {
         "solid": [
-            "Concentrates can enrich residues relative to input biomass depending on process yield and partitioning",
-            "Documented, inspectable systems (records, CAPA, genealogy) are the core of GMP thinking",
+            "A concentrate can have a higher concentration of residues than the input biomass. The difference changes with the extraction yield and the partitioning.",
+            "Systems that you can examine, with records, CAPA and genealogy, are the primary part of GMP.",
         ],
         "operational": [
-            "Room flow, gowning, and batch-record patterns used in regulated facilities",
+            "Procedures for room flow, for gowning and for batch records, in facilities that a regulator controls.",
         ],
         "provisional": [
-            "ICH residual-solvent numbers as your cannabis licence limits (jurisdiction-specific)",
-            "EU Annex 1 Grade A/B as default for all hash (product/licence dependent)",
-            "Any fixed 'seven mandatory test families' without your regulator's panel",
+            "ICH values for residual solvents as the limits of your cannabis license. The limits are different in each jurisdiction.",
+            "EU Annex 1 Grade A or B for all hash. The grade changes with the product and with the license.",
+            "A list of seven mandatory groups of tests that ignores the panel of your regulator.",
         ],
     },
     "grow-room-systems": {
         "solid": [
-            "Light, heat, humidity, CO₂, water and airflow couple; one dial moves others",
-            "VPD is a useful plant-comfort framing of T + RH",
+            "Light, heat, humidity, CO₂, water and airflow have an effect on each other. When you change one of them, all the other items change.",
+            "VPD shows the effect of the temperature and the RH together on the plant, in one value.",
         ],
         "operational": [
-            "0.8–1.5 kPa style VPD bands by stage as hort starting points",
-            "Sealed vs vented room design choices",
+            "VPD ranges of the type 0.8 to 1.5 kPa for each stage, as start values in horticulture.",
+            "The decision to use a sealed room or a room with vents.",
         ],
         "provisional": [
-            "Exact VPD optima from non-cannabis crops applied as hard cannabis law",
-            "Tacoing always = VPD alone (often light + leaf heat + VPD)",
+            "Accurate VPD values that are best for crops other than cannabis as mandatory values for cannabis.",
+            "VPD as the only cause of tacoing (leaf edges that bend up) in all conditions. Frequently, light, leaf heat and VPD together are the cause.",
         ],
     },
     "lighting-fundamentals": {
         "solid": [
-            "PAR/PPFD/DLI definitions and photoperiod night-length control of flowering",
-            "More light raises yield only until another factor limits (Liebig)",
-            "LED efficacy bands for modern fixtures (era-dependent; check current DLC/maps)",
+            "The definitions of PAR, PPFD and DLI. The length of the night in the photoperiod controls flowering.",
+            "More light increases the yield only until a different condition becomes the limit (Liebig).",
+            "Efficacy ranges for new LED fixtures. The ranges change with time, thus examine the current DLC data and the PPFD maps.",
         ],
         "operational": [
-            "Stage PPFD tables for indoor cannabis without/with CO₂",
-            "9-point map uniformity checks",
+            "Tables of PPFD for each stage for indoor cannabis, with CO₂ enrichment and without CO₂ enrichment.",
+            "Checks of uniformity with a PPFD map of 9 points.",
         ],
         "provisional": [
-            "Inverse-square as exact hang-height math for multi-bar LED panels (use maps + meters)",
-            "Red light 'drives flowering' as the primary mechanism (photoperiod does; R:FR affects morphology)",
-            "UV-B as a reliable potency booster (evidence mixed; safety cost real)",
+            "The inverse-square law as an accurate formula for the height at which LED panels with many bars hang. Use maps and meters.",
+            "Red light as the primary mechanism that causes flowering. The photoperiod is the primary mechanism, and R:FR has an effect on morphology.",
+            "UV-B as a sure method to increase potency. The data are mixed, and UV-B has a risk to safety.",
         ],
     },
     "airflow-design": {
         "solid": [
-            "Boundary-layer thinning improves gas exchange; still air holds humidity at the leaf",
-            "Mechanical flexure (thigmomorphogenesis) can affect stem strength",
+            "When the boundary layer becomes thinner, gas exchange increases. Air that does not move keeps the humidity at the leaf.",
+            "Mechanical movement of the stem (thigmomorphogenesis) can change the strength of the stem.",
         ],
         "operational": [
-            "~0.3–1.0 m/s canopy flutter bands and HAF layout habits",
+            "Ranges of air speed of approximately 0.3 to 1.0 m/s that make the canopy move, and the usual positions of HAF fans.",
         ],
         "provisional": [
-            "Hard disease/stress velocity cliffs without measurement height defined",
+            "A sudden change in disease or stress at one value of air velocity, with no specified height of measurement.",
         ],
     },
     "under-canopy-lighting": {
         "solid": [
-            "Upper canopy filters spectrum; understory is relatively green/FR-enriched vs blue/red-rich",
-            "Lower sites often light-limited for grade/fill",
+            "The top canopy filters the spectrum. The light below it has more green and far-red, and less blue and red, than the light above it.",
+            "The bottom flower sites frequently do not receive sufficient light for the grade and the fill of the flower.",
         ],
         "operational": [
-            "SCL/ICL commercial installs and bleach-risk management at short range",
+            "SCL and ICL in commercial rooms, and control of the risk of bleaching when the distance to the plant is short.",
         ],
         "provisional": [
-            "Any single 'minimum viability PPFD' for all lower flowers",
-            "Sealed-room continuous high ACH recipes that dump CO₂",
+            "A minimum PPFD for viability that is the same for all bottom flowers.",
+            "Procedures for a sealed room with a continuous high ACH, which remove the CO₂.",
         ],
     },
     "co2-enrichment": {
         "solid": [
-            "C3 plants including cannabis respond to elevated CO₂ under strong light",
-            "Inject in light only; NDIR sensors; occupational limits ~5,000 / 30,000 / 40,000 ppm class",
-            "Sealed rooms retain enrichment; exhaust vents it",
+            "In strong light, a higher CO₂ concentration increases the photosynthesis of C3 plants, for example cannabis.",
+            "Inject CO₂ only when the light is on. Measure the CO₂ with NDIR sensors. The occupational limits are approximately 5,000, 30,000 and 40,000 ppm.",
+            "A sealed room keeps the CO₂ enrichment. Exhaust removes it.",
         ],
         "operational": [
-            "1,000–1,500 ppm enrichment bands and bottled delivery as standard sealed-room practice",
-            "Dark-period purge / ethylene management concepts",
+            "Enrichment ranges of 1,000 to 1,500 ppm, and CO₂ from bottles, as the standard procedure in a sealed room.",
+            "Methods of air exchange in the dark period and of ethylene control.",
         ],
         "provisional": [
-            "Exact % yield uplift for every room (genetics, light, seal quality dominate)",
-            "Unmeasured drying-room CO₂ ceilings as percent-level facts (measure your room)",
-            "Tomato greenhouse % gains mapped 1:1 to cannabis flower",
+            "One percentage of yield increase for all rooms. The genetics, the light and the quality of the seal have the largest effect.",
+            "Maximum CO₂ values in percent for a drying room, as facts with no measurement. Measure your room.",
+            "Percentage increases for tomato in a greenhouse, with the same values (1:1) for cannabis flower.",
         ],
     },
     "scaling-high-light": {
         "solid": [
-            "Raising PPFD raises demand for water, nutrients, cooling, and often CO₂",
-            "Canopy yield can keep rising past single-leaf saturation points",
+            "When you increase the PPFD, the plant uses more water and nutrients, and the heat load increases. Frequently the plant also uses more CO₂.",
+            "The yield of the canopy can continue to increase at PPFD values higher than the saturation point of one leaf.",
         ],
         "operational": [
-            "Ladder tables as engineering sizing guides under strong control",
+            "Ladder tables as engineering guides to the size of the equipment, in rooms with strong control.",
         ],
         "provisional": [
-            "Extreme runoff EC / feed ladders as beginner defaults",
-            "Simple PPFD × constant water-use formulas without VPD/LAI/CO₂ context",
+            "Ladder tables with a very high runoff EC and feed EC as start values for a new grower.",
+            "Formulas that multiply the PPFD by a constant to find the quantity of water, with no data on VPD, LAI or CO₂.",
         ],
     },
     "substrates-overview": {
         "solid": [
-            "Air-filled porosity and water-holding differ by media class",
-            "Soil buffers pH/nutrients; inert media do not",
+            "Air-filled porosity and water-holding capacity are different for each type of medium.",
+            "Soil is a buffer for pH and nutrients. Inert media are not buffers.",
         ],
         "operational": [
-            "Beginner medium pick heuristics (forgiveness vs control)",
+            "Easy methods for a new grower to select a medium for tolerance of errors or for control.",
         ],
         "provisional": [
-            "Living soil pH self-correcting 'within minutes for any water'",
-            "Single AFP % as universal for all rockwool SKUs",
+            "The pH of a living soil corrects automatically in a small number of minutes, for all types of water.",
+            "One percentage of air-filled porosity (AFP) for all rockwool products.",
         ],
     },
     "water-quality": {
         "solid": [
-            "Alkalinity ≠ hardness; chloramine ≠ free chlorine for removal methods",
-            "DO saturation falls gently with temperature; warm low-O₂ systems raise root disease risk",
+            "Alkalinity is not the same as hardness. For removal methods, chloramine is not the same as free chlorine.",
+            "The saturation of dissolved oxygen (DO) decreases gradually when the temperature increases. Warm systems with a low O₂ content increase the risk of root disease.",
         ],
         "operational": [
-            "RO decision thresholds and source-EC budgeting in mS/cm",
+            "Threshold values for the decision to use RO, and a procedure to calculate the EC of the source water (mS/cm) in the feed.",
         ],
         "provisional": [
-            "Fixed 800–900 ppm 'feed ceiling' independent of scale and stage",
-            "Chlorine injury thresholds transferred from lettuce as cannabis hard limits",
+            "One feed maximum of 800 to 900 ppm for all ppm scales and all stages.",
+            "Threshold values of chlorine damage from lettuce as mandatory limits for cannabis.",
         ],
     },
     "ph-management": {
         "solid": [
-            "pH gates nutrient availability; lockout can look like deficiency",
-            "Soilless sweet spots roughly mid-5s to mid-6s; soil higher/wider",
+            "The pH controls which nutrients are available to the plant. A lockout can show the same symptoms as a deficiency.",
+            "In soilless media, the best pH values are approximately from the middle of the 5s to the middle of the 6s. In soil, the range is higher and wider.",
         ],
         "operational": [
-            "Inflow pH discipline and two-point pen calibration habits",
+            "Control of the feed pH, and the usual procedure for a two-point calibration of the pH meter.",
         ],
         "provisional": [
-            "Low-pH chemistry details from basil/lettuce applied without cannabis context",
-            "Runoff EC always within 10% of feed as a universal law (steering may hold higher root-zone EC on purpose)",
+            "Chemical information at low pH from basil or lettuce for cannabis, with no cannabis data.",
+            "A runoff EC that is always a maximum of 10% different from the feed EC. In steering, the operator can select a higher root-zone EC.",
         ],
     },
     "nutrient-mixing-athena": {
         "solid": [
-            "A/B separation prevents Ca + sulphate/phosphate precipitation",
-            "Stock concentration maths for stated bag-into-volume recipes",
+            "When you keep part A and part B apart, calcium does not make a precipitate with sulfate or phosphate.",
+            "The method to calculate the concentration of the stock solution, for procedures with a specified bag of fertilizer in a specified volume of water.",
         ],
         "operational": [
-            "Athena Pro Line stock-and-dose workflow as one commercial system among many",
+            "The Athena Pro Line procedure with stock solutions and doses, as one commercial system of many.",
         ],
         "provisional": [
-            "Any third-party dosing table not verified with your meter and water",
+            "A table of doses from a different manufacturer, with no check of the table with your meter and your water.",
         ],
     },
     "nutrient-deficiencies": {
         "solid": [
-            "Mobile vs immobile symptom position is a first-pass diagnostic rule",
-            "pH lockout, overwatering, and light stress mimic nutrient issues",
+            "The position of a symptom on the plant, for a mobile nutrient or an immobile nutrient, is a good first step to find the cause.",
+            "A pH lockout, too much water and light stress can show the same symptoms as nutrient problems.",
         ],
         "operational": [
-            "Field guides for N/P/K/Mg/Ca/Fe patterns on cannabis",
+            "Guides to the symptoms of N, P, K, Mg, Ca and Fe on cannabis.",
         ],
         "provisional": [
-            "Visual diagnosis as lab-certainty without tissue/substrate tests",
-            "Incomplete micronutrient atlas (Zn/B/Mn/Cu/Mo need extra care)",
+            "A visual identification of the problem as a result that is as sure as a laboratory test, with no test of tissue or substrate.",
+            "An atlas of micronutrients with missing parts. Be more careful with Zn, B, Mn, Cu and Mo.",
         ],
     },
     "mould-risk": {
         "solid": [
-            "Botrytis favours high humidity, dense tissue, poor air exchange",
-            "In-canopy RH can exceed room sensor readings",
+            "Botrytis occurs more frequently when the humidity is high, the tissue has a high density and the air exchange is low.",
+            "The RH in the canopy can be higher than the readings of the room sensors.",
         ],
         "operational": [
-            "Late-flower RH step-downs and bag-and-cut protocols",
+            "Procedures to decrease the RH in steps in the last stage of flowering, and procedures to put a bag on the rot and cut it.",
         ],
         "provisional": [
-            "Any fixed '60–70% flowering RH' as a safe late-flower target band",
-            "Relative-risk multipliers from claims data without absolute rates (immunocompromised remain high-stakes)",
+            "One RH range of 60 to 70% in flowering as a safe target for the last stage of flowering.",
+            "Values of relative risk from claims data, with no absolute rates. The group of persons with a weak immune system stays at high risk.",
         ],
     },
     "auckland-ipm-blueprint": {
         "solid": [
-            "Exclusion, clean stock, monitoring, and CAPA structure",
-            "NZ pathway thinking: approval/status is not the same as 'someone used it once'",
+            "The structure of exclusion, clean stock, monitoring and CAPA.",
+            "In the NZ pathway, the approval status of a product is not the same as the fact that a person used the product one time.",
         ],
         "operational": [
-            "Threshold models and mother-room controls as facility SOPs",
+            "Threshold models and controls for the mother room, as SOPs of the facility.",
         ],
         "provisional": [
-            "Any named product/organism status without checking the live register today",
-            "AI-generated diagnostic plates as confirmatory ID (training aids only)",
+            "The approval status of a specified product or organism, with no check of the register at this time.",
+            "Figures that an AI system makes, as a method to make sure of the identification of a pest. The figures are only aids for training.",
         ],
     },
     "ipm-sop": {
         "solid": [
-            "IPM hierarchy: prevent → monitor → soft → hard",
-            "Label rate and legal status rule any spray",
+            "The IPM hierarchy is prevent, monitor, soft controls and hard controls.",
+            "The rate on the label and the legal status of a product control each spray.",
         ],
         "operational": [
-            "Scouting cadences and example action thresholds",
+            "Intervals for scouting and examples of action thresholds.",
         ],
         "provisional": [
-            "Kitchen volumetric rates for pesticides (never; labels only)",
-            "Day-21 foliar lockout as global science law (quality SOP, not universal regulation)",
-            "Biocontrol agents assumed legal in every country",
+            "Rates for pesticides in kitchen volumes. Do not use them. Use only the rate on the label.",
+            "A limit of day 21 for foliar sprays as a general fact. The limit is a quality SOP and not a regulation for all areas.",
+            "Biocontrol agents that a grower thinks you can use in all countries.",
         ],
     },
     "pest-id": {
         "solid": [
-            "Loupe/scope confirmation before treating lookalikes",
-            "Life-cycle awareness matters for timing controls",
+            "Before you apply a treatment, use a loupe or microscope to identify the pest. Different pests can be almost the same visually.",
+            "If you know the life cycle of the pest, you can select the correct time for each control.",
         ],
         "operational": [
-            "Common cannabis pest field signs and biocontrol pairings where legal",
+            "The signs of frequent cannabis pests on plants, and the biocontrol agent for each pest where you can use it.",
         ],
         "provisional": [
-            "Extreme life-cycle times (e.g. 3-day full generations) as typical rather than hot/dry extremes",
-            "Sticky-card density rules of thumb as optimized science",
+            "Very short life-cycle times (for example, a life cycle of 3 days) as typical times. These times occur only in conditions that are very hot and dry.",
+            "Estimates for the density of sticky traps as the best values that tests show.",
         ],
     },
     "pppe": {
         "solid": [
-            "People are major contamination vectors; mechanical HpLVd spread on tools/hands is real",
-            "Hand hygiene log reductions are log-scale (≈90/99/99.9% class under test conditions)",
-            "Clean→dirty personnel flow; waste dirty→exit",
+            "Persons are a primary vector of contamination. HpLVd can move on tools and on hands.",
+            "The log reductions for hand hygiene use a log scale. In test conditions, they are approximately 90%, 99% and 99.9%.",
+            "The flow of personnel is from clean to dirty areas. The flow of waste is from dirty areas to the exit.",
         ],
         "operational": [
-            "Gowning order and two-kit models for cultivation vs post-harvest",
-            "NZ HSWA PPE framing where applicable",
+            "The sequence of gowning, and models with two kits, for cultivation and for post-harvest.",
+            "The NZ HSWA structure for PPE, where it is applicable.",
         ],
         "provisional": [
-            "Exact '70–90% of cleanroom contamination is people' as a universal constant",
-            "Phone-vs-toilet-seat rankings as rigorous biosecurity metrics",
+            "One value of 70 to 90% for the part of cleanroom contamination that persons cause, as a constant for all conditions.",
+            "The contamination of a phone compared with a toilet seat, as an accurate measure of biosecurity.",
         ],
     },
     "root-zone-teros12": {
         "solid": [
-            "Capacitance probes estimate VWC via permittivity; media calibration matters",
-            "Pore-water EC estimation has real limits (Hilhorst-class caveats)",
+            "Capacitance probes calculate the VWC from the permittivity. The calibration for the medium is important.",
+            "The estimate of pore-water EC has limits, as for the Hilhorst model and models of the same type.",
         ],
         "operational": [
-            "Install depth, volume of influence, and multi-pot placement habits",
+            "The depth of the installation, the volume of influence, and the usual positions of probes in many pots.",
         ],
         "provisional": [
-            "Manufacturer accuracy specs as guaranteed on every uncalibrated pack",
+            "The accuracy values of the manufacturer as values that you always get with no calibration for your medium.",
         ],
     },
     "smart-watering-vrwe": {
         "solid": [
-            "Single moisture probes can lie; multi-signal caution is sound engineering",
+            "One moisture probe can give an incorrect reading. A check of more than one signal is good engineering.",
         ],
         "operational": [
-            "VRWE-style fusion as a safety architecture for automated irrigation",
+            "Sensor fusion of the VRWE type, as a safety structure for automatic irrigation.",
         ],
         "provisional": [
-            "Any claim the system 'never floods, never starves' in all failure modes",
-            "Transpiration proxies as precise water-need models without crop coefficients",
+            "A system that, in all failure modes, always applies a sufficient quantity of water and does not apply too much water.",
+            "Transpiration proxies as accurate models of the quantity of water that the crop uses, with no crop coefficients.",
         ],
     },
     "signal-and-noise": {
         "solid": [
-            "Control charts and filtering reduce false alarms; sensors have noise",
+            "Control charts and filters decrease the number of false alarms. Sensors have noise.",
         ],
         "operational": [
-            "Sampling cadence and deadbands for grow-room automation",
+            "The sampling interval and the deadbands for automation in the grow room.",
         ],
         "provisional": [
-            "Fixed '% of alerts are noise' figures cited to process-industry standards without your measured rate",
-            "Mashed Western Electric / Nelson rule names without source attribution",
+            "One percentage of alerts that are noise, from standards of the process industry, with no rate that you measured.",
+            "The names of the Western Electric rules and the Nelson rules in one mixture, with no reference to a source.",
         ],
     },
     "closed-loop": {
         "solid": [
-            "Act → measure → compare → adjust is valid control theory",
-            "Coupled climate variables should not be tuned in isolation",
+            "A loop that operates, measures, compares and adjusts is correct control theory.",
+            "Do not adjust one climate value at a time, because the climate values have an effect on each other.",
         ],
         "operational": [
-            "Dashboard and automation design patterns for rooms",
+            "Typical structures of the dashboard and of the automation for rooms.",
         ],
         "provisional": [
-            "Guaranteed tip-burn prediction lead times from non-cannabis analogies",
-            "Whole-room health 'in under five seconds' as demonstrated hort performance",
+            "Sure values of the time before tipburn, from data on other crops and not from cannabis.",
+            "A time of less than five seconds to know the condition of all the room, as performance that tests show in horticulture.",
         ],
     },
     "plant-state-dashboard": {
         "solid": [
-            "Showing plant state beats raw sensor walls for operators",
+            "A display of the plant state is better for operators than a display of many raw sensor readings.",
         ],
         "operational": [
-            "UX patterns and advisory wording examples",
+            "UX structures and examples of advisories.",
         ],
         "provisional": [
-            "Any on-screen clinical prognosis (e.g. tip burn in 48 h) as a validated model",
+            "An estimate on the screen of a problem that will occur (for example, tipburn in 48 h) as a model that tests show is correct.",
         ],
     },
     "f2-crop-steering": {
         "solid": [
-            "Emergency stop ≠ disarm is a correct safety design principle",
-            "Sensor-driven irrigation needs calibrated VWC, not raw factory %",
+            "An emergency stop and a procedure to disarm the system are different. This difference is correct for the safety of the system.",
+            "Irrigation that a sensor controls must use a calibrated VWC, and not the percentage that the sensor gives with no calibration for the medium.",
         ],
         "operational": [
-            "Phase machines and Home Assistant entity patterns for one facility class",
+            "Phase machines and structures of entities in Home Assistant, for one type of facility.",
         ],
         "provisional": [
-            "Default VWC numbers as universal substrate truth",
-            "Caplan drought as full proof of a specific P0–P3 recipe",
+            "The VWC values that the system has at the start as correct values for all substrates.",
+            "The Caplan drought as a full test that one P0–P3 procedure is correct.",
         ],
     },
     "irrigation-manual": {
         "solid": [
-            "Missing safety sensors mean do not run unattended",
-            "Vegetative vs generative dryback polarity (smaller vs larger controlled drybacks)",
+            "If the system has no safety sensors, do not operate it when no person monitors it.",
+            "Vegetative growth uses smaller controlled drybacks. Generative growth uses larger controlled drybacks.",
         ],
         "operational": [
-            "Install and maintenance procedures for a sensor-driven manifold",
+            "Procedures for installation and servicing of a manifold that sensors control.",
         ],
         "provisional": [
-            "Any facility's entity names and setpoints as plug-and-play for yours",
+            "The entity names and setpoints of a different facility in your facility with no change.",
         ],
     },
     "plant-biosignal-sensor": {
         "solid": [
-            "Plants generate measurable biopotentials; electrode noise is a real engineering problem",
+            "Plants make biopotentials that you can measure. Noise at the electrode is an important problem in engineering.",
         ],
         "operational": [
-            "DIY AD8232 + ESPHome acquisition as a logging hobby build",
+            "A DIY hobby system with an AD8232 and ESPHome to record data.",
         ],
         "provisional": [
-            "Inferring NPK, irrigation need, or stress state from DIY millivolts alone",
-            "Commercial product model outputs reproduced without their trained library",
-            "Emotional-state classification literature applied to cultivation decisions",
+            "The estimate of NPK, of the irrigation that is necessary, or of the stress condition, from only the signal in millivolts of a DIY system.",
+            "The outputs of models of commercial products that you make again without the trained library of the product.",
+            "Papers on the classification of emotional states for decisions about cultivation.",
         ],
     },
     "facility-3d": {
         "solid": [
-            "Layout clashes found in CAD cost less than clashes in concrete",
+            "The cost to correct a layout clash that you find in CAD is less than the cost to correct a clash in concrete.",
         ],
         "operational": [
-            "3D planning workflow for rooms, doors, and equipment footprints",
+            "A procedure with a 3D model to make the layout of the rooms, the doors and the floor area of the equipment.",
         ],
         "provisional": [
-            "WAC/IBC examples as your local licence rules",
-            "Any model as engineering stamp / fire-life-safety approval",
+            "Examples from the WAC and the IBC as the conditions of your local license.",
+            "A model as an engineering approval or as an approval for fire safety and life safety.",
         ],
     },
     "daily-checks": {
         "solid": [
-            "Checklists improve process reliability in high-risk work",
+            "Checklists increase the reliability of a procedure in work with a high risk.",
         ],
         "operational": [
-            "HA auto-tick + walk-around hybrid for grow ops",
+            "A hybrid method for cultivation facilities: HA auto-tick and a walk-around.",
         ],
         "provisional": [
-            "Surgical mortality reductions as evidence of cannabis yield gains",
-            "Home Assistant logs as default validated GxP/GACP audit systems",
-            "Implementation-intention effect sizes as '2–3×' without base rates",
+            "A smaller number of deaths in surgery as data that the yield of cannabis increases.",
+            "Home Assistant logs as audit systems for GxP and GACP with no validation of the system.",
+            "Effect sizes of 2 to 3 times for implementation intentions, with no base rates.",
         ],
     },
 }
@@ -549,7 +549,7 @@ def get(slug: str) -> dict:
 def panel_html(slug: str) -> str:
     """Full evidence panel HTML for injection into a paper."""
     if slug == "slab-irrigation-strategy":
-        return """<div class="evidence-panel"><p>Sources include research papers, manufacturer instructions and grower reports. Product instructions apply to the named products; reported schedules apply to the described facilities.</p><p><strong>CORPUS / INFERRED:</strong> the layout, calculated examples and assembled irrigation ranges are explanatory. <strong>OPERATIONAL:</strong> controller values require a named local procedure or measured crop record. This article supplies no locally validated setpoints.</p></div>"""
+        return """<div class="evidence-panel"><p>The sources are journal papers, manufacturer instructions and grower reports. The product instructions are for the specified products. The irrigation procedures in the reports are for the facilities in the paper.</p><p><strong>CORPUS / INFERRED:</strong> the diagrams, the calculated examples and the assembled irrigation ranges are only for information. <strong>OPERATIONAL:</strong> controller values must come from a specified local procedure or from a measured crop record. This paper gives no setpoints that are correct for your location.</p></div>"""
     e = get(slug)
     def lis(items):
         return "<ul class='ev-list'>" + "".join(f"<li>{x}</li>" for x in items) + "</ul>"
@@ -557,49 +557,49 @@ def panel_html(slug: str) -> str:
     issues = (
         "https://github.com/JakeTheRabbit/cannabis-white-papers/issues/new"
         "?title=Accuracy%20report%3A%20" + slug +
-        "&body=Paper%3A%20" + slug + "%0A%0AWhat%20looks%20wrong%3A%0A%0AWhat%20you%20expected%20%2F%20source%20if%20you%20have%20one%3A%0A"
+        "&body=Paper%3A%20" + slug + "%0A%0AIncorrect%20information%3A%0A%0ACorrect%20information%20and%20the%20source%2C%20if%20you%20have%20one%3A%0A"
     )
 
     return (
         "<div class='evidence-panel'>"
         "<div class='evidence-h'>"
-        "<div class='evidence-kicker'>How sure is this paper?</div>"
-        "<p class='evidence-lead'>We've gone to great lengths to keep these guides honest. One of the main ways we do "
-        "that is <strong>self-review</strong>: we actively look for claims that are subjective, only lightly backed by "
-        "literature, or based on grower practice rather than a controlled study &mdash; and we <strong>call those out</strong> "
-        "instead of dressing them up as settled science.</p>"
-        "<p class='evidence-lead'>Often there simply is no paper for the decision you're making. In those cases we're "
-        "drawing on what other growers report and what has worked in our own rooms. That can still be useful &mdash; "
-        "but it is not a lab proof. <strong>Do what works for your plants, your room, and your meters.</strong> "
-        "If a table disagrees with your crop, believe the crop and log the difference.</p>"
+        "<div class='evidence-kicker'>Three types of information</div>"
+        "<p class='evidence-lead'>We want each paper to be correct. Thus we <strong>examine each paper</strong> for information that is not solid. "
+        "This information comes from the view of one grower, from a small number of sources, or from grower "
+        "methods that have no controlled test. We <strong>identify</strong> this information, and we do not show it "
+        "as solid.</p>"
+        "<p class='evidence-lead'>Frequently there is no paper for the decision that you must make. Then we use the "
+        "reports of other growers and the methods that work in the rooms that we know. This information can help you, "
+        "but it is not the result of a laboratory test. <strong>Use the methods that work for your plants, for your room "
+        "and for your meters.</strong> If a table does not agree with your crop, use the data from your crop and record "
+        "the difference.</p>"
         "</div>"
         "<div class='evidence-grid'>"
         "<div class='evidence-col solid'>"
         "<div class='evidence-badge'>Solid</div>"
-        "<div class='evidence-sub'>Well supported by plant science, standards, or broad multi-source consensus</div>"
+        "<div class='evidence-sub'>Tests of plants, specifications or many sources that agree show that the information is correct</div>"
         + lis(e["solid"]) +
         "</div>"
         "<div class='evidence-col operational'>"
-        "<div class='evidence-badge'>Operational</div>"
-        "<div class='evidence-sub'>What many growers and rooms actually run &mdash; start here, then tune</div>"
+        "<div class='evidence-badge'>Grower method</div>"
+        "<div class='evidence-sub'>Many growers use this method in their rooms. Start with it, then change it for your room.</div>"
         + lis(e["operational"]) +
         "</div>"
         "<div class='evidence-col provisional'>"
-        "<div class='evidence-badge'>Grain of salt</div>"
-        "<div class='evidence-sub'>Subjective, thin literature, single studies, or &ldquo;this works for us&rdquo; practice</div>"
+        "<div class='evidence-badge'>Weak</div>"
+        "<div class='evidence-sub'>The view of one grower, a small number of sources, one test, or a method that works in one room</div>"
         + lis(e["provisional"]) +
-        "</div>"
-        "</div>"
-        "<p class='evidence-foot'><strong>See something glaringly wrong?</strong> Tell us and we'll fix it. "
-        "Please open a GitHub issue with the paper name and what looks off "
-        f"(include a source if you have one): <a href='{issues}' target='_blank' rel='noopener'>Report an accuracy issue</a>. "
-        "Local law, labels, and licences always override any recipe here. "
-        "Inline notes labelled <span class='ev-tag'>grain of salt</span> flag the highest-risk over-trust points in the text.</p>"
-        "</div>"
+        "</div></div><p class='evidence-foot'><strong>If you find an error, make a report.</strong> "
+        "We will correct it. Make the report on GitHub, with the name of the paper and the "
+        f"information that is incorrect. If you have a source, include it: <a href='{issues}' "
+        "target='_blank' rel='noopener'>Make a report of an accuracy problem</a>. The regulations, "
+        "labels and licenses of your area always override each procedure in these papers. The label "
+        "<span class='ev-tag'>weak</span> in a paper shows the points where the risk of an error is "
+        "highest.</p></div>"
     )
 
 
-def community_note(body: str, title: str = "Grain of salt") -> str:
+def community_note(body: str, title: str = "Weak") -> str:
     """Inline provisional callout (used from papers or build)."""
     from components import callout
     return callout("evidence", title, f"<p>{body}</p>")

@@ -204,7 +204,7 @@ def render_paper(mod):
             _ei = (_definitions + 1) if _definitions is not None else 1
             evidence_sec = {
                 "id": "evidence-notes",
-                "kicker": "Evidence assessment",
+                "kicker": "Quality of the information",
                 "title": "Evidence and limitations",
                 "blocks": [_ep],
             }
@@ -290,7 +290,7 @@ def render_paper(mod):
     toc_items += (
         f'<a href="#references"><span class="n">{len(secs) + 1:02d}</span> References</a>'
     )
-    index_card = (f'<div class="toc-card"><div class="kicker">{icon("list",14)} In this guide</div>'
+    index_card = (f'<div class="toc-card"><div class="kicker">{icon("list",14)} In this paper</div>'
                   f'<div class="toc">{toc_items}</div></div>')
     # sections (with auto-interlinking across the page)
     body_secs = []
@@ -319,14 +319,15 @@ def render_paper(mod):
         r = REFS.REFS.get(rid)
         if not r:
             continue
-        npc = "" if r.get("peer") else " <span style='color:var(--faint)'>(industry/manufacturer or non-journal source)</span>"
+        npc = "" if r.get("peer") else " <span style='color:var(--faint)'>(source not from a journal, for example from a manufacturer)</span>"
         link = f' <a href="{r["url"]}" target="_blank" rel="noopener">{r["url"]}</a>' if r.get("url") else ""
         cls = "" if r.get("peer") else " class='np'"
         ref_lis += f'<li id="ref-{rid}"{cls}>{r["cite"]}{npc}{link}</li>'
     refs = (f'<div class="refs" id="references"><h2>References</h2><ol>{ref_lis}</ol>'
-            f'<p class="foot">Citations marked in-text as [n] map to this list. Primary literature and official guidance '
-            f'except where noted. Cannabis tissue culture is strongly genotype-dependent, verify '
-            f'dilutions, hormone doses and local regulations against the primary sources before relying on them.</p></div>') if ref_lis else ""
+            f'<p class="foot">Each citation in the paper, for example [1], refers to an item in this list. '
+            f'Each item is a primary source or an instruction from an authority, unless the item shows a different type. '
+            f'The results of cannabis tissue culture change much with the genotype. Before you use the '
+            f'dilutions, hormone doses and local regulations, make sure that they agree with the primary sources.</p></div>') if ref_lis else ""
 
     body = (hero + index_card + "".join(body_secs) + related + refs
             + getattr(mod, "RAW_REFERENCES", ""))
@@ -343,7 +344,7 @@ def track_grid(only_live=False):
                    f'<span class="ct">{live_ct} of {len(items)} available</span></div><div class="pgrid">')
         for it in items:
             live = it["status"] == "live"
-            soon = "" if live else '<span class="soon-tag">soon</span>'
+            soon = "" if live else '<span class="soon-tag">in production</span>'
             cls = "pcard" if live else "pcard soon"
             inner = (f'<div class="pic">{icon(it["icon"],20)}</div>'
                      f'<div><div class="pt">{esc(it["title"])}</div>'
@@ -375,15 +376,15 @@ def render_index():
         meta[m.SLUG] = (blurb, rt)
     hero = (
         '<div class="hero-land tight">'
-        '<div class="eyebrow">A field guide to growing, from zero</div>'
+        '<div class="eyebrow">A reference for growers, from the first step</div>'
         + fit_title("The Cannabis White Papers", 60, cls="") +
-        f'<p class="sub">Evidence-linked cultivation field guides, rewritten so a first-timer can actually '
-        f'follow it: every term defined, every claim cited, the working shown in diagrams. '
-        f'We self-review hard and flag what is <strong>solid science</strong>, what is '
-        f'<strong>grower practice</strong>, and what should be taken with a <strong>grain of salt</strong> '
-        f'when the literature is thin. If something looks wrong, '
-        f'<a href="https://github.com/JakeTheRabbit/cannabis-white-papers/issues/new" target="_blank" rel="noopener">report it on GitHub</a>. '
-        f'Filter the {n} papers below, or press <strong>Ctrl&nbsp;K</strong> to search.</p></div>'
+        f'<p class="sub">Each paper is a cultivation reference for a new grower. '
+        f'Each term has a definition, each fact has a citation, and diagrams show the method. '
+        f'We examine each paper and show the quality of the information. '
+        f'The information is <strong>solid</strong>, a <strong>grower method</strong>, '
+        f'or <strong>weak</strong> when the data are thin. If you find an error, '
+        f'<a href="https://github.com/JakeTheRabbit/cannabis-white-papers/issues/new" target="_blank" rel="noopener">make a report on GitHub</a>. '
+        f'Use the filter below for the {n} papers, or push <strong>Ctrl&nbsp;K</strong> to find a paper or a term.</p></div>'
     )
     pills = [f'<button class="fpill on" data-filter="all">All <span>{n}</span></button>']
     groups = []
@@ -401,7 +402,7 @@ def render_index():
             if live and rt:
                 metah = f'<span class="trow-meta">{esc(rt)}</span>'
             elif not live:
-                metah = '<span class="trow-meta soon">soon</span>'
+                metah = '<span class="trow-meta soon">in production</span>'
             else:
                 metah = ''
             inner = (f'<span class="trow-ic">{icon(it["icon"], 18)}</span>'
@@ -416,25 +417,25 @@ def render_index():
                       f'<div class="tg-rows">{"".join(rows)}</div></section>')
     tools = ('<div class="dirtools">'
              '<input id="treeFilter" class="treefilter" type="text" '
-             'placeholder="Filter papers by name or topic…" autocomplete="off" spellcheck="false">'
+             'placeholder="Filter papers by name or term…" autocomplete="off" spellcheck="false">'
              f'<div class="filterbar" id="filterbar">{"".join(pills)}</div></div>')
     tree = (f'<div id="paperdir">{"".join(groups)}'
-            '<div class="dir-empty" id="dirEmpty" style="display:none">No papers match that filter.</div></div>')
+            '<div class="dir-empty" id="dirEmpty" style="display:none">There are no papers for that filter.</div></div>')
     body = hero + tools + tree
-    return shell.page("index", "Home", body, desc="Evidence-linked cannabis cultivation field guides, by grow stage.", wide=True, mobile_active="index")
+    return shell.page("index", "Home", body, desc="Cannabis cultivation papers with citations, for each growth stage.", wide=True, mobile_active="index")
 
 def render_papers():
-    head = ('<div class="eyebrow">Library</div>' + fit_title("All papers", 54) +
-            '<p class="sub">Every white paper in the collection, grouped by track. Greyed cards are '
-            'in production and coming soon.</p><div class="divider"></div>')
+    head = ('<div class="eyebrow">Papers by group</div>' + fit_title("All papers", 54) +
+            '<p class="sub">Each group shows its papers. You cannot open a paper that is '
+            'in production.</p><div class="divider"></div>')
     body = head + track_grid()
-    return shell.page("papers", "All papers", body, desc="The full white-paper library.", wide=True, mobile_active="papers")
+    return shell.page("papers", "All papers", body, desc="The full list of the papers.", wide=True, mobile_active="papers")
 
 # ---------------------------------------------------------------- glossary
 def render_glossary():
     head = ('<div class="eyebrow">Reference</div>' + fit_title("Glossary", 54) +
-            '<p class="sub">Every bit of jargon used across the papers, in plain English. '
-            'No prior knowledge assumed.</p><div class="divider"></div>')
+            '<p class="sub">Each term in the papers has a definition here. '
+            'The definitions are for new growers.</p><div class="divider"></div>')
     buckets = GL.by_letter()
     parts = [head]
     for letter in sorted(buckets):
@@ -447,72 +448,73 @@ def render_glossary():
                 f'<div class="gl-defn">{g["defn"]}</div>'
                 f'<div class="gl-tags">{tags}</div></div>')
     body = "".join(parts)
-    return shell.page("glossary", "Glossary", body, desc="Plain-English definitions of every grow term used in the papers.", wide=True, mobile_active="glossary")
+    return shell.page("glossary", "Glossary", body, desc="Definitions of each term in the papers.", wide=True, mobile_active="glossary")
 
 # ---------------------------------------------------------------- curriculum tree
 CURRICULUM = [
  ("1 · Propagation", "Start the plants.", [
-   ("Seeds, germination & seedlings", "seeds-germination"), ("Cloning", "cloning"),
+   ("Seeds, germination and seedlings", "seeds-germination"), ("Cloning", "cloning"),
    ("Tissue culture: clean genetics", "tissue-culture"),
-   ("Tissue culture playbook", "cannabis-tissue-culture-playbook"),
+   ("Tissue culture method", "cannabis-tissue-culture-playbook"),
    ("Tissue culture SOP", "cannabis-tissue-culture-sop"),
-   ("Mother / stock-plant management", "mother-plants"), ("Transplanting & potting up", "transplanting")]),
- ("2 · Vegetative growth", "Build a big, healthy plant.", [
-   ("Light acclimation", "light-acclimation"), ("Defoliation & plant training", "defoliation-training"),
-   ("Vegetative management & timing", "veg-management")]),
- ("3 · Flowering", "Steer the plant to yield and quality.", [
+   ("Mother plants (stock plants)", "mother-plants"), ("Transplanting to larger pots", "transplanting")]),
+ ("2 · Vegetative growth", "Make a large plant in good condition.", [
+   ("Light acclimation", "light-acclimation"), ("Defoliation and plant training", "defoliation-training"),
+   ("Vegetative stage length", "veg-management")]),
+ ("3 · Flowering", "Control the plant for yield and quality.", [
    ("The flower cycle, week by week", "flowering-stages"),
    ("Precision coco cultivation: crop steering", "coco-crop-steering"),
-   ("Rockwool crop steering: drybacks & saturation", "rockwool-crop-steering"),
-   ("The one steering law: coco, rockwool, soil & water", "one-steering-law"),
-   ("Ripening, flush & harvest timing", "ripening-harvest-timing")]),
- ("4 · Harvest, dry, trim & cure", "Turn flower into finished product.", [
-   ("Harvest, dry, trim & cure", "harvest-dry-trim-cure"), ("GMP hash manufacturing", "gmp-hash-lab"),
-   ("Hash rosin: solventless pressing", "hash-rosin-pressing"), ("Lab testing, potency & COAs", "lab-testing-coas")]),
- ("Runs every stage · Environment & climate", "The conditions the plant lives in.", [
-   ("The grow room: a systems guide", "grow-room-systems"), ("Lighting: spectrum, PPFD & DLI", "lighting-fundamentals"),
-   ("Airflow design", "airflow-design"), ("Under-canopy & inter-canopy lighting", "under-canopy-lighting"),
-   ("Temperature, humidity & VPD", "temp-humidity-vpd"),
-   ("CO2 enrichment", "co2-enrichment"), ("HVAC, cooling & dehumidification", "hvac-dehumidification")]),
- ("Runs every stage · Water, substrate & feed", "What the roots get.", [
-   ("Substrates compared: coco, rockwool, soil, hydro", "substrates-overview"),
-   ("Source water, RO & alkalinity", "water-quality"), ("pH: hold it steady", "ph-management"),
-   ("Mixing an Athena Pro Line stock tank", "nutrient-mixing-athena"),
-   ("Nutrient deficiency & toxicity diagnosis", "nutrient-deficiencies")]),
- ("Runs every stage · Plant health", "Keep them clean.", [
-   ("Auckland medicinal-cannabis IPM blueprint", "auckland-ipm-blueprint"),
-   ("Mould risk: bud rot & PM", "mould-risk"), ("IPM: a working SOP", "ipm-sop"),
-   ("Pest identification & control", "pest-id"), ("PPE & biosecurity (PPPE)", "pppe"),
-   ("Root diseases: pythium & fusarium", "auckland-ipm-blueprint")]),
- ("Runs every stage · Precision & automation", "Dial it in and let it run.", [
-   ("Root-zone state (TEROS-12)", "root-zone-teros12"), ("Signal & noise", "signal-and-noise"),
-   ("Smart watering (VRWE)", "smart-watering-vrwe"), ("The closed loop", "closed-loop"),
-   ("Plant-state dashboard", "plant-state-dashboard"), ("F2 crop steering", "f2-crop-steering"),
+   ("Rockwool crop steering with drybacks and saturation", "rockwool-crop-steering"),
+   ("One steering method for coco, rockwool, soil and water", "one-steering-law"),
+   ("Ripening, how to flush, and when to harvest", "ripening-harvest-timing")]),
+ ("4 · Harvest, dry, trim and cure", "Make product from flower.", [
+   ("Harvest, dry, trim and cure", "harvest-dry-trim-cure"), ("GMP hash production", "gmp-hash-lab"),
+   ("Hash rosin without solvents", "hash-rosin-pressing"), ("Lab testing, potency and COAs", "lab-testing-coas")]),
+ ("For all stages · Environment and climate", "The conditions around the plant.", [
+   ("The grow room as a system", "grow-room-systems"), ("Lighting: spectrum, PPFD and DLI", "lighting-fundamentals"),
+   ("Airflow and fans", "airflow-design"), ("Lower-canopy and inner-canopy lighting", "under-canopy-lighting"),
+   ("Temperature, humidity and VPD", "temp-humidity-vpd"),
+   ("CO2 enrichment", "co2-enrichment"), ("HVAC and dehumidification", "hvac-dehumidification")]),
+ ("For all stages · Water, substrate and feed", "The water and feed that the roots get.", [
+   ("Substrates compared: coco, rockwool, soil and hydro", "substrates-overview"),
+   ("Source water, RO and alkalinity", "water-quality"), ("pH: keep it stable", "ph-management"),
+   ("Mix an Athena Pro Line stock tank", "nutrient-mixing-athena"),
+   ("Nutrient deficiencies and toxicity", "nutrient-deficiencies")]),
+ ("For all stages · Plant health", "Keep the plants clean.", [
+   ("IPM for medical cannabis in Auckland", "auckland-ipm-blueprint"),
+   ("Mold risk with bud rot and PM", "mould-risk"), ("IPM SOP", "ipm-sop"),
+   ("Pest identification and control", "pest-id"), ("PPE and biosecurity (PPPE)", "pppe"),
+   ("Root diseases: pythium and fusarium", "auckland-ipm-blueprint")]),
+ ("For all stages · Precision and automation", "Set the values and let the system operate.", [
+   ("Root-zone condition (TEROS-12)", "root-zone-teros12"), ("Signal and noise", "signal-and-noise"),
+   ("Irrigation control (VRWE)", "smart-watering-vrwe"), ("The closed loop", "closed-loop"),
+   ("Plant state dashboard", "plant-state-dashboard"), ("F2 crop steering", "f2-crop-steering"),
    ("Irrigation manual", "irrigation-manual"),
    ("DIY plant-biosignal sensor", "plant-biosignal-sensor")]),
- ("The operation · Facility & quality", "Run it as a business.", [
-   ("Designing a facility in 3D", "facility-3d"),
-   ("Daily checks: the self-completing round", "daily-checks"),
-   ("Compliance, licensing & track-and-trace", "compliance-track-trace"),
-   ("Energy, utilities & sustainability", "energy-sustainability"), ("Yield per watt & unit economics", "unit-economics")]),
- ("Reference · Know the plant", "Background worth having.", [
-   ("Cannabis plant biology & life cycle", "plant-biology"), ("Cannabinoids & terpenes", "cannabinoids-terpenes"),
-   ("Genetics, seeds & phenotype hunting", "genetics-phenohunting")]),
+ ("The operation · Facility and quality", "Control the quality and the cost of the operation.", [
+   ("3D facility model", "facility-3d"),
+   ("Checks each day: sensors do most of the work", "daily-checks"),
+   ("Compliance, licenses and traceability", "compliance-track-trace"),
+   ("Energy and utilities", "energy-sustainability"), ("Yield and unit cost", "unit-economics")]),
+ ("Reference · Know the plant", "Basic information about the plant.", [
+   ("Cannabis plant biology and life cycle", "plant-biology"), ("Cannabinoids and terpenes", "cannabinoids-terpenes"),
+   ("Genetics, seeds and the phenohunt", "genetics-phenohunting")]),
 ]
 
 def render_curriculum():
     total = sum(len(items) for _, _, items in CURRICULUM)
     live = sum(1 for _, _, items in CURRICULUM for _, slug in items if slug in _LIVE)
     head = (
-        '<div class="eyebrow">The grow, in order</div>'
-        + fit_title("Start here: the whole grow, stage by stage", 46) +
-        '<p class="sub">Every paper, grouped by where it sits in a grow: propagation, vegetative '
-        'growth, flowering, then harvest through to cure, plus the systems that run across every '
-        'stage. Green dots are published now. Greyed rows are written and on the way.</p>'
+        '<div class="eyebrow">Papers in sequence</div>'
+        + fit_title("Start here: the growth stages, one by one", 46) +
+        '<p class="sub">This list shows all the papers in groups. The first four groups follow the '
+        'growth stages, from propagation to harvest. The other groups are for all stages. '
+        'A row that you can open is a paper that is available at this time. '
+        'The other rows are papers in production.</p>'
         f'<div class="hero-stats" style="justify-content:flex-start;gap:28px;margin:22px 0 0">'
-        f'<div class="s"><b>{live}</b><span>published</span></div>'
-        f'<div class="s"><b>{total}</b><span>in the full guide</span></div>'
-        f'<div class="s"><b>{round(live/total*100)}%</b><span>complete</span></div></div>'
+        f'<div class="s"><b>{live}</b><span>available</span></div>'
+        f'<div class="s"><b>{total}</b><span>in the full list</span></div>'
+        f'<div class="s"><b>{round(live/total*100)}%</b><span>done</span></div></div>'
         '<div class="divider"></div>')
     parts = [head]
     for title, desc, items in CURRICULUM:
@@ -523,11 +525,11 @@ def render_curriculum():
                             f'<span>{esc(label)}</span><span class="arr">{icon("arrowright",15)}</span></a>')
             else:
                 rows.append(f'<div class="curitem soon"><span class="dot"></span>'
-                            f'<span>{esc(label)}</span><span class="soon-tag">soon</span></div>')
+                            f'<span>{esc(label)}</span><span class="soon-tag">in production</span></div>')
         parts.append(f'<div class="curtier"><div class="curtier-h"><h3>{esc(title)}</h3>'
                      f'<span class="d">{esc(desc)}</span></div><div class="curlist">{"".join(rows)}</div></div>')
     return shell.page("curriculum", "Start here", "".join(parts),
-                      desc="The complete cannabis cultivation guide, ordered as a learning path.",
+                      desc="All the cultivation papers, in the sequence of the growth stages.",
                       wide=True, mobile_active="curriculum")
 
 # ---------------------------------------------------------------- search index
@@ -574,10 +576,10 @@ SEARCH_SYN = {
 
 def build_search_index():
     idx = []
-    pages = list(NAV.TOP) + [{"slug": "curriculum", "title": "Curriculum", "icon": "list"}]
+    pages = list(NAV.TOP) + [{"slug": "curriculum", "title": "Papers in sequence", "icon": "list"}]
     for t in pages:
         url = "index.html" if t["slug"] == "index" else f'{t["slug"]}.html'
-        idx.append({"type": "page", "title": t["title"], "url": url, "text": "", "kw": ""})
+        idx.append({"type": "index", "title": t["title"], "url": url, "text": "", "kw": ""})
     for mod in PAPERS:
         kw = " ".join(LINKS.LINK_PHRASES.get(mod.SLUG, []))
         idx.append({"type": "paper", "title": mod.TITLE, "url": f"{mod.SLUG}.html",
@@ -591,7 +593,7 @@ def build_search_index():
     for it in NAV.all_items():
         if it["slug"] in live_slugs:
             continue
-        idx.append({"type": "coming soon", "title": it["title"], "url": "papers.html",
+        idx.append({"type": "in production", "title": it["title"], "url": "papers.html",
                     "text": it["short"], "kw": ""})
     for g in GL.GLOSSARY:
         idx.append({"type": "term", "title": g["term"],
