@@ -13,13 +13,16 @@ SUB = ("Each leaf has a layer of still air that decreases the rate of gas exchan
        "this layer. After you read this paper, you will know how much air to move and which fans "
        "supply the air. You will also know where to put the fans, to give each leaf a light airflow.")
 META = [("wind", "Basic"), ("image", "8 diagrams · 8 photos"),
-        ("quote", "18 sources"), ("clock", "~26 min to read")]
+        ("quote", "29 sources"), ("clock", "~29 min to read")]
 RELATED = ["grow-room-systems", "mould-risk", "coco-crop-steering"]
 REF_IDS = ["schuepp1993-bl", "dupont2025-wind", "kitaya2004-airvel", "tjosvold2018-air",
            "rm2021-light", "kitaya2010-circ", "gilliham2011-ca", "chehab2009-thigmo",
            "chandra2008-photo", "pipp2026-airflow",
            "bartok-haf", "uconn-haf", "goto1992-tipburn", "ahmed2020-multifan",
-           "moosavi2025-vaf", "perfduct2025", "amca-fanlaws", "vas-inrack"]
+           "moosavi2025-vaf", "perfduct2025", "amca-fanlaws", "vas-inrack",
+           "cockson2019-nutr", "llewellyn2023-def", "cbt-marginburn", "nelson2015-leaftemp",
+           "dupont2026-lowwind", "zhang2016-cfd", "ashrae2023-roomair", "rii2022-hvac",
+           "quest-airflow", "vostermans-vflo", "tmu2026-vfarm"]
 
 def _c(rid):
     return "<sup class='cite'><a href='#ref-%s'>[%d]</a></sup>" % (rid, REF_IDS.index(rid) + 1)
@@ -413,14 +416,22 @@ SECTIONS.append({"id": "transpiration", "kicker": "06 · The effects", "title": 
       "effect is thigmomorphogenesis" + _c("chehab2009-thigmo") + ". A plant that has good airflow "
       "can hold heavy colas without stakes.",
     ]),
-    callout("note", "A second cause of tipburn",
-      p("Tipburn has two opposite causes. The first cause is airflow that is too high with feed "
-        "that is too low. The result is a calcium deficiency in the leaf. The second cause is a "
-        "dead zone <em>in</em> a dense canopy, where the air does not move. The leaves in the dead "
-        "zone cannot transpire. As a result, no calcium moves to these leaves.</p><p>In lettuce, "
-        "the result is this: when you blow air directly into the inner leaves, the calcium in the "
-        "leaves increases. The tipburn almost stops" + _c("goto1992-tipburn") +
-        ". The top-down fans in section 10 are important because of this result.")),
+    callout("note", "Calcium and still air",
+      p("Calcium moves to the leaves in the transpiration stream, and it almost does not move out "
+        "of a leaf again" + _c("gilliham2011-ca") + ". Thus a leaf that transpires slowly gets "
+        "little calcium. A leaf in a dead zone <em>in</em> a dense canopy is an example. In "
+        "cannabis, calcium deficiency shows first on the youngest growth. The new leaves are "
+        "distorted or curled, and the edges and tips of tissue that grows quickly become dead"
+        + _c("cockson2019-nutr") + _c("llewellyn2023-def") + ".</p><p>Do not use burnt tips "
+        "alone to find calcium deficiency. In cannabis, burnt tips and edges also come from a "
+        "high EC (salt), from drought stress and from potassium deficiency. These usually start "
+        "on the lower, older leaves and not on the new growth" + _c("cbt-marginburn") + ". "
+        "Examine the position of the symptom before you change the fans or the feed.</p><p>Most "
+        "data for this mechanism come from lettuce. Air that goes directly to the closed inner "
+        "leaves of a lettuce head stops calcium tipburn" + _c("goto1992-tipburn") +
+        _c("ahmed2020-multifan") + _c("moosavi2025-vaf") + ". A cannabis plant does not have a "
+        "closed head. Thus these data support the mechanism, but they do not show the size of "
+        "the effect in cannabis or which fan type is best. No cannabis study has tested this.")),
   ]})
 
 SECTIONS.append({"id": "build", "kicker": "07 · The system", "title": "Airflow system functions and equipment",
@@ -549,7 +560,9 @@ SECTIONS.append({"id": "fan-types", "kicker": "10 · The equipment", "title": "F
           "plant.</p><p><strong>Where:</strong> above the canopy in a grid. Put the fans at a "
           "distance that gives an overlap of their flows of air. <strong>The problem:</strong> each "
           "fan has a higher cost and makes shade. Put the fan in a position where its shade is not "
-          "on the crop."), tag="Recirculation · into the canopy"),
+          "on the crop. Also, the fan takes in the warm air from the level of the lights and pushes "
+          "it into the canopy. In a sealed room that you cool, this adds heat to the canopy (refer "
+          "to &ldquo;Top-down fans and heat&rdquo; in section 11)."), tag="Recirculation · into the canopy"),
       card("Oscillating fan (wall or pole)",
         p("The oscillating fan is the usual fan for a grow room: a head on a bracket that "
           "oscillates. It has a low cost and it is easy to find. It is good in a small room, "
@@ -656,7 +669,7 @@ SECTIONS.append({"id": "ranking", "kicker": "11 · The selection", "title": "Sel
       ["2", "<strong>Under-canopy fan</strong>", "Removes the zone with the most water and the minimum air movement in the room",
        "Bottom of the plant", "<strong>The best fan to add, for the cost.</strong> It is for the area where bud rot starts"],
       ["3", "<strong>VAF fan</strong>", "Air that moves down into the middle of the plant",
-       "The full depth. The VAF fan is the only fan that supplies air at this depth.", "<strong>Install these fans when the canopy density increases.</strong> Peer-reviewed papers show the effect on the calcium in the inner leaves" + _c("goto1992-tipburn") + _c("moosavi2025-vaf")],
+       "The full depth. The VAF fan is the only fan that supplies air at this depth.", "<strong>Use with care in a sealed room that you cool.</strong> The fan pushes the warm air from the level of the lights into the canopy. Measure the vertical temperature difference first (refer to the box after the table). No cannabis study shows an effect on calcium."],
       ["4", "Oscillating fan", "Low cost. Turbulent airflow that changes direction.", "Along the canopy and around it, for short times",
        "It is good as the primary fan for a canopy of less than approximately 20&nbsp;m&sup2; (215&nbsp;ft&sup2;). For a larger canopy, other fans are better."],
       ["5", "Air sock from the AHU", "Equal supply of <em>conditioned</em> air, with no strong flow of air at one point",
@@ -677,17 +690,64 @@ SECTIONS.append({"id": "ranking", "kicker": "11 · The selection", "title": "Sel
         "<strong>Vertical racks:</strong> in-rack systems become #1, and HAF fans are not in the "
         "list. Fans that hang above the racks cannot supply air to the inner part of a tier" +
         _c("vas-inrack") + ".",
-        "<strong>Dense canopy with no defoliation:</strong> VAF fans have a higher position than "
-        "HAF fans in the ranking. Measurements show that top-down airflow is better than horizontal "
-        "airflow to move air, and thus calcium, into the inner leaves" + _c("goto1992-tipburn") +
-        _c("ahmed2020-multifan") + ". In greenhouse lettuce, vertical fans decreased the tipburn "
-        "rating from 5.0 to less than 0.1. They also decreased the percentage of burned leaves from "
-        "39% to less than 7%" + _c("moosavi2025-vaf") + ".",
+        "<strong>Dense canopy with no defoliation:</strong> first open the canopy (defoliation), "
+        "then add under-canopy fans. Plant factories for lettuce add vertical airflow onto the "
+        "canopy to help stop tipburn" + _c("zhang2016-cfd") + ", but no test shows this effect in "
+        "cannabis. Add VAF fans only where the air above the canopy is not warmer than the air in "
+        "the canopy.",
+        "<strong>Sealed room that you cool, with returns at the ceiling:</strong> if the air at "
+        "the level of the lights is clearly warmer than the canopy, the air sock (or another "
+        "supply of conditioned air at or below the canopy) gets a higher position than the VAF "
+        "fan. Top-down fans mix the heat from the lights into the canopy" + _c("ashrae2023-roomair") +
+        _c("quest-airflow") + ".",
         "<strong>Tents and setups for one plant:</strong> all the table changes to one or two clip "
         "fans and the inline duct fan. This selection is correct at this size.",
         "<strong>Greenhouses:</strong> HAF fans stay #1, and the air sock gets a higher position, "
         "because you also move heat in the greenhouse" + _c("uconn-haf") + ".",
       ], "tight")),
+    callout("warn", "Top-down fans and heat",
+      p("A VAF fan does not make cool air. It takes in the air above the canopy and pushes this "
+        "air down. In a grow room, the lights are the largest load of sensible heat. The energy "
+        "that an LED fixture does not release as light goes from its heat sinks and its driver "
+        "into the air at the fixture. Warm air rises. Thus, in a room without strong mixing, the "
+        "air at the level of the lights is warmer than the air in the canopy.</p><p>HVAC "
+        "engineers use this effect. ASHRAE divides air distribution into fully mixed, stratified "
+        "and partially mixed systems. In a stratified system, the warm air rises to returns at the "
+        "ceiling, and the occupied zone stays cooler than the return air" +
+        _c("ashrae2023-roomair") + ". In a grow room, the canopy is the occupied zone. Designers "
+        "of cannabis rooms recommend that you supply the air at or below the canopy and pull it "
+        "up through the plants to returns at the ceiling" + _c("quest-airflow") + ". Then the "
+        "HVAC removes the hottest air first.</p><p>Top-down fans change this room into a fully "
+        "mixed room. The results are:") +
+        ul([
+          "The warm air from the lights goes into the canopy, and the air temperature in the "
+          "canopy increases.",
+          "The return air is not warmer than the canopy. The airflow that the HVAC must supply "
+          "increases when the temperature difference between the supply and the return decreases"
+          + _c("ashrae2023-roomair") + ".",
+          "The fan motors are a source of sensible heat in the room" + _c("rii2022-hvac") +
+          ". The HVAC must also remove this heat.",
+        ], "tight") +
+        p("Greenhouses use vertical fans for the opposite task. The fans move the heat of the "
+          "lamps from the top of the greenhouse down to the crop" + _c("vostermans-vflo") + ". "
+          "This is good when you want heat at the crop. It is bad when you cool the room.</p><p>"
+          "Moving air does cool the leaf. When a plant has sufficient water and the air moves, the "
+          "leaf usually stays within approximately 2&nbsp;&deg;C of the air temperature. With low "
+          "air movement and water stress, the leaf can become much hotter than the air" +
+          _c("nelson2015-leaftemp") + ". In lettuce, an airflow of 0.65&nbsp;m/s made the leaves "
+          "approximately 1.3&nbsp;&deg;C cooler than an airflow of 0.22&nbsp;m/s" +
+          _c("dupont2026-lowwind") + ". But the air cools the leaf only if the air is not warmer "
+          "than the leaf.</p><p>Vertical airflow can operate correctly when the air that goes "
+          "down is <strong>conditioned supply air</strong> from the HVAC, and not air from the "
+          "level of the lights. In a model of a vertical farm, conditioned air that went "
+          "vertically into the canopy decreased the average canopy air temperature by "
+          "2.43&nbsp;&deg;C, compared with usual fans. It also made the temperature and the "
+          "humidity more uniform" + _c("tmu2026-vfarm") + ".</p><p><strong>Test before you "
+          "install VAF fans:</strong> when the lights are on, measure the air temperature at the "
+          "height where the fan takes in air. Then measure it in the middle of the canopy. If the "
+          "air at the intake is warmer, the fan will increase the canopy temperature. Use "
+          "sensors at canopy level and at more than one point, not one sensor on a wall" +
+          _c("rii2022-hvac") + ".")),
     callout("warn", "The problem that the ranking prevents",
       p("Select the airflow pattern and not the peak value. Almost all rooms with low performance "
         "have the same problem. <strong>The total CFM is large, but the airflow is not the same in "
@@ -700,7 +760,7 @@ SECTIONS.append({"id": "placement", "kicker": "12 · The position", "title": "Fa
   "blocks": [
     p("The position of the fans is a problem of airflow pattern and not a problem of area. Do not "
       "try to put a jet of air on each plant. Make all the air in the room move slowly and "
-      "constantly in a loop. Then push this moving air down into the canopy."),
+      "constantly in a loop. Then get this moving air into the canopy, without adding heat to it."),
     figure(_fig_haf_loop(), 7,
       "The horizontal loop from above. The fans do not each supply air to one area only. The fans "
       "give air to each other around a circuit. The first fan is approximately 3 to 4.5&nbsp;m (10 "
@@ -724,10 +784,12 @@ SECTIONS.append({"id": "placement", "kicker": "12 · The position", "title": "Fa
        "floor for a crop at floor level. Thus the jet goes above the canopy and does not push into "
        "the canopy" + _c("uconn-haf") + ". If hung baskets or a rack for lights are at this height, "
        "hang the fans above them or below them. Do not hang the fans at the same height."),
-      ("Push air down into the canopy",
-       "Install top-down fans above the crop in a grid. Put the fans at a distance that gives an "
-       "overlap of their flows of air. Almost all persons do not do this step, but it supplies air "
-       "to the inner leaves" + _c("goto1992-tipburn") + "."),
+      ("Get air into the canopy without adding heat",
+       "First, open the canopy with defoliation. Then add under-canopy fans (step 4). If you can, "
+       "supply conditioned air at or below the canopy, for example with air socks, and return it "
+       "at the ceiling" + _c("quest-airflow") + _c("tmu2026-vfarm") + ". Install top-down fans "
+       "only where the air above the canopy is not warmer than the canopy (refer to "
+       "&ldquo;Top-down fans and heat&rdquo; in section 11)."),
       ("Supply air to the floor",
        "Put fans at the level of the pots. Point the fans along the rows. Cold air with high "
        "humidity collects at this level, and no fan above the canopy moves it."),
@@ -772,6 +834,8 @@ SECTIONS.append({"id": "sizing", "kicker": "13 · The numbers", "title": "Size o
        "Bartok and Grubinger" + _c("bartok-haf")],
       ["Greenhouse velocity target", "0.25 to 0.5 m/s (50 to 100 FPM) for the general movement of air in the room.",
        "UConn IPM" + _c("uconn-haf")],
+      ["Minimum at crop level (all CEA crops)", "At least 0.25 m/s (50 FPM) at the crop. Some crops need 0.75 m/s (150 FPM) or more for maximum production. Measure with a hot-wire anemometer.",
+       "Resource Innovation Institute HVAC guide" + _c("rii2022-hvac")],
       ["Cannabis flower-room target", "Approximately 1.0 m/s (approximately 200 FPM) that the room <em>supplies</em>, to give each leaf an air velocity in the target range.",
        "Pipp / Justice test" + _c("pipp2026-airflow")],
       ["Operation time", "24/7, but not while the exhaust fans operate or the vents are open.",
@@ -808,11 +872,12 @@ SECTIONS.append({"id": "sizing", "kicker": "13 · The numbers", "title": "Size o
 SECTIONS.append({"id": "trouble", "kicker": "14 · When there is a problem", "title": "Troubleshooting",
   "blocks": [
     table(["Symptom", "Possible cause", "To correct it"], [
-      ["Bud rot starts in the inner part of the colas", "Dead zone: the air does not go to the inner part of the canopy", "Add top-down (VAF) airflow. Defoliate the plants. Decrease the RH."],
-      ["The tops of the plants move, but the middle and the bottom do not move", "All the airflow is above the canopy (HAF fans only)", "Add VAF fans above the crop. Add under-canopy fans at the level of the pots."],
+      ["Bud rot starts in the inner part of the colas", "Dead zone: the air does not go to the inner part of the canopy", "Defoliate the plants. Add under-canopy airflow. Decrease the RH. Add VAF fans only if the air above the canopy is not warmer than the canopy."],
+      ["The tops of the plants move, but the middle and the bottom do not move", "All the airflow is above the canopy (HAF fans only)", "Defoliate. Add under-canopy fans at the level of the pots. Then add VAF fans if the vertical temperature test permits."],
+      ["The canopy becomes hotter after you add top-down fans", "The VAF fans push the warm air from the level of the lights into the canopy", "Measure the temperature above and in the canopy. Decrease the speed of the VAF fans or remove them. Supply conditioned air low and return it high."],
       ["Rot and mildew start at the bottom of the plants", "The zone at the floor has the most water and the minimum air movement in the room", "Install under-canopy fans that blow along the rows."],
       ["Leaf tipburn, but the tank is full", "The airflow is too high for the supply of nutrient (calcium)", "Increase the feed EC to agree with the transpiration"],
-      ["Tipburn only on new growth in the inner part", "The inner leaves are in still air and cannot transpire. As a result, no calcium moves to them.", "Make air go into the inner part of the canopy and not only along the top"],
+      ["Tipburn only on new growth in the inner part", "Possible calcium deficiency: the inner leaves are in still air and transpire slowly. But first make sure that the cause is not high EC, drought or potassium deficiency.", "Examine the position of the symptom and do a leaf tissue test. Open the canopy and add under-canopy airflow before you add top-down fans."],
       ["Leaves with the claw, or edges with wind damage", "The air velocity is too high, or a fan points at the plants", "Decrease the speed. Point the fans to mix the air and not to make strong jets."],
       ["One end of a row is always different", "The loop does not operate: the fans are too far apart or they point at each other", "Set the racetrack loop again. Do not point two fans at each other."],
       ["Large fans and much noise, but the air continues to be in layers", "The number of fans is too small, and they operate at full speed", "Use more fans at a lower speed. The power increases with the cube of the speed."],

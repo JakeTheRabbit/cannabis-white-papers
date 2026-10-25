@@ -225,12 +225,17 @@ PAPERS = {
         "solid": [
             "When the boundary layer becomes thinner, gas exchange increases. Air that does not move keeps the humidity at the leaf.",
             "Mechanical movement of the stem (thigmomorphogenesis) can change the strength of the stem.",
+            "Calcium moves with the transpiration stream. In cannabis, calcium deficiency shows first on the new growth.",
+            "Warm air rises. Mixing the air removes the vertical temperature difference in the room.",
         ],
         "operational": [
             "Ranges of air speed of approximately 0.3 to 1.0 m/s that make the canopy move, and the usual positions of HAF fans.",
+            "Supply of conditioned air at or below the canopy, with returns at the ceiling, in sealed cannabis rooms.",
         ],
         "provisional": [
             "A sudden change in disease or stress at one value of air velocity, with no specified height of measurement.",
+            "Top-down (VAF) airflow increases the calcium in the inner leaves. The data are from lettuce, mostly lettuce with a closed head. No study has tested this in cannabis.",
+            "The best fan type for a cannabis flower room. No peer-reviewed study compares VAF and HAF fans in cannabis.",
         ],
     },
     "under-canopy-lighting": {
