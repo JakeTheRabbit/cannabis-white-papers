@@ -225,7 +225,7 @@ PAPERS = {
         "solid": [
             "When the boundary layer becomes thinner, gas exchange increases. Air that does not move keeps the humidity at the leaf.",
             "Mechanical movement of the stem (thigmomorphogenesis) can change the strength of the stem.",
-            "Calcium moves with the transpiration stream. In cannabis, calcium deficiency shows first on the new growth.",
+            "Calcium moves with the transpiration stream. A leaf that transpires slowly gets less calcium.",
             "Warm air rises. Mixing the air removes the vertical temperature difference in the room.",
         ],
         "operational": [
