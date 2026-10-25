@@ -104,7 +104,7 @@
    "title": "Airflow design for indoor cultivation",
    "summary": "Each leaf has a layer of still air that decreases the rate of gas exchange. Airflow removes this layer. After you read this paper, you will know how much air to move and which fans supply the air. You will also know where to put the fans, to give each leaf a light airflow.",
    "track": "Environment and climate",
-   "read_time": "~26 min to read",
+   "read_time": "~29 min to read",
    "diagrams": "8 diagrams · 8 photos",
    "related": [
     "grow-room-systems",
@@ -115,7 +115,7 @@
    "md_url": "https://www.growlabs.nz/wiki/papers/airflow-design.md",
    "version": "1.2",
    "updated": "2026-07-18",
-   "ref_count": 18
+   "ref_count": 29
   },
   {
    "slug": "co2-enrichment",
