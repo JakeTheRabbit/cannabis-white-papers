@@ -21,6 +21,18 @@ REFS = {
     "pb_esphome_ads1115": {
         "cite": "ESPHome, ADS1115 4-channel 16-bit A/D converter component (documentation).",
         "url": "https://esphome.io/components/sensor/ads1115/", "peer": False},
+    "pb_najdenovska_stress": {
+        "cite": "Najdenovska E et al. (2021). Identifying general stress in commercial tomatoes based on machine learning applied to plant electrophysiology. <em>Applied Sciences</em>, 11(12):5640.",
+        "url": "https://doi.org/10.3390/app11125640", "peer": True},
+    "pb_ad8232_ds": {
+        "cite": "Analog Devices, AD8232 single-lead heart rate monitor front end (data sheet). High-pass and low-pass filter design.",
+        "url": "https://www.analog.com/media/en/technical-documentation/data-sheets/ad8232.pdf", "peer": False},
+    "pb_ad623_ds": {
+        "cite": "Analog Devices, AD623 single-supply, rail-to-rail, low cost instrumentation amplifier (data sheet).",
+        "url": "https://www.analog.com/media/en/technical-documentation/data-sheets/ad623.pdf", "peer": False},
+    "pb_ads1115_ds": {
+        "cite": "Texas Instruments, ADS111x ultra-small, low-power, I2C-compatible, 16-bit ADCs (data sheet SBAS444).",
+        "url": "https://www.ti.com/lit/ds/symlink/ads1115.pdf", "peer": False},
     "holmes2021": {
         "cite": "Holmes JE et al. (2021). Variables affecting shoot growth and plantlet recovery in tissue cultures of drug-type <em>Cannabis sativa</em> L. <em>Frontiers in Plant Science</em>, 12:732344.",
         "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8491305/", "peer": True},

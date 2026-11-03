@@ -502,7 +502,8 @@ PAPERS = {
             "Plants make biopotentials that you can measure. Noise at the electrode is an important problem in engineering.",
         ],
         "operational": [
-            "A DIY hobby system with an AD8232 and ESPHome to record data.",
+            "A DIY system with a DC-coupled AD623 amplifier and ESPHome to record data.",
+            "A model of your own that estimates substrate moisture from the signal, tested on days that the model did not see.",
         ],
         "provisional": [
             "The estimate of NPK, of the irrigation that is necessary, or of the stress condition, from only the signal in millivolts of a DIY system.",

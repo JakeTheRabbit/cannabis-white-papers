@@ -705,9 +705,9 @@
   {
    "slug": "plant-biosignal-sensor",
    "title": "Make a plant-biosignal sensor with M5Stack and ESPHome",
-   "summary": "Plants make small electrical signals, from microvolts to some millivolts. The signals change when the light comes on, when the water becomes low, or when the plant has stress. This guide shows how to make the sensor that records these signals. The sensor has an M5Stack ESP32, an ECG front-end chip and ESPHome, and the cost is approximately NZ$110. You will record the raw trace in Home Assistant and know how to read the rhythm of each day and the stress events. The sensor is not a validated meter for water or nutrients, but it shows the electrical activity of the plant in real time.",
+   "summary": "Plants make small electrical signals, from microvolts to some millivolts. The signals change when the light comes on, when the water becomes low, or when the plant has stress. This guide shows how to make a sensor that records these signals, and how to change the signal into a water-status number of your own. The sensor has an M5Stack ESP32, a DC-coupled instrumentation amplifier and ESPHome, and the cost is approximately NZ$110. The sensor is not a validated meter for water or nutrients, but it shows the electrical activity of the plant in real time.",
    "track": "Precision and automation",
-   "read_time": "~14 min to read",
+   "read_time": "~18 min to read",
    "diagrams": "",
    "related": [
     "plant-state-dashboard",
@@ -718,7 +718,7 @@
    "md_url": "https://www.growlabs.nz/wiki/papers/plant-biosignal-sensor.md",
    "version": "1.2",
    "updated": "2026-07-18",
-   "ref_count": 6
+   "ref_count": 10
   },
   {
    "slug": "slab-irrigation-strategy",
