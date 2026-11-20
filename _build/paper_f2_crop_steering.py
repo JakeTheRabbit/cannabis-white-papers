@@ -45,9 +45,9 @@ SECTIONS.append({"id": "what-this-is", "kicker": "Start here",
       "controlled dose, at a controlled time.</p><p><em>Vegetative</em> steering (bulking) keeps "
       "the substrate wet. It uses many small shots and a small dryback. <em>Generative</em> "
       "steering (flower steering or stress steering) uses a larger dryback, more salt in the root "
-      "zone, and a smaller number of larger shots. A small, controlled water deficit at the correct "
-      "time is sufficient to cause a cannabis plant to change to generative growth. The yield does "
-      "not decrease." + _c("caplan-drought-2019")),
+      "zone, and a smaller number of larger shots. The cited experiment tested one 11-day drought "
+      "in late flowering on one cultivar. It does not establish yield effects for the daily "
+      "steering schedule described here." + _c("caplan-drought-2019")),
     p("The system has two software layers that operate together. A <strong>Home Assistant "
       "integration</strong> gives you each control and each reading on the screen. An "
       "<strong>AppDaemon engine</strong> (<code>master_crop_steering_app.py</code>) makes the "
@@ -65,6 +65,10 @@ SECTIONS.append({"id": "what-this-is", "kicker": "Start here",
              ("Main line", "a branch to each row"), ("Row 1/2/3 valves", "one VWC + EC probe each")],
             note="Only one row receives water at a time."), 2,
       "One tank, one pump and one main line supply three rows. You control each row independently. Each row has one probe pair and one valve."),
+    callout("warn", "Stop the controller as well as the outputs",
+      p("In the legacy AppDaemon setup shown here, the output-off script can close valves while "
+        "the controller remains armed. Set <strong>System enabled</strong> to off and verify the "
+        "pump and valves are off. Use the site isolation procedure for work on equipment.")),
     callout("key", "Two important facts",
       ul(["The <strong>&lsquo;Phase (manual set)&rsquo;</strong> list <em>overrides</em> the "
           "automatic phase. It shows the phase that you selected last, not the phase that is in "

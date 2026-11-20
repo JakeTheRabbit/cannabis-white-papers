@@ -31,13 +31,17 @@ _Precision · Crop steering · ~18 min to read_
 
 F2 is an **automatic irrigation controller** for a grow room for the vegetative stage. It is software that reads the probes for moisture and salt in the root zone. The software selects the time to start each shot of water automatically, and it supplies the water through a pump and valves. You set the targets. The software applies the water.
 
-**Crop steering** is a method in which you select the water content and the salt content of the root zone. The selection changes the type of growth that is primary in the plant. For a plant that is not in cultivation, a drought is a signal that the time is short. The plant then changes to reproduction. The system gives this signal with a controlled dose, at a controlled time._Vegetative_ steering (bulking) keeps the substrate wet. It uses many small shots and a small dryback. _Generative_ steering (flower steering or stress steering) uses a larger dryback, more salt in the root zone, and a smaller number of larger shots. A small, controlled water deficit at the correct time is sufficient to cause a cannabis plant to change to generative growth. The yield does not decrease.[^caplan-drought-2019]
+**Crop steering** is a method in which you select the water content and the salt content of the root zone. The selection changes the type of growth that is primary in the plant. For a plant that is not in cultivation, a drought is a signal that the time is short. The plant then changes to reproduction. The system gives this signal with a controlled dose, at a controlled time._Vegetative_ steering (bulking) keeps the substrate wet. It uses many small shots and a small dryback. _Generative_ steering (flower steering or stress steering) uses a larger dryback, more salt in the root zone, and a smaller number of larger shots. The cited experiment tested one 11-day drought in late flowering on one cultivar. It does not establish yield effects for the daily steering schedule described here.[^caplan-drought-2019]
 
 The system has two software layers that operate together. A **Home Assistant integration** gives you each control and each reading on the screen. An **AppDaemon engine** (`master_crop_steering_app.py`) makes the decisions and starts the shots. The room has **3 rows (zones)**. Each row has one probe for moisture and salt and one valve. One tank, one pump and one main line supply all the rows.
 
 > **Diagram.** The two software layers and the hardware that they operate. The controls go from the dashboard to the hardware. The probe readings go back from the hardware to the dashboard.
 
 > **Diagram.** One tank, one pump and one main line supply three rows. You control each row independently. Each row has one probe pair and one valve.
+
+> **WARN: Stop the controller as well as the outputs**
+>
+> In the legacy AppDaemon setup shown here, the output-off script can close valves while the controller remains armed. Set **System enabled** to off and verify the pump and valves are off. Use the site isolation procedure for work on equipment.
 
 > **KEY: Two important facts**
 >

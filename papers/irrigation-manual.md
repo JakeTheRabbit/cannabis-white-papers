@@ -98,7 +98,7 @@ Crop steering divides each lights-on day into four phases. The phases control ho
 > **KEY: Vegetative and generative steering**
 >
 > - **Vegetative** steering uses smaller drybacks and a moderate EC to cause the growth of roots and leaves.
-> - **Generative** steering uses larger controlled drybacks, a higher root-zone EC, or the two together, to cause flowering.[^caplan-2019-drought-cannabis]
+> - **Generative** steering uses larger controlled drybacks, a higher root-zone EC, or the two together, to apply controlled stress. One late-flower drought trial on one cultivar does not establish daily targets.[^caplan-2019-drought-cannabis]
 > - The same P0 to P3 phases operate for the two types of steering. Only the dryback targets and the EC change.
 
 > **Diagram.** The cycle starts again each day. P3 changes to P0 during the night, and lights-on starts the ramp again.
@@ -163,7 +163,7 @@ On the Trends tab, the VWC graph must show a **sawtooth**. A sawtooth is a trace
 - Correct readings each day: VWC 30 to 70%, EC approximately 2 to 6 mS/cm, substrate temperature 20 to 26 °C (68 to 79 °F), and all safety indicators green
 - A VWC trace that is not a sawtooth is your first signal of a problem
 - To set a table to on or off, use the **Enabled** toggle in Zone Control
-- To stop the system in an emergency, set Maintenance Mode to on (this closes all valves) or use the emergency-stop script
+- For a durable stop, enable Maintenance Mode, disarm the controller, and verify the pump and valves are off. An output-off script alone does not latch the controller off.
 
 | Tab | Information shown | When to use it |
 | --- | --- | --- |
@@ -210,7 +210,7 @@ If irrigation does not operate, make sure that the system is on and that mainten
 
 > **KEY: You cannot be sure of the results**
 >
-> The basic system gives automatic control of the irrigation times and automatic decisions from sensor data. The sensors and the plumbing set the limit for the performance of the system. The tank-low abort and the leak abort **always show ‘safe’ and will not operate**, until you install the tank float switch and the leak sensor. In this condition, do not operate the system without a person to monitor it.
+> The basic system gives automatic control of the irrigation times and automatic decisions from sensor data. The sensors and the plumbing set the limit for the performance of the system. Before the tank float switch and leak sensor are installed and enabled, the corresponding aborts are permissive and cannot detect those conditions. Treat them as unavailable safety layers. Operate only under supervision until both aborts are verified.
 
 There are two more limits. Without a leaf-temperature sensor, the system calculates the VPD from the air temperature of the room, and the VPD is less accurate. The optional AppDaemon layer is necessary for automatic changes between the P0 to P3 phases without a person. The basic system does not include this layer. Before you use the automation, operate the system with only a timer for approximately one week. Monitor the system in this time.
 

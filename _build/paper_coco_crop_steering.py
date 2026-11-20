@@ -135,12 +135,12 @@ SECTIONS.append({"id": "dryback", "kicker": "05 · The dryback", "title": "Dryba
     p("When the root zone dries by a small quantity, the plant makes a stress hormone. The name of "
       "this hormone is <strong>abscisic acid (ABA)</strong>. ABA decreases vegetative growth and "
       "increases the production of flowers and resin" + _c("welling2025-aba") +
-      ". The data show that a controlled water deficit at the correct time <em>increases</em> the "
-      "cannabinoid content, and the yield does not decrease" + _c("caplan2019-drought") +
+      ". In one trial, an 11-day drought in late flowering increased some cannabinoid "
+      "concentrations. The flower-yield difference was not statistically significant. The study "
+      "used one cultivar and did not validate daily dryback targets" + _c("caplan2019-drought") +
       "."),
     callout("warn", "A dryback is not a drought",
-      p("The difference is the dose and the time. <strong>Moderate</strong> drybacks keep the yield "
-        "when you measure them and stop them at the correct time. A <strong>large</strong> drought "
+      p("The difference is the dose and the time. The effect of a <strong>moderate</strong> dryback on yield depends on the cultivar and growing conditions. A <strong>large</strong> drought "
         "that continues for too long decreases the yield and the cannabinoids by a large quantity" +
         _c("stack2024-drought") + ". Make small, careful changes. Always apply water before the "
         "plant shows wilt.")),

@@ -77,7 +77,7 @@ Then the probe uses a **calibration equation** to change the measured permittivi
 
 ## Calibrate the probe to the substrate that you use
 
-When you receive the TEROS-12, it has a generic calibration for mineral soil. This calibration has an accuracy of only ±0.03 m³/m³. A **substrate-specific** calibration for your coco or rockwool decreases the error to ±0.01–0.02 m³/m³.[^fragkos-2024-teros12-soils-ec] This difference is important when you use the probe. Frequently, the dryback windows in crop steering are _smaller_ than the error band of the generic calibration (±0.03). If you use a VWC without calibration for steering, the changes that you want are in the noise.
+When you receive the TEROS-12, it has a generic calibration for mineral soil. This calibration has an accuracy of only ±0.03 m³/m³. A **substrate-specific** calibration can reduce the error. Measure residual error in the actual growing medium. The cited study used inorganic soils and does not establish an accuracy for coco or rockwool.[^fragkos-2024-teros12-soils-ec] This difference is important when you use the probe. Frequently, the dryback windows in crop steering are _smaller_ than the error band of the generic calibration (±0.03). If you use a VWC without calibration for steering, the changes that you want are in the noise.
 
 An example of safe headroom shows the result of this difference. An estimate that ignores the error gives 256 mL (8.7 fl oz) of ‘room to apply water’. When you include an accuracy of ±0.02, the safe quantity is approximately 109 mL (3.7 fl oz). With the generic calibration (accuracy ±0.03), the safe quantity is only approximately 54 mL (1.8 fl oz). The pot and the probe are the same. The only difference is how you include the error band when you calculate.[^nemali-2006-set-point-irrigation]
 
@@ -86,7 +86,7 @@ An example of safe headroom shows the result of this difference. An estimate tha
 | Calibration type | VWC accuracy | Resolution | Accurate steering? |
 | --- | --- | --- | --- |
 | Generic calibration for mineral soil (in the probe) | ±0.03 m³/m³ | 0.001 m³/m³ | No. The error band is wider than a usual dryback window. |
-| Substrate-specific calibration | ±0.01–0.02 m³/m³ | 0.001 m³/m³ | Yes. It is necessary for accurate steering. |
+| Substrate-specific calibration | Measure against reference samples | 0.001 m³/m³ | Depends on the measured error and the intended control band. |
 
 *The resolution is the same for the two types. The accuracy is different. Calibrate the probe to your substrate before you use it for steering.*
 
@@ -162,7 +162,7 @@ Monitor for a VWC that changes with the temperature cycle of the substrate each 
 
 > **KEY: The facts**
 >
-> One TEROS-12 cannot give you the correct condition of the root zone for each zone. If you think that it can, you make the most frequent error and the error with the highest cost. With a substrate-specific calibration, you can find the _trends_ of dryback. You can also calculate an estimate of the water in the substrate with an accuracy of approximately ±0.01–0.02 m³/m³ in the position of the probe. This accuracy is sufficient for steering if you include the uncertainty in your decisions and compare the data with a second witness.[^fragkos-2024-teros12-soils-ec]
+> One TEROS-12 cannot give you the correct condition of the root zone for each zone. If you think that it can, you make the most frequent error and the error with the highest cost. With a substrate-specific calibration, you can find the _trends_ of dryback. You can estimate water content in the volume around the probe. Verify the residual error in that substrate and cross-check against an independent measurement before using the readings for tight control.[^fragkos-2024-teros12-soils-ec]
 
 > **Diagram.** Only one probe has a wide error band and many limits. When you add a substrate-specific calibration and a second witness, the error band becomes smaller. You can use this range for steering.[^nemali-2006-set-point-irrigation]
 

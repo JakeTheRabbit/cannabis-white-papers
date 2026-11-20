@@ -87,11 +87,11 @@ New growers frequently do not know this fact. **When the substrate dries, the co
 
 A **dryback** is the quantity by which the root zone dries before you apply water again. You select this quantity. The effect on the plant is different for a small dryback and for a large dryback. A small, controlled water deficit changes the growth of the plant.
 
-When the root zone dries by a small quantity, the plant makes a stress hormone. The name of this hormone is **abscisic acid (ABA)**. ABA decreases vegetative growth and increases the production of flowers and resin[^welling2025-aba]. The data show that a controlled water deficit at the correct time _increases_ the cannabinoid content, and the yield does not decrease[^caplan2019-drought].
+When the root zone dries by a small quantity, the plant makes a stress hormone. The name of this hormone is **abscisic acid (ABA)**. ABA decreases vegetative growth and increases the production of flowers and resin[^welling2025-aba]. In one trial, an 11-day drought in late flowering increased some cannabinoid concentrations. The flower-yield difference was not statistically significant. The study used one cultivar and did not validate daily dryback targets[^caplan2019-drought].
 
 > **WARN: A dryback is not a drought**
 >
-> The difference is the dose and the time. **Moderate** drybacks keep the yield when you measure them and stop them at the correct time. A **large** drought that continues for too long decreases the yield and the cannabinoids by a large quantity[^stack2024-drought]. Make small, careful changes. Always apply water before the plant shows wilt.
+> The difference is the dose and the time. The effect of a **moderate** dryback on yield depends on the cultivar and growing conditions. A **large** drought that continues for too long decreases the yield and the cannabinoids by a large quantity[^stack2024-drought]. Make small, careful changes. Always apply water before the plant shows wilt.
 
 Larger drybacks give more generative growth (flowers). Smaller drybacks, which keep the substrate wetter, give more vegetative growth (leaves and size). This one control is most of crop steering: the quantity by which you let the root zone dry.
 

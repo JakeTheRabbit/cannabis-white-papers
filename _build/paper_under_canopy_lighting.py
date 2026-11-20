@@ -110,13 +110,13 @@ SECTIONS.append({"id": "the-evidence", "kicker": "The data", "title": "Data on y
       "the opposite (Section 7)."),
     p("<strong>2025, top light compared with SCL and with ICL.</strong> A test in <em>Plants</em> "
       "compared the usual top light directly with SCL and ICL" + _c("icl2025-plants") +
-      ". ICL gave the best results, and the two methods made the energy-use efficiency better. The "
-      "output for each watt increased. More power was not the only cause."),
+      ". ICL increased gross dry flower yield and used 23.21% more lighting energy than top light. "
+      "Dry flower per lighting kWh was 1.49 with top light, 1.61 with SCL and 1.48 with ICL."),
     table(["Measurement (ICL compared with the top-light control)", "Result"], [
       ["Dry inflorescence yield", "+30% (29.95%)"],
-      ["THC content", "+24% (24.4%)"],
+      ["Total THC yield", "+24% (24.42%)"],
       ["Total terpene concentration", "+12% (12.5%)"],
-    ], caption="The 2025 test in Plants: ICL gave the highest yield, potency and terpene concentration. ICL also made the energy-use efficiency better."),
+    ], caption="The 2025 test in Plants: ICL produced the largest gross flower yield. SCL had the highest dry flower yield per lighting kWh."),
     p("<strong>Fluence / Texas Original.</strong> This test shows the limits of the other results" +
       _c("fluence-icl-2024") + ". At <strong>equal total flux</strong>, ICL moved photons into the "
       "canopy. ICL did <em>not</em> always increase the <em>total</em> yield compared with top "

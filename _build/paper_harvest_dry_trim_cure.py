@@ -174,14 +174,14 @@ SECTIONS.append({"id": "water-activity", "kicker": "The primary information", "t
     p("These two limits give a range of 0.55 to 0.65 aw. This range is the same as the range in the "
       "ASTM D8197 standard for dry cannabis flower." + _c("astm-d8197-water-activity") +
       " Start the testing of samples at approximately day 7 to 8. The takedown is the removal of "
-      "the plants from the racks. Do the takedown when the average aw of the batch is 0.60 to 0.62. "
-      "Thus there is headroom to the 0.65 mold limit."),
+      "the plants from the racks. A batch average of 0.60 to 0.62 is an operational starting point from AROYA guidance. "
+      "Confirm it against the cultivar, sampling plan and storage conditions." + _c("aroya-drying-water-activity-guide")),
     figure(L.zones("Safe zone of water activity", 0.50, 0.90,
             [(0.50, 0.55, L.AMBL, "too dry"), (0.55, 0.65, L.GL, "takedown at 0.60-0.62"),
              (0.70, 0.85, L.REDL, "mold and yeast"), (0.85, 0.90, L.RED, "bacteria")],
             note="Do the takedown in the green zone, at approximately 0.60-0.62 aw, with headroom to the 0.65 mold limit."), 6,
-      "If the aw is less than 0.55, the terpenes evaporate. If the aw is more than 0.65, there is a "
-      "risk of mold. The takedown of the batch is at 0.60 to 0.62 aw." + _c("astm-d8197-water-activity")),
+      "ASTM D8197 specifies the 0.55 to 0.65 aw range for dry flower." +
+      _c("astm-d8197-water-activity") + " The narrower takedown point is operational guidance."),
     figure(L.bars("Water activity thresholds for microbe growth",
             [("No growth", 0.60), ("Mold and yeast", 0.70), ("Bacteria", 0.85)], unit=" aw",
             target=0.62, maxv=0.95,
