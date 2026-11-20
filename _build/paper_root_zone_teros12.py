@@ -159,8 +159,9 @@ SECTIONS.append({"id": "calibration", "kicker": "Primary content", "title": "Cal
   "blocks": [
     p("When you receive the TEROS-12, it has a generic calibration for mineral soil. This "
       "calibration has an accuracy of only &plusmn;0.03 m&sup3;/m&sup3;. A "
-      "<strong>substrate-specific</strong> calibration for your coco or rockwool decreases the "
-      "error to &plusmn;0.01&ndash;0.02 m&sup3;/m&sup3;." + _c("fragkos-2024-teros12-soils-ec") +
+      "<strong>substrate-specific</strong> calibration can reduce the error. Measure residual "
+      "error in the actual growing medium. The cited study used inorganic soils and does "
+      "not establish an accuracy for coco or rockwool." + _c("fragkos-2024-teros12-soils-ec") +
       " This difference is important when you use the probe. Frequently, the dryback windows in "
       "crop steering are <em>smaller</em> than the error band of the generic calibration "
       "(&plusmn;0.03). If you use a VWC without calibration for steering, the changes that you want "
@@ -181,7 +182,7 @@ SECTIONS.append({"id": "calibration", "kicker": "Primary content", "title": "Cal
       "with the generic curve." + _c("nemali-2006-set-point-irrigation")),
     table(["Calibration type", "VWC accuracy", "Resolution", "Accurate steering?"], [
       ["Generic calibration for mineral soil (in the probe)", "&plusmn;0.03 m&sup3;/m&sup3;", "0.001 m&sup3;/m&sup3;", "No. The error band is wider than a usual dryback window."],
-      ["Substrate-specific calibration", "&plusmn;0.01&ndash;0.02 m&sup3;/m&sup3;", "0.001 m&sup3;/m&sup3;", "Yes. It is necessary for accurate steering."],
+      ["Substrate-specific calibration", "Measure against reference samples", "0.001 m&sup3;/m&sup3;", "Depends on the measured error and the intended control band."],
     ], cls="compact", caption="The resolution is the same for the two types. The accuracy is different. Calibrate the probe to your substrate before you use it for steering."),
     callout("warn", "Calibration does not correct all errors",
       p("Make sure that you use a substrate-specific calibration: it is <strong>necessary</strong> "
@@ -336,10 +337,9 @@ SECTIONS.append({"id": "expectations", "kicker": "Facts and limits", "title": "E
       p("One TEROS-12 cannot give you the correct condition of the root zone for each zone. If you "
         "think that it can, you make the most frequent error and the error with the highest cost. "
         "With a substrate-specific calibration, you can find the <em>trends</em> of dryback. You "
-        "can also calculate an estimate of the water in the substrate with an accuracy of "
-        "approximately &plusmn;0.01&ndash;0.02 m&sup3;/m&sup3; in the position of the probe. This "
-        "accuracy is sufficient for steering if you include the uncertainty in your decisions and "
-        "compare the data with a second witness." + _c("fragkos-2024-teros12-soils-ec"))),
+        "can estimate water content in the volume around the probe. Verify the residual error "
+        "in that substrate and cross-check against an independent measurement before using "
+        "the readings for tight control." + _c("fragkos-2024-teros12-soils-ec"))),
     figure(L.zones("Confidence: one probe, or probe + witness + calibration",
             0, 100,
             [(0, 45, L.REDL, "only one probe, wide error band, many limits"),

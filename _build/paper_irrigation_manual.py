@@ -167,7 +167,8 @@ SECTIONS.append({"id": "phases", "kicker": "Basic information", "title": "Irriga
       ul(["<strong>Vegetative</strong> steering uses smaller drybacks and a moderate EC to cause "
           "the growth of roots and leaves.",
           "<strong>Generative</strong> steering uses larger controlled drybacks, a higher root-zone "
-          "EC, or the two together, to cause flowering." + _c("caplan-2019-drought-cannabis"),
+          "EC, or the two together, to apply controlled stress. One late-flower drought trial on "
+          "one cultivar does not establish daily targets." + _c("caplan-2019-drought-cannabis"),
           "The same P0 to P3 phases operate for the two types of steering. Only the dryback targets and the EC change."], "tight")),
     figure(L.flow("The phase cycle each day",
             [("P0", "dryback until target"), ("P1", "ramp-up &rarr; ~65% VWC"),
@@ -279,7 +280,7 @@ SECTIONS.append({"id": "daily-operation", "kicker": "Use each day",
     ul(["Correct readings each day: VWC 30 to 70%, EC approximately 2 to 6 mS/cm, substrate temperature 20 to 26 °C (68 to 79 °F), and all safety indicators green",
         "A VWC trace that is not a sawtooth is your first signal of a problem",
         "To set a table to on or off, use the <strong>Enabled</strong> toggle in Zone Control",
-        "To stop the system in an emergency, set Maintenance Mode to on (this closes all valves) or use the emergency-stop script"]),
+        "For a durable stop, enable Maintenance Mode, disarm the controller, and verify the pump and valves are off. An output-off script alone does not latch the controller off."]),
     table(["Tab", "Information shown", "When to use it"], [
       ["Command Center", "All tables on one display: VWC, EC, temperature, and safety.", "Check of the condition each day"],
       ["Zone Control", "The Enabled toggle for each table, and the manual valve controls", "Add a table, or stop irrigation of a table"],
@@ -344,9 +345,9 @@ SECTIONS.append({"id": "expectations", "kicker": "The limits", "title": "Expecte
     callout("key", "You cannot be sure of the results",
       p("The basic system gives automatic control of the irrigation times and automatic decisions "
         "from sensor data. The sensors and the plumbing set the limit for the performance of the "
-        "system. The tank-low abort and the leak abort <strong>always show &lsquo;safe&rsquo; and "
-        "will not operate</strong>, until you install the tank float switch and the leak sensor. In "
-        "this condition, do not operate the system without a person to monitor it.")),
+        "system. Before the tank float switch and leak sensor are installed and enabled, the "
+        "corresponding aborts are permissive and cannot detect those conditions. Treat them as "
+        "unavailable safety layers. Operate only under supervision until both aborts are verified.")),
     p("There are two more limits. Without a leaf-temperature sensor, the system calculates the VPD "
       "from the air temperature of the room, and the VPD is less accurate. The optional AppDaemon "
       "layer is necessary for automatic changes between the P0 to P3 phases without a person. The "

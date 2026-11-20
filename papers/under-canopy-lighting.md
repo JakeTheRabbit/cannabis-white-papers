@@ -57,15 +57,15 @@ All the marketing material of the suppliers shows ‘the yield increases 20–60
 
 **Hawley and other authors, 2018.** The group at Guelph did the first controlled test of under-canopy lighting on cannabis. The paper on this test is in _HortScience_[^hawley2018-scl]. With red-blue SCL and with RGB SCL, the yield _and_ the THC in the bud in the bottom canopy increased. The change was statistically significant.The mechanism is a better supply of light to the bottom canopy. This supply gives better results than when you increase the PPFD of the top fixtures. All work on SCL and ICL starts from this mechanism. One result is important. In the second cycle, the group _kept the growth at the bottom of the plant_ (and did not remove it), and the effect on the yield was larger. With SCL, the method of defoliation is the opposite (Section 7).
 
-**2025, top light compared with SCL and with ICL.** A test in _Plants_ compared the usual top light directly with SCL and ICL[^icl2025-plants]. ICL gave the best results, and the two methods made the energy-use efficiency better. The output for each watt increased. More power was not the only cause.
+**2025, top light compared with SCL and with ICL.** A test in _Plants_ compared the usual top light directly with SCL and ICL[^icl2025-plants]. ICL increased gross dry flower yield and used 23.21% more lighting energy than top light. Dry flower per lighting kWh was 1.49 with top light, 1.61 with SCL and 1.48 with ICL.
 
 | Measurement (ICL compared with the top-light control) | Result |
 | --- | --- |
 | Dry inflorescence yield | +30% (29.95%) |
-| THC content | +24% (24.4%) |
+| Total THC yield | +24% (24.42%) |
 | Total terpene concentration | +12% (12.5%) |
 
-*The 2025 test in Plants: ICL gave the highest yield, potency and terpene concentration. ICL also made the energy-use efficiency better.*
+*The 2025 test in Plants: ICL produced the largest gross flower yield. SCL had the highest dry flower yield per lighting kWh.*
 
 **Fluence / Texas Original.** This test shows the limits of the other results[^fluence-icl-2024]. At **equal total flux**, ICL moved photons into the canopy. ICL did _not_ always increase the _total_ yield compared with top light only. But ICL increased the size of the bud in the bottom canopy and made the grade **better** (B/C to B/A), with much less variation.In a market with low prices, the margin comes from the grade and the uniformity of the product. It does not come from the total yield.
 
