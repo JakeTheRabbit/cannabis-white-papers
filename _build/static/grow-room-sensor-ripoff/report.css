@@ -1,10 +1,20 @@
 /* Report-only components for grow-room-sensor-ripoff, drawn in the site's own tokens. */
-.wsr-stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px;margin:8px 0 28px}
+.wsr-stats{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin:8px 0 28px}
+@media (max-width:520px){.wsr-stats{grid-template-columns:1fr}}
 .wsr-stats .stat{background:var(--surface);border:1px solid var(--line);border-left:3px solid var(--red);border-radius:var(--r);padding:14px 16px}
 .wsr-stats .num{font-family:var(--serif);font-size:24px;font-weight:600;color:var(--ink);line-height:1.15}
 .wsr-stats .lbl{font-size:12.5px;color:var(--muted);margin-top:4px;line-height:1.45}
-.sec .fig.wsr-fig{padding:12px;background:var(--surface-2)}
+/* Diagrams are drawn on an 820-unit canvas with 10-12 unit labels: give them room. */
+.sec .fig.wsr-fig{padding:8px;background:var(--surface-2);overflow-x:auto;-webkit-overflow-scrolling:touch}
 .sec .fig.wsr-fig svg{display:block;width:100%;height:auto}
+.sec .fig.wsr-fig figcaption{padding:0 6px 4px}
+/* Desktop: spill past the text measure into the column gutter (col is ~112px wider). */
+@media (min-width:1100px){.sec .fig.wsr-fig{margin-left:-56px;margin-right:-56px}}
+/* Phone/tablet: keep labels legible, scroll the diagram sideways instead of shrinking it. */
+@media (max-width:760px){
+  .sec .fig.wsr-fig svg{width:720px;max-width:none}
+  .sec .fig.wsr-fig::before{content:"Scroll sideways to see the whole diagram →";display:block;position:sticky;left:0;font-size:11.5px;color:var(--faint);padding:2px 4px 8px;text-align:left}
+}
 .sec .tbl td{vertical-align:top}
 .sec .tbl.brand-table{font-size:13px}
 .sec .badge{display:inline-block;padding:2px 8px;border-radius:999px;font-size:11px;font-weight:700;letter-spacing:.03em;white-space:nowrap;border:1px solid currentColor}

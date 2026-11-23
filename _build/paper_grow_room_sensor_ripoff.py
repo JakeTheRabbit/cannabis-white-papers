@@ -31,7 +31,7 @@ TITLE_MAX_PX = 54
 RELATED = ["temp-humidity-vpd", "hvac-dehumidification", "harvest-dry-trim-cure", "signal-and-noise"]
 REF_IDS = []
 
-_ASSET_V = "1"
+_ASSET_V = "3"
 _HEAD = (
     f'<link rel="stylesheet" href="assets/{SLUG}/report.css?v={_ASSET_V}">'
 )
@@ -55,7 +55,8 @@ _PAYLOAD = re.sub(
     flags=re.S,
 )
 
-_STATS = re.search(r'<!-- STATS -->\s*(<div class="wsr-stats">.*?</div>\s*</div>)\s*\n', _PAYLOAD, re.S).group(1)
+_STATS = re.search(r'<!-- STATS -->\s*(<div class="wsr-stats">.*?)\s*<section ', _PAYLOAD, re.S).group(1)
+assert _STATS.count('class="stat"') == 4 and _STATS.count("<div") == _STATS.count("</div>")
 _FOOT = re.search(r'<!-- FOOTER -->\s*(<p class="wsr-foot">.*?</p>)', _PAYLOAD, re.S).group(1)
 _SECTION_RE = re.compile(r'<section id="([^"]+)">\s*<h2>(.*?)</h2>(.*?)</section>', re.S)
 _TAG_RE = re.compile(r"<[^>]+>")

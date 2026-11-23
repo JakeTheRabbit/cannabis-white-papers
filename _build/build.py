@@ -198,8 +198,9 @@ def render_paper(mod):
     # Inject per-paper evidence confidence panel (solid / operational / provisional)
     try:
         from data import evidence as EV
+        from check_section_structure import VERBATIM_SLUGS
         _ep = EV.panel_html(mod.SLUG)
-        if _ep and secs:
+        if _ep and secs and mod.SLUG not in VERBATIM_SLUGS:
             _definitions = next((i for i, sec in enumerate(secs)
                                  if sec.get("title") == "Definitions"), None)
             _ei = (_definitions + 1) if _definitions is not None else 1

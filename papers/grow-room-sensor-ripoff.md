@@ -26,6 +26,9 @@ _Investigative Grow-Room Hardware Exposé · ~45 min to read_
 ## The $250,000 Contradiction
 
 $6.50 vs. $1,450Bare SHT45-AD1F chip cost vs. retail grow sensors running the same fragile polymer physics
+      1 of 17Retail grow brands naming their exact RH chip in their own manual (Ecowitt -EP)
+      +10.6% RHReal-world silent drift caught in a licensed flower room (+33.7% VPD with zero alarms)
+      ±5% RHTotal width of the ASTM dry-room safe zone (0.55–0.65 aw) between hay & mould
 
 Walk into almost any commercial cannabis facility—or a dialed-in craft grow—and you will see the exact same absurdity: **$100,000 to $250,000+ worth of precision HVAC, dehumidification, and environmental controls taking orders from a $4 to $6 silicon chip hanging directly over the canopy.**
 

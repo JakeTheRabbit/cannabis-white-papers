@@ -163,6 +163,8 @@ def _document_diagnostics(slug, text, source_sections, image_parent_expectations
     diagnostics = []
     page = _parse_page(text)
     expected = _expected_rendered_sections(source_sections)
+    if slug in VERBATIM_SLUGS:  # verbatim papers carry no injected Evidence panel
+        expected = [entry for entry in expected if entry[0] != "evidence-notes"]
     actual = [(section_id, _plain_title(title)) for section_id, title in page.h2]
     actual_titles = [title for _, title in actual]
 
@@ -187,7 +189,7 @@ def _document_diagnostics(slug, text, source_sections, image_parent_expectations
     )
     evidence = [index for index, (_, title) in enumerate(actual) if title == "Evidence and limitations"]
     expected_evidence = definitions + 1 if definitions is not None else 1
-    if evidence != [expected_evidence]:
+    if slug not in VERBATIM_SLUGS and evidence != [expected_evidence]:
         anchor = "'Definitions'" if definitions is not None else "'Purpose and scope'"
         diagnostics.append(f"{slug}: Evidence and limitations must follow {anchor}")
 
