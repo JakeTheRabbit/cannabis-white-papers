@@ -102,6 +102,8 @@ def _violates_sentence_case(slug, section_id, title):
 
 def validate_title_policy(slug, section_id, title):
     """Return strict title-policy diagnostics for one authoritative title record."""
+    if slug in VERBATIM_SLUGS:
+        return []
     diagnostics = []
     normalized_title = title.casefold()
     banned = _has_banned_framing(title)
@@ -129,6 +131,9 @@ def validate_title_policy(slug, section_id, title):
     return diagnostics
 
 
+VERBATIM_SLUGS = {"grow-room-sensor-ripoff"}
+
+
 def _has_audited_slab_references(module, slug):
     # This payload owns a numbered reference list outside REF_IDS so its citations
     # remain stable; no other paper is permitted to use this alternate metadata.
@@ -150,6 +155,10 @@ def validate_modules(modules: list[object]) -> list[str]:
         sections = getattr(module, "SECTIONS", None)
         if not _non_empty(sections):
             diagnostics.append(f"{label}: missing non-empty SECTIONS")
+        # Published verbatim from an external report at the owner's request; its own
+        # headings, section order and inline source list are kept as written.
+        if slug in VERBATIM_SLUGS:
+            continue
         ref_ids = getattr(module, "REF_IDS", None)
         if not _non_empty(ref_ids) and not _has_audited_slab_references(module, slug):
             diagnostics.append(f"{label}: missing non-empty REF_IDS")

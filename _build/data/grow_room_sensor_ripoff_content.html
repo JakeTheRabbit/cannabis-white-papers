@@ -1,0 +1,1305 @@
+<!-- Verbatim body of MEGA-REPORT-grow-room-sensor-ripoff.html (C:/Github/sensors), 2026-11-24. -->
+<!-- STATS -->
+<div class="stat-strip">
+      <div class="stat"><div class="num">$6.50 vs. $1,450</div><div class="lbl">Bare SHT45-AD1F chip cost vs. retail grow sensors running the same fragile polymer physics</div></div>
+      <div class="stat"><div class="num">1 of 17</div><div class="lbl">Retail grow brands naming their exact RH chip in their own manual (Ecowitt -EP)</div></div>
+      <div class="stat"><div class="num">+10.6% RH</div><div class="lbl">Real-world silent drift caught in a licensed flower room (+33.7% VPD with zero alarms)</div></div>
+      <div class="stat"><div class="num">±5% RH</div><div class="lbl">Total width of the ASTM dry-room safe zone (0.55–0.65 a<sub>w</sub>) between hay &amp; mould</div></div>
+    </div>
+
+<section id="1-the-250-000-contradiction">
+<h2>1. The $250,000 Contradiction</h2>
+<p>Walk into almost any commercial cannabis facility—or a dialed-in craft grow—and you will see the exact same absurdity: <strong>$100,000 to $250,000+ worth of precision HVAC, dehumidification, and environmental controls taking orders from a $4 to $6 silicon chip hanging directly over the canopy.</strong></p>
+<p>Nobody checks it. Nobody replaces it on a schedule. The dashboard prints <code>60.2% RH</code> and <code>1.06 kPa</code> to two decimal places, the trend line looks silky smooth, and nobody gets an alarm—so everybody assumes the room is locked in.</p>
+<p><strong>It probably isn't.</strong></p>
+<p>You replace pH electrodes, HEPA filters, carbon scrubbers, and RO membranes on strict schedules because the companies selling them admit they are consumables. Yet the humidity probe steering your entire crop—from a <strong>$9 Govee puck</strong> up to an <strong>$800 Growlink ESM-2</strong> or <strong>$500 Pulse Pro</strong>—is marketed as if it lasts forever.</p>
+<p>Here is the ugly reality the grow-tech industry hopes you never look up:</p>
+<ol>
+<li><strong>Almost every grow sensor on the market uses the exact same fragile physics:</strong> an exposed microscopic polymer sponge that costs <strong>$2 to $15</strong> (even Sensirion's flagship <strong>SHT45-AD1F</strong> costs <strong>$5.90–$6.90</strong> single-unit and <strong>~$4.16–$4.55</strong> on a factory reel).</li>
+<li><strong>Every chip maker explicitly warns that the chemicals you spray ruin these chips.</strong> Sensirion, Texas Instruments, Bosch, TE Connectivity, Silicon Labs, and Aosong all put isopropyl alcohol (IPA), ethanol, hydrogen peroxide (H<sub>2</sub>O<sub>2</sub>), acids, ammonia, ozone, and detergents right on their "do not expose / irreversible drift" lists. TI flatly admits that <strong>a single contamination event can add more error than 10 years of normal aging.</strong></li>
+<li><strong>Paying $500 to $800+ for "enterprise" grow sensors like AROYA and Growlink is the biggest ripoff in indoor cultivation.</strong> You aren't buying industrial chemical immunity—you're paying a <strong>75× to 180× markup</strong> on the exact same $4–$6 polymer die, glued inside a proprietary non-serviceable box with <strong>no $20 swappable RH tip</strong> and <strong>no 180 °C chemical purge</strong>. Worse, <strong>AROYA Climate One, AROYA Climate Station, Growlink ESM-2/ClimaLINK, Agrowtek, and Argus Omni all strap an active aspiration fan onto it</strong>—turning your $500–$800 "enterprise" box into a <strong>chemical vacuum cleaner</strong> that sucks ZeroTol fog, IPA fumes, foliar oils, and sulfur straight across the chip every time nobody shuts it down!</li>
+<li><strong>Almost no grow brand tells you what chip is inside, how fast it drifts, or when to bin it.</strong> Across 25 grow and greenhouse sensor lines audited from datasheets, manuals, support pages, and FCC internal photos, <strong>only one consumer brand (Ecowitt's <code>-EP</code> probe)</strong> names its exact chip in its own docs. Instead, brands quietly hand you a <strong>±10% to ±20% software offset slider</strong>—an accidental confession that their probes wander off a cliff.</li>
+<li><strong>You can't fix chemical poisoning with a software offset.</strong> Contamination bends the sensor's response curve, flips the sign of the error across the humidity range, and makes the probe sluggish—or completely "blind."</li>
+</ol>
+
+<figure class="fig">
+<svg viewBox="0 0 820 382" width="100%" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Bare RH chip cost vs retail grow sensor box prices and markup multipliers">
+  <rect width="820" height="382" rx="12" fill="#0f131a"/>
+  <text x="26" y="34" fill="#f8fafc" font-size="17" font-weight="900" font-family="system-ui,sans-serif">GRAPHIC 1 · THE MARKUP SCAM: A $6 CHIP INSIDE AN $800+ BOX</text>
+  <text x="26" y="54" fill="#94a3b8" font-size="12" font-family="system-ui,sans-serif">Retail price vs. Sensirion SHT45-AD1F chip cost ($6.50 qty 1 / ~$4.50 reel). Almost every box uses the exact same fragile polymer physics.</text>
+  <g font-family="system-ui,sans-serif" font-size="12">
+    <!-- Gridlines x=215..735 (width 520, max $1500 -> 0.3467 px/$) -->
+    <line x1="215" y1="74" x2="215" y2="338" stroke="#334155"/>
+    <line x1="388" y1="74" x2="388" y2="338" stroke="#1e293b" stroke-dasharray="3 4"/>
+    <line x1="562" y1="74" x2="562" y2="338" stroke="#1e293b" stroke-dasharray="3 4"/>
+    <line x1="735" y1="74" x2="735" y2="338" stroke="#1e293b" stroke-dasharray="3 4"/>
+    <text x="215" y="356" fill="#64748b" font-size="10.5" text-anchor="middle">$0</text>
+    <text x="388" y="356" fill="#64748b" font-size="10.5" text-anchor="middle">$500</text>
+    <text x="562" y="356" fill="#64748b" font-size="10.5" text-anchor="middle">$1,000</text>
+    <text x="735" y="356" fill="#64748b" font-size="10.5" text-anchor="middle">$1,500</text>
+
+    <!-- Row 1: Bare chip $6.50 -->
+    <text x="204" y="96" fill="#4ade80" text-anchor="end" font-weight="800">Bare SHT45-AD1F Chip</text>
+    <rect x="215" y="82" width="5" height="20" rx="3" fill="#22c55e"/>
+    <text x="228" y="96" fill="#4ade80" font-weight="800">$6.50 (~$4.50 reel)</text>
+    <rect x="744" y="82" width="56" height="20" rx="4" fill="#052e16" stroke="#22c55e"/>
+    <text x="772" y="96" fill="#4ade80" font-size="11" font-weight="800" text-anchor="middle">1× BASE</text>
+
+    <!-- Row 2: AC Infinity $20 -->
+    <text x="204" y="128" fill="#cbd5e1" text-anchor="end" font-weight="600">AC Infinity UIS Probe</text>
+    <rect x="215" y="114" width="9" height="20" rx="3" fill="#38bdf8"/>
+    <text x="232" y="128" fill="#94a3b8" font-weight="600">$20 (cheap modular swap)</text>
+    <rect x="744" y="114" width="56" height="20" rx="4" fill="#0c2d48" stroke="#38bdf8"/>
+    <text x="772" y="128" fill="#38bdf8" font-size="11" font-weight="800" text-anchor="middle">3×</text>
+
+    <!-- Row 3: TrolMaster MBS-PRO $300 -->
+    <text x="204" y="160" fill="#e2e8f0" text-anchor="end" font-weight="600">TrolMaster MBS-PRO</text>
+    <rect x="215" y="146" width="104" height="20" rx="3" fill="#f59e0b"/>
+    <text x="327" y="160" fill="#fbbf24" font-weight="700">~$300 (no swappable RH tip)</text>
+    <rect x="744" y="146" width="56" height="20" rx="4" fill="#451a03" stroke="#f59e0b"/>
+    <text x="772" y="160" fill="#fbbf24" font-size="11" font-weight="800" text-anchor="middle">46×</text>
+
+    <!-- Row 4: Pulse Pro $499 -->
+    <text x="204" y="192" fill="#e2e8f0" text-anchor="end" font-weight="600">Pulse Pro</text>
+    <rect x="215" y="178" width="173" height="20" rx="3" fill="#f97316"/>
+    <text x="396" y="192" fill="#fb923c" font-weight="700">$499 (whole-unit toss)</text>
+    <rect x="744" y="178" width="56" height="20" rx="4" fill="#431407" stroke="#f97316"/>
+    <text x="772" y="192" fill="#fb923c" font-size="11" font-weight="800" text-anchor="middle">77×</text>
+
+    <!-- Row 5: AROYA Climate One $500+ -->
+    <text x="204" y="224" fill="#fde047" text-anchor="end" font-weight="800">AROYA Climate One</text>
+    <rect x="215" y="210" width="176" height="20" rx="3" fill="#ef4444"/>
+    <text x="399" y="224" fill="#fde047" font-weight="800">$500+ (+SaaS! · 7.1 CFM fan · ±3% / ±0.7 °C)</text>
+    <rect x="744" y="210" width="56" height="20" rx="4" fill="#7f1d1d" stroke="#ef4444"/>
+    <text x="772" y="224" fill="#fde047" font-size="11" font-weight="900" text-anchor="middle">77×+</text>
+
+    <!-- Row 6: Growlink ESM-2 / Link4 DISM $799 -->
+    <text x="204" y="256" fill="#e2e8f0" text-anchor="end" font-weight="600">Link4 DISM / Growlink ESM-2</text>
+    <rect x="215" y="242" width="277" height="20" rx="3" fill="#ef4444"/>
+    <text x="500" y="256" fill="#f87171" font-weight="700">$767–$799 (aspirated, "TBD" spec)</text>
+    <rect x="744" y="242" width="56" height="20" rx="4" fill="#450a0a" stroke="#ef4444"/>
+    <text x="772" y="256" fill="#fca5a5" font-size="11" font-weight="800" text-anchor="middle">123×</text>
+
+    <!-- Row 7: Autogrow $980 -->
+    <text x="204" y="288" fill="#e2e8f0" text-anchor="end" font-weight="600">Autogrow IntelliClimate</text>
+    <rect x="215" y="274" width="340" height="20" rx="3" fill="#dc2626"/>
+    <text x="563" y="288" fill="#fca5a5" font-weight="700">$830–$980 (no spray spec)</text>
+    <rect x="744" y="274" width="56" height="20" rx="4" fill="#450a0a" stroke="#dc2626"/>
+    <text x="772" y="288" fill="#fca5a5" font-size="11" font-weight="800" text-anchor="middle">151×</text>
+
+    <!-- Row 8: Grodan $1,450 -->
+    <text x="204" y="320" fill="#fecaca" text-anchor="end" font-weight="800">Grodan GroSens Climate</text>
+    <rect x="215" y="306" width="503" height="20" rx="3" fill="#991b1b"/>
+    <text x="708" y="320" fill="#ffffff" font-weight="800" text-anchor="end">$1,450+ (±4.5% to ±8% RH!)</text>
+    <rect x="744" y="306" width="56" height="20" rx="4" fill="#7f1d1d" stroke="#ef4444"/>
+    <text x="772" y="320" fill="#ffffff" font-size="11" font-weight="900" text-anchor="middle">223×</text>
+  </g>
+</svg>
+<figcaption>Figure 1. What you pay vs. the silicon doing the work. High price tags don't buy chemical immunity—they lock a disposable polymer die inside a non-serviceable (or fan-aspirated) box.</figcaption>
+</figure>
+
+<h3>Real-World Proof: The 10.6-Point Surprise</h3>
+
+<figure class="fig">
+<svg viewBox="0 0 820 265" width="100%" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Real-world NZ flower room case study showing displayed vs actual environment">
+  <rect width="820" height="265" rx="12" fill="#0f131a"/>
+  <text x="26" y="32" fill="#f8fafc" font-size="16" font-weight="900" font-family="system-ui,sans-serif">GRAPHIC 2 · REAL CRIME SCENE: LICENSED FLOWER ROOM F2 (SEPT 24, 2026)</text>
+  <text x="26" y="51" fill="#94a3b8" font-size="11.5" font-family="system-ui,sans-serif">Old M5Stack ENV III (SHT30) swapped for fresh Sensirion SHT45 on the exact same node. Temp matched (+0.073 °C). Humidity lied by +10.628% RH.</text>
+
+  <!-- Left panel: Dashboard Lie -->
+  <rect x="26" y="68" width="356" height="172" rx="10" fill="#071e15" stroke="#22c55e" stroke-width="2"/>
+  <text x="46" y="94" fill="#4ade80" font-size="12" font-weight="800" font-family="system-ui,sans-serif" letter-spacing="1">WHAT THE CONTROLLER SHOWED</text>
+  <rect x="292" y="79" width="72" height="20" rx="10" fill="#14532d"/>
+  <text x="328" y="93" fill="#4ade80" font-size="10" font-weight="800" text-anchor="middle" font-family="system-ui,sans-serif">ALL GREEN</text>
+  <text x="46" y="148" fill="#ffffff" font-size="44" font-weight="900" font-family="ui-monospace,Consolas,monospace">60.0%</text>
+  <text x="206" y="148" fill="#4ade80" font-size="28" font-weight="800" font-family="ui-monospace,Consolas,monospace">1.06 kPa</text>
+  <text x="46" y="172" fill="#86efac" font-size="12" font-family="system-ui,sans-serif">Old SHT30 reading · Zero alarms triggered</text>
+  <line x1="46" y1="188" x2="362" y2="188" stroke="#14532d"/>
+  <text x="46" y="210" fill="#cbd5e1" font-size="12" font-family="system-ui,sans-serif">Smooth graph. Textbook VPD. Grow team</text>
+  <text x="46" y="227" fill="#cbd5e1" font-size="12" font-family="system-ui,sans-serif">assumed room was perfectly dialed in.</text>
+
+  <!-- VS Arrow -->
+  <circle cx="410" cy="154" r="22" fill="#1e293b" stroke="#f59e0b" stroke-width="2"/>
+  <text x="410" y="159" fill="#fbbf24" font-size="13" font-weight="900" text-anchor="middle" font-family="system-ui,sans-serif">VS</text>
+
+  <!-- Right panel: Reality -->
+  <rect x="438" y="68" width="356" height="172" rx="10" fill="#230b0e" stroke="#ef4444" stroke-width="2"/>
+  <text x="458" y="94" fill="#fca5a5" font-size="11.5" font-weight="800" font-family="system-ui,sans-serif" letter-spacing="0.5">WHAT THE PLANTS LIVED IN</text>
+  <rect x="706" y="79" width="72" height="20" rx="10" fill="#7f1d1d"/>
+  <text x="742" y="93" fill="#fecaca" font-size="10" font-weight="800" text-anchor="middle" font-family="system-ui,sans-serif">+33.7% VPD</text>
+  <text x="458" y="148" fill="#f87171" font-size="44" font-weight="900" font-family="ui-monospace,Consolas,monospace">49.4%</text>
+  <text x="618" y="148" fill="#fbbf24" font-size="28" font-weight="800" font-family="ui-monospace,Consolas,monospace">1.41 kPa</text>
+  <text x="458" y="172" fill="#fca5a5" font-size="12" font-family="system-ui,sans-serif">True room RH (fresh SHT45) · ΔT = +0.073 °C</text>
+  <line x1="458" y1="188" x2="774" y2="188" stroke="#7f1d1d"/>
+  <text x="458" y="210" fill="#fecaca" font-size="12" font-family="system-ui,sans-serif">Dehumidifiers hammered room 10.6 pts too dry.</text>
+  <text x="458" y="227" fill="#fecaca" font-size="12" font-family="system-ui,sans-serif">Plants locked in harsh crop-steering dry-back.</text>
+</svg>
+<figcaption>Figure 2. A dew-point check proved the 10.628% RH gap was a pure moisture-element failure—not temperature. One 20-minute reference swap caught it immediately.</figcaption>
+</figure>
+
+<p>This isn't lab theory. On <strong>September 24, 2026</strong>, inside a licensed commercial flower room in New Zealand (Room F2), a room node running an <strong>M5Stack ENV III (Sensirion SHT30)</strong>—which had lived through routine IPM and room sanitation cycles—was swapped for a brand-new bare <strong>Sensirion SHT45</strong> in the exact same position on the exact same node.</p>
+<div class="table-wrap"><table class="data-table"><thead><tr>
+<th>Metric</th>
+<th>Old SHT30 vs. New SHT45</th>
+<th>What It Meant</th>
+</tr></thead><tbody>
+<tr><td><strong>Temperature difference</strong></td><td><strong>+0.073 °C</strong> [+0.13 °F]</td><td>Virtually identical — not a temperature fault</td></tr>
+<tr><td><strong>Humidity difference</strong></td><td><strong>SHT30 read +10.628% RH higher</strong></td><td>Dew-point check confirmed pure RH element error</td></tr>
+<tr><td><strong>Displayed vs. Actual Room RH</strong></td><td>Screen: <strong>60.0%</strong> · True room: <strong>~49.4%</strong></td><td>Dehumidifiers were hammering the room 10+ points too dry</td></tr>
+<tr><td><strong>Planned vs. Actual Leaf VPD</strong></td><td>Planned: <strong>1.06 kPa</strong> · Actual: <strong>1.41 kPa</strong></td><td>Plants were stuck in aggressive dry-back stress (+33.7% VPD)</td></tr>
+</tbody></table></div>
+<p>Nothing alarmed. The graph looked clean, smooth, and believable. For who knows how many weeks, the HVAC and dehumidifiers obeyed every command—steering the room straight to the wrong number. A single fresh reference sensor caught a 10.6-point lie in 20 minutes.</p>
+</section>
+<section id="2-how-your-sensor-actually-works-and-the-5-ways-your-sprays-break-it">
+<h2>2. How Your Sensor Actually Works—And the 5 Ways Your Sprays Break It</h2>
+<h3>The Polymer Sponge Inside the Box</h3>
+<p>Nearly every digital RH probe under a few hundred dollars—and plenty over $500—is a <strong>polymer-capacitive sensor</strong>. Picture two microscopic metal plates (often interdigitated fingers) sandwiching a porous <strong>1–10 µm hygroscopic polymer film</strong>—essentially a microscopic sponge.</p>
+<ul>
+<li>A dry polymer has a low dielectric constant (<strong>ε<sub>r</sub> ≈ 2–6</strong>).</li>
+<li>Liquid/sorbed water has a massive dielectric constant (<strong>ε<sub>r</sub> ≈ 80.1</strong> at room temperature).</li>
+</ul>
+<p>When water vapour diffuses into the polymer sponge, capacitance jumps, and the chip converts that into <code>%RH</code> using a factory curve.</p>
+<p><strong>The fatal flaw:</strong> Water isn't the only molecule that fits into those pores. Silicon Labs states it bluntly in its datasheet: <em>"any changes to the dielectric constant of the polymer film will be detected as a change in relative humidity."</em> Sensirion puts it even simpler: <strong>the chip cannot tell contaminants from water.</strong></p>
+<p>Not all polymers are built equal:</p>
+<ul>
+<li><strong>Thermoplastic polymers</strong> (linear/lightly branched chains in cheap dies) have loose free volume—solvents easily swell and permanently rearrange the chains, wrecking calibration for good.</li>
+<li><strong>Thermoset polymers</strong> (heavily crosslinked networks, like Honeywell HIH, Rotronic Hygromer, or crosslinked polyimides) resist swelling much better—yet active vapours still skew their readings until purged.</li>
+</ul>
+<p>Sensirion's Contamination Guide warns that contamination risk scales with <strong>Concentration × Exposure Time × Temperature</strong>. A warm grow room running 24/7 with weekly IPM sprays, IPA wipe-downs, and between-run fogging is literally the worst-case torture chamber imaginable.</p>
+
+<figure class="fig">
+<svg viewBox="0 0 820 325" width="100%" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Cross-section of clean vs chemically contaminated capacitive RH sensor polymer sponge">
+  <rect width="820" height="325" rx="12" fill="#0f131a"/>
+  <text x="26" y="34" fill="#f8fafc" font-size="17" font-weight="900" font-family="system-ui,sans-serif">GRAPHIC 3 · INSIDE THE CHIP: CLEAN VS. POISONED POLYMER SPONGE</text>
+  <text x="26" y="53" fill="#94a3b8" font-size="11.5" font-family="system-ui,sans-serif">Every capacitive sensor measures dielectric permittivity (water εᵣ ≈ 80.1 vs. polymer εᵣ ≈ 2–6). It cannot tell foreign chemicals from water.</text>
+
+  <!-- LEFT: CLEAN -->
+  <g font-family="system-ui,sans-serif">
+    <text x="200" y="84" fill="#4ade80" font-size="14" font-weight="800" text-anchor="middle">CLEAN SENSOR (LAB AIR)</text>
+    <text x="200" y="100" fill="#94a3b8" font-size="11" text-anchor="middle">Only H₂O molecules enter the 1–10 µm polymer</text>
+    <!-- Top porous electrode -->
+    <rect x="46" y="118" width="60" height="14" rx="2" fill="#94a3b8"/>
+    <rect x="116" y="118" width="60" height="14" rx="2" fill="#94a3b8"/>
+    <rect x="186" y="118" width="60" height="14" rx="2" fill="#94a3b8"/>
+    <rect x="256" y="118" width="98" height="14" rx="2" fill="#94a3b8"/>
+    <!-- Polymer layer -->
+    <rect x="46" y="132" width="308" height="106" fill="#0c2920" stroke="#22c55e" stroke-width="1.5"/>
+    <!-- Bottom electrode -->
+    <rect x="46" y="238" width="308" height="16" rx="2" fill="#64748b"/>
+    <text x="200" y="250" fill="#0f131a" font-size="10" font-weight="800" text-anchor="middle">SILICON SUBSTRATE &amp; BOTTOM ELECTRODE</text>
+    <!-- Water molecules (blue circles) -->
+    <g fill="#38bdf8">
+      <circle cx="84" cy="158" r="8"/><circle cx="136" cy="176" r="8"/><circle cx="190" cy="154" r="8"/>
+      <circle cx="246" cy="172" r="8"/><circle cx="304" cy="156" r="8"/><circle cx="106" cy="210" r="8"/>
+      <circle cx="168" cy="214" r="8"/><circle cx="228" cy="208" r="8"/><circle cx="288" cy="212" r="8"/>
+      <circle cx="326" cy="190" r="8"/><circle cx="68" cy="192" r="8"/>
+    </g>
+    <text x="200" y="278" fill="#4ade80" font-size="12.5" font-weight="800" text-anchor="middle">Capacitance = Pure Water Signal</text>
+    <text x="200" y="294" fill="#94a3b8" font-size="11" text-anchor="middle">Fast 4 s response · ±1.0% RH accuracy</text>
+  </g>
+
+  <!-- RIGHT: POISONED -->
+  <g font-family="system-ui,sans-serif">
+    <text x="615" y="84" fill="#f87171" font-size="14" font-weight="800" text-anchor="middle">POISONED SENSOR (GROW ROOM)</text>
+    <text x="615" y="100" fill="#fca5a5" font-size="11" text-anchor="middle">Oil clogs pores · Solvents steal seats · Oxidizers swell &amp; corrode</text>
+    <!-- Oily / quat film on top -->
+    <rect x="460" y="106" width="310" height="14" rx="3" fill="#eab308"/>
+    <text x="615" y="116.5" fill="#111" font-size="9" font-weight="900" text-anchor="middle">NEEM OIL / QUAT SURFACTANT / SALT SLUDGE (15–60 MIN LAG)</text>
+    <!-- Top electrode (corroded) -->
+    <rect x="460" y="120" width="58" height="14" rx="2" fill="#94a3b8"/>
+    <rect x="528" y="120" width="58" height="14" rx="2" fill="#b45309"/>
+    <rect x="596" y="120" width="58" height="14" rx="2" fill="#94a3b8"/>
+    <rect x="664" y="120" width="106" height="14" rx="2" fill="#991b1b"/>
+    <!-- Swollen polymer -->
+    <rect x="460" y="134" width="310" height="106" fill="#291217" stroke="#ef4444" stroke-width="1.5"/>
+    <!-- Bottom electrode -->
+    <rect x="460" y="240" width="310" height="16" rx="2" fill="#7f1d1d"/>
+    <text x="615" y="252" fill="#fecaca" font-size="10" font-weight="800" text-anchor="middle">SULFIDE / CHLORINE CORRODED TRACES &amp; CONTACTS</text>
+    <!-- Mixed molecules: few water, lots of orange solvents + red oxidizers -->
+    <circle cx="502" cy="168" r="7" fill="#38bdf8"/>
+    <circle cx="630" cy="212" r="7" fill="#38bdf8"/>
+    <circle cx="718" cy="176" r="7" fill="#38bdf8"/>
+    <rect x="536" y="150" width="16" height="16" rx="3" fill="#f97316"/>
+    <rect x="582" y="176" width="16" height="16" rx="3" fill="#f97316"/>
+    <rect x="658" y="152" width="16" height="16" rx="3" fill="#f97316"/>
+    <rect x="484" y="204" width="16" height="16" rx="3" fill="#f97316"/>
+    <rect x="688" y="204" width="16" height="16" rx="3" fill="#f97316"/>
+    <polygon points="560,218 570,200 580,218" fill="#ef4444"/>
+    <polygon points="620,168 630,150 640,168" fill="#ef4444"/>
+    <polygon points="736,216 746,198 756,216" fill="#ef4444"/>
+    <polygon points="512,188 522,170 532,188" fill="#ef4444"/>
+    <text x="615" y="278" fill="#f87171" font-size="12.5" font-weight="800" text-anchor="middle">Reading = Water + Solvents − Blocked Sites</text>
+    <text x="615" y="294" fill="#fca5a5" font-size="11" text-anchor="middle">Tilted slope · Swollen chains · Permanent drift</text>
+  </g>
+
+  <!-- Legend -->
+  <circle cx="170" cy="312" r="5.5" fill="#38bdf8"/><text x="182" y="316" fill="#cbd5e1" font-size="11" font-family="system-ui,sans-serif">Water (εᵣ≈80)</text>
+  <rect x="295" y="306" width="11" height="11" rx="2" fill="#f97316"/><text x="312" y="316" fill="#cbd5e1" font-size="11" font-family="system-ui,sans-serif">IPA / Ethanol / Terpenes (εᵣ≈18–25)</text>
+  <polygon points="525,317 531,306 537,317" fill="#ef4444"/><text x="544" y="316" fill="#cbd5e1" font-size="11" font-family="system-ui,sans-serif">H₂O₂ / PAA / Cl₂ / SO₂ Oxidizers</text>
+</svg>
+<figcaption>Figure 3. Risk scales with Concentration × Exposure Time × Temperature. A warm grow room sprayed every week is worst-case on all three.</figcaption>
+</figure>
+
+<h3>Busting the #1 Grow-Room Myth: "Dirty Sensors Always Read Wet"</h3>
+<p>Most growers assume a poisoned sensor always reads too high (wet). <strong>That is dangerously half-wrong.</strong></p>
+<p>Sensirion splits contamination into <strong>surface</strong> (oils, dust, crusts on the outside) and <strong>bulk</strong> (chemicals diffusing <em>into</em> the polymer—"by far the most frequent form"). Once chemicals get inside or coat the chip, there are <strong>five distinct ways your sensor betrays you</strong>:</p>
+<ol>
+<li><strong>Flat Offset (The Rare One):</strong> The whole reading shifts up or down uniformly. This is the <em>only</em> failure an app calibration slider can fix—and the <em>least common</em> result of chemical poisoning.</li>
+<li><strong>Slope Collapse & The Crossover Trap (The Sneakiest Killer):</strong> Polar solvents like ethanol (ε<sub>r</sub> = 24.5), acetone ($20.7$), IPA ($17.9$), and acetic acid ($6.15$) hydrogen-bond to water's binding sites inside the polymer.</li>
+</ol>
+<ul>
+<li>At <strong>low RH</strong> (where the polymer should be nearly empty), those extra polar molecules <em>add</em> capacitance → the sensor <strong>reads HIGH (wet)</strong>.</li>
+<li>At <strong>high RH</strong> (where water should fill those sites), those contaminants <em>block</em> water (ε<sub>r</sub> ≈ 80) with a weaker dielectric → the sensor <strong>reads LOW (dry)</strong> and loses gain/sensitivity.</li>
+<li><strong>The Crossover Trap:</strong> Because it reads high at the bottom and low at the top, the poisoned curve <em>crosses</em> the true line right around <strong>50–65% RH</strong>—meaning a wrecked probe can look <strong>100% accurate at one room setpoint</strong> while lying its ass off at lights-off spikes or in a 75% salt bag!</li>
+<li><em>Hard lab proof (Honeywell HIH-3602 vapour tests):</em> Methanol shifted a sensor <strong>−5.4% RH at 0% RH</strong> and <strong>+39.8% RH at 75% RH</strong>. A 50/50 ethanol/methanol mix shifted <strong>+14.5% at 0% RH</strong> and <strong>−17.4% at 75% RH</strong>—the error completely flipped sign across the range! Similarly, TI's HDC3020 exposed to 65.7% IPA read <strong>+2% at 10% RH</strong> and <strong>−2% at 90% RH</strong>.</li>
+</ul>
+<ol>
+<li><strong>High-Humidity Creep (Reversible, But Constant in Grow/Dry Rooms):</strong> Sitting above <strong>80% RH</strong> for days causes water clustering inside the polymer. Sensirion's datasheets admit <strong>+3% RH upward creep after 60 hours >80% RH</strong> on <em>both</em> SHT3x and SHT4x chips (Aosong lists the exact same +3% creep on the AHT20). In Matsuguchi's hot-humid ageing test (40 °C [104 °F] / 90% RH for 1,000 h), a polyimide prototype shifted <strong>+6% RH wet</strong>. Lights-off flower spikes, propagation domes, and wet drying rooms live in this zone.</li>
+<li><strong>Surface Fouling, Sluggish Lag & Salt Crusts:</strong> Foliar oils, surfactants, waxes, and dust coat the inlet or membrane. The sensor lags <strong>15 to 60 minutes</strong> behind real humidity swings—reading falsely wet while a room dries and falsely dry while humidity spikes—making dehumidifiers overshoot and hunt non-stop. Worse, TI documents that <strong>ionic salt/condensation residues above 80% RH cause errors often exceeding −10% RH</strong>, and TI's heavy surface-coating smoke test destroyed sensor gain from <strong>+25% down to −50% RH</strong> across the range.</li>
+<li><strong>The "Blind Sensor," Delayed Drift & Hardware Corrosion:</strong></li>
+</ol>
+<ul>
+<li><strong>Blind Sensor:</strong> Saturate the polymer enough and the output barely moves at all—printing a rock-steady, super-believable <code>58.4% RH</code> while measuring nothing.</li>
+<li><strong>Delayed Drift:</strong> Both Sensirion and Vaisala warn that slow-diffusing contaminants keep creeping into the polymer <em>after</em> exposure ends. A probe can pass inspection the morning after a spray and drift out of spec <strong>a week later</strong>.</li>
+<li><strong>Corrosion:</strong> Strong oxidizers, bleach/chlorine, and sulfur + night dew corrode copper PCB traces, pins, and silver/nickel electrodes into resistive sulfide crusts (Cu<sub>2</sub>S, Ag<sub>2</sub>S) or dead open circuits. TI physically observed <strong>corroded copper traces and pins</strong> in its 4.5% hypochlorite test.</li>
+</ul>
+
+<figure class="fig">
+<svg viewBox="0 0 820 215" width="100%" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Five ways contaminated RH sensors fail">
+  <rect width="820" height="215" rx="12" fill="#0f131a"/>
+  <text x="24" y="30" fill="#f8fafc" font-size="15.5" font-weight="900" font-family="system-ui,sans-serif">GRAPHIC 4 · THE 5 WAYS CHEMICALS BREAK YOUR SENSOR</text>
+  <g font-family="system-ui,sans-serif">
+    <!-- Card 1: Flat Offset -->
+    <rect x="20" y="48" width="148" height="148" rx="8" fill="#161b26" stroke="#334155"/>
+    <text x="94" y="68" fill="#38bdf8" font-size="11.5" font-weight="800" text-anchor="middle">1. FLAT OFFSET</text>
+    <line x1="36" y1="138" x2="152" y2="86" stroke="#22c55e" stroke-width="2" stroke-dasharray="3 3"/>
+    <line x1="36" y1="122" x2="152" y2="70" stroke="#38bdf8" stroke-width="2.5"/>
+    <text x="94" y="162" fill="#cbd5e1" font-size="10" text-anchor="middle">Whole line shifts.</text>
+    <text x="94" y="176" fill="#94a3b8" font-size="9.5" text-anchor="middle">Rare alone after sprays.</text>
+    <text x="94" y="190" fill="#38bdf8" font-size="9.5" font-weight="700" text-anchor="middle">Only fixable by offset</text>
+
+    <!-- Card 2: Crossover -->
+    <rect x="178" y="48" width="148" height="148" rx="8" fill="#161b26" stroke="#ef4444"/>
+    <text x="252" y="68" fill="#f87171" font-size="11.5" font-weight="800" text-anchor="middle">2. CROSSOVER TILT</text>
+    <line x1="194" y1="138" x2="310" y2="82" stroke="#22c55e" stroke-width="2" stroke-dasharray="3 3"/>
+    <line x1="194" y1="116" x2="310" y2="104" stroke="#ef4444" stroke-width="2.5"/>
+    <circle cx="252" cy="110" r="4" fill="#fbbf24"/>
+    <text x="252" y="162" fill="#fecaca" font-size="10" text-anchor="middle">High low-RH, low high-RH.</text>
+    <text x="252" y="176" fill="#94a3b8" font-size="9.5" text-anchor="middle">Fools 1-point checks!</text>
+    <text x="252" y="190" fill="#ef4444" font-size="9.5" font-weight="800" text-anchor="middle">OFFSET BREAKS IT MORE</text>
+
+    <!-- Card 3: Creep -->
+    <rect x="336" y="48" width="148" height="148" rx="8" fill="#161b26" stroke="#f59e0b"/>
+    <text x="410" y="68" fill="#fbbf24" font-size="11.5" font-weight="800" text-anchor="middle">3. HIGH-RH CREEP</text>
+    <line x1="352" y1="126" x2="468" y2="126" stroke="#22c55e" stroke-width="2" stroke-dasharray="3 3"/>
+    <path d="M352 126 Q400 120 468 92" fill="none" stroke="#f59e0b" stroke-width="2.5"/>
+    <text x="410" y="162" fill="#fef3c7" font-size="10" text-anchor="middle">+3% after 60h &gt;80% RH</text>
+    <text x="410" y="176" fill="#94a3b8" font-size="9.5" text-anchor="middle">Lights-off &amp; dry rooms.</text>
+    <text x="410" y="190" fill="#fbbf24" font-size="9.5" font-weight="700" text-anchor="middle">Reversible w/ SHT4x heat</text>
+
+    <!-- Card 4: Lag -->
+    <rect x="494" y="48" width="148" height="148" rx="8" fill="#161b26" stroke="#f97316"/>
+    <text x="568" y="68" fill="#fb923c" font-size="11.5" font-weight="800" text-anchor="middle">4. OIL LAG / HUNT</text>
+    <path d="M510 132 L536 90 L574 90 L594 132 L626 132" fill="none" stroke="#22c55e" stroke-width="2" stroke-dasharray="3 3"/>
+    <path d="M510 132 Q550 128 576 96 Q604 98 626 122" fill="none" stroke="#f97316" stroke-width="2.5"/>
+    <text x="568" y="162" fill="#ffedd5" font-size="10" text-anchor="middle">15–60 min slow response</text>
+    <text x="568" y="176" fill="#94a3b8" font-size="9.5" text-anchor="middle">Dehus overshoot &amp; cycle.</text>
+    <text x="568" y="190" fill="#fb923c" font-size="9.5" font-weight="800" text-anchor="middle">Oils/quats glaze pores</text>
+
+    <!-- Card 5: Blind -->
+    <rect x="652" y="48" width="148" height="148" rx="8" fill="#230b0e" stroke="#dc2626"/>
+    <text x="726" y="68" fill="#fca5a5" font-size="11.5" font-weight="800" text-anchor="middle">5. "BLIND" SENSOR</text>
+    <path d="M668 134 L700 84 L742 134 L784 86" fill="none" stroke="#22c55e" stroke-width="2" stroke-dasharray="3 3"/>
+    <line x1="668" y1="112" x2="784" y2="113" stroke="#ef4444" stroke-width="3"/>
+    <text x="726" y="162" fill="#fecaca" font-size="10" text-anchor="middle">Flat, smooth, believable</text>
+    <text x="726" y="176" fill="#94a3b8" font-size="9.5" text-anchor="middle">Measures NOTHING.</text>
+    <text x="726" y="190" fill="#ef4444" font-size="9.5" font-weight="900" text-anchor="middle">STRAIGHT IN THE BIN</text>
+  </g>
+</svg>
+</figure>
+
+
+<figure class="fig">
+<svg viewBox="0 0 820 340" width="100%" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Crossover curve trap and Honeywell real vapour test sign flip">
+  <rect width="820" height="340" rx="12" fill="#0f131a"/>
+  <text x="26" y="32" fill="#f8fafc" font-size="16.5" font-weight="900" font-family="system-ui,sans-serif">GRAPHIC 5 · THE CROSSOVER TRAP &amp; REAL LAB SIGN-FLIP PROOF</text>
+  <text x="26" y="51" fill="#94a3b8" font-size="11.5" font-family="system-ui,sans-serif">Left: Sensirion/TI contamination model. Right: Actual Honeywell HIH-3602 &amp; TI HDC3020 lab tests proving error FLIPS SIGN across RH!</text>
+
+  <!-- LEFT PANEL: Crossover curve x=58..408, y=78..278 -->
+  <g font-family="system-ui,sans-serif">
+    <rect x="233" y="78" width="53" height="200" fill="#f59e0b" opacity="0.12"/>
+    <text x="259" y="92" fill="#fbbf24" font-size="9.5" font-weight="800" text-anchor="middle">GROW/DRY</text>
+    <line x1="58" y1="278" x2="408" y2="278" stroke="#334155"/>
+    <line x1="58" y1="228" x2="408" y2="228" stroke="#1e293b" stroke-dasharray="3 4"/>
+    <line x1="58" y1="178" x2="408" y2="178" stroke="#1e293b" stroke-dasharray="3 4"/>
+    <line x1="58" y1="128" x2="408" y2="128" stroke="#1e293b" stroke-dasharray="3 4"/>
+    <line x1="58" y1="78" x2="408" y2="78" stroke="#1e293b" stroke-dasharray="3 4"/>
+    <text x="50" y="282" fill="#64748b" font-size="10" text-anchor="end">0%</text>
+    <text x="50" y="182" fill="#64748b" font-size="10" text-anchor="end">50%</text>
+    <text x="50" y="82" fill="#64748b" font-size="10" text-anchor="end">100%</text>
+    <text x="58" y="295" fill="#64748b" font-size="10" text-anchor="middle">0%</text>
+    <text x="233" y="295" fill="#64748b" font-size="10" text-anchor="middle">50%</text>
+    <text x="408" y="295" fill="#64748b" font-size="10" text-anchor="middle">100%</text>
+    <text x="233" y="316" fill="#cbd5e1" font-size="11" font-weight="700" text-anchor="middle">True Room RH (%)</text>
+    <!-- Honest line -->
+    <line x1="58" y1="278" x2="408" y2="78" stroke="#22c55e" stroke-width="2.5"/>
+    <text x="348" y="96" fill="#4ade80" font-size="10.5" font-weight="700">Honest</text>
+    <!-- Poisoned line -->
+    <path d="M58 250 Q160 206 250 168 T408 112" fill="none" stroke="#ef4444" stroke-width="3.2"/>
+    <circle cx="250" cy="168" r="5.5" fill="#fbbf24" stroke="#0f131a" stroke-width="2"/>
+    <text x="258" y="186" fill="#fbbf24" font-size="10.5" font-weight="800">Crossover ("looks OK")</text>
+    <text x="74" y="216" fill="#f87171" font-size="11" font-weight="800">READS HIGH</text>
+    <text x="310" y="148" fill="#f87171" font-size="11" font-weight="800">READS LOW</text>
+  </g>
+
+  <!-- Divider -->
+  <line x1="432" y1="74" x2="432" y2="318" stroke="#1e293b" stroke-width="1.5"/>
+
+  <!-- RIGHT PANEL: Real Lab Sign-Flip Bars (0 line at x=626, scale 2.4 px per %RH) -->
+  <g font-family="system-ui,sans-serif">
+    <text x="626" y="88" fill="#f8fafc" font-size="12.5" font-weight="800" text-anchor="middle">REAL LAB SIGN FLIPS (%RH ERROR)</text>
+    <line x1="626" y1="100" x2="626" y2="296" stroke="#64748b" stroke-width="1.5"/>
+    <text x="626" y="313" fill="#94a3b8" font-size="10" text-anchor="middle">0%</text>
+    <text x="512" y="313" fill="#f87171" font-size="10" text-anchor="middle">−50% (Dry)</text>
+    <text x="730" y="313" fill="#fbbf24" font-size="10" text-anchor="middle">+40% (Wet)</text>
+
+    <!-- Methanol (Honeywell) -->
+    <text x="446" y="114" fill="#e2e8f0" font-size="10.5" font-weight="800">Methanol Vapour (Honeywell HIH-3602)</text>
+    <rect x="613" y="119" width="13" height="11" rx="2" fill="#38bdf8"/>
+    <text x="608" y="128" fill="#38bdf8" font-size="9.5" font-weight="700" text-anchor="end">−5.4% @0%</text>
+    <rect x="626" y="133" width="96" height="11" rx="2" fill="#ef4444"/>
+    <text x="727" y="142" fill="#fca5a5" font-size="9.5" font-weight="800">+39.8% @75%</text>
+
+    <!-- 50/50 EtOH/MeOH (Honeywell) -->
+    <text x="446" y="164" fill="#e2e8f0" font-size="10.5" font-weight="800">50/50 Ethanol–Methanol (Honeywell HIH-3602)</text>
+    <rect x="626" y="169" width="35" height="11" rx="2" fill="#f59e0b"/>
+    <text x="666" y="178" fill="#fbbf24" font-size="9.5" font-weight="800">+14.5% @0%</text>
+    <rect x="584" y="183" width="42" height="11" rx="2" fill="#ef4444"/>
+    <text x="579" y="192" fill="#fca5a5" font-size="9.5" font-weight="800" text-anchor="end">−17.4% @75%</text>
+
+    <!-- 65.7% IPA (TI HDC3020) -->
+    <text x="446" y="214" fill="#e2e8f0" font-size="10.5" font-weight="800">65.7% IPA, 8×30s (TI HDC3020)</text>
+    <rect x="626" y="219" width="10" height="11" rx="2" fill="#f59e0b"/>
+    <text x="641" y="228" fill="#fbbf24" font-size="9.5" font-weight="700">+2.0% @10%</text>
+    <rect x="616" y="233" width="10" height="11" rx="2" fill="#38bdf8"/>
+    <text x="611" y="242" fill="#38bdf8" font-size="9.5" font-weight="700" text-anchor="end">−2.0% @90%</text>
+
+    <!-- Heavy Smoke Coating (TI) -->
+    <text x="446" y="264" fill="#e2e8f0" font-size="10.5" font-weight="800">Heavy Surface Coating (TI Smoke Test)</text>
+    <rect x="626" y="269" width="60" height="11" rx="2" fill="#f97316"/>
+    <text x="691" y="278" fill="#fb923c" font-size="9.5" font-weight="800">+25% @10%</text>
+    <rect x="506" y="283" width="120" height="11" rx="2" fill="#991b1b"/>
+    <text x="501" y="292" fill="#fca5a5" font-size="9.5" font-weight="800" text-anchor="end">−50% @90%</text>
+  </g>
+</svg>
+<figcaption>Figure 5. Why single-point app calibration is a trap: in real lab tests, chemical exposure makes the same sensor read HIGH at one humidity and LOW at another.</figcaption>
+</figure>
+
+<div class="callout"><strong>Side-Note — Your CO<sub>2</sub> Sensor Isn't Safe Either:</strong> While capacitive RH chips are casualty #1, NDIR CO<sub>2</sub> sensors also degrade when fogger oils, surfactants, and salt mists coat their internal gold-plated optical mirrors and IR filters. Worse, Automatic Baseline Calibration (ABC) assumes the room drops to ~400 ppm outdoor air regularly—so in sealed CO<sub>2</sub>-enriched flower rooms, ABC actively masks or corrupts calibration.</div>
+</section>
+<section id="3-the-grow-room-chemical-hit-list">
+<h2>3. The Grow-Room Chemical Hit List</h2>
+<p>Here is what you actually spray, wipe, fog, and burn—matched directly against published lab tests and manufacturer compatibility limits.</p>
+<div class="table-wrap"><table class="data-table"><thead><tr>
+<th>Grow-Room Product / Source</th>
+<th>Active & Hidden Ingredients</th>
+<th>How It Wrecks Sensors + Hard Published Data</th>
+<th>Typical Drift & Reversibility</th>
+</tr></thead><tbody>
+<tr><td><strong>70–99% IPA & Ethanol</strong> (bench wipes, tool dips, hand sanitizer) & <strong>Green Cleaner</strong></td><td>Isopropanol, ethanol <em>(Note: Green Cleaner is soybean oil + SLS + <strong>IPA as inert!</strong>)</em></td><td>Polar –OH groups mimic water (ε<sub>r</sub> = 17.9–24.5). Sensirion: <em>"irreversibly in most cases."</em> Bosch: permanent damage <em>"very likely."</em> TI: <em>"will always have large impact on RH accuracy."</em> <strong>Lab data:</strong> Honeywell 66% IPA liquid soak left <strong>+1.83% RH</strong> at 75% after 60h recovery; ethanol vapour headspace caused <strong>outright failure</strong> (89–893h). Vaisala: standard sensors in IPA vapour drifted <strong>within 24 h</strong>; in 126-day 50,000 ppm IPA test, a rival exceeded 3 pts while Vaisala HMP7 held. TI HDC3020: 862–1,003 ppm ethanol (21d) = +0.7 at 10% / −0.9 at 90%; 8× 30s 65.7% IPA shots = +2 at 10% / −2 at 90%. Rotronic ±2% continuous limit: IPA 4,800–6,000 ppm, ethanol 3,500–5,800 ppm.</td><td>High at low RH, low at high RH (or erratic). Brief exposure reversible; heavy exposure permanent unless baked.</td></tr>
+<tr><td><strong>ZeroTol 2.0 / SaniDate</strong> (room fogging & sanitation)</td><td><strong>27.1% H<sub>2</sub>O<sub>2</sub></strong>, <strong>2.0% peracetic acid (PAA)</strong></td><td>Aggressive oxidizers attack polymer backbone + H<sub>2</sub>O<sub>2</sub> gives a <em>stronger</em> capacitive signal than water. Sensirion & TI list H<sub>2</sub>O<sub>2</sub> as irreversible. Vaisala: <em>"Standard RH sensors are not recommended in vaporized H<sub>2</sub>O<sub>2</sub>."</em> Even catalytically protected Vaisala <strong>PEROXCAP</strong> reads <strong>+1% RH at 300 ppm</strong> and <strong>+3% at 900 ppm</strong> (23 °C [73.4 °F]), and <strong>unpowered condensing vH<sub>2</sub>O<sub>2</sub> causes permanent failure within 24 hours!</strong> Rotronic limits: H<sub>2</sub>O<sub>2</sub> <strong>90 ppm</strong> (IN-1) / 880 ppm (HH-1); acetic acid 800–1,000 ppm. Vaisala warns even a <strong>180 °C chemical purge cannot remove tiny molecules like acetic acid or methanol!</strong> <em>(Honeywell liquid Endo-Spor: +0.4/−0.43%; TI 7.35% single liquid shot: ~−1 pt near 90%.)</em></td><td>Wet spikes during dosing; permanent oxidative shift or sensor death.</td></tr>
+<tr><td><strong>Bleach (NaOCl), Hypochlorous Acid (HOCl) & Virkon S</strong></td><td>Hypochlorite, chlorine, <strong>21.41% potassium peroxymonosulfate</strong> <em>(Virkon S is NOT a quat)</em></td><td>Oxidative polymer attack + halogen corrosion of pins, bond wires, and traces. <strong>Lab data:</strong> Rotronic chlorine limit is tiny—<strong>0.7 to 1.5 ppm</strong>! TI's repeated 4.5% sodium hypochlorite challenge <strong>corroded copper traces and pins</strong> and caused massive negative gain. Honeywell hypochlorite soak: <strong>+0.43 / +1.53% RH</strong>. <em>(Note: No exact drift curve exists for dilute HOCl spray; treat wetting/chlorine mist as high-risk.)</em></td><td>Permanent gain loss, drift, or dead traces.</td></tr>
+<tr><td><strong>Physan 20 & Quats (QACs)</strong></td><td><strong>20% quaternary ammonium</strong> surfactants</td><td>Don't evaporate cleanly—leave a tacky, hygroscopic surfactant film right over the sensing window that traps moisture. <strong>Lab data:</strong> Detergents are on Sensirion's avoid list. Honeywell Virex quat soak: +0.3 / +0.8% RH; <strong>Kleenaseptic soak: +2.96 / +4.66% RH</strong> after 60h recovery.</td><td>Persistent <strong>upward (wet)</strong> drift + sluggish response. Permanent.</td></tr>
+<tr><td><strong>Sulfur Burners & Wettable Sulfur</strong></td><td>Elemental sulfur dust, SO<sub>2</sub> gas</td><td>Dust plugs filters; SO<sub>2</sub> + night-time dew/condensation forms sulfuric acid that turns copper/silver contacts into resistive sulfide crusts (Cu<sub>2</sub>S, Ag<sub>2</sub>S). <strong>Lab data:</strong> Rotronic limits <strong>5 ppm SO<sub>2</sub></strong> (350 ppm H<sub>2</sub>S). TI 5 ppm SO<sub>2</sub> (21d): ~−0.9 pts at 90%. Vaisala confirms sulfur + dew = <strong>irreversible drift</strong>.</td><td>Erratic drift → corroded, dead probe. Permanent.</td></tr>
+<tr><td><strong>Foliar IPM Oils, Soaps & Bio-Sprays</strong> (<strong>SNS-209</strong>, <strong>Athena IPM</strong>, neem, horticultural oil, pyrethrin foggers, <strong>Regalia</strong>, <strong>Venerate XC</strong>, Ca/Si sprays)</td><td>Rosemary (10% ext / 0.23% oil), peppermint/lemongrass/geranium oils (1.5% ea + 0.05% citric), neem/soybean oil, fatty acid soaps, <em>R. sachalinensis</em> 5%, heat-killed <em>Burkholderia</em> A396, mineral salts, fogger carriers</td><td>Hydrophobic oils and fogger carriers clog porous membranes/pores; nutrient sprays leave salty hygroscopic crusts. <em>(No university spray-cycle curve exists, but surface-film pore clogging is established by every maker; TI's severe smoke coating test wrecked gain from +25 to −50 pts.)</em> Always check the SDS for hidden solvents/propellants.</td><td>Severe lag (15–60 min), hysteresis, <strong>downward (dry) bias</strong> from oil blockage or wet spikes from salt crusts. Permanent.</td></tr>
+<tr><td><strong>Late-Flower Terpenes & Off-Gassing Plastics / Silicone / Tape</strong></td><td>Monoterpenes, sesquiterpenes, siloxanes, plasticizers, adhesives</td><td>Lipophilic terpenes partition into the polymer over weeks (Colorado commercial grow studies confirm heavy indoor monoterpene emissions). <strong>Closest long-term test:</strong> Vaisala's <strong>400-day wood-dryer study</strong> (terpenes, acids, alcohols, ketones) drifted standard sensors <strong>>1% at 0% RH and >2.5% at 75% RH</strong> (vs. 0.5% on chemically resistant probe). TI toluene (298–322 ppm, 21d): ~−2 pts at 90%. <strong>Hidden killer:</strong> Rotronic literally puts an exclamation mark on it—<strong>"silicone damages the sensor!"</strong> Sensirion, TI, and Renesas also ban <strong>PE antistatic bags, pink foam, fresh PVC cases, cable ties, tape, and adhesives</strong>.</td><td>Gradual sensitivity loss, dry bias at high RH, or permanent offset.</td></tr>
+<tr><td><strong>Ammonia (NH<sub>3</sub>)</strong> (cleaners, decomposing media)</td><td>NH<sub>3</sub> / NH<sub>4</sub>OH</td><td>Sensirion lists NH<sub>3</sub> as irreversible. Honeywell ammonium hydroxide headspace = <strong>outright failure from 89 hours onward</strong> <em>(Rotronic lists 5,500 ppm within ±2% on industrial elements—polymers/protocols differ)</em>.</td><td>Severe permanent drift / failure.</td></tr>
+<tr><td><strong>Ozone Generators (O<sub>3</sub>)</strong></td><td>O<sub>3</sub></td><td>Rapid oxidative destruction of polymer film and micro-electronics. Sensirion, TI, Bosch = irreversible. Rotronic limit: <strong>1.0–1.5 ppm</strong>.</td><td>Rapid, catastrophic permanent failure.</td></tr>
+</tbody></table></div>
+
+<figure class="fig">
+<svg viewBox="0 0 820 355" width="100%" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Log-scale chemical ppm danger limits for humidity sensors">
+  <rect width="820" height="355" rx="12" fill="#0f131a"/>
+  <text x="26" y="32" fill="#f8fafc" font-size="16.5" font-weight="900" font-family="system-ui,sans-serif">GRAPHIC 6 · HOW LITTLE IT TAKES: CONTINUOUS PPM LIMITS (LOG SCALE)</text>
+  <text x="26" y="51" fill="#94a3b8" font-size="11.5" font-family="system-ui,sans-serif">Rotronic published max continuous ppm for ±2% RH tolerance (shorter bar = MORE LETHAL to your probe). Plus non-volatile &amp; myth callouts.</text>
+  <g font-family="system-ui,sans-serif" font-size="11.5">
+    <!-- Log10 scale from 0.1 ppm (x=220) to 10000 ppm (x=720) -> 5 decades = 100 px/decade -->
+    <!-- x = 220 + (log10(ppm) + 1) * 100 -->
+    <line x1="220" y1="70" x2="220" y2="270" stroke="#334155"/>
+    <line x1="320" y1="70" x2="320" y2="270" stroke="#1e293b" stroke-dasharray="3 4"/>
+    <line x1="420" y1="70" x2="420" y2="270" stroke="#1e293b" stroke-dasharray="3 4"/>
+    <line x1="520" y1="70" x2="520" y2="270" stroke="#1e293b" stroke-dasharray="3 4"/>
+    <line x1="620" y1="70" x2="620" y2="270" stroke="#1e293b" stroke-dasharray="3 4"/>
+    <line x1="720" y1="70" x2="720" y2="270" stroke="#1e293b" stroke-dasharray="3 4"/>
+    <text x="220" y="286" fill="#64748b" font-size="10" text-anchor="middle">0.1 ppm</text>
+    <text x="320" y="286" fill="#ef4444" font-size="10" font-weight="700" text-anchor="middle">1 ppm</text>
+    <text x="420" y="286" fill="#f97316" font-size="10" text-anchor="middle">10 ppm</text>
+    <text x="520" y="286" fill="#f59e0b" font-size="10" text-anchor="middle">100 ppm</text>
+    <text x="620" y="286" fill="#94a3b8" font-size="10" text-anchor="middle">1,000 ppm</text>
+    <text x="720" y="286" fill="#94a3b8" font-size="10" text-anchor="middle">10,000 ppm</text>
+
+    <!-- Cl2 0.7-1.5 ppm -> log10(1.1)=0.04 -> x=324 (w=104) -->
+    <text x="210" y="92" fill="#fca5a5" text-anchor="end" font-weight="800">Chlorine / Bleach (Cl₂)</text>
+    <rect x="220" y="79" width="104" height="17" rx="3" fill="#dc2626"/>
+    <text x="332" y="92" fill="#fca5a5" font-weight="800">0.7–1.5 ppm (ULTRA-LETHAL · TI observed Cu corrosion)</text>
+
+    <!-- Ozone 1-1.5 ppm -> w=110 -->
+    <text x="210" y="118" fill="#fca5a5" text-anchor="end" font-weight="800">Ozone (O₃)</text>
+    <rect x="220" y="105" width="110" height="17" rx="3" fill="#dc2626"/>
+    <text x="338" y="118" fill="#fca5a5" font-weight="800">1.0–1.5 ppm (Irreversible polymer breakdown)</text>
+
+    <!-- EtO 3 ppm -> log10(3)=0.48 -> w=148 -->
+    <text x="210" y="144" fill="#fca5a5" text-anchor="end" font-weight="700">Ethylene Oxide (EtO)</text>
+    <rect x="220" y="131" width="148" height="17" rx="3" fill="#ef4444"/>
+    <text x="376" y="144" fill="#f87171" font-weight="700">3 ppm (Medical sterilant — NOT plant ethylene!)</text>
+
+    <!-- SO2 5 ppm -> log10(5)=0.70 -> w=170 -->
+    <text x="210" y="170" fill="#fb923c" text-anchor="end" font-weight="700">Sulfur Dioxide (SO₂)</text>
+    <rect x="220" y="157" width="170" height="17" rx="3" fill="#f97316"/>
+    <text x="398" y="170" fill="#fb923c" font-weight="700">5 ppm (+ night dew = sulfuric acid corrosion)</text>
+
+    <!-- H2O2 90 ppm (IN-1) -> log10(90)=1.95 -> w=295 -->
+    <text x="210" y="196" fill="#fbbf24" text-anchor="end" font-weight="800">Hydrogen Peroxide (H₂O₂)</text>
+    <rect x="220" y="183" width="295" height="17" rx="3" fill="#f59e0b"/>
+    <text x="523" y="196" fill="#fbbf24" font-weight="700">90 ppm (IN-1) · Condensing vH₂O₂ kills in 24h!</text>
+
+    <!-- Acetic acid (PAA) 800 ppm -> log10(800)=2.90 -> w=390 -->
+    <text x="210" y="222" fill="#e2e8f0" text-anchor="end" font-weight="600">Acetic Acid (in PAA)</text>
+    <rect x="220" y="209" width="390" height="17" rx="3" fill="#eab308"/>
+    <text x="618" y="222" fill="#fde047" font-weight="700">800–1k ppm (180 °C purge fails)</text>
+
+    <!-- Ethanol 3500-5800 -> log10(4500)=3.65 -> w=465 -->
+    <text x="210" y="248" fill="#cbd5e1" text-anchor="end" font-weight="600">Ethanol / IPA Vapour</text>
+    <rect x="220" y="235" width="465" height="17" rx="3" fill="#38bdf8"/>
+    <text x="692" y="248" fill="#7dd3fc" font-weight="700">3.5k–6k ppm</text>
+  </g>
+  <!-- Bottom callout pills -->
+  <rect x="26" y="302" width="482" height="36" rx="6" fill="#230b0e" stroke="#ef4444"/>
+  <text x="38" y="324" fill="#fecaca" font-size="10.4" font-weight="700" font-family="system-ui,sans-serif">⚠ ALSO DEADLY (NON-PPM): Silicone · PE antistatic bags · Pink foam · Neem/Quats</text>
+  <rect x="520" y="302" width="274" height="36" rx="6" fill="#071e15" stroke="#22c55e"/>
+  <text x="532" y="324" fill="#86efac" font-size="10.5" font-weight="800" font-family="system-ui,sans-serif">✓ MYTH BUSTED: Plant Ethylene (C₂H₄) = SAFE</text>
+</svg>
+</figure>
+
+<h3>Myth Busted: Stop Blaming Plant Ethylene (C<sub>2</sub>H<sub>4</sub>)</h3>
+<p>Growers love blaming "plant ethylene" for drifting dry-room sensors—especially since a 2022 Clemson / <em>Cannabis Business Times</em> talk noted ethylene is detectable in dry rooms. <strong>Here is the honest science:</strong> across Vaisala, Rotronic, Honeywell, TI, and Sensirion compatibility guides, <strong>there is zero controlled evidence that biological plant ethylene poisons capacitive RH sensors at grow-room concentrations.</strong></p>
+<p>Ethylene (C<sub>2</sub>H<sub>4</sub>) is a tiny, non-polar hydrocarbon—just like ethane, methane, propane, and butane, which Rotronic lists as having <strong>no influence</strong> (and TI notes non-polar vapours have negligible dielectric impact). Growers mixed up plant ethylene with <strong>ethylene oxide (C<sub>2</sub>H<sub>4</sub>O, EtO)</strong>—a toxic medical sterilant (Rotronic limit: <strong>3 ppm</strong>) that destroys thermoplastic sensors—and <strong>ethylene glycol</strong>. What actually wrecks your dry-room sensor is the heavy terpene cloud, between-batch sanitizers, and days of >80% RH creep—not plant ethylene.</p>
+</section>
+<section id="4-the-receipts-what-the-chip-makers-quietly-admit-and-where-evidence-ends">
+<h2>4. The Receipts: What the Chip Makers Quietly Admit (And Where Evidence Ends)</h2>
+<p>If a grow-controller sales rep tells you their sensor handles grow-room sprays just fine, hand them the handling instructions written by the actual engineers who build the silicon inside their box:</p>
+<ul>
+<li><strong>Sensirion (SHTxx Handling v9 & Contamination Guide v1.1):</strong> Explicitly bans ketenes, acetone, ethanol, IPA, toluene (<em>"irreversibly in most cases"</em>), HCl, H<sub>2</sub>SO<sub>4</sub>, HNO<sub>3</sub>, NH<sub>3</sub>, H<sub>2</sub>O<sub>2</sub>, high ozone, adhesives, tapes, and detergents. Its FAQ openly admits <strong>Sensirion provides no chemical sensitivity chart.</strong></li>
+<li><strong>Texas Instruments (HDC1080/2080/302x — SDAA445A, SNAA353A, SNIA025, SNAU265D):</strong> Bans alcohols, ketones, acids, H<sub>2</sub>O<sub>2</sub>, O<sub>3</sub>, NH<sub>3</sub>, formaldehyde, and adhesive off-gassing. States that <strong>one contamination event can add more error than 10 years of normal aging</strong> (up to 10%+ shift), and its clean-air drift spec explicitly <em>"Excludes the impact of dust, gas phase solvents and other contaminants."</em></li>
+<li><strong>Bosch Sensortec (BME280/680/688 — BST-BME280-HS006):</strong> Warns that toluene, acetone, ethanol, IPA, ketenes, acids, O<sub>3</sub>, and H<sub>2</sub>O<sub>2</sub> make <strong>"permanent damage of the sensor readings very likely in most of these cases."</strong> And no—the gas-sensing MOX channel on the BME680/688 does <em>not</em> protect its humidity sensor!</li>
+<li><strong>TE Connectivity (HTU21D/HTU31):</strong> <em>"Shall not be in contact with volatile chemicals such as solvents or other organic compounds."</em></li>
+<li><strong>Renesas / IDT (HS300x):</strong> Boasts 0.1% RH/yr clean-air drift with silicon-carbide construction, warns against PE antistatic bags, and provides zero spray-cycle durability data.</li>
+<li><strong>Silicon Labs (Si7021 — now EOL):</strong> Hilariously markets <em>"immunity to contaminants"</em> in one breath while admitting in the datasheet that drift <em>"May be impacted by dust, vaporized solvents or other contaminants."</em></li>
+<li><strong>Aosong / ASAIR (DHT22/AM2302, DHT20, AHT10/20/21):</strong> Warns <em>"vapor from chemical materials may interfere with sensitive-elements and debase sensitivity"</em> and DHT20 <em>"output signal may be high if surrounded by volatile solvents."</em> Independent tests by Page & Page (<code>kandrsmith.org</code>) revealed massive budget scatter and DHT22 sawtooth anomalies; in a 2-year field test, <strong>3 of 6 DHT22s died</strong>, and a greenhouse study measured <strong>3.18% RH RMSE</strong> on DHT22s. <em>(Bonus: the AHT20 datasheet even has a translation blunder telling you to "dry" the chip at ">75% RH"—do not follow it!)</em></li>
+<li><strong>Vaisala & Rotronic (The Only Grown-Ups in the Room):</strong> Openly publish continuous ppm tolerance tables, warn against standard probes in H<sub>2</sub>O<sub>2</sub>, and engineer active chemical-purge heaters and catalytic peroxide layers because they admit polymer physics has hard limits.</li>
+</ul>
+
+<figure class="fig">
+<svg viewBox="0 0 820 225" width="100%" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Grow-room sensor vendor transparency scorecard across 25 audited brands">
+  <rect width="820" height="225" rx="12" fill="#0f131a"/>
+  <text x="26" y="32" fill="#f8fafc" font-size="16.5" font-weight="900" font-family="system-ui,sans-serif">GRAPHIC 7 · THE INDUSTRY SILENCE SCORECARD (25 SENSOR LINES AUDITED)</text>
+  <text x="26" y="51" fill="#94a3b8" font-size="11.5" font-family="system-ui,sans-serif">What grow-room brands actually disclose in public datasheets, manuals, support pages, and FCC internal filings:</text>
+
+  <!-- 4 Big Metric Tiles -->
+  <g font-family="system-ui,sans-serif">
+    <rect x="26" y="68" width="182" height="134" rx="10" fill="#230b0e" stroke="#ef4444" stroke-width="1.5"/>
+    <text x="117" y="114" fill="#ef4444" font-size="38" font-weight="900" text-anchor="middle">1 / 17</text>
+    <text x="117" y="138" fill="#ffffff" font-size="12" font-weight="800" text-anchor="middle">Names Exact RH Chip</text>
+    <text x="117" y="156" fill="#fca5a5" font-size="10.5" text-anchor="middle">Only Ecowitt's -EP probe</text>
+    <text x="117" y="170" fill="#94a3b8" font-size="10" text-anchor="middle">(out of retail grow brands)</text>
+    <text x="117" y="186" fill="#94a3b8" font-size="10" text-anchor="middle">names SHT35 in its manual</text>
+
+    <rect x="222" y="68" width="182" height="134" rx="10" fill="#230b0e" stroke="#f97316" stroke-width="1.5"/>
+    <text x="313" y="114" fill="#fb923c" font-size="38" font-weight="900" text-anchor="middle">2 / 17</text>
+    <text x="313" y="138" fill="#ffffff" font-size="12" font-weight="800" text-anchor="middle">Publish Annual Drift</text>
+    <text x="313" y="156" fill="#ffedd5" font-size="10.5" text-anchor="middle">Only AROYA (ATMOS 14)</text>
+    <text x="313" y="170" fill="#94a3b8" font-size="10" text-anchor="middle">&amp; Aranet (lab-air only).</text>
+    <text x="313" y="186" fill="#94a3b8" font-size="10" text-anchor="middle">Everyone else: total silence</text>
+
+    <rect x="418" y="68" width="182" height="134" rx="10" fill="#230b0e" stroke="#f59e0b" stroke-width="1.5"/>
+    <text x="509" y="114" fill="#fbbf24" font-size="38" font-weight="900" text-anchor="middle">ZERO</text>
+    <text x="509" y="138" fill="#ffffff" font-size="12" font-weight="800" text-anchor="middle">Spray-Cycle Spec</text>
+    <text x="509" y="156" fill="#fef3c7" font-size="10.5" text-anchor="middle">Not ONE grow brand gives</text>
+    <text x="509" y="170" fill="#94a3b8" font-size="10" text-anchor="middle">post-IPM drift curves or</text>
+    <text x="509" y="186" fill="#94a3b8" font-size="10" text-anchor="middle">fires SHT4x heater purges</text>
+
+    <rect x="614" y="68" width="180" height="134" rx="10" fill="#161b26" stroke="#38bdf8" stroke-width="1.5"/>
+    <text x="704" y="114" fill="#38bdf8" font-size="38" font-weight="900" text-anchor="middle">±20%</text>
+    <text x="704" y="138" fill="#ffffff" font-size="12" font-weight="800" text-anchor="middle">Software Offset Sliders</text>
+    <text x="704" y="156" fill="#bae6fd" font-size="10.5" text-anchor="middle">Spider Farmer, Inkbird,</text>
+    <text x="704" y="170" fill="#94a3b8" font-size="10" text-anchor="middle">Govee &amp; others hand you</text>
+    <text x="704" y="186" fill="#94a3b8" font-size="10" text-anchor="middle">a band-aid for dead chips</text>
+  </g>
+</svg>
+</figure>
+
+<h3>Keeping It 100% Honest (What the Data Does <em>Not</em> Prove)</h3>
+<p>A good grower calls BS on hype from <em>both</em> sides—so let's be crystal clear about what the evidence does <strong>not</strong> claim:</p>
+<ul>
+<li><strong>Every single spray doesn't instantly nuke every probe.</strong> In Honeywell's liquid soak tests, quat, hypochlorite, peroxide, and IPA all recovered to under 2% RH after 60 hours. Rotronic industrial sensors tolerate thousands of ppm of ethanol and IPA within ±2% RH. In Vaisala's 430-day clean outdoor test, all probes stayed under 1% RH. In clean indoor air, hobbyist BME280/HTU21D/Si7021 units stayed stable for years.</li>
+<li><strong>No peer-reviewed university study has measured exact %RH drift per cannabis spray cycle</strong> (e.g., 10 cycles of ZeroTol 2.0 or 0.5% neem on a TrolMaster vs. Pulse probe). A Met Office review found mostly wet drift outdoors, not sprayed grow rooms.</li>
+</ul>
+<p>*<em>Why does that honesty make the grow-brand ripoff </em>worse<em>, not better?<strong> Because every single chipmaker proves the chemicals are dangerous, </strong>nobody has measured the real-world dose in your room<strong>, the error is completely invisible on your dashboard, and </strong>the companies charging you $300–$800 never did the testing and never warned you to check.</em>*</p>
+</section>
+<section id="5-the-sensirion-sht45-reality-check-why-swiss-chip-ptfe-cap-won-t-save-you">
+<h2>5. The Sensirion SHT45 Reality Check: Why "Swiss Chip + PTFE Cap" Won't Save You</h2>
+<p>Whenever this topic comes up online, somebody immediately chimes in: <em>"Doesn't apply to me—I run a Swiss Sensirion SHT45 with a PTFE filter cap!"</em></p>
+<p>Let's be fair: the <strong>Sensirion SHT45</strong> is genuinely the best compact digital RH chip you can buy under $10. Compared to legacy chips, it's in another league:</p>
+<div class="table-wrap"><table class="data-table"><thead><tr>
+<th>Sensor Tier</th>
+<th>Example Chips</th>
+<th>Clean-Air Accuracy (Typ / Max)</th>
+<th>Clean-Air Drift</th>
+<th>On-Chip Heater</th>
+<th>Realistic Grow-Room Life Before >3% RH Drift</th>
+</tr></thead><tbody>
+<tr><td><strong>Budget Hobby / Tent</strong></td><td>DHT22, AHT20, BME280, SHTC3</td><td>±2–3% typ (±5% max)</td><td>~0.25–0.5% / yr</td><td>None</td><td>Weeks to 1 cycle (often off out of the box)</td></tr>
+<tr><td><strong>Legacy Horticultural</strong></td><td>SHT21, SHT30/31, SHT35, Si7021, HTU21D</td><td>±1.5–2% <em>(SHT30 was ±3% pre-2022)</em></td><td><0.25–0.5% / yr</td><td>Weak ("plausibility check only")</td><td>1–3 cycles (one bad fog or sulfur burn can kill it)</td></tr>
+<tr><td><strong>Modern High-Precision</strong></td><td><strong>Sensirion SHT45-AD1F</strong> <em>(~$5.90–$6.90 bare; ~$4.16–$4.55 reel; ~$12.50 breakout)</em></td><td><strong>±1.0% typ (±2.0% max)</strong>; ±0.1 °C [±0.18 °F]; 4 s τ<sub>63</sub></td><td><strong><0.2% / yr</strong> <em>(V7.3: 0.5% mean ±1σ)</em></td><td><strong>20 / 110 / 200 mW</strong> (up to ~110 °C [230 °F])</td><td><strong>3–6+ cycles</strong> <em>if</em> protected from sprays & heater used</td></tr>
+</tbody></table></div>
+<p><strong>Now here are the four uncomfortable truths the hype leaves out:</strong></p>
+<ol>
+<li><strong>The "Exceptional VOC Resistance" Line Has Zero Grow-Chemical Proof.</strong> Sensirion's datasheet touts <em>"exceptional resistance to volatile organic compounds."</em> We went hunting for the test data behind that claim. For IPA, ethanol, H<sub>2</sub>O<sub>2</sub>, PAA, HOCl, quats, or terpenes: <strong>none exists.</strong> The <em>only</em> published chemical test is 20 hours in saturated acetone at 25 °C [77 °F]. Even after two weeks airing out in clean air, <strong>the SHT4x was STILL +3% to +5% RH out of spec!</strong> <em>(Yes, it crushed two unnamed competitors that were stuck +10% to +30% RH off—which proves it's tougher, NOT immune.)</em></li>
+<li><strong>Filter Membranes Stop Droplets—NOT Vapours.</strong> A water vapour molecule is <strong>~0.27 nm</strong> wide. The SHT45-AD1F's filter membrane blocks dust and liquid droplets down to <strong>200 nm</strong> (>99.99% efficiency, unaltered 4 s response). If water vapour walks through those pores, <strong>so do gas-phase IPA, ethanol, H<sub>2</sub>O<sub>2</sub>, PAA, HOCl, SO<sub>2</sub>, and volatile terpenes.</strong> Sensirion literally states the membrane is <strong>"not selectively filtering"</strong> and <strong>"does not in general prevent contamination with volatile chemicals."</strong> TI says the exact same thing about its HDC3022 ePTFE cap. And foliar oil sprays simply glaze over the outside of the membrane.</li>
+<li><strong>The Quiet 2026 Bait-and-Switch (PCN254901): It Might Not Even Be PTFE Anymore!</strong> Under Product Change Notification <strong>PCN254901</strong> (issued Dec 2025, rolling out starting Feb 2026), Sensirion changed the <code>-AD1F</code> filter membrane <strong>under the exact same part number (<code>SHT45-AD1F-R2</code>, 3.000.886)</strong>:</li>
+</ol>
+<ul>
+<li><strong>Reel IDs <code>25</code> and lower:</strong> 100 µm <strong>PTFE (Teflon)</strong>, rated IP67.</li>
+<li><strong>Reel IDs <code>26</code> and higher:</strong> 40 µm <strong>Polyimide (PI)</strong>, rated IP68 <em>(Datasheet V7.3, June 2026, literally says "Corrected PTFE membrane to polyimide membrane")</em>.</li>
+<li>Retailers are <em>still</em> selling breakout boards as "PTFE." Polyimide is still dust/water-tight (IP68), <strong>but it is not a chemically inert fluoropolymer</strong> and has lower resistance to strong caustics and aggressive polar agents. Demand lot/reel confirmation if you care.</li>
+</ul>
+<ol>
+<li><strong>The 200 mW Decontamination Heater Is Almost NEVER Used.</strong> Sensirion's crown jewel on the SHT4x is its high-power internal heater (ΔT ≥ 60 °C):</li>
+</ol>
+<ul>
+<li>Pulsing <strong>200 mW for 1 second once per minute</strong> almost completely eliminates high-RH creep at 90% RH (or 200 mW every 2 s for 2 min + 2 min cool for a clean single read).</li>
+<li>Running <strong>110 mW for 80 minutes (~110 °C [230 °F])</strong> fully baked acetone back out of flex-mounted SHT4x chips, restoring them to spec.</li>
+<li><strong>The 5 Catches:</strong> (a) <strong>Almost zero commercial grow controllers actually fire this heater cycle</strong> (only DIY/ESPHome setups do!); (b) battery sensors <em>can't</em> fire a 200 mW heater without killing their batteries in days; (c) rigid FR-4 circuit boards without thermal cutouts sink the heat below desorption temperature; (d) running 80 minutes continuous contradicts the datasheet's own 10% max duty cycle; and (e) <strong>NEVER heat a sensor in contaminated air</strong> (it bakes chemicals <em>deeper</em> into the polymer!), and heat <strong>cannot</strong> remove polymerized neem oil, sticky quats, sulfur corrosion, or peroxide-oxidized polymer chains.</li>
+</ul>
+
+<figure class="fig">
+<svg viewBox="0 0 820 350" width="100%" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="SHT45-AD1F membrane pore size vs gas molecules, PCN254901 switch, and Sensirion acetone test">
+  <rect width="820" height="350" rx="12" fill="#0f131a"/>
+  <text x="26" y="32" fill="#f8fafc" font-size="16.5" font-weight="900" font-family="system-ui,sans-serif">GRAPHIC 8 · THE SHT45 REALITY CHECK: MEMBRANES, PCN254901 &amp; ACETONE TEST</text>
+
+  <!-- LEFT HALF: Pore vs Molecule + PCN254901 -->
+  <g font-family="system-ui,sans-serif">
+    <rect x="24" y="50" width="380" height="278" rx="10" fill="#161b26" stroke="#334155"/>
+    <text x="42" y="74" fill="#38bdf8" font-size="12.5" font-weight="800">WHY FILTER CAPS STOP DROPS — NOT FUMES</text>
+    <!-- Spray droplet blocked -->
+    <circle cx="98" cy="116" r="22" fill="#eab308" opacity="0.85"/>
+    <text x="98" y="114" fill="#111" font-size="9.5" font-weight="900" text-anchor="middle">SPRAY</text>
+    <text x="98" y="125" fill="#111" font-size="8.5" font-weight="800" text-anchor="middle">≥200 nm</text>
+    <text x="98" y="150" fill="#4ade80" font-size="10" font-weight="800" text-anchor="middle">BLOCKED ✓</text>
+
+    <!-- Membrane bar with pores -->
+    <rect x="42" y="160" width="84" height="14" rx="2" fill="#64748b"/>
+    <rect x="138" y="160" width="54" height="14" rx="2" fill="#64748b"/>
+    <rect x="204" y="160" width="54" height="14" rx="2" fill="#64748b"/>
+    <rect x="270" y="160" width="116" height="14" rx="2" fill="#64748b"/>
+    <text x="328" y="171" fill="#f8fafc" font-size="9" font-weight="800" text-anchor="middle">200 nm PORES</text>
+
+    <!-- Gas arrows passing right through -->
+    <path d="M132 104 L132 204 m-5 -7 l5 7 l5 -7" stroke="#38bdf8" stroke-width="2" fill="none"/>
+    <text x="162" y="102" fill="#38bdf8" font-size="9.5" font-weight="700">H₂O (0.27 nm)</text>
+    <path d="M198 104 L198 204 m-5 -7 l5 7 l5 -7" stroke="#f97316" stroke-width="2.5" fill="none"/>
+    <text x="204" y="122" fill="#fb923c" font-size="9.5" font-weight="800">IPA / EtOH gas</text>
+    <path d="M264 104 L264 204 m-5 -7 l5 7 l5 -7" stroke="#ef4444" stroke-width="2.5" fill="none"/>
+    <text x="270" y="142" fill="#fca5a5" font-size="9.5" font-weight="800">H₂O₂ / PAA / Terps</text>
+
+    <rect x="42" y="212" width="344" height="24" rx="4" fill="#291217" stroke="#ef4444"/>
+    <text x="214" y="228" fill="#fecaca" font-size="10.5" font-weight="800" text-anchor="middle">POLYMER DIE BELOW STILL BREATHES EVERY VAPOUR</text>
+
+    <!-- PCN254901 Banner -->
+    <rect x="42" y="246" width="344" height="68" rx="6" fill="#261a07" stroke="#f59e0b"/>
+    <text x="54" y="265" fill="#fbbf24" font-size="11" font-weight="900">2026 BAIT-AND-SWITCH (PCN254901)</text>
+    <text x="54" y="282" fill="#fef3c7" font-size="10.5">Same part # SHT45-AD1F-R2 (3.000.886):</text>
+    <text x="54" y="298" fill="#cbd5e1" font-size="10.5">• Reel ≤25 = <tspan fill="#4ade80" font-weight="700">100 µm PTFE</tspan> · Reel ≥26 = <tspan fill="#fb923c" font-weight="700">40 µm Polyimide</tspan></text>
+  </g>
+
+  <!-- RIGHT HALF: Sensirion Acetone 20h Test Results -->
+  <g font-family="system-ui,sans-serif">
+    <rect x="418" y="50" width="378" height="278" rx="10" fill="#161b26" stroke="#334155"/>
+    <text x="436" y="74" fill="#f8fafc" font-size="12.5" font-weight="800">SENSIRION ACETONE TEST (20h SATURATED)</text>
+    <text x="436" y="90" fill="#94a3b8" font-size="10.5">Error at 34% RH ref after 14 days in clean air (Fig. 4 est.)</text>
+
+    <!-- Bars max +30% -> height 140px (y=248 down from y=108) -->
+    <line x1="444" y1="248" x2="778" y2="248" stroke="#475569"/>
+    <!-- Spec band ±1% -->
+    <rect x="444" y="242" width="334" height="6" fill="#22c55e" opacity="0.35"/>
+
+    <!-- Competitors: +10 to +30% (show +20 avg / +30 peak) -->
+    <rect x="466" y="114" width="76" height="134" rx="5" fill="#ef4444"/>
+    <text x="504" y="108" fill="#fca5a5" font-size="12" font-weight="900" text-anchor="middle">+10 to +30%</text>
+    <text x="504" y="266" fill="#f8fafc" font-size="10.5" font-weight="700" text-anchor="middle">2 Unnamed</text>
+    <text x="504" y="280" fill="#94a3b8" font-size="9.5" text-anchor="middle">Competitors</text>
+
+    <!-- SHT4x NO heater: +3 to +5% -->
+    <rect x="572" y="224" width="76" height="24" rx="5" fill="#f59e0b"/>
+    <text x="610" y="216" fill="#fbbf24" font-size="12" font-weight="900" text-anchor="middle">+3 to +5%</text>
+    <text x="610" y="266" fill="#fbbf24" font-size="10.5" font-weight="800" text-anchor="middle">SHT4x (No Heat)</text>
+    <text x="610" y="280" fill="#94a3b8" font-size="9.5" text-anchor="middle">STILL OUT OF SPEC!</text>
+
+    <!-- SHT4x WITH 110mW x 80m heater -->
+    <rect x="678" y="243" width="76" height="5" rx="2" fill="#22c55e"/>
+    <text x="716" y="234" fill="#4ade80" font-size="12" font-weight="900" text-anchor="middle">≤ ±1% ✓</text>
+    <text x="716" y="266" fill="#4ade80" font-size="10.5" font-weight="800" text-anchor="middle">SHT4x + Heater</text>
+    <text x="716" y="280" fill="#94a3b8" font-size="9.5" text-anchor="middle">110 mW × 80 min</text>
+
+    <text x="436" y="308" fill="#fca5a5" font-size="10.5" font-weight="700">The Catch: Almost ZERO commercial grow controllers</text>
+    <text x="436" y="321" fill="#94a3b8" font-size="10">ever run that 80-min heater cycle (and heat can't fix oil/H₂O₂).</text>
+  </g>
+</svg>
+</figure>
+
+<p><strong>Verdict on SHT45-AD1F:</strong> Best-in-class sensing engine for the money. It buys you tighter starting accuracy, droplet defense, and a shot at self-cleaning <em>if</em> your firmware uses it. <strong>It buys you margin—not immortality.</strong></p>
+</section>
+<section id="6-the-wall-of-shame-forensic-breakdown-of-25-grow-industrial-sensor-brands">
+<h2>6. THE WALL OF SHAME: Forensic Breakdown of 25 Grow & Industrial Sensor Brands</h2>
+<p>We dug through datasheets, user manuals, support KBs, community teardowns, and <strong>public FCC internal circuit-board photos</strong> for 25 sensor lines across every tier of the market.</p>
+<p><strong>Chip Identification Key:</strong> <strong>Confirmed</strong> = vendor doc, press release, or legible hardware proof · <strong>Probable</strong> = credible teardown or strong indirect evidence · <strong>Unknown</strong> = vendor hides it and FCC photos don't show markings.</p>
+<h3>Master 25-Brand Forensic Matrix</h3>
+
+<div class="brand-controls">
+  <input type="search" id="brand-search" placeholder="Search your sensor brand (e.g., TrolMaster, Pulse, AC Infinity, Govee, Growlink, AROYA)..." oninput="filterBrands()">
+  <div class="tier-pills">
+    <button type="button" class="pill active" onclick="setTier('all', this)">All 25</button>
+    <button type="button" class="pill" onclick="setTier('high', this)">High Risk</button>
+    <button type="button" class="pill" onclick="setTier('medium', this)">Medium Risk</button>
+    <button type="button" class="pill" onclick="setTier('low', this)">Honest / Industrial</button>
+  </div>
+</div>
+
+<div class="table-wrap"><table class="data-table brand-table" id="brand-table"><thead><tr>
+<th>Brand / Model</th>
+<th>Approx. Price (USD)</th>
+<th>RH Element (Evidence)</th>
+<th>Spray / Inlet Defense</th>
+<th>Stated Accuracy & Clean-Air Drift</th>
+<th>Vendor Chemical / Calibration Disclosure</th>
+<th>Post-Spray Risk & Replacement Pain</th>
+</tr></thead><tbody>
+<tr data-risk="high"><td><strong>Govee</strong> H5074 / H5075 / H5179 / H5100</td><td>~$9–$35</td><td><strong>Confirmed SHTC3 / SHT30</strong> <em>(Sensirion PR; FCC 2AQA6-H5075 unreadable)</em></td><td><strong>None</strong> (open plastic grille)</td><td>±3% RH, ±0.3 °C · Drift: ND</td><td>None. Offers <strong>±20% app offset</strong>; coin/AAA battery (no heater).</td><td><span class="badge b-high">HIGH RISK</span> (±5–12% drift in 1–2 cycles). Cheap enough to toss, never run a dry room on one.</td></tr>
+<tr data-risk="high"><td><strong>Inkbird</strong> IBS-TH2 / IHC-200 Wi-Fi</td><td>~$15–$60</td><td><strong>Unknown</strong> <em>(IHC-200: HTG3535CH-class; IBS-TH2 FCC 2AYZD-IBSTH2 shows rubber boot)</em></td><td><strong>None</strong> (IPX4 splash / slotted plastic)</td><td>±3% typ, ±4.5–5% max · Drift: ND</td><td>IBS-TH2 warns <em>"Do not use alcohol to clean sensor."</em> IHC-200 has <strong>±20% <code>CA</code> offset</strong>; notorious 89–95% / <code>"ER"</code> condensation lockups & 30–60 min lag.</td><td><span class="badge b-high">HIGH RISK</span> (±5–15%+ drift). Cheap probe (~$15–$25) or whole unit.</td></tr>
+<tr data-risk="high"><td><strong>Vivosun</strong> GrowHub E42 / E42A+</td><td>~$50–$80 <em>(~$10–$30 probe)</em></td><td><strong>Probable</strong> SHT-class (<em>"Swiss-made"</em> claim; unverified)</td><td>Stainless sleeve; <strong>no verified PTFE</strong></td><td>Probe: <strong>±5–6% RH</strong>, ±0.8 °C · GrowHub sheet typo: <strong><code>"±0.6 %PH"</code> (sic)</strong> · Drift: ND</td><td>Zero chemical disclosure; manual covers CO<sub>2</sub> cal only. 4–8% unit-to-unit spread brand new; severe night-cycle non-linear drift.</td><td><span class="badge b-high">HIGH RISK</span> (±6–20% drift). Wide factory error leaves zero margin.</td></tr>
+<tr data-risk="high"><td><strong>Spider Farmer</strong> GGS / GGS Pro</td><td>~$50–$90 (kits)</td><td><strong>Unknown</strong> (budget capacitive)</td><td>Connector cap only; inlet <strong>unknown</strong></td><td>±3% RH · Drift: ND</td><td>Zero chemical disclosure; infamous night-cycle non-linear drift; firmware gives a <strong>±20% RH offset</strong>!</td><td><span class="badge b-high">HIGH RISK</span> (±6–20% drift). Cheap probe (~$15–$30) swap.</td></tr>
+<tr data-risk="high"><td><strong>Ecowitt</strong> WH31 / WN31 vs. <strong>WN31EP / WH31-EP</strong></td><td>~$11–$20 std / ~$30–$45 <code>-EP</code></td><td>Std: <strong>Probable SHT30</strong> · <code>-EP</code>: <strong>Confirmed Sensirion SHT35</strong> <em>(vendor manual!)</em></td><td>Std: None · <code>-EP</code>: water-resistant capsule (membrane ND)</td><td>Std: ±5% · <strong><code>-EP</code>: ±1.5–1.8%</strong> · Drift: ND</td><td><strong>ONLY consumer brand naming its exact RH chip (<code>-EP</code>).</strong> Console offset; no chemical-exposure rating.</td><td><span class="badge b-high">HIGH RISK</span> (std) / <span class="badge b-med">MEDIUM</span> (<code>-EP</code>). Great chip, cheap swappable probe.</td></tr>
+<tr data-risk="high"><td><strong>AC Infinity</strong> Controller 69 Pro / AI+ UIS Probes</td><td>~$50–$70 ctrl · <strong>$16–$25 probe</strong></td><td><strong>Probable SHT30/3x/4x</strong> <em>(grower.ch microscope/I2C teardown; FCC 2AXMF-CTR69A controller PCB only)</em></td><td>SAE 316 stainless tube + potted PCB + gasket (AI+); <strong>shipping cap must be removed</strong>; no verified vapour shield or heater purge</td><td><strong>Often unlisted!</strong> Users report ±3–6% spread & probes reading ~10 pts high</td><td>App offset <strong>−8/+8% or −10/+10%</strong>. Zero chemical or drift disclosure.</td><td><span class="badge b-high">HIGH RISK</span> (±3–10% drift). <strong>Silver lining:</strong> cheap $16–$25 plug-in swap—treat as disposable!</td></tr>
+<tr data-risk="high"><td><strong>SensorPush</strong> HT1 / HT.w / HTP.xw</td><td>~$50–$55 / ~$70 / ~$90–$100</td><td><strong>Probable</strong> <em>(HT1: Si7021-class, FCC 2AL9X-HT1 low-res; .w/.xw: SHT35/45-class)</em></td><td>HT1: open vents · <strong>.w/.xw: O-ring + ePTFE membrane</strong></td><td>±3% / ±2% / <strong>±1.5%</strong> typ <em>(±4.5% max on HT1/.w)</em> · Drift: ND</td><td>Honestly discloses <strong>+3% reversible offset >80% RH</strong> & salt-bag cal (48–72h). Zero chemical spec; <strong>coin-cell battery = no heater purge</strong>.</td><td><span class="badge b-high">HIGH RISK</span> (HT1) / <span class="badge b-med">MEDIUM</span> (.w/.xw: ±2–6% vapour drift). Non-swappable—must toss <strong>$100 puck</strong>.</td></tr>
+<tr data-risk="high"><td><strong>Pulse Grow</strong> One / Pro / Hub THV-1</td><td>~$149–$199 / ~$420–$499 / ~$69–$99 probe (base extra)</td><td>One: <strong>Confirmed Sensirion family</strong> <em>(part hidden)</em> · Pro: <em>"Swiss & Austrian"</em> (<strong>Unknown</strong>) · THV-1: <strong>Unknown</strong></td><td>Vented plastic body; <strong>no IP67 PTFE cartridge</strong></td><td>One: ±3% <em>(or ND)</em> · <strong>Pro: ±1.5% on sales page vs ±3% on tech-spec page!</strong> · <strong>THV-1: ±5%</strong> · Drift: <em>"good temporal stability"</em></td><td>App offset; support admits if it won't calibrate it <em>"may be damaged"</em> → replace. Zero chemical spec.</td><td><span class="badge b-high">HIGH RISK</span> (±4–12% drift). <strong>BRUTAL PAIN:</strong> No swappable RH tip on One/Pro—throw away a <strong>$200–$500 unit</strong>!</td></tr>
+<tr data-risk="high"><td><strong>TrolMaster</strong> MBS-TH (3-in-1) / MBS-PRO (4-in-1)</td><td>~$79–$120 / ~$250–$350</td><td><strong>Probable SHT3x/4x</strong> <em>(wired, no FCC filing)</em></td><td>Slotted plastic box; <strong>NOT waterproof</strong>; no heater purge</td><td><strong>MBS-TH: ±7% RH!!</strong> · MBS-PRO: ±3% RH · Drift: ND</td><td>One of the <em>only</em> brands with a spray warning: <em>"Do not spray foreign substances or allow water/condensate."</em> Offset KB; contamination routinely denied warranty.</td><td><span class="badge b-high">HIGH RISK</span> (±5–15%+ drift; infamous <code>r/macrogrowery</code> deaths after ZeroTol & sulfur). <strong>$80–$350 whole-unit replacement!</strong></td></tr>
+<tr data-risk="high"><td><strong>AROYA Climate One</strong> <em>(Aspirated Station)</em></td><td>Quote only <em>(~$500+ / ~$5,000 AROYA GO starter bundle + SaaS!)</em></td><td><strong>Unknown</strong> <em>(exact chip & inlet membrane undisclosed)</em></td><td><strong>Active fan pulling 0.2 m³/min (~7.1 CFM) 24/7</strong> (vacuums 288 m³/day of air—and every spray/fog—straight onto sensor!)</td><td><strong>±3% RH (20–80% only!)</strong>, <strong>±0.7 °C [±1.26 °F]</strong> · Drift: ND</td><td>Markets <em>"research-grade ground-truth"</em> while hiding chip, membrane, drift & pricing; zero spray-cycle validation, no thermal purge.</td><td><span class="badge b-high">HIGH RISK</span> (±3–8%+ drift if 7.1 CFM fan runs during IPM/ZeroTol/IPA). <strong>Enterprise ripoff + spray vacuum!</strong></td></tr>
+<tr data-risk="medium"><td><strong>AROYA Climate Station</strong> <em>(METER ATMOS 14 Gen 2)</em></td><td>~$340–$500+ / Quote</td><td><strong>Probable Sensirion CMOSens</strong> <em>(METER docs)</em></td><td><strong>Aspirated fan housing</strong> + <strong>porous Teflon (PTFE) screen</strong></td><td>RH-dependent curve · <strong>±0.25%/yr</strong> (Gen 2)</td><td><strong>Best manual in cannabis:</strong> METER explicitly discusses suspected solvent damage, PTFE screen care, Gen-2 board swap & ~$100–$120 recal.</td><td><span class="badge b-med">MEDIUM</span> — PTFE blocks droplets, <strong>but fan still pulls IPA/H₂O₂/terpene fumes straight through PTFE</strong> unless shut off.</td></tr>
+<tr data-risk="high"><td><strong>Growlink</strong> ClimaLINK / ESM-2 / ESM-3</td><td>~$299–<strong>$799 standalone (ESM-2)</strong></td><td><strong>Unknown</strong> (commercial capacitive)</td><td><strong>Aspirated multi-sensor box</strong>; filter ND</td><td>Claims ±1–2% <em>(spec sheet literally has <strong>"TBD"</strong> fields!)</em> · Drift: ND</td><td>1-yr warranty; zero chemical endurance spec; relies on <strong>GrowlinkOS software offsets</strong>.</td><td><span class="badge b-high">HIGH RISK</span> (±3–10%+ if aspirated during sprays). <strong>BRUTAL PAIN:</strong> No cheap RH tip—<strong>$799 box</strong> at risk!</td></tr>
+<tr data-risk="medium"><td><strong>Agrowtek</strong> SXC / SXC+ / SXE / SXHM</td><td>~$300–$600+ <em>(~$319 SXC)</em></td><td><strong>Unknown</strong> (CMOS polymer)</td><td><strong>6 CFM fan + open-cell foam dust filter</strong></td><td>±2% typ / ±4% max <em>(0–80% RH; <strong>80% max continuous!</strong>)</em> · Drift: ND</td><td>Good: cal wizards & stores last cal date. Bad: zero vapour defense—<strong>soaked foam filter acts as a chemical sponge</strong>, off-gassing sprays onto the chip for <em>days</em>!</td><td><span class="badge b-medhigh">MED–HIGH</span> (±5–12%+ if fan runs during sprays). Modular assembly swap, not chip-swappable.</td></tr>
+<tr data-risk="high"><td><strong>Grow Sensor PRO</strong></td><td>Quote</td><td><strong>Confirmed SHT45 family</strong> <em>(exact suffix/filter ND)</em></td><td>Unknown</td><td><strong>±1% typ (10–95%)</strong> · Drift: <em>"minimal"</em> (no number)</td><td>Good component transparency & factory chamber cal; still no public post-spray test.</td><td><span class="badge b-high">HIGH RISK</span> until filter lot & post-spray protocol verified.</td></tr>
+<tr data-risk="high"><td><strong>Grodan</strong> GroSens Climate</td><td>~$1,000–$1,450+ (sys)</td><td><strong>Unknown</strong> <em>(FCC 2AUKP-CL002: unmarked DFN behind rear vents; older units rootzone-only)</em></td><td>IPX4 splash housing; no inlet filter</td><td><strong>±4.5% to ±8% RH!!</strong> · Drift: ND</td><td>Worst commercial transparency; specs locked behind dealer/e-Gro portal; zero sanitation spec.</td><td><span class="badge b-high">HIGH RISK</span>. Shockingly wide ±4.5–8% factory tolerance for a $1,000+ ecosystem.</td></tr>
+<tr data-risk="medium"><td><strong>Link4</strong> iPonic 624 / Pearl DISM / I2C DTH / iGrow</td><td>~$250 (DTH) / ~$430–$529 / <strong>~$767 (DISM)</strong></td><td><strong>Confirmed Sensirion CMOSens</strong> on I2C DTH <em>(exact chip ND)</em></td><td>Radiation shield / aspirated opt.; inlet filter ND</td><td>±2–3% RH <em>(1–3%/yr greenhouse baseline)</em></td><td>Legacy iPonic discontinued; enclosure rating doesn't protect external probe; minimal spray spec.</td><td><span class="badge b-medhigh">MED–HIGH</span> (±4–12%+ under sulfur/oxidizers). Expensive proprietary module.</td></tr>
+<tr data-risk="medium"><td><strong>Autogrow / Bluelab</strong> IntelliClimate / EnviroSensor</td><td>~$300–$400 / <strong>~$830–$980</strong></td><td><strong>Unknown</strong></td><td>Unknown</td><td>±2% RH, ±0.5 °C · Drift: ND</td><td>Dual sensors advised >6.1×6.1 m; <strong>no RH cal in EnviroSensor manual</strong> (whole sensor replaced); zero spray spec.</td><td><span class="badge b-medhigh">MED–HIGH</span>. Nearly <strong>$1,000</strong> hanging unprotected if unbagged.</td></tr>
+<tr data-risk="high"><td><strong>Quest & Anden Dehumidifiers</strong> (Onboard & A77)</td><td>~$30–$80 harness</td><td>Standard HVAC capacitive polymer</td><td><strong>ZERO</strong> — sits directly in <strong>hundreds of CFM</strong> of sticky return airflow!</td><td>±3–5% RH · Drift: ND</td><td>None. Routinely drifts <strong>5–15%+ RH</strong> in 1 year, fights your main controller, short-cycles, or throws <strong>Quest <code>E1</code> fault</strong>.</td><td><span class="badge b-high">HIGH RISK</span>. <strong>Never trust onboard dehu sensors!</strong> Bypass via external dry-contact controller.</td></tr>
+<tr data-risk="medium"><td><strong>Onset HOBO</strong> MX2301A <em>(Ref)</em> / <strong>Davis Vantage Pro2</strong></td><td>~$220–$230 (HOBO)</td><td>HOBO: <strong>Unknown</strong> · Davis (2016+): <strong>Confirmed SHT31</strong></td><td>Weatherproof replacement caps (HOBO)</td><td>±2.5% RH, <1%/yr (HOBO)</td><td>Optional NIST cert; no chemical vapour spec; Davis requires board swap.</td><td><span class="badge b-med">MEDIUM</span>. Weatherproof ≠ chemical-proof.</td></tr>
+<tr data-risk="medium"><td><strong>Aranet</strong> TDSPT802 / Heavy Duty / TDSPT409</td><td>~€100–$200+</td><td><strong>Probable SHT-series</strong></td><td>IP67 + <strong>PTFE membrane</strong> + ammonia-resistant variant</td><td>±2% RH · <strong>0.5%/yr "at lab conditions"</strong></td><td><strong>BEST chemical disclosure in grow market:</strong> <em>"Exposure to VOCs, acids or bases, etching substances such as H<sub>2</sub>O<sub>2</sub>, NH<sub>3</sub>, shall be avoided."</em> Replaceable probe.</td><td><span class="badge b-med">MEDIUM</span> (±2–7% vapour drift). Battery wireless = no heater purge.</td></tr>
+<tr data-risk="low"><td><strong>Argus Controls</strong> Titan SEN-OSM vs. <strong>SEN-RHT</strong></td><td>~$400–$900+</td><td><strong>Confirmed field-replaceable NIST <code>SUB-RHT-RST</code> tip</strong> <em>(die OEM ND)</em></td><td>Solar shield; OSM aspirated</td><td><strong>±2% RH</strong> (10–90%, ±3% >80%) · Drift: ND</td><td>Refreshingly honest: warns aspirated Omni is for <em>"clean ambient air"</em> and <strong>not >80% RH or fog</strong>; sells swappable NIST tips for harsh zones.</td><td><span class="badge b-low">LOW–MED</span> (SEN-RHT). <strong>Correct modular architecture.</strong></td></tr>
+<tr data-risk="low"><td><strong>Priva</strong> Classic Wet/Dry Bulb vs. <strong>E-Measuring Box SPE</strong></td><td>~$500–$1,200+</td><td><strong>Classic: Confirmed dual 3 kΩ NTC wet/dry bulb (ZERO polymer!)</strong> · E-Box: Capacitive</td><td>Aspirated + air filter; cotton wick + Aquanex water (Classic)</td><td>Psychrometer ~±1–2% · E-Box ±2%</td><td><strong>Classic:</strong> 0% polymer VOC drift! (Oils/algae foul wick instead; ~$5 swap.) <strong>E-Box:</strong> Dealers explicitly mandate <strong>annual plug-in sensor & filter replacement!</strong></td><td><span class="badge b-low">LOW RISK</span> (maintained psychrometer or annual E-Box swap).</td></tr>
+<tr data-risk="low"><td><strong>Hoogendoorn</strong> iSii / IIVO Measuring Box</td><td>~$600–$1,500+</td><td><strong>Confirmed PT500 dry/wet bulb</strong> (default) or electronic opt.</td><td>Aspirated + air filter</td><td>Industrial grade</td><td>Publishes wick, water, comparison & cal procedures; <strong>preventive maintenance at least annually</strong>.</td><td><span class="badge b-low">LOW RISK</span> (psychrometer) / <span class="badge b-med">MEDIUM</span> (electronic).</td></tr>
+<tr data-risk="low"><td><strong>Vaisala</strong> (HMP110/HMP7/HM40/PEROXCAP) · <strong>Rotronic</strong> (HC2A-S/HP32) · <strong>E+E</strong></td><td><strong>$400–$2,600</strong></td><td><strong>HUMICAP 180R/RC / PEROXCAP</strong> · <strong>Hygromer HH1-SK</strong> · <strong>E+E ChemShield</strong></td><td>Sintered/PTFE + <strong>160–180 °C chemical purge</strong> + <strong>catalytic H<sub>2</sub>O<sub>2</sub> breakdown</strong> + E+E 24h ARC heat/coating</td><td><strong>±0.8% to ±1.5% RH</strong> · <1%/yr</td><td><strong>Gold standard:</strong> publishes full ppm limits, weekly chemical purge, and <strong>field-swappable INTERCAP/HUMICAP cartridges</strong>.</td><td><span class="badge b-low">LOWEST (&lt;1–3%)</span> when purged. Still not invincible to heavy oil/sulfur crusts.</td></tr>
+<tr data-risk="low"><td><strong>DIY / Open Hardware</strong> (M5Stack ENV III/IV · Adafruit SHT45 #5665)</td><td><strong>$12.50–$20</strong></td><td><strong>Confirmed SHT30 / SHT40 / SHT45</strong></td><td>Optional PTFE/PI cap</td><td>±2% / ±1.8% / <strong>±1.0% RH</strong></td><td>Full chip transparency, cheap swap, and <strong>ESPHome actually lets you run SHT45 heater purges & anti-creep pulses!</strong></td><td><span class="badge b-low">BEST DIY</span> — best DIY reference & modular node.</td></tr>
+</tbody></table></div>
+
+<figure class="fig">
+<svg viewBox="0 0 820 300" width="100%" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Aspiration fan trap diagram and brand price vs accuracy risk map">
+  <rect width="820" height="300" rx="12" fill="#0f131a"/>
+  <text x="26" y="32" fill="#f8fafc" font-size="16" font-weight="900" font-family="system-ui,sans-serif">GRAPHIC 9 · THE ASPIRATION FAN TRAP &amp; THE PRICE-VS-HONESTY MAP</text>
+
+  <!-- LEFT: Aspiration Fan Trap -->
+  <g font-family="system-ui,sans-serif">
+    <rect x="24" y="50" width="368" height="228" rx="10" fill="#161b26" stroke="#ef4444"/>
+    <text x="40" y="73" fill="#fca5a5" font-size="12" font-weight="900">HOW ASPIRATED FAN BOXES POISON THEMSELVES</text>
+    <text x="40" y="88" fill="#fbbf24" font-size="9.6" font-weight="700">AROYA Climate One (7.1 CFM!) · Growlink ESM · Agrowtek (6 CFM)</text>
+    <!-- Spray mist cloud -->
+    <circle cx="62" cy="146" r="18" fill="#eab308" opacity="0.35"/>
+    <circle cx="82" cy="160" r="14" fill="#ef4444" opacity="0.35"/>
+    <text x="72" y="190" fill="#fbbf24" font-size="10" font-weight="800" text-anchor="middle">ZeroTol / Oil</text>
+    <text x="72" y="203" fill="#fbbf24" font-size="10" font-weight="800" text-anchor="middle">IPA / Sulfur</text>
+    <!-- Arrow sucked in -->
+    <path d="M98 152 L138 152 m-7 -6 l7 6 l-7 6" stroke="#ef4444" stroke-width="3" fill="none"/>
+    <!-- Housing box -->
+    <rect x="142" y="112" width="232" height="80" rx="8" fill="#0f131a" stroke="#64748b" stroke-width="2"/>
+    <!-- Filter / PTFE screen -->
+    <rect x="152" y="122" width="24" height="60" rx="3" fill="#ca8a04"/>
+    <text x="164" y="206" fill="#fde047" font-size="9.5" font-weight="800" text-anchor="middle">Foam / PTFE</text>
+    <text x="164" y="218" fill="#94a3b8" font-size="9" text-anchor="middle">(vapour walks in!)</text>
+    <!-- Chip -->
+    <rect x="224" y="138" width="44" height="28" rx="4" fill="#ef4444"/>
+    <text x="246" y="156" fill="#fff" font-size="9.5" font-weight="900" text-anchor="middle">$4 CHIP</text>
+    <path d="M182 152 L218 152 m-5 -4 l5 4 l-5 4" stroke="#f97316" stroke-width="2" fill="none"/>
+    <!-- Fan -->
+    <circle cx="332" cy="152" r="24" fill="#1e293b" stroke="#38bdf8" stroke-width="2"/>
+    <text x="332" y="150" fill="#38bdf8" font-size="9.5" font-weight="900" text-anchor="middle">7.1 CFM</text>
+    <text x="332" y="162" fill="#38bdf8" font-size="9" font-weight="800" text-anchor="middle">FAN</text>
+    <path d="M274 152 L302 152 m-5 -4 l5 4 l-5 4" stroke="#38bdf8" stroke-width="2" fill="none"/>
+    <text x="40" y="248" fill="#fecaca" font-size="10.2" font-weight="700">AROYA sucks 288,000 L/day (0.2 m³/min)! Leave the</text>
+    <text x="40" y="263" fill="#fecaca" font-size="10.2" font-weight="700">fan on during sprays = $500–$800 chemical shop-vac!</text>
+  </g>
+
+  <!-- RIGHT: Price vs Stated Tolerance Scatter -->
+  <g font-family="system-ui,sans-serif">
+    <rect x="408" y="50" width="388" height="228" rx="10" fill="#161b26" stroke="#334155"/>
+    <text x="424" y="73" fill="#f8fafc" font-size="12" font-weight="900">PRICE VS. FACTORY TOLERANCE (OUT OF THE BOX)</text>
+    <text x="424" y="88" fill="#94a3b8" font-size="10">Paying more does NOT guarantee tighter accuracy or swappable tips</text>
+    <!-- Axes: X=448..778 (Price $0..$1500), Y=238 (0%)..104 (±8%) -->
+    <line x1="448" y1="238" x2="778" y2="238" stroke="#475569"/>
+    <line x1="448" y1="104" x2="448" y2="238" stroke="#475569"/>
+    <line x1="448" y1="171" x2="778" y2="171" stroke="#1e293b" stroke-dasharray="3 3"/>
+    <text x="442" y="241" fill="#64748b" font-size="9.5" text-anchor="end">±0%</text>
+    <text x="442" y="174" fill="#64748b" font-size="9.5" text-anchor="end">±4%</text>
+    <text x="442" y="108" fill="#ef4444" font-size="9.5" font-weight="700" text-anchor="end">±8%</text>
+    <text x="448" y="253" fill="#64748b" font-size="9.5" text-anchor="middle">$0</text>
+    <text x="558" y="253" fill="#64748b" font-size="9.5" text-anchor="middle">$500</text>
+    <text x="668" y="253" fill="#64748b" font-size="9.5" text-anchor="middle">$1,000</text>
+    <text x="778" y="253" fill="#64748b" font-size="9.5" text-anchor="middle">$1,500</text>
+
+    <!-- Points: X = 448 + price/1500*330, Y = 238 - tol/8*134 -->
+    <!-- SHT45 breakout ($12.50, ±1%) -> (451, 221) -->
+    <circle cx="454" cy="221" r="6" fill="#22c55e"/><text x="464" y="224" fill="#4ade80" font-size="9.5" font-weight="800">SHT45 ($13, ±1%)</text>
+    <!-- SensorPush HTP.xw ($100, ±1.5%) -> (470, 213) -->
+    <circle cx="470" cy="208" r="5" fill="#38bdf8"/><text x="479" y="206" fill="#7dd3fc" font-size="9">HTP.xw</text>
+    <!-- TrolMaster MBS-TH ($85, ±7%) -> (467, 121) -->
+    <circle cx="467" cy="121" r="6.5" fill="#ef4444"/><text x="477" y="124" fill="#fca5a5" font-size="9.5" font-weight="800">TrolMaster MBS-TH (±7%!)</text>
+    <!-- Pulse Pro ($499, ±3% spec) & AROYA Climate One ($500+, ±3%, fan) -->
+    <circle cx="558" cy="188" r="5.5" fill="#f97316"/><text x="558" y="164" fill="#fb923c" font-size="9.2" text-anchor="middle">Pulse Pro ($499)</text>
+    <circle cx="566" cy="188" r="5.5" fill="#ef4444" stroke="#fbbf24" stroke-width="1.2"/><text x="566" y="176" fill="#fde047" font-size="9.2" font-weight="800" text-anchor="middle">AROYA Climate One ($500+, Fan)</text>
+    <!-- Growlink ESM-2 ($799, ±2%) -> (624, 205) -->
+    <circle cx="624" cy="205" r="5.5" fill="#f59e0b"/><text x="633" y="208" fill="#fbbf24" font-size="9.5">Growlink ($799)</text>
+    <!-- Vaisala/Rotronic ($1100, ±0.8%) -> (690, 225) -->
+    <circle cx="690" cy="225" r="6" fill="#22c55e"/><text x="701" y="228" fill="#4ade80" font-size="9.5" font-weight="700">Vaisala/Rotronic</text>
+    <!-- Grodan ($1450, ±8%) -> (767, 108) -->
+    <circle cx="767" cy="112" r="7" fill="#dc2626"/><text x="756" y="115" fill="#fecaca" font-size="9.5" font-weight="800" text-anchor="end">Grodan ($1,450, ±8%!)</text>
+    <text x="613" y="270" fill="#94a3b8" font-size="9.5" text-anchor="middle">Green = Swappable / Transparent · Red/Orange = Wide spec or sealed box</text>
+  </g>
+</svg>
+</figure>
+
+<div class="ripoff-box"><h3>🚨 The Enterprise Ripoff Spotlight: AROYA &amp; Growlink</h3>
+<p>If you want to know how badly commercial cultivators are getting fleeced, look no further than the two biggest "enterprise" names hanging in multi-million-dollar facilities: <strong>AROYA</strong> and <strong>Growlink</strong>.</p>
+<ul>
+<li><strong>Growlink ($299 ClimaLINK → $799 standalone ESM-2) — $800 for a Mystery Chip, a Fan, and a "TBD" Spec Sheet:</strong></li>
+<li><strong>$799 standalone</strong> is <strong>123× the single-unit price</strong> (and <strong>~175× the factory reel price</strong>) of a flagship Sensirion SHT45-AD1F chip.</li>
+<li>What does $800 buy you? An <strong>undisclosed RH chip</strong>, <strong>zero published chemical endurance</strong>, <strong>no active thermal chemical purge</strong>, <strong>no cheap $15–$25 swappable RH tip</strong>, and a spec sheet that literally had <strong>"TBD" fields</strong> left on it!</li>
+<li>They strap an <strong>aspiration fan</strong> onto the box—meaning one unbagged ZeroTol fog or sulfur burn vacuums poison straight onto a non-serviceable sensor—and when your $800 box drifts off a cliff, GrowlinkOS hands you… <strong>a software offset menu.</strong> For the cost of <strong>one</strong> Growlink ESM-2, you could buy <strong>60+ Adafruit SHT45 breakouts</strong> and throw a fresh one in every room every quarter for a decade!</li>
+<li><strong>AROYA Climate One & Climate Station (Quote-Only / ~$5,000 AROYA GO Bundles + Recurring SaaS Lock-In) — "National Weather Service" Hype, $9 Govee Accuracy, and a 7.1 CFM Spray Vacuum:</strong></li>
+<li>Read AROYA's own <code>CLIMATE ONE</code> sales page and try not to laugh: they call it <em>"industrial-grade reliability, not fragile hobbyist tech"</em>, <em>"flawless moisture tracking"</em>, <em>"unquestionable, research-level durability"</em>, and <em>"pure, uninterrupted ground-truth data"</em>—and hide the price behind a <strong>"Book a technical demo"</strong> sales funnel (with entry AROYA GO starter kits running <strong>~$5,000</strong> plus ongoing platform fees).</li>
+<li><strong>Now look at the actual specs printed on that same product:</strong></li>
+<li><strong>±3% RH accuracy (and only rated 20–80% RH!)</strong> — literally the <strong>exact same ±3% RH tolerance as a $9 Govee puck</strong>, and <strong>3× sloppier than a $6.50 bare Sensirion SHT45 (±1.0% RH)</strong>!</li>
+<li><strong>±0.7 °C [±1.26 °F] temperature accuracy</strong> — <strong>7× worse than a $6.50 SHT45 (±0.1 °C)</strong> and <strong>over 2× worse than a $9 Govee (±0.3 °C)</strong>!</li>
+<li><strong>An active aspiration fan sucking 0.2 m³/min (~7.1 CFM) 24/7</strong> — that's <strong>288,000 liters of room air every single day</strong> pulled straight over an <strong>undisclosed RH chip</strong> with <strong>no disclosed inlet membrane, no published annual drift rate, no spray-cycle validation, and no thermal chemical purge!</strong> Forget to cut PoE power and bag it before ZeroTol fogging, IPA wipe-downs, foliar oil sprays, or sulfur burns, and your "ground-truth" enterprise box turns into a <strong>7.1 CFM chemical shop-vac</strong> poisoning itself on your dime!</li>
+<li>Even on AROYA's older <strong>METER ATMOS 14</strong> station (which at least earns credit for a porous PTFE screen, ±0.25%/yr clean-air drift disclosure, and an honest solvent-damage manual), <strong>gas-phase IPA, H<sub>2</sub>O<sub>2</sub>, PAA, and terpenes walk straight through PTFE</strong>—and when it drifts, you're paying <strong>~$100–$120 just for a recalibration</strong> or a proprietary Gen-2 board swap on top of enterprise pricing!</li>
+<li><strong>The Brutal Comparison:</strong> Real industrial instrument makers earn their price tags with physics: <strong>Vaisala</strong> gives you a 180 °C chemical purge and catalytic H<sub>2</sub>O<sub>2</sub> destruction; <strong>Priva</strong> and <strong>Hoogendoorn</strong> give you polymer-free wet/dry bulb psychrometers or honest annual plug-in swaps; <strong>Argus SEN-RHT</strong> gives you field-replaceable NIST tips. <strong>AROYA and Growlink charge you industrial money for consumer polymer physics, bolt a fan to it that accelerates chemical poisoning, and lock you into proprietary hardware.</strong></li>
+</ul>
+</div>
+<h3>The Rest of the Hall of Outrage</h3>
+<ul>
+<li><strong>TrolMaster</strong> sells the most popular commercial cannabis sensor in North America (MBS-TH) with a <strong>±7% RH factory spec</strong>—wide enough to drive a truck through <em>before it ever touches a spray</em>—and wraps a $4 chip inside a <strong>$250–$350 MBS-PRO</strong> with no swappable RH tip.</li>
+<li><strong>Pulse Grow</strong> can't even agree with itself: the <strong>$499 Pulse Pro</strong> claims <strong>±1.5% RH</strong> on the sales page and <strong>±3% RH</strong> on the tech spec page—and if your canopy sprays poison the hidden $4 chip inside, there is no replaceable tip.</li>
+<li><strong>Grodan</strong> sells a <strong>$1,000–$1,450+</strong> climate system with an unmarked chip rated <strong>±4.5% to ±8% RH</strong>.</li>
+<li><strong>Agrowtek</strong> puts a <strong>6 CFM fan behind an open-cell foam dust filter</strong>—turning the filter into a chemical sponge that breathes trapped IPM oils and ZeroTol straight over the chip for <em>days</em>—and rates it for <strong>80% RH max continuous</strong>.</li>
+<li><strong>Vivosun</strong> couldn't even proofread <code>%RH</code> (<code>"±0.6 %PH"</code>), and <strong>Spider Farmer, Inkbird, and Govee</strong> hand you a <strong>±20% RH offset slider</strong>—because they know their probes go sideways.</li>
+</ul>
+<p>Meanwhile, look at the <strong>big Dutch greenhouse veterans (Priva & Hoogendoorn)</strong> and <strong>industrial lab leaders (Vaisala, Rotronic, Argus)</strong>: they don't pretend capacitive polymer chips last forever. They either <strong>refuse to use polymers at all</strong> (sticking to wet/dry bulb psychrometers), <strong>bake chemicals out at 180 °C</strong>, <strong>install catalytic peroxide destroyers</strong>, or <strong>build annual plug-in element replacements right into the product.</strong></p>
+<p>That is how an honest instrument is built. What most cannabis brands are selling you is a pretty dashboard glued to a disposable chip—at a 100× markup.</p>
+</section>
+<section id="7-the-brutal-math-how-just-5-to-8-drift-wrecks-your-yield-power-bill-dry-room">
+<h2>7. The Brutal Math: How "Just 5 to 8% Drift" Wrecks Your Yield, Power Bill & Dry Room</h2>
+<p>Growers argue over <code>0.05 kPa</code> on VPD charts and pay six figures for HVACD—then hand the wheel to a probe that drifted 8% two harvests ago.</p>
+<p><strong>The Golden Psychrometric Shortcut:</strong> At 26.0 °C [78.8 °F], <strong>every 1% RH of sensor error shifts VPD by ~0.034 kPa</strong> <em>(exact: 0.0336 kPa, independent of leaf temp; FAO-56 Tetens and revised Buck equations agree to ~0.001 kPa).</em></p>
+<div class="callout"><strong>Sanity Check on Leaf Temperature:</strong> A <strong>2.0 °C [3.6 °F]</strong> error in your assumed leaf temperature moves Leaf VPD about as much as an <strong>11% RH sensor error</strong>. Fix your RH sensor first because it drifts silently—then verify canopy leaf temperature with an IR gun so you aren't chasing ghosts.</div>
+
+<div class="calc-card" id="drift-calc">
+  <div class="calc-head">
+    <div>
+      <div class="calc-badge">INTERACTIVE TOOL · FAO-56 TETENS PSYCHROMETRIC ENGINE</div>
+      <h3>Test How Badly a Drifted Sensor Is Lying to YOUR Room</h3>
+    </div>
+    <div class="calc-presets">
+      <button type="button" onclick="setPreset(26,1.5,60,8)">Flower +8% Wet</button>
+      <button type="button" onclick="setPreset(26,1.5,60,10.6)">NZ F2 (+10.6%)</button>
+      <button type="button" onclick="setPreset(15.5,0,60,8)">Dry +8% Wet</button>
+      <button type="button" onclick="setPreset(15.5,0,60,-8)">Dry −8% Oil</button>
+    </div>
+  </div>
+  <div class="calc-grid">
+    <div class="calc-controls">
+      <label>Room Air Temp: <strong id="lbl-t">26.0 °C [78.8 °F]</strong>
+        <input type="range" id="in-t" min="14" max="32" step="0.5" value="26" oninput="updateCalc()">
+      </label>
+      <label>Leaf Temp Offset (0 for Dry Room): <strong id="lbl-dt">−1.5 °C [−2.7 °F]</strong>
+        <input type="range" id="in-dt" min="0" max="3" step="0.5" value="1.5" oninput="updateCalc()">
+      </label>
+      <label>Controller Target Setpoint: <strong id="lbl-rh">60% RH</strong>
+        <input type="range" id="in-rh" min="40" max="80" step="1" value="60" oninput="updateCalc()">
+      </label>
+      <label>Sensor Chemical Drift (+ Wet / − Dry): <strong id="lbl-err" style="color:#ef4444">+8.0% RH</strong>
+        <input type="range" id="in-err" min="-15" max="15" step="0.5" value="8" oninput="updateCalc()">
+      </label>
+    </div>
+    <div class="calc-results">
+      <div class="res-box">
+        <div class="res-k">True Room RH</div>
+        <div class="res-v" id="out-trh">52.0%</div>
+        <div class="res-s" id="out-aw">Eq. Water Activity: 0.52 a<sub>w</sub></div>
+      </div>
+      <div class="res-box">
+        <div class="res-k">Target vs. True Leaf VPD</div>
+        <div class="res-v" id="out-vpd">1.33 kPa</div>
+        <div class="res-s" id="out-vpdpct">Target 1.06 kPa (+25.4% error)</div>
+      </div>
+      <div class="res-box">
+        <div class="res-k">True Dew Point</div>
+        <div class="res-v" id="out-td">15.4 °C</div>
+        <div class="res-s" id="out-tdf">59.7 °F</div>
+      </div>
+      <div class="res-verdict" id="out-verdict"></div>
+    </div>
+  </div>
+</div>
+
+<h3>Scenario A: Flower Room — When a Wet-Drifting Sensor Starves Your Canopy</h3>
+<p><strong>Setup:</strong> 26.0 °C [78.8 °F] air, <strong>60.0% RH controller setpoint</strong>, leaves at 24.5 °C [76.1 °F] (−1.5 °C differential; target Leaf VPD = <strong>1.06 kPa</strong>).</p>
+<p>When your sensor drifts <strong>wet (+)</strong>, the controller sees fake humidity and hammers the dehumidifiers until the <em>drifted</em> display hits 60%—pulling the real room drier by the exact sensor error:</p>
+<div class="table-wrap"><table class="data-table"><thead><tr>
+<th>Sensor Error (Displayed − True)</th>
+<th>Displayed RH</th>
+<th><strong>True Room RH</strong></th>
+<th><strong>True Air VPD</strong></th>
+<th><strong>True Leaf VPD</strong> <em>(24.5 °C leaf)</em></th>
+<th><strong>LVPD Error %</strong> <em>(and at −1 °C / −2 °C leaf)</em></th>
+<th>Real-World Damage</th>
+</tr></thead><tbody>
+<tr><td><strong>0% RH (Honest)</strong></td><td>60.0%</td><td><strong>60.0%</strong></td><td>1.34 kPa</td><td><strong>1.06 kPa</strong></td><td><strong>0.0%</strong></td><td>Dialed in</td></tr>
+<tr><td><strong>+3% RH</strong></td><td>60.0%</td><td><strong>57.0%</strong></td><td>1.45 kPa</td><td><strong>1.16 kPa</strong></td><td><strong>+9.5%</strong> <em>(+8.8% / +10.4%)</em></td><td>Extra dehu duty cycle; drifting out of sweet spot</td></tr>
+<tr><td><strong>+5% RH</strong></td><td>60.0%</td><td><strong>55.0%</strong></td><td>1.51 kPa</td><td><strong>1.23 kPa</strong></td><td><strong>+15.9%</strong> <em>(+14.6% / +17.4%)</em></td><td>Pushes a 1.0–1.2 kPa room out of band</td></tr>
+<tr><td><strong>+8% RH</strong></td><td>60.0%</td><td><strong>52.0%</strong></td><td>1.61 kPa</td><td><strong>1.33 kPa</strong></td><td><strong>+25.4%</strong> <em>(+23.4% / +27.8%)</em></td><td>Stomatal stress, rootzone EC spikes, <strong>wasted kWh</strong> (1.95 g/m³ excess water removal = hundreds/mo)</td></tr>
+<tr><td>*<em>+10.6% RH </em>(Real NZ F2 case!)***</td><td>60.0%</td><td><strong>49.4%</strong></td><td>1.70 kPa</td><td><strong>1.41 kPa</strong></td><td><strong>+33.7%</strong></td><td>Accidental crop-steering dry-back; growers chase fake irrigation/EC issues!</td></tr>
+</tbody></table></div>
+<ul>
+<li><strong>Running a VPD Controller Instead of RH?</strong> Doesn't save you! Targeting <strong>1.20 kPa Leaf VPD</strong> at 26 °C with a +8% wet sensor drops true room RH to <strong>50.5%</strong> (at −1 °C leaf) or <strong>45.1%</strong> (at −2 °C leaf), slamming true Leaf VPD to <strong>1.47 kPa</strong>!</li>
+<li><strong>In Veg, the % Hit Is Even Bigger:</strong> At 25 °C air / 24 °C leaf targeting 70% RH (0.77 kPa), just <strong>+5% RH</strong> spikes VPD to <strong>0.93 kPa (+20%)</strong> on tender young plants. At 26 °C / 24.5 °C targeting 65% RH (0.89 kPa), a <strong>−10% dry drift</strong> crashes LVPD to <strong>0.55 kPa (−38%)</strong>.</li>
+<li><strong>Flip the Sign in Flower (Oil/Terpene Dry Drift):</strong> In a 25.0 °C [77.0 °F] mid-flower room targeting <strong>55% RH</strong> (1.24 kPa LVPD at 24 °C leaf):</li>
+<li><strong>−10% dry drift</strong> → true room sits at <strong>65% RH</strong> (LVPD drops to <strong>0.92 kPa</strong>) → weak calcium transport, stretched/larfy buds, high pathogen pressure.</li>
+<li><strong>−15% dry drift</strong> → true room sits at <strong>70% RH</strong> (LVPD collapses to <strong>0.77 kPa</strong>) → <strong>Botrytis & powdery mildew inside dense colas</strong>, dew-point condensation at lights-off!</li>
+</ul>
+
+<figure class="fig">
+<svg viewBox="0 0 820 330" width="100%" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Flower room wet drift VPD blowup and bi-directional dry vs wet risk">
+  <rect width="820" height="330" rx="12" fill="#0f131a"/>
+  <text x="26" y="32" fill="#f8fafc" font-size="16.5" font-weight="900" font-family="system-ui,sans-serif">GRAPHIC 10 · FLOWER ROOM VPD BLOWUP (BOTH DIRECTIONS KILL)</text>
+  <text x="26" y="51" fill="#94a3b8" font-size="11.5" font-family="system-ui,sans-serif">Left: 26 °C / 60% setpoint under wet drift (+3% to +10.6% NZ Case). Right: 25 °C / 55% room showing BOTH dry-drift mould &amp; wet-drift stress.</text>
+
+  <!-- LEFT: Bars 26C/60% (Y: 0..1.6 kPa -> B=266, T=86 -> 112.5 px/kPa) -->
+  <g font-family="system-ui,sans-serif">
+    <rect x="58" y="131" width="356" height="22.5" fill="#22c55e" opacity="0.18"/>
+    <text x="64" y="96" fill="#4ade80" font-size="10" font-weight="800">GREEN BAND = TARGET 1.0–1.2 kPa</text>
+    <line x1="58" y1="266" x2="414" y2="266" stroke="#475569"/>
+    <text x="50" y="270" fill="#64748b" font-size="9.5" text-anchor="end">0.0</text>
+    <text x="50" y="176" fill="#64748b" font-size="9.5" text-anchor="end">0.8</text>
+    <text x="50" y="89" fill="#64748b" font-size="9.5" text-anchor="end">1.6</text>
+
+    <rect x="70" y="147" width="52" height="119" rx="4" fill="#22c55e"/>
+    <text x="96" y="141" fill="#4ade80" font-size="11.5" font-weight="800" text-anchor="middle">1.06</text>
+    <text x="96" y="284" fill="#e2e8f0" font-size="10.5" font-weight="700" text-anchor="middle">0%</text>
+    <text x="96" y="298" fill="#94a3b8" font-size="9.5" text-anchor="middle">True 60%</text>
+
+    <rect x="138" y="135.5" width="52" height="130.5" rx="4" fill="#84cc16"/>
+    <text x="164" y="129" fill="#bef264" font-size="11.5" font-weight="800" text-anchor="middle">1.16</text>
+    <text x="164" y="284" fill="#e2e8f0" font-size="10.5" font-weight="700" text-anchor="middle">+3%</text>
+    <text x="164" y="298" fill="#94a3b8" font-size="9.5" text-anchor="middle">True 57%</text>
+
+    <rect x="206" y="127.6" width="52" height="138.4" rx="4" fill="#f59e0b"/>
+    <text x="232" y="121" fill="#fbbf24" font-size="11.5" font-weight="800" text-anchor="middle">1.23</text>
+    <text x="232" y="284" fill="#e2e8f0" font-size="10.5" font-weight="700" text-anchor="middle">+5%</text>
+    <text x="232" y="298" fill="#94a3b8" font-size="9.5" text-anchor="middle">True 55%</text>
+
+    <rect x="274" y="116.4" width="52" height="149.6" rx="4" fill="#f97316"/>
+    <text x="300" y="110" fill="#fb923c" font-size="11.5" font-weight="800" text-anchor="middle">1.33</text>
+    <text x="300" y="284" fill="#e2e8f0" font-size="10.5" font-weight="700" text-anchor="middle">+8%</text>
+    <text x="300" y="298" fill="#94a3b8" font-size="9.5" text-anchor="middle">True 52%</text>
+
+    <rect x="342" y="107.4" width="56" height="158.6" rx="4" fill="#ef4444"/>
+    <text x="370" y="101" fill="#fca5a5" font-size="12" font-weight="900" text-anchor="middle">1.41</text>
+    <text x="370" y="284" fill="#f87171" font-size="10.5" font-weight="900" text-anchor="middle">+10.6%</text>
+    <text x="370" y="298" fill="#fca5a5" font-size="9.5" text-anchor="middle">NZ F2 Case</text>
+    <text x="236" y="318" fill="#94a3b8" font-size="10" text-anchor="middle">Wet Drift → Over-Dehumidifies → +33.7% LVPD Stress</text>
+  </g>
+
+  <line x1="432" y1="74" x2="432" y2="316" stroke="#1e293b" stroke-width="1.5"/>
+
+  <!-- RIGHT: Bi-directional 25C/55% Mid-Flower Spectrum -->
+  <g font-family="system-ui,sans-serif">
+    <text x="622" y="88" fill="#f8fafc" font-size="12.5" font-weight="800" text-anchor="middle">MID-FLOWER (25 °C, 55% TARGET = 1.24 kPa)</text>
+    <!-- Horizontal spectrum bar x=454..790 (w=336) -->
+    <rect x="454" y="116" width="112" height="36" rx="4" fill="#3b82f6" opacity="0.85"/>
+    <rect x="566" y="116" width="112" height="36" fill="#22c55e" opacity="0.85"/>
+    <rect x="678" y="116" width="112" height="36" rx="4" fill="#ef4444" opacity="0.85"/>
+    <text x="510" y="132" fill="#fff" font-size="10.5" font-weight="900" text-anchor="middle">BOTRYTIS / PM</text>
+    <text x="510" y="146" fill="#dbeafe" font-size="9.5" text-anchor="middle">0.77–0.92 kPa</text>
+    <text x="622" y="132" fill="#052e16" font-size="10.5" font-weight="900" text-anchor="middle">ON TARGET</text>
+    <text x="622" y="146" fill="#052e16" font-size="9.5" font-weight="700" text-anchor="middle">1.24 kPa (55%)</text>
+    <text x="734" y="132" fill="#fff" font-size="10.5" font-weight="900" text-anchor="middle">STOMATAL LOCK</text>
+    <text x="734" y="146" fill="#fee2e2" font-size="9.5" text-anchor="middle">1.56–1.72 kPa</text>
+
+    <text x="458" y="170" fill="#60a5fa" font-size="10" font-weight="800">−15% Dry Drift</text>
+    <text x="458" y="183" fill="#94a3b8" font-size="9.5">True 70% RH inside colas</text>
+    <text x="786" y="170" fill="#f87171" font-size="10" font-weight="800" text-anchor="end">+15% Wet Drift</text>
+    <text x="786" y="183" fill="#94a3b8" font-size="9.5" text-anchor="end">True 40% RH · EC spikes</text>
+
+    <!-- Veg & Leaf-temp insight box -->
+    <rect x="454" y="204" width="336" height="96" rx="8" fill="#161b26" stroke="#334155"/>
+    <text x="470" y="226" fill="#fbbf24" font-size="11.5" font-weight="800">⚡ TWO EXTRA MULTIPLIERS GROWERS MISS</text>
+    <text x="470" y="246" fill="#e2e8f0" font-size="11">• <tspan font-weight="700">In Veg (26 °C, 65%):</tspan> −10% drift crashes LVPD</text>
+    <text x="478" y="261" fill="#94a3b8" font-size="10.5">from 0.89 → <tspan fill="#38bdf8" font-weight="700">0.55 kPa (−38%!)</tspan></text>
+    <text x="470" y="281" fill="#e2e8f0" font-size="11">• <tspan font-weight="700">Leaf Temp Check:</tspan> A 2 °C leaf-temp error equals</text>
+    <text x="478" y="295" fill="#94a3b8" font-size="10.5">an <tspan fill="#fbbf24" font-weight="700">11% RH sensor error</tspan> — verify with an IR gun!</text>
+  </g>
+</svg>
+</figure>
+
+<h3>Scenario B: The Dry & Cure Room — A Razor's Edge Where One Bad Sensor Kills an Entire Harvest</h3>
+<p>If a lying flower-room sensor quietly bleeds yield and electricity, <strong>a lying dry-room sensor wipes out $20,000 to $250,000+ batches in a single week.</strong></p>
+<p>At equilibrium, your flower's <strong>water activity (a<sub>w</sub>)</strong> matches the room's Equilibrium Relative Humidity (a<sub>w</sub> = ERH / 100).</p>
+<ul>
+<li><strong>ASTM D8196 / D8197-22</strong> sets the commercial safe band for dried cannabis flower at <strong>0.55 to 0.65 a<sub>w</sub></strong>.</li>
+<li>Below <strong>0.55 a<sub>w</sub></strong>: trichomes turn brittle, curing biochemistry halts, volatile monoterpenes flash off, and you burn <strong>2–5% of sellable harvest weight straight into thin air</strong>.</li>
+<li>Above <strong>0.65 a<sub>w</sub></strong>: <em>Aspergillus</em>, <em>Penicillium</em>, and <em>Botrytis</em> explode—and state microbial compliance tests fail. <em>(Peer-reviewed warning: Segers et al. 2016 proved xerophilic <strong>Aspergillus penicillioides</strong> can germinate as low as <strong>0.585 a<sub>w</sub></strong>! And Birenboim et al. 2024 notes optimal drying curves are cultivar-specific—not a blind "60/60" religion.)</em></li>
+</ul>
+<p><strong>Look how narrow that margin is:</strong> Around a 60% RH setpoint, the <em>entire</em> ASTM safe window is only <strong>±5% RH wide</strong>—the exact size of drift you can pick up from a single sanitizing week! <em>(And a 55% setpoint has ZERO downward margin.)</em></p>
+<div class="table-wrap"><table class="data-table"><thead><tr>
+<th>Dry Room Setpoint</th>
+<th>Sensor Drift</th>
+<th><strong>True Room RH</strong></th>
+<th><strong>Equilibrium a<sub>w</sub></strong></th>
+<th><strong>Air VPD</strong> <em>(Drying Force vs. Target)</em></th>
+<th>Dew Point (°C [°F])</th>
+<th>Harvest Outcome</th>
+</tr></thead><tbody>
+<tr><td><strong>15.5 °C [59.9 °F], 60%</strong></td><td><strong>−15%</strong> <em>(dry bias)</em></td><td><strong>75.0%</strong></td><td><strong>0.75</strong></td><td>0.44 kPa <em>(×0.63)</em></td><td>11.1 [52.0]</td><td><strong>Catastrophic Botrytis / mould wipeout</strong></td></tr>
+<tr><td><strong>15.5 °C [59.9 °F], 60%</strong></td><td><strong>−8%</strong> <em>(oil/crossover)</em></td><td><strong>68.0%</strong></td><td><strong>0.68</strong></td><td>0.56 kPa <em>(×0.80)</em></td><td>9.6 [49.3]</td><td><strong>Aspergillus / failed state microbial compliance</strong></td></tr>
+<tr><td><strong>15.5 °C [59.9 °F], 60%</strong></td><td><strong>−5%</strong></td><td><strong>65.0%</strong></td><td><strong>0.65</strong></td><td>0.62 kPa <em>(×0.88)</em></td><td>8.9 [48.1]</td><td><strong>Standing directly on the mould cliff edge</strong></td></tr>
+<tr><td><strong>15.5 °C [59.9 °F], 60%</strong></td><td><strong>0% (Honest)</strong></td><td><strong>60.0%</strong></td><td><strong>0.60</strong></td><td><strong>0.70 kPa</strong> <em>(×1.00)</em></td><td>7.8 [46.0]</td><td><strong>Ideal slow dry; dead-centre of ASTM D8197</strong></td></tr>
+<tr><td><strong>15.5 °C [59.9 °F], 60%</strong></td><td><strong>+5%</strong> <em>(wet bias)</em></td><td><strong>55.0%</strong></td><td><strong>0.55</strong></td><td>0.79 kPa <em>(×1.13)</em></td><td>6.5 [43.7]</td><td>Bottom edge of ASTM band; accelerated dry</td></tr>
+<tr><td><strong>15.5 °C [59.9 °F], 60%</strong></td><td><strong>+8%</strong></td><td><strong>52.0%</strong></td><td><strong>0.52</strong></td><td>0.85 kPa <em>(×1.20)</em></td><td>5.7 [42.3]</td><td><strong>Over-dried:</strong> terpene loss, brittle trichomes, <strong>2–5% weight loss</strong></td></tr>
+<tr><td><strong>15.5 °C [59.9 °F], 55%</strong></td><td><strong>+8%</strong></td><td><strong>47.0%</strong></td><td><strong>0.47</strong></td><td>0.93 kPa <em>(×1.18)</em></td><td>4.2 [39.6]</td><td><strong>Severe over-dry:</strong> hay smell, shattered flower</td></tr>
+<tr><td><strong>18.0 °C [64.4 °F], 60%</strong></td><td><strong>+5%</strong></td><td><strong>55.0%</strong></td><td><strong>0.55</strong></td><td>0.93 kPa <em>(×1.13)</em></td><td>8.8 [47.9]</td><td>High VPD; outer case-hardening while cores stay wet</td></tr>
+<tr><td><strong>18.0 °C [64.4 °F], 55%</strong></td><td><strong>+8%</strong></td><td><strong>47.0%</strong></td><td><strong>0.47</strong></td><td>1.09 kPa <em>(×1.18)</em></td><td>6.5 [43.8]</td><td><strong>Severe over-dry</strong></td></tr>
+</tbody></table></div>
+
+<figure class="fig">
+<svg viewBox="0 0 820 265" width="100%" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Dry room ASTM water activity razor edge and drying force comparison">
+  <rect width="820" height="265" rx="12" fill="#0f131a"/>
+  <text x="26" y="32" fill="#f8fafc" font-size="16.5" font-weight="900" font-family="system-ui,sans-serif">GRAPHIC 11 · DRY ROOM RAZOR'S EDGE: ONLY ±5% RH BETWEEN HAY &amp; MOULD</text>
+  <text x="26" y="51" fill="#94a3b8" font-size="11.5" font-family="system-ui,sans-serif">Controller holds displayed 60% RH (15.5 °C [59.9 °F]). Equilibrium flower water activity a_w = ERH / 100. ASTM D8197 window: 0.55–0.65 a_w.</text>
+
+  <g font-family="system-ui,sans-serif">
+    <!-- Bar x=36..784 (width 748) representing True RH 45%..75% (30 pts = 24.93 px/pt) -->
+    <!-- 45..55 = 249px; 55..65 = 250px; 65..75 = 249px -->
+    <rect x="36" y="86" width="249" height="54" rx="5" fill="#ea580c"/>
+    <rect x="285" y="86" width="250" height="54" fill="#16a34a"/>
+    <rect x="535" y="86" width="249" height="54" rx="5" fill="#dc2626"/>
+
+    <text x="160" y="109" fill="#ffffff" font-size="13.5" font-weight="900" text-anchor="middle">OVER-DRY (&lt;0.55 a_w)</text>
+    <text x="160" y="128" fill="#ffedd5" font-size="11" text-anchor="middle">Hay smell · Terps gone · −2–5% weight</text>
+
+    <text x="410" y="109" fill="#052e16" font-size="13.5" font-weight="900" text-anchor="middle">ASTM SAFE BAND (0.55–0.65)</text>
+    <text x="410" y="128" fill="#052e16" font-size="11" font-weight="700" text-anchor="middle">10–14 day slow dry · Ideal 0.60 a_w</text>
+
+    <text x="660" y="109" fill="#ffffff" font-size="13.5" font-weight="900" text-anchor="middle">MOULD / FAIL (&gt;0.65 a_w)</text>
+    <text x="660" y="128" fill="#fee2e2" font-size="11" text-anchor="middle">Aspergillus / Botrytis · Failed lab test</text>
+
+    <!-- Markers -->
+    <!-- +10% -> true 50% (x=160) -->
+    <line x1="160" y1="74" x2="160" y2="152" stroke="#fde047" stroke-width="2" stroke-dasharray="3 2"/>
+    <text x="160" y="168" fill="#fde047" font-size="11" font-weight="800" text-anchor="middle">+10% Wet</text>
+    <text x="160" y="182" fill="#94a3b8" font-size="10" text-anchor="middle">50% (0.50 a_w)</text>
+
+    <!-- +5% -> true 55% (x=285) -->
+    <line x1="285" y1="74" x2="285" y2="152" stroke="#fff" stroke-width="1.5"/>
+    <text x="285" y="168" fill="#cbd5e1" font-size="10.5" font-weight="700" text-anchor="middle">+5% (0.55)</text>
+
+    <!-- 0% -> true 60% (x=410) -->
+    <line x1="410" y1="72" x2="410" y2="154" stroke="#ffffff" stroke-width="3"/>
+    <text x="410" y="168" fill="#4ade80" font-size="11.5" font-weight="900" text-anchor="middle">0% Honest</text>
+    <text x="410" y="182" fill="#86efac" font-size="10" text-anchor="middle">60% (0.60 a_w)</text>
+
+    <!-- 0.585 Aspergillus penicillioides note at x=372 -->
+    <circle cx="372" cy="140" r="4.5" fill="#fbbf24" stroke="#0f131a" stroke-width="1.5"/>
+    <text x="372" y="208" fill="#fbbf24" font-size="10" font-weight="700" text-anchor="middle">▲ Xerophilic A. penicillioides germinates as low as 0.585 a_w (Segers 2016)</text>
+
+    <!-- -5% -> true 65% (x=535) -->
+    <line x1="535" y1="74" x2="535" y2="152" stroke="#fff" stroke-width="1.5"/>
+    <text x="535" y="168" fill="#fca5a5" font-size="10.5" font-weight="700" text-anchor="middle">−5% (0.65)</text>
+
+    <!-- -10% -> true 70% (x=660) -->
+    <line x1="660" y1="74" x2="660" y2="152" stroke="#fca5a5" stroke-width="2" stroke-dasharray="3 2"/>
+    <text x="660" y="168" fill="#f87171" font-size="11" font-weight="800" text-anchor="middle">−10% Dry</text>
+    <text x="660" y="182" fill="#94a3b8" font-size="10" text-anchor="middle">70% (0.70 a_w)</text>
+
+    <!-- Bottom warning strip -->
+    <rect x="36" y="222" width="748" height="30" rx="6" fill="#161b26" stroke="#334155"/>
+    <text x="410" y="241" fill="#e2e8f0" font-size="11" font-weight="700" text-anchor="middle">Running a 55% RH dry setpoint? You have ZERO downward margin: +8% wet drift slams you to 47% RH (0.47 a_w)!</text>
+  </g>
+</svg>
+</figure>
+
+<div class="callout"><strong>Dry-Room Reality Check:</strong> Dry rooms sit right where Sensirion and TI place the contamination <strong>crossover</strong> (high RH + heavy terpenes + between-batch sanitizers), meaning a poisoned probe can lie in <em>either</em> direction. <strong>Never trust the wall screen alone for release:</strong> always measure actual <strong>a<sub>w</sub> directly on a representative flower sample</strong> with a calibrated water-activity meter before jarring or packaging. Wall RH tells you where the flower is <em>heading</em>, not where it <em>is</em>.</div>
+</section>
+<section id="8-stop-falling-for-software-offsets-and-toaster-oven-reconditioning">
+<h2>8. Stop Falling for Software Offsets and Toaster-Oven "Reconditioning"</h2>
+<p>When growers finally catch a drifted probe, they usually try one of two bad fixes:</p>
+<h3>Trap #1: Punching in a Software Offset (<code>−8%</code> or <code>+6%</code>)</h3>
+<p>Every consumer app begs you to type in a flat offset. <strong>Don't fall for it.</strong></p>
+<ol>
+<li><strong>Chemical drift is non-linear.</strong> A sensor that reads <code>−7%</code> at 55% RH daytime might read <code>−2%</code> at 40% RH and <code>−13%</code> at 75% RH lights-off. Fixing one point breaks the rest of the curve.</li>
+<li><strong>Offsets can't cure lag or blindness.</strong> If oils choked the filter to a 30-minute response lag, offsetting the average still leaves your dehumidifiers swinging wildly.</li>
+<li><strong>Poisoned polymers keep moving.</strong> Today's <code>−7%</code> offset will be wrong again next week.</li>
+</ol>
+<h3>Trap #2: Baking Probes to "Recondition" Them</h3>
+<p>Chipmakers publish oven bake-and-rehydrate recipes for <strong>bare silicon chips</strong> suffering <em>mild, reversible</em> creep or volatile solvent sorption:</p>
+<div class="table-wrap"><table class="data-table"><thead><tr>
+<th>Chipmaker</th>
+<th>Bake Step (Bare Chip Only!)</th>
+<th>Rehydration Step</th>
+</tr></thead><tbody>
+<tr><td><strong>Sensirion SHTxx</strong></td><td>100–105 °C [212–221 °F], <5% RH, <strong>10 h</strong></td><td>20–30 °C [68–86 °F], ~75% RH (NaCl), <strong>12 h</strong></td></tr>
+<tr><td><strong>Texas Instruments HDC302x</strong></td><td>100 °C, <5% RH, <strong>5–10 h</strong></td><td>25 °C, 50% RH, <strong>5 days</strong></td></tr>
+<tr><td><strong>Bosch BME280</strong></td><td>120 °C, <5% RH, <strong>2 h</strong></td><td>70 °C, 75% RH, <strong>6 h</strong> (+ 1 h rest)</td></tr>
+<tr><td><strong>Renesas HS300x</strong></td><td>100 °C, <10% RH, <strong>10–12 h</strong></td><td>20–30 °C, 75% RH, <strong>12–14 h</strong></td></tr>
+<tr><td><strong>Silicon Labs Si7021</strong></td><td>125 °C, <strong>≥12 h</strong></td><td>30 °C, 75% RH, <strong>≥10 h</strong></td></tr>
+<tr><td><strong>Aosong DHT22 / DHT20</strong></td><td>DHT22: 50–60 °C, <10% RH, <strong>2 h</strong> · DHT20: 60–65 °C, <5% RH, <strong>6 h</strong></td><td>20–30 °C, >70–75% RH, <strong>5–6 h</strong> <em>(ignore AHT20 datasheet typo!)</em></td></tr>
+<tr><td><strong>Vaisala (Industrial Probes)</strong></td><td>Up to <strong>160 °C [320 °F] for 1 h</strong> (compatible models only)</td><td>Per service spec</td></tr>
+</tbody></table></div>
+<p><strong>Why you should NEVER waste time baking grow probes:</strong> Sensirion itself calls this a <strong>"last resort" for bare chips only</strong>. Stick an assembled plastic grow probe in a 105 °C oven and you will melt the housing, force the cable jacket and epoxy to outgas <em>even more</em> VOCs onto the chip, bake neem oil and quats into a permanent glaze, and accomplish zero against peroxide oxidation or sulfur corrosion.</p>
+<p>Do the math: <strong>22+ hours of oven/chamber time + 1 to 2 hours of technician labour ($30–$120)</strong> + a 2-point salt re-check—for an uncertain repair on a <strong>$6 to $25 sensor head</strong>. Only refurbish high-dollar industrial probes (Vaisala/Rotronic/ATMOS) under manufacturer service. For everything else: <strong>scrap it and swap it.</strong></p>
+</section>
+<section id="9-take-back-control-the-grower-s-bulletproof-protocol">
+<h2>9. Take Back Control: The Grower's Bulletproof Protocol</h2>
+<p>You cannot trust three room sensors to check each other—if all three sat through the same ZeroTol fog, <strong>all three lie together.</strong> The cure is boring, cheap, and takes 20 minutes per room.</p>
+
+<figure class="fig">
+<svg viewBox="0 0 820 355" width="100%" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Reconditioning vs replacement economics, Golden Benchmark loop, and salt-check temperature error trap">
+  <rect width="820" height="355" rx="12" fill="#0f131a"/>
+  <text x="26" y="32" fill="#f8fafc" font-size="16" font-weight="900" font-family="system-ui,sans-serif">GRAPHIC 12 · WHY SWAPPING BEATS BAKING + THE GOLDEN BENCHMARK PROTOCOL</text>
+
+  <!-- TOP HALF: Bake vs Swap + Thermal Salt Trap -->
+  <g font-family="system-ui,sans-serif">
+    <!-- Left Box: Bake vs Swap -->
+    <rect x="24" y="48" width="446" height="136" rx="10" fill="#161b26" stroke="#334155"/>
+    <text x="40" y="70" fill="#f8fafc" font-size="12" font-weight="900">ECONOMICS: OVEN "RECONDITIONING" VS. STRAIGHT SWAP</text>
+    <!-- Bake bar -->
+    <text x="40" y="96" fill="#fca5a5" font-size="11" font-weight="800">Bake &amp; Rehydrate</text>
+    <rect x="162" y="83" width="286" height="20" rx="4" fill="#991b1b"/>
+    <text x="172" y="97" fill="#fff" font-size="10.5" font-weight="700">22+ hrs · $30–$120 labour · melts plastic · uncertain</text>
+    <!-- Swap bar -->
+    <text x="40" y="130" fill="#4ade80" font-size="11" font-weight="800">Modular SHT45 Swap</text>
+    <rect x="162" y="117" width="66" height="20" rx="4" fill="#16a34a"/>
+    <text x="236" y="131" fill="#4ade80" font-size="10.5" font-weight="800">$6–$25 · 2 minutes · factory ±1.0% RH!</text>
+    <text x="40" y="164" fill="#94a3b8" font-size="10.5">vs. ONE ruined dry-room batch or failed mould test = <tspan fill="#ef4444" font-weight="800">$20,000–$250,000+</tspan></text>
+
+    <!-- Right Box: Salt-Check Thermal Trap -->
+    <rect x="484" y="48" width="312" height="136" rx="10" fill="#261a07" stroke="#f59e0b"/>
+    <text x="500" y="70" fill="#fbbf24" font-size="11.5" font-weight="900">⚠ SALT-CHECK THERMAL TRAP (NaCl @ 25 °C)</text>
+    <text x="500" y="88" fill="#fef3c7" font-size="10.5">True NaCl slurry = <tspan font-weight="800">75.29% RH</tspan>. If sensor is warmer:</text>
+    <!-- 3 mini bars -->
+    <text x="500" y="113" fill="#4ade80" font-size="10.5" font-weight="700">ΔT = 0.0 °C</text>
+    <rect x="580" y="102" width="110" height="14" rx="3" fill="#22c55e"/>
+    <text x="697" y="113" fill="#4ade80" font-size="10.5" font-weight="800">75.29% ✓</text>
+
+    <text x="500" y="136" fill="#fbbf24" font-size="10.5" font-weight="700">ΔT = +0.5 °C</text>
+    <rect x="580" y="125" width="90" height="14" rx="3" fill="#f59e0b"/>
+    <text x="677" y="136" fill="#fbbf24" font-size="10.5" font-weight="800">73.08% (−2.2!)</text>
+
+    <text x="500" y="159" fill="#f87171" font-size="10.5" font-weight="700">ΔT = +1.0 °C</text>
+    <rect x="580" y="148" width="70" height="14" rx="3" fill="#ef4444"/>
+    <text x="657" y="159" fill="#fca5a5" font-size="10.5" font-weight="800">70.95% (−4.3!)</text>
+    <text x="500" y="176" fill="#cbd5e1" font-size="9.5">Hold jars ±0.2 °C steady, glass only, 12–24h!</text>
+  </g>
+
+  <!-- BOTTOM HALF: 4-Step Golden Benchmark Loop -->
+  <g font-family="system-ui,sans-serif">
+    <text x="26" y="212" fill="#38bdf8" font-size="12.5" font-weight="900">THE 4-STEP GOLDEN BENCHMARK LOOP (TAKES 20 MINUTES PER ROOM)</text>
+
+    <rect x="24" y="224" width="176" height="110" rx="9" fill="#161b26" stroke="#38bdf8" stroke-width="1.5"/>
+    <text x="112" y="248" fill="#38bdf8" font-size="12.5" font-weight="900" text-anchor="middle">1. VAULT BENCHMARK</text>
+    <text x="112" y="268" fill="#e2e8f0" font-size="10.5" text-anchor="middle">2× SHT45-AD1F or NIST</text>
+    <text x="112" y="283" fill="#e2e8f0" font-size="10.5" text-anchor="middle">Vaisala/Rotronic in glass</text>
+    <text x="112" y="298" fill="#94a3b8" font-size="10" text-anchor="middle">jar + silica (office only).</text>
+    <text x="112" y="316" fill="#fca5a5" font-size="9.5" font-weight="700" text-anchor="middle">NO PE bags, foam, IPA!</text>
+
+    <path d="M204 279 l18 0 m-6 -5 l6 5 l-6 5" stroke="#64748b" stroke-width="2" fill="none"/>
+
+    <rect x="226" y="224" width="176" height="110" rx="9" fill="#161b26" stroke="#22c55e" stroke-width="1.5"/>
+    <text x="314" y="248" fill="#4ade80" font-size="12.5" font-weight="900" text-anchor="middle">2. 2-POINT SALT</text>
+    <text x="314" y="268" fill="#e2e8f0" font-size="10.5" text-anchor="middle">Quarterly MgCl₂ (32.8%)</text>
+    <text x="314" y="283" fill="#e2e8f0" font-size="10.5" text-anchor="middle">&amp; NaCl (75.3% @ 25 °C).</text>
+    <text x="314" y="298" fill="#94a3b8" font-size="10" text-anchor="middle">20× tighter than Boveda.</text>
+    <text x="314" y="316" fill="#4ade80" font-size="9.5" font-weight="700" text-anchor="middle">&gt;2% slope gap = trash it</text>
+
+    <path d="M406 279 l18 0 m-6 -5 l6 5 l-6 5" stroke="#64748b" stroke-width="2" fill="none"/>
+
+    <rect x="428" y="224" width="176" height="110" rx="9" fill="#161b26" stroke="#f59e0b" stroke-width="1.5"/>
+    <text x="516" y="248" fill="#fbbf24" font-size="12.5" font-weight="900" text-anchor="middle">3. CO-LOCATE</text>
+    <text x="516" y="268" fill="#e2e8f0" font-size="10.5" text-anchor="middle">5–10 cm from room probe,</text>
+    <text x="516" y="283" fill="#e2e8f0" font-size="10.5" text-anchor="middle">wait 20–30m, 10 readings.</text>
+    <text x="516" y="298" fill="#94a3b8" font-size="10" text-anchor="middle">Check +24h &amp; +7d post-spray.</text>
+    <text x="516" y="316" fill="#fbbf24" font-size="9.5" font-weight="700" text-anchor="middle">Compare dew points (T_d)!</text>
+
+    <path d="M608 279 l18 0 m-6 -5 l6 5 l-6 5" stroke="#64748b" stroke-width="2" fill="none"/>
+
+    <rect x="630" y="224" width="166" height="110" rx="9" fill="#230b0e" stroke="#ef4444" stroke-width="1.5"/>
+    <text x="713" y="248" fill="#f87171" font-size="12.5" font-weight="900" text-anchor="middle">4. BIN &amp; ROTATE</text>
+    <text x="713" y="268" fill="#e2e8f0" font-size="10.5" text-anchor="middle">≤2% Pass · 2–4% Flag</text>
+    <text x="713" y="284" fill="#ffffff" font-size="11" font-weight="900" text-anchor="middle">&gt;4% BIN IT TODAY</text>
+    <text x="713" y="300" fill="#fca5a5" font-size="9.5" text-anchor="middle">(&gt;2–3% in Dry/Cure!)</text>
+    <text x="713" y="316" fill="#fecaca" font-size="9.5" font-weight="700" text-anchor="middle">Hard swap every 6–12 mo</text>
+  </g>
+</svg>
+</figure>
+
+<h3>Step 1: Lock Down Your "Golden Benchmark" (Your Source of Truth)</h3>
+<p>Keep <strong>two dedicated reference sensors</strong> (Primary + Vault Backup) that <strong>NEVER live inside a grow room, dry room, trim room, or chemical/nutrient closet.</strong></p>
+<ul>
+<li><strong>GMP / Commercial Facilities:</strong> ISO 17025 / NIST-traceable handheld—<strong>Vaisala HM40/HM45</strong> (±1.1% RH, ~$1,000–$2,600) or <strong>Rotronic HP32 + HC2A-S</strong> (±0.8% RH, ~$1,100–$1,900), calibrated annually. Target expanded uncertainty ≤1% RH.</li>
+<li><strong>Craft / Budget Facilities:</strong> Two clean, dedicated <strong>Sensirion SHT45-AD1F</strong> loggers (verify Reel ID, low-self-heating board) or <strong>SensorPush HTP.xw</strong> (±1.5% RH, ePTFE). If your two references ever disagree by <strong>>1.5% RH</strong>, salt-check both before trusting either.</li>
+<li><strong>Non-Negotiable Storage Rules:</strong></li>
+<li>Store in an <strong>airtight borosilicate glass jar with a metal lid</strong> (or sealed stainless box) with isolated, buffered indicating silica gel desiccant in a clean office (20–25 °C [68–77 °F]). <em>(Avoid ultra-dry storage beyond maker limits; let settle 30 min in room air after desiccant storage before reading.)</em></li>
+<li><strong>NEVER</strong> store in PE antistatic bags, pink foam, soft PVC cases, silicone-gasket plastic tubs, or taped boxes—container off-gassing alone will poison a reference!</li>
+<li><strong>NEVER</strong> wipe the reference with IPA, ethanol, or disinfectant wipes. Never take it into a room during or immediately after spraying.</li>
+</ul>
+<h3>Step 2: Verify Your Benchmark Quarterly (Two-Point Saturated Salt Check — ASTM E104 / Greenspan 1977)</h3>
+<div class="callout"><strong>Why Boveda calibration kits aren't enough:</strong> Boveda rates its packs at <strong>±2% RH</strong> at a single point. That catches a sensor that's 10 points broken, <em>not</em> a 2.5% drift or a bent slope/gain error. Reagent-grade salt slurries are <strong>~20× tighter</strong> and cost a few dollars.</div>
+<p>Make two separate slurries in <strong>small airtight glass or stainless jars</strong> (never plastic—plastics absorb moisture and ruin equilibration) using reagent-grade salt + distilled/DI water (~1 cm wet slush with <strong>visible excess undissolved crystals</strong>). Suspend the sensor clean above the salt—never let it touch liquid.</p>
+<div class="table-wrap"><table class="data-table"><thead><tr>
+<th>Jar Temperature</th>
+<th><strong>MgCl<sub>2</sub> Target (%RH)</strong></th>
+<th><strong>NaCl Target (%RH)</strong></th>
+</tr></thead><tbody>
+<tr><td><strong>15 °C [59.0 °F]</strong></td><td><strong>33.30 ± 0.21%</strong></td><td><strong>75.61 ± 0.18%</strong></td></tr>
+<tr><td><strong>20 °C [68.0 °F]</strong></td><td><strong>33.07 ± 0.18%</strong></td><td><strong>75.47 ± 0.14%</strong></td></tr>
+<tr><td><strong>25 °C [77.0 °F]</strong></td><td><strong>32.78 ± 0.16%</strong></td><td><strong>75.29 ± 0.12%</strong></td></tr>
+<tr><td><strong>30 °C [86.0 °F]</strong></td><td><strong>32.44 ± 0.14%</strong></td><td><strong>75.09 ± 0.11%</strong></td></tr>
+</tbody></table></div>
+<p><em>(Additional 25 °C Greenspan fixed points if needed: LiCl 11.30%, K<sub>2</sub>CO<sub>3</sub> 43.16%, Mg(NO<sub>3</sub>)<sub>2</sub> 52.89%.)</em></p>
+<ul>
+<li><strong>The #1 Salt-Check Killer — Temperature Mismatch:</strong> Keep jars isothermal (±0.2 °C [±0.36 °F]), out of sunlight, vents, and hands. At 25 °C, a sensor just <strong>0.5 °C warmer</strong> than the NaCl slurry reads <strong>73.08% instead of 75.29%</strong>; <strong>1.0 °C warmer</strong> reads <strong>70.95%</strong>—a massive fake error!</li>
+<li><strong>Wait Long Enough:</strong> Minimum <strong>12–24 hours</strong> per point <em>(SensorPush recommends 48–72 hours for sealed pucks)</em> until the last 1–2 hours stay flat within <strong>±0.2% RH</strong>.</li>
+<li><strong>The Two-Point Gain Check:</strong> Run <strong>both</strong> salts. If the error at 33% and the error at 75% differ by <strong>>2.0% RH</strong>, the polymer has <strong>lost gain/bent slope</strong>—trash it!</li>
+</ul>
+<h3>Step 3: Run the 20-Minute In-Room Side-by-Side Check</h3>
+<ol>
+<li><strong>Wait for Clean Air:</strong> Never bring your Golden Benchmark into a room until full re-entry interval (REI), HVAC ventilation purge, and drying are complete.</li>
+<li><strong>Inspect the Room Probe:</strong> Check cap/filter/foam for oil film, salt crust, dust, or moisture droplets.</li>
+<li><strong>Co-Locate Properly:</strong> Mount the Golden Benchmark <strong>5–10 cm (2–4 in)</strong> from the working sensor's inlet—exact same height, airflow stream, and light shading (keep out of direct LED/HPS radiation and fan jets). Stand 2–3 ft back—don't breathe on it!</li>
+<li><strong>Equilibrate (20–30 Min):</strong> Never wave a meter for 60 seconds. A 1.0 °C temperature lag creates a 3–4% RH fake error. Wait until <strong>ΔT ≤ 0.2–0.5 °C</strong> and RH moves <0.2% over 3 minutes.</li>
+<li><strong>Log 5–10 Paired Readings (1 min apart)</strong> and compute mean ΔRH = mean RH<sub>room</sub> − mean RH<sub>ref</sub> <em>(positive = room probe reads wet)</em>.</li>
+<li><strong>Run the Dew-Point Diagnostic Trick:</strong> Compute dew point (T<sub>d</sub>) for both probes. <strong>If dew points match but RH disagrees, the problem is a temperature error or housing self-heating—NOT a poisoned RH element!</strong></li>
+<li><strong>Check Both Ends of the Day & Lag:</strong> Quarterly, compare at both <strong>lights-on and lights-off</strong> (catches crossover/slope errors). If a graph looks suspiciously flat, test step response—a steady-state check won't catch a blind or sluggish probe.</li>
+</ol>
+<h3>Step 4: Audit Schedule & Hard Pass / Flag / Bin Rules</h3>
+<p><strong>Mandatory Check Calendar:</strong></p>
+<ul>
+<li><strong>Dry & Cure Rooms:</strong> <strong>Weekly</strong> + <strong>24 h before every harvest load</strong> + mid-dry + after between-batch cleaning.</li>
+<li><strong>Flower / Veg / Mother Rooms:</strong> <strong>Every 1–2 weeks</strong> (monthly absolute minimum) + at room turnover.</li>
+<li><strong>Mandatory Event Trigger:</strong> <strong>24 hours after</strong> every foliar spray, H<sub>2</sub>O<sub>2</sub>/PAA/HOCl fog, sulfur burn, or deep clean (post-REI/ventilation) — <strong>AND re-check 7 days later</strong> to catch slow-diffuser delayed drift!</li>
+</ul>
+<div class="table-wrap"><table class="data-table"><thead><tr>
+<th>Deviation (&#124;ΔRH&#124;)</th>
+<th>Status</th>
+<th>Flower / Veg Room Action</th>
+<th>Dry / Cure Room Action</th>
+</tr></thead><tbody>
+<tr><td><strong>≤ 2.0% RH</strong> <em>(and ΔT ≤ 0.3 °C)</em></td><td><span class="badge b-low">PASS</span></td><td>Log as-found data; leave in service. <em>(Within combined ±2.24% RSS uncertainty of ±1% ref + ±2% probe.)</em></td><td><span class="badge b-low">PASS</span> — Clear room for harvest.</td></tr>
+<tr><td><strong>>2.0 to 3.5–4.0% RH</strong></td><td><span class="badge b-med">FLAG</span></td><td>Inspect filter/cap, check T/lag/offsets, re-check in 72h–7d and at a 2nd RH point. Schedule swap at next room flip. <strong>Never hide ongoing drift with permanent software offsets.</strong></td><td><strong>REPLACE IMMEDIATELY</strong> if >2.0–3.0% RH — the margin to the 0.65 a<sub>w</sub> mould cliff is too narrow!</td></tr>
+<tr><td><strong>>3.5–4.0% RH</strong> <em>(or sluggish / blind / damaged)</em></td><td><span class="badge b-high">FAIL — BIN IT</span></td><td><strong>SWAP TODAY.</strong> Tag <em>Out of Tolerance (OOT)</em>, fit desiccant-stored spare, <strong>reset all software offsets to <code>0.0</code></strong>, verify spare within ±1.5% RH, discard old probe.</td><td><strong>SWAP TODAY + QA DEVIATION.</strong> Hold drying adjustments, assess affected lots since last passing check, verify flower a<sub>w</sub> directly.</td></tr>
+</tbody></table></div>
+<div class="callout"><strong>Important After Every Swap:</strong> Your room will <em>feel</em> different because your old probe was lying. <strong>Retune setpoints to your plants—never to your old broken numbers!</strong></div>
+<h3>Step 5: Stop Killing Probes Early (Prevention, Spares & Hard Rotation)</h3>
+<ul>
+<li><strong>Before Every Spray, Fog, Sulfur Burn, or Deep Clean:</strong></li>
+<li>Switch control loops to a verified backup/temporary mode and log alarms.</li>
+<li><strong>Unplug and remove modular probes</strong> into a clean sealed glass jar.</li>
+<li>For hardwired stations: <strong>TURN OFF ASPIRATION FANS</strong>, slip an <strong>aluminium foil cap</strong> or clean sealed barrier over the head, and clip a bright red <strong>"REMOVE AFTER REI"</strong> tag on it. <em>(Avoid cheap outgassing plastic bags for long stretches.)</em></li>
+<li>Keep probes covered/out until <strong>full REI + at least 1 hour of active ventilation purge</strong> completes.</li>
+<li><strong>Zero-Solvent Rule:</strong> <strong>NEVER</strong> spray or wipe any sensor housing, radiation shield, or adjacent control panel with IPA or ethanol. Any probe directly wetted by spray or solvent goes straight in the bin.</li>
+<li><strong>Smart Mounting:</strong> Mount above/beside the canopy in a shaded, ventilated spot—never buried inside wet colas or directly downstream of fogger/humidifier jets.</li>
+<li><strong>Stock Sealed Spares:</strong> Keep <strong>20–25% spare probes</strong> (1 per 4 installed) sealed like your benchmark, pre-qualified in the exact housing you run. Tag every active probe with <strong>Sensor ID, Install Date, and Retirement Date</strong>.</li>
+<li><strong>Hard Calendar Retirement (Even If Passing!):</strong> Replace exposed room probes every <strong>6 months (or 3 cycles)</strong> in heavy-IPM veg/mother rooms and every <strong>12 months</strong> in flower and dry rooms—matching what Priva and Hoogendoorn build into industrial greenhouse systems.</li>
+<li><strong>Buy Smarter Next Time:</strong> Stop buying $500 sealed boxes with glued-in $4 chips. Standardize on <strong>modular, quick-swap SHT45-AD1F probes</strong> (with verified membrane lot and firmware heater cycles if possible), <strong>swappable-tip industrial probes (Argus SEN-RHT / Vaisala / Rotronic)</strong>, or <strong>polymer-free wet/dry-bulb psychrometers</strong> for harsh rooms.</li>
+</ul>
+<h3>Step 6: The 5 Questions to Email Your Sensor Vendor Today (In Writing)</h3>
+<p>Before you spend another dollar on climate hardware, send these five questions to your vendor—and watch how fast they squirm:</p>
+<ol>
+<li><strong>What exact RH chip part number and revision is inside your probe?</strong> <em>(If SHT45-AD1F, is it pre-2026 PTFE or post-2026 polyimide under PCN254901?)</em></li>
+<li><strong>What is the published annual drift rate, and what pre/post accuracy and step-response test data do you have after exposure to IPA, H<sub>2</sub>O<sub>2</sub>/PAA, quats, sulfur, and foliar oils?</strong></li>
+<li><strong>Does your firmware actually run the chip's on-board thermal decontamination and anti-creep heater cycles—and how do you keep it from firing in contaminated air?</strong></li>
+<li><strong>Can I swap just the $15–$25 sensing tip when it drifts, or do you expect me to buy a whole new $300–$800 unit every year?</strong></li>
+<li><strong>Why does your app offer a ±10% to ±20% software calibration offset instead of a documented replacement schedule?</strong></li>
+</ol>
+<p>Their answer tells you whether you bought a real instrument—or an overpriced dashboard.</p>
+<h3>Step 7: Print-Ready GMP / GACP Sensor Verification Log Template</h3>
+<div class="table-wrap"><table class="data-table"><thead><tr>
+<th>Date / Time</th>
+<th>Room</th>
+<th>Sensor ID (Install Date)</th>
+<th>Ref ID (Cal / Salt Due)</th>
+<th>Trigger</th>
+<th>Ref T / RH</th>
+<th>Room T / RH</th>
+<th>ΔRH</th>
+<th>ΔT<sub>d</sub></th>
+<th>Status</th>
+<th>Action / New ID / Deviation</th>
+<th>Tech / QA</th>
+</tr></thead><tbody>
+<tr><td><em><code>2026-11-24 08:30</code></em></td><td><em><code>Dry-02</code></em></td><td><em><code>DRY2-S1 (2026-05-01)</code></em></td><td><em><code>HM45-01 (2027-04-15)</code></em></td><td><em><code>Weekly</code></em></td><td><em><code>15.5°C / 59.7%</code></em></td><td><em><code>15.6°C / 64.8%</code></em></td><td><em><code>+5.1%</code></em></td><td><em><code>+1.3°C</code></em></td><td><em><code>FAIL</code></em></td><td><em><code>Replaced w/ DRY2-S2; Offset 0.0; Dev #26-14</code></em></td><td><em><code>J.M. / K.R.</code></em></td></tr>
+<tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+</tbody></table></div>
+</section>
+<section id="10-verified-sources-technical-references">
+<h2>10. Verified Sources & Technical References</h2>
+<h3>Chipmakers & Chemical Contamination Studies</h3>
+<ol>
+<li><strong>Sensirion AG.</strong> <em>SHT4x Datasheet V7.3</em> (June 2026) & <em>V6.4</em> (Nov 2023); <em>SHT3x-DIS Datasheet V7</em> (2022) & <em>SHT3x Membrane Datasheet V6</em> (July 2026); <em>PCN254901: Change of Filter Membrane Material PTFE to Polyimide</em> (Dec 2025).</li>
+<li><strong>Sensirion AG.</strong> <em>Handling Instructions for SHTxx Humidity Sensors</em> V9 (June 2025); <em>Contamination Guide</em> V1.1 (Sept 2024); <em>Using the Integrated Heater of SHT4x for Heat-Assisted Polymer Decontamination</em> (2022/2024); <em>Creep Mitigation App Note</em> (Apr 2022); <em>Support FAQ</em>.</li>
+<li><strong>Texas Instruments.</strong> <em>SDAA445A: How Chemical Contamination Impacts Humidity Sensors</em> (Aug 2026); <em>SNAA353A: Accuracy Shift & Drift</em> (2021); <em>SNIA025: Storage & Handling Guidelines</em> (2017); <em>SNAU265D: HDC3x Silicon User's Guide</em> (Figs. 2-1 to 2-5); <em>HDC1080 / HDC2080 / HDC302x Datasheets</em>.</li>
+<li><strong>Honeywell Sensing & Control.</strong> <em>Humidity Sensors: Chemical Resistivity</em>, Application Sheet <code>009068-1-EN</code> (June 2011, HIH-3602 liquid & vapour tests); <em>HIH6130/6131 & HIH-4000 Guides</em>.</li>
+<li><strong>Vaisala Oyj.</strong> Ikonen, Stormbom & Ranta-aho, <em>Chemical Interference Test Results of a Novel Humidity Sensor (HUMICAP 180R)</em>, ISHM 2006; Ikonen, <em>Humidity Sensor Chemical Tolerance</em>, WMO TECO-2008; <em>Humidity Measurements in Vaporized H<sub>2</sub>O<sub>2</sub> Bio-Decontamination Applications</em> (PEROXCAP); <em>Common Pitfalls in Industrial Humidity Measurements</em> (50,000 ppm IPA test); <em>HM40 User Guide</em>.</li>
+<li><strong>Rotronic AG.</strong> <em>Contamination & Pollutants Permissible Concentrations</em> (IN-1 / HH-1 / HT-1); <em>Hygromer HH1-SK Manual</em>; <em>HP32 / HC2A-S Specs</em>.</li>
+<li><strong>Bosch Sensortec.</strong> <em>BST-BME280-HS006 Handling, Soldering & Mounting Instructions</em> (2018); <em>BME680 / BME688 Docs</em>.</li>
+<li><strong>TE Connectivity / MEAS</strong> (<em>HTU21D / HTU31</em>); <strong>Renesas</strong> (<em>HS300x Datasheet</em>); <strong>Silicon Labs</strong> (<em>Si7021-A20 Datasheet</em>); <strong>Aosong / ASAIR</strong> (<em>DHT22/AM2302, DHT20, AHT10/20/21 Datasheets</em>).</li>
+</ol>
+<h3>Peer-Reviewed Science, Standards & Independent Testing</h3>
+<ol>
+<li><strong>ASTM International.</strong> <em>ASTM D8197-22</em> (Acceptable Water Activity Range 0.55–0.65 a<sub>w</sub> for Dry Cannabis Flower); <em>ASTM D8196-20/22</em> (Determination of Water Activity); <em>ASTM E104</em> (Constant RH via Aqueous Salt Solutions).</li>
+<li><strong>Greenspan, L. (1977).</strong> <em>Humidity Fixed Points of Binary Saturated Aqueous Solutions</em>, J. Res. NBS 81A(1):89–96.</li>
+<li><strong>Allen et al. (1998)</strong> <em>FAO-56 Tetens Saturation Vapour Pressure (Ch. 3, Eq. 11)</em> & <strong>Buck Research Instruments</strong> <em>Revised Buck Saturation Pressure Coefficients</em>.</li>
+<li><strong>Segers, F.J.J. et al. (2016).</strong> <em>Xerophilic fungus Aspergillus penicillioides germination at low water activity (0.585 a<sub>w</sub>)</em>, PubMed <code>27871132</code>.</li>
+<li><strong>Birenboim et al. (2024).</strong> <em>In Pursuit of Optimal Quality: Cultivar-Specific Drying Approaches for Medicinal Cannabis</em>, <em>Plants</em> (2024).</li>
+<li><strong>Colorado Cannabis Emissions Study (2023).</strong> <em>Indoor Monoterpene Emission Rates from Commercial Cannabis Cultivation Facilities in Colorado</em>, J. Air Waste Manage. Assoc.</li>
+<li><strong>Matsuguchi et al. (1998).</strong> <em>Stability and Reliability of Capacitive-Type RH Sensors Using Crosslinked Polyimide Films</em>, Sensors and Actuators B; <strong>Farahani et al. (2014)</strong> <em>Sensors</em> 14:7881–7939; *<em>MDPI </em>Sensors<em> (2019)<strong> 19(3):659; </strong>Ingleby et al. (2013)</em><em> Met Office </em>Surface Humidity Reports*.</li>
+<li><strong>Smith, R.J. / Page & Page.</strong> <em>Hygrometer Comparison & Calibration Study</em> (<code>kandrsmith.org</code>).</li>
+<li><strong>EPA Labels & Product SDS:</strong> Green Cleaner, ZeroTol 2.0, Physan 20, Virkon S, SNS-209, Athena IPM, Regalia, Venerate XC.</li>
+<li><strong>Live Facility Telemetry:</strong> Licensed commercial flower room sensor swap record (New Zealand, Room F2, SHT30 → SHT45, Sept 24, 2026).</li>
+</ol>
+<h3>Brand Datasheets, Manuals & FCC Exhibits</h3>
+<ol>
+<li>TrolMaster (<code>MBS-TH</code> / <code>MBS-PRO</code> cut sheets & KB); Pulse Grow (One / Pro / <code>THV-1</code> manuals & specs); METER Group / AROYA (<code>ATMOS 14</code> Gen 2 & Climate One); Growlink (<code>ClimaLINK</code> / <code>ESM-2</code>); Agrowtek (<code>SXC</code> / <code>SXC+</code>); AC Infinity (Controller 69 / AI+ manuals & <strong>FCC <code>2AXMF-CTR69A</code></strong>); Spider Farmer (<code>GGS</code> manual); Vivosun (<code>GrowHub</code> / probe specs); Govee (Sensirion PR & <strong>FCC <code>2AQA6-H5075</code></strong>); SensorPush (<code>HT1</code> / <code>HT.w</code> / <code>HTP.xw</code> & <strong>FCC <code>2AL9X-HT1</code></strong>); Inkbird (<code>IBS-TH2</code> / <code>IHC-200</code> manuals & <strong>FCC <code>2AYZD-IBSTH2</code> / <code>2AYZD-200WIFI</code></strong>); Ecowitt (<code>WN31</code> / <code>WN31EP</code> manual); Grodan (<code>GroSens</code> Climate & <strong>FCC <code>2AUKP-CL002</code></strong>); Link4 (<code>iPonic 624</code> / <code>DISM</code> / <code>I2C DTH</code>); Autogrow / Bluelab (<code>IntelliClimate</code>); Argus Controls (<code>SEN-RHT</code> / <code>SEN-OSM</code>); Priva (Classic & <code>E-Measuring Box SPE</code>); Hoogendoorn (<code>iSii</code> / <code>IIVO</code>); Aranet (<code>TDSPT802</code> / <code>TDSPT409</code>); Grow Sensor PRO; Onset (<code>HOBO MX2301A</code>); Davis Instruments (<code>Vantage Pro2</code> KB); DigiKey / Mouser / Adafruit (<code>SHT45-AD1F-R2</code> & <code>#5665</code>).</li>
+</ol>
+</section>
+
+<!-- FOOTER -->
+<p class="wsr-foot">Synthesized from semiconductor datasheets, Honeywell / TI / Vaisala / Rotronic lab tests, FCC internal exhibits, ASTM/NIST standards &amp; live facility telemetry. Works 100% offline — share freely with every grower who still trusts their wall screen.</p>

@@ -49,6 +49,7 @@ PAPER_MODULES = [
     "paper_under_canopy_lighting",
     "paper_plant_biosignal",
     "paper_slab_irrigation",
+    "paper_grow_room_sensor_ripoff",
     "paper_hash_rosin",
     "paper_ripening",
     "paper_transplanting",

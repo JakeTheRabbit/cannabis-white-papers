@@ -1,18 +1,18 @@
 ---
 name: cannabis-white-papers
-description: "Beginner-friendly, evidence-linked cannabis cultivation reference: 55 white papers on propagation (seeds, cloning, tissue culture), crop steering (coco, rockwool, dryback, P0-P3), environment (VPD, lighting, airflow, CO2), water and nutrition (pH, EC, substrates, Athena mixing, deficiencies), plant health (mould, IPM, pest ID, PPE and biosecurity), precision irrigation (root-zone sensors, smart watering, F2, the closed loop), and facility and quality (GMP, QMS, daily checks). Use when answering questions about growing cannabis, crop steering, irrigation, drybacks, water content, nutrients, pests, mould, environment/VPD, or cultivation facility setup; read the relevant papers/<slug>.md for detail and citations."
+description: "Beginner-friendly, evidence-linked cannabis cultivation reference: 56 white papers on propagation (seeds, cloning, tissue culture), crop steering (coco, rockwool, dryback, P0-P3), environment (VPD, lighting, airflow, CO2), water and nutrition (pH, EC, substrates, Athena mixing, deficiencies), plant health (mould, IPM, pest ID, PPE and biosecurity), precision irrigation (root-zone sensors, smart watering, F2, the closed loop), and facility and quality (GMP, QMS, daily checks). Use when answering questions about growing cannabis, crop steering, irrigation, drybacks, water content, nutrients, pests, mould, environment/VPD, or cultivation facility setup; read the relevant papers/<slug>.md for detail and citations."
 ---
 
 # The Cannabis White Papers
 
-A library of 55 evidence-linked, beginner-friendly cannabis cultivation field guides. Every paper is a clean markdown file in `papers/` with sources preserved as `[^id]` footnotes.
+A library of 56 evidence-linked, beginner-friendly cannabis cultivation field guides. Every paper is a clean markdown file in `papers/` with sources preserved as `[^id]` footnotes.
 
 Licensed CC BY-NC 4.0 (https://creativecommons.org/licenses/by-nc/4.0/). Attribution: The Cannabis White Papers.
 
 ## How to use
 
 1. Match the user's question to a paper below (or grep `papers/` / read `manifest.json`).
-2. Read only the relevant `papers/<slug>.md` (progressive disclosure, do not load all 55).
+2. Read only the relevant `papers/<slug>.md` (progressive disclosure, do not load all 56).
 3. Answer from it and cite the paper's footnoted sources. Look up terms in `glossary.json`.
 
 ## Papers by stage
@@ -52,6 +52,7 @@ Licensed CC BY-NC 4.0 (https://creativecommons.org/licenses/by-nc/4.0/). Attribu
 - **Set the light to the limiting factor** (`papers/scaling-high-light.md`): Find the supply that is the limit, then adjust the light
 - **Lighting: spectrum, PPFD and DLI** (`papers/lighting-fundamentals.md`): Spectrum, PPFD and DLI
 - **Under-canopy and inter-canopy lighting for cannabis in grow rooms** (`papers/under-canopy-lighting.md`): Photons at the floor: SCL and ICL
+- **THE $6 CHIP INSIDE YOUR $800 BOX** (`papers/grow-room-sensor-ripoff.md`): RH sensor drift, chemical poisoning and 25 brands audited
 - **Temperature, humidity and VPD: stage targets, measurement and condensation control** (`papers/temp-humidity-vpd.md`): Leaf VPD, dew point and targets for each stage
 - **HVAC and dehumidification for grow rooms** (`papers/hvac-dehumidification.md`): Heat load and vapor load, and the size of the equipment
 

@@ -39,6 +39,7 @@ Licensed CC BY-NC 4.0 (https://creativecommons.org/licenses/by-nc/4.0/). Attribu
 - [Set the light to the limiting factor](https://www.growlabs.nz/wiki/papers/scaling-high-light.md): Find the supply that is the limit, then adjust the light
 - [Lighting: spectrum, PPFD and DLI](https://www.growlabs.nz/wiki/papers/lighting-fundamentals.md): Spectrum, PPFD and DLI
 - [Under-canopy and inter-canopy lighting for cannabis in grow rooms](https://www.growlabs.nz/wiki/papers/under-canopy-lighting.md): Photons at the floor: SCL and ICL
+- [THE $6 CHIP INSIDE YOUR $800 BOX](https://www.growlabs.nz/wiki/papers/grow-room-sensor-ripoff.md): RH sensor drift, chemical poisoning and 25 brands audited
 - [Temperature, humidity and VPD: stage targets, measurement and condensation control](https://www.growlabs.nz/wiki/papers/temp-humidity-vpd.md): Leaf VPD, dew point and targets for each stage
 - [HVAC and dehumidification for grow rooms](https://www.growlabs.nz/wiki/papers/hvac-dehumidification.md): Heat load and vapor load, and the size of the equipment
 

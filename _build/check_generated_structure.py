@@ -158,7 +158,7 @@ def _parse_page(text):
 
 
 def _document_diagnostics(slug, text, source_sections, image_parent_expectations=()):
-    from check_section_structure import validate_title_policy
+    from check_section_structure import validate_title_policy, VERBATIM_SLUGS
 
     diagnostics = []
     page = _parse_page(text)
@@ -166,7 +166,7 @@ def _document_diagnostics(slug, text, source_sections, image_parent_expectations
     actual = [(section_id, _plain_title(title)) for section_id, title in page.h2]
     actual_titles = [title for _, title in actual]
 
-    if not actual_titles or actual_titles[0] != "Purpose and scope":
+    if slug not in VERBATIM_SLUGS and (not actual_titles or actual_titles[0] != "Purpose and scope"):
         found = actual_titles[0] if actual_titles else None
         diagnostics.append(f"{slug}: first source H2 must be 'Purpose and scope', found {found!r}")
     reference_h2 = [(parent, title) for parent, title in actual if title == "References"]
@@ -316,9 +316,9 @@ def validate_generated_structure(root, modules):
     root = Path(root)
     diagnostics = []
     module_slugs = [module.SLUG for module in modules]
-    if len(module_slugs) != 55 or len(set(module_slugs)) != 55:
+    if len(module_slugs) != 56 or len(set(module_slugs)) != 56:
         diagnostics.append(
-            f"loaded modules: expected 55 unique slugs, got {len(module_slugs)} total / "
+            f"loaded modules: expected 56 unique slugs, got {len(module_slugs)} total / "
             f"{len(set(module_slugs))} unique"
         )
 
@@ -337,9 +337,9 @@ def validate_generated_structure(root, modules):
                 )
         except (json.JSONDecodeError, KeyError, TypeError) as error:
             diagnostics.append(f"manifest.json: invalid manifest: {error}")
-    if len(manifest_slugs) != 55 or len(set(manifest_slugs)) != 55:
+    if len(manifest_slugs) != 56 or len(set(manifest_slugs)) != 56:
         diagnostics.append(
-            f"manifest.json: expected 55 unique slugs, got {len(manifest_slugs)} total / "
+            f"manifest.json: expected 56 unique slugs, got {len(manifest_slugs)} total / "
             f"{len(set(manifest_slugs))} unique"
         )
     if set(manifest_slugs) != set(module_slugs):

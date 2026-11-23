@@ -5,7 +5,7 @@
  "license": "CC BY-NC 4.0",
  "license_url": "https://creativecommons.org/licenses/by-nc/4.0/",
  "base": "https://www.growlabs.nz/wiki",
- "count": 55,
+ "count": 56,
  "papers": [
   {
    "slug": "tissue-culture",
@@ -735,6 +735,25 @@
    ],
    "url": "https://www.growlabs.nz/wiki/slab-irrigation-strategy.html",
    "md_url": "https://www.growlabs.nz/wiki/papers/slab-irrigation-strategy.md",
+   "version": "1.2",
+   "updated": "2026-07-18",
+   "ref_count": 0
+  },
+  {
+   "slug": "grow-room-sensor-ripoff",
+   "title": "THE $6 CHIP INSIDE YOUR $800 BOX",
+   "summary": "How Grow-Tech Brands Sold You Disposable Humidity Sensors, Hid the Chemical Drift, and Let Your Sprays Wreck Your Rooms — Plus the 20-Minute Protocol to Take Back Control.",
+   "track": "Environment and climate",
+   "read_time": "~45 min to read",
+   "diagrams": "12 Visual Graphs & Diagrams",
+   "related": [
+    "temp-humidity-vpd",
+    "hvac-dehumidification",
+    "harvest-dry-trim-cure",
+    "signal-and-noise"
+   ],
+   "url": "https://www.growlabs.nz/wiki/grow-room-sensor-ripoff.html",
+   "md_url": "https://www.growlabs.nz/wiki/papers/grow-room-sensor-ripoff.md",
    "version": "1.2",
    "updated": "2026-07-18",
    "ref_count": 0

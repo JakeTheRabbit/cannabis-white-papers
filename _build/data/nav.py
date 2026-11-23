@@ -48,6 +48,7 @@ GROUPS = [
         {"slug": "scaling-high-light",   "title": "Higher light levels", "short": "Find the supply that is the limit, then adjust the light", "icon": "gauge",  "status": "live", "track": "Environment"},
         {"slug": "temp-humidity-vpd",    "title": "Temperature, humidity and VPD",  "short": "Leaf VPD, dew point and targets for each stage",  "icon": "wave",   "status": "live", "track": "Environment"},
         {"slug": "hvac-dehumidification","title": "HVAC and dehumidifiers",  "short": "Heat load and vapor load, and the size of the equipment", "icon": "wind", "status": "live", "track": "Environment"},
+        {"slug": "grow-room-sensor-ripoff", "title": "The $6 chip in your $800 box", "short": "RH sensor drift, chemical poisoning and 25 brands audited", "icon": "wave", "status": "live", "track": "Environment"},
     ]},
     {"group": "Water, substrate and feed", "items": [
         {"slug": "substrates-overview",  "title": "Substrates compared",     "short": "Coco, rockwool, soil and hydro",   "icon": "leaf",    "status": "live", "track": "Feed"},

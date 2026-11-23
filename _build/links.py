@@ -128,6 +128,7 @@ LINK_PHRASES = {
                               "regular seed", "autoflower seed", "cannabis ruderalis", "keeper phenotype"],
     "temp-humidity-vpd": ["vapour pressure deficit", "VPD", "leaf VPD", "dew point", "relative humidity", "night humidity",
                           "plant transpiration rate", "kPa VPD", "transpiration rate"],
+    "grow-room-sensor-ripoff": ["humidity sensor drift", "RH sensor drift", "SHT45", "chemical contamination of humidity sensors"],
     "lab-testing-coas": ["certificate of analysis", "COA", "total THC", "potency testing", "HPLC", "lab testing",
                          "OOS result", "out of specification", "residual solvent"],
     "unit-economics": ["cost per gram", "grams per watt", "unit economics", "cycles per year",
